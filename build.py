@@ -38,7 +38,7 @@ def build_site(lang):
       site._env.install_gettext_translations(translator)
 
       def l10n_has_tag(tag):
-            return tag in translator.lang_file_tag_set('start/release', lang)
+            return tag in translator.lang_file_tag_set('thunderbird/start/release', lang)
 
       site._env.globals.update(l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag)
 
