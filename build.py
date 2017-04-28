@@ -1,5 +1,6 @@
 from staticjinja import make_site
 import os
+import shutil
 import translate
 
 extensions = ['jinja2.ext.i18n']
@@ -19,6 +20,14 @@ PROD_LANGUAGES = ('ach', 'af', 'an', 'ar', 'as', 'ast', 'az', 'be', 'bg',
 
 LANGUAGES_BIDI = ('he', 'ar', 'fa', 'ur')
 
+# path to search for templates
+searchpath = 'start-page'
+# static file/media path
+staticpath = 'start-page/_media'
+# path to render the finished site to
+renderpath = 'site'
+
+
 def text_dir(lang):
       textdir = 'ltr'
       if lang in LANGUAGES_BIDI:
@@ -29,10 +38,10 @@ def build_site(lang):
       context = {'LANG': lang,
                  'DIR': text_dir(lang) }
 
-      outpath = os.path.join('site', lang)
+      outpath = os.path.join(renderpath, lang)
       if not os.path.exists(outpath):
             os.makedirs(outpath)
-      site = make_site(outpath=outpath, staticpaths=["media/"], extensions=extensions, env_globals=context)
+      site = make_site(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
       # Add l10n_css function to context
       translator = translate.Translation(lang, ['thunderbird/start/release', 'main'])
       site._env.install_gettext_translations(translator)
@@ -41,8 +50,9 @@ def build_site(lang):
             return tag in translator.lang_file_tag_set('thunderbird/start/release', lang)
 
       site._env.globals.update(l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag)
-
       site.render(use_reloader=False)
+      shutil.rmtree(renderpath+'/media', ignore_errors=True)
+      shutil.copytree(staticpath, renderpath+'/media')
 
 build_site('en-US')
 

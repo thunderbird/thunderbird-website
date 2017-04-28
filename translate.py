@@ -161,7 +161,7 @@ class Translation(object):
         return translations
 
     def l10n_css(self):
-        path = os.path.join('media','css', 'l10n', self.locale)
+        path = os.path.join('start-page', '_media', 'css', 'l10n', self.locale)
         markup = ''
         if os.path.exists(path):
             url = '/media/css/l10n/{0}/intl.css'.format(self.locale)
