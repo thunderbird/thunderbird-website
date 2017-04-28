@@ -34,7 +34,7 @@ def build_site(lang):
             os.makedirs(outpath)
       site = make_site(outpath=outpath, staticpaths=["media/"], extensions=extensions, env_globals=context)
       # Add l10n_css function to context
-      translator = translate.Translation(lang)
+      translator = translate.Translation(lang, ['thunderbird/start/release', 'main'])
       site._env.install_gettext_translations(translator)
 
       def l10n_has_tag(tag):

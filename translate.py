@@ -21,9 +21,10 @@ TAG_REGEX = re.compile(r"^## ([\w-]+) ##")
 class Translation(object):
 
 
-    def __init__(self, language):
+    def __init__(self, language, langfiles):
         self.locale = language
         self.cache = {}
+        self.langfiles = langfiles
 
     def mail_error(self, path, message):
         print "{0} is corrupted: {1}".format(path, message)
@@ -75,10 +76,10 @@ class Translation(object):
 
         return trans
 
-    def translate(self, text, files):
+    def translate(self, text):
         """Search a list of .lang files for a translation"""
         lang = self.locale
-
+        files = self.langfiles
         # don't attempt to translate the default language.
         if lang == 'en-US':
             return Markup(text)
@@ -107,17 +108,6 @@ class Translation(object):
                 return Markup(trans[tweaked_text])
 
         return Markup(text)
-
-    def lang_file_is_active(self, path, lang=None):
-        """
-        If the lang file for a locale exists and has the correct comment returns
-        True, and False otherwise.
-        :param path: the relative lang file name
-        :param lang: the language code
-        :return: bool
-        """
-        return lang_file_has_tag(path, lang, 'active')
-
 
     def lang_file_tag_set(self, path, lang=None):
         """Return a set of tags for a specific lang file and locale.
@@ -148,21 +138,6 @@ class Translation(object):
             self.cache[cache_key] = tag_set
 
         return tag_set
-
-
-    def lang_file_has_tag(self, path, lang=None, tag='active'):
-        """
-        Return True if the lang file exists and has a line like "^## tag ##"
-        at the top. Stops looking at the line that doesn't have a tag.
-        Always returns true for the default lang.
-        :param path: the relative lang file name
-        :param lang: the language code or the lang of the request if omitted
-        @param tag: The string that should appear between ##'s. Can contain
-           alphanumerics and "_".
-        @return: bool
-        """
-        return tag in lang_file_tag_set(path, lang)
-
 
     def get_translations_for_langfile(self, langfile):
         """
@@ -196,7 +171,7 @@ class Translation(object):
         return Markup(markup)
 
     def gettext(self, message):
-        return self.translate(message, ['thunderbird/start/release', 'main'])
+        return self.translate(message)
 
     ugettext = gettext
 
