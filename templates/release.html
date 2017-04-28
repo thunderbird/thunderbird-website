@@ -11,6 +11,7 @@
       <header>
         <h1>{{ self.title() }}</h1>
       </header>
+      {% if l10n_has_tag('thunderbird_startpage_donate_2016_06') %}
       <div>
         <section>
           <h2>{{ _('Why we need donations') }}</h2>
@@ -46,18 +47,36 @@
              </p>
         </section>
       </div>
+      {% else %}
+      <div>
+        <section>
+          <h2>{{ _('Contribute to Thunderbird') }}</h2>
+          <p>{{ _('To ensure that Thunderbird continues to improve, as it has for the last ten years, active contributors <a href="%s">recently organized</a> to focus on the future.')|format('https://blog.mozilla.org/thunderbird/2014/11/thunderbird-reorganizes-at-2014-toronto-summit/') }}
+             {{ _('Now is a great time for you to <a href="%s" class="iconic">get involved</a>.')|format('https://wiki.mozilla.org/Thunderbird#Contributing') }}
+             {{ _('Please help us assist users of Thunderbird, and improve the Thunderbird product and eco-system.') }}</p>
+          <p>{{ _('We look forward to <a href="%s">hearing from you</a>.')|format('https://wiki.mozilla.org/Thunderbird#Contributing') }}</p>
+          <p><a class="more" href="https://wiki.mozilla.org/Thunderbird">{{ _('Learn more') }}</a></p>
+        </section>
+      </div>
+      {% endif %}
       <div>
         <section class="help">
           <h2 class="iconic">{{ _('Need Support?') }}</h2>
+          {% if l10n_has_tag('thunderbird_startpage_donate_2016_06') %}
           {# L10n: If your locale has a dedicated Thunderbird support forum, you can localize the URL to point there. -#}
           <p>{{ _('Most Thunderbird support questions are answered in the <a href="%s">Knowledge Base</a>.')|format('https://support.mozilla.org/products/thunderbird') }}
-             {{ _('If you can’t find an answer, <a href="%s">ask your question in our support forum</a>.')|format('https://support.mozilla.org/questions/new/thunderbird') }}</p>
+             {{ _('If you can’t find an answer, <a href="%s">ask your question in our support forum</a>.')|format(_('https://support.mozilla.org/questions/new/thunderbird')) }}</p>
+          {% else %}
+          {# L10n: If your locale has a dedicated Thunderbird support forum, you can localize the URL to point there. -#}
+          <p>{{ _('Most Thunderbird support questions are answered on the <a href="%s">Knowledge Base</a>.')|format('https://support.mozilla.org/products/thunderbird') }}
+             {{ _('If you can’t find an answer, <a href="%s">ask your question on our support forum</a>.')|format(_('https://support.mozilla.org/questions/new/thunderbird')) }}</p>
+          {% endif %}
         </section>
       </div>
       <footer>
         <nav>
           <ul>
-            <li><a href="https://www.mozilla.org/en-US/thunderbird/features/">{{ _('Features') }}</a></li>
+            <li><a href="https://www.mozilla.org/thunderbird/features/">{{ _('Features') }}</a></li>
             <li><a href="https://blog.mozilla.org/thunderbird/">{{ _('Visit our blog') }}</a></li>
             <li><a href="https://donate.mozilla.org/thunderbird/">{{ _('Donate') }}</a></li>
             <li><a href="https://wiki.mozilla.org/Thunderbird#Contributing">{{ _('Contribute') }}</a></li>

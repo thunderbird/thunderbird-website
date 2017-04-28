@@ -16,6 +16,7 @@ def strip_whitespace(message):
 FORMAT_IDENTIFIER_RE = re.compile(r"""(%
                                   (?:\((\w+)\))? # Mapping key
                                   s)""", re.VERBOSE)
+TAG_REGEX = re.compile(r"^## ([\w-]+) ##")
 
 class Translation(object):
 
@@ -126,13 +127,12 @@ class Translation(object):
         """
         lang = self.locale
         rel_path = os.path.join('locale', lang, 'thunderbird', '%s.lang' % path)
-        self.cache_key = 'tag:%s' % rel_path
+        cache_key = 'tag:%s' % rel_path
         tag_set = self.cache.get(cache_key)
         if tag_set is None:
             tag_set = set()
-            fpath = os.path.join(settings.ROOT, rel_path)
             try:
-                with codecs.open(fpath, 'r', 'utf-8', errors='replace') as lines:
+                with codecs.open(rel_path, 'r', 'utf-8', errors='replace') as lines:
                     for line in lines:
                         # Filter out Byte order Mark
                         line = line.replace(u'\ufeff', '')
