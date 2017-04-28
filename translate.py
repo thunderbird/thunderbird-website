@@ -87,7 +87,7 @@ class Translation(object):
 
         for file_ in files:
             key = "dotlang-%s-%s" % (lang, file_)
-            rel_path = os.path.join('locale', lang, 'thunderbird', '%s.lang' % file_)
+            rel_path = os.path.join('locale', lang, '%s.lang' % file_)
 
             trans = self.cache.get(key)
             if trans is None:
@@ -126,7 +126,7 @@ class Translation(object):
         :return: set of strings
         """
         lang = self.locale
-        rel_path = os.path.join('locale', lang, 'thunderbird', '%s.lang' % path)
+        rel_path = os.path.join('locale', lang, '%s.lang' % path)
         cache_key = 'tag:%s' % rel_path
         tag_set = self.cache.get(cache_key)
         if tag_set is None:
@@ -196,7 +196,7 @@ class Translation(object):
         return Markup(markup)
 
     def gettext(self, message):
-        return self.translate(message, ['start/release'])
+        return self.translate(message, ['thunderbird/start/release', 'main'])
 
     ugettext = gettext
 
