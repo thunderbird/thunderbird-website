@@ -4,37 +4,37 @@
     font-family: 'Open Sans Light';
     font-weight: 400;
     font-style: normal;
-    src: url("/media/fonts/opensans-light.2120033991a4.woff2") format('woff2'), url("https://www.mozilla.org/media/fonts/opensans-light.c709d7bf4556.woff") format('woff')
+    src: url("/media/fonts/opensans-light.woff2") format('woff2'), url("/media/fonts/opensans-light.woff") format('woff')
 }
 @font-face {
     font-family: 'Open Sans Light';
     font-weight: 700;
     font-style: normal;
-    src: url("/media/fonts/opensans-semibold.ca624b3a4a97.woff2") format('woff2'), url("https://www.mozilla.org/media/fonts/opensans-semibold.3a18a24d16cb.woff") format('woff')
+    src: url("/media/fonts/opensans-semibold.woff2") format('woff2'), url("/media/fonts/opensans-semibold.woff") format('woff')
 }
 @font-face {
     font-family: 'Open Sans Light';
     font-weight: 400;
     font-style: italic;
-    src: url("/media/fonts/opensans-lightitalic.580ce2d5ac1d.woff2") format('woff2'), url("https://www.mozilla.org/media/fonts/opensans-lightitalic.e3fb6f344bae.woff") format('woff')
+    src: url("/media/fonts/opensans-lightitalic.woff2") format('woff2'), url("/media/fonts/opensans-lightitalic.woff") format('woff')
 }
 @font-face {
     font-family: 'Open Sans';
     font-weight: 400;
     font-style: normal;
-    src: url("/media/fonts/opensans-regular.668362de763a.woff2") format('woff2'), url("https://www.mozilla.org/media/fonts/opensans-regular.fe6f746bb376.woff") format('woff')
+    src: url("/media/fonts/opensans-regular.woff2") format('woff2'), url("/media/fonts/opensans-regular.woff") format('woff')
 }
 @font-face {
     font-family: 'Open Sans';
     font-weight: 700;
     font-style: normal;
-    src: url("/media/fonts/opensans-bold.5cf854f3d1c0.woff2") format('woff2'), url("https://www.mozilla.org/media/fonts/opensans-bold.2abfa530b0d8.woff") format('woff')
+    src: url("/media/fonts/opensans-bold.woff2") format('woff2'), url("/media/fonts/opensans-bold.woff") format('woff')
 }
 @font-face {
     font-family: 'Open Sans';
     font-weight: 400;
     font-style: italic;
-    src: url("/media/fonts/opensans-italic.c86748d08341.woff2") format('woff2'), url("https://www.mozilla.org/media/fonts/opensans-italic.23d9589c3efb.woff") format('woff')
+    src: url("/media/fonts/opensans-italic.woff2") format('woff2'), url("/media/fonts/opensans-italic.woff") format('woff')
 }
 html {
     color: #333;
@@ -44,7 +44,7 @@ html {
 }
 body {
     margin: 1.5rem;
-    background: url("https://www.mozilla.org/media/img/sandstone/bg-gradient-sky.7ea325995978.png") repeat-x, url("https://www.mozilla.org/media/img/sandstone/grain.855f29e0c686.png") repeat, #eee
+    background: url("/media/img/sandstone/bg-gradient-sky.png") repeat-x, url("/media/img/sandstone/grain.png") repeat, #eee
 }
 a {
     color: #0096dd;
@@ -86,16 +86,16 @@ section h2.iconic:before {
     content: ''
 }
 header h1:before {
-    background-image: url("https://www.mozilla.org/media/img/thunderbird/logos/release-100.2a4d7f91ea9a.png")
+    background-image: url("/media/img/thunderbird/logos/release-100.png")
 }
 html[data-channel=earlybird] header h1:before {
-    background-image: url("https://www.mozilla.org/media/img/thunderbird/logos/earlybird-100.b69c5ab1c2a0.png")
+    background-image: url("/media/img/thunderbird/logos/earlybird-100.png")
 }
 html[data-channel=daily] header h1:before {
-    background-image: url("https://www.mozilla.org/media/img/thunderbird/logos/daily-100.40831153973a.png")
+    background-image: url("/media/img/thunderbird/logos/daily-100.png")
 }
 section h2.iconic:before {
-    background-image: url("https://www.mozilla.org/media/img/thunderbird/start/sprite.e6d50d256e3a.png")
+    background-image: url("/media/img/thunderbird/start/sprite.png")
 }
 footer a {
     display: inline-block;
@@ -113,7 +113,7 @@ section a.iconic:before {
     margin-inline-end: 5px;
     width: 20px;
     height: 20px;
-    background-image: url("https://www.mozilla.org/media/img/thunderbird/start/sprite.e6d50d256e3a.png");
+    background-image: url("/media/img/thunderbird/start/sprite.png");
     background-repeat: no-repeat;
     vertical-align: text-bottom;
     content: ''
@@ -305,13 +305,13 @@ footer a[href*=how]:before {
 (min-resolution: 1.5dppx),
 (min-resolution: 144dpi) {
     header h1:before {
-        background-image: url("https://www.mozilla.org/media/img/thunderbird/logos/release-200.cc5a08767ff7.png");
+        background-image: url("/media/img/thunderbird/logos/release-200.png");
         background-size: 100px 100px
     }
     html[data-channel=earlybird] header h1:before {
-        background-image: url("https://www.mozilla.org/media/img/thunderbird/logos/earlybird-200.d696a95c5943.png")
+        background-image: url("/media/img/thunderbird/logos/earlybird-200.png")
     }
     html[data-channel=daily] header h1:before {
-        background-image: url("https://www.mozilla.org/media/img/thunderbird/logos/daily-200.7e697927422d.png")
+        background-image: url("/media/img/thunderbird/logos/daily-200.png")
     }
 }
