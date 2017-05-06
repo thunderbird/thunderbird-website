@@ -29,33 +29,33 @@ renderpath = 'site'
 
 
 def text_dir(lang):
-      textdir = 'ltr'
-      if lang in LANGUAGES_BIDI:
-            textdir = 'rtl'
-      return textdir
+    textdir = 'ltr'
+    if lang in LANGUAGES_BIDI:
+        textdir = 'rtl'
+    return textdir
 
 def build_site(lang):
-      context = {'LANG': lang,
+    context = {'LANG': lang,
                  'DIR': text_dir(lang) }
 
-      outpath = os.path.join(renderpath, lang)
-      if not os.path.exists(outpath):
-            os.makedirs(outpath)
-      site = make_site(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
+    outpath = os.path.join(renderpath, lang)
+    if not os.path.exists(outpath):
+        os.makedirs(outpath)
+    site = make_site(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
 
-      translator = translate.Translation(lang, ['thunderbird/start/release', 'main'])
-      site._env.install_gettext_translations(translator)
+    translator = translate.Translation(lang, ['thunderbird/start/release', 'main'])
+    site._env.install_gettext_translations(translator)
 
-      def l10n_has_tag(tag):
-            return tag in translator.lang_file_tag_set('thunderbird/start/release', lang)
+    def l10n_has_tag(tag):
+        return tag in translator.lang_file_tag_set('thunderbird/start/release', lang)
 
-      # Add l10n_css function to context
-      site._env.globals.update(l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag)
-      site.render(use_reloader=False)
-      shutil.rmtree(renderpath+'/media', ignore_errors=True)
-      shutil.copytree(staticpath, renderpath+'/media')
+    # Add l10n_css function to context
+    site._env.globals.update(l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag)
+    site.render(use_reloader=False)
+    shutil.rmtree(renderpath+'/media', ignore_errors=True)
+    shutil.copytree(staticpath, renderpath+'/media')
 
 build_site('en-US')
 
 for lang in PROD_LANGUAGES:
-      build_site(lang)
+    build_site(lang)
