@@ -19,3 +19,4 @@ PAGE_LINKS = {'thunderbird.channel':'',
               'thunderbird.index':'',
               'thunderbird.organizations':'',
               'mozorg.home':''}
+CANONICAL_URL = 'https://www.thunderbird.net'

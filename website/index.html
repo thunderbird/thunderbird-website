@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block page_css %}
-  {% stylesheet 'thunderbird-landing' %}
+  <link href="/media/css/thunderbird-landing.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block content %}
@@ -39,7 +39,7 @@
 <div itemscope itemtype="http://schema.org/SoftwareApplication">
   <meta itemprop="name" content="{{_('Thunderbird')}}">
   <meta itemprop="description" content="{% block product_desc %}{{ self.page_desc() }}{% endblock %}">
-  <meta itemprop="url" content="{{ settings.CANONICAL_URL }}/thunderbird/">
+  <meta itemprop="url" content="https://www.thunderbird.net">
   <meta itemprop="image" content="{% block product_logo %}{{ static('img/thunderbird/thunderbird-256.png') }}{% endblock %}">
   <div itemprop="author" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="{{_('Mozilla')}}">

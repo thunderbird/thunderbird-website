@@ -1,43 +1,31 @@
-{% from "macros.html" import share_cta with context %}
 <!doctype html>
 {# Note the "windows" class, without javascript platform-specific
      assets default to windows #}
-<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}" data-latest-firefox="{{ latest_firefox_version }}" data-esr-versions="{{ esr_firefox_versions|join(' ') }}" {% if settings.STATCOUNTER_PROJECT_ID %}data-statcounter-project-id="{{ settings.STATCOUNTER_PROJECT_ID }}"{% endif %} {% if settings.STATCOUNTER_SECURITY_ID %}data-statcounter-security-id="{{ settings.STATCOUNTER_SECURITY_ID }}"{% endif %} {% if settings.OPTIMIZELY_PROJECT_ID %}data-optimizely-project-id="{{ settings.OPTIMIZELY_PROJECT_ID }}"{% endif %} {% if settings.GTM_CONTAINER_ID %}data-gtm-container-id="{{ settings.GTM_CONTAINER_ID }}"{% endif %} {% block gtm_page_id %}{% endblock %} {% if settings.STUB_ATTRIBUTION_RATE %}data-stub-attribution-rate="{{ settings.STUB_ATTRIBUTION_RATE }}"{% endif %}>
+<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
   <head>
     <meta charset="utf-8">{# Note: Must be within first 512 bytes of page #}
 
-    {% javascript 'site' %}
+    <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
     {% block experiments %}{% endblock %}
-
-<!--
-{% include "includes/careers-teaser.html" %}
--->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block extra_meta %}{% endblock %}
-
+javascript
     {% block shared_meta %}
     {#- Please sync this block with the base.html template.
         Because of blocks, we cannot use an include here. -#}
     <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} — Mozilla{% endblock %}{% endfilter %}</title>
     <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{% endblock %}{% endfilter %}">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ _('Mozilla') }}">
+    <meta property="og:site_name" content="{{ _('Thunderbird') }}">
     <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
-    <meta property="og:url" content="{% filter trim|absolute_url %}{% block page_og_url %}{{ settings.CANONICAL_URL + '/' + LANG + canonical_path }}{% endblock %}{% endfilter %}">
-    <meta property="og:image" content="{% filter trim|absolute_url %}{% block page_image %}{{ static('img/mozorg/mozilla-256.jpg') }}{% endblock %}{% endfilter %}">
+    <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
     <meta property="og:title" content="{% filter striptags|e %}{% block page_og_title %}{{ self.page_title_full() }}{% endblock %}{% endfilter %}">
     <meta property="og:description" content="{% filter striptags|e %}{% block page_og_desc %}{{ self.page_desc() }}{% endblock %}{% endfilter %}">
     <meta property="fb:page_id" content="{% block facebook_id %}262134952380{# facebook.com/mozilla #}{% endblock %}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{% block twitter_id %}mozilla{% endblock %}">
-    <meta name="twitter:domain" content="mozilla.org">
-    <meta name="twitter:app:name:googleplay" content="{% block android_app_name %}{{ _('Firefox') }}{% endblock %}">
-    <meta name="twitter:app:id:googleplay" content="{% block android_app_id %}org.mozilla.firefox{% endblock %}">
-    <meta name="twitter:app:name:iphone" content="{% block iphone_app_name %}{{ _('Firefox') }}{% endblock %}">
-    <meta name="twitter:app:id:iphone" content="{% block iphone_app_id %}989804926{% endblock %}">
-    <meta name="twitter:app:name:ipad" content="{% block ipad_app_name %}{{ _('Firefox') }}{% endblock %}">
-    <meta name="twitter:app:id:ipad" content="{% block ipad_app_id %}989804926{% endblock %}">
+    <meta name="twitter:domain" content="thunderbird.net">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{% block page_ios_icon %}{{ static('img/favicon/apple-touch-icon-180x180.png') }}{% endblock %}">
     <link rel="icon" type="image/png" sizes="196x196" href="{% block page_favicon_large %}{{ static('img/favicon/favicon-196x196.png') }}{% endblock %}">
     <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/favicon.ico') }}{% endblock %}">
@@ -45,18 +33,11 @@
 
     {{ l10n_css() }}
 
-    <!--[if lte IE 8]>
-      {# Only needed for IE before v9 #}
-      <script src="{{ static('js/libs/html5shiv.js') }}"></script>
-
-      {# Basic styles, only for IE8 and lower #}
-      {% stylesheet 'oldIE' %}
-    <![endif]-->
 
     <!--[if !lte IE 8]><!-->
     {# Global styles, hidden from IE8 and lower #}
     {% block site_css %}
-      {% stylesheet 'responsive' %}
+      <link href="/media/css/responsive-bundle.css" rel="stylesheet" type="text/css" />
     {% endblock %}
 
     {# Page-specific styles, hidden from IE8 and lower #}
@@ -67,12 +48,7 @@
       {# Extra header stuff (scripts, styles, metadata, etc) seen by all browsers. Use the 'page_css' block for CSS you want to hide from IE8 and lower. #}
     {% endblock %}
 
-    {% block optimizely %}{% endblock %}
-
     {% block js_pretrack %}{# include JavaScript that must be run pre GA tracking here #}{% endblock %}
-    {% block google_analytics %}
-      {% include 'includes/google-analytics.html' %}
-    {% endblock %}
   </head>
 
   <body {% if self.body_id() %}id="{% block body_id %}{% endblock %}" {% endif %}class="html-{{ DIR }} {% block body_class %}{% endblock %}" {% block body_attrs %}{% endblock %}>
@@ -82,12 +58,6 @@
       data-global-previous="{{ _('Previous') }}"
       data-global-update-firefox="{{ _('Update your Firefox') }}"
       {% block string_data %}{% endblock %}></div>
-
-    {% block global_nav %}
-      {% if LANG.startswith('en-') %}
-        {% include 'includes/global-nav.html' %}
-      {% endif %}
-    {% endblock %}
 
     <div id="outer-wrapper">
 
@@ -158,14 +128,6 @@
       {# for newsletters not to be confined by #wrapper #}
       {% block email_form_unwrapped %}{% endblock %}
 
-      {% block site_footer %}
-        {% if LANG.startswith('en-') %}
-          {% include 'includes/site-footer-new.html' %}
-        {% else %}
-          {% include 'includes/site-footer.html' %}
-        {% endif %}
-      {% endblock %}
-
     </div><!-- close #outer-wrapper -->
 
     <!--[if IE 9]>
@@ -173,7 +135,7 @@
     <![endif]-->
 
     {% block site_js %}
-      {% javascript 'common' %}
+      <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8"></script>
     {% endblock %}
 
     {% block js %}{% endblock %}

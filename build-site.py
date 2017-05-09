@@ -34,6 +34,7 @@ def high_res_img(ctx, url, optional_attributes=None):
 def platform_img(ctx, url, optional_attributes=None):
     return static(url)
 
+@jinja2.contextfunction
 def download_thunderbird(ctx, channel='release', dom_id=None,
                          locale=None, force_direct=False,
                          alt_copy=None, button_color='button-green'):
@@ -57,7 +58,7 @@ def build_site(lang):
     # Add l10n_css function to context
     site._env.globals.update(l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag,
                            static=static, url=url, high_res_img=high_res_img, platform_img=platform_img,
-                           download_thunderbird=download_thunderbird)
+                           download_thunderbird=download_thunderbird, settings=settings)
     site.render(use_reloader=False)
     #shutil.rmtree(renderpath+'/media', ignore_errors=True)
     #shutil.copytree(staticpath, renderpath+'/media')

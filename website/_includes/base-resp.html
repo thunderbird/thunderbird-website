@@ -2,7 +2,7 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "bedrock/base-resp.html" %}
+{% extends "_includes/bedrock/base-resp.html" %}
 
 {% block facebook_id %}348169218537151{# facebook.com/Thunderbird #}{% endblock %}
 {% block twitter_id %}mozthunderbird{% endblock %}
@@ -18,12 +18,6 @@
 
 {% block site_header %}
   <header id="masthead">
-
-  {% block tabzilla_tab %}
-    <div id="tabzilla">
-      <a href="{{ url('mozorg.home') }}" data-link-type="nav" data-link-name="tabzilla">Mozilla</a>
-    </div>
-  {% endblock %}
 
   {% block site_header_nav %}
   <nav id="nav-main" role="navigation">
