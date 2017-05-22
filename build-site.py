@@ -60,8 +60,8 @@ def build_site(lang):
                            static=static, url=url, high_res_img=high_res_img, platform_img=platform_img,
                            download_thunderbird=download_thunderbird, settings=settings)
     site.render(use_reloader=False)
-    #shutil.rmtree(renderpath+'/media', ignore_errors=True)
-    #shutil.copytree(staticpath, renderpath+'/media')
+    shutil.rmtree(renderpath+'/media', ignore_errors=True)
+    shutil.copytree(staticpath, renderpath+'/media')
 
 build_site('en-US')
 
