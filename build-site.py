@@ -19,8 +19,8 @@ cssout = renderpath+'/media/css'
 
 def build_assets():
     env = webassets.Environment(load_path=[settings.ASSETS], directory=cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
-    sandstone_css = webassets.Bundle('less/sandstone/sandstone-resp.less', filters='less', output='responsive-bundle.css')
-    tb_landing_css = webassets.Bundle('less/thunderbird/landing.less', filters='less', output='thunderbird-landing.css')
+    sandstone_css = webassets.Bundle('less/sandstone/sandstone-resp.less', 'less/base/global-nav.less', filters='less', output='responsive-bundle.css')
+    tb_landing_css = webassets.Bundle('less/thunderbird/landing.less', 'less/base/menu-resp.less', filters='less', output='thunderbird-landing.css')
     env.register('responsive-bundle', sandstone_css)
     env.register('thunderbird-landing', tb_landing_css)
     env['responsive-bundle'].urls()
