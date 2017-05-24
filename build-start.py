@@ -63,9 +63,11 @@ def build_site(lang):
     site.render(use_reloader=False)
     shutil.rmtree(renderpath+'/media', ignore_errors=True)
     shutil.copytree(staticpath, renderpath+'/media')
-    build_assets()
+
 
 build_site('en-US')
 
 for lang in PROD_LANGUAGES:
     build_site(lang)
+
+build_assets()
