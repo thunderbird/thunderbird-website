@@ -1,7 +1,9 @@
 from staticjinja import make_site
 import os
 import shutil
+import settings
 import translate
+import webassets
 
 extensions = ['jinja2.ext.i18n']
 PROD_LANGUAGES = ('ach', 'af', 'an', 'ar', 'as', 'ast', 'az', 'be', 'bg',
@@ -26,7 +28,14 @@ searchpath = 'start-page'
 staticpath = 'start-page/_media'
 # path to render the finished site to
 renderpath = 'site'
+# path to compile CSS to
+cssout = renderpath+'/media/css'
 
+def build_assets():
+    env = webassets.Environment(load_path=[settings.ASSETS], directory=cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
+    start_css = webassets.Bundle('less/thunderbird/start.less', filters='less', output='start-style.css')
+    env.register('start-style', start_css)
+    env['start-style'].urls()
 
 def text_dir(lang):
     textdir = 'ltr'
@@ -54,6 +63,7 @@ def build_site(lang):
     site.render(use_reloader=False)
     shutil.rmtree(renderpath+'/media', ignore_errors=True)
     shutil.copytree(staticpath, renderpath+'/media')
+    build_assets()
 
 build_site('en-US')
 

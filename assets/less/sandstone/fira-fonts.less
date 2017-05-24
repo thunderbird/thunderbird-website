@@ -1,0 +1,62 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+/*! updated 2016-12-28 */
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('/media/fonts/FiraSans-Regular.woff2') format('woff2'),
+         url('/media/fonts/FiraSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('/media/fonts/FiraSans-Bold.woff2') format('woff2'),
+         url('/media/fonts/FiraSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fira Sans Light';
+    src: url('/media/fonts/FiraSans-Light.woff2') format('woff2'),
+         url('/media/fonts/FiraSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fira Sans Light';
+    src: url('/media/fonts/FiraSans-SemiBold.woff2') format('woff2'),
+         url('/media/fonts/FiraSans-SemiBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fira Sans Light';
+    src: url('/media/fonts/FiraSans-LightItalic.woff2') format('woff2'),
+         url('/media/fonts/FiraSans-LightItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@baseFiraFontFamily: 'Fira Sans', X-LocaleSpecific, sans-serif;
+
+.fira-sans() {
+    font-family: @baseFiraFontFamily;
+}
+
+.fira-sans-light() {
+    font-family: 'Fira Sans Light', X-LocaleSpecific-Light, @baseFiraFontFamily;
+    font-weight: normal;
+}
+
+.fira-sans-light-italic() {
+    font-family: 'Fira Sans Light', X-LocaleSpecific-Light, @baseFiraFontFamily;
+    font-weight: normal;
+    font-style: italic;
+}

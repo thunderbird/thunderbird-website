@@ -20,3 +20,9 @@ PAGE_LINKS = {'thunderbird.channel':'',
               'thunderbird.organizations':'',
               'mozorg.home':''}
 CANONICAL_URL = 'https://www.thunderbird.net'
+
+# path for assets that need processing, like LESS and js
+ASSETS = 'assets'
+
+# base url for media files
+MEDIA_URL = '/media'

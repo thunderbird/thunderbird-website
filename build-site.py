@@ -4,6 +4,7 @@ import os
 import shutil
 import settings
 import translate
+import webassets
 
 extensions = ['jinja2.ext.i18n']
 
@@ -13,6 +14,17 @@ searchpath = 'website'
 staticpath = 'website/_media'
 # path to render the finished site to
 renderpath = 'thunderbird.net'
+# path to compile CSS to
+cssout = renderpath+'/media/css'
+
+def build_assets():
+    env = webassets.Environment(load_path=[settings.ASSETS], directory=cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
+    sandstone_css = webassets.Bundle('less/sandstone/sandstone-resp.less', filters='less', output='responsive-bundle.css')
+    tb_landing_css = webassets.Bundle('less/thunderbird/landing.less', filters='less', output='thunderbird-landing.css')
+    env.register('responsive-bundle', sandstone_css)
+    env.register('thunderbird-landing', tb_landing_css)
+    env['responsive-bundle'].urls()
+    env['thunderbird-landing'].urls()
 
 def text_dir(lang):
     textdir = 'ltr'
@@ -42,7 +54,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
 
 def build_site(lang):
     context = {'LANG': lang,
-             'DIR': text_dir(lang) }
+               'DIR': text_dir(lang) }
 
     outpath = os.path.join(renderpath, lang)
     if not os.path.exists(outpath):
@@ -62,6 +74,7 @@ def build_site(lang):
     site.render(use_reloader=False)
     shutil.rmtree(renderpath+'/media', ignore_errors=True)
     shutil.copytree(staticpath, renderpath+'/media')
+    build_assets()
 
 build_site('en-US')
 
