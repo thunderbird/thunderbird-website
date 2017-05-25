@@ -2,6 +2,7 @@
 
 import codecs
 import os
+import settings
 import re
 import requests
 import requests_cache
@@ -161,10 +162,10 @@ class Translation(object):
         return translations
 
     def l10n_css(self):
-        path = os.path.join('start-page', '_media', 'css', 'l10n', self.locale)
+        path = os.path.join(settings.MEDIA_URL.strip('/'), 'css', 'l10n', self.locale)
         markup = ''
         if os.path.exists(path):
-            url = '/media/css/l10n/{0}/intl.css'.format(self.locale)
+            url = settings.MEDIA_URL + '/css/l10n/{0}/intl.css'.format(self.locale)
             markup = ('<link rel="stylesheet" media="screen,projection,tv" href='
                       '"{0}">'.format(url))
 

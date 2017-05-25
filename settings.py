@@ -14,6 +14,9 @@ PROD_LANGUAGES = ('ach', 'af', 'an', 'ar', 'as', 'ast', 'az', 'be', 'bg',
 
 LANGUAGES_BIDI = ('he', 'ar', 'fa', 'ur')
 
+#default language
+LANGUAGE_CODE = 'en-US'
+
 PAGE_LINKS = {'thunderbird.channel':'',
               'thunderbird.features':'',
               'thunderbird.index':'',
