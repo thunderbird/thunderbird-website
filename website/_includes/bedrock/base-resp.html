@@ -128,6 +128,11 @@
       {# for newsletters not to be confined by #wrapper #}
       {% block email_form_unwrapped %}{% endblock %}
 
+      {% block site_footer %}
+          {% include '_includes/site-footer.html' %}
+      {% endblock %}
+
+
     </div><!-- close #outer-wrapper -->
 
     <!--[if IE 9]>

@@ -162,4 +162,39 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
       return ''
 
 
+@jinja2.contextfunction
+def donate_url(ctx, source=''):
+    """Output a donation link to the donation page formatted using settings.DONATE_PARAMS
+
+    Examples
+    ========
+
+    In Template
+    -----------
+
+        {{ donate_url() }}
+
+    For en-US this would output:
+
+        https://donate.mozilla.org/en-US/?presets=100,50,25,15&amount=50&ref=EOYFR2015&utm_campaign=EOYFR2015&utm_source=mozilla.org&utm_medium=referra$
+
+    For de this would output:
+
+        https://donate.mozilla.org/de/?presets=100,50,25,15&amount=50&ref=EOYFR2015&utm_campaign=EOYFR2015&utm_source=mozilla.org&utm_medium=referral&u$
+
+    For a locale not defined in settings.DONATE this would output:
+
+        https://donate.mozilla.org/ca/?presets=100,50,25,15&amount=50&ref=EOYFR2015&utm_campaign=EOYFR2015&utm_source=mozilla.org&utm_medium=referral&u$
+
+    """
+    locale = ctx.get('LANG', None)
+
+    donate_url_params = settings.DONATE_PARAMS.get(
+        locale, settings.DONATE_PARAMS['en-US'])
+
+    return settings.DONATE_LINK.format(locale=locale, presets=donate_url_params['presets'],
+        default=donate_url_params['default'], source=source,
+        currency=donate_url_params['currency'])
+
+
 contextfunctions = dict(inspect.getmembers(sys.modules[__name__], inspect.isfunction))
