@@ -65,6 +65,7 @@ def build_site(lang):
     shutil.copytree(staticpath, renderpath+'/media')
     build_assets()
 
+
 build_site(settings.LANGUAGE_CODE)
 
 #for lang in settings.PROD_LANGUAGES:

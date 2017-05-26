@@ -11,6 +11,7 @@ def static(filepath):
 
 
 def url(key):
+    # TODO: needs to contain mappings for stuff like url('thunderbird.channel')
     return ''
 
 
@@ -115,7 +116,43 @@ def high_res_img(ctx, url, optional_attributes=None):
 
 @jinja2.contextfunction
 def platform_img(ctx, url, optional_attributes=None):
-    return static(url)
+    optional_attributes = optional_attributes or {}
+    img_urls = {}
+    platforms = optional_attributes.pop('platforms', settings.ALL_PLATFORMS)
+    add_high_res = optional_attributes.pop('high-res', False)
+    is_l10n = optional_attributes.pop('l10n', False)
+
+    for platform in platforms:
+        img_urls[platform] = add_string_to_image_url(url, platform)
+        if add_high_res:
+            img_urls[platform + '-high-res'] = convert_to_high_res(img_urls[platform])
+
+    img_attrs = {}
+    for platform, image in img_urls.iteritems():
+        if is_l10n:
+            image = l10n_img_file_name(ctx, image)
+        else:
+            image = path.join('img', image)
+
+        if path.exists(path.join(settings.MEDIA_URL.strip('/'), image)):
+            key = 'data-src-' + platform
+            img_attrs[key] = static(image)
+
+    if add_high_res:
+        img_attrs['data-high-res'] = 'true'
+
+    img_attrs.update(optional_attributes)
+    attrs = ' '.join('%s="%s"' % (attr, val)
+                     for attr, val in img_attrs.iteritems())
+
+    # Don't download any image until the javascript sets it based on
+    # data-src so we can do platform detection. If no js, show the
+    # windows version.
+    markup = ('<img class="platform-img js" src="" data-processed="false" {attrs}>'
+              '<noscript><img class="platform-img win" src="{win_src}" {attrs}>'
+              '</noscript>').format(attrs=attrs, win_src=img_attrs['data-src-windows'])
+
+    return jinja2.Markup(markup)
 
 
 @jinja2.contextfunction

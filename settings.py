@@ -29,3 +29,5 @@ ASSETS = 'assets'
 
 # base url for media files
 MEDIA_URL = '/media'
+
+ALL_PLATFORMS = ('windows', 'linux', 'mac')
