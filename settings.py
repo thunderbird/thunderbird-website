@@ -34,9 +34,9 @@ MEDIA_URL = '/media'
 
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
-DONATE_LINK = ('https://donate.mozilla.org/{locale}/?presets={presets}'
+DONATE_LINK = ('https://donate.mozilla.org/{locale}/thunderbird/?presets={presets}'
     '&amount={default}&ref=EOYFR2015&utm_campaign=EOYFR2015'
-    '&utm_source=mozilla.org&utm_medium=referral&utm_content={source}'
+    '&utm_source=thunderbird.net&utm_medium=referral&utm_content={source}'
     '&currency={currency}')
 
 DONATE_PARAMS = {
