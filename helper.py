@@ -11,8 +11,8 @@ def static(filepath):
 
 
 def url(key):
-    # TODO: needs to contain mappings for stuff like url('thunderbird.channel')
-    return ''
+    return "{0}{1}".format(settings.CANONICAL_URL, settings.URL_MAPPINGS.get(key, ''))
+
 
 
 def _l10n_media_exists(type, locale, url):
@@ -159,8 +159,7 @@ def platform_img(ctx, url, optional_attributes=None):
 def download_thunderbird(ctx, channel='release', dom_id=None,
                          locale=None, force_direct=False,
                          alt_copy=None, button_color='button-green'):
-      return ''
-
+    return ''
 
 @jinja2.contextfunction
 def donate_url(ctx, source=''):

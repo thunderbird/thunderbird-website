@@ -34,6 +34,10 @@ MEDIA_URL = '/media'
 
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
+URL_MAPPINGS = {'thunderbird.features': '/features',
+                         'thunderbird.channel': 'https://www.mozilla.org/thunderbird/channel',
+                         'thunderbird.organizations': 'https://www.mozilla.org/thunderbird/organizations'}
+
 DONATE_LINK = ('https://donate.mozilla.org/{locale}/thunderbird/?presets={presets}'
     '&amount={default}&ref=EOYFR2015&utm_campaign=EOYFR2015'
     '&utm_source=thunderbird.net&utm_medium=referral&utm_content={source}'
