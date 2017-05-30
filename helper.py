@@ -9,10 +9,9 @@ import sys
 def static(filepath):
     return path.join(settings.MEDIA_URL, filepath)
 
-
-def url(key):
-    return "{0}{1}".format(settings.CANONICAL_URL, settings.URL_MAPPINGS.get(key, ''))
-
+@jinja2.contextfunction
+def url(ctx, key):
+    return "{0}{1}{2}".format(settings.CANONICAL_URL, ctx['LANG'], settings.URL_MAPPINGS.get(key, ''))
 
 
 def _l10n_media_exists(type, locale, url):
