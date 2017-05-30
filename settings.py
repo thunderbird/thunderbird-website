@@ -24,7 +24,7 @@ PAGE_LINKS = {'thunderbird.channel':'',
               'thunderbird.index':'',
               'thunderbird.organizations':'',
               'mozorg.home':''}
-CANONICAL_URL = 'https://www.thunderbird.net'
+CANONICAL_URL = 'https://stage.thunderbird.net'
 
 # path for assets that need processing, like LESS and js
 ASSETS = 'assets'
@@ -35,8 +35,8 @@ MEDIA_URL = '/media'
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
 URL_MAPPINGS = {'thunderbird.features': '/features',
-                         'thunderbird.channel': 'https://www.mozilla.org/thunderbird/channel',
-                         'thunderbird.organizations': 'https://www.mozilla.org/thunderbird/organizations'}
+                'thunderbird.channel': '/channel',
+                'thunderbird.organizations': '/organizations'}
 
 DONATE_LINK = ('https://donate.mozilla.org/{locale}/thunderbird/?presets={presets}'
     '&amount={default}&ref=EOYFR2015&utm_campaign=EOYFR2015'

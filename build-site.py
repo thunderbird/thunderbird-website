@@ -55,11 +55,11 @@ def build_site(lang):
         os.makedirs(outpath)
     site = make_site(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
 
-    translator = translate.Translation(lang, ['thunderbird/index', 'main'])
+    translator = translate.Translation(lang, ['thunderbird/index', 'thunderbird/features', 'main'])
     site._env.install_gettext_translations(translator)
 
     def l10n_has_tag(tag):
-        return tag in translator.lang_file_tag_set('thunderbird/index', lang)
+        return tag in translator.lang_file_tag_set('thunderbird/features', lang)
 
     # Add l10n_css function to context
     site._env.globals.update(l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag, settings=settings, **helper.contextfunctions)
