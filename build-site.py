@@ -39,13 +39,6 @@ def text_dir(lang):
     return textdir
 
 
-@jinja2.contextfunction
-def download_thunderbird(ctx, channel='release', dom_id=None,
-                         locale=None, force_direct=False,
-                         alt_copy=None, button_color='button-green'):
-      return ''
-
-
 def build_site(lang):
     context = {'LANG': lang,
                'DIR': text_dir(lang) }

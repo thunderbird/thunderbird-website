@@ -1,17 +1,19 @@
 from os import path
 from os.path import splitext
+from product_details import thunderbird_desktop
 
 import inspect
 import jinja2
 import settings
 import sys
+import translate
 
 def static(filepath):
     return path.join(settings.MEDIA_URL, filepath)
 
 @jinja2.contextfunction
 def url(ctx, key):
-    return "{0}{1}{2}".format(settings.CANONICAL_URL, ctx['LANG'], settings.URL_MAPPINGS.get(key, ''))
+    return "{0}/{1}{2}".format(settings.CANONICAL_URL, ctx['LANG'], settings.URL_MAPPINGS.get(key, ''))
 
 
 def _l10n_media_exists(type, locale, url):
@@ -158,7 +160,101 @@ def platform_img(ctx, url, optional_attributes=None):
 def download_thunderbird(ctx, channel='release', dom_id=None,
                          locale=None, force_direct=False,
                          alt_copy=None, button_color='button-green'):
-    return ''
+    """ Output a "Download Thunderbird" button.
+
+    :param ctx: context from calling template.
+    :param channel: name of channel: 'release', 'beta' or 'alpha'.
+    :param dom_id: Use this string as the id attr on the element.
+    :param locale: The locale of the download. Default to locale of request.
+    :param force_direct: Force the download URL to be direct.
+    :param alt_copy: Specifies alternate copy to use for download buttons.
+    :param button_color: color of download button. Default to 'green'.
+    :return: The button html.
+    """
+    alt_channel = '' if channel == 'release' else channel
+    locale = ctx.get('LANG', None)
+    dom_id = dom_id or 'download-button-desktop-%s' % channel
+
+    l_version = thunderbird_desktop.latest_builds(locale, channel)
+    if l_version:
+        version, platforms = l_version
+    else:
+        locale = 'en-US'
+        version, platforms = thunderbird_desktop.latest_builds('en-US', channel)
+
+    # Gather data about the build for each platform
+    builds = []
+
+    for plat_os, plat_os_pretty in thunderbird_desktop.platform_labels.iteritems():
+        # And generate all the info
+        download_link = thunderbird_desktop.get_download_url(
+            channel, version, plat_os, locale,
+            force_direct=force_direct,
+        )
+
+        # If download_link_direct is False the data-direct-link attr
+        # will not be output, and the JS won't attempt the IE popup.
+        if force_direct:
+            # no need to run get_download_url again with the same args
+            download_link_direct = False
+        else:
+            download_link_direct = thunderbird_desktop.get_download_url(
+                channel, version, plat_os, locale,
+                force_direct=True,
+            )
+            if download_link_direct == download_link:
+                download_link_direct = False
+
+        builds.append({'os': plat_os,
+                       'os_pretty': plat_os_pretty,
+                       'download_link': download_link,
+                       'download_link_direct': download_link_direct})
+
+    # Get the native name for current locale
+    langs = thunderbird_desktop.languages
+    locale_name = langs[locale]['native'] if locale in langs else locale
+
+    data = {
+        'locale_name': locale_name,
+        'version': version,
+        'product': 'thunderbird',
+        'builds': builds,
+        'id': dom_id,
+        'channel': alt_channel,
+        'alt_copy': alt_copy,
+        'button_color': button_color,
+    }
+    loader = jinja2.FileSystemLoader(searchpath=settings.WEBSITE_PATH)
+    env = jinja2.Environment(loader=loader, extensions=['jinja2.ext.i18n'])
+    translator = translate.Translation(locale, ['download_button', 'main'])
+    env.install_gettext_translations(translator)
+    env.globals.update(**ctx)
+    template = env.get_template('_includes/download-button.html')
+
+    html = template.render(data)
+    return jinja2.Markup(html)
+
+def thunderbird_url(page, channel=None):
+        """
+        Return a product-related URL like /thunderbird/all/ or /thunderbird/beta/notes/.
+        page = ('sysreq', 'all', 'notes')
+        channel = ('beta', 'release')
+        Examples:
+            {{ thunderbird_url('all', 'beta') }}
+            {{ thunderbird_url('sysreq', channel) }}
+        """
+
+        kwargs = {}
+
+        if channel == 'alpha':
+            channel = 'earlybird'
+
+        url = '/thunderbird/{0}/{1}/'.format(channel, page)
+
+        if channel == 'release':
+            url = '/thunderbird/{0}/'.format(page)
+
+        return url
 
 @jinja2.contextfunction
 def donate_url(ctx, source=''):

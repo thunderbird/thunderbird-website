@@ -32,6 +32,11 @@ ASSETS = 'assets'
 # base url for media files
 MEDIA_URL = '/media'
 
+WEBSITE_PATH = 'website/'
+
+#path to product-details json files
+JSON_PATH = 'product-details-json/product-details/'
+
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
 URL_MAPPINGS = {'thunderbird.features': '/features',
