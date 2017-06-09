@@ -234,7 +234,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     html = template.render(data)
     return jinja2.Markup(html)
 
-def thunderbird_url(page, channel=None):
+def thunderbird_url(page, channel='None'):
         """
         Return a product-related URL like /thunderbird/all/ or /thunderbird/beta/notes/.
         page = ('sysreq', 'all', 'notes')
@@ -251,7 +251,7 @@ def thunderbird_url(page, channel=None):
 
         url = '/thunderbird/{0}/{1}/'.format(channel, page)
 
-        if channel == 'release':
+        if channel == 'release' or not channel:
             url = '/thunderbird/{0}/'.format(page)
 
         return url
