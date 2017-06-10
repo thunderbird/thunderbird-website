@@ -19,17 +19,20 @@ renderpath = 'thunderbird.net'
 # path to compile CSS to
 cssout = renderpath+'/media/css'
 
+css_bundles = [{'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less']},
+               {'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less']},
+               {'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less']},
+               {'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less']},
+               {'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less']},
+               ]
+
 def build_assets():
     env = webassets.Environment(load_path=[settings.ASSETS], directory=cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
-    sandstone_css = webassets.Bundle('less/sandstone/sandstone-resp.less', 'less/base/global-nav.less', filters='less', output='responsive-bundle.css')
-    tb_landing_css = webassets.Bundle('less/thunderbird/landing.less', 'less/base/menu-resp.less', filters='less', output='thunderbird-landing.css')
-    tb_features_css = webassets.Bundle('less/thunderbird/features.less', 'less/base/menu-resp.less', filters='less', output='thunderbird-features.css')
-    env.register('responsive-bundle', sandstone_css)
-    env.register('thunderbird-landing', tb_landing_css)
-    env.register('thunderbird-features', tb_features_css)
-    env['responsive-bundle'].urls()
-    env['thunderbird-landing'].urls()
-    env['thunderbird-features'].urls()
+    for bundle in css_bundles:
+        k, v = bundle.popitem()
+        reg = webassets.Bundle(*v, filters='less', output=k+'.css')
+        env.register(k, reg)
+        env[k].urls()
 
 
 def text_dir(lang):
@@ -48,7 +51,7 @@ def build_site(lang):
         os.makedirs(outpath)
     site = make_site(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
 
-    translator = translate.Translation(lang, ['thunderbird/index', 'thunderbird/features', 'main'])
+    translator = translate.Translation(lang, ['thunderbird/index', 'thunderbird/features', 'thunderbird/channel', 'main'])
     site._env.install_gettext_translations(translator)
 
     def l10n_has_tag(tag):
