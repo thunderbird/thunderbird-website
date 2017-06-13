@@ -63,6 +63,7 @@ class ThunderbirdDetails():
         builds = self.all_builds
 
         for locale, build in builds.iteritems():
+
             if locale not in self.languages or not build.get(_version):
                 continue
 
@@ -82,7 +83,7 @@ class ThunderbirdDetails():
 
             f_builds.append(build_info)
 
-            return sorted(f_builds, key=itemgetter('name_en'))
+        return sorted(f_builds, key=itemgetter('name_en'))
 
     def get_download_url(self, channel, version, plat_os, locale, force_direct=False):
         return 'https://download.mozilla.org/?product=thunderbird-52.1.1-SSL&os={0}&lang=en-US'.format(plat_os)
