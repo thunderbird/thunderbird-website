@@ -1,7 +1,9 @@
  # -*- coding: utf-8 -*-
 
 from collections import OrderedDict
+from operator import itemgetter
 from urllib import urlencode
+
 import json
 import os
 import settings
@@ -54,6 +56,34 @@ class ThunderbirdDetails():
             return version, _builds
 
 
+    def get_filtered_full_builds(self, channel, version):
+        version = version or self.latest_version(channel)
+        _version = self.latest_version('release')
+        f_builds = []
+        builds = self.all_builds
+
+        for locale, build in builds.iteritems():
+            if locale not in self.languages or not build.get(_version):
+                continue
+
+            build_info = {
+                'locale': locale,
+                'name_en': self.languages[locale]['English'],
+                'name_native': self.languages[locale]['native'],
+                'platforms': {},
+            }
+
+            for platform, label in self.platform_labels.iteritems():
+                build_info['platforms'][platform] = {
+                    'download_url': self.get_download_url(channel, version,
+                                                          platform, locale,
+                                                          True),
+                }
+
+            f_builds.append(build_info)
+
+            return sorted(f_builds, key=itemgetter('name_en'))
+
     def get_download_url(self, channel, version, plat_os, locale, force_direct=False):
         return 'https://download.mozilla.org/?product=thunderbird-52.1.1-SSL&os={0}&lang=en-US'.format(plat_os)
 
@@ -78,5 +108,8 @@ class ThunderbirdDetails():
                              # Order matters, lang must be last for bouncer.
                              ('lang', _locale),
                          ])])
+
+    def platforms(self, channel='release'):
+        return self.platform_labels.items()
 
 thunderbird_desktop = ThunderbirdDetails()

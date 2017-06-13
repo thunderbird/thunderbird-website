@@ -24,6 +24,7 @@ css_bundles = [{'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'les
                {'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less']},
                {'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less']},
                {'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less']},
+               {'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less']},
                ]
 
 def build_assets():
@@ -43,8 +44,16 @@ def text_dir(lang):
 
 
 def build_site(lang):
+    version = helper.thunderbird_desktop.latest_version('release')
     context = {'LANG': lang,
-               'DIR': text_dir(lang) }
+               'DIR': text_dir(lang),
+               'platform': 'desktop',
+               'query': '',
+               'platforms': helper.thunderbird_desktop.platforms('release'),
+               'full_builds_version': version.split('.', 1)[0],
+               'full_builds': helper.thunderbird_desktop.get_filtered_full_builds('release', helper.thunderbird_desktop.latest_version()),
+               'channel_label': 'Thunderbird',
+                }
 
     outpath = os.path.join(renderpath, lang)
     if not os.path.exists(outpath):
