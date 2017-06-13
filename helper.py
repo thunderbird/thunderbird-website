@@ -249,10 +249,10 @@ def thunderbird_url(page, channel='None'):
         if channel == 'alpha':
             channel = 'earlybird'
 
-        url = '/thunderbird/{0}/{1}/'.format(channel, page)
+        url = '/en-US/thunderbird/{0}/{1}/'.format(channel, page)
 
         if channel == 'release' or not channel:
-            url = '/thunderbird/{0}/'.format(page)
+            url = '/en-US/thunderbird/{0}/'.format(page)
 
         return url
 
