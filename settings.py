@@ -24,8 +24,10 @@ PAGE_LINKS = {'thunderbird.channel':'',
               'thunderbird.index':'',
               'thunderbird.organizations':'',
               'mozorg.home':''}
+
 CANONICAL_URL = 'https://stage.thunderbird.net'
 
+BOUNCER_URL = 'https://download.mozilla.org/'
 # path for assets that need processing, like LESS and js
 ASSETS = 'assets'
 

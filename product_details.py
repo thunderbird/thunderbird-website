@@ -1,6 +1,7 @@
  # -*- coding: utf-8 -*-
 
 from collections import OrderedDict
+from urllib import urlencode
 import json
 import os
 import settings
@@ -56,5 +57,26 @@ class ThunderbirdDetails():
     def get_download_url(self, channel, version, plat_os, locale, force_direct=False):
         return 'https://download.mozilla.org/?product=thunderbird-52.1.1-SSL&os={0}&lang=en-US'.format(plat_os)
 
+
+    def get_download_url(self, channel, version, platform, locale, force_direct=True):
+        _version = version
+        _locale = 'ja-JP-mac' if platform == 'osx' and locale == 'ja' else locale
+        _platform = 'win' if platform == 'winsha1' else platform
+
+        # Check if direct download link has been requested
+        # (bypassing the transition page)
+        if not force_direct:
+            # Currently we don't have the transition page for Thunderbird, so
+            # return a direct link instead
+            pass
+
+        # build a direct download link
+        return '?'.join([settings.BOUNCER_URL,
+                         urlencode([
+                             ('product', 'thunderbird-%s-SSL' % _version),
+                             ('os', _platform),
+                             # Order matters, lang must be last for bouncer.
+                             ('lang', _locale),
+                         ])])
 
 thunderbird_desktop = ThunderbirdDetails()
