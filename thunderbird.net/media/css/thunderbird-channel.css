@@ -25,9 +25,8 @@ main .row {
 }
 main section {
   overflow: hidden;
-  float: left;
-  width: 460px;
-  margin: 0 10px;
+  width: 45%;
+  margin: 0 auto;
 }
 main header {
   overflow: hidden;
@@ -53,7 +52,7 @@ main header li {
 main .download-box {
   text-align: center;
 }
-/* Tablet & Mobile Layout: 760px */
+/* Tablet Layout: <1000px */
 @media only screen and (max-width: 1000px) {
   main header {
     text-align: center;
@@ -67,15 +66,7 @@ main .download-box {
     margin: 0 0 20px;
   }
 }
-/* Tablet Layout: 760px */
-@media only screen and (min-width: 760px) and (max-width: 1000px) {
-  main section {
-    float: left;
-    width: 340px;
-    margin: 0 10px;
-  }
-}
-/* Mobile & Wide Mobile layout: 480px */
+/* Mobile & Wide Mobile layout: <760px */
 @media only screen and (max-width: 760px) {
   #main-feature h1 {
     font-size: 48px;
