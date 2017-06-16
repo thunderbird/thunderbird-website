@@ -1,12 +1,15 @@
 # coding=utf-8
 
+from product_details import thunderbird_desktop as product_details
+from jinja2 import Markup
+
 import codecs
 import os
 import settings
 import re
 import requests
 import requests_cache
-from jinja2 import Markup
+
 
 def strip_whitespace(message):
     """Collapses all whitespace into single spaces.
@@ -140,22 +143,20 @@ class Translation(object):
 
         return tag_set
 
-    def get_translations_for_langfile(self, langfile):
+    def get_translations(self):
         """
         Return the list of available translations for the langfile.
         :param langfile: the path to a lang file, retrieved with get_lang_path()
         :return: dict, like {'en-US': 'English (US)', 'fr': 'Français'}
         """
-        cache_key = 'translations:%s' % langfile
+        cache_key = 'translations'
         translations = self.cache.get(cache_key, {})
 
         if translations:
             return translations
 
         for lang in settings.PROD_LANGUAGES:
-            if (lang in product_details.languages and
-                    (lang == settings.LANGUAGE_CODE or
-                     lang_file_is_active(langfile, lang))):
+            if (lang in product_details.languages):
                 translations[lang] = product_details.languages[lang]['native']
 
         self.cache[cache_key] = translations

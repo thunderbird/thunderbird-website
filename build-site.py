@@ -67,7 +67,7 @@ def build_site(lang):
         return tag in translator.lang_file_tag_set('thunderbird/features', lang)
 
     # Add l10n_css function to context
-    site._env.globals.update(l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag, settings=settings, **helper.contextfunctions)
+    site._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag, settings=settings, **helper.contextfunctions)
     site.render(use_reloader=False)
 
 
