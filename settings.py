@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+# Languages we build the site in.
 PROD_LANGUAGES = ('ach', 'af', 'an', 'ar', 'as', 'ast', 'az', 'be', 'bg',
                   'bn-BD', 'bn-IN', 'br', 'bs', 'ca', 'cak', 'cs',
                   'cy', 'da', 'de', 'dsb', 'el', 'en-GB', 'en-US',
@@ -14,10 +15,27 @@ PROD_LANGUAGES = ('ach', 'af', 'an', 'ar', 'as', 'ast', 'az', 'be', 'bg',
                   'sr', 'sv-SE', 'ta', 'te', 'th', 'tr', 'uk', 'ur',
                   'uz', 'vi', 'xh', 'zh-CN', 'zh-TW', 'zu')
 
+# Languages that require RTL support.
 LANGUAGES_BIDI = ('he', 'ar', 'fa', 'ur')
 
 #default language
 LANGUAGE_CODE = 'en-US'
+
+# Map short locale names to long, preferred locale names. This
+# will be used in urlresolvers to determine the
+# best-matching locale from the user's Accept-Language header.
+CANONICAL_LOCALES = {
+    'en': 'en-US',
+    'es': 'es-ES',
+    'ja-jp-mac': 'ja',
+    'no': 'nb-NO',
+    'pt': 'pt-BR',
+    'sv': 'sv-SE',
+    'zh-hant': 'zh-TW',     # Bug 1263193
+    'zh-hant-tw': 'zh-TW',  # Bug 1263193
+    'zh-hk': 'zh-TW',       # Bug 1338072
+    'zh-hant-hk': 'zh-TW',  # Bug 1338072
+}
 
 PAGE_LINKS = {'thunderbird.channel':'',
               'thunderbird.features':'',
