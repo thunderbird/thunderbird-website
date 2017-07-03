@@ -7,9 +7,6 @@ import codecs
 import os
 import settings
 import re
-import requests
-import requests_cache
-
 
 def strip_whitespace(message):
     """Collapses all whitespace into single spaces.
