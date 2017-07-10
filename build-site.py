@@ -25,6 +25,7 @@ css_bundles = [{'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'les
                {'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less']},
                {'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less']},
                {'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less']},
+               {'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less']},
                ]
 
 def build_assets():
