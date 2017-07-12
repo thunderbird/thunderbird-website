@@ -12,13 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>Thunderbird — 52.0.1 System Requirements — Mozilla</title>
+    <title>Thunderbird — Notes (52.0.1) — Mozilla</title>
     <meta name="description" content="">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Thunderbird">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
-    <meta property="og:title" content="Thunderbird — 52.0.1 System Requirements">
+    <meta property="og:title" content="Thunderbird — Notes (52.0.1)">
     <meta property="og:description" content="">
     <meta property="fb:page_id" content="348169218537151">
     <meta name="twitter:card" content="summary">
@@ -138,28 +138,160 @@
       
 
       
-  <header id="main-feature">
-    <h1>Thunderbird 52.0.1 System Requirements</h1>
-  </header>
+<main role="main">
+  <article id="main-content">
 
-  <div id="main-content">
-    <article class="main-column">
-        <p>Windows   Operating Systems
-<em> Windows XP SP3 * Windows Server 2003 SP1 * Windows Server 2003 R2 * Windows Server 2008 * Windows Server 2008 R2 * Windows Vista * Windows 7 * Windows 8 * Windows 10
-Please note that while the 32-bit and 64-bit versions of Windows Vista and Windows 7 can be used to run Thunderbird, only 32-bit builds of Thunderbird are supported at this time.
-Note that Thunderbird 52 is the last release to support Windows XP, Windows Server 2003, Windows Server 2003 R2, Windows 2008 and Windows Vista. Windows Recommended Hardware
-</em> Pentium 4 or newer processor that supports SSE2 * 1GB RAM * 200 MB hard drive space
-Mac Operating Systems
-<em> Mac OS X 10.9 * Mac OS X 10.10 * Mac OS X 10.11 * Mac OS X 10.12
-Recommended Hardware
-</em> Macintosh computer with an Intel x86 processor * 512 MB RAM * 200 MB hard drive space
-GNU/Linux Software Requirements
-Please note that Linux distributors may provide packages for your distribution which have different requirements. Software Requirements
-Please note that GNU/Linux distributors may provide packages for your distribution which have different requirements.
-<em> Thunderbird will not run at all without the following libraries or packages: <strong> GTK+ 3.4 or higher </strong> GLib 2.22 or higher <strong> Pango 1.14 or higher </strong> X.Org 1.0 or higher (1.7 or higher is recommended) <strong> libstdc++ 4.6.1 or higher </strong> PulseAudio   * For optimal functionality, we recommend the following libraries or packages: <strong> NetworkManager 0.7 or higher </strong> DBus 1.0 or higher </em>* GNOME 2.16 or higher</p>
-    </article>
-  </div>
   
+    <header class="notes-head">
+    <h1>Thunderbird  Notes</h1>
+    <h2>Version 52.0.1, first offered to  channel users on </h2>
+
+      <p>
+        Check out "What’s New" and "Known Issues" for this version of Thunderbird below.
+      
+        As always, you’re encouraged to
+        <a href="https://support.mozilla.org/questions/new/thunderbird">tell us what you think</a>,
+        or <a href="https://bugzilla.mozilla.org/">file a bug in Bugzilla</a>.
+      
+      
+          If interested, please see the  <a href="https://bugzilla.mozilla.org/buglist.cgi?o1=equals&v1=54%2B&f1=cf_tracking_thunderbird_esr52&query_format=advanced&list_id=13634735">complete list of changes</a> in this release.
+      
+        <p><strong>System Requirements:
+• Window: Windows XP, Windows Server 2003 or later
+• Mac: Mac OS X 10.9 or later
+• Linux: GTK+ 3.4 or higher</strong>
+Details <a href="https://thunderbird.net/en-US/thunderbird/52.0/system-requirements/">here</a>.</p>
+<p><strong>Please refer to <a href="https://thunderbird.net/en-US/thunderbird/52.0/releasenotes/">Release Notes for version 52.0</a> to see the list of improvements and fixed issues.</strong></p>
+      </p>
+    </header>
+  
+
+    <div class="main-column">
+      
+      <section class="notes-section" id="new-features">
+        <h3>What’s New</h3>
+        <ul class="section-items tagged">
+          
+          <li  id="note-">
+            
+              <b class="tag tag-fixed">fixed</b>
+            
+              <p>Clicking on a link in an email may not open this link in the external browser.</p>
+          </li>
+          
+        </ul>
+      </section>
+      
+      
+      <section class="notes-section" id="known-issues">
+        <h3>Known Issues</h3>
+        <ul class="section-items tagged">
+          
+            <li id="note-">
+              <b class="tag tag-unresolved">unresolved</b>
+              <p>Large number of blank pages being printed under certain circumstances. <strong>To fix this problem</strong>, remove all printer specific preferences in the configuration editor.</p>
+            
+            </li>
+          
+            <li id="note-">
+              <b class="tag tag-unresolved">unresolved</b>
+              <p>Large attachments may not be shown or saved correctly if the message is stored in an IMAP folder which is not synchronized for offline use. <strong>Workaround</strong>: Set preference browser.cache.memory.max_entry_size to the value of -1 (unlimited) and create integer preference browser.cache.memory.capacity with the value of 200000 (200 MB, 25 MB per message).</p>
+            
+            </li>
+          
+            <li id="note-">
+              <b class="tag tag-unresolved">unresolved</b>
+              <p>Crash due to incompatibility with McAfee Anti-SPAM add-on. <strong>Workaround</strong>: Start in safe mode and disable McAfee Anti-Spam Extension.</p>
+            
+            </li>
+          
+            <li id="note-">
+              <b class="tag tag-unresolved">unresolved</b>
+              <p>Background images not working and other issues related to embedded images when composing email.</p>
+            
+            </li>
+          
+            <li id="note-">
+              <b class="tag tag-unresolved">unresolved</b>
+              <p>Crash when compacting IMAP folder.</p>
+            
+            </li>
+          
+        </ul>
+      </section>
+      
+    </div>
+
+  
+    <aside id="sidebar" class="sidebar">
+      <section id="try">
+        <h3>Try Thunderbird </h3>
+        <ol>
+          <li class="try1">
+            <a href="https://stage.thunderbird.net/en-US">
+              Check
+            </a>
+          </li>
+          <li class="try2">
+            <a href="">
+              Download
+            </a>
+          </li>
+          <li class="try3">
+            <a href="https://support.mozilla.org/kb/Installing%20Thunderbird">
+              Install
+            </a>
+          </li>
+          <li class="try4">
+            <a href="https://addons.mozilla.org/thunderbird/">
+              Customize
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <section id="get-involved">
+        <h3>Want to get involved?</h3>
+        <p>Did you know that most of the content in Thunderbird Support was written by volunteers?<br>
+        <a href="https://wiki.mozilla.org/Thunderbird#Contributing">Find out more</a></p>
+      </section>
+
+      <section id="problems">
+        <h3>Having Problems?</h3>
+        <ol>
+          <li>
+            <a href="">
+              Search for answers on the Thunderbird Support page
+            </a>
+          </li>
+          
+            <li>
+              <a href="#known-issues">
+                Look at the known issues list and see if we already know about the problem
+              </a>
+            </li>
+          
+          <li>
+            <a href="https://bugzilla.mozilla.org/enter_bug.cgi">
+              If you can’t find reference to your issue, please consider filing a technical bug report
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <section id="other">
+        <h3>Other Resources</h3>
+        <p>
+          <a href="https://blog.mozilla.com/thunderbird/">
+            The Thunderbird Blog
+          </a>
+        </p>
+      </section>
+    </aside>
+  
+
+  </article>
+</main>
 
 
       
