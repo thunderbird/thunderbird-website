@@ -54,14 +54,16 @@ MEDIA_URL = '/media'
 
 WEBSITE_PATH = 'website/'
 
-#path to product-details json files
+# path to product-details json files
 JSON_PATH = 'product-details-json/product-details/'
 
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
 URL_MAPPINGS = {'thunderbird.features': '/features',
                 'thunderbird.channel': '/channel',
-                'thunderbird.organizations': '/organizations'}
+                'thunderbird.organizations': '/organizations',
+                'thunderbird.index': '/',
+               }
 
 DONATE_LINK = ('https://donate.mozilla.org/{locale}/thunderbird/?presets={presets}'
     '&amount={default}&ref=EOYFR2015&utm_campaign=EOYFR2015'

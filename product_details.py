@@ -6,6 +6,7 @@ from urllib import urlencode
 
 import json
 import os
+import re
 import settings
 
 def load_json(path):
@@ -28,6 +29,10 @@ class ThunderbirdDetails():
     current_versions = load_json('thunderbird_versions.json')
 
     all_builds = load_json('thunderbird_primary_builds.json')
+
+    major_releases = load_json('thunderbird_history_major_releases.json')
+
+    minor_releases = load_json('thunderbird_history_stability_releases.json')
 
     version_map = {
         'alpha': 'LATEST_THUNDERBIRD_ALPHA_VERSION',
@@ -112,5 +117,27 @@ class ThunderbirdDetails():
 
     def platforms(self, channel='release'):
         return self.platform_labels.items()
+
+
+    def list_releases(self, channel='beta'):
+        version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_DEVEL_VERSION')
+        esr_major_versions = range(10, int(self.current_versions[version_name].split('.')[0]), 7)
+        releases = {}
+        for release in self.major_releases:
+            major_version = float(re.findall(r'^\d+\.\d+', release)[0])
+            # The version numbering scheme of Firefox changes sometimes. The second
+            # number has not been used since Firefox 4, then reintroduced with
+            # Firefox ESR 24 (Bug 870540). On this index page, 24.1.x should be
+            # fallen under 24.0. This pattern is a tricky part.
+            converter = '%g' if int(major_version) in esr_major_versions else '%s'
+            major_pattern = r'^' + re.escape(converter % round(major_version, 1))
+            releases[major_version] = {
+                'major': release,
+                'minor': sorted(filter(lambda x: re.findall(major_pattern, x),
+                                       self.minor_releases),
+                                key=lambda x: map(lambda y: int(y), x.split('.')))
+            }
+        return sorted(releases.items(), reverse=True)
+
 
 thunderbird_desktop = ThunderbirdDetails()

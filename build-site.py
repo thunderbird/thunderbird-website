@@ -1,5 +1,7 @@
+from thunderbird_notes import releasenotes
 from staticjinja import make_site
 
+import errno
 import helper
 import jinja2
 import os
@@ -26,7 +28,15 @@ css_bundles = [{'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'les
                {'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less']},
                {'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less']},
                {'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less']},
+               {'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less']},
                ]
+
+def mkdir(path):
+    try:
+        os.makedirs(path)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
 
 def build_assets():
     env = webassets.Environment(load_path=[settings.ASSETS], directory=cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
@@ -54,6 +64,7 @@ def build_site(lang):
                'full_builds_version': version.split('.', 1)[0],
                'full_builds': helper.thunderbird_desktop.get_filtered_full_builds('release', helper.thunderbird_desktop.latest_version()),
                'channel_label': 'Thunderbird',
+               'releases': helper.thunderbird_desktop.list_releases()
                 }
 
     outpath = os.path.join(renderpath, lang)
@@ -71,11 +82,37 @@ def build_site(lang):
     site._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag, settings=settings, **helper.contextfunctions)
     site.render(use_reloader=False)
 
+    # Render release notes and system requirements
+    if lang == settings.LANGUAGE_CODE:
+        notelist = releasenotes.notes
+        e = site._env
+        e.filters["markdown"] = helper.safe_markdown
+        e.filters["f"] = helper.f
+        e.filters["l10n_format_date"] = helper.l10n_format_date
+        template = e.get_template('_includes/release-notes.html')
+        e.globals.update(channel='Release', feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["feedback"])
+        for k, n in notelist.iteritems():
+            e.globals.update(**n)
+            target = os.path.join(outpath,'thunderbird', str(k), 'releasenotes')
+            mkdir(target)
+            with open(os.path.join(target, 'index.html'), "wb") as f:
+                print "Rendering {0}.../index.html".format(target)
+                o = template.render()
+                f.write(o.encode('utf8'))
+
+            target = os.path.join(outpath,'thunderbird', str(k), 'system-requirements')
+            mkdir(target)
+            newtemplate = e.get_template('_includes/system_requirements.html')
+            with open(os.path.join(target, 'index.html'), "wb") as f:
+                print "Rendering {0}/index.html...".format(target)
+                o = newtemplate.render()
+                f.write(o.encode('utf8'))
+
 
 build_site(settings.LANGUAGE_CODE)
 
-for lang in settings.PROD_LANGUAGES:
-      build_site(lang)
+#for lang in settings.PROD_LANGUAGES:
+ #   build_site(lang)
 
 shutil.rmtree(renderpath+'/media', ignore_errors=True)
 shutil.copytree(staticpath, renderpath+'/media')

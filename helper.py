@@ -4,6 +4,7 @@ from product_details import thunderbird_desktop
 
 import inspect
 import jinja2
+import markdown
 import settings
 import sys
 import translate
@@ -12,8 +13,10 @@ def static(filepath):
     return path.join(settings.MEDIA_URL, filepath)
 
 @jinja2.contextfunction
-def url(ctx, key):
+def url(ctx, key, *args):
     return "{0}/{1}{2}".format(settings.CANONICAL_URL, ctx['LANG'], settings.URL_MAPPINGS.get(key, ''))
+    if args[0] and key=='thunderbird.sysreq':
+        return "{0}/{1}{2}{3}{4}".format(settings.CANONICAL_URL, ctx['LANG'], '/thunderbird/', args[0], '/system-requirements/')
 
 
 def _l10n_media_exists(type, locale, url):
@@ -234,6 +237,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     html = template.render(data)
     return jinja2.Markup(html)
 
+
 def thunderbird_url(page, channel='None'):
         """
         Return a product-related URL like /thunderbird/all/ or /thunderbird/beta/notes/.
@@ -255,6 +259,7 @@ def thunderbird_url(page, channel='None'):
             url = '/en-US/thunderbird/{0}/'.format(page)
 
         return url
+
 
 @jinja2.contextfunction
 def donate_url(ctx, source=''):
@@ -289,6 +294,20 @@ def donate_url(ctx, source=''):
     return settings.DONATE_LINK.format(locale=locale, presets=donate_url_params['presets'],
         default=donate_url_params['default'], source=source,
         currency=donate_url_params['currency'])
+
+
+def safe_markdown(text):
+    if not text:
+        text = ''
+    return jinja2.Markup(markdown.markdown(text))
+
+
+def l10n_format_date(text):
+    return text
+
+
+def f(s, *args, **kwargs):
+    return s.format(*args, **kwargs)
 
 
 contextfunctions = dict(inspect.getmembers(sys.modules[__name__], inspect.isfunction))
