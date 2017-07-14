@@ -1,6 +1,3 @@
-from thunderbird_notes import releasenotes
-from staticjinja import make_site
-
 import errno
 import helper
 import jinja2
@@ -9,6 +6,10 @@ import shutil
 import settings
 import translate
 import webassets
+
+from dateutil.parser import parse
+from thunderbird_notes import releasenotes
+from staticjinja import make_site
 
 extensions = ['jinja2.ext.i18n']
 
@@ -82,7 +83,7 @@ def build_site(lang):
     site._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag, settings=settings, **helper.contextfunctions)
     site.render(use_reloader=False)
 
-    # Render release notes and system requirements
+    # Render release notes and system requirements for en-US only.
     if lang == settings.LANGUAGE_CODE:
         notelist = releasenotes.notes
         e = site._env
@@ -90,8 +91,14 @@ def build_site(lang):
         e.filters["f"] = helper.f
         e.filters["l10n_format_date"] = helper.l10n_format_date
         template = e.get_template('_includes/release-notes.html')
-        e.globals.update(channel='Release', feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["feedback"])
+        e.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
         for k, n in notelist.iteritems():
+            if 'beta' in k:
+                e.globals.update(channel='Beta')
+            else:
+                e.globals.update(channel='Release')
+            n["release"]["release_date"] = n["release"].get("release_date", helper.thunderbird_desktop.get_release_date(k))
+            n["release"]["release_date"] = parse(n["release"]["release_date"])
             e.globals.update(**n)
             target = os.path.join(outpath,'thunderbird', str(k), 'releasenotes')
             mkdir(target)

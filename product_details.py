@@ -140,4 +140,11 @@ class ThunderbirdDetails():
         return sorted(releases.items(), reverse=True)
 
 
+    def get_release_date(self, version):
+        date = self.major_releases.get(version, '')
+        if not date:
+            date = self.minor_releases.get(version, '')
+        return date
+
+
 thunderbird_desktop = ThunderbirdDetails()

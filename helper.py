@@ -1,13 +1,21 @@
-from os import path
-from os.path import splitext
-from product_details import thunderbird_desktop
-
 import inspect
 import jinja2
 import markdown
 import settings
 import sys
 import translate
+
+from babel.core import Locale, UnknownLocaleError
+from babel.dates import format_date
+from babel.numbers import format_number
+from os import path
+from os.path import splitext
+from product_details import thunderbird_desktop
+
+babel_format_locale_map = {
+    'hsb': 'de',
+    'dsb': 'de',
+}
 
 def static(filepath):
     return path.join(settings.MEDIA_URL, filepath)
@@ -302,8 +310,22 @@ def safe_markdown(text):
     return jinja2.Markup(markdown.markdown(text))
 
 
-def l10n_format_date(text):
-    return text
+def get_locale(lang):
+    """Return a babel Locale object for lang. defaults to LANGUAGE_CODE."""
+    lang = babel_format_locale_map.get(lang) or lang
+    try:
+        return Locale.parse(lang, sep='-')
+    except (UnknownLocaleError, ValueError):
+        return Locale(*settings.LANGUAGE_CODE.split('-'))
+
+@jinja2.filters.contextfilter
+def l10n_format_date(ctx, date, format='long'):
+    """
+    Formats a date according to the current locale. Wraps around
+    babel.dates.format_date.
+    """
+    lang = get_locale(ctx['LANG'])
+    return format_date(date, locale=lang, format=format)
 
 
 def f(s, *args, **kwargs):
