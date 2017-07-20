@@ -22,15 +22,15 @@ renderpath = 'thunderbird.net'
 # path to compile CSS to
 cssout = renderpath+'/media/css'
 
-css_bundles = [{'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less']},
-               {'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less']},
-               {'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less']},
-               {'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less']},
-               {'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less']},
-               {'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less']},
-               {'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less']},
-               {'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less']},
-               ]
+css_bundles = [ {'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less']},
+                {'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less']},
+                {'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less']},
+                {'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less']},
+                {'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less']},
+                {'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less']},
+                {'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less']},
+                {'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less']},
+              ]
 
 def mkdir(path):
     try:
@@ -115,12 +115,14 @@ def build_site(lang):
                 o = newtemplate.render()
                 f.write(o.encode('utf8'))
 
+# Rebuild whole site from scratch.
+shutil.rmtree(renderpath, ignore_errors=True)
 
+# en-US
 build_site(settings.LANGUAGE_CODE)
 
-#for lang in settings.PROD_LANGUAGES:
- #   build_site(lang)
+for lang in settings.PROD_LANGUAGES:
+    build_site(lang)
 
-shutil.rmtree(renderpath+'/media', ignore_errors=True)
 shutil.copytree(staticpath, renderpath+'/media')
 build_assets()
