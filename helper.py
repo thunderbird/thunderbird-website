@@ -1,6 +1,7 @@
 import inspect
 import jinja2
 import markdown
+import re
 import settings
 import sys
 import translate
@@ -247,26 +248,29 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
 
 
 def thunderbird_url(page, channel='None'):
-        """
-        Return a product-related URL like /thunderbird/all/ or /thunderbird/beta/notes/.
-        page = ('sysreq', 'all', 'notes')
-        channel = ('beta', 'release')
-        Examples:
-            {{ thunderbird_url('all', 'beta') }}
-            {{ thunderbird_url('sysreq', channel) }}
-        """
+    """
+    Return a product-related URL like /thunderbird/all/ or /thunderbird/beta/notes/.
+    page = ('sysreq', 'all', 'notes')
+    channel = ('beta', 'release')
+    Examples:
+        {{ thunderbird_url('all', 'beta') }}
+        {{ thunderbird_url('sysreq', channel) }}
+    """
 
-        kwargs = {}
+    channel = channel or 'release'
+    version = thunderbird_desktop.latest_version(channel)
+    # replace 'b1', 'b2' etc in beta version with just 'beta', since we don't generate
+    # new notes for each beta iteration.
+    version = re.sub(r"b[1-9]", "beta", version)
 
-        if channel == 'alpha':
-            channel = 'earlybird'
+    url = '/en-US/thunderbird/{0}/{1}/'.format(version, page)
 
+    if page == 'all':
         url = '/en-US/thunderbird/{0}/{1}/'.format(channel, page)
-
-        if channel == 'release' or not channel:
+        if channel == 'release':
             url = '/en-US/thunderbird/{0}/'.format(page)
 
-        return url
+    return url
 
 
 @jinja2.contextfunction

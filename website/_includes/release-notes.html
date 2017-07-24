@@ -92,12 +92,12 @@
         <h3>{{ _('Try Thunderbird %s')|format(channel_name) }}</h3>
         <ol>
           <li class="try1">
-            <a href="{{ url('thunderbird.sysreq', version) }}">
+            <a href="/thunderbird/{{version}}/system-requirements/">
               {{ _('Check') }}
             </a>
           </li>
           <li class="try2">
-            <a href="{{ download_url }}">
+            <a href="/">
               {{ _('Download') }}
             </a>
           </li>
@@ -124,7 +124,7 @@
         <h3>{{ _('Having Problems?') }}</h3>
         <ol>
           <li>
-            <a href="{{ support_url }}">
+            <a href="{{ url('support') }}">
               {{ _('Search for answers on the Thunderbird Support page') }}
             </a>
           </li>

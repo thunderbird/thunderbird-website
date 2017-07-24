@@ -31,8 +31,8 @@
     <h1>{{ self.page_title()  }}</h1>
     <h2>{{ self.page_desc() }}</h2>
     {% if channel != 'alpha' %}{# Earlybird release notes are not available yet #}
-    <p><a class="sysreq" href="{{ thunderbird_url('sysreq', channel) }}">{{ _('Check the system requirements') }}</a><br>
-    <a class="sysreq" href="{{ thunderbird_url('notes', channel) }}">{{ _('Release notes') }}</a></p>
+    <p><a class="sysreq" href="{{ thunderbird_url('system-requirements', channel) }}">{{ _('Check the system requirements') }}</a><br>
+    <a class="sysreq" href="{{ thunderbird_url('releasenotes', channel) }}">{{ _('Release notes') }}</a></p>
     {% endif %}
   </header>
 
