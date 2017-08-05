@@ -61,7 +61,7 @@ ALL_PLATFORMS = ('windows', 'linux', 'mac')
 URL_MAPPINGS = {
     'firefox.dnt': 'https://www.mozilla.org/firefox/dnt/',
     'firefox.organizations.faq': 'https://www.mozilla.org/firefox/organizations/faq/',
-    'foundation.licensing.website-content': '',
+    'foundation.licensing.website-content': 'https://www.mozilla.org/foundation/licensing/website-content/',
     'thunderbird.channel': '/channel',
     'thunderbird.features': '/features',
     'thunderbird.index': '/',
