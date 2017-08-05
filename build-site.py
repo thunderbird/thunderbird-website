@@ -73,7 +73,7 @@ def build_site(lang):
         os.makedirs(outpath)
     site = make_site(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
 
-    translator = translate.Translation(lang, ['thunderbird/index', 'thunderbird/features', 'thunderbird/channel', 'main'])
+    translator = translate.Translation(lang, ['thunderbird/index', 'thunderbird/features', 'thunderbird/channel', 'main', 'download_button'])
     site._env.install_gettext_translations(translator)
 
     def l10n_has_tag(tag):
