@@ -27,7 +27,12 @@
         <ul aria-expanded="false" id="nav-main-features-submenu" class="submenu">
           <li class="first">
             <a href="{{ url('thunderbird.channel') }}" tabindex="-1">
-              {{_('Releases')}}
+              {{_('Beta')}}
+            </a>
+          </li>
+          <li>
+            <a href="{{ donate_url('header') }}" tabindex="-1">
+              {{_('Donate')}}
             </a>
           </li>
           <li>
@@ -36,8 +41,8 @@
             </a>
           </li>
           <li>
-            <a href="{{ donate_url('header') }}" tabindex="-1">
-              {{_('Donate')}}
+            <a href="{{ url('thunderbird.releases.index') }}" tabindex="-1">
+              {{_('Releases')}}
             </a>
           </li>
           <li class="last">

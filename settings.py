@@ -66,6 +66,7 @@ URL_MAPPINGS = {
     'thunderbird.features': '/features',
     'thunderbird.index': '/',
     'thunderbird.organizations': '/organizations',
+    'thunderbird.releases.index': '/thunderbird/releases',
     'thunderbird.latest.all': '/thunderbird/all/',
     'contribute': 'https://github.com/thundernest/thunderbird-website',
     'mozorg.home': 'https://www.mozilla.org/',
