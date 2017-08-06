@@ -26,9 +26,9 @@ def url(ctx, key, *args):
     if 'http' in settings.URL_MAPPINGS.get(key, ''):
         return settings.URL_MAPPINGS.get(key, '')
     if key=='thunderbird.sysreq':
-        return "{0}/{1}{2}{3}{4}".format(settings.CANONICAL_URL, ctx['LANG'], '/thunderbird/', args[0], '/system-requirements/')
+        return "/{0}{1}{2}{3}".format('en-US', '/thunderbird/', args[0], '/system-requirements/')
 
-    return "{0}/{1}{2}".format(settings.CANONICAL_URL, ctx['LANG'], settings.URL_MAPPINGS.get(key, ''))
+    return "/{0}{1}".format(ctx['LANG'], settings.URL_MAPPINGS.get(key, ''))
 
 
 def _l10n_media_exists(type, locale, url):

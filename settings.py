@@ -39,7 +39,7 @@ CANONICAL_LOCALES = {
     'zh-hant-hk': 'zh-TW',  # Bug 1338072
 }
 
-CANONICAL_URL = 'https://stage.thunderbird.net'
+CANONICAL_URL = 'https://www.thunderbird.net'
 
 # url for the server that serves Thunderbird downloads
 BOUNCER_URL = 'https://download.mozilla.org/'
