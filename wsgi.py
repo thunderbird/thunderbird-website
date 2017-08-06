@@ -72,9 +72,9 @@ def application(environ, start_response):
     if 'thunderbird' in req.path_qs:
         # Release notes, system requirements, and 'all' builds pages are only available in English.
         language_code = 'en-US'
-    elif req.GET.get(['lang'], ''):
+    elif req.GET.get('lang', ''):
         # Handle language switcher.
-        language_code = reg.GET['lang']
+        language_code = req.GET['lang']
     else:
         language_code = get_best_language(environ.get('HTTP_ACCEPT_LANGUAGE', 'en-US'))
 
