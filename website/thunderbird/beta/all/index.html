@@ -1,13 +1,13 @@
 {# This Source Code Form is subject to the terms of the Mozilla Public
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
-{% set channel = 'release' %}
+{% set channel = 'beta' %}
 {% from "_includes/product-all-macros.html" import build_search_box, build_table, build_row, build_link with context %}
 {% extends "_includes/base-resp.html" %}
 
 {% block extra_meta %}<meta name="robots" content="noindex">{% endblock %}
 
-{% block page_title %}{{ _('Download %s in your language')|format(channel_name) }}{% endblock %}
+{% block page_title %}{{ _('Download Beta in your language') }}{% endblock %}
 {% block body_id %}thunderbird-all{% endblock %}
 
 {% block page_desc %}
@@ -40,7 +40,7 @@
     <section class="pager-content">
       <div class="pager-page" id="builds">
         <div class="localized">
-          {{ build_table(platforms, full_builds, _('Fully localized versions')) }}
+          {{ build_table(platforms, full_builds_beta, _('Fully localized versions')) }}
         </div>
       </div> {#-- /builds --#}
     </section>

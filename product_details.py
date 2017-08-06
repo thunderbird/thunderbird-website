@@ -90,9 +90,6 @@ class ThunderbirdDetails():
 
         return sorted(f_builds, key=itemgetter('name_en'))
 
-    def get_download_url(self, channel, version, plat_os, locale, force_direct=False):
-        return 'https://download.mozilla.org/?product=thunderbird-52.1.1-SSL&os={0}&lang=en-US'.format(plat_os)
-
 
     def get_download_url(self, channel, version, platform, locale, force_direct=True):
         _version = version

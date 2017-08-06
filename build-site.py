@@ -64,6 +64,7 @@ def build_site(lang):
                'platforms': helper.thunderbird_desktop.platforms('release'),
                'full_builds_version': version.split('.', 1)[0],
                'full_builds': helper.thunderbird_desktop.get_filtered_full_builds('release', helper.thunderbird_desktop.latest_version()),
+               'full_builds_beta': helper.thunderbird_desktop.get_filtered_full_builds('beta', helper.thunderbird_desktop.latest_version('beta')),
                'channel_label': 'Thunderbird',
                'releases': helper.thunderbird_desktop.list_releases()
                 }
