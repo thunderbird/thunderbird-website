@@ -41,7 +41,7 @@
         <p>If interested, please see the <button type="submit">complete list of changes</button> in this release.</p>
       </form>
       {% else %}
-          If interested, please see the  <a href="{{ release.get_bug_search_url() }}">complete list of changes</a> in this release.
+          If interested, please see the  <a href="{{ release.bug_search_url }}">complete list of changes</a> in this release.
       {% endif %}
         {{ release.text|markdown|safe }}
       </p>
