@@ -101,7 +101,10 @@ def build_site(lang):
             else:
                 e.globals.update(channel='Release')
             n["release"]["release_date"] = n["release"].get("release_date", helper.thunderbird_desktop.get_release_date(k))
-            n["release"]["release_date"] = parse(str(n["release"]["release_date"]))
+
+            # If there's no data at all, we can't parse an empty string for a date.
+            if n["release"]["release_date"]:
+                n["release"]["release_date"] = parse(str(n["release"]["release_date"]))
             e.globals.update(**n)
             target = os.path.join(outpath,'thunderbird', str(k), 'releasenotes')
             mkdir(target)

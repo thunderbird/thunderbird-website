@@ -34,6 +34,10 @@ class ThunderbirdDetails():
 
     minor_releases = load_json('thunderbird_history_stability_releases.json')
 
+    major_releases = load_json('thunderbird_history_major_releases.json')
+
+    dev_releases = load_json('thunderbird_history_development_releases.json')
+
     version_map = {
         'alpha': 'LATEST_THUNDERBIRD_ALPHA_VERSION',
         'beta': 'LATEST_THUNDERBIRD_DEVEL_VERSION',
@@ -137,10 +141,28 @@ class ThunderbirdDetails():
         return sorted(releases.items(), reverse=True)
 
 
+    def beta_version_to_canonical(self, version):
+        last = ''
+        for x in range(1, 10):
+            v = re.sub(r'beta', 'b{0}'.format(x), version)
+            date = self.dev_releases.get(v, '')
+            if date:
+                last = v
+        return last
+
+
     def get_release_date(self, version):
-        date = self.major_releases.get(version, '')
+        date = ''
+        if 'b' in version:
+            version = self.beta_version_to_canonical(version)
+            date = self.dev_releases.get(version, '')
+
+        if not date:
+            date = self.major_releases.get(version, '')
+
         if not date:
             date = self.minor_releases.get(version, '')
+
         return date
 
 
