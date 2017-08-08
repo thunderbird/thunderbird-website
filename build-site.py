@@ -7,6 +7,7 @@ import settings
 import translate
 import webassets
 
+from datetime import date
 from dateutil.parser import parse
 from thunderbird_notes import releasenotes
 from staticjinja import make_site
@@ -58,6 +59,7 @@ def text_dir(lang):
 def build_site(lang):
     version = helper.thunderbird_desktop.latest_version('release')
     context = {'LANG': lang,
+               'current_year': date.today().year,
                'DIR': text_dir(lang),
                'platform': 'desktop',
                'query': '',
