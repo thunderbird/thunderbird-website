@@ -59,15 +59,15 @@
 
 {% macro get_link(int_version, version) %}
   {%- if int_version < 2 -%}
-    <a href="https://www.mozilla.org/en-US/thunderbird/releases/{{ version }}.html">{{ version }}</a>
+    <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/{{ version }}.html">{{ version }}</a>
   {%- elif version == '2.0' -%}
-    <a href="https://www.mozilla.org/en-US/thunderbird/2.0.0.0/releasenotes/">{{ version }}</a>
+    <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/2.0.0.0/releasenotes/">{{ version }}</a>
   {%- elif version == '17.0.9' -%}
-    <a href="https://www.mozilla.org/en-US/thunderbird/17.0.9esr/releasenotes/">{{ version }}</a>
+    <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/17.0.9esr/releasenotes/">{{ version }}</a>
   {%- elif version == '17.0.10' -%}
-    <a href="https://www.mozilla.org/en-US/thunderbird/17.0.10esr/releasenotes/">{{ version }}</a>
+    <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/17.0.10esr/releasenotes/">{{ version }}</a>
   {%- elif int_version < 31 -%}
-    <a href="https://www.mozilla.org/en-US/thunderbird/{{ version }}/releasenotes/">{{ version }}</a>
+    <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/{{ version }}/releasenotes/">{{ version }}</a>
   {%- else -%}
     <a href="../{{ version }}/releasenotes/">{{ version }}</a>
   {%- endif -%}
