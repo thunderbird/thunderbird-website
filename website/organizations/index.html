@@ -21,24 +21,10 @@
   <main role="main" id="main-content">
     <div class="row">
       <div class="main-column">
-        <p>{{ _('The Thunderbird Extended Support Releases (ESR) have now been merged into the <a href="%s">mainstream releases</a>.')|format(url('thunderbird.latest.all')) }}</p>
-        <p>{{ _('The mainstream releases are now operating to similar standards as the <a href="%s">Mozilla Firefox ESR</a> - they are stable for approximately one year, before receiving feature updates.')|format(url('firefox.organizations.faq')) }}</p>
-        <p>{{ _('You can still sign up to our Enterprise mailing list to get help with Enterprise deployments and other regular communications regarding Thunderbird and Enterprises.') }}</p>
+        <p>{{ _('The Thunderbird Extended Support Releases (ESR) are <a href="{latest}">mainstream releases</a>, operating similarly to <a href="{firefox_esr}">Mozilla Firefox ESR</a>. They are stable for approximately one year before receiving feature updates.')|f(latest=url('thunderbird.latest.all'), firefox_esr=url('firefox.organizations.faq')) }}</p>
+        <p>{{ _('To get help or ask questions about Thunderbird visit <a href="%s">Thunderbird support</a>.')|f(url('thunderbird.support')) }}</p>
+        <p>{{ _('For information about deploying and configuring Thunderbird in business and enterprise environments, you can join the <a href="%s">Enterprise mailing list</a>.')|f(url('thunderbird.enterprise')) }}</p>
       </div>
-      <aside id="sidebar" class="sidebar">
-        <form method="post" action="https://mail.mozilla.org/subscribe/tb-enterprise" id="esr-form">
-          <h4>{{ _('Subscribe to the Thunderbird Enterprise mailing list') }}</h4>
-          <div class="field">
-            <input type="email" name="email" id="email" size="30" value="" placeholder="{{ _('Email') }}" required>
-          </div>
-          <div class="field">
-            <input type="text" name="fullname" size="30" value="" placeholder="{{ _('Full Name') }}">
-          </div>
-          <div class="field">
-            <input type="submit" name="email-button" value="{{ _('Subscribe') }}" class="button">
-          </div>
-        </form>
-      </aside>
     </div>
   </main>
 {% endblock %}

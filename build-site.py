@@ -84,15 +84,15 @@ def build_site(lang):
 
     # Add l10n_css function to context
     site._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag, settings=settings, **helper.contextfunctions)
+    site._env.filters["markdown"] = helper.safe_markdown
+    site._env.filters["f"] = helper.f
+    site._env.filters["l10n_format_date"] = helper.l10n_format_date
     site.render(use_reloader=False)
 
     # Render release notes and system requirements for en-US only.
     if lang == settings.LANGUAGE_CODE:
         notelist = releasenotes.notes
         e = site._env
-        e.filters["markdown"] = helper.safe_markdown
-        e.filters["f"] = helper.f
-        e.filters["l10n_format_date"] = helper.l10n_format_date
         template = e.get_template('_includes/release-notes.html')
         e.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
         for k, n in notelist.iteritems():
