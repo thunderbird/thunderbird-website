@@ -332,7 +332,10 @@ def l10n_format_date(ctx, date, format='long'):
     babel.dates.format_date.
     """
     lang = get_locale(ctx['LANG'])
-    return format_date(date, locale=lang, format=format)
+    if date:
+        return format_date(date, locale=lang, format=format)
+    else:
+        return ''
 
 
 def f(s, *args, **kwargs):
