@@ -4,8 +4,6 @@ This repo contains the Thunderbird in-client Start page and the www.thunderbird.
 * The `prod` branch is used to update https://start.thunderbird.net and https://www.thunderbird.net.
 * The `master` branch is used to update https://start-stage.thunderbird.net and https://www-stage.thunderbird.net.
 
-Pushes occur automatically with each commit to github on either branch.
-
 # Build Instructions
 
 ## Dependencies
@@ -22,7 +20,7 @@ There are two build scripts, one for the [start page](https://start.thunderbird.
 * `python build-start.py` for the start page.
     * This builds into the `site` directory.
 * `python build-site.py` for thunderbird.net.
-    * This builds into the thunderbird.net directory.
+    * This builds into the `thunderbird.net` directory.
 
 ## Automated Builds
 In general, you only need to manually build the website for testing and development purposes. Webhooks on each of the repositories trigger
