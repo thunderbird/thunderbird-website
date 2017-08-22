@@ -20,9 +20,9 @@ git clone https://github.com/mozilla/product-details-json
 There are two build scripts, one for the [start page](https://start.thunderbird.net/) and one for [www.thunderbird.net](https://www.thunderbird.net/)
 
 * `python build-start.py` for the start page.
-** This builds into the `site` directory.
+    * This builds into the `site` directory.
 * `python build-site.py` for thunderbird.net.
-** This builds into the thunderbird.net directory.
+    * This builds into the thunderbird.net directory.
 
 ## Automated Builds
 In general, you only need to manually build the website for testing and development purposes. Webhooks on each of the repositories trigger
@@ -30,7 +30,7 @@ automatic rebuilds when:
 
 * https://github.com/thundernest/thunderbird-notes.git (Release Notes) are updated.
 * https://github.com/mozilla/product-details-json (Product Details) are updated. Product details contains data on what versions of Thunderbird exist.
-** Currently stage doesn't update automatically from product-details changes.
+    * Currently stage doesn't update automatically from product-details changes.
 
 Both of these update frequently enough(multiple times per week) that independent updates for localization are not necessary. Any triggered
 update will always use the most recent data available from all sources. If changes to one of the above repos don't produce any change in the built files, no actual
