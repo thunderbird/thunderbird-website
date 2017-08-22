@@ -20,7 +20,7 @@
 
   <main role="main" id="main-content">
     <p>{{ _('The Thunderbird Extended Support Releases (ESR) are <a href="{latest}">mainstream releases</a>, operating similarly to <a href="{firefox_esr}">Mozilla Firefox ESR</a>. They are stable for approximately one year before receiving feature updates.')|f(latest=url('thunderbird.latest.all'), firefox_esr=url('firefox.organizations.faq')) }}</p>
-    <p>{{ _('To get help or ask questions about Thunderbird visit <a href="%s">Thunderbird support</a>.')|f(url('thunderbird.support')) }}</p>
-    <p>{{ _('For information about deploying and configuring Thunderbird in business and enterprise environments, you can join the <a href="%s">Enterprise mailing list</a>.')|f(url('thunderbird.enterprise')) }}</p>
+    <p>{{ _('To get help or ask questions about Thunderbird visit <a href="{0}">Thunderbird support</a>.')|f(url('support')) }}</p>
+    <p>{{ _('For information about deploying and configuring Thunderbird in business and enterprise environments, you can join the <a href="{0}">Enterprise mailing list</a>.')|f(url('thunderbird.enterprise')) }}</p>
   </main>
 {% endblock %}
