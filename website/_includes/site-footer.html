@@ -27,21 +27,8 @@
           </div>
           <div class="col col-3">
             <ul class="links-social">
-              <li>
-                {{ _('Mozilla:') }}
-                <ul>
-                  <li><a href="https://twitter.com/mozilla" data-link-type="footer" data-link-name="Twitter (@mozilla)">{{ _('Twitter') }}<span> (@mozilla)</span></a></li>
-                  <li><a href="https://www.facebook.com/mozilla" data-link-type="footer" data-link-name="Facebook (Mozilla)">{{ _('Facebook') }}<span> (Mozilla)</span></a></li>
-                  <li><a href="https://www.instagram.com/mozillagram/" data-link-type="footer" data-link-name="Instagram (@mozillagram)">{{ _('Instagram') }}<span> (@mozillagram)</span></a></li>
-                </ul>
-              </li>
-              <li>
-                {{ _('Thunderbird:') }}
-                <ul>
-                  <li><a href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (@firefox)">{{ _('Twitter') }}<span> (@firefox)</span></a></li>
-                  <li><a href="https://www.facebook.com/Thunderbird/" data-link-type="footer" data-link-name="Facebook (Firefox)">{{ _('Facebook') }}<span> (Firefox)</span></a></li>
-                </ul>
-              </li>
+              <li><a class="twitter-button" title="Follow @mozthunderbird on Twitter" href="https://twitter.com/intent/follow?screen_name=mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)"><i></i><div>@mozthunderbird</div></a></li>
+              <li><a class="facebook" href="https://www.facebook.com/Thunderbird/" data-link-type="footer" data-link-name="Facebook (Thunderbird)"><i></i><div>{{ _('Thunderbird') }}</div></a></li>
             </ul>
             <div class="lang-switcher">
               {% include '_includes/lang_switcher.html' %}

@@ -1035,6 +1035,77 @@ nav.menu-bar {
         list-style-type: none;
     }
 
+    .twitter-button {
+        font: normal normal normal 13px/26px 'Helvetica Neue',Arial,sans-serif;
+        height: 28px;
+        border-radius: 4px;
+        max-width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #1DA1F2;
+        border: #CCC solid 1px;
+        color: #333;
+        font-weight: bold;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1;
+        text-decoration: none;
+
+        li:before {
+            content: none;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        i {
+            width: 32px;
+            height: 24px;
+            margin-top: -16px;
+            position: absolute;
+            top: 50%;
+            background: url(/media/img/thunderbird/twitter.png) 0 0 / ~"32px auto" no-repeat;
+        }
+
+        div {
+            padding: 0px 7px 0 29px;
+            white-space: nowrap;
+            color: white;
+        }
+    }
+
+    .facebook {
+        position: relative;
+        display: inline-block;
+
+        i {
+            width: 24px;
+            height: 24px;
+            margin-top: -8px;
+            margin-left: 1px;
+            position: absolute;
+            top: 50%;
+            background: url(/media/img/thunderbird/facebook.png) 0 0 / ~"24px auto" no-repeat;
+        }
+        div {
+            padding: 10px 7px 0 29px;
+            white-space: nowrap;
+            color: #3b5998;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     &.dark {
         background: #000;
         color: #fff;
