@@ -31,11 +31,6 @@
             </a>
           </li>
           <li>
-            <a href="{{ donate_url('header') }}" tabindex="-1">
-              {{_('Donate')}}
-            </a>
-          </li>
-          <li>
             <a href="{{ url('thunderbird.features') }}" tabindex="-1">
               {{_('Features')}}
             </a>
@@ -69,9 +64,14 @@
           </li>
         </ul>
       </li>
-      <li class="last" id="nav-main-support">
+      <li id="nav-main-support">
         <a href="{{ url('support') }}" tabindex="0">
           {{_('Support')}}
+        </a>
+      </li>
+      <li class="last" id="nav-main-donate">
+        <a class="emphasis" href="{{ donate_url('header') }}" tabindex="-1">
+          {{_('Donate')}}
         </a>
       </li>
     </ul>
