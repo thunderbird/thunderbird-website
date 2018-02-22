@@ -8,7 +8,7 @@ This repo contains the Thunderbird in-client Start page and the www.thunderbird.
 
 ## Dependencies
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 git clone https://github.com/mozilla-l10n/bedrock-l10n locale
 git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
 git clone https://github.com/mozilla/product-details-json
