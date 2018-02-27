@@ -15,12 +15,9 @@ git clone https://github.com/mozilla-l10n/bedrock-l10n locale
 git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
 git clone https://github.com/mozilla/product-details-json
 sudo yum install npm
-sudo npm install -g less 
-```
-#### Note: The specific version of less used and known to work is 2.7.2, it can be installed via the following command:
-```
 sudo npm install -g less@2.7.2`
 ```
+#### Note: The website will not work with less 3.0 or above.
 
 ## Run Build
 There are two build scripts, one for the [start page](https://start.thunderbird.net/) and one for [www.thunderbird.net](https://www.thunderbird.net/)
