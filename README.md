@@ -15,8 +15,9 @@ git clone https://github.com/mozilla-l10n/bedrock-l10n locale
 git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
 git clone https://github.com/mozilla/product-details-json
 sudo yum install npm
-sudo npm install -g less 
+sudo npm install -g less@2.7.2`
 ```
+#### Note: The website will not work with less 3.0 or above.
 
 ## Run Build
 There are two build scripts, one for the [start page](https://start.thunderbird.net/) and one for [www.thunderbird.net](https://www.thunderbird.net/)
@@ -25,6 +26,13 @@ There are two build scripts, one for the [start page](https://start.thunderbird.
     * This builds into the `site` directory.
 * `python build-site.py` for thunderbird.net.
     * This builds into the `thunderbird.net` directory.
+    
+## View Website
+In order to view the website, enter the `thunderbird.net` directory and run the following command to spin up an HTTP server
+
+`python -m SimpleHTTPServer 8000`
+
+You can then navigate to: http://127.0.0.1:8000 to view the website (you have to choose your location when you visit the page first, as it won't redirect you to your locale automatically).
 
 ## Automated Builds
 In general, you only need to manually build the website for testing and development purposes. Webhooks on each of the repositories trigger
