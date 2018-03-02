@@ -1,0 +1,172 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "_includes/base-resp.html" %}
+
+{% block page_title %}{{ _('Get Involved') }}{% endblock %}
+
+{% block page_desc %}
+{% if LANG.startswith('en-') %}
+Everything you need to know in order to get involved with Thunderbird.
+{% else %}
+{{ _('Everything you need to know in order to get involved with Thunderbird.') }}
+{% endif %}
+{% endblock %}
+
+{% block body_id %}get-involved{% endblock %}
+
+{% block page_css %}
+<link href="/media/css/thunderbird-features.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<header id="main-feature">
+    <h1>{{ self.page_title() }}</h1>
+    <h2>{{ self.page_desc() }}</h2>
+</header>
+
+<nav role="directory">
+    <ul class="feature-links">
+        <li><a href="#development">{{ _('Development') }}</a></li>
+        <li><a href="#documentation">{{ _('Documentation') }}</a></li>
+        <li><a href="#communication">{{ _('Communication') }}</a></li>
+        <li><a href="#infrastructure">{{ _('Infrastructure') }}</a></li>
+        <li><a href="#design">{{ _('Design') }}</a></li>
+        <li><a href="#translation">{{ _('Translation') }}</a></li>
+        <li><a href="#qualityassurance">{{ _('Quality Assurance') }}</a></li>
+        <li><a href="#marketing">{{ _('Marketing') }}</a></li>
+    </ul>
+</nav>
+
+<main role="main">
+    <section id="development">
+        <h2>{{ _('Development') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <h3>{{ _('Code') }}</h3>
+                    <p>{{ _('Code is located on Mozilla\'s Mercurial server.') }}</p>
+                    <ul>
+                        <li><a href="https://hg.mozilla.org/comm-central/">{{ _('comm-central') }}</a> {{ _('is the main Thunderbird repository.') }}</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>{{ _('Getting Started') }}</h3>
+                    <p>{{ _('Read the') }} <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Introduction">{{ _('Developer Guide') }}</a> {{ _('on MDN. That will give you a general overview of the ecosystem Thunderbird is part of.') }}</p>
+                    <p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Thunderbird_build">{{ _('Simple Thunderbird build') }}</a> {{ _('on MDN is a good place to find how to get your first build completed.') }}
+                    </p>
+                </section>
+                <section>
+                    <h3>{{ _('Bugs') }}</h3>
+                    <p>{{ _('All Thunderbird bugs live on') }} <a href="https://bugzilla.mozilla.org">{{ _('Mozilla\'s Bugzilla') }}</a>. {{ _('Bugzilla is a powerful tool and can be intimidating if you are not used to it. So check out these pre-defined searches to test the waters.') }} </p>
+                    <ul>
+                        <li><a href="https://mzl.la/2oijxOd">{{ _('"Good first bugs"') }}</a> {{ _('which are extra easy.') }}</li>
+                        <li><a href="http://www.joshmatthews.net/bugsahoy/?thunderbird=1">{{ _('Mentored Bugs') }}</a> ') }}have a mentor who commits to helping you every step of the way.') }}</li>
+                        <li><a href="https://wiki.mozilla.org/Thunderbird:Bug_Queries">{{ _('Thunderbird bug queries') }}</a> {{ _('is a wiki page with lots of useful searches.') }}</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section><!-- end #development -->
+
+
+    <section id="documentation">
+        <h2>{{ _('Documentation') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <h3>{{ _('Heading') }}</h3>
+                    <p>{{ _('Content Text') }}</p>
+                </section>
+            </div>
+        </div>
+    </section><!-- end #documentation -->
+
+    <section id="communication">
+        <h2>{{ _('Communication') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <h3>{{ _('Discussion Forums') }}</h3>
+                    <ul>
+                        <li><a href="https://support.mozilla.org/en-US/questions/thunderbird">{{ _('Thunderbird Support Forum') }}</a> </li>
+                        <li><a href="https://discourse.mozilla.org/c/thunderbird">{{ _('Thunderbird category on Mozilla\'s Discourse.') }}</a> </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>{{ _('Live Chat') }}</h3>
+                    <p>{{ _('List IRC Channels here.') }}</p>
+                </section>
+                <section>
+                    <h3>{{ _('Mailing Lists') }}</h3>
+                    <p>{{ _('Content Text') }}</p>
+                </section>
+            </div>
+        </div>
+    </section><!-- end #documentation -->
+
+    <section id="infrastructure">
+        <h2>{{ _('Infrastructure') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <h3>{{ _('Heading') }}</h3>
+                    <p>{{ _('Content Text') }}</p>
+                </section>
+            </div>
+        </div>
+    </section><!-- end #infrastructure -->
+
+
+    <section id="design">
+        <h2>{{ _('Design') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <h3>{{ _('Heading') }}</h3>
+                    <p>{{ _('Content Text') }}</p>
+                </section>
+            </div>
+        </div>
+    </section><!-- end #design -->
+
+
+    <section id="translation">
+        <h2>{{ _('Translation') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <p>See <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Thunderbird/Thunderbird_Localization">Thunderbird Localization on MDN</a>.</p>
+                </section>
+            </div>
+        </div>
+    </section><!-- end #translation -->
+
+
+    <section id="qualityassurance">
+        <h2>{{ _('Quality Assurance') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <p>See <a href="https://wiki.mozilla.org/Thunderbird:Testing">the Mozilla Wiki page</a>.</p>
+                </section>
+            </div>
+        </div>
+    </section><!-- end #qualityassurance -->
+
+
+    <section id="marketing">
+        <h2>{{ _('Marketing') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <h3>{{ _('Testing') }}</h3>
+                    <p>{{ _('') }}</p>
+                </section>
+            </div>
+        </div>
+    </section><!-- end #marketing -->
+</main>
+{% endblock %}
