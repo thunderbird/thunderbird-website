@@ -40,6 +40,13 @@
               {{_('Releases')}}
             </a>
           </li>
+          {% if LANG.startswith('en-') %}
+            <li>
+              <a href="{{ url('calendar') }}" tabindex="-1">
+                {{_('Calendar Add-on')}}
+              </a>
+            </li>
+          {% endif %}
           <li class="last">
             <a href="{{ url('thunderbird.organizations') }}" tabindex="-1">
               {{_('Thunderbird for Organizations')}}
