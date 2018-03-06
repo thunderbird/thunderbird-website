@@ -59,6 +59,7 @@ def text_dir(lang):
 
 def build_site(lang):
     version = helper.thunderbird_desktop.latest_version('release')
+    caldata = helper.load_calendar_json('media/caldata/calendars.json')
     context = {'LANG': lang,
                'current_year': date.today().year,
                'DIR': text_dir(lang),
@@ -69,8 +70,11 @@ def build_site(lang):
                'full_builds': helper.thunderbird_desktop.get_filtered_full_builds('release', helper.thunderbird_desktop.latest_version()),
                'full_builds_beta': helper.thunderbird_desktop.get_filtered_full_builds('beta', helper.thunderbird_desktop.latest_version('beta')),
                'channel_label': 'Thunderbird',
-               'releases': helper.thunderbird_desktop.list_releases()
-                }
+               'releases': helper.thunderbird_desktop.list_releases(),
+               'calendars': caldata['calendars'],
+               'letters': caldata['letters'],
+               'CALDATA_URL': settings.CALDATA_URL
+              }
 
     outpath = os.path.join(renderpath, lang)
     if not os.path.exists(outpath):

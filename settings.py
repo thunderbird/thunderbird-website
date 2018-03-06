@@ -53,6 +53,8 @@ MEDIA_URL = '/media'
 # path to the website templates
 WEBSITE_PATH = 'website/'
 
+CALDATA_URL = MEDIA_URL + '/caldata/'
+
 # path to product-details json files
 JSON_PATH = 'product-details-json/product-details/'
 

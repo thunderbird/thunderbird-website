@@ -35,7 +35,6 @@
       <p>{{ _('You can also find calendars to subscribe to at <a href="%s">iCalShare.com</a>.')|format('http://icalshare.com') }}</p>
   </div>
   <div class="calendar-table billboard">
-  {#
     <ul class="holiday-nav">
       {% for letter in letters -%}
         <li><a href="{{ letter }}">{{ letter }}</a></li>
@@ -66,7 +65,6 @@
           <td>{{ calendar.datespan }}</td>
         </tr>
       {% endfor %}
-  #}
     </table>
     <h2>{{ ('Contributing a Holiday Calendar') }}</h2>
     <p>{{ ('If you would like to send us your calendar files, please follow these steps:') }}</p>

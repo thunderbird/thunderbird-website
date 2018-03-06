@@ -1,5 +1,6 @@
 import inspect
 import jinja2
+import json
 import markdown
 import re
 import settings
@@ -17,6 +18,22 @@ babel_format_locale_map = {
     'hsb': 'de',
     'dsb': 'de',
 }
+
+def load_calendar_json(json_file):
+    calendars = []
+
+    with open(json_file) as calendar_data:
+        calendars = json.load(calendar_data)
+
+    letters = set()
+    for calendar in calendars:
+        letters.add(calendar['country'][:1])
+
+    data = {
+        'calendars': sorted(calendars, key=lambda k: k['country']),
+        'letters': sorted(letters),
+    }
+    return data
 
 def static(filepath):
     return path.join(settings.MEDIA_URL, filepath)
