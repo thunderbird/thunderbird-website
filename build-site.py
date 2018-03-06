@@ -23,7 +23,8 @@ renderpath = 'thunderbird.net'
 # path to compile CSS to
 cssout = renderpath+'/media/css'
 
-css_bundles = [ {'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less']},
+css_bundles = [ {'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less']},
+                {'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less']},
                 {'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less']},
                 {'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less']},
                 {'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less']},
