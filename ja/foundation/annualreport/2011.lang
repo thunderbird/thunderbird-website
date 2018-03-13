@@ -1,0 +1,336 @@
+## active ##
+# State of Mozilla 2011 annual report, main page
+# test server: https://www-dev.allizom.org/foundation/annualreport/2011/
+# tracking bug for L10N https://bugzilla.mozilla.org/show_bug.cgi?id=788871
+;Firefox for Android
+Android 版 Firefox
+
+
+;Welcome
+はじめに
+
+
+;Mobilized
+様々な製品
+
+
+;Action
+行動
+
+
+;Community
+コミュニティ
+
+
+;Sustainability
+持続可能性
+
+
+;Click to play this video
+クリックして動画を再生
+
+
+;Mozilla‘s vision of the Internet is a place where anyone can access information, a place where everyone can hack and tinker; one that has openness, freedom and transparency; where users have control over their personal data and where all minds have the freedom to create and to consume without walls or tight restrictions.
+Mozilla は、インターネットとは誰もが情報にアクセスでき、皆がハックしたり、手を加えたりできる場所であるべきだと考えています。オープンで自由で透明性があり、ユーザーが自分の個人情報を自分でコントロールできなければなりません。すべての人が、障害や厳しい制約を受けることなく自由に何かを作ったり利用したりできる場所であるべきです。
+
+
+;In less than 20 years the Internet has changed our lives. It is a powerful platform with unprecedented opportunity and connectedness. But even with great growth and innovation there are significant challenges to this vision of a healthy Internet.
+この 20 年足らずの間に、インターネットは私たちの生活を変えました。インターネットはこれまでにないチャンスとつながる環境をもたらす強力な基盤となっています。しかしこれほど大きく成長し、優れた革新性があっても、インターネットの健全性を保つという私たちのビジョンを実現するには、大きな課題があります。
+
+
+;Mozilla is mobilized to ensure the protection of the Web and to empower tomorrow’s webmakers and Web users. Today, Mozilla is growing — with more employees, contributors, products and locations — to ensure that the Web remains an open, vibrant ecosystem. Because, the Web is the platform for building the world we want.
+Mozilla はウェブを保護し、将来ウェブの作り手となる Webmaker やウェブのユーザーの権限を強化するため、力を結集しています。今、Mozilla は従業員、貢献者、製品、活動拠点を増やして成長を続け、ウェブをオープンで活気にあふれたエコシステムとして維持することを目指しています。なぜなら、ウェブは私たちが求める世界を築くための基盤だからです。
+
+
+;Please explore this site to learn more about Mozilla, our priorities and focus areas that enable us to ensure the healthy growth of this large and precious global resource.
+このサイトで、Mozilla について、また、広大で貴重なこのグローバルなリソースの健全な成長を実現するために Mozilla が重視し力を入れている事柄について、さらに詳しく紹介します。
+
+
+;Mozilla Mobilized
+力を結集する Mozilla
+
+
+;Mozilla is mobilizing millions of people to build the world they want. Mobilizing to set the mobile Web free from proprietary platforms and gatekeepers. Mobilizing to empower the world's next two billion Web users. And mobilizing to build a new generation of digital innovators, creators and webmakers.
+Mozilla では、数百万人の人々が求める世界を実現するために、モバイルの取り組みを進めています。それはモバイルウェブを独自仕様のプラットフォームとゲートキーパーから解放するためであり、世界中で 20 億人に上る次世代のウェブユーザーたちの権限を強化するためでもあります。また、新世代のデジタル技術革新の担い手やクリエーター、Webmaker たちを育成するためでもあります。
+
+
+;Moving forward we will continue to focus on building products, technology solutions and educational offerings that incorporate Mozilla values into the Web. Today, Mozilla’s mission remains as important as ever. From Firefox through Firefox OS to our new Mozilla Webmaker educational offering, the goal is empowerment. It’s about unlocking the full creative power of mobile; standing up for user sovereignty, privacy and freedom; and helping millions of people move from using the Web to actively building its future.
+並行し、Mozilla は引き続き Mozilla の価値をウェブに反映させる製品、テクノロジーソリューション、教育サービスの開発にも力を入れていきます。Mozilla の使命は今も、これまでと変わらず重要です。Firefox や Firefox OS、さらには新しい Mozilla Webmaker 教育プログラムまで、目指すのはウェブの権利を取り戻すことです。それは、モバイルの持つモノづくりの力をフルに解き放つことであり、ユーザーの主権、プライバシー、自由を守ることであり、数百万人の人々がウェブを利用する側から積極的にウェブの未来を築く側へと前進するための手助けをするということです。
+
+
+;Just like we did on the desktop, Mozilla is setting out to ensure that the mobile Web is full of freedom, choice & opportunity.
+Mozilla はデスクトップでの対応と同様に、モバイルウェブでも自由と選択肢とチャンスにあふれた環境を実現したいと考えています。
+
+
+;Just like we did on the desktop, Mozilla is setting out to ensure that the mobile Web is full of freedom, choice and opportunity and that it has the ability for users to create anything they want. With <a href="%(fxos_url)s" rel="external">Firefox OS</a>, we can break open the world of native operating systems and closed platforms once again.
+Mozilla はデスクトップでの対応と同様に、モバイルウェブでも自由と選択肢とチャンスにあふれた環境を実現し、ユーザーが求めるものを何でも創り出すことができるようにしたいと考えています。<a href="%(fxos_url)s" rel="external">Firefox OS</a> によって、Mozilla はネイティブのオペレーティングシステムとクローズドなプラットフォームで構成される世界を再びこじ開けることができます。
+
+
+;Firefox OS is the first truly open mobile platform. Developers are already embracing HTML5, but so far HTML5 applications on mobile have been held back because they can’t access the device’s underlying capabilities the way that native apps can. Firefox OS overcomes these limitations and provides the necessary <abbr title="Application Program Interfaces">APIs</abbr> to show how it is possible to run an entire device using open standards.
+Firefox OS は真にオープンな初めてのモバイルプラットフォームです。開発者はすでに HTML5 を取り入れるようになっていますが、これまでモバイル向けの HTML5 アプリケーションはまだ提供されていません。ネイティブのアプリケーションと同様の方法で端末の基本機能にアクセスすることができなかったからです。 Firefox OS はこうした制約を解消します。必要な <abbr title="Application Program Interfaces">APIs</abbr> を提供し、オープンな標準規格を使用して端末全体を機能させる方法を提示します。
+
+
+;Firefox OS devices will launch in early 2013 through <a href="%(telefonica_url)s" rel="external">Telefónica</a>, establishing HTML5 as a viable platform for the mobile industry. The Web as the platform will free developers to create groundbreaking new apps that work seamlessly across all devices, spurring a new era of innovation and creativity for the ubiquitous Web.
+Firefox OS を搭載する端末は 2013 年初めに <a href="%(telefonica_url)s" rel="external">Telefónica</a> から提供が開始される予定です。これにより、HTML5 はモバイル業界に不可欠なプラットフォームとなります。ウェブをプラットフォームとすることによって、開発者はあらゆる端末上でシームレスに機能する画期的な新しいアプリケーションを自由に開発できるようになり、ユビキタスなウェブを目指して革新と創造の新しい時代を促進することができます。
+
+
+# Fast. Smart. Safe." is a slogan for Firefox for Android. It appears here as three separate strings for styling and layout purposes.
+;Fast.
+高速。
+
+
+;Smart.
+スマート。
+
+
+;Safe.
+安心。
+
+
+;In June 2012 we released an update to <a href="%(mobile_url)s" rel="external">Firefox for Android</a> that we believe is the best browser for Android available. We completely rebuilt and redesigned the product in native UI, resulting in a snappy and dynamic upgrade to mobile browsing that is significantly faster than the Android stock browser. This made Firefox significantly faster on Android and delivered a much better browsing experience to users than the one offered by the device’s stock browser. We also added Do Not Track to Firefox for Android to let users express their intent for privacy, even on mobile and are the first mobile browser to offer Do Not Track. Firefox for Android is a critical part of supporting the open Web. This is a great start, but it is only a start. We want these opportunities to exist at all layers of our Web experience.
+2012 年 6 月に、Mozilla は <a href="%(mobile_url)s" rel="external">Android 版 Firefox</a> の更新版をリリースしました。これは現在利用可能な Android 向けブラウザーの中で最高のものであると Mozilla は考えています。この製品はネイティブの UI を完全に再構築して設計し直しているため、モバイル端末上でのスムーズで動的なブラウジングが可能となり、Android の標準ブラウザーよりはるかに高速です。こうして、Firefox は Android 上での動作が大幅に高速化され、端末標準搭載のブラウザーよりはるかに優れたブラウジング体験をユーザーに提供しています。また、この Android 版 Firefox にもプライバシー保護機能 Do Not Track が追加され、ユーザーはモバイル上でもプライバシーに関する自分の意志をウェブサイトに伝えることができるようになりました。Android 版 Firefox は Do Not Track 機能を搭載した初のモバイルブラウザーです。Android 版 Firefox は、オープンなウェブを支える不可欠の要素です。これは重要な出発点ですが、ほんの始まりにすぎません。Mozilla は、私たちのウェブ体験のあらゆる部分にこうした機能を盛り込んでいきたいと考えています。
+
+
+;Firefox for Windows, Mac and Linux
+Windows、Mac、および Linux 版 Firefox
+
+
+;Firefox will always be the part of the Mozilla mission that people can see, feel and touch.
+Firefox はこれからも常に、人々が Mozilla の使命を直接見たり、感じたり、触れたりできるよう、その役割を担っていきます。
+
+
+;Firefox will always be the part of the Mozilla mission that people can see, feel and touch. We are excited by the progress and innovation we have seen with the desktop version of Firefox over the past year. Several performance and security improvements, memory enhancements make this the best Firefox yet. We're proud of the work that we're doing to make developing on Firefox easier by adding exciting tools for developers, like <a href="%(cmdline_url)s" rel="external">Developer Command Line</a>, <a href="%(console_url)s" rel="external">Web Console</a> and <a href="%(tilt_url)s" rel="external">“Tilt” the 3D Page Inspector</a>.
+Firefox はこれからも常に、人々が Mozilla の使命を直接見たり、感じたり、触れたりできるよう、その役割を担っていきます。Mozilla はこの 1 年間にデスクトップ版 Firefox で達成した進歩や革新について、大変喜ばしく思っています。パフォーマンスとセキュリティ機能に関するいくつかの改善とメモリーの機能拡張により、現在のバージョンはこれまでで最高の Firefox となっています。<a href="%(cmdline_url)s" rel="external">開発者コマンドライン</a>、<a href="%(console_url)s" rel="external">ウェブコンソール</a>、<a href="%(tilt_url)s" rel="external">ページインスペクターの 3D ビュー (コードネーム「Tilt」)</a> など、開発者にとって便利なツールを追加して、Firefox でより簡単に開発できるようにしていることも Mozilla の誇りです。
+
+
+;Recently, we have been experimenting with ways to integrate social functionality into Firefox. Firefox will support a new Social API that lets developers integrate social services directly into the browser. The Social API will support multiple providers and has endless potential for integrating social networks, e-mail, finance, news and other applications into your Firefox experience. Our first experimental provider is Facebook.
+最近では、Firefox にソーシャル機能を統合する試みに取り組んでいます。Firefox は新しいソーシャル API をサポートし、開発者はソーシャルサービスを Firefox に直接統合できるようになります。このソーシャル API は複数のプロバイダーをサポートし、ソーシャルネットワーク、電子メール、財務、ニュースなどのアプリケーションを Firefox 環境に組み込むことができるため、可能性は無限に広がります。この新機能を最初に提供するのは、Facebook です。
+
+
+;Webmaker: Teaching the world the Web
+Webmaker: 世界中の人々にウェブについて知ってもらう
+
+
+;The unique power of the Web is that anyone can make and build with it.
+ウェブならではの力、それは、誰でも Web を利用して何かを作り、構築できるということです。
+
+
+;The unique power of the Web means that anyone can make and build with it. Our new educational offering, <a href="%(webmaker_url)s" rel="external">Mozilla Webmaker</a>, will place that power in the hands of millions of new creators everywhere.
+ウェブならではの力、それは、誰でもウェブを利用して何かを作り、構築できるということです。Mozilla の新しい教育プロジェクト、<a href="%(webmaker_url)s" rel="external">Mozilla Webmaker</a> は、世界中の数百万もの新しいクリエイターたちにそうした力を与えます。
+
+
+;Webmaker tools, projects and events help educators, youth, media-makers and everyday consumers around the world move from using the Web to making the Web. In 2013, Webmaker will mobilize a global community of mentors, instructors and youth to teach and learn together; advance revolutionary Webmaker software tools like <a href="%(popcorn_url)s" rel="external">Popcorn</a> and <a href="%(thimble_url)s" rel="external">Thimble</a>; and work together to build a more Web-literate planet.
+Webmaker のツール、プロジェクト、イベントは、世界中の教育者、若者、メディア制作者、一般の消費者が、ウェブを使うだけの人からウェブを作る人へと前進するための手助けをします。2013 年には、Webmaker は指導者、インストラクター、若者が共に教え、学習するグローバルなコミュニティをモバイル環境で構築し、<a href="%(popcorn_url)s" rel="external">Popcorn</a> や <a href="%(thimble_url)s" rel="external">Thimble</a> などの革新的な Webmaker ソフトウェアツールをさらに改善して、地球上の人々が協力し合ってウェブをより使いこなせるようにしていきます。
+
+
+;Webmaker: Video
+Webmaker: 動画
+
+
+;Click to view this video
+クリックして動画を再生
+
+
+;Advocating for Web standards
+ウェブ標準の提唱
+
+
+;Mozilla will continue to contribute to Web standards.
+Mozilla はこれからも、ウェブ標準技術に貢献していきます。
+
+
+;Mozilla has always contributed to Web standards, going back as far as the start of the project, and we will continue to do that moving forward. We <a href="%(cofound_url)s" rel="external">co-founded</a> the <a href="%(whatwg_url)s" rel="external">WHAT-WG</a> to kick off <a href="%(html5_url)s" rel="external">HTML5</a>. We are a leader in <a href="%(javascript_url)s" rel="external">JavaScript standardization</a>. We have some of the top <a href="%(dbaron_url)s" rel="external">CSS</a> and <a href="%(ocallahan_url)s" rel="external">layout</a> experts in the world.
+Mozilla はプロジェクト創設時からこれまで常に、ウェブ標準技術に貢献してきました。これからもそうした技術の向上に努めていきます。Mozilla は <a href="%(whatwg_url)s" rel="external">WHAT-WG</a> の <a href="%(cofound_url)s" rel="external">共同創設</a> に関わり、<a href="%(html5_url)s" rel="external">HTML5</a> をまとめました。<a href="%(javascript_url)s" rel="external">JavaScript 標準化</a> のリーダーでもあります。Mozilla には世界でもトップクラスの <a href="%(dbaron_url)s" rel="external">CSS</a> や <a href="%(ocallahan_url)s" rel="external">レイアウトの専門家</a> が参加しています。
+
+
+;Standards are a multi-vendor effort, but Mozilla is proud of the many technologies we have pioneered and submitted to standards bodies to make them interoperable for the Web as a whole. Some examples of these include geolocation, WebGL, the Gamepad API, Web Telephony and IndexedDB.
+標準規格は複数のベンダーが協力し合った成果ですが、Mozilla は多くの技術をその先駆者として開発し、標準化団体に提出してウェブ全体での相互運用を可能にしてきたことを誇らしく思っています。Geolocation、WebGL、Gamepad API、Web Telephony、IndexedDB は、Mozilla のそうした取り組みの一例です。
+
+
+;Fighting for you: Standing up for your security, privacy and freedom
+Mozilla は、ユーザーの安全、プライバシー、自由を守るために戦います。
+
+
+;Mozilla is proudly non-profit and answers to no one but you. That means we're uniquely able to fight for users at a critical moment in the Web's history. Looking forward, we will mobilize millions of people to stand up for privacy, security and online freedom. We will take on new threats to the Web's future — from locked down proprietary platforms, to would-be censors and gatekeepers, to short-sighted government legislation. Together we will set the mobile Web free, reassert the vital importance of privacy and user sovereignty, and join others in building a more Web-literate world.
+Mozilla は非営利の組織であり、ユーザーの声にのみ応える姿勢に誇りを持っています。ウェブの歴史の中でも、重要な場面でユーザーのために戦うことができたのは Mozilla だけでした。今後も、Mozilla は数百万人の人々の環境をモバイル化し、プライバシー、セキュリティ、オンライン上での自由を守ります。また、独自仕様のプラットフォームによる拘束、検閲者やゲートキーパーと称するもの、目先のことしか考えていない政府の規制など、ウェブの未来にとっての新たな脅威にも対抗していきます。さらに、モバイルウェブの自由を維持し、プライバシーとユーザー主権が非常に重要であることを改めて主張し、ウェブをより使いこなせる世界を実現するための取り組みに参加していきます。
+
+
+;Do Not Track
+Do Not Track {ok}
+
+
+;Our Internet experiences involve more of our personal data, which forms a picture or profile of who we are online. The ability for organizations to monitor, log, store, use, correlate and sell information about who we are and what we do has huge implications for individuals and for society.
+私たちがインターネットを利用するとき、多くの個人情報が使用されます。これは私たちがオンライン上で誰であるかを示す情報、つまりプロファイルとなります。私たちが誰であり、何をするかという情報を組織が監視、記録、保存、使用、関連付けして、売ることができるということは、個人にとっても社会にとっても、非常に大きな意味を持っています。
+
+
+;In an effort to give users more control over their Web experiences, we developed the <a href="%(dnt_url)s" rel="external">Do Not Track</a> feature in Firefox. We also became the first browser manufacturer to offer it on multiple platforms, including Windows, Mac, Linux and Android. <a href="%(dntfxos_url)s" rel="external">Do Not Track is even available for Firefox OS</a> so that user privacy settings can be controlled on a system-wide level to ensure that every third-party application on a user's device respects their choice.
+ユーザーが自分のウェブ体験を自分でコントロールする権限を強化するため、Mozilla は Firefox に <a href="%(dnt_url)s" rel="external">Do Not Track</a> (行動追跡の拒否) 機能を搭載しました。また、Mozilla はこの機能を Windows、Mac、Linux、Android といった複数のプラットフォーム向けに提供した初のブラウザーベンダーとなりました。<a href="%(dntfxos_url)s" rel="external">Do Not Track は Firefox OS にも搭載されているため</a>、ユーザーはシステム全体でプライバシー設定をコントロールでき、自分が選択したプライバシー保護の設定が自分の端末上にあるすべてのアプリケーションで尊重されるようになります。
+
+
+;Do Not Track is important because it gives users a voice online to express their preference for privacy and personalization. It captures the user’s intent and allows them to put their hand up and ask for privacy online.
+Do Not Track は重要な機能です。なぜなら、ユーザーはこの機能によって、プライバシーとカスタマイズに関する自分の好みをオンライン上でウェブサイトに伝えることができるからです。この機能を利用することによってユーザーの意志が反映され、ユーザーはオンライン上でプライバシー保護を求める意志表示ができます。
+
+
+;Mozilla was instrumental in the movement to motivate the Web community to act against the Stop Online Piracy Act and the Protect IP act. These laws, had they gone into effect, would have given the US government and private businesses incredible censorship powers that would have global ramifications, weaken the Internet's security and discourage innovation and investment worldwide.
+Mozilla は、Stop Online Piracy Act (著作権保護法案) と Protect IP Act (知的財産保護法案) に対する抗議行動をウェブコミュニティに呼びかけて、反対運動を支援しました。これらの法案が可決されて発効すれば、米国政府と民間企業は非常に強大な検閲権を持つことになり、世界中に悪影響を及ぼしてインターネットのセキュリティを弱体化し、世界規模の革新や投資を妨げることになります。
+
+
+;Mozilla was one of many organizations that blacked out its websites in opposition to the SOPA/PIPA bills in congress. For the first time, the Web community of more than 15 million people came together to speak against a policy that affected the Web as a whole. This historic protest represented a significant turning point for the Web as a way to engage the electorate and mobilize citizens for change.
+Mozilla は他の多くの組織とともに、議会での SOPA/PIPA 法案の可決に反対して自社のウェブサイトを一時的に閉鎖しました。これは、ウェブ全体に影響を及ぼす法案に対して、ウェブコミュニティの1,500 万人以上の人々が協力して反対の声を上げた初めての出来事でした。この歴史的な抗議行動は、有権者を参加させ、市民をモバイル化して変化を起こす手段として、ウェブの重要な転換点となっています。
+
+
+;Early in 2012, Mozilla warned against the ratification of the Anti-Counterfeiting Trade Agreement (<abbr>ACTA</abbr>) by the European Parliament. <a href="%(acta_url)s" rel="external">In a blog post</a>, Mitchell Baker urged the policymakers that opaque processes were a “bad way to develop Internet policy” — in particular, that the global trade agreement was negotiated in private without open involvement of all the stakeholders. After massive street protests of Net-savvy citizens across Europe, the European Parliament rejected ACTA on July 4th in an unequivocal vote.
+2012 年初め、Mozilla は欧州議会による偽造品の取引の防止に関する協定 (<abbr>ACTA</abbr>) の批准に対して警告を発しました。<a href="%(acta_url)s" rel="external">このブログ記事で</a> Mitchell Baker は、不透明なプロセスは「インターネット政策を立てるにあたっては不適切な方法」であり、特に世界的な貿易協定はすべての利害関係者が開かれた場で参加することなく非公開で交渉されたと政策立案者に向けて主張しました。ヨーロッパ各地でインターネットに詳しい市民による抗議集会が開かれた末、欧州議会は 7 月 4 日に ACTA を明確に廃案としました。
+
+
+;Collusion
+Collusion {ok}
+
+
+;<a href="%(collusion_url)s" rel="external">Mozilla Collusion</a> gives consumers a powerful tool to protect their privacy, arming them with transparency, facts and the power to make their own decisions about how their personal data is shared and used. Made possible with the support of the Ford Foundation, Collusion allows users to see who is tracking them across the Web. It shows, in real time, how that data creates a spider-web of interaction between companies and other trackers.
+<a href="%(collusion_url)s" rel="external">Mozilla Collusion</a> は、個人ユーザーが自分のプライバシーを守るため、オンラインプライバシーの透明性や現実を知ることができる強力なツールです。どのように自分の個人情報が使われ、共有されるのかを自分で決める力を持たせるものでもあります。。フォード財団の支援を受けて実現した Collusion を使用すると、ユーザーはウェブ上で誰が自分を追跡しているかを見ることができます。そのデータが企業や他の追跡者との間でやり取りされる様子が、クモの巣のようにリアルタイムで表示されます。
+
+
+;Firefox Flicks
+Firefox Flicks {ok}
+
+
+;This year we brought back <a href="%(flicks_url)s" rel="external">Firefox Flicks</a> — a video challenge for aspiring filmmakers, animators and creatives from around the world to produce and submit short films. These films made by Firefox fans, promoted and educated users about the issues that affect their online lives such as privacy and security. Most importantly, these filmmakers shared what makes Firefox different using their own voices. Celebrities and film-industry experts helped select the regional winners from more than 400 submissions from thousands of filmmakers worldwide.
+今年、Mozilla は再び <a href="%(flicks_url)s" rel="external">Firefox Flicks</a> コンテストを開催しました。これは、映画製作者、アニメ制作者、クリエーターを目指す世界中の人々に、短い映画を制作して提出してもらう動画コンテストです。Firefox のファンが制作したこれらの映画は、プライバシーやセキュリティなど、ユーザーのオンライン生活に影響を及ぼす様々な問題についてユーザーの関心を促し啓蒙するものとなりました。最も重要なことは、この映画制作者たちが、Firefox は他のブラウザーと何が違うのかを、自分の言葉で語って共有し合ったことです。著名人や映画界の専門家に協力していただき、世界中の数千人の映画制作者によって提出された 400 点以上の作品から、地域ごとの受賞者が選定されました。
+
+
+;Our success begins with you.
+Mozilla の成功は、まずユーザーの成功から。
+
+
+;Mozilla is an organization that is fundamentally about people and making the Web better for everyone. The Mozilla community is essential to the success of the project. We can’t fight for an open, hackable and transparent Web without people who believe in and support that cause. We have Mozilla communities spanning the world and these remarkable people are responsible for coding, testing, localizing, hosting hackfests and summer code parties, teaching Webmakers, marketing, evangelizing Mozilla products and much more.
+Mozilla は、根本的に人々のための組織であり、ウェブをすべての人々にとってより良いものにするための組織です。Mozilla のコミュニティは、このプロジェクトの成功に不可欠です。オープンで様々な工夫ができて透明性のあるウェブを目指す戦いは、その理念を信じて支持する人々がいなければ戦うことはできません。Mozilla には世界中に広がるコミュニティがあり、そうした優れた人々がコードの作成やテスト、ローカライズ、開発者向けイベントの主催、Summer Code Party、Web Maker たちの指導、マーケティング、Mozilla 製品の啓蒙活動などを担っています。
+
+
+;Mozilla Reps
+Mozilla Reps {ok}
+
+
+;The <a href="%(reps_url)s" rel="external">Mozilla Reps</a> program, designed to empower volunteers to become official representatives of Mozilla in their region, has grown to more than 350 people in more than 70 countries in a little more than a year. The program plays a critical role in helping Mozilla execute against its organizational goals around the promotion and development of Firefox OS, Firefox for Windows, Mac and Linux and Firefox for Android. Reps have organized more than 700 events around the world and have successfully recruited and trained hundreds of new contributors across dozens of functional areas.
+<a href="%(reps_url)s" rel="external">Mozilla Reps</a> プログラムは、Mozilla のためにボランティアで活動する人々が各地域で Mozilla オフィシャルの代表者となるためのプログラムであり、発足後 1 年と少しの間に 70 か国で 350 人以上の規模へと成長しました。このプログラムは、Mozilla が Firefox OS、Windows、Mac、および Linux 版 Firefox、Android 版 Firefox を広め、開発するという組織としての目標達成に向けての活動を行う上で重要な役割を果たしています。代表者たちは世界中で 700 以上のイベントを実施し、Mozilla が活動している数十の地域で数百人の貢献者を新たに採用し、トレーニングを行いました。
+
+
+;MozCamps
+MozCamps {ok}
+
+
+;MozCamps are regional events that bring together core paid and volunteer Mozilla staff members from all areas of the project for two full days of presentations, discussions, brainstorms, work sprints, hackathons and, of course, a little bit of fun.
+MozCamps は、Mozilla の中心的な社員とボランティアメンバーが集う地域のイベントです。Mozilla が活動しているすべての地域からメンバーが集まり、まる 2 日間にわたってプレゼンテーション、討議、ブレインストーミング、作業スプリント、ハッカソンなどが行われます。もちろん、少しですが楽しいイベントもあります。
+
+
+;While the main focus is on community leaders and core contributors, MozCamps also aim to train up future leaders — those Mozilla contributors who have been particularly active in the past six months and represent the next generation of Mozilla leadership in the community.
+MozCamps の主な対象はコミュニティリーダーと中心的な貢献者たちですが、将来のリーダーを育成することも目指しています。これは、過去 6 か月間に特に積極的に活動し、そのコミュニティで Mozilla の次世代のリーダーとなれる貢献者が対象となります。
+
+
+;This year‘s MozCamps were held in Buenos Aires, Warsaw and Singapore, bringing together more than 300 employees and 600 volunteers.
+今年の MozCamps はブエノスアイレス、ワルシャワ、シンガポールで行われ、300 人以上の社員と 600 人以上のボランティアが参加しました。
+
+
+;Emerging Communities
+新しいコミュニティ
+
+
+;Some of the fastest growing and most dynamic communities are some of our youngest communities. They can be found in the Middle East, Africa and South East Asia and many of their members have been invited to MozCamps in 2012 as participants. The <a href="%(tunisia_url)s" rel="external">Tunisian community</a>, <a href="%(kenya_url)s" rel="external">Kenyan community</a> and <a href="%(philippines_url)s" rel="external">Filipino community</a> have been doing particularly outstanding work and each comprises roughly a dozen active contributors across many functional areas, including localization, QA, marketing and development. One of the newest Mozilla communities launched in 2012 is in <a href="%(myanmar_url)s" rel="external">Myanmar</a>.
+特に成長著しく活発に活動している Mozilla コミュニティの中には、最も歴史の浅いコミュニティがいくつかあります。そのようなコミュニティは中東、アフリカ、東南アジアに見られ、2012 年の MozCamps にはその中から多くのメンバーが参加者として招待されました。中でも <a href="%(tunisia_url)s" rel="external">チュニジアコミュニティ</a>、<a href="%(kenya_url)s" rel="external">ケニアコミュニティ</a>、<a href="%(philippines_url)s" rel="external">フィリピンコミュニティ</a> の活躍は目覚ましいものがあります。それぞれおよそ十数人の貢献者で構成され、その人たちがローカライズ、QA、マーケティング、開発など様々な分野で活動しています。2012 年に発足した最新の Mozilla コミュニティの 1 つに、<a href="%(myanmar_url)s" rel="external">ミャンマーコミュニティ</a> があります。
+
+
+;Contributor Stories
+貢献者たちのメッセージ
+
+
+;Chit started contributing to Mozilla in 2010 and has been leading community building efforts in Myanmar ever since.
+Chit は 2010 年に Mozilla に関わる活動を始め、それ以来ミャンマーでコミュニティ育成活動のリーダーを担っています。
+
+
+;Viking organized the first ever Firefox launch party in Indonesia back in 2007 and has led community marketing efforts across the country.
+Viking は 2007 年にインドネシア初の Firefox 立ち上げパーティーを主催し、同国内でのコミュニティマーケティング活動の先頭に立ってきました。
+
+
+;Keng kickstarted efforts to get Firefox localized in Thai and has been a community lead since 2008.
+Keng は Firefox をタイ語にローカライズする取り組みを始め、2008 年以来コミュニティのリーダーを務めています。
+
+
+;Claire started contributing to Mozilla in 2009 and is the editor of the Bonjour Mozilla blog.
+Claire は 2009 年に Mozilla への貢献を始め、Bonjour Mozilla ブログの編集に携わっています。
+
+
+;A passionate open source evangelist in his native Egypt, Haitham became a Mozilla Rep in early 2011.
+母国エジプトで熱心なオープンソースエバンジェリストとして活動している Haitham は、2011 年初めに Mozilla Rep となりました。
+
+
+;Ioana has been driving Mozilla hackathons across her native Romania since 2010.
+Ioana は 2010 年以降、母国ルーマニアの各地で Mozilla ハッカソンを主催しています。
+
+
+;Brian has been contributing to Mozilla for more than a decade and recently sat on the Mozilla Reps Council.
+Brian は 10 年以上にわたって Mozilla に貢献しており、最近 Mozilla Reps 評議委員に就任しました。
+
+
+;Passionate about reviving Songay, a dialect in his native Mali, Mohomodou has led localization efforts to get Firefox translated into Songay.
+母国マリの方言であるソンガイ語の復活に取り組んでいる Mohomodou は、Firefox をソンガイ語に翻訳する活動を進めています。
+
+
+;Sustainability and Partnerships
+持続可能性とパートナーシップ
+
+
+;Along with this annual report, we released our audited financial statements for 2011. Mozilla remains well positioned, both financially and organizationally, to advance our mission of building openness, freedom and participation into the Internet.
+Mozilla はこの年次報告書と併せ、2011 年度の監査済み財務諸表を公開しました。Mozilla は財務的にも組織的にも引き続き良好な状態にあり、インターネットをオープンで自由で誰もが参加できる場所にするという使命を前進させることができます。
+
+
+;Mozilla remains financially healthy; we continue to hire more people globally, we’ve opened new Mozilla Spaces around the world, have launched significant new initiatives such as Firefox OS and are able to support those with viable resources.
+Mozilla の財務状況は健全な状態を維持しており、世界中で新規採用を続けています。世界各地に新しい Mozilla Spaces を開設し、Firefox OS などの重要な新しい取り組みにも着手しました。こうした活動を、実現可能なリソースによって支援することができます。
+
+
+;The majority of our revenue comes from the search functionality in the Firefox browser. Google is the largest source of revenue and in December 2011, we announced that we negotiated a significant and mutually beneficial revenue agreement with Google. This new agreement extends our long term search relationship with Google for at least three additional years.
+Mozilla の収入の大半は、Firefox ブラウザーの検索機能によるものです。Google は最大の収入源であり、Mozilla は 2011 年 12 月に、Google との間で双方にとってメリットのある重要な収益契約について交渉したことを発表しました。この新しい契約によって、Mozilla が Google との間で長年にわたって築いてきた検索に関する関係が、さらに少なくとも 3 年間延長されます。
+
+
+;Mozilla has a number of other relationships in the Web community, as well as new relationships with mobile operators, device manufacturers, third-party content partners and other players in the mobile ecosystem.
+Mozilla はその他にもウェブコミュニティ内で多くの関係を築いており、携帯電話会社、端末メーカー、サードパーティのコンテンツパートナーなど、モバイルエコシステムに関わる多くの組織とも新しい関係が生まれています。
+
+
+;2011 Audited Financial Statement
+2011 年度監査済み財務諸表
+
+
+;Download PDF
+PDF をダウンロード
+
+
+;2011 Form 990
+2011 年度 Form 990
+
+
+# This is a button inciting the user to read the following section of content in a modal window.
+;Read
+読む
+
+
+# This is a button inciting the user to read the following section of content in a modal window
+;Done
+完了
+
+
+;At Mozilla, we measure success by how much we are doing to improve the overall health of the Web and advance the interests of users and developers. We succeed when we build products that people love, and when other organizations build the traits and features we care about into competing products. For example, we view Google Chrome's recent implementation of the Do Not Track feature we pioneered to be a success for Mozilla and our mission.
+Mozilla にとっての成功の基準とは、ウェブ全体の健全性向上とユーザーや開発者の利益向上のためにどれだけ努力したか、ということです。人々に喜ばれる製品を開発したとき、あるいは Mozilla が重要と考える特性や機能を他の組織が競合製品に採用したときは、Mozilla にとって成功と言えます。たとえば、最初に Mozilla が導入した Do Not Track 機能が先ごろ Google Chrome で採用されたことは、Mozilla とその使命にとっての成功であると考えています。
+
+
+;Mozilla has announced a commercial partnership with Telefónica for Firefox OS. The specific terms of the agreement are subject to traditional confidentiality requirements. We are developing new partnerships with additional <abbr title="Original Equipment Manufacturers">OEMs</abbr> and operators, which will be announced in due course through 2012 and into 2013. We also have numerous arrangements with app publishers who will be included in the Firefox Marketplace.
+Mozilla は Firefox OS について Telefónica との商業的なパートナー契約の締結を発表しました。その具体的な条件は、従来の守秘義務の対象となります。Mozilla は他の <abbr title="Original Equipment Manufacturers">OEM</abbr> や通信事業者とも新たなパートナー契約の交渉を進めており、それらについては 2012 年から 2013 年にかけて、いずれ発表されます。また、Firefox Marketplace で提供されるアプリの開発会社とも多くの契約を結んでいます。
+
+
+# This string is for the page <title> value
+;The State of Mozilla: 2011 Annual Report
+Mozilla 年次報告書 — 2011 Mozilla の現状
+
+
+;SOPA / PIPA & ACTA
+SOPA/PIPA および ACTA
+
+

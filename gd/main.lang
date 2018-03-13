@@ -1,0 +1,811 @@
+;Navigation
+Seòladh
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Luchdaidhean ro-sgaoilidh
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Mu dhèidhinn
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Aplacaidean
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Na tracaich
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Deas-bhòrd nan ùidhean
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Tionndadh luchd-leasachaidh
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Brabhsadh prìobhaideach
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Cobhair a dhìth?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Naidheachdan
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Tagh am brabhsair neo-eisimeileach
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Tha Firefox neo-phrothaideach, neo-chorporra ’s gun truailleadh. Ma thaghas tu Firefox, chan e dìreach brabhsair a thaghas tu. Bidh tu a’ cur taic ri saorsa phearsanta.
+
+
+;Donate
+Thoir tabhartas
+
+
+;Support
+Taic
+
+
+;Products
+Bathar
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Leudachain
+
+
+;Add-ons
+Tuilleadain
+
+
+;About Us
+Mu ar dèidhinn
+
+
+;Labs
+Na deuchainn-lannan
+
+
+;skip to Navigation
+thoir leum dhan t-seòladaireachd
+
+
+;switch language
+atharraich an cànan
+
+
+;Back to home page
+Air ais dhan duilleag mhòr
+
+
+;About Mozilla
+Mu dhèidhinn Mozilla
+
+
+;Get Involved
+Gabh pàirt ann
+
+
+;Careers
+Obair
+
+
+;Press Center
+Ionadh an luchd-naidheachd
+
+
+;Contact Us
+Leig fios thugainn
+
+
+# Used in new footer to switch the language of the page
+;Language
+Cànan
+
+
+;Other languages:
+Cànain eile:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Cànan na duilleige:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d-%m-%Y
+
+
+;Legal
+Laghail
+
+
+# Used as link in the footer
+;Cookies
+Briosgaidean
+
+
+;Legal Notices
+Sanasan laghail
+
+
+;Privacy Policy
+Am Poileasaidh Prìobhaideachd
+
+
+;Release Notes
+Na notaichean sgaoilidh
+
+
+;Other Systems and Languages
+Siostaman is cànain eile
+
+
+;Close
+Dùin
+
+
+;(in English)
+(ann am Beurla)
+
+
+;Return to top
+Till gu barr na duilleige
+
+
+;Features
+Feartan
+
+
+;Customize
+Gnàthaich
+
+
+;Download
+Luchdaich a-nuas
+
+
+;Previous
+Air ais
+
+
+;Next
+Air adhart
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+MegaBytes {ok}
+
+
+;FAQ
+CÀBHA
+
+
+;Videos
+Videothan
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Ach far a bheil <a href="%s">sanas</a> eile ann, tha susbaint na làraich seo fo cheadachas <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> no tionndadh nas ùire dheth.
+
+
+;Report Trademark Abuse
+Dèan aithris air droch chleachdadh comharraidh-mhalairt
+
+
+;Free Upgrade
+Ùrachadh saor an-asgaidh
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Cum cluas ri naidheachdan oirnn air:
+
+
+;Customize with Add-ons
+Gnàthaich le tuilleadain
+
+
+;Learn More
+Barrachd fiosrachaidh
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Barrachd fiosrachaidh
+
+
+# Link used to play again an animation or a video
+;Replay
+Ath-chluich
+
+
+;Watch the video
+Coimhead air a' video
+
+
+;Replay the video
+Cluich a' video a-rithist
+
+
+;Share the video
+Co-roinn a' video
+
+
+;WebM format
+Fòrmat WebM
+
+
+;Ogg Theora format
+Fòrmat Ogg Theora
+
+
+;MPEG-4 format
+Fòrmat MPEG-4
+
+
+;Mobile
+Gluasadach
+
+
+;View Full Site
+Seall an làrach shlàn
+
+
+;Desktop
+Deasg
+
+
+;Firefox for mobile
+Firefox airson innealan-làimhe
+
+
+;Email
+Post-d
+
+
+;Upgrade now
+Àrdaich an-dràsta
+
+
+;Update now
+Ùraich an-dràsta
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Prìobhaideachd
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Tha cuid dhen t-susbaint seo fo ©1998–%(current_year)s le com-pàirtichean mozilla.org. Tha an t-susbaint ri fhaighinn fo cheadachas <a rel="license" href="%(url)s">Creative Commons</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Tha cuid dhen t-susbaint seo fo ©1998–%(current_year)s le com-pàirtichean mozilla.org. Tha an t-susbaint ri fhaighinn fo cheadachas <a href="%(url)s">Creative Commons</a>.
+
+
+# Footer string
+;Contribute to this site
+Cuir ris an làrach seo
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Còd tùsail na duilleige seo
+
+
+# Top menu item
+;Mission
+Am misean
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Turas
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sioncronaich
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Tuilleadain deasga
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Tuilleadan Android
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Ùrlaran
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Taic airson Firefox deasga
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Taic Android
+
+
+;Releases
+Sgaoilidhean
+
+
+;Blog
+Bloga
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Faigh ùrachaidhean Mozilla
+
+
+# share button for social networks
+;Share
+Co-roinn
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla air Twitter
+
+
+# footer link
+;Firefox on Twitter
+Firefox air Twitter
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla air Facebook
+
+
+# footer link
+;Firefox on Facebook
+Firefox air Facebook
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Fòraman
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Peutantan
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Ceannardas
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Riaghlachas
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Eachdraidh
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Am bathar againn
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Bathar-bog is tionnsgnadh eile a chuireas ris a' mhisean againn.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+'S urrainn dhut pàirt a ghabhail mar shaor-thoileach air iomadh dòigh.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Clàr-taice
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+An dealas dhut, dha do phrìobhaideachd is do lìon fosgailte
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Cuir air JavaScript gus an duilleag seo fhaicinn mar bu chòir.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Feartan Firefox
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Cobhair le Firefox
+
+
+;January
+Faoilleach
+
+
+;February
+Gearran
+
+
+;March
+Màrt
+
+
+;April
+Giblean
+
+
+;May
+Cèitean
+
+
+;June
+Ògmhios
+
+
+;July
+Iuchar
+
+
+;August
+Lùnastal
+
+
+;September
+Sultain
+
+
+;October
+Dàmhair
+
+
+;November
+Samhain
+
+
+;December
+Dùbhlachd
+
+
+;<abbr>Jan</abbr>
+<abbr>Faoi</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>Gearr</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Màrt</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>Gibl</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>Cèit</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Ògmh</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Iuch</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Lùna</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Sult</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>Dàmh</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Samh</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Dùbh</abbr>
+
+
+;Congrats. You’re up to date!
+Meal do naidheachd, gach rud cho ùr ’s a ghabhas!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Fòrmat
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Teacsa
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Oich! Dèan cinnteach gu bheil am post-dealain a chuireas thu a-steach dligheach.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Tha mi toilichte gun làimhsich Mozilla am fiosrachadh agam mar a mhìnich iad san <a href="%s">aithris phrìobhaideachd seo</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Cum suas ri <br> naidheachdan Firefox.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Faigh naidheachdan Firefox
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+CUIR AM POST-D AGAD AN-SEO
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Clàraich an-dràsta
+
+
+# Old newsletter subscription Button
+;Sign me up
+Clàraich mi
+
+
+;Select country
+Tagh do dhùthaich
+
+
+;Available Languages
+Na cànain a tha ri fhaighinn
+
+
+;We will only send you Mozilla-related information.
+Cha chuir sinn thugad ach fiosrachadh mu Mozilla.
+
+
+;Thanks!
+Mòran taing!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Mur an do dhearbh thu fo-sgrìobhadh airson cuairt-litir air chor-eigin o Mozilla, dh’fhaoidte gum bi agad ri sin seo a dhèanamh. Thoir sùil air a’ bhogsa phuist agad no pasgan an spama airson post-d uainn.
+
+
+;Read all about it in our <span>newsletter</span>
+Na naidheachdan uile sa <span>chuairt-litir</span> againn
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Leis a' chuairt-litir mhìosail, bidh na naidheachdan as ùire aig Mozilla agad, a' gabhail a-steach na gleusan as ùire leis an cur thu Firefox gu làn fheum dhut fhèin. Chan eil dòigh nas fhearr gus cumail suas rinn!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> agus thusa
+
+
+;Get Firefox tips, tricks, news and more
+Faigh gliocasan, naidheachdan is mòran a bharrachd mu dhèidhinn Firefox
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Ag innleachadh an lìn
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Slàinte-lìn
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Tapadh leibh airson Firefox a thaghadh!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Brabhsair-lìn Mozilla Firefox
+
+
+# Link in the footer
+;Android Browser
+Brabhsair Android
+
+
+# Link in the footer
+;iOS Browser
+Brabhsair iOS
+
+
+# Link in the footer
+;Focus Browser
+Brabhsair Focus
+
+
+# Link in the footer
+;Desktop Browser
+Brabhsair Desktop
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, tionndadh luchd-leasachaidh
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Luchdaich a-nuas brabhsair-lìn Mozilla Firefox
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Brabhsair desktop airson Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Brabhsair mobile airson Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Brabhsair mobile airson iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Tha am Firefox agad gu math aosta.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Faigh an tionndadh as ùire airson brabhsadh tèarainte a dhèanamh.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Ùraich Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Na tha ùr ann am Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Seall an corr
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Seall nas lugha
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Cuir romhad mar a thèid an dàta seo a cho-roinneadh ann am Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Tagh...
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Seall na h-uile
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Falaich na h-uile
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Làr-ionad an luchd-leasachaidh
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Rannsachadh
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Fìorachd bhiortail
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Geamannan
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Docamaideadh
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Bloga nan hacks
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+
+

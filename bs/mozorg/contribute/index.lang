@@ -1,0 +1,721 @@
+## active ##
+## contribute_cta_updates ##
+## NOTE: Demo server available at https://www-dev.allizom.org/contribute
+
+
+# Used for HTML title attribute
+;Volunteer Opportunities at Mozilla
+Volonterske mogućnosti u Mozilli
+
+
+# this string is used for accessibility reasons, it's not visible in the page
+;Menu
+Meni
+
+
+# this br is for formatting, omit or reposition as needed
+;Why<br> volunteer
+Zašto<br> volontirati
+
+
+# this br is for formatting, omit or reposition as needed
+;Find<br> an event
+Pronađi<br> događaj
+
+
+# this br is for formatting, omit or reposition as needed
+;Meet<br> Mozillians
+Upoznaj<br> Mozillians
+
+
+;Get involved
+Uključite se
+
+
+;Your country
+Vaša država
+
+
+# This is a hint used as a placeholder in a country selection dropdown menu. It should be short.
+;I live in&hellip;
+Živim u&hellip;
+
+
+;Volunteer with Mozilla!
+Volontirajte sa Mozillom!
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;active Mozillians worldwide
+aktivnih Mozillera širom svijeta
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;upcoming events around the globe
+predstojećih događaja širom svijeta
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms. The phrase "and counting" means there are always more being added; not sure how that idiom might translate so do your best :)
+;languages and counting, on every continent
+jezika i u porastu, na svakom kontinentu
+
+
+;Join a global community of game-changers.
+Pridružite se globalnoj zajednici koja pravi promjene.
+
+
+# this br is for formatting, omit or reposition as needed
+;Volunteer as much as you like. Or as little.<br> It’s totally up to you.
+Volontirajte koliko god želite. Ili malo.<br> to je potpuno do vas.
+
+
+# this br is for formatting, omit or reposition as needed
+;Share your skills and pick up<br> a few new ones along the way.
+Pokažite svoje vještine i pokupite<br> nekoliko novih usput.
+
+
+;Volunteering with Mozilla&hellip;
+Volontiranje u Mozilli&hellip;
+
+
+# This paragraph follows the headline, "Volunteering with Mozilla...", so the first sentence continues from that fragment. The line breaks are for formatting.
+;is about more than lending a hand. It’s about learning, collaborating and sharing your skills with a global community of Mozillians — coders, organizers, activists and more — who help shape the Web every day.
+predstavlja mnogo više od pomaganja. Radi se o učenju, sarađivanju i dijeljenju Vaših vještina sa globalnom zajednicom Mozillera — programerima, organizatorima, aktivistima i mnogim drugim — sa onima koji pomažu u svakodnevnom oblikovanju weba.
+
+
+;See our community in action
+Pogledajte našu zajednicu u akciji
+
+
+;How Mozillians help every day
+Kako Mozilleri pomažu svaki dan
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Spain &middot; Activism
+Španija $middot; Aktivizam
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Philippines &middot; Activism
+Filipini &middot; Aktivizam
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Switzerland &middot; Coding
+Švicarska &middot; Kodiranje
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;India &middot; Teaching
+Indija &middot; Učenje
+
+
+;Read his story
+Pročitajte njegovu priču
+
+
+;Read her story
+Pročitajte njenu priču
+
+
+;Want to get involved? Here’s how.
+Želite se uključiti? Evo kako.
+
+
+;Choose what interests you and tell us how you’d like to help
+Odaberite ono što vas zanima i recite nam kako želite da pomognete
+
+
+;Stand by for an email that will connect you to the Mozilla community
+Pričekajte e-mail koji će vas povezati sa Mozilla zajednicom
+
+
+;Create your Mozillians account and share your contributions with the world
+Kreirajte svoj Mozilla račun i podijelite svoje doprinose sa svijetom
+
+
+;Get started
+Započnite
+
+
+;Not ready to dive in just yet?
+Niste spremni samo još roniti?
+
+
+;Here are a few other ways you can support Mozilla right now.
+Evo još nekoliko načina na koje možete sada podržati Mozillu.
+
+
+;Donate to Mozilla
+Donirajte za Mozillu
+
+
+;Read our Manifesto
+Pročitajte naš Manifest
+
+
+;Like us on Facebook
+Lajkujte nas na Facebooku
+
+
+;Follow us on Twitter
+Pratite nas na Twitteru
+
+
+;Upcoming event
+Predstojeći događaji
+
+
+;See all events
+Pogledajte sve događaje
+
+
+;Communicate
+Komunicirajte
+
+
+;Mozilla communities
+Mozillina zajednica
+
+
+;Mailing lists
+Mailing lista
+
+
+;IRC channels
+IRC kanali
+
+
+;More links
+Više linkova
+
+
+;Submit Firefox feedback
+Prihvatite Firefoxove povratne informacije
+
+
+;Explore Mozilla careers
+Istražite Mozilline karijere
+
+
+;Get help with Firefox
+Potražite pomoć sa Firefoxa
+
+
+;Subscribe to community events
+Pretplatite se na događaje u zajednici
+
+
+;Get community updates
+Dobijte ažuriranja zajednice
+
+
+# Used as title of the /stories sub-page
+;Mozillian Stories
+Mozilline priče
+
+
+# Used as a toggle to display more content.
+;More
+Više
+
+
+# Used as a toggle to display less content.
+;Less
+Manje
+
+
+;Read more Mozillian stories
+Pročitajte više Mozillinih priča
+
+
+;Discover even more stories on Twitter with <a href="%(link_hashtag)s">#IAmAMozillian</a>
+Otkrijte još više priče na Twitteru sa <a href="%(link_hashtag)s">#IAmAMozillian</a>
+
+
+;More coming soon
+Uskoro više
+
+
+# Used as title of the /signup sub-page
+;Get Involved: Volunteer Opportunities at Mozilla
+Pridružite se: Volonterske mogućnosti u Mozilli
+
+
+;To get started, tell us what interests you.
+Za početak, recite nam šta vas zanima.
+
+
+;Choose one for now. You can always contribute to other areas later.
+Odaberite jedno za sada. Uvijek možete doprinijeti na drugim područjima kasnije.
+
+
+# This text is used for accessibility reasons, it's not visible
+;Where would you like to get started?
+Gdje biste voljeli da počnete?
+
+
+;Coding
+Kodiranje
+
+
+;More about coding
+Više o kodiranju
+
+
+;Contribute code to a whole range of Mozilla products, including Firefox and Firefox OS.
+Doprinosi koda za čitav niz Mozillinih proizvoda, uključujući Firefox i Firefox OS.
+
+
+;Testing
+Testiranje
+
+
+;More about testing
+Više o testiranju
+
+
+;Help make the Mozilla products you use — and love — even better.
+Pomozite da Mozilline proizvode koje koristite - i volite - budu bolji.
+
+
+;Writing
+Pišem
+
+
+;More about writing
+Više o upisivanju
+
+
+;Lend your voice to Mozilla — from blogging and social media to providing technical documents for users and developers.
+Posudite svoj glas Mozilla - sa bloga i društvenih mreža u pružanju tehničke dokumentacije za korisnike i programere.
+
+
+;Teaching
+Učenje
+
+
+;More about teaching
+Više o učenju
+
+
+;Share your skills with a community that’s eager to learn. Take advantage of our free tools, teaching resources and events.
+Podijelite svoje vještine sa zajednicom koja je željna da nauči. Iskoristite naše besplatne alate, resurse za učenje i događaje.
+
+
+;Helping
+Pomoć
+
+
+;More about helping
+Više o pomoći
+
+
+;Provide support to users who need it and help everyone get the most out of their Mozilla products.
+Pružite podršku korisnicima kojima je to potrebno i pomozite svima da izvuku maksimum iz Mozillinih proizvoda.
+
+
+;Translating
+Prevođenje
+
+
+;More about translating
+Više o prevođenju
+
+
+;Help make Mozilla stuff available in other languages. Translate everything from newsletters and websites to copy for Firefox and Firefox OS.
+Pomozite da Mozilla stvari budu dostupne na drugim jezicima. Prevodite sve iz biltena i web stranica za kopiranje iz Firefoxa i Firefox OS.
+
+
+;Activism
+Aktivizam
+
+
+;More about activism
+Više o aktivizmu
+
+
+;Get involved with our opportunities to support freedom, security and privacy on the open Web.
+Uključite se sa našim mogućnostima da podržimo slobodu, sigurnost i privatnost na internetu.
+
+
+;I don’t know
+Ne znam
+
+
+;More about how you can contribute
+Više o tome kako možete doprinijeti
+
+
+;Not sure how you want to help? No problem. We can find the appropriate contribution activity for you.
+Niste sigurni kako želite da pomognete? Nema problema. Mi možemo pronaći odgovarajuće aktivnosti za vas.
+
+
+;Now tell us a little about yourself:
+Sada nam recite nešto o sebi:
+
+
+;Name
+Ime
+
+
+;Email address
+Email adresa
+
+
+;Country
+Zemlja
+
+
+;select
+izaberite
+
+
+;Why do you want to be a Mozilla volunteer?
+Zašto želite biti Mozillin volonter?
+
+
+;(Optional)
+(opcionalno)
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%(privacy)s">this Privacy Policy</a>
+Slažem se da se Mozilla koristi mojim informacijama kao što je objašnjeno u <a href="%(privacy)s">this Privacy Policy</a>
+
+
+;Start contributing
+Počnite doprinositi
+
+
+;Sign me up for community updates
+Prijavi me za promjene u zajednici
+
+
+;(English)
+(Engleski)
+
+
+;What particular area?
+Koje tačno područje?
+
+
+;What would you like to code?
+Šta biste željeli programirati?
+
+
+;What would you like to test?
+Šta biste željeli testirati?
+
+
+;What would you like to translate?
+Šta biste željeli prevoditi?
+
+
+;What would you like to write?
+Šta biste željeli pisati?
+
+
+;What would you like to teach?
+Šta biste željeli učiti?
+
+
+;Firefox
+Firefox {ok}
+
+
+;Websites
+Web stranice
+
+
+;Firefox add-ons
+Dodaci Firefoxa
+
+
+;HTML5 apps
+HTML5 aplikacije
+
+
+;Diagnosing Web compatibility issues
+Dijagnosticiranje problema web kompatibilnosti
+
+
+;Online services
+Internet usluge
+
+
+;Web compatibility
+Web kompatibilnost
+
+
+;Product localization
+Lokalizacija proizvoda
+
+
+;Website localization
+Lokalizacija web stranica
+
+
+;I’d like to work on localization tools
+Htio/htjela bih da radim na alatima lokalizacije
+
+
+;Social media
+Društveni mediji
+
+
+;Journalism
+Novinarstvo
+
+
+;Technical docs for users
+Tehnička dokumentacija za korisnike
+
+
+;Technical docs for developers
+Tehnička dokumentacija za programere
+
+
+;Technical docs for Firefox add-ons
+Tehnička dokumentacija za Firefox dodatke
+
+
+;Technical docs for HTML5 apps
+Tehnička dokumentacija za HTML5 aplikacije
+
+
+;Teach the Web (Webmaker)
+Nauči web (Webmaker)
+
+
+;Open News fellowships
+Otvori novisti stipendija
+
+
+;Hive - Community networks of educators/mentors
+Košnica - Zajednica mreža edukatora/mentora
+
+
+;Open Web science research
+Otvori internet istraživanje nauke
+
+
+;Community Events
+Događaji zajednice
+
+
+;Find events
+Traži događaje
+
+
+;By city, country, or event:
+Prema gradu, zemlji, ili događaju:
+
+
+;By date:
+Po datumu:
+
+
+;month
+mjesec
+
+
+;year
+godina
+
+
+;Date
+Datum
+
+
+;Event
+Događaj
+
+
+;Location
+Lokacija
+
+
+;City
+Grad
+
+
+;Events
+Događaji
+
+
+# Used as title of the thank you page displayed after users send the form
+;Thank you!
+Hvala vam!
+
+
+;Thanks!
+Zahvale!
+
+
+;We’re thrilled to see that you’re interested in coding and can’t wait to get you started.
+Oduševljeni smo da vidimo da ste zainteresovani za kodiranje i jedva čekamo početak.
+
+
+;We’re thrilled to see that you’re interested in testing and can’t wait to get you started.
+Oduševljeni smo da vidimo da ste zainteresirani za testiranje i jedva čekamo vaš početak.
+
+
+;We’re thrilled to see that you’re interested in writing and can’t wait to get you started.
+Oduševljeni smo da vidimo da ste zainteresirani zapisanje i jedva čekamo da počnete.
+
+
+;We’re thrilled to see that you’re interested in teaching and can’t wait to get you started.
+Oduševljeni smo da vidimo da ste zainteresirani za učenje i jedva čekamo da počnete.
+
+
+;We’re thrilled to see that you’re interested in helping and can’t wait to get you started.
+Oduševljeni smo da vidimo da ste zainteresirani za pomoć i jedva čekamo da počnete.
+
+
+;We’re thrilled to see that you’re interested in translating and can’t wait to get you started.
+Oduševljeni smo da vidimo da ste zainteresirani za prevođenje i jedva čekamo da počnete.
+
+
+;We’re thrilled to see that you’re interested in activism and can’t wait to get you started.
+Oduševljeni smo da vidimo da ste zainteresirani za aktivizam i jedva čekamo da počnete.
+
+
+;We’re thrilled to see that you’re interested in volunteering and can’t wait to get you started.
+Oduševljeni smo da vidimo da ste zainteresirani za volontiranje i jedva čekamo da počnete.
+
+
+;Keep an eye on your inbox for an important message from us.
+Pogledajte u vaš inbox za važnu poruku od nas.
+
+
+;Hello!
+Zdravo!
+
+
+;Your Name
+Vaše ime
+
+
+;In the meantime&hellip;
+U međuvremenu&hellip;
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;You can help by picking an easy task that only takes a few minutes &mdash; or take on a bigger challenge.
+Možete pomoći tako što ćete odabrati lagan zadatak koji traje samo nekoliko minuta &mdash; ili prihvatiti veći izazov.
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;Choose a Task Now
+Izaberite zadatak sada
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Help us tell the world how awesome Firefox is and about all the important work Mozilla does every day.
+Pomozite nam reći svijetu kako je Firefox fenomenalan i o svim važnim poslovima koje Mozilla radi svaki dan.
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Join Now
+Pristupite sada
+
+
+;You can create your Mozillians account now to connect with fellow Mozillians.
+Možete kreirati Mozillin naloga za povezivanje sa kolegama iz Mozille.
+
+
+;Yes, create my Mozillians account
+Da, kreiraj moj Mozilla račun
+
+
+;You will be asked to sign in before proceeding
+Od vas će se tražiti da se prijavite prije postupka
+
+
+;No thanks, I’ll just wait for the email
+Ne hvala, ja ću samo čekati za e-mail
+
+
+# The following strings are used in the contribute form on production (https://www.mozilla.org/contribute/signup/), not in the one available on stage
+# Strings have been copied from the old template (mozorg/contribute.lang)
+;Area of interest?
+Područja od značaja?
+
+
+;Helping Users
+Pomoć korisnicima
+
+
+;Testing and QA
+Testiranje i osiguranje kvaliteta
+
+
+;Marketing
+Marketing {ok}
+
+
+;Localization and Translation
+Lokalizacija i prijevod
+
+
+;Web Development
+Web programiranje
+
+
+;Firefox Marketplace
+Firefox Marketplace {ok}
+
+
+;Add-ons
+Dodaci
+
+
+;Visual Design
+Vizuelni dizajn
+
+
+;Documentation and Writing
+Dokumentovanje i upisivanje
+
+
+;Education
+Obrazovanje
+
+
+;Other
+Ostalo
+
+
+;Hi, I’m interested in…
+Zdravo, ja sam zainteresovan za...
+
+
+;Send us a note and we can get you started right away.
+Pošaljite nam poruku i možemo dobiti ste počeli odmah.
+
+
+;I have a suggestion for Firefox
+Ja imam prijedlog za Firefox.
+
+
+;I need help with a Firefox issue
+Trebam pomoć za Firefox probleme
+
+
+;Please enter a valid email address.
+Molimo vas da upišete ispravnu email adresu.
+
+
+;You must agree to the privacy policy.
+Morate se složiti sa politikom privatnosti.
+
+
+;Please select an area of interest.
+Molimo izaberite područja interesovanja.
+
+
+;Please tell us more about your interests.
+Molim vas recite nam nešto više o vašim interesima.
+
+

@@ -1,0 +1,811 @@
+;Navigation
+Gezinme
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Final öncesi sürümler
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Hakkımızda
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Uygulamalar
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Beni İzleme
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+İlgi Alanı Panosu
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Developer Edition {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Gizli Gezinti
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Yardım mı lazım?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Haberler
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Bağımsız tarayıcıyı seçin
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox kâr amacı gütmüyor, kurumsallaşmıyor, taviz vermiyor. Firefox’u seçmek, sadece bir tarayıcı seçmek değil, kişisel özgürlüğünüzü seçmek demek.
+
+
+;Donate
+Bağış yapın
+
+
+;Support
+Destek
+
+
+;Products
+Ürünler
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Eklentiler
+
+
+;Add-ons
+Eklentiler
+
+
+;About Us
+Hakkımızda
+
+
+;Labs
+Laboratuvar
+
+
+;skip to Navigation
+gezinme alanına geç
+
+
+;switch language
+dili değiştir
+
+
+;Back to home page
+Ana sayfaya dön
+
+
+;About Mozilla
+Mozilla Hakkında
+
+
+;Get Involved
+Bize Katılın
+
+
+;Careers
+İş Olanakları
+
+
+;Press Center
+Basın Merkezi
+
+
+;Contact Us
+Bize ulaşın
+
+
+# Used in new footer to switch the language of the page
+;Language
+Dil
+
+
+;Other languages:
+Diğer diller:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Sayfa dili:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d.%m.%Y
+
+
+;Legal
+Yasal
+
+
+# Used as link in the footer
+;Cookies
+Çerezler
+
+
+;Legal Notices
+Yasal Uyarılar
+
+
+;Privacy Policy
+Gizlilik İlkeleri
+
+
+;Release Notes
+Sürüm notları
+
+
+;Other Systems and Languages
+Diğer Sistemler ve Diller
+
+
+;Close
+Kapat
+
+
+;(in English)
+(İngilizce)
+
+
+;Return to top
+Başa dön
+
+
+;Features
+Özellikler
+
+
+;Customize
+Özelleştir
+
+
+;Download
+İndir
+
+
+;Previous
+Önceki
+
+
+;Next
+Sonraki
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+Megabayt
+
+
+;FAQ
+S.S.S.
+
+
+;Videos
+Videolar
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Aksi <a href="%s">belirtilmedikçe</a>, bu sitedeki içerikler <a href="%s">Creative Commons Attribution<br />Share-Alike Lisansı v3.0</a> veya daha üst bir sürümle lisanslanmıştır.
+
+
+;Report Trademark Abuse
+Telif hakkı ihlali bildir
+
+
+;Free Upgrade
+Ücretsiz Yükseltme
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Bizi takip edin:
+
+
+;Customize with Add-ons
+Eklentilerle Özelleştirin
+
+
+;Learn More
+Ayrıntılı bilgi al
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Ayrıntılı bilgi al
+
+
+# Link used to play again an animation or a video
+;Replay
+Tekrar oynat
+
+
+;Watch the video
+Videoyu izleyin
+
+
+;Replay the video
+Videoyu tekrar oynat
+
+
+;Share the video
+Videoyu paylaş
+
+
+;WebM format
+WebM biçimi
+
+
+;Ogg Theora format
+Ogg Theora biçimi
+
+
+;MPEG-4 format
+MPEG-4 biçimi
+
+
+;Mobile
+Mobil
+
+
+;View Full Site
+Tüm siteyi göster
+
+
+;Desktop
+Masaüstü
+
+
+;Firefox for mobile
+Mobil aygıtlar için Firefox
+
+
+;Email
+E-posta
+
+
+;Upgrade now
+Şimdi yükselt
+
+
+;Update now
+Şimdi güncelle
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Gizlilik
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Bu içeriğin bazı kısımları ©1998–%(current_year)s bireysel mozilla.org yazarları. İçerik, <a rel="license" href="%(url)s">Creative Commons lisansı</a> ile sunulmaktadır.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Bu içeriğin bazı kısımları ©1998–%(current_year)s bireysel mozilla.org yazarları. İçerik, <a href="%(url)s">Creative Commons lisansı</a> ile sunulmaktadır.
+
+
+# Footer string
+;Contribute to this site
+Bu siteye katkıda bulunun
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Bu sayfanın kaynak kodu
+
+
+# Top menu item
+;Mission
+Misyon
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Tur
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sync {ok}
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Masaüstü Eklentileri
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Android Eklentileri
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Temalar
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Masaüstü Desteği
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Android Desteği
+
+
+;Releases
+Sürümler
+
+
+;Blog
+Blog {ok}
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Mozilla haberlerini alın
+
+
+# share button for social networks
+;Share
+Paylaş
+
+
+# footer link
+;Mozilla on Twitter
+Twitter’da Mozilla
+
+
+# footer link
+;Firefox on Twitter
+Twitter’da Firefox
+
+
+# footer link
+;Mozilla on Facebook
+Facebook’ta Mozilla
+
+
+# footer link
+;Firefox on Facebook
+Facebook’ta Firefox
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Forumlar
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patentler
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Yönetim
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+İdare
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Tarihçe
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Ürünlerimiz
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Misyonumuzu gerçekleştirmeye yönelik yazılımlar ve diğer yenilikler.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Çeşitli alanlarda gönüllü olarak aramıza katılın.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Menü
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Sizin için, gizliliğiniz için ve açık bir Web için varız
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Bu sayfayı doğru şekilde görmek için lütfen JavaScript'i açın.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Firefox Özellikleri
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Firefox Yardımı
+
+
+;January
+Ocak
+
+
+;February
+Şubat
+
+
+;March
+Mart
+
+
+;April
+Nisan
+
+
+;May
+Mayıs
+
+
+;June
+Haziran
+
+
+;July
+Temmuz
+
+
+;August
+Ağustos
+
+
+;September
+Eylül
+
+
+;October
+Ekim
+
+
+;November
+Kasım
+
+
+;December
+Aralık
+
+
+;<abbr>Jan</abbr>
+<abbr>Oca</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>Şub</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Mar</abbr> {ok}
+
+
+;<abbr>Apr</abbr>
+<abbr>Nis</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>May</abbr> {ok}
+
+
+;<abbr>Jun</abbr>
+<abbr>Haz</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Tem</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Ağu</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Eyl</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>Eki</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Kas</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Ara</abbr>
+
+
+;Congrats. You’re up to date!
+Tebrikler, tarayıcınız güncel!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Biçim
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Metin
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Hata! Geçerli bir e-posta adresi girdiğinizden emin olun.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Mozilla’nın bilgilerimi <a href="%s">bu Gizlilik Notu’nda</a> açıklandığı şekilde kullanmasını kabul ediyorum.
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Firefox ile ilgili her<br> şeyden haberiniz olsun.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Firefox haberlerini alın
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+E-POSTA ADRESİNİZ
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Kaydol
+
+
+# Old newsletter subscription Button
+;Sign me up
+Kaydol
+
+
+;Select country
+Ülkenizi seçin
+
+
+;Available Languages
+Mevcut diller
+
+
+;We will only send you Mozilla-related information.
+Mozilla ile ilgili olmayan hiçbir şey göndermiyoruz.
+
+
+;Thanks!
+Teşekkürler!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Daha önce bir Mozilla bültenine abone olmadıysanız aboneliğinizi onaylamanız gerekebilir. Lütfen gelen kutunuzu veya spam klasörünüzü kontrol edin.
+
+
+;Read all about it in our <span>newsletter</span>
+Hepsini <span>bültenimizde</span> okuyun
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Aylık bültene abone olarak Mozilla’da gelişmelerden haberdar olun, püf noktalarını öğrenin veFirefox tarayıcınızdan faydalanmanın yeni yollarını keşfedin. Bizimle iletişimde kalmanın en iyi yolu bu!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + Sen
+
+
+;Get Firefox tips, tricks, news and more
+Firefox ipuçlarını, haberlerini ve daha fazlasını alın
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Web Buluşları
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+İnternet Sağlığı
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Firefox’u seçtiğiniz için teşekkürler!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Mozilla Firefox Web Tarayıcısı
+
+
+# Link in the footer
+;Android Browser
+Android Tarayıcısı
+
+
+# Link in the footer
+;iOS Browser
+iOS Tarayıcısı
+
+
+# Link in the footer
+;Focus Browser
+Focus tarayıcı
+
+
+# Link in the footer
+;Desktop Browser
+Masaüstü Tarayıcı
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer Edition {ok}
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Firefox web tarayıcısını indir
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Mac, Windows, Linux için masaüstü tarayıcı
+
+
+# Link in the footer
+;Mobile Browser for Android
+Android için mobil tarayıcı
+
+
+# Link in the footer
+;Mobile Browser for iOS
+iOS için mobil tarayıcı
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Firefox’unuz güncel değil.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Güvenle dolaşmaya devam etmek için en yeni sürümü indirin.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Firefox’u güncelle
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Firefox’taki yeniliklere bak
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Daha hızlı, daha sıkıntısız ve gizliliğini koruyor. Arkanı kollayan tarayıcıdaki yeniliklere sen de bir bak.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Daha fazla göster
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Daha az göster
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Firefox’ta bu verileri nasıl paylaşmak istediğinizi seçin.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Seçin…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Tümünü göster
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Tümünü gizle
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Geliştirici Merkezi
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Araştırma
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Sanal Gerçeklik
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Oyunlar
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Belgelendirme
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Hacks blog’u
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Ücretsiz web tarayıcısı Mozilla Firefox’u indirin. Firefox, internette kontrolü elinizde tutmanızı isteyen, kâr amacı gütmeyen bir organizasyon tarafından yaratıldı. Firefox’u Windows, macOS, Linux, Android ve iOS’te kullanabilirsiniz.
+
+

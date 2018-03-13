@@ -1,0 +1,719 @@
+## NOTE: Demo server available at https://www-dev.allizom.org/contribute
+
+
+# Used for HTML title attribute
+;Volunteer Opportunities at Mozilla
+Zibandakanye: Amathuba okuba litsha-ntliziyo kwaMozilla
+
+
+# this string is used for accessibility reasons, it's not visible in the page
+;Menu
+Imenyu
+
+
+# this br is for formatting, omit or reposition as needed
+;Why<br> volunteer
+Kutheni <br> uzibandakanya
+
+
+# this br is for formatting, omit or reposition as needed
+;Find<br> an event
+Fumana <br> umcimbi
+
+
+# this br is for formatting, omit or reposition as needed
+;Meet<br> Mozillians
+Dibana <br> nabantu bakaMozilla
+
+
+;Get involved
+Get involved
+
+
+;Your country
+Ilizwe lakho
+
+
+# This is a hint used as a placeholder in a country selection dropdown menu. It should be short.
+;I live in&hellip;
+Ndihlala e &hellip;
+
+
+;Volunteer with Mozilla!
+Volunteer with Mozilla!
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;active Mozillians worldwide
+active Mozillians worldwide
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;upcoming events around the globe
+upcoming events around the globe
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms. The phrase "and counting" means there are always more being added; not sure how that idiom might translate so do your best :)
+;languages and counting, on every continent
+languages and counting, on every continent
+
+
+;Join a global community of game-changers.
+Zibandakanye noluntu lwehlabathi olufuna ukwenza iinguqu.
+
+
+# this br is for formatting, omit or reposition as needed
+;Volunteer as much as you like. Or as little.<br> It’s totally up to you.
+Volontiya kangangoko ufuna. Okanye kancinci. <br> Konke kuxhomekeke kuwe.
+
+
+# this br is for formatting, omit or reposition as needed
+;Share your skills and pick up<br> a few new ones along the way.
+Yabelana ngesakhono sakho uzechole <br> neziliqela ezintsha endleleni.
+
+
+;Volunteering with Mozilla&hellip;
+Ukuvolontiya neMozilla &hellip;
+
+
+# This paragraph follows the headline, "Volunteering with Mozilla...", so the first sentence continues from that fragment. The line breaks are for formatting.
+;is about more than lending a hand. It’s about learning, collaborating and sharing your skills with a global community of Mozillians — coders, organizers, activists and more — who help shape the Web every day.
+kungaphezulu kokunikela ngesandla. Kukufunda, ukusebenzisana nokwabelana ngezakhono zakho kunye noluntu lwehlabathi lwe-Mozilla - abantu beekhowudi, abaququzeleli, imisebenzi nangaphezulu - abanceda ukwakha iWebhu mihla le.
+
+
+;See our community in action
+Bona uluntu lwethu lusebenza
+
+
+;How Mozillians help every day
+Banceda njani abantu beMozilla mihla le
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Spain &middot; Activism
+I-Spain &middot; i-Activism
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Philippines &middot; Activism
+eFilipino &middot; i-Activism
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Switzerland &middot; Coding
+e-Switzerland &middot; I-Coding
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;India &middot; Teaching
+I-Indiya &middot; Ukutitsha
+
+
+;Read his story
+Funda ibali lakhe
+
+
+;Read her story
+Funda ibali lakhe
+
+
+;Want to get involved? Here’s how.
+Ufuna ukubandakanyeka? Ungenza ngolu hlobo.
+
+
+;Choose what interests you and tell us how you’d like to help
+Khetha yintoni ekunika umdla uze usixelele ukuba unganceda njani
+
+
+;Stand by for an email that will connect you to the Mozilla community
+Lindela imeyile eyakuthi ukudibanise noluntu luka-Mozilla
+
+
+;Create your Mozillians account and share your contributions with the world
+Zenzele i-akhawunti ka-Mozilla ukuze wabelane ngegalelo lakho nehlabathi
+
+
+;Get started
+Qalisa
+
+
+;Not ready to dive in just yet?
+Awukakulungeli ukuqalisa okwangoku?
+
+
+;Here are a few other ways you can support Mozilla right now.
+Nazi ezinye iindlela ezimbalwa zokuxhasa u-Mozilla ngoku.
+
+
+;Donate to Mozilla
+Ukuliza i-Mozilla
+
+
+;Read our Manifesto
+Funda i-manifesto yethu
+
+
+;Like us on Facebook
+Sithande kuFacebook
+
+
+;Follow us on Twitter
+Silandele kuTwitter
+
+
+;Upcoming event
+Upcoming event
+
+
+;See all events
+Bona yonke imicimbi
+
+
+;Communicate
+Nxibelelana
+
+
+;Mozilla communities
+Uluntu lukaMozilla
+
+
+;Mailing lists
+Uluhla loqhagamshelwano
+
+
+;IRC channels
+Iitshanele ze-IRC
+
+
+;More links
+Iilinki ezingaphezulu
+
+
+;Submit Firefox feedback
+Ngenisa impendulo-ngxelo ka-Firefox
+
+
+;Explore Mozilla careers
+Hlola imisebenzi ku-Mozilla
+
+
+;Get help with Firefox
+Fumana uncedo ngo-Firefox
+
+
+;Subscribe to community events
+Subscribe to community events
+
+
+;Get community updates
+Fumana uhlaziyo lwabahlali
+
+
+# Used as title of the /stories sub-page
+;Mozillian Stories
+Amabali oluntu luka-Mozilla
+
+
+# Used as a toggle to display more content.
+;More
+Ngaphezulu
+
+
+# Used as a toggle to display less content.
+;Less
+Ngaphantsi
+
+
+;Read more Mozillian stories
+Funda ngakumbi malunga namabali oluntu ka-Mozilla
+
+
+;Discover even more stories on Twitter with <a href="%(link_hashtag)s">#IAmAMozillian</a>
+Famuna nangakumbi amabali ku-Twitter no <a href="%(link_hashtag)s">#IAmAMoaillian</a>
+
+
+;More coming soon
+Ziyeza kwamsinyane nangaphezulu
+
+
+# Used as title of the /signup sub-page
+;Get Involved: Volunteer Opportunities at Mozilla
+Zibandakanye: Amathuba okuba litsha-ntliziyo kwaMozilla
+
+
+;To get started, tell us what interests you.
+Ukuqalisa, sixelele yintoni ekunika umdla.
+
+
+;Choose one for now. You can always contribute to other areas later.
+Khetha ibe nye okwangoku. Ungalenza igalelo naninina nakwezinye iindawo mva.
+
+
+# This text is used for accessibility reasons, it's not visible
+;Where would you like to get started?
+Ungathanda ukuqalisa phi?
+
+
+;Coding
+Ukufaka ikhowudi
+
+
+;More about coding
+Ngakumbi malunga ne-coding
+
+
+;Contribute code to a whole range of Mozilla products, including Firefox and Firefox OS.
+Yenza igalele kwikhowudi kuzo zonke iimveliso ezahlukeneyo zika-Mozilla, ziquka i-Firefox ne-Firefox OS.
+
+
+;Testing
+Iyavavanya
+
+
+;More about testing
+Ngakumbi malunga nokuvavanya
+
+
+;Help make the Mozilla products you use — and love — even better.
+Nceda ukwenze iimveliso zika-Mozilla ozisebenzisayo - nozithandayo - zibe ngcono.
+
+
+;Writing
+Ukubhala
+
+
+;More about writing
+Ngakumbi malunga nokubhala
+
+
+;Lend your voice to Mozilla — from blogging and social media to providing technical documents for users and developers.
+Yabelana ngezimvo zakho ku-Mozila - ngokubhloga ne-social media ngokunikezela ngamaxwebhu obuchepheshe betheknoloji.
+
+
+;Teaching
+Ukufundisa
+
+
+;More about teaching
+Ngakumbi malunga nokufundisa
+
+
+;Share your skills with a community that’s eager to learn. Take advantage of our free tools, teaching resources and events.
+Yabelana ngezakhono zakho noluntu olunomdla wokufunda. Zimxhamlele kwizixhobo zethu ezimahala, koovimba bokufundisa nemicimbi.
+
+
+;Helping
+Ukuncedisa
+
+
+;More about helping
+Ngakumbi malunga nokuncedisa
+
+
+;Provide support to users who need it and help everyone get the most out of their Mozilla products.
+Nika inkxaso kubasebenzisi abayifunayo uze uncede wonke ubani afumane konke kwimveliso zika-Mozilla.
+
+
+;Translating
+Ukuguqulela ulwimi kolunye ulwimi
+
+
+;More about translating
+Ngakumbi malunga nokuguqulelwa kolwimi kolunye ulwimi
+
+
+;Help make Mozilla stuff available in other languages. Translate everything from newsletters and websites to copy for Firefox and Firefox OS.
+Unceda ukwenza izinto zika-Mozilla zibe nokufumaneka nakwezinye iilwimi. Uguqulela yonke into ukusesela kwiincwadi zeendaba newebhusayithi ukuya ekukopeni i-Firefox ne-Firefox OS.
+
+
+;Activism
+i-Activism
+
+
+;More about activism
+Ngakumbi nge-activism
+
+
+;Get involved with our opportunities to support freedom, security and privacy on the open Web.
+Yiba yinxalenye namathuba ethu ukuze unike inkxaso kwinkululeko, ukhuseleko neWebhu evulelekileyo yabucala.
+
+
+;I don’t know
+Andazi
+
+
+;More about how you can contribute
+Ngakumbi malunga nendlela onika ngalo igalelo
+
+
+;Not sure how you want to help? No problem. We can find the appropriate contribution activity for you.
+Awuqinisekanga ngendlela ofuna ukunceda ngayo? Akukho ngxaki. Singakufumanela indlela echanekileyo yokunikela.
+
+
+;Now tell us a little about yourself:
+Sixelele kancinci ngawe:
+
+
+;Name
+Igama
+
+
+;Email address
+Idilesi ye-imeyili
+
+
+;Country
+Ilizwe
+
+
+;select
+khetha
+
+
+;Why do you want to be a Mozilla volunteer?
+Kutheni ufuna ukuvoluntiyela i-Mozilla?
+
+
+;(Optional)
+(Okukhethwayo)
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%(privacy)s">this Privacy Policy</a>
+Ndilungile kwi-Mozilla ukuba isingathe inkcazelo njengoko kuchaziwe kwi-<a href="%(privacy)s">kulo Mgaqo-nkqubo Wabucala</a>
+
+
+;Start contributing
+Qalisa ukwenza igalelo
+
+
+;Sign me up for community updates
+Ndisayine kuhlaziyo loluntu
+
+
+;(English)
+(isiNgesi)
+
+
+;What particular area?
+Eyiphi kanye ingingqi?
+
+
+;What would you like to code?
+Yintoni ongafuna ukuyikhowuda?
+
+
+;What would you like to test?
+Yintoni ongafuna ukuyivavanya?
+
+
+;What would you like to translate?
+Yintoni ongafuna ukuyiguqulela?
+
+
+;What would you like to write?
+Yintoni ongafuna ukuyibhala?
+
+
+;What would you like to teach?
+Yintoni ongafuna ukuyifundisa?
+
+
+;Firefox
+IFirefox
+
+
+;Websites
+Websites
+
+
+;Firefox add-ons
+I-Firefox add-ons
+
+
+;HTML5 apps
+Ii-apps ze-HTML5
+
+
+;Diagnosing Web compatibility issues
+Ukunyanga okuthile malunga nokuhambelana neWebhu
+
+
+;Online services
+Iinkonzo ezikwinethiwokhi
+
+
+;Web compatibility
+Ukuhambelana neWebhu
+
+
+;Product localization
+Imveliso ze-localization
+
+
+;Website localization
+IWebhusayithi ya-localization
+
+
+;I’d like to work on localization tools
+Ndingathanda ukusebenzisa izixhobo ze-localization
+
+
+;Social media
+Imidiya yokuntu
+
+
+;Journalism
+Ijenali
+
+
+;Technical docs for users
+Amaxwebhu obuchwepheshe babasebenzisi
+
+
+;Technical docs for developers
+Amaxwebhu obuchwepheshe babavelisi
+
+
+;Technical docs for Firefox add-ons
+Amaxwebhu obuchwepheshe ka-Firefox add-ons
+
+
+;Technical docs for HTML5 apps
+Amaxwebhu obuchwepheshe be-HTML5 apps
+
+
+;Teach the Web (Webmaker)
+Fundisa iWebhu (Umenzi weWebhu)
+
+
+;Open News fellowships
+Vula ii-felowship ezintsha
+
+
+;Hive - Community networks of educators/mentors
+Hive - Community networks of educators/mentors
+
+
+;Open Web science research
+IWebhu evulelekileyo yophando lobugcisa
+
+
+;Community Events
+Imicimbi yoluntu
+
+
+;Find events
+Fumana imicimbi
+
+
+;By city, country, or event:
+Ngedolophu, ilizwe, okanye imicimbi:
+
+
+;By date:
+Ngomhla:
+
+
+;month
+inyanga
+
+
+;year
+unyaka
+
+
+;Date
+umhla
+
+
+;Event
+Umcimbi
+
+
+;Location
+Indawo
+
+
+;City
+Isixeko
+
+
+;Events
+Imicimbi
+
+
+# Used as title of the thank you page displayed after users send the form
+;Thank you!
+Enkosi!
+
+
+;Thanks!
+Enkosi!
+
+
+;We’re thrilled to see that you’re interested in coding and can’t wait to get you started.
+Siyavuya ukubona ukuba unomdla ekukhowudeni kwaye sikungxamele ukuqalisa.
+
+
+;We’re thrilled to see that you’re interested in testing and can’t wait to get you started.
+Siyavuya ukubona ukuba unomdla ekuvavanyeni kwaye sikungxamele ukuqalisa.
+
+
+;We’re thrilled to see that you’re interested in writing and can’t wait to get you started.
+Siyavuya ukubona ukuba unomdla ekubhaleni kwaye sikungxamele ukuqalisa.
+
+
+;We’re thrilled to see that you’re interested in teaching and can’t wait to get you started.
+Siyavuya ukubona ukuba unomdla ekufundiseni kwaye sikungxamele ukuqalisa.
+
+
+;We’re thrilled to see that you’re interested in helping and can’t wait to get you started.
+Siyavuya ukubona ukuba unomdla ekuncedeni kwaye sikungxamele ukuqalisa.
+
+
+;We’re thrilled to see that you’re interested in translating and can’t wait to get you started.
+Siyavuya ukubona ukuba unomdla ekuguquleni iilwimi kwaye sikungxamele ukuqalisa.
+
+
+;We’re thrilled to see that you’re interested in activism and can’t wait to get you started.
+Siyavuya ukubona ukuba unomdla kwi-activism kwaye sikungxamela ukuqalisa.
+
+
+;We’re thrilled to see that you’re interested in volunteering and can’t wait to get you started.
+Siyavuya ukubona ukuba unomdla ekuvolontiyeni kwaye sikungxamele ukuqalisa
+
+
+;Keep an eye on your inbox for an important message from us.
+Beka iliso kwi-inbox yakho kukho umyalezo obalulekileyo osuka kuthi.
+
+
+;Hello!
+Molo!
+
+
+;Your Name
+Igama lakho
+
+
+;In the meantime&hellip;
+Okwangoku&hellip;
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;You can help by picking an easy task that only takes a few minutes &mdash; or take on a bigger challenge.
+You can help by picking an easy task that only takes a few minutes &mdash; or take on a bigger challenge.
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;Choose a Task Now
+Choose a Task Now
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Help us tell the world how awesome Firefox is and about all the important work Mozilla does every day.
+Help us tell the world how awesome Firefox is and about all the important work Mozilla does every day.
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Join Now
+Join Now
+
+
+;You can create your Mozillians account now to connect with fellow Mozillians.
+Ungazenzela i-akhawunti yoluntu luka-Mozilla yakho unxibelelane noluntu lwe-Mozilla.
+
+
+;Yes, create my Mozillians account
+Ewe, yenza i-akhawunti yam ye-Mozilla
+
+
+;You will be asked to sign in before proceeding
+Uyakucelwa ukuba usayinele ukungena phambi kokuba uqhubeke
+
+
+;No thanks, I’ll just wait for the email
+Hayi enkosi, ndakulindela nje i-imeyili
+
+
+# The following strings are used in the contribute form on production (https://www.mozilla.org/contribute/signup/), not in the one available on stage
+# Strings have been copied from the old template (mozorg/contribute.lang)
+;Area of interest?
+Unomdla kweyiphi into?
+
+
+;Helping Users
+Ukunceda abasebenzisi
+
+
+;Testing and QA
+Uvavanyo ne-QA
+
+
+;Marketing
+Urhwebo
+
+
+;Localization and Translation
+I-localization nenguququlelo yolwimi
+
+
+;Web Development
+Uphuhliso lweWebhu
+
+
+;Firefox Marketplace
+IMarike yeFirefox
+
+
+;Add-ons
+Izongezelelo
+
+
+;Visual Design
+Uyilo Olubonakalayo
+
+
+;Documentation and Writing
+Amaxwebhu nokubhala
+
+
+;Education
+Imfundo
+
+
+;Other
+Okunye
+
+
+;Hi, I’m interested in…
+Molweni, ndinomdla kwi-…
+
+
+;Send us a note and we can get you started right away.
+Sithumelele imigcana embalwa yaye siza kukuqalisa ngokukhawuleza.
+
+
+;I have a suggestion for Firefox
+Ndinecebiso nge-Firefox
+
+
+;I need help with a Firefox issue
+Ndifuna uncedo kumbandela we-Firefox
+
+
+;Please enter a valid email address.
+Please enter a valid email address.
+
+
+;You must agree to the privacy policy.
+Ufanele uvumelane nomgaqo-nkqubo wabucala.
+
+
+;Please select an area of interest.
+Nceda ukhethe icandelo onomdla kulo.
+
+
+;Please tell us more about your interests.
+Nceda usixelela okungakumbi ngezinto onomdla kuzo.
+
+

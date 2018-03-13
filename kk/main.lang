@@ -1,0 +1,811 @@
+;Navigation
+Навигация
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Шығарылымға дейінгі жүктеп алулар
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Біз туралы
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Қолданбалар
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Do Not Track {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Interest Dashboard {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Өндіруші нұсқасы
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Жекелік шолу режимі
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Көмек керек пе?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Жаңалықтар
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Тәуелсіз браузерді таңдаңыз
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox коммерциялы емес, корпоративті емес және әшкереленген емес. Firefox қолданбасын таңдау тек браузерді таңдау ғана емес. Ол жеке бостандық үшін дауыс беру.
+
+
+;Donate
+Демеушілік ету
+
+
+;Support
+Қолдау
+
+
+;Products
+Өнімдер
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Extensions
+
+
+;Add-ons
+Қосымшалар
+
+
+;About Us
+Біз туралы
+
+
+;Labs
+Зертхана
+
+
+;skip to Navigation
+навигацияға өту
+
+
+;switch language
+тілді ауыстыру
+
+
+;Back to home page
+Үй парағына қайту
+
+
+;About Mozilla
+Mozilla туралы
+
+
+;Get Involved
+Бізге қосылу
+
+
+;Careers
+Карьера
+
+
+;Press Center
+Баспасөз орталығы
+
+
+;Contact Us
+Кері байланыс
+
+
+# Used in new footer to switch the language of the page
+;Language
+Тіл
+
+
+;Other languages:
+Басқа тілдер:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Бет тілі:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d.%m.%Y
+
+
+;Legal
+Құқықтық ақпарат
+
+
+# Used as link in the footer
+;Cookies
+Cookies {ok}
+
+
+;Legal Notices
+Заңдық ақпарат
+
+
+;Privacy Policy
+Құпиялық саясаты
+
+
+;Release Notes
+Шығарылым ескертпесі
+
+
+;Other Systems and Languages
+Басқа жүйелер мен тілдер
+
+
+;Close
+Жабу
+
+
+;(in English)
+(ағылшынша)
+
+
+;Return to top
+Басына оралу
+
+
+;Features
+Мүмкіндіктері
+
+
+;Customize
+Өзіңізге лайықтау
+
+
+;Download
+Жүктеп алу
+
+
+;Previous
+Алдыңғы
+
+
+;Next
+Келесі
+
+
+# MegaBytes abbreviation
+;MB
+МБ
+
+
+;MegaBytes
+Мегабайт
+
+
+;FAQ
+Жиі қойылатын сұрақтар
+
+
+;Videos
+Видеолар
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Арнайы <a href="%s">көрсетілгеннен</a> басқа, бұл сайттың құрамасы <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> не кейін шыққан кез-келген нұсқасы аясында таратылады.
+
+
+;Report Trademark Abuse
+Сауда белгісін заңсыз қолдану туралы хабарлау
+
+
+;Free Upgrade
+Тегін жаңарту
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Біздің соңымыздан еріңіз:
+
+
+;Customize with Add-ons
+Аддондар көмегімен баптау
+
+
+;Learn More
+Көбірек білу
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Көбірек білу
+
+
+# Link used to play again an animation or a video
+;Replay
+Қайта ойнату
+
+
+;Watch the video
+Видеоны қараңыз
+
+
+;Replay the video
+Видеоны қайта ойнату
+
+
+;Share the video
+Видеомен бөлісу
+
+
+;WebM format
+WebM пішімі
+
+
+;Ogg Theora format
+Ogg Theora пішімі
+
+
+;MPEG-4 format
+MPEG-4 пішімі
+
+
+;Mobile
+Мобильді
+
+
+;View Full Site
+Сайтты толығымен қарау
+
+
+;Desktop
+Дербес компьютер
+
+
+;Firefox for mobile
+Мобильді телефондар үшін Firefox
+
+
+;Email
+Эл. пошта
+
+
+;Upgrade now
+Қазір жаңарту
+
+
+;Update now
+Қазір жаңарту
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Жекелік
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Құрама бөліктері ©1998–%(current_year)s жеке mozilla.org үлес қосушыларымен иеленуде. Құрама <a rel="license" href="%(url)s">Creative Commons лицензиясы</a> аясында қолжетерлік.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Құрама бөліктері ©1998–%(current_year)s жеке mozilla.org үлес қосушыларымен иеленуде. Құрама <a href="%(url)s">Creative Commons лицензиясы</a> аясында қолжетерлік.
+
+
+# Footer string
+;Contribute to this site
+Бұл сайтқа үлес қосу
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Source code for this page
+
+
+# Top menu item
+;Mission
+Мақсатымыз
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Шолу
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Синхрондау
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Жұмыс үстел нұсқасының қосымшалары
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Android кеңейтулері
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Темалар
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Жұмыс үстел нұсқасын қолдау
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Android қолдауы
+
+
+;Releases
+Шығарылымдар
+
+
+;Blog
+Блог
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Mozilla жаңартуларын алу
+
+
+# share button for social networks
+;Share
+Бөлісу
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla Twitter желісінде
+
+
+# footer link
+;Firefox on Twitter
+Firefox Twitter желісінде
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla Facebook желісінде
+
+
+# footer link
+;Firefox on Facebook
+Firefox Facebook желісінде
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Форумдар
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Патенттер
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Озаттық
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Басқару
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Тарихы
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Өнімдеріміз
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Мақсатымызды ілгері жылжыту үшін жасалған БҚ және басқа инновациялар.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Бірнеше әр түрлі аймақтарда волонтер үлес қосушы болыңыз.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Мәзір
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Сіз, сіздің жекелігіңіз, және ашық Интернет үшін жасалған
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Бұл бетті дұрыс көрсету үшін JavaScript-ті іске қосыңыз.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Firefox мүмкіндіктері
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Firefox көмегі
+
+
+;January
+Қаңтар
+
+
+;February
+Ақпан
+
+
+;March
+Наурыз
+
+
+;April
+Сәуір
+
+
+;May
+Мамыр
+
+
+;June
+Маусым
+
+
+;July
+Шілде
+
+
+;August
+Тамыз
+
+
+;September
+Қыркүйек
+
+
+;October
+Қазан
+
+
+;November
+Қараша
+
+
+;December
+Желтоқсан
+
+
+;<abbr>Jan</abbr>
+<abbr>Қаң</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>Ақп</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Нау</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>Сәу</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>Мам</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Мау</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Шіл</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Там</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Қыр</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>Қаз</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Қар</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Жел</abbr>
+
+
+;Congrats. You’re up to date!
+Құттықтаймыз. Сіздің нұсқаңыз ескірмеген.
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Пішім
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Мәтін
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Дұрыс эл. пошта адресін енгізіңіз.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Мен Mozilla менің жеке ақпаратымды <a href="%s">осы Жекелік ескертуінде</a> жазылғанға сай қолданатынымен келісемін
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Firefox туралы барлығын<br> біліп отырыңыз.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Firefox жаңалықтарын алу
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+ЭЛ. ПОШТА АДРЕСІҢІЗ
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Қазір тіркелгіні жасау
+
+
+# Old newsletter subscription Button
+;Sign me up
+Мені де жазыңыз
+
+
+;Select country
+Елді таңдаңыз
+
+
+;Available Languages
+Қолжетерлік тілдер
+
+
+;We will only send you Mozilla-related information.
+Біз сізге тек Mozilla-мен байланысты ақпаратты жіберетін боламыз.
+
+
+;Thanks!
+Рахмет!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Mozilla-ға байланысты жаңалықтар таспасына жазылуды осыған дейін растамаған болсаңыз, оны жасауыңыз керек болуы мүмкін. Поштаңыздың кіріс және спам бумаларынан бізден хатты іздеңіз.
+
+
+;Read all about it in our <span>newsletter</span>
+Бұл туралы барлығын біздің <span>жаңалықтар хабарламада</span> оқып алыңыз
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Ай сайынғы жаңартуларға жазылып, сізге Firefox қолданбасын барынша қолдануға рұқсат беретін Mozilla компаниясының соңғы жаңалықтары, кеңестері сонымен қатар қулықтары жайлы хабардар болыңыз. Ол сізбен байланыста қалу үшін табысты жол!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> және сіз
+
+
+;Get Firefox tips, tricks, news and more
+Firefox жөнінде кеңестер, жаңалықтар және т.б. алу
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Веб инновациялары
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Интернет денсаулығы
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Firefox қолданбасын таңдағаныңыз үшін рахмет!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Mozilla Firefox веб браузері
+
+
+# Link in the footer
+;Android Browser
+Android үшін браузер
+
+
+# Link in the footer
+;iOS Browser
+iOS үшін браузер
+
+
+# Link in the footer
+;Focus Browser
+Focus браузері
+
+
+# Link in the footer
+;Desktop Browser
+Жұмыс үстелі үшін браузер
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Бета, Nightly, Developer Edition
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Firefox веб-браузерін жүктеп алу
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Mac, Windows, Linux үшін жұмыс үстел браузері
+
+
+# Link in the footer
+;Mobile Browser for Android
+Android үшін мобильді браузер
+
+
+# Link in the footer
+;Mobile Browser for iOS
+iOS үшін мобильді браузер
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Сіздің Firefox нұсқаңыз ескірген.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Қауіпсіз шолуды қамтамасыз ету үшін, ең соңғы нұсқасын алыңыз.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Firefox қолданбасын жаңарту
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Firefox жаңалықтарын біліңіз
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Жылдамырақ, жауапты және қауіпсіз. Сіздің қорғайтын браузердің соңғы жаңалықтары туралы көбірек біліңіз.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Көбірек көрсету
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Азырақ көрсету
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Firefox ішінде бұл деректермен қалай бөлісетініңізді таңдаңыз.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Таңдау…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Барлығын көрсету
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Барлығын жасыру
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Developer Hub
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Research
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Virtual Reality
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Ойындар
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Құжаттама
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Hacks blog
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Mozilla Firefox, еркін веб браузерін, жүктеп алыңыз. Firefox глобалды коммерциялық емес ұйымымен жасалған, әр адамның қолына интернетте басқаруды қайтару мақсатымен жасалған. Windows, macOS, Linux, Android және iOS үшін Firefox қолданбасын бүгін алыңыз!
+
+

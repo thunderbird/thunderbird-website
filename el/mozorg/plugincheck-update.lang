@@ -1,0 +1,66 @@
+## active ##
+## NOTE: Demo server available at url: https://www-dev.allizom.org/plugincheck/
+
+
+# HTML page title
+;More browser features, fewer plugin updates | Firefox
+Περισσότερες λειτουργίες περιήγησης, λιγότερες ενημερώσεις πρόσθετων λειτουργιών | Firefox
+
+
+# HTML page decription
+# NPAPI stands for Netscape Plugin Application Programming Interface.
+;Browse with fewer interruptions. Features from NPAPI plugins are now automatically supported in Firefox. Download the latest Firefox now!
+Περιηγηθείτε με λιγότερες διακοπές. Λειτουργίες από τις πρόσθετες λειτουργίες NPAPI υποστηρίζονται πλέον αυτόματα στο Firefox. Κάντε λήψη της πιο πρόσφατης έκδοσης του Firefox!
+
+
+# Message targetting users already on the latest version of Firefox
+# <br> for visual formatting
+;Good news - you’re using<br> the latest version of Firefox!
+Καλά νέα - χρησιμοποιείτε <br> την νεότερη έκδοση του Firefox!
+
+
+;Even better news - Firefox now <a href="%(npapi)s">supports features</a> that used to require additional plugins.
+Ακόμη καλύτερα νέα - το Firefox, πλέον, <a href="%(npapi)s">υποστηρίζει λειτουργίες</a> που, κάποτε, απαιτούσαν επιπλέον πρόσθετες λειτουργίες.
+
+
+# The link points to https://support.mozilla.org/
+;Need help? Visit Mozilla Support
+Χρειάζεστε βοήθεια; Επισκεφτείτε την υποστήριξη του Mozilla
+
+
+# Message targeting users on older versions of Firefox
+# <br> for visual formatting
+;Better features,<br> fewer plugin updates
+Καλύτερες λειτουργίες,<br> λιγότερες ενημερώσεις πρόσθετων λειτουργιών
+
+
+;Firefox has been <a href="%(npapi)s">expanding to support features</a> that used to require extra plugins. Now, they’re kept up-to-date automatically and managed through <a href="%(blocklist)s">blocklisting</a> for added security. So you can stay current with just one Firefox update.
+Το Firefox έχει <a href="%(npapi)s">ενισχυθεί, ώστε να υποστηρίζει λειτουργίες</a> που, κάποτε, απαιτούσαν πρόσθετες λειτουργίες. Πλέον, διατηρούνται αυτόματα ενημερωμένες, ενώ η διαχείρισή τους επιτυγχάνεται διαμέσου <a href="%(blocklist)s">λιστών φραγής</a> για επιπρόσθετη ασφάλεια. Έτσι, μπορείτε να παραμένετε ενημερωμένοι με μια μόνο ενημέρωση του Firefox.
+
+
+;Download the latest version:
+Κάντε λήψη της πιο πρόσφατης έκδοσης:
+
+
+;Update Firefox
+Ενημέρωση του Firefox
+
+
+# FMessage targeting non-Firefox users
+# <br> for visual formatting
+;Tired of updating plugins?<br> Firefox has you covered.
+Κουραστήκατε να ενημερώνετε τις πρόσθετες λειτουργίες;<br> Αφήστε το στο Firefox.
+
+
+;As the web moves forward, so do we. Firefox now <a href="%(npapi)s">supports more features</a> that used to require plugins, so you can browse with fewer crashes and interruptions. Plus, our <a href="%(blocklist)s">blocklist system</a> protects you between updates.
+Όσο εξελίσσεται το διαδίκτυο, άλλο τόσο κι εμείς. Το Firefox, πλέον, <a href="%(npapi)s">υποστηρίζει περισσότερες λειτουργίες</a> που, κάποτε, απαιτούσαν πρόσθετες λειτουργίες. Έτσι μπορείτε να περιηγηθείτε με λιγότερα σφάλματα και διακοπές. Επιπλέον, το δικό μας <a href="%(blocklist)s">σύστημα λιστών φραγής</a> σάς προστατεύει μεταξύ των ενημερώσεων.
+
+
+;Hungry for more?
+Θέλετε ακόμη περισσότερα;
+
+
+;Get the latest &amp; greatest from Firefox delivered straight to your inbox.
+Λάβετε τα τελευταία &amp; σπουδαιότερα νέα από το Firefox, απευθείας στα εισερχόμενά σας.
+
+

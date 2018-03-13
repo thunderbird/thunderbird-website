@@ -1,0 +1,811 @@
+;Navigation
+Navigacija
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Tarpinės laidos
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Apie
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Programos
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Nestebėti („Do Not Track“)
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Pomėgių statistika
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+„Developer Edition“
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Privatusis naršymas
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Reikia pagalbos?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Naujienos
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Rinkitės nepriklausomą naršyklę
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+„Firefox“ nesiekia tikslo yra nepriklausoma nuo korporacijų ir nesukompromituota kitais būdais. Rinkdamiesi „Firefox“, ne tik renkatės naršyklę – tuo pačiu pasisakote ir už asmeninę laisvę.
+
+
+;Donate
+Paaukokite
+
+
+;Support
+Palaikymas
+
+
+;Products
+Produktai
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Plėtiniai
+
+
+;Add-ons
+Priedai
+
+
+;About Us
+Apie mus
+
+
+;Labs
+Laboratorija
+
+
+;skip to Navigation
+šokti į navigaciją
+
+
+;switch language
+pakeisti kalbą
+
+
+;Back to home page
+Grįžti į pradžios tinklalapį
+
+
+;About Mozilla
+Apie „Mozillą“
+
+
+;Get Involved
+Prisijunkite prie mūsų
+
+
+;Careers
+Karjeros galimybės
+
+
+;Press Center
+Spaudos centras
+
+
+;Contact Us
+Susisiekite su mumis
+
+
+# Used in new footer to switch the language of the page
+;Language
+Kalba
+
+
+;Other languages:
+Kitos kalbos:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Tinklalapio kalba:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%Y-%m-%d {ok}
+
+
+;Legal
+Teisinė informacija
+
+
+# Used as link in the footer
+;Cookies
+Slapukai
+
+
+;Legal Notices
+Teisinė informacija
+
+
+;Privacy Policy
+Privatumo nuostatai
+
+
+;Release Notes
+Laidos apžvalga
+
+
+;Other Systems and Languages
+Kitos sistemos ir kalbos
+
+
+;Close
+Užverti
+
+
+;(in English)
+(anglų kalba)
+
+
+;Return to top
+Grįžti į pradžią
+
+
+;Features
+Savybės
+
+
+;Customize
+Individualizavimas
+
+
+;Download
+Parsisiųsti
+
+
+;Previous
+Atgal
+
+
+;Next
+Toliau
+
+
+# MegaBytes abbreviation
+;MB
+&nbsp;MB
+
+
+;MegaBytes
+megabaito
+
+
+;FAQ
+Klausimai ir atsakymai
+
+
+;Videos
+Vaizdo įrašai
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Jeigu <a href="%s">nenurodyta kitaip</a>, visas šios svetainės turinys yra pateikiamas pagal<br /><a href="%s">„Creative Commons Attribution Share-Alike 3.0“</a> arba vėlesnės versijos licenciją.
+
+
+;Report Trademark Abuse
+Pranešti apie neleistiną prekės ženklo naudojimą
+
+
+;Free Upgrade
+Atnaujinkite nemokamai
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Sekite mus:
+
+
+;Customize with Add-ons
+Papildykite priedais
+
+
+;Learn More
+Išsamiau
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Išsamiau
+
+
+# Link used to play again an animation or a video
+;Replay
+Kartoti
+
+
+;Watch the video
+Žiūrėti vaizdo įrašą
+
+
+;Replay the video
+Kartoti vaizdo įrašą
+
+
+;Share the video
+Dalintis vaizdo įrašu
+
+
+;WebM format
+„WebM“ formatu
+
+
+;Ogg Theora format
+„Ogg Theora“ formatu
+
+
+;MPEG-4 format
+„MPEG-4“ formatu
+
+
+;Mobile
+Mobiliesiems
+
+
+;View Full Site
+Į pilnos apimties svetainę
+
+
+;Desktop
+Kompiuteriams
+
+
+;Firefox for mobile
+„Firefox“ mobiliesiems
+
+
+;Email
+El. paštas
+
+
+;Upgrade now
+Naujovinti dabar
+
+
+;Update now
+Atnaujinti dabar
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Privatumas
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+©1998–%(current_year)s. Kai kurių šio turinio dalių autoriai yra atskiri mozilla.org bendradarbiai. Turinys pateikiamas <a rel="license" href="%(url)s">„Creative Commons“ licencijos</a> sąlygomis.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+©1998–%(current_year)s. Kai kurių šio turinio dalių autoriai yra atskiri mozilla.org bendradarbiai. Turinys pateikiamas <a href="%(url)s">„Creative Commons“ licencijos</a> sąlygomis.
+
+
+# Footer string
+;Contribute to this site
+Prisidėkite prie šios svetainės vystymo
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Šio tinklalapio pirminis tekstas
+
+
+# Top menu item
+;Mission
+Misija
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Apžvalga
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sinchronizavimas
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Priedai kompiuteryje
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+„Android“ priedai
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Grafiniai apvalkalai
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Stalinės „Firefox“ palaikymas
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+„Android“ palaikymas
+
+
+;Releases
+Laidos
+
+
+;Blog
+Tinklaraštis
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+„Mozillos“ naujienos
+
+
+# share button for social networks
+;Share
+Dalintis
+
+
+# footer link
+;Mozilla on Twitter
+„Mozilla“ „Twitter'yje“
+
+
+# footer link
+;Firefox on Twitter
+„Firefox“ „Twitter'yje“
+
+
+# footer link
+;Mozilla on Facebook
+„Mozilla“ „Facebook'e“
+
+
+# footer link
+;Firefox on Facebook
+„Firefox“ „Facebook'e“
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Forumai
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patentai
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Vadovybė
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Valdymas
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Istorija
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Mūsų produktai
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Programinė įranga ir kitos inovacijos, sukurtos mūsų misijai plėtoti.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Tapkite savanoriu vienoje iš daugybės sričių.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Meniu
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Pašvęsta jums, jūsų privatumui ir atvirajam saitynui
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Kad šis tinklalapis tinkamai veiktų, turite įgalinti „JavaScript“ scenarijų vykdymą.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+„Firefox“ savybės
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+„Firefox“ žinynas
+
+
+;January
+sausio
+
+
+;February
+vasario
+
+
+;March
+kovo
+
+
+;April
+balandžio
+
+
+;May
+gegužės
+
+
+;June
+birželio
+
+
+;July
+liepos
+
+
+;August
+rugpjūčio
+
+
+;September
+rugsėjo
+
+
+;October
+spalio
+
+
+;November
+lapkričio
+
+
+;December
+gruodžio
+
+
+;<abbr>Jan</abbr>
+<abbr>Sau</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>Vas</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Kov</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>Bal</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>Geg</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Bir</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Lie</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Rgp</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Rgs</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>Spl</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Lap</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Grd</abbr>
+
+
+;Congrats. You’re up to date!
+Sveikiname, jūs atsinaujinę!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Formatas
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Grynasis tekstas
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+Raiškusis tekstas (HTML)
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Oi! Įsitikinkite, jog įvedėte galiojantį el. pašto adresą.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Sutinku, kad „Mozilla“ tvarkytų mano duomenis kaip paaiškinta <a href="%s">šioje pastaboje dėl privatumo</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Neatsilikite nuo<br> „Firefox“ naujienų.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Gaukite „Firefox“ naujienas
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+JŪSŲ EL. PAŠTAS
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Prenumeruoti
+
+
+# Old newsletter subscription Button
+;Sign me up
+Prenumeruoti
+
+
+;Select country
+Pasirinkite šalį
+
+
+;Available Languages
+Galimos kalbos
+
+
+;We will only send you Mozilla-related information.
+Mes jums siųsime tik su „Mozilla“ susijusią informaciją.
+
+
+;Thanks!
+Ačiū!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Jei nesate anksčiau patvirtinę kurio nors „Mozillos“ naujienlaiškio prenumeratos, turbūt turėsite tai padaryti dabar. Dėl visa ko patikrinkite ir savo brukalo aplanką – galbūt mūsų laiškas netyčia atsidurs jame.
+
+
+;Read all about it in our <span>newsletter</span>
+Sužinokite viską iš mūsų <span>naujienlaiškio</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Prenumeruokite mėnesinį naujienlaiškį ir neatsilikite nuo „Mozillos“ naujienų, tuo pačiu gaudami aktualių „Firefox“ naudojimosi patarimų. Tai – puikus būdas palaikyti tarp mūsų ryšį!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + jūs
+
+
+;Get Firefox tips, tricks, news and more
+Gaukite su „Firefox“ susijusius patarimus, naujienas ir kt.
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Saityno inovacijos
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Interneto būklė
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Ačiū, kad renkatės „Firefox“!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+„Mozilla Firefox“ naršyklė
+
+
+# Link in the footer
+;Android Browser
+„Android“ naršyklė
+
+
+# Link in the footer
+;iOS Browser
+„iOS“ naršyklė
+
+
+# Link in the footer
+;Focus Browser
+„Focus“ naršyklė
+
+
+# Link in the footer
+;Desktop Browser
+Naršyklė kompiuteriams
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer Edition {ok}
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Parsisiųsti „Mozilla Firefox“ naršyklę
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Naršyklė „Mac“, „Windows“ ir „Linux“ kompiuteriams
+
+
+# Link in the footer
+;Mobile Browser for Android
+Mobilioji naršyklė „Android“ įrenginiams
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Mobilioji naršyklė „iOS“ įrenginiams
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Jūsų „Firefox“ naršyklė pasenusi
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Saugesniam naršymui parsisiųskite šviežiausią versiją.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Atnaujinti „Firefox“
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Susipažinkite su „Firefox“ naujovėmis
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Visapusiškai spartesnė ir ypatingai privati. Išbandykite naujoves naršyklės, kuriai svarbiausia – jūs.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Išskleisti aprašymą
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Suskleisti aprašymą
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Pasirinkite, kaip šiais duomenimis norite dalintis „Firefox“ naršyklėje
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Pasirinkite…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Išskleisti viską
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Suskleisti viską
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Programuotojų centras
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Tyrimai
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Virtualioji realybė
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Žaidimai
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Dokumentacija
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+„Hacks“ tinklaraštis
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+„Mozilla Firefox“ – tai laisvoji naršyklė, kurią kuria pasaulinė ne pelno organizacija, siekianti kiekvienam suteikti svertus internete. Parsisiųskite „Firefox“ į savo „Windows“, „macOS“, „Linux“, „Android“ ar „iOS“ įrenginį jau šiandien!
+
+

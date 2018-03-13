@@ -1,0 +1,320 @@
+## active ##
+## ember_reference_fix ##
+## quantum-firstrun-whatsnew ##
+## NOTE: demo page available at https://www-dev.allizom.org/firefox/developer/
+
+
+# HTML page description
+;Built for those who build the Web. The only browser made for developers like you.
+Bygd for dei som byggjer nettet. Den einaste nettlesaren som er bygd for utviklarar som deg.
+
+
+;Firefox Quantum: Developer Edition
+Firefox Quantum: Developer Edition {ok}
+
+
+;Welcome to your new favorite browser. Get the latest features, fast performance, and the development tools you need to build for the open web.
+Velkomen til den nye favorittnettlesaren din. Få dei siste funksjonane, rask yting, og dei utviklerverktøya du treng for å byggje det opne nettet.
+
+
+;Firefox Developer Edition automatically sends feedback to Mozilla.
+Firefox Developer Edition sender automatisk tilbakemeldingar til Mozilla.
+
+
+;Faster Performance
+Raskare yting
+
+
+;A Next-Generation CSS Engine
+Neste-generasjons CSS-motor
+
+
+;Firefox has been rebuilt from the ground up to be faster and more powerful than ever. This includes a new CSS engine that has state-of-the-art innovations and is blazingly fast.
+Firefox er bygd oppatt frå grunnen av til å vere raskare og kraftigare enn nokon gong. Dette inkluderer ein ny CSS-motor som har toppmoderne innovasjonar og er lynrask.
+
+
+;New Tools
+Nye verktøy
+
+
+;Firefox DevTools
+Firefox DevTools {ok}
+
+
+# Link points to http://firefox-dev.tools/
+;Learn more about Firefox developer tools
+Les meir om Firefox developer tools
+
+
+;The new Firefox DevTools are powerful, flexible, and best of all, hackable. This includes a best-in-class JavaScript debugger, which can target multiple browsers and is built in React and Redux.
+Dei nye utviklarverktøya (DevTools) i Firefox er avanserte og fleksible, og du kan du tilpasse dei etter behov. Du får mellom anna ein JavaScript-debugger, som er langt betre enn andre debuggarar. Den nye debuggaren er bygd i React og Redux, og du kan bruke han med ulike nettlesarar.
+
+
+# String is obsolete. Do not remove.
+;The new Firefox DevTools are powerful, flexible, and best of all, hackable. This includes a best-in-class JavaScript debugger, which can target multiple browsers and is built in React and Ember.
+Nye Firefox DevTools er kraftig, fleksibel og best av alt, hackbar. Dette inkluderer ein avansert JavaScript-feilsøker (debugger), som kan målrettast mot fleire nettlesarar, og er bygd i React og Ember.
+
+
+;Innovative Features
+Innovative funksjonar
+
+
+;Master CSS Grid
+Meistre CSS-rutenett
+
+
+# Link points to https://mozilladevelopers.github.io/playground/
+;Learn more about CSS Grid
+Les meir om CSS Grid
+
+
+;Firefox is the only browser with tools built specifically for building and designing with CSS Grid. These tools allow you to visualize the grid, display associated area names, preview transformations on the grid and much more.
+Firefox er den einaste nettlesaren med verktøy som er bygd spesielt for å byggje og designe med CSS-rutenett. Desse verktøya lar deg visualisere rutenettet, vise tilknytte områdenamn, førehandsvise transformasjonar på rutenettet og mykje meir.
+
+
+;Design. Code. Test. Refine.
+Designe. Kode. Teste. Raffinere.
+
+
+# line break for visual formatting
+;Build and Perfect your sites<br> with Firefox DevTools
+Bygg og perfeksjoner nettsidene<br> dine med Firefox DevTools
+
+
+;Inspector
+Inspektør
+
+
+;Inspect and refine code to build pixel-perfect layouts.
+Inspiser og forbetre koden for å lage pixel-perfekte utformingar.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Page_Inspector
+;Learn more about Page Inspector
+Les meir om Page Inspector
+
+
+;Console
+Konsoll
+
+
+;Track CSS, JavaScript, security and network issues.
+Spor CSS, JavaScript, sikkerheit og nettverksproblem.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Web_Console
+;Learn more about Web Console
+Les meir om Web Console
+
+
+;Debugger
+Feilrettar (Debugger)
+
+
+;Powerful JavaScript debugger with support for your framework.
+Kraftig JavaScript-debugger med støtte for ditt rammeverk (framework).
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Debugger
+;Learn more about JavaScript Debugger
+Les meir om JavaScript Debugger
+
+
+;Network
+Nettverk
+
+
+;Monitor network requests that can slow or block your site.
+Overvak nettverksførespurnadar som kan senke eller blokkere nettsida di.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Network_Monitor
+;Learn more about Network Monitor
+Les meir om Network Monitor
+
+
+;Storage panel
+Lagringspanel
+
+
+;Add, modify and remove cache, cookies, databases and session data.
+Legg til, endre og slett cache, infokapslar, databasar og øktdata.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Storage_Inspector
+;Learn more about Storage Panel
+Les meir om Storage Panel
+
+
+;Responsive Design Mode
+Responsiv design-modus (Responsive Design Mode)
+
+
+;Test sites on emulated devices in your browser.
+Test nettstadar på emulerte einingar i nettlesaren din.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Responsive_Design_View
+;Learn more about Responsive Design View
+Les meir om Responsive Design View
+
+
+;Visual Editing
+Visuell redigering (Visual Editing)
+
+
+;Fine-tune animations, alignment and padding.
+Finjuster animasjonar, plassering og utfylling.
+
+
+# Link points to https://hacks.mozilla.org/2015/11/developer-edition-44-creative-tools-and-more
+;Learn more about Visual Editing
+Les meir om Visual Editing
+
+
+;Performance
+Yting (Performance)
+
+
+;Unblock bottlenecks, streamline processes, optimize assets.
+Fjern flaskhalsar, effektiviser prosessar, optimer tilgjenge.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Performance
+;Learn more about Performance Tools
+Les meir om Performance Tools
+
+
+;Memory
+Minne
+
+
+;Find memory leaks and make your application zippy.
+Finn minnelekasjar og gjer programmet ditt raskare.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Memory
+;Learn more about Memory Tools
+Les meir om Memory Tools
+
+
+;Web Audio
+Nettlyd
+
+
+;The only developer tool for inspecting the Web Audio API.
+Det einaste utviklingsverktøyet for granskning av nettlyd-API (Web Audio API).
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Web_Audio_Editor
+;Learn more about Web Audio Editor
+Les meir om Web Audio Editor
+
+
+;Scratchpad
+Kladdeblokk (Scratchpad)
+
+
+;Edit, write, run and execute JavaScript in real time.
+Rediger, skriv, køyr og utfør JavaScript i realtid.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Scratchpad
+;Learn more about Scratchpad
+Les meir om Scratchpad
+
+
+;Style Editor
+Stilredigerar
+
+
+;Edit and manage all your CSS stylesheets in your browser.
+Rediger og handter alle CSS-stilsetta dine, i nettlesaren din.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Style_Editor
+;Learn more about Style Editor
+Les meir om Style Editor
+
+
+;Speak up
+Sei kva du meiner
+
+
+;Feedback makes us better. Tell us how we can improve the browser and Developer tools.
+Tilbakemelding gjer oss betre. Fortel oss korleis vi kan forbetre nettlesaren og utviklarverktøya (Developer Tools).
+
+
+# Link to https://discourse.mozilla-community.org/c/devtools
+;Join the conversation
+Ver med i diskusjonen
+
+
+;Get involved
+Ver med
+
+
+;Help build the last independent browser. Write code, fix bugs, make add-ons, and more.
+Hjelp oss med å byggje den siste uavhengige nettlesaren. Skriv kode, rett feil, lag utvidingar, med meir.
+
+
+# Link to https://devtools-html.github.io/
+;Start now
+Start no
+
+
+;Download the Firefox browser made for developers
+Last ned Firefox-nettlesaren som er laga for utviklarar
+
+
+# First run page at https://www.mozilla.org/firefox/57.0a2/firstrun/
+;Firefox Developer Edition is the blazing fast browser that offers cutting edge developer tools and latest features like CSS Grid support and framework debugging
+Firefox Developer Edition er den lynraske nettlesaren som tilbyr avanserte utviklarverktøy og nyaste funksjonar som støtte for CSS-rutenett og feilsøking (debugging) av framework
+
+
+;Welcome to the all-new Firefox Quantum: Developer Edition
+Velkomen til den heilt nye Firefox Quantum: Developer Edition
+
+
+;Firefox has been rebuilt from the ground-up to be faster, sleeker, and more powerful than ever.
+Firefox er bygd oppatt frå grunnen til å vere raskare, penare og kraftigare enn nokon gong.
+
+
+;Firefox Devtools
+Firefox DevTools
+
+
+;Next-Gen CSS Engine
+Neste generasjons CSS-motor
+
+
+# line break for visual formatting
+;Get developer news, tricks and resources <br /> sent straight to your inbox.
+Få utviklernyheiter, -tips og -ressursar <br /> sende direkte til innboksen din.
+
+
+;A Next-Generation CSS Engine (hint: it’s fast)
+Ein nestegenerasjons CSS-motor (hint: han er rask)
+
+
+;Firefox Quantum includes a new CSS engine, written in Rust, that has state-of-the-art innovations and is blazingly fast.
+Firefox Quantum inneheld ein ny CSS-motor, utvikla i Rust, som har toppmoderne innovasjonar og er lynrask.
+
+
+# What's new run page at https://www.mozilla.org/firefox/57.0a2/whatsnew/
+;Want to be on the cutting-edge?
+Vil du vere i framkant?
+
+
+;Firefox Nightly receives daily updates and allows you to access features months before they go mainstream.
+Firefox Nightly får daglege oppdateringar og lèt deg få tilgang til funksjonar månadar før dei går ut til alle andre.
+
+
+;Congrats. You now have Firefox Quantum: Developer Edition.
+Gratulerer. Du har no Firefox Quantum: Developer Edition.
+
+
+;This isn’t just an update. This is Firefox Quantum: A brand new Firefox that has been rebuilt from the ground-up to be faster, sleeker, and more powerful than ever.
+Dette er ikkje berre ei oppdatering. Dette er Firefox Quantum: ein heilt ny Firefox som er bygd oppatt frå grunnen av for å vere raskare, penare og kraftigare enn nokon gong.
+
+

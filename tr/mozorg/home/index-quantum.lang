@@ -1,0 +1,204 @@
+## active ##
+## home-fundraiser-EOY2017 ##
+## home-update-20171116 ##
+## mozorg-home-health-report ##
+## mozorg-home-impact-health ##
+## NOTE: demo server at https://www-dev.allizom.org/
+
+
+# HTML title tag of the page
+;Internet for people, not profit
+Para için değil, insanlık için internet
+
+
+# HTML description tag
+;Did you know? Mozilla — the maker of Firefox — fights to keep the Internet a global public resource, open and accessible to all.
+Biliyor muydunuz? Firefox’un yapımcısı Mozilla, internetin açık ve herkesçe erişilebilir bir küresel kaynak olması için savaşıyor.
+
+
+;We all love the web. Join Mozilla in defending it.
+Web’i hepimiz seviyoruz. Gelin, onu birlikte koruyalım.
+
+
+# "Cup of coffee" is meant to represent an inexpensive item that an average person would purchase daily/without hesitation. Feel free to substitute with something affordable locally.
+;Let’s protect the world’s largest public resource for future generations. A few times a year, Mozilla asks for donations. Just chipping in the price of a cup of coffee can help us keep the web healthy, wonderful and welcoming to all.
+Dünyanın en büyük kamusal kaynağını gelecek nesiller için korumak bizim görevimiz. Mozilla, yılda birkaç kez bağış toplar. Bugünkü kahve paranızı bize bağışlayarak web’i daha sağlıklı, daha güzel ve herkesi birleştiren bir yere dönüştürmemize yardım edebilirsiniz.
+
+
+# Line break below for visual formatting only
+;Internet for people, <br>not profit.
+Para için değil,<br>insanlık için internet.
+
+
+;Hi. We’re Mozilla, the proudly non-profit champions of the Internet, helping to keep it healthy, open and accessible to all.
+Merhaba. Biz Mozilla’yız. İnternetin kâr amacı gütmeyen öncüleriyiz. Onu sağlıklı, açık ve herkesçe erişilebilir tutmak için çalışıyoruz.
+
+
+;Our impact
+Etkimiz
+
+
+;When you use Firefox, you help Mozilla fight misinformation online, teach digital skills and make the comments section more human. Check out what helps create a healthier internet.
+Firefox’u kullandığınızda Mozilla’nın internette bilgi kirliliğiyle savaşmasına, dijital becerileri öğretmesine ve internetteki yorumları daha insancıl kılmasına yardım ediyorsunuz. Daha sağlıklı bir internet için neler yaptığımıza bakın.
+
+
+# String is obsolete. Do not remove.
+;Working at the grassroots and policy levels, we teach web literacy, provide tools and advocate on behalf of every individual who values an internet built on fairness, inclusion and respect.
+Hem halk hem de siyaset düzeyinde çalışarak web okuryazarlığını öğretiyoruz; araçlar geliştiriyoruz; tarafsızlık, aidiyet ve saygı üzerine kurulu bir internete değer veren herkes adına bu fikirleri savunuyoruz.
+
+
+# Link points to https://blog.mozilla.org/blog/2017/08/08/mozilla-information-trust-initiative-building-movement-fight-misinformation-online/
+;Mozilla Information Trust Initiative
+Mozilla Bilgi Güvenilirliği Girişimi
+
+
+# Link points to https://learning.mozilla.org/blog/new-partnership-with-un-women-to-teach-key-digital-skills-to-women
+;Empowering Women Online
+İnternette Kadın Gücü
+
+
+# Link points to https://blog.mozilla.org/blog/2017/09/06/mozilla-washington-post-reinventing-online-comments/
+;The Coral Project
+Coral Projesi
+
+
+# Link points to https://internethealthreport.org
+;Internet Health Report
+İnternet Sağlığı Raporu
+
+
+# String is obsolete. Do not remove.
+;Stand Up For Encryption
+Şifrelemeye sahip çıkın
+
+
+# String is obsolete. Do not remove.
+;Teach The Web
+Web’i öğretin
+
+
+# String is obsolete. Do not remove.
+;Try the Lean Data Toolkit
+Temiz Veri Araç Kiti’ni deneyin
+
+
+# String is obsolete. Do not remove.
+;Read our Internet Health Report
+İnternet Sağlığı Raporu’muzu okuyun
+
+
+;Our innovations
+Buluşlarımız
+
+
+;Using the web as the platform, we build open, innovative technologies that allow developers to work free of closed, corporate ecosystems and create faster, safer web experiences for us all.
+Web’i bir platform olarak kullanarak, geliştiricilerin kapalı ve kurumsal ekosistemlere hapsolmadan, daha hızlı, daha güvenli web deneyimleri geliştirmelerini sağlayan açık ve yenilikçi teknolojiler inşa ediyoruz.
+
+
+;Common Voice
+Common Voice {ok}
+
+
+# String is obsolete. Do not remove.
+;Gaming on the Web
+Web’de oyun
+
+
+;Virtual Reality Platform
+Sanal Gerçeklik Platformu
+
+
+;Get Firefox today
+Firefox’u hemen indir
+
+
+;Extensions
+Eklentiler
+
+
+;Personalize Firefox with your favorite extras like password managers, ad blockers and more.
+Firefox’u parola yöneticileri, reklam engelleyiciler gibi sevdiğiniz eklentilerle kişiselleştirin.
+
+
+;Careers
+İş olanakları
+
+
+;Learn about the benefits of working at Mozilla and view open positions around the world.
+Mozilla’da çalışmanın avantajlarını öğrenin ve tüm dünyadaki açık pozisyonları inceleyin.
+
+
+;Need help?
+Yardım mı lazım?
+
+
+;Get answers to your questions about Firefox and all Mozilla products from our support team.
+Firefox ve tüm Mozilla ürünleriyle ilgili sorularınızı destek ekibimiz yanıtlasın.
+
+
+# This is a sum in US dollars, e.g. '$100'. You can change the way it's displayed, e.g. '%(sum)s USD' will display '100 USD'
+# You can also localize the currency (e.g. to use € instead of $), but only if your currency is available on https://donate.mozilla.org (check the currency dropdown)
+;$%(sum)s
+%(sum)s ₺
+
+
+# Take over form
+;Enter your own amount
+Kendi tutarınızı girin
+
+
+# Take over form: radio button for monthly contributions
+;Monthly
+Her ay
+
+
+# Take over form: radio button for one-time contributions
+;One-time
+Bir kere
+
+
+# Take over form: button to submit the donation form
+;Donate
+Bağış yap
+
+
+;Working to keep the Internet healthy, open and accessible to all, we teach web literacy, provide tools and advocate on behalf of every individual who values the Internet as a global public resource.
+İnternetin sağlıklı, açık ve herkesçe erişilebilir olmasını sağlamak için web okuryazarlığını öğretiyoruz, araçlar geliştiriyoruz ve internete kamusal bir kaynak olarak değer veren herkes adına bu fikri savunuyoruz.
+
+
+# The <span> below is for visual formatting only - bolding the word 'Firefox'.
+;The new <span>Firefox</span>
+Yeni <span>Firefox</span>
+
+
+;Fast for good.
+İyi insanların tarayıcısı.
+
+
+# The string is obsolete. Do not remove.
+;Browse faster. For good.
+Daha hızlı dolaş.
+
+
+;With 2x the speed, built-in privacy protection and Mozilla behind it, the new Firefox is the better way to browse.
+2 kat hız, bütünleşik gizlilik koruması ve Mozilla gücüyle yeni Firefox, internette gezmenin en iyi yolu.
+
+
+# String is obsolete. Do not remove.
+;With 2x the speed, built-in privacy protection and Mozilla behind it, the new Firefox is fast for good.
+2 kat hız, bütünleşik gizlilik koruması ve Mozilla gücüyle yeni Firefox, iyilik kadar hızlı.
+
+
+;We make the internet safer, healthier and faster for good.
+Herkesin iyiliği için daha güvenli, daha sağlıklı ve daha hızlı bir internet yaratıyoruz.
+
+
+;Mozilla is the not-for-profit behind Firefox, the original alternative browser. We create products and policy to keep the internet in service of people, not profit.
+Alternatif tarayıcı Firefox’un arkasında kâr amacı gütmeyen Mozilla var. İnterneti paranın değil, insanların hizmetine veren ürünler ve politikalar geliştiriyoruz.
+
+
+# String is obsolete. Do not remove.
+;Mozilla is the not-for-profit behind Firefox, the original alternative browser. We create products and policy to keep the internet in service of people, not profits.
+Alternatif tarayıcı Firefox’un arkasında kâr amacı gütmeyen Mozilla var. İnterneti paranın değil, insanların hizmetine veren ürünler ve politikalar geliştiriyoruz.
+
+

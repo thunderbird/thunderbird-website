@@ -1,0 +1,721 @@
+## active ##
+## contribute_cta_updates ##
+## NOTE: Demo server available at https://www-dev.allizom.org/contribute
+
+
+# Used for HTML title attribute
+;Volunteer Opportunities at Mozilla
+Mozilla’da gönüllülük olanakları
+
+
+# this string is used for accessibility reasons, it's not visible in the page
+;Menu
+Menü
+
+
+# this br is for formatting, omit or reposition as needed
+;Why<br> volunteer
+Neden<br> gönüllülük?
+
+
+# this br is for formatting, omit or reposition as needed
+;Find<br> an event
+Bir etkinlik<br> bulun
+
+
+# this br is for formatting, omit or reposition as needed
+;Meet<br> Mozillians
+Mozillian’larla<br> tanışın
+
+
+;Get involved
+Aramıza katılın
+
+
+;Your country
+Ülkeniz
+
+
+# This is a hint used as a placeholder in a country selection dropdown menu. It should be short.
+;I live in&hellip;
+Ülkem&hellip;
+
+
+;Volunteer with Mozilla!
+Mozilla’da gönüllü olun!
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;active Mozillians worldwide
+aktif Mozillian (tüm dünyada)
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;upcoming events around the globe
+yaklaşan etkinlik (dünya çapında)
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms. The phrase "and counting" means there are always more being added; not sure how that idiom might translate so do your best :)
+;languages and counting, on every continent
+dil (tüm kıtalarda)
+
+
+;Join a global community of game-changers.
+Dünyayı değiştiren küresel bir topluluğa katılın.
+
+
+# this br is for formatting, omit or reposition as needed
+;Volunteer as much as you like. Or as little.<br> It’s totally up to you.
+İster az vakit ayırın, ister çok.<br> Tamamen size bağlı.
+
+
+# this br is for formatting, omit or reposition as needed
+;Share your skills and pick up<br> a few new ones along the way.
+Becerilerinizi paylaşırken<br> yeni bir şeyler de öğreneceksiniz.
+
+
+;Volunteering with Mozilla&hellip;
+Mozilla’da gönüllü olmak&hellip;
+
+
+# This paragraph follows the headline, "Volunteering with Mozilla...", so the first sentence continues from that fragment. The line breaks are for formatting.
+;is about more than lending a hand. It’s about learning, collaborating and sharing your skills with a global community of Mozillians — coders, organizers, activists and more — who help shape the Web every day.
+bir yardım eli uzatmaktan çok daha fazlası. Her gün Web’i şekillendiren Mozillian’lardan (programcılar, organizatörler, aktivistler) oluşan küresel bir toplulukla becerilerinizi paylaşacak, öğrenecek, işbirliği yapacaksınız.
+
+
+;See our community in action
+Topluluğumuzun nasıl çalıştığını görün
+
+
+;How Mozillians help every day
+Bakın Mozillian’lar her gün neler yapıyor
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Spain &middot; Activism
+İspanya &middot; Aktivizm
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Philippines &middot; Activism
+Filipinler &middot; Aktivizm
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Switzerland &middot; Coding
+İsviçre &middot; Programlama
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;India &middot; Teaching
+Hindistan &middot; Eğitim
+
+
+;Read his story
+Öyküsünü oku
+
+
+;Read her story
+Öyküsünü oku
+
+
+;Want to get involved? Here’s how.
+Aramıza katılmak ister misiniz? İşte yapmanız gerekenler:
+
+
+;Choose what interests you and tell us how you’d like to help
+İlginizi çeken konuları ve nasıl yardımcı olmak istediğinizi bize söyleyin
+
+
+;Stand by for an email that will connect you to the Mozilla community
+Sizi Mozilla topluluğuna bağlayacak e-postayı bekleyin
+
+
+;Create your Mozillians account and share your contributions with the world
+Mozillians hesabınızı oluşturup katkılarınızı dünyaya ulaştırmaya başlayın
+
+
+;Get started
+Başlayalım
+
+
+;Not ready to dive in just yet?
+Henüz hazır değil misiniz?
+
+
+;Here are a few other ways you can support Mozilla right now.
+Mozilla’yı hemen desteklemenizin birkaç yolu daha var.
+
+
+;Donate to Mozilla
+Mozilla’ya bağış yapın
+
+
+;Read our Manifesto
+Manifestomuzu okuyun
+
+
+;Like us on Facebook
+Facebook’ta bizi beğenin
+
+
+;Follow us on Twitter
+Twitter’da bizi takip edin
+
+
+;Upcoming event
+Yaklaşan etkilik
+
+
+;See all events
+Tüm etkinlikleri görün
+
+
+;Communicate
+İletişim kurun
+
+
+;Mozilla communities
+Mozilla toplulukları
+
+
+;Mailing lists
+Yazışma listeleri
+
+
+;IRC channels
+IRC kanalları
+
+
+;More links
+Diğer bağlantılar
+
+
+;Submit Firefox feedback
+Firefox’la ilgili geri bildirim
+
+
+;Explore Mozilla careers
+Mozilla’da kariyer olanakları
+
+
+;Get help with Firefox
+Firefox’la ilgili yardım alın
+
+
+;Subscribe to community events
+Topluluk etkinliklerine abone olun
+
+
+;Get community updates
+Topluluktan haberleri alın
+
+
+# Used as title of the /stories sub-page
+;Mozillian Stories
+Mozillian Öyküleri
+
+
+# Used as a toggle to display more content.
+;More
+Devamı
+
+
+# Used as a toggle to display less content.
+;Less
+Kısalt
+
+
+;Read more Mozillian stories
+Daha fazla Mozillian öyküsü okuyun
+
+
+;Discover even more stories on Twitter with <a href="%(link_hashtag)s">#IAmAMozillian</a>
+Twitter’da <a href="%(link_hashtag)s">#IAmAMozillian</a> ile daha da fazla öyküyü keşfedin
+
+
+;More coming soon
+Devamı çok yakında
+
+
+# Used as title of the /signup sub-page
+;Get Involved: Volunteer Opportunities at Mozilla
+Aramıza Katılın: Mozilla’daki Gönüllü Görevleri
+
+
+;To get started, tell us what interests you.
+Başlamak için bize ilgi alanınızı söyleyin.
+
+
+;Choose one for now. You can always contribute to other areas later.
+Şimdilik bir tane seçin. Daha sonra başka alanlarda da katkıda bulunabilirsiniz.
+
+
+# This text is used for accessibility reasons, it's not visible
+;Where would you like to get started?
+Nereden başlamak istersiniz?
+
+
+;Coding
+Programlama
+
+
+;More about coding
+Kodlama hakkında daha fazla bilgi
+
+
+;Contribute code to a whole range of Mozilla products, including Firefox and Firefox OS.
+Firefox ve Firefox OS de dahil olmak üzere çeşitli Mozilla ürünlerinin kodlarına katkıda bulunun.
+
+
+;Testing
+Test
+
+
+;More about testing
+Test hakkında daha fazla bilgi
+
+
+;Help make the Mozilla products you use — and love — even better.
+Kullandığınız ve sevdiğiniz Mozila ürünlerinin daha da iyi hale gelmesini sağlayın.
+
+
+;Writing
+Yazarlık
+
+
+;More about writing
+Yazma hakkında daha fazla bilgi
+
+
+;Lend your voice to Mozilla — from blogging and social media to providing technical documents for users and developers.
+Mozilla’nın sesi olun: Blog yazmadan sosyal medyaya, kullanıcı ve geliştiriciler için teknik dokümanlar sağlamaya kadar birçok alanda yardımcı olabilirsiniz.
+
+
+;Teaching
+Öğretim
+
+
+;More about teaching
+Öğretim hakkında daha fazla bilgi
+
+
+;Share your skills with a community that’s eager to learn. Take advantage of our free tools, teaching resources and events.
+Becerilerinizi öğrenmeye meraklı bir toplulukla paylaşın. Ücetsiz araçlarımızdan, eğitim kaynaklarımızdan ve etkinliklerimizden faydalanın.
+
+
+;Helping
+Yardım etme
+
+
+;More about helping
+Yardım etme hakkında daha fazla bilgi
+
+
+;Provide support to users who need it and help everyone get the most out of their Mozilla products.
+Mozilla ürünleriyle ilgili yardıma ihtiyacı olan kullanıcılara destek verin.
+
+
+;Translating
+Çeviri
+
+
+;More about translating
+Çeviri hakkında daha fazla bilgi
+
+
+;Help make Mozilla stuff available in other languages. Translate everything from newsletters and websites to copy for Firefox and Firefox OS.
+Mozilla ile ilgili her şeyin kendi dilinizde kullanılabilmesine yardım edin. Bültenlerden web sitelerine, Firefox’tan Firefox OS’e kadar birçok şeyi çeviriyoruz.
+
+
+;Activism
+Aktivizm
+
+
+;More about activism
+Aktivizm hakkında daha fazla bilgi
+
+
+;Get involved with our opportunities to support freedom, security and privacy on the open Web.
+Web’de özgürlüğü, güvenliği ve gizliliği destekleyen olanaklarımıza katkıda bulunun.
+
+
+;I don’t know
+Bilmiyorum
+
+
+;More about how you can contribute
+Nasıl katkıda bulunabilirsiniz?
+
+
+;Not sure how you want to help? No problem. We can find the appropriate contribution activity for you.
+Nasıl yardım etmek istediğinizden emin değil misiniz? Sorun değil. Size en uygun katkıda bulunma yolunu bulabiliriz.
+
+
+;Now tell us a little about yourself:
+Bize biraz kendinizden bahsedin:
+
+
+;Name
+Adınız
+
+
+;Email address
+E-posta adresiniz
+
+
+;Country
+Ülkeniz
+
+
+;select
+seçin
+
+
+;Why do you want to be a Mozilla volunteer?
+Neden Mozilla gönüllüsü olmak istiyorsunuz?
+
+
+;(Optional)
+(Tercihe bağlı)
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%(privacy)s">this Privacy Policy</a>
+Mozilla’nın bilgilerimi <a href="%(privacy)s">bu Gizlilik İlkelerinde</a> açıklandığı şekilde kullanmasına izin veriyorum
+
+
+;Start contributing
+Katkıda bulunmaya başla
+
+
+;Sign me up for community updates
+Topluluktan haberleri almak istiyorum
+
+
+;(English)
+(İngilizce)
+
+
+;What particular area?
+Hangi alan?
+
+
+;What would you like to code?
+Neyi kodlamak istersiniz?
+
+
+;What would you like to test?
+Neyi test etmek istersiniz?
+
+
+;What would you like to translate?
+Neyi çevirmek istersiniz?
+
+
+;What would you like to write?
+Ne yazmak istersiniz?
+
+
+;What would you like to teach?
+Ne öğretmek istersiniz?
+
+
+;Firefox
+Firefox {ok}
+
+
+;Websites
+Web siteleri
+
+
+;Firefox add-ons
+Firefox eklentileri
+
+
+;HTML5 apps
+HTML5 uygulamaları
+
+
+;Diagnosing Web compatibility issues
+Web uyumlululuk sorunlarının tespiti
+
+
+;Online services
+Çevrimiçi hizmetler
+
+
+;Web compatibility
+Web uyumlululuğu
+
+
+;Product localization
+Ürün yerelleştirme
+
+
+;Website localization
+Web sitesi yerelleştirme
+
+
+;I’d like to work on localization tools
+Yerelleştirme araçları üzerinde çalışmak istiyorum
+
+
+;Social media
+Sosyal medya
+
+
+;Journalism
+Gazetecilik
+
+
+;Technical docs for users
+Kullanıcılar için teknik belgeler
+
+
+;Technical docs for developers
+Geliştiriciler için teknik belgeler
+
+
+;Technical docs for Firefox add-ons
+Firefox eklentileri için teknik belgeler
+
+
+;Technical docs for HTML5 apps
+HTML5 uygulamaları için teknik belgeler
+
+
+;Teach the Web (Webmaker)
+Web öğretmek (Webmaker)
+
+
+;Open News fellowships
+Open News bursları
+
+
+;Hive - Community networks of educators/mentors
+Hive - Eğitimci ve akıl hocalarından oluşan topluluk ağları
+
+
+;Open Web science research
+Açık Web bilimsel araştırmaları
+
+
+;Community Events
+Topluluk Etkinlikleri
+
+
+;Find events
+Etkinlik arama
+
+
+;By city, country, or event:
+Şehre, ülkeye veya etkinliğe göre:
+
+
+;By date:
+Tarihe göre:
+
+
+;month
+ay
+
+
+;year
+yıl
+
+
+;Date
+Tarih
+
+
+;Event
+Etkinlik
+
+
+;Location
+Konum
+
+
+;City
+Şehir
+
+
+;Events
+Etkinlikler
+
+
+# Used as title of the thank you page displayed after users send the form
+;Thank you!
+Teşekkür ederiz!
+
+
+;Thanks!
+Teşekkürler!
+
+
+;We’re thrilled to see that you’re interested in coding and can’t wait to get you started.
+Programlama konusuyla ilgilenmenize çok sevindik. Desteğinizi görmek için sabırsızlanıyoruz.
+
+
+;We’re thrilled to see that you’re interested in testing and can’t wait to get you started.
+Test konusuyla ilgilenmenize çok sevindik. Desteğinizi görmek için sabırsızlanıyoruz.
+
+
+;We’re thrilled to see that you’re interested in writing and can’t wait to get you started.
+Yazım konusuyla ilgilenmenize çok sevindik. Desteğinizi görmek için sabırsızlanıyoruz.
+
+
+;We’re thrilled to see that you’re interested in teaching and can’t wait to get you started.
+Öğretim konusuyla ilgilenmenize çok sevindik. Desteğinizi görmek için sabırsızlanıyoruz.
+
+
+;We’re thrilled to see that you’re interested in helping and can’t wait to get you started.
+Yardım konusuyla ilgilenmenize çok sevindik. Desteğinizi görmek için sabırsızlanıyoruz.
+
+
+;We’re thrilled to see that you’re interested in translating and can’t wait to get you started.
+Çeviri konusuyla ilgilenmenize çok sevindik. Desteğinizi görmek için sabırsızlanıyoruz.
+
+
+;We’re thrilled to see that you’re interested in activism and can’t wait to get you started.
+Aktivizm konusuyla ilgilenmenize çok sevindik. Desteğinizi görmek için sabırsızlanıyoruz.
+
+
+;We’re thrilled to see that you’re interested in volunteering and can’t wait to get you started.
+Gönüllü olmak istemenize çok sevindik. Desteğinizi görmek için sabırsızlanıyoruz.
+
+
+;Keep an eye on your inbox for an important message from us.
+Bizden gelecek önemli bir mesajı yakında gelen kutunuzda bulacaksınız.
+
+
+;Hello!
+Merhaba!
+
+
+;Your Name
+Adınız
+
+
+;In the meantime&hellip;
+Bu arada&hellip;
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;You can help by picking an easy task that only takes a few minutes &mdash; or take on a bigger challenge.
+Yalnızca birkaç dakikanızı alacak kolay bir görev seçerek yardımcı olabilir veya daha büyük bir göreve girişebilirsiniz.
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;Choose a Task Now
+Hemen bir görev seçin
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Help us tell the world how awesome Firefox is and about all the important work Mozilla does every day.
+Firefox’un ne kadar şahane olduğunu ve Mozilla’nın her gün yaptığı önemli işleri başkalarına anlatmamıza yardım edin.
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Join Now
+Hemen katılın
+
+
+;You can create your Mozillians account now to connect with fellow Mozillians.
+Diğer Mozillian’larla iletişime geçmek için Mozillians hesabınızı hemen oluşturabilirsiniz.
+
+
+;Yes, create my Mozillians account
+Evet, Mozillians hesabımı oluştur
+
+
+;You will be asked to sign in before proceeding
+Devam etmeden önce oturum açmanız istenecektir
+
+
+;No thanks, I’ll just wait for the email
+Gerek yok, e-postayı bekleyeceğim
+
+
+# The following strings are used in the contribute form on production (https://www.mozilla.org/contribute/signup/), not in the one available on stage
+# Strings have been copied from the old template (mozorg/contribute.lang)
+;Area of interest?
+İlgi alanınız?
+
+
+;Helping Users
+Kullanıcılara Yardım
+
+
+;Testing and QA
+Test ve Kalite Kontrolü
+
+
+;Marketing
+Pazarlama
+
+
+;Localization and Translation
+Yerelleştirme ve Çeviri
+
+
+;Web Development
+Web Geliştirme
+
+
+;Firefox Marketplace
+Firefox Marketplace {ok}
+
+
+;Add-ons
+Eklentiler
+
+
+;Visual Design
+Görsel Tasarım
+
+
+;Documentation and Writing
+Belgelendirme ve Yazım
+
+
+;Education
+Eğitim
+
+
+;Other
+Diğer
+
+
+;Hi, I’m interested in…
+Merhaba, ilgi alanım…
+
+
+;Send us a note and we can get you started right away.
+Size uygun bir şeyler bulmamız için bize bilgi verin.
+
+
+;I have a suggestion for Firefox
+Firefox için bir önerim var
+
+
+;I need help with a Firefox issue
+Bir Firefox sorunuyla ilgili yardıma ihtiyacım var
+
+
+;Please enter a valid email address.
+Lütfen geçerli bir e-posta adresi girin.
+
+
+;You must agree to the privacy policy.
+Gizlilik ilkelerini kabul etmelisiniz.
+
+
+;Please select an area of interest.
+Lütfen bir ilgi alanı seçin.
+
+
+;Please tell us more about your interests.
+Lütfen bize ilgi alanlarınızdan bahsedin.
+
+

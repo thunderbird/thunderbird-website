@@ -1,0 +1,66 @@
+## active ##
+## NOTE: Demo server available at url: https://www-dev.allizom.org/plugincheck/
+
+
+# HTML page title
+;More browser features, fewer plugin updates | Firefox
+მეტი შესაძლებლობები, ნაკლები განახლებები მოდულებზე | Firefox
+
+
+# HTML page decription
+# NPAPI stands for Netscape Plugin Application Programming Interface.
+;Browse with fewer interruptions. Features from NPAPI plugins are now automatically supported in Firefox. Download the latest Firefox now!
+მოინახულეთ საიტები წყვეტებისა და შეფერხებების გარეშე. NPAPI მოდულების შესაძლებლობები, უკვე ჩაშენებულია Firefox-ში. ჩამოტვირთეთ უახლესი Firefox ახლავე!
+
+
+# Message targetting users already on the latest version of Firefox
+# <br> for visual formatting
+;Good news - you’re using<br> the latest version of Firefox!
+მშვენიერია - თქვენ უკვე<br> სარგებლობთ ახალი Firefox-ით!
+
+
+;Even better news - Firefox now <a href="%(npapi)s">supports features</a> that used to require additional plugins.
+კიდევ უფრო მშვენიერი კი ისაა, რომ ახალ Firefox-ს, უკვე გააჩნია ყველა ის <a href="%(npapi)s">შესაძლებლობა</a>, რომელიც აქამდე, დამატებით მოდულებს საჭიროებდა.
+
+
+# The link points to https://support.mozilla.org/
+;Need help? Visit Mozilla Support
+დახმარება გჭირდებათ? ეწვიეთ Mozilla-ს მხარდაჭერის გვერდს
+
+
+# Message targeting users on older versions of Firefox
+# <br> for visual formatting
+;Better features,<br> fewer plugin updates
+მეტი შესაძლებლობები,<br> ნაკლები განახლებები მოდულებზე
+
+
+;Firefox has been <a href="%(npapi)s">expanding to support features</a> that used to require extra plugins. Now, they’re kept up-to-date automatically and managed through <a href="%(blocklist)s">blocklisting</a> for added security. So you can stay current with just one Firefox update.
+Firefox-მა <a href="%(npapi)s">გააფართოვა იმ შესაძლებლობების მხარდაჭერა</a>, რომელიც აქამდე დამატებითი მოდულების ჩადგმას საჭიროებდა. ახლა უკვე, მათი ცალ-ცალკე განახლება აღარაა საჭირო, ხოლო უსაფრთხოება მუდმივად მოწმდება <a href="%(blocklist)s">შეზღუდვის სისტემის</a> საშუალებით. ასე რომ, ამიერიდან, მხოლოდ ერთი - Firefox განახლების დაყენება იქნება საკმარისი.
+
+
+;Download the latest version:
+უახლესი ვერსიის ჩამოტვირთვა:
+
+
+;Update Firefox
+Firefox-ის განახლება
+
+
+# FMessage targeting non-Firefox users
+# <br> for visual formatting
+;Tired of updating plugins?<br> Firefox has you covered.
+მოგბეზრდათ მოდულების მუდმივი განახლება?<br> Firefox შეუძლია ამის მოგვარება.
+
+
+;As the web moves forward, so do we. Firefox now <a href="%(npapi)s">supports more features</a> that used to require plugins, so you can browse with fewer crashes and interruptions. Plus, our <a href="%(blocklist)s">blocklist system</a> protects you between updates.
+ინტერნეტი განუწყვეტლივ ვითარდება და ჩვენც ფეხდაფეხ მივყვებით სიახლეებს. Firefox-ს ახლა უკვე გააჩნია ყველა ის <a href="%(npapi)s">შესაძლებლობა</a>, რაც აქამდე დამატებითი მოდულების ჩადგმას საჭიროებდა, ასე რომ, ამიერიდან წყვეტებისა და შეფერხებების გარეშე შეგეძლებათ გვერდების მონახულება. ამასთან, ჩვენი <a href="%(blocklist)s">შეზღუდვის სისტემა</a> უზრუნველყოფს თქვენს უსაფრთხოებას, განახლებებს შორის დროის შუალედში.
+
+
+;Hungry for more?
+გაინტერესებთ მეტი?
+
+
+;Get the latest &amp; greatest from Firefox delivered straight to your inbox.
+მიიღეთ უახლესი და უმნიშვნელოვანესი სიახლეები Firefox-ისგან პირდაპირ თქვენს ფოსტაზე.
+
+

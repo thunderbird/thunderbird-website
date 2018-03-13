@@ -1,0 +1,811 @@
+;Navigation
+การนำทาง
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+ดาวน์โหลดรุ่นออกก่อนตัวจริง
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+เกี่ยวกับ
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+แอป
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+ไม่ติดตาม
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+แดชบอร์ดที่น่าสนใจ
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+รุ่นสำหรับนักพัฒนา
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+การท่องเว็บแบบส่วนตัว
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+ต้องการความช่วยเหลือ?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+ข่าว
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+เลือกเบราว์เซอร์ที่เป็นอิสระ
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox ไม่แสวงหากำไร ไม่ใช่ธุรกิจ ไม่มีทางพัง การเลือก Firefox ไม่ใช่เพียงเลือกเบราเซอร์ แต่มันเป็นการเลือกอิสรภาพส่วนบุคคล
+
+
+;Donate
+บริจาค
+
+
+;Support
+สนับสนุน
+
+
+;Products
+ผลิตภัณฑ์
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+ส่วนขยาย
+
+
+;Add-ons
+ส่วนเสริม
+
+
+;About Us
+เกี่ยวกับเรา
+
+
+;Labs
+ห้องทดลอง
+
+
+;skip to Navigation
+ข้ามไปยังการนำทาง
+
+
+;switch language
+สลับภาษา
+
+
+;Back to home page
+กลับไปยังหน้าหลัก
+
+
+;About Mozilla
+เกี่ยวกับ Mozilla
+
+
+;Get Involved
+มีส่วนร่วม
+
+
+;Careers
+ตำแหน่งงาน
+
+
+;Press Center
+ศูนย์ข่าว
+
+
+;Contact Us
+ติดต่อเรา
+
+
+# Used in new footer to switch the language of the page
+;Language
+ภาษา
+
+
+;Other languages:
+ภาษาอื่น ๆ:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+ภาษาของหน้า:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d-%m-%Y
+
+
+;Legal
+ข้อกฎหมาย
+
+
+# Used as link in the footer
+;Cookies
+คุกกี้
+
+
+;Legal Notices
+ข้อกฎหมาย
+
+
+;Privacy Policy
+นโยบายความเป็นส่วนตัว
+
+
+;Release Notes
+บันทึกประจำรุ่น
+
+
+;Other Systems and Languages
+ระบบและภาษาอื่น ๆ
+
+
+;Close
+ปิด
+
+
+;(in English)
+(in English) {ok}
+
+
+;Return to top
+กลับด้านบนสุด
+
+
+;Features
+คุณลักษณะ
+
+
+;Customize
+การปรับแต่ง
+
+
+;Download
+ดาวน์โหลด
+
+
+;Previous
+ก่อนหน้า
+
+
+;Next
+ถัดไป
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+เมกะไบต์
+
+
+;FAQ
+คำถามที่พบบ่อย
+
+
+;Videos
+วิดีโอ
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+เว้นแต่จะ <a href="%s">ระบุไว้</a> เป็นอย่างอื่น เนื้อหาในไซต์นี้อยู่ภายใต้ <br /><a href="%s">สัญญาอนุญาต Creative Commons แสดงที่มา อนุญาตแบบเดียวกัน v3.0</a> หรือรุ่นใดก็ตามหลังจากนั้น
+
+
+;Report Trademark Abuse
+รายงานการใช้เครื่องหมายการค้าที่ผิดวัตถุประสงค์
+
+
+;Free Upgrade
+อัปเกรดฟรี
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+ติดตามเราที่:
+
+
+;Customize with Add-ons
+ปรับแต่งด้วยส่วนขยาย
+
+
+;Learn More
+เรียนรู้เพิ่มเติม
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+เรียนรู้เพิ่มเติม
+
+
+# Link used to play again an animation or a video
+;Replay
+เล่นซ้ำ
+
+
+;Watch the video
+ดูวิดีโอ
+
+
+;Replay the video
+เล่นวิดีโอซ้ำ
+
+
+;Share the video
+แบ่งปันวิดีโอ
+
+
+;WebM format
+รูปแบบ WebM
+
+
+;Ogg Theora format
+รูปแบบ Ogg Theora
+
+
+;MPEG-4 format
+รูปแบบ MPEG-4
+
+
+;Mobile
+อุปกรณ์พกพา
+
+
+;View Full Site
+ดูเต็มรูปแบบ
+
+
+;Desktop
+เดสก์ท็อป
+
+
+;Firefox for mobile
+Firefox สำหรับอุปกรณ์เคลื่อนที่
+
+
+;Email
+อีเมล
+
+
+;Upgrade now
+อัปเกรดตอนนี้
+
+
+;Update now
+อัปเดตตอนนี้
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+ความเป็นส่วนตัว
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+บางส่วนของเนื้อหานี้สงวนลิขสิทธิ์ ©1998–%(current_year)s โดยผู้มีส่วนร่วมของ mozilla.org แต่ละคน เนื้อหาใช้งานได้ภายใต้ <a rel="license" href="%(url)s">สัญญาอนุญาต Creative Commons</a>
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+บางส่วนของเนื้อหานี้สงวนลิขสิทธิ์ ©1998–%(current_year)s โดยผู้มีส่วนร่วมของ mozilla.org แต่ละคน เนื้อหาใช้งานได้ภายใต้ <a href="%(url)s">สัญญาอนุญาต Creative Commons</a>
+
+
+# Footer string
+;Contribute to this site
+มีส่วนร่วมกับหน้านี้
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+รหัสต้นฉบับของหน้านี้
+
+
+# Top menu item
+;Mission
+เป้าหมาย
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+เที่ยวชม
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sync {ok}
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+ส่วนเสริมสำหรับเดสก์ท็อป
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+ส่วนเสริมสำหรับระบบ Android
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+ชุดตกแต่ง
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+การสนับสนุนเดสก์ท็อป
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+การสนับสนุน Android
+
+
+;Releases
+รุ่นที่ออก
+
+
+;Blog
+บล็อก
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+รับการอัปเดตจาก Mozilla
+
+
+# share button for social networks
+;Share
+แบ่งปัน
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla บน Twitter
+
+
+# footer link
+;Firefox on Twitter
+Firefox บน Twitter
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla บน Facebook
+
+
+# footer link
+;Firefox on Facebook
+Firefox บน Facebook
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+กระดานสนทนา
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+สิทธิบัตร
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+ความเป็นผู้นำ
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+การกำกับดูแลกิจการ
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+ประวัติ
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+ผลิตภัณฑ์ของเรา
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+ซอฟต์แวร์และนวัตกรรมอื่นออกแบบมาเพื่อทำให้ภารกิจเราก้าวไปข้างหน้า
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+มาเป็นอาสาสมัครผู้มีส่วนร่วมในหลากหลายความสนใจ
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+เมนู
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+มอบหมายให้แก่คุณ, ความเป็นส่วนตัวของคุณ และเว็บเสรี
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+โปรดเปิดใช้งาน JavaScript เพื่อแสดงหน้านี้อย่างถูกต้อง
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+ความสามารถของ Firefox
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+การให้ความช่วยเหลือของ Firefox
+
+
+;January
+มกราคม
+
+
+;February
+กุมภาพันธ์
+
+
+;March
+มีนาคม
+
+
+;April
+เมษายน
+
+
+;May
+พฤษภาคม
+
+
+;June
+มิถุนายน
+
+
+;July
+กรกฎาคม
+
+
+;August
+สิงหาคม
+
+
+;September
+กันยายน
+
+
+;October
+ตุลาคม
+
+
+;November
+พฤศจิกายน
+
+
+;December
+ธันวาคม
+
+
+;<abbr>Jan</abbr>
+<abbr>ม.ค.</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>ก.พ.</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>มี.ค.</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>เม.ย.</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>พ.ค.</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>มิ.ย.</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>ก.ค.</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>ส.ค.</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>ก.ย.</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>ต.ค.</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>พ.ย.</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>ธ.ค.</abbr>
+
+
+;Congrats. You’re up to date!
+ยินดีด้วย คุณทันสมัยแล้ว!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+รูปแบบ
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+ข้อความ
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+โอ๊ะ! ตรวจสอบให้แน่ใจว่าป้อนที่อยู่อีเมลที่ถูกต้อง
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+ฉันตกลงให้ Mozilla รองรับข้อมูลของฉันตามที่อธิบายใน <a href="%s">คำแจ้งความเป็นส่วนตัวนี้</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+คงอยู่ไว้กับ <br> Firefox ทุกอย่าง
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+รับข่าว Firefox
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+อีเมลของคุณที่นี่
+
+
+# Newsletter subscription Button
+;Sign Up Now
+ลงทะเบียนตอนนี้
+
+
+# Old newsletter subscription Button
+;Sign me up
+ลงทะเบียน
+
+
+;Select country
+เลือกประเทศ
+
+
+;Available Languages
+ภาษาที่มี
+
+
+;We will only send you Mozilla-related information.
+เราจะส่งเฉพาะข้อมูลที่เกี่ยวข้องกับ Mozilla เท่านั้น
+
+
+;Thanks!
+ขอบคุณ!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+ถ้าคุณยังไม่เคยยืนยันการสมัครจดหมายข่าวที่เกี่ยวข้องกับ Mozilla คุณอาจจะต้องทำต่อไปนี้ โปรดตรวจสอบกล่องจดหมายเข้าของคุณหรือตัวกรองสแปมของคุณเพื่อดูอีเมลจากเรา
+
+
+;Read all about it in our <span>newsletter</span>
+อ่านต่อใน <span>จดหมายข่าว</span> ของเรา
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+บอกรับข่าวรายเดือนเพื่อเกาะติดข่าวที่เกี่ยวข้องกับ Mozilla เช่น กลเม็ดเคล็ดลับล่าสุดในการใช้งาน Firefox ให้มีประสิทธิภาพสูงสุด นี่เป็นหนทางที่ดีที่เราจะใกล้ชิดกัน!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + คุณ
+
+
+;Get Firefox tips, tricks, news and more
+รับกลเม็ด เคล็ดลับ ข่าว และอีกมากมายเกี่ยวกับ Firefox
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+นวัตกรรมเว็บ
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+สุขภาพอินเทอร์เน็ต
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+ขอบคุณที่เลือก Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+เว็บเบราว์เซอร์ Mozilla Firefox
+
+
+# Link in the footer
+;Android Browser
+เบราว์เซอร์ Android
+
+
+# Link in the footer
+;iOS Browser
+เบราว์เซอร์ iOS
+
+
+# Link in the footer
+;Focus Browser
+เบราว์เซอร์ Focus
+
+
+# Link in the footer
+;Desktop Browser
+เบราว์เซอร์สำหรับเดสก์ท็อป
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta Nightly รุ่นนักพัฒนา
+
+
+# Link in the footer
+;Download Firefox Web Browser
+ดาวน์โหลด Firefox
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+เบราว์เซอร์บนเดสก์ท็อปสำหรับ Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+เบราว์เซอร์มือถือสำหรับ Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+เบราว์เซอร์มือถือสำหรับ iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Firefox ของคุณเป็นรุ่นล้าสมัย
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+ดาวน์โหลดรุ่นใหม่ขึ้นเพื่อที่จะท่องเว็บอย่างปลอดภัย
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+ปรับรุ่น Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+ดูว่ามีอะไรใหม่เกี่ยวกับ Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+เร็วขึ้น ตอบสนองมากขึ้นและเป็นส่วนตัวขึ้น ลองเบราว์เซอร์ล่าสุดที่ระวังหลังให้คุณ
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+แสดงเพิ่มเติม
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+แสดงน้อยลง
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+เลือกว่าจะแบ่งปันข้อมูลนี้อย่างไรใน Firefox
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+เลือก…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+แสดงทั้งหมด
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+ซ่อนทั้งหมด
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+ศูนย์กลางนักพัฒนา
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+วิจัย
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+ความจริงเสมือน
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+เกม
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+คู่มือ
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+บล็อกแฮ็ก
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+ดาวน์โหลด Mozilla Firefox เว็บเบราว์เซอร์ฟรี Firefox ถูกสร้างโดยองค์กรไม่แสวงผลกำไรในระดับโลกซึ่งอุทิศตัวเพื่อผลักดันการควบคุมในโลกออนไลน์ให้แต่ละคน รับ Firefox บน Windows, macOS, Linux, Android และ iOS วันนี้!
+
+

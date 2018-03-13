@@ -1,0 +1,811 @@
+;Navigation
+导航
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+预览版下载
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+关于
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+应用
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+请勿跟踪
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+兴趣仪表盘
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+开发者版本
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+隐私浏览
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+需要帮助？
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+新闻
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+选择独立自主的浏览器
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox 是非营利、无企业背景、无妥协的。选择 Firefox 不仅是选择了一款浏览器，也是选择支持个人自由。
+
+
+;Donate
+捐赠
+
+
+;Support
+支持
+
+
+;Products
+产品
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+扩展
+
+
+;Add-ons
+附加组件
+
+
+;About Us
+关于我们
+
+
+;Labs
+实验室
+
+
+;skip to Navigation
+跳到导航
+
+
+;switch language
+语言切换
+
+
+;Back to home page
+返回首页
+
+
+;About Mozilla
+关于 Mozilla
+
+
+;Get Involved
+参与
+
+
+;Careers
+职位
+
+
+;Press Center
+新闻中心
+
+
+;Contact Us
+联系我们
+
+
+# Used in new footer to switch the language of the page
+;Language
+语言
+
+
+;Other languages:
+其他语言
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+页面语言：
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%Y-%m-%d {ok}
+
+
+;Legal
+法律
+
+
+# Used as link in the footer
+;Cookies
+Cookie
+
+
+;Legal Notices
+法律声明
+
+
+;Privacy Policy
+隐私政策
+
+
+;Release Notes
+发行说明
+
+
+;Other Systems and Languages
+其他系统和语言
+
+
+;Close
+关闭
+
+
+;(in English)
+(英语)
+
+
+;Return to top
+返回顶端
+
+
+;Features
+功能
+
+
+;Customize
+个性化
+
+
+;Download
+下载
+
+
+;Previous
+上一步
+
+
+;Next
+下一步
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+兆字节
+
+
+;FAQ
+常见问题
+
+
+;Videos
+视频
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+除非另有<a href="%s">注明</a>，本网站内容按<br /><a href="%s">知识共享 署名-相同方式共享 许可证第3版</a>或更新版本授权。
+
+
+;Report Trademark Abuse
+报告滥用商标
+
+
+;Free Upgrade
+免费升级
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+关注我们：
+
+
+;Customize with Add-ons
+通过附加组件个性化
+
+
+;Learn More
+了解更多
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+了解更多
+
+
+# Link used to play again an animation or a video
+;Replay
+重播
+
+
+;Watch the video
+观看视频
+
+
+;Replay the video
+重播视频
+
+
+;Share the video
+分享视频
+
+
+;WebM format
+WebM 格式
+
+
+;Ogg Theora format
+Ogg Theora 格式
+
+
+;MPEG-4 format
+MPEG-4 格式
+
+
+;Mobile
+移动版
+
+
+;View Full Site
+查看完整网页
+
+
+;Desktop
+桌面版
+
+
+;Firefox for mobile
+Firefox 移动版
+
+
+;Email
+电子邮件
+
+
+;Upgrade now
+现在升级
+
+
+;Update now
+现在更新
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+隐私
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+上述内容中的某些部分系 mozilla.org 志愿者个人版权所有（©1998–%(current_year)s）。内容可按<a rel="license" href="%(url)s">知识共享许可协议</a>使用。
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+上述内容中的某些部分系 mozilla.org 志愿者个人版权所有（©1998–%(current_year)s）。内容可按<a href="%(url)s">知识共享许可协议</a>使用。
+
+
+# Footer string
+;Contribute to this site
+助力此网站
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+此页面的源代码
+
+
+# Top menu item
+;Mission
+使命
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+指引
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+同步
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+桌面版附加组件
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Android 版附加组件
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+主题
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+桌面版支持
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Android 版技术支持
+
+
+;Releases
+发布
+
+
+;Blog
+博客
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+获取 Mozilla 更新
+
+
+# share button for social networks
+;Share
+分享
+
+
+# footer link
+;Mozilla on Twitter
+Twitter 上的 Mozilla
+
+
+# footer link
+;Firefox on Twitter
+Twitter 上的 Firefox
+
+
+# footer link
+;Mozilla on Facebook
+Facebook 上的 Mozilla
+
+
+# footer link
+;Firefox on Facebook
+Facebook 上的 Firefox
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+论坛
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+专利
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+领导层
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+管理机制
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+历史
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+我们的产品
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+借助软件和其他创新设计推进我们的使命。
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+在多个不同领域成为志愿工作者。
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+菜单
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+对您、您的隐私和开放的网络做出承诺
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+要正确显示此页面，请开启 JavaScript。
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Firefox 功能
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Firefox 帮助
+
+
+;January
+一月
+
+
+;February
+二月
+
+
+;March
+三月
+
+
+;April
+四月
+
+
+;May
+五月
+
+
+;June
+六月
+
+
+;July
+七月
+
+
+;August
+八月
+
+
+;September
+九月
+
+
+;October
+十月
+
+
+;November
+十一月
+
+
+;December
+十二月
+
+
+;<abbr>Jan</abbr>
+<abbr>一月</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>二月</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>三月</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>四月</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>五月</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>六月</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>七月</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>八月</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>九月</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>十月</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>十一月</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>十二月</abbr>
+
+
+;Congrats. You’re up to date!
+恭喜。您已经在用最新版！
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+格式
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+文本
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+哎呦！请确认您输入了有效的电子邮件地址。
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+我同意 Mozilla 按照<a href="%s">这份隐私声明</a>所述的方式处理我的信息
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+快速获知<br>Firefox 新动态。
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+获取 Firefox 新闻
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+在这里输入您的电子邮件地址
+
+
+# Newsletter subscription Button
+;Sign Up Now
+立即注册
+
+
+# Old newsletter subscription Button
+;Sign me up
+为我注册
+
+
+;Select country
+选择国家地区
+
+
+;Available Languages
+可用语言
+
+
+;We will only send you Mozilla-related information.
+我们只会向您发送和 Mozilla 有关的信息。
+
+
+;Thanks!
+谢谢！
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+如果您以前没有确认订阅过 Mozilla 相关的新闻报，您可能需要检查您的收件箱、垃圾邮件箱或垃圾邮件过滤器，以找到我们发给您的确认邮件。
+
+
+;Read all about it in our <span>newsletter</span>
+在我们的 <span>新闻邮件</span> 中阅读完整信息
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+订阅以保证及时收到每月更新的 Mozilla 新闻，包括如何更有效使用您的浏览器的提示和技巧。这是与我们保持联系的绝佳方式！
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + 您
+
+
+;Get Firefox tips, tricks, news and more
+获得 Firefox 的技巧、提示、新闻等等
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Web 创新
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+互联网健康
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+感谢选择 Firefox !
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Mozilla Firefox 网络浏览器
+
+
+# Link in the footer
+;Android Browser
+Android 浏览器
+
+
+# Link in the footer
+;iOS Browser
+iOS 浏览器
+
+
+# Link in the footer
+;Focus Browser
+Focus 浏览器
+
+
+# Link in the footer
+;Desktop Browser
+桌面浏览器
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta、Nightly、Developer Edition
+
+
+# Link in the footer
+;Download Firefox Web Browser
+下载 Firefox 网络浏览器
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+适用于 Mac、Windows 和 Linux 的桌面浏览器
+
+
+# Link in the footer
+;Mobile Browser for Android
+适用于 Android 的移动浏览器
+
+
+# Link in the footer
+;Mobile Browser for iOS
+适用于 iOS 的移动浏览器
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+您的 Firefox 已过时。
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+获取最新版本以确保安全。
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+更新 Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+了解 Firefox 中的新鲜事
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+更快、更灵敏、更私密。了解浏览器背后的新变化。
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+显示更多
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+显示更少
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+选择如何共享您使用 Firefox 的数据。
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+选择…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+全部显示
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+全部隐藏
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+开发者中心
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+研究
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+虚拟现实
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+游戏
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+文档
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Hacks 博客
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+下载免费的网络浏览器 Mozilla Firefox。Firefox 由致力于让每个人都能自行控制网络生活的全球性非营利社区打造。立即下载用于 Windows、macOS、Linux、Android 以及 iOS 的 Firefox 吧！
+
+

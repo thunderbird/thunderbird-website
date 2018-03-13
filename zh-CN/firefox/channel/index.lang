@@ -1,0 +1,190 @@
+## active ##
+## android_nightly_copy ##
+## firefox_channel_bug1387466 ##
+## firefox_title_meta_bug1345338 ##
+## firefox_title_meta_bug1357373 ##
+## nightly_description_bug1375100 ##
+## NOTE: url is https://www-demo1.allizom.org/firefox/channel/
+
+
+# Main page heading. In case the text is too hard to translate, here's an alternative text: "Take the future for a test run."
+;Take a browse on the wild side.
+品尝新鲜出炉的浏览器。
+
+
+;Be among the first to explore future releases of Firefox for desktop, Android and iOS.
+先行体验即将上架的 Firefox 桌面版、Android 版和 iOS 版。
+
+
+# Used in the navigation menu
+;Desktop
+桌面版
+
+
+# Used in the navigation menu
+;Android
+Android {ok}
+
+
+# Used in the navigation menu
+;iOS
+iOS {ok}
+
+
+;See something that isn’t working? Let us know.
+发现功能异常？请报告给我们。
+
+
+;File a bug now
+反馈 Bug
+
+
+;Tips for filing a bug
+反馈 Bug 的技巧
+
+
+;Take our latest experimental features for a spin and shape the future of Firefox.
+尝试 Firefox 的最新版本，体验最新最炫的实验功能。
+
+
+;Learn more about Test Pilot
+了解试飞员（Test Pilot）是什么
+
+
+# HTML page title, on the Android page only.
+;Try New Features in a Pre-Release Android Browser | Firefox
+体验预览版 Android 浏览器中的新功能 | Firefox
+
+
+# String is obsolete. Do not remove.
+# HTML page title
+;Download and test future releases of Firefox for desktop, Android and iOS.
+下载和测试 Firefox 桌面版、Android 版和 iOS 版的早期版本。
+
+
+# HTML Description, on the Android page only.
+;Experience cutting-edge features in a pre-release browser for Android: Firefox Beta and Firefox Nightly. Install now!
+在下列预发布的 Android 版浏览器中体验最前沿的功能：Firefox Beta 和 Firefox Nightly。即刻安装！
+
+
+# String is obsolete. Do not remove.
+# HTML Description, on the Android page only.
+;Experience cutting-edge features in a pre-release browser for Android: Firefox Beta, Firefox Aurora and Firefox Nightly. Install now!
+在下列预发布版本中可体验到最新的 Android 版浏览器功能：Firefox Beta、Firefox Aurora 与 Firefox Nightly。立即安装！
+
+
+# String is obsolete. Do not remove.
+# HTML Description
+;Download and test the latest Firefox for Android features with Aurora, Beta and Nightly builds.
+下载和测试 Firefox Android 版在 Aurora、Beta 和 Nightly 阶段中的新功能。
+
+
+;Try the latest Android features, before they get released to the rest of the world.
+提前体验和尝试最新的 Android 版功能。
+
+
+;All Languages and Builds
+所有语言和版本
+
+
+;Help determine what features will go into the next Firefox for Android.
+帮助决定哪些功能可降临下一个 Firefox Android 版。
+
+
+;Firefox Aurora automatically sends feedback to Mozilla.
+Firefox Aurora 版会自动发送反馈信息到 Mozilla。
+
+
+;Firefox Beta automatically sends feedback to Mozilla.
+Firefox Beta 版会自动发送反馈信息到 Mozilla。
+
+
+;<a rel="external" href="%(feedback)s">Give us feedback</a> to help us put the final tweaks on performance and functionality in a stable environment.
+<a rel="external" href="%(feedback)s">提供反馈</a>帮助我们将性能和功能最终调整到稳定的环境。
+
+
+# HTML page title, on the desktop page only.
+;Try New Browser Features in Pre-Release Versions | Firefox
+体验预览版浏览器中的新功能 | Firefox
+
+
+# HTML page description, on the desktop page only.
+;Experience cutting-edge browser features in pre-release versions: Firefox Developer Edition, Firefox Beta and Firefox Nightly. Download now!
+在下列预发布版本中可体验到最新的浏览器功能：Firefox 开发者版、Firefox Beta 与 Firefox Nightly。立即下载！
+
+
+# String is obsolete. Do not remove.
+# HTML page description
+;Download and test the latest Firefox for desktop features with Developer Edition, Beta and Nightly builds.
+下载和测试 Firefox 桌面版在 开发者版、Beta 版和 Nightly 版中的新功能。
+
+
+;Test about-to-be-released features in the most stable pre-release build.
+在最稳定的预览版本中测试即将发布的功能。
+
+
+;All Languages and Platforms
+所有语言和平台
+
+
+# String is obsolete. Do not remove.
+;All Languages and Builds (incl. Win 64)
+所有语言和版本（包括 Win 64 版）
+
+
+;Build, test, scale and more with the only browser built just for developers.
+建立、测试和测量只为开发者打造的浏览器。
+
+
+;Firefox Developer Edition automatically sends feedback to Mozilla.
+Firefox 开发者版会自动发送反馈到 Mozilla。
+
+
+;Check out new Android features in their earliest stages. Enjoy at your own risk.
+最先体验 Android 版的最新功能。享受的同时，请自担风险。
+
+
+;Get a sneak peek at our next generation web browser, and help us make it the best browser it can be: try Firefox Nightly.
+抢先体验我们的下一代网络浏览器，与我们一起把它打造得尽善尽美：尝试 Firefox Nightly。
+
+
+# String is obsolete. Do NOT remove.
+;Test brand new features daily (or… nightly). Enjoy at your own risk.
+每天都能体验最新鲜的功能。不过使用时也需留意风险。
+
+
+;Firefox Nightly automatically sends feedback to Mozilla.
+Firefox Nightly 版会自动发送反馈到 Mozilla。
+
+
+;Nightly Blog
+Nightly 博客
+
+
+# HTML page title, on the iOS page only.
+;Try New Features in a Pre-Release iOS Browser | Firefox
+体验预览版 iOS 浏览器中的新功能 | Firefox
+
+
+# HTML page description, on the iOS page only.
+# Don't translate TestFlight
+;Experience cutting-edge features in a pre-release browser for iOS via Apple’s TestFlight program. Install now!
+通过苹果公司的 TestFlight 计划，体验 iOS 版浏览器的最新功能。立即安装！
+
+
+# String is obsolete. Do not remove.
+# HTML page description
+# Don't translate TestFlight
+;Test beta versions of Firefox for iOS via Apple’s TestFlight program and help make our mobile browser for iPhone, iPad and iPod touch even better.
+通过苹果公司的 TestFlight 计划帮助测试 Firefox iOS 版的公测版本，使我们适用于 iPhone、iPad 和 iPod touch 等设备的移动浏览器变得更好。
+
+
+# Don't translate TestFlight
+;Test beta versions of Firefox for iOS via Apple’s TestFlight program.
+通过苹果公司的 TestFlight 计划帮助测试 Firefox iOS 版的公测版本。
+
+
+;Sign up now
+立即订阅
+
+

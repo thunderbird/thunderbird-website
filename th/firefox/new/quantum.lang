@@ -1,0 +1,192 @@
+## active ##
+## firefox_new_platform_link_text ##
+## firefox_quantum_new_headline ##
+## NOTE: Demo page at https://www-demo3.allizom.org/firefox/new/
+
+
+;Congrats! You’re using the latest version of Firefox.
+ยินดีด้วย! คุณกำลังใช้ Firefox รุ่นล่าสุด
+
+
+;<a href="%(url)s">Update</a> your Firefox for the latest in speed and privacy.
+<a href="%(url)s">อัปเดต</a> Firefox ของคุณเพื่อให้ได้ความเร็วและความเป็นส่วนตัวล่าสุด
+
+
+;You’re using a pre-release version of Firefox.
+คุณกำลังใช้ Firefox รุ่นก่อนเปิดตัว
+
+
+;The new <strong>Firefox</strong>
+<strong>Firefox</strong> ใหม่
+
+
+;Fast for good.
+เร็วขึ้นดีขึ้น
+
+
+# String is obsolete. Do note remove.
+;Meet Firefox Quantum
+พบกับ Firefox Quantum
+
+
+# String is obsolete. Do note remove.
+;New. Fast. For good.
+ใหม่ เร็ว ดีขึ้น
+
+
+# Link points to /firefox/new/?scene=2
+;Download Now
+ดาวน์โหลดเดี๋ยวนี้
+
+
+# Link points to https://support.mozilla.org/kb/refresh-firefox-reset-add-ons-and-settings
+;Refresh Firefox
+ล้าง Firefox ใหม่
+
+
+# Link points to https://support.mozilla.org/kb/install-firefox-linux
+;Please follow <a href="%(url)s">these instructions</a> to install Firefox.
+โปรดทำตาม<a href="%(url)s">คำแนะนำนี้</a>เพื่อติดตั้ง Firefox
+
+
+# Title displayed in the modal window for advanced options.
+# The different case is to let localizers use a different translation (or case) from the link, if needed
+;Advanced Install Options & Other Platforms
+ตัวเลือกการติดตั้งขั้นสูงและแพลตฟอร์มอื่น ๆ
+
+
+# Link to display the advanced install panel
+;Advanced install options & other platforms
+ตัวเลือกการติดตั้งขั้นสูงและแพลตฟอร์มอื่น ๆ
+
+
+;Keep up with<br> all things Firefox.
+ตามทัน<br>เรื่องราวทุกอย่างของ Firefox
+
+
+# Link Span is for visual formatting and line break.
+;Download Firefox <span>for Windows</span>
+ดาวน์โหลด Firefox <span>สำหรับ Windows</span>
+
+
+# Span is for visual formatting and line break.
+;Download Firefox <span>for macOS</span>
+ดาวน์โหลด Firefox <span>สำหรับ macOS</span>
+
+
+# Span is for visual formatting and line break.
+;Download Firefox <span>for Linux</span>
+ดาวน์โหลด Firefox <span>สำหรับ Linux</span>
+
+
+# Link points to /firefox/all/
+;Download for other platforms & languages
+Firefox สำหรับแพลตฟอร์มและภาษาอื่น
+
+
+# The string is obsolete. Do not remove.
+# Link points to /firefox/all/
+;Download in another language
+ดาวน์โหลดในภาษาอื่น
+
+
+;Let’s do this!
+เริ่มกันเลย
+
+
+;Your download should begin automatically. Didn’t work? <a id="%(id)s" href="%(fallback_url)s">Try downloading again</a>.
+Your download should begin automatically. Didn’t work? <a id="%(id)s" href="%(fallback_url)s">Try downloading again</a>.
+
+
+# Obsolete string, DO NOT REMOVE
+;Your download should begin automatically. If it doesn’t, <a id="%(id)s" href="%(fallback_url)s">click here</a>.
+จะเริ่มดาวน์โหลดอัตโนมัติ หากยังไม่เริ่ม<a id="%(id)s" href="%(fallback_url)s">คลิกที่นี่</a>
+
+
+;Sync up with Firefox on mobile:
+ซิงค์กับ Firefox บนอุปกรณ์เคลื่อนที่:
+
+
+# HTML page title prefix
+;Download Firefox
+ดาวน์โหลด Firefox
+
+
+# HTML page title
+;Free Web Browser
+เว็บเบราว์เซอร์ฟรี
+
+
+# HTML page description
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+ดาวน์โหลด Mozilla Firefox เว็บเบราว์เซอร์ฟรี Firefox ถูกสร้างโดยองค์กรไม่แสวงผลกำไรในระดับโลกซึ่งอุทิศตัวเพื่อผลักดันการควบคุมในโลกออนไลน์ให้แต่ละคน รับ Firefox บน Windows, macOS, Linux, Android และ iOS วันนี้!
+
+
+;Download the fastest Firefox ever
+ดาวน์โหลด Firefox ตัวที่เร็วที่สุดตั้งแต่เคยมีมา
+
+
+;Faster page loading, less memory usage and packed with features, the new Firefox is here.
+โหลดหน้าเว็บไวขึ้น ใช้หน่วยความจำน้อยลง และเต็มไปด้วยคุณสมบัติ Firefox ใหม่อยู่ที่นี่แล้ว
+
+
+;2x Faster
+เร็วขึ้น 2 เท่า
+
+
+;The best Firefox ever
+Firefox ที่ดีที่สุดเท่าที่เคยมีมา
+
+
+;Lightweight
+เบา
+
+
+;Uses 30% less memory than Chrome
+ใช้หน่วยความจำน้อยกว่า Chrome 30%
+
+
+;Powerfully private
+เป็นส่วนตัวอย่างมาก
+
+
+;Truly Private Browsing with Tracking Protection
+การท่องเว็บแบบส่วนตัวที่แท้จริงพร้อมการป้องกันการติดตาม
+
+
+# These strings are used in /firstrun, e.g. https://www-dev.allizom.org/firefox/56.0/firstrun/
+;Welcome to Firefox
+ยินดีต้อนรับสู่ Firefox
+
+
+;Take Firefox with You
+Take Firefox with You
+
+
+;Get your bookmarks, history, passwords and other settings on all your devices.
+Get your bookmarks, history, passwords and other settings on all your devices.
+
+
+# Obsolete string, DO NOT REMOVE
+;Already using Firefox?
+ใช้ Firefox อยู่แล้วหรือ ?
+
+
+# Obsolete string, DO NOT REMOVE
+;Sign in to your account and we’ll sync the bookmarks, passwords and other great things you’ve saved to Firefox on other devices.
+ลงชื่อเข้าใช้บัญชีของคุณและเราจะชิงค์ที่คั่นหน้า รหัสผ่านและสิ่งดี ๆ อื่น ๆ ที่คุณบันทึกไว้ใน Firefox บนอุปกรณ์อื่น ๆ
+
+
+;Learn more about Firefox Accounts
+เรียนรู้เพิ่มเติมเกี่ยวกับบัญชี Firefox
+
+
+;Skip this step
+ข้ามขั้นตอนนี้
+
+
+# Old firstrun page
+;Chart your own course
+กำหนดวิถึชีวิตของคุณเอง
+
+

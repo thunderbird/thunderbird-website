@@ -1,0 +1,66 @@
+## active ##
+## NOTE: Demo server available at url: https://www-dev.allizom.org/plugincheck/
+
+
+# HTML page title
+;More browser features, fewer plugin updates | Firefox
+Nhiều tính năng hơn, cập nhật plugin ít hơn | Firefox
+
+
+# HTML page decription
+# NPAPI stands for Netscape Plugin Application Programming Interface.
+;Browse with fewer interruptions. Features from NPAPI plugins are now automatically supported in Firefox. Download the latest Firefox now!
+Duyệt web với ít gián đoạn hơn. Các tính năng từ các plugin NPAPI bây giờ được hỗ trợ tự động trên Firefox. Download Firefox phiên bản mới nhất ngay bây giờ!
+
+
+# Message targetting users already on the latest version of Firefox
+# <br> for visual formatting
+;Good news - you’re using<br> the latest version of Firefox!
+Tin tốt đây - bạn đang sử dụng<br> phiên bản mới nhất của Firefox!
+
+
+;Even better news - Firefox now <a href="%(npapi)s">supports features</a> that used to require additional plugins.
+Thêm một tin tốt hơn nữa - Firefox bây giờ <a href="%(npapi)s">hỗ trợ các tính năng</a> được sử dụng để chạy các plugin bổ sung.
+
+
+# The link points to https://support.mozilla.org/
+;Need help? Visit Mozilla Support
+Cần sự trợ giúp? Truy cập trang Trợ giúp Mozilla
+
+
+# Message targeting users on older versions of Firefox
+# <br> for visual formatting
+;Better features,<br> fewer plugin updates
+Các tính năng tốt hơn,<br> cập nhật plugin ít hơn
+
+
+;Firefox has been <a href="%(npapi)s">expanding to support features</a> that used to require extra plugins. Now, they’re kept up-to-date automatically and managed through <a href="%(blocklist)s">blocklisting</a> for added security. So you can stay current with just one Firefox update.
+Firefox đã được <a href="%(npapi)s">mở rộng để hỗ trợ các tính năng</a> được sử dụng để chạy các plugin bổ sung. Bây giờ, chúng luôn được cập nhật tự động và quản lý thông qua <a href="%(blocklist)s">blocklist</a> để tăng thêm sự bảo mật. Vì vậy, bạn có thể tiếp tục lướt web và chỉ cần cập nhật mỗi mình Firefox.
+
+
+;Download the latest version:
+Tải về phiên bản mới nhất:
+
+
+;Update Firefox
+Cập nhật Firefox
+
+
+# FMessage targeting non-Firefox users
+# <br> for visual formatting
+;Tired of updating plugins?<br> Firefox has you covered.
+Mệt mỏi vì luôn phải cập nhật plugin?<br> Firefox hiểu điều đó.
+
+
+;As the web moves forward, so do we. Firefox now <a href="%(npapi)s">supports more features</a> that used to require plugins, so you can browse with fewer crashes and interruptions. Plus, our <a href="%(blocklist)s">blocklist system</a> protects you between updates.
+Internet ngày càng phát triển, và chúng tôi cũng vậy. Bây giờ Firefox <a href="%(npapi)s">hỗ trợ nhiều tính năng hơn</a> mà đã từng dùng để chạy các plugin cũ, vậy nên bạn có thể duyệt web với ít sự cố và gián đoạn hơn. Hơn nữa, <a href="%(blocklist)s">hệ thống blocklist</a> của chúng tôi bảo vệ bạn khỏi phải cập nhập chúng.
+
+
+;Hungry for more?
+Muốn tìm hiểu thêm?
+
+
+;Get the latest &amp; greatest from Firefox delivered straight to your inbox.
+Nhận thông tin mới nhất &amp; hay nhất từ Firefox ngay trong hộp thư của bạn.
+
+

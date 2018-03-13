@@ -1,0 +1,190 @@
+## active ##
+## android_nightly_copy ##
+## firefox_channel_bug1387466 ##
+## firefox_title_meta_bug1345338 ##
+## firefox_title_meta_bug1357373 ##
+## nightly_description_bug1375100 ##
+## NOTE: url is https://www-demo1.allizom.org/firefox/channel/
+
+
+# Main page heading. In case the text is too hard to translate, here's an alternative text: "Take the future for a test run."
+;Take a browse on the wild side.
+Testi tulevikku.
+
+
+;Be among the first to explore future releases of Firefox for desktop, Android and iOS.
+Ole esimeste tuleviku Firefoxi töölaua, Androidi ja iOS-i väljalasete avastajate hulgas.
+
+
+# Used in the navigation menu
+;Desktop
+Töölauaversioon
+
+
+# Used in the navigation menu
+;Android
+Android {ok}
+
+
+# Used in the navigation menu
+;iOS
+iOS {ok}
+
+
+;See something that isn’t working? Let us know.
+Näed midagi katkist? Anna meile teada.
+
+
+;File a bug now
+Sisesta vearaport
+
+
+;Tips for filing a bug
+Nipid vearaporti lisamiseks
+
+
+;Take our latest experimental features for a spin and shape the future of Firefox.
+Proovi järgi uusimaid katsetamisel võimalusi ning kujunda Firefoxi tulevikku.
+
+
+;Learn more about Test Pilot
+Rohkem teavet Test Pilot'ist
+
+
+# HTML page title, on the Android page only.
+;Try New Features in a Pre-Release Android Browser | Firefox
+Uute võimaluste proovimine Androidi veebilehitseja eelväljalaskes | Firefox
+
+
+# String is obsolete. Do not remove.
+# HTML page title
+;Download and test future releases of Firefox for desktop, Android and iOS.
+Laadi alla ning proovi tuleviku Firefoxi väljalaskeid töölauale, Androidile ja iOS-ile.
+
+
+# HTML Description, on the Android page only.
+;Experience cutting-edge features in a pre-release browser for Android: Firefox Beta and Firefox Nightly. Install now!
+Koge uusimaid võimalusi veebilehitseja eelväljalaskes Androidile: kasuta Firefoxi beetat ja Firefox Nightly't. Paigalda kohe!
+
+
+# String is obsolete. Do not remove.
+# HTML Description, on the Android page only.
+;Experience cutting-edge features in a pre-release browser for Android: Firefox Beta, Firefox Aurora and Firefox Nightly. Install now!
+Koge uusimaid võimalusi veebilehitseja eelväljalaskes Androidile: kasuta Firefoxi beetat, Firefox Aurora't ja Firefox Nightly't. Paigalda kohe!
+
+
+# String is obsolete. Do not remove.
+# HTML Description
+;Download and test the latest Firefox for Android features with Aurora, Beta and Nightly builds.
+Laadi alla ning testi uusimaid Firefoxi võimalusi Androidil Aurora, Beta ja Nightly versioonides.
+
+
+;Try the latest Android features, before they get released to the rest of the world.
+Proovi uusimaid Androidi võimalusi veel enne, kui need ülejäänud maailmale avaldatakse.
+
+
+;All Languages and Builds
+Kõik keeled ja versioonid
+
+
+;Help determine what features will go into the next Firefox for Android.
+Aita määrata, millised võimalused jõuavad järgmisse Firefoxi Androidile.
+
+
+;Firefox Aurora automatically sends feedback to Mozilla.
+Firefox Aurora saadab Mozillale automaatselt tagasisidet.
+
+
+;Firefox Beta automatically sends feedback to Mozilla.
+Firefox Beta saadab Mozillale automaatselt tagasisidet.
+
+
+;<a rel="external" href="%(feedback)s">Give us feedback</a> to help us put the final tweaks on performance and functionality in a stable environment.
+<a rel="external" href="%(feedback)s">Anna meile tagasisidet</a> ning aita anda viimast lihvi jõudlusele ja funktsionaalsusele stabiilses keskkonnas.
+
+
+# HTML page title, on the desktop page only.
+;Try New Browser Features in Pre-Release Versions | Firefox
+Uute võimaluste proovimine eelväljalasetes | Firefox
+
+
+# HTML page description, on the desktop page only.
+;Experience cutting-edge browser features in pre-release versions: Firefox Developer Edition, Firefox Beta and Firefox Nightly. Download now!
+Koge uusimaid veebilehitseja võimalusi eelväljalasetes: kasuta Firefox Developer Edition'it, Firefoxi beetat ja Firefox Nightly't. Laadi kohe alla!
+
+
+# String is obsolete. Do not remove.
+# HTML page description
+;Download and test the latest Firefox for desktop features with Developer Edition, Beta and Nightly builds.
+Laadi alla ning testi uusimaid Firefoxi võimalusi töölaual Developer Edition, Beta ja Nightly versioonides.
+
+
+;Test about-to-be-released features in the most stable pre-release build.
+Testi peagi väljalastavaid võimalusi kõige stabiilsemas eelväljalaskes.
+
+
+;All Languages and Platforms
+Kõik keeled ja platvormid
+
+
+# String is obsolete. Do not remove.
+;All Languages and Builds (incl. Win 64)
+Kõik keeled ja versioonid (k.a Win 64)
+
+
+;Build, test, scale and more with the only browser built just for developers.
+Ehita, testi ja skaleeri ainsas veebilehitsejas, mis on ehitatud vaid arendajatele.
+
+
+;Firefox Developer Edition automatically sends feedback to Mozilla.
+Firefoxi arendajate väljaanne saadab Mozillale automaatselt tagasisidet.
+
+
+;Check out new Android features in their earliest stages. Enjoy at your own risk.
+Proovi uusi võimalusi Androidil nende varaseimas faasis. Naudi omal vastutusel.
+
+
+;Get a sneak peek at our next generation web browser, and help us make it the best browser it can be: try Firefox Nightly.
+Heida pilk meie järgmise põlvkonna veebilehitsejale ja aita meil sellest parim võimalik brauser teha: proovi Firefox Nightly't.
+
+
+# String is obsolete. Do NOT remove.
+;Test brand new features daily (or… nightly). Enjoy at your own risk.
+Proovi uhiuusi võimalusi igapäevaselt (või igaöiselt…). Naudi omal vastutusel.
+
+
+;Firefox Nightly automatically sends feedback to Mozilla.
+Firefox Nightly saadab Mozillale automaatselt tagasisidet.
+
+
+;Nightly Blog
+Nightly blogi
+
+
+# HTML page title, on the iOS page only.
+;Try New Features in a Pre-Release iOS Browser | Firefox
+Uute võimaluste proovimine iOS-i veebilehitseja eelväljalaskes | Firefox
+
+
+# HTML page description, on the iOS page only.
+# Don't translate TestFlight
+;Experience cutting-edge features in a pre-release browser for iOS via Apple’s TestFlight program. Install now!
+Koge uusimaid võimalusi veebilehitseja eelväljalaskes iOS-ile Apple TestFlight programmi kaudu. Paigalda kohe!
+
+
+# String is obsolete. Do not remove.
+# HTML page description
+# Don't translate TestFlight
+;Test beta versions of Firefox for iOS via Apple’s TestFlight program and help make our mobile browser for iPhone, iPad and iPod touch even better.
+Proovi Firefoxi beetat iOS-ile Apple’i TestFlight programmi kaudu ning aita meil parendada mobiilset brauserit iPhone'ile, iPad'ile ja iPod touch'ile.
+
+
+# Don't translate TestFlight
+;Test beta versions of Firefox for iOS via Apple’s TestFlight program.
+Proovi Firefoxi beetat iOS-ile Apple’i TestFlight programmi kaudu.
+
+
+;Sign up now
+Registreeru
+
+

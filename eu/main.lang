@@ -1,0 +1,811 @@
+;Navigation
+Nabigazioa
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Aurreargitalpen deskargak
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Honi buruz
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Aplikazioak
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Do Not Track {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Zaletasunen aginte-panela
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Developer Edition {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Nabigatze pribatua
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Laguntza bila?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Albisteak
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Aukeratu nabigatzaile independentea
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox irabazi-asmorik gabekoa, ez-korporatiboa eta konpromisorik gabekoa da. Firefox aukeratzea ez da nabigatzaile bat aukeratzea soilik. Askatasun pertsonalaren aldeko boz bat da.
+
+
+;Donate
+Egin dohaintza
+
+
+;Support
+Laguntza
+
+
+;Products
+Produktuak
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Hedapenak
+
+
+;Add-ons
+Gehigarriak
+
+
+;About Us
+Guri buruz
+
+
+;Labs
+Laborategiak
+
+
+;skip to Navigation
+Saltatu nabigaziora
+
+
+;switch language
+Aldatu hizkuntza
+
+
+;Back to home page
+Itzuli hasierako orrira
+
+
+;About Mozilla
+Mozillari buruz
+
+
+;Get Involved
+Parte hartu
+
+
+;Careers
+Lan-eskaintzak
+
+
+;Press Center
+Prentsagunea
+
+
+;Contact Us
+Jarri gurekin harremanetan
+
+
+# Used in new footer to switch the language of the page
+;Language
+Hizkuntza
+
+
+;Other languages:
+Beste hizkuntzetan:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Orriko hizkuntza:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%Y-%m-%d {ok}
+
+
+;Legal
+Lege-oharra
+
+
+# Used as link in the footer
+;Cookies
+Cookieak
+
+
+;Legal Notices
+Lege-oharrak
+
+
+;Privacy Policy
+Pribatutasun-politika
+
+
+;Release Notes
+Bertsio-oharrak
+
+
+;Other Systems and Languages
+Beste sistemak eta hizkuntzak
+
+
+;Close
+Itxi
+
+
+;(in English)
+(ingelesez)
+
+
+;Return to top
+Itzuli gora
+
+
+;Features
+Ezaugarriak
+
+
+;Customize
+Pertsonalizatu
+
+
+;Download
+Deskargatu
+
+
+;Previous
+Aurrekoa
+
+
+;Next
+Hurrengoa
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+MegaByte
+
+
+;FAQ
+Ohiko galderak
+
+
+;Videos
+Bideoak
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+<a href="%s">Besterik jakinarazi ezean</a>, webgune honetako edukia <br /><a href="%s">Creative Commons Aitortu Partekatu-Berdin v3.0</a> lizentziarekin edo bertsio berriago batekin babestuta dago.
+
+
+;Report Trademark Abuse
+Salatu markaren erabilera okerra
+
+
+;Free Upgrade
+Doako eguneraketa
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Jarrai gaitzazu hemen:
+
+
+;Customize with Add-ons
+Pertsonalizatu gehigarriekin
+
+
+;Learn More
+Argibide gehiago
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Argibide gehiago
+
+
+# Link used to play again an animation or a video
+;Replay
+Berriro erreproduzitu
+
+
+;Watch the video
+Ikusi bideoa
+
+
+;Replay the video
+Erreproduzitu bideoa berriz
+
+
+;Share the video
+Partekatu bideoa
+
+
+;WebM format
+WebM formatua
+
+
+;Ogg Theora format
+Ogg Theora formatua
+
+
+;MPEG-4 format
+MPEG-4 formatua
+
+
+;Mobile
+Mugikorra
+
+
+;View Full Site
+Ikusi gune osoa
+
+
+;Desktop
+Mahaigainekoa
+
+
+;Firefox for mobile
+Firefox mugikorrerako
+
+
+;Email
+Posta
+
+
+;Upgrade now
+Bertsio-berritu orain
+
+
+;Update now
+Eguneratu orain
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Pribatutasuna
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Eduki honen zati batzuk mozilla.org-en laguntzaile indibidualenak dira, ©1998–%(current_year)s. Edukia <a rel="license" href="%(url)s">Creative Commons lizentzia</a>pean dago erabilgarri.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Eduki honen zati batzuk mozilla.org-en laguntzaile indibidualenak dira, ©1998–%(current_year)s. Edukia <a href="%(url)s">Creative Commons lizentzia</a>pean dago erabilgarri.
+
+
+# Footer string
+;Contribute to this site
+Egin ekarpena gune honi
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Orri honen iturburu-kodea
+
+
+# Top menu item
+;Mission
+Misioa
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Aurkezpena
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sinkronizatu
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Mahaigainerako gehigarriak
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Androiderako gehigarriak
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Gaiak
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Mahaigainerako laguntza
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Androiderako laguntza
+
+
+;Releases
+Bertsioak
+
+
+;Blog
+Bloga
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Jaso Mozillaren berriak
+
+
+# share button for social networks
+;Share
+Partekatu
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla Twitterren
+
+
+# footer link
+;Firefox on Twitter
+Firefox Twitterren
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla Facebooken
+
+
+# footer link
+;Firefox on Facebook
+Firefox Facebooken
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Foroak
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patenteak
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Gidaritza
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Gobernantza
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Historia
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Gure produktuak
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Gure misioan aurrera egiteko diseinaturiko softwarea eta beste innobazioak.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Egin zaitez laguntzaile boluntario arlo desberdin ugarietako batean.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Menua
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Zurekin, pribatutasunarekin eta Web irekiarekin konprometitua
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Gaitu JavaScript orria behar bezala bistaratzeko.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Firefoxen eginbideak
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Firefoxen laguntza
+
+
+;January
+Urtarrila
+
+
+;February
+Otsaila
+
+
+;March
+Martxoa
+
+
+;April
+Apirila
+
+
+;May
+Maiatza
+
+
+;June
+Ekaina
+
+
+;July
+Uztaila
+
+
+;August
+Abuztua
+
+
+;September
+Iraila
+
+
+;October
+Urria
+
+
+;November
+Azaroa
+
+
+;December
+Abendua
+
+
+;<abbr>Jan</abbr>
+<abbr>Urt</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>Ots</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Mar</abbr> {ok}
+
+
+;<abbr>Apr</abbr>
+<abbr>Api</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>Mai</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Eka</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Uzt</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Abu</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Ira</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>Urr</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Aza</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Abe</abbr>
+
+
+;Congrats. You’re up to date!
+Bejondeizula. Egunean zaude!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Formatua
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Testua
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Hara! Egiaztatu baliozko e-posta helbide bat sartu duzula.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Onartzen dut Mozillak nire informazioa <a href="%s">pribatutasun-ohar honetan</a> azaldu bezala kudeatzea
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Ez galdu<br> Firefoxen berririk.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Jaso Firefoxi buruzko berriak
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+ZURE HELBIDEA HEMEN
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Harpidetu orain
+
+
+# Old newsletter subscription Button
+;Sign me up
+Harpidetu nazazu
+
+
+;Select country
+Hautatu herrialdea
+
+
+;Available Languages
+Hizkuntza erabilgarriak
+
+
+;We will only send you Mozilla-related information.
+Mozillarekin erlazionatutako informazioa soilik bidaliko dizugu.
+
+
+;Thanks!
+Milesker!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Ez baduzu inoiz berretsi Mozillarekin lotutako berripaper baterako harpidetzarik, orain egin beharko duzu. Begiratu zure sarrera-ontzian edo zabor-postan gure mezua aurkitzeko.
+
+
+;Read all about it in our <span>newsletter</span>
+Irakurri guztia gure <span>berripaperean</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Harpidetu hileroko berrietara eta mantendu egunean Mozillaren albisteekin, eta baita Firefox nabigatzaileari zukua ateratzeko azken aholku eta trikimailuekin ere. Gurekin harremanik ez galtzeko modu perfektua da!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + Zu
+
+
+;Get Firefox tips, tricks, news and more
+Jaso Firefoxen aholkuak, trikimailuak, berriak eta gehiago
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Web berrikuntzak
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Interneten osasuna
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Eskerrik asko Firefox aukeratzeagatik!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Mozilla Firefox web-nabigatzailea
+
+
+# Link in the footer
+;Android Browser
+Androiderako nabigatzailea
+
+
+# Link in the footer
+;iOS Browser
+iOSerako nabigatzailea
+
+
+# Link in the footer
+;Focus Browser
+Focus nabigatzailea
+
+
+# Link in the footer
+;Desktop Browser
+Mahaigaineko nabigatzailea
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer Edition {ok}
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Deskargatu Firefox web-nabigatzailea
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Mahagaineko nabigatzailea Mac, Windows eta Linuxerako
+
+
+# Link in the footer
+;Mobile Browser for Android
+Androiderako nabigatzaile mugikorra
+
+
+# Link in the footer
+;Mobile Browser for iOS
+iOSerako nabigatzaile mugikorra
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Zure Firefox zaharkitua dago.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Eskuratu azken bertsioa seguru nabigatzen jarraitzeko.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Eguneratu Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Ikusi Firefoxen nobedadeak
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Arinagoa, bizkorragoa erantzutean, eta izugarri pribatua. Ezagutu zure bizkarra zaintzen duen nabigatzailearen nobedadeak.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Ikusi gehiago
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Ikusi gutxiago
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Aukeratu datu hauek Firefoxen nola partekatu nahi dituzun.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Aukeratu…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Erakutsi dena
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Ezkutatu dena
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Developer Hub {ok}
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Ikerkuntza
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Errealitate birtuala
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Jokoak
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Dokumentazioa
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Hack-en bloga
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Deskargatu Mozilla Firefox, web-nabigatzaile librea. Firefox norbanakoei online kontrola emateaz arduratzen den irabazi-asmorik gabeko erakunde global batek garatzen du. Eskuratu Windows, macOs, Linux, Android eta iOSerako Firefox orain!
+
+
