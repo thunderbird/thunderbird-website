@@ -1,0 +1,194 @@
+## active ##
+## firefox_new_platform_link_text ##
+## firefox_new_try_again_link_020818 ##
+## firefox_quantum_new_headline ##
+## firstrun_email_only_form ##
+## NOTE: Demo page at https://www-demo3.allizom.org/firefox/new/
+
+
+;Congrats! You’re using the latest version of Firefox.
+축하합니다! Firefox 최신 버전을 사용하고 있습니다.
+
+
+;<a href="%(url)s">Update</a> your Firefox for the latest in speed and privacy.
+<a href="%(url)s">업데이트!</a> 현재 Firefox를 더 빠르고 안전한 최신 버전으로 업데이트 하세요.
+
+
+;You’re using a pre-release version of Firefox.
+Firefox 정식 출시 전 버전을 사용하고 있습니다.
+
+
+;The new <strong>Firefox</strong>
+새로운 <strong>Firefox</strong>
+
+
+;Fast for good.
+매우 빠릅니다.
+
+
+# String is obsolete. Do note remove.
+;Meet Firefox Quantum
+Firefox Quantum 만나보기
+
+
+# String is obsolete. Do note remove.
+;New. Fast. For good.
+새롭고. 빠르고. 착한 브라우저
+
+
+# Link points to /firefox/new/?scene=2
+;Download Now
+다운로드
+
+
+# Link points to https://support.mozilla.org/kb/refresh-firefox-reset-add-ons-and-settings
+;Refresh Firefox
+Firefox 재설정
+
+
+# Link points to https://support.mozilla.org/kb/install-firefox-linux
+;Please follow <a href="%(url)s">these instructions</a> to install Firefox.
+Firefox <a href="%(url)s">설치 가이드</a>를 참고하세요.
+
+
+# Title displayed in the modal window for advanced options.
+# The different case is to let localizers use a different translation (or case) from the link, if needed
+;Advanced Install Options & Other Platforms
+고급 설치 방법 및 기타 플랫폼
+
+
+# Link to display the advanced install panel
+;Advanced install options & other platforms
+고급 설치 방법 및 기타 플랫폼
+
+
+;Keep up with<br> all things Firefox.
+Firefox에 대한<br> 소식을 전해드립니다.
+
+
+# Link Span is for visual formatting and line break.
+;Download Firefox <span>for Windows</span>
+Firefox 다운로드  <span>Windows용</span>
+
+
+# Span is for visual formatting and line break.
+;Download Firefox <span>for macOS</span>
+Firefox 다운로드 <span>macOS용</span>
+
+
+# Span is for visual formatting and line break.
+;Download Firefox <span>for Linux</span>
+Firefox 다운로드  <span>Linux용</span>
+
+
+# Link points to /firefox/all/
+;Download for other platforms & languages
+다른 플랫폼과 언어에 대한 다운로드
+
+
+# The string is obsolete. Do not remove.
+# Link points to /firefox/all/
+;Download in another language
+언어별 다운로드
+
+
+;Let’s do this!
+지금 시작하세요!
+
+
+;Your download should begin automatically. Didn’t work? <a id="%(id)s" href="%(fallback_url)s">Try downloading again</a>.
+자동으로 다운로드가 시작됩니다. 그렇지 않으면 <a id="%(id)s" href="%(fallback_url)s">다시 시도해 보세요</a>.
+
+
+# Obsolete string, DO NOT REMOVE
+;Your download should begin automatically. If it doesn’t, <a id="%(id)s" href="%(fallback_url)s">click here</a>.
+자동으로 다운로드가 시작됩니다. 그렇지 않으면, <a id="%(id)s" href="%(fallback_url)s">여기를</a> 클릭하세요.
+
+
+;Sync up with Firefox on mobile:
+모바일용 Firefox와 동기화:
+
+
+# HTML page title prefix
+;Download Firefox
+Firefox 다운로드
+
+
+# HTML page title
+;Free Web Browser
+자유로운 웹 브라우저
+
+
+# HTML page description
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+자유로운 웹 브라우저인 Mozilla Firefox를 다운로드하세요. Firefox는 글로벌 비영리 조직에서 개발 중이며, 온라인 정보 통제 및 제어로 부터 개인의 자유를 위해 노력합니다. 윈도, macOS, 리눅스 및 안드로이드, iOS 등 다양한 운영 체제를 지원합니다.
+
+
+;Download the fastest Firefox ever
+이제까지 가장 빠른 Firefox 다운로드
+
+
+;Faster page loading, less memory usage and packed with features, the new Firefox is here.
+더 빠른 페이지 로딩, 더 적은 메모리 사용량, 다양한 기능 탑재, 새로운 Firefox가 있습니다.
+
+
+;2x Faster
+2배 더 빠름
+
+
+;The best Firefox ever
+가장 최고의 Firefox 브라우저
+
+
+;Lightweight
+가벼운 브라우징
+
+
+;Uses 30% less memory than Chrome
+Chrome보다 30% 더 적은 메모리 사용
+
+
+;Powerfully private
+강력한 개인정보보호 기능
+
+
+;Truly Private Browsing with Tracking Protection
+추척 방지된 진정한 개인정보 보호 브라우징
+
+
+# These strings are used in /firstrun, e.g. https://www-dev.allizom.org/firefox/56.0/firstrun/
+;Welcome to Firefox
+Firefox를 선택해 주셔서 감사합니다
+
+
+;Take Firefox with You
+Firefox와 함께 하세요
+
+
+;Get your bookmarks, history, passwords and other settings on all your devices.
+즐겨찾기와 방문기록, 비밀번호, 다른 설정을 모든 기기에서 사용해 보세요.
+
+
+# Obsolete string, DO NOT REMOVE
+;Already using Firefox?
+Firefox를 사용하고 계신가요?
+
+
+# Obsolete string, DO NOT REMOVE
+;Sign in to your account and we’ll sync the bookmarks, passwords and other great things you’ve saved to Firefox on other devices.
+계정에 로그인하셔서 북마크, 암호 및 다른 정보들을 Firefox가 설치된 모든 기기에서 동기화 하고,이를 손쉽게 활용 가능합니다.
+
+
+;Learn more about Firefox Accounts
+Firefox 계정 자세히 알아보기
+
+
+;Skip this step
+단계 건너뛰기
+
+
+# Old firstrun page
+;Chart your own course
+나만의 코스 만들기
+
+

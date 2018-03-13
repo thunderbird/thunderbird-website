@@ -1,0 +1,811 @@
+;Navigation
+Kundaha rendaite
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Pre-release downloads
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Rehegua
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Tembipuru'i
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Ani rehapykue reka
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Techaha momorambýva
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Mboguatahárape g̃uarãite
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Kundaha ñemi
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Reikotevẽpa pytyvõ
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Marandu
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Eiporavo kundaha ijeheguíva
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox ndohekái viru, atyguasu rehegua'ỹva, isã'ỹva. Firefox jeporavo ndaha'éi kundaha jeporavo año. Ipype oĩ sãso añete.
+
+
+;Donate
+Me'ẽ
+
+
+;Support
+Ñepytyvõ
+
+
+;Products
+Apopyre
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Extensions
+
+
+;Add-ons
+Moĩmbaha
+
+
+;About Us
+Ore rehegua
+
+
+;Labs
+Laboratorio
+
+
+;skip to Navigation
+Eho kundaha rendaitépe
+
+
+;switch language
+Ñe'ẽ moambue
+
+
+;Back to home page
+Ejevy kuatiarogue ñepyrũme
+
+
+;About Mozilla
+Mozilla rehegua
+
+
+;Get Involved
+Eike pype
+
+
+;Careers
+Mbo'esyryete
+
+
+;Press Center
+Kuatiahaiha rendaite
+
+
+;Contact Us
+Eñe'ẽ orendive
+
+
+# Used in new footer to switch the language of the page
+;Language
+Language
+
+
+;Other languages:
+Ambue ñe'ẽnguéra:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Page language:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%Y-%m-%d {ok}
+
+
+;Legal
+Añetegua
+
+
+# Used as link in the footer
+;Cookies
+Kookie
+
+
+;Legal Notices
+Marandu'i añetéva
+
+
+;Privacy Policy
+Temiñemi purureko
+
+
+;Release Notes
+Jehaipy rehegua
+
+
+;Other Systems and Languages
+Ambue apopyvusu ha ñe'ẽnguéra
+
+
+;Close
+Mboty
+
+
+;(in English)
+(inglés pe)
+
+
+;Return to top
+Eguevi ñepyrũhápe
+
+
+;Features
+Reheguáva
+
+
+;Customize
+ñemomba'e
+
+
+;Download
+Mboguejy
+
+
+;Previous
+Mboyvegua
+
+
+;Next
+Upeigua
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+Megabytes
+
+
+;FAQ
+FAQ {ok}
+
+
+;Videos
+Ta'ãngamýi
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Péicha <a href="%s">oje'e mba'éramo</a> mba'evaiha, ko kuatiarogue retepy omoneĩ <br /><a href="%s">Creative Commons Reconocimiento Compartir-Igual v3.0</a> térã oimeraẽva ichagua ipyahuvéva.
+
+
+;Report Trademark Abuse
+Emombe'u jepuruvai marca rehegua
+
+
+;Free Upgrade
+Mbohekopyahu reigua
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Orerapykueho ápe:
+
+
+;Customize with Add-ons
+Eñemomba'e moĩmbaha ndive
+
+
+;Learn More
+Maranduve
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Eikuaave
+
+
+# Link used to play again an animation or a video
+;Replay
+Je'ejey
+
+
+;Watch the video
+Ehecha ta'ãngamýi
+
+
+;Replay the video
+Ta'ãngamýi ñemboheta
+
+
+;Share the video
+Emoherakuã ta'ãngamýi
+
+
+;WebM format
+WebM ysaja
+
+
+;Ogg Theora format
+Ogg Theora ysaja
+
+
+;MPEG-4 format
+MPEG-4 ysaja
+
+
+;Mobile
+Pumbyry popegua
+
+
+;View Full Site
+Tenda tuichakue jehecha
+
+
+;Desktop
+Mba'erechaha
+
+
+;Firefox for mobile
+Firefox pumbyry popeguápe g̃uarã
+
+
+;Email
+Ñanduti veve
+
+
+;Upgrade now
+Embohekopyahu ko'ág̃a
+
+
+;Update now
+Embohekopyahu ko'ág̃a
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Ñemigua
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Heta tetepy oĩ omo'ãva chupe apohára mba'eteéva ©1998–%(current_year)s pytyvõhára mozilla.org. pegua. Hembýva tetepy ehechakuaa <a rel="license" href="%(url)s">Creative Commons ñemoneĩ rupi</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Heta tetepy oĩ omo'ãva chupe apohára mba'eteéva ©1998–%(current_year)s pytyvõhára mozilla.org.-pe. Hembýva tetepy ehechakuaa <a href="%(url)s">Creative Commons</a> ñemoneĩ rupi.
+
+
+# Footer string
+;Contribute to this site
+Eipytyvõ ko tendápe
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Source code for this page
+
+
+# Top menu item
+;Mission
+Tembipota
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Ñeg̃uahẽ ñanduti rupi
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Mbojuehe
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Moĩmbaha mba'erechahápe g̃uarã
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Moĩmbaha Android
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Mbojeguaha
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Mba'erechaha pytyvõha
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Android pytyvõha
+
+
+;Releases
+Jekuaauka
+
+
+;Blog
+Blog {ok}
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Ejapyhy ñembohekopyahu Mozilla-gui
+
+
+# share button for social networks
+;Share
+Moherakuã
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla Twitter-pe
+
+
+# footer link
+;Firefox on Twitter
+Firefox Twitter-pe
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla Facebook-pe
+
+
+# footer link
+;Firefox on Facebook
+Mozilla Facebook-pe
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Ñomongetajere
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patente
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Motenondekuaa
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Sãmbyhyrã
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Tembiasakue
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Ñane rembiapopyre
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Software ha ambue mba'epyahu ojejapóva oho hag̃ua tenonde gotyo ñane rembipota.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Toiko ndehegui pytyvõhára reiguáva iñambuéva tendaitépe.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Poravorã
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Oĩva nendive, nde rekorosã ha peteĩ ñanduti ijurujáva
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Ikatúpiko emyandy JavaScript ehecha porã hag̃ua ko kuatiarogue.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Firefox rehegua
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Ñepytyvõ Firefox-gui
+
+
+;January
+Jasyteĩ
+
+
+;February
+Jasykõi
+
+
+;March
+Jasyapy
+
+
+;April
+Jasyrundy
+
+
+;May
+Jasypo
+
+
+;June
+Jasypoteĩ
+
+
+;July
+Jasypokõi
+
+
+;August
+Jasypoapy
+
+
+;September
+Jasyporundy
+
+
+;October
+Jasypa
+
+
+;November
+Jasypateĩ
+
+
+;December
+Jasypakõi
+
+
+;<abbr>Jan</abbr>
+<abbr>Jasyteĩ</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>Jasykõi</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Jasyapy</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>Jasyrundy</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>Jasypo</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Jasypoteĩ</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Jasypokõi</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Jasypoapy</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Jasyporundy</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>Jasypa</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Jasypateĩ</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Jasypakõi</abbr>
+
+
+;Congrats. You’re up to date!
+Vy'apavẽ. Nde reime hi'araitépe!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Ysaja
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Moñe'ẽrã
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+¡Rombyasyeterei! Emoinge porãke ñanduti veve kundaharape oikóva.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Keep up with<br> all things Firefox.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Ejapyhy marandu Firefox-gui
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+NE ÑANDUTIVEVE
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Sign Up Now
+
+
+# Old newsletter subscription Button
+;Sign me up
+Che añemboheraguapyse
+
+
+;Select country
+Eiporavo tetã
+
+
+;Available Languages
+Ñe'ẽnguéra eipurukuaáva
+
+
+;We will only send you Mozilla-related information.
+Ore roguerahauka marandu Mozilla rehegua añónte.
+
+
+;Thanks!
+Thanks!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+
+
+;Read all about it in our <span>newsletter</span>
+Emoñe'ẽmba ko'ãva ore <span>marandúpe</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Eñemboheraguapy ñembohekopyahu jasyguávape ha eñemoĩ Mozilla marandu tapiápe, oĩhápe avei heta mba'e pyahu iporãva eipuru hag̃ua hekopete nde Firefox kundahára. Kóva ha'e mb'ae tuichavéva ñaime hag̃ua ñomongeta tapiápe!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + You
+
+
+;Get Firefox tips, tricks, news and more
+Get Firefox tips, tricks, news and more
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Web Innovations
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Internet Health
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+¡Aguyje eiporavo haguére Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Mozilla Firefox Web Browser
+
+
+# Link in the footer
+;Android Browser
+Android Browser
+
+
+# Link in the footer
+;iOS Browser
+iOS Browser
+
+
+# Link in the footer
+;Focus Browser
+Focus Browser
+
+
+# Link in the footer
+;Desktop Browser
+Desktop Browser
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer Edition
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Download Firefox Web Browser
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Desktop Browser for Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Mobile Browser for Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Mobile Browser for iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Your Firefox is out-of-date.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Get the most recent version to keep browsing securely.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Update Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+See what’s new with Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Show More
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Show Less
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Choose how you want to share this data in Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Choose…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Show All
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Hide All
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Developer Hub
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Research
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Virtual Reality
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Games
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Documentation
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Hacks blog
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+
+

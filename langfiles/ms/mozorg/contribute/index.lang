@@ -1,0 +1,721 @@
+## active ##
+## contribute_cta_updates ##
+## NOTE: Demo server available at https://www-dev.allizom.org/contribute
+
+
+# Used for HTML title attribute
+;Volunteer Opportunities at Mozilla
+Peluang Sukarelawan di Mozilla
+
+
+# this string is used for accessibility reasons, it's not visible in the page
+;Menu
+Menu {ok}
+
+
+# this br is for formatting, omit or reposition as needed
+;Why<br> volunteer
+Mengapa<br> jadi sukarelawan
+
+
+# this br is for formatting, omit or reposition as needed
+;Find<br> an event
+Cari<br> aktiviti
+
+
+# this br is for formatting, omit or reposition as needed
+;Meet<br> Mozillians
+Temui <br> anggota Mozillia
+
+
+;Get involved
+Sertainya
+
+
+;Your country
+Negara anda
+
+
+# This is a hint used as a placeholder in a country selection dropdown menu. It should be short.
+;I live in&hellip;
+Saya tinggal di &hellip;
+
+
+;Volunteer with Mozilla!
+Jadilah sukarelawan Mozilla!
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;active Mozillians worldwide
+Anggota Mozillia yang aktif di seluruh dunia
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;upcoming events around the globe
+aktiviti akan datang di serata dunia
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms. The phrase "and counting" means there are always more being added; not sure how that idiom might translate so do your best :)
+;languages and counting, on every continent
+bahasa sedia ada dan tambahan bahasa, di setiap benua
+
+
+;Join a global community of game-changers.
+Sertai komuniti global penukar-permainan.
+
+
+# this br is for formatting, omit or reposition as needed
+;Volunteer as much as you like. Or as little.<br> It’s totally up to you.
+Jadilah sukarelawan sepenuh masa. Atau setakat yang anda mampu.<br> Semuanya bergantung kepada anda.
+
+
+# this br is for formatting, omit or reposition as needed
+;Share your skills and pick up<br> a few new ones along the way.
+Kongsi kemahiran anda dan dapatkan<br> beberapa kemahiran yang baru dalam proses tersebut.
+
+
+;Volunteering with Mozilla&hellip;
+Menjadi sukarelawan Mozilla&hellip;
+
+
+# This paragraph follows the headline, "Volunteering with Mozilla...", so the first sentence continues from that fragment. The line breaks are for formatting.
+;is about more than lending a hand. It’s about learning, collaborating and sharing your skills with a global community of Mozillians — coders, organizers, activists and more — who help shape the Web every day.
+lebih daripada sekadar membantu. Tetapi juga mengenai pembelajaran, kolaborasi dan berkongsi kemahiran anda dengan komuniti global Mozilla — pengekod, penganjur, aktivis dan pelbagai lagi — yang membantu membentuk Web pada setiap hari.
+
+
+;See our community in action
+Lihat komuniti kami bekerja
+
+
+;How Mozillians help every day
+Cara anggota Mozilla membantu pada setiap hari
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Spain &middot; Activism
+Aktivisme &middot; Sepanyol
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Philippines &middot; Activism
+Aktivisme &middot; Filipina
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Switzerland &middot; Coding
+Pengekod &middot; Switzerland
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;India &middot; Teaching
+Pengajar &middot; India
+
+
+;Read his story
+Baca kisah beliau
+
+
+;Read her story
+Baca kisah beliau
+
+
+;Want to get involved? Here’s how.
+Mahu sertai? Ini caranya.
+
+
+;Choose what interests you and tell us how you’d like to help
+Pilih minat anda dan beritahu cara untuk anda membantu kami
+
+
+;Stand by for an email that will connect you to the Mozilla community
+Bersedialah untuk menerima e-mel yang akan menghubungkan anda dengan komuniti Mozilla
+
+
+;Create your Mozillians account and share your contributions with the world
+Cipta akaun Mozilla anda dan kongsi sumbangan anda dengan seluruh dunia
+
+
+;Get started
+Mari mulakan
+
+
+;Not ready to dive in just yet?
+Masih belum bersedia lagi?
+
+
+;Here are a few other ways you can support Mozilla right now.
+Ini ada beberapa cara untuk anda membantu Mozilla sekarang.
+
+
+;Donate to Mozilla
+Menderma kepada Mozilla
+
+
+;Read our Manifesto
+Baca Manifesto kami
+
+
+;Like us on Facebook
+Sokong kami di Facebook
+
+
+;Follow us on Twitter
+Ikut kami di Twitter
+
+
+;Upcoming event
+Aktiviti akan datang
+
+
+;See all events
+Tinjau semua aktiviti
+
+
+;Communicate
+Komunikasi
+
+
+;Mozilla communities
+Komuniti Mozilla
+
+
+;Mailing lists
+Senarai mel
+
+
+;IRC channels
+Saluran IRC
+
+
+;More links
+Pautan selanjutnya
+
+
+;Submit Firefox feedback
+Hantar maklum balas Firefox
+
+
+;Explore Mozilla careers
+Potensi karier di Mozilla
+
+
+;Get help with Firefox
+Dapatkan bantuan daripada Firefox
+
+
+;Subscribe to community events
+Ikuti berita aktiviti komuniti
+
+
+;Get community updates
+Dapatkan perkembangan semasa komuniti
+
+
+# Used as title of the /stories sub-page
+;Mozillian Stories
+Kisah Anggota Mozilla
+
+
+# Used as a toggle to display more content.
+;More
+Selanjutnya
+
+
+# Used as a toggle to display less content.
+;Less
+Kurangkan
+
+
+;Read more Mozillian stories
+Baca kisah anggota Mozilla selanjutnya
+
+
+;Discover even more stories on Twitter with <a href="%(link_hashtag)s">#IAmAMozillian</a>
+Ketahui lebih banyak kisahnya di Twitter dengan <a href="%(link_hashtag)s">#IAmAMozillian</a>
+
+
+;More coming soon
+Kisah selanjutnya yang akan datang
+
+
+# Used as title of the /signup sub-page
+;Get Involved: Volunteer Opportunities at Mozilla
+Sertainya: Peluang Sukarelawan di Mozilla
+
+
+;To get started, tell us what interests you.
+Untuk bermula, beritahu kami minat anda.
+
+
+;Choose one for now. You can always contribute to other areas later.
+Pilih satu minat anda buat masa sekarang. Anda boleh menyumbang dalam bidang lain nanti.
+
+
+# This text is used for accessibility reasons, it's not visible
+;Where would you like to get started?
+Anda mahu memulakan dengan?
+
+
+;Coding
+Aturcara
+
+
+;More about coding
+Lanjutan perihal pengekodan
+
+
+;Contribute code to a whole range of Mozilla products, including Firefox and Firefox OS.
+Sumbangkan kod untuk semua julat produk Mozilla, termasuk Firefox dan Firefox OS.
+
+
+;Testing
+Ujian
+
+
+;More about testing
+Lanjutan perihal ujian
+
+
+;Help make the Mozilla products you use — and love — even better.
+Bantu membina poduk Mozilla yang anda gunakan — dan suka — menjadi lebih baik.
+
+
+;Writing
+Penulisan
+
+
+;More about writing
+Lanjutan perihal penulisan
+
+
+;Lend your voice to Mozilla — from blogging and social media to providing technical documents for users and developers.
+Suarakan pendapat anda kepada Mozilla — daripada blog dan media social untuk menyediakan dokumen teknikal kepada pengguna dan pembangun.
+
+
+;Teaching
+Mengajar
+
+
+;More about teaching
+Lanjutan perihal mengajar
+
+
+;Share your skills with a community that’s eager to learn. Take advantage of our free tools, teaching resources and events.
+Kongsi kemahiran anda dengan komuniti yang bersemangat mahu belajar. Gunakan sepenuhnya alatan, sumber mengajar dan aktiviti percuma kami.
+
+
+;Helping
+Membantu
+
+
+;More about helping
+Lanjutan perihal membantu
+
+
+;Provide support to users who need it and help everyone get the most out of their Mozilla products.
+Beri sokongan kepada pengguna yang memerlukannya dan bantu sesiapa sahaja mendapatkan manfaat daripada produk Mozilla mereka.
+
+
+;Translating
+Menterjemah
+
+
+;More about translating
+Lanjutan perihal menterjemah
+
+
+;Help make Mozilla stuff available in other languages. Translate everything from newsletters and websites to copy for Firefox and Firefox OS.
+Bantu menterjemah kandungan Mozilla ke pelbagai bahasa. Terjemahkan semuanya daripada surat berita dan laman web hingga ke salinan Firefox dan Firefox OS.
+
+
+;Activism
+Aktivis
+
+
+;More about activism
+Lanjutan perihal aktivis
+
+
+;Get involved with our opportunities to support freedom, security and privacy on the open Web.
+Sertai kami untuk mendapatkan peluang menyokong kebebasan, keselamatan dan privasi Web terbuka.
+
+
+;I don’t know
+Saya tidak pasti
+
+
+;More about how you can contribute
+Lanjutan cara untuk anda memberikan sumbangan
+
+
+;Not sure how you want to help? No problem. We can find the appropriate contribution activity for you.
+Masih tidak pasti untuk membantu? Kami boleh cari sumbangan aktiviti yang sesuai untuk anda.
+
+
+;Now tell us a little about yourself:
+Sekarang beritahu kami serba sedikit perihal diri anda:
+
+
+;Name
+Nama
+
+
+;Email address
+Alamat e-mel
+
+
+;Country
+Negara
+
+
+;select
+pilih
+
+
+;Why do you want to be a Mozilla volunteer?
+Kenapa anda mahu menjadi sukarelawan Mozilla?
+
+
+;(Optional)
+(Pilihan)
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%(privacy)s">this Privacy Policy</a>
+Saya setuju Mozilla mengendalikan maklumat saya seperti yang dijelaskan dalam <a href="%(privacy)s">Dasar Privasi ini</a>
+
+
+;Start contributing
+Mula memberikan sumbangan
+
+
+;Sign me up for community updates
+Daftarkan saya untuk mengikuti perkembangan komuniti
+
+
+;(English)
+(English) {ok}
+
+
+;What particular area?
+Apa bidang khusus anda?
+
+
+;What would you like to code?
+Adakah anda mahu mengekod?
+
+
+;What would you like to test?
+Apa yang anda mahu uji?
+
+
+;What would you like to translate?
+Apa yang anda mahu terjemah?
+
+
+;What would you like to write?
+Apa yang anda mahu tulis?
+
+
+;What would you like to teach?
+Apa yang anda mahu ajar?
+
+
+;Firefox
+Firefox {ok}
+
+
+;Websites
+Laman web
+
+
+;Firefox add-ons
+Add-ons Firefox
+
+
+;HTML5 apps
+Apps HTML5
+
+
+;Diagnosing Web compatibility issues
+Mendiagnos isu keserasian Web
+
+
+;Online services
+Perkhidmatan Dalam talian
+
+
+;Web compatibility
+Keserasian Web
+
+
+;Product localization
+Lokalisasi Produk
+
+
+;Website localization
+Lokalisasi Laman web
+
+
+;I’d like to work on localization tools
+Saya mahu usahakan alatan lokalisasi
+
+
+;Social media
+Media Sosial
+
+
+;Journalism
+Kewartawanan
+
+
+;Technical docs for users
+Dokumen teknikal untuk pengguna
+
+
+;Technical docs for developers
+Dokumen teknikal untuk pembangun
+
+
+;Technical docs for Firefox add-ons
+Dokumen teknikal untuk add-ons Firefox
+
+
+;Technical docs for HTML5 apps
+Dokumen teknikal untuk app HTML5
+
+
+;Teach the Web (Webmaker)
+Ajar pembangun Web (Webmaker)
+
+
+;Open News fellowships
+News fellowships terbuka
+
+
+;Hive - Community networks of educators/mentors
+Hive - Rangkaian komuniti pendidik/mentors
+
+
+;Open Web science research
+Kajian sains Web terbuka
+
+
+;Community Events
+Acara Komuniti
+
+
+;Find events
+Cari aktiviti
+
+
+;By city, country, or event:
+Mengikut bandar, negara, atau acara:
+
+
+;By date:
+Mengikut tarikh:
+
+
+;month
+bulan
+
+
+;year
+tahun
+
+
+;Date
+Tarikh
+
+
+;Event
+Aktiviti
+
+
+;Location
+Lokasi
+
+
+;City
+Bandar
+
+
+;Events
+Aktiviti
+
+
+# Used as title of the thank you page displayed after users send the form
+;Thank you!
+Terima kasih!
+
+
+;Thanks!
+Terima kasih!
+
+
+;We’re thrilled to see that you’re interested in coding and can’t wait to get you started.
+Kita teruja bahawa anda berminat mengekod dan kami tidak sabar menunggu untuk anda bermula.
+
+
+;We’re thrilled to see that you’re interested in testing and can’t wait to get you started.
+Kita teruja bahawa anda berminat menguji dan kami tidak sabar menunggu untuk anda bermula.
+
+
+;We’re thrilled to see that you’re interested in writing and can’t wait to get you started.
+Kita teruja bahawa anda berminat menulis dan kami tidak sabar menunggu untuk anda bermula.
+
+
+;We’re thrilled to see that you’re interested in teaching and can’t wait to get you started.
+Kita teruja bahawa anda berminat mengajar dan kami tidak sabar menunggu untuk anda bermula.
+
+
+;We’re thrilled to see that you’re interested in helping and can’t wait to get you started.
+Kita teruja bahawa anda berminat membantu dan kami tidak sabar menunggu untuk anda bermula.
+
+
+;We’re thrilled to see that you’re interested in translating and can’t wait to get you started.
+Kita teruja bahawa anda berminat menterjemah dan kami tidak sabar menunggu untuk anda bermula.
+
+
+;We’re thrilled to see that you’re interested in activism and can’t wait to get you started.
+Kita teruja bahawa anda berminat menjadi aktivis dan kami tidak sabar menunggu untuk anda bermula.
+
+
+;We’re thrilled to see that you’re interested in volunteering and can’t wait to get you started.
+Kita teruja bahawa anda berminat menjadi sukarelawan dan kami tidak sabar menunggu untuk anda bermula.
+
+
+;Keep an eye on your inbox for an important message from us.
+Perhatikan peti masuk mel anda untuk mendapatkan mesej penting daripada kami.
+
+
+;Hello!
+Hello! {ok}
+
+
+;Your Name
+Nama Anda
+
+
+;In the meantime&hellip;
+Buat masa ini&hellip;
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;You can help by picking an easy task that only takes a few minutes &mdash; or take on a bigger challenge.
+Anda boleh bantu dengan memilih satu tugas mudah yang hanya mengambil masa beberapa minit — atau buat tugasan yang lebih besar.
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;Choose a Task Now
+Pilih Tugasan Sekarang
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Help us tell the world how awesome Firefox is and about all the important work Mozilla does every day.
+Bantu kami sebarkan kepada dunia perihal kehebatan Firefox dan semua tugasan penting Mozilla pada setiap hari.
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Join Now
+Sertai Sekarang
+
+
+;You can create your Mozillians account now to connect with fellow Mozillians.
+Anda boleh cipta akaun Mozilla sekarang untuk berhubungan dengan rakan Mozilla.
+
+
+;Yes, create my Mozillians account
+Ya, cipta akaun Mozilla saya
+
+
+;You will be asked to sign in before proceeding
+Anda akan diminta mendaftar masuk sebelum meneruskan
+
+
+;No thanks, I’ll just wait for the email
+Tidak terima kasih, saya hanya tunggu dapat e-mel
+
+
+# The following strings are used in the contribute form on production (https://www.mozilla.org/contribute/signup/), not in the one available on stage
+# Strings have been copied from the old template (mozorg/contribute.lang)
+;Area of interest?
+Bidang yang anda minat?
+
+
+;Helping Users
+Membantu Pengguna
+
+
+;Testing and QA
+Penguji dan QA
+
+
+;Marketing
+Pemasaran
+
+
+;Localization and Translation
+Localization dan Penterjemahan
+
+
+;Web Development
+Pembangunan Web
+
+
+;Firefox Marketplace
+Gedung Firefox
+
+
+;Add-ons
+Add-ons {ok}
+
+
+;Visual Design
+Rekaan Visual
+
+
+;Documentation and Writing
+Dokumentasi dan Penulisan
+
+
+;Education
+Pendidikan
+
+
+;Other
+Lain-lain
+
+
+;Hi, I’m interested in…
+Hi, Saya berminat dalam…
+
+
+;Send us a note and we can get you started right away.
+Hantar nota kepada kami dan kami akan beri anda untuk mulakan terus.
+
+
+;I have a suggestion for Firefox
+Saya ada cadangan untuk Firefox
+
+
+;I need help with a Firefox issue
+Saya perlu bantuan dengan masalah Firefox
+
+
+;Please enter a valid email address.
+Sila masukkan alamat e-mel yang sah.
+
+
+;You must agree to the privacy policy.
+Anda perlu setuju dengan polisi privasi.
+
+
+;Please select an area of interest.
+Sila pilih bidang yang diminati.
+
+
+;Please tell us more about your interests.
+Sila beritahu kami tentang minat anda.
+
+

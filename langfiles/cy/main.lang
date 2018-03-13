@@ -1,0 +1,811 @@
+;Navigation
+Llywio
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Fersiynau cyn eu ryddhau
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Ynghylch
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Apiau
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Dim Tracio
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Bwrdd Gwaith Diddordeb
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Developer Edition {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Pori Preifat
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Angen cymorth?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Newyddion
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Dewiswch y porwr annibynnol
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Nid yw Firefox yma er elw, nac yn gorfforaethol, nac yn cyfaddawdu. Dyw dewis Firefox ddim ynglŷn â dewis porwr. Mae'n bleidlais dros ryddid personol.
+
+
+;Donate
+Cyfrannu
+
+
+;Support
+Cefnogaeth
+
+
+;Products
+Cynnyrch
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Estyniadau
+
+
+;Add-ons
+Ychwanegion
+
+
+;About Us
+Amdanom ni
+
+
+;Labs
+Labordai
+
+
+;skip to Navigation
+neidio i Llywio
+
+
+;switch language
+newid iaith
+
+
+;Back to home page
+Nôl i'r dudalen gartref
+
+
+;About Mozilla
+Ynghylch Mozilla
+
+
+;Get Involved
+Ymuno â ni
+
+
+;Careers
+Gyrfaoedd
+
+
+;Press Center
+Canolfan y Wasg
+
+
+;Contact Us
+Cysylltu â ni
+
+
+# Used in new footer to switch the language of the page
+;Language
+Iaith
+
+
+;Other languages:
+Ieithoedd eraill:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Iaith y dudalen:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%Y-%m-%d {ok}
+
+
+;Legal
+Cyfreithiol
+
+
+# Used as link in the footer
+;Cookies
+Cwcis
+
+
+;Legal Notices
+Hysbysiadau Cyfreithiol
+
+
+;Privacy Policy
+Polisi Preifatrwydd
+
+
+;Release Notes
+Nodiadau rhyddhau
+
+
+;Other Systems and Languages
+Systemau ac Ieithoedd Eraill
+
+
+;Close
+Cau
+
+
+;(in English)
+(yn Saesneg)
+
+
+;Return to top
+Dychwelyd i'r brig
+
+
+;Features
+Nodweddion
+
+
+;Customize
+Cyfaddasu
+
+
+;Download
+Llwytho i Lawr
+
+
+;Previous
+Blaenorol
+
+
+;Next
+Nesaf
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+MegaBeit
+
+
+;FAQ
+Cwestiynau Cyffredin
+
+
+;Videos
+Fideos
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Ar wahân i lle <a href="%s">nodir</a> yn wahanol, mae cynnwys y wefan wedi ei drwyddedu o dan amodau <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> neu unrhyw fersiwn diweddarach.
+
+
+;Report Trademark Abuse
+Adrodd am Gamddefnyddio Nod Masnach
+
+
+;Free Upgrade
+Diweddaru am Ddim
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Dilyn ni ar:
+
+
+;Customize with Add-ons
+Cyfaddasu gydag Ychwanegion
+
+
+;Learn More
+Dysgu Rhagor
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Dysgu rhagor
+
+
+# Link used to play again an animation or a video
+;Replay
+Chwarae eto
+
+
+;Watch the video
+Gwylio'r fideo
+
+
+;Replay the video
+Ail chwarae'r fideo
+
+
+;Share the video
+Rhannu'r fideo
+
+
+;WebM format
+Fformat WebM
+
+
+;Ogg Theora format
+Fformat Ogg Theora
+
+
+;MPEG-4 format
+Fformat MPEG-4
+
+
+;Mobile
+Symudol
+
+
+;View Full Site
+Gweld y Wefan Gyfan
+
+
+;Desktop
+Bwrdd Gwaith
+
+
+;Firefox for mobile
+Firefox ar gyfer ffonau symudol
+
+
+;Email
+E-bost
+
+
+;Upgrade now
+Diweddarwch yn awr
+
+
+;Update now
+Diweddarwch yn awr
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Preifatrwydd
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Mae darnau o'r cynnwys yn ©1998–%(current_year)s gan gyfranwyr unigol mozilla.org. Mae'r cynnwys ar gael o dan <a rel="license" href="%(url)s">drwydded Creative Commons</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Mae darnau o'r cynnwys yn ©1998–%(current_year)s gan gyfranwyr unigol mozilla.org. Mae'r cynnwys ar gael o dan <a href="%(url)s">drwydded Creative Commons</a>.
+
+
+# Footer string
+;Contribute to this site
+Cyfrannwch i'r wefan hon
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Cod ffynhonnell ar gyfer y dudalen hon
+
+
+# Top menu item
+;Mission
+Amcan
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Cyflwyniad
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Cydweddu
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Ychwanegion Bwrdd Gwaith
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Ychwanegion Android
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Themâu
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Cynnal y Bwrdd Gwaith
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Cefnogaeth Android
+
+
+;Releases
+Rhyddhau
+
+
+;Blog
+Blog {ok}
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Derbyn diweddariadau Mozilla
+
+
+# share button for social networks
+;Share
+Rhannu
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla ar Twitter
+
+
+# footer link
+;Firefox on Twitter
+Firefox ar Twitter
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla ar Facebook
+
+
+# footer link
+;Firefox on Facebook
+Firefox ar Facebook
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Fforymau
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patentau
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Arweinyddiaeth
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Llywodraethu
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Hanes
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Ein Cynnyrch
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Meddalwedd ac arloesedd sy'n gyrru'n cenhadaeth yn ei flaen.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Dewch i wirfoddoli mewn nifer o wahanol feysydd.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Dewislen
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Yn ymroddedig i chi, eich preifatrwydd ac i'r We agored
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Cychwynnwch JavaScript i ddangos y dudalen yn iawn.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Nodweddion Firefox
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Cymorth Firefox
+
+
+;January
+Ionawr
+
+
+;February
+Chwefror
+
+
+;March
+Mawrth
+
+
+;April
+Ebrill
+
+
+;May
+Mai
+
+
+;June
+Mehefin
+
+
+;July
+Gorffennaf
+
+
+;August
+Awst
+
+
+;September
+Medi
+
+
+;October
+Hydref
+
+
+;November
+Tachwedd
+
+
+;December
+Rhagfyr
+
+
+;<abbr>Jan</abbr>
+<abbr>Ion</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>Chw</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Maw</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>Ebr</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>Mai</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Meh</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Gor</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Aws</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Med</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>Hyd</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Tac</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Rha</abbr>
+
+
+;Congrats. You’re up to date!
+Llongyfarchiadau. Rydych yn gyfredol!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Fformat
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Testun
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Wps! Cofiwch roi cyfeiriad e-bost dilys.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Rwy'n fodlon i Mozilla drin fy manylion fel mae'n cael ei esbonio yn y <a href="%s">Datganiad Preifatrwydd hwn</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Cadw'n gyfredol<br> gyda phopeth Firefox.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Derbyn newyddion Firefox
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+EICH E-BOST YMA
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Cofrestrwch nawr
+
+
+# Old newsletter subscription Button
+;Sign me up
+Cofrestru
+
+
+;Select country
+Dewis gwlad
+
+
+;Available Languages
+Ieithoedd sydd ar Gael
+
+
+;We will only send you Mozilla-related information.
+Dim ond gwybodaeth am Mozilla fyddwn ni'n anfon atoch.
+
+
+;Thanks!
+Diolch!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Os nad ydych eisoes wedi cadarnhau tanysgrifiad i gylchlythyr y perthyn i Mozilla, rhaid i chi wneud hynny nawr. Gwiriwch eich blwch i mewn neu eich hidl sbam am e-bost gennym ni.
+
+
+;Read all about it in our <span>newsletter</span>
+Darllen ein newyddion yn ein <span>newyddlen</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Tanysgrifiwch i'r diweddariadau misol a chadw'n gyfredol gyda newyddion Mozilla, gan gynnwys y ffyrdd o gael y gorau allan o'ch porwr Firefox. Dyma'r ffordd berffaith i ni gadw mewn cysylltiad!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + Chi
+
+
+;Get Firefox tips, tricks, news and more
+Cewch gynghorion, triciau, newyddion a rhagor
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Arloesedd Gwe
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Iechyd y Rhyngrwyd
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Diolch am ddewis Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Porwr Gwe Mozilla Firefox
+
+
+# Link in the footer
+;Android Browser
+Android
+
+
+# Link in the footer
+;iOS Browser
+iOS
+
+
+# Link in the footer
+;Focus Browser
+Focus
+
+
+# Link in the footer
+;Desktop Browser
+Bwrdd Gwaith
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer Edition {ok}
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Llwythwch Porwr Gwe Firefox i Lawr
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Porwr Bwrdd Gwaith ar gyfer Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Porwr Symudol ar gyfer Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Porwr Symudol ar gyfer iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Mae eich Firefox yn hen.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Estynnwch y fersiwn mwyaf diweddar i gadw pori'n ddiogel.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Diweddaru Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Gweld beth sy'n newydd gyda Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Cyflymach, mwy ymatebol a phreifatrwydd grymus. Darllenwch am y diweddaraf gan y porwr sy'n eich cefnogi chi.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Dangos Mwy
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Dangos Llai
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Dewis sut hoffech chi rannu’r data yma o fewn Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Dewis…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Dangos y Cyfan
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Cuddio'r Cyfan
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Developer Hub {ok}
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Ymchwil
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Rhithwirionedd
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Gemau
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Dogfennaeth
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Y Blog Hacio
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Llwythwch Mozilla Firefox i lawr, mae'n borwr gwe rhydd a rhad. Mae Firefox wedi ei greu gan gorff byd-eang, dim-er-elw sydd a'i fryd ar roi grym i unigolion ar-lein. Defnyddiwch Firefox ar Windows, macOS, Linux, Android ac iOS heddiw!
+
+

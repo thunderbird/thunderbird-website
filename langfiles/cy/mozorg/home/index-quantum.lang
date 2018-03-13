@@ -1,0 +1,204 @@
+## active ##
+## home-fundraiser-EOY2017 ##
+## home-update-20171116 ##
+## mozorg-home-health-report ##
+## mozorg-home-impact-health ##
+## NOTE: demo server at https://www-dev.allizom.org/
+
+
+# HTML title tag of the page
+;Internet for people, not profit
+Rhyngrwyd ar gyfer pobl, nid elw
+
+
+# HTML description tag
+;Did you know? Mozilla — the maker of Firefox — fights to keep the Internet a global public resource, open and accessible to all.
+A wyddoch chi? Mae Mozilla — gwneuthurwr Firefox — yn ymladd i gadw'r Rhyngrwyd yn adnodd cyhoeddus byd eang ar gael ac agored i bawb.
+
+
+;We all love the web. Join Mozilla in defending it.
+Rydym i gyd yn hoffi'r we. Ymunwch â Mozilla i'w amddiffyn.
+
+
+# "Cup of coffee" is meant to represent an inexpensive item that an average person would purchase daily/without hesitation. Feel free to substitute with something affordable locally.
+;Let’s protect the world’s largest public resource for future generations. A few times a year, Mozilla asks for donations. Just chipping in the price of a cup of coffee can help us keep the web healthy, wonderful and welcoming to all.
+Beth am i ni amddiffyn adnodd cyhoeddus mwyaf y byd ar gyfer cenedlaethau'r dyfodol. Ar rhai adegau yn y flwyddyn mae Mozilla'n gofyn am gydraniadau. Gall gyfrannu cost paned o goffi ein cynorthwyo ni i gadw'r we yn iach, yn wych ac yn groesawgar i bawb.
+
+
+# Line break below for visual formatting only
+;Internet for people, <br>not profit.
+Rhyngrwyd ar gyfer pobl, <br>nid elw.
+
+
+;Hi. We’re Mozilla, the proudly non-profit champions of the Internet, helping to keep it healthy, open and accessible to all.
+Helo. Ni yw Mozilla, pleidwyr balch dim-er-elw y Rhyngrwyd, sy'n cynorthwyo i'w gadw'n iach, agored ac hygyrch i bawb.
+
+
+;Our impact
+Effaith
+
+
+;When you use Firefox, you help Mozilla fight misinformation online, teach digital skills and make the comments section more human. Check out what helps create a healthier internet.
+Pan fyddwch y defnyddio Firefox, rydych yn helpu Mozilla i frwydro yn erbyn gwybodaeth gamarweiniol ar-lein, dysgu sgiliau digidol a gwneud colofnau sylwadau’n fwy dynol. Darllenwch beth sy'n helpu i wneud rhyngrwyd mwy iach.
+
+
+# String is obsolete. Do not remove.
+;Working at the grassroots and policy levels, we teach web literacy, provide tools and advocate on behalf of every individual who values an internet built on fairness, inclusion and respect.
+Gan weithio ar lawr gwlad a thrwy bolisi, rydym yn dysgu llythrennedd y we, darparu offer ac yn eiriol ar ran unigolion sy'n gwerthfawrogi rhyngrwyd sydd wedi ei adeiladu ar degwch, cynhwysedd a pharch.
+
+
+# Link points to https://blog.mozilla.org/blog/2017/08/08/mozilla-information-trust-initiative-building-movement-fight-misinformation-online/
+;Mozilla Information Trust Initiative
+Menter Ymddiriedaeth Gwybodaeth Mozilla
+
+
+# Link points to https://learning.mozilla.org/blog/new-partnership-with-un-women-to-teach-key-digital-skills-to-women
+;Empowering Women Online
+Ymrymuso Merched Ar-lein
+
+
+# Link points to https://blog.mozilla.org/blog/2017/09/06/mozilla-washington-post-reinventing-online-comments/
+;The Coral Project
+Project Coral
+
+
+# Link points to https://internethealthreport.org
+;Internet Health Report
+Adroddiad Iechyd y Rhyngrwyd
+
+
+# String is obsolete. Do not remove.
+;Stand Up For Encryption
+Cefnogi Amgryptio
+
+
+# String is obsolete. Do not remove.
+;Teach The Web
+Addysgu'r We
+
+
+# String is obsolete. Do not remove.
+;Try the Lean Data Toolkit
+Defnyddiwch y Blwch Offer Data Cynnil
+
+
+# String is obsolete. Do not remove.
+;Read our Internet Health Report
+Darllenwch ein Adroddiad Iechyd y Rhyngrwyd
+
+
+;Our innovations
+Arloesedd
+
+
+;Using the web as the platform, we build open, innovative technologies that allow developers to work free of closed, corporate ecosystems and create faster, safer web experiences for us all.
+Gan ddefnyddio'r we fel platfform, rydym yn adeiladu technolegau agored ac arloesol sy'n caniatáu i ddatblygwyr weithio'n rhydd o ecosystemau caeëdig corfforaethau gan greu profiadau gwe cynt a mwy diogel ar ein cyfer ni oll.
+
+
+;Common Voice
+Common Voice {ok}
+
+
+# String is obsolete. Do not remove.
+;Gaming on the Web
+Gemau ar y We
+
+
+;Virtual Reality Platform
+Platfform Rhithrealiti
+
+
+;Get Firefox today
+Defnyddiwch Firefox Heddiw
+
+
+;Extensions
+Estyniadau
+
+
+;Personalize Firefox with your favorite extras like password managers, ad blockers and more.
+Personolwch Firefox gyda'ch hoff ychwanegiadau fel rheolwyr cyfrineiriau, rhwystrwyr hysbysebion a mwy.
+
+
+;Careers
+Gyrfaoedd
+
+
+;Learn about the benefits of working at Mozilla and view open positions around the world.
+Dysgu am fanteision gweithio i Mozilla a gweld y swyddi gweigion sydd o amgylch y byd.
+
+
+;Need help?
+Angen cymorth?
+
+
+;Get answers to your questions about Firefox and all Mozilla products from our support team.
+Cewch atebion i'ch cwestiynau am Firefox a holl gynnyrch Mozilla gan ein tîm cefnogi.
+
+
+# This is a sum in US dollars, e.g. '$100'. You can change the way it's displayed, e.g. '%(sum)s USD' will display '100 USD'
+# You can also localize the currency (e.g. to use € instead of $), but only if your currency is available on https://donate.mozilla.org (check the currency dropdown)
+;$%(sum)s
+£%(sum)s
+
+
+# Take over form
+;Enter your own amount
+Nodwch eich swm eich hun
+
+
+# Take over form: radio button for monthly contributions
+;Monthly
+Misol
+
+
+# Take over form: radio button for one-time contributions
+;One-time
+Unwaith yn Unig
+
+
+# Take over form: button to submit the donation form
+;Donate
+Cyfrannu
+
+
+;Working to keep the Internet healthy, open and accessible to all, we teach web literacy, provide tools and advocate on behalf of every individual who values the Internet as a global public resource.
+Rydym yn gweithio i gadw'r Rhyngrwyd yn iach, agored ac ar gael i bawb, yn dysgu llythrennedd y we, darparu offer ac yn eiriol ar ran pob unigolyn sy'n gwerthfawrogi'r Rhyngrwyd fel adnodd cyhoeddus byd-eang.
+
+
+# The <span> below is for visual formatting only - bolding the word 'Firefox'.
+;The new <span>Firefox</span>
+Y <span>Firefox</span> newydd
+
+
+;Fast for good.
+Cyflym am byth.
+
+
+# The string is obsolete. Do not remove.
+;Browse faster. For good.
+Pori'n gynt. Am byth.
+
+
+;With 2x the speed, built-in privacy protection and Mozilla behind it, the new Firefox is the better way to browse.
+Gyda 2x y cyflymder, diogelwch preifatrwydd o'i fewn a Mozilla y tu ôl iddo, mae'r Firefox newydd yn ffordd well o bori.
+
+
+# String is obsolete. Do not remove.
+;With 2x the speed, built-in privacy protection and Mozilla behind it, the new Firefox is fast for good.
+Gyda 2x y cyflymder, diogelwch preifatrwydd o'i fewn a Mozilla y tu ôl iddo, mae Firefox yn gyflym am byth.
+
+
+;We make the internet safer, healthier and faster for good.
+Rydym yn gwneud y rhyngrwyd yn fwy diogel, iach a chynt, am byth.
+
+
+;Mozilla is the not-for-profit behind Firefox, the original alternative browser. We create products and policy to keep the internet in service of people, not profit.
+Mozilla yw'r corff ddim-am-elw y tu ôl i Firefox, y porwr arall gwreiddiol. Rydym yn creu cynnyrch a pholisi i gadw'r rhyngrwyd fel gwasanaeth i bobl, nid er mwyn elw.
+
+
+# String is obsolete. Do not remove.
+;Mozilla is the not-for-profit behind Firefox, the original alternative browser. We create products and policy to keep the internet in service of people, not profits.
+Mozilla yw'r corff ddim-am-elw y tu ôl i Firefox, y porwr arall gwreiddiol. Rydym yn creu cynnyrch a pholisi i gadw'r rhyngrwyd er gwasanaeth i bobl, nid elw.
+
+

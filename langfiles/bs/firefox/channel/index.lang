@@ -1,0 +1,190 @@
+## active ##
+## android_nightly_copy ##
+## firefox_channel_bug1387466 ##
+## firefox_title_meta_bug1345338 ##
+## firefox_title_meta_bug1357373 ##
+## nightly_description_bug1375100 ##
+## NOTE: url is https://www-demo1.allizom.org/firefox/channel/
+
+
+# Main page heading. In case the text is too hard to translate, here's an alternative text: "Take the future for a test run."
+;Take a browse on the wild side.
+Pretražujte na ivici.
+
+
+;Be among the first to explore future releases of Firefox for desktop, Android and iOS.
+Budite među prvima koji će istražiti buduća izdanja Firefoxa za desktop, Android i iOS.
+
+
+# Used in the navigation menu
+;Desktop
+Desktop {ok}
+
+
+# Used in the navigation menu
+;Android
+Android {ok}
+
+
+# Used in the navigation menu
+;iOS
+iOS {ok}
+
+
+;See something that isn’t working? Let us know.
+Vidite nešto što ne radi? Javite nam.
+
+
+;File a bug now
+Prijavite grešku sada
+
+
+;Tips for filing a bug
+Savjeti za prijavu greške
+
+
+;Take our latest experimental features for a spin and shape the future of Firefox.
+Probajte naše posljednje eksperimentalne funkcije za spin i oblikovanje budućnosti Firefoxa.
+
+
+;Learn more about Test Pilot
+Saznajte više o Test Pilot-u
+
+
+# HTML page title, on the Android page only.
+;Try New Features in a Pre-Release Android Browser | Firefox
+Isprobajte nove mogućnosti u beta verziji Android pretraživača | Firefox
+
+
+# String is obsolete. Do not remove.
+# HTML page title
+;Download and test future releases of Firefox for desktop, Android and iOS.
+Preuzmite i testirajte buduća izdanja Firefoxa za desktop, Android i iOS.
+
+
+# HTML Description, on the Android page only.
+;Experience cutting-edge features in a pre-release browser for Android: Firefox Beta and Firefox Nightly. Install now!
+Iskusite nove mogućnosti u beta verzijama pretraživača za Android: Firefox Beta i Firefox Nightly. Instalirajte ih odmah!
+
+
+# String is obsolete. Do not remove.
+# HTML Description, on the Android page only.
+;Experience cutting-edge features in a pre-release browser for Android: Firefox Beta, Firefox Aurora and Firefox Nightly. Install now!
+Iskusite nove mogućnosti u beta verzijama pretraživača za Android: Firefox Beta, Firefox Aurora i Firefox Nightly. Instalirajte ih odmah!
+
+
+# String is obsolete. Do not remove.
+# HTML Description
+;Download and test the latest Firefox for Android features with Aurora, Beta and Nightly builds.
+Preuzmite i testirajte posljednje Firefox za Android funkcije sa Aurora-om, Beta-om i Nightly izdanjima.
+
+
+;Try the latest Android features, before they get released to the rest of the world.
+Probajte posljednje Android funkcije, prije nego budu dostupne za ostatak svijeta.
+
+
+;All Languages and Builds
+Svi jezici i izdanja
+
+
+;Help determine what features will go into the next Firefox for Android.
+Pomozite da utvrdimo koje funkcije će ići u novi Firefox za Android.
+
+
+;Firefox Aurora automatically sends feedback to Mozilla.
+Firefox Aurora automatski šalje povratne informacije Mozilli.
+
+
+;Firefox Beta automatically sends feedback to Mozilla.
+Firefox Beta automatski šalje povratne informacije Mozilli.
+
+
+;<a rel="external" href="%(feedback)s">Give us feedback</a> to help us put the final tweaks on performance and functionality in a stable environment.
+<a rel="external" href="%(feedback)s">Dajte nam povratne informacije</a>da nam pomognete da stavimo konačna podešavanja na performanse i funkcionalnost u stabilnom okruženju.
+
+
+# HTML page title, on the desktop page only.
+;Try New Browser Features in Pre-Release Versions | Firefox
+Isprobajte nove mogućnosti pretraživača u beta verzijama | Firefox
+
+
+# HTML page description, on the desktop page only.
+;Experience cutting-edge browser features in pre-release versions: Firefox Developer Edition, Firefox Beta and Firefox Nightly. Download now!
+Iskusite nove mogućnosti u beta verzijama: Firefox Developer Edition, Firefox Beta i Firefox Nightly. Preuzmite ih sada!
+
+
+# String is obsolete. Do not remove.
+# HTML page description
+;Download and test the latest Firefox for desktop features with Developer Edition, Beta and Nightly builds.
+Preuzmite i testirajte posljednje Firefox za desktop funkcije sa Developer Edition, Beta i Nightly izdanjima.
+
+
+;Test about-to-be-released features in the most stable pre-release build.
+Isprobajte funkcije prije izdavanja u najstabilnijem beta izdanju.
+
+
+;All Languages and Platforms
+Svi jezici i platforme
+
+
+# String is obsolete. Do not remove.
+;All Languages and Builds (incl. Win 64)
+Svi jezici i osnove (uključujući Win 64)
+
+
+;Build, test, scale and more with the only browser built just for developers.
+Pravite, testirajte, poredajte i mnogo više sa jedinim pretraživačem napravljenim samo za programere.
+
+
+;Firefox Developer Edition automatically sends feedback to Mozilla.
+Firefox Developer Edition automatski šalje povratne informacije Mozilli.
+
+
+;Check out new Android features in their earliest stages. Enjoy at your own risk.
+Probajte nove Android funkcije u njihovim najranijim fazama. Uživajte na vlastitu odgovornost.
+
+
+;Get a sneak peek at our next generation web browser, and help us make it the best browser it can be: try Firefox Nightly.
+Zavirite u vaš web pretraživač sljedeće generacije i pomozite nam da ga učinimo najboljim pretraživačem ikada: isprobajte Firefox Nightly.
+
+
+# String is obsolete. Do NOT remove.
+;Test brand new features daily (or… nightly). Enjoy at your own risk.
+Testirajte potpuno nove mogućnosti svaki dan (ili… svaku noć). Uživajte na vlastitu odgovornost.
+
+
+;Firefox Nightly automatically sends feedback to Mozilla.
+Firefox Nightly automatski šalje povratne informacije Mozilli.
+
+
+;Nightly Blog
+Nightly blog
+
+
+# HTML page title, on the iOS page only.
+;Try New Features in a Pre-Release iOS Browser | Firefox
+Isprobajte nove mogućnosti u beta verziji iOS pretraživača | Firefox
+
+
+# HTML page description, on the iOS page only.
+# Don't translate TestFlight
+;Experience cutting-edge features in a pre-release browser for iOS via Apple’s TestFlight program. Install now!
+Iskusite nove mogućnosti u beta verziji pretraživača za iOS uz Apple-ov TestFlight program. Instalirajte sada!
+
+
+# String is obsolete. Do not remove.
+# HTML page description
+# Don't translate TestFlight
+;Test beta versions of Firefox for iOS via Apple’s TestFlight program and help make our mobile browser for iPhone, iPad and iPod touch even better.
+Testirajte probne verzije Firefoxa za iOS putem Apple's TestFlight programa i pomozite nam da napravimo naš mobilni pretraživač za iPhone, iPad, i iPod touch još boljim.
+
+
+# Don't translate TestFlight
+;Test beta versions of Firefox for iOS via Apple’s TestFlight program.
+Testirajte probne verzije Firefoxa za iOS putem Apple's TestFlight programa.
+
+
+;Sign up now
+Registrujte se sada
+
+

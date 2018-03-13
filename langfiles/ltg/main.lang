@@ -1,0 +1,811 @@
+;Navigation
+Navigaceja
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Pyrmslaidīna verseju nūlōdiešona
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Par
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Aplikacejas
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Naizsekōt
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Interešu paneļs
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Developer Edition {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Privātō porlyukōšona
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Vajag paleidzeibu?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Ziņas
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Izalosi naatkareigu porlyuku
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox ir nakomercials, nakorporativs, nasakompromiteits. Izalosut Firefox, tu naizalosi viņ porlyuku. Tu esi par personisku breiveibu.
+
+
+;Donate
+Zīdoj
+
+
+;Support
+Tehniskais atbolsts
+
+
+;Products
+Produkti
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Extensions
+
+
+;Add-ons
+Papyldynōjumi
+
+
+;About Us
+Par myusim
+
+
+;Labs
+Labs {ok}
+
+
+;skip to Navigation
+īt iz navigaceji
+
+
+;switch language
+pamaineit volūdu
+
+
+;Back to home page
+Acagrīzt uz sātys lopu
+
+
+;About Mozilla
+Par Mozilla
+
+
+;Get Involved
+Paleidzēt
+
+
+;Careers
+Karjera
+
+
+;Press Center
+Preses centrs
+
+
+;Contact Us
+Sazazynōt
+
+
+# Used in new footer to switch the language of the page
+;Language
+Volūda
+
+
+;Other languages:
+Cytas volūdas:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Lopys volūda:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d.%m.%Y
+
+
+;Legal
+Juridiska informaceja
+
+
+# Used as link in the footer
+;Cookies
+Seikdatnes
+
+
+;Legal Notices
+Juridiski paziņojumi
+
+
+;Privacy Policy
+Privātuma politika
+
+
+;Release Notes
+Laidīņa informaceja
+
+
+;Other Systems and Languages
+Cytas sistemas un volūdas
+
+
+;Close
+Aiztaisēt
+
+
+;(in English)
+(angļu volūdā)
+
+
+;Return to top
+Acagrīzt uz viersu
+
+
+;Features
+Īspiejas
+
+
+;Customize
+Damārōt
+
+
+;Download
+Nūlōdēt
+
+
+;Previous
+Īprīkšejō
+
+
+;Next
+Nōkuša
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+Megabaiti
+
+
+;FAQ
+FAQ {ok}
+
+
+;Videos
+Filmas
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Ja nav <a href="%s">nūrōdāts</a> sovaižōk, tod lopas saturs ir licenceits ar <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> licenci voi jaunōku jōs verseji.
+
+
+;Report Trademark Abuse
+Ziņōt par tierdznīceibas zeimes nalīteigu izmontōšonu
+
+
+;Free Upgrade
+Bezmoksas atjauninōšona
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Sekoj myusim:
+
+
+;Customize with Add-ons
+Damārōt ar papyldynōjumim
+
+
+;Learn More
+Vaira
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Vaira
+
+
+# Link used to play again an animation or a video
+;Replay
+Atbiļdēt
+
+
+;Watch the video
+Vērtīs filmu
+
+
+;Replay the video
+Vērtīs filmu nu jauna
+
+
+;Share the video
+Pazadalēt ar filmu
+
+
+;WebM format
+WebM formats
+
+
+;Ogg Theora format
+Ogg Theora formats
+
+
+;MPEG-4 format
+MPEG-4 formats
+
+
+;Mobile
+Mobilais formats
+
+
+;View Full Site
+Rōdēt vysu teiklavītu
+
+
+;Desktop
+Dators
+
+
+;Firefox for mobile
+Firefox kuļdinīkim
+
+
+;Email
+E-posts
+
+
+;Upgrade now
+Ņiuļa atjauninōt
+
+
+;Update now
+Ņiuļa atjaunōt
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Privātums
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Satura daļas ©1998–%(current_year)s godūs ir davīnōjuši dažaidi mozilla.org pazīdōtōji. Saturs ir pīejams saskaņā ar <a rel="license" href="%(url)s">Creative Commons licenci</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Satura daļas ©1998–%(current_year)s godūs ir davīnōjuši dažaidi mozilla.org pazīdōtōji. Saturs ir pīejams saskaņā ar <a href="%(url)s">Creative Commons licenci</a>.
+
+
+# Footer string
+;Contribute to this site
+Pazīdoj itai škārsteikla vītai
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Source code for this page
+
+
+# Top menu item
+;Mission
+Miseja
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Ekskurseja
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sinhronizēt
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Golda datora papyldynōjumi
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Android papyldynōjumi
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Apdares tēmas
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Atbolsts golda datoru lītōtōjim
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Atbolsts Android lītōtōjim
+
+
+;Releases
+Laidumi
+
+
+;Blog
+Blogs
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Sajem Mozilla jaunumus
+
+
+# share button for social networks
+;Share
+Pasadalēt
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla Twitter teiklā
+
+
+# footer link
+;Firefox on Twitter
+Firefox Twitter teiklā
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla Facebook teiklā
+
+
+# footer link
+;Firefox on Facebook
+Firefox Facebook teiklā
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Forumi
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patenti
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Vadeiba
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Valdeišona
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Viesture
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Myusu produkti
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Programmaturas izstrōde un cytas inovācejas paleidz myusu misijai.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Nōc par breivprōteigū voi zīdoj kap paleidzietu vysaidūs dorbūs.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Izvielne
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Uzticams tev, tovam privātumam un breivam škārsteiklam
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Lyudzu īslēdz JavaScript kap lopa izavārtu pareizi.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Firefox īspiejas
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Firefox paleidzeiba
+
+
+;January
+Janvars
+
+
+;February
+Pebraļs
+
+
+;March
+Marts
+
+
+;April
+Apreļs
+
+
+;May
+Maijs
+
+
+;June
+Juņs
+
+
+;July
+Juļs
+
+
+;August
+Augusts
+
+
+;September
+Septembrs
+
+
+;October
+Oktobrs
+
+
+;November
+Novembrs
+
+
+;December
+Decembrs
+
+
+;<abbr>Jan</abbr>
+<abbr>Jan</abbr> {ok}
+
+
+;<abbr>Feb</abbr>
+<abbr>Peb</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Mar</abbr> {ok}
+
+
+;<abbr>Apr</abbr>
+<abbr>Apr</abbr> {ok}
+
+
+;<abbr>May</abbr>
+<abbr>Mai</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Jun</abbr> {ok}
+
+
+;<abbr>Jul</abbr>
+<abbr>Jul</abbr> {ok}
+
+
+;<abbr>Aug</abbr>
+<abbr>Aug</abbr> {ok}
+
+
+;<abbr>Sep</abbr>
+<abbr>Sep</abbr> {ok}
+
+
+;<abbr>Oct</abbr>
+<abbr>Okt</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Nov</abbr> {ok}
+
+
+;<abbr>Dec</abbr>
+<abbr>Dec</abbr> {ok}
+
+
+;Congrats. You’re up to date!
+Apsveicam! Ņiuļa tev ir jaunōkō verseja.
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Formatēt
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Teksts
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Eva kai! Porzalīcynoj, ka esi pareizi pīrakstiejs e-posta adresi.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Es asu uz mīru, ka Mozilla reikojās ar munu informaceji, kai nūleigts <a href="%s">itymā Privātuma paziņōjumā</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Zyni vysus jaunumus <br> par Firefox.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Sajimt Firefox jaunumus
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+TOVA E-POSTA ADRESE
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Pīzareģistēt parreizi
+
+
+# Old newsletter subscription Button
+;Sign me up
+Pīrakstēt mani
+
+
+;Select country
+Vaļsts
+
+
+;Available Languages
+Pīejamōs volūdas
+
+
+;We will only send you Mozilla-related information.
+Mes izsyutēsim viņ ar Mozilla saisteitu informaceji.
+
+
+;Thanks!
+Paļdis!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+
+
+;Read all about it in our <span>newsletter</span>
+Par vysu vaira var skaitēt <span>jaunumūs</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Pazaroksti uz ikmieneša jaunumu lopu un byusi informeits par Mozilla jaunumim, padūmim un viļteibom, kuras ļaus lītōt Firefox ar pylnu spāku. Mes uzskotam, ka tys ir lobōkais saziņas veids.
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + tu
+
+
+;Get Firefox tips, tricks, news and more
+Sajam Firefox pamōceibas, trikus, jaunumus un vāļ vysa kū
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Teikla inovacejis
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Interneta veseleiba
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Paļdis, ka izaraudzieji Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Mozilla Firefox škārsteikla pōrlyuks
+
+
+# Link in the footer
+;Android Browser
+Porlyuks deļ Android
+
+
+# Link in the footer
+;iOS Browser
+Porlyuks deļ iOS
+
+
+# Link in the footer
+;Focus Browser
+Focus porlyuks
+
+
+# Link in the footer
+;Desktop Browser
+Porlyuks golda datoram
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer laidīni
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Nūlōdej Firefox porlyuku
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Golda datora porlyuks deļ Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Mobile Browser for Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Mobile Browser for iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Your Firefox is out-of-date.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Get the most recent version to keep browsing securely.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Update Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+See what’s new with Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Show More
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Show Less
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Choose how you want to share this data in Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Choose…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Show All
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Hide All
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Developer Hub
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Research
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Virtual Reality
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Games
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Documentation
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Hacks blog
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+
+

@@ -1,0 +1,811 @@
+;Navigation
+Meni
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Prenosi razvojnih različic
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Predstavitev
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Aplikacije
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Brez sledenja
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Nadzorna plošča zanimanj
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Developer Edition {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Zasebno brskanje
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Potrebujete pomoč?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Novice
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Izberite neodvisen brskalnik
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox je neprofiten, nekorporacijski in nepokvarjen. Izbira Firefoxa ni samo izbira brskalnika. Je tudi glas za osebno svobodo.
+
+
+;Donate
+Donirajte
+
+
+;Support
+Podpora
+
+
+;Products
+Izdelki
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Razširitve
+
+
+;Add-ons
+Dodatki
+
+
+;About Us
+O nas
+
+
+;Labs
+Laboratoriji
+
+
+;skip to Navigation
+skoči na meni
+
+
+;switch language
+zamenjaj jezik
+
+
+;Back to home page
+Nazaj na domačo stran
+
+
+;About Mozilla
+O Mozilli
+
+
+;Get Involved
+Pridružite se
+
+
+;Careers
+Zaposlitev
+
+
+;Press Center
+Novinarsko središče
+
+
+;Contact Us
+Pišite nam
+
+
+# Used in new footer to switch the language of the page
+;Language
+Jezik
+
+
+;Other languages:
+Drugi jeziki:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Jezik strani:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d. %m. %Y
+
+
+;Legal
+Pravno obvestilo
+
+
+# Used as link in the footer
+;Cookies
+Piškotki
+
+
+;Legal Notices
+Pravna obvestila
+
+
+;Privacy Policy
+Politika zasebnosti
+
+
+;Release Notes
+Opombe k izdaji
+
+
+;Other Systems and Languages
+Drugi sistemi in jeziki
+
+
+;Close
+Zapri
+
+
+;(in English)
+(v angleščini)
+
+
+;Return to top
+Nazaj na vrh
+
+
+;Features
+Značilnosti
+
+
+;Customize
+Prilagodi
+
+
+;Download
+Prenesi
+
+
+;Previous
+Nazaj
+
+
+;Next
+Naprej
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+Megabajtov
+
+
+;FAQ
+Pogosta vprašanja
+
+
+;Videos
+Posnetki
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Če ni <a href="%s">navedeno</a> drugače, je vsebina te spletne strani na voljo pod dovoljenjem <br/><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> ali pod katerokoli novejšo različico.
+
+
+;Report Trademark Abuse
+Obvestite nas o zlorabi trgovske znamke
+
+
+;Free Upgrade
+Brezplačna posodobitev
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Sledite nam:
+
+
+;Customize with Add-ons
+Prilagoditev z dodatki
+
+
+;Learn More
+Več o tem
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Več o tem
+
+
+# Link used to play again an animation or a video
+;Replay
+Ponovi
+
+
+;Watch the video
+Oglejte si posnetek
+
+
+;Replay the video
+Ponovno predvajaj
+
+
+;Share the video
+Deli video
+
+
+;WebM format
+Zapis WebM
+
+
+;Ogg Theora format
+Zapis Ogg Theora
+
+
+;MPEG-4 format
+Zapis MPEG-4
+
+
+;Mobile
+Mobilniki
+
+
+;View Full Site
+Prikaz celotne strani
+
+
+;Desktop
+Namizje
+
+
+;Firefox for mobile
+Firefox za mobilnike
+
+
+;Email
+E-pošta
+
+
+;Upgrade now
+Nadgradi zdaj
+
+
+;Update now
+Posodobi zdaj
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Zasebnost
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Deli vsebine so avtorsko zaščiteni ©1998–%(current_year)s s strani sodelavcev mozilla.org. Vsebina je na voljo pod pogoji <a rel="license" href="%(url)s">Creative Commons</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Deli vsebine so avtorsko zaščiteni ©1998–%(current_year)s s strani sodelavcev mozilla.org. Vsebina je na voljo pod pogoji <a href="%(url)s">Creative Commons</a>.
+
+
+# Footer string
+;Contribute to this site
+Prispevajte k tej strani
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Izvorna koda te strani
+
+
+# Top menu item
+;Mission
+Poslanstvo
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Predstavitev
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sinhronizacija
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Dodatki za namizje
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Dodatki za Android
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Teme
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Podpora za namizje
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Podpora za Android
+
+
+;Releases
+Izdaje
+
+
+;Blog
+Blog {ok}
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Ostanite v stiku
+
+
+# share button for social networks
+;Share
+Delite
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla na Twitterju
+
+
+# footer link
+;Firefox on Twitter
+Firefox na Twitterju
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla na Facebooku
+
+
+# footer link
+;Firefox on Facebook
+Firefox na Facebooku
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Forumi
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patenti
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Vodstvo
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Vodenje
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Zgodovina
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Naši izdelki
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Programska oprema in druge inovacije za doseganje našega poslanstva.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Postanete lahko prostovoljni sodelavec na številnih področjih.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Meni
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Predan vam, vaši zasebnosti in odprtemu spletu
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Za pravilen prikaz strani vključite JavaScript.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Značilnosti Firefoxa
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Pomoč za Firefox
+
+
+;January
+Januar
+
+
+;February
+Februar
+
+
+;March
+Marec
+
+
+;April
+April {ok}
+
+
+;May
+Maj
+
+
+;June
+Junij
+
+
+;July
+Julij
+
+
+;August
+Avgust
+
+
+;September
+September {ok}
+
+
+;October
+Oktober
+
+
+;November
+November {ok}
+
+
+;December
+December {ok}
+
+
+;<abbr>Jan</abbr>
+<abbr>jan</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>feb</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>mar</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>apr</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>maj</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>jun</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>jul</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>avg</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>sep</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>okt</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>nov</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>dec</abbr>
+
+
+;Congrats. You’re up to date!
+Čestitke! Uporabljate najnovejšo različico.
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Oblika
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Besedilo
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Ups! Prepričajte se, da je e-poštni naslov pravilen.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Strinjam se, da Mozilla obdela te podatke, kot je razloženo v <a href="%s">obvestilu o zasebnosti</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Ostanite na tekočem<br> s Firefoxom.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Novice o Firefoxu
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+VAŠA E-POŠTA
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Prijava
+
+
+# Old newsletter subscription Button
+;Sign me up
+Prijavi me
+
+
+;Select country
+Izberite državo
+
+
+;Available Languages
+Jeziki na razpolago
+
+
+;We will only send you Mozilla-related information.
+Pošiljali vam bomo samo informacije, ki se tičejo Mozille.
+
+
+;Thanks!
+Hvala!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Če v preteklosti še niste potrdili naročnine na Mozillino okrožnico, boste morda to morali storiti zdaj. Poiščite našo pošto v poštnem predalu ali mapi z neželeno pošto.
+
+
+;Read all about it in our <span>newsletter</span>
+Vse to in še več v naši <span>okrožnici</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Naročite se na mesečne novice in ostanite na tekočem z Mozillo. Pošiljali vas bomo tudi najnovejše nasvete in zvijače, da boste imeli čim več od Firefoxa. Ostanite v stiku z nami!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> in vi
+
+
+;Get Firefox tips, tricks, news and more
+Nasveti, zvijače in novice o Firefoxu
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Spletne inovacije
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Zdravje interneta
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Hvala, da ste izbrali Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Spletni brskalnik Mozilla Firefox
+
+
+# Link in the footer
+;Android Browser
+Brskalnik za Android
+
+
+# Link in the footer
+;iOS Browser
+Brskalnik za iOS
+
+
+# Link in the footer
+;Focus Browser
+Brskalnik Focus
+
+
+# Link in the footer
+;Desktop Browser
+Namizni brskalnik
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer Edition {ok}
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Prenesite spletni brskalnik Firefox
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Namizni brskalnik za Windows, Mac, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Mobilni brskalnik za Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Mobilni brskalnik za iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Vaš Firefox je zastarel.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Prenesite najnovejšo različico in nadaljujte z varnim brskanjem.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Posodobi Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Kaj je novega v Firefoxu
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Hitrejši, bolj odziven in močno zaseben. Oglejte si najnovejše iz brskalnika, ki vam krije hrbet.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Prikaži več
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Prikaži manj
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Izberite, kako želite v Firefoxu deliti te podatke.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Izberi …
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Prikaži vse
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Skrij vse
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Središče za razvijalce
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Raziskave
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Navidezna resničnost
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Igre
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Dokumentacija
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Blog Hacks
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Prenesite brezplačni brskalnik Mozilla Firefox. Ustvarila ga je globalna neprofitna organizacija, ki želi, da imajo posamezniki priložnost nadzora v spletu. Prenesite si Firefox za Windows, macOS, Linux, Android ali iOS!
+
+

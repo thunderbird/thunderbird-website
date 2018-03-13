@@ -1,0 +1,811 @@
+;Navigation
+வழிசெலுத்தல்
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+முன்-வெளியீட்டு பதிவிறக்கங்கள்
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+பற்றி
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+பயன்பாடுகள்
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+தடமறிய வேண்டாம்
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+விருப்பமான பக்கம்
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+உருவாக்குநர் பதிப்பு
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+தனிப்பட்ட உலாவல்
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+உதவி தேவையா?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+செய்திகள்
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+தனித்த உலாவியை தேர்ந்தெடு
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+பயர்பாக்ஸ் என்பது இலாப-நோக்கமற்றது, நிறுவனம்-அல்ல, சமரசம்-அற்றது. பயர்பாக்ஸை தேர்ந்தெடுப்பது என்பது உலாவியைத் தேர்ந்தெடுப்பது போன்றது அல்ல. இதுத் தனி மனித சுதந்திரத்திற்கான வாக்கு.
+
+
+;Donate
+நன்கொடை
+
+
+;Support
+சேவை
+
+
+;Products
+தயாரிப்புகள்
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+நீட்சிகள்
+
+
+;Add-ons
+கூடுதல் இணைப்புகள்
+
+
+;About Us
+எங்களைப் பற்றி
+
+
+;Labs
+ஆய்வகங்கள்
+
+
+;skip to Navigation
+திசையமைப்புக்கு தவிர்த்தல்
+
+
+;switch language
+மொழி மாற்றுதல்
+
+
+;Back to home page
+மீண்டும் முகப்பு பக்கத்திற்கு
+
+
+;About Mozilla
+Mozilla பற்றி
+
+
+;Get Involved
+பங்குபெறுதல்
+
+
+;Careers
+வேலைவாய்ப்புகள்
+
+
+;Press Center
+பத்திரிக்கை மையம்
+
+
+;Contact Us
+எங்களை தொடர்பு கொள்ள
+
+
+# Used in new footer to switch the language of the page
+;Language
+மொழி
+
+
+;Other languages:
+வேறு மொழிகள்:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+பக்க மொழி:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%Y-%m-%d {ok}
+
+
+;Legal
+சட்டபூர்வ
+
+
+# Used as link in the footer
+;Cookies
+நினைவிகள்
+
+
+;Legal Notices
+சட்ட அறிவிப்புகள்
+
+
+;Privacy Policy
+தனியுரிமை கொள்கை
+
+
+;Release Notes
+வெளியீட்டு அறிக்கை
+
+
+;Other Systems and Languages
+வேறு கணினிகள் மற்றும் மொழிகள்
+
+
+;Close
+மூடுதல்
+
+
+;(in English)
+(ஆங்கிலத்தில்)
+
+
+;Return to top
+மேலே திரும்புதல்
+
+
+;Features
+அம்சங்கள்
+
+
+;Customize
+தனிபயனாக்கு
+
+
+;Download
+பதிவிறக்குங்கள்
+
+
+;Previous
+முந்தைய
+
+
+;Next
+அடுத்து
+
+
+# MegaBytes abbreviation
+;MB
+மெ.பை.
+
+
+;MegaBytes
+மெகாபைட்ஸ்
+
+
+;FAQ
+கேள்விகள்
+
+
+;Videos
+வீடியோக்கள்
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Except  where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+
+
+;Report Trademark Abuse
+வணிக முத்திரை மோசடியை அறிக்கையிடுங்கள்
+
+
+;Free Upgrade
+இலவச மேம்படுத்தல்
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+எங்களை தொடர:
+
+
+;Customize with Add-ons
+கூடுதல் இணைப்புகளுடன் தனிபயனாக்க
+
+
+;Learn More
+மேலும் அறிய
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+மேலும் அறிய
+
+
+# Link used to play again an animation or a video
+;Replay
+மீட்டுயக்கு
+
+
+;Watch the video
+வீடியோவைப் பார்க்கவும்
+
+
+;Replay the video
+இக்காணொளியை மீள் இயக்கு
+
+
+;Share the video
+இக்காணொளியை பகிர்
+
+
+;WebM format
+WebM வடிவம்
+
+
+;Ogg Theora format
+Ogg Theora வடிவம்
+
+
+;MPEG-4 format
+MPEG-4 வடிவம்
+
+
+;Mobile
+மொபைல்
+
+
+;View Full Site
+முழு தளத்தை பார்க்கவும்
+
+
+;Desktop
+கணினி
+
+
+;Firefox for mobile
+கைபேசிக்கான Firefox
+
+
+;Email
+மின்னஞ்சல்
+
+
+;Upgrade now
+இப்போதே மேம்படுத்து
+
+
+;Update now
+இப்போதே புதுப்பி
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+தனியுரிமை
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+mozilla.org தளத்தில் உள்ள சில உள்ளடக்கங்கள் தனித்தனி பங்களிப்பாளர்களால் வழங்கப்பட்டது ©1998–%(current_year)s. உள்ளடக்கங்கள் <a rel="license" href="%(url)s"> கிரியேடிவ் காமன்ஸ் உரிமத்தின்</a> கீழ் கிடைக்கும்.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+mozilla.org இல் உள்ள சில உள்ளடக்கங்கள் தனித்தனி பங்களிப்பாளர்களால் வழங்கப்பட்டது ©1998–%(current_year)s. உள்ளடக்கங்கள் <a href="%(url)s"> கிரியேடிவ் காமன்ஸ் உரிமத்தின் கீழ் உள்ளடக்கங்கள் கிடைக்கும்</a>.
+
+
+# Footer string
+;Contribute to this site
+இந்த தளத்திற்க்கு பங்களித்திடுங்கள்
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+இந்தப் பக்கத்தின் மூலநிரல்
+
+
+# Top menu item
+;Mission
+தன்னேற்புத் திட்டம்
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+உலா
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+ஒத்திசை
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+திரைகணினிக்கான கூடுதல் இணைப்புகள்
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+ஆண்ட்ராய்டு கூடுதல்-இணைப்புகள்
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+தோற்றங்கள்
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+திரைக்கணினிக்கான ஆதரவு
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+ஆண்ட்ராய்டு ஆதரவு
+
+
+;Releases
+வெளியீடுகள்
+
+
+;Blog
+வலைப்பூ
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+மொசில்லா மேம்பாடுகளை பெறவும்
+
+
+# share button for social networks
+;Share
+பகிர்க
+
+
+# footer link
+;Mozilla on Twitter
+டிவிட்டரில் மொசில்லா
+
+
+# footer link
+;Firefox on Twitter
+டிவிட்டரில் பயர்பாக்ஸ்
+
+
+# footer link
+;Mozilla on Facebook
+முகநூலில் மொசில்லா
+
+
+# footer link
+;Firefox on Facebook
+முகநூலில் பயர்பாக்ஸ்
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+இணையவழி மன்றங்கள்
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+காப்புரிமைகள்
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+தலமைத்துவம்
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+ஆளுமை
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+வரலாறு
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+எங்களுடைய தயாரிப்புகள்
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+மென்பொருள் மற்றும் மற்ற கண்டுபிடிப்புகள்எங்களின் நோக்கத்தை முன்னெடுத்து செல்ல அடித்தளமிடுகிறது.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+பல திட்டங்களில் நீங்கள் ஒரு தன்னார்வ பங்களிப்பாளராக வேண்டும்.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+மெனு
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+ஒரு திறந்த இணையம் உங்களுக்கும் உங்களுடைய தனியுரிமைக்கும் உறுதியளிக்கிறது
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+இப்பக்கத்தை சரியாகப் பார்க்க JavaScript ஐ செயலாக்கவும்.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Firefox அம்சங்கள்
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Firefox உதவி
+
+
+;January
+சனவரி
+
+
+;February
+பிப்ரவரி
+
+
+;March
+மார்ச்
+
+
+;April
+ஏப்ரல்
+
+
+;May
+மே
+
+
+;June
+சூன்
+
+
+;July
+சூலை
+
+
+;August
+ஆகஸ்ட்
+
+
+;September
+செப்டம்பர்
+
+
+;October
+அக்டோபர்
+
+
+;November
+நவம்பர்
+
+
+;December
+டிசம்பர்
+
+
+;<abbr>Jan</abbr>
+<abbr>சன</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>பிப்</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>மார்</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>ஏப்</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>மே</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>சூன்</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>சூலை</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>ஆக</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>செப்</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>அக்</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>நவ</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>டிச</abbr>
+
+
+;Congrats. You’re up to date!
+வாழ்த்துக்கள். நீங்கள் புதுப்பித்த நிலையில் உள்ளீர்கள்!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+வடிவம்
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+உரை
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+மன்னிக்கவும்! ஒரு சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+<a href="%s">தனிமையுரிமை அறிகையில்</a> குறிப்பிட்டபடி என் சுய தகவல்களைக் கையாள மொசில்லாவிற்கு நான் விருப்பம் தெரிவிக்கிறேன்
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+பயர்பாக்சின் அனைத்து நிகழ்வுகளிலும்<br> இணைந்திருங்கள்.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Firefox செய்தியைப் பெறுக
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+உங்கள் மின்னஞ்சல் இங்கே
+
+
+# Newsletter subscription Button
+;Sign Up Now
+இப்பொழுதே பதிவுசெய்யுங்கள்
+
+
+# Old newsletter subscription Button
+;Sign me up
+என்னைச் சேருங்கள்
+
+
+;Select country
+நாட்டைத் தேர்வுசெய்யவும்
+
+
+;Available Languages
+கிடைக்கும் மொழிகள்
+
+
+;We will only send you Mozilla-related information.
+உங்களுக்கு மொசில்லா சம்பந்தப்பட்ட தகவல்களை மட்டுமே அனுப்புவோம்.
+
+
+;Thanks!
+நன்றி வணக்கம்!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+முன்னதாக மொசில்லா பற்றிய செய்திகளைப் பெறுவதற்கான சந்தாப்படுத்தலை உறுதிப்படுத்தாமல் இருந்தால், உங்கள் மின்னஞ்சல் ஸ்பேம் அடைவில் உள்ளதா எனச்சோதித்துப் பார்க்கவும்.
+
+
+;Read all about it in our <span>newsletter</span>
+அதைப் பற்றிய அனைத்தையும் எங்கள் <span>செய்திமடலில்</span> வாசிக்கவும்
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+மாதாந்திர புதுப்பிப்புகளுக்கு சந்தா பெற்று Mozilla செய்திகளை உடனுக்குடன் தெரிந்துவைத்துக்கொள்ளுங்கள், அதில் உங்கள் பயர்பாக்ஸ் உலாவியைச் சிறப்பாக எப்படி பயன்படுத்துவது என்பது குறித்த உதவிக்குறிப்புகள் மற்றும் நுணுக்கங்களும் அடங்கும். இது தான் எங்களுக்குத் தொடர்பு கொள்ள சிறந்த வழி!
+
+
+;<span>Firefox</span> + You
+<span>பயர்பாக்சும்</span> + நீங்களும்
+
+
+;Get Firefox tips, tricks, news and more
+பயர்பாக்ஸ் குறிப்புகள் உத்திகள் செய்திகள் என பலவற்றைப் பெறுக
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+வலை புதுமைகள்
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+இணைய சுகாதாரம்
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+பயர்பாக்சை தேர்வு செய்தமைக்கு நன்றி!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Mozilla Firefox வலை உலாவி
+
+
+# Link in the footer
+;Android Browser
+ஆண்ட்ராய்டு உலாவி
+
+
+# Link in the footer
+;iOS Browser
+iOS உலாவி
+
+
+# Link in the footer
+;Focus Browser
+போக்கசு உலாவி
+
+
+# Link in the footer
+;Desktop Browser
+மேசைக்கணினி உலாவி
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+பீட்டா, இராக்கால, உருவாக்குநர் பதிப்பு
+
+
+# Link in the footer
+;Download Firefox Web Browser
+பயர்பாக்ஸ் வலை உலாவியை பதிவிறக்கம் செய்யவும்
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+மேக், விண்டோஸ், லினக்சிற்கான பணித்திரை உலாவி
+
+
+# Link in the footer
+;Mobile Browser for Android
+ஆண்ட்ராய்டிற்கான கைப்பேசி உலாவி
+
+
+# Link in the footer
+;Mobile Browser for iOS
+iOS இயங்குதளத்திற்கான கைப்பேசி உலாவி
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+உங்கள் பயர்பாக்சு காலாவதியானது.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+பாதுகாப்பாக உலாவுவதைத் தொடர சமீபத்திய பதிப்பைப் பெறவும்.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+பயர்பாக்சைப் புதுப்பிக்கவும்
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+பயர்பாக்ஸில் புதியவை என்னவென்று காணுங்கள்
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+விரைவானது, அதிகம் பதிலளிக்கக்கூடிய மற்றும் சக்திவாய்ந்த தனிமை. உங்களுக்கு பக்கபலமாக இருக்கும் உலாவியின் சமீபத்திய அம்சங்களைப் பார்க்கவும்.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+மேலும் காட்டு
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+குறைவாகக் காண்பி
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+நீங்கள் இந்த தரவைப் பயர்பாக்சுடன் எப்படி பகிர்கிறீர்கள் என்று தேர்ந்தெடுக்கவும்.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+தேர்ந்தெடு…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+அனைத்தையும் காட்டு
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+அனைத்தையும் மறை
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+உருவாக்குநர் மையம்
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+ஆய்வு
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+மெய் நிகர்
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+விளையாட்டுகள்
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+ஆவணமாக்கம்
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+ஹேக்ஸ் வலைப்பூ
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+இலவசமான இணைய உலாவி, மொசில்லா பயர்பாக்ஸை பதிவிறக்கு. பயர்பாக்ஸ் தனிநபர் கட்டுப்பாடுகளை இணையத்தில் வைத்திருக்க அர்பணிக்கப்பட்ட ஒரு சர்வதேச இலாப நோக்கமற்ற நிறுவனத்தால் உருவாக்கப்பட்டது. விண்டோஸ், macOS, இலினக்சு, Android மற்றும் iOS இயங்குதளங்களுக்கான பயர்பாக்ஸை இன்றே பெறுங்கள்!
+
+

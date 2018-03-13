@@ -1,0 +1,811 @@
+;Navigation
+ການນຳທາງ
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+ດາວໂຫລດລຸ້ນອອກກ່ອນຕົວຈິງ
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+ກ່ຽວກັບ
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+ແອັບ
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+ຢ່າຕິດຕາມ
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+ແດສ໌ບອດທີ່ຫນ້າສົນໃຈ
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+ລຸ້ນສຳລັບນັກພັດທະນາ
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+ການທ່ອງເວັບແບບສ່ວນຕົວ
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+ຕ້ອງການຄວາມຊ່ວຍເຫລືອບໍ?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+ຂ່າວ
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+ເລືອກບຣາວເຊີທີ່ມີຄວາມເປັນອິດສະລະ
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox ບໍ່ສະແຫວງຫາຜົນກຳໄລ, ບໍ່ແມ່ນທຸລະກິດ, ບໍ່ມີທາງຍົກເລີກ. ການເລືອກ Firefox ບໍ່ແມ່ນແຕ່ພຽງເລືອກບາວເຊີ. ມັນເປັນການເລືອກອິດສະຫຼະພາບສ່ວນບຸກຄົນ.
+
+
+;Donate
+ບໍລິຈາກ
+
+
+;Support
+ສະຫນັບສະຫນູນ
+
+
+;Products
+ຜະລິດຕະພັນ
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+ສ່ວນເສີມ
+
+
+;Add-ons
+Add-ons {ok}
+
+
+;About Us
+ກ່ຽວກັບພວກເຮົາ
+
+
+;Labs
+ແລັບ
+
+
+;skip to Navigation
+ຂ້າມໄປຫາການນຳທາງ
+
+
+;switch language
+ປ່ຽນພາສາ
+
+
+;Back to home page
+ກັບໄປຫນ້າຫລັກ
+
+
+;About Mozilla
+ກ່ຽວກັບ Mozilla
+
+
+;Get Involved
+ເຂົ້າມາມີສ່ວນຮ່ວມ
+
+
+;Careers
+ສະຫມັກວຽກ
+
+
+;Press Center
+ສູນຂ່າວ
+
+
+;Contact Us
+ຕິດຕໍ່ພວກເຮົາ
+
+
+# Used in new footer to switch the language of the page
+;Language
+ພາສາ
+
+
+;Other languages:
+ພາສາອື່ນໆ:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+ພາສາຂອງຫນ້າ:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d-%m-%Y
+
+
+;Legal
+ຖືກກົດຫມາຍ
+
+
+# Used as link in the footer
+;Cookies
+ຄຸກກີ
+
+
+;Legal Notices
+ແຈ້ງການກ່ຽວກັບກົດຫມາຍ
+
+
+;Privacy Policy
+ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ
+
+
+;Release Notes
+ບັນທຶກປະຈຳລຸ້ນ
+
+
+;Other Systems and Languages
+ລະບົບ ແລະ ພາສາອື່ນໆ
+
+
+;Close
+ປິດ
+
+
+;(in English)
+(ໃນ ພາສາອັງກິດ)
+
+
+;Return to top
+ກັບໄປດ້ານເທິງ
+
+
+;Features
+ຄຸນລັກສະນະ
+
+
+;Customize
+ການປັບແຕ່ງ
+
+
+;Download
+ດາວໂຫລດ
+
+
+;Previous
+ກ່ອນຫນ້ານີ້
+
+
+;Next
+ຕໍ່ໄປ
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+MegaBytes {ok}
+
+
+;FAQ
+ຄຳຖາມທີ່ມີຄົນຖາມເລື້ອຍໆ
+
+
+;Videos
+ວີດີໂອ
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+
+
+;Report Trademark Abuse
+ລາຍງານເຄື່ອງໝາຍການຄ້າທີ່ຜິດຈຸດປະສົງ
+
+
+;Free Upgrade
+ຟຣີອັບເກດ
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+ຕິດຕາມພວກເຮົາໄດ້ໃນ:
+
+
+;Customize with Add-ons
+ປັບແຕ່ງດ້ວຍ Add-ons
+
+
+;Learn More
+ຮຽນຮູ້ເພີ່ມເຕີມ
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+ຮຽນຮູ້ເພີ່ມເຕີມ
+
+
+# Link used to play again an animation or a video
+;Replay
+ຫຼິ້ນຊໍ້າ
+
+
+;Watch the video
+ເບິງວິດີໂອ
+
+
+;Replay the video
+ຫຼິ້ນວິດີໂອຊໍ້າ
+
+
+;Share the video
+ແບ່ງປັນວິດີໂອ
+
+
+;WebM format
+ຮູບແບບ WebM
+
+
+;Ogg Theora format
+ຮູບແບບ Ogg Theora
+
+
+;MPEG-4 format
+ຮູບແບບ MPEG-4
+
+
+;Mobile
+ໂທລະສັບມືຖື
+
+
+;View Full Site
+ເບິ່ງເຕັມຈໍ
+
+
+;Desktop
+ເດສກ໌ທັອບ
+
+
+;Firefox for mobile
+Firefox ສຳລັບໂທລະສັບ
+
+
+;Email
+ອີເມລ໌
+
+
+;Upgrade now
+ອັບເກດຕອນນີ້
+
+
+;Update now
+ອັບເດດຕອນນີ້
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+ຄວາມເປັນສ່ວນໂຕ
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+
+
+# Footer string
+;Contribute to this site
+ປະກອບສ່ວນເຂົ້າໃນເວັບໄຊທນີ້
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Source code ສຳລັບຫນ້ານີ້
+
+
+# Top menu item
+;Mission
+ພາລະກິດ
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+ທ່ຽວຊົມ
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sync {ok}
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Add-ons ສຳລັບເດສກ໌ທັອບ
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Add-ons ສຳລັບ Android
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+ເທມ
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+ການສະໜັບສະໜູນ Desktop
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+ການສະໜັບສະໜູນ Android
+
+
+;Releases
+ລຸ້ນທີ່ອອກ
+
+
+;Blog
+ບລັອກ
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+ຮັບອັບເດດ Mozilla
+
+
+# share button for social networks
+;Share
+ແບ່ງປັນ
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla ໃນ Twitter
+
+
+# footer link
+;Firefox on Twitter
+Firefox ໃນ Twitter
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla ໃນ Facebook
+
+
+# footer link
+;Firefox on Facebook
+Firefox ໃນ Facebook
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+ຟໍລຳ
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+ສິດທິບັດ
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+ຄວາມເປັນຜູ່ນຳ
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+ການດູແລຄວບຄຸມ
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+ປະຫວັດ
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+ຜະລິດຕະພັນຂອງພວກເຮົາ
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Software and other innovations designed to advance our mission.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Become a volunteer contributor in a number of different areas.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+ເມນູ
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Committed to you, your privacy and an open Web
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Please turn on JavaScript to display this page correctly.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+ຄວາມສາມາດຂອງ Firefox
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+ການໃຫ້ຄວາມຊ່ວຍເຫຼືອຂອງ Firefox
+
+
+;January
+ມັງກອນ
+
+
+;February
+ກຸມພາ
+
+
+;March
+ມີນາ
+
+
+;April
+ເມສາ
+
+
+;May
+ພຶດສະພາ
+
+
+;June
+ມິຖຸນາ
+
+
+;July
+ກໍລະກົດ
+
+
+;August
+ສິງຫາ
+
+
+;September
+ກັນຍາ
+
+
+;October
+ຕຸລາ
+
+
+;November
+ພະຈິກ
+
+
+;December
+ທັນວາ
+
+
+;<abbr>Jan</abbr>
+<abbr>ມັງກອນ</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>ກຸມພາ</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>ມີນາ</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>ເມສາ</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>ພຶດສະພາ</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>ມິຖຸນາ</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>ກໍລະກົດ</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>ສິງຫາ</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>ກັນຍາ</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>ຕຸລາ</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>ພະຈິກ</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>ທັນວາ</abbr>
+
+
+;Congrats. You’re up to date!
+ຍິນດີ. ເຈົ້າທັນສະໄໝແລ້ວ!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+ຮູບແບບ
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+ຂໍ້ຄວາມ
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Whoops! Be sure to enter a valid email address.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+ຂ້ອຍອະນຸຍາດໃຫ້ Mozilla ຮອງຮັບຂໍ້ມູນຂອງຂ້ອຍຕາມທີ່ໄດ້ຮ່າງໄວ້ຢູ່ໃນ <a href="%s">ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+ຮັກສາໄວ້ກັບ <br> Firefox ທຸກຢ່າງ.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+ຮັບຂ່າວຈາກ Firefox
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+ປ້ອນອີເມລຂອງທ່ານໃສ່ນີ້
+
+
+# Newsletter subscription Button
+;Sign Up Now
+ລົງທະບຽນດຽວນີ້
+
+
+# Old newsletter subscription Button
+;Sign me up
+ລົງທະບຽນ
+
+
+;Select country
+ເລືອກປະເທດ
+
+
+;Available Languages
+ພາສາທີ່ມີຢູ່
+
+
+;We will only send you Mozilla-related information.
+ພວກເຮົາຈະສົ່ງສະເພາະຂໍ້ມູນຂ່າວສານທີ່ກ່ຽວຂ້ອງກັບ Mozilla ເທົ່ານັ້ນ.
+
+
+;Thanks!
+ຂອບໃຈ!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+
+
+;Read all about it in our <span>newsletter</span>
+Read all about it in our <span>newsletter</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + ເຈົ້າ
+
+
+;Get Firefox tips, tricks, news and more
+Get Firefox tips, tricks, news and more
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+ນະວັດຕະກຳເວັບ
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+ສຸຂະພາບຂອງອິນເຕີເນັດ
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+ຂອບໃຈທີ່ເລືອກນຳໃຊ້ Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+ເວັບບາວເຊີ Mozilla Firefox
+
+
+# Link in the footer
+;Android Browser
+Android ບາວເຊີ
+
+
+# Link in the footer
+;iOS Browser
+iOS ບາວເຊີ
+
+
+# Link in the footer
+;Focus Browser
+Focus ບາວເຊີ
+
+
+# Link in the footer
+;Desktop Browser
+Desktop ບາວເຊີ
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+ເບຕ້າ, Nightly, ລຸ້ນສຳລັບນັກພັດທະນາ
+
+
+# Link in the footer
+;Download Firefox Web Browser
+ດາວໂຫລດ Firefox Web Browser
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Browser ເດສກທັອບສຳລັບ Mac, ວິນໂດ, ລີນຸກ
+
+
+# Link in the footer
+;Mobile Browser for Android
+Browser ໂທລະສັບສຳລັບ Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Browser ໂທລະສັບສຳລັບ iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Firefox ຂອງເຈົ້າໝົດອາຍຸ.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+ຮັບເວີຊັ່ນຫຼ້າສຸດທີ່ສຸດເພື່ອເຮັດໃຫ້ການທ່ອງເວັບມີຄວາມປອດໄພ.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+ອັບເດດ Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+ມາເບິ່ງສິ່ງໃໝ່ໃນ Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+ສະແດງຕື່ມ
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+ສະແດງໜ້ອຍ
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+ເລືອກວ່າເຈົ້າຕ້ອງການຈະແບ່ງປັນຂໍ້ມູນນີ້ໃນ Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+ເລືອກ…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+ສະແດງທັງໝົດ
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+ເຊື່ອງທັງໝົດ
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+ສູນລວມນັກພັດທະນາ
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+ວິໄຈ
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+ມຸມມອງສະເໝືອນຈິງ
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+ເກມ
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+ເອກະສານ
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+ບົດຄວາມ Hacks
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+ດາວໂຫຼດ Mozilla Firefox, ເວັບບາວເຊີຟຣີ. Firefox ຖືກສ້າງຂຶ້ນໂດຍອົງກອນລະດັບໂລກທີ່ບໍ່ສະແຫວງຫາຜົນກຳໄລ ຊື່ງອຸທິດຕົນເພື່ອພັກດັນການຄວບຄຸມໃນໂລກອອນລາຍໃຫ້ແຕ່ລະຕຄົນ. ລົງ Firefox ສຳລັບ Windows, macOS, Linux, Android ແລະ iOS ໄດ້ແລ້ວມື້ນີ້!
+
+

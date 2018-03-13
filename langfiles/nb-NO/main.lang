@@ -1,0 +1,811 @@
+;Navigation
+Navigasjon
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Last ned tidlige versjoner
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Om
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Apper
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Ikke spor
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Interessepanel
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Utviklerversjon
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Privat nettlesing
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Trenger du hjelp?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Nyheter
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Velg en nettleser som er uavhengig
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox er kompromissløs og lages ikke for profitt. Å velge Firefox er ikke bare et valg av nettleser: Det er et valg for personlig frihet.
+
+
+;Donate
+Donasjon
+
+
+;Support
+Hjelp
+
+
+;Products
+Produkter
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Utvidelser
+
+
+;Add-ons
+Utvidelser
+
+
+;About Us
+Om oss
+
+
+;Labs
+Lab
+
+
+;skip to Navigation
+bytt til navigasjon
+
+
+;switch language
+bytt språk
+
+
+;Back to home page
+Tilbake til forsiden
+
+
+;About Mozilla
+Om Mozilla
+
+
+;Get Involved
+Engasjer deg
+
+
+;Careers
+Jobbmuligheter
+
+
+;Press Center
+Pressesenter
+
+
+;Contact Us
+Kontakt oss
+
+
+# Used in new footer to switch the language of the page
+;Language
+Språk
+
+
+;Other languages:
+Andre språk:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Sidespråk:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d.%m.%Y
+
+
+;Legal
+Juridisk
+
+
+# Used as link in the footer
+;Cookies
+Infokapsler
+
+
+;Legal Notices
+Juridisk info
+
+
+;Privacy Policy
+Personvern
+
+
+;Release Notes
+Versjonsnotat
+
+
+;Other Systems and Languages
+Andre systemer og språk
+
+
+;Close
+Lukk
+
+
+;(in English)
+(på engelsk)
+
+
+;Return to top
+Gå til toppen
+
+
+;Features
+Funksjoner
+
+
+;Customize
+Tilpass
+
+
+;Download
+Last ned
+
+
+;Previous
+Forrige
+
+
+;Next
+Neste
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+MegaBytes {ok}
+
+
+;FAQ
+OSS
+
+
+;Videos
+Videoer
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Med mindre annet er <a href="%s">spesifisert</a>, er innholdet på dette nettstedet lisensiert under <br /><a href="%s">Creative Commons Navngivelse-del-på-samme-vilkår-lisens v3.0</a> eller en senere versjon.
+
+
+;Report Trademark Abuse
+Rapporter misbruk av varemerke
+
+
+;Free Upgrade
+Gratis oppgradering
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Følg oss på:
+
+
+;Customize with Add-ons
+Tilpass med utvidelser
+
+
+;Learn More
+Les mer
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Les mer
+
+
+# Link used to play again an animation or a video
+;Replay
+Spill av igjen
+
+
+;Watch the video
+Se videoen
+
+
+;Replay the video
+Spill av videoen på nytt
+
+
+;Share the video
+Del videoen
+
+
+;WebM format
+WebM-format
+
+
+;Ogg Theora format
+Ogg Theora-format
+
+
+;MPEG-4 format
+MPEG-4-format
+
+
+;Mobile
+Mobil
+
+
+;View Full Site
+Vis i fullversjon
+
+
+;Desktop
+Desktop {ok}
+
+
+;Firefox for mobile
+Firefox for mobil
+
+
+;Email
+Epost
+
+
+;Upgrade now
+Oppgrader nå
+
+
+;Update now
+Oppdater nå
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Personvern
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Deler av dette innholdet er ©1998–%(current_year)s individuelle mozilla.org-bidragsytere. Innholdet er tilgjengelig under en <a rel="license" href="%(url)s">Creative Commons-lisens</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Deler av dette innholdet er ©1998–%(current_year)s individuelle mozilla.org-bidragsytere. Innholdet er tilgjengelig under en <a href="%(url)s">Creative Commons-lisens</a>.
+
+
+# Footer string
+;Contribute to this site
+Bidra til dette nettstedet
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Kildekode for denne siden
+
+
+# Top menu item
+;Mission
+Målsetning
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Omvisning
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sync {ok}
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Desktop-utvidelser
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Android-utvidelser
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Tema
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Brukerstøtte for desktop
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Android-brukerstøtte
+
+
+;Releases
+Utgivelser
+
+
+;Blog
+Blogg
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Få oppdateringer fra Mozilla
+
+
+# share button for social networks
+;Share
+Del
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla på Twitter
+
+
+# footer link
+;Firefox on Twitter
+Firefox på Twitter
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla på Facebook
+
+
+# footer link
+;Firefox on Facebook
+Firefox på Facebook
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Forum
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patenter
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Lederskapet
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Styring
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Historie
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Produkter
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Teknologiutvikling og nyvinning for å fremme vår kamp.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Bli frivillig innen et område.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Meny
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Forpliktet til deg, ditt personvern og et åpent nett
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Skru på JavaScript for at denne siden skal vises korrekt.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Funksjoner i Firefox
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Firefox hjelp
+
+
+;January
+Januar
+
+
+;February
+Februar
+
+
+;March
+Mars
+
+
+;April
+April {ok}
+
+
+;May
+Mai
+
+
+;June
+Juni
+
+
+;July
+Juli
+
+
+;August
+August {ok}
+
+
+;September
+September {ok}
+
+
+;October
+Oktober
+
+
+;November
+November {ok}
+
+
+;December
+Desember
+
+
+;<abbr>Jan</abbr>
+<abbr>Jan</abbr> {ok}
+
+
+;<abbr>Feb</abbr>
+<abbr>Feb</abbr> {ok}
+
+
+;<abbr>Mar</abbr>
+<abbr>Mar</abbr> {ok}
+
+
+;<abbr>Apr</abbr>
+<abbr>Apr</abbr> {ok}
+
+
+;<abbr>May</abbr>
+<abbr>Mai</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Jun</abbr> {ok}
+
+
+;<abbr>Jul</abbr>
+<abbr>Jul</abbr> {ok}
+
+
+;<abbr>Aug</abbr>
+<abbr>Aug</abbr> {ok}
+
+
+;<abbr>Sep</abbr>
+<abbr>Sep</abbr> {ok}
+
+
+;<abbr>Oct</abbr>
+<abbr>Okt</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Nov</abbr> {ok}
+
+
+;<abbr>Dec</abbr>
+<abbr>Des</abbr>
+
+
+;Congrats. You’re up to date!
+Hurra! Du er på siste versjon!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Format {ok}
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Tekst
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Ups! Skriv inn en gyldig epostadresse.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Jeg er forstått med hvordan Mozilla behandler mine personlige data, som forklart i <a href="%s">personvernserklæringen</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Få nyheter<br> om Firefox.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Motta nyheter om Firefox
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+DIN EPOSTADRESSE HER
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Registrer deg nå
+
+
+# Old newsletter subscription Button
+;Sign me up
+Registrer meg
+
+
+;Select country
+Velg land
+
+
+;Available Languages
+Tilgjengelige språk
+
+
+;We will only send you Mozilla-related information.
+Vi vil bare sende informasjon relatert til Mozilla.
+
+
+;Thanks!
+Takk!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Om du ikke tidligere har bekreftet et abonnement på et Mozilla-relatert nyhetsbrev, må du kanskje gjøre det nå. Se etter en e-post fra oss i innboksen din eller i søppelpostfilteret ditt.
+
+
+;Read all about it in our <span>newsletter</span>
+Les mer i vårt <span>nyhetsbrev</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Abonner for å motta månedelige oppdateringer og holde deg informert om Mozilla-nyheter, blant annet de nyeste tipsene om hvordan du kan få mest mulig ut av Firefox. Det er en god måte for oss å holde kontakten på!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + deg
+
+
+;Get Firefox tips, tricks, news and more
+Få Firefox-tips, -triks, -nyheter og mer
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Innovasjoner på nettet
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Internetthelse
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Takk for at du velger Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Mozilla Firefox nettleser
+
+
+# Link in the footer
+;Android Browser
+Android-nettleser
+
+
+# Link in the footer
+;iOS Browser
+iOS-nettleser
+
+
+# Link in the footer
+;Focus Browser
+Focus nettleser
+
+
+# Link in the footer
+;Desktop Browser
+Datamaskiner
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer Edition {ok}
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Last ned Firefox nettleser
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Nettleser for Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Mobil nettleser for Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Mobil nettleser for iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Firefox er utdatert.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Hent den nyeste versjonen for å fortsette å surfe sikkert.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Oppdater Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Se hva som er nytt med Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Raskere, mer responsiv og mer fokusert på personvern. Sjekk ut det siste fra nettleseren som beskytter deg.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Vis mer
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Vis mindre
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Velg hvordan du vil dele disse dataene i Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Velg…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Vis alle
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Skjul alle
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Utviklerhubb
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Forskning
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Virtuell virkelighet (Virtual Reality)
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Spill
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Dokumentasjon
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Hacks-blogg
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Last ned Mozilla Firefox, en gratis nettleser. Firefox er laget av en global, ideell organisasjon, som har som mål at individet skal ta kontroll over egne aktiviteter på nettet. Last ned Firefox for Windows, macOS, Linux, Android og iOS i dag!
+
+

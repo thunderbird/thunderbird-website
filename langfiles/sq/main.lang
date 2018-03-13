@@ -1,0 +1,811 @@
+;Navigation
+Lëvizje
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Shkarkime paraprake hedhjeje në qarkullim
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Rreth
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Aplikacione
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Mos Më Gjurmo
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Pult Interesash
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Versioni Për Zhvillues
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Shfletim Privat
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Ju duhet ndihmë?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Lajme
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Zgjidhni shfletuesin e pavarur
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox-i është jofitimprurës, jo i ndonjë korporate, i pakomprometuar. Zgjedhja e Firefox-it s’është thjesht zgjedhje e një shfletuesi. Është një  votë për lirinë personale.
+
+
+;Donate
+Dhuroni
+
+
+;Support
+Asistencë
+
+
+;Products
+Produkte
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Zgjerime
+
+
+;Add-ons
+Shtesa
+
+
+;About Us
+Rreth Nesh
+
+
+;Labs
+Laboratorë
+
+
+;skip to Navigation
+kaloni te Lëvizja
+
+
+;switch language
+ndërroni gjuhën
+
+
+;Back to home page
+Mbrapsht te faqja hyrëse
+
+
+;About Mozilla
+Rreth Mozilla-s
+
+
+;Get Involved
+Përfshihuni
+
+
+;Careers
+Vende pune
+
+
+;Press Center
+Qendër Shtypi
+
+
+;Contact Us
+Lidhuni Me Ne
+
+
+# Used in new footer to switch the language of the page
+;Language
+Gjuhë
+
+
+;Other languages:
+Gjuhë të tjera:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Gjuhë faqeje:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d-%m-%Y
+
+
+;Legal
+Ligjore
+
+
+# Used as link in the footer
+;Cookies
+Cookies{ok}
+
+
+;Legal Notices
+Shënime Ligjore
+
+
+;Privacy Policy
+Rregulla Privatësie
+
+
+;Release Notes
+Shënime Versioni
+
+
+;Other Systems and Languages
+Sisteme dhe Gjuhë të Tjera
+
+
+;Close
+Mbylle
+
+
+;(in English)
+(në Anglisht)
+
+
+;Return to top
+Kthehuni në krye
+
+
+;Features
+Veçori
+
+
+;Customize
+Përshtateni
+
+
+;Download
+Shkarkoje
+
+
+;Previous
+E mëparshmja
+
+
+;Next
+Pasuesja
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+Megabajte
+
+
+;FAQ
+FAQ {ok}
+
+
+;Videos
+Video
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Hiq atje ku <a href="%s">shënohet</a> ndryshe, lënda e këtij sajti qarkullon sipas licencës <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> ose cilitdo versioni të mëvonshëm.
+
+
+;Report Trademark Abuse
+Njoftoni Cenim Shenjash Tregtare
+
+
+;Free Upgrade
+Përditësim Falas
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Na ndiqni në:
+
+
+;Customize with Add-ons
+Përshtateni me Shtesa
+
+
+;Learn More
+Mësoni Më Tepër
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Mësoni më tepër
+
+
+# Link used to play again an animation or a video
+;Replay
+Riluaje
+
+
+;Watch the video
+Shiheni videon
+
+
+;Replay the video
+Riluaje videon
+
+
+;Share the video
+Ndajeni videon me të tjerët
+
+
+;WebM format
+Në format WebM
+
+
+;Ogg Theora format
+Në format Ogg Theora
+
+
+;MPEG-4 format
+Në format MPEG-4
+
+
+;Mobile
+Celular
+
+
+;View Full Site
+Shihni Sajtin e Plotë
+
+
+;Desktop
+Desktop {ok}
+
+
+;Firefox for mobile
+Firefox për celular
+
+
+;Email
+Email {ok}
+
+
+;Upgrade now
+Përmirësojeni tani
+
+
+;Update now
+Përditësojeni tani
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Privatësi
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Pjesë të kësaj lënde janë nën të drejta kopjimi ©1998–%(current_year)s nga kontribues individualë te mozilla.org. Lëndë e passhme sipas një <a rel="license" href="%(url)s">licence Creative Commons</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Pjesë të kësaj lënde janë nën të drejta kopjimi ©1998–%(current_year)s nga kontribues individualë te mozilla.org. Lëndë e passhme sipas një <a href="%(url)s">licence Creative Commons</a>.
+
+
+# Footer string
+;Contribute to this site
+Kontribuoni te ky sajt
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Kod burim për këtë faqe
+
+
+# Top menu item
+;Mission
+Misioni
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Tur
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sync{ok}
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Shtesa Desktopi
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Shtesa për Android
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Tema
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Asistencë për Desktop
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Asistencë për Android
+
+
+;Releases
+Hedhje Në Qarkullim
+
+
+;Blog
+Blog{ok}
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Merrni përditësime nga Mozilla
+
+
+# share button for social networks
+;Share
+Përhapeni
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla në Twitter
+
+
+# footer link
+;Firefox on Twitter
+Firefox-i në Twitter
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla në Facebook
+
+
+# footer link
+;Firefox on Facebook
+Firefox-i në Facebook
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Forume
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patenta
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Lidership
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Drejtim
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Historik
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Produktet Tona
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Software dhe të tjera risi të hartuara për të shpënë përpara misionin tonë.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Bëhuni një kontribues vullnetar në një numër fushash të ndryshme.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Menu {ok}
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+I përkushtuar ndaj jush, privatësisë suaj dhe një Web-i të hapur
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Ju lutemi, që kjo faqe të shfaqet si duhet, aktivizoni JavaScript-in.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Veçori Firefox-i
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Ndihmë për Firefox-in
+
+
+;January
+Janar
+
+
+;February
+Shkurt
+
+
+;March
+Mars
+
+
+;April
+Prill
+
+
+;May
+Maj
+
+
+;June
+Qershor
+
+
+;July
+Korrik
+
+
+;August
+Gusht
+
+
+;September
+Shtator
+
+
+;October
+Tetor
+
+
+;November
+Nëntor
+
+
+;December
+Dhjetor
+
+
+;<abbr>Jan</abbr>
+<abbr>Jan</abbr>{ok}
+
+
+;<abbr>Feb</abbr>
+<abbr>Shk</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Mar</abbr>{ok}
+
+
+;<abbr>Apr</abbr>
+<abbr>Pri</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>Maj</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Qer</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Kor</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Gus</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Sht</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>Tet</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Nën</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Dhj</abbr>
+
+
+;Congrats. You’re up to date!
+Përgëzime. E keni të përditësuar!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Format {ok}
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Tekst
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Kujdes! Sigurohuni që po jepni një adresë email të vlefshme.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Pajtohem me trajtimin që Mozilla u bën të dhënave të mia, ashtu si shpjegohet te <a href="%s">ky Shënim mbi Privatësinë</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Ndiqni<br> krejt gjërat Firefox.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Merrni lajme për Firefox-in
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+JEPNI KËTU EMAIL-IN TUAJ
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Regjistrohuni Tani
+
+
+# Old newsletter subscription Button
+;Sign me up
+Regjistromëni
+
+
+;Select country
+Përzgjidhni vendin
+
+
+;Available Languages
+Gjuhë të Mundshme
+
+
+;We will only send you Mozilla-related information.
+Do t’ju dërgojmë vetëm të dhëna që kanë lidhje me Mozilla-n.
+
+
+;Thanks!
+Faleminderit!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Nëse s’e keni ripohuar më parë pajtimin te buletini me lajme nga Mozilla, mund t’ju duhet ta bëni. Ju lutemi, kontrolloni te të marrat tuaja apo te dosja e të padëshiruarave për një email nga ne.
+
+
+;Read all about it in our <span>newsletter</span>
+Lexoni gjithçka për të, te <span>buletini</span> ynë
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Pajtohuni te përditësimet mujore dhe merrni vazhdimisht lajmet më të reja nga Mozilla, përfshi ndihmëzat më të reja për të përfituar maksimumin nga shfletuesi juaj Firefox. Mënyra e përsosur që të mbajmë lidhjet me njëri-tjetrin!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + Ju
+
+
+;Get Firefox tips, tricks, news and more
+Merrni ndihmëza, marifete, lajme dhe të tjera gjëra lidhur me Firefox-in
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Risi Web
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Shëndeti i Internetit
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Faleminderit që zgjodhët Firefox-in!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Shfletuesi Web Mozilla Firefox
+
+
+# Link in the footer
+;Android Browser
+Shfletues për Android
+
+
+# Link in the footer
+;iOS Browser
+Shfletues për iOS
+
+
+# Link in the footer
+;Focus Browser
+Shfletuesi Focus
+
+
+# Link in the footer
+;Desktop Browser
+Shfletuesi për Desktop
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer Edition{ok}
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Shkarkoni Shfletuesin Firefox
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Shfletues për Desktop për Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Shfletues Celular për Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Shfletues Celular për iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Firefox-i juaj s’është i përditësuar.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Merrni versionin më të ri, që ta mbani shfletimin tuaj të sigurt.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Përditësojeni Firefox-in
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Shihni ç’ka të re te Firefox-i
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Më i shpejtë, më reagues dhe fuqimisht privat. Shihni gjërat më të reja nga shfletuesi që ju mbron.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Shfaq Më Tepër
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Shfaq Më Pak
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Zgjidhni si doni t’i ndani këto të dhëna në Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Zgjidhni…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Shfaqi Krejt
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Fshihi Krejt
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Qendra e Zhvilluesve
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Kërkim
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Realitet Virtual
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Lojëra
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Dokumentim
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Blog Hack-imesh
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Shkarkoni Mozilla Firefox-in, një shfletues Web i lirë. Firefox-i është krijuar nga një organizëm jofitimprurës, mbarëbotëror, i përkushtuar vënies së individit në kontroll të jetës së tij <em>online</em>. Merreni që sot Firefox-in për Windows, macOS, Linux, Android dhe iOS!
+
+

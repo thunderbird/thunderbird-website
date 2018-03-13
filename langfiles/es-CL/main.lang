@@ -1,0 +1,811 @@
+;Navigation
+Navegación
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Descargas pre-lanzamiento
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Acerca de
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Apps {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+No rastrear
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Panel de interés
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Developer Edition {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Navegación privada
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+¿Necesitas ayuda?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Noticias
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Elige el navegador independiente
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox no tiene fines de lucros, no es corporativo ni se encuentra comprometido. Elegir Firefox no es solo elegir un navegador. Es un voto para la libertad personal.
+
+
+;Donate
+Donar
+
+
+;Support
+Soporte
+
+
+;Products
+Productos
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Extensiones
+
+
+;Add-ons
+Complementos
+
+
+;About Us
+Acerca de nosotros
+
+
+;Labs
+Labs {ok}
+
+
+;skip to Navigation
+ir a Navegación
+
+
+;switch language
+cambiar idioma
+
+
+;Back to home page
+Regresar a la página principal
+
+
+;About Mozilla
+Acerca de Mozilla
+
+
+;Get Involved
+Participa
+
+
+;Careers
+Empleo
+
+
+;Press Center
+Centro de prensa
+
+
+;Contact Us
+Contáctanos
+
+
+# Used in new footer to switch the language of the page
+;Language
+Idioma
+
+
+;Other languages:
+Otros idiomas:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Idioma de la página:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d-%m-%Y
+
+
+;Legal
+Legal {ok}
+
+
+# Used as link in the footer
+;Cookies
+Cookies {ok}
+
+
+;Legal Notices
+Avisos legales
+
+
+;Privacy Policy
+Política de privacidad
+
+
+;Release Notes
+Notas de la versión
+
+
+;Other Systems and Languages
+Otros sistemas e idiomas
+
+
+;Close
+Cerrar
+
+
+;(in English)
+(en inglés)
+
+
+;Return to top
+Ir hacia arriba
+
+
+;Features
+Características
+
+
+;Customize
+Personalizar
+
+
+;Download
+Bajar
+
+
+;Previous
+Anterior
+
+
+;Next
+Siguiente
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+MegaBytes {ok}
+
+
+;FAQ
+FAQ {ok}
+
+
+;Videos
+Videos {ok}
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Salvo que se <a href="%s">indique</a> lo contrario, el contenido de este sitio está licenciado bajo los términos de <br /><a href="%s">Licencia Creative Commons Atribución Compartir-Igual v3.0</a> o cualquier versión posterior.
+
+
+;Report Trademark Abuse
+Reportar abuso de marcas registradas
+
+
+;Free Upgrade
+Actualización gratuita
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Síguenos en:
+
+
+;Customize with Add-ons
+Personaliza con complementos
+
+
+;Learn More
+Descubre más
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Descubre más
+
+
+# Link used to play again an animation or a video
+;Replay
+Volver a ver
+
+
+;Watch the video
+Mira el video
+
+
+;Replay the video
+Volver a reproducir el video
+
+
+;Share the video
+Compartir el video
+
+
+;WebM format
+Formato WebM
+
+
+;Ogg Theora format
+Formato Ogg Theora
+
+
+;MPEG-4 format
+Formato MPEG-4
+
+
+;Mobile
+Móvil
+
+
+;View Full Site
+Ver el sitio completo
+
+
+;Desktop
+Escritorio
+
+
+;Firefox for mobile
+Firefox para dispositivos móviles
+
+
+;Email
+Email {ok}
+
+
+;Upgrade now
+Actualiza ahora
+
+
+;Update now
+Actualiza ahora
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Privacidad
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Algunos de estos contenidos están protegidos por derechos de autor ©1998–%(current_year)s de determinados colaboradores en mozilla.org. Contenido disponible bajo una <a rel="license" href="%(url)s">licencia Creative Commons</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Algunos de estos contenidos están protegidos por derechos de autor ©1998–%(current_year)s de determinados colaboradores en mozilla.org. Contenido disponible bajo una <a href="%(url)s">licencia Creative Commons</a>.
+
+
+# Footer string
+;Contribute to this site
+Colabora en esta página
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Código fuente de esta página
+
+
+# Top menu item
+;Mission
+Misión
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Tour {ok}
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sync {ok}
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Complementos de escritorio
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Complementos para Android
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Temas
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Soporte para escritorio
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Soporte para Android
+
+
+;Releases
+Lanzamientos
+
+
+;Blog
+Blog {ok}
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Recibir actualizaciones de Mozilla
+
+
+# share button for social networks
+;Share
+Compartir
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla en Twitter
+
+
+# footer link
+;Firefox on Twitter
+Firefox en Twitter
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla en Facebook
+
+
+# footer link
+;Firefox on Facebook
+Firefox en Facebook
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Foros
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Patentes
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Liderazgo
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Gobernanza
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Historia
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Nuestros productos
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Software y otras innovaciones diseñadas para avanzar en nuestra misión.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Sé un contribuidor voluntario en diferentes áreas.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Menú
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Comprometidos contigo, tu privacidad y la Web abierta
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Por favor, activa JavaScript para mostrar correctamente esta página.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Características de Firefox
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Ayuda de Firefox
+
+
+;January
+Enero
+
+
+;February
+Febrero
+
+
+;March
+Marzo
+
+
+;April
+Abril
+
+
+;May
+Mayo
+
+
+;June
+Junio
+
+
+;July
+Julio
+
+
+;August
+Agosto
+
+
+;September
+Septiembre
+
+
+;October
+Octubre
+
+
+;November
+Noviembre
+
+
+;December
+Diciembre
+
+
+;<abbr>Jan</abbr>
+<abbr>Ene</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>Feb</abbr> {ok}
+
+
+;<abbr>Mar</abbr>
+<abbr>Mar</abbr> {ok}
+
+
+;<abbr>Apr</abbr>
+<abbr>Abr</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>May</abbr> {ok}
+
+
+;<abbr>Jun</abbr>
+<abbr>Jun</abbr> {ok}
+
+
+;<abbr>Jul</abbr>
+<abbr>Jul</abbr> {ok}
+
+
+;<abbr>Aug</abbr>
+<abbr>Ago</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Sep</abbr> {ok}
+
+
+;<abbr>Oct</abbr>
+<abbr>Oct</abbr> {ok}
+
+
+;<abbr>Nov</abbr>
+<abbr>Nov</abbr> {ok}
+
+
+;<abbr>Dec</abbr>
+<abbr>Dic</abbr>
+
+
+;Congrats. You’re up to date!
+Felicitaciones. ¡Estás al día!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Formato
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Texto
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+¡Chuta! Asegúrate de introducir un correo electrónico válido.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Me parece bien que Mozilla gestione mi información según se indica en el <a href="%s">Aviso de privacidad</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Mantenerse al día con<br> todo sobre Firefox.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Recibe noticias sobre Firefox
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+TU CORREO AQUÍ
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Suscríbete ahora
+
+
+# Old newsletter subscription Button
+;Sign me up
+Suscribirme
+
+
+;Select country
+Elige un país
+
+
+;Available Languages
+Idiomas disponibles
+
+
+;We will only send you Mozilla-related information.
+Solo te enviaremos información relacionada con Mozilla.
+
+
+;Thanks!
+¡Gracias!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Si no has confirmado previamente una suscripción a un boletín relacionado a Mozilla, puede que tengas que hacerlo. Por favor, revisa tu bandeja de entrada o filtro de spam en busca de un email de nosotros.
+
+
+;Read all about it in our <span>newsletter</span>
+¡Lee toda la información sobre Firefox en <span>nuestro boletín!</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Suscríbete para recibir actualizaciones mensuales y estar al día de las novedades de Firefox, incluyendo los últimos trucos y consejos para sacar el máximo partido a tu navegador. ¡Es la forma perfecta de que sigamos en contacto contigo!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> y tú
+
+
+;Get Firefox tips, tricks, news and more
+Obtén consejos, noticias y más sobre Firefox
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Innovaciones Web
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Salud de Internet
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+¡Gracias por elegir Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Navegador Web Mozilla Firefox
+
+
+# Link in the footer
+;Android Browser
+Navegador para android
+
+
+# Link in the footer
+;iOS Browser
+Navegador para iOS
+
+
+# Link in the footer
+;Focus Browser
+Navegador Focus
+
+
+# Link in the footer
+;Desktop Browser
+Navegador de escritorio
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Edición para desarrolladores
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Bajar navegador web Firefox
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Navegador de escritorio para Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Navegador móvil para Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Navegador móvil para iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Tu Firefox está desactualizado.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Obtén la versión más reciente para seguir navegando seguro.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Actualizar Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Mira que hay de nuevo en Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Rápido, más responsivo y con una privacidad potenciada. Revisa lo último del navegador que cuida tu espalda.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Mostrar más
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Mostrar menos
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Elige cómo quieres compartir estos datos en Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Elegir…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Mostrar todo
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Ocultar todo
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Centro de desarrolladores
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Investigación
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Realidad virtual
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Juegos
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Documentación
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Blog de hacks
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Descarga Mozilla Firefox, un navegador Web libre. Firefox es creado por una organización sin fines de lucro dedicada a poner a los individuos al control en línea. ¡Obtén Firefox para Windows, macOS, Linux, Android e iOS hoy!
+
+

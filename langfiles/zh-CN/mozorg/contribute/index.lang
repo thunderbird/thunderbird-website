@@ -1,0 +1,721 @@
+## active ##
+## contribute_cta_updates ##
+## NOTE: Demo server available at https://www-dev.allizom.org/contribute
+
+
+# Used for HTML title attribute
+;Volunteer Opportunities at Mozilla
+Mozilla 的志愿机会
+
+
+# this string is used for accessibility reasons, it's not visible in the page
+;Menu
+菜单
+
+
+# this br is for formatting, omit or reposition as needed
+;Why<br> volunteer
+为何要<br> 做志愿者
+
+
+# this br is for formatting, omit or reposition as needed
+;Find<br> an event
+寻找<br> 活动
+
+
+# this br is for formatting, omit or reposition as needed
+;Meet<br> Mozillians
+认识<br> 谋智人
+
+
+;Get involved
+参与进来
+
+
+;Your country
+您的国家
+
+
+# This is a hint used as a placeholder in a country selection dropdown menu. It should be short.
+;I live in&hellip;
+我生活在&hellip;
+
+
+;Volunteer with Mozilla!
+加入 Mozilla，<br>为世界做出贡献吧！
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;active Mozillians worldwide
+位谋智人在全球活跃
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms.
+;upcoming events around the globe
+个活动在世界上即将开展
+
+
+# This label accompanies a numeric count. The number appears before this string, unfortunately we don't have support for plural forms. The phrase "and counting" means there are always more being added; not sure how that idiom might translate so do your best :)
+;languages and counting, on every continent
+种语言，遍及各州
+
+
+;Join a global community of game-changers.
+加入这个全球社区，一起改变世界的游戏规则。
+
+
+# this br is for formatting, omit or reposition as needed
+;Volunteer as much as you like. Or as little.<br> It’s totally up to you.
+志愿工作完全随您所好。<br> 贡献多少都没问题。
+
+
+# this br is for formatting, omit or reposition as needed
+;Share your skills and pick up<br> a few new ones along the way.
+展现您的才华，<br> 同时也能学点新东西。
+
+
+;Volunteering with Mozilla&hellip;
+Mozilla 的志愿活动&hellip;
+
+
+# This paragraph follows the headline, "Volunteering with Mozilla...", so the first sentence continues from that fragment. The line breaks are for formatting.
+;is about more than lending a hand. It’s about learning, collaborating and sharing your skills with a global community of Mozillians — coders, organizers, activists and more — who help shape the Web every day.
+很多人都在助一臂之力。在谋智人的全球社区里学习、协作同时展现您的才华 — 无论是程序员、组织人还是活动家等等 — 人人都在一起构建更好的 Web。您也能做到。
+
+
+;See our community in action
+看看社区里有哪些活动
+
+
+;How Mozillians help every day
+谋智人都在帮忙什么
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Spain &middot; Activism
+西班牙 &middot; 行动
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Philippines &middot; Activism
+菲律宾 &middot; 行动
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;Switzerland &middot; Coding
+瑞士 &middot; 编程
+
+
+# Caption used under Mozillians photo. You can replace $middot; with a different separator if it doesn't work for your locale
+;India &middot; Teaching
+印度 &middot; 教学
+
+
+;Read his story
+阅读他的故事
+
+
+;Read her story
+阅读她的故事
+
+
+;Want to get involved? Here’s how.
+想要参与进来？这里告诉您该做什么。
+
+
+;Choose what interests you and tell us how you’d like to help
+选择您感兴趣的内容，并告诉我们您想要怎样协助
+
+
+;Stand by for an email that will connect you to the Mozilla community
+稍等片刻，我们将发送一封电子邮件给您，让您详细了解 Mozilla 社区
+
+
+;Create your Mozillians account and share your contributions with the world
+创建您的谋智人（Mozillians）账号，与世界分享您的能力
+
+
+;Get started
+入门简介
+
+
+;Not ready to dive in just yet?
+还没准备好加入？
+
+
+;Here are a few other ways you can support Mozilla right now.
+您现在就可以帮忙支持 Mozilla。
+
+
+;Donate to Mozilla
+捐助 Mozilla
+
+
+;Read our Manifesto
+阅读我们的宣言
+
+
+;Like us on Facebook
+在 Facebook 上赞我们
+
+
+;Follow us on Twitter
+在 Twitter 上关注我们
+
+
+;Upcoming event
+即将到来的活动
+
+
+;See all events
+查看所有活动
+
+
+;Communicate
+沟通
+
+
+;Mozilla communities
+Mozilla 社区
+
+
+;Mailing lists
+邮件列表
+
+
+;IRC channels
+IRC 频道
+
+
+;More links
+更多链接
+
+
+;Submit Firefox feedback
+提交 Firefox 反馈
+
+
+;Explore Mozilla careers
+探索 Mozilla 生涯
+
+
+;Get help with Firefox
+获取有关 Firefox 的帮助
+
+
+;Subscribe to community events
+订阅社区活动
+
+
+;Get community updates
+获取社区更新
+
+
+# Used as title of the /stories sub-page
+;Mozillian Stories
+谋智人的故事
+
+
+# Used as a toggle to display more content.
+;More
+更多
+
+
+# Used as a toggle to display less content.
+;Less
+更少
+
+
+;Read more Mozillian stories
+阅读更多谋智人故事
+
+
+;Discover even more stories on Twitter with <a href="%(link_hashtag)s">#IAmAMozillian</a>
+在 Twitter 上发现更多 <a href="%(link_hashtag)s">#IAmAMozillian</a> 的故事
+
+
+;More coming soon
+更多即将推出
+
+
+# Used as title of the /signup sub-page
+;Get Involved: Volunteer Opportunities at Mozilla
+加入我们：Mozilla 的志愿工作机会
+
+
+;To get started, tell us what interests you.
+若要开始，告诉我们您感兴趣的内容。
+
+
+;Choose one for now. You can always contribute to other areas later.
+现在选择一个。您也可以随时贡献其他领域。
+
+
+# This text is used for accessibility reasons, it's not visible
+;Where would you like to get started?
+您想从哪里开始？
+
+
+;Coding
+编程
+
+
+;More about coding
+更多有关编写代码
+
+
+;Contribute code to a whole range of Mozilla products, including Firefox and Firefox OS.
+为整个 Mozilla 产品线贡献代码，包括 Firefox 和 Firefox OS。
+
+
+;Testing
+测试
+
+
+;More about testing
+更多有关测试
+
+
+;Help make the Mozilla products you use — and love — even better.
+帮助制作您使用的 Mozilla 产品 — 与爱 — 与更好。
+
+
+;Writing
+书写
+
+
+;More about writing
+更多有关书写
+
+
+;Lend your voice to Mozilla — from blogging and social media to providing technical documents for users and developers.
+将您的声音传递给 Mozilla — 在博客和社交媒体上为用户和开发者提供技术文档。
+
+
+;Teaching
+教学
+
+
+;More about teaching
+更多有关教学
+
+
+;Share your skills with a community that’s eager to learn. Take advantage of our free tools, teaching resources and events.
+将您的技能分享给社区中渴望学习的人。借助我们的免费工具、教学资源和活动的优势。
+
+
+;Helping
+帮助
+
+
+;More about helping
+更多有关帮助
+
+
+;Provide support to users who need it and help everyone get the most out of their Mozilla products.
+为需要的用户提供服务支持，并帮助所有人更充分的使用 Mozilla 产品。
+
+
+;Translating
+翻译
+
+
+;More about translating
+更多有关翻译
+
+
+;Help make Mozilla stuff available in other languages. Translate everything from newsletters and websites to copy for Firefox and Firefox OS.
+帮助 Mozilla 的东西有更多语言可用。翻译新闻邮件、网站等用于 Firefox 和 Firefox OS 的东西。
+
+
+;Activism
+行动
+
+
+;More about activism
+更多有关行动
+
+
+;Get involved with our opportunities to support freedom, security and privacy on the open Web.
+参与我们的行动机会，来支持开放网络的自由、安全和隐私。
+
+
+;I don’t know
+我不知道
+
+
+;More about how you can contribute
+更多有关可以贡献什么
+
+
+;Not sure how you want to help? No problem. We can find the appropriate contribution activity for you.
+不确定您想帮什么？没问题，我们可以为您找到适合的贡献活动。
+
+
+;Now tell us a little about yourself:
+现在向我们介绍一下您自己吧：
+
+
+;Name
+姓名
+
+
+;Email address
+电子邮件地址
+
+
+;Country
+国家 / 地区
+
+
+;select
+选择
+
+
+;Why do you want to be a Mozilla volunteer?
+为什么想成为 Mozilla 志愿者？
+
+
+;(Optional)
+(可选)
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%(privacy)s">this Privacy Policy</a>
+我同意 Mozilla 按照<a href="%(privacy)s">这份隐私政策</a>所述的方式处理我的信息
+
+
+;Start contributing
+开始贡献
+
+
+;Sign me up for community updates
+为我注册社区更新
+
+
+;(English)
+(英语)
+
+
+;What particular area?
+有什么特征呢？
+
+
+;What would you like to code?
+您喜欢编写代码吗？
+
+
+;What would you like to test?
+您喜欢参与测试吗？
+
+
+;What would you like to translate?
+您喜欢帮忙翻译吗？
+
+
+;What would you like to write?
+您喜欢书写文章吗？
+
+
+;What would you like to teach?
+您喜欢参与教学吗？
+
+
+;Firefox
+Firefox {ok}
+
+
+;Websites
+网站
+
+
+;Firefox add-ons
+Firefox 附加组件
+
+
+;HTML5 apps
+HTML5 应用
+
+
+;Diagnosing Web compatibility issues
+诊断 Web 兼容性问题
+
+
+;Online services
+在线服务
+
+
+;Web compatibility
+Web 兼容性
+
+
+;Product localization
+产品本地化
+
+
+;Website localization
+网站本地化
+
+
+;I’d like to work on localization tools
+我喜欢参与本地化工具的相关工作
+
+
+;Social media
+社交媒体
+
+
+;Journalism
+新闻学
+
+
+;Technical docs for users
+面向用户的技术文档
+
+
+;Technical docs for developers
+面向开发者的技术文档
+
+
+;Technical docs for Firefox add-ons
+面向 Firefox 附加组件的技术文档
+
+
+;Technical docs for HTML5 apps
+面向 HTML5 应用的技术文档
+
+
+;Teach the Web (Webmaker)
+教学 Web (Webmaker)
+
+
+;Open News fellowships
+开放新闻奖学金
+
+
+;Hive - Community networks of educators/mentors
+Hive - 教育者/导师的社区网络
+
+
+;Open Web science research
+开放网络科学研究
+
+
+;Community Events
+社区活动
+
+
+;Find events
+查找活动
+
+
+;By city, country, or event:
+按照城市、国家或者事件：
+
+
+;By date:
+按照日期：
+
+
+;month
+月
+
+
+;year
+年
+
+
+;Date
+日期
+
+
+;Event
+活动
+
+
+;Location
+位置
+
+
+;City
+城市
+
+
+;Events
+活动
+
+
+# Used as title of the thank you page displayed after users send the form
+;Thank you!
+谢谢您！
+
+
+;Thanks!
+谢谢！
+
+
+;We’re thrilled to see that you’re interested in coding and can’t wait to get you started.
+我们很高兴看到您有兴趣参与编写代码，并等不及想带您开始了。
+
+
+;We’re thrilled to see that you’re interested in testing and can’t wait to get you started.
+我们很高兴看到您有兴趣参与测试，并等不及想带你开始了。
+
+
+;We’re thrilled to see that you’re interested in writing and can’t wait to get you started.
+我们很高兴看到您有兴趣参与书写，并等不及想带你开始了。
+
+
+;We’re thrilled to see that you’re interested in teaching and can’t wait to get you started.
+我们很高兴看到您有兴趣参与教学，并等不及想带你开始了。
+
+
+;We’re thrilled to see that you’re interested in helping and can’t wait to get you started.
+我们很高兴看到您有兴趣参与帮助，并等不及想带你开始了。
+
+
+;We’re thrilled to see that you’re interested in translating and can’t wait to get you started.
+我们很高兴看到您有兴趣参与翻译，并等不及想带你开始了。
+
+
+;We’re thrilled to see that you’re interested in activism and can’t wait to get you started.
+我们很高兴看到您有兴趣参与行动，并等不及想带你开始了。
+
+
+;We’re thrilled to see that you’re interested in volunteering and can’t wait to get you started.
+我们很高兴看到您有兴趣参与志愿活动，并等不及想带你开始了。
+
+
+;Keep an eye on your inbox for an important message from us.
+关注你的收件箱，我们会发送一封重要的信息。
+
+
+;Hello!
+你好！
+
+
+;Your Name
+您的名字
+
+
+;In the meantime&hellip;
+与此同时&hellip;
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;You can help by picking an easy task that only takes a few minutes &mdash; or take on a bigger challenge.
+你可以挑选一个几分钟就能完成的帮助任务 &mdash; 或者等待更大的挑战。
+
+
+# Displayed in the "Thank You!" page after the email is sent for coding, testing, helping, translating.
+;Choose a Task Now
+现在选择一个任务
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Help us tell the world how awesome Firefox is and about all the important work Mozilla does every day.
+帮助我们告诉世界 Firefox 有多棒，以及 Mozilla 每天所做的重要事情。
+
+
+# Displayed in the "Thank You!" page after the email is sent for other categories.
+;Join Now
+现在加入
+
+
+;You can create your Mozillians account now to connect with fellow Mozillians.
+您现在可以创建您的谋智人（Mozillians）账号以激活与其他谋智人的联系。
+
+
+;Yes, create my Mozillians account
+是的，创建我的谋智人（Mozillians）账号
+
+
+;You will be asked to sign in before proceeding
+在继续之前您需要登录
+
+
+;No thanks, I’ll just wait for the email
+不，我只是想等待电子邮件
+
+
+# The following strings are used in the contribute form on production (https://www.mozilla.org/contribute/signup/), not in the one available on stage
+# Strings have been copied from the old template (mozorg/contribute.lang)
+;Area of interest?
+感兴趣的领域？
+
+
+;Helping Users
+帮助用户
+
+
+;Testing and QA
+测试和质量保证
+
+
+;Marketing
+市场
+
+
+;Localization and Translation
+本地化和翻译
+
+
+;Web Development
+网页开发
+
+
+;Firefox Marketplace
+火狐应用市场
+
+
+;Add-ons
+附加组件
+
+
+;Visual Design
+视觉设计
+
+
+;Documentation and Writing
+文档和写作
+
+
+;Education
+教育
+
+
+;Other
+其他
+
+
+;Hi, I’m interested in…
+嗨，我的兴趣是…
+
+
+;Send us a note and we can get you started right away.
+发给我们一个提示，我们就可以帮助你马上开始。
+
+
+;I have a suggestion for Firefox
+我有关于 Firefox 的建议
+
+
+;I need help with a Firefox issue
+我有 Firefox 的问题需要帮助
+
+
+;Please enter a valid email address.
+请输入一个有效的电子邮件地址。
+
+
+;You must agree to the privacy policy.
+你必须同意隐私政策。
+
+
+;Please select an area of interest.
+请选择一个感兴趣的领域。
+
+
+;Please tell us more about your interests.
+请让我们多了解一些你的兴趣爱好。
+
+

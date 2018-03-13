@@ -1,0 +1,320 @@
+## active ##
+## ember_reference_fix ##
+## quantum-firstrun-whatsnew ##
+## NOTE: demo page available at https://www-dev.allizom.org/firefox/developer/
+
+
+# HTML page description
+;Built for those who build the Web. The only browser made for developers like you.
+Sukurta kuriantiems saityną. Vienintelė naršyklė, skirta būtent programuotojams.
+
+
+;Firefox Quantum: Developer Edition
+Firefox Quantum: Developer Edition {ok}
+
+
+;Welcome to your new favorite browser. Get the latest features, fast performance, and the development tools you need to build for the open web.
+Susipažinkite – jūsų nauja mėgstamiausia naršyklė. Joje suderinta viskas – naujausios savybės, neprilygstama sparta ir saitynui kurti reikalingos priemonės.
+
+
+;Firefox Developer Edition automatically sends feedback to Mozilla.
+„Firefox Developer Edition“ automatiškai siunčia informaciją „Mozillai“.
+
+
+;Faster Performance
+Didesnė sparta
+
+
+;A Next-Generation CSS Engine
+Naujos kartos CSS varikliukas
+
+
+;Firefox has been rebuilt from the ground up to be faster and more powerful than ever. This includes a new CSS engine that has state-of-the-art innovations and is blazingly fast.
+„Firefox“ buvo perdaryta iš pagrindų, kad būtų spartesnė ir galingesnė nei kada nors anksčiau. Dalis šio atnaujinimo – naujas, inovatyvus ir ypač spartus CSS varikliukas.
+
+
+;New Tools
+Naujos priemonės
+
+
+;Firefox DevTools
+„Firefox“ saityno kūrėjų priemonės
+
+
+# Link points to http://firefox-dev.tools/
+;Learn more about Firefox developer tools
+Susipažinkite su „Firefox“ saityno kūrėjų priemonėmis iš arčiau
+
+
+;The new Firefox DevTools are powerful, flexible, and best of all, hackable. This includes a best-in-class JavaScript debugger, which can target multiple browsers and is built in React and Redux.
+Naujosios „Firefox“ saityno kūrėjų priemonės yra galingos, lanksčios, ir  – svarbiausia – pritaikomos. Viena jų – geriausia rinkoje „JavaScript“ derintuvė, galinti derinti daugelį naršyklių bei sukurta „React“ ir „Redux“ pagrindu.
+
+
+# String is obsolete. Do not remove.
+;The new Firefox DevTools are powerful, flexible, and best of all, hackable. This includes a best-in-class JavaScript debugger, which can target multiple browsers and is built in React and Ember.
+Naujosios „Firefox“ saityno kūrėjų priemonės yra galingos, lanksčios, ir  – svarbiausia – pritaikomos. Viena jų – geriausia rinkoje „JavaScript“ derintuvė, galinti derinti daugelį naršyklių bei sukurta „React“ ir „Ember“ pagrindu.
+
+
+;Innovative Features
+Inovatyvios funkcijos
+
+
+;Master CSS Grid
+Įvaldykite CSS tinklelį
+
+
+# Link points to https://mozilladevelopers.github.io/playground/
+;Learn more about CSS Grid
+Sužinokite daugiau apie CSS tinklelį
+
+
+;Firefox is the only browser with tools built specifically for building and designing with CSS Grid. These tools allow you to visualize the grid, display associated area names, preview transformations on the grid and much more.
+„Firefox“ – vienintelė naršyklė, suteikianti priemones CSS tinklelio projektavimui ir kūrimui. Šios priemonės padeda vizualizuoti tinklelį, pamatyti jo langelių vardus, peržiūrėti jo transformacijas ir atlikti daug kitų veiksmų.
+
+
+;Design. Code. Test. Refine.
+Projektuokite. Kurkite. Testuokite. Tobulinkite.
+
+
+# line break for visual formatting
+;Build and Perfect your sites<br> with Firefox DevTools
+Kurkite ir tobulinkite savo svetaines<br> su „Firefox“ kūrėjų priemonių pagalba
+
+
+;Inspector
+Tyriklis
+
+
+;Inspect and refine code to build pixel-perfect layouts.
+Tirkite ir tobulinkite kodą, kad visi tinklalapiai atrodytų tobulai.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Page_Inspector
+;Learn more about Page Inspector
+Sužinokite apie tyriklį daugiau
+
+
+;Console
+Pultas
+
+
+;Track CSS, JavaScript, security and network issues.
+Matykite CSS, „JavaScript“, saugumo ir tinklo problemas.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Web_Console
+;Learn more about Web Console
+Sužinokite apie pultą daugiau
+
+
+;Debugger
+Derintuvė
+
+
+;Powerful JavaScript debugger with support for your framework.
+Galinga „JavaScript“ derintuvė, palaikanti ir jūsų naudojamą karkasą.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Debugger
+;Learn more about JavaScript Debugger
+Sužinokite apie „JavaScript“ derintuvę daugiau
+
+
+;Network
+Tinklo stebyklė
+
+
+;Monitor network requests that can slow or block your site.
+Stebėkite tinklo užklausas ir jų vykdymo spartą bei aptikite tas, kurios labiausiai lėtina tinklalapio įkėlimą.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Network_Monitor
+;Learn more about Network Monitor
+Sužinokite apie tinklo stebyklę daugiau
+
+
+;Storage panel
+Saugyklų tyriklis
+
+
+;Add, modify and remove cache, cookies, databases and session data.
+Pridėkite, keiskite ir šalinkite podėlio įrašus, slapukus, vietinės duomenų bazės įrašus ir kitus duomenis.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Storage_Inspector
+;Learn more about Storage Panel
+Sužinokite apie saugyklų tyriklį daugiau
+
+
+;Responsive Design Mode
+Keičiamo dydžio rodinys
+
+
+;Test sites on emulated devices in your browser.
+Įsitikinkite, jog svetainės gerai atrodys mažuose telefonų ekranuose, emuliuodami juos tiesiai naršyklėje.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Responsive_Design_View
+;Learn more about Responsive Design View
+Sužinokite apie keičiamo dydžio rodinį daugiau
+
+
+;Visual Editing
+Vaizdusis redaktorius
+
+
+;Fine-tune animations, alignment and padding.
+Kruopščiai nupoliruokite animacijas, parinkite tinkamiausias paraštes ir lygiuotę.
+
+
+# Link points to https://hacks.mozilla.org/2015/11/developer-edition-44-creative-tools-and-more
+;Learn more about Visual Editing
+Sužinokite apie vaizdųjį redaktorių daugiau
+
+
+;Performance
+Našumo priemonės
+
+
+;Unblock bottlenecks, streamline processes, optimize assets.
+Atraskite ir pašalinkite našumo problemas, sustyguokite procesus, optimizuokite išteklius.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Performance
+;Learn more about Performance Tools
+Sužinokite apie našumo priemones daugiau
+
+
+;Memory
+Atminties priemonės
+
+
+;Find memory leaks and make your application zippy.
+Raskite atminties protėkius ir paspartinkite savo programą.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Memory
+;Learn more about Memory Tools
+Sužinokite apie atminties priemones daugiau
+
+
+;Web Audio
+Saityno garso tyriklis
+
+
+;The only developer tool for inspecting the Web Audio API.
+Vienintelė priemonė, skirta programuotojams dirbti su „Web Audio“ API sąsaja.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Web_Audio_Editor
+;Learn more about Web Audio Editor
+Sužinokite daugiau apie saityno garso tyriklį
+
+
+;Scratchpad
+Juodraštis
+
+
+;Edit, write, run and execute JavaScript in real time.
+Taisykite, kurkite ir vykdykite „JavaScript“ scenarijus realiu laiku.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Scratchpad
+;Learn more about Scratchpad
+Sužinokite apie juodraštį daugiau
+
+
+;Style Editor
+Stilių rengyklė
+
+
+;Edit and manage all your CSS stylesheets in your browser.
+Taisykite ir tvarkykite savo svetainių CSS stilius tiesiog naršyklėje.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Style_Editor
+;Learn more about Style Editor
+Sužinokite apie stilių rengyklę daugiau
+
+
+;Speak up
+Pasisakykite
+
+
+;Feedback makes us better. Tell us how we can improve the browser and Developer tools.
+Jūsų atsiliepimai mums padeda tobulėti. Papasakokite, kaip savo naršyklę ir jos pateikiamas saityno kūrėjų priemones galime patobulinti.
+
+
+# Link to https://discourse.mozilla-community.org/c/devtools
+;Join the conversation
+Įsijunkite į pokalbį
+
+
+;Get involved
+Įsitraukite
+
+
+;Help build the last independent browser. Write code, fix bugs, make add-ons, and more.
+Padėkite kurti paskutinę nepriklausomą naršyklę. Įsitraukti galite įvairiais būdais: rašydami kodą, taisydami klaidas, kurdami priedus ir daugybe kitų.
+
+
+# Link to https://devtools-html.github.io/
+;Start now
+Pradėkite dabar
+
+
+;Download the Firefox browser made for developers
+Parsisiųskite „Firefox“ naršyklę, sukurtą programuotojams
+
+
+# First run page at https://www.mozilla.org/firefox/57.0a2/firstrun/
+;Firefox Developer Edition is the blazing fast browser that offers cutting edge developer tools and latest features like CSS Grid support and framework debugging
+„Firefox Developer Edition“ – tai ypač sparti naršyklė, suteikianti itin šiuolaikiškas saityno kūrėjų priemones ir šviežiausias naujoves, tokias, kaip CSS tinklelių palaikymas ir JS karkasų derinimas
+
+
+;Welcome to the all-new Firefox Quantum: Developer Edition
+Jus sveikina visiškai nauja „Firefox Quantum: Developer Edition“
+
+
+;Firefox has been rebuilt from the ground-up to be faster, sleeker, and more powerful than ever.
+„Firefox“ naršyklė buvo atnaujinta iš pagrindų, kad taptų spartesnė, grakštesnė ir galingesnė nei kada nors anksčiau.
+
+
+;Firefox Devtools
+Kūrėjų priemonės
+
+
+;Next-Gen CSS Engine
+Naujos kartos CSS varikliukas
+
+
+# line break for visual formatting
+;Get developer news, tricks and resources <br /> sent straight to your inbox.
+Gaukite programuotojams skirtas naujienas, patarimus ir kitą naudingą informaciją tiesiai į savo el.&nbsp;pašto dėžutę.
+
+
+;A Next-Generation CSS Engine (hint: it’s fast)
+Naujos kartos CSS varikliukas (beje, labai spartus)
+
+
+;Firefox Quantum includes a new CSS engine, written in Rust, that has state-of-the-art innovations and is blazingly fast.
+į „Firefox Quantum“ įtrauktas naujas, inovatyvus ir neįtikėtinai spartus „Rust“ kalba parašytas CSS varikliukas.
+
+
+# What's new run page at https://www.mozilla.org/firefox/57.0a2/whatsnew/
+;Want to be on the cutting-edge?
+Norite būti traukinio priešakyje?
+
+
+;Firefox Nightly receives daily updates and allows you to access features months before they go mainstream.
+„Firefox Nightly“ atnaujinama kasdien ir suteikia galimybę išbandyti naujausias funkcijas, kurias planuojama išleisti tik po kelių mėnesių.
+
+
+;Congrats. You now have Firefox Quantum: Developer Edition.
+Sveikiname! Jūs naudojatės „Firefox Quantum: Developer Edition“.
+
+
+;This isn’t just an update. This is Firefox Quantum: A brand new Firefox that has been rebuilt from the ground-up to be faster, sleeker, and more powerful than ever.
+Tai nėra eilinis atnaujinimas. Tai – „Firefox Quantum“ – visiškai nauja, iš pagrindų atnaujinta „Firefox“ laida – spartesnė, grakštesnė ir galingesnė nei kada nors anksčiau.
+
+

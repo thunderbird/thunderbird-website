@@ -1,0 +1,811 @@
+;Navigation
+Навигация
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Изпитателни версии
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Относно
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Приложения
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Без проследяване
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Табло на интересите
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Developer Edition {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Поверително сърфиране
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Имате нужда от помощ?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Новини
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Изберете независимият четец
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox остана не-комерсиален, не-корпоративен, не-компрометиран. Избирайки Firefox не избирате само четец. Това е вашият глас за лична свобода.
+
+
+;Donate
+Даряване
+
+
+;Support
+Поддръжка
+
+
+;Products
+Продукти
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Разширения
+
+
+;Add-ons
+Добавки
+
+
+;About Us
+За нас
+
+
+;Labs
+Лаборатории
+
+
+;skip to Navigation
+прескачане до навигацията
+
+
+;switch language
+смяна на език
+
+
+;Back to home page
+Връщане към началната страница
+
+
+;About Mozilla
+За Mozilla
+
+
+;Get Involved
+Участвайте
+
+
+;Careers
+Работа
+
+
+;Press Center
+Пресцентър
+
+
+;Contact Us
+Връзка с нас
+
+
+# Used in new footer to switch the language of the page
+;Language
+Език
+
+
+;Other languages:
+Други езици:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Език на страницата:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d.%m.%Y
+
+
+;Legal
+Правни въпроси
+
+
+# Used as link in the footer
+;Cookies
+Бисквитки
+
+
+;Legal Notices
+Правни бележки
+
+
+;Privacy Policy
+Политика за личните данни
+
+
+;Release Notes
+Бележки към изданието
+
+
+;Other Systems and Languages
+Други системи и езици
+
+
+;Close
+Затваряне
+
+
+;(in English)
+(на английски)
+
+
+;Return to top
+Връщане в началото
+
+
+;Features
+Възможности
+
+
+;Customize
+Персонализиране
+
+
+;Download
+Изтегляне
+
+
+;Previous
+Предишен
+
+
+;Next
+Следващ
+
+
+# MegaBytes abbreviation
+;MB
+MБ
+
+
+;MegaBytes
+Мегабайта
+
+
+;FAQ
+Въпроси и отговори
+
+
+;Videos
+Видео
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Освен ако не е <a href="%s">изрично упоменато</a>, съдържанието на тази страница е лицензирано според<br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> или по-нова версия.
+
+
+;Report Trademark Abuse
+Докладване на злоупотреба с търговска марка
+
+
+;Free Upgrade
+Безплатно обновяване
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Следвайте ни:
+
+
+;Customize with Add-ons
+Персонализирайте чрез добавки
+
+
+;Learn More
+Научете повече
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Научете повече
+
+
+# Link used to play again an animation or a video
+;Replay
+Повторение
+
+
+;Watch the video
+Гледайте видеото
+
+
+;Replay the video
+Гледайте отново
+
+
+;Share the video
+Споделете видеото
+
+
+;WebM format
+Формат WebM
+
+
+;Ogg Theora format
+Формат Ogg Theora
+
+
+;MPEG-4 format
+Формат MPEG-4
+
+
+;Mobile
+За мобилен телефон
+
+
+;View Full Site
+Вижте цялата страница
+
+
+;Desktop
+Desktop {ok}
+
+
+;Firefox for mobile
+Firefox за мобилен телефон
+
+
+;Email
+Електронна поща
+
+
+;Upgrade now
+Обнови сега
+
+
+;Update now
+Обнови сега
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Лични данни
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Части от това съдържание са ©1998–%(current_year)s на индивидуални сътрудници на mozilla.org. Съдържанието е достъпно под <a rel="license" href="%(url)s">Creative Commons license</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Части от това съдържание са ©1998–%(current_year)s на индивидуални сътрудници на mozilla.org. Съдържанието е достъпно под <a href="%(url)s">Creative Commons license</a>.
+
+
+# Footer string
+;Contribute to this site
+Принос към страницата
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Изходен код на страницата
+
+
+# Top menu item
+;Mission
+Мисия
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Разходка
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sync {ok}
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Добавки за компютър
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Добавки за Android
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Теми
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Поддръжка за компютър
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Поддръжка за Android
+
+
+;Releases
+Издания
+
+
+;Blog
+Блог
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Получаване на новини от Mozilla
+
+
+# share button for social networks
+;Share
+Споделете
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla в Twitter
+
+
+# footer link
+;Firefox on Twitter
+Firefox в Twitter
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla във Facebook
+
+
+# footer link
+;Firefox on Facebook
+Firefox във Facebook
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Форуми
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Патенти
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Ръководство
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Управление
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+История
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Нашите продукти
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Софтуер и други иновации, предназначени да придвижат напред нашата мисия.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Станете доброволец в някое от многото направления.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Меню
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+С ангажимент към Вас, Вашата сигурност и отворения Уеб
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Моля включете JavaScript във вашия четец, за да ползвате пълните възможности на страницата.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Възможности на Firefox
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Firefox помощ
+
+
+;January
+Януари
+
+
+;February
+Февруари
+
+
+;March
+Март
+
+
+;April
+Април
+
+
+;May
+Май
+
+
+;June
+Юни
+
+
+;July
+Юли
+
+
+;August
+Август
+
+
+;September
+Септември
+
+
+;October
+Октомври
+
+
+;November
+Ноември
+
+
+;December
+Декември
+
+
+;<abbr>Jan</abbr>
+<abbr>Яну</abbr>
+
+
+;<abbr>Feb</abbr>
+<abbr>Фев</abbr>
+
+
+;<abbr>Mar</abbr>
+<abbr>Мар</abbr>
+
+
+;<abbr>Apr</abbr>
+<abbr>Апр</abbr>
+
+
+;<abbr>May</abbr>
+<abbr>Май</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Юни</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Юли</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Авг</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Сеп</abbr>
+
+
+;<abbr>Oct</abbr>
+<abbr>Окт</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Ное</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Дек</abbr>
+
+
+;Congrats. You’re up to date!
+Поздравления. Работите с най-новата версия!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Формат
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Текст
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Ехххей! Моля, уверете се, че е въведен валиден имейл адрес.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Съгласен съм Mozilla да разполага с данните ми, както е обяснено в <a href="%s">тази Политика за личните данни</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Бъдете в течение с<br>всичко около Firefox.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Получавайте новини за Firefox
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+ВЪВЕДЕТЕ СВОЯ ИМЕЙЛ ТУК
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Абониране
+
+
+# Old newsletter subscription Button
+;Sign me up
+Абониране
+
+
+;Select country
+Изберете държава
+
+
+;Available Languages
+Изберете език
+
+
+;We will only send you Mozilla-related information.
+Ще ви изпращаме само информация, свързана с Мozilla.
+
+
+;Thanks!
+Благодарим!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Ако преди не сте потвърждавали абонамент за бюлетин на Mozilla ще трябва да го направите сега. Моля, проверете входящата или папката с нежелана поща за писмо от нас.
+
+
+;Read all about it in our <span>newsletter</span>
+Прочетете повече за всичко това в нашия <span>бюлетин</span>
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Абонирайте се за месечните ни новини и бъдете в крак с новите неща около Mozilla, включително и последните съвети как да направите вашия Firefox по-добър. Това е идеален начин да следите какво става при нас!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + Вие
+
+
+;Get Firefox tips, tricks, news and more
+Съвети, новини и още много за Firefox
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Иновации на уеб
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Здраве на Мрежата
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Благодарим ви, че избрахте Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Четецът Mozilla Firefox
+
+
+# Link in the footer
+;Android Browser
+Четец за Android
+
+
+# Link in the footer
+;iOS Browser
+Четец за iOS
+
+
+# Link in the footer
+;Focus Browser
+Четецът Focus
+
+
+# Link in the footer
+;Desktop Browser
+Настолен четец
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer Edition {ok}
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Изтегляне на мрежовия четец Firefox
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Настолен четец за Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Мобилен четец за Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Мобилен четец за iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Вашият Firefox е остарял.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Вземете последната версия, за да продължите да разглеждате мрежата защитени.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Обновяване на Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Вижте какво е новото в това издание на Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+По-бърз, по-отзивчив и предпазващ вашата лична информация. Вижте последните новини за четеца, който пази вашия гръб.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Повече
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+По-малко
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Изберете как да споделите тези данни във Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Избиране…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Показване на всички
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Скриване на всички
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Център за разработчици
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Изследване
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Виртуална реалност
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Игри
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Документация
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Блог на Hacks
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Изтеглете Mozilla Firefox, един наистина безплатен и свободен мрежов четец. Firefox е създаден от общност с нестопанска цел посветена да даде на потребителя пълен контрол, когато е онлайн. Вземете Firefox за Windows, macOS, Linux, Android и iOS днес!
+
+

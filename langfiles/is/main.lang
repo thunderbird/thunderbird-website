@@ -1,0 +1,811 @@
+;Navigation
+Flakka
+
+
+# Used for the navigation menu, points to /firefox/channel
+;Pre-release downloads
+Niðurhala forútgáfu
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;About
+Um
+
+
+# Used in the new Firefox family navigation menu. Second-level item of "OS"
+;Apps
+Öpp
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Do Not Track
+Do Not Track {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+# Internet Dashboard: https://www.mozilla.org/firefox/interest-dashboard/
+;Interest Dashboard
+Interest Dashboard {ok}
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Developer Edition
+Þróunarútgáfa
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;Private Browsing
+Huliðsgluggi
+
+
+# Used in the new Firefox family navigation menu and in several pages as an active link to SUMO
+;Need help?
+Vantar þig hjálp?
+
+
+# Firefox family navigation menu. Item displayed pressing the "…" button.
+;News
+Fréttir
+
+
+# Used as og:title (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Choose the independent browser
+Veldu frjálsa vafrann
+
+
+# Used as og:description (meta tag for Open Graphs, not visible in the page) in in-product tours and firefox/new
+;Firefox is non-profit, non-corporate, non-compromised. Choosing Firefox isn’t just choosing a browser. It’s a vote for personal freedom.
+Firefox er ekki rekið í hagnaðarskyni, er ekki fyrirtækjasamsteypa, slakar ekki á í kröfum. Að velja Firefox er ekki bara að velja vafra. Það er yfirlýsing um eigið frelsi.
+
+
+;Donate
+Gefa pening
+
+
+;Support
+Aðstoð
+
+
+;Products
+Vörur
+
+
+# A top menu navigation label that points to https://addons.mozilla.org/firefox/.
+# Will replace Add-ons once this string is localized.
+;Extensions
+Extensions
+
+
+;Add-ons
+Viðbætur
+
+
+;About Us
+Um okkur
+
+
+;Labs
+Vinnustofur
+
+
+;skip to Navigation
+til baka á að flakka
+
+
+;switch language
+skipta um tungumál
+
+
+;Back to home page
+Til baka á heimasíðu
+
+
+;About Mozilla
+Um Mozilla
+
+
+;Get Involved
+Taka þátt
+
+
+;Careers
+Starfsframi
+
+
+;Press Center
+Fréttir
+
+
+;Contact Us
+Hafa samband
+
+
+# Used in new footer to switch the language of the page
+;Language
+Tungumál
+
+
+;Other languages:
+Önnur tungumál:
+
+
+# Will replace "Other languages" for the footer's language switcher
+;Page language:
+Tungumál síðu:
+
+
+# Year / Month / Day, indicate your prefered date format for your language
+;%Y-%m-%d
+%d.%m.%Y
+
+
+;Legal
+Lögmæti
+
+
+# Used as link in the footer
+;Cookies
+Smákökur
+
+
+;Legal Notices
+Lögfræðitilkynningar
+
+
+;Privacy Policy
+Meðferð persónuupplýsinga
+
+
+;Release Notes
+Útgáfuupplýsingar
+
+
+;Other Systems and Languages
+Önnur kerfi og tungumál
+
+
+;Close
+Loka
+
+
+;(in English)
+(á ensku)
+
+
+;Return to top
+Fara efst á síðu
+
+
+;Features
+Eiginleikar
+
+
+;Customize
+Sérsníða
+
+
+;Download
+Niðurhal
+
+
+;Previous
+Fyrra
+
+
+;Next
+Næsta
+
+
+# MegaBytes abbreviation
+;MB
+MB {ok}
+
+
+;MegaBytes
+Megabæti
+
+
+;FAQ
+Spurningar og svör
+
+
+;Videos
+Myndbönd
+
+
+;Except where otherwise <a href="%s">noted</a>, content on this site is licensed under the <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.
+Á meðan annað er ekki tekið <a href="%s">fram</a>, er efni á þessu vefsvæði gefið út undir leyfi <br /><a href="%s">Creative Commons Attribution Share-Alike License v3.0</a> eða nýrri útgáfu.
+
+
+;Report Trademark Abuse
+Tilkynna misnotkun á vörumerki
+
+
+;Free Upgrade
+Ókeypis uppfærsla
+
+
+# social networks such as Facebook and Twitter
+;Follow us on:
+Kíktu á okkur á:
+
+
+;Customize with Add-ons
+Sérsníða með viðbótum
+
+
+;Learn More
+Fræðast Meira
+
+
+# Same as previous above but with no capitalization on More
+;Learn more
+Fræðast meira
+
+
+# Link used to play again an animation or a video
+;Replay
+Spila aftur
+
+
+;Watch the video
+Horfa á myndbandið
+
+
+;Replay the video
+Spila myndbandið aftur
+
+
+;Share the video
+Deila myndbandinu
+
+
+;WebM format
+WebM skráarsnið
+
+
+;Ogg Theora format
+Ogg Theora skráarsnið
+
+
+;MPEG-4 format
+MPEG-4 skráarsnið
+
+
+;Mobile
+Farsími
+
+
+;View Full Site
+Skoða allt vefsvæðið
+
+
+;Desktop
+Tölva
+
+
+;Firefox for mobile
+Firefox fyrir farsíma
+
+
+;Email
+Tölvupóstur
+
+
+;Upgrade now
+Uppfæra núna
+
+
+;Update now
+Uppfæra núna
+
+
+# This is the equivalent of 'Privacy Policy' but shorter, used next to download buttons and as link in the footer
+;Privacy
+Friðhelgi
+
+
+# New footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a rel="license" href="%(url)s">Creative Commons license</a>.
+Hlutar innihalds eru ©1998–%(current_year)s af einstökum mozilla.org þátttakendum. Efnið er aðgengilegt undir <a rel="license" href="%(url)s">Creative Commons leyfi</a>.
+
+
+# Previous footer string
+;Portions of this content are ©1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href="%(url)s">Creative Commons license</a>.
+Hlutar innihalds eru ©1998–%(current_year)s af einstökum mozilla.org þátttakendum. Efnið er aðgengilegt undir <a href="%(url)s">Creative Commons leyfi</a>.
+
+
+# Footer string
+;Contribute to this site
+Bæta við efni á þetta vefsvæði
+
+
+# Used in footer, links to the source code of the page currently displayed.
+;Source code for this page
+Source code for this page
+
+
+# Top menu item
+;Mission
+Takmark
+
+
+# Footer item on some pages to link to a tour of features
+;Tour
+Skoðunarferð
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Sync
+Sync {ok}
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Add-ons
+Borðtölvu viðbætur
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Add-ons
+Android viðbætur
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Themes
+Þema
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Desktop Support
+Hjálp fyrir tölvu
+
+
+# Top menu item on pages like firefox/desktop/tips/
+;Android Support
+Android stuðningur
+
+
+;Releases
+Útgáfur
+
+
+;Blog
+Blogg
+
+
+# Newsletter subscription form above footer on some pages
+;Get Mozilla updates
+Ná í Mozilla uppfærslur
+
+
+# share button for social networks
+;Share
+Deila
+
+
+# footer link
+;Mozilla on Twitter
+Mozilla á Twitter
+
+
+# footer link
+;Firefox on Twitter
+Firefox á Twitter
+
+
+# footer link
+;Mozilla on Facebook
+Mozilla á Facebook
+
+
+# footer link
+;Firefox on Facebook
+Firefox á Facebook
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Forums
+Spjallsvæði
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Patents
+Einkaleyfi
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Leadership
+Forysta
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Governance
+Stjórnskipulag
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;History
+Saga
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Our Products
+Okkar vörur
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Software and other innovations designed to advance our mission.
+Hugbúnaður og aðrar nýjungar sem leiða okkur áfram.
+
+
+# sidebar link in some /about pages (e.g. Manifesto)
+;Become a volunteer contributor in a number of different areas.
+Þú getur gerst þátttakandi á marga vegu.
+
+
+# This is a non-visible string for blind people to indicate where the menu is
+;Menu
+Valmynd
+
+
+# Headline used in multiple pages (firstrun, firefox/new, firefox/desktop)
+;Committed to you, your privacy and an open Web
+Fyrir þig, þína friðhelgi og netfrelsi
+
+
+# This message is displayed when the page requires JavaScript to work (e.g. Australis or Privacy Tour)
+;Please turn on JavaScript to display this page correctly.
+Kveiktu á JavaScript svo hægt sé að birta þessa síðu rétt.
+
+
+# Used as link to /firefox/desktop in footers on some pages
+;Firefox Features
+Firefox eiginleikar
+
+
+# Used as link to SUMO in footers on some pages
+;Firefox Help
+Firefox Hjálp
+
+
+;January
+Janúar
+
+
+;February
+Febrúar
+
+
+;March
+Mars
+
+
+;April
+Apríl
+
+
+;May
+Maí
+
+
+;June
+Júní
+
+
+;July
+Júlí
+
+
+;August
+Ágúst
+
+
+;September
+September {ok}
+
+
+;October
+Október
+
+
+;November
+Nóvember
+
+
+;December
+Desember
+
+
+;<abbr>Jan</abbr>
+<abbr>Jan</abbr> {ok}
+
+
+;<abbr>Feb</abbr>
+<abbr>Feb</abbr> {ok}
+
+
+;<abbr>Mar</abbr>
+<abbr>Mar</abbr> {ok}
+
+
+;<abbr>Apr</abbr>
+<abbr>Apr</abbr> {ok}
+
+
+;<abbr>May</abbr>
+<abbr>Maí</abbr>
+
+
+;<abbr>Jun</abbr>
+<abbr>Jún</abbr>
+
+
+;<abbr>Jul</abbr>
+<abbr>Júl</abbr>
+
+
+;<abbr>Aug</abbr>
+<abbr>Ágú</abbr>
+
+
+;<abbr>Sep</abbr>
+<abbr>Sep</abbr> {ok}
+
+
+;<abbr>Oct</abbr>
+<abbr>Okt</abbr>
+
+
+;<abbr>Nov</abbr>
+<abbr>Nóv</abbr>
+
+
+;<abbr>Dec</abbr>
+<abbr>Des</abbr>
+
+
+;Congrats. You’re up to date!
+Til hamingju. Þú ert með nýjustu útgáfu!
+
+
+# Label: what email format a visitor contacting Mozilla via a form wants (contact form, contribute form…)
+;Format
+Sniðmát
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;Text
+Texti
+
+
+# Used in contact forms checkboxes to know if you want to receive HTML or pure text emails
+;HTML
+HTML {ok}
+
+
+# This is the error message displayed if you provide an invalid email address in a form
+;Whoops! Be sure to enter a valid email address.
+Úps! Vertu viss um að þú hafir slegið inn rétt póstfang.
+
+
+;I’m okay with Mozilla handling my info as explained in <a href="%s">this Privacy Notice</a>
+Ég er sáttur við að Mozilla meðhöndli mínar upplýsingar eins og útskýrt er <a href="%s">þessum skilmálum</a>
+
+
+# This title is used for the newsletter block in footers, replacing "Get Firefox news". Currently visible on the en-US pages.
+;Keep up with<br> all things Firefox.
+Vertu vakandi fyrir<br> öllu sem tengist Firefox.
+
+
+# This string is used for a subscription field on other pages than /newsletter/
+;Get Firefox news
+Gerast áskrifandi að Firefox fréttum
+
+
+# This is a default placeholder for a subscription field on other pages than /newsletter/
+;YOUR EMAIL HERE
+ÞITT TÖLVUPÓSTFANG
+
+
+# Newsletter subscription Button
+;Sign Up Now
+Skráðu þig núna
+
+
+# Old newsletter subscription Button
+;Sign me up
+Skráðu mig
+
+
+;Select country
+Veldu land
+
+
+;Available Languages
+Tiltæk tungumál
+
+
+;We will only send you Mozilla-related information.
+Við sendum aðeins upplýsingar sem tengjast Mozilla.
+
+
+;Thanks!
+Takk!
+
+
+;If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+Ef þú hefur ekki þegar staðfest áskrift að Mozilla tengdu fréttabréfi gætirðu þurft að staðfesta. Athugaðu hvort póstur sé frá okkur í innhólfinu eða í ruslpóst möppunni.
+
+
+;Read all about it in our <span>newsletter</span>
+Lestu allt um þetta í <span>fréttablaðinu</span> okkar
+
+
+;Subscribe to monthly updates and keep current with Mozilla news, including the latest tips and tricks for getting the most out of your Firefox browser. It’s the perfect way for us to keep in touch!
+Vertu áskrifandi að mánaðarlegum uppfærslum og lestu nýjustu fréttir frá Mozilla, t.d nýjar ábendingar sem hjálpa þér að fá sem mest út úr Firefox vafranum. Þetta er besta leiðin til að fylgjast með!
+
+
+;<span>Firefox</span> + You
+<span>Firefox</span> + Þú
+
+
+;Get Firefox tips, tricks, news and more
+Fáðu Firefox ábendingar, snjallræði, fréttir og fleira
+
+
+# This string will be used as a navigation label in home page, pointing to /technology
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Web Innovations
+Nýjungar á vefnum
+
+
+# This string will be used as a navigation label in home page, pointing to /internet-health
+# The string is only visible in https://www-dev.allizom.org/en-US/ until we have enough translations.
+;Internet Health
+Heilbrigt Internet
+
+
+# Used as title in What's new page for 50
+;Thanks for choosing Firefox!
+Takk fyrir að velja Firefox!
+
+
+# Used in combination with other strings to create HTML page titles, e.g. in What's new pages
+;Mozilla Firefox Web Browser
+Mozilla Firefox vafri
+
+
+# Link in the footer
+;Android Browser
+Android vafri
+
+
+# Link in the footer
+;iOS Browser
+iOS vafri
+
+
+# Link in the footer
+;Focus Browser
+Focus vafri
+
+
+# Link in the footer
+;Desktop Browser
+Vafri á borðtölvu
+
+
+# Link in the footer
+;Beta, Nightly, Developer Edition
+Beta, Nightly, Developer útgáfa
+
+
+# Link in the footer
+;Download Firefox Web Browser
+Halaðu niður Firefox vafra
+
+
+# Link in the footer
+;Desktop Browser for Mac, Windows, Linux
+Vafri fyrir Mac, Windows, Linux
+
+
+# Link in the footer
+;Mobile Browser for Android
+Snjallsíma vafri fyrir Android
+
+
+# Link in the footer
+;Mobile Browser for iOS
+Snjallsíma vafri fyrir iOS
+
+
+# Title in a banner displayed to users of old versions of Firefox
+;Your Firefox is out-of-date.
+Firefox hjá þér er úreltur.
+
+
+# Description in a banner displayed to users of old versions of Firefox
+;Get the most recent version to keep browsing securely.
+Náðu í nýjustu útgáfu til að vafra öruggur.
+
+
+# Button label in a banner displayed to users of old versions of Firefox
+;Update Firefox
+Uppfæra Firefox
+
+
+# Title for Open Graph sharing in new What's new pages
+;See what’s new with Firefox
+Sjá hvað er nýtt í Firefox
+
+
+# Description for Open Graph sharing in new What's new pages
+;Faster, more responsive and powerfully private. Check out the latest from the browser that has your back.
+Hraðari, sneggri og með betri friðhelgi. Kíktu á það nýjasta frá vafranum sem sér um þig.
+
+
+# Used on Firefox Privacy Notice landing page
+;Show More
+Sýna meira
+
+
+# Used on Firefox Privacy Notice landing page
+;Show Less
+Sýna minna
+
+
+# Used on Firefox Privacy Notice landing page
+;Choose how you want to share this data in Firefox.
+Veldu hvernig þú vilt deila þessum gögnum í Firefox.
+
+
+# The button opens Firefox preferences, in the Data section, to select your option
+;Choose…
+Veldu…
+
+
+# Used on Firefox Privacy Notice landing page
+;Show All
+Sýna allt
+
+
+# Used on Firefox Privacy Notice landing page
+;Hide All
+Fela allt
+
+
+# Navigation link points to /firefox/developer
+;Developer Hub
+Forritara svæði
+
+
+# Naviation link points to https://research.mozilla.org
+;Research
+Rannsóknir
+
+
+# Navigation link points to https://vr.mozilla.org
+;Virtual Reality
+Sýndarheimur
+
+
+# Navigation link points to https://games.mozilla.org/
+;Games
+Leikir
+
+
+# Navigation link points to https://developer.mozilla.org
+;Documentation
+Skjölun
+
+
+# Navigation link points to https://hacks.mozilla.org
+;Hacks blog
+Hacks blogg
+
+
+;Download Mozilla Firefox, a free Web browser. Firefox is created by a global non-profit dedicated to putting individuals in control online. Get Firefox for Windows, macOS, Linux, Android and iOS today!
+Halaðu niður Mozilla Firefox, sem er ókeypis vafri. Firefox er búið til af fyrirtæki sem er ekki rekin í hagnaðarskyni og setur í forgang að einstaklingar séu við stjórnvölin á netinu. Náðu í Firefox fyrir Windows, macOS, Linux, Android og iOS strax í dag!
+
+

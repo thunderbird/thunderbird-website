@@ -1,0 +1,320 @@
+## active ##
+## ember_reference_fix ##
+## quantum-firstrun-whatsnew ##
+## NOTE: demo page available at https://www-dev.allizom.org/firefox/developer/
+
+
+# HTML page description
+;Built for those who build the Web. The only browser made for developers like you.
+Собран для тех, кто строит Интернет. Единственный браузер, созданный для разработчиков.
+
+
+;Firefox Quantum: Developer Edition
+Firefox Quantum: Developer Edition {ok}
+
+
+;Welcome to your new favorite browser. Get the latest features, fast performance, and the development tools you need to build for the open web.
+Добро пожаловать в ваш новый любимый браузер. Получите доступ к новым функциям, повышенной производительности и инструментам разработчика, которые понадобятся вам для построения открытого Интернета.
+
+
+;Firefox Developer Edition automatically sends feedback to Mozilla.
+Firefox Developer Edition автоматически осуществляет обратную связь с Mozilla.
+
+
+;Faster Performance
+Повышенная производительность
+
+
+;A Next-Generation CSS Engine
+CSS-движок нового поколения
+
+
+;Firefox has been rebuilt from the ground up to be faster and more powerful than ever. This includes a new CSS engine that has state-of-the-art innovations and is blazingly fast.
+Firefox был пересобран с нуля, и стал ещё быстрее и мощнее, чем когда бы то либо. Он включает в себя абсолютно инновационный и невероятно быстрый CSS-движок.
+
+
+;New Tools
+Новые инструменты
+
+
+;Firefox DevTools
+Инструменты разработчика Firefox
+
+
+# Link points to http://firefox-dev.tools/
+;Learn more about Firefox developer tools
+Подробнее об инструментах разработчика Firefox
+
+
+;The new Firefox DevTools are powerful, flexible, and best of all, hackable. This includes a best-in-class JavaScript debugger, which can target multiple browsers and is built in React and Redux.
+Новые инструменты разработчика Firefox - мощны, гибки и хорошо настраиваемы. В них есть лучший в своём классе отладчик JavaScript, который может эмулировать поведение других браузеров, и построен на React и Redux.
+
+
+# String is obsolete. Do not remove.
+;The new Firefox DevTools are powerful, flexible, and best of all, hackable. This includes a best-in-class JavaScript debugger, which can target multiple browsers and is built in React and Ember.
+Новые инструменты разработчика Firefox - мощны, гибки и хорошо настраиваемы. В них есть лучший в своём классе отладчик JavaScript, который может эмулировать поведение других браузеров, и построен на React и Ember.
+
+
+;Innovative Features
+Инновационные функции
+
+
+;Master CSS Grid
+Управление CSS-сеткой
+
+
+# Link points to https://mozilladevelopers.github.io/playground/
+;Learn more about CSS Grid
+Подробнее о CSS-сетках
+
+
+;Firefox is the only browser with tools built specifically for building and designing with CSS Grid. These tools allow you to visualize the grid, display associated area names, preview transformations on the grid and much more.
+Firefox - единственный браузер с инструментами, созданными специально для построения и дизайна с помощью CSS-сетки. Эти инструменты позволяют визуализировать сетку, отображать связанные имена областей, предпросматривать трансформации на сетке и многое другое.
+
+
+;Design. Code. Test. Refine.
+Разрабатывайте. Кодите. Тестируйте. Улучшайте.
+
+
+# line break for visual formatting
+;Build and Perfect your sites<br> with Firefox DevTools
+Создавайте и улучшайте свои сайты <br> с помощью Инструментов разработчика Firefox
+
+
+;Inspector
+Инспектор
+
+
+;Inspect and refine code to build pixel-perfect layouts.
+Изучайте и совершенствуйте код, чтобы создавать попиксельно-идеальные макеты.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Page_Inspector
+;Learn more about Page Inspector
+Подробнее об инспекторе страниц
+
+
+;Console
+Консоль
+
+
+;Track CSS, JavaScript, security and network issues.
+Отлаживайте CSS, JavaScript, а также проблемы с сетью и безопасностью.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Web_Console
+;Learn more about Web Console
+Подробнее о Веб-консоли
+
+
+;Debugger
+Отладчик
+
+
+;Powerful JavaScript debugger with support for your framework.
+Мощный отладчик JavaScript с поддержкой вашего любимого фреймворка.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Debugger
+;Learn more about JavaScript Debugger
+Подробнее об отладчике JavaScript
+
+
+;Network
+Сеть
+
+
+;Monitor network requests that can slow or block your site.
+Контролируйте сетевые запросы, которые могут замедлить или заблокировать ваш сайт.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Network_Monitor
+;Learn more about Network Monitor
+Подробнее о мониторе сети
+
+
+;Storage panel
+Панель хранилища
+
+
+;Add, modify and remove cache, cookies, databases and session data.
+Добавляйте, редактируйте и удаляйте кэш, куки, базы данных и данные сессий.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Storage_Inspector
+;Learn more about Storage Panel
+Подробнее о панели хранилища
+
+
+;Responsive Design Mode
+Режим адаптивного дизайна
+
+
+;Test sites on emulated devices in your browser.
+Тестируйте сайты на эмулируемых устройствах в вашем браузере.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Responsive_Design_View
+;Learn more about Responsive Design View
+Подробнее о режиме адаптивного дизайна
+
+
+;Visual Editing
+Визуальное редактирование
+
+
+;Fine-tune animations, alignment and padding.
+Точная настройка анимаций, выравнивания и отступов.
+
+
+# Link points to https://hacks.mozilla.org/2015/11/developer-edition-44-creative-tools-and-more
+;Learn more about Visual Editing
+Подробнее о визуальном редактировании
+
+
+;Performance
+Производительность
+
+
+;Unblock bottlenecks, streamline processes, optimize assets.
+Разблокируйте узкие места, обеспечьте упрощение процессов и оптимизируйте производительность.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Performance
+;Learn more about Performance Tools
+Подробнее об инструментах повышения производительности
+
+
+;Memory
+Память
+
+
+;Find memory leaks and make your application zippy.
+Находите утечки памяти и уменьшите её потребление вашим приложением.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Memory
+;Learn more about Memory Tools
+Подробнее об инструментах работы с памятью
+
+
+;Web Audio
+Веб-аудио
+
+
+;The only developer tool for inspecting the Web Audio API.
+Единственный инструмент разработчиков для изучения Web Audio API.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Web_Audio_Editor
+;Learn more about Web Audio Editor
+Подробнее о редакторе веб-аудио
+
+
+;Scratchpad
+Простой редактор JavaScript
+
+
+;Edit, write, run and execute JavaScript in real time.
+Редактируйте, пишите, запускайте и исполняйте JavaScript в реальном времени.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Scratchpad
+;Learn more about Scratchpad
+Подробнее о простом редакторе JavaScript
+
+
+;Style Editor
+Редактор стилей
+
+
+;Edit and manage all your CSS stylesheets in your browser.
+Редактируйте и управляйте всеми CSS-таблицами стилей в вашем браузере.
+
+
+# Link points to https://developer.mozilla.org/docs/Tools/Style_Editor
+;Learn more about Style Editor
+Подробнее о редакторе стилей
+
+
+;Speak up
+Выскажитесь
+
+
+;Feedback makes us better. Tell us how we can improve the browser and Developer tools.
+Отзывы делают нас лучше. Расскажите нам, как мы можем улучшить браузер и инструменты веб-разработчика.
+
+
+# Link to https://discourse.mozilla-community.org/c/devtools
+;Join the conversation
+Присоединиться к обсуждению
+
+
+;Get involved
+Принять участие
+
+
+;Help build the last independent browser. Write code, fix bugs, make add-ons, and more.
+Помогите нам в создании последнего независимого браузера. Пишите код, исправляйте баги, создавайте дополнения и многое другое.
+
+
+# Link to https://devtools-html.github.io/
+;Start now
+Начать сейчас
+
+
+;Download the Firefox browser made for developers
+Загрузите браузер Firefox, созданный для разработчиков
+
+
+# First run page at https://www.mozilla.org/firefox/57.0a2/firstrun/
+;Firefox Developer Edition is the blazing fast browser that offers cutting edge developer tools and latest features like CSS Grid support and framework debugging
+Firefox Developer Edition - очень быстрый браузер, предоставляющий доступ к передовым технологиям и последним разработкам, например, он поддерживает CSS-сетки и отладку веб-приложений на основе фреймворков
+
+
+;Welcome to the all-new Firefox Quantum: Developer Edition
+Добро пожаловать в полностью новый Firefox Quantum: Developer Edition
+
+
+;Firefox has been rebuilt from the ground-up to be faster, sleeker, and more powerful than ever.
+Firefox был перестроен с нуля, и теперь быстрее, плавнее и мощнее, чем когда-либо.
+
+
+;Firefox Devtools
+Инструменты разработчика Firefox
+
+
+;Next-Gen CSS Engine
+CSS-движок нового поколения
+
+
+# line break for visual formatting
+;Get developer news, tricks and resources <br /> sent straight to your inbox.
+Получайте новости от разработчиков, советы и ресурсы, <br /> отправляемые прямо в ваш почтовый ящик.
+
+
+;A Next-Generation CSS Engine (hint: it’s fast)
+CSS-движок нового поколения (он быстрый)
+
+
+;Firefox Quantum includes a new CSS engine, written in Rust, that has state-of-the-art innovations and is blazingly fast.
+Firefox Quantum включает в себя новейший CSS-движок, написанный на Rust, содержащий в себе передовые инновации и фантастическую скорость.
+
+
+# What's new run page at https://www.mozilla.org/firefox/57.0a2/whatsnew/
+;Want to be on the cutting-edge?
+Хотите быть на волне передовых технологий?
+
+
+;Firefox Nightly receives daily updates and allows you to access features months before they go mainstream.
+Firefox Nightly обновляется ежедневно и предоставляет вам доступ к функциям за месяцы до официального релиза.
+
+
+;Congrats. You now have Firefox Quantum: Developer Edition.
+Поздравляем. Теперь у вас установлен Firefox Quantum: Developer Edition.
+
+
+;This isn’t just an update. This is Firefox Quantum: A brand new Firefox that has been rebuilt from the ground-up to be faster, sleeker, and more powerful than ever.
+Это не просто обновление. Это Firefox Quantum: Совершенно новый Firefox, который был перестроен с нуля, и теперь быстрее, плавнее и мощнее, чем когда-либо.
+
+
