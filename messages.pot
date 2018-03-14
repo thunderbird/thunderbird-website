@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-03 23:50-0800\n"
+"POT-Creation-Date: 2018-03-13 19:10-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,170 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
+
+#: start-page/release/index.html:8
+msgid "Welcome to <span>Thunderbird</span>"
+msgstr ""
+
+#: start-page/release/index.html:17
+msgid "Why we need donations"
+msgstr ""
+
+#: start-page/release/index.html:19
+msgid ""
+"You might already know that Thunderbird improvements are no longer paid "
+"for by Mozilla. Fortunately there is an active community keeping it "
+"running and developing it further. But to survive long term, the project "
+"needs funding."
+msgstr ""
+
+#: start-page/release/index.html:22
+msgid ""
+"Thunderbird is currently transitioning to an independent organization. "
+"Being independent, we can shape our own fate, but there is significant "
+"infrastructure that must be maintained to deliver the application to our "
+"tens of millions of users. For Thunderbird to survive and continue to "
+"evolve, we need your support and ask for your donation today. All the "
+"money donated will go directly to funding Thunderbird development and "
+"infrastructure."
+msgstr ""
+
+#: start-page/release/index.html:28
+msgid "Donate to Thunderbird"
+msgstr ""
+
+#: start-page/release/index.html:30
+msgid ""
+"Thunderbird is the leading open source, cross-platform email and "
+"calendaring client, free for business and personal use. We want it to "
+"stay secure and become even better."
+msgstr ""
+
+#: start-page/release/index.html:34
+msgid "If you like Thunderbird, please consider a donation!"
+msgstr ""
+
+#: start-page/release/index.html:36
+msgid ""
+"By donating, you will help us to continue delivering an ad-free top-notch"
+" email client."
+msgstr ""
+
+#: start-page/release/index.html:37
+msgid "Make a donation"
+msgstr ""
+
+#: start-page/release/index.html:43
+msgid "Other ways to contribute to Thunderbird"
+msgstr ""
+
+#: start-page/release/index.html:45
+msgid ""
+"Now is a great time for you to get involved: writing code, testing, "
+"support, localization and more. Join a global community! Share your "
+"skills and pick up a few new ones along the way. Volunteer as much as you"
+" like. Or as little. It’s totally up to you."
+msgstr ""
+
+#: start-page/release/index.html:46 start-page/release/index.html:58
+msgid "Learn more"
+msgstr ""
+
+#: start-page/release/index.html:53
+msgid "Contribute to Thunderbird"
+msgstr ""
+
+#: start-page/release/index.html:54
+#, python-format
+msgid ""
+"To ensure that Thunderbird continues to improve, as it has for the last "
+"ten years, active contributors <a href=\"%s\">recently organized</a> to "
+"focus on the future."
+msgstr ""
+
+#: start-page/release/index.html:55
+#, python-format
+msgid ""
+"Now is a great time for you to <a href=\"%s\" class=\"iconic\">get "
+"involved</a>."
+msgstr ""
+
+#: start-page/release/index.html:56
+msgid ""
+"Please help us assist users of Thunderbird, and improve the Thunderbird "
+"product and eco-system."
+msgstr ""
+
+#: start-page/release/index.html:57
+#, python-format
+msgid "We look forward to <a href=\"%s\">hearing from you</a>."
+msgstr ""
+
+#: start-page/release/index.html:64
+msgid "Need Support?"
+msgstr ""
+
+#: start-page/release/index.html:67
+#, python-format
+msgid ""
+"Most Thunderbird support questions are answered in the <a "
+"href=\"%s\">Knowledge Base</a>."
+msgstr ""
+
+#: start-page/release/index.html:68
+#, python-format
+msgid ""
+"If you can’t find an answer, <a href=\"%s\">ask your question in our "
+"support forum</a>."
+msgstr ""
+
+#: start-page/release/index.html:68 start-page/release/index.html:72
+msgid "https://support.mozilla.org/questions/new/thunderbird"
+msgstr ""
+
+#: start-page/release/index.html:71
+#, python-format
+msgid ""
+"Most Thunderbird support questions are answered on the <a "
+"href=\"%s\">Knowledge Base</a>."
+msgstr ""
+
+#: start-page/release/index.html:72
+#, python-format
+msgid ""
+"If you can’t find an answer, <a href=\"%s\">ask your question on our "
+"support forum</a>."
+msgstr ""
+
+#: start-page/release/index.html:79 website/base-resp.html:35
+msgid "Features"
+msgstr ""
+
+#: start-page/release/index.html:80
+msgid "Visit our blog"
+msgstr ""
+
+#: start-page/release/index.html:81 website/base-resp.html:81
+#: website/site-footer.html:17
+msgid "Donate"
+msgstr ""
+
+#: start-page/release/index.html:82
+msgid "Contribute"
+msgstr ""
+
+#: start-page/release/index.html:83
+msgid "Tips"
+msgstr ""
+
+#: start-page/release/index.html:84 website/base-resp.html:59
+#: website/base-resp.html:64
+msgid "Add-ons"
+msgstr ""
+
+#: start-page/release/index.html:85
+msgid "Get help"
+msgstr ""
 
 #: website/base-resp.html:24
 msgid "Menu"
@@ -31,32 +195,24 @@ msgstr ""
 msgid "Beta"
 msgstr ""
 
-#: website/base-resp.html:35
-msgid "Features"
-msgstr ""
-
 #: website/base-resp.html:40
 msgid "Releases"
 msgstr ""
 
-#: website/base-resp.html:45
+#: website/base-resp.html:46
+msgid "Calendar Add-on"
+msgstr ""
+
+#: website/base-resp.html:52
 msgid "Thunderbird for Organizations"
 msgstr ""
 
-#: website/base-resp.html:52 website/base-resp.html:57
-msgid "Add-ons"
-msgstr ""
-
-#: website/base-resp.html:62
+#: website/base-resp.html:69
 msgid "Themes"
 msgstr ""
 
-#: website/base-resp.html:69
+#: website/base-resp.html:76
 msgid "Support"
-msgstr ""
-
-#: website/base-resp.html:74 website/site-footer.html:17
-msgid "Donate"
 msgstr ""
 
 #: website/download-button.html:7 website/download-button.html:48

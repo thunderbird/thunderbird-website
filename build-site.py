@@ -1,5 +1,4 @@
 import errno
-import gettext
 import helper
 import jinja2
 import os

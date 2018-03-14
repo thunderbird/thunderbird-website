@@ -1,1 +1,1 @@
-find ../newlocale -name \*.po -printf '%h\n' -execdir msgfmt messages.po -o messages.mo \;
+find ../locale -name \*.po -printf '%h\n' -execdir msgfmt messages.po -o messages.mo \;

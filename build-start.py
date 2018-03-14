@@ -53,7 +53,8 @@ def build_site(lang):
     site = make_site(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
 
     translator = translate.Translation(lang, ['thunderbird/start/release', 'main'])
-    site._env.install_gettext_translations(translator)
+    gettext_translator = translate.gettext_object(lang)
+    site._env.install_gettext_translations(gettext_translator)
 
     def l10n_has_tag(tag):
         return tag in translator.lang_file_tag_set('thunderbird/start/release', lang)
