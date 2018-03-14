@@ -4,9 +4,14 @@ from product_details import thunderbird_desktop as product_details
 from jinja2 import Markup
 
 import codecs
+import gettext
 import os
-import settings
 import re
+import settings
+
+def gettext_object(lang):
+    trans = gettext.translation("messages", localedir="locale", languages=[lang.replace('-','_')], fallback=True)
+    return trans
 
 def strip_whitespace(message):
     """Collapses all whitespace into single spaces.
