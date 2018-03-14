@@ -175,15 +175,15 @@ def platform_img(ctx, url, optional_attributes=None):
         img_attrs['data-high-res'] = 'true'
 
     img_attrs.update(optional_attributes)
-    attrs = ' '.join('%s="%s"' % (attr, val)
+    attrs = ' '.join(u'%s="%s"' % (attr, val)
                      for attr, val in img_attrs.iteritems())
 
     # Don't download any image until the javascript sets it based on
     # data-src so we can do platform detection. If no js, show the
     # windows version.
-    markup = ('<img class="platform-img js" src="" data-processed="false" {attrs}>'
-              '<noscript><img class="platform-img win" src="{win_src}" {attrs}>'
-              '</noscript>').format(attrs=attrs, win_src=img_attrs['data-src-windows'])
+    markup = (u'<img class="platform-img js" src="" data-processed="false" {attrs}>'
+              u'<noscript><img class="platform-img win" src="{win_src}" {attrs}>'
+              u'</noscript>').format(attrs=attrs, win_src=img_attrs[u'data-src-windows'])
 
     return jinja2.Markup(markup)
 
