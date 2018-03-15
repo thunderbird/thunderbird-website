@@ -7,17 +7,23 @@ This repo contains the Thunderbird in-client Start page and the www.thunderbird.
 # Build Instructions
 
 ## Dependencies
-Note: On Ubuntu, you would need to use apt-get instead of yum, and similarly for different package managers.
+On Ubuntu, you would need to use apt-get instead of yum, and similarly for different package managers.
+Also, the website is incompatible with LESS 3.0 or above.
 
 ```
 pip install -r requirements.txt
-git clone https://github.com/mozilla-l10n/bedrock-l10n locale
 git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
 git clone https://github.com/mozilla/product-details-json
 sudo yum install npm
 sudo npm install -g less@2.7.2`
 ```
-#### Note: The website will not work with less 3.0 or above.
+
+If you need the localizations to display pages translated from English into other languages:
+
+```
+git clone https://github.com/thundernest/thunderbird.net-l10n.git locale
+l10n_tools/compile.sh
+```
 
 ## Run Build
 There are two build scripts, one for the [start page](https://start.thunderbird.net/) and one for [www.thunderbird.net](https://www.thunderbird.net/)
@@ -26,7 +32,7 @@ There are two build scripts, one for the [start page](https://start.thunderbird.
     * This builds into the `site` directory.
 * `python build-site.py` for thunderbird.net.
     * This builds into the `thunderbird.net` directory.
-    
+
 ## View Website
 In order to view the website, enter the `thunderbird.net` directory and run the following command to spin up an HTTP server
 
