@@ -25,12 +25,12 @@
 <nav role="directory">
     <ul class="feature-links">
         <li><a href="#development">{{ _('Development') }}</a></li>
-        <li><a href="#documentation">{{ _('Documentation') }}</a></li>
-        <li><a href="#communication">{{ _('Communication') }}</a></li>
-        <li><a href="#infrastructure">{{ _('Infrastructure') }}</a></li>
         <li><a href="#design">{{ _('Design') }}</a></li>
+        <li><a href="#documentation">{{ _('Documentation') }}</a></li>
         <li><a href="#translation">{{ _('Translation') }}</a></li>
         <li><a href="#qualityassurance">{{ _('Quality Assurance') }}</a></li>
+        <li><a href="#communication">{{ _('Communication') }}</a></li>
+        <li><a href="#infrastructure">{{ _('Infrastructure') }}</a></li>
         <li><a href="#marketing">{{ _('Marketing') }}</a></li>
     </ul>
 </nav>
@@ -67,6 +67,17 @@
         </div>
     </section><!-- end #development -->
 
+    <section id="design">
+        <h2>{{ _('Design') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <h3>{{ _('Heading') }}</h3>
+                    <p>{{ _('Content Text') }}</p>
+                </section>
+            </div>
+        </div>
+    </section><!-- end #design -->
 
     <section id="documentation">
         <h2>{{ _('Documentation') }}</h2>
@@ -79,6 +90,28 @@
             </div>
         </div>
     </section><!-- end #documentation -->
+
+    <section id="translation">
+        <h2>{{ _('Translation') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    {{ _('See <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Thunderbird/Thunderbird_Localization">Thunderbird Localization on MDN</a>.') }}
+                </section>
+            </div>
+        </div>
+    </section><!-- end #translation -->
+
+    <section id="qualityassurance">
+        <h2>{{ _('Quality Assurance') }}</h2>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    {{ _('See <a href="https://wiki.mozilla.org/Thunderbird:Testing">the Mozilla Wiki page</a>.') }}
+                </section>
+            </div>
+        </div>
+    </section><!-- end #qualityassurance -->
 
     <section id="communication">
         <h2>{{ _('Communication') }}</h2>
@@ -101,7 +134,7 @@
                 </section>
             </div>
         </div>
-    </section><!-- end #documentation -->
+    </section><!-- end #communication -->
 
     <section id="infrastructure">
         <h2>{{ _('Infrastructure') }}</h2>
@@ -114,43 +147,6 @@
             </div>
         </div>
     </section><!-- end #infrastructure -->
-
-
-    <section id="design">
-        <h2>{{ _('Design') }}</h2>
-        <div class="row">
-            <div class="col full">
-                <section>
-                    <h3>{{ _('Heading') }}</h3>
-                    <p>{{ _('Content Text') }}</p>
-                </section>
-            </div>
-        </div>
-    </section><!-- end #design -->
-
-
-    <section id="translation">
-        <h2>{{ _('Translation') }}</h2>
-        <div class="row">
-            <div class="col full">
-                <section>
-                    {{ _('See <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Thunderbird/Thunderbird_Localization">Thunderbird Localization on MDN</a>.') }}
-                </section>
-            </div>
-        </div>
-    </section><!-- end #translation -->
-
-
-    <section id="qualityassurance">
-        <h2>{{ _('Quality Assurance') }}</h2>
-        <div class="row">
-            <div class="col full">
-                <section>
-                    {{ _('See <a href="https://wiki.mozilla.org/Thunderbird:Testing">the Mozilla Wiki page</a>.') }}
-                </section>
-            </div>
-        </div>
-    </section><!-- end #qualityassurance -->
 
 
     <section id="marketing">
