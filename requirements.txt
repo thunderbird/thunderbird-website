@@ -5,3 +5,7 @@ babel
 webob
 python-dateutil
 markdown
+polib==1.1.0 \
+    --hash=sha256:93b730477c16380c9a96726c54016822ff81acfa553977fdd131f2b90ba858d7
+icalendar==3.8.3 \
+    --hash=sha256:41949b09031611799136e019168b84eb5ed899c8e4e692117d2d38504659fd16
