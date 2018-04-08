@@ -30,8 +30,6 @@
         <li><a href="#translation">{{ _('Translation') }}</a></li>
         <li><a href="#qualityassurance">{{ _('Quality Assurance') }}</a></li>
         <li><a href="#communication">{{ _('Communication') }}</a></li>
-        <li><a href="#infrastructure">{{ _('Infrastructure') }}</a></li>
-        <li><a href="#marketing">{{ _('Marketing') }}</a></li>
     </ul>
 </nav>
 
@@ -40,18 +38,21 @@
         <h2>{{ _('Development') }}</h2>
         <div class="row">
             <div class="col full">
+                <p>{{ _('How to develop the best mail client in existence.') }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col full">
                 <section>
                     <h3>{{ _('Getting Started') }}</h3>
                     <p>{{ _('Read the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Introduction">Developer Guide</a> on MDN. That will give you a general overview of the ecosystem Thunderbird is part of.') }}</p>
-                    <p>
-                        {{ _('<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Thunderbird_build">Simple Thunderbird build</a> on MDN is a good place to find how to get your first build completed.') }}
-                    </p>
+                    <p>{{ _('<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Thunderbird_build">Simple Thunderbird build</a> on MDN is a good place to find how to get your first build completed.') }}</p>
                 </section>
                 <section>
                     <h3>{{ _('Code') }}</h3>
                     <p>{{ _('Code is located on Mozilla\'s Mercurial server.') }}</p>
                     <ul>
-                        <li><a href="https://hg.mozilla.org/comm-central/">{{ _('comm-central') }}</a> {{ _('is the main Thunderbird repository.') }}</li>
+                        <li>{{ _('<a href="https://hg.mozilla.org/comm-central/">comm-central</a> is the main Thunderbird repository.') }}</li>
                     </ul>
                     <p>{{ _('There is also some code hosted on GitHub.') }}</p>
                     <ul>
@@ -61,7 +62,7 @@
                 </section>
                 <section>
                     <h3>{{ _('Bugs') }}</h3>
-                    <p>{{ _('All Thunderbird bugs live on <a href="https://bugzilla.mozilla.org">Mozilla\'s Bugzilla</a>. Bugzilla is a powerful tool and can be intimidating if you are not used to it. So check out these pre-defined searches to test the waters.') }}</p>
+                    <p>{{ _('All Thunderbird bugs live on <a href="https://bugzilla.mozilla.org">Mozilla\'s Bugzilla</a>. Bugzilla is a powerful tool and can be intimidating if you are not used to it. So check out these pre-defined searches to test the waters:') }}</p>
                     <ul>
                         <li>{{ _('<a href="https://mzl.la/2oijxOd">"Good first bugs"</a> which are extra easy.') }}</li>
                         <li>{{ _('<a href="http://www.joshmatthews.net/bugsahoy/?thunderbird=1">Mentored Bugs</a> have a mentor who commits to helping you every step of the way.') }}</li>
@@ -80,8 +81,13 @@
         <h2>{{ _('Design') }}</h2>
         <div class="row">
             <div class="col full">
+                <p>{{ _('Make Thunderbird easy to use, and easy on the eyes.') }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col full">
                 <section>
-                    <p>{{ _('Please share ideas and concepts by posting them on <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird&bug_severity=enhancement">Bugzilla</a>. You can also discuss design in the #maildev irc channel, or the <a href="https://discourse.mozilla.org/c/thunderbird">Discourse forum</a>.') }}</p>
+                    <p>{{ _('Please share ideas and concepts by posting them on <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird&bug_severity=enhancement">Bugzilla</a>. You can also discuss design in the #maildev irc channel, or the <a href="https://discourse.mozilla.org/c/thunderbird">Discourse category</a>.') }}</p>
                 </section>
             </div>
         </div>
@@ -91,18 +97,22 @@
         <h2>{{ _('Documentation') }}</h2>
         <div class="row">
             <div class="col full">
+                <p>{{ _('Help make sure the answers are written down before the questions are asked.') }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col full">
                 <section>
                     <h3>Where documentation lives</h3>
                     <ul>
-                        <li>{{ _('<a href="https://wiki.mozilla.org/Thunderbird:Home">The Thunderbird section of the Mozilla wiki.</a> ') }}</li>
-                    <li>{{ _('<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird">The Thunderbird section of MDN.</a> ') }}</li>
-                        <li></li>
+                        <li>{{ _('<a href="https://wiki.mozilla.org/Thunderbird:Home">The Thunderbird section</a> of the Mozilla wiki.') }}</li>
+                        <li>{{ _('<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird">The Thunderbird section</a> of MDN.') }}</li>
                     </ul>
                 </section>
                 <section>
                     <h3>Contributing to documentation</h3>
                     <ul>
-                        <li>{{ _('<a href="https://wiki.mozilla.org/MozillaWiki:Policies/Accounts">MozillaWiki:Policies/Accounts</a> - What you need to know to contribute to the wiki.') }}</li>
+                        <li>{{ _('<a href="https://wiki.mozilla.org/MozillaWiki:Policies/Accounts">MozillaWiki:Policies/Accounts</a> - What you need to know to contribute to the wiki. That page is applicable to the Thunderbird section.') }}</li>
                         <li>{{ _('<a href="https://developer.mozilla.org/en-US/docs/MDN/Getting_started">Getting started on MDN</a> - What you need to know to contribute to the Thunderbird section of MDN.') }}</li>
 
                     </ul>
@@ -115,8 +125,13 @@
         <h2>{{ _('Translation') }}</h2>
         <div class="row">
             <div class="col full">
+                <p>{{ _('Make sure the entire world can use Thunderbird.') }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col full">
                 <section>
-                    {{ _('See <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Thunderbird/Thunderbird_Localization">Thunderbird Localization on MDN</a>.') }}
+                    {{ _('See <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Thunderbird/Thunderbird_Localization">Thunderbird Localization</a> on MDN.') }}
                 </section>
             </div>
         </div>
@@ -126,8 +141,13 @@
         <h2>{{ _('Quality Assurance') }}</h2>
         <div class="row">
             <div class="col full">
+                <p>{{ _('Help catch those bugs before they get loose.') }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col full">
                 <section>
-                    {{ _('See <a href="https://wiki.mozilla.org/Thunderbird:Testing">the Mozilla Wiki page</a>.') }}
+                    {{ _('See <a href="https://wiki.mozilla.org/Thunderbird:Testing">Thunderbird:Testing</a> on the Mozilla Wiki.') }}
                 </section>
             </div>
         </div>
@@ -137,22 +157,28 @@
         <h2>{{ _('Communication') }}</h2>
         <div class="row">
             <div class="col full">
+                <p>{{ _('Here are the places and ways Thunderbird communicates.') }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col full">
                 <section>
                     <h3>{{ _('Discussion Forums') }}</h3>
                     <ul>
-                        <li><a href="https://support.mozilla.org/en-US/questions/thunderbird">{{ _('Thunderbird Support Forum') }}</a> </li>
-                        <li><a href="https://discourse.mozilla.org/c/thunderbird">{{ _('Thunderbird category on Mozilla\'s Discourse.') }}</a> </li>
+                        <li>{{ _('<a href="https://support.mozilla.org/en-US/questions/thunderbird">Thunderbird Support Forum</a>') }}</li>
+                        <li>{{ _('<a href="https://discourse.mozilla.org/c/thunderbird">Thunderbird category on Mozilla\'s Discourse.</a>') }}</li>
                         <li>{{ _('<a href="http://forums.mozillazine.org/viewforum.php?f=29">Thunderbird Builds</a> on MozillaZine') }}</li>
                     </ul>
                 </section>
                 <section>
                     <h3>{{ _('Live Chat') }}</h3>
                     <h4>{{ _('IRC Channels on irc.mozilla.org') }}</h4>
+                    <p>{{ _('You can use <a href="https://mibbit.com/">Mibbit.com</a> if you don\'t already have a preferred IRC client.') }}</p>
                     <ul>
                         <li>{{ _('#maildev - For hacking on Thunderbird.') }}</li>
                         <li>{{ _('#thunderbird - For general questions and support.') }}</li>
                         <li>{{ _('#instantbird - For chatting.') }}</li>
-                        <li>{{ _('#tb-qa') - For QA chat.}}</li>
+                        <li>{{ _('#tb-qa - For QA chat.') }}</li>
                     </ul>
                 </section>
                 <section>
@@ -162,8 +188,6 @@
                         <li>{{ _('<a href="https://wiki.mozilla.org/Thunderbird/tb-support-crew">tb-support-crew</a> - For those who help the users.') }}</li>
                         <li>{{ _('<a href="https://mail.mozilla.org/listinfo/thunderbird-testers">thunderbird-testers</a> - For anyone who is helping test.') }}</li>
                         <li>{{ _('<a href="https://lists.mozilla.org/listinfo/dev-apps-thunderbird">dev-apps-thunderbird</a> - For add on related discussion.') }}</li>
-                        <li>{{ _('') }}</li>
-                        <li>{{ _('') }}</li>
                         <li>{{ _('<a href="https://wiki.mozilla.org/Thunderbird/tb-enterprise">tb-enterprise</a> - tb-enterprise is a mailing list for ADMINISTRATORS to discuss large scale deployment and configuration of Thunderbird.') }}</li>
                     </ul>
                 </section>
