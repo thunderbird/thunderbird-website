@@ -47,8 +47,9 @@
     {% block extrahead %}
       {# Extra header stuff (scripts, styles, metadata, etc) seen by all browsers. Use the 'page_css' block for CSS you want to hide from IE8 and lower. #}
     {% endblock %}
-
-    {% block js_pretrack %}{# include JavaScript that must be run pre GA tracking here #}{% endblock %}
+    <script type="text/javascript" src="/media/js/piwik.js" async defer></script>
+    <script type="text/javascript" src="/media/js/matomo.js" charset="utf-8"></script>
+    <noscript><p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
   </head>
 
   <body {% if self.body_id() %}id="{% block body_id %}{% endblock %}" {% endif %}class="html-{{ DIR }} {% block body_class %}{% endblock %}" {% block body_attrs %}{% endblock %}>
