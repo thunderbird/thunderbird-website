@@ -103,9 +103,9 @@ def build_site(lang):
         e.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
         for k, n in notelist.iteritems():
             if 'beta' in k:
-                e.globals.update(channel='Beta')
+                e.globals.update(channel='Beta', channel_name='Beta')
             else:
-                e.globals.update(channel='Release')
+                e.globals.update(channel='Release', channel_name='Release')
             n["release"]["release_date"] = n["release"].get("release_date", helper.thunderbird_desktop.get_release_date(k))
 
             # If there's no data at all, we can't parse an empty string for a date.
