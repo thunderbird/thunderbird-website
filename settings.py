@@ -65,6 +65,7 @@ URL_MAPPINGS = {
     'thunderbird.channel': '/channel',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
     'thunderbird.features': '/features',
+    'thunderbird.get-involved': '/get-involved',
     'thunderbird.index': '/',
     'thunderbird.organizations': '/organizations',
     'thunderbird.releases.index': '/thunderbird/releases',
