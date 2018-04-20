@@ -28,7 +28,7 @@
           {# L10n: This description applies to Thunderbird Beta #}
           <ul>
             <li>{{ _('Experience cutting edge features with more stability') }}</li>
-            <li>{{ _('Provide feedback to help refine and polish what will be in the final release') }}</li>
+            <li>{{ _('<a href="%(feedback)s">Provide feedback</a> to help refine and polish what will be in the final release')|format(feedback='https://discourse.mozilla.org/c/thunderbird/beta') }}</li>
           </ul>
         </header>
         <div class="download-box">{{ download_thunderbird('beta', force_direct=True) }}</div>
