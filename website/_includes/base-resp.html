@@ -76,11 +76,13 @@
           {{_('Support')}}
         </a>
       </li>
-      <li id="nav-main-get-involved">
-        <a href="{{ url('thunderbird.get-involved') }}" tabindex="0">
-          {{_('Get Involved')}}
-        </a>
-      </li>
+      {% if LANG.startswith('en-') %}
+        <li id="nav-main-get-involved">
+          <a href="{{ url('thunderbird.get-involved') }}" tabindex="0">
+            {{_('Get Involved')}}
+          </a>
+        </li>
+      {% endif %}
       <li class="last" id="nav-main-donate">
         <a class="emphasis" href="{{ donate_url('header') }}" tabindex="-1">
           {{_('Donate')}}
