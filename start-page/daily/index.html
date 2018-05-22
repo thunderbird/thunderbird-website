@@ -10,31 +10,30 @@
 {% block main %}
       <header>
         <h1>{{ self.title() }}</h1>
-        <p>{{ _('Congratulations! You’ve <a href="%(download)s">downloaded</a> or <a href="%(build)s">compiled</a> a Daily build of Thunderbird. These are the builds that contain the latest additions and changes to Thunderbird.')|format(download='https://ftp.mozilla.org/pub/mozilla.org/thunderbird/nightly/', build='https://developer.mozilla.org/docs/Simple_Thunderbird_build') }}</p>
-        <p>{{ _('Earlybird is the place where we stabilise our features before pushing them to our beta users. Experience the newest innovations as they’re developed.') }}</p>
+        <p>{{ _('You are using the daily version of Thunderbird, which means you get to experience the absolute newest Thunderbird - fresh out of the build system! But with great power comes great responsibility, we hope you’ll take the time to report bugs and provide feedback on your experience using the daily version and help make the next Thunderbird release as awesome as possible.') }}</p>
       </header>
       <div>
         <section>
-          <h2>{{ _('The QA Team Needs You') }}</h2>
-          <p>{{ _('Help our QA team improve this version of Thunderbird, see <a href="%(test)s">our wiki for more details</a>')|format(test='https://wiki.mozilla.org/Thunderbird:Testing') }}</p>
+          <h2><i class="far fa-life-ring fa-lg" style="color:#0060df"></i> {{ _('<a href="%(support)s">Get Support</a>')|format(support='https://support.mozilla.org/products/thunderbird') }}</h2>
+          <p>{{ _('The Daily release of Thunderbird can be unstable. If you need help setting up an account or learning to do something else in Thunderbird - you can check out our <a href="%(support)s">support page</a>.  If you believe you are encountering a bug, please use the “report a bug” link below.')|format(support='https://support.mozilla.org/products/thunderbird') }}</p>
         </section>
         <section>
-          <h2>{{ _('Submit a Bug') }}</h2>
-          <p>{{ _('If you notice any problems with %(channel)s, please file a bug using these <a href="%(report)s">instructions</a>.')|format(channel=_('Daily'), report='https://developer.mozilla.org/docs/Mozilla/QA/Bug_writing_guidelines') }}</p>
-        </section>
-        <section>
-          <h2>{{ _('Submit Crash Reports') }}</h2>
-          <p>{{ _('Please use the Crash Reporter when %(channel)s crashes. It gives us valuable data on the most serious crashes and how people encounter them. ‘Tell Mozilla’ must be checked, and add a comment before you click ‘Restart’ or ‘Quit’. An email address is also useful if we need to contact you for more details.')|format(channel=_('Daily')) }}</p>
-        </section>
-        <section>
-          <h2>{{ _('Give Feedback') }}</h2>
-          <p>{{ _('You can send us <a href="%(feedback)s">feedback</a> using this form.')|format(feedback='https://support.mozilla.org/questions/new/thunderbird') }}</p>
+          <h2><i class="fas fa-bug fa-lg" style="color:#058b00"></i> {{ _('<a href="%(bug)s">Report a Bug</a>')|format(bug='https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird') }}</h2>
+          <p>{{ _('Think you\'ve found a problem with Thunderbird Daily? <a href="%(bug)s">Create a bug report</a> so that we can make sure it gets solved. Helping us identify and fix bugs makes for a better Thunderbird experience for all.')|format(bug='https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird') }}</p>
         </section>
       </div>
       <div>
         <section>
-          <h2>{{ _('More Ways to Help') }}</h2>
-          <p>{{ _('<a href="%(contribute)s">Get Involved!</a> You don’t have to be technical and being involved is good for people wanting to get more familiar with Thunderbird.')|format(contribute='https://wiki.mozilla.org/Thunderbird#Contributing') }}</p>
+          <h2><i class="fas fa-heart fa-lg"  style="color:#ff0039"></i> {{ _('<a href="%(donate)s">Donate</a>')|format(donate='https://donate.mozilla.org/en-US/thunderbird/?presets=100,50,25,15&amount=50&utm_source=start_page_thunderbird&utm_medium=referral&utm_content=header&currency=usd') }}</h2>
+          <p>{{ _('Thunderbird is both free and freedom respecting, but we\'re also completely funded by donations! The best way for you to ensure Thunderbird remains available and awesome is to <a href="%(donate)s">donate</a> so that the project can hire developers, pay for infrastructure, and continue to improve.')|format(donate='https://donate.mozilla.org/en-US/thunderbird/?presets=100,50,25,15&amount=50&utm_source=start_page_thunderbird&utm_medium=referral&utm_content=header&currency=usd') }}</p>
+        </section>
+        <section>
+          <h2><i class="fas fa-hands-helping fa-lg" style="color:#ed00b5"></i> {{ _('<a href="%(contribute)s">Get Involved</a>')|format(contribute='https://wiki.mozilla.org/Thunderbird#contributing') }}</h2>
+          <p>{{ _('Don’t just use the Daily release, help other users and improve the experience! Thunderbird is an open source project, which means anyone can contribute ideas, designs, code, and time helping fellow users. <a href="%(contribute)s">Join us</a> and become a part of the team that creates Thunderbird.')|format(contribute='https://wiki.mozilla.org/Thunderbird#contributing') }}</p>
+        </section>
+        <section>
+          <h2><i class="fas fa-exclamation-circle fa-lg"></i> {{ _('Submit Crash Reports') }}</h2>
+          <p>{{ _('Please report every crash. The <a href="%(crash)s">Mozilla Crash Reporter</a> gives valuable data on which crashes are the most serious. And if you are comfortable doing so, please also add a public comment, and supply your email address (which is non-public) to allow us to contact you if we need to.')|format(crash='https://support.mozilla.org/en-US/kb/mozilla-crash-reporter-tb') }}</p>
         </section>
       </div>
 {% endblock %}
