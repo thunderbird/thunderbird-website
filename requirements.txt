@@ -1,10 +1,20 @@
-git+git://github.com/Ceasar/staticjinja.git@3476a3977a5dc67b24cd6a9eff874e2cfbc1d35d#egg=staticjinja
-jinja2
-webassets
-babel
-webob
-python-dateutil
-markdown
+https://github.com/Ceasar/staticjinja/archive/3476a3977a5dc67b24cd6a9eff874e2cfbc1d35d.tar.gz#egg=staticjinja \
+    --hash=sha256:b02b87849fc0ff00d45705f129bae2573d4c4f4df8ed6be81084433dc11fd49f
+Jinja2==2.10 \
+    --hash=sha256:74c935a1b8bb9a3947c50a54766a969d4846290e1e788ea44c1392163723c3bd \
+    --hash=sha256:f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4
+webassets==0.12.1 \
+    --hash=sha256:e7d9c8887343123fd5b32309b33167428cb1318cdda97ece12d0907fd69d38db
+babel==2.6.0 \
+    --hash=sha256:6778d85147d5d85345c14a26aada5e478ab04e39b078b0745ee6870c2b5cf669 \
+    --hash=sha256:65ae0c8101309c45772196b21b74c46b2e5d11b6275c45d251b150d5da334555
+webob==1.7.3 \
+    --hash=sha256:0ef6a10fc04a9e699fe0260b3af9b3518e239d35e2942c6fdc2959c193730a2d
+python-dateutil==2.6.0 \
+    --hash=sha256:1adb80e7a782c12e52ef9a8182bebeb73f1d7e24e374397af06fb4956c8dc5c0 \
+    --hash=sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb
+markdown==2.6.8 \
+    --hash=sha256:0ac8a81e658167da95d063a9279c9c1b2699f37c7c4153256a458b3a43860e33
 polib==1.1.0 \
     --hash=sha256:93b730477c16380c9a96726c54016822ff81acfa553977fdd131f2b90ba858d7
 icalendar==3.8.3 \
