@@ -97,8 +97,12 @@
             </a>
           </li>
           <li class="try2">
-            <a href="/">
-              {{ _('Download') }}
+            {% if 'b' in release.version %}
+              <a href="{{ url('thunderbird.channel') }}">
+            {% else %}
+              <a href="/">
+            {% endif %}
+            {{ _('Download') }}
             </a>
           </li>
           <li class="try3">
