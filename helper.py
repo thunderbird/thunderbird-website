@@ -283,7 +283,7 @@ def thunderbird_url(page, channel='None'):
     version = thunderbird_desktop.latest_version(channel)
     # replace 'b1', 'b2' etc in beta version with just 'beta', since we don't generate
     # new notes for each beta iteration.
-    version = re.sub(r"b[1-9]", "beta", version)
+    version = re.sub(r"b[1-9][0-9]?", "beta", version)
 
     url = '/en-US/thunderbird/{0}/{1}/'.format(version, page)
 
