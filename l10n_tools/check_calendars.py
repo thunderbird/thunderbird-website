@@ -17,6 +17,7 @@ def check_if_correct_parse(ics_file):
         # vCalendar entries - we probably don't want them to fail
         # parse. So we set multiple=True below
         cal_entries = Calendar.from_ical(fh.read(), multiple=True)
+        import pdb; pdb.set_trace()
         if cal_entries is None:
             raise ValueError
     finally:
@@ -27,7 +28,6 @@ def run(*args):
     calendars_dir = os.path.join('media', 'caldata')
     ics_files = map(lambda x: os.path.join(calendars_dir, x),
                     filter(get_ics, os.listdir(calendars_dir)))
-
     format_str = "Failed to parse the icalendar file: {}. {}"
     check_failed = False
     for f in ics_files:
@@ -40,5 +40,6 @@ def run(*args):
     if check_failed:
         sys.exit(1)
 
+if __name__ == "__main__":
+    run()
 
-# vim: ts=4 sw=4 et ai
