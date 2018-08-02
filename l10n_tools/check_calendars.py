@@ -17,7 +17,6 @@ def check_if_correct_parse(ics_file):
         # vCalendar entries - we probably don't want them to fail
         # parse. So we set multiple=True below
         cal_entries = Calendar.from_ical(fh.read(), multiple=True)
-        import pdb; pdb.set_trace()
         if cal_entries is None:
             raise ValueError
     finally:
