@@ -24,8 +24,8 @@
       </div>
       <div>
         <section>
-          <h2><i class="fas fa-heart fa-lg"  style="color:#ff0039"></i> {{ _('<a href="%(donate)s">Donate</a>')|format(donate='https://donate.mozilla.org/en-US/thunderbird/?presets=100,50,25,15&amount=50&utm_source=start_page_thunderbird&utm_medium=referral&utm_content=header&currency=usd') }}</h2>
-          <p>{{ _('Thunderbird is both free and freedom respecting, but we\'re also completely funded by donations! The best way for you to ensure Thunderbird remains available and awesome is to <a href="%(donate)s">donate</a> so that the project can hire developers, pay for infrastructure, and continue to improve.')|format(donate='https://donate.mozilla.org/en-US/thunderbird/?presets=100,50,25,15&amount=50&utm_source=start_page_thunderbird&utm_medium=referral&utm_content=header&currency=usd') }}</p>
+          <h2><i class="fas fa-heart fa-lg"  style="color:#ff0039"></i> {{ _('<a href="%(donate)s">Donate</a>')|format(donate=donate_url('heading', 'start_page_tb_beta')) }}</h2>
+          <p>{{ _('Thunderbird is both free and freedom respecting, but we\'re also completely funded by donations! The best way for you to ensure Thunderbird remains available and awesome is to <a href="%(donate)s">donate</a> so that the project can hire developers, pay for infrastructure, and continue to improve.')|format(donate=donate_url('paragraph_text', 'start_page_tb_beta')) }}</p>
         </section>
         <section>
           <h2><i class="fas fa-hands-helping fa-lg" style="color:#ed00b5"></i> {{ _('<a href="%(contribute)s">Get Involved</a>')|format(contribute='https://www.thunderbird.net/en-US/get-involved/') }}</h2>

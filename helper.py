@@ -296,7 +296,7 @@ def thunderbird_url(page, channel='None'):
 
 
 @jinja2.contextfunction
-def donate_url(ctx, source=''):
+def donate_url(ctx, content='', source='thunderbird.net'):
     """Output a donation link to the donation page formatted using settings.DONATE_PARAMS
 
     Examples
@@ -326,7 +326,7 @@ def donate_url(ctx, source=''):
         locale, settings.DONATE_PARAMS['en-US'])
 
     return settings.DONATE_LINK.format(locale=locale, presets=donate_url_params['presets'],
-        default=donate_url_params['default'], source=source,
+        default=donate_url_params['default'], content=content, source=source,
         currency=donate_url_params['currency'])
 
 

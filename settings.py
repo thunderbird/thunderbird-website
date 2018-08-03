@@ -88,7 +88,7 @@ URL_MAPPINGS = {
 DONATE_LINK = (
     'https://donate.mozilla.org/{locale}/thunderbird/?presets={presets}'
     '&amount={default}'
-    '&utm_source=thunderbird.net&utm_medium=referral&utm_content={source}'
+    '&utm_source={source}&utm_medium=referral&utm_content={content}'
     '&currency={currency}'
 )
 
