@@ -110,16 +110,6 @@
                 }
             });
 
-        // On touch-enabled devices, hijack the click event and just make it focus
-        // the item. This prevents flashing menus on iOS and prevents clicking on
-        // a top-level item causing navigation on Android.
-        if ('ontouchstart' in window) {
-            NavMain.mainMenuLinks.click(function(e) {
-                e.preventDefault();
-                this.focus();
-            });
-        }
-
         // With JavaScript enabled, we can provide a full navigation with
         // #nav-main. Now "hide" the duplicated #footer-menu from AT.
         $('#footer-menu').attr('role', 'presentation');
@@ -317,7 +307,7 @@
     NavMain.unlinkMainMenuItems = function() {
         NavMain.mainMenuLinks.each(function(i, n) {
             var node = $(n);
-            if (node.siblings('.submenu')) {
+            if (node.siblings('.submenu').length) {
                 node.attr('data-old-href', node.attr('href'));
                 node.removeAttr('href');
             }
@@ -421,9 +411,11 @@
     };
 
     NavMain.handleSubmenuClick = function(e) {
-        e.preventDefault();
         var menu = $(this).siblings('.submenu');
-        NavMain.openSmallSubmenu(menu);
+        if (menu.length) {
+            NavMain.openSmallSubmenu(menu);
+            e.preventDefault();
+        }
     };
 
     NavMain.handleSubmenuKeypress = function(e) {
