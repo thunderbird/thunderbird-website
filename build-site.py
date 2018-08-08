@@ -14,14 +14,15 @@ from staticjinja import make_site
 
 extensions = ['jinja2.ext.i18n']
 
-# path to search for templates
+# Path to search for templates.
 searchpath = 'website'
-# static file/media path
+# Static file/media path.
 staticpath = 'website/_media'
-# path to render the finished site to
+# Path to render the finished site to.
 renderpath = 'thunderbird.net'
-# path to compile CSS to
+# Paths to compile CSS and concat JS to.
 cssout = renderpath+'/media/css'
+jsout = renderpath+'/media/js'
 
 css_bundles = [ {'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less']},
                 {'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less']},
@@ -34,12 +35,33 @@ css_bundles = [ {'calendar-bundle': ['less/thunderbird/calendar.less', 'less/bas
                 {'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less']},
               ]
 
+js_bundles = [ {'common-bundle': ['js/common/jquery-1.11.3.min.js', 'js/common/spin.min.js', 'js/common/mozilla-utils.js',
+                                  'js/common/form.js', 'js/common/mozilla-client.js', 'js/common/mozilla-image-helper.js',
+                                  'js/common/nav-main-resp.js', 'js/common/class-list-polyfill.js', 'js/common/mozilla-global-nav.js',
+                                  'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js']
+               }
+             ]
+
 def mkdir(path):
     try:
         os.makedirs(path)
     except OSError as exception:
         if exception.errno != errno.EEXIST:
             raise
+
+
+def read_file(file):
+    with open(file, 'r') as f:
+        return f.read()
+
+
+def concat_js(bundle):
+    bundle_name, files = bundle.popitem()
+    bundle_path = jsout+'/'+bundle_name+'.js'
+
+    js_string = '\n'.join(read_file(settings.ASSETS + '/' + file) for file in files)
+    with open(bundle_path, 'w') as f:
+        f.write(js_string)
 
 def build_assets():
     env = webassets.Environment(load_path=[settings.ASSETS], directory=cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
@@ -48,6 +70,9 @@ def build_assets():
         reg = webassets.Bundle(*v, filters='less', output=k+'.css')
         env.register(k, reg)
         env[k].urls()
+
+    for bundle in js_bundles:
+        concat_js(bundle)
 
 
 def text_dir(lang):
@@ -88,7 +113,7 @@ def build_site(lang):
     def l10n_has_tag(tag):
         return tag in translator.lang_file_tag_set('thunderbird/features', lang)
 
-    # Add l10n_css function to context
+    # Add l10n_css function to context.
     site._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag, settings=settings, **helper.contextfunctions)
     site._env.filters["markdown"] = helper.safe_markdown
     site._env.filters["f"] = helper.f
