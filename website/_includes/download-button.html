@@ -7,7 +7,7 @@
     <h4>{{ _('Download Thunderbird') }} — {{ locale_name|safe }}</h4>
     <ul>
       {% for plat in builds -%}
-        <li><a href="{{ plat.download_link_direct or plat.download_link }}" class="download-link button button-green">{{ plat.os_arch_pretty or plat.os_pretty }}</a></li>
+        <li><a href="{{ plat.download_link_direct or plat.download_link }}" class="download-link button button-green" data-donate-link="{{ donate_url('post_download', download=True) }}">{{ plat.os_arch_pretty or plat.os_pretty }}</a></li>
       {%- endfor %}
     </ul>
   </div>
@@ -34,8 +34,11 @@
     {% for plat in builds %}
       <li class="os_{{ plat.os }}{% if plat.arch %} {{ plat.arch }}{% endif %}">
         <a class="download-link button {{button_color}}"
-           href="{{ plat.download_link }}"{% if plat.download_link_direct %}
-           data-direct-link="{{ plat.download_link_direct }}"{% endif %}>
+          href="{{ plat.download_link }}"
+          data-donate-link="{{ donate_url('post_download', download=True) }}"
+          {% if plat.download_link_direct %}
+            data-direct-link="{{ plat.download_link_direct }}"
+          {% endif %}>
           <strong class="download-title">
             {% if alt_copy %}
               {{ alt_copy }}

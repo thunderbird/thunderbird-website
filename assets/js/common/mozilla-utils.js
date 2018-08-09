@@ -18,12 +18,15 @@ if (typeof Mozilla === 'undefined') {
      * @param {link} direct link to download URL
      * @param {userAgent} optional UA string for testing purposes.
      */
+
     Utils.triggerIEDownload = function(link, userAgent) {
         'use strict';
         var ua = userAgent !== undefined ? userAgent : navigator.userAgent;
         // Only open if we got a link and this is IE < 9.
         if (link && window.site.platform === 'windows' && /MSIE\s[1-8]\./.test(ua)) {
             window.open(link, 'download_window', 'toolbar=0,location=no,directories=0,status=0,scrollbars=0,resizeable=0,width=1,height=1,top=0,left=0');
+            window.focus();
+            window.open('https://donate.mozilla.org');
             window.focus();
         }
     };
@@ -33,7 +36,9 @@ if (typeof Mozilla === 'undefined') {
     Utils.initDownloadLinks = function() {
         $('.download-link').each(function() {
             var $el = $(this);
+            var donate_link = $el.data('donate-link')
             $el.click(function() {
+                window.open(donate_link)
                 Utils.triggerIEDownload($el.data('direct-link'));
             });
         });

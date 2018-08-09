@@ -296,7 +296,7 @@ def thunderbird_url(page, channel='None'):
 
 
 @jinja2.contextfunction
-def donate_url(ctx, content='', source='thunderbird.net'):
+def donate_url(ctx, content='', source='thunderbird.net', download = False):
     """Output a donation link to the donation page formatted using settings.DONATE_PARAMS
 
     Examples
@@ -325,9 +325,14 @@ def donate_url(ctx, content='', source='thunderbird.net'):
     donate_url_params = settings.DONATE_PARAMS.get(
         locale, settings.DONATE_PARAMS['en-US'])
 
+    # If this link is from a download button, donate.mozilla.org has thank you text.
+    download_string = ''
+    if download:
+        download_string = '?test=tbdownload'
+
     return settings.DONATE_LINK.format(locale=locale, presets=donate_url_params['presets'],
         default=donate_url_params['default'], content=content, source=source,
-        currency=donate_url_params['currency'])
+        currency=donate_url_params['currency']) + download_string
 
 
 def safe_markdown(text):
