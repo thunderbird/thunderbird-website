@@ -34,8 +34,8 @@ if (typeof Mozilla === 'undefined') {
     Utils.initDownloadLinks = function() {
         $('.download-link').each(function() {
             var $el = $(this);
-            var donate_link = $el.data('donate-link')
             $el.click(function() {
+                setTimeout( function(){ window.location.href = $el.data('donate-link') }, 2000);
                 Utils.triggerIEDownload($el.data('direct-link'));
             });
         });
