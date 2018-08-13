@@ -35,7 +35,11 @@ if (typeof Mozilla === 'undefined') {
         $('.download-link').each(function() {
             var $el = $(this);
             $el.click(function() {
-                setTimeout( function(){ window.location.href = $el.data('donate-link') }, 2000);
+                if (/msie\s|trident\/|edge\//i.test(navigator.userAgent)) {
+                    window.open($el.data('donate-link'))
+                } else {
+                setTimeout( function(){ window.location.href = $el.data('donate-link') }, 5000);
+                }
                 Utils.triggerIEDownload($el.data('direct-link'));
             });
         });
