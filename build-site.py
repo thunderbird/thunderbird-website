@@ -50,12 +50,6 @@ def mkdir(path):
             raise
 
 
-def write_htaccess(path, url):
-    mkdir(path)
-    with open(os.path.join(path,'.htaccess'), 'w') as f:
-        f.write('RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
-
-
 def read_file(file):
     with open(file, 'r') as f:
         return f.read()
@@ -158,14 +152,6 @@ def build_site(lang):
                 o = newtemplate.render()
                 f.write(o.encode('utf8'))
 
-        # Build htaccess files for sysreq and release notes redirects.
-        print "Writing htaccess files..."
-        sysreq_path = os.path.join(renderpath, 'system-requirements')
-        notes_path = os.path.join(renderpath, 'notes')
-        write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
-        write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes'))
-
-
 # Rebuild whole site from scratch.
 shutil.rmtree(renderpath, ignore_errors=True)
 
@@ -175,7 +161,5 @@ build_site(settings.LANGUAGE_CODE)
 for lang in settings.PROD_LANGUAGES:
     build_site(lang)
 
-print "Copying media files..."
 shutil.copytree(staticpath, renderpath+'/media')
-print "Building assets..."
 build_assets()
