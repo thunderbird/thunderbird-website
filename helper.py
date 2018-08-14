@@ -271,12 +271,12 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
 
 def thunderbird_url(page, channel='None'):
     """
-    Return a product-related URL like /thunderbird/all/ or /thunderbird/beta/notes/.
-    page = ('sysreq', 'all', 'notes')
+    Return a product-related URL like /thunderbird/all/ or /thunderbird/beta/60.0/releasenotes/.
+    page = ('system-requirements', 'all', 'releasenotes')
     channel = ('beta', 'release')
     Examples:
         {{ thunderbird_url('all', 'beta') }}
-        {{ thunderbird_url('sysreq', channel) }}
+        {{ thunderbird_url('system-requirements', channel) }}
     """
 
     channel = channel or 'release'
