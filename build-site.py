@@ -104,7 +104,8 @@ def build_site(lang):
                'releases': helper.thunderbird_desktop.list_releases(),
                'calendars': caldata['calendars'],
                'letters': caldata['letters'],
-               'CALDATA_URL': settings.CALDATA_URL
+               'CALDATA_URL': settings.CALDATA_URL,
+               'latest_thunderbird_version': version,
               }
 
     outpath = os.path.join(renderpath, lang)

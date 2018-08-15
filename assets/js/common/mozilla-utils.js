@@ -35,10 +35,14 @@ if (typeof Mozilla === 'undefined') {
         $('.download-link').each(function() {
             var $el = $(this);
             $el.click(function() {
-                if (/msie\s|trident\/|edge\//i.test(navigator.userAgent)) {
-                    window.open($el.data('donate-link'))
-                } else {
-                setTimeout( function(){ window.location.href = $el.data('donate-link') }, 5000);
+                // Don't redirect if we're on the failed download page.
+                if ($( "body" ).attr('id') !== 'thunderbird-download') {
+                    // MSIE and Edge cancel the download prompt on redirect, so we open a new tab instead.
+                    if (/msie\s|trident\/|edge\//i.test(navigator.userAgent)) {
+                        window.open($el.data('donate-link'))
+                    } else {
+                        setTimeout( function(){ window.location.href = $el.data('donate-link') }, 5000);
+                    }
                 }
                 Utils.triggerIEDownload($el.data('direct-link'));
             });
