@@ -6,7 +6,7 @@
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
 {% block page_title %}{{ _('Download Thunderbird') }}{% endblock %}
-{% block page_desc %}{{ _('Download didn’t work? Try again below!') }}{% endblock %}
+{% block page_desc %}{{ _('Your download should begin automatically. Didn’t work? Try the button below!') }}{% endblock %}
 
 {% block body_id %}thunderbird-download{% endblock %}
 
@@ -24,7 +24,6 @@
   <div id="main-feature">
     <div class="row">
       {{ high_res_img('thunderbird/landing/logo.png', {'alt': _('Thunderbird'), 'width': '120', 'height': '120'}) }}
-      <h1 class="large">{{ self.page_title() }}</h1>
       <p class="large">{{ self.page_desc() }}</p>
       <div class="download-button-wrapper">
         {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download')) }}

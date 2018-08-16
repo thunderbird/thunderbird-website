@@ -38,7 +38,8 @@ css_bundles = [ {'calendar-bundle': ['less/thunderbird/calendar.less', 'less/bas
 js_bundles = [ {'common-bundle': ['js/common/jquery-1.11.3.min.js', 'js/common/spin.min.js', 'js/common/mozilla-utils.js',
                                   'js/common/form.js', 'js/common/mozilla-client.js', 'js/common/mozilla-image-helper.js',
                                   'js/common/nav-main-resp.js', 'js/common/class-list-polyfill.js', 'js/common/mozilla-global-nav.js',
-                                  'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js']
+                                  'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js',
+                                  'js/common/autodownload.js']
                }
              ]
 
