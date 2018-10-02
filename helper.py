@@ -300,7 +300,7 @@ def donate_url(ctx, content='', source='thunderbird.net', download=False):
     # If this link is from a download button, donate.mozilla.org has thank you text.
     download_string = ''
     if download:
-        download_string = '&test=tbdownload'
+        download_string = '&tbdownload=true'
 
     return settings.DONATE_LINK.format(content=content, source=source) + download_string
 
