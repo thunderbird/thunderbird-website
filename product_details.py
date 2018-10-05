@@ -122,7 +122,8 @@ class ThunderbirdDetails():
 
     def list_releases(self, channel='beta'):
         version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_DEVEL_VERSION')
-        esr_major_versions = range(10, int(self.current_versions[version_name].split('.')[0]), 7)
+        esr_major_versions = (range(10, 59, 7) +
+        range(60, int(self.current_versions[version_name].split('.')[0])+1, 8))
         releases = {}
         for release in self.major_releases:
             major_version = float(re.findall(r'^\d+\.\d+', release)[0])
@@ -138,6 +139,7 @@ class ThunderbirdDetails():
                                        self.minor_releases),
                                 key=lambda x: map(lambda y: int(y), x.split('.')))
             }
+        import pdb; pdb.set_trace()
         return sorted(releases.items(), reverse=True)
 
 
