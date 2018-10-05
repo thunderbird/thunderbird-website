@@ -139,7 +139,6 @@ class ThunderbirdDetails():
                                        self.minor_releases),
                                 key=lambda x: map(lambda y: int(y), x.split('.')))
             }
-        import pdb; pdb.set_trace()
         return sorted(releases.items(), reverse=True)
 
 
