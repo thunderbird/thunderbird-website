@@ -1,0 +1,38 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "_includes/base-resp.html" %}
+
+{% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
+{% block page_title %}{{ _('There\'s nothing here!') }}{% endblock %}
+{% block page_desc %}{{ _('The page you are looking for doesn\'t exist. If you think this is a bug, you can <a href="https://github.com/thundernest/thunderbird-website">report an issue here</a>.') }}{% endblock %}
+
+{% block body_id %}thunderbird-landing{% endblock %}
+
+{% block site_header_logo %}
+  <h2>{{ high_res_img('thunderbird/landing/wordmark.png', {'alt': _('Thunderbird'), 'width': '329', 'height': '77'}) }}</h2>
+{% endblock %}
+
+{% block page_css %}
+  <link href="/media/css/thunderbird-landing.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+
+<main role="main">
+  <div id="main-feature">
+    <div class="row">
+      {{ high_res_img('thunderbird/landing/logo.png', {'alt': _('Thunderbird'), 'width': '120', 'height': '120'}) }}
+      <h1 class="large">{{ self.page_title() }}</h1>
+      <p class="large">{{ self.page_desc() }}</p>
+    </div>
+  </div>
+  <div id="404-image">
+    {{ high_res_img('thunderbird/404nest.png', {'alt': _('Empty nest'), 'high-res': True }) }}
+  </div>
+</main>
+
+{% endblock %}
+
+{% block email_form %}{% endblock %}
