@@ -5,10 +5,10 @@
 {% extends "_includes/base-resp.html" %}
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
-{% block page_title %}{{ _('There\'s nothing here!') }}{% endblock %}
-{% block page_desc %}{{ _('The page you are looking for doesn\'t exist. If you think this is a bug, you can <a href="https://github.com/thundernest/thunderbird-website">report an issue here</a>.') }}{% endblock %}
+{% block page_title %}{{ _('There’s nothing here!') }}{% endblock %}
+{% block page_desc %}{{ _('The page you are looking for doesn’t exist. If you think this is a bug, you can <a href="https://github.com/thundernest/thunderbird-website">report an issue here</a>.') }}{% endblock %}
 
-{% block body_id %}thunderbird-landing{% endblock %}
+{% block body_id %}thunderbird-404{% endblock %}
 
 {% block site_header_logo %}
   <h2>{{ high_res_img('thunderbird/landing/wordmark.png', {'alt': _('Thunderbird'), 'width': '329', 'height': '77'}) }}</h2>
@@ -29,7 +29,7 @@
     </div>
   </div>
   <div id="404-image">
-    {{ high_res_img('thunderbird/404nest.png', {'alt': _('Empty nest'), 'high-res': True }) }}
+    <img src="{{ static('img/thunderbird/404/nest.png') }}" alt="{{ _('Empty nest') }}">
   </div>
 </main>
 
