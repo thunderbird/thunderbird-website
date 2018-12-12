@@ -6,7 +6,7 @@
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
 {% block page_title %}{{ _('There’s nothing here!') }}{% endblock %}
-{% block page_desc %}{{ _('The page you are looking for doesn’t exist. If you think this is a bug, you can <a href="https://github.com/thundernest/thunderbird-website">report an issue here</a>.') }}{% endblock %}
+{% block page_desc %}{{ _('The page you are looking for doesn’t exist. If you think this is a bug, you can <a href="%(bug_report_url)s">report an issue here</a>.')|format(bug_report_url=url('thunderbird.site.bug-report')) }}{% endblock %}
 
 {% block body_id %}thunderbird-404{% endblock %}
 

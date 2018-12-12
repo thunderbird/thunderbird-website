@@ -73,6 +73,7 @@ URL_MAPPINGS = {
     'thunderbird.organizations': '/organizations',
     'thunderbird.releases.index': '/thunderbird/releases',
     'thunderbird.latest.all': '/thunderbird/all/',
+    'thunderbird.site.bug-report': 'https://github.com/thundernest/thunderbird-website/issues',
     'contribute': 'https://github.com/thundernest/thunderbird-website',
     'mozorg.home': 'https://www.mozilla.org/',
     'mozorg.about': 'https://www.mozilla.org/about/',
@@ -83,6 +84,7 @@ URL_MAPPINGS = {
     'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#cookies',
     'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
     'support': 'https://support.mozilla.org/products/thunderbird/',
+
 }
 
 DONATE_LINK = (
