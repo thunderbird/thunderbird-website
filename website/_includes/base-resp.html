@@ -83,6 +83,13 @@
           </a>
         </li>
       {% endif %}
+      {% if LANG.startswith('en-') %}
+        <li id="nav-main-contact">
+          <a href="{{ url('thunderbird.contact') }}" tabindex="0">
+            {{_('Contact Us')}}
+          </a>
+        </li>
+      {% endif %}
       <li class="last" id="nav-main-donate">
         <a class="emphasis" href="{{ donate_url('header') }}" tabindex="-1">
           {{_('Donate')}}
