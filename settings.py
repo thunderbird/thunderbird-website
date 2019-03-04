@@ -77,7 +77,7 @@ URL_MAPPINGS = {
     'contribute': 'https://github.com/thundernest/thunderbird-website',
     'mozorg.home': 'https://www.mozilla.org/',
     'mozorg.about': 'https://www.mozilla.org/about/',
-    'mozorg.contact.contact-landing': 'https://www.mozilla.org/contact/',
+    'thunderbird.contact': '/contact',
     'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
     'legal.index': 'https://www.mozilla.org/about/legal/',
     'privacy': 'https://www.mozilla.org/privacy/',
