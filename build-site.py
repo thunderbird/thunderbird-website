@@ -57,6 +57,11 @@ def write_htaccess(path, url):
         f.write('RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
 
 
+def write_404_htaccess(path, lang):
+    with open(os.path.join(path,'.htaccess'), 'w') as f:
+        f.write('ErrorDocument 404 /{lang}/404.html\n'.format(lang=lang))
+
+
 def read_file(file):
     with open(file, 'r') as f:
         return f.read()
@@ -69,6 +74,7 @@ def concat_js(bundle):
     js_string = '\n'.join(read_file(settings.ASSETS + '/' + file) for file in files)
     with open(bundle_path, 'w') as f:
         f.write(js_string)
+
 
 def build_assets():
     env = webassets.Environment(load_path=[settings.ASSETS], directory=cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
@@ -126,6 +132,7 @@ def build_site(lang):
     site._env.filters["markdown"] = helper.safe_markdown
     site._env.filters["f"] = helper.f
     site._env.filters["l10n_format_date"] = helper.l10n_format_date
+    write_404_htaccess(outpath, lang)
     site.render(use_reloader=False)
 
     # Render release notes and system requirements for en-US only.
@@ -161,7 +168,7 @@ def build_site(lang):
                 f.write(o.encode('utf8'))
 
         # Build htaccess files for sysreq and release notes redirects.
-        print "Writing htaccess files..."
+        print "Writing sysreq and release notes htaccess files..."
         sysreq_path = os.path.join(renderpath, 'system-requirements')
         notes_path = os.path.join(renderpath, 'notes')
         write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
