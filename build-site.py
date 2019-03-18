@@ -173,6 +173,8 @@ def build_site(lang):
         notes_path = os.path.join(renderpath, 'notes')
         write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
         write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes'))
+        # Default root 404 file.
+        write_404_htaccess(renderpath, lang)
 
 
 # Rebuild whole site from scratch.
