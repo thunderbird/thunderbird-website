@@ -618,14 +618,23 @@ label.error {
 /* }}} */
 /* {{{ Header Nav */
 #masthead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // Fix for IE9 - fall back to stacked elements
+    text-align: center;
 
     h2 {
         padding: (@baseLine * 1.5) 0 @baseLine;
         margin: 0 (@gridGutterWidth / 2);
+        flex: 1;
+
+        img {
+            height: auto;
+        }
     }
 
     nav {
-        float: right;
         margin: 0 16px;
         text-transform: uppercase;
         .font-size(13px);
@@ -1363,6 +1372,11 @@ nav.menu-bar {
     .billboard,
     .container {
         width: @widthTablet - (@gridGutterWidth * 2);
+    }
+
+    #masthead {
+        flex-direction: column;
+        align-items: center;
     }
 
     .main-column {
