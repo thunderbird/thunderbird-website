@@ -76,7 +76,7 @@ URL_MAPPINGS = {
     'thunderbird.site.bug-report': 'https://github.com/thundernest/thunderbird-website/issues',
     'contribute': 'https://github.com/thundernest/thunderbird-website',
     'mozorg.home': 'https://www.mozilla.org/',
-    'mozorg.about': 'https://www.mozilla.org/about/',
+    'thunderbird.about': '/about',
     'thunderbird.contact': '/contact',
     'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
     'legal.index': 'https://www.mozilla.org/about/legal/',
