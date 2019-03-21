@@ -621,6 +621,7 @@ label.error {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     // Fix for IE9 - fall back to stacked elements
     text-align: center;
 
@@ -681,11 +682,13 @@ label.error {
 
 }
 
-.html-rtl #tabzilla,
-.html-rtl #masthead nav {
+.html-rtl #tabzilla {
     float: left;
 }
 
+.html-rtl #masthead {
+    flex-direction: row-reverse;
+}
 
 #masthead .toggle {
     display: none; /* Hidden in non-mobile views */
@@ -699,7 +702,9 @@ label.error {
 
     nav.breadcrumbs {
         padding: 0 10px (@baseLine / 2) 10px;
-        float: none;
+        width: 100%;
+        text-align: left;
+        order: 1;
 
         a,
         span {
@@ -1374,11 +1379,6 @@ nav.menu-bar {
         width: @widthTablet - (@gridGutterWidth * 2);
     }
 
-    #masthead {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .main-column {
         .span_narrow(8);
     }
@@ -1520,6 +1520,8 @@ nav.menu-bar {
     }
 
     #masthead {
+        flex-direction: column-reverse;
+        align-items: start;
 
         .toggle {
             display: block;
@@ -1540,12 +1542,13 @@ nav.menu-bar {
         h2 {
             padding-top: @baseLine / 2;
             padding-bottom: @baseLine / 2;
+            order: 2;
         }
 
         nav {
-            float: none;
             padding-top: 10px;
             margin-left: 10px;
+            order: 3;
 
             ul li {
                 display: block;
@@ -1570,6 +1573,11 @@ nav.menu-bar {
                 margin-left: .3em;
             }
         }
+    }
+
+    .html-rtl #masthead {
+        flex-direction: column-reverse;
+        align-items: end;
     }
 
     .space #masthead nav li,
@@ -1822,7 +1830,8 @@ nav.menu-bar {
 
     .html-rtl #nav-main-menu {
         margin-left: 0;
-        margin-right: -20px;
+        margin-right: 0;
+        right: 60px;
     }
 
     .html-rtl #nav-main-menu:before {
