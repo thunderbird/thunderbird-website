@@ -84,6 +84,7 @@ URL_MAPPINGS = {
     'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#cookies',
     'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
     'support': 'https://support.mozilla.org/products/thunderbird/',
+    'blog': 'https://blog.mozilla.org/thunderbird'
 
 }
 
