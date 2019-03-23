@@ -26,7 +26,7 @@
   <ul class="feature-links">
     <li><a href="#what">{{ _('What is Thunderbird') }}</a></li>
     <li><a href="#who"</a>{{ _('Who We Are')}}
-    <li><a href="#mozilla">{{ _('Thunderbird and Mozilla') }}</a></li>
+    <li><a href="#mozilla">{{ _('Thunderbird and Mozilla Foundation') }}</a></li>
   </ul>
 </nav>
 
@@ -60,9 +60,10 @@
       <div class="col full">
         <section>
           <h3>{{ _('Our Community') }}</h3>
-          <p>{{ _('The people making Thunderbird are a dedicated and passionate team of volunteers. We also have paid staff working full-time on Thunderbird, funded by donations from our users. If you want
-          to become a part of the team making Thunderbird, check out our <a href="%(volunteer)s">Get Involved page</a>. You can see a list of our core contributors 
-          <a href="https://wiki.mozilla.org/Thunderbird/Core_Team">on the Thunderbird wiki</a>.')|format(volunteer=url('thunderbird.get-involved')) }}</p>
+          <p>{{ _('There is a passionate team of volunteers involved in developing Thunderbird and assisting its users who would welcome your involvement. 
+          Check out our <a href="%(volunteer)s">Get Involved page</a> for how you can participate on the Thunderbird team. We also have paid staff working full-time on Thunderbird, 
+          <a href="https://donate.mozilla.org/thunderbird/">funded by donations</a> from our users. If you\'re curious about who is working on Thunderbird, check out 
+          the <a href="https://wiki.mozilla.org/Thunderbird/Core_Team">list of our core contributors</a>.')|format(volunteer=url('thunderbird.get-involved')) }}</p>
         </section>
         <section>
           <h3>{{ _('Thunderbird Council') }}</h3>
@@ -74,17 +75,19 @@
   </section><!-- end #who -->
 
   <section id="mozilla">
-    <h2>{{ _('Thunderbird and Mozilla') }}</h2>
+    <h2>{{ _('Thunderbird and Mozilla Foundation') }}</h2>
     <div class="row">
       <div class="col full">
-        <p>{{ _('Thunderbird lives at the nonprofit Mozilla Foundation.') }}</p>
+        <p>{{ _('Thunderbird lives at the nonprofit <a href="https://foundation.mozilla.org/about/">Mozilla Foundation</a>.') }}</p>
       </div>
     </div>
     <div class="row">
       <div class="col full">
         <section>
-          <p>{{ _('Thunderbird is an independent project with its legal and financial home at the Mozilla Foundation. The Mozilla Foundation exerts no governance over the project, which instead falls to
-          the Thunderbird Council, elected by the Thunderbird project\'s community. The Mozilla Foundation became Thunderbird\'s home after an exploration of other potential legal homes in 2017.') }}</p>
+          <p>{{ _('Thunderbird is an independent project with its legal and financial home at <a href="https://foundation.mozilla.org/about/">the Mozilla Foundation</a>. The Mozilla Foundation believes the
+          Internet is a global public resource that must remain open and accessible to all. The Foundation is also the sole shareholder in the Mozilla Corporation, the maker of Firefox - but has its focus
+          on advocacy issues and keeping the Internet healthy. The Mozilla Foundation exerts no governance over the project, which instead falls to the Thunderbird Council, elected by the Thunderbird
+          project\'s community. The Mozilla Foundation became Thunderbird\'s home after an exploration of legal homes in 2017.') }}</p>
         </section>
       </div>
     </div>
