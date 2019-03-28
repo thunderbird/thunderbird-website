@@ -66,7 +66,9 @@ URL_MAPPINGS = {
     'firefox.organizations.faq': 'https://www.mozilla.org/firefox/organizations/faq/',
     'foundation.licensing.website-content': 'https://www.mozilla.org/foundation/licensing/website-content/',
     'foundation.about': 'https://foundation.mozilla.org/about/',
+    'thunderbird.about': '/about',
     'thunderbird.channel': '/channel',
+    'thunderbird.contact': '/contact',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
     'thunderbird.features': '/features',
     'thunderbird.get-involved': '/get-involved',
@@ -77,8 +79,6 @@ URL_MAPPINGS = {
     'thunderbird.site.bug-report': 'https://github.com/thundernest/thunderbird-website/issues',
     'contribute': 'https://github.com/thundernest/thunderbird-website',
     'mozorg.home': 'https://www.mozilla.org/',
-    'thunderbird.about': '/about',
-    'thunderbird.contact': '/contact',
     'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
     'legal.index': 'https://www.mozilla.org/about/legal/',
     'privacy': 'https://www.mozilla.org/privacy/',
@@ -88,6 +88,8 @@ URL_MAPPINGS = {
     'blog': 'https://blog.mozilla.org/thunderbird'
 
 }
+
+ENUS_ONLY = [ 'thunderbird.get-involved' ]
 
 DONATE_LINK = (
     'https://donate.mozilla.org/thunderbird/'

@@ -42,12 +42,17 @@ def static(filepath):
 
 @jinja2.contextfunction
 def url(ctx, key, *args):
-    if 'http' in settings.URL_MAPPINGS.get(key, ''):
-        return settings.URL_MAPPINGS.get(key, '')
+    target_url = settings.URL_MAPPINGS.get(key, '')
+    lang = ctx['LANG']
+
+    if 'http' in target_url:
+        return target_url
     if key=='thunderbird.sysreq':
         return "/{0}{1}{2}{3}".format('en-US', '/thunderbird/', args[0], '/system-requirements/')
+    if key in settings.ENUS_ONLY:
+        lang = 'en-US'   
 
-    return "/{0}{1}".format(ctx['LANG'], settings.URL_MAPPINGS.get(key, ''))
+    return "/{0}{1}".format(lang, target_url)
 
 
 def _l10n_media_exists(type, locale, url):
