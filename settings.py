@@ -89,7 +89,11 @@ URL_MAPPINGS = {
 
 }
 
-ENUS_ONLY = [ 'thunderbird.get-involved' ]
+ENUS_ONLY = [ 
+    'thunderbird.get-involved',
+    'thunderbird.contact',
+    'thunderbird.organizations',
+]
 
 DONATE_LINK = (
     'https://donate.mozilla.org/thunderbird/'
