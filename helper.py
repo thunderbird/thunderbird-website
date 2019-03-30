@@ -49,8 +49,10 @@ def url(ctx, key, *args):
         return target_url
     if key=='thunderbird.sysreq':
         return "/{0}{1}{2}{3}".format('en-US', '/thunderbird/', args[0], '/system-requirements/')
+    if key=='wiki.moz':
+        return "{0}{1}".format(settings.WIKI_URL, args[0])
     if key in settings.ENUS_ONLY:
-        lang = 'en-US'   
+        lang = 'en-US'
 
     return "/{0}{1}".format(lang, target_url)
 

@@ -44,6 +44,9 @@ CANONICAL_URL = 'https://www.thunderbird.net'
 # url for the server that serves Thunderbird downloads
 BOUNCER_URL = 'https://download.mozilla.org/'
 
+# url for the mozilla wiki used for some documentation.
+WIKI_URL = 'https://wiki.mozilla.org'
+
 # path for assets that need processing, like LESS and js
 ASSETS = 'assets'
 
@@ -60,6 +63,8 @@ JSON_PATH = 'product-details-json/product-details/'
 
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
+# Mappings for the helper.url function.
+# 'thunderbird.sysreq' and 'wiki.moz' have special behaviour.
 URL_MAPPINGS = {
     'calendar': '/calendar',
     'firefox.dnt': 'https://www.mozilla.org/firefox/dnt/',
@@ -89,7 +94,7 @@ URL_MAPPINGS = {
 
 }
 
-ENUS_ONLY = [ 
+ENUS_ONLY = [
     'thunderbird.get-involved',
     'thunderbird.contact',
     'thunderbird.organizations',
