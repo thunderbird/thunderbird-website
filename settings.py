@@ -80,6 +80,7 @@ URL_MAPPINGS = {
     'thunderbird.index': '/',
     'thunderbird.organizations': '/organizations',
     'thunderbird.releases.index': '/thunderbird/releases',
+    'thunderbird.style': 'https://style.thunderbird.net',
     'thunderbird.latest.all': '/thunderbird/all/',
     'thunderbird.site.bug-report': 'https://github.com/thundernest/thunderbird-website/issues',
     'contribute': 'https://github.com/thundernest/thunderbird-website',
