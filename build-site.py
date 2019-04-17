@@ -124,11 +124,8 @@ def build_site(lang):
     gettext_translator = translate.gettext_object(lang)
     site._env.install_gettext_translations(gettext_translator)
 
-    def l10n_has_tag(tag):
-        return tag in translator.lang_file_tag_set('thunderbird/features', lang)
-
     # Add l10n_css function to context.
-    site._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css, l10n_has_tag=l10n_has_tag, settings=settings, **helper.contextfunctions)
+    site._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css, settings=settings, **helper.contextfunctions)
     site._env.filters["markdown"] = helper.safe_markdown
     site._env.filters["f"] = helper.f
     site._env.filters["l10n_format_date"] = helper.l10n_format_date
