@@ -267,7 +267,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     }
     loader = jinja2.FileSystemLoader(searchpath=settings.WEBSITE_PATH)
     env = jinja2.Environment(loader=loader, extensions=['jinja2.ext.i18n'])
-    translator = translate.Translation(locale, ['download_button', 'main'])
+    translator = translate.gettext_object(locale)
     env.install_gettext_translations(translator)
     env.globals.update(**ctx)
     template = env.get_template('_includes/download-button.html')
