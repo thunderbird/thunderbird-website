@@ -6,21 +6,6 @@ import translate
 import webassets
 
 extensions = ['jinja2.ext.i18n']
-PROD_LANGUAGES = ('ach', 'af', 'an', 'ar', 'as', 'ast', 'az', 'be', 'bg',
-                  'bn-BD', 'bn-IN', 'br', 'bs', 'ca', 'cak', 'cs',
-                  'cy', 'da', 'de', 'dsb', 'el', 'en-GB', 'en-US',
-                  'en-ZA', 'eo', 'es-AR', 'es-CL', 'es-ES', 'es-MX', 'et',
-                  'eu', 'fa', 'ff', 'fi', 'fr', 'fy-NL', 'ga-IE', 'gd',
-                  'gl', 'gn', 'gu-IN', 'he', 'hi-IN', 'hr', 'hsb',
-                  'hu', 'hy-AM', 'id', 'is', 'it', 'ja', 'ja-JP-mac',
-                  'ka', 'kab', 'kk', 'km', 'kn', 'ko', 'lij', 'lt', 'ltg', 'lv',
-                  'mai', 'mk', 'ml', 'mr', 'ms', 'my', 'nb-NO', 'ne-NP', 'nl',
-                  'nn-NO', 'oc', 'or', 'pa-IN', 'pl', 'pt-BR', 'pt-PT',
-                  'rm', 'ro', 'ru', 'si', 'sk', 'sl', 'son', 'sq',
-                  'sr', 'sv-SE', 'ta', 'te', 'th', 'tr', 'uk', 'ur',
-                  'uz', 'vi', 'xh', 'zh-CN', 'zh-TW', 'zu')
-
-LANGUAGES_BIDI = ('he', 'ar', 'fa', 'ur')
 
 # path to search for templates
 searchpath = 'start-page'
@@ -39,9 +24,10 @@ def build_assets():
     shutil.rmtree(renderpath+'/media', ignore_errors=True)
     shutil.copytree(staticpath, renderpath+'/media')
 
+
 def text_dir(lang):
     textdir = 'ltr'
-    if lang in LANGUAGES_BIDI:
+    if lang in settings.LANGUAGES_BIDI:
         textdir = 'rtl'
     return textdir
 
@@ -53,12 +39,14 @@ def jinja_env(outpath, searchpath, extensions=[], env_globals=[]):
     env.globals.update(env_globals)
     return env
 
+
 def render(env, outpath):
     for template in env.list_templates():
         if not template.startswith("_"):
             filepath = os.path.join(outpath, template)
             t = env.get_template(template)
             t.stream().dump(filepath)
+
 
 def build_site(lang):
     context = {'LANG': lang,
@@ -77,7 +65,7 @@ def build_site(lang):
 
 build_site('en-US')
 
-for lang in PROD_LANGUAGES:
+for lang in settings.PROD_LANGUAGES:
     build_site(lang)
 
 build_assets()
