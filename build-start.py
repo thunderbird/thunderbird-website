@@ -1,4 +1,3 @@
-from staticjinja import make_site
 import helper
 import os
 import shutil
@@ -46,6 +45,21 @@ def text_dir(lang):
         textdir = 'rtl'
     return textdir
 
+
+def jinja_env(outpath, searchpath, extensions=[], env_globals=[]):
+    from jinja2 import Environment, FileSystemLoader
+    load = FileSystemLoader(searchpath)
+    env = Environment(loader=load, extensions=extensions)
+    env.globals.update(env_globals)
+    return env
+
+def render(env, outpath):
+    for template in env.list_templates():
+        if not template.startswith("_"):
+            filepath = os.path.join(outpath, template)
+            t = env.get_template(template)
+            t.stream().dump(filepath)
+
 def build_site(lang):
     context = {'LANG': lang,
                  'DIR': text_dir(lang) }
@@ -53,14 +67,12 @@ def build_site(lang):
     outpath = os.path.join(renderpath, lang)
     if not os.path.exists(outpath):
         os.makedirs(outpath)
-    site = make_site(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
+    env = jinja_env(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
 
     translator = translate.gettext_object(lang)
-    site._env.install_gettext_translations(translator)
-
-    # Add l10n_css function to context
-    site._env.globals.update(l10n_css=translator.l10n_css, **helper.contextfunctions)
-    site.render(use_reloader=False)
+    env.install_gettext_translations(translator)
+    env.globals.update(l10n_css=translator.l10n_css, **helper.contextfunctions)
+    render(env, outpath)
 
 
 build_site('en-US')
