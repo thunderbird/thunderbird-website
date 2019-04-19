@@ -37,6 +37,8 @@ def build_assets():
     start_css = webassets.Bundle('less/sandstone/fonts.less', 'less/thunderbird/start.less',  filters='less', output='start-style.css')
     env.register('start-style', start_css)
     env['start-style'].urls()
+    shutil.rmtree(renderpath+'/media', ignore_errors=True)
+    shutil.copytree(staticpath, renderpath+'/media')
 
 def text_dir(lang):
     textdir = 'ltr'
@@ -59,8 +61,6 @@ def build_site(lang):
     # Add l10n_css function to context
     site._env.globals.update(l10n_css=translator.l10n_css, **helper.contextfunctions)
     site.render(use_reloader=False)
-    shutil.rmtree(renderpath+'/media', ignore_errors=True)
-    shutil.copytree(staticpath, renderpath+'/media')
 
 
 build_site('en-US')
