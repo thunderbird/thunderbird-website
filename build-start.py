@@ -53,9 +53,8 @@ def build_site(lang):
         os.makedirs(outpath)
     site = make_site(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
 
-    translator = translate.Translation(lang, ['thunderbird/start/release', 'main'])
-    gettext_translator = translate.gettext_object(lang)
-    site._env.install_gettext_translations(gettext_translator)
+    translator = translate.gettext_object(lang)
+    site._env.install_gettext_translations(translator)
 
     # Add l10n_css function to context
     site._env.globals.update(l10n_css=translator.l10n_css, **helper.contextfunctions)
