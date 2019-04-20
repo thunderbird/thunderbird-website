@@ -1,11 +1,8 @@
-import helper
-import os
+import builder
 import shutil
 import settings
-import translate
 import webassets
 
-extensions = ['jinja2.ext.i18n']
 
 # path to search for templates
 searchpath = 'start-page'
@@ -25,47 +22,6 @@ def build_assets():
     shutil.copytree(staticpath, renderpath+'/media')
 
 
-def text_dir(lang):
-    textdir = 'ltr'
-    if lang in settings.LANGUAGES_BIDI:
-        textdir = 'rtl'
-    return textdir
-
-
-def jinja_env(outpath, searchpath, extensions=[], env_globals=[]):
-    from jinja2 import Environment, FileSystemLoader
-    load = FileSystemLoader(searchpath)
-    env = Environment(loader=load, extensions=extensions)
-    env.globals.update(env_globals)
-    return env
-
-
-def render(env, outpath):
-    for template in env.list_templates():
-        if not template.startswith("_"):
-            filepath = os.path.join(outpath, template)
-            t = env.get_template(template)
-            t.stream().dump(filepath)
-
-
-def build_site(lang):
-    context = {'LANG': lang,
-                 'DIR': text_dir(lang) }
-
-    outpath = os.path.join(renderpath, lang)
-    if not os.path.exists(outpath):
-        os.makedirs(outpath)
-    env = jinja_env(outpath=outpath, searchpath=searchpath, extensions=extensions, env_globals=context)
-
-    translator = translate.gettext_object(lang)
-    env.install_gettext_translations(translator)
-    env.globals.update(l10n_css=translator.l10n_css, **helper.contextfunctions)
-    render(env, outpath)
-
-
-build_site('en-US')
-
-for lang in settings.PROD_LANGUAGES:
-    build_site(lang)
-
+site = builder.Site(settings.PROD_LANGUAGES, searchpath, renderpath)
+site.build_site()
 build_assets()
