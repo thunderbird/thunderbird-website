@@ -45,12 +45,15 @@ class Site(object):
 
     def render(self):
         outpath = os.path.join(self.renderpath, self.lang)
-        # Make sure the output directory exists.
-        if not os.path.exists(outpath):
-            os.makedirs(outpath)
+
+
         for template in self._env.list_templates():
             if not template.startswith("_"):
                 filepath = os.path.join(outpath, template)
+                # Make sure the output directory exists.
+                filedir = os.path.dirname(filepath)
+                if not os.path.exists(filedir):
+                    os.makedirs(filedir)
                 t = self._env.get_template(template)
                 t.stream().dump(filepath)
 
