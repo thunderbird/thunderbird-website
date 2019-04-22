@@ -35,18 +35,16 @@ class Site(object):
         self._env = Environment(loader=load, extensions=extensions)
 
     def build_assets(self):
+        shutil.rmtree(self.renderpath+'/media', ignore_errors=True)
+        shutil.copytree(self.staticpath, self.renderpath+'/media')
         env = webassets.Environment(load_path=[settings.ASSETS], directory=self.cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
         for k, v in self.css_bundles.iteritems():
             reg = webassets.Bundle(*v, filters='less', output=k+'.css')
             env.register(k, reg)
             env[k].urls()
-        shutil.rmtree(self.renderpath+'/media', ignore_errors=True)
-        shutil.copytree(self.staticpath, self.renderpath+'/media')
 
     def render(self):
         outpath = os.path.join(self.renderpath, self.lang)
-
-
         for template in self._env.list_templates():
             if not template.startswith("_"):
                 filepath = os.path.join(outpath, template)
