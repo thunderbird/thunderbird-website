@@ -9,8 +9,12 @@ from jinja2 import Environment, FileSystemLoader
 
 extensions = ['jinja2.ext.i18n']
 
+def read_file(file):
+    with open(file, 'r') as f:
+        return f.read()
+
 class Site(object):
-    def __init__(self, languages, searchpath, renderpath, staticpath, css_bundles):
+    def __init__(self, languages, searchpath, renderpath, staticpath, css_bundles, js_bundles = {}):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
@@ -19,6 +23,8 @@ class Site(object):
         self.staticpath = staticpath
         self.cssout = renderpath+'/media/css'
         self.css_bundles = css_bundles
+        self.js_bundles = js_bundles
+        self.jsout = renderpath+'/media/js'
 
     def _text_dir(self):
         textdir = 'ltr'
@@ -34,6 +40,14 @@ class Site(object):
         load = FileSystemLoader(self.searchpath)
         self._env = Environment(loader=load, extensions=extensions)
 
+    def _concat_js(self):
+        for bundle_name, files in self.js_bundles.iteritems():
+            bundle_path = self.jsout+'/'+bundle_name+'.js'
+
+            js_string = '\n'.join(read_file(settings.ASSETS + '/' + file) for file in files)
+            with open(bundle_path, 'w') as f:
+                f.write(js_string)
+
     def build_assets(self):
         shutil.rmtree(self.renderpath+'/media', ignore_errors=True)
         shutil.copytree(self.staticpath, self.renderpath+'/media')
@@ -42,6 +56,8 @@ class Site(object):
             reg = webassets.Bundle(*v, filters='less', output=k+'.css')
             env.register(k, reg)
             env[k].urls()
+        if self.js_bundles:
+            self._concat_js()
 
     def render(self):
         outpath = os.path.join(self.renderpath, self.lang)

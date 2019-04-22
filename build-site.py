@@ -1,3 +1,4 @@
+import builder
 import errno
 import helper
 import jinja2
@@ -21,27 +22,26 @@ staticpath = 'website/_media'
 # Path to render the finished site to.
 renderpath = 'thunderbird.net'
 # Paths to compile CSS and concat JS to.
-cssout = renderpath+'/media/css'
 jsout = renderpath+'/media/js'
 
-css_bundles = [ {'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less']},
-                {'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less']},
-                {'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less']},
-                {'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less']},
-                {'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less']},
-                {'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less']},
-                {'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less']},
-                {'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less']},
-                {'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less']},
-              ]
+css_bundles = {
+                'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
+                'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less'],
+                'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less'],
+                'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less'],
+                'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less'],
+                'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less'],
+                'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less'],
+                'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less'],
+                'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less'],
+            }
 
-js_bundles = [ {'common-bundle': ['js/common/jquery-1.11.3.min.js', 'js/common/spin.min.js', 'js/common/mozilla-utils.js',
-                                  'js/common/form.js', 'js/common/mozilla-client.js', 'js/common/mozilla-image-helper.js',
-                                  'js/common/nav-main-resp.js', 'js/common/class-list-polyfill.js', 'js/common/mozilla-global-nav.js',
-                                  'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js',
-                                  'js/common/autodownload.js']
-               }
-             ]
+js_bundles = { 'common-bundle': ['js/common/jquery-1.11.3.min.js', 'js/common/spin.min.js', 'js/common/mozilla-utils.js',
+                'js/common/form.js', 'js/common/mozilla-client.js', 'js/common/mozilla-image-helper.js',
+                'js/common/nav-main-resp.js', 'js/common/class-list-polyfill.js', 'js/common/mozilla-global-nav.js',
+                'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js',
+                'js/common/autodownload.js']
+             }
 
 def mkdir(path):
     try:
@@ -67,25 +67,9 @@ def read_file(file):
         return f.read()
 
 
-def concat_js(bundle):
-    bundle_name, files = bundle.popitem()
-    bundle_path = jsout+'/'+bundle_name+'.js'
-
-    js_string = '\n'.join(read_file(settings.ASSETS + '/' + file) for file in files)
-    with open(bundle_path, 'w') as f:
-        f.write(js_string)
-
-
 def build_assets():
-    env = webassets.Environment(load_path=[settings.ASSETS], directory=cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
-    for bundle in css_bundles:
-        k, v = bundle.popitem()
-        reg = webassets.Bundle(*v, filters='less', output=k+'.css')
-        env.register(k, reg)
-        env[k].urls()
-
-    for bundle in js_bundles:
-        concat_js(bundle)
+    site = builder.Site(settings.PROD_LANGUAGES, searchpath, renderpath, staticpath, css_bundles, js_bundles)
+    site.build_assets()
 
 
 def text_dir(lang):
@@ -182,7 +166,5 @@ build_site(settings.LANGUAGE_CODE)
 for lang in settings.PROD_LANGUAGES:
     build_site(lang)
 
-print "Copying media files..."
-shutil.copytree(staticpath, renderpath+'/media')
 print "Building assets..."
 build_assets()
