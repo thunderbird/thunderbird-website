@@ -14,7 +14,7 @@ def read_file(file):
         return f.read()
 
 class Site(object):
-    def __init__(self, languages, searchpath, renderpath, staticpath, css_bundles, js_bundles = {}):
+    def __init__(self, languages, searchpath, renderpath, staticpath, css_bundles, js_bundles = {}, data = {}):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
@@ -25,6 +25,7 @@ class Site(object):
         self.css_bundles = css_bundles
         self.js_bundles = js_bundles
         self.jsout = renderpath+'/media/js'
+        self.data = data
 
     def _text_dir(self):
         textdir = 'ltr'
@@ -39,6 +40,9 @@ class Site(object):
     def _setup_env(self):
         load = FileSystemLoader(self.searchpath)
         self._env = Environment(loader=load, extensions=extensions)
+        self._env.filters["markdown"] = helper.safe_markdown
+        self._env.filters["f"] = helper.f
+        self._env.filters["l10n_format_date"] = helper.l10n_format_date
 
     def _concat_js(self):
         for bundle_name, files in self.js_bundles.iteritems():
@@ -47,6 +51,14 @@ class Site(object):
             js_string = '\n'.join(read_file(settings.ASSETS + '/' + file) for file in files)
             with open(bundle_path, 'w') as f:
                 f.write(js_string)
+
+    def _switch_lang(self, lang):
+        self.lang = lang
+        self._set_context()
+        self._env.globals.update(self.context)
+        translator = translate.gettext_object(lang)
+        self._env.install_gettext_translations(translator)
+        self._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css)
 
     def build_assets(self):
         shutil.rmtree(self.renderpath+'/media', ignore_errors=True)
@@ -73,12 +85,10 @@ class Site(object):
 
     def build_site(self):
         self._setup_env()
+        self._env.globals.update(settings=settings, **helper.contextfunctions)
+        if self.data:
+            self._env.globals.update(self.data)
         for lang in self.languages:
-            self.lang = lang
-            self._set_context()
-            self._env.globals.update(self.context)
-            translator = translate.gettext_object(lang)
-            self._env.install_gettext_translations(translator)
-            self._env.globals.update(l10n_css=translator.l10n_css, **helper.contextfunctions)
+            self._switch_lang(lang)
             self.render()
         self.build_assets()

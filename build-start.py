@@ -1,7 +1,5 @@
 import builder
-import shutil
 import settings
-import webassets
 
 
 # path to search for templates
