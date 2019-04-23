@@ -36,6 +36,15 @@ js_bundles = { 'common-bundle': ['js/common/jquery-1.11.3.min.js', 'js/common/sp
                 'js/common/autodownload.js']
              }
 
+def delete_contents(dirpath):
+    if os.path.exists(dirpath):
+        for filename in os.listdir(dirpath):
+            filepath = os.path.join(dirpath, filename)
+            try:
+                shutil.rmtree(filepath)
+            except OSError:
+                os.remove(filepath)
+
 def mkdir(path):
     try:
         os.makedirs(path)
@@ -97,7 +106,7 @@ def build_notes(siteobj):
 
 
 # Rebuild whole site from scratch.
-shutil.rmtree(renderpath, ignore_errors=True)
+delete_contents(renderpath)
 
 # Prepare data.
 version = helper.thunderbird_desktop.latest_version('release')
@@ -122,16 +131,15 @@ parser.add_argument('--enus', nargs='?', default='', const='enus')
 args = parser.parse_args()
 
 if args.enus:
-    print 'en-US output only.\n'
+    print 'Rendering en-US locale only.'
     languages = ['en-US']
 else:
     languages = settings.PROD_LANGUAGES
 
 site = builder.Site(languages, searchpath, renderpath, staticpath, css_bundles, js_bundles, context)
-
 site.build_site()
+build_notes(site)
 
 for lang in languages:
     outpath = os.path.join(renderpath, lang)
     write_404_htaccess(outpath, lang)
-build_notes(site)
