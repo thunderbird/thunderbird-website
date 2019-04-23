@@ -1,3 +1,4 @@
+import argparse
 import builder
 import errno
 import helper
@@ -116,12 +117,21 @@ context = {'current_year': date.today().year,
            'latest_thunderbird_version': version,
           }
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--enus', nargs='?', default='', const='enus')
+args = parser.parse_args()
 
-site = builder.Site(settings.PROD_LANGUAGES, searchpath, renderpath, staticpath, css_bundles, js_bundles, context)
+if args.enus:
+    print 'en-US output only.\n'
+    languages = ['en-US']
+else:
+    languages = settings.PROD_LANGUAGES
+
+site = builder.Site(languages, searchpath, renderpath, staticpath, css_bundles, js_bundles, context)
 
 site.build_site()
 
-for lang in settings.PROD_LANGUAGES:
+for lang in languages:
     outpath = os.path.join(renderpath, lang)
     write_404_htaccess(outpath, lang)
 build_notes(site)
