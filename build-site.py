@@ -7,8 +7,7 @@ import shutil
 import settings
 
 from datetime import date
-from dateutil.parser import parse
-from thunderbird_notes import releasenotes
+
 
 # Path to search for templates.
 searchpath = 'website'
@@ -35,78 +34,6 @@ js_bundles = { 'common-bundle': ['js/common/jquery-1.11.3.min.js', 'js/common/sp
                 'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js',
                 'js/common/autodownload.js']
              }
-
-def delete_contents(dirpath):
-    if os.path.exists(dirpath):
-        for filename in os.listdir(dirpath):
-            filepath = os.path.join(dirpath, filename)
-            try:
-                shutil.rmtree(filepath)
-            except OSError:
-                os.remove(filepath)
-
-def mkdir(path):
-    try:
-        os.makedirs(path)
-    except OSError as exception:
-        if exception.errno != errno.EEXIST:
-            raise
-
-
-def write_404_htaccess(path, lang):
-    with open(os.path.join(path,'.htaccess'), 'w') as f:
-        f.write('ErrorDocument 404 /{lang}/404.html\n'.format(lang=lang))
-
-
-def write_htaccess(path, url):
-    mkdir(path)
-    with open(os.path.join(path,'.htaccess'), 'w') as f:
-        f.write('RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
-
-
-def build_notes(siteobj):
-    # Render release notes and system requirements for en-US only.
-    lang = 'en-US'
-    siteobj._switch_lang(lang)
-    e = siteobj._env
-    outpath = os.path.join(renderpath, lang)
-    notelist = releasenotes.notes
-    template = e.get_template('_includes/release-notes.html')
-    e.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
-    for k, n in notelist.iteritems():
-        if 'beta' in k:
-            e.globals.update(channel='Beta', channel_name='Beta')
-        else:
-            e.globals.update(channel='Release', channel_name='Release')
-        n["release"]["release_date"] = n["release"].get("release_date", helper.thunderbird_desktop.get_release_date(k))
-
-        # If there's no data at all, we can't parse an empty string for a date.
-        if n["release"]["release_date"]:
-            n["release"]["release_date"] = parse(str(n["release"]["release_date"]))
-        e.globals.update(**n)
-        target = os.path.join(outpath,'thunderbird', str(k), 'releasenotes')
-        mkdir(target)
-        print "Rendering {0}/index.html...".format(target)
-        template.stream().dump(os.path.join(target, 'index.html'))
-
-        target = os.path.join(outpath,'thunderbird', str(k), 'system-requirements')
-        mkdir(target)
-        newtemplate = e.get_template('_includes/system_requirements.html')
-        print "Rendering {0}/index.html...".format(target)
-        newtemplate.stream().dump(os.path.join(target, 'index.html'))
-
-    # Build htaccess files for sysreq and release notes redirects.
-    print "Writing sysreq and release notes htaccess files..."
-    sysreq_path = os.path.join(renderpath, 'system-requirements')
-    notes_path = os.path.join(renderpath, 'notes')
-    write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
-    write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes'))
-    # Default root 404 file.
-    write_404_htaccess(renderpath, lang)
-
-
-# Rebuild whole site from scratch.
-delete_contents(renderpath)
 
 # Prepare data.
 version = helper.thunderbird_desktop.latest_version('release')
@@ -137,9 +64,4 @@ else:
     languages = settings.PROD_LANGUAGES
 
 site = builder.Site(languages, searchpath, renderpath, staticpath, css_bundles, js_bundles, context)
-site.build_site()
-build_notes(site)
-
-for lang in languages:
-    outpath = os.path.join(renderpath, lang)
-    write_404_htaccess(outpath, lang)
+site.build_website()
