@@ -54,7 +54,8 @@ context = {'current_year': date.today().year,
           }
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--enus', nargs='?', default='', const='enus')
+parser.add_argument('--enus', action='store_true')
+parser.add_argument('--debug', action='store_true')
 args = parser.parse_args()
 
 if args.enus:
@@ -63,5 +64,5 @@ if args.enus:
 else:
     languages = settings.PROD_LANGUAGES
 
-site = builder.Site(languages, searchpath, renderpath, staticpath, css_bundles, js_bundles, context)
+site = builder.Site(languages, searchpath, renderpath, staticpath, css_bundles, js_bundles=js_bundles, data=context, debug = args.debug)
 site.build_website()

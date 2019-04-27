@@ -1,7 +1,9 @@
 import helper
+import logging
 import os
 import shutil
 import settings
+import sys
 import translate
 import webassets
 
@@ -10,6 +12,11 @@ from jinja2 import Environment, FileSystemLoader
 from thunderbird_notes import releasenotes
 
 extensions = ['jinja2.ext.i18n']
+
+# Logging default off unless debug = True.
+logger = logging.getLogger(__name__)
+sh = logging.StreamHandler(sys.stdout)
+logger.addHandler(sh)
 
 def read_file(file):
     with open(file, 'r') as f:
@@ -46,7 +53,7 @@ def delete_contents(dirpath):
 
 
 class Site(object):
-    def __init__(self, languages, searchpath, renderpath, staticpath, css_bundles, js_bundles = {}, data = {}):
+    def __init__(self, languages, searchpath, renderpath, staticpath, css_bundles, js_bundles = {}, data = {}, debug=False):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
@@ -60,6 +67,8 @@ class Site(object):
         self.data = data
         self._setup_env()
         self._env.globals.update(settings=settings, **helper.contextfunctions)
+        if debug:
+            logger.setLevel(logging.INFO)
 
     @property
     def outpath(self):
@@ -119,13 +128,13 @@ class Site(object):
             self._env.globals.update(**n)
             target = os.path.join(self.outpath,'thunderbird', str(k), 'releasenotes')
             mkdir(target)
-            # print "Rendering {0}/index.html...".format(target)
+            logger.info("Rendering {0}/index.html...".format(target))
             note_template.stream().dump(os.path.join(target, 'index.html'))
 
             target = os.path.join(self.outpath,'thunderbird', str(k), 'system-requirements')
             mkdir(target)
             sysreq_template = self._env.get_template('_includes/system_requirements.html')
-            # print "Rendering {0}/index.html...".format(target)
+            logger.info("Rendering {0}/index.html...".format(target))
             sysreq_template.stream().dump(os.path.join(target, 'index.html'))
 
         # Build htaccess files for sysreq and release notes redirects.
@@ -166,7 +175,7 @@ class Site(object):
         delete_contents(self.renderpath)
         self._env.globals.update(self.data)
         for lang in self.languages:
-            # print "Building pages for {lang}...".format(lang=lang)
+            logger.info("Building pages for {lang}...".format(lang=lang))
             self._switch_lang(lang)
             self.render()
             write_404_htaccess(self.outpath, self.lang)
@@ -174,5 +183,5 @@ class Site(object):
                 # 404 page for root accesses outside lang dirs.
                 write_404_htaccess(self.renderpath, self.lang)
                 self.build_notes()
-        # print "Building assets..."
+        logger.info("Building assets...")
         self.build_assets()
