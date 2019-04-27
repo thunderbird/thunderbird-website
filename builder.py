@@ -172,6 +172,7 @@ class Site(object):
     def build_startpage(self):
         delete_contents(self.renderpath)
         for lang in self.languages:
+            logger.info("Building pages for {lang}...".format(lang=lang))
             self._switch_lang(lang)
             self.render()
         self.build_assets()
