@@ -12,6 +12,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--enus', action='store_true')
 parser.add_argument('--debug', action='store_true')
 parser.add_argument('--startpage', action='store_true')
+parser.add_argument('--watch', action='store_true')
 
 args = parser.parse_args()
 
@@ -49,3 +50,6 @@ else:
     site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,
         settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS, data=context, debug=args.debug)
     site.build_website()
+
+if args.watch:
+    builder.setup_observer(site)

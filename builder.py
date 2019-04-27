@@ -1,15 +1,19 @@
+import datetime
 import helper
 import logging
 import os
 import shutil
 import settings
 import sys
+import time
 import translate
 import webassets
 
 from dateutil.parser import parse
 from jinja2 import Environment, FileSystemLoader
 from thunderbird_notes import releasenotes
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
 
 extensions = ['jinja2.ext.i18n']
 
@@ -172,7 +176,7 @@ class Site(object):
             self.render()
         self.build_assets()
 
-    def build_website(self):
+    def build_website(self, assets=True):
         delete_contents(self.renderpath)
         self._env.globals.update(self.data)
         for lang in self.languages:
@@ -184,5 +188,51 @@ class Site(object):
                 # 404 page for root accesses outside lang dirs.
                 write_404_htaccess(self.renderpath, self.lang)
                 self.build_notes()
-        logger.info("Building assets...")
-        self.build_assets()
+        if assets:
+            logger.info("Building assets...")
+            self.build_assets()
+
+
+class UpdateHandler(FileSystemEventHandler):
+    def __init__(self, builder_instance):
+        self.builder = builder_instance
+        self.updatetime = datetime.datetime.fromtimestamp(0)
+
+    def updatesite(self):
+        if self.builder.searchpath == settings.START_PATH:
+            self.builder.build_startpage()
+        else:
+            self.builder.build_website(assets=False)
+
+    def throttle_updates(self, timestamp, event):
+        # Multiple FileModified events can fire, so only update
+        # once per second.
+        delta = timestamp - self.updatetime
+        if delta.seconds > 0:
+            timemsg = timestamp.strftime("%H:%M:%S")
+            if settings.ASSETS in event.src_path:
+                self.builder.build_assets()
+                print "{0}: Assets rebuilt.".format(timemsg)
+            else:
+                self.updatesite()
+                print "{0}: Website rebuilt.".format(timemsg)
+            self.updatetime = datetime.datetime.now()
+
+    def on_modified(self, event):
+        self.throttle_updates(datetime.datetime.now(), event)
+
+
+def setup_observer(builder_instance):
+    handler = UpdateHandler(builder_instance)
+    observer = Observer()
+    observer.schedule(handler, path=builder_instance.searchpath, recursive=True)
+    observer.schedule(handler, path=settings.ASSETS, recursive=True)
+    observer.start()
+    print "Updating website when templates, CSS, or JS are modified. Press Ctrl-C to end."
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print "Ending watcher..."
+        observer.stop()
+    observer.join()
