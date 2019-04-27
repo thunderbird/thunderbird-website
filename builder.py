@@ -53,13 +53,13 @@ def delete_contents(dirpath):
 
 
 class Site(object):
-    def __init__(self, languages, searchpath, renderpath, staticpath, css_bundles, js_bundles = {}, data = {}, debug=False):
+    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir = '_media', js_bundles = {}, data = {}, debug=False):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
         self.searchpath = searchpath
         self.renderpath = renderpath
-        self.staticpath = staticpath
+        self.staticpath = os.path.join(searchpath, staticdir)
         self.cssout = renderpath+'/media/css'
         self.css_bundles = css_bundles
         self.js_bundles = js_bundles
@@ -170,6 +170,7 @@ class Site(object):
         for lang in self.languages:
             self._switch_lang(lang)
             self.render()
+        self.build_assets()
 
     def build_website(self):
         delete_contents(self.renderpath)

@@ -56,6 +56,15 @@ MEDIA_URL = '/media'
 # path to the website templates
 WEBSITE_PATH = 'website/'
 
+# path to the start page templates
+START_PATH = 'start-page/'
+
+# path for the finished website artifacts.
+WEBSITE_RENDERPATH = 'thunderbird.net'
+
+# path for the finished start page artifacts.
+START_RENDERPATH = 'site'
+
 CALDATA_URL = MEDIA_URL + '/caldata/'
 
 # path to product-details json files
@@ -105,3 +114,29 @@ DONATE_LINK = (
     'https://donate.mozilla.org/thunderbird/'
     '?utm_source={source}&utm_medium=referral&utm_content={content}'
 )
+
+WEBSITE_CSS = {
+    'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
+    'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less'],
+    'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less'],
+    'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less'],
+    'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less'],
+    'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less'],
+    'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less'],
+    'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less'],
+    'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less'],
+}
+
+WEBSITE_JS = {
+    'common-bundle': [
+        'js/common/jquery-1.11.3.min.js', 'js/common/spin.min.js', 'js/common/mozilla-utils.js',
+        'js/common/form.js', 'js/common/mozilla-client.js', 'js/common/mozilla-image-helper.js',
+        'js/common/nav-main-resp.js', 'js/common/class-list-polyfill.js', 'js/common/mozilla-global-nav.js',
+        'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js',
+        'js/common/autodownload.js'
+    ]
+}
+
+START_CSS = {
+    'start-style': ['less/sandstone/fonts.less', 'less/thunderbird/start.less']
+}
