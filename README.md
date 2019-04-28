@@ -28,7 +28,7 @@ l10n_tools/compile.sh
 ## Run Build
 
 A basic build is `python build-site.py`.
-It builds [www.thunderbird.net](https://www.thunderbird.net/) into the thunderbird.net directory by default.
+It builds [www.thunderbird.net](https://www.thunderbird.net/) into the `thunderbird.net` directory by default.
 
 There are additional arguments:
 
@@ -40,7 +40,10 @@ There are additional arguments:
     * This logs output for each locale built and some of the templates, used to make debugging easier.
 * `--watch`
     * This starts an HTTP server on localhost port 8000, and watches the template and assets folders for changes and then does quick rebuilds.
-
+    * Note that this only rebuilds when you modify a file. To add or remove files, you should start a new build.
+* `--port`
+    * Sets the port to be used for the localhost server. Default is 8000. Format: `--port 8000`.
+ 
 * thunderbird.net templates are in the `website` directory, and start page in the `start-page` dir. Assets are shared and in the `assets` dir.
 
 ## View Website
