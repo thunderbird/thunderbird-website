@@ -1,6 +1,7 @@
 import datetime
 import helper
 import logging
+import ntpath
 import os
 import shutil
 import settings
@@ -111,6 +112,41 @@ class Site(object):
         self._env.install_gettext_translations(translator)
         self._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css)
 
+    def is_css_bundle(self, path):
+        changed_file = ntpath.basename(path).split('.')[0]
+        bundle = ''
+        for bundle_name, files in self.css_bundles.iteritems():
+            for file in files:
+                if changed_file in file:
+                    bundle = bundle_name
+        return bundle
+
+    def partial_asset_build(self, path, timemsg=''):
+        if 'less' in path:
+            bundle = self.is_css_bundle(path)
+            if bundle:
+                env = webassets.Environment(load_path=[settings.ASSETS], directory=self.cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
+                css_files = self.css_bundles[bundle]
+                reg = webassets.Bundle(*css_files, filters='less', output=bundle+'.css')
+                env.register(bundle, reg)
+                env[bundle].urls()
+                print "{0}: CSS bundle rebuilt: {1}.".format(timemsg, bundle)
+            else:
+                print "{0}: All Assets rebuilt.".format(timemsg)
+                self.build_assets()
+        elif 'js' in path:
+            if self.js_bundles:
+                self._concat_js()
+                print "{0}: JS bundles rebuilt.".format(timemsg)
+            else:
+                print "{0}: All Assets rebuilt.".format(timemsg)
+                self.build_assets()
+        # If we can't figure out what to build partially, give up and do a full build.
+        else:
+            print "{0}: All Assets rebuilt.".format(timemsg)
+            self.build_assets()
+
+
     def build_notes(self):
         # Render release notes and system requirements for en-US only.
         if self.lang != 'en-US':
@@ -177,8 +213,9 @@ class Site(object):
             self.render()
         self.build_assets()
 
-    def build_website(self, assets=True):
-        delete_contents(self.renderpath)
+    def build_website(self, assets=True, notes=True):
+        if assets and notes:
+            delete_contents(self.renderpath)
         self._env.globals.update(self.data)
         for lang in self.languages:
             logger.info("Building pages for {lang}...".format(lang=lang))
@@ -188,7 +225,8 @@ class Site(object):
             if lang == 'en-US':
                 # 404 page for root accesses outside lang dirs.
                 write_404_htaccess(self.renderpath, self.lang)
-                self.build_notes()
+                if notes:
+                    self.build_notes()
         if assets:
             logger.info("Building assets...")
             self.build_assets()
@@ -199,11 +237,15 @@ class UpdateHandler(FileSystemEventHandler):
         self.builder = builder_instance
         self.updatetime = datetime.datetime.fromtimestamp(0)
 
-    def updatesite(self):
+    def updatesite(self, event):
         if self.builder.searchpath == settings.START_PATH:
             self.builder.build_startpage()
         else:
-            self.builder.build_website(assets=False)
+            # Reduce build time by ignoring release notes when unnecessary.
+            if '_includes' in event.src_path:
+                self.builder.build_website(assets=False, notes=True)
+            else:
+                self.builder.build_website(assets=False, notes=False)
 
     def throttle_updates(self, timestamp, event):
         # Multiple FileModified events can fire, so only update
@@ -212,10 +254,9 @@ class UpdateHandler(FileSystemEventHandler):
         if delta.seconds > 0:
             timemsg = timestamp.strftime("%H:%M:%S")
             if settings.ASSETS in event.src_path:
-                self.builder.build_assets()
-                print "{0}: Assets rebuilt.".format(timemsg)
+                self.builder.partial_asset_build(event.src_path, timemsg)
             else:
-                self.updatesite()
+                self.updatesite(event)
                 print "{0}: Website rebuilt.".format(timemsg)
             self.updatetime = datetime.datetime.now()
 
