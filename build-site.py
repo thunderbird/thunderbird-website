@@ -9,12 +9,13 @@ import settings
 from datetime import date
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--enus', action='store_true')
-parser.add_argument('--debug', action='store_true')
-parser.add_argument('--startpage', action='store_true')
-parser.add_argument('--watch', action='store_true')
-
+parser.add_argument('--enus', help='Only build the en-US language.', action='store_true')
+parser.add_argument('--debug', help='Log output with more detailed build information.',action='store_true')
+parser.add_argument('--startpage', help='Build the start page instead of the main thunderbird.net website.', action='store_true')
+parser.add_argument('--watch', help='Rebuild when template and asset dirs are changed, and run a server on localhost.', action='store_true')
+parser.add_argument('--port' , const=8000, default=8000, type=int, help='Port for the server that runs with --watch.', nargs='?')
 args = parser.parse_args()
+
 
 if args.enus:
     langmsg = 'in en-US only.'
@@ -52,4 +53,4 @@ else:
     site.build_website()
 
 if args.watch:
-    builder.setup_observer(site)
+    builder.setup_observer(site, args.port)

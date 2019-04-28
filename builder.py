@@ -1,6 +1,7 @@
 import datetime
 import helper
 import logging
+import multiprocessing
 import ntpath
 import os
 import shutil
@@ -9,6 +10,9 @@ import sys
 import time
 import translate
 import webassets
+
+import SocketServer
+import SimpleHTTPServer
 
 from dateutil.parser import parse
 from jinja2 import Environment, FileSystemLoader
@@ -263,18 +267,34 @@ class UpdateHandler(FileSystemEventHandler):
     def on_modified(self, event):
         self.throttle_updates(datetime.datetime.now(), event)
 
+def setup_httpd(port, path):
+    cwd = os.getcwd()
+    os.chdir(path)
+    handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+    httpd = SocketServer.TCPServer(("", port), handler)
+    process = multiprocessing.Process(target=httpd.serve_forever)
+    process.daemon = True
+    process.start()
+    os.chdir(cwd)
+    print "HTTP Server running on localhost port {0}.".format(port)
+    return process
 
-def setup_observer(builder_instance):
+def setup_observer(builder_instance, port):
     handler = UpdateHandler(builder_instance)
     observer = Observer()
     observer.schedule(handler, path=builder_instance.searchpath, recursive=True)
     observer.schedule(handler, path=settings.ASSETS, recursive=True)
+    observer.daemon = True
     observer.start()
     print "Updating website when templates, CSS, or JS are modified. Press Ctrl-C to end."
+    server = setup_httpd(port, builder_instance.renderpath)
     try:
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
-        print "Ending watcher..."
+        print "Shutting down watcher and server..."
+        server.terminate()
+        server.join()
         observer.stop()
-    observer.join()
+        observer.join()
+
