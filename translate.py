@@ -3,7 +3,6 @@
 from product_details import thunderbird_desktop as product_details
 from jinja2 import Markup
 
-import codecs
 import gettext
 import os
 import re
@@ -38,6 +37,7 @@ def get_translations(self):
 
 
 def l10n_css(self):
+    """Return locale-specific css for `self.locale` on the translation object."""
     path = os.path.join(settings.MEDIA_URL.strip('/'), 'css', 'l10n', self.locale)
     markup = ''
     if os.path.exists(path):
@@ -49,7 +49,8 @@ def l10n_css(self):
 
 
 def gettext_object(lang):
-    trans = gettext.translation("messages", localedir="locale", languages=[lang.replace('-','_')], fallback=True)
+    """Setup gettext translation object and add l10n_css and get_translations methods to it."""
+    trans = gettext.translation("messages", localedir="locale", languages=[lang.replace('-', '_')], fallback=True)
     trans.cache = {}
     trans.locale = lang
     trans.get_translations = get_translations.__get__(trans)

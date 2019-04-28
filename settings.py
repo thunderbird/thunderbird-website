@@ -20,7 +20,7 @@ PROD_LANGUAGES = (
 # Languages that require RTL support.
 LANGUAGES_BIDI = ('he', 'ar', 'fa', 'ur')
 
-#default language
+# Default main site language.
 LANGUAGE_CODE = 'en-US'
 
 # Map short locale names to long, preferred locale names. This

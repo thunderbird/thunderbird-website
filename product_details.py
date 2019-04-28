@@ -1,4 +1,4 @@
- # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 from collections import OrderedDict
 from operator import itemgetter
@@ -9,13 +9,16 @@ import os
 import re
 import settings
 
+
 def load_json(path):
+    """Load the .json at `path` and return data."""
     path = os.path.join(settings.JSON_PATH, path)
     with open(path, 'r') as f:
         return json.load(f)
 
-class ThunderbirdDetails():
 
+class ThunderbirdDetails():
+    """ Loads Thunderbird versioning information from product details JSON files."""
     platform_labels = OrderedDict([
         ('winsha1', 'Windows (XP/Vista)'),
         ('win', 'Windows'),
@@ -44,13 +47,13 @@ class ThunderbirdDetails():
         'release': 'LATEST_THUNDERBIRD_VERSION',
     }
 
-
     def latest_version(self, channel='release'):
+        """Returns the latest release version of Thunderbird by default, or other `channel`."""
         version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_VERSION')
         return self.current_versions[version_name]
 
-
     def latest_builds(self, locale, channel='release'):
+        """Returns builds for the latest version of Thunderbird based on `channel`."""
         version = self.latest_version(channel)
 
         # We don't really have any build data for non-release builds
@@ -63,7 +66,6 @@ class ThunderbirdDetails():
             if 'Linux' in _builds:
                 _builds['Linux 64-bit'] = _builds['Linux']
             return version, _builds
-
 
     def get_filtered_full_builds(self, channel, version):
         version = version or self.latest_version(channel)
@@ -94,7 +96,6 @@ class ThunderbirdDetails():
 
         return sorted(f_builds, key=itemgetter('name_en'))
 
-
     def get_download_url(self, channel, version, platform, locale, force_direct=True):
         _version = version
         _locale = 'ja-JP-mac' if platform == 'osx' and locale == 'ja' else locale
@@ -119,11 +120,10 @@ class ThunderbirdDetails():
     def platforms(self, channel='release'):
         return self.platform_labels.items()
 
-
     def list_releases(self, channel='beta'):
         version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_DEVEL_VERSION')
         esr_major_versions = (range(10, 59, 7) +
-        range(60, int(self.current_versions[version_name].split('.')[0])+1, 8))
+        range(60, int(self.current_versions[version_name].split('.')[0]) + 1, 8))
         releases = {}
         for release in self.major_releases:
             major_version = float(re.findall(r'^\d+\.\d+', release)[0])
@@ -141,7 +141,6 @@ class ThunderbirdDetails():
             }
         return sorted(releases.items(), reverse=True)
 
-
     def beta_version_to_canonical(self, version):
         last = ''
         for x in range(1, 10):
@@ -150,7 +149,6 @@ class ThunderbirdDetails():
             if date:
                 last = v
         return last
-
 
     def get_release_date(self, version):
         date = ''
