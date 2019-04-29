@@ -14,7 +14,7 @@ def execute(command, shell=False, env={}):
         proc.stdout.close()
     return_code = proc.wait()
     if return_code:
-            raise subprocess.CalledProcessError(return_code, command)
+        raise subprocess.CalledProcessError(return_code, command)
     print '\n'
 
 

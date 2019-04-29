@@ -77,21 +77,21 @@ def convert_to_high_res(url):
 
 @jinja2.contextfunction
 def l10n_img_file_name(ctx, url):
-        """Return the filename of the l10n image for use by static()"""
-        url = url.lstrip('/')
-        locale = ctx.get('LANG', None)
-        if not locale:
+    """Return the filename of the l10n image for use by static()"""
+    url = url.lstrip('/')
+    locale = ctx.get('LANG', None)
+    if not locale:
+        locale = settings.LANGUAGE_CODE
+
+    # We use the same localized screenshots for all Spanishes
+    if locale.startswith('es') and not _l10n_media_exists('img', locale, url):
+        locale = 'es-ES'
+
+    if locale != settings.LANGUAGE_CODE:
+        if not _l10n_media_exists('img', locale, url):
             locale = settings.LANGUAGE_CODE
 
-        # We use the same localized screenshots for all Spanishes
-        if locale.startswith('es') and not _l10n_media_exists('img', locale, url):
-            locale = 'es-ES'
-
-        if locale != settings.LANGUAGE_CODE:
-            if not _l10n_media_exists('img', locale, url):
-                locale = settings.LANGUAGE_CODE
-
-        return path.join('img', 'l10n', locale, url)
+    return path.join('img', 'l10n', locale, url)
 
 
 @jinja2.contextfunction
