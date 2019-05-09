@@ -10,7 +10,8 @@
 {% block main %}
       <header>
         <h1>{{ self.title() }}</h1>
-        <p>{{ _('You are using the beta version of Thunderbird, which means you get to experience improvements and fixes before the rest of our users! But with great power comes great responsibility, we hope you’ll take the time to report bugs and provide feedback on your experience. Thank you for helping to make the next Thunderbird release as awesome as possible.') }}</p>
+        <p>{{ _('You are using the beta version of Thunderbird, which means you get to experience improvements and fixes before the rest of our users! But with great power comes great responsibility, we hope you’ll take the time to report bugs and provide feedback on your experience. Thank you for helping to make the next Thunderbird release as awesome as possible. <a class="more" href="%(learn)s">Learn more about the Beta.</a>')|format(learn='https://support.mozilla.org/kb/thunderbird-beta') }}</p>
+        <p><b>{{ _('WARNING: Add-ons in Thunderbird Betas can be fragile, meaning they may not work properly in your current beta, may break in a future Thunderbird Beta, and you may have installation problems.  Anyone using or thinking of using add-ons in beta versions should read our <a href="%(addons)s">add-ons KB article</a>, especially if you are currently using Thunderbird Beta version 60 or older.')|format(addons='https://support.mozilla.org/kb/thunderbird-beta#w_add-ons')}}</b></p>
       </header>
       <div>
         <section>

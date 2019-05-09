@@ -2,6 +2,7 @@ from webob import Request
 import re
 import settings
 
+
 def get_language_map():
     """
     Return a complete dict of language -> URL mappings, including the canonical
@@ -67,39 +68,38 @@ def get_best_language(accept_lang):
 
 
 def application(environ, start_response):
+    """Main wsgi application to redirect incoming users to the correct locale."""
+
     req = Request(environ)
 
     if 'thunderbird' in req.path_qs:
         # Release notes, system requirements, and 'all' builds pages are only available in English.
         language_code = 'en-US'
-    elif req.GET.get('lang', ''):
-        # Handle language switcher.
-        language_code = req.GET['lang']
     else:
         language_code = get_best_language(environ.get('HTTP_ACCEPT_LANGUAGE', 'en-US'))
 
     location = "{0}/{1}{2}".format(req.host_url, language_code, req.path_qs)
 
-    start_response('302 Found',
-    [('Content-type', 'text/html; charset=utf-8' ),
-    ('Cache-Control', 'private, s-maxage=0, max-age=604800'),
-    ('Vary', 'Accept-Language'),
-    ('Location', location)
+    start_response('302 Found', [
+        ('Content-type', 'text/html; charset=utf-8'),
+        ('Cache-Control', 'private, s-maxage=0, max-age=604800'),
+        ('Vary', 'Accept-Language'),
+        ('Location', location)
     ])
 
     return ''
 
 
 if __name__ == '__main__':
-    #this runs when script is started directly from commandline
+    # This runs when script is started directly from commandline.
     try:
-        #   create a simple WSGI server and run the application
+        # Create a simple WSGI server and run the application.
         from wsgiref import simple_server
-        print   "Running test   application -   point   your browser at http://localhost:8000/ ..."
-        httpd   =   simple_server.WSGIServer(('',   8000), simple_server.WSGIRequestHandler)
+        print "Running test application - point your browser at http://localhost:8000/ ..."
+        httpd = simple_server.WSGIServer(('', 8000), simple_server.WSGIRequestHandler)
         httpd.set_app(application)
         httpd.serve_forever()
     except ImportError:
-        #wsgiref not installed, just output html to stdout
+        # wsgiref not installed, just output html to stdout
         for content in application({}, lambda status, headers: None):
             print content
