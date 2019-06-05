@@ -3,6 +3,7 @@ sys.path.append('..')
 import settings
 import subprocess
 
+
 def execute(command, shell=False, env={}):
     command = command.split()
     global failures
@@ -13,8 +14,9 @@ def execute(command, shell=False, env={}):
         proc.stdout.close()
     return_code = proc.wait()
     if return_code:
-            raise subprocess.CalledProcessError(return_code, command)
+        raise subprocess.CalledProcessError(return_code, command)
     print '\n'
+
 
 for lang in settings.PROD_LANGUAGES:
     mkd = 'mkdir ../newlocale/{0} ../newlocale/{0}/LC_MESSAGES'.format(lang)

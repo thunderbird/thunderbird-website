@@ -11,7 +11,6 @@ import translate
 
 from babel.core import Locale, UnknownLocaleError
 from babel.dates import format_date
-from babel.numbers import format_number
 from os import path
 from os.path import splitext
 from product_details import thunderbird_desktop
@@ -20,6 +19,7 @@ babel_format_locale_map = {
     'hsb': 'de',
     'dsb': 'de',
 }
+
 
 def load_calendar_json(json_file):
     calendars = []
@@ -37,17 +37,26 @@ def load_calendar_json(json_file):
     }
     return data
 
+
 def static(filepath):
     return path.join(settings.MEDIA_URL, filepath)
 
+
 @jinja2.contextfunction
 def url(ctx, key, *args):
-    if 'http' in settings.URL_MAPPINGS.get(key, ''):
-        return settings.URL_MAPPINGS.get(key, '')
-    if key=='thunderbird.sysreq':
-        return "/{0}{1}{2}{3}".format('en-US', '/thunderbird/', args[0], '/system-requirements/')
+    target_url = settings.URL_MAPPINGS.get(key, '')
+    lang = ctx['LANG']
 
-    return "/{0}{1}".format(ctx['LANG'], settings.URL_MAPPINGS.get(key, ''))
+    if 'http' in target_url:
+        return target_url
+    if key == 'thunderbird.sysreq':
+        return "/{0}{1}{2}{3}".format('en-US', '/thunderbird/', args[0], '/system-requirements/')
+    if key == 'wiki.moz':
+        return "{0}{1}".format(settings.WIKI_URL, args[0])
+    if key in settings.ENUS_ONLY:
+        lang = 'en-US'
+
+    return "/{0}{1}".format(lang, target_url)
 
 
 def _l10n_media_exists(type, locale, url):
@@ -68,21 +77,22 @@ def convert_to_high_res(url):
 
 @jinja2.contextfunction
 def l10n_img_file_name(ctx, url):
-        """Return the filename of the l10n image for use by static()"""
-        url = url.lstrip('/')
-        locale = ctx.get('LANG', None)
-        if not locale:
+    """Return the filename of the l10n image for use by static()"""
+    url = url.lstrip('/')
+    locale = ctx.get('LANG', None)
+    if not locale:
+        locale = settings.LANGUAGE_CODE
+
+    # We use the same localized screenshots for all Spanishes
+    if locale.startswith('es') and not _l10n_media_exists('img', locale, url):
+        locale = 'es-ES'
+
+    if locale != settings.LANGUAGE_CODE:
+        if not _l10n_media_exists('img', locale, url):
             locale = settings.LANGUAGE_CODE
 
-        # We use the same localized screenshots for all Spanishes
-        if locale.startswith('es') and not _l10n_media_exists('img', locale, url):
-            locale = 'es-ES'
+    return path.join('img', 'l10n', locale, url)
 
-        if locale != settings.LANGUAGE_CODE:
-            if not _l10n_media_exists('img', locale, url):
-                locale = settings.LANGUAGE_CODE
-
-        return path.join('img', 'l10n', locale, url)
 
 @jinja2.contextfunction
 def l10n_img(ctx, url):
@@ -260,7 +270,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     }
     loader = jinja2.FileSystemLoader(searchpath=settings.WEBSITE_PATH)
     env = jinja2.Environment(loader=loader, extensions=['jinja2.ext.i18n'])
-    translator = translate.Translation(locale, ['download_button', 'main'])
+    translator = translate.gettext_object(locale)
     env.install_gettext_translations(translator)
     env.globals.update(**ctx)
     template = env.get_template('_includes/download-button.html')
@@ -318,6 +328,7 @@ def get_locale(lang):
         return Locale.parse(lang, sep='-')
     except (UnknownLocaleError, ValueError):
         return Locale(*settings.LANGUAGE_CODE.split('-'))
+
 
 @jinja2.filters.contextfilter
 def l10n_format_date(ctx, date, format='long'):
