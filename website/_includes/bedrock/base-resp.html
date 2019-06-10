@@ -33,12 +33,9 @@
 
     {{ l10n_css() }}
 
-
     <!--[if !lte IE 8]><!-->
     {# Global styles, hidden from IE8 and lower #}
-    {% block site_css %}
-      <link href="/media/css/responsive-bundle.css" rel="stylesheet" type="text/css" />
-    {% endblock %}
+    {% block site_css %}{% endblock %}
 
     {# Page-specific styles, hidden from IE8 and lower #}
     {% block page_css %}{% endblock %}
