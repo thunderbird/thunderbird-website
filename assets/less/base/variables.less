@@ -12,8 +12,21 @@
 /*-------------------------
  * Spacing
  *--------------------------*/
-// @paddings: ('pt': 'padding-top', 'pr': 'padding-right', 'pb': 'padding-bottom', 'pl': 'padding-left');
-// @margins: ('mt': 'margin-top', 'mr': 'margin-right', 'mb': 'margin-bottom', 'ml': 'margin-left');
+@paddings: {
+    p: padding;
+    pt: padding-top;
+    pr: padding-right;
+    pb: padding-bottom;
+    pl: padding-left;
+}
+
+@margins: {
+    m: margin;
+    mt: margin-top;
+    mr: margin-right;
+    mb: margin-bottom;
+    ml: margin-left;
+}
 
 /*-------------------------
  * Media Queries
@@ -25,17 +38,22 @@
 @xl: 1440px;
 @xxl: 1700px;
 
-// @breakpoints: ('xs': @xs, 'sm': @sm, 'md': @md, 'lg': @lg, 'xl': @xl);
+@breakpoints: {
+    xs: @xs;
+    sm: @sm;
+    md: @md;
+    lg: @lg;
+    xl: @xl;
+}
 
 /*-------------------------
  * Colours
  *--------------------------*/
-@white: #fff;
-@black: #000;
-@light-grey: #f0f0f0;
-
-// Color loop
-// @colours: ('white': @white, 'black': @black, 'light-grey': @light-grey);
+@colors: {
+    white: #fff;
+    black: #000;
+    light-grey: #f0f0f0;
+}
 
 /*-------------------------
  * Typography

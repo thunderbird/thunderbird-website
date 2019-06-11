@@ -8,14 +8,13 @@ This repo contains the Thunderbird in-client Start page and the [www.thunderbird
 
 ## Dependencies
 On Ubuntu, you would need to use apt-get instead of yum, and similarly for different package managers.
-Also, the website is incompatible with LESS 3.0 or above.
 
 ```
 pip install -r requirements.txt
 git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
 git clone https://github.com/mozilla/product-details-json
 sudo yum install npm
-sudo npm install -g less@2.7.2`
+sudo npm install -g less
 ```
 
 If you need the localizations to display pages translated from English into other languages:
