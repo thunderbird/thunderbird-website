@@ -1,3 +1,67 @@
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+/*-------------------------
+ * Grid
+ *--------------------------*/
+@columns: 12;
+@gutter: 10px;
+@spacing: 20;
+
+/*-------------------------
+ * Spacing
+ *--------------------------*/
+// @paddings: ('pt': 'padding-top', 'pr': 'padding-right', 'pb': 'padding-bottom', 'pl': 'padding-left');
+// @margins: ('mt': 'margin-top', 'mr': 'margin-right', 'mb': 'margin-bottom', 'ml': 'margin-left');
+
+/*-------------------------
+ * Media Queries
+ *--------------------------*/
+@xs: 480px;
+@sm: 600px;
+@md: 800px;
+@lg: 1190px;
+@xl: 1440px;
+@xxl: 1700px;
+
+// @breakpoints: ('xs': @xs, 'sm': @sm, 'md': @md, 'lg': @lg, 'xl': @xl);
+
+/*-------------------------
+ * Colours
+ *--------------------------*/
+@white: #fff;
+@black: #000;
+@light-grey: #f0f0f0;
+
+// Color loop
+// @colours: ('white': @white, 'black': @black, 'light-grey': @light-grey);
+
+/*-------------------------
+ * Typography
+ *
+ * The custom X-LocaleSpecific font family is defined with a @font-face rule in
+ * locale-specific style sheets which can be found at /media/css/l10n/. See
+ * /docs/l10n.rst for details.
+ *--------------------------*/
+@base-font: 'Open Sans', X-LocaleSpecific, sans-serif;
+
+@font-base: 18px;
+@font-xs: 11px;
+@font-sm: 12px;
+@font-md: 14px;
+@font-lg: 16px;
+@font-xl: 20px;
+@font-hero: 60px;
+
+/*-------------------------
+ * Animations
+ *--------------------------*/
+@time: 320ms;
+@time_slow: 700ms;
+
+@swing: cubic-bezier(0.55, 0, 0.1, 1);
+@swift: cubic-bezier(0.4, 0, 0.2, 1);
+@ease: ease;
+
+@transition-default: all @time @ease;

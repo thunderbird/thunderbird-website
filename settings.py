@@ -128,7 +128,6 @@ DONATE_LINK = (
 # }
 
 WEBSITE_CSS = {
-    'normalize': ['normalize.css'],
     'thunderbird-style': ['less/style.less'],
 }
 
