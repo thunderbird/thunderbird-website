@@ -15,7 +15,7 @@ pip install -r requirements.txt
 git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
 git clone https://github.com/mozilla/product-details-json
 sudo yum install npm
-sudo npm install -g less@2.7.2`
+sudo npm install -g less@2.7.2
 ```
 
 If you need the localizations to display pages translated from English into other languages:
