@@ -24,6 +24,7 @@
 
 <nav role="directory">
     <ul class="feature-links">
+        <li><a href="#opensource">{{ _('Why Contribute?') }}</a></li>
         <li><a href="#development">{{ _('Development') }}</a></li>
         <li><a href="#design">{{ _('Design') }}</a></li>
         <li><a href="#documentation">{{ _('Documentation') }}</a></li>
@@ -34,6 +35,24 @@
 </nav>
 
 <main role="main">
+    <section id="opensource">
+      <h2>{{ _('Why Contribute?') }}</h2>
+      <div class="row">
+            <div class="col full">
+                <p>{{ _('Thunderbird is created by an online community of volunteers.') }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col full">
+                <section>
+                    <h3>{{ _('What is Open Source Software?') }}</h3>
+                    <p>{{ _('Thunderbird is open source software, meaning that anyone can inspect, modify, enhance it, and share it. But the fun is not just for programmers!
+                        Thunderbird is created by a community of designers, translators, documentation writers and support people in addition to developers. We invite anyone to come and
+                        participate in the creation of Thunderbird. Regardless of your skillset, we’re sure there is something you can add to our community and project.') }}</p>
+                </section>
+            </div>
+        </div>
+    </section>
     <section id="development">
         <h2>{{ _('Development') }}</h2>
         <div class="row">
@@ -45,13 +64,9 @@
             <div class="col full">
                 <section>
                     <h3>{{ _('Getting Started') }}</h3>
-                    <p>{{ _('Read the <a
-                            href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Introduction">Developer
-                        Guide</a> on MDN. That will give you a general overview of the Mozilla ecosystem. Thunderbird
-                        participates in that ecosystem, so you will need that overview as you join in the work.</p>
-                    <p>Read the <a
-                                href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Thunderbird_build">Simple
-                            Thunderbird build</a> guide on MDN to learn how to run your first build successfully. You will learn how to get the code, set any necessary configuration, build the calendar, rebuild after checking out new code, etc. It\'s a good read. Don\'t just skim it.') }}</p>
+                    <p>{{ _('If you would like to learn how to contribute code to Thunderbird, check out our <a
+                            href="https://developer.thunderbird.net/">developer
+                        documentation.</a> You will learn how to get the code, set any necessary configuration, build the calendar, rebuild after checking out new code, etc. It is a good read. Don’t just skim it.') }}</p>
                 </section>
                 <section>
                     <h3>{{ _('Code') }}</h3>
@@ -91,10 +106,10 @@
                     </ul>
                 </section>
                 <section>
-                    <h3>{{ _('Extension/Add-On Development') }}</h3>
-                    <p>{{ _('See the <a
-                            href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Thunderbird_extensions">documentation
-                        on MDN.</a>') }}</p>
+                    <h3>{{ _('Add-Ons') }}</h3>
+                    <p>{{ _('Learn how to create add-ons and themes by checking out our <a
+                            href="https://developer.thunderbird.net/add-ons/about-add-ons"> developer
+                        documentation. </a>') }}</p>
                 </section>
             </div>
         </div>
@@ -141,8 +156,8 @@
                         <li>{{ _('<a href="https://wiki.mozilla.org/Thunderbird:Home">The Thunderbird section</a> of the
                             Mozilla wiki.') }}
                         </li>
-                        <li>{{ _('<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird">The Thunderbird
-                            section</a> of MDN.') }}
+                        <li>{{ _('The official <a href="https://developer.thunderbird.net/">Thunderbird developer
+                            website.</a>') }}
                         </li>
                     </ul>
                 </section>
@@ -153,8 +168,8 @@
                             - What you need to know to contribute to the wiki. That page is applicable to the
                             Thunderbird section.') }}
                         </li>
-                        <li>{{ _('<a href="https://developer.mozilla.org/en-US/docs/MDN/Getting_started">Getting started
-                            on MDN</a> - What you need to know to contribute to the Thunderbird section of MDN.') }}
+                        <li>{{ _('You can contribute to the Thunderbird developer documentation via its repository <a href="https://github.com/thundernest/developer-docs"> on
+                            GitHub.</a>') }}
                         </li>
                         <li>{{ _('Support users asking for help on the <a href="https://support.mozilla.org/en-US/questions/thunderbird">Thunderbird Support Forum</a>') }}</li>
                     </ul>
@@ -264,6 +279,9 @@
                         </li>
                         <li>{{ _('<a href="https://wiki.mozilla.org/Thunderbird/tb-enterprise">tb-enterprise</a> -
                             For ADMINISTRATORS to discuss large scale deployment and configuration of Thunderbird.') }}
+                        </li>
+                        <li>{{ _('<a href="https://thunderbird.topicbox.com/groups/addons">Add-on Developers List</a> -
+                            For general discussions about creating add-ons, and is for add-on developers who need support in creating their add-ons.') }}
                         </li>
                     </ul>
                 </section>
