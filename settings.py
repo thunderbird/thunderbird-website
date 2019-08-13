@@ -3,7 +3,7 @@
 # Languages we build the site in.
 PROD_LANGUAGES = (
     'ach', 'af', 'an', 'ar', 'as', 'ast', 'az', 'be', 'bg',
-    'bn-BD', 'bn-IN', 'br', 'bs', 'ca', 'cak', 'cs',
+    'bn', 'br', 'bs', 'ca', 'cak', 'cs',
     'cy', 'da', 'de', 'dsb', 'el', 'en-GB', 'en-US',
     'en-ZA', 'eo', 'es-AR', 'es-CL', 'es-ES', 'es-MX', 'et',
     'eu', 'fa', 'ff', 'fi', 'fr', 'fy-NL', 'ga-IE', 'gd',
@@ -27,6 +27,8 @@ LANGUAGE_CODE = 'en-US'
 # will be used in urlresolvers to determine the
 # best-matching locale from the user's Accept-Language header.
 CANONICAL_LOCALES = {
+    'bn-BD': 'bn', # https://github.com/thundernest/thunderbird.net-l10n/issues/1
+    'bn-IN': 'bn', # These two locales were merged for the above issue.
     'en': 'en-US',
     'es': 'es-ES',
     'ja-jp-mac': 'ja',

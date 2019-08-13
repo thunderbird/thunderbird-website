@@ -42,7 +42,7 @@ There are additional arguments:
     * Note that this only rebuilds when you modify a file. To add or remove files, you should start a new build.
 * `--port`
     * Sets the port to be used for the localhost server. Default is 8000. Format: `--port 8000`.
- 
+
 * thunderbird.net templates are in the `website` directory, and start page in the `start-page` dir. Assets are shared and in the `assets` dir.
 
 ## View Website
