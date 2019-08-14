@@ -3,17 +3,19 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 each(@paddings, #(@k, @v) {
-    each(range(20), {
-        .@{v}-@{key} {
-            @{k}: (@key * 0.25rem);
-        }
-    });
+  each(range(21), {
+    @num: 21-@index;
+    .@{v}-@{num} {
+      @{k}: (@num * 0.25rem);
+    }
+  });
 });
 
 each(@margins, #(@k, @v) {
-    each(range(20), {
-        .@{v}-@{key} {
-            @{k}: (@key * 0.25rem);
-        }
-    });
+  each(range(21), {
+    @num: 21-@index;
+    .@{v}-@{num} {
+      @{k}: (@num * 0.25rem);
+    }
+  });
 });

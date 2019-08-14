@@ -3,11 +3,11 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 .container {
-    width: 100%;
+  width: 100%;
 }
 
 each(@breakpoints, #(@k, @v) {
-    .container-@{v} {
-        max-width: @k;
-    }
+  .container-@{v} {
+    max-width: @k;
+  }
 });

@@ -3,29 +3,29 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 each(@position, #(@k, @v) {
-    .@{v} {
-        position: @k;
-    }
+  .@{v} {
+    position: @k;
+  }
 });
 
 each(@pin, #(@k, @v) {
-    .@{v} {
-        @k: 0;
-    }
+  .@{v} {
+    @k: 0;
+  }
 });
 
 .pin-x {
-    left: 0;
-    right: 0;
+  left: 0;
+  right: 0;
 }
 
 .pin-y {
-    top: 0;
-    bottom: 0;
+  top: 0;
+  bottom: 0;
 }
 
 each(@z-index, #(@k, @v) {
-    .@{v} {
-        z-index: @k;
-    }
+  .@{v} {
+    z-index: @k;
+  }
 });

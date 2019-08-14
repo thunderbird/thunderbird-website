@@ -3,15 +3,23 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 each(@colors, #(@k, @v) {
-    .text-@{v} {
-        color: @k;
-    }
+  .text-@{v} {
+    color: @k;
+  }
 
-    .bg-@{v} {
-        color: @k;
-    }
+  .bg-@{v} {
+    background-color: @k;
+  }
 
-    .border-@{v} {
-        border-color: @k;
-    }
+  .border-@{v} {
+    border-color: @k;
+  }
 });
+
+.bg-primary-gradient {
+  background: #1c2f56;
+  background: -moz-linear-gradient(top, #1c2f56 0%, #2c9afe 100%);
+  background: -webkit-linear-gradient(top, #1c2f56 0%, #2c9afe 100%);
+  background: linear-gradient(to bottom, #1c2f56 0%, #2c9afe 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c2f56', endColorstr='#2c9afe', GradientType=0);
+}
