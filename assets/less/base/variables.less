@@ -3,13 +3,6 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 /*-------------------------
- * Grid
- *--------------------------*/
-@columns: 12;
-@gutter: 10px;
-@spacing: 20;
-
-/*-------------------------
  * Spacing
  *--------------------------*/
 @paddings: {
@@ -32,14 +25,13 @@
  * Media Queries
  *--------------------------*/
 @xs: 480px;
-@sm: 600px;
-@md: 800px;
-@lg: 1190px;
-@xl: 1440px;
-@xxl: 1700px;
+@sm: 640px;
+@md: 768px;
+@lg: 1024px;
+@xl: 1280px;
+@xxl: 1440px;
 
 @breakpoints: {
-    xs: @xs;
     sm: @sm;
     md: @md;
     lg: @lg;
@@ -56,6 +48,87 @@
 }
 
 /*-------------------------
+ * Display
+ *--------------------------*/
+@display: {
+    block: block;
+    inline-block: inline-block;
+    inline: inline;
+    flex: flex;
+    inline-flex: inline-flex;
+    table: table;
+    table-row: table-row;
+    table-cell: table-cell;
+    hidden: none;
+}
+
+/*-------------------------
+ * Object Fit
+ *--------------------------*/
+@object-fit: {
+    object-contain: contain;
+    object-cover: cover;
+    object-fill: fill;
+    object-none: none;
+    object-scale-down: scale-down;
+}
+
+/*-------------------------
+ * Object Fit
+ *--------------------------*/
+@object-position: {
+    object-bottom: bottom;
+    object-center: center;
+    object-left: left;
+    object-left-bottom: left bottom;
+    object-left-top: left top;
+    object-right: right;
+    object-right-bottom: right bottom;
+    object-right-top: right top;
+    object-top: top;
+}
+
+/*-------------------------
+ * Overflow
+ *--------------------------*/
+@overflow: {
+    overflow-auto: auto;
+    overflow-hidden: hidden;
+    overflow-visible: visible;
+    overflow-scroll: scroll;
+}
+
+/*-------------------------
+ * Positions
+ *--------------------------*/
+@position: {
+    static: static;
+    fixed: fixed;
+    absolute: absolute;
+    relative: relative;
+    sticky: sticky;
+}
+
+@pin: {
+    pin-t: top;
+    pin-r: right;
+    pin-b: bottom;
+    pin-l: left;
+}
+
+/*-------------------------
+ * Z Index
+ *--------------------------*/
+@z-index: {
+    z-0: 0;
+    z-10: 10;
+    z-20: 20;
+    z-30: 30;
+    z-40: 40;
+    z-50: 50;
+}
+
+/*-------------------------
  * Typography
  *
  * The custom X-LocaleSpecific font family is defined with a @font-face rule in
@@ -64,11 +137,11 @@
  *--------------------------*/
 @base-font: 'Open Sans', X-LocaleSpecific, sans-serif;
 
-@font-base: 18px;
-@font-xs: 11px;
+@font-base: 14px;
+@font-xs: 10px;
 @font-sm: 12px;
-@font-md: 14px;
-@font-lg: 16px;
+@font-md: 16px;
+@font-lg: 18px;
 @font-xl: 20px;
 @font-hero: 60px;
 
