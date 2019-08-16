@@ -13,7 +13,7 @@
 {% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}
 
 {% block site_header %}
-  <header id="masthead" class="flex flex-col bg-primary-gradient">
+  <header id="masthead" class="bg-header bg-no-repeat bg-cover bg-top flex flex-col">
 
     <section class="flex justify-between items-center p-6">
       {% block site_header_logo %}
@@ -62,10 +62,11 @@
       {% endblock %}
     </section>
 
+    {% block header_content %}{% endblock %}
 
-  {% block breadcrumbs %}{% endblock %}
+    {% block breadcrumbs %}{% endblock %}
 
-  {% block site_header_share %}{% endblock %}
+    {% block site_header_share %}{% endblock %}
 
   </header>
 {% endblock %}

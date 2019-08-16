@@ -23,10 +23,17 @@ each(@font-weight, #(@k, @v) {
   }
 });
 
-// Font Weight
+// Letter Spacing
 each(@letter-spacing, #(@k, @v) {
   .@{v} {
     letter-spacing: @k;
+  }
+});
+
+// Line Height
+each(@line-height, #(@k, @v) {
+  .@{v} {
+    line-height: @k;
   }
 });
 
@@ -41,5 +48,12 @@ each(@decoration, #(@k, @v) {
 each(@text-transform, #(@k, @v) {
   .@{v} {
     text-transform: @k;
+  }
+});
+
+// Text Align
+each(@text-align, #(@k, @v) {
+  .@{v} {
+    text-align: @k;
   }
 });

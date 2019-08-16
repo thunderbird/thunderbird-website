@@ -29,6 +29,8 @@
     <link rel="icon" type="image/png" sizes="196x196" href="{% block page_favicon_large %}{{ static('img/favicon/favicon-196x196.png') }}{% endblock %}">
     <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/favicon.ico') }}{% endblock %}">
     {% endblock shared_meta %}
+    <link href="/media/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/media/css/thunderbird-style.css" rel="stylesheet" type="text/css" />
 
     {{ l10n_css() }}
 
@@ -55,15 +57,13 @@
       {% if not LANG.startswith('en-') %}
       <header id="masthead">
 
-      {% block site_header_nav %}{% endblock %}
+        {% block site_header_nav %}{% endblock %}
 
-      {% block site_header_logo %}
-        <h2><a href="{{ url('mozorg.home') }}">{{ high_res_img('sandstone/header-mozilla-stone.png', {'alt': 'Mozilla', 'width': '170', 'height': '45'}) }}</a></h2>
-      {% endblock %}
+        {% block site_header_logo %}{% endblock %}
 
-      {% block breadcrumbs %}{% endblock %}
+        {% block breadcrumbs %}{% endblock %}
 
-      {% block site_header_share %}{% endblock %}
+        {% block site_header_share %}{% endblock %}
 
       </header>
       {% endif %}

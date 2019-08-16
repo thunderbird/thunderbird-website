@@ -273,6 +273,16 @@
   tracking-widest: 0.1em;
 }
 
+// Line Height
+@line-height: {
+  leading-none: 1;
+  leading-tight: 1.25;
+  leading-snug: 1.375;
+  leading-normal: 1.5;
+  leading-relaxed: 1.625;
+  leading-loose: 2;
+}
+
 // Decoration
 @decoration: {
   underline: underline;
@@ -286,6 +296,50 @@
   lowercase: lowercase;
   capitalize: capitalize;
   normal-case: none;
+}
+
+// Text Align
+@text-align: {
+  text-left: left;
+  text-center: center;
+  text-right: right;
+  text-justify: justify;
+}
+
+/*-------------------------
+* Backgrounds
+*--------------------------*/
+@background-attachment: {
+  bg-fixed: fixed;
+  bg-local: local;
+  bg-scroll: scroll;
+}
+
+@background-position: {
+  bg-bottom: bottom;
+  bg-center: center;
+  bg-left: left;
+  bg-left-bottom: left bottom;
+  bg-left-top: left top;
+  bg-right: right;
+  bg-right-bottom: right bottom;
+  bg-right-top: right top;
+  bg-top: top;
+}
+
+@background-repeat: {
+  bg-repeat: repeat;
+  bg-no-repeat: no-repeat;
+  bg-repeat-x: repeat-x;
+  bg-repeat-y: repeat-y;
+  bg-repeat-round: round;
+  bg-repeat-space: space;
+}
+
+@background-size: {
+  bg-auto: auto;
+  bg-cover: cover;
+  bg-contain: contain;
 }
 
 /*-------------------------
