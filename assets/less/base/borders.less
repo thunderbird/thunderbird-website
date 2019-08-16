@@ -2,16 +2,9 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-// Box Shadow
-each(@shadow, #(@k, @v) {
+each(@border-radius, #(@k, @v) {
   .@{v} {
-    box-shadow: @k;
+    border-radius: @k;
   }
 });
 
-// Opacity
-each(@opacity, #(@k, @v) {
-  .@{v} {
-    opacity: @k;
-  }
-});

@@ -3,151 +3,64 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 // Flex
-.flex-initial {
-  flex: 0 1 auto;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
-}
-
-.flex-auto {
-  flex: 1 1 auto;
-}
-
-.flex-none {
-  flex: none;
-}
+each(@flex, #(@k, @v) {
+  .@{v} {
+    flex: @k;
+  }
+});
 
 // Flex Direction
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-row-reverse {
-  flex-direction: row-reverse;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-col-reverse {
-  flex-direction: column-reverse;
-}
+each(@flex-direction, #(@k, @v) {
+  .@{v} {
+    flex-direction: @k;
+  }
+});
 
 // Flex Wrap
-.flex-no-wrap {
-  flex-wrap: nowrap;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-wrap-reverse {
-  flex-wrap: wrap-reverse;
-}
+each(@flex-wrap, #(@k, @v) {
+  .@{v} {
+    flex-wrap: @k;
+  }
+});
 
 // Align Items
-.items-stretch {
-  align-items: stretch;
-}
-
-.items-start {
-  align-items: flex-start;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.items-end {
-  align-items: flex-end;
-}
-
-.items-baseline {
-  align-items: baseline;
-}
+each(@align-items, #(@k, @v) {
+  .@{v} {
+    align-items: @k;
+  }
+});
 
 // Align Content
-.content-start {
-  align-content: flex-start;
-}
-
-.content-center {
-  align-content: center;
-}
-
-.content-end {
-  align-content: flex-end;
-}
-
-.content-between {
-  align-content: space-between;
-}
-
-.content-around {
-  align-content: space-around;
-}
+each(@align-content, #(@k, @v) {
+  .@{v} {
+    align-content: @k;
+  }
+});
 
 // Align Self
-.self-auto {
-  align-self: auto;
-}
-
-.self-start {
-  align-self: flex-start;
-}
-
-.self-center {
-  align-self: center;
-}
-
-.self-end {
-  align-self: flex-end;
-}
-
-.self-stretch {
-  align-self: stretch;
-}
+each(@align-self, #(@k, @v) {
+  .@{v} {
+    align-self: @k;
+  }
+});
 
 // Justify Content
-.justify-start {
-  justify-content: flex-start;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
+each(@justify-content, #(@k, @v) {
+  .@{v} {
+    justify-content: @k;
+  }
+});
 
 // Flex Grow
-.flex-grow {
-  flex-grow: 1;
-}
-
-.flex-grow-0 {
-  flex-grow: 0;
-}
+each(@flex-grow, #(@k, @v) {
+  .@{v} {
+    flex-grow: @k;
+  }
+});
 
 // Flex Shrink
-.flex-shrink {
-  flex-shrink: 1;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
-
+each(@flex-shrink, #(@k, @v) {
+  .@{v} {
+    flex-shrink: @k;
+  }
+});

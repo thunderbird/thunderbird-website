@@ -74,7 +74,7 @@
 }
 
 /*-------------------------
-* Object Fit
+* Object Position
 *--------------------------*/
 @object-position: {
   object-bottom: bottom;
@@ -129,6 +129,108 @@
 }
 
 /*-------------------------
+* Opacity
+*--------------------------*/
+@opacity: {
+  opacity-0: 0;
+  opacity-25: .25;
+  opacity-50: .50;
+  opacity-75: .75;
+  opacity-100: 1;
+}
+
+/*-------------------------
+* Box Shadow
+*--------------------------*/
+@shadow: {
+  shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  shadow-none: none;
+}
+
+/*-------------------------
+* Borders
+*--------------------------*/
+@border-radius: {
+  rounded-none: 0;
+  rounded-xs: .1rem;
+  rounded-sm: .125rem;
+  rounded: .25rem;
+  rounded-lg: .5rem;
+  rounded-full: 9999px;
+}
+
+/*-------------------------
+* FlexBox
+*--------------------------*/
+@flex: {
+  flex-initial: 0 1 auto;
+  flex-1: 1 1 0%;
+  flex-auto: 1 1 auto;
+  flex-none: none;
+}
+
+@flex-direction: {
+  flex-row: row;
+  flex-row-reverse: row-reverse;
+  flex-col: column;
+  flex-col-reverse: column-reverse;
+}
+
+@flex-wrap: {
+  flex-no-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap-reverse: wrap-reverse;
+}
+
+@align-items: {
+  items-stretch: stretch;
+  items-start: flex-start;
+  items-center: center;
+  items-end: flex-end;
+  items-baseline: baseline;
+}
+
+@align-content: {
+  content-start: flex-start;
+  content-center: center;
+  content-end: flex-end;
+  content-between: space-between;
+  content-around: space-around;
+}
+
+@align-self: {
+  self-auto: auto;
+  self-start: flex-start;
+  self-center: center;
+  self-end: flex-end;
+  self-stretch: stretch;
+}
+
+@justify-content: {
+  justify-start: flex-start;
+  justify-center: center;
+  justify-end: flex-end;
+  justify-between: space-between;
+  justify-around: space-around;
+}
+
+@flex-grow: {
+  flex-grow: 1;
+  flex-grow-0: 0;
+}
+
+@flex-shrink: {
+  flex-shrink: 1;
+  flex-shrink-0: 0;
+}
+
+/*-------------------------
 * Typography
 *
 * The custom X-LocaleSpecific font family is defined with a @font-face rule in
@@ -137,13 +239,54 @@
 *--------------------------*/
 @base-font: 'Open Sans', X-LocaleSpecific, sans-serif;
 
-@font-base: 14px;
-@font-xs: 10px;
-@font-sm: 12px;
-@font-md: 16px;
-@font-lg: 18px;
-@font-xl: 20px;
-@font-hero: 60px;
+// Font Size
+@fonts: {
+  font-base: 13px;
+  font-xs: 9px;
+  font-sm: 11px;
+  font-md: 15px;
+  font-lg: 17px;
+  font-xl: 19px;
+  font-hero: 59px;
+}
+
+// Font Weight
+@font-weight: {
+  font-hairline: 100;
+  font-thin: 200;
+  font-light: 300;
+  font-normal: 400;
+  font-medium: 500;
+  font-semibold: 600;
+  font-bold: 700;
+  font-extrabold: 800;
+  font-black: 900;
+}
+
+// Letter Spacing
+@letter-spacing: {
+  tracking-tighter: -0.05em;
+  tracking-tight: -0.025em;
+  tracking-normal: 0;
+  tracking-wide: 0.025em;
+  tracking-wider: 0.05em;
+  tracking-widest: 0.1em;
+}
+
+// Decoration
+@decoration: {
+  underline: underline;
+  line-through: line-through;
+  no-underline: none;
+}
+
+// Transform
+@text-transform: {
+  uppercase: uppercase;
+  lowercase: lowercase;
+  capitalize: capitalize;
+  normal-case: none;
+}
 
 /*-------------------------
 * Animations
