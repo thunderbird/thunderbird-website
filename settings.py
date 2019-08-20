@@ -144,5 +144,5 @@ WEBSITE_JS = {
 }
 
 START_CSS = {
-    'start-style': ['less/sandstone/fonts.less', 'less/thunderbird/start.less']
+    'start-style': ['less.old/sandstone/fonts.less', 'less.old/thunderbird/start.less']
 }
