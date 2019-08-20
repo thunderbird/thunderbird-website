@@ -12,104 +12,61 @@
 {% block page_favicon_large %}{{ static('img/thunderbird/favicon-196.png') }}{% endblock %}
 {% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}
 
-{% block body_class %}sky{% endblock %}
-
-{% block global_nav %}{% endblock %}
-
 {% block site_header %}
-  <header id="masthead">
+  <header id="masthead" class="bg-header bg-no-repeat bg-cover bg-top flex flex-col">
 
-  {% block site_header_logo %}
-    <h2><a href="{{ url('thunderbird.index') }}">{{ high_res_img('thunderbird/template/logo-wordmark.png', {'alt':'Thunderbird', 'width': '281', 'height': '66'}) }}</a></h2>
-  {% endblock %}
+    <section class="flex justify-between items-center p-6">
+      {% block site_header_logo %}
+        <h2 class="mt-0 mb-0">
+          <a href="{{ url('thunderbird.index') }}" class="block w-56" title="{{ _('Thunderbird') }}" alt="{{ _('Thunderbird Vector Wordmark') }}">
+            {{ svg('logo-wordmark-white') }}
+          </a>
+        </h2>
+      {% endblock %}
 
-  {% block site_header_nav %}
-  <nav id="nav-main" role="navigation">
-    <span class="toggle" role="button" aria-controls="nav-main-menu" aria-expanded="false" tabindex="0">{{_('Menu')}}</span>
-    <ul id="nav-main-menu" class="has-submenus">
-      <li class="first" id="nav-main-features"><a href="{{ url('thunderbird.index') }}" tabindex="0" aria-owns="nav-main-features-submenu" aria-haspopup="true">{{_('Thunderbird')}}</a>
-        <ul aria-expanded="false" id="nav-main-features-submenu" class="submenu">
-          <li class="first">
-            <a href="{{ url('thunderbird.channel') }}" tabindex="-1">
-              {{_('Beta')}}
-            </a>
-          </li>
+      {% block site_header_nav %}
+      <nav id="nav-main" role="navigation">
+        <ul id="nav-main-menu" class="list-none p-0 flex items-center text-white font-md">
           <li>
-            <a href="{{ url('thunderbird.features') }}" tabindex="-1">
+            <a href="{{ url('thunderbird.features') }}" class="nav-link">
               {{_('Features')}}
             </a>
           </li>
           <li>
-            <a href="{{ url('thunderbird.releases.index') }}" tabindex="-1">
-              {{_('Releases')}}
-            </a>
-          </li>
-          {% if LANG.startswith('en-') %}
-            <li>
-              <a href="{{ url('calendar') }}" tabindex="-1">
-                {{_('Calendar Add-on')}}
-              </a>
-            </li>
-          {% endif %}
-          <li class="last">
-            <a href="{{ url('thunderbird.organizations') }}" tabindex="-1">
-              {{_('Thunderbird for Organizations')}}
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li id="nav-main-addons">
-        <a href="https://addons.thunderbird.net" tabindex="0" aria-owns="nav-main-addons-submenu" aria-haspopup="true">
-          {{_('Add-ons')}}
-        </a>
-        <ul aria-expanded="false" id="nav-main-addons-submenu" class="submenu">
-          <li class="first">
-            <a href="https://addons.thunderbird.net/extensions/" tabindex="-1">
+            <a href="https://addons.thunderbird.net" target="_blank" class="nav-link">
               {{_('Add-ons')}}
             </a>
           </li>
-          <li class="last">
-            <a href="https://addons.thunderbird.net/themes/" tabindex="-1">
-              {{_('Themes')}}
+          <li id="nav-main-support">
+            <a href="{{ url('support') }}" class="nav-link">
+              {{_('Get Help')}}
+            </a>
+          </li>
+          <li id="nav-main-support">
+            <a href="{{ url('thunderbird.about') }}" class="nav-link">
+              {{_('About Us')}}
+            </a>
+          </li>
+          <li id="nav-main-blog">
+            <a href="{{ url('blog') }}" class="nav-link">
+              {{_('Blog')}}
+            </a>
+          </li>
+          <li>
+            <a href="{{ donate_url('header') }}" class="btn-donate">
+              <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
             </a>
           </li>
         </ul>
-      </li>
-      <li id="nav-main-support">
-        <a href="{{ url('support') }}" tabindex="0">
-          {{_('Support')}}
-        </a>
-      </li>
-      {% if LANG.startswith('en-') %}
-        <li id="nav-main-get-involved">
-          <a href="{{ url('thunderbird.get-involved') }}" tabindex="0">
-            {{_('Get Involved')}}
-          </a>
-        </li>
-      {% endif %}
-      {% if LANG.startswith('en-') %}
-        <li id="nav-main-blog">
-          <a href="{{ url('blog') }}" tabindex="0">
-            {{_('Blog')}}
-          </a>
-        </li>
-      {% endif %}
-      <li class="last" id="nav-main-donate">
-        <a class="emphasis" href="{{ donate_url('header') }}" tabindex="-1">
-          {{_('Donate')}}
-        </a>
-      </li>
-    </ul>
-  </nav>
-  {% endblock %}
+      </nav>
+      {% endblock %}
+    </section>
 
-  {% block alt_header %}{% endblock %}
+    {% block header_content %}{% endblock %}
 
-  {% block subnav %}{% endblock %}
+    {% block breadcrumbs %}{% endblock %}
 
-  {% block breadcrumbs %}{% endblock %}
-
-  {% block site_header_share %}{% endblock %}
+    {% block site_header_share %}{% endblock %}
 
   </header>
 {% endblock %}

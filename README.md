@@ -8,14 +8,13 @@ This repo contains the Thunderbird in-client Start page and the [www.thunderbird
 
 ## Dependencies
 On Ubuntu, you would need to use apt-get instead of yum, and similarly for different package managers.
-Also, the website is incompatible with LESS 3.0 or above.
 
 ```
 pip install -r requirements.txt
 git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
 git clone https://github.com/mozilla/product-details-json
 sudo yum install npm
-sudo npm install -g less@2.7.2
+sudo npm install -g less
 ```
 
 If you need the localizations to display pages translated from English into other languages:
@@ -43,7 +42,7 @@ There are additional arguments:
     * Note that this only rebuilds when you modify a file. To add or remove files, you should start a new build.
 * `--port`
     * Sets the port to be used for the localhost server. Default is 8000. Format: `--port 8000`.
- 
+
 * thunderbird.net templates are in the `website` directory, and start page in the `start-page` dir. Assets are shared and in the `assets` dir.
 
 ## View Website

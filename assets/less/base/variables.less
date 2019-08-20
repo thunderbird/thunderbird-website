@@ -1,0 +1,356 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+/*-------------------------
+* Spacing
+*--------------------------*/
+@paddings: {
+  p: padding;
+  pt: padding-top;
+  pr: padding-right;
+  pb: padding-bottom;
+  pl: padding-left;
+}
+
+@margins: {
+  m: margin;
+  mt: margin-top;
+  mr: margin-right;
+  mb: margin-bottom;
+  ml: margin-left;
+}
+
+/*-------------------------
+* Media Queries
+*--------------------------*/
+@xs: 480px;
+@sm: 640px;
+@md: 768px;
+@lg: 1024px;
+@xl: 1280px;
+@xxl: 1440px;
+
+@breakpoints: {
+  sm: @sm;
+  md: @md;
+  lg: @lg;
+  xl: @xl;
+}
+
+/*-------------------------
+* Colours
+*--------------------------*/
+@colors: {
+  white: #fff;
+  black: #000;
+  light-grey: #f0f0f0;
+  orange: #ff9500;
+}
+
+/*-------------------------
+* Display
+*--------------------------*/
+@display: {
+  block: block;
+  inline-block: inline-block;
+  inline: inline;
+  flex: flex;
+  inline-flex: inline-flex;
+  table: table;
+  table-row: table-row;
+  table-cell: table-cell;
+  hidden: none;
+}
+
+/*-------------------------
+* Object Fit
+*--------------------------*/
+@object-fit: {
+  object-contain: contain;
+  object-cover: cover;
+  object-fill: fill;
+  object-none: none;
+  object-scale-down: scale-down;
+}
+
+/*-------------------------
+* Object Position
+*--------------------------*/
+@object-position: {
+  object-bottom: bottom;
+  object-center: center;
+  object-left: left;
+  object-left-bottom: left bottom;
+  object-left-top: left top;
+  object-right: right;
+  object-right-bottom: right bottom;
+  object-right-top: right top;
+  object-top: top;
+}
+
+/*-------------------------
+* Overflow
+*--------------------------*/
+@overflow: {
+  overflow-auto: auto;
+  overflow-hidden: hidden;
+  overflow-visible: visible;
+  overflow-scroll: scroll;
+}
+
+/*-------------------------
+* Positions
+*--------------------------*/
+@position: {
+  static: static;
+  fixed: fixed;
+  absolute: absolute;
+  relative: relative;
+  sticky: sticky;
+}
+
+@pin: {
+  pin-t: top;
+  pin-r: right;
+  pin-b: bottom;
+  pin-l: left;
+}
+
+/*-------------------------
+* Z Index
+*--------------------------*/
+@z-index: {
+  z-0: 0;
+  z-10: 10;
+  z-20: 20;
+  z-30: 30;
+  z-40: 40;
+  z-50: 50;
+}
+
+/*-------------------------
+* Opacity
+*--------------------------*/
+@opacity: {
+  opacity-0: 0;
+  opacity-25: .25;
+  opacity-50: .50;
+  opacity-75: .75;
+  opacity-100: 1;
+}
+
+/*-------------------------
+* Box Shadow
+*--------------------------*/
+@shadow: {
+  shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  shadow-none: none;
+}
+
+/*-------------------------
+* Borders
+*--------------------------*/
+@border-radius: {
+  rounded-none: 0;
+  rounded-xs: .1rem;
+  rounded-sm: .125rem;
+  rounded: .25rem;
+  rounded-lg: .5rem;
+  rounded-full: 9999px;
+}
+
+/*-------------------------
+* FlexBox
+*--------------------------*/
+@flex: {
+  flex-initial: 0 1 auto;
+  flex-1: 1 1 0%;
+  flex-auto: 1 1 auto;
+  flex-none: none;
+}
+
+@flex-direction: {
+  flex-row: row;
+  flex-row-reverse: row-reverse;
+  flex-col: column;
+  flex-col-reverse: column-reverse;
+}
+
+@flex-wrap: {
+  flex-no-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap-reverse: wrap-reverse;
+}
+
+@align-items: {
+  items-stretch: stretch;
+  items-start: flex-start;
+  items-center: center;
+  items-end: flex-end;
+  items-baseline: baseline;
+}
+
+@align-content: {
+  content-start: flex-start;
+  content-center: center;
+  content-end: flex-end;
+  content-between: space-between;
+  content-around: space-around;
+}
+
+@align-self: {
+  self-auto: auto;
+  self-start: flex-start;
+  self-center: center;
+  self-end: flex-end;
+  self-stretch: stretch;
+}
+
+@justify-content: {
+  justify-start: flex-start;
+  justify-center: center;
+  justify-end: flex-end;
+  justify-between: space-between;
+  justify-around: space-around;
+}
+
+@flex-grow: {
+  flex-grow: 1;
+  flex-grow-0: 0;
+}
+
+@flex-shrink: {
+  flex-shrink: 1;
+  flex-shrink-0: 0;
+}
+
+/*-------------------------
+* Typography
+*
+* The custom X-LocaleSpecific font family is defined with a @font-face rule in
+* locale-specific style sheets which can be found at /media/css/l10n/. See
+* /docs/l10n.rst for details.
+*--------------------------*/
+@base-font: 'Open Sans', X-LocaleSpecific, sans-serif;
+
+// Font Size
+@fonts: {
+  font-base: 13px;
+  font-xs: 9px;
+  font-sm: 11px;
+  font-md: 15px;
+  font-lg: 17px;
+  font-xl: 19px;
+  font-hero: 59px;
+}
+
+// Font Weight
+@font-weight: {
+  font-hairline: 100;
+  font-thin: 200;
+  font-light: 300;
+  font-normal: 400;
+  font-medium: 500;
+  font-semibold: 600;
+  font-bold: 700;
+  font-extrabold: 800;
+  font-black: 900;
+}
+
+// Letter Spacing
+@letter-spacing: {
+  tracking-tighter: -0.05em;
+  tracking-tight: -0.025em;
+  tracking-normal: 0;
+  tracking-wide: 0.025em;
+  tracking-wider: 0.05em;
+  tracking-widest: 0.1em;
+}
+
+// Line Height
+@line-height: {
+  leading-none: 1;
+  leading-tight: 1.25;
+  leading-snug: 1.375;
+  leading-normal: 1.5;
+  leading-relaxed: 1.625;
+  leading-loose: 2;
+}
+
+// Decoration
+@decoration: {
+  underline: underline;
+  line-through: line-through;
+  no-underline: none;
+}
+
+// Transform
+@text-transform: {
+  uppercase: uppercase;
+  lowercase: lowercase;
+  capitalize: capitalize;
+  normal-case: none;
+}
+
+// Text Align
+@text-align: {
+  text-left: left;
+  text-center: center;
+  text-right: right;
+  text-justify: justify;
+}
+
+/*-------------------------
+* Backgrounds
+*--------------------------*/
+@background-attachment: {
+  bg-fixed: fixed;
+  bg-local: local;
+  bg-scroll: scroll;
+}
+
+@background-position: {
+  bg-bottom: bottom;
+  bg-center: center;
+  bg-left: left;
+  bg-left-bottom: left bottom;
+  bg-left-top: left top;
+  bg-right: right;
+  bg-right-bottom: right bottom;
+  bg-right-top: right top;
+  bg-top: top;
+}
+
+@background-repeat: {
+  bg-repeat: repeat;
+  bg-no-repeat: no-repeat;
+  bg-repeat-x: repeat-x;
+  bg-repeat-y: repeat-y;
+  bg-repeat-round: round;
+  bg-repeat-space: space;
+}
+
+@background-size: {
+  bg-auto: auto;
+  bg-cover: cover;
+  bg-contain: contain;
+}
+
+/*-------------------------
+* Animations
+*--------------------------*/
+@time: 320ms;
+@time_slow: 700ms;
+
+@swing: cubic-bezier(0.55, 0, 0.1, 1);
+@swift: cubic-bezier(0.4, 0, 0.2, 1);
+@ease: ease;
+
+@transition-default: all @time @ease;

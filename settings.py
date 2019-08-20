@@ -117,16 +117,20 @@ DONATE_LINK = (
     '?utm_source={source}&utm_medium=referral&utm_content={content}'
 )
 
+# WEBSITE_CSS = {
+#     'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
+#     'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less'],
+#     'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less'],
+#     'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less'],
+#     'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less'],
+#     'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less'],
+#     'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less'],
+#     'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less'],
+#     'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less'],
+# }
+
 WEBSITE_CSS = {
-    'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
-    'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less'],
-    'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less'],
-    'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less'],
-    'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less'],
-    'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less'],
-    'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less'],
-    'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less'],
-    'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less'],
+    'thunderbird-style': ['less/style.less'],
 }
 
 WEBSITE_JS = {

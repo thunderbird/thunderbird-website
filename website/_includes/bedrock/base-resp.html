@@ -5,7 +5,6 @@
   <head>
     <meta charset="utf-8">{# Note: Must be within first 512 bytes of page #}
 
-    <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
     {% block experiments %}{% endblock %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,15 +29,14 @@
     <link rel="icon" type="image/png" sizes="196x196" href="{% block page_favicon_large %}{{ static('img/favicon/favicon-196x196.png') }}{% endblock %}">
     <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/favicon.ico') }}{% endblock %}">
     {% endblock shared_meta %}
+    <link href="/media/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/media/css/thunderbird-style.css" rel="stylesheet" type="text/css" />
 
     {{ l10n_css() }}
 
-
     <!--[if !lte IE 8]><!-->
     {# Global styles, hidden from IE8 and lower #}
-    {% block site_css %}
-      <link href="/media/css/responsive-bundle.css" rel="stylesheet" type="text/css" />
-    {% endblock %}
+    {% block site_css %}{% endblock %}
 
     {# Page-specific styles, hidden from IE8 and lower #}
     {% block page_css %}{% endblock %}
@@ -47,98 +45,64 @@
     {% block extrahead %}
       {# Extra header stuff (scripts, styles, metadata, etc) seen by all browsers. Use the 'page_css' block for CSS you want to hide from IE8 and lower. #}
     {% endblock %}
-    <script type="text/javascript" src="/media/js/piwik.js" async defer></script>
-    <script type="text/javascript" src="/media/js/matomo.js" charset="utf-8"></script>
-    <noscript><p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
   </head>
 
   <body {% if self.body_id() %}id="{% block body_id %}{% endblock %}" {% endif %}class="html-{{ DIR }} {% block body_class %}{% endblock %}" {% block body_attrs %}{% endblock %}>
-    <div id="strings"
-      {% block string_data %}{% endblock %}></div>
-
-    <div id="outer-wrapper">
+    <div id="strings" {% block string_data %}{% endblock %}></div>
 
     {# for headers not to be confined by #wrapper (like fx family nav) #}
     {% block site_header_unwrapped %}{% endblock %}
 
-      <div id="wrapper">
+    {% block site_header %}
+      {% if not LANG.startswith('en-') %}
+      <header id="masthead">
 
-      {% block site_header %}
-        {% if not LANG.startswith('en-') %}
-        <header id="masthead">
+        {% block site_header_nav %}{% endblock %}
 
-        {% block tabzilla_tab %}
-          <div id="tabzilla">
-            <a href="{{ url('mozorg.home') }}" data-link-type="nav" data-link-name="tabzilla">Mozilla</a>
-          </div>
-        {% endblock %}
-
-        {% block site_header_nav %}
-          <nav id="nav-main" role="navigation">
-            <span class="toggle" role="button" aria-controls="nav-main-menu" aria-expanded="false" tabindex="0">{{_('Menu')}}</span>
-            <ul id="nav-main-menu">
-              <li class="first internet-health-item">
-                <a href="{{ url('mozorg.internet-health') }}" data-link-type="nav" data-link-name="Internet Health">{{ _('Internet Health') }}</a>
-              </li>
-              <li class="technology-item">
-                <a href="{{ url('mozorg.technology') }}" data-link-type="nav" data-link-name="Web Innovations">{{ _('Web Innovations') }}</a>
-              </li>
-              <li class="last donate-item">
-                <a href="{{ donate_url('header') }}" data-link-type="nav" data-link-name="Donate">{{_('Donate')}}</a>
-              </li>
-            </ul>
-          </nav>
-        {% endblock %}
-
-        {% block site_header_logo %}
-          <h2><a href="{{ url('mozorg.home') }}">{{ high_res_img('sandstone/header-mozilla-stone.png', {'alt': 'Mozilla', 'width': '170', 'height': '45'}) }}</a></h2>
-        {% endblock %}
-
-        {% block alt_header %}{% endblock %}
-
-        {% block subnav %}{% endblock %}
+        {% block site_header_logo %}{% endblock %}
 
         {% block breadcrumbs %}{% endblock %}
 
         {% block site_header_share %}{% endblock %}
 
-        </header>
-        {% endif %}
-      {% endblock %}
+      </header>
+      {% endif %}
+    {% endblock %}
 
-      {% block messages %}
-        {% if messages %}
-          <ul class="messagelist billboard">
-            {% for message in messages %}
-              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      {% endblock messages %}
+    {% block messages %}
+      {% if messages %}
+        <ul class="messagelist billboard">
+          {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endblock messages %}
 
-      {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
-      {% block email_form %}{{ email_newsletter_form() }}{% endblock %}
+    {% block email_form %}{{ email_newsletter_form() }}{% endblock %}
 
-      </div><!-- close #wrapper -->
+    {# for newsletters not to be confined by #wrapper #}
+    {% block email_form_unwrapped %}{% endblock %}
 
-      {# for newsletters not to be confined by #wrapper #}
-      {% block email_form_unwrapped %}{% endblock %}
+    {% block site_footer %}
+        {% include '_includes/site-footer.html' %}
+    {% endblock %}
 
-      {% block site_footer %}
-          {% include '_includes/site-footer.html' %}
-      {% endblock %}
-
-
-    </div><!-- close #outer-wrapper -->
+    {% block site_js %}
+      <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/js/piwik.js" async defer></script>
+      <script type="text/javascript" src="/media/js/matomo.js" charset="utf-8"></script>
+      <noscript>
+        <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
+      </noscript>
+    {% endblock %}
 
     <!--[if IE 9]>
       <script src="{{ static('js/libs/matchMedia.js') }}"></script>
     <![endif]-->
-
-    {% block site_js %}
-      <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8"></script>
-    {% endblock %}
 
     {% block js %}{% endblock %}
 

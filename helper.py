@@ -160,6 +160,12 @@ def high_res_img(ctx, url, optional_attributes=None):
 
 
 @jinja2.contextfunction
+def svg(ctx, file_name):
+    file = path.join(settings.MEDIA_URL.strip('/'), 'svg/'+file_name+'.svg')
+    return open(file).read()
+
+
+@jinja2.contextfunction
 def platform_img(ctx, url, optional_attributes=None):
     optional_attributes = optional_attributes or {}
     img_urls = {}

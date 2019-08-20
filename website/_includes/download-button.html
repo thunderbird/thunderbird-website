@@ -5,9 +5,13 @@
 {% macro alt_buttons(builds) %}
   <div class="download download-dumb">
     <h4>{{ _('Download Thunderbird') }} — {{ locale_name|safe }}</h4>
-    <ul>
+    <ul class="list-none p-0 flex flex-wrap max-w-lg justify-center">
       {% for plat in builds -%}
-        <li><a href="{{ plat.download_link_direct or plat.download_link }}" class="download-link button button-green" data-donate-link="{{ donate_url('post_download', download=True) }}">{{ plat.os_arch_pretty or plat.os_pretty }}</a></li>
+        <li class="ml-3 mr-3">
+          <a href="{{ plat.download_link_direct or plat.download_link }}" class="download-link btn-download" data-donate-link="{{ donate_url('post_download', download=True) }}">
+            {{ plat.os_arch_pretty or plat.os_pretty }}
+          </a>
+        </li>
       {%- endfor %}
     </ul>
   </div>
@@ -25,42 +29,40 @@
     {{ alt_buttons(builds) }}
   </div>
   <p class="unsupported-download">
-    {{ _("Your system doesn't meet the <a href=\"%(url)s\">requirements</a> to run Thunderbird.")|format(url=thunderbird_url('system-requirements', channel)) }}
+    {{ _("Your system doesn't meet the <a href=\"%(url)s\" class=\"inline-link\">requirements</a> to run Thunderbird.")|format(url=thunderbird_url('system-requirements', channel)) }}
   </p>
-  <p class="linux-arm-download">
-    {{ _('Please follow <a href="%(url)s">these instructions</a> to install Thunderbird.')|format(url='https://support.mozilla.org/kb/installing-thunderbird-linux') }}
+  <p class="linux-arm-download mb-8">
+    {{ _('Please follow <a href="%(url)s" class=\"inline-link\">these instructions</a> to install Thunderbird.')|format(url='https://support.mozilla.org/kb/installing-thunderbird-linux') }}
   </p>
-  <ul class="download-list">
+  <ul class="download-list list-none p-0 flex flex-wrap max-w-lg justify-center">
     {% for plat in builds %}
-      <li class="os_{{ plat.os }}{% if plat.arch %} {{ plat.arch }}{% endif %}">
-        <a class="download-link button {{button_color}}"
+      <li class="os_{{ plat.os }}{% if plat.arch %} {{ plat.arch }}{% endif %} ml-3 mr-3">
+        <a class="download-link btn-download"
           href="{{ plat.download_link }}"
           data-donate-link="{{ donate_url('post_download', download=True) }}"
           {% if plat.download_link_direct %}
             data-direct-link="{{ plat.download_link_direct }}"
           {% endif %}>
-          <strong class="download-title">
-            {% if alt_copy %}
-              {{ alt_copy }}
+          {% if alt_copy %}
+            {{ alt_copy }}
+          {% else %}
+            {% if channel == 'beta' %}
+              {{ _('Thunderbird Beta') }}
+            {% elif channel == 'alpha' %}
+              {{ _('Thunderbird Earlybird') }}
             {% else %}
-              {% if channel == 'beta' %}
-                {{ _('Thunderbird Beta') }}
-              {% elif channel == 'alpha' %}
-                {{ _('<span>Thunderbird</span> Earlybird') }}
-              {% else %}
-                {{ _('Download Thunderbird') }}
-              {% endif %}
+              {{ _('Download Thunderbird') }}
             {% endif %}
-          </strong>
+          {% endif %}
         </a>
       </li>
     {% endfor %}
   </ul>
-  <small class="download-other download-other-desktop os_linux os_linux64 os_osx os_win os_winsha1">
-    <a href="{{ thunderbird_url('all', channel) }}">{{ _('Systems &amp; Languages') }}</a> |
+  <p class="download-other download-other-desktop os_linux os_linux64 os_osx os_win os_winsha1 font-sm tracking-wider">
+    <a href="{{ thunderbird_url('all', channel) }}" class="small-link">{{ _('Systems &amp; Languages') }}</a> &bull;
     {% if channel != 'alpha' %}{# Earlybird release notes are not available yet #}
-    <a href="{{ thunderbird_url('releasenotes', channel) }}">{{ _('What’s New') }}</a> |
+      <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link">{{ _('What’s New') }}</a> &bull;
     {% endif %}
-    <a href="{{ url('privacy.notices.thunderbird') }}">{{ _('Privacy') }}</a>
-  </small>
+    <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link">{{ _('Privacy') }}</a>
+  </p>
 </div>
