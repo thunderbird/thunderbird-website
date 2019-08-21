@@ -3,6 +3,21 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 /*-------------------------
+* Colours
+*--------------------------*/
+@colors: {
+  white: #fff;
+  black: #000;
+  black-light: #212123;
+  black-lighter: #34343A;
+  black-lightest: #45454B;
+  grey-light: #f0f0f0;
+  blue-dark: #36385A;
+  orange: #ff9500;
+  blue: #0080FF;
+}
+
+/*-------------------------
 * Spacing
 *--------------------------*/
 @paddings: {
@@ -36,21 +51,6 @@
   md: @md;
   lg: @lg;
   xl: @xl;
-}
-
-/*-------------------------
-* Colours
-*--------------------------*/
-@colors: {
-  white: #fff;
-  black: #000;
-  black-light: #212123;
-  black-lighter: #34343A;
-  black-lightest: #45454B;
-  light-grey: #f0f0f0;
-  blue-dark: #36385A;
-  orange: #ff9500;
-  blue: #0080FF;
 }
 
 /*-------------------------
@@ -169,6 +169,13 @@
   rounded: .25rem;
   rounded-lg: .5rem;
   rounded-full: 9999px;
+}
+
+@border-style: {
+  border-solid: solid;
+  border-dashed: dashed;
+  border-dotted: dotted;
+  border-none: none;
 }
 
 /*-------------------------
@@ -346,6 +353,14 @@
   bg-auto: auto;
   bg-cover: cover;
   bg-contain: contain;
+}
+
+/*-------------------------
+* Pinter Events
+*--------------------------*/
+@pointer-events: {
+  pointer-events-none: none;
+  pointer-events-auto: auto;
 }
 
 /*-------------------------
