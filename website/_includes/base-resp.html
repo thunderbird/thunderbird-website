@@ -25,40 +25,30 @@
       {% endblock %}
 
       {% block site_header_nav %}
-      <nav id="nav-main" role="navigation">
-        <ul id="nav-main-menu" class="list-none p-0 flex items-center text-white font-md">
-          <li>
-            <a href="{{ url('thunderbird.features') }}" class="nav-link">
-              {{_('Features')}}
-            </a>
-          </li>
-          <li>
-            <a href="https://addons.thunderbird.net" target="_blank" class="nav-link">
-              {{_('Add-ons')}}
-            </a>
-          </li>
-          <li id="nav-main-support">
-            <a href="{{ url('support') }}" class="nav-link">
-              {{_('Get Help')}}
-            </a>
-          </li>
-          <li id="nav-main-support">
-            <a href="{{ url('thunderbird.about') }}" class="nav-link">
-              {{_('About Us')}}
-            </a>
-          </li>
-          <li id="nav-main-blog">
-            <a href="{{ url('blog') }}" class="nav-link">
-              {{_('Blog')}}
-            </a>
-          </li>
-          <li>
-            <a href="{{ donate_url('header') }}" class="btn-donate">
-              <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav id="nav-main" role="navigation">
+          <ul id="nav-main-menu" class="list-none p-0 flex items-center text-white font-md font-semibold">
+            <li>
+              <a href="{{ url('thunderbird.features') }}" class="nav-link">{{_('Features')}}</a>
+            </li>
+            <li>
+              <a href="https://addons.thunderbird.net" target="_blank" class="nav-link">{{_('Add-ons')}}</a>
+            </li>
+            <li>
+              <a href="{{ url('support') }}" class="nav-link">{{_('Get Help')}}</a>
+            </li>
+            <li>
+              <a href="{{ url('thunderbird.about') }}" class="nav-link">{{_('About Us')}}</a>
+            </li>
+            <li>
+              <a href="{{ url('blog') }}" class="nav-link">{{_('Blog')}}</a>
+            </li>
+            <li>
+              <a href="{{ donate_url('header') }}" class="btn-donate">
+                <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
+              </a>
+            </li>
+          </ul>
+        </nav>
       {% endblock %}
     </section>
 

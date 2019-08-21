@@ -1,38 +1,79 @@
-      <footer id="colophon" class="old{% if footer_class %} {{ footer_class }}{% endif %}">
-        <nav class="row">
-          <div class="col col-1">
-            <div class="logo"><a href="{{ url('mozorg.home') }}" data-link-type="footer" data-link-name="Mozilla">Mozilla</a></div>
-            <p class="license">
-              {%- trans url=url('foundation.licensing.website-content') -%}
-              Portions of this content are ©1998–{{ current_year }} by individual
-              mozilla.org contributors. Content available under
-              a <a href="{{ url }}">Creative Commons license</a>.
-              {%- endtrans -%}
-            </p>
-          </div>
-          <div class="col col-2">
-            <ul class="links-join">
-              <li><a href="{{ url('thunderbird.about') }}" data-link-type="footer" data-link-name="About">{{ _('About') }}</a></li>
-              <li class="wrap"><a href="{{ url('thunderbird.contact') }}" data-link-type="footer" data-link-name="Contact Us">{{ _('Contact Us') }}</a></li>
-              <li class="wrap"><a href="{{ donate_url('footer') }}" class="donate" data-link-type="footer" data-link-name="Donate">{{ _('Donate') }}</a></li>
-              <li class="clear"><a href="{{ url('contribute') }}" data-link-type="footer" data-link-name="Contribute to this site">{{ _('Contribute to this site') }}</a></li>
-            </ul>
+<footer id="colophon" class="bg-black-light text-white flex flex-col pt-10 pb-8">
+  <section class="flex justify-between items-center self-center w-full max-w-6xl pl-4 pr-4">
+    <aside class="flex flex-col">
+      <a href="{{ url('thunderbird.index') }}" class="block w-32" title="{{ _('Thunderbird') }}"
+        alt="{{ _('Thunderbird Vector Wordmark') }}">
+        {{ svg('logo-wordmark-white') }}
+      </a>
 
-            <ul class="links-legal">
-              <li><a href="{{ url('privacy') }}" data-link-type="footer" data-link-name="Privacy">{{ _('Privacy') }}</a></li>
-              <li class="wrap"><a href="{{ url('privacy.notices.websites') }}#cookies" data-link-type="footer" data-link-name="Cookies">{{ _('Cookies') }}</a></li>
-              <li class="wrap"><a href="{{ url('legal.index') }}" data-link-type="footer" data-link-name="Legal">{{ _('Legal') }}</a></li>
-              <li class="clear"><a href="{{ url('legal.fraud-report') }}" data-link-type="footer" data-link-name="Report Trademark Abuse">{{ _('Report Trademark Abuse') }}</a></li>
-            </ul>
-          </div>
-          <div class="col col-3">
-            <ul class="links-social">
-              <li><a class="twitter-button" title="Follow @mozthunderbird on Twitter" href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)"><i></i><div>@mozthunderbird</div></a></li>
-              <li><a class="facebook" href="https://www.facebook.com/Thunderbird/" data-link-type="footer" data-link-name="Facebook (Thunderbird)"><i></i><div>{{ _('Thunderbird') }}</div></a></li>
-            </ul>
-            <div class="lang-switcher">
-              {% include '_includes/lang_switcher.html' %}
-            </div>
-          </div>
-        </nav>
-      </footer>
+      <nav id="footer-main" role="navigation" class="mt-2">
+        <ul class="list-none p-0 flex items-center text-white font-md">
+          <li>
+            <a href="{{ url('thunderbird.features') }}" class="ml-0 nav-link">{{_('Features')}}</a>
+          </li>
+          <li>
+            <a href="https://addons.thunderbird.net" target="_blank" class="nav-link">{{_('Add-ons')}}</a>
+          </li>
+          <li>
+            <a href="{{ url('support') }}" class="nav-link">{{_('Get Help')}}</a>
+          </li>
+          <li>
+            <a href="{{ url('blog') }}" class="nav-link">{{_('Blog')}}</a>
+          </li>
+          <li>
+            <a href="{{ url('thunderbird.about') }}" class="nav-link">{{_('About Us')}}</a>
+          </li>
+          <li>
+            <a href="{{ url('thunderbird.contact') }}" class="nav-link">{{_('Contact Us')}}</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <aside class="flex flex-col text-right">
+      <ul class="list-none p-0 flex justify-end">
+        <li class="mr-4"><a class="small-link font-semibold" title="Follow @mozthunderbird on Twitter"
+            href="https://twitter.com/mozthunderbird" data-link-type="footer"
+            data-link-name="Twitter (Thunderbird)"><i></i>
+            <div>@mozthunderbird</div>
+          </a></li>
+        <li><a class="small-link font-semibold" href="https://www.facebook.com/Thunderbird/" data-link-type="footer"
+            data-link-name="Facebook (Thunderbird)"><i></i>
+            <div>{{ _('Thunderbird') }}</div>
+          </a></li>
+      </ul>
+      <aside class="mt-2">
+        {% include '_includes/lang_switcher.html' %}
+      </aside>
+    </aside>
+  </section>
+  <section class="self-center text-center max-w-xl mt-8">
+    <ul class="list-none p-0 flex justify-center">
+      <li>
+        <a href="{{ url('privacy') }}" class="small-link mr-3 ml-3" data-link-type="footer" data-link-name="Privacy">{{ _('Privacy') }}</a>
+      </li>
+      <li>
+        <a href="{{ url('privacy.notices.websites') }}#cookies" class="small-link mr-3 ml-3" data-link-type="footer"
+          data-link-name="Cookies">{{ _('Cookies') }}</a>
+        </li>
+      <li>
+        <a href="{{ url('legal.index') }}" class="small-link mr-3 ml-3" data-link-type="footer"
+          data-link-name="Legal">{{ _('Legal') }}</a>
+        </li>
+      <li>
+        <a href="{{ url('legal.fraud-report') }}" class="small-link mr-3 ml-3" data-link-type="footer"
+          data-link-name="Report Trademark Abuse">{{ _('Report Trademark Abuse') }}</a>
+        </li>
+    </ul>
+
+    <p class="mt-6 mb-6">
+      {%- trans url=url('foundation.licensing.website-content') -%}
+      Portions of this content are ©1998–{{ current_year }} by individual
+      mozilla.org contributors. Content available under
+      a <a href="{{ url }}" class="inline-link">Creative Commons license</a>.
+      {%- endtrans -%}
+    </p>
+
+    <a href="{{ url('contribute') }}" class="small-link font-semibold" data-link-type="footer"
+      data-link-name="Contribute to this site">{{ _('Contribute to this site') }}</a>
+  </section>
+</footer>

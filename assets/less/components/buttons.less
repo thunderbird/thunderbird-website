@@ -17,8 +17,15 @@
     .pl-3,
     .pr-3,
     .bg-donate-button,
-    .rounded-xs
+    .rounded-xs,
+    .shadow
   );
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
 }
 
 .btn-download {
@@ -38,6 +45,12 @@
     .rounded-xs,
     .shadow
   );
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
 }
 
 // Product download buttons

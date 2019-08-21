@@ -2,12 +2,37 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+a {
+ .transition(@transition-default);
+}
+
 .nav-link {
-  &:extend(.ml-6, .mr-6, .text-white, .font-semibold, .no-underline);
+  &:extend(.ml-6, .mr-6, .text-white, .no-underline, .relative, .pt-2, .pb-2);
+
+  &:after {
+    &:extend(.absolute, .block, .pin-l, .pin-r, .pin-b, .bg-white, .opacity-0);
+    .transition(all @time @swing);
+    .transform(translateY(-10px));
+    content: "";
+    height: 1px;
+  }
+
+  &:hover,
+  &:focus {
+    &:after {
+      &:extend(.opacity-100);
+      .transform(translateY(0));
+    }
+  }
 }
 
 .small-link {
   &:extend(.ml-1, .mr-1, .text-white, .no-underline);
+
+  &:hover,
+  &:focus {
+    &:extend(.underline);
+  }
 }
 
 .inline-link {
