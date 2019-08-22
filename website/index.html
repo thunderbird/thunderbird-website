@@ -63,6 +63,59 @@
     </aside>
   </section>
 
+  <section class="pt-20 pb-20 flex flex-col items-center bg-body">
+    <h3 class="header-section">{{ _('Stay in the loop')}}</h3>
+    <p class="font-lg tracking-wider leading-loose mb-16 mt-0 max-w-xl text-center">
+      {{ _('Keep yourself up to date with recent announcements and releases by following the official Thunderbird Blog!') }}
+    </p>
+
+    <section class="flex w-full max-w-6xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
+      <article class="flex flex-col p-4 flex-1 max-w-sm bg-white rounded shadow-lg">
+        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
+          All Thunderbird bugs have been fixed!
+        </h4>
+        <p class="mt-0 mb-6 flex-1">
+          April Fools! We still have open bugs, but we'd like your help to close them!
+        </p>
+        <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+          <span>Apr 1, 2019</span>
+          <span>Comments 0</span>
+        </footer>
+      </article>
+
+      <article class="flex flex-col p-4 flex-1 max-w-sm bg-white rounded shadow-lg ml-16 mr-16">
+        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
+          FOSDEM 2019 and DeltaChat
+        </h4>
+        <p class="mt-0 mb-6 flex-1">
+          During the last month we attended two events: FOSDEM, Europe's premier free software event, and a meetup with the folks behind DeltaChat.
+        </p>
+        <footer
+          class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+          <span>Mar 7, 2019</span>
+        </footer>
+      </article>
+
+      <article class="flex flex-col p-4 flex-1 max-w-sm bg-white rounded shadow-lg">
+        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
+          Thunderbird in 2019
+        </h4>
+        <p class="mt-0 mb-6 flex-1">
+          Welcome to 2019! In this blog post we’ll look at what we accomplished in 2018 and look forward to what we're going to be working on this year.
+        </p>
+        <footer
+          class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+          <span>Jan 2, 2019</span>
+          <span>Comments 114</span>
+        </footer>
+      </article>
+    </section>
+
+    <a href="{{ url('blog') }}" class="btn-body">{{_('Read the Blog')}}
+      <span>{{ svg('chevron-right') }}</span>
+    </a>
+  </section>
+
   <div itemscope itemtype="http://schema.org/SoftwareApplication">
     <meta itemprop="name" content="{{_('Thunderbird')}}">
     <meta itemprop="description" content="{% block product_desc %}{{ self.page_desc() }}{% endblock %}">

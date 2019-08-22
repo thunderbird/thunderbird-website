@@ -14,3 +14,33 @@ each(@border-style, #(@k, @v) {
   }
 });
 
+each(@border, #(@k, @v) {
+  .@{v} {
+    border-width: @k;
+  }
+});
+
+each(@border-top, #(@k, @v) {
+  .@{v} {
+    border-top-width: @k;
+  }
+});
+
+each(@border-right, #(@k, @v) {
+  .@{v} {
+    border-right-width: @k;
+  }
+});
+
+each(@border-bottom, #(@k, @v) {
+  .@{v} {
+    border-bottom-width: @k;
+  }
+});
+
+each(@border-left, #(@k, @v) {
+  .@{v} {
+    border-left-width: @k;
+  }
+});
+

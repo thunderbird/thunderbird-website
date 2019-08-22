@@ -49,3 +49,8 @@ each(@background-size, #(@k, @v) {
   background: linear-gradient(135deg, #21B711 0%, #058B00 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#21B711', endColorstr='#058B00', GradientType=1);
 }
+
+.bg-body {
+  &:extend(.bg-top, .bg-no-repeat, .bg-cover);
+  background-image: url('../img/bg-body.png');
+}
