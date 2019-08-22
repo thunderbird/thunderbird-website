@@ -11,9 +11,9 @@
 {% block page_css %}{% endblock %}
 
 {% block header_content %}
-  <section class="text-center text-white flex flex-col items-center mb-20">
+  <section class="text-center text-white flex flex-col items-center mb-12">
     <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-lg tracking-wide leading-normal max-w-xl mb-20">{{ self.page_desc() }}</p>
+    <p class="font-xl tracking-wide leading-relaxed max-w-xl mb-16">{{ self.page_desc() }}</p>
     <div class="download-button-wrapper">
       {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download')) }}
     </div>
