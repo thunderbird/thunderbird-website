@@ -25,6 +25,44 @@
 
 {% block content %}
 
+  <section class="mt-20 mb-20 flex max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <aside class="flex flex-col flex-1 max-w-sm">
+      <h3 class="header-section">
+        <span>{{ svg('customize') }}</span>{{ _('Tailored for all your needs')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
+        {{ _('Thunderbird makes email better for you, bringing together speed, privacy and the latest technologies. Focus on what matters and forget about complexity.') }}
+      </p>
+      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Explore all Features')}}
+        <span>{{ svg('chevron-right') }}</span>
+      </a>
+    </aside>
+
+    <aside class="flex flex-col flex-1 max-w-sm ml-16 mr-16">
+      <h3 class="header-section">
+        <span>{{ svg('lock') }}</span>{{ _('Secure &amp; Private')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
+        {{ _('Multiple features, such as built-in Do Not Track and remote content blocking, work together to ensure your safety and privacy, so you can have peace of mind.') }}
+      </p>
+      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Know your rights')}}
+        <span>{{ svg('chevron-right') }}</span>
+      </a>
+    </aside>
+
+    <aside class="flex flex-col flex-1 max-w-sm">
+      <h3 class="header-section">
+        <span>{{ svg('puzzle') }}</span>{{ _('Fully Customizable')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
+        {{ _('With Extensions, Personas, lightweight "skins”, and many more features you can change the look and feel of Thunderbird in an instant.') }}
+      </p>
+      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Make it personal')}}
+        <span>{{ svg('chevron-right') }}</span>
+      </a>
+    </aside>
+  </section>
+
   <div itemscope itemtype="http://schema.org/SoftwareApplication">
     <meta itemprop="name" content="{{_('Thunderbird')}}">
     <meta itemprop="description" content="{% block product_desc %}{{ self.page_desc() }}{% endblock %}">
