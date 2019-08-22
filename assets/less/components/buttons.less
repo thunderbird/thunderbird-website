@@ -2,6 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+button {
+  .transition(@transition-default);
+  cursor: pointer;
+}
+
 .btn-donate {
   &:extend(
     .ml-6,
@@ -50,6 +55,21 @@
   &:focus {
     &:extend(.shadow-md);
     .transform(translateY(-7%));
+  }
+}
+
+.btn-inline {
+  &:extend(.rounded-sm, .border-none, .bg-grey-light, .text-black, .p-1, .pl-2, .pr-2, .ml-2);
+  -moz-appearance: none;
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    &:extend(.bg-black-lightest, .text-white);
+  }
+
+  &:active {
+    &:extend(.bg-blue, .text-white);
   }
 }
 
