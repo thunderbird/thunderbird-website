@@ -36,13 +36,13 @@
             {{_('Download Beta')}}
           </a>
           <p class="font-sm mt-0 text-blue font-semibold self-start">
-            <a href="#}" class="small-link text-blue" target="_blank">
+            <a href="{{ thunderbird_url('all', 'beta') }}" class="small-link text-blue" target="_blank">
               {{ _('Systems &amp; Languages') }}
             </a> &bull;
-            <a href="#" class="small-link text-blue" target="_blank">
+            <a href="{{ thunderbird_url('releasenotes', 'beta') }}" class="small-link text-blue" target="_blank">
               {{ _('What’s New') }}
             </a> &bull;
-            <a href="#" class="small-link text-blue" target="_blank">
+            <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link text-blue" target="_blank">
               {{ _('Privacy') }}
             </a>
           </p>
