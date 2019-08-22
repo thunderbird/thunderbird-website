@@ -1,0 +1,53 @@
+<section class="pt-20 pb-20 flex bg-prefooter bg-grey-lighter">
+  <section class="flex flex-1 max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <article class="flex flex-1 max-w-md">
+      <aside class="w-24 pt-4">
+        {{ high_res_img('thunderbird/handshake.png', {'alt': _('Get Involved'), 'class': 'w-full h-auto'}) }}
+      </aside>
+      <main class="flex flex-col flex-1 ml-4">
+        <h3 class="header-section">{{ _('Get Involved')}}</h3>
+        <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+          {{ _('Thunderbird is an open source project, which means anyone can contribute ideas, designs, code, and time helping fellow users.') }}
+        </p>
+        <a href="{{ url('thunderbird.get-involved') }}" class="btn-join self-start ml-0 mr-0">
+          {{_('Join Us')}}
+        </a>
+        <p class="font-sm mt-0 text-blue font-semibold self-start">
+          <a href="{{ donate_url('pre_footer') }}" class="small-link text-blue" target="_blank">{{ _('Make a Donation') }}</a> &bull;
+          <a href="https://support.mozilla.org/products/thunderbird/calendar"
+            class="small-link text-blue" target="_blank">{{ _('Get Support') }}</a> &bull;
+          <a href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird"
+            class="small-link text-blue" target="_blank">{{ _('Report a Bug') }}</a>
+        </p>
+      </main>
+    </article>
+
+    <aside class="flex flex-1 max-w-md">
+      <article class="flex flex-1 max-w-md">
+        <aside class="w-24 pt-4">
+          {{ high_res_img('thunderbird/logos/beta.png', {'alt': _('Thunderbird Beta'), 'class': 'w-full h-auto'}) }}
+        </aside>
+        <main class="flex flex-col flex-1 ml-4">
+          <h3 class="header-section">{{ _('The Future of Thunderbird')}}</h3>
+          <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+            {{ _('Experience cutting edge features. Provide feedback to help refine and polish what will be in the final release') }}
+          </p>
+          <a href="#" class="btn-beta self-start ml-0 mr-0">
+            {{_('Download Beta')}}
+          </a>
+          <p class="font-sm mt-0 text-blue font-semibold self-start">
+            <a href="#}" class="small-link text-blue" target="_blank">
+              {{ _('Systems &amp; Languages') }}
+            </a> &bull;
+            <a href="#" class="small-link text-blue" target="_blank">
+              {{ _('What’s New') }}
+            </a> &bull;
+            <a href="#" class="small-link text-blue" target="_blank">
+              {{ _('Privacy') }}
+            </a>
+          </p>
+        </main>
+      </article>
+    </aside>
+  </section>
+</section>

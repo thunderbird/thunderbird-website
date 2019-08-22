@@ -28,9 +28,9 @@ each(@background-size, #(@k, @v) {
 
 .bg-header {
   background-color: #1c2f56;
-  background-image: url('../img/bg-header.png'), -moz-linear-gradient(top, #1c2f56 0%, #2c9afe 100%);
-  background-image: url('../img/bg-header.png'), -webkit-linear-gradient(top, #1c2f56 0%, #2c9afe 100%);
-  background-image: url('../img/bg-header.png'), linear-gradient(to bottom, #1c2f56 0%, #2c9afe 100%);
+  background-image: url('../img/thunderbird/backgrounds/bg-header.png'), -moz-linear-gradient(top, #1c2f56 0%, #2c9afe 100%);
+  background-image: url('../img/thunderbird/backgrounds/bg-header.png'), -webkit-linear-gradient(top, #1c2f56 0%, #2c9afe 100%);
+  background-image: url('../img/thunderbird/backgrounds/bg-header.png'), linear-gradient(to bottom, #1c2f56 0%, #2c9afe 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c2f56', endColorstr='#2c9afe', GradientType=0);
 }
 
@@ -50,7 +50,33 @@ each(@background-size, #(@k, @v) {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#21B711', endColorstr='#058B00', GradientType=1);
 }
 
+.bg-primary-button {
+  background: #005CE3;
+  background: -moz-linear-gradient(-45deg, #0080FF 0%, #005CE3 100%);
+  background: -webkit-linear-gradient(-45deg, #0080FF 0%, #005CE3 100%);
+  background: linear-gradient(135deg, #0080FF 0%, #005CE3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0080FF', endColorstr='#005CE3', GradientType=1);
+}
+
+.bg-beta-button {
+  background: #882395;
+  background: -moz-linear-gradient(-45deg, #E74EB9 0%, #882395 100%);
+  background: -webkit-linear-gradient(-45deg, #E74EB9 0%, #882395 100%);
+  background: linear-gradient(135deg, #E74EB9 0%, #882395 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E74EB9', endColorstr='#882395', GradientType=1);
+}
+
 .bg-body {
+  &:extend(.bg-top, .bg-no-repeat, .bg-contain);
+  background-image: url('../img/thunderbird/backgrounds/bg-body.png');
+}
+
+.bg-calendar {
   &:extend(.bg-top, .bg-no-repeat, .bg-cover);
-  background-image: url('../img/bg-body.png');
+  background-image: url('../img/thunderbird/backgrounds/bg-calendar.png');
+}
+
+.bg-prefooter {
+  &:extend(.bg-top, .bg-no-repeat, .bg-cover);
+  background-image: url('../img/thunderbird/backgrounds/bg-prefooter.png');
 }

@@ -93,6 +93,40 @@ button {
   }
 }
 
+.btn-newsletter {
+  &:extend(.rounded-xs, .border-none, .bg-primary-button, .text-white, .p-2, .pl-3, .pr-3, .uppercase, .font-semibold, .appearance-none);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+
+  &:active {
+    &:extend(.bg-blue);
+  }
+}
+
+.btn-join {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-primary-button, .rounded-xs, .shadow);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-beta {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-beta-button, .rounded-xs, .shadow);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
 // Product download buttons
 .download-button {
   .ios-download,
