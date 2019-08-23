@@ -58,6 +58,26 @@ button {
   }
 }
 
+.btn-body {
+  &:extend(.relative, .bg-white, .text-green, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-5, .pr-9, .rounded-xs, .border-green-light, .rounded-sm);
+  border-style: solid;
+  border-width: 1px;
+
+  span {
+    &:extend(.absolute, .flex, .items-center, .w-2, .pin-r, .pin-t, .pin-b, .pr-4);
+
+    svg {
+      &:extend(.w-2);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
 .btn-inline {
   &:extend(.rounded-sm, .border-none, .bg-grey-light, .text-black, .p-1, .pl-2, .pr-2, .ml-2);
   -moz-appearance: none;
@@ -70,6 +90,40 @@ button {
 
   &:active {
     &:extend(.bg-blue, .text-white);
+  }
+}
+
+.btn-newsletter {
+  &:extend(.rounded-xs, .border-none, .bg-primary-button, .text-white, .p-2, .pl-3, .pr-3, .uppercase, .font-semibold, .appearance-none);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+
+  &:active {
+    &:extend(.bg-blue);
+  }
+}
+
+.btn-join {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-primary-button, .rounded-xs, .shadow);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-beta {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-beta-button, .rounded-xs, .shadow);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
   }
 }
 

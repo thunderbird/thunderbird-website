@@ -11,9 +11,9 @@
 {% block page_css %}{% endblock %}
 
 {% block header_content %}
-  <section class="text-center text-white flex flex-col items-center mb-20">
+  <section class="text-center text-white flex flex-col items-center mb-12">
     <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-lg tracking-wide leading-normal max-w-xl mb-20">{{ self.page_desc() }}</p>
+    <p class="font-xl tracking-wide leading-relaxed max-w-xl mb-16">{{ self.page_desc() }}</p>
     <div class="download-button-wrapper">
       {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download')) }}
     </div>
@@ -24,6 +24,136 @@
 {% endblock %}
 
 {% block content %}
+
+  <section class="mt-20 mb-20 flex max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <aside class="flex flex-col flex-1 max-w-sm">
+      <h3 class="header-section">
+        <span>{{ svg('customize') }}</span>{{ _('Tailored for all your needs')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
+        {{ _('Thunderbird makes email better for you, bringing together speed, privacy and the latest technologies. Focus on what matters and forget about complexity.') }}
+      </p>
+      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Explore all Features')}}
+        <span>{{ svg('chevron-right') }}</span>
+      </a>
+    </aside>
+
+    <aside class="flex flex-col flex-1 max-w-sm ml-16 mr-16">
+      <h3 class="header-section">
+        <span>{{ svg('lock') }}</span>{{ _('Secure &amp; Private')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
+        {{ _('Multiple features, such as built-in Do Not Track and remote content blocking, work together to ensure your safety and privacy, so you can have peace of mind.') }}
+      </p>
+      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Know your rights')}}
+        <span>{{ svg('chevron-right') }}</span>
+      </a>
+    </aside>
+
+    <aside class="flex flex-col flex-1 max-w-sm">
+      <h3 class="header-section">
+        <span>{{ svg('puzzle') }}</span>{{ _('Fully Customizable')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
+        {{ _('With Extensions, Personas, lightweight "skins”, and many more features you can change the look and feel of Thunderbird in an instant.') }}
+      </p>
+      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Make it personal')}}
+        <span>{{ svg('chevron-right') }}</span>
+      </a>
+    </aside>
+  </section>
+
+  <section class="pt-20 pb-20 flex flex-col items-center bg-body">
+    <h3 class="header-section">{{ _('Stay in the loop')}}</h3>
+    <p class="font-lg tracking-wider leading-loose mb-16 mt-0 max-w-xl text-center">
+      {{ _('Keep yourself up to date with recent announcements and releases by following the official Thunderbird Blog!') }}
+    </p>
+
+    <section class="flex w-full max-w-6xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
+      <article class="flex flex-col p-4 flex-1 max-w-sm bg-white rounded shadow-lg">
+        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
+          All Thunderbird bugs have been fixed!
+        </h4>
+        <p class="mt-0 mb-6 flex-1">
+          April Fools! We still have open bugs, but we'd like your help to close them!
+        </p>
+        <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+          <span>Apr 1, 2019</span>
+          <span>Comments 0</span>
+        </footer>
+      </article>
+
+      <article class="flex flex-col p-4 flex-1 max-w-sm bg-white rounded shadow-lg ml-16 mr-16">
+        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
+          FOSDEM 2019 and DeltaChat
+        </h4>
+        <p class="mt-0 mb-6 flex-1">
+          During the last month we attended two events: FOSDEM, Europe's premier free software event, and a meetup with the folks behind DeltaChat.
+        </p>
+        <footer
+          class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+          <span>Mar 7, 2019</span>
+        </footer>
+      </article>
+
+      <article class="flex flex-col p-4 flex-1 max-w-sm bg-white rounded shadow-lg">
+        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
+          Thunderbird in 2019
+        </h4>
+        <p class="mt-0 mb-6 flex-1">
+          Welcome to 2019! In this blog post we’ll look at what we accomplished in 2018 and look forward to what we're going to be working on this year.
+        </p>
+        <footer
+          class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+          <span>Jan 2, 2019</span>
+          <span>Comments 114</span>
+        </footer>
+      </article>
+    </section>
+
+    <a href="{{ url('blog') }}" class="btn-body mb-10">{{_('Read the Blog')}}
+      <span>{{ svg('chevron-right') }}</span>
+    </a>
+  </section>
+
+  <section class="pt-20 pb-20 flex max-w-6xl mx-auto justify-between pl-8 pr-8 mb-10">
+    <aside class="flex flex-col flex-1 max-w-lg">
+      <h3 class="header-section">{{ _('Thunderbird is funded by users like you')}}</h3>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+        {{ _('Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.') }}
+      </p>
+      <a href="{{ donate_url('home_page_body') }}" class="btn-donate self-start ml-0 mr-0" target="_blank">
+        <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
+      </a>
+    </aside>
+
+    <aside class="flex flex-col flex-1 max-w-lg">
+      <h3 class="header-section">{{ _('Join our Newsletter')}}</h3>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+        {{ _('Keep up with the latest and greatest updates on news, features, events, and previews, and get a sneak peek on the upcoming releases.') }}
+      </p>
+      <!-- Begin Mailchimp Signup Form -->
+      <form action="https://mozilla.us12.list-manage.com/subscribe/post?u=f8051cc8637cf3ff79661f382&amp;id=9badb0cec2"
+            class="shadow flex items-center rounded-md self-start p-1"
+            method="post" id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            target="_blank">
+        <input id="mce-EMAIL" name="EMAIL" type="email" placeholder="{{ _('Your Email') }}"
+          class="w-64 appearance-none border-none p-2 tracking-wide font-semibold font-regular" required>
+        <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter">{{ _('Sign me up!') }}</button>
+        <!-- Prevent Bot signups -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+            name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value=""></div>
+      </form>
+      <!--End mc_embed_signup-->
+    </aside>
+  </section>
+
+  <section class="pt-20 pb-20 flex bg-calendar">
+    <!-- platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Thunderbird screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) -->
+  </section>
+
+  {% include '_includes/site-prefooter.html' %}
 
   <div itemscope itemtype="http://schema.org/SoftwareApplication">
     <meta itemprop="name" content="{{_('Thunderbird')}}">
