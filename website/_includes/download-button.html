@@ -2,13 +2,16 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
+{% set button_class = 'btn-beta' if channel == 'beta' else 'btn-download' %}
+{% set flex_class = 'self-start' if channel == 'beta' else 'justify-center' %}
+
 {% macro alt_buttons(builds) %}
   <div class="download download-dumb">
     <h4>{{ _('Download Thunderbird') }} — {{ locale_name|safe }}</h4>
-    <ul class="list-none p-0 flex flex-wrap max-w-lg justify-center">
+    <ul class="list-none p-0 flex flex-wrap max-w-lg {{ flex_class }}">
       {% for plat in builds -%}
         <li class="ml-3 mr-3">
-          <a href="{{ plat.download_link_direct or plat.download_link }}" class="download-link btn-download" data-donate-link="{{ donate_url('post_download', download=True) }}">
+          <a href="{{ plat.download_link_direct or plat.download_link }}" class="download-link {{ button_class }}" data-donate-link="{{ donate_url('post_download', download=True) }}">
             {{ plat.os_arch_pretty or plat.os_pretty }}
           </a>
         </li>
@@ -34,10 +37,10 @@
   <p class="linux-arm-download mb-8">
     {{ _('Please follow <a href="%(url)s" class=\"inline-link\">these instructions</a> to install Thunderbird.')|format(url='https://support.mozilla.org/kb/installing-thunderbird-linux') }}
   </p>
-  <ul class="download-list list-none p-0 flex flex-wrap max-w-lg justify-center mb-0">
+  <ul class="download-list list-none p-0 flex flex-wrap max-w-lg mb-0 {{ flex_class }}">
     {% for plat in builds %}
       <li class="os_{{ plat.os }}{% if plat.arch %} {{ plat.arch }}{% endif %} ml-3 mr-3">
-        <a class="download-link btn-download"
+        <a class="download-link {{ button_class }}"
           href="{{ plat.download_link }}"
           data-donate-link="{{ donate_url('post_download', download=True) }}"
           {% if plat.download_link_direct %}
@@ -58,11 +61,11 @@
       </li>
     {% endfor %}
   </ul>
-  <p class="download-other download-other-desktop os_linux os_linux64 os_osx os_win os_winsha1 font-sm tracking-wider mt-0">
-    <a href="{{ thunderbird_url('all', channel) }}" class="small-link">{{ _('Systems &amp; Languages') }}</a> &bull;
+  <p class="download-other download-other-desktop os_linux os_linux64 os_osx os_win os_winsha1 font-sm mt-0">
+    <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if channel == 'beta' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a> &bull;
     {% if channel != 'alpha' %}{# Earlybird release notes are not available yet #}
-      <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link">{{ _('What’s New') }}</a> &bull;
+      <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if channel == 'beta' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
     {% endif %}
-    <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link">{{ _('Privacy') }}</a>
+    <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link {% if channel == 'beta' %} text-blue {% endif %}">{{ _('Privacy') }}</a>
   </p>
 </div>

@@ -9,7 +9,7 @@
         <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
           {{ _('Thunderbird is an open source project, which means anyone can contribute ideas, designs, code, and time helping fellow users.') }}
         </p>
-        <a href="{{ url('thunderbird.get-involved') }}" class="btn-join self-start ml-0 mr-0">
+        <a href="{{ url('thunderbird.get-involved') }}" class="btn-join self-start ml-3 mr-3">
           {{_('Join Us')}}
         </a>
         <p class="font-sm mt-0 text-blue font-semibold self-start">
@@ -32,20 +32,9 @@
           <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
             {{ _('Experience cutting edge features. Provide feedback to help refine and polish what will be in the final release') }}
           </p>
-          <a href="#" class="btn-beta self-start ml-0 mr-0">
-            {{_('Download Beta')}}
-          </a>
-          <p class="font-sm mt-0 text-blue font-semibold self-start">
-            <a href="{{ thunderbird_url('all', 'beta') }}" class="small-link text-blue" target="_blank">
-              {{ _('Systems &amp; Languages') }}
-            </a> &bull;
-            <a href="{{ thunderbird_url('releasenotes', 'beta') }}" class="small-link text-blue" target="_blank">
-              {{ _('What’s New') }}
-            </a> &bull;
-            <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link text-blue" target="_blank">
-              {{ _('Privacy') }}
-            </a>
-          </p>
+          <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
+            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Beta'), channel='beta') }}
+          </aside>
         </main>
       </article>
     </aside>
