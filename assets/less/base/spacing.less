@@ -18,6 +18,13 @@ each(@margins, #(@k, @v) {
       @{k}: (@num * 0.25rem);
     }
   });
+
+  each(range(21), {
+    @num: 21-@index;
+    .-@{v}-@{num} {
+      @{k}: -(@num * 0.25rem);
+    }
+  });
 });
 
 .mx-auto {

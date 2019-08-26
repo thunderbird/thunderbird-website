@@ -199,8 +199,8 @@ def platform_img(ctx, url, optional_attributes=None):
     # Don't download any image until the javascript sets it based on
     # data-src so we can do platform detection. If no js, show the
     # windows version.
-    markup = (u'<img class="platform-img w-full js" src="" data-processed="false" {attrs}>'
-              u'<noscript><img class="platform-img w-full win" src="{win_src}" {attrs}>'
+    markup = (u'<img class="platform-img w-full h-auto js" src="" data-processed="false" {attrs}>'
+              u'<noscript><img class="platform-img w-full h-auto win" src="{win_src}" {attrs}>'
               u'</noscript>').format(attrs=attrs, win_src=img_attrs[u'data-src-windows'])
 
     return jinja2.Markup(markup)
