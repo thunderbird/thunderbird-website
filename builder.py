@@ -212,7 +212,7 @@ class Site(object):
             logger.info("Rendering {0}/index.html...".format(target))
             sysreq_template.stream().dump(os.path.join(target, 'index.html'))
 
-        # Build htaccess files for sysreq, release notes, and what's new redirects.
+        # Build htaccess files for sysreq and release notes redirects.
         sysreq_path = os.path.join(self.renderpath, 'system-requirements')
         notes_path = os.path.join(self.renderpath, 'notes')
         write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
