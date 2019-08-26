@@ -2,6 +2,7 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
+{% set active_page = "index" %}
 {% extends "_includes/base-resp.html" %}
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
@@ -24,7 +25,6 @@
 {% endblock %}
 
 {% block content %}
-
   <section class="mt-20 mb-20 flex max-w-6xl mx-auto justify-between pl-8 pr-8">
     <aside class="flex flex-col flex-1 max-w-sm">
       <h3 class="header-section">
@@ -170,9 +170,14 @@
       <p class="font-lg tracking-wider leading-loose mb-10">
         {{ _('Manage multiple calendars, create your daily to do list, invite friends to events, and subscribe to public calendars.') }}
       </p>
-      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Know your rights')}}
-        <span>{{ svg('chevron-right') }}</span>
-      </a>
+      <p class="flex justify-start">
+        <a href="{{ url('calendar') }}" class="btn-body">{{_('Explore Features')}}
+          <span>{{ svg('chevron-right') }}</span>
+        </a>
+        <a href="https://addons.thunderbird.net" class="btn-body btn-secondary ml-4" target="_blank">{{_('Explore More Add-ons')}}
+          <span>{{ svg('chevron-right') }}</span>
+        </a>
+      </p>
     </aside>
   </section>
 
@@ -210,7 +215,6 @@
       <meta itemprop="price" content="0">
     </div>
   </div>
-
 {% endblock %}
 
 {% block email_form %}{% endblock %}

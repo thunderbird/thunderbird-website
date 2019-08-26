@@ -209,7 +209,8 @@ def platform_img(ctx, url, optional_attributes=None):
 @jinja2.contextfunction
 def download_thunderbird(ctx, channel='release', dom_id=None,
                          locale=None, force_direct=False,
-                         alt_copy=None, button_color='button-green'):
+                         alt_copy=None, button_color='button-green',
+                         section='header'):
     """ Output a "Download Thunderbird" button.
 
     :param ctx: context from calling template.
@@ -219,6 +220,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     :param force_direct: Force the download URL to be direct.
     :param alt_copy: Specifies alternate copy to use for download buttons.
     :param button_color: color of download button. Default to 'green'.
+    :param section: Where the button is rendered in the page. Default to 'header'.
     :return: The button html.
     """
     alt_channel = '' if channel == 'release' else channel
@@ -273,6 +275,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
         'channel': alt_channel,
         'alt_copy': alt_copy,
         'button_color': button_color,
+        'section': section,
     }
     loader = jinja2.FileSystemLoader(searchpath=settings.WEBSITE_PATH)
     env = jinja2.Environment(loader=loader, extensions=['jinja2.ext.i18n'])
