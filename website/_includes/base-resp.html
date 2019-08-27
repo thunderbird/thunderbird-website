@@ -13,8 +13,7 @@
 {% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}
 
 {% block site_header %}
-  <header id="masthead" class="bg-header bg-no-repeat bg-cover bg-top flex flex-col">
-
+  <header id="masthead" class="bg-no-repeat bg-cover bg-top flex flex-col{% if active_page == 'index' %} bg-header{% else %} bg-header-page{% endif %}">
     <section class="flex justify-between items-center p-6">
       {% block site_header_logo %}
         <h2 class="mt-0 mb-0">
@@ -34,7 +33,7 @@
               <a href="https://addons.thunderbird.net" target="_blank" class="nav-link">{{_('Add-ons')}}</a>
             </li>
             <li>
-              <a href="{{ url('support') }}" class="nav-link">{{_('Get Help')}}</a>
+              <a href="{{ url('support') }}" class="nav-link" target="_blank">{{_('Get Help')}}</a>
             </li>
             <li>
               <a href="{{ url('thunderbird.about') }}" class="nav-link">{{_('About Us')}}</a>

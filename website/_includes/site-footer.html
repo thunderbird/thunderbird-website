@@ -15,10 +15,10 @@
             <a href="https://addons.thunderbird.net" target="_blank" class="nav-link">{{_('Add-ons')}}</a>
           </li>
           <li>
-            <a href="{{ url('support') }}" class="nav-link">{{_('Get Help')}}</a>
+            <a href="{{ url('support') }}" class="nav-link" target="_blank">{{_('Get Help')}}</a>
           </li>
           <li>
-            <a href="{{ url('blog') }}" class="nav-link">{{_('Blog')}}</a>
+            <a href="{{ url('blog') }}" class="nav-link" target="_blank">{{_('Blog')}}</a>
           </li>
           <li>
             <a href="{{ url('thunderbird.about') }}" class="nav-link">{{_('About Us')}}</a>
@@ -54,19 +54,18 @@
   <section class="self-center text-center max-w-xl mt-8">
     <ul class="list-none p-0 flex justify-center">
       <li>
-        <a href="{{ url('privacy') }}" class="small-link mr-3 ml-3" data-link-type="footer" data-link-name="Privacy">{{ _('Privacy') }}</a>
+        <a href="{{ url('privacy') }}" class="small-link mr-3 ml-3" data-link-type="footer" data-link-name="Privacy" target="_blank">{{ _('Privacy') }}</a>
       </li>
       <li>
-        <a href="{{ url('privacy.notices.websites') }}#cookies" class="small-link mr-3 ml-3" data-link-type="footer"
-          data-link-name="Cookies">{{ _('Cookies') }}</a>
+        <a href="{{ url('privacy.notices.websites') }}#cookies" class="small-link mr-3 ml-3" data-link-type="footer" data-link-name="Cookies" target="_blank">{{ _('Cookies') }}</a>
         </li>
       <li>
         <a href="{{ url('legal.index') }}" class="small-link mr-3 ml-3" data-link-type="footer"
-          data-link-name="Legal">{{ _('Legal') }}</a>
+          data-link-name="Legal" target="_blank">{{ _('Legal') }}</a>
         </li>
       <li>
         <a href="{{ url('legal.fraud-report') }}" class="small-link mr-3 ml-3" data-link-type="footer"
-          data-link-name="Report Trademark Abuse">{{ _('Report Trademark Abuse') }}</a>
+          data-link-name="Report Trademark Abuse" target="_blank">{{ _('Report Trademark Abuse') }}</a>
         </li>
     </ul>
 
@@ -74,11 +73,11 @@
       {%- trans url=url('foundation.licensing.website-content') -%}
       Portions of this content are ©1998–{{ current_year }} by individual
       mozilla.org contributors. Content available under
-      a <a href="{{ url }}" class="inline-link">Creative Commons license</a>.
+      a <a href="{{ url }}" class="inline-link" target="_blank">Creative Commons license</a>.
       {%- endtrans -%}
     </p>
 
     <a href="{{ url('contribute') }}" class="small-link font-semibold" data-link-type="footer"
-      data-link-name="Contribute to this site">{{ _('Contribute to this site') }}</a>
+      data-link-name="Contribute to this site" target="_blank">{{ _('Contribute to this site') }}</a>
   </section>
 </footer>
