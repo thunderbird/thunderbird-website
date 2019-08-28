@@ -40,6 +40,15 @@ a {
   &:extend(.font-semibold, .underline, .text-white);
 }
 
+.header-link {
+  &:extend(.no-underline, .text-blue);
+
+  &:hover,
+  &:focus {
+    &:extend(.underline);
+  }
+}
+
 .social-link {
   &:extend(.ml-1, .mr-1, .text-white, .no-underline, .font-sm, .font-semibold, .flex, .items-center, .bg-black-lightest, .pt-1, .pb-1, .pl-1, .pr-2, .leading-none, .rounded-full);
 
