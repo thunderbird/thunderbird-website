@@ -82,6 +82,16 @@ button {
   }
 }
 
+.btn-block-white {
+  &:extend(.p-2, .no-underline, .rounded);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md, .bg-white);
+    .transform(translateY(-7%));
+  }
+}
+
 .btn-inline {
   &:extend(.rounded-sm, .border-none, .bg-grey-light, .text-black, .p-1, .pl-2, .pr-2, .ml-2);
   -moz-appearance: none;
