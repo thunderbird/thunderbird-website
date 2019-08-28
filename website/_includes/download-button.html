@@ -66,6 +66,6 @@
     {% if channel != 'alpha' %}{# Earlybird release notes are not available yet #}
       <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if channel == 'beta' or section == 'body' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
     {% endif %}
-    <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link {% if channel == 'beta' or section == 'body' %} text-blue {% endif %}">{{ _('Privacy') }}</a>
+    <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link {% if channel == 'beta' or section == 'body' %} text-blue {% endif %}" target="_blank">{{ _('Privacy') }}</a>
   </p>
 </div>
