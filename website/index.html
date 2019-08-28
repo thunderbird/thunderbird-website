@@ -45,7 +45,7 @@
       <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
         {{ _('Multiple features, such as built-in Do Not Track and remote content blocking, work together to ensure your safety and privacy, so you can have peace of mind.') }}
       </p>
-      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Know your rights')}}
+      <a href="{{ url('thunderbird.features') }}#secureprotect" class="btn-body self-start">{{_('Know your rights')}}
         <span>{{ svg('chevron-right') }}</span>
       </a>
     </aside>
@@ -57,7 +57,7 @@
       <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
         {{ _('With Extensions, Personas, lightweight "skins”, and many more features you can change the look and feel of Thunderbird in an instant.') }}
       </p>
-      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Make it personal')}}
+      <a href="{{ url('thunderbird.features') }}#customize-email" class="btn-body self-start">{{_('Make it personal')}}
         <span>{{ svg('chevron-right') }}</span>
       </a>
     </aside>
@@ -111,7 +111,7 @@
       </article>
     </section>
 
-    <a href="{{ url('blog') }}" class="btn-body mb-10">{{_('Read the Blog')}}
+    <a href="{{ url('blog') }}" class="btn-body mb-10" target="_blank">{{_('Read the Blog')}}
       <span>{{ svg('chevron-right') }}</span>
     </a>
   </section>
@@ -216,5 +216,3 @@
     </div>
   </div>
 {% endblock %}
-
-{% block email_form %}{% endblock %}
