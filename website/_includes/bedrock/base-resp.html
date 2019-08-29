@@ -79,7 +79,9 @@
       {% endif %}
     {% endblock messages %}
 
-    {% block content %}{% endblock %}
+    <main>
+      {% block content %}{% endblock %}
+    </main>
 
     {% block email_form %}{{ email_newsletter_form() }}{% endblock %}
 

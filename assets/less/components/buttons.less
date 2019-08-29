@@ -59,7 +59,7 @@ button {
 }
 
 .btn-body {
-  &:extend(.relative, .bg-white, .text-green, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-5, .pr-9, .rounded-xs, .border-green-light, .rounded-sm);
+  &:extend(.relative, .bg-white, .text-green, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-5, .pr-9, .border-green-light, .rounded-sm);
   border-style: solid;
   border-width: 1px;
 
@@ -79,6 +79,16 @@ button {
 
   &.btn-secondary {
     &:extend(.text-blue, .border-transparent, .bg-transparent, .normal-case);
+  }
+}
+
+.btn-block-white {
+  &:extend(.p-2, .no-underline, .rounded);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md, .bg-white);
+    .transform(translateY(-7%));
   }
 }
 
@@ -128,6 +138,15 @@ button {
   &:focus {
     &:extend(.shadow-md);
     .transform(translateY(-7%));
+  }
+}
+
+.btn-link {
+  &:extend(.bg-transparent, .text-white, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-4, .pr-4, .rounded-sm, .m-1);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md, .bg-white, .text-blue);
   }
 }
 

@@ -4,87 +4,140 @@
 
 {% extends "_includes/base-resp.html" %}
 
-{% block page_title %}{{ _('Mozilla Thunderbird - Lightning Calendar') }}{% endblock %}
+{% block page_title %}{{ _('Lightning Calendar') }}{% endblock %}
 {% block page_desc %}{{ _('Organize your life — it&rsquo;s about time!') }}{% endblock %}
-{% block body_id %}calendar-page{% endblock %}
 
-{% block page_css %}
-  <link href="/media/css/calendar-bundle.css" rel="stylesheet" type="text/css" />
+{% block header_content %}
+  <section class="text-left text-white flex flex-col items-start w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-hero font-thin mt-10 mb-16">{{ self.page_title() }}</h1>
+  </section>
 {% endblock %}
 
 {% block content %}
-
-<section id="lightning" class="billboard products" data-lang="{{LANG}}">
-  <div class="topbox">
-    <img id="calendar-logo" src="{{ static('img/calendar/calendar-logo.png') }}" alt="">
-    <div class="infobox">
-      <h1>{{ _('Lightning Calendar') }}</h1>
-      <h2>{{ _('Organize your life &mdash; it&rsquo;s about time!') }}</h2>
-      <aside id="download" class="hide-for-touch">
-        <a id="download-link" class="loading" href="https://addons.thunderbird.net/addon/lightning/">
-          <span id="version-box" class="title">{{ _('Lightning') }}</span>
-          <span class="desc">{{ _('Free download') }}</span>
+  <section class="pt-10 pb-10 flex justify-between items-center pl-20">
+    <aside class="flex flex-col w-2/5 ml-16 mr-16">
+      <h3 class="header-section">
+        <span>{{ svg('calendar') }}</span>
+        <aside class="flex flex-col">
+          {{ _('Lightning Calendar')}}
+          <small class="font-normal font-md tracking-normal normal-case">
+            {{ _('Organize your life &mdash; it&rsquo;s about time!') }}
+          </small>
+        </aside>
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-6">
+        {{ _('Organize your schedule and life&rsquo;s important events in a calendar that&rsquo;s fully integrated with your Thunderbird or Seamonkey email. Manage multiple calendars, create your daily to do list, invite friends to events, and subscribe to public calendars.') }}
+      </p>
+      <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
+        <a href="https://addons.thunderbird.net/addon/lightning/" class="btn-join self-start" target="_blank">
+          {{_('Free Download')}}
         </a>
-        <small class="download-other">
-          <a href="https://addons.thunderbird.net/addon/lightning/versions/">{{ _('Other Systems &amp; Versions') }}</a>
-        </small>
+        <p class="font-sm mt-0 text-blue font-semibold self-start">
+          <a href="https://addons.thunderbird.net/addon/lightning/versions/" class="small-link text-blue"
+            target="_blank">{{ _('Other Systems &amp; Versions') }}</a>
+        </p>
       </aside>
-    </div>
-  </div>
-  <div class="midbox">
-      <p>{{ _('Organize your schedule and life&rsquo;s important events in a calendar that&rsquo;s fully integrated with your Thunderbird or Seamonkey email. Manage multiple calendars, create your daily to do list, invite friends to events, and subscribe to public calendars.') }}</p>
-  </div>
-  <div class="items">
-    <ul>
-      <li>
-        <img src="{{ static('img/calendar/info-icon.png') }}" alt="">
-        <div class="itemtext">
-          <a href="https://developer.mozilla.org/en/Calendar/Calendar_Versions" class="title">{{ _('Compatibility Information') }}</a>
-          <span class="desc">{{ _('Thunderbird, Seamonkey, what version?') }}</span>
-        </div>
-      </li>
-      <li>
-        <img src="{{ static('img/calendar/question-icon.png') }}" alt="">
-        <div class="itemtext">
-          <a href="https://support.mozilla.org/products/thunderbird/calendar" class="title">{{ _('Get Support') }}</a>
-          <span class="desc">{{ _('Need help with Lightning?') }}</span>
-        </div>
-      </li>
-      <li>
-        <img src="{{ static('img/calendar/holiday-icon.png') }}" alt="">
-        <div class="itemtext">
-          <a href="holidays/" class="title">{{ _('Holiday Calendars') }}</a>
-          <span class="desc">{{ _('Need a break? Now you know when!') }}</span>
-        </div>
-      </li>
-      <li>
-        <img src="{{ static('img/calendar/tools-icon.png') }}" alt="">
-        <div class="itemtext">
-          <a href="https://developer.mozilla.org/en/Calendar/" class="title">{{ _('Developer Tools') }}</a>
-          <span class="desc">{{ _('Dive into development.') }}</span>
-        </div>
-      </li>
-      <li>
-        <img src="{{ static('img/calendar/bug-icon.png') }}" alt="">
-        <div class="itemtext">
-          <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Calendar" class="title">{{ _('Bugzilla') }}</a>
-          <span class="desc">{{ _('Found a bug? Let us know!') }}</span>
-        </div>
-      </li>
-      <li>
-        <img src="{{ static('img/calendar/bugspray-icon.png') }}" alt="">
-        <div class="itemtext">
-          <a href="http://www.joshmatthews.net/bugsahoy/?calendar=1 " class="title">{{ _('Bugs Ahoy!') }}</a>
-          <span class="desc">{{ _('Want to make a difference? Fix a bug that fits your interests.') }}</span>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
+    </aside>
+
+    <aside class="w-3/5">
+      {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Lightning Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
+    </aside>
+  </section>
+
+  <section class="pt-20 pb-20 w-full bg-calendar">
+    <section class="flex flex-wrap max-w-6xl mx-auto pl-8 pr-8">
+
+      <aside class="flex flex-col w-1/3">
+        <a href="https://developer.mozilla.org/en/Calendar/Calendar_Versions"
+          class="flex flex-col btn-block-white m-2" target="_blank">
+          <h4 class="header-section mb-0">
+            <span>{{ svg('information') }}</span>
+            <aside class="flex flex-col font-lg">
+              {{ _('Compatibility Information')}}
+              <small class="font-normal font-regular tracking-normal normal-case">
+                {{ _('Thunderbird, Seamonkey, what version?') }}
+              </small>
+            </aside>
+          </h4>
+        </a>
+      </aside>
+
+      <aside class="flex flex-col w-1/3">
+        <a href="https://support.mozilla.org/products/thunderbird/calendar"
+          class="flex flex-col btn-block-white m-2" target="_blank">
+          <h4 class="header-section mb-0">
+            <span>{{ svg('help') }}</span>
+            <aside class="flex flex-col font-lg">
+              {{ _('Get Support')}}
+              <small class="font-normal font-regular tracking-normal normal-case">
+                {{ _('Need help with Lightning?') }}
+              </small>
+            </aside>
+          </h4>
+        </a>
+      </aside>
+
+      <aside class="flex flex-col w-1/3">
+        <a href="holidays/" class="flex flex-col btn-block-white m-2">
+          <h4 class="header-section mb-0">
+            <span>{{ svg('calendar') }}</span>
+            <aside class="flex flex-col font-lg">
+              {{ _('Holiday Calendars')}}
+              <small class="font-normal font-regular tracking-normal normal-case">
+                {{ _('Need a break? Now you know when!') }}
+              </small>
+            </aside>
+          </h4>
+        </a>
+      </aside>
+
+      <aside class="flex flex-col w-1/3">
+        <a href="https://developer.mozilla.org/en/Calendar/"
+          class="flex flex-col btn-block-white m-2" target="_blank">
+          <h4 class="header-section mb-0">
+            <span>{{ svg('developer') }}</span>
+            <aside class="flex flex-col font-lg">
+              {{ _('Developer Tools')}}
+              <small class="font-normal font-regular tracking-normal normal-case">
+                {{ _('Dive into development.') }}
+              </small>
+            </aside>
+          </h4>
+        </a>
+      </aside>
+
+      <aside class="flex flex-col w-1/3">
+        <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Calendar"
+          class="flex flex-col btn-block-white m-2" target="_blank">
+          <h4 class="header-section mb-0">
+            <span>{{ svg('warning') }}</span>
+            <aside class="flex flex-col font-lg">
+              {{ _('Bugzilla')}}
+              <small class="font-normal font-regular tracking-normal normal-case">
+                {{ _('Found a bug? Let us know!') }}
+              </small>
+            </aside>
+          </h4>
+        </a>
+      </aside>
+
+      <aside class="flex flex-col w-1/3">
+        <a href="https://codetribute.mozilla.org/projects/calendar"
+          class="flex flex-col btn-block-white m-2" target="_blank">
+          <h4 class="header-section mb-0">
+            <span>{{ svg('report') }}</span>
+            <aside class="flex flex-col font-lg">
+              {{ _('Bugs Ahoy!')}}
+              <small class="font-normal font-regular tracking-normal normal-case">
+                {{ _('Want to make a difference? Fix a bug that fits your interests.') }}
+              </small>
+            </aside>
+          </h4>
+        </a>
+      </aside>
+
+    </section>
+  </section>
+
+  {% include '_includes/site-prefooter.html' %}
 {% endblock %}
-
-{% block js %}
-  <script type="text/javascript" src="/media/js/calendar.js" charset="utf-8"></script>
-{% endblock %}
-
-
