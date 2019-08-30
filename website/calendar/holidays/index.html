@@ -80,22 +80,6 @@
           {{ calendar.datespan }}
         </aside>
       </div>
-    <!-- <tr>
-      <td>
-        {% if calendar.title %}
-        {% trans url=CALDATA_URL + calendar.filename, country=calendar.country,
-                 title=calendar.title, authors=calendar.authors %}
-        <a href="{{ url }}">{{ country }}</a> {{ title }}, thanks to {{ authors }}
-        {% endtrans %}
-        {% else %}
-        {% trans url=CALDATA_URL + calendar.filename, country=calendar.country,
-                 authors=calendar.authors %}
-        <a href="{{ url }}">{{ country }}</a> holidays thanks to {{ authors }}
-        {% endtrans %}
-        {% endif %}
-      </td>
-      <td>{{ calendar.datespan }}</td>
-    </tr> -->
     {% endfor %}
   </section>
 

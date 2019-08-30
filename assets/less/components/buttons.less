@@ -34,26 +34,21 @@ button {
 }
 
 .btn-download {
-  &:extend(
-    .text-white,
-    .font-md,
-    .font-semibold,
-    .no-underline,
-    .uppercase,
-    .inline-block,
-    .pt-4,
-    .pb-4,
-    .pl-7,
-    .pr-7,
-    .mb-5,
-    .bg-download-button,
-    .rounded-xs,
-    .shadow
-  );
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-7, .pr-7, .mb-5, .bg-download-button, .rounded-xs, .shadow);
 
   &:hover,
   &:focus {
     &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-download-inline {
+  &:extend(.ml-1, .mr-2, .text-green-light, .font-base, .font-semibold, .no-underline, .uppercase, .inline-block, .p-2, .bg-white, .rounded-sm, .border-green-light, .border, .border-solid);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md, .bg-green-light, .text-white);
     .transform(translateY(-7%));
   }
 }

@@ -38,43 +38,40 @@
   </form>
 {% endmacro %}
 
-{% macro build_table(platforms, builds, title, description) %}
-  <div class="build-table-container">
+{% macro build_table(platforms, builds) %}
     {% if builds %}
-      <table class="table build-table">
-        <caption>
-          <h3>{{ title }}</h3>
-            {% if description %}
-              <p>{{ description }}</p>
-            {% endif %}
-        </caption>
-        <thead>
-          <tr>
-            <th colspan="2" scope="col">{{ _('Language') }}</th>
-            {% for p_name, p_label in platforms %}
-              <th scope="col" class="{{ p_name }}">{{ p_label|replace('\n', '<br>'|safe) }}</th>
-            {% endfor %}
-          </tr>
-        </thead>
-        <tbody>
-          {% for build in builds %}
-            {{ build_row(platforms, build) }}
-          {% endfor %}
-        </tbody>
-      </table>
+      {% set letter = namespace(first='') %}
+      {% for build in builds %}
+
+        {% if letter.first != build.name_en[:1] %}
+          {% set letter.first = build.name_en[:1] %}
+          <h4 id="{{ letter.first }}" class="header-section w-full mb-0 pt-6 pl-3">
+            {{ letter.first }}
+          </h4>
+        {% endif %}
+
+        {{ build_row(platforms, build) }}
+      {% endfor %}
     {% endif %}
-    <h4 class="not-found{% if builds %} hide{% endif %}">{{ _('No matching languages found.') }}</h4>
-  </div>
+    <h4 class="subheader-section{% if builds %} hidden{% endif %}">
+      {{ _('No matching languages found.') }}
+    </h4>
 {% endmacro %}
 
 {% macro build_row(platforms, build) %}
-  <tr id="{{ build.locale }}" data-search="{{ build.name_en|lower }}, {{ build.name_native|lower }}">
-    <th scope="row">{{ build.name_en }}</th>
-    <td lang="{{ build.locale }}">{{ build.name_native }}</td>
-    {% for p_name, p_label in platforms %}
-      {{ build_link(build, p_name, _('Download for %(platform)s in %(locale)s')|format(platform=p_label|replace('\n', ' '), locale=build.name_en)) }}
-    {% endfor %}
-  </tr>
+  <aside id="{{ build.locale }}" data-search="{{ build.name_en|lower }}, {{ build.name_native|lower }}" class="flex flex-row flex-wrap items-center bg-white p-2 pl-3 pr-3 shadow-md mb-4 rounded">
+    <h4 class="subheader-section flex flex-col flex-1 mb-0">
+      {{ build.name_en }}
+      <small class="font-normal font-regular tracking-normal normal-case text-black-lightest">
+        {{ build.name_native }}
+      </small>
+    </h4>
+    <aside>
+      {% for p_name, p_label in platforms %}
+        {{ build_link(build, p_name, _('%(platform)s')|format(platform=p_label|replace('\n', ' '))) }}
+      {% endfor %}
+    </aside>
+  </aside>
 {% endmacro %}
 
 {#
@@ -84,15 +81,14 @@
 #}
 {% macro build_link(build, platform, tooltip) %}
   {% if build.platforms[platform] %}
-    <td class="download {{ platform }}">
-        <a href="{{ build.platforms[platform].download_url }}" title="{{ tooltip }}"
-           data-download-version="{{ platform }}" data-download-language="{{ build.name_en|lower}}" data-link-type="download"
-           {% if platform == 'android' %} data-download-os="Android"
-           {% elif platform == 'ios' %} data-download-os="iOS"
-           {% else %} data-download-os="Desktop"{% endif %}>{{ _('Download') }}
-        </a>
-    </td>
-  {% else %}
-    <td class="unavailable">{{ _('Not Yet Available') }}</td>
+    <a href="{{ build.platforms[platform].download_url }}" title="{{ tooltip }}"
+      class="btn-download-inline {% if platform == 'winsha1' %} hidden{% endif %}"
+      data-download-version="{{ platform }}"
+      data-download-language="{{ build.name_en|lower}}" data-link-type="download"
+      {% if platform == 'android' %} data-download-os="Android"
+      {% elif platform == 'ios' %} data-download-os="iOS"
+      {% else %} data-download-os="Desktop"{% endif %}>
+        <span class="inline-block w-3 mr-1">{{ svg('download') }}</span> {{ tooltip }}
+    </a>
   {% endif %}
 {% endmacro %}
