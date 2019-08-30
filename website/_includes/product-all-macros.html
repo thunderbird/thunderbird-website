@@ -68,7 +68,7 @@
     </h4>
     <aside class="p-1 pl-2 pr-2">
       {% for p_name, p_label in platforms %}
-        {{ build_link(build, p_name, _('%(platform)s')|format(platform=p_label|replace('\n', ' '))) }}
+        {{ build_link(build, p_name, _('Download for %(platform)s in %(locale)s')|format(platform=p_label|replace('\n', ' '), locale=build.name_en), _('%(platform)s')|format(platform=p_label|replace('\n', ' '))) }}
       {% endfor %}
     </aside>
   </aside>
@@ -79,7 +79,7 @@
   platform: Value in build.platforms to use. One of 'win', 'win64', 'osx', 'linux' and 'linux64'.
   tooltip: Text to display as tooltip for download link.
 #}
-{% macro build_link(build, platform, tooltip) %}
+{% macro build_link(build, platform, tooltip, text) %}
   {% if build.platforms[platform] %}
     <a href="{{ build.platforms[platform].download_url }}" title="{{ tooltip }}"
       class="btn-download-inline {% if platform == 'winsha1' %} hidden{% endif %}"
@@ -88,7 +88,7 @@
       {% if platform == 'android' %} data-download-os="Android"
       {% elif platform == 'ios' %} data-download-os="iOS"
       {% else %} data-download-os="Desktop"{% endif %}>
-        <span class="inline-block w-3 mr-1">{{ svg('download') }}</span> {{ tooltip }}
+        <span class="inline-block w-3 mr-1">{{ svg('download') }}</span> {{ text }}
     </a>
   {% endif %}
 {% endmacro %}

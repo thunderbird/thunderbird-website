@@ -7,24 +7,24 @@
 {% block page_title_prefix %}{% endblock %}
 {% block page_title %}{{ _('Thunderbird — {version} System Requirements')|f(version=version) }}{% endblock %}
 
-{% block body_id %}notes{% endblock %}
-{% block body_class %}thunderbird-notes sky{% endblock %}
-
-{% block page_css %}
-  <link href="/media/css/releasenotes.css" rel="stylesheet" type="text/css" />
+{% block header_content %}
+<section class="text-left text-white flex flex-col items-start w-full max-w-6xl mx-auto pl-8 pr-8">
+  <h1 class="font-hero font-thin mt-10 mb-16">
+    {{ _('System Requirements - {version}')|f(version=version) }}
+  </h1>
+</section>
 {% endblock %}
 
 {% block content %}
-  <header id="main-feature">
-    <h1>{{ _('Thunderbird {version} System Requirements')|f(version=version) }}</h1>
-  </header>
+  <section class="mt-10 flex justify-between items-center pl-20 pr-20">
+    <aside class="flex flex-col w-full ml-16 mr-16 font-lg tracking-wider leading-loose -mb-20 markup-page">
+      {{ release.system_requirements|markdown|safe }}
+    </aside>
+  </section>
 
-  <div id="main-content">
-    <article class="main-column">
-        {{ release.system_requirements|markdown|safe }}
-    </article>
-  </div>
-  {% block sidebar %}{% endblock %}
+  <section class="pt-20 pb-20 flex bg-calendar">
+    &nbsp;
+  </section>
+  {% include '_includes/site-prefooter.html' %}
+
 {% endblock %}
-
-{% block js %}{% endblock  %}
