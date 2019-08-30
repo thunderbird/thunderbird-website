@@ -57,6 +57,15 @@ button {
   &.btn-secondary {
     &:extend(.text-blue, .border-transparent, .bg-transparent, .normal-case);
   }
+
+  &.btn-release {
+    &:extend(.p-2);
+
+    &:hover,
+    &:focus {
+      &:extend(.text-white, .bg-blue);
+    }
+  }
 }
 
 .btn-block-white {
