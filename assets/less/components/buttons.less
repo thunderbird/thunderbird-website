@@ -8,23 +8,7 @@ button {
 }
 
 .btn-donate {
-  &:extend(
-    .ml-6,
-    .mr-6,
-    .text-white,
-    .font-base,
-    .font-semibold,
-    .no-underline,
-    .uppercase,
-    .block,
-    .pt-2,
-    .pb-2,
-    .pl-3,
-    .pr-3,
-    .bg-donate-button,
-    .rounded-xs,
-    .shadow
-  );
+  &:extend(.ml-6, .mr-6, .text-white, .font-base, .font-semibold, .no-underline, .uppercase, .block, .pt-2, .pb-2, .pl-3, .pr-3, .bg-donate-button, .rounded-xs, .shadow);
 
   &:hover,
   &:focus {
@@ -44,7 +28,7 @@ button {
 }
 
 .btn-download-inline {
-  &:extend(.ml-1, .mr-2, .text-green-light, .font-base, .font-semibold, .no-underline, .uppercase, .inline-block, .p-2, .bg-white, .rounded-sm, .border-green-light, .border, .border-solid);
+  &:extend(.m-1, .text-green-light, .font-base, .font-semibold, .no-underline, .uppercase, .inline-block, .p-2, .bg-white, .rounded-sm, .border-green-light, .border, .border-solid);
 
   &:hover,
   &:focus {
@@ -54,9 +38,7 @@ button {
 }
 
 .btn-body {
-  &:extend(.relative, .bg-white, .text-green, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-5, .pr-9, .border-green-light, .rounded-sm);
-  border-style: solid;
-  border-width: 1px;
+  &:extend(.relative, .bg-white, .text-green, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-5, .pr-9, .border-green-light, .rounded-sm, .border, .border-solid);
 
   span {
     &:extend(.absolute, .flex, .items-center, .w-2, .pin-r, .pin-t, .pin-b, .pr-4);
@@ -88,9 +70,7 @@ button {
 }
 
 .btn-inline {
-  &:extend(.rounded-sm, .border-none, .bg-grey-light, .text-black, .p-1, .pl-2, .pr-2, .ml-2);
-  -moz-appearance: none;
-  appearance: none;
+  &:extend(.rounded-sm, .border-none, .bg-grey-light, .text-black, .p-1, .pl-2, .pr-2, .ml-2, .appearance-none);
 
   &:hover,
   &:focus {
