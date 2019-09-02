@@ -37,8 +37,8 @@
 {% block content %}
   <section  class="pt-20 flex justify-center items-center pl-20 pr-20">
     <aside class="flex flex-col w-full ml-16 mr-16">
-      <p class="font-lg tracking-wider leading-loose mb-6">
-        {{ _('Check out "What’s New" and "Known Issues" for this version of Thunderbird below. As always, you’re encouraged to <a href="%(feedback)s" class="inline-link text-blue" target="_blank">tell us what you think</a>, or <a href="%(bugzilla)s" class="inline-link text-blue" target="_blank">file a bug in Bugzilla</a>')|format(feedback='https://support.mozilla.org/questions/new/thunderbird', bugzilla='https://bugzilla.mozilla.org/') }}
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('Check out "What’s New" and "Known Issues" for this version of Thunderbird below. As always, you’re encouraged to <a href="%(feedback)s" target="_blank">tell us what you think</a>, or <a href="%(bugzilla)s" target="_blank">file a bug in Bugzilla</a>')|format(feedback='https://support.mozilla.org/questions/new/thunderbird', bugzilla='https://bugzilla.mozilla.org/') }}
       </p>
       <aside class="font-lg tracking-wider leading-loose mb-6 markup-page">
         {{ release.text|markdown|safe }}

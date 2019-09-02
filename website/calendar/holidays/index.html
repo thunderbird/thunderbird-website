@@ -25,11 +25,11 @@
           </small>
         </aside>
       </h3>
-      <p class="font-lg tracking-wider leading-loose mb-6">
-        {{ _('We&rsquo;ve got some holiday calendar files available for download. You can either download and then import them into Sunbird or Lightning or you can just subscribe to these calendars by copying their URL and then adding them as new remote calendar files. More information on installing a holiday calendar can be found in the <a href="%s" class="inline-link text-blue" target="_blank">Adding a holiday calendar article</a>.')|format('https://support.mozilla.org/kb/adding-a-holiday-calendar') }}
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('We&rsquo;ve got some holiday calendar files available for download. You can either download and then import them into Sunbird or Lightning or you can just subscribe to these calendars by copying their URL and then adding them as new remote calendar files. More information on installing a holiday calendar can be found in the <a href="%s"target="_blank">Adding a holiday calendar article</a>.')|format('https://support.mozilla.org/kb/adding-a-holiday-calendar') }}
       </p>
-      <p class="font-lg tracking-wider leading-loose mb-10 mt-0">
-        {{ _('You can also find calendars to subscribe to at <a href="%s" class="inline-link text-blue" target="_blank">iCalShare.com</a>.')|format('http://icalshare.com') }}
+      <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
+        {{ _('You can also find calendars to subscribe to at <a href="%s" target="_blank">iCalShare.com</a>.')|format('http://icalshare.com') }}
       </p>
       <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
         <a href="https://addons.thunderbird.net/addon/lightning/" class="btn-join self-start" target="_blank">
@@ -98,8 +98,8 @@
           <li>
             {{ _('Right-click on this calendar and choose "Export Calendar". Please use the iCalendar (ics) format.') }}
           </li>
-          <li>
-            {{ _('Open a bug in <a href="%s" class="inline-link text-blue" target="_blank">Bugzilla</a>.')|format('http://bugzilla.mozilla.org/enter_bug.cgi?product=Calendar&component=Website') }}
+          <li class="p-links-blue">
+            {{ _('Open a bug in <a href="%s" target="_blank">Bugzilla</a>.')|format('http://bugzilla.mozilla.org/enter_bug.cgi?product=Calendar&component=Website') }}
           </li>
           <li>{{ _('Add your holiday file as an attachment in the new bug.') }}</li>
         </ol>

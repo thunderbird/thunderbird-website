@@ -9,8 +9,8 @@
 {% block header_content %}
   <section class="text-left text-white flex flex-col items-start w-full max-w-6xl mx-auto pl-8 pr-8">
     <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-16 mt-0">
-      {{ _('This article describes some of the major changes visible to users in Thunderbird version 68.0. Full details of all the changes can be found in the <a href="%(release)s" class="inline-link">Thunderbird 68 release notes</a>.')|format(release='https://www.thunderbird.net/thunderbird/68.0/releasenotes/') }}
+    <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-16 mt-0 p-links">
+      {{ _('This article describes some of the major changes visible to users in Thunderbird version 68.0. Full details of all the changes can be found in the <a href="%(release)s">Thunderbird 68 release notes</a>.')|format(release='https://www.thunderbird.net/thunderbird/68.0/releasenotes/') }}
       </p>
   </section>
 {% endblock %}
@@ -45,8 +45,8 @@
       <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
         {{ _('Filelink attachments that have already been uploaded can now be linked to again instead of having to re-upload them. Also, an account is no longer required to use the default Filelink provider - <strong>WeTransfer</strong>.') }}
       </p>
-      <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
-        {{ _('Other Filelink providers like Box and Dropbox are not included by default, but can be added by grabbing the <a href="%(dropbox)s" class="inline-link text-blue" target="_blank">Dropbox</a> and <a href="%(box)s" class="inline-link text-blue" target="_blank">Box</a> add-ons.')|format(dropbox='https://addons.thunderbird.net/thunderbird/addon/filelink-provider-for-dropbox/',box='https://addons.thunderbird.net/thunderbird/addon/filelink-provider-for-box/') }}
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1 p-links-blue">
+        {{ _('Other Filelink providers like Box and Dropbox are not included by default, but can be added by grabbing the <a href="%(dropbox)s" target="_blank">Dropbox</a> and <a href="%(box)s" target="_blank">Box</a> add-ons.')|format(dropbox='https://addons.thunderbird.net/thunderbird/addon/filelink-provider-for-dropbox/',box='https://addons.thunderbird.net/thunderbird/addon/filelink-provider-for-box/') }}
       </p>
     </aside>
 
@@ -74,8 +74,8 @@
       <p class="font-lg tracking-wider leading-loose mb-6">
         {{ _('There are many other smaller changes that make Thunderbird 68 feel polished and powerful including: a new App Menu UI, an updated To/CC/BCC selector in compose, improved attachment management, full color support across the app, filters can now be set to run periodically, and feed articles now show external attachments as links.') }}
       </p>
-      <p class="font-lg tracking-wider leading-loose mb-10">
-        {{ _('There are many other updates in this release, you can see a list of all of them in the <a href="%(release)s" class="inline-link text-blue">Thunderbird 68 release notes</a>.')|format(release='https://www.thunderbird.net/thunderbird/68.0/releasenotes/') }}
+      <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
+        {{ _('There are many other updates in this release, you can see a list of all of them in the <a href="%(release)s">Thunderbird 68 release notes</a>.')|format(release='https://www.thunderbird.net/thunderbird/68.0/releasenotes/') }}
       </p>
     </aside>
   </section>
