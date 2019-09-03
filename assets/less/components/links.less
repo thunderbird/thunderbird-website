@@ -9,6 +9,7 @@ a {
 
 .nav-link {
   &:extend(.ml-6, .mr-6, .text-white, .no-underline, .relative, .pt-2, .pb-2);
+  white-space: nowrap;
 
   &:after {
     &:extend(.absolute, .block, .pin-l, .pin-r, .pin-b, .bg-white, .opacity-0);
@@ -25,6 +26,10 @@ a {
       .transform(translateY(0));
     }
   }
+}
+
+.nav-footer .nav-link {
+  &:extend(.ml-3, .mr-3, .text-white, .no-underline, .relative, .pt-1, .pb-1);
 }
 
 .small-link {
