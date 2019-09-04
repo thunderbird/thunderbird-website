@@ -4,23 +4,37 @@
 
 {% extends "_includes/base-resp.html" %}
 
-{% block page_title %}{{ _('Thunderbird Extended Release Support for Your Organization, Business, Enterprise - Overview') }}{% endblock %}
+{% block page_title %}{{ _('Extended Support Release') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird Extended Release Support for Your Organization, Business, or Enterprise') }}{% endblock %}
 
-{% block body_id %}thunderbird-organizations{% endblock %}
-
-{% block page_css %}
-    <link href="/media/css/thunderbird-organizations.css" rel="stylesheet" type="text/css" />
+{% block header_content %}
+  <section class="text-center text-white flex flex-col items-center mb-12">
+    <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-8">{{ self.page_desc() }}</p>
+  </section>
 {% endblock %}
 
 {% block content %}
-  <header id="main-feature" class="stacked">
-    <h1>{{ _('Mozilla Thunderbird <span class="large">Extended Support Release</span>') }}</h1>
-    <p class="large">{{ _('A community-led project that allows organizations to benefit from the speed, flexibility and security of Thunderbird while getting the support they need.') }}</p>
-  </header>
+  <section class="mt-20 pb-20 pt-10 flex justify-between items-center pl-20 pr-20 bg-calendar">
+    <aside class="flex flex-col w-full ml-16 mr-16">
+      <h3 class="header-section">
+        <span>{{ svg('envelope') }}</span> {{ _('Thunderbird ESR')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-6">
+        {{ _('A community-led project that allows organizations to benefit from the speed, flexibility and security of Thunderbird while getting the support they need.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('The Thunderbird Extended Support Releases (ESR) are <a href="{latest}">mainstream releases</a>, operating similarly to <a href="{firefox_esr}" target="_blank">Mozilla Firefox ESR</a>. They are stable for approximately one year before receiving feature updates.')|f(latest=url('thunderbird.latest.all'), firefox_esr=url('firefox.organizations.faq')) }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
+        {{ _('To get help or ask questions about Thunderbird visit <a href="{0}" target="_blank">Thunderbird support</a>.')|f(url('support')) }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
+        {{ _('For information about deploying and configuring Thunderbird in business and enterprise environments, you can join the <a href="{0}" target="_blank">Enterprise mailing list</a>.')|f(url('thunderbird.enterprise')) }}
+      </p>
+    </aside>
+  </section>
 
-  <main role="main" id="main-content">
-    <p>{{ _('The Thunderbird Extended Support Releases (ESR) are <a href="{latest}">mainstream releases</a>, operating similarly to <a href="{firefox_esr}">Mozilla Firefox ESR</a>. They are stable for approximately one year before receiving feature updates.')|f(latest=url('thunderbird.latest.all'), firefox_esr=url('firefox.organizations.faq')) }}</p>
-    <p>{{ _('To get help or ask questions about Thunderbird visit <a href="{0}">Thunderbird support</a>.')|f(url('support')) }}</p>
-    <p>{{ _('For information about deploying and configuring Thunderbird in business and enterprise environments, you can join the <a href="{0}">Enterprise mailing list</a>.')|f(url('thunderbird.enterprise')) }}</p>
-  </main>
+  {% include '_includes/site-prefooter.html' %}
+
 {% endblock %}

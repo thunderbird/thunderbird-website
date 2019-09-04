@@ -1,0 +1,31 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+.markup-page {
+  h2 {
+    &:extend(.header-section);
+  }
+
+  h3 {
+    &:extend(.subheader-section);
+  }
+
+  ul {
+    &:extend(.mt-0, .mb-8);
+  }
+
+  hr {
+    &:extend(.mb-10, .mt-2, .border-0, .border-t, .border-grey-light, .border-solid, .w-full);
+  }
+
+  a {
+    &:extend(.inline-link, .text-blue);
+  }
+}
+
+.no-padding {
+  p {
+    &:extend(.p-0, .m-0);
+  }
+}

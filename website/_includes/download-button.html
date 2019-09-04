@@ -31,11 +31,11 @@
   <div class="unrecognized-download">
     {{ alt_buttons(builds) }}
   </div>
-  <p class="unsupported-download">
-    {{ _("Your system doesn't meet the <a href=\"%(url)s\" class=\"inline-link\">requirements</a> to run Thunderbird.")|format(url=thunderbird_url('system-requirements', channel)) }}
+  <p class="unsupported-download p-links">
+    {{ _("Your system doesn't meet the <a href=\"%(url)s\">requirements</a> to run Thunderbird.")|format(url=thunderbird_url('system-requirements', channel)) }}
   </p>
-  <p class="linux-arm-download mb-8">
-    {{ _('Please follow <a href="%(url)s" class=\"inline-link\">these instructions</a> to install Thunderbird.')|format(url='https://support.mozilla.org/kb/installing-thunderbird-linux') }}
+  <p class="linux-arm-download mb-8 p-links">
+    {{ _('Please follow <a href="%(url)s">these instructions</a> to install Thunderbird.')|format(url='https://support.mozilla.org/kb/installing-thunderbird-linux') }}
   </p>
   <ul class="download-list list-none p-0 flex flex-wrap max-w-lg mb-0 {{ flex_class }}">
     {% for plat in builds %}

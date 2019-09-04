@@ -2,13 +2,12 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 {% set channel = 'beta' %}
-{% from "_includes/product-all-macros.html" import build_search_box, build_table, build_row, build_link with context %}
+{% from "_includes/product-all-macros.html" import build_table with context %}
 {% extends "_includes/base-resp.html" %}
 
 {% block extra_meta %}<meta name="robots" content="noindex">{% endblock %}
 
 {% block page_title %}{{ _('Download Beta in your language') }}{% endblock %}
-{% block body_id %}thunderbird-all{% endblock %}
 
 {% block page_desc %}
   {% if channel != 'release' %}
@@ -22,30 +21,67 @@
   sky {{ platform }} {{ channel }}
 {% endblock %}
 
-{% block page_css %}
-  <link href="/media/css/thunderbird-all.css" rel="stylesheet" type="text/css" />
+{% block header_content %}
+  <section class="text-center text-white flex flex-col items-center w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
+      {{ self.page_desc() }}
+    </p>
+  </section>
+  {% if channel != 'alpha' %}{# Earlybird release notes are not available yet #}
+    <nav class="text-left text-white flex justify-center mx-auto bg-black-25 rounded mb-10">
+      <ul class="list-none p-0 flex flex-wrap justify-around flex-1 m-0">
+        <li class="ml-2 mr-2">
+          <a href="{{ thunderbird_url('system-requirements', channel) }}" class="btn-link">{{ _('Check the system requirements') }}</a>
+        </li>
+        <li class="ml-2 mr-2">
+          <a href="{{ thunderbird_url('releasenotes', channel) }}" class="btn-link">{{ _('Release notes') }}</a>
+        </li>
+      </ul>
+    </nav>
+  {% endif %}
 {% endblock %}
 
 {% block content %}
-  <header id="main-feature">
-    <h1>{{ self.page_title()  }}</h1>
-    <h2>{{ self.page_desc() }}</h2>
-    {% if channel != 'alpha' %}{# Earlybird release notes are not available yet #}
-    <p><a class="sysreq" href="{{ thunderbird_url('system-requirements', channel) }}">{{ _('Check the system requirements') }}</a><br>
-    <a class="sysreq" href="{{ thunderbird_url('releasenotes', channel) }}">{{ _('Release notes') }}</a></p>
-    {% endif %}
-  </header>
+  <section class="pt-10 flex flex-wrap max-w-6xl mx-auto">
+    <aside class="flex flex-col w-full pr-8 pl-8 mb-6">
+      <h3 class="header-section">
+        <span>{{ svg('dictionaries') }}</span>
+        <aside class="flex flex-col">
+          {{ _('Fully localized beta versions')}}
+          <small class="font-normal font-md tracking-normal normal-case">
+            {{ _('Choose your Language and Operating System') }}
+          </small>
+        </aside>
+      </h3>
+    </aside>
+  </section>
 
-  <main id="main-content" role="main" class="pager pager-with-tabs pager-no-history">
-    <section class="pager-content">
-      <div class="pager-page" id="builds">
-        <div class="localized">
-          {{ build_table(platforms, full_builds_beta, _('Fully localized versions')) }}
-        </div>
-      </div> {#-- /builds --#}
+  <section class="pt-10 pb-10 w-full bg-calendar">
+    <section class="flex justify-between items-center w-full max-w-6xl mx-auto mb-10">
+      <ul class="list-none p-0 flex flex-wrap justify-center flex-1 m-0 bg-grey-light rounded mr-8 ml-8">
+        {% set letter = namespace(first='') %}
+        {% for build in full_builds_beta -%}
+        {% if letter.first != build.name_en[:1] %}
+        {% set letter.first = build.name_en[:1] %}
+        <li>
+          <a href="#{{ letter.first }}" class="btn-link text-blue-dark">
+            {{ letter.first }}
+          </a>
+        </li>
+        {% endif %}
+        {% endfor -%}
+      </ul>
     </section>
-  </main>
-{% endblock %}
+  </section>
 
-{% block js %}
+  <section class="pb-10 w-full bg-grey-lighter">
+    <section class="flex max-w-6xl mx-auto pl-8 pr-8">
+      <aside class="flex flex-col w-full pr-8 pl-8">
+        {{ build_table(platforms, full_builds_beta) }}
+      </aside>
+    </section>
+  </section>
+
+  {% include '_includes/site-prefooter.html' %}
 {% endblock %}

@@ -79,6 +79,11 @@ each(@background-size, #(@k, @v) {
   background-image: url('../img/thunderbird/backgrounds/bg-body.png');
 }
 
+.bg-logo {
+  &:extend(.bg-right-bottom, .bg-no-repeat, .bg-contain);
+  background-image: url('../img/thunderbird/backgrounds/bg-logo.png');
+}
+
 .bg-calendar {
   &:extend(.bg-top, .bg-no-repeat, .bg-cover);
   background-image: url('../img/thunderbird/backgrounds/bg-calendar.png');
