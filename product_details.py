@@ -22,6 +22,7 @@ class ThunderbirdDetails():
     platform_labels = OrderedDict([
         ('winsha1', 'Windows (XP/Vista)'),
         ('win', 'Windows'),
+        ('win64', 'Windows 64-bit'),
         ('osx', 'macOS'),
         ('linux', 'Linux'),
         ('linux64', 'Linux 64-bit'),
@@ -65,6 +66,8 @@ class ThunderbirdDetails():
             # Append 64-bit builds
             if 'Linux' in _builds:
                 _builds['Linux 64-bit'] = _builds['Linux']
+            if 'Windows' in _builds:
+                _builds['Windows 64-bit'] = _builds['Windows']
             return version, _builds
 
     def get_filtered_full_builds(self, channel, version):

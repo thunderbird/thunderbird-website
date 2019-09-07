@@ -61,7 +61,7 @@
       </li>
     {% endfor %}
   </ul>
-  <p class="download-other download-other-desktop os_linux os_linux64 os_osx os_win os_winsha1 font-sm mt-0">
+  <p class="download-other download-other-desktop os_linux os_linux64 os_osx os_win os_win64 os_winsha1 font-sm mt-0">
     <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if channel == 'beta' or section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a> &bull;
     {% if channel != 'alpha' %}{# Earlybird release notes are not available yet #}
       <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if channel == 'beta' or section == 'body' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
