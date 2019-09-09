@@ -21,11 +21,12 @@ class ThunderbirdDetails():
     """ Loads Thunderbird versioning information from product details JSON files."""
     platform_labels = OrderedDict([
         ('winsha1', 'Windows (XP/Vista)'),
-        ('win', 'Windows'),
+        ('win', 'Windows 32-bit'),
         ('win64', 'Windows 64-bit'),
         ('osx', 'macOS'),
-        ('linux', 'Linux'),
+        ('linux', 'Linux 32-bit'),
         ('linux64', 'Linux 64-bit'),
+        ('msi', 'Windows MSI 64-bit')
     ])
 
     languages = load_json('languages.json')
@@ -103,6 +104,11 @@ class ThunderbirdDetails():
         _version = version
         _locale = 'ja-JP-mac' if platform == 'osx' and locale == 'ja' else locale
         _platform = 'win' if platform == 'winsha1' else platform
+        product_url = 'thunderbird-%s-SSL'
+
+        if platform == 'msi':
+            _platform = 'win64'
+            product_url = 'thunderbird-%s-msi-SSL'
 
         # Check if direct download link has been requested
         # (bypassing the transition page)
@@ -114,7 +120,7 @@ class ThunderbirdDetails():
         # build a direct download link
         return '?'.join([settings.BOUNCER_URL,
                          urlencode([
-                             ('product', 'thunderbird-%s-SSL' % _version),
+                             ('product', product_url % _version),
                              ('os', _platform),
                              # Order matters, lang must be last for bouncer.
                              ('lang', _locale),
