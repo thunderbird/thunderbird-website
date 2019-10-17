@@ -30,7 +30,7 @@
         {{ _('To get help or ask questions about Thunderbird visit <a href="{0}" target="_blank">Thunderbird support</a>.')|f(url('support')) }}
       </p>
       <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
-        {{ _('For information about deploying and configuring Thunderbird in business and enterprise environments, you can join the <a href="{0}" target="_blank">Enterprise mailing list</a>.')|f(url('thunderbird.enterprise')) }}
+        {{ _('You can find the Thunderbird MSI Installer on the <a href="{syslang}">Systems & Languages page</a>. For more information about deploying and configuring Thunderbird in business and enterprise environments, you can also join the <a href="{maillist}" target="_blank">Enterprise mailing list</a>.')|f(maillist=url('thunderbird.enterprise'), syslang=url('thunderbird.latest.all')) }}
       </p>
     </aside>
   </section>
