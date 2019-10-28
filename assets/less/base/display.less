@@ -7,3 +7,13 @@ each(@display, #(@k, @v) {
     display: @k;
   }
 });
+
+each(@breakpoints, #(@k, @v) {
+  @media (min-width: @k) {
+    each(@display, #(@i, @r) {
+      .@{v}\:@{r} {
+        display: @i;
+      }
+    });
+  }
+});

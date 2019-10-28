@@ -3,29 +3,6 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 // Widths
-each(@breakpoints, #(@k, @v) {
-  @media (min-width: @k) {
-    each(@widths, #(@i, @r) {
-      .@{v}\:@{r} {
-        width: @i;
-      }
-    });
-
-    each(@widths-percentage, #(@i, @r) {
-      @num: replace(@r, "--", "\/");
-      .@{v}\:@{num} {
-        width: @i;
-      }
-    });
-
-    each(@max-widths, #(@i, @r) {
-      .@{v}\:@{r} {
-        max-width: @i;
-      }
-    });
-  }
-});
-
 each(@widths, #(@k, @v) {
   .@{v} {
     width: @k;
@@ -54,5 +31,28 @@ each(@heights, #(@k, @v) {
 each(@min-heights, #(@k, @v) {
   .@{v} {
     min-height: @k;
+  }
+});
+
+each(@breakpoints, #(@k, @v) {
+  @media (min-width: @k) {
+    each(@widths, #(@i, @r) {
+      .@{v}\:@{r} {
+        width: @i;
+      }
+    });
+
+    each(@widths-percentage, #(@i, @r) {
+      @num: replace(@r, "--", "\/");
+      .@{v}\:@{num} {
+        width: @i;
+      }
+    });
+
+    each(@max-widths, #(@i, @r) {
+      .@{v}\:@{r} {
+        max-width: @i;
+      }
+    });
   }
 });
