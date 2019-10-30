@@ -80,5 +80,11 @@ each(@breakpoints, #(@k, @v) {
       }
     });
 
+    each(@align-items, #(@i, @r) {
+      .@{v}\:@{r} {
+        align-items: @i;
+      }
+    });
+
   }
 });

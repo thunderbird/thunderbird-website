@@ -1,13 +1,13 @@
-<footer id="colophon" class="bg-black-light text-white flex flex-col pt-10 pb-8">
-  <section class="flex justify-between items-center self-center w-full max-w-6xl pl-4 pr-4">
-    <aside class="flex flex-col">
+<footer id="colophon" class="bg-black-light text-white flex flex-col pt-10 pb-8 pl-4 pr-4">
+  <section class="flex flex-col lg:flex-row justify-between items-center self-center w-full max-w-6xl">
+    <aside class="flex flex-col items-center lg:items-start">
       <a href="{{ url('thunderbird.index') }}" class="block w-40" title="{{ _('Thunderbird') }}"
         alt="{{ _('Thunderbird Vector Wordmark') }}">
         {{ svg('logo-wordmark-white') }}
       </a>
 
       <nav id="footer-main" role="navigation" class="mt-2">
-        <ul class="list-none p-0 flex items-center text-white nav-footer">
+        <ul class="list-none p-0 flex flex-wrap items-center text-white nav-footer justify-around">
           <li>
             <a href="{{ url('thunderbird.organizations') }}" class="nav-link" target="_blank">{{_('For Organizations')}}</a>
           </li>

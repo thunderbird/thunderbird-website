@@ -23,8 +23,8 @@
 {% endblock %}
 
 {% block content %}
-  <section class="mt-20 mb-20 flex max-w-6xl mx-auto justify-between pl-8 pr-8">
-    <aside class="flex flex-col flex-1 max-w-sm">
+  <section class="mt-20 mb-20 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <aside class="flex flex-col flex-1 mb-20 lg:mb-0 lg:max-w-sm">
       <h3 class="header-section">
         <span>{{ svg('customize') }}</span>{{ _('Tailored for all your needs')}}
       </h3>
@@ -36,7 +36,7 @@
       </a>
     </aside>
 
-    <aside class="flex flex-col flex-1 max-w-sm ml-16 mr-16">
+    <aside class="flex flex-col flex-1 mb-20 lg:mb-0 lg:max-w-sm lg:ml-16 lg:mr-16">
       <h3 class="header-section">
         <span>{{ svg('lock') }}</span>{{ _('Secure &amp; Private')}}
       </h3>
@@ -48,7 +48,7 @@
       </a>
     </aside>
 
-    <aside class="flex flex-col flex-1 max-w-sm">
+    <aside class="flex flex-col flex-1 mb-20 lg:mb-0 lg:max-w-sm">
       <h3 class="header-section">
         <span>{{ svg('puzzle') }}</span>{{ _('Fully Customizable')}}
       </h3>
@@ -61,14 +61,14 @@
     </aside>
   </section>
 
-  <section class="pt-20 pb-20 flex flex-col items-center bg-body">
-    <h3 class="header-section">{{ _('Stay in the loop')}}</h3>
-    <p class="font-lg tracking-wider leading-loose mb-16 mt-0 max-w-xl text-center">
+  <section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex flex-col items-center bg-body">
+    <h3 class="header-section pr-4 pl-4">{{ _('Stay in the loop')}}</h3>
+    <p class="font-lg tracking-wider leading-loose mb-16 mt-0 max-w-xl text-center pr-4 pl-4">
       {{ _('Keep yourself up to date with recent announcements and releases by following the official Thunderbird Blog!') }}
     </p>
 
-    <section class="flex w-full max-w-6xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
-      <article class="flex flex-col p-4 flex-1 max-w-sm bg-white rounded shadow-lg">
+    <section class="flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
+      <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg">
         <h4 class="mt-0 mb-4 uppercase text-blue font-md">
           What’s New in Thunderbird 68
         </h4>
@@ -82,7 +82,7 @@
         </footer>
       </article>
 
-      <article class="flex flex-col p-4 flex-1 max-w-sm bg-white rounded shadow-lg ml-16 mr-16">
+      <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg lg:ml-16 lg:mr-16">
         <h4 class="mt-0 mb-4 uppercase text-blue font-md">
           All Thunderbird bugs have been fixed!
         </h4>
@@ -95,7 +95,7 @@
         </footer>
       </article>
 
-      <article class="flex flex-col p-4 flex-1 max-w-sm bg-white rounded shadow-lg">
+      <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg">
         <h4 class="mt-0 mb-4 uppercase text-blue font-md">
           FOSDEM 2019 and DeltaChat
         </h4>
@@ -114,18 +114,18 @@
     </a>
   </section>
 
-  <section class="pt-20 pb-20 flex max-w-6xl mx-auto justify-between pl-8 pr-8 mb-10">
-    <aside class="flex flex-col flex-1 max-w-lg">
+  <section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-10">
+    <aside class="flex flex-col flex-1 lg:max-w-lg mb-20 lg:mb-0">
       <h3 class="header-section">{{ _('Thunderbird is funded by users like you')}}</h3>
       <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
         {{ _('Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.') }}
       </p>
-      <a href="{{ donate_url('home_page_body') }}" class="btn-donate self-start ml-0 mr-0" target="_blank">
+      <a href="{{ donate_url('home_page_body') }}" class="btn-donate self-start ml-0 mr-0 font-lg lg:font-base" target="_blank">
         <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
       </a>
     </aside>
 
-    <aside class="flex flex-col flex-1 max-w-lg">
+    <aside class="flex flex-col flex-1 lg:max-w-lg">
       <h3 class="header-section">{{ _('Join our Newsletter')}}</h3>
       <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
         {{ _('Keep up with the latest and greatest updates on news, features, events, and previews, and get a sneak peek on the upcoming releases.') }}
@@ -147,36 +147,38 @@
     </aside>
   </section>
 
-  <section class="pt-20 pb-10 flex justify-between bg-calendar pr-20">
-    <aside class="flex flex-1 -ml-20">
-      {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Lightning Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
-    </aside>
+  <section class="pt-20 pb-10 flex bg-calendar lg:pr-20">
+    <section class="flex justify-between mx-auto">
+      <aside class="hidden lg:flex flex-1 -ml-20">
+        {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Lightning Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
+      </aside>
 
-    <aside class="flex flex-col flex-1 max-w-md ml-16 mr-16 pt-12">
-      <h3 class="header-section">
-        <span>{{ svg('calendar') }}</span>
-        <aside class="flex flex-col">
-          {{ _('Lightning Calendar')}}
-          <small class="font-normal font-md tracking-normal normal-case">
-            {{ _('Organize your life — it’s about time!') }}
-          </small>
-        </aside>
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-6">
-        {{ _('Organize your schedule and life’s important events in a calendar that’s fully integrated with your Thunderbird email.') }}
-      </p>
-      <p class="font-lg tracking-wider leading-loose mb-10">
-        {{ _('Manage multiple calendars, create your daily to do list, invite friends to events, and subscribe to public calendars.') }}
-      </p>
-      <p class="flex justify-start">
-        <a href="{{ url('calendar') }}" class="btn-body">{{_('Explore Features')}}
-          <span>{{ svg('chevron-right') }}</span>
-        </a>
-        <a href="https://addons.thunderbird.net" class="btn-body btn-secondary ml-4" target="_blank">{{_('Explore More Add-ons')}}
-          <span>{{ svg('chevron-right') }}</span>
-        </a>
-      </p>
-    </aside>
+      <aside class="flex flex-col flex-1 lg:max-w-md mr-8 ml-8 lg:ml-16 lg:mr-16 lg:pt-12">
+        <h3 class="header-section">
+          <span>{{ svg('calendar') }}</span>
+          <aside class="flex flex-col">
+            {{ _('Lightning Calendar')}}
+            <small class="font-normal font-md tracking-normal normal-case">
+              {{ _('Organize your life — it’s about time!') }}
+            </small>
+          </aside>
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6">
+          {{ _('Organize your schedule and life’s important events in a calendar that’s fully integrated with your Thunderbird email.') }}
+        </p>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Manage multiple calendars, create your daily to do list, invite friends to events, and subscribe to public calendars.') }}
+        </p>
+        <p class="flex justify-start">
+          <a href="{{ url('calendar') }}" class="btn-body">{{_('Explore Features')}}
+            <span>{{ svg('chevron-right') }}</span>
+          </a>
+          <a href="https://addons.thunderbird.net" class="btn-body btn-secondary ml-4" target="_blank">{{_('Explore More Add-ons')}}
+            <span>{{ svg('chevron-right') }}</span>
+          </a>
+        </p>
+      </aside>
+    </section>
   </section>
 
   {% include '_includes/site-prefooter.html' %}
