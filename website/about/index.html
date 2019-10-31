@@ -7,34 +7,36 @@
 {% block page_title %}{{ _('About Us') }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-left text-white flex flex-col items-start w-full max-w-6xl mx-auto pl-8 pr-8">
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
     <h1 class="font-hero font-thin mt-10 mb-16">{{ self.page_title() }}</h1>
   </section>
 {% endblock %}
 
 {% block content %}
-  <section class="pt-20 pb-20 flex justify-between items-center pl-20">
-    <aside class="flex flex-col w-3/5 ml-16 mr-16">
-      <h3 class="header-section">
-        <span>{{ svg('envelope') }}</span>
-        <aside class="flex flex-col">
-          {{ _('What is Thunderbird?')}}
-          <small class="font-normal font-md tracking-normal normal-case">
-            {{ _('Software made to make email easier.') }}
-          </small>
+  <section class="pt-20 pb-20 flex justify-between items-center pr-8 pl-8 overflow-hidden">
+    <section class="flex justify-between mx-auto">
+      <aside class="flex flex-col flex-1 lg:max-w-4xl mr-8 ml-8 lg:ml-16 lg:mr-16 lg:pt-12">
+        <h3 class="header-section">
+          <span>{{ svg('envelope') }}</span>
+          <aside class="flex flex-col">
+            {{ _('What is Thunderbird?')}}
+            <small class="font-normal font-md tracking-normal normal-case">
+              {{ _('Software made to make email easier.') }}
+            </small>
+          </aside>
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6">
+          {{ _('Thunderbird is a free and open source email, newsfeed, chat, and calendaring client, that’s easy to set up and customize. One of the core principles of Thunderbird is the use and promotion of open standards - this focus is a rejection of our world of closed platforms and services that can’t communicate with each other. We want our users to have freedom and choice in how they communicate.') }}
+        </p>
+        <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
+          {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download'), section='body') }}
         </aside>
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-6">
-        {{ _('Thunderbird is a free and open source email, newsfeed, chat, and calendaring client, that’s easy to set up and customize. One of the core principles of Thunderbird is the use and promotion of open standards - this focus is a rejection of our world of closed platforms and services that can’t communicate with each other. We want our users to have freedom and choice in how they communicate.') }}
-      </p>
-      <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
-        {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download'), section='body') }}
       </aside>
-    </aside>
 
-    <aside class="w-2/5">
-      {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Lightning Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
-    </aside>
+      <aside class="hidden lg:flex flex-1 max-w-xl -mr-20">
+        {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Lightning Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
+      </aside>
+    </section>
   </section>
 
   <section class="pt-10 flex max-w-6xl mx-auto justify-between pl-8 pr-8">
@@ -49,12 +51,12 @@
     </h3>
   </section>
 
-  <section class="pt-10 flex max-w-6xl mx-auto mb-10">
-    <aside class="flex flex-col w-1/2 pr-8">
-      <img class="w-full h-auto shadow-lg rounded-sm" src="{{ static('img/thunderbird/team.jpg') }}" alt="Thunderbird Developers Toronto Summit 2014">
+  <section class="pt-10 flex flex-col lg:flex-row w-full max-w-6xl mx-auto mb-10">
+    <aside class="flex flex-col lg:w-1/2 pr-8 pl-8">
+      <img class="w-full max-w-4xl mb-10 lg:mb-0 h-auto shadow-lg rounded-sm" src="{{ static('img/thunderbird/team.jpg') }}" alt="Thunderbird Developers Toronto Summit 2014">
     </aside>
 
-    <aside class="flex flex-col w-1/2 pl-8">
+    <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
       <article class="flex flex-col w-full mb-6">
         <h4 class="subheader-section">{{ _('Our Community') }}</h4>
         <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
