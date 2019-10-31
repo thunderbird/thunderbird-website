@@ -81,7 +81,12 @@ each(@background-size, #(@k, @v) {
 
 .bg-logo {
   &:extend(.bg-right-bottom, .bg-no-repeat, .bg-contain);
-  background-image: url('../img/thunderbird/backgrounds/bg-logo.png');
+  background-image: none;
+  background-position-x: 95%;
+
+  @media (min-width: @lg) {
+    background-image: url('../img/thunderbird/backgrounds/bg-logo.png');
+  }
 }
 
 .bg-calendar {
