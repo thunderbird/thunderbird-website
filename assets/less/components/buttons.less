@@ -38,6 +38,15 @@ button {
   }
 }
 
+.btn-download-link {
+  &:extend(.m-1, .text-black-lightest, .font-base, .font-semibold, .no-underline, .capitalize, .inline-block);
+
+  &:hover,
+  &:focus {
+    &:extend(.text-green-light);
+  }
+}
+
 .btn-body {
   &:extend(.relative, .bg-white, .text-green, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-5, .pr-9, .border-green-light, .rounded-sm, .border, .border-solid);
 
