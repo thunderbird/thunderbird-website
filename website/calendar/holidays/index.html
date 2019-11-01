@@ -7,15 +7,15 @@
 {% block page_title %}{{ _('Holiday Calendars') }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-left text-white flex flex-col items-start w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-hero font-thin mt-10 mb-16">{{ self.page_title() }}</h1>
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-16">{{ self.page_title() }}</h1>
   </section>
 {% endblock %}
 
 {% block content %}
 
-  <section class="mt-10 mb-20 flex justify-between items-center pl-20 pr-20">
-    <aside class="flex flex-col w-full ml-16 mr-16">
+  <section class="mt-10 mb-20 flex justify-center items-center pl-8 pr-8">
+    <aside class="flex flex-col w-full max-w-6xl lg:ml-16 lg:mr-16">
       <h3 class="header-section">
         <span>{{ svg('calendar') }}</span>
         <aside class="flex flex-col">
@@ -43,7 +43,7 @@
     </aside>
   </section>
 
-  <section class="flex justify-between items-center bg-grey-light rounded w-full max-w-6xl mx-auto">
+  <section class="flex justify-between items-center bg-grey-light rounded lg:w-full max-w-6xl mx-auto">
     <ul class="list-none p-0 flex flex-wrap justify-center flex-1 m-0">
       {% for letter in letters -%}
       <li>
@@ -53,12 +53,12 @@
     </ul>
   </section>
 
-  <section class="mb-10 flex flex-col items-start w-full max-w-6xl mx-auto">
+  <section class="mb-10 flex flex-col items-start lg:w-full max-w-6xl mx-auto pr-8 pl-8">
     {% set letter = namespace(first='') %}
     {% for calendar in calendars -%}
       {% if letter.first != calendar.country[:1] %}
         {% set letter.first = calendar.country[:1] %}
-        <h4 id="{{ letter.first }}" class="header-section w-full mb-0 pt-6 pl-3">
+        <h4 id="{{ letter.first }}" class="header-section lg:w-full mb-0 pt-6 pl-3">
           {{ letter.first }}
         </h4>
       {% endif %}

@@ -9,9 +9,9 @@
 {% block page_desc %}{{ _('The page you are looking for doesn’t exist.<br/>If you think this is a bug, you can <a href="%(bug_report_url)s" target="_blank">report an issue here</a>.')|format(bug_report_url=url('thunderbird.site.bug-report')) }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-center text-white flex flex-col items-center w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-20 mt-0 p-links">
+  <section class="text-center text-white flex flex-col items-center xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-20 mt-0 p-links">
       {{ self.page_desc() }}
     </p>
   </section>
