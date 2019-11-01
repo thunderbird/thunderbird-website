@@ -8,9 +8,9 @@
 {% block page_desc %}{{ _('Release notes for each version of Thunderbird.') }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-left text-white flex flex-col items-start w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
       {{ _('Thunderbird release notes are specific to each version of the application. Select your version from the list below to see the release notes for it.') }}
     </p>
   </section>
@@ -19,7 +19,7 @@
 {% block content %}
 
   <section class="mt-10 pt-10 pb-10 w-full bg-calendar">
-    <section class="flex justify-between items-center w-full max-w-6xl mx-auto mb-10">
+    <section class="flex justify-between items-center max-w-6xl mx-auto mb-10 pr-8 pl-8">
       <h3 class="subheader-section">{{ _('Release notes for each version of Thunderbird.') }}</h3>
     </section>
   </section>
@@ -28,8 +28,8 @@
     <section class="flex max-w-6xl mx-auto pl-8 pr-8">
       <aside class="flex flex-col w-full pr-8 pl-8">
         {% for int_version, versions in releases -%}
-          <aside class="flex flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
-            <h4 class="font-2xl font-bold m-0 p-3 w-24">
+          <aside class="flex flex-col lg:flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
+            <h4 class="font-2xl font-bold m-0 p-3 lg:w-24">
               {{ get_link(int_version, versions.major) }}
             </h4>
             {% if versions.minor -%}
@@ -42,8 +42,8 @@
           </aside>
         {% endfor -%}
 
-        <aside class="flex flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
-          <h4 class="font-2xl font-bold m-0 p-3 w-24">
+        <aside class="flex flex-col lg:flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
+          <h4 class="font-2xl font-bold m-0 p-3 lg:w-24">
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.1.html" class="inline-link text-blue-dark font-bold no-underline" target="_blank">0.1</a>
           </h4>
           <aside class="flex-1 p-3">
