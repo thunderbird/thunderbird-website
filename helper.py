@@ -11,9 +11,11 @@ import translate
 
 from babel.core import Locale, UnknownLocaleError
 from babel.dates import format_date
+from datetime import datetime
 from os import path
 from os.path import splitext
 from product_details import thunderbird_desktop
+from time import mktime
 
 babel_format_locale_map = {
     'hsb': 'de',
@@ -161,7 +163,7 @@ def high_res_img(ctx, url, optional_attributes=None):
 
 @jinja2.contextfunction
 def svg(ctx, file_name):
-    file = path.join(settings.MEDIA_URL.strip('/'), 'svg/'+file_name+'.svg')
+    file = path.join(settings.MEDIA_URL.strip('/'), 'svg/' + file_name + '.svg')
     return open(file).read()
 
 
@@ -350,6 +352,20 @@ def l10n_format_date(ctx, date, format='long'):
         return format_date(date, locale=lang, format=format)
     else:
         return ''
+
+
+@jinja2.contextfunction
+def get_blog_data(ctx, entry):
+    data = ctx.get('blog_data')
+    parsed = {}
+
+    parsed['summary'] = jinja2.Markup(data['entries'][entry]['summary_detail']['value'])
+    parsed['title'] = data['entries'][entry]['title']
+    parsed['comments'] = data['entries'][entry]['slash_comments']
+    parsed['date'] = datetime.fromtimestamp(mktime(data['entries'][entry]['published_parsed'])).strftime('%B %-m, %Y')
+    parsed['link'] = data['entries'][entry]['links'][0]['href']
+
+    return parsed
 
 
 def f(s, *args, **kwargs):
