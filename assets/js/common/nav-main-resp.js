@@ -223,20 +223,8 @@
     NavMain.enterSmallMode = function() {
         NavMain.unlinkMainMenuItems();
 
-        $('#nav-main-menu').css('display', 'none').attr('aria-hidden');
-
         $('#outer-wrapper').on('click.mobile-nav', NavMain.handleDocumentClick);
         $('a, input, textarea, button, :focus').on('focus.mobile-nav', NavMain.handleDocumentFocus);
-
-        $('#nav-main-menu, #nav-main-menu .submenu').attr('aria-hidden', 'true');
-
-        // remove submenu click handler and CSS class
-        NavMain.mainMenuLinks
-            .addClass('submenu-item')
-            .unbind('click', NavMain.handleSubmenuClick);
-
-        // add click handler to menu links to hide menu
-        NavMain.linkMenuHideOnClick();
 
         NavMain.smallMode = true;
     };
@@ -244,26 +232,8 @@
     NavMain.leaveSmallMode = function() {
         NavMain.relinkMainMenuLinks();
 
-        $('#nav-main-menu').css('display', '').removeAttr('aria-hidden');
-
         $('#outer-wrapper').off('click.mobile-nav', NavMain.handleDocumentClick);
         $('a, input, textarea, button, :focus').off('focus.mobile-nav', NavMain.handleDocumentFocus);
-
-        NavMain.toggleButton.removeClass('open').attr('aria-expanded', false);
-
-        // reset submenus
-        $('#nav-main-menu > li > .submenu').stop(true).css({
-            'left'         : '',
-            'top'          : '',
-            'display'      : '',
-            'opacity'      : '',
-            'height'       : '',
-            'marginTop'    : '',
-            'marginBottom' : ''
-        }).attr('aria-expanded', 'false');
-
-        // remove click handler from menu links that hide menu
-        NavMain.unlinkMenuHideOnClick();
 
         NavMain.currentSmallSubmenu = null;
         NavMain.smallMode = false;

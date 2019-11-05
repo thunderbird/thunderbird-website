@@ -11,9 +11,9 @@
 {% endblock %}
 
 {% block header_content %}
-  <section class="text-left text-white flex flex-col items-start w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
       {{ self.page_desc() }}
     </p>
   </section>
@@ -46,8 +46,8 @@
 
 {% block content %}
 
-  <section id="opensource" class="pt-20 pb-10 flex justify-center items-center pl-20 pr-20">
-    <aside class="flex flex-col w-full ml-16 mr-16">
+  <section id="opensource" class="pt-20 pb-10 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
+    <aside class="flex flex-col flex-grow">
       <h3 class="header-section">
         <span>{{ svg('heart') }}</span>
         <aside class="flex flex-col">
@@ -63,27 +63,27 @@
     </aside>
   </section>
 
-  <section id="development" class="pt-10 flex justify-center items-center pl-20 pr-20 bg-grey-lighter">
-    <aside class="flex flex-col w-full ml-16 mr-16">
-      <h3 class="header-section">
-        <span>{{ svg('developer') }}</span>
-        <aside class="flex flex-col">
-          {{ _('Development')}}
-          <small class="font-normal font-md tracking-normal normal-case">
-            {{ _('How to develop the best mail client in existence.') }}
-          </small>
-        </aside>
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
-        {{ _('If you would like to learn how to contribute code to Thunderbird, check out our <a href="https://developer.thunderbird.net/" target="_blank">developer documentation.</a> You will learn how to get the code, set any necessary configuration, build the calendar, rebuild after checking out new code, etc. It is a good read. Don’t just skim it.') }}
-      </p>
-    </aside>
-  </section>
-
   <section class="pt-10 pb-10 w-full bg-grey-lighter">
-    <section class="flex flex-wrap max-w-6xl mx-auto">
-      <aside class="flex flex-col w-1/2">
-        <article class="flex flex-col w-full mb-6 pr-8">
+    <section id="development" class="pt-10 pb-10 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
+      <aside class="flex flex-col flex-grow">
+        <h3 class="header-section">
+          <span>{{ svg('developer') }}</span>
+          <aside class="flex flex-col">
+            {{ _('Development')}}
+            <small class="font-normal font-md tracking-normal normal-case">
+              {{ _('How to develop the best mail client in existence.') }}
+            </small>
+          </aside>
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+          {{ _('If you would like to learn how to contribute code to Thunderbird, check out our <a href="https://developer.thunderbird.net/" target="_blank">developer documentation.</a> You will learn how to get the code, set any necessary configuration, build the calendar, rebuild after checking out new code, etc. It is a good read. Don’t just skim it.') }}
+        </p>
+      </aside>
+    </section>
+
+    <section class="flex flex-col lg:flex-row flex-wrap max-w-6xl mx-auto pl-8 pr-8">
+      <aside class="flex flex-col lg:w-1/2">
+        <article class="flex flex-col mb-6 pr-8">
           <h4 class="subheader-section">{{ _('Code') }}</h4>
           <p class="font-md tracking-wide leading-loose mt-0 mb-0">
             {{ _('Code is located on Mozilla’s Mercurial server.') }}
@@ -113,8 +113,8 @@
         </article>
       </aside>
 
-      <aside class="flex flex-col w-1/2">
-        <article class="flex flex-col w-full mb-6 pl-8">
+      <aside class="flex flex-col lg:w-1/2">
+        <article class="flex flex-col mb-6 lg:pl-8">
           <h4 class="subheader-section">{{ _('Bugs') }}</h4>
           <p class="font-md tracking-wide leading-loose mb-0 mt-0 p-links-blue">
             {{ _('All Thunderbird bugs live on <a href="https://bugzilla.mozilla.org" target="_blank">Mozilla’s Bugzilla</a>. Bugzilla is a powerful tool and can be intimidating if you are not used to it. So check out these pre-defined searches to test the waters:') }}
@@ -136,7 +136,7 @@
         </article>
       </aside>
 
-      <aside class="flex flex-col w-full">
+      <aside class="flex flex-col">
         <h4 class="subheader-section">{{ _('Add-Ons') }}</h4>
         <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
           {{ _('Learn how to create add-ons and themes by checking out our <a href="https://developer.thunderbird.net/add-ons/about-add-ons" target="_blank">developer documentation. </a>') }}
@@ -145,31 +145,33 @@
     </section>
   </section>
 
-  <section id="design" class="mt-20 pb-10 flex flex-wrap justify-center items-center ml-20 mr-20 bg-logo">
-    <aside class="flex flex-col w-full ml-16 mr-16">
-      <h3 class="header-section">
-        <span>{{ svg('customize') }}</span>
-        <aside class="flex flex-col">
-          {{ _('Design')}}
-          <small class="font-normal font-md tracking-normal normal-case">
-            {{ _('Make Thunderbird easy to use, and easy on the eyes.') }}
-          </small>
-        </aside>
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
-        {{ _('Please share ideas and concepts by posting them on <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird&bug_severity=enhancement" target="_blank">Bugzilla</a>.<br/>You can also discuss design in the <a href="irc://irc.mozilla.org/maildev" target="_blank">#maildev</a> irc channel, or the <a href="https://discourse.mozilla.org/c/thunderbird" target="_blank">Discourse category</a>.') }}
-      </p>
-    </aside>
+  <section id="design" class="flex bg-logo">
+    <section class="pt-20 pb-10 flex flex-col lg:flex-row flex-grow max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
+      <aside class="flex flex-col w-full lg:w-1/2">
+        <h3 class="header-section">
+          <span>{{ svg('customize') }}</span>
+          <aside class="flex flex-col">
+            {{ _('Design')}}
+            <small class="font-normal font-md tracking-normal normal-case">
+              {{ _('Make Thunderbird easy to use, and easy on the eyes.') }}
+            </small>
+          </aside>
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+          {{ _('Please share ideas and concepts by posting them on <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird&bug_severity=enhancement" target="_blank">Bugzilla</a>.<br/>You can also discuss design in the <a href="irc://irc.mozilla.org/maildev" target="_blank">#maildev</a> irc channel, or the <a href="https://discourse.mozilla.org/c/thunderbird" target="_blank">Discourse category</a>.') }}
+        </p>
+      </aside>
 
-    <aside class="flex flex-col w-full ml-16 mr-16">
-      <h4 class="subheader-section">{{ _('Style Guide') }}</h4>
-      <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-        {{ _('Looking for the Thunderbird logo, icons, color palette, or other design resources? Check out our <a href="%(style_guide)s" target="_blank">style guide</a>.')|format(style_guide=url('thunderbird.style')) }}
-      </p>
-    </aside>
+      <aside class="flex flex-col w-full lg:w-1/2 lg:mt-20">
+        <h4 class="subheader-section">{{ _('Style Guide') }}</h4>
+        <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+          {{ _('Looking for the Thunderbird logo, icons, color palette, or other design resources? Check out our <a href="%(style_guide)s" target="_blank">style guide</a>.')|format(style_guide=url('thunderbird.style')) }}
+        </p>
+      </aside>
+    </section>
   </section>
 
-  <section id="documentation" class="pt-10 pb-10 flex flex-wrap max-w-6xl mx-auto">
+  <section id="documentation" class="pt-10 lg:pb-10 flex flex-col lg:flex-row flex-wrap max-w-6xl mx-auto pl-8 pr-8">
     <aside class="flex flex-col w-full mb-10">
       <h3 class="header-section">
         <span>{{ svg('news') }}</span>
@@ -182,7 +184,7 @@
       </h3>
     </aside>
 
-    <aside class="flex flex-col w-1/2">
+    <aside class="flex flex-col w-full lg:w-1/2">
       <article class="flex flex-col w-full mb-6 pr-8">
         <h4 class="subheader-section">{{ _('Where documentation lives') }}</h4>
         <ul class="font-md tracking-wider leading-loose mb-10 p-links-blue">
@@ -196,8 +198,8 @@
       </article>
     </aside>
 
-    <aside class="flex flex-col w-1/2">
-      <article class="flex flex-col w-full mb-6 pl-8">
+    <aside class="flex flex-col w-full lg:w-1/2">
+      <article class="flex flex-col w-full mb-6 lg:pl-8">
         <h4 class="subheader-section">{{ _('Contributing to documentation') }}</h4>
         <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
           <li>
@@ -214,8 +216,8 @@
     </aside>
   </section>
 
-  <section class="pt-10 pb-10 flex flex-wrap max-w-6xl mx-auto">
-    <aside id="translation" class="flex flex-col w-1/2">
+  <section class="pt-10 pb-10 flex flex-col lg:flex-row flex-wrap max-w-6xl mx-auto pr-8 pl-8">
+    <aside id="translation" class="flex flex-col w-full lg:w-1/2">
       <article class="flex flex-col w-full mb-6 pr-8">
         <h3 class="header-section">
           <span>{{ svg('dictionaries') }}</span>
@@ -232,8 +234,8 @@
       </article>
     </aside>
 
-    <aside id="qualityassurance" class="flex flex-col w-1/2">
-      <article class="flex flex-col w-full mb-6 pl-8">
+    <aside id="qualityassurance" class="flex flex-col w-full lg:w-1/2">
+      <article class="flex flex-col w-full mb-6 lg:pl-8">
         <h3 class="header-section">
           <span>{{ svg('popular') }}</span>
           <aside class="flex flex-col">
@@ -250,8 +252,8 @@
     </aside>
   </section>
 
-  <section class="pt-20 pb-10 w-full bg-calendar">
-    <section id="communication" class="flex flex-wrap max-w-6xl mx-auto">
+  <section class="pt-10 lg:pt-20 pb-10 w-full bg-calendar pr-8 pl-8">
+    <section id="communication" class="flex flex-col lg:flex-row flex-wrap max-w-6xl mx-auto">
       <aside class="flex flex-col w-full mb-10">
         <h3 class="header-section">
           <span>{{ svg('accessibility') }}</span>
@@ -264,8 +266,8 @@
         </h3>
       </aside>
 
-      <aside class="flex flex-col w-1/2">
-        <article class="flex flex-col w-full mb-6 pl-8">
+      <aside class="flex flex-col w-full lg:w-1/2">
+        <article class="flex flex-col w-full mb-6 lg:pl-8">
           <h4 class="subheader-section">{{ _('Discussion Forums') }}</h4>
           <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
             <li>{{ _('<a href="https://support.mozilla.org/en-US/questions/thunderbird" target="_blank">Thunderbird Support Forum</a>') }}
@@ -293,8 +295,8 @@
         </article>
       </aside>
 
-      <aside class="flex flex-col w-1/2">
-        <article class="flex flex-col w-full mb-6 pl-8">
+      <aside class="flex flex-col w-full lg:w-1/2">
+        <article class="flex flex-col w-full mb-6 lg:pl-8">
           <h4 class="subheader-section">{{ _('IRC Channels on irc.mozilla.org') }}</h4>
           <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
             {{ _('You can use <a href="https://mibbit.com/" target="_blank">Mibbit.com</a> if you don’t already have a preferred IRC client..') }}
@@ -315,7 +317,7 @@
       </aside>
 
       <aside class="flex flex-col w-full">
-        <article class="flex flex-col w-full mb-6 pl-8">
+        <article class="flex flex-col w-full mb-6 lg:pl-8">
           <h4 class="subheader-section">{{ _('Mailing Lists') }}</h4>
           <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
             <li>

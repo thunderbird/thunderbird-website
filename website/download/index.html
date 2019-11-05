@@ -12,16 +12,16 @@
 {% block body_id %}thunderbird-download{% endblock %}
 
 {% block header_content %}
-<section class="text-center text-white flex flex-col items-center mb-12">
-  <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
-  <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-16">{{ self.page_desc() }}</p>
-  <div class="tracking-wider">
-    {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download')) }}
-  </div>
-</section>
-<section class="flex max-w-5xl self-center">
-  {{ platform_img('thunderbird/landing/screenshot.png', {'alt': _('Thunderbird screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
-</section>
+<section class="text-center text-white flex flex-col items-center mb-12 pr-4 pl-4">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-xl mb-8 md:mb-16">{{ self.page_desc() }}</p>
+    <div class="tracking-wider">
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download')) }}
+    </div>
+  </section>
+  <section class="hidden md:flex max-w-5xl self-center">
+    {{ platform_img('thunderbird/landing/screenshot.png', {'alt': _('Thunderbird screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
+  </section>
 {% endblock %}
 
 {% block content %}

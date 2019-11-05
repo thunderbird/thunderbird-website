@@ -8,31 +8,33 @@
 {% block page_desc %}{{ _('Thunderbird Extended Release Support for Your Organization, Business, or Enterprise') }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-center text-white flex flex-col items-center mb-12">
-    <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-8">{{ self.page_desc() }}</p>
+  <section class="text-center text-white flex flex-col items-center mb-12 pr-8 pl-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-8">{{ self.page_desc() }}</p>
   </section>
 {% endblock %}
 
 {% block content %}
-  <section class="mt-20 pb-20 pt-10 flex justify-between items-center pl-20 pr-20 bg-calendar">
-    <aside class="flex flex-col w-full ml-16 mr-16">
-      <h3 class="header-section">
-        <span>{{ svg('envelope') }}</span> {{ _('Thunderbird ESR')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-6">
-        {{ _('A community-led project that allows organizations to benefit from the speed, flexibility and security of Thunderbird while getting the support they need.') }}
-      </p>
-      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
-        {{ _('The Thunderbird Extended Support Releases (ESR) are <a href="{latest}">mainstream releases</a>, operating similarly to <a href="{firefox_esr}" target="_blank">Mozilla Firefox ESR</a>. They are stable for approximately one year before receiving feature updates.')|f(latest=url('thunderbird.latest.all'), firefox_esr=url('firefox.organizations.faq')) }}
-      </p>
-      <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
-        {{ _('To get help or ask questions about Thunderbird visit <a href="{0}" target="_blank">Thunderbird support</a>.')|f(url('support')) }}
-      </p>
-      <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
-        {{ _('You can find the Thunderbird MSI Installer on the <a href="{syslang}">Systems & Languages page</a>. For more information about deploying and configuring Thunderbird in business and enterprise environments, you can also join the <a href="{maillist}" target="_blank">Enterprise mailing list</a>.')|f(maillist=url('thunderbird.enterprise'), syslang=url('thunderbird.latest.all')) }}
-      </p>
-    </aside>
+  <section class="mt-20 pb-20 pt-10 pl-8 pr-8 bg-calendar">
+    <section class="flex max-w-6xl mx-auto justify-between items-center">
+      <aside class="flex flex-col w-full">
+        <h3 class="header-section">
+          <span>{{ svg('envelope') }}</span> {{ _('Thunderbird ESR')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6">
+          {{ _('A community-led project that allows organizations to benefit from the speed, flexibility and security of Thunderbird while getting the support they need.') }}
+        </p>
+        <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+          {{ _('The Thunderbird Extended Support Releases (ESR) are <a href="{latest}">mainstream releases</a>, operating similarly to <a href="{firefox_esr}" target="_blank">Mozilla Firefox ESR</a>. They are stable for approximately one year before receiving feature updates.')|f(latest=url('thunderbird.latest.all'), firefox_esr=url('firefox.organizations.faq')) }}
+        </p>
+        <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
+          {{ _('To get help or ask questions about Thunderbird visit <a href="{0}" target="_blank">Thunderbird support</a>.')|f(url('support')) }}
+        </p>
+        <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
+          {{ _('You can find the Thunderbird MSI Installer on the <a href="{syslang}">Systems & Languages page</a>. For more information about deploying and configuring Thunderbird in business and enterprise environments, you can also join the <a href="{maillist}" target="_blank">Enterprise mailing list</a>.')|f(maillist=url('thunderbird.enterprise'), syslang=url('thunderbird.latest.all')) }}
+        </p>
+      </aside>
+    </section>
   </section>
 
   {% include '_includes/site-prefooter.html' %}

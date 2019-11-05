@@ -31,3 +31,33 @@ each(@margins, #(@k, @v) {
   margin-left: auto;
   margin-right: auto;
 }
+
+each(@breakpoints, #(@k, @v) {
+  @media (min-width: @k) {
+
+    each(@paddings, #(@i, @r) {
+      each(range(21), {
+        @num: 21-@index;
+        .@{v}\:@{r}-@{num} {
+          @{i}: (@num * 0.25rem);
+        }
+      });
+    });
+
+    each(@margins, #(@i, @r) {
+      each(range(21), {
+        @num: 21-@index;
+        .@{v}\:@{r}-@{num} {
+          @{i}: (@num * 0.25rem);
+        }
+      });
+
+      each(range(21), {
+        @num: 21-@index;
+        .@{v}\:-@{r}-@{num} {
+          @{i}: -(@num * 0.25rem);
+        }
+      });
+    });
+  }
+});

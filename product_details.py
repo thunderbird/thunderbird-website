@@ -20,13 +20,13 @@ def load_json(path):
 class ThunderbirdDetails():
     """ Loads Thunderbird versioning information from product details JSON files."""
     platform_labels = OrderedDict([
-        ('winsha1', 'Windows (XP/Vista)'),
-        ('win', 'Windows 32-bit'),
+        # ('winsha1', 'Windows (XP/Vista)'),
         ('win64', 'Windows 64-bit'),
+        ('msi', 'Windows MSI 64-bit'),
         ('osx', 'macOS'),
-        ('linux', 'Linux 32-bit'),
         ('linux64', 'Linux 64-bit'),
-        ('msi', 'Windows MSI 64-bit')
+        ('win', 'Windows 32-bit'),
+        ('linux', 'Linux 32-bit')
     ])
 
     languages = load_json('languages.json')

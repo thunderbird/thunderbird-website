@@ -64,3 +64,27 @@ each(@flex-shrink, #(@k, @v) {
     flex-shrink: @k;
   }
 });
+
+each(@breakpoints, #(@k, @v) {
+  @media (min-width: @k) {
+
+    each(@flex-direction, #(@i, @r) {
+      .@{v}\:@{r} {
+        flex-direction: @i;
+      }
+    });
+
+    each(@flex-grow, #(@i, @r) {
+      .@{v}\:@{r} {
+        flex-grow: @i;
+      }
+    });
+
+    each(@align-items, #(@i, @r) {
+      .@{v}\:@{r} {
+        align-items: @i;
+      }
+    });
+
+  }
+});

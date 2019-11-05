@@ -8,16 +8,16 @@
 {% block page_title %}{{ _('Thunderbird — {version} System Requirements')|f(version=version) }}{% endblock %}
 
 {% block header_content %}
-<section class="text-left text-white flex flex-col items-start w-full max-w-6xl mx-auto pl-8 pr-8">
-  <h1 class="font-hero font-thin mt-10 mb-16">
+<section class="text-left text-white flex flex-col items-start lg:w-full max-w-6xl mx-auto pl-8 pr-8">
+  <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-16">
     {{ _('System Requirements - {version}')|f(version=version) }}
   </h1>
 </section>
 {% endblock %}
 
 {% block content %}
-  <section class="mt-10 flex justify-between items-center pl-20 pr-20">
-    <aside class="flex flex-col w-full ml-16 mr-16 font-lg tracking-wider leading-loose -mb-20 markup-page">
+  <section class="mt-10 flex justify-between items-center pl-8 pr-8">
+    <aside class="flex flex-col w-full lg:ml-16 lg:mr-16 font-lg tracking-wider leading-loose -mb-20 markup-page">
       {{ release.system_requirements|markdown|safe }}
     </aside>
   </section>

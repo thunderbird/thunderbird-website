@@ -7,9 +7,9 @@
 {% block page_title %}{{ _('Free Email Providers') }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-left text-white flex flex-col items-start w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-hero font-thin mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
       {{ _('List of Free Email Providers') }}
     </p>
   </section>
@@ -21,8 +21,8 @@
   </section>
 
   <section class="w-full bg-grey-lighter">
-    <section class="pb-20 flex flex-wrap max-w-6xl mx-auto justify-between pl-8 pr-8">
-      <aside class="flex flex-col w-1/3 max-w-xs">
+    <section class="pb-20 flex flex-col lg:flex-row flex-wrap max-w-6xl mx-auto justify-between pl-8 pr-8">
+      <aside class="flex flex-col lg:w-1/3 lg:max-w-xs mb-10 lg:mb-0">
         <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg"
           src="{{ static('img/thunderbird/email-providers/gmail-ss-small.jpg') }}" alt="">
         <h3 class="subheader-section">{{ _('Gmail')}}</h3>
@@ -34,7 +34,7 @@
         </a>
       </aside>
 
-      <aside class="flex flex-col w-1/3 max-w-xs">
+      <aside class="flex flex-col lg:w-1/3 lg:max-w-xs mb-10 lg:mb-0">
         <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg"
           src="{{ static('img/thunderbird/email-providers/hotmail-ss-small.jpg') }}" alt="">
         <h3 class="subheader-section">{{ _('Outlook Live')}}</h3>
@@ -46,7 +46,7 @@
         </a>
       </aside>
 
-      <aside class="flex flex-col w-1/3 max-w-xs">
+      <aside class="flex flex-col lg:w-1/3 lg:max-w-xs mb-10 lg:mb-0">
         <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg"
           src="{{ static('img/thunderbird/email-providers/gmx-ss-small.jpg') }}" alt="">
         <h3 class="subheader-section">{{ _('GMX Mail')}}</h3>

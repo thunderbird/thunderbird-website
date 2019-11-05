@@ -1,7 +1,11 @@
-<section class="pt-20 pb-20 flex bg-prefooter bg-grey-lighter">
-  <section class="flex flex-1 max-w-6xl mx-auto justify-between pl-8 pr-8">
-    <article class="flex flex-1 max-w-md">
-      <aside class="w-24 pt-4">
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+<section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex bg-prefooter bg-grey-lighter">
+  <section class="flex flex-col lg:flex-row flex-1 max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <article class="flex flex-1 lg:max-w-md mb-20 lg:mb-0">
+      <aside class="w-16 md:w-24 pt-4">
         {{ high_res_img('thunderbird/handshake.png', {'alt': _('Get Involved'), 'class': 'w-full h-auto'}) }}
       </aside>
       <main class="flex flex-col flex-1 ml-4">
@@ -22,21 +26,19 @@
       </main>
     </article>
 
-    <aside class="flex flex-1 max-w-md">
-      <article class="flex flex-1 max-w-md">
-        <aside class="w-24 pt-4">
-          {{ high_res_img('thunderbird/logos/beta.png', {'alt': _('Thunderbird Beta'), 'class': 'w-full h-auto'}) }}
+    <article class="flex flex-1 lg:max-w-md mb-10 lg:mb-0">
+      <aside class="w-16 md:w-24 pt-4">
+        {{ high_res_img('thunderbird/logos/beta.png', {'alt': _('Thunderbird Beta'), 'class': 'w-full h-auto'}) }}
+      </aside>
+      <main class="flex flex-col flex-1 ml-4">
+        <h3 class="header-section">{{ _('The Future of Thunderbird')}}</h3>
+        <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+          {{ _('Experience cutting edge features. Provide feedback to help refine and polish what will be in the final release') }}
+        </p>
+        <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
+          {{ download_thunderbird(force_direct=true, alt_copy=_('Download Beta'), channel='beta') }}
         </aside>
-        <main class="flex flex-col flex-1 ml-4">
-          <h3 class="header-section">{{ _('The Future of Thunderbird')}}</h3>
-          <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
-            {{ _('Experience cutting edge features. Provide feedback to help refine and polish what will be in the final release') }}
-          </p>
-          <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
-            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Beta'), channel='beta') }}
-          </aside>
-        </main>
-      </article>
-    </aside>
+      </main>
+    </article>
   </section>
 </section>
