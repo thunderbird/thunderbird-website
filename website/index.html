@@ -69,46 +69,22 @@
 
     {% if LANG.startswith('en-') %}
       <section class="flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
-        <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg">
-          <h4 class="mt-0 mb-4 uppercase text-blue font-md">
-            {{ get_blog_data(0)['title'] }}
-          </h4>
-          <p class="mt-0 mb-6 flex-1">
-            {{ get_blog_data(0)['summary'] }}
-          </p>
-          <footer
-            class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
-            <span>{{ get_blog_data(0)['date'] }}</span>
-            <span>COMMENTS {{ get_blog_data(0)['comments'] }}</span>
-          </footer>
-        </article>
 
-        <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg lg:ml-16 lg:mr-16">
-          <h4 class="mt-0 mb-4 uppercase text-blue font-md">
-            {{ get_blog_data(1)['title'] }}
-          </h4>
-          <p class="mt-0 mb-6 flex-1">
-            {{ get_blog_data(1)['summary'] }}
-          </p>
-          <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
-            <span>{{ get_blog_data(1)['date'] }}</span>
-            <span>COMMENTS {{ get_blog_data(1)['comments'] }}</span>
-          </footer>
-        </article>
+        {% for x in range(3): %}
+          <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg{% if x != 2 %} mb-10 lg:mb-0{% endif %}{% if x == 1 %} lg:ml-16 lg:mr-16{% endif %}">
+            <a class="blog-link" href="{{ get_blog_data(x)['link'] }}" target="_blank" title="Continue Reading {{ get_blog_data(x)['title'] }}">
+              {{ get_blog_data(x)['title'] }}
+            </a>
+            <p class="blog-body">
+              {{ get_blog_data(x)['summary'] }}
+            </p>
+            <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+              <span>{{ get_blog_data(x)['date'] }}</span>
+              <span>COMMENTS {{ get_blog_data(x)['comments'] }}</span>
+            </footer>
+          </article>
+        {% endfor %}
 
-        <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg">
-          <h4 class="mt-0 mb-4 uppercase text-blue font-md">
-            {{ get_blog_data(2)['title'] }}
-          </h4>
-          <p class="mt-0 mb-6 flex-1">
-            {{ get_blog_data(2)['summary'] }}
-          </p>
-          <footer
-            class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
-            <span>{{ get_blog_data(2)['date'] }}</span>
-            <span>COMMENTS {{ get_blog_data(2)['comments'] }}</span>
-          </footer>
-        </article>
       </section>
     {% endif %}
 

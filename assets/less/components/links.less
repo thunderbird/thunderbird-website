@@ -84,3 +84,20 @@ a {
     &:extend(.inline-link, .text-blue);
   }
 }
+
+.blog-link {
+  &:extend(.font-bold, .mt-0, .mb-4, .uppercase, .text-blue, .font-md, .no-underline);
+
+  &:hover,
+  &:focus {
+    &:extend(.underline);
+  }
+}
+
+.blog-body {
+  &:extend(.mt-0, .mb-6, .flex-1);
+
+  .go {
+    display: none;
+  }
+}
