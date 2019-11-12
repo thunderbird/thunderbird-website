@@ -135,6 +135,16 @@ button {
   }
 }
 
+.btn-alpha {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-alpha-button, .rounded-xs, .shadow);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
 .btn-link {
   &:extend(.bg-transparent, .text-white, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-4, .pr-4, .rounded-sm, .m-1);
 
