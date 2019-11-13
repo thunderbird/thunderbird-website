@@ -26,19 +26,57 @@
       </main>
     </article>
 
-    <article class="flex flex-1 lg:max-w-md mb-10 lg:mb-0">
-      <aside class="w-16 md:w-24 pt-4">
-        {{ high_res_img('thunderbird/logos/beta.png', {'alt': _('Thunderbird Beta'), 'class': 'w-full h-auto'}) }}
+    <article class="flex flex-1 flex-col lg:max-w-md mb-10 lg:mb-0 tabs">
+      <input checked="checked" id="beta" type="radio" name="pct" class="hidden"/>
+      <input id="alpha" type="radio" name="pct" class="hidden"/>
+      <aside class="self-start text-left lg:-mt-12 ml-20 md:pl-8">
+        <nav>
+          <ul class="list-none p-0 flex flex-wrap font-semibold tabs-nav">
+            <li class="beta">
+              <label for="beta">Beta Channel</label>
+            </li>
+            <li class="alpha">
+              <label for="alpha">Nightly Channel</label>
+            </li>
+          </ul>
+        </nav>
       </aside>
-      <main class="flex flex-col flex-1 ml-4">
-        <h3 class="header-section">{{ _('The Future of Thunderbird')}}</h3>
-        <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
-          {{ _('Experience cutting edge features. Provide feedback to help refine and polish what will be in the final release') }}
-        </p>
-        <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
-          {{ download_thunderbird(force_direct=true, alt_copy=_('Download Beta'), channel='beta') }}
+
+      <section class="tab beta flex flex-1">
+        <aside class="w-16 md:w-24 pt-4">
+          {{ high_res_img('thunderbird/logos/beta.png', {'alt': _('Thunderbird Beta'), 'class': 'w-full h-auto'}) }}
         </aside>
-      </main>
+        <main class="flex flex-col flex-1 ml-4">
+          <h3 class="header-section">{{ _('The Future of Thunderbird')}}</h3>
+          <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+            {{ _('Experience cutting edge features. Provide feedback to help refine and polish what will be in the final release.') }}
+          </p>
+          <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
+            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Beta'), channel='beta') }}
+          </aside>
+        </main>
+      </section>
+
+      <section class="tab alpha flex flex-1">
+        <aside class="w-16 md:w-24 pt-4">
+          {{ high_res_img('thunderbird/logos/alpha.png', {'alt': _('Thunderbird Nightly'), 'class': 'w-full h-auto'}) }}
+        </aside>
+        <main class="flex flex-col flex-1 ml-4">
+          <h3 class="header-section">{{ _('Thunderbird Nightly')}}</h3>
+          <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+            {{ _('Get an even further look at our next generation of Thunderbird with the unstable Nightly builds.') }}
+          </p>
+          <p class="tracking-wider leading-loose mb-2 mt-0 flex-1 text-black-light">
+            <span class="bg-orange p-1 rounded-sm font-bold mr-1 inline-block leading-none text-white font-sm">
+              {{ _('WARNING!') }}
+            </span>
+            {{ _('Nightly is an unstable testing and development platform.') }}
+          </p>
+          <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
+            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Nightly'), channel='alpha') }}
+          </aside>
+        </main>
+      </section>
     </article>
   </section>
 </section>

@@ -2,8 +2,8 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% set button_class = 'btn-beta' if channel == 'beta' else 'btn-download' %}
-{% set flex_class = 'self-start' if channel == 'beta' or section == 'body' else 'justify-center' %}
+{% set button_class = 'btn-'+channel if channel else 'btn-download' %}
+{% set flex_class = 'self-start' if channel or section == 'body' else 'justify-center' %}
 
 {% macro alt_buttons(builds) %}
   <div class="download download-dumb">
@@ -62,10 +62,10 @@
     {% endfor %}
   </ul>
   <p class="download-other download-other-desktop os_linux os_linux64 os_osx os_win os_win64 os_winsha1 font-sm mt-0">
-    <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if channel == 'beta' or section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a> &bull;
+    <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if channel or section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a> &bull;
     {% if channel != 'alpha' %}{# Earlybird release notes are not available yet #}
-      <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if channel == 'beta' or section == 'body' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
+      <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if channel or section == 'body' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
     {% endif %}
-    <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link {% if channel == 'beta' or section == 'body' %} text-blue {% endif %}" target="_blank">{{ _('Privacy') }}</a>
+    <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link {% if channel or section == 'body' %} text-blue {% endif %}" target="_blank">{{ _('Privacy') }}</a>
   </p>
 </div>
