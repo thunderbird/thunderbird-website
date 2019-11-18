@@ -12,6 +12,7 @@ $(document).ready(function() {
 
     utils.initDownloadLinks();
     utils.initMobileDownloadLinks();
+    utils.externalLinks();
     utils.initLangSwitcher();
 
     /* Bug 1264843: In partner distribution of desktop Firefox, switch the

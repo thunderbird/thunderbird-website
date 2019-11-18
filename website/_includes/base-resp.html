@@ -25,7 +25,7 @@
       {% endblock %}
 
       {% block site_header_nav %}
-        <a href="{{ donate_url('header') }}" class="btn-donate md:hidden" target="_blank">
+        <a href="{{ donate_url('header') }}" class="btn-donate md:hidden">
           <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
         </a>
         <nav id="nav-main" role="navigation" class="flex-grow md:flex-grow-0">
@@ -34,22 +34,22 @@
               <a href="{{ url('thunderbird.features') }}" class="nav-link">{{_('Features')}}</a>
             </li>
             <li>
-              <a href="https://addons.thunderbird.net" target="_blank" class="nav-link">{{_('Add-ons')}}</a>
+              <a href="https://addons.thunderbird.net" class="nav-link">{{_('Add-ons')}}</a>
             </li>
             <li>
               <a href="{{ url('thunderbird.get-involved') }}" class="nav-link">{{_('Get Involved')}}</a>
             </li>
             <li>
-              <a href="{{ url('support') }}" class="nav-link" target="_blank">{{_('Get Help')}}</a>
+              <a href="{{ url('support') }}" class="nav-link">{{_('Get Help')}}</a>
             </li>
             <li>
               <a href="{{ url('thunderbird.about') }}" class="nav-link">{{_('About Us')}}</a>
             </li>
             <li>
-              <a href="{{ url('blog') }}" class="nav-link" target="_blank">{{_('Blog')}}</a>
+              <a href="{{ url('blog') }}" class="nav-link">{{_('Blog')}}</a>
             </li>
             <li class="hidden md:inline">
-              <a href="{{ donate_url('header') }}" class="btn-donate" target="_blank">
+              <a href="{{ donate_url('header') }}" class="btn-donate">
                 <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
               </a>
             </li>
