@@ -73,7 +73,7 @@
 
           {% for x in range(3): %}
             <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg{% if x != 2 %} mb-10 lg:mb-0{% endif %}{% if x == 1 %} lg:ml-16 lg:mr-16{% endif %}">
-              <a class="blog-link" href="{{ get_blog_data(x)['link'] }}" target="_blank" title="Continue Reading {{ get_blog_data(x)['title'] }}">
+              <a class="blog-link" href="{{ get_blog_data(x)['link'] }}" title="Continue Reading {{ get_blog_data(x)['title'] }}">
                 {{ get_blog_data(x)['title'] }}
               </a>
               <p class="blog-body">
@@ -89,7 +89,7 @@
         </section>
       {% endif %}
 
-      <a href="{{ url('blog') }}" class="btn-body mb-10" target="_blank">{{_('Read the Blog')}}
+      <a href="{{ url('blog') }}" class="btn-body mb-10">{{_('Read the Blog')}}
         <span>{{ svg('chevron-right') }}</span>
       </a>
     </section>
@@ -123,7 +123,7 @@
           <a href="{{ url('calendar') }}" class="btn-body">{{_('Explore Features')}}
             <span>{{ svg('chevron-right') }}</span>
           </a>
-          <a href="https://addons.thunderbird.net" class="btn-body btn-secondary ml-4" target="_blank">{{_('Explore More Add-ons')}}
+          <a href="https://addons.thunderbird.net" class="btn-body btn-secondary ml-4">{{_('Explore More Add-ons')}}
             <span>{{ svg('chevron-right') }}</span>
           </a>
         </p>

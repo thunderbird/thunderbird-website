@@ -11,6 +11,7 @@ if (typeof Mozilla === 'undefined') {
     'use strict';
 
     var Utils = {};
+    var bouncerURL = 'download.mozilla.org'
 
     /**
      * Bug 393263 A special function for IE < 9.
@@ -26,6 +27,14 @@ if (typeof Mozilla === 'undefined') {
         if (link && window.site.platform === 'windows' && /MSIE\s[1-8]\./.test(ua)) {
             window.open(link, 'download_window', 'toolbar=0,location=no,directories=0,status=0,scrollbars=0,resizeable=0,width=1,height=1,top=0,left=0');
             window.focus();
+        }
+    };
+
+    // Add target="_blank" to all external links so they open in a new tab by default.
+    Utils.externalLinks = function() {
+        for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) {
+            var b = c[a];
+            b.getAttribute("href") && b.hostname !== location.hostname && b.hostname !== bouncerURL && (b.target = "_blank")
         }
     };
 
