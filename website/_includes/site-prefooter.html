@@ -28,15 +28,15 @@
 
     <article class="flex flex-1 flex-col lg:max-w-md mb-10 lg:mb-0 tabs">
       <input checked="checked" id="beta" type="radio" name="pct" class="hidden"/>
-      <input id="alpha" type="radio" name="pct" class="hidden"/>
+      <input id="nightly" type="radio" name="pct" class="hidden"/>
       <aside class="self-start text-left lg:-mt-12 ml-20 md:pl-8">
         <nav>
           <ul class="list-none p-0 flex flex-wrap font-semibold tabs-nav">
             <li class="beta">
               <label for="beta">Beta Channel</label>
             </li>
-            <li class="alpha">
-              <label for="alpha">Nightly Channel</label>
+            <li class="nightly">
+              <label for="nightly">Nightly Channel</label>
             </li>
           </ul>
         </nav>
@@ -57,9 +57,9 @@
         </main>
       </section>
 
-      <section class="tab alpha flex flex-1">
+      <section class="tab nightly flex flex-1">
         <aside class="w-16 md:w-24 pt-4">
-          {{ high_res_img('thunderbird/logos/alpha.png', {'alt': _('Thunderbird Nightly'), 'class': 'w-full h-auto'}) }}
+          {{ high_res_img('thunderbird/logos/nightly.png', {'alt': _('Thunderbird Nightly'), 'class': 'w-full h-auto'}) }}
         </aside>
         <main class="flex flex-col flex-1 ml-4">
           <h3 class="header-section">{{ _('Thunderbird Nightly')}}</h3>
@@ -72,8 +72,8 @@
             </span>
             {{ _('Nightly is an unstable testing and development platform, make sure you back up important data regularly!') }}
           </p>
-          <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
-            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Nightly'), channel='alpha') }}
+          <aside class="ml-0 mr-0 self-start text-center text-blue font-semibold">
+            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Nightly'), channel='nightly') }}
           </aside>
         </main>
       </section>
