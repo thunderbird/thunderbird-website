@@ -216,7 +216,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     """ Output a "Download Thunderbird" button.
 
     :param ctx: context from calling template.
-    :param channel: name of channel: 'release', 'beta' or 'alpha'.
+    :param channel: name of channel: 'release', 'beta' or 'nightly'. 'alpha' has been retired.
     :param dom_id: Use this string as the id attr on the element.
     :param locale: The locale of the download. Default to locale of request.
     :param force_direct: Force the download URL to be direct.

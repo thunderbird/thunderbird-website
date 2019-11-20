@@ -44,7 +44,7 @@ class ThunderbirdDetails():
     dev_releases = load_json('thunderbird_history_development_releases.json')
 
     version_map = {
-        'alpha': 'LATEST_THUNDERBIRD_ALPHA_VERSION',
+        'nightly': 'LATEST_THUNDERBIRD_NIGHTLY_VERSION',
         'beta': 'LATEST_THUNDERBIRD_DEVEL_VERSION',
         'release': 'LATEST_THUNDERBIRD_VERSION',
     }
@@ -117,7 +117,20 @@ class ThunderbirdDetails():
             # return a direct link instead
             pass
 
-        # build a direct download link
+        # The 'nightly' channel is hosted on FTP and uses a different filename format.
+        if channel == 'nightly':
+            platform_filetype = {
+                'osx': 'mac.dmg',
+                'linux': 'linux-i686.tar.bz2',
+                'linux64': 'linux-x86_64.tar.bz2',
+                'win': 'win32.installer.exe',
+                'win64': 'win64.installer.exe'
+            }
+            platform_filename = platform_filetype.get(_platform, '')
+            nightly_url = 'thunderbird-{version}.{locale}.{platform}'.format(version=_version, locale=_locale, platform=platform_filename)
+            return ''.join([settings.NIGHTLY_URL, nightly_url])
+
+        # build a direct download link for 'beta' and 'release' channels.
         return '?'.join([settings.BOUNCER_URL,
                          urlencode([
                              ('product', product_url % _version),
