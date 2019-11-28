@@ -336,6 +336,7 @@ def setup_observer(builder_instance, port):
     observer = Observer()
     observer.schedule(handler, path=builder_instance.searchpath, recursive=True)
     observer.schedule(handler, path=settings.ASSETS, recursive=True)
+    observer.schedule(handler, path=settings.MEDIA_URL.strip('/'), recursive=True)
     observer.daemon = True
     observer.start()
     print "Updating website when templates, CSS, or JS are modified. Press Ctrl-C to end."

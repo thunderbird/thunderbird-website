@@ -1,0 +1,34 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+.tabs {
+  .tab {
+    display: none;
+  }
+}
+
+#beta:checked ~ section.tab.beta,
+#nightly:checked ~ section.tab.nightly {
+  display: flex;
+}
+
+.tabs-nav {
+  label {
+    &:extend(.inline-block, .uppercase, .p-1, .bg-transparent, .rounded-sm, .font-sm);
+    cursor: pointer;
+
+    &:hover {
+      &:extend(.bg-black-lightest, .text-white);
+    }
+  }
+
+  li ~ li {
+    &:extend(.ml-2);
+  }
+}
+
+#beta:checked ~ aside nav .tabs-nav .beta label,
+#nightly:checked ~ aside nav .tabs-nav .nightly label {
+  &:extend(.bg-blue, .text-white);
+}

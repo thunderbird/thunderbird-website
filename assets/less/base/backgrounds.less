@@ -1,0 +1,108 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+each(@background-attachment, #(@k, @v) {
+  .@{v} {
+    background-attachment: @k;
+  }
+});
+
+each(@background-position, #(@k, @v) {
+  .@{v} {
+    background-position: @k;
+  }
+});
+
+each(@background-repeat, #(@k, @v) {
+  .@{v} {
+    background-repeat: @k;
+  }
+});
+
+each(@background-size, #(@k, @v) {
+  .@{v} {
+    background-size: @k;
+  }
+});
+
+.bg-header {
+  background-color: #1c2f56;
+  background-image: url('../img/thunderbird/backgrounds/bg-header.png'), -moz-linear-gradient(top, #1c2f56 0%, #2c9afe 100%);
+  background-image: url('../img/thunderbird/backgrounds/bg-header.png'), -webkit-linear-gradient(top, #1c2f56 0%, #2c9afe 100%);
+  background-image: url('../img/thunderbird/backgrounds/bg-header.png'), linear-gradient(to bottom, #1c2f56 0%, #2c9afe 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c2f56', endColorstr='#2c9afe', GradientType=0);
+}
+
+.bg-header-page {
+  background-color: #1c2f56;
+  background-image: url('../img/thunderbird/backgrounds/bg-header.png'), -moz-linear-gradient(top, #1c2f56 0%, #037ae6 100%);
+  background-image: url('../img/thunderbird/backgrounds/bg-header.png'), -webkit-linear-gradient(top, #1c2f56 0%, #037ae6 100%);
+  background-image: url('../img/thunderbird/backgrounds/bg-header.png'), linear-gradient(to bottom, #1c2f56 0%, #037ae6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c2f56', endColorstr='#037ae6', GradientType=0);
+}
+
+.bg-donate-button {
+  background: #b92f51;
+  background: -moz-linear-gradient(-45deg, #f23d5c 0%, #b92f51 100%);
+  background: -webkit-linear-gradient(-45deg, #f23d5c 0%, #b92f51 100%);
+  background: linear-gradient(135deg, #f23d5c 0%, #b92f51 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f23d5c', endColorstr='#b92f51', GradientType=1);
+}
+
+.bg-download-button {
+  background: #058B00;
+  background: -moz-linear-gradient(-45deg, #21B711 0%, #058B00 100%);
+  background: -webkit-linear-gradient(-45deg, #21B711 0%, #058B00 100%);
+  background: linear-gradient(135deg, #21B711 0%, #058B00 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#21B711', endColorstr='#058B00', GradientType=1);
+}
+
+.bg-primary-button {
+  background: #005CE3;
+  background: -moz-linear-gradient(-45deg, #0080FF 0%, #005CE3 100%);
+  background: -webkit-linear-gradient(-45deg, #0080FF 0%, #005CE3 100%);
+  background: linear-gradient(135deg, #0080FF 0%, #005CE3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0080FF', endColorstr='#005CE3', GradientType=1);
+}
+
+.bg-beta-button {
+  background: #882395;
+  background: -moz-linear-gradient(-45deg, #E74EB9 0%, #882395 100%);
+  background: -webkit-linear-gradient(-45deg, #E74EB9 0%, #882395 100%);
+  background: linear-gradient(135deg, #E74EB9 0%, #882395 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E74EB9', endColorstr='#882395', GradientType=1);
+}
+
+.bg-nightly-button {
+  background: #2A2A2E;
+  background: -moz-linear-gradient(-45deg, #737373 0%, #2A2A2E 100%);
+  background: -webkit-linear-gradient(-45deg, #737373 0%, #2A2A2E 100%);
+  background: linear-gradient(135deg, #737373 0%, #2A2A2E 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#737373', endColorstr='#2A2A2E', GradientType=1);
+}
+
+.bg-body {
+  &:extend(.bg-top, .bg-no-repeat, .bg-cover);
+  background-image: url('../img/thunderbird/backgrounds/bg-body.png');
+}
+
+.bg-logo {
+  &:extend(.bg-right-bottom, .bg-no-repeat, .bg-contain);
+  background-image: none;
+  background-position-x: 95%;
+
+  @media (min-width: @lg) {
+    background-image: url('../img/thunderbird/backgrounds/bg-logo.png');
+  }
+}
+
+.bg-calendar {
+  &:extend(.bg-top, .bg-no-repeat, .bg-cover);
+  background-image: url('../img/thunderbird/backgrounds/bg-calendar.png');
+}
+
+.bg-prefooter {
+  &:extend(.bg-top, .bg-no-repeat, .bg-cover);
+  background-image: url('../img/thunderbird/backgrounds/bg-prefooter.png');
+}

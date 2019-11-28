@@ -4,84 +4,108 @@
 
 {% extends "_includes/base-resp.html" %}
 
-{% block page_title %}{{ _('Mozilla Thunderbird - Holiday Calendars') }}{% endblock %}
-{% block page_desc %}{{ _('Holiday calendar data for Lightning') }}{% endblock %}
-{% block body_id %}holiday-calendars{% endblock %}
+{% block page_title %}{{ _('Holiday Calendars') }}{% endblock %}
 
-{% block page_css %}
-  <link href="/media/css/calendar-bundle.css" rel="stylesheet" type="text/css" />
+{% block header_content %}
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-16">{{ self.page_title() }}</h1>
+  </section>
 {% endblock %}
 
 {% block content %}
 
-<section id="lightning" class="products">
-  <div class="topbox">
-    <div class="infobox holiday">
-      <aside id="download" class="hide-for-touch">
-        <a id="download-link" class="loading" href="https://addons.thunderbird.net/addon/lightning/">
-          <span id="version-box" class="title">{{ _('Lightning') }}</span>
-          <span class="desc">{{ _('Free download') }}</span>
+  <section class="mt-10 mb-20 flex justify-center items-center pl-8 pr-8">
+    <aside class="flex flex-col w-full max-w-6xl lg:ml-16 lg:mr-16">
+      <h3 class="header-section">
+        <span>{{ svg('calendar') }}</span>
+        <aside class="flex flex-col">
+          {{ _('Holiday Calendars')}}
+          <small class="font-normal font-md tracking-normal normal-case">
+            {{ _('Add your nation’s holidays to Lightning!') }}
+          </small>
+        </aside>
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('We&rsquo;ve got some holiday calendar files available for download. You can either download and then import them into Sunbird or Lightning or you can just subscribe to these calendars by copying their URL and then adding them as new remote calendar files. More information on installing a holiday calendar can be found in the <a href="%s">Adding a holiday calendar article</a>.')|format('https://support.mozilla.org/kb/adding-a-holiday-calendar') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
+        {{ _('You can also find calendars to subscribe to at <a href="%s">iCalShare.com</a>.')|format('http://icalshare.com') }}
+      </p>
+      <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
+        <a href="https://addons.thunderbird.net/addon/lightning/" class="btn-join self-start">
+          {{_('Download Lightning')}}
         </a>
-        <small class="download-other">
-          <a href="https://addons.thunderbird.net/addon/lightning/versions/">{{ _('Other Systems &amp; Versions') }}</a>
-        </small>
+        <p class="font-sm mt-0 text-blue font-semibold self-start">
+          <a href="https://addons.thunderbird.net/addon/lightning/versions/" class="small-link text-blue"
+           >{{ _('Other Systems &amp; Versions') }}</a>
+        </p>
       </aside>
-      <h1>{{ _('Holiday Calendars') }}</h1>
-      <h2>{{ _('Add your nation&rsquo;s holidays to Lightning!') }}</h2>
-    </div>
-  </div>
-  <div class="midbox">
-      <p>{{ _('We&rsquo;ve got some holiday calendar files available for download. You can either download and then import them into Sunbird or Lightning or you can just subscribe to these calendars by copying their URL and then adding them as new remote calendar files. More information on installing a holiday calendar can be found in the <a href="%s">Adding a holiday calendar article</a>.')|format('https://support.mozilla.org/kb/adding-a-holiday-calendar') }}</p>
-      <p>{{ _('You can also find calendars to subscribe to at <a href="%s">iCalShare.com</a>.')|format('http://icalshare.com') }}</p>
-  </div>
-  <div class="calendar-table billboard">
-    <ul class="holiday-nav">
+    </aside>
+  </section>
+
+  <section class="flex justify-between items-center bg-grey-light rounded lg:w-full max-w-6xl mx-auto">
+    <ul class="list-none p-0 flex flex-wrap justify-center flex-1 m-0">
       {% for letter in letters -%}
-        <li><a href="#{{ letter }}">{{ letter }}</a></li>
+      <li>
+        <a href="#{{ letter }}" class="btn-link text-blue-dark">{{ letter }}</a>
+      </li>
       {% endfor -%}
     </ul>
-    <table class="data">
+  </section>
 
-      {% set first_letter = '' %}
-      {% for calendar in calendars -%}
-        {% if first_letter != calendar.country[:1] %}
-          {% set first_letter = calendar.country[:1] %}
-          <tr><th colspan="2" id="{{ first_letter }}">{{ first_letter }}</th></tr>
-        {% endif %}
-        <tr>
-          <td>
-            {% if calendar.title %}
-              {% trans url=CALDATA_URL + calendar.filename, country=calendar.country,
-                 title=calendar.title, authors=calendar.authors %}
-                <a href="{{ url }}">{{ country }}</a> {{ title }}, thanks to {{ authors }}
-              {% endtrans %}
-            {% else %}
-              {% trans url=CALDATA_URL + calendar.filename, country=calendar.country,
-                 authors=calendar.authors %}
-                <a href="{{ url }}">{{ country }}</a> holidays thanks to {{ authors }}
-              {% endtrans %}
-            {% endif %}
-          </td>
-          <td>{{ calendar.datespan }}</td>
-        </tr>
-      {% endfor %}
-    </table>
-    <h2>{{ ('Contributing a Holiday Calendar') }}</h2>
-    <p>{{ ('If you would like to send us your calendar files, please follow these steps:') }}</p>
-    <ol>
-      <li>{{ _('Create a new local calendar, e.g. "$Country$ Holidays".') }}</li>
-      <li>{{ _('Create the different holidays of your country in this local calendar.') }}</li>
-      <li>{{ _('Right-click on this calendar and choose "Export Calendar". Please use the iCalendar (ics) format.') }}</li>
-      <li>{{ _('Open a bug in <a href="%s">Bugzilla</a>.')|format('http://bugzilla.mozilla.org/enter_bug.cgi?product=Calendar&component=Website') }}</li>
-      <li>{{ _('Add your holiday file as an attachment in the new bug.') }}</li>
-    </ol>
-  </div>
-</section>
+  <section class="mb-10 flex flex-col items-start lg:w-full max-w-6xl mx-auto pr-8 pl-8">
+    {% set letter = namespace(first='') %}
+    {% for calendar in calendars -%}
+      {% if letter.first != calendar.country[:1] %}
+        {% set letter.first = calendar.country[:1] %}
+        <h4 id="{{ letter.first }}" class="header-section lg:w-full mb-0 pt-6 pl-3">
+          {{ letter.first }}
+        </h4>
+      {% endif %}
+      <div class="flex w-full mt-1 mb-1 bg-grey-light rounded p-1 font-md items-center">
+        <aside class="flex-1 p-2">
+          {% if calendar.title %}
+            {% trans url=CALDATA_URL + calendar.filename, country=calendar.country,
+                    title=calendar.title, authors=calendar.authors %}
+            <a href="{{ url }}" class="inline-link text-blue">{{ country }}</a> {{ title }}, thanks to {{ authors }}
+            {% endtrans %}
+          {% else %}
+            {% trans url=CALDATA_URL + calendar.filename, country=calendar.country,
+                    authors=calendar.authors %}
+            <a href="{{ url }}" class="inline-link text-blue">{{ country }}</a> holidays thanks to {{ authors }}
+            {% endtrans %}
+          {% endif %}
+        </aside>
+        <aside class="text-right p-2 font-sm uppercase font-semibold">
+          {{ calendar.datespan }}
+        </aside>
+      </div>
+    {% endfor %}
+  </section>
 
+  <section class="pt-20 pb-10 w-full bg-calendar">
+    <section class="flex max-w-4xl mx-auto pl-8 pr-8">
+      <aside class="flex flex-col w-full">
+        <h3 class="header-section">
+          {{ _('Contributing a Holiday Calendar')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6">
+          {{ _('If you would like to send us your calendar files, please follow these steps:') }}
+        </p>
+        <ol class="font-md tracking-wider leading-loose mb-6">
+          <li>{{ _('Create a new local calendar, e.g. <i>"$Country$ Holidays"</i>.') }}</li>
+          <li>{{ _('Create the different holidays of your country in this local calendar.') }}</li>
+          <li>
+            {{ _('Right-click on this calendar and choose "Export Calendar". Please use the iCalendar (ics) format.') }}
+          </li>
+          <li class="p-links-blue">
+            {{ _('Open a bug in <a href="%s">Bugzilla</a>.')|format('http://bugzilla.mozilla.org/enter_bug.cgi?product=Calendar&component=Website') }}
+          </li>
+          <li>{{ _('Add your holiday file as an attachment in the new bug.') }}</li>
+        </ol>
+      </aside>
+    </section>
+  </section>
+
+  {% include '_includes/site-prefooter.html' %}
 {% endblock %}
-
-{% block js %}
-  <script type="text/javascript" src="/media/js/calendar.js" charset="utf-8"></script>
-{% endblock %}
-
-

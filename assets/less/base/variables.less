@@ -1,0 +1,518 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+/*-------------------------
+* Colours
+*--------------------------*/
+@colors: {
+  transparent: transparent;
+  white: #fff;
+  black: #000;
+  black-25: rgba(0, 0, 0, 0.25);
+  black-light: #212123;
+  black-lighter: #34343A;
+  black-lightest: #45454B;
+  grey-light: #f0f0f0;
+  grey-lighter: #fdfdfd;
+  blue-dark: #36385A;
+  orange: #ff9500;
+  blue-lightest: #B2D9FF;
+  blue: #0080FF;
+  blue-dark: #245CAD;
+  blue-darker: #36385A;
+  green: #058B00;
+  green-light: #11AD00;
+  purple: #ad3bff;
+  red: #a4000f;
+}
+
+/*-------------------------
+* Spacing
+*--------------------------*/
+@paddings: {
+  p: padding;
+  pt: padding-top;
+  pr: padding-right;
+  pb: padding-bottom;
+  pl: padding-left;
+}
+
+@margins: {
+  m: margin;
+  mt: margin-top;
+  mr: margin-right;
+  mb: margin-bottom;
+  ml: margin-left;
+}
+
+/*-------------------------
+* Sizing
+*--------------------------*/
+@widths: {
+  w-auto:auto;
+  // w-px:1px;
+  // w-0: 0;
+  // w-1: 0.25rem;
+  w-2: 0.5rem;
+  w-3: 0.75rem;
+  w-4: 1rem;
+  // w-5: 1.25rem;
+  w-6: 1.5rem;
+  // w-8: 2rem;
+  // w-10: 2.5rem;
+  // w-12: 3rem;
+  w-16: 4rem;
+  // w-20: 5rem;
+  w-24: 6rem;
+  // w-32: 8rem;
+  w-40: 10rem;
+  w-48: 12rem;
+  w-56: 14rem;
+  w-64: 16rem;
+}
+
+// -- is converted to /, .w-1/2, .w-1/3, etc.
+@widths-percentage: {
+  w-1--2: 50%;
+  w-1--3: 33.333333%;
+  w-2--3: 66.666667%;
+  w-1--4: 25%;
+  w-2--4: 50%;
+  w-3--4: 75%;
+  w-1--5: 20%;
+  w-2--5: 40%;
+  w-3--5: 60%;
+  w-4--5: 80%;
+  w-1--6: 16.666667%;
+  w-2--6: 33.333333%;
+  w-3--6: 50%;
+  w-4--6: 66.666667%;
+  w-5--6: 83.333333%;
+  w-1--12: 8.333333%;
+  w-2--12: 16.666667%;
+  w-3--12: 25%;
+  w-4--12: 33.333333%;
+  w-5--12: 41.666667%;
+  w-6--12: 50%;
+  w-7--12: 58.333333%;
+  w-8--12: 66.666667%;
+  w-9--12: 75%;
+  w-10--12: 83.333333%;
+  w-11--12: 91.666667%;
+  w-full: 100%;
+  w-screen: 100vw;
+}
+
+@max-widths: {
+  max-w-xs: 20rem;
+  max-w-sm: 24rem;
+  max-w-md: 28rem;
+  max-w-lg: 32rem;
+  max-w-xl: 36rem;
+  // max-w-2xl: 42rem;
+  max-w-3xl: 48rem;
+  max-w-4xl: 56rem;
+  max-w-5xl: 64rem;
+  max-w-6xl: 72rem;
+  // max-w-full: 100%;
+}
+
+@heights: {
+  // h-0: 0;
+  // h-1: 0.25rem;
+  // h-2: 0.5rem;
+  h-3: 0.75rem;
+  h-4: 1rem;
+  // h-5: 1.25rem;
+  h-6: 1.5rem;
+  // h-8: 2rem;
+  // h-10: 2.5rem;
+  // h-12: 3rem;
+  // h-16: 4rem;
+  // h-20: 5rem;
+  // h-24: 6rem;
+  // h-32: 8rem;
+  // h-40: 10rem;
+  // h-48: 12rem;
+  // h-56: 14rem;
+  // h-64: 16rem;
+  h-auto: auto;
+  // h-px: 1px;
+  h-full: 100%;
+  // h-screen: 100vh;
+}
+
+@min-heights: {
+  // min-h-0: 0;
+  // min-h-full: 100%;
+  // min-h-screen: 100vh;
+}
+
+/*-------------------------
+* Media Queries
+*--------------------------*/
+@xs: 480px;
+@sm: 640px;
+@md: 768px;
+@lg: 1024px;
+@xl: 1280px;
+@xxl: 1440px;
+
+@breakpoints: {
+  // sm: @sm;
+  md: @md;
+  lg: @lg;
+  xl: @xl;
+}
+
+/*-------------------------
+* Display
+*--------------------------*/
+@display: {
+  block: block;
+  inline-block: inline-block;
+  inline: inline;
+  flex: flex;
+  // inline-flex: inline-flex;
+  table: table;
+  // table-row: table-row;
+  // table-cell: table-cell;
+  hidden: none;
+}
+
+/*-------------------------
+* Object Fit
+*--------------------------*/
+@object-fit: {
+  // object-contain: contain;
+  // object-cover: cover;
+  // object-fill: fill;
+  // object-none: none;
+  // object-scale-down: scale-down;
+}
+
+/*-------------------------
+* Object Position
+*--------------------------*/
+@object-position: {
+  // object-bottom: bottom;
+  // object-center: center;
+  // object-left: left;
+  // object-left-bottom: left bottom;
+  // object-left-top: left top;
+  // object-right: right;
+  // object-right-bottom: right bottom;
+  // object-right-top: right top;
+  // object-top: top;
+}
+
+/*-------------------------
+* Overflow
+*--------------------------*/
+@overflow: {
+  overflow-auto: auto;
+  overflow-hidden: hidden;
+  overflow-visible: visible;
+  overflow-scroll: scroll;
+}
+
+/*-------------------------
+* Positions
+*--------------------------*/
+@position: {
+  static: static;
+  fixed: fixed;
+  absolute: absolute;
+  relative: relative;
+  sticky: sticky;
+}
+
+@pin: {
+  pin-t: top;
+  pin-r: right;
+  pin-b: bottom;
+  pin-l: left;
+}
+
+/*-------------------------
+* Z Index
+*--------------------------*/
+@z-index: {
+  // z-0: 0;
+  // z-10: 10;
+  // z-20: 20;
+  // z-30: 30;
+  // z-40: 40;
+  // z-50: 50;
+}
+
+/*-------------------------
+* Opacity
+*--------------------------*/
+@opacity: {
+  opacity-0: 0;
+  opacity-25: .25;
+  opacity-50: .50;
+  opacity-75: .75;
+  opacity-100: 1;
+}
+
+/*-------------------------
+* Box Shadow
+*--------------------------*/
+@shadow: {
+  shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  shadow-none: none;
+}
+
+/*-------------------------
+* Borders
+*--------------------------*/
+@border-radius: {
+  rounded-none: 0;
+  rounded-xs: .1rem;
+  rounded-sm: .125rem;
+  rounded: .25rem;
+  rounded-lg: .5rem;
+  rounded-full: 9999px;
+}
+
+@border-style: {
+  border-solid: solid;
+  border-dashed: dashed;
+  border-dotted: dotted;
+  border-none: none;
+}
+
+@border: {
+  border: 1px;
+  border-0: 0;
+}
+
+@border-top: {
+  border-t: 1px;
+  border-t-0: 0;
+}
+
+@border-right: {
+  border-r: 1px;
+  border-r-0: 0;
+}
+
+@border-bottom: {
+  border-b: 1px;
+  border-b-0: 0;
+}
+
+@border-left: {
+  border-l: 1px;
+  border-l-0: 0;
+}
+
+/*-------------------------
+* FlexBox
+*--------------------------*/
+@flex: {
+  flex-initial: 0 1 auto;
+  flex-1: 1 1 0%;
+  flex-auto: 1 1 auto;
+  flex-none: none;
+}
+
+@flex-direction: {
+  flex-row: row;
+  flex-row-reverse: row-reverse;
+  flex-col: column;
+  flex-col-reverse: column-reverse;
+}
+
+@flex-wrap: {
+  flex-no-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap-reverse: wrap-reverse;
+}
+
+@align-items: {
+  items-stretch: stretch;
+  items-start: flex-start;
+  items-center: center;
+  items-end: flex-end;
+  items-baseline: baseline;
+}
+
+@align-content: {
+  content-start: flex-start;
+  content-center: center;
+  content-end: flex-end;
+  content-between: space-between;
+  content-around: space-around;
+}
+
+@align-self: {
+  self-auto: auto;
+  self-start: flex-start;
+  self-center: center;
+  self-end: flex-end;
+  self-stretch: stretch;
+}
+
+@justify-content: {
+  justify-start: flex-start;
+  justify-center: center;
+  justify-end: flex-end;
+  justify-between: space-between;
+  justify-around: space-around;
+}
+
+@flex-grow: {
+  flex-grow: 1;
+  flex-grow-0: 0;
+}
+
+@flex-shrink: {
+  flex-shrink: 1;
+  flex-shrink-0: 0;
+}
+
+/*-------------------------
+* Typography
+*
+* The custom X-LocaleSpecific font family is defined with a @font-face rule in
+* locale-specific style sheets which can be found at /media/css/l10n/. See
+* /docs/l10n.rst for details.
+*--------------------------*/
+@base-font: 'Open Sans', X-LocaleSpecific, sans-serif;
+
+// Font Size
+@fonts: {
+  font-base: 13px;
+  font-xs: 9px;
+  font-sm: 11px;
+  font-regular: 12px;
+  font-md: 15px;
+  font-lg: 17px;
+  font-xl: 19px;
+  font-2xl: 21px;
+  font-4xl: 41px;
+  font-hero: 59px;
+}
+
+// Font Weight
+@font-weight: {
+  font-hairline: 100;
+  font-thin: 200;
+  font-light: 300;
+  font-normal: 400;
+  font-medium: 500;
+  font-semibold: 600;
+  font-bold: 700;
+  font-extrabold: 800;
+  font-black: 900;
+}
+
+// Letter Spacing
+@letter-spacing: {
+  tracking-tighter: -0.05em;
+  tracking-tight: -0.025em;
+  tracking-normal: 0;
+  tracking-wide: 0.025em;
+  tracking-wider: 0.05em;
+  tracking-widest: 0.1em;
+}
+
+// Line Height
+@line-height: {
+  leading-none: 1;
+  leading-tight: 1.25;
+  leading-snug: 1.375;
+  leading-normal: 1.5;
+  leading-relaxed: 1.625;
+  leading-loose: 2;
+}
+
+// Decoration
+@decoration: {
+  underline: underline;
+  line-through: line-through;
+  no-underline: none;
+}
+
+// Transform
+@text-transform: {
+  uppercase: uppercase;
+  lowercase: lowercase;
+  capitalize: capitalize;
+  normal-case: none;
+}
+
+// Text Align
+@text-align: {
+  text-left: left;
+  text-center: center;
+  text-right: right;
+  text-justify: justify;
+}
+
+/*-------------------------
+* Backgrounds
+*--------------------------*/
+@background-attachment: {
+  bg-fixed: fixed;
+  bg-local: local;
+  bg-scroll: scroll;
+}
+
+@background-position: {
+  bg-bottom: bottom;
+  bg-center: center;
+  bg-left: left;
+  bg-left-bottom: left bottom;
+  bg-left-top: left top;
+  bg-right: right;
+  bg-right-bottom: right bottom;
+  bg-right-top: right top;
+  bg-top: top;
+}
+
+@background-repeat: {
+  bg-repeat: repeat;
+  bg-no-repeat: no-repeat;
+  bg-repeat-x: repeat-x;
+  bg-repeat-y: repeat-y;
+  bg-repeat-round: round;
+  bg-repeat-space: space;
+}
+
+@background-size: {
+  bg-auto: auto;
+  bg-cover: cover;
+  bg-contain: contain;
+}
+
+/*-------------------------
+* Pinter Events
+*--------------------------*/
+@pointer-events: {
+  pointer-events-none: none;
+  pointer-events-auto: auto;
+}
+
+/*-------------------------
+* Animations
+*--------------------------*/
+@time: 320ms;
+@time_fast: 240ms;
+@time_slow: 700ms;
+
+@swing: cubic-bezier(0.55, 0, 0.1, 1);
+@swift: cubic-bezier(0.4, 0, 0.2, 1);
+@ease: ease;
+
+@transition-default: all @time @ease;

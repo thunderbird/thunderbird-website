@@ -10,100 +10,80 @@
 {{ _('How to contact Thunderbird.') }}
 {% endblock %}
 
-{% block body_id %}contact{% endblock %}
-
-{% block page_css %}
-<link href="/media/css/thunderbird-features.css" rel="stylesheet" type="text/css"/>
+{% block header_content %}
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-16">{{ self.page_title() }}</h1>
+  </section>
 {% endblock %}
 
 {% block content %}
-<header id="main-feature">
-  <h1>{{ self.page_title() }}</h1>
-  <h2>{{ self.page_desc() }}</h2>
-</header>
+  <section class="pt-20 pb-10 flex flex-col items-center">
+    <h3 class="header-section">{{ _('Get Support')}}</h3>
+    <p class="font-lg tracking-wider leading-loose mb-10 mt-0 max-w-xl text-center">
+      {{ _('How to get support for Thunderbird.') }}
+    </p>
 
-<nav role="directory">
-  <ul class="feature-links">
-    <li><a href="#support">{{ _('Get Support') }}</a></li>
-    <li><a href="#press"</a>{{ _('Press Inquiries')}}
-    <li><a href="#partnerships">{{ _('Partner with Thunderbird') }}</a></li>
-  </ul>
-</nav>
+    <section class="flex xl:w-full flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
+      <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg">
+        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
+          {{ _('<a href="%(support)s" class="header-link">Mozilla Support Website</a>')|format(support=url('support')) }}
+        </h4>
+        <p class="mt-0 mb-6 flex-1 p-links-blue">
+          {{ _('The best place to start looking for answers if you have questions about Thunderbird is the Mozilla Support website, <a href="%(support)s">specifically the Thunderbird page</a>. There you can search for articles, ask questions, and read tutorials.')|format(support=url('support')) }}
+        </p>
+      </article>
 
-<main role="main">
-  <section id="support">
-    <h2>{{ _('Get Support') }}</h2>
-    <div class="row">
-      <div class="col full">
-        <p>{{ _('How to get support for Thunderbird.') }}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col full">
-        <section>
-          <h3>{{ _('<a href="%(support)s">Mozilla Support Website</a>')|format(support=url('support')) }}</h3>
-            <p>{{ _('The best place to start looking for answers if you have questions about Thunderbird is the Mozilla Support website, <a href="%(support)s">specifically the Thunderbird page</a>.
-              There you can search for articles, ask questions, and read tutorials.')|format(support=url('support')) }}</p>
-        </section>
-        <section>
-          <h3>{{ _('<a href="https://support.mozilla.org/questions/new/thunderbird">Ask a Question</a>') }}</h3>
-            <p>{{ _('You can ask a question on the support website. <b>Remember to be courteous</b>, as most of the people providing support on this site are volunteers and fellow Thunderbird users like you!') }}</p>
-        </section>
-        <section>
-          <h3>{{ _('<a href="irc://irc.mozilla.org/thunderbird">Live Chat on IRC</a>') }}</h3>
-          <p>{{ _('You can chat with other users and members of the Thunderbird team on the <a href="irc://irc.mozilla.org/thunderbird">#thunderbird channel on Mozilla’s IRC</a>. You can set up IRC in Thunderbird by following the <a href="https://support.mozilla.org/kb/instant-messaging-and-chat#w_configuring-chat">instructions on SUMO</a>.') }}</p>
-        </section>
-      </div>
-    </div>
-  </section><!-- end #support -->
+      <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg lg:ml-16 lg:mr-16">
+        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
+          {{ _('<a href="https://support.mozilla.org/questions/new/thunderbird" class="header-link">Ask a Question</a>') }}
+        </h4>
+        <p class="mt-0 mb-6 flex-1">
+          {{ _('You can ask a question on the support website. <b>Remember to be courteous</b>, as most of the people providing support on this site are volunteers and fellow Thunderbird users like you!') }}
+        </p>
+      </article>
 
-  <section id="press">
-    <h2>{{ _('Press Inquiries') }}</h2>
-    <div class="row">
-      <div class="col full">
-        <p>{{ _('Information on how members of the press to reach out to us.') }}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col full">
-        <section>
-          <p>{{ _('Are you a member of the press who would like to ask us a question about Thunderbird? You can reach our team at <a href="mailto:press@thunderbird.net">press@thunderbird.net</a>.') }}</p>
-        </section>
-      </div>
-    </div>
-  </section><!-- end #press -->
+      <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg">
+        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
+          {{ _('<a href="irc://irc.mozilla.org/thunderbird" class="header-link">Live Chat on IRC</a>') }}
+        </h4>
+        <p class="mt-0 mb-6 flex-1 p-links-blue">
+          {{ _('You can chat with other users and members of the Thunderbird team on the <a href="irc://irc.mozilla.org/thunderbird">#thunderbird channel on Mozilla’s IRC</a>. You can set up IRC in Thunderbird by following the <a href="https://support.mozilla.org/kb/instant-messaging-and-chat#w_configuring-chat">instructions on SUMO</a>.') }}
+        </p>
+      </article>
+    </section>
+  </section>
 
-  <section id="partnerships">
-    <h2>{{ _('Partnerships') }}</h2>
-    <div class="row">
-      <div class="col full">
-        <p>{{ _('Partner with the Thunderbird Project.') }}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col full">
-        <section>
-          <p>{{ _('Are you interested in partnering with the Thunderbird project? Do you provide services that could improve the experience of using Thunderbird?
-            Do you deploy Thunderbird at scale and want to provide a better experience for your users? Please Email us at <a href="mailto:partnerships@thunderbird.net">partnerships@thunderbird.net</a>.') }}</p>
-        </section>
-      </div>
-    </div>
-  </section><!-- end #partnerships -->
+  <section class="pt-20 pb-10 w-full bg-calendar">
+    <section class="flex flex-col lg:flex-row max-w-6xl mx-auto">
+      <aside class="flex flex-col lg:w-1/2 pr-8 pl-8">
+        <article class="flex flex-col w-full mb-6 lg:pr-8">
+          <h4 class="subheader-section">{{ _('Security') }}</h4>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('To report a security issue related to Thunderbird, please register an account at <a href="https://bugzilla.mozilla.org/">Bugzilla</a>, and describe the issue in a new Thunderbird <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">bug report</a>. If you select the <i>Security checkmark</i> before you submit, then only members of our security team will have access to your report.') }}
+          </p>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('Bugzilla is also our preferred medium for coordinating the disclosure of security incidents and for discussing embargo dates. If you don’t get a timely response in Bugzilla, please contact us at <a href="mailto:security@thunderbird.net">security@thunderbird.net</a> and mention the respective bug numbers. Encrypted email can be arranged on demand.') }}
+          </p>
+        </article>
+      </aside>
 
-  <section id="security">
-    <h2>{{ _('Security') }}</h2>
-    <div class="row">
-      <div class="col full">
-        <p>{{ _('For developers who would like to report security issues.') }}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col full">
-        <section>
-          <p>{{ _('To report a security issue related to Thunderbird, please register an account at <a href="https://bugzilla.mozilla.org/">Bugzilla</a>, and describe the issue in a new Thunderbird <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">bug report</a>. If you select the <i>Security checkmark</i> before you submit, then only members of our security team will have access to your report. Bugzilla is also our preferred medium for coordinating the disclosure of security incidents and for discussing embargo dates. If you don\'t get a timely response in Bugzilla, please contact us at <a href="mailto:security@thunderbird.net">security@thunderbird.net</a> and mention the respective bug numbers. Encrypted email can be arranged on demand.') }}</p>
-        </section>
-      </div>
-    </div>
-  </section><!-- end #security -->
-</main>
+      <aside class="flex flex-col lg:w-1/2 pr-8 pl-8">
+        <article class="flex flex-col w-full mb-6 lg:pl-8">
+          <h4 class="subheader-section">{{ _('Partnerships') }}</h4>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('Are you interested in partnering with the Thunderbird project? Do you provide services that could improve the experience of using Thunderbird? Do you deploy Thunderbird at scale and want to provide a better experience for your users? Please Email us at <a href="mailto:partnerships@thunderbird.net">partnerships@thunderbird.net</a>.') }}
+          </p>
+        </article>
+
+        <article class="flex flex-col w-full lg:pl-8">
+          <h4 class="subheader-section">{{ _('Press Inquiries') }}</h4>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('Are you a member of the press who would like to ask us a question about Thunderbird? You can reach our team at <a href="mailto:press@thunderbird.net">press@thunderbird.net</a>.') }}
+          </p>
+        </article>
+      </aside>
+    </section>
+  </section>
+
+  {% include '_includes/site-prefooter.html' %}
 {% endblock %}

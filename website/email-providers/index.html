@@ -6,51 +6,60 @@
 
 {% block page_title %}{{ _('Free Email Providers') }}{% endblock %}
 
-{% block body_id %}email-providers{% endblock %}
-
-{% block page_css %}
-  <link href="/media/css/thunderbird-features.css" rel="stylesheet" type="text/css" />
+{% block header_content %}
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
+      {{ _('List of Free Email Providers') }}
+    </p>
+  </section>
 {% endblock %}
 
 {% block content %}
-  <header id="main-feature">
-    <h1>Free Email Providers</h1>
-  </header>
+  <section class="mt-10 pt-20 pb-16 w-full bg-calendar">
+    &nbsp;
+  </section>
 
-  <main role="main">
-    <section>
-      <h2>List of Free Email Providers</h2>
-      <div class="row">
-        <div class="col">
-          <section id="gmail">
-            <h3><a href="http://mail.google.com">Gmail</a></h3>
-            <p>Gmail is a free email service provided by Google that offers webmail supported by targeted advertising as well as POP3 and IMAP access. It also has a very large amount of storage and integration with the Google Talk messaging service.</p>
-            <img src="{{ static('img/thunderbird/email-providers/gmail-ss-small.jpg') }}" alt="">
-          </section>
-        </div>
-        <div class="col">
-          <section id="yahoo">
-            <h3><a href="http://mail.yahoo.com">Y! Mail</a></h3>
-            <p>Y! Mail is a free email service provided by Yahoo! It offers webmail supported by targeted advertising as well as IMAP access. It also has unlimited storage and integration with the Yahoo! Messenger application.</p>
-            <img src="{{ static('img/thunderbird/email-providers/ymail-ss-small.jpg') }}" alt="">
-          </section>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <section id="hotmail">
-            <h3><a href="http://www.hotmail.com">Windows Live Hotmail</a></h3>
-            <p>Windows Live Hotmail is a free email service provided by Microsoft that offers webmail supported by targeted advertising as well as POP3 access. It also has unlimited storage and integration with all Windows Live applications and Outlook.</p>
-            <img src="{{ static('img/thunderbird/email-providers/hotmail-ss-small.jpg') }}" alt="">
-          </section>
-        </div>
-        <div class="col">
-          <section id="gmx">
-            <h3><a href="http://www.gmx.com/">GMX Mail</a></h3>
-            <p>GMX Mail is a free email service provided by German-based GMX that offers webmail supported by targeted advertising as well as POP3 and IMAP access. It also has 5GB of storage for your email and 2GB of storage for files. It supports file sharing capabilities and offers a choice of email address on a number of different domains.</p>
-            <img src="{{ static('img/thunderbird/email-providers/gmx-ss-small.jpg') }}" alt="">
-          </section>
-      </div>
+  <section class="w-full bg-grey-lighter">
+    <section class="pb-20 flex flex-col lg:flex-row flex-wrap max-w-6xl mx-auto justify-between pl-8 pr-8">
+      <aside class="flex flex-col lg:w-1/3 lg:max-w-xs mb-10 lg:mb-0">
+        <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg"
+          src="{{ static('img/thunderbird/email-providers/gmail-ss-small.jpg') }}" alt="">
+        <h3 class="subheader-section">{{ _('Gmail')}}</h3>
+        <p class="font-md tracking-wider leading-loose mb-8 mt-0 flex-1">
+          {{ _('Gmail is a free email service provided by Google that offers webmail supported by targeted advertising as well as POP3 and IMAP access. It also has a very large amount of storage and integration with the Google Talk messaging service.') }}
+        </p>
+        <a href="https://mail.google.com" class="btn-body self-start">{{_('Get Gmail')}}
+          <span>{{ svg('chevron-right') }}</span>
+        </a>
+      </aside>
+
+      <aside class="flex flex-col lg:w-1/3 lg:max-w-xs mb-10 lg:mb-0">
+        <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg"
+          src="{{ static('img/thunderbird/email-providers/hotmail-ss-small.jpg') }}" alt="">
+        <h3 class="subheader-section">{{ _('Outlook Live')}}</h3>
+        <p class="font-md tracking-wider leading-loose mb-8 mt-0 flex-1">
+          {{ _('Windows Outlook Live is a free email service provided by Microsoft that offers webmail supported by targeted advertising as well as POP3 access. It also has a built-in calendar and integrations with other Live Outlook applications.') }}
+        </p>
+        <a href="https://outlook.live.com/owa/" class="btn-body self-start">{{_('Get Outlook')}}
+          <span>{{ svg('chevron-right') }}</span>
+        </a>
+      </aside>
+
+      <aside class="flex flex-col lg:w-1/3 lg:max-w-xs mb-10 lg:mb-0">
+        <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg"
+          src="{{ static('img/thunderbird/email-providers/gmx-ss-small.jpg') }}" alt="">
+        <h3 class="subheader-section">{{ _('GMX Mail')}}</h3>
+        <p class="font-md tracking-wider leading-loose mb-8 mt-0 flex-1">
+          {{ _('GMX Mail is a free email service provided by German-based GMX that offers webmail supported by targeted advertising as well as POP3 and IMAP access. It also has 5GB of storage for your email and 2GB of storage for files. It supports file sharing capabilities and offers a choice of email address on a number of different domains.') }}
+        </p>
+        <a href="https://www.gmx.com/" class="btn-body self-start">{{_('Get GMX')}}
+          <span>{{ svg('chevron-right') }}</span>
+        </a>
+      </aside>
     </section>
-  </main>
+  </section>
+
+  {% include '_includes/site-prefooter.html' %}
+
 {% endblock %}

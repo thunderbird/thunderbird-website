@@ -1,0 +1,63 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+each(@paddings, #(@k, @v) {
+  each(range(21), {
+    @num: 21-@index;
+    .@{v}-@{num} {
+      @{k}: (@num * 0.25rem);
+    }
+  });
+});
+
+each(@margins, #(@k, @v) {
+  each(range(21), {
+    @num: 21-@index;
+    .@{v}-@{num} {
+      @{k}: (@num * 0.25rem);
+    }
+  });
+
+  each(range(21), {
+    @num: 21-@index;
+    .-@{v}-@{num} {
+      @{k}: -(@num * 0.25rem);
+    }
+  });
+});
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+each(@breakpoints, #(@k, @v) {
+  @media (min-width: @k) {
+
+    each(@paddings, #(@i, @r) {
+      each(range(21), {
+        @num: 21-@index;
+        .@{v}\:@{r}-@{num} {
+          @{i}: (@num * 0.25rem);
+        }
+      });
+    });
+
+    each(@margins, #(@i, @r) {
+      each(range(21), {
+        @num: 21-@index;
+        .@{v}\:@{r}-@{num} {
+          @{i}: (@num * 0.25rem);
+        }
+      });
+
+      each(range(21), {
+        @num: 21-@index;
+        .@{v}\:-@{r}-@{num} {
+          @{i}: -(@num * 0.25rem);
+        }
+      });
+    });
+  }
+});

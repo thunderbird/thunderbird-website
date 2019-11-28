@@ -1,0 +1,90 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// Flex
+each(@flex, #(@k, @v) {
+  .@{v} {
+    flex: @k;
+  }
+});
+
+// Flex Direction
+each(@flex-direction, #(@k, @v) {
+  .@{v} {
+    flex-direction: @k;
+  }
+});
+
+// Flex Wrap
+each(@flex-wrap, #(@k, @v) {
+  .@{v} {
+    flex-wrap: @k;
+  }
+});
+
+// Align Items
+each(@align-items, #(@k, @v) {
+  .@{v} {
+    align-items: @k;
+  }
+});
+
+// Align Content
+each(@align-content, #(@k, @v) {
+  .@{v} {
+    align-content: @k;
+  }
+});
+
+// Align Self
+each(@align-self, #(@k, @v) {
+  .@{v} {
+    align-self: @k;
+  }
+});
+
+// Justify Content
+each(@justify-content, #(@k, @v) {
+  .@{v} {
+    justify-content: @k;
+  }
+});
+
+// Flex Grow
+each(@flex-grow, #(@k, @v) {
+  .@{v} {
+    flex-grow: @k;
+  }
+});
+
+// Flex Shrink
+each(@flex-shrink, #(@k, @v) {
+  .@{v} {
+    flex-shrink: @k;
+  }
+});
+
+each(@breakpoints, #(@k, @v) {
+  @media (min-width: @k) {
+
+    each(@flex-direction, #(@i, @r) {
+      .@{v}\:@{r} {
+        flex-direction: @i;
+      }
+    });
+
+    each(@flex-grow, #(@i, @r) {
+      .@{v}\:@{r} {
+        flex-grow: @i;
+      }
+    });
+
+    each(@align-items, #(@i, @r) {
+      .@{v}\:@{r} {
+        align-items: @i;
+      }
+    });
+
+  }
+});

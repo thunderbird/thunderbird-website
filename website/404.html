@@ -6,33 +6,28 @@
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
 {% block page_title %}{{ _('There’s nothing here!') }}{% endblock %}
-{% block page_desc %}{{ _('The page you are looking for doesn’t exist. If you think this is a bug, you can <a href="%(bug_report_url)s">report an issue here</a>.')|format(bug_report_url=url('thunderbird.site.bug-report')) }}{% endblock %}
+{% block page_desc %}{{ _('The page you are looking for doesn’t exist.<br/>If you think this is a bug, you can <a href="%(bug_report_url)s">report an issue here</a>.')|format(bug_report_url=url('thunderbird.site.bug-report')) }}{% endblock %}
 
-{% block body_id %}thunderbird-404{% endblock %}
-
-{% block site_header_logo %}
-  <h2>{{ high_res_img('thunderbird/landing/wordmark.png', {'alt': _('Thunderbird'), 'width': '329', 'height': '77'}) }}</h2>
-{% endblock %}
-
-{% block page_css %}
-  <link href="/media/css/thunderbird-landing.css" rel="stylesheet" type="text/css" />
+{% block header_content %}
+  <section class="text-center text-white flex flex-col items-center xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-20 mt-0 p-links">
+      {{ self.page_desc() }}
+    </p>
+  </section>
 {% endblock %}
 
 {% block content %}
 
-<main role="main">
-  <div id="main-feature">
-    <div class="row">
-      {{ high_res_img('thunderbird/landing/logo.png', {'alt': _('Thunderbird'), 'width': '120', 'height': '120'}) }}
-      <h1 class="large">{{ self.page_title() }}</h1>
-      <p class="large">{{ self.page_desc() }}</p>
-    </div>
-  </div>
-  <div id="404-image">
-    <img src="{{ static('img/thunderbird/404/nest.png') }}" alt="{{ _('Empty nest') }}">
-  </div>
-</main>
+  <section class="pt-20 w-full">
+    <img src="{{ static('img/thunderbird/404/nest.png') }}" alt="{{ _('Empty nest') }}"
+      class="flex w-full max-w-3xl mx-auto pr-8 pl-8">
+  </section>
+
+  <section class="pt-20 pb-20 w-full bg-calendar">
+    &nbsp;
+  </section>
+
+  {% include '_includes/site-prefooter.html' %}
 
 {% endblock %}
-
-{% block email_form %}{% endblock %}

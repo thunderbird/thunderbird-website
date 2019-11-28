@@ -43,8 +43,11 @@ CANONICAL_LOCALES = {
 
 CANONICAL_URL = 'https://www.thunderbird.net'
 
-# url for the server that serves Thunderbird downloads
+# url for the server that serves Thunderbird downloads.
 BOUNCER_URL = 'https://download.mozilla.org/'
+
+# url for the ftp server where Nightly builds are hosted.
+NIGHTLY_URL = 'https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/'
 
 # url for the mozilla wiki used for some documentation.
 WIKI_URL = 'https://wiki.mozilla.org'
@@ -102,9 +105,11 @@ URL_MAPPINGS = {
     'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#cookies',
     'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
     'support': 'https://support.mozilla.org/products/thunderbird/',
-    'blog': 'https://blog.mozilla.org/thunderbird'
+    'blog': 'https://blog.thunderbird.net/'
 
 }
+
+BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/'
 
 ENUS_ONLY = [
     'thunderbird.get-involved',
@@ -117,16 +122,20 @@ DONATE_LINK = (
     '?utm_source={source}&utm_medium=referral&utm_content={content}'
 )
 
+# WEBSITE_CSS = {
+#     'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
+#     'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less'],
+#     'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less'],
+#     'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less'],
+#     'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less'],
+#     'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less'],
+#     'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less'],
+#     'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less'],
+#     'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less'],
+# }
+
 WEBSITE_CSS = {
-    'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
-    'responsive-bundle': ['less/sandstone/sandstone-resp.less', 'less/base/global-nav.less'],
-    'thunderbird-landing': ['less/thunderbird/landing.less', 'less/base/menu-resp.less'],
-    'thunderbird-features': ['less/thunderbird/features.less', 'less/base/menu-resp.less'],
-    'thunderbird-channel': ['less/thunderbird/channel.less', 'less/base/menu-resp.less'],
-    'thunderbird-organizations': ['less/thunderbird/organizations.less', 'less/base/menu-resp.less'],
-    'thunderbird-all': ['less/thunderbird/all.less', 'less/base/menu-resp.less'],
-    'releasenotes': ['less/firefox/releasenotes.less', 'less/base/menu-resp.less'],
-    'releases-index': ['less/firefox/releases-index.less', 'less/base/menu-resp.less'],
+    'thunderbird-style': ['less/style.less'],
 }
 
 WEBSITE_JS = {
@@ -144,5 +153,5 @@ WEBSITE_JS = {
 }
 
 START_CSS = {
-    'start-style': ['less/sandstone/fonts.less', 'less/thunderbird/start.less']
+    'start-style': ['less.old/sandstone/fonts.less', 'less.old/thunderbird/start.less']
 }

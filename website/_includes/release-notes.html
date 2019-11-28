@@ -7,166 +7,130 @@
 {% block page_title_prefix %}{% endblock %}
 {% block page_title %}{{ _('Thunderbird — {channel} Notes ({version})')|f(channel=channel_name, version=release.version) }}{% endblock %}
 
-{% block body_id %}notes{% endblock %}
-{% block body_class %}thunderbird-notes sky{% endblock %}
-
-{% block page_css %}
-  <link href="/media/css/releasenotes.css" rel="stylesheet" type="text/css" />
-{% endblock %}
-
 {# channel_name is for display purposes where needed.  #}
 {% set channel_name = channel_name|default('') %}
 
-{% block content %}
-<main role="main">
-  <article id="main-content">
-
-  {% block notes_header %}
-    <header class="notes-head">
-    <h1>{{ _('Thunderbird {channel} Notes')|f(channel=channel_name) }}</h1>
-    <h2>{{ _('Version {version}, first offered to {channel} channel users on {date}')|f(channel=release.channel, date=release.release_date|l10n_format_date, version=release.version) }}</h2>
-
-      <p>
-        {{ _('Check out "What’s New" and "Known Issues" for this version of Thunderbird below.') }}
-      {% trans feedback='https://support.mozilla.org/questions/new/thunderbird',
-               bugzilla='https://bugzilla.mozilla.org/' %}
-        As always, you’re encouraged to
-        <a href="{{ feedback }}">tell us what you think</a>,
-        or <a href="{{ bugzilla }}">file a bug in Bugzilla</a>.
-      {% endtrans %}
-      {% if release.bug_list %}
-      <form action="https://bugzilla.mozilla.org/buglist.cgi" method="post">
-        <input type="hidden" name="limit" value="0">
-        <input type="hidden" name="bug_id" value="{{ release.bug_list }}">
-        <p>If interested, please see the <button type="submit">complete list of changes</button> in this release.</p>
-      </form>
-      {% else %}
-          If interested, please see the  <a href="{{ release.bug_search_url }}">complete list of changes</a> in this release.
-      {% endif %}
-        {{ release.text|markdown|safe }}
-      </p>
-    </header>
-  {% endblock %}
-
-  <div class="main-column">
-    {% if notes %}
-    <section class="notes-section" id="new-features">
-      <h3>{{ _('What’s New') }}</h3>
-      {% for group in range(release.groups|length) %}
-        {% if release.groups[group] %}
-          <h4>{{ release.groups[group] }}</h4>
-        {% endif %}
-        <ul class="section-items tagged">
-          {% for note in notes %}
-          {% if note.get('group', 1)-1 == group and note.tag != 'unresolved' %}
-            <li {% if not note.tag %}class="untagged"{% endif %} id="note-{{ note.id }}">
-              {% if note.tag %}
-                <b class="tag tag-{{ note.tag.lower() }}">{{ note.tag }}</b>
-              {% endif %}
-                {{ note.note|markdown|safe }}
-            </li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-      {% endfor %}
-    </section>
-    {% endif %}
-    {% if known_issues %}
-    <section class="notes-section" id="known-issues">
-      <h3>{{ _('Known Issues') }}</h3>
-      <ul class="section-items tagged">
-        {% for note in known_issues %}
-          <li id="note-{{ note.id }}">
-            <b class="tag tag-unresolved">{{ _('unresolved') }}</b>
-            {{ note.note|markdown|safe }}
-          {% if note.fixed_in_release %}
-            <p class="note">
-              <a href="{{ releasenotes_url(note.fixed_in_release) }}">
-                {{ _('Resolved in v{version_number}')|f(version_number=note.fixed_in_release.version) }}
-              </a>
-            </p>
-          {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-    {% endif %}
-  </div>
-
-  {% block notes_sidebar %}
-    <aside id="sidebar" class="sidebar">
-      <section id="try">
-        <h3>{{ _('Try Thunderbird %s')|format(channel_name) }}</h3>
-        <ol>
-          <li class="try1">
-            <a href="{{ url('thunderbird.sysreq', version) }}">
-              {{ _('Check') }}
-            </a>
-          </li>
-          <li class="try2">
-            {% if 'b' in release.version %}
-              <a href="{{ url('thunderbird.channel') }}">
-            {% else %}
-              <a href="/">
-            {% endif %}
-            {{ _('Download') }}
-            </a>
-          </li>
-          <li class="try3">
-            <a href="https://support.mozilla.org/kb/Installing%20Thunderbird">
-              {{ _('Install') }}
-            </a>
-          </li>
-          <li class="try4">
-            <a href="https://addons.thunderbird.net">
-              {{ _('Customize') }}
-            </a>
-          </li>
-        </ol>
-      </section>
-
-      <section id="get-involved">
-        <h3>{{ _('Want to get involved?') }}</h3>
-        <p>{{ _('Did you know that most of the content in Thunderbird Support was written by volunteers?') }}<br>
-        <a href="https://wiki.mozilla.org/Thunderbird#Contributing">{{ _('Find out more') }}</a></p>
-      </section>
-
-      <section id="problems">
-        <h3>{{ _('Having Problems?') }}</h3>
-        <ol>
-          <li>
-            <a href="{{ url('support') }}">
-              {{ _('Search for answers on the Thunderbird Support page') }}
-            </a>
-          </li>
-          {% if known_issues %}
-            <li>
-              <a href="#known-issues">
-                {{ _('Look at the known issues list and see if we already know about the problem') }}
-              </a>
-            </li>
-          {% endif %}
-          <li>
-            <a href="https://bugzilla.mozilla.org/enter_bug.cgi">
-              {{ _('If you can’t find reference to your issue, please consider filing a technical bug report') }}
-            </a>
-          </li>
-        </ol>
-      </section>
-
-      <section id="other">
-        <h3>{{ _('Other Resources') }}</h3>
-        <p>
-          <a href="https://blog.mozilla.com/thunderbird/">
-            {{ _('The Thunderbird Blog') }}
-          </a>
-        </p>
-      </section>
-    </aside>
-  {% endblock %}
-
-  </article>
-</main>
+{% block header_content %}
+  <section class="text-center text-white flex flex-col items-center xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">
+      {{ _('Thunderbird {channel} Notes')|f(channel=channel_name) }}
+    </h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
+      {{ _('Version {version}, first offered to {channel} channel users on {date}')|f(channel=release.channel, date=release.release_date|l10n_format_date, version=release.version) }}
+    </p>
+  </section>
+  <nav role="directory" class="text-center text-white flex justify-center max-w-6xl mx-auto bg-black-25 rounded mb-10">
+    <ul class="list-none p-0 flex flex-wrap justify-around flex-1 m-0">
+      <li class="ml-2 mr-2">
+        <a href="#whatsnew" class="btn-link">{{ _('What’s new') }}</a>
+      </li>
+      <li class="ml-2 mr-2">
+        <a href="#changes" class="btn-link">{{ _('Changes') }}</a>
+      </li>
+      <li class="ml-2 mr-2">
+        <a href="#fixes" class="btn-link">{{ _('Bug Fixes') }}</a>
+      </li>
+    </ul>
+  </nav>
 {% endblock %}
 
-{% block js %}{% endblock  %}
+{% block content %}
+  <section  class="pt-20 flex justify-center items-center pl-8 pr-8">
+    <aside class="flex flex-col w-full max-w-6xl lg:ml-16 lg:mr-16">
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('Check out "What’s New" and "Known Issues" for this version of Thunderbird below. As always, you’re encouraged to <a href="%(feedback)s">tell us what you think</a>, or <a href="%(bugzilla)s">file a bug in Bugzilla</a>')|format(feedback='https://support.mozilla.org/questions/new/thunderbird', bugzilla='https://bugzilla.mozilla.org/') }}
+      </p>
+      <aside class="font-lg tracking-wider leading-loose mb-6 markup-page">
+        {{ release.text|markdown|safe }}
+      </aside>
+    </aside>
+  </section>
+
+  <section class="pt-20 pb-16 w-full bg-calendar -mt-10">
+    &nbsp;
+  </section>
+
+  {% if notes %}
+    <section class="pb-10 flex flex-wrap justify-center items-center pl-8 pr-8 bg-grey-lighter">
+      <aside class="flex flex-col w-full max-w-6xl lg:ml-16 lg:mr-16">
+        {% set section = namespace(name='') %}
+        {% for group in range(release.groups|length) %}
+          {% for note in notes %}
+            {% if section.name != note.tag %}
+              {% set section.name = note.tag %}
+
+              {% if section.name == 'new' %}
+                <h3 id="whatsnew" class="header-section">
+                  <span>{{ svg('bookmark') }}</span>{{ _('What’s New')}}
+                </h3>
+              {% elif section.name == 'changed' %}
+                <h3 id="changes" class="header-section pt-14 pb-4">
+                  <span>{{ svg('sync') }}</span>{{ _('Changes')}}
+                </h3>
+              {% elif section.name == 'fixed' %}
+                <h3 id="fixes" class="header-section pt-14 pb-4">
+                  <span>{{ svg('check') }}</span>{{ _('Fixes')}}
+                </h3>
+              {% endif %}
+
+            {% endif %}
+            {% if note.get('group', 1)-1 == group and note.tag != 'unresolved' %}
+              <aside id="note-{{ note.id }}" class="flex flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
+                <h4 class="font-bold uppercase m-0 p-3 w-24">
+                  {% if note.tag == 'new' %}
+                    <aside class="flex items-center text-orange">
+                      <span class="w-4 mr-2">{{ svg('bookmark') }}</span>
+                      {{ note.tag }}
+                    </aside>
+                  {% elif note.tag == 'changed' %}
+                    <aside class="flex items-center text-purple">
+                      <span class="w-4 mr-2">{{ svg('sync') }}</span>
+                      {{ note.tag }}
+                    </aside>
+                  {% elif note.tag == 'fixed' %}
+                    <aside class="flex items-center text-green">
+                      <span class="w-4 mr-2">{{ svg('check') }}</span>
+                      {{ note.tag }}
+                    </aside>
+                  {% endif %}
+                </h4>
+                <aside class="flex-1 p-3 font-md leading-normal markup-page no-padding">
+                  {{ note.note|markdown|safe }}
+                </aside>
+              </aside>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+
+        {% if known_issues %}
+          <h3 id="known-issues" class="header-section pt-14 pb-4">
+            <span>{{ svg('warning') }}</span>{{ _('Known Issues')}}
+          </h3>
+          {% for note in known_issues %}
+            <aside id="note-{{ note.id }}" class="flex flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
+              <h4 class="font-bold uppercase m-0 p-3 w-24">
+                <aside class="flex items-center text-red">
+                  <span class="w-4 mr-2">{{ svg('bookmark') }}</span>
+                  {{ _('unresolved') }}
+                </aside>
+              </h4>
+              <aside class="flex-1 p-3 font-md leading-normal markup-page no-padding">
+                {{ note.note|markdown|safe }}
+                {% if note.fixed_in_release %}
+                  <p class="note">
+                    <a href="{{ releasenotes_url(note.fixed_in_release) }}">
+                      {{ _('Resolved in v{version_number}')|f(version_number=note.fixed_in_release.version) }}
+                    </a>
+                  </p>
+                {% endif %}
+              </aside>
+            </aside>
+          {% endfor %}
+        {% endif %}
+      </aside>
+    </section>
+  {% endif %}
+
+  {% include '_includes/site-prefooter.html' %}
+
+{% endblock %}

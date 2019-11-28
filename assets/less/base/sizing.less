@@ -1,0 +1,58 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// Widths
+each(@widths, #(@k, @v) {
+  .@{v} {
+    width: @k;
+  }
+});
+
+each(@widths-percentage, #(@k, @v) {
+  @num: replace(@v, "--", "\/");
+  .@{num} {
+    width: @k;
+  }
+});
+
+each(@max-widths, #(@k, @v) {
+  .@{v} {
+    max-width: @k;
+  }
+});
+
+each(@heights, #(@k, @v) {
+  .@{v} {
+    height: @k;
+  }
+});
+
+each(@min-heights, #(@k, @v) {
+  .@{v} {
+    min-height: @k;
+  }
+});
+
+each(@breakpoints, #(@k, @v) {
+  @media (min-width: @k) {
+    each(@widths, #(@i, @r) {
+      .@{v}\:@{r} {
+        width: @i;
+      }
+    });
+
+    each(@widths-percentage, #(@i, @r) {
+      @num: replace(@r, "--", "\/");
+      .@{v}\:@{num} {
+        width: @i;
+      }
+    });
+
+    each(@max-widths, #(@i, @r) {
+      .@{v}\:@{r} {
+        max-width: @i;
+      }
+    });
+  }
+});

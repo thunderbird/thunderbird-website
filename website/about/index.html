@@ -6,83 +6,93 @@
 
 {% block page_title %}{{ _('About Us') }}{% endblock %}
 
-{% block page_desc %}
-{{ _('About the Thunderbird Project.') }}
-{% endblock %}
-
-{% block body_id %}about{% endblock %}
-
-{% block page_css %}
-<link href="/media/css/thunderbird-features.css" rel="stylesheet" type="text/css"/>
+{% block header_content %}
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-hero font-thin mt-10 mb-16">{{ self.page_title() }}</h1>
+  </section>
 {% endblock %}
 
 {% block content %}
-<header id="main-feature">
-  <h1>{{ self.page_title() }}</h1>
-  <h2>{{ self.page_desc() }}</h2>
-</header>
+  <section class="pt-20 pb-20 flex justify-between items-center pr-8 pl-8 overflow-hidden">
+    <section class="flex justify-between mx-auto">
+      <aside class="flex flex-col flex-1 lg:max-w-4xl mr-8 ml-8 lg:ml-16 lg:mr-16 lg:pt-12">
+        <h3 class="header-section">
+          <span>{{ svg('envelope') }}</span>
+          <aside class="flex flex-col">
+            {{ _('What is Thunderbird?')}}
+            <small class="font-normal font-md tracking-normal normal-case">
+              {{ _('Software made to make email easier.') }}
+            </small>
+          </aside>
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6">
+          {{ _('Thunderbird is a free and open source email, newsfeed, chat, and calendaring client, that’s easy to set up and customize. One of the core principles of Thunderbird is the use and promotion of open standards - this focus is a rejection of our world of closed platforms and services that can’t communicate with each other. We want our users to have freedom and choice in how they communicate.') }}
+        </p>
+        <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
+          {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download'), section='body') }}
+        </aside>
+      </aside>
 
-<nav role="directory">
-  <ul class="feature-links">
-    <li><a href="#what">{{ _('What is Thunderbird?') }}</a></li>
-    <li><a href="#who"</a>{{ _('Who We Are')}}
-    <li><a href="#mozilla">{{ _('Thunderbird and Mozilla Foundation') }}</a></li>
-  </ul>
-</nav>
+      <aside class="hidden lg:flex flex-1 max-w-xl -mr-20">
+        {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Lightning Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
+      </aside>
+    </section>
+  </section>
 
-<main role="main">
-  <section id="what">
-    <h2>{{ _('What is Thunderbird?') }}</h2>
-    <div class="row">
-      <div class="col full">
-        <p>{{ _('Software made to make email easier.') }}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col full">
-        <section>
-            <p>{{ _('Thunderbird is a free and open source email, newsfeed, chat, and calendaring client, that’s easy to set up and customize. One of the core principles of Thunderbird is the use and promotion of open standards - this focus is a rejection of our world of closed platforms and services that can’t communicate with each other. We want our users to have freedom and choice in how they communicate.') }}</p>
-        </section>
-      </div>
-    </div>
-  </section><!-- end #what -->
+  <section class="pt-10 flex max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <h3 class="header-section">
+      <span>{{ svg('accessibility') }}</span>
+      <aside class="flex flex-col">
+        {{ _('Who We Are')}}
+        <small class="font-normal font-md tracking-normal normal-case">
+          {{ _('We are a community making communication free and open.') }}
+        </small>
+      </aside>
+    </h3>
+  </section>
 
-  <section id="who">
-    <h2>{{ _('Who We Are') }}</h2>
-    <div class="row">
-      <div class="col full">
-        <p>{{ _('We are a community making communication free and open.') }}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col full">
-        <section>
-          <h3>{{ _('Our Community') }}</h3>
-          <p>{{ _('There is a passionate team of volunteers involved in developing Thunderbird and assisting its users who would welcome your involvement. Check out our <a href="%(volunteer)s">Get Involved page</a> to learn how you can participate on the Thunderbird team. We also have paid staff working full-time on Thunderbird, <a href="%(donate)s">funded by donations</a> from our users. If you’re curious about who is working on Thunderbird, check out the <a href="%(core_team)s">list of our core contributors</a>.')|format(volunteer=url('thunderbird.get-involved'), donate=donate_url('about'), core_team=url('wiki.moz', '/Thunderbird/Core_Team')) }}</p>
-        </section>
-        <section>
-          <h3>{{ _('Thunderbird Council') }}</h3>
-          <p>{{ _('The Thunderbird project is governed by seven councilors, elected by the Thunderbird community’s active contributors. You can see the current elected Thunderbird Council members <a href="%(council)s">on the Thunderbird wiki</a>.')|format(council=url('wiki.moz', '/Modules/Thunderbird#Thunderbird_Council')) }}</p>
-        </section>
-      </div>
-    </div>
-  </section><!-- end #who -->
+  <section class="pt-10 flex flex-col lg:flex-row w-full max-w-6xl mx-auto mb-10">
+    <aside class="flex flex-col lg:w-1/2 pr-8 pl-8">
+      <img class="w-full max-w-4xl mb-10 lg:mb-0 h-auto shadow-lg rounded-sm" src="{{ static('img/thunderbird/team.jpg') }}" alt="Thunderbird Developers Toronto Summit 2014">
+    </aside>
 
-  <section id="mozilla">
-    <h2>{{ _('Thunderbird and Mozilla Foundation') }}</h2>
-    <div class="row">
-      <div class="col full">
-        <p>{{ _('Thunderbird lives at the nonprofit <a href="%(foundation)s">Mozilla Foundation</a>.')|format(foundation=url('foundation.about')) }}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col full">
-        <section>
-          <p>{{ _('Thunderbird is an independent project with its legal and financial home at <a href="%(foundation)s">the Mozilla Foundation</a>. The Mozilla Foundation believes the Internet is a global public resource that must remain open and accessible to all. It is focused on advocacy issues and keeping the Internet healthy, but is also the sole shareholder in the maker of Firefox, the Mozilla Corporation. Mozilla exerts no governance over the project, which instead falls to the Thunderbird Council, elected by the Thunderbird project’s community. The Mozilla Foundation became Thunderbird’s home after an <a href="%(home_blog_post)s">exploration of legal homes in 2017</a>.')|format(foundation=url('foundation.about'), home_blog_post='https://blog.mozilla.org/thunderbird/2017/05/thunderbirds-future-home/') }}</p>
-        </section>
-      </div>
-    </div>
-  </section><!-- end #mozilla -->
-</main>
+    <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
+      <article class="flex flex-col w-full mb-6">
+        <h4 class="subheader-section">{{ _('Our Community') }}</h4>
+        <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+          {{ _('There is a passionate team of volunteers involved in developing Thunderbird and assisting its users who would welcome your involvement. Check out our <a href="%(volunteer)s">Get Involved page</a> to learn how you can participate on the Thunderbird team. We also have paid staff working full-time on Thunderbird, <a href="%(donate)s">funded by donations</a> from our users. If you’re curious about who is working on Thunderbird, check out the <a href="%(core_team)s">list of our core contributors</a>.')|format(volunteer=url('thunderbird.get-involved'), donate=donate_url('about'), core_team=url('wiki.moz', '/Thunderbird/Core_Team')) }}
+        </p>
+      </article>
+
+      <article class="flex flex-col w-full">
+        <h4 class="subheader-section">{{ _('Thunderbird Council') }}</h4>
+        <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+          {{ _('The Thunderbird project is governed by seven councilors, elected by the Thunderbird community’s active contributors. You can see the current elected Thunderbird Council members <a href="%(council)s">on the Thunderbird wiki</a>.')|format(council=url('wiki.moz', '/Modules/Thunderbird#Thunderbird_Council')) }}
+        </p>
+      </article>
+    </aside>
+  </section>
+
+  <section class="pt-20 pb-20 w-full bg-calendar">
+    <section class="flex flex-wrap max-w-6xl mx-auto pl-8 pr-8">
+      <aside class="flex flex-col w-full">
+        <h3 class="header-section">
+          <span>{{ svg('heart') }}</span>
+          <aside class="flex flex-col">
+            {{ _('Thunderbird and Mozilla Foundation')}}
+            <small class="font-normal font-md tracking-normal normal-case p-links-blue">
+              {{ _('Thunderbird lives at the nonprofit <a href="%(foundation)s">Mozilla Foundation</a>.')|format(foundation=url('foundation.about')) }}
+            </small>
+          </aside>
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+          {{ _('Thunderbird is an independent project with its legal and financial home at <a href="%(foundation)s">the Mozilla Foundation</a>. The Mozilla Foundation believes the Internet is a global public resource that must remain open and accessible to all. It is focused on advocacy issues and keeping the Internet healthy, but is also the sole shareholder in the maker of Firefox, the Mozilla Corporation. Mozilla exerts no governance over the project, which instead falls to the Thunderbird Council, elected by the Thunderbird project’s community. The Mozilla Foundation became Thunderbird’s home after an <a href="%(home_blog_post)s">exploration of legal homes in 2017</a>.')|format(foundation=url('foundation.about'), home_blog_post='https://blog.mozilla.org/thunderbird/2017/05/thunderbirds-future-home/') }}
+        </p>
+      </aside>
+    </section>
+  </section>
+
+  {% include '_includes/site-prefooter.html' %}
+
 {% endblock %}
 

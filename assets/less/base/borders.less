@@ -1,0 +1,46 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+each(@border-radius, #(@k, @v) {
+  .@{v} {
+    border-radius: @k;
+  }
+});
+
+each(@border-style, #(@k, @v) {
+  .@{v} {
+    border-style: @k;
+  }
+});
+
+each(@border, #(@k, @v) {
+  .@{v} {
+    border-width: @k;
+  }
+});
+
+each(@border-top, #(@k, @v) {
+  .@{v} {
+    border-top-width: @k;
+  }
+});
+
+each(@border-right, #(@k, @v) {
+  .@{v} {
+    border-right-width: @k;
+  }
+});
+
+each(@border-bottom, #(@k, @v) {
+  .@{v} {
+    border-bottom-width: @k;
+  }
+});
+
+each(@border-left, #(@k, @v) {
+  .@{v} {
+    border-left-width: @k;
+  }
+});
+

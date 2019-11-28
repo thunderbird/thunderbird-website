@@ -11,9 +11,11 @@ import translate
 
 from babel.core import Locale, UnknownLocaleError
 from babel.dates import format_date
+from datetime import datetime
 from os import path
 from os.path import splitext
 from product_details import thunderbird_desktop
+from time import mktime
 
 babel_format_locale_map = {
     'hsb': 'de',
@@ -160,6 +162,12 @@ def high_res_img(ctx, url, optional_attributes=None):
 
 
 @jinja2.contextfunction
+def svg(ctx, file_name):
+    file = path.join(settings.MEDIA_URL.strip('/'), 'svg/' + file_name + '.svg')
+    return open(file).read()
+
+
+@jinja2.contextfunction
 def platform_img(ctx, url, optional_attributes=None):
     optional_attributes = optional_attributes or {}
     img_urls = {}
@@ -193,8 +201,8 @@ def platform_img(ctx, url, optional_attributes=None):
     # Don't download any image until the javascript sets it based on
     # data-src so we can do platform detection. If no js, show the
     # windows version.
-    markup = (u'<img class="platform-img js" src="" data-processed="false" {attrs}>'
-              u'<noscript><img class="platform-img win" src="{win_src}" {attrs}>'
+    markup = (u'<img class="platform-img w-full h-auto js" src="" data-processed="false" {attrs}>'
+              u'<noscript><img class="platform-img w-full h-auto win" src="{win_src}" {attrs}>'
               u'</noscript>').format(attrs=attrs, win_src=img_attrs[u'data-src-windows'])
 
     return jinja2.Markup(markup)
@@ -203,16 +211,18 @@ def platform_img(ctx, url, optional_attributes=None):
 @jinja2.contextfunction
 def download_thunderbird(ctx, channel='release', dom_id=None,
                          locale=None, force_direct=False,
-                         alt_copy=None, button_color='button-green'):
+                         alt_copy=None, button_color='button-green',
+                         section='header'):
     """ Output a "Download Thunderbird" button.
 
     :param ctx: context from calling template.
-    :param channel: name of channel: 'release', 'beta' or 'alpha'.
+    :param channel: name of channel: 'release', 'beta' or 'nightly'. 'alpha' has been retired.
     :param dom_id: Use this string as the id attr on the element.
     :param locale: The locale of the download. Default to locale of request.
     :param force_direct: Force the download URL to be direct.
     :param alt_copy: Specifies alternate copy to use for download buttons.
     :param button_color: color of download button. Default to 'green'.
+    :param section: Where the button is rendered in the page. Default to 'header'.
     :return: The button html.
     """
     alt_channel = '' if channel == 'release' else channel
@@ -267,6 +277,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
         'channel': alt_channel,
         'alt_copy': alt_copy,
         'button_color': button_color,
+        'section': section,
     }
     loader = jinja2.FileSystemLoader(searchpath=settings.WEBSITE_PATH)
     env = jinja2.Environment(loader=loader, extensions=['jinja2.ext.i18n'])
@@ -341,6 +352,20 @@ def l10n_format_date(ctx, date, format='long'):
         return format_date(date, locale=lang, format=format)
     else:
         return ''
+
+
+@jinja2.contextfunction
+def get_blog_data(ctx, entry):
+    data = ctx.get('blog_data')
+    parsed = {}
+
+    parsed['summary'] = jinja2.Markup(data['entries'][entry]['summary_detail']['value'])
+    parsed['title'] = data['entries'][entry]['title']
+    parsed['comments'] = data['entries'][entry]['slash_comments']
+    parsed['date'] = datetime.fromtimestamp(mktime(data['entries'][entry]['published_parsed'])).strftime('%B %-m, %Y')
+    parsed['link'] = data['entries'][entry]['links'][0]['href']
+
+    return parsed
 
 
 def f(s, *args, **kwargs):

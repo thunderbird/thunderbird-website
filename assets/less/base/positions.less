@@ -1,0 +1,31 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+each(@position, #(@k, @v) {
+  .@{v} {
+    position: @k;
+  }
+});
+
+each(@pin, #(@k, @v) {
+  .@{v} {
+    @{k}: 0;
+  }
+});
+
+.pin-x {
+  left: 0;
+  right: 0;
+}
+
+.pin-y {
+  top: 0;
+  bottom: 0;
+}
+
+each(@z-index, #(@k, @v) {
+  .@{v} {
+    z-index: @k;
+  }
+});

@@ -1,0 +1,260 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+button {
+  .transition(@transition-default);
+  cursor: pointer;
+}
+
+.btn-donate {
+  &:extend(.xl\:ml-6, .xl\:mr-6, .md\:ml-4, .md\:mr-4, .text-white, .font-base, .font-semibold, .no-underline, .uppercase, .block, .pt-2, .pb-2, .pl-3, .pr-3, .bg-donate-button, .rounded-xs, .shadow);
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-download {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-7, .pr-7, .mb-5, .bg-download-button, .rounded-xs, .shadow);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-download-inline {
+  &:extend(.m-1, .text-green-light, .font-base, .font-semibold, .no-underline, .uppercase, .inline-block, .p-2, .bg-white, .rounded-sm, .border-green-light, .border, .border-solid);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md, .bg-green-light, .text-white);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-download-link {
+  &:extend(.m-1, .text-black-lightest, .font-base, .font-semibold, .no-underline, .capitalize, .inline-block);
+
+  &:hover,
+  &:focus {
+    &:extend(.text-green-light);
+  }
+}
+
+.btn-body {
+  &:extend(.relative, .bg-white, .text-green, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-5, .pr-9, .border-green-light, .rounded-sm, .border, .border-solid);
+
+  span {
+    &:extend(.absolute, .flex, .items-center, .w-2, .pin-r, .pin-t, .pin-b, .pr-4);
+
+    svg {
+      &:extend(.w-2);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+
+  &.btn-secondary {
+    &:extend(.text-blue, .border-transparent, .bg-transparent, .normal-case);
+  }
+
+  &.btn-release {
+    &:extend(.p-2);
+
+    &:hover,
+    &:focus {
+      &:extend(.text-white, .bg-blue);
+    }
+  }
+}
+
+.btn-block-white {
+  &:extend(.p-2, .no-underline, .rounded);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md, .bg-white);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-inline {
+  &:extend(.rounded-sm, .border-none, .bg-grey-light, .text-black, .p-1, .pl-2, .pr-2, .ml-2, .appearance-none);
+
+  &:hover,
+  &:focus {
+    &:extend(.bg-black-lightest, .text-white);
+  }
+
+  &:active {
+    &:extend(.bg-blue, .text-white);
+  }
+}
+
+.btn-newsletter {
+  &:extend(.rounded-xs, .border-none, .bg-primary-button, .text-white, .p-2, .pl-3, .pr-3, .uppercase, .font-semibold, .appearance-none);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+
+  &:active {
+    &:extend(.bg-blue);
+  }
+}
+
+.btn-join {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-primary-button, .rounded-xs, .shadow);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-beta {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-beta-button, .rounded-xs, .shadow);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-nightly {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-nightly-button, .rounded-xs, .shadow);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
+}
+
+.btn-link {
+  &:extend(.bg-transparent, .text-white, .font-regular, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-4, .pr-4, .rounded-sm, .m-1);
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md, .bg-white, .text-blue);
+  }
+}
+
+// Product download buttons
+.download-button {
+  .ios-download,
+  .linux-arm-download,
+  .unrecognized-download,
+  .unsupported-download,
+  .unsupported-download-osx,
+  .nojs-download {
+    display: none;
+  }
+}
+
+// OS detection
+.download-button .os_msi,
+.download-button .os_winsha1,
+.download-button .os_win64,
+.download-button .os_linux,
+.download-button .os_linux64,
+.win7up.x86.x64 .download-button .os_win,
+.android .download-button-desktop,
+.windows.arm .download-button .os_win,
+.linux.arm .download-button .os_linux,
+.linux.x86.x64 .download-list .os_linux,
+.download-button .os_win,
+.download-button .os_osx,
+.download-button .os_android,
+.download-button .os_ios,
+.no-js .download-list,
+.other .download-list {
+  display: none !important;
+}
+
+.win7up.x86.x64 .download-button .os_win64,
+.linux .download-button .os_linux,
+.linux.x86.x64 .download-button .os_linux64,
+.windows .download-button .os_win,
+.osx .download-button .os_osx,
+.android .download-button .os_android,
+.download-button-android .os_android,
+.android .download-button-desktop .download-list,
+.android .download-button-desktop small.os_win,
+.download-button-ios .os_ios,
+.ios .download-button .os_ios,
+.ios .download-button .ios-download,
+.ios .download-button-desktop .download-list,
+.other .download-button-android .download-list,
+.other .download-button small.os_win {
+  display: block !important;
+}
+
+.windows.arm .download-button .unsupported-download,
+.linux.arm .download-button .linux-arm-download,
+.oldwin .download-button .unsupported-download,
+.oldmac .download-button .unsupported-download {
+  display: block;
+  max-width: 250px;
+}
+
+// Hide the privacy link if platform is unsupported.
+.windows.arm .download-button .fx-privacy-link,
+.linux.arm .download-button .fx-privacy-link,
+.oldwin .download-button .fx-privacy-link,
+.oldmac .download-button .fx-privacy-link {
+  display: none;
+}
+
+.android .download-button-desktop,
+.ios .download-button-desktop,
+.no-js .download-button {
+  .nojs-download {
+    display: block;
+  }
+}
+
+.other .download-button {
+  .unrecognized-download {
+    display: block;
+  }
+}
+
+// Android architecture detection
+.download-button .download-list .os_android.x86,
+.download-button .download-other.os_android .api-15,
+.android.x86 .download-button .download-list .os_android.armv7up,
+.android.x86 .download-button .download-other.os_android .x86 {
+  display: none !important;
+}
+
+.android.x86 .download-button .download-list .os_android.x86 {
+  display: block !important;
+}
+
+.android.x86 .download-button .download-other.os_android .armv7up {
+  display: inline !important;
+}
+
+// IE on Windows XP, Server 2003, Vista need sha-1 button
+.windows.sha-1 .download-button .os_win {
+  display: none !important;
+}
+
+.windows.sha-1 .download-button .os_winsha1 {
+  display: block !important;
+}

@@ -1,5 +1,6 @@
 import argparse
 import builder
+import feedparser
 import helper
 import settings
 
@@ -46,6 +47,7 @@ else:
                'letters': caldata['letters'],
                'CALDATA_URL': settings.CALDATA_URL,
                'latest_thunderbird_version': version,
+               'blog_data': feedparser.parse(settings.BLOG_FEED_URL)
               }
 
     site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,
