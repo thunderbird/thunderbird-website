@@ -73,7 +73,7 @@ START_RENDERPATH = 'site'
 CALDATA_URL = MEDIA_URL + '/caldata/'
 
 # path to product-details json files
-JSON_PATH = 'product-details-json/product-details/'
+JSON_PATH = 'product-details/public/1.0'
 
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
