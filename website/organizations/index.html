@@ -4,8 +4,8 @@
 
 {% extends "_includes/base-resp.html" %}
 
-{% block page_title %}{{ _('Extended Support Release') }}{% endblock %}
-{% block page_desc %}{{ _('Thunderbird Extended Release Support for Your Organization, Business, or Enterprise') }}{% endblock %}
+{% block page_title %}{{ _('Thunderbird for Organizations') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird Support for Your Organization, Business, or Enterprise') }}{% endblock %}
 
 {% block header_content %}
   <section class="text-center text-white flex flex-col items-center mb-12 pr-8 pl-8">
@@ -19,19 +19,16 @@
     <section class="flex max-w-6xl mx-auto justify-between items-center">
       <aside class="flex flex-col w-full">
         <h3 class="header-section">
-          <span>{{ svg('envelope') }}</span> {{ _('Thunderbird ESR')}}
+          <span>{{ svg('envelope') }}</span> {{ _('Thunderbird for Organizations')}}
         </h3>
         <p class="font-lg tracking-wider leading-loose mb-6">
-          {{ _('A community-led project that allows organizations to benefit from the speed, flexibility and security of Thunderbird while getting the support they need.') }}
-        </p>
-        <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
-          {{ _('The Thunderbird Extended Support Releases (ESR) are <a href="{latest}">mainstream releases</a>, operating similarly to <a href="{firefox_esr}">Mozilla Firefox ESR</a>. They are stable for approximately one year before receiving feature updates.')|f(latest=url('thunderbird.latest.all'), firefox_esr=url('firefox.organizations.faq')) }}
+          {{ _('Unlike the <a href="{firefox_esr}">Mozilla Firefox ESR</a>, Thunderbird does not provide a separate ESR release. This is because the <a href="/">regular Thunderbird release</a> is already an ESR release. It remains stable and on that major version for approximately one year. Only <a href="/#channel">Thunderbird Beta</a> follows the more frequent major version releases.') }}
         </p>
         <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
-          {{ _('To get help or ask questions about Thunderbird visit <a href="{0}">Thunderbird support</a>.')|f(url('support')) }}
+          {{ _('We do have other resources for organizations: If you need it, you can find the Thunderbird MSI Installer on the <a href="{syslang}">Systems & Languages page</a>. And for more information about deploying and configuring Thunderbird in business and enterprise environments, you can also join the <a href="{maillist}">Enterprise mailing list</a>.')|f(maillist=url('thunderbird.enterprise'), syslang=url('thunderbird.latest.all')) }}
         </p>
         <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
-          {{ _('You can find the Thunderbird MSI Installer on the <a href="{syslang}">Systems & Languages page</a>. For more information about deploying and configuring Thunderbird in business and enterprise environments, you can also join the <a href="{maillist}">Enterprise mailing list</a>.')|f(maillist=url('thunderbird.enterprise'), syslang=url('thunderbird.latest.all')) }}
+          {{ _('For general help or questions about Thunderbird you can visit <a href="{support_site}">Thunderbird support</a>.')|f(support_site=url('support')) }}
         </p>
       </aside>
     </section>
