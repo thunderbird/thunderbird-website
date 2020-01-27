@@ -86,6 +86,7 @@ URL_MAPPINGS = {
     'foundation.licensing.website-content': 'https://www.mozilla.org/foundation/licensing/website-content/',
     'foundation.about': 'https://foundation.mozilla.org/about/',
     'thunderbird.about': '/about',
+    'thunderbird.careers': '/careers',
     'thunderbird.channel': '/channel',
     'thunderbird.contact': '/contact',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
