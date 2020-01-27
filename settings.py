@@ -8,7 +8,7 @@ PROD_LANGUAGES = (
     'en-ZA', 'eo', 'es-AR', 'es-CL', 'es-ES', 'es-MX', 'et',
     'eu', 'fa', 'ff', 'fi', 'fr', 'fy-NL', 'ga-IE', 'gd',
     'gl', 'gn', 'gu-IN', 'he', 'hi-IN', 'hr', 'hsb',
-    'hu', 'hy-AM', 'id', 'is', 'it', 'ja', 'ja-JP-mac',
+    'hu', 'hy-AM', 'id', 'is', 'it', 'ja',
     'ka', 'kab', 'kk', 'km', 'kn', 'ko', 'lij', 'lt', 'ltg', 'lv',
     'mai', 'mk', 'ml', 'mr', 'ms', 'my', 'nb-NO', 'ne-NP', 'nl',
     'nn-NO', 'oc', 'or', 'pa-IN', 'pl', 'pt-BR', 'pt-PT',
@@ -73,7 +73,7 @@ START_RENDERPATH = 'site'
 CALDATA_URL = MEDIA_URL + '/caldata/'
 
 # path to product-details json files
-JSON_PATH = 'product-details-json/product-details/'
+JSON_PATH = 'product-details/public/1.0'
 
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 

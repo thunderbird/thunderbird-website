@@ -12,7 +12,7 @@ On Ubuntu, you would need to use apt-get instead of yum, and similarly for diffe
 ```
 pip install -r requirements.txt
 git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
-git clone https://github.com/mozilla/product-details-json
+git clone -b production https://github.com/mozilla-releng/product-details.git
 sudo yum install npm
 sudo npm install -g less
 ```
@@ -56,7 +56,7 @@ In general, you only need to manually build the website for testing and developm
 automatic rebuilds when:
 
 * https://github.com/thundernest/thunderbird-notes.git (Release Notes) are updated.
-* https://github.com/mozilla/product-details-json (Product Details) are updated. Product details contains data on what versions of Thunderbird exist.
+* https://github.com/mozilla-releng/product-details.git (Product Details) are updated. Product details contains data on what versions of Thunderbird exist.
     * Currently stage doesn't update automatically from product-details changes.
 
 Both of these update frequently enough(multiple times per week) that independent updates for localization are not necessary. Any triggered
