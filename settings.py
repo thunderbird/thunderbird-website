@@ -100,9 +100,10 @@ URL_MAPPINGS = {
     'contribute': 'https://github.com/thundernest/thunderbird-website',
     'mozorg.home': 'https://www.mozilla.org/',
     'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
-    'legal.index': 'https://www.mozilla.org/about/legal/',
-    'privacy': 'https://www.mozilla.org/privacy/',
-    'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#cookies',
+    'legal.index': 'https://www.mozilla.org/en-US/about/legal/terms/mozilla/',
+    'guidelines': 'https://www.mozilla.org/en-US/about/governance/policies/participation/',
+    'privacy': 'https://www.mozilla.org/privacy/websites/',
+    'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#data-tools',
     'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
     'support': 'https://support.mozilla.org/products/thunderbird/',
     'blog': 'https://blog.thunderbird.net/'
