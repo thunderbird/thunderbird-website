@@ -27,8 +27,8 @@ LANGUAGE_CODE = 'en-US'
 # will be used in urlresolvers to determine the
 # best-matching locale from the user's Accept-Language header.
 CANONICAL_LOCALES = {
-    'bn-BD': 'bn', # https://github.com/thundernest/thunderbird.net-l10n/issues/1
-    'bn-IN': 'bn', # These two locales were merged for the above issue.
+    'bn-BD': 'bn',  # https://github.com/thundernest/thunderbird.net-l10n/issues/1
+    'bn-IN': 'bn',  # These two locales were merged for the above issue.
     'en': 'en-US',
     'es': 'es-ES',
     'ja-jp-mac': 'ja',
@@ -80,11 +80,22 @@ ALL_PLATFORMS = ('windows', 'linux', 'mac')
 # Mappings for the helper.url function.
 # 'thunderbird.sysreq' and 'wiki.moz' have special behaviour.
 URL_MAPPINGS = {
+    'blog': 'https://blog.thunderbird.net/',
     'calendar': '/calendar',
+    'contribute': 'https://github.com/thundernest/thunderbird-website',
     'firefox.dnt': 'https://www.mozilla.org/firefox/dnt/',
     'firefox.organizations.faq': 'https://www.mozilla.org/firefox/organizations/faq/',
     'foundation.licensing.website-content': 'https://www.mozilla.org/foundation/licensing/website-content/',
     'foundation.about': 'https://foundation.mozilla.org/about/',
+    'guidelines': 'https://www.mozilla.org/en-US/about/governance/policies/participation/',
+    'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
+    'legal.index': 'https://www.mozilla.org/en-US/about/legal/terms/mozilla/',
+    'mozorg.home': 'https://www.mozilla.org/',
+    'mzla.blog-post': 'https://blog.thunderbird.net/2020/01/thunderbirds-new-home/',
+    'privacy': 'https://www.mozilla.org/privacy/websites/',
+    'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#data-tools',
+    'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
+    'support': 'https://support.mozilla.org/products/thunderbird/',
     'thunderbird.about': '/about',
     'thunderbird.careers': '/careers',
     'thunderbird.channel': '/channel',
@@ -93,30 +104,19 @@ URL_MAPPINGS = {
     'thunderbird.features': '/features',
     'thunderbird.get-involved': '/get-involved',
     'thunderbird.index': '/',
+    'thunderbird.latest.all': '/thunderbird/all/',
     'thunderbird.organizations': '/organizations',
     'thunderbird.releases.index': '/thunderbird/releases',
     'thunderbird.style': 'https://style.thunderbird.net',
-    'thunderbird.latest.all': '/thunderbird/all/',
     'thunderbird.site.bug-report': 'https://github.com/thundernest/thunderbird-website/issues',
-    'contribute': 'https://github.com/thundernest/thunderbird-website',
-    'mozorg.home': 'https://www.mozilla.org/',
-    'mzla.blog-post': 'https://blog.thunderbird.net/2020/01/thunderbirds-new-home/',
-    'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
-    'legal.index': 'https://www.mozilla.org/en-US/about/legal/terms/mozilla/',
-    'guidelines': 'https://www.mozilla.org/en-US/about/governance/policies/participation/',
-    'privacy': 'https://www.mozilla.org/privacy/websites/',
-    'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#data-tools',
-    'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
-    'support': 'https://support.mozilla.org/products/thunderbird/',
-    'blog': 'https://blog.thunderbird.net/'
-
 }
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/'
 
 ENUS_ONLY = [
-    'thunderbird.get-involved',
     'thunderbird.contact',
+    'thunderbird.careers',
+    'thunderbird.get-involved',
     'thunderbird.organizations',
 ]
 
