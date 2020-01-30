@@ -99,6 +99,7 @@ URL_MAPPINGS = {
     'thunderbird.site.bug-report': 'https://github.com/thundernest/thunderbird-website/issues',
     'contribute': 'https://github.com/thundernest/thunderbird-website',
     'mozorg.home': 'https://www.mozilla.org/',
+    'mzla.blog-post': 'https://blog.thunderbird.net/2020/01/thunderbirds-new-home/',
     'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
     'legal.index': 'https://www.mozilla.org/en-US/about/legal/terms/mozilla/',
     'guidelines': 'https://www.mozilla.org/en-US/about/governance/policies/participation/',

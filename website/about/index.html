@@ -51,43 +51,26 @@
     </h3>
   </section>
 
-  <section class="pt-10 flex flex-col lg:flex-row w-full max-w-6xl mx-auto mb-10">
-    <aside class="flex flex-col lg:w-1/2 pr-8 pl-8">
-      <img class="w-full max-w-4xl mb-10 lg:mb-0 h-auto shadow-lg rounded-sm" src="{{ static('img/thunderbird/team.jpg') }}" alt="Thunderbird Developers Toronto Summit 2014">
-    </aside>
-
-    <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
-      <article class="flex flex-col w-full mb-6">
-        <h4 class="subheader-section">{{ _('Our Community') }}</h4>
-        <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-          {{ _('There is a passionate team of volunteers involved in developing Thunderbird and assisting its users who would welcome your involvement. Check out our <a href="%(volunteer)s">Get Involved page</a> to learn how you can participate on the Thunderbird team. We also have paid staff working full-time on Thunderbird, <a href="%(donate)s">funded by donations</a> from our users. If you’re curious about who is working on Thunderbird, check out the <a href="%(core_team)s">list of our core contributors</a>.')|format(volunteer=url('thunderbird.get-involved'), donate=donate_url('about'), core_team=url('wiki.moz', '/Thunderbird/Core_Team')) }}
-        </p>
-      </article>
-
-      <article class="flex flex-col w-full">
-        <h4 class="subheader-section">{{ _('Thunderbird Council') }}</h4>
-        <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-          {{ _('The Thunderbird project is governed by seven councilors, elected by the Thunderbird community’s active contributors. You can see the current elected Thunderbird Council members <a href="%(council)s">on the Thunderbird wiki</a>.')|format(council=url('wiki.moz', '/Modules/Thunderbird#Thunderbird_Council')) }}
-        </p>
-      </article>
-    </aside>
-  </section>
-
   <section class="pt-20 pb-20 w-full bg-calendar">
-    <section class="flex flex-wrap max-w-6xl mx-auto pl-8 pr-8">
-      <aside class="flex flex-col w-full">
-        <h3 class="header-section">
-          <span>{{ svg('heart') }}</span>
-          <aside class="flex flex-col">
-            {{ _('Thunderbird and Mozilla Foundation')}}
-            <small class="font-normal font-md tracking-normal normal-case p-links-blue">
-              {{ _('Thunderbird lives at the nonprofit <a href="%(foundation)s">Mozilla Foundation</a>.')|format(foundation=url('foundation.about')) }}
-            </small>
-          </aside>
-        </h3>
-        <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
-          {{ _('Thunderbird is an independent project with its legal and financial home at <a href="%(foundation)s">the Mozilla Foundation</a>. The Mozilla Foundation believes the Internet is a global public resource that must remain open and accessible to all. It is focused on advocacy issues and keeping the Internet healthy, but is also the sole shareholder in the maker of Firefox, the Mozilla Corporation. Mozilla exerts no governance over the project, which instead falls to the Thunderbird Council, elected by the Thunderbird project’s community. The Mozilla Foundation became Thunderbird’s home after an <a href="%(home_blog_post)s">exploration of legal homes in 2017</a>.')|format(foundation=url('foundation.about'), home_blog_post='https://blog.mozilla.org/thunderbird/2017/05/thunderbirds-future-home/') }}
-        </p>
+    <section class="pt-10 flex flex-col lg:flex-row w-full max-w-6xl mx-auto mb-10">
+      <aside class="flex flex-col lg:w-1/2 pr-8 pl-8">
+        <img class="w-full max-w-4xl mb-10 lg:mb-0 h-auto shadow-lg rounded-sm" src="{{ static('img/thunderbird/team.jpg') }}" alt="Thunderbird Developers Toronto Summit 2014">
+      </aside>
+
+      <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
+        <article class="flex flex-col w-full mb-6">
+          <h4 class="subheader-section">{{ _('Our Community') }}</h4>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('There is a passionate team of volunteers involved in developing Thunderbird and assisting its users who would welcome your involvement. Check out our <a href="%(volunteer)s">Get Involved page</a> to learn how you can participate on the Thunderbird team. We also have paid staff working full-time on Thunderbird, <a href="%(donate)s">funded by donations</a> from our users. If you’re curious about who is working on Thunderbird, check out the <a href="%(core_team)s">list of our core contributors</a>.')|format(volunteer=url('thunderbird.get-involved'), donate=donate_url('about'), core_team=url('wiki.moz', '/Thunderbird/Core_Team')) }}
+          </p>
+        </article>
+
+        <article class="flex flex-col w-full">
+          <h4 class="subheader-section">{{ _('Thunderbird Council') }}</h4>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('The Thunderbird project is governed by seven councilors, elected by the Thunderbird community’s active contributors. You can see the current elected Thunderbird Council members <a href="%(council)s">on the Thunderbird wiki</a>.')|format(council=url('wiki.moz', '/Modules/Thunderbird#Thunderbird_Council')) }}
+          </p>
+        </article>
       </aside>
     </section>
   </section>
