@@ -1,0 +1,322 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "_includes/base-resp.html" %}
+
+{% block page_title %}{{ _('Work with Us') }}{% endblock %}
+{% block page_desc %}{{ _('Come work with the Thunderbird team on the most popular open source desktop email client in the world. We are a distributed team comprised of people spread across the globe working on decentralized communication technology based on open standards.') }}{% endblock %}
+
+{% block header_content %}
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-6xl mb-10 mt-0">
+      {{ self.page_desc() }}
+    </p>
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="pt-20 pb-0 flex justify-between items-center pr-8 pl-8 overflow-hidden">
+    <section class="flex flex-col justify-between mx-auto w-full max-w-6xl">
+        <h3 class="header-section">
+          <span>{{ svg('envelope') }}</span>
+          <aside class="flex flex-col">
+            {{ _('What is Thunderbird?')}}
+            <small class="font-normal font-md tracking-normal normal-case">
+              {{ _('Software made to make email easier.') }}
+            </small>
+          </aside>
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6">
+          {{ _('Thunderbird is a free and open source email, newsfeed, chat, and calendaring client, that’s easy to set up and customize. One of the core principles of Thunderbird is the use and promotion of open standards - this focus is a rejection of our world of closed platforms and services that can’t communicate with each other. We want our users to have freedom and choice in how they communicate.') }}
+        </p>
+    </section>
+  </section>
+
+  <section id="getstarted" class="mt-20 mb-14 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
+    <span class="header-line flex-1"></span>
+    <h2 class="header-section pl-4 pr-4 mb-0 text-center">{{ _('Open Positions')}}</h2>
+    <span class="header-line flex-1"></span>
+  </section>
+
+  <section class="pt-10 pb-10 flex flex-col max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <aside>
+      <h3 class="header-section">
+        <span>{{ svg('developer') }}</span>
+        <aside class="flex flex-col">
+          {{ _('Thunderbird Release Engineer / Web Infra Engineer')}}
+          <small class="font-normal font-md tracking-normal normal-case">
+            {{ _('Full Time / Remote') }}
+          </small>
+        </aside>
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-5 p-links-blue">
+        {{ _('Thunderbird is looking for a multi-skilled self-starter to work partly on release engineering, and partly on operating the cloud based web infrastructure around Thunderbird. You will be working in close cooperation with our release engineer, infra engineer and other staff, as well as with community members.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('This is a <strong>remote</strong>, <strong>full time</strong> position. You are expected to have excellent written communication skills and coordinate your work over email, video conferencing, IRC, and Bugzilla.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
+        {{ _('As a release engineer you will be serving the community, empowering them to make their contributions available to millions of people worldwide. Your focus will be on developing and maintaining the systems that are used for continuous integration and for making the final builds of the software available to end users. A large part of this is following and adjusting to improvements made by the Firefox release engineering team, since Thunderbird uses very similar tools and procedures. You will collaborate with <strong>QA</strong>, <strong>security</strong>, <strong>localization</strong>, and engineering to ship beta and release builds.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
+        {{ _('The Thunderbird project operates some server side infrastructure, such as the <a href="https://thunderbird.net/">thunderbird.net</a> web site and <a href="https://addons.thunderbird.net/">addons.thunderbird.net</a>. As a web infra engineer you will be involved with infrastructure maintenance and development and of these web sites. The job involves full stack development of these properties, as well as monitoring their cloud based deployments.') }}
+      </p>
+    </aside>
+    <aside>
+      <h4 class="subheader-section">{{ _('We’re looking for someone with:') }}</h4>
+      <ul class="font-md tracking-wider leading-loose mb-10 p-links-blue">
+        <li>
+          {{ _('Solid scripting knowledge (shell, Python).') }}
+        </li>
+        <li>
+          {{ _('Familiarity with using distributed version control systems (preferably Mercurial).') }}
+        </li>
+        <li>
+          {{ _('Experience with <a href="https://docs.taskcluster.net/">Taskcluster</a> is highly desirable.') }}
+        </li>
+        <li>
+          {{ _('Good pattern matching abilities.') }}
+        </li>
+        <li>
+          {{ _('Devops knowledge for cloud based setups (AWS, Linode etc.)') }}
+        </li>
+        <li>
+          {{ _('Capability of full stack web development (especially Python-based backends)') }}
+        </li>
+      </ul>
+      <a href="#apply" class="btn-join self-start">{{ _('How to Apply')}}</a>
+    </aside>
+  </section>
+
+  <section class="pt-10 pb-10 flex flex-col max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <aside>
+      <h3 class="header-section">
+        <span>{{ svg('developer') }}</span>
+        <aside class="flex flex-col">
+          {{ _('Senior Software Engineers')}}
+          <small class="font-normal font-md tracking-normal normal-case">
+            {{ _('Full Time / Remote / 2 Available Openings') }}
+          </small>
+        </aside>
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-5 p-links-blue">
+        {{ _('Thunderbird is looking to hire two senior software engineers to join the team. You will help modernize the codebase and design new features for this already very popular cross platform email client. We’re committed to moving the code base over to using primarily web technologies, and you’ll be part of this effort. Contrary to many opportunities elsewhere, you have the opportunity to directly utilize the most cutting edge developments in the browser engine.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('As an engineer at Thunderbird, you will be working with existing staff and community members from all over the globe. We work very much in the open, and you’ll be able to show your skills to the world both on the code level and as a concrete result in improvements on the product.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
+        {{ _('This is a <strong>remote</strong>, <strong>full time</strong> position. You are expected to have excellent written communication skills and coordinate your work over email, video conferencing, IRC, and Bugzilla.') }}
+      </p>
+    </aside>
+    <aside>
+      <h4 class="subheader-section">{{ _('You could end up working on:') }}</h4>
+      <ul class="font-md tracking-wider leading-loose mb-10 p-links-blue">
+        <li>
+          {{ _('Rewriting the address book.') }}
+        </li>
+        <li>
+          {{ _('Modernizing the compose pipeline.') }}
+        </li>
+        <li>
+          {{ _('Creating tests for operational performance, and address performance bottlenecks.') }}
+        </li>
+        <li>
+          {{ _('Integrating some of the best parts of the more popular add-ons into core.') }}
+        </li>
+        <li>
+          {{ _('...and <a href="http://lists.thunderbird.net/pipermail/maildev_lists.thunderbird.net/2019-November/002024.html">much more</a>.') }}
+        </li>
+      </ul>
+    </aside>
+    <aside>
+      <h4 class="subheader-section">{{ _('We’re looking for someone with:') }}</h4>
+      <ul class="font-md tracking-wider leading-loose mb-10 p-links-blue">
+        <li>
+          {{ _('Passion for open source, and open standards.') }}
+        </li>
+        <li>
+          {{ _('A mission of making a concrete positive impact on the day to day communication experience for tens of millions of users.') }}
+        </li>
+        <li>
+          {{ _('Solid understanding of web technologies.') }}
+        </li>
+        <li>
+          {{ _('At least five years experience developing with JavaScript/HTML/CSS.') }}
+        </li>
+        <li>
+          {{ _('Knowledge of C/C++.') }}
+        </li>
+        <li>
+          {{ _('Good problem solving skills.') }}
+        </li>
+        <li>
+          {{ _('Familiarity with add-ons and previous open source engagement is a plus.') }}
+        </li>
+      </ul>
+      <a href="#apply" class="btn-join self-start">{{ _('How to Apply')}}</a>
+    </aside>
+  </section>
+
+  <section class="pt-10 pb-10 flex flex-col max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <aside>
+      <h3 class="header-section">
+        <span>{{ svg('developer') }}</span>
+        <aside class="flex flex-col">
+          {{ _('Software Engineers')}}
+          <small class="font-normal font-md tracking-normal normal-case">
+            {{ _('Full Time / Remote / Multiple Available Openings') }}
+          </small>
+        </aside>
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-5 p-links-blue">
+        {{ _('The Thunderbird team is expanding and wants to hire a few more passionate engineers to work with us on ongoing maintenance work as well as feature development.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('We’re committed to moving the code base over to using primarily web technologies, and you’ll be part of this effort. Contrary to many opportunities elsewhere, you’ll have the opportunity to utilize the most cutting edge developments in the browser engine.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('As an engineer at Thunderbird, you’ll be working with existing staff and community members from all over the globe. We work very much in the open, and you’ll be able to show your skills to the world both on the code level and as a concrete results in improvements on the product.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
+        {{ _('This is a <strong>remote</strong>, <strong>full time</strong> position. You are expected to have excellent written communication skills and coordinate your work over email, video conferencing, IRC, and Bugzilla.') }}
+      </p>
+    </aside>
+    <aside>
+      <h4 class="subheader-section">{{ _('You could end up working on:') }}</h4>
+      <ul class="font-md tracking-wider leading-loose mb-10 p-links-blue">
+        <li>
+          {{ _('Localization, moving Thunderbird to using Fluent.') }}
+        </li>
+        <li>
+          {{ _('The ongoing effort of converting the user interface from using XUL to HTML.') }}
+        </li>
+        <li>
+          {{ _('Converting filtering code implementation to JavaScript, and async operation.') }}
+        </li>
+        <li>
+          {{ _('Compose pipeline modernization.') }}
+        </li>
+        <li>
+          {{ _('Integrating some of the best parts of the more popular add-ons into core.') }}
+        </li>
+        <li>
+          {{ _('...and <a href="http://lists.thunderbird.net/pipermail/maildev_lists.thunderbird.net/2019-November/002024.html">much more</a>.') }}
+        </li>
+      </ul>
+    </aside>
+    <aside>
+      <h4 class="subheader-section">{{ _('We’re looking for someone with:') }}</h4>
+      <ul class="font-md tracking-wider leading-loose mb-10 p-links-blue">
+        <li>
+          {{ _('Passion for open source, and open standards.') }}
+        </li>
+        <li>
+          {{ _('Good understanding of web technologies.') }}
+        </li>
+        <li>
+          {{ _('Proven experience developing with JavaScript/HTML/CSS.') }}
+        </li>
+        <li>
+          {{ _('Knowledge of C/C++.') }}
+        </li>
+        <li>
+          {{ _('Good problem solving skills.') }}
+        </li>
+      </ul>
+      <a href="#apply" class="btn-join self-start">{{ _('How to Apply')}}</a>
+    </aside>
+  </section>
+
+  <section class="pt-10 pb-10 flex flex-col max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <aside>
+      <h3 class="header-section">
+        <span>{{ svg('bookmark') }}</span>
+        <aside class="flex flex-col">
+          {{ _('Add-on Support Engineer')}}
+          <small class="font-normal font-md tracking-normal normal-case">
+            {{ _('Full Time / Remote') }}
+          </small>
+        </aside>
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-5 p-links-blue">
+        {{ _('The Thunderbird add-ons system is transitioning to <strong>WebExtension</strong> compatible technology. To ease the process for add-on authors to convert their code over to the new way of doing things, as well as making sure needed APIs are available, the Thunderbird team is looking for someone to help add-on authors make the jump for the next version (Thunderbird 78).') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+        {{ _('At Thunderbird, you’ll be working with existing staff and community members from all over the globe. We work very much in the open, and you’ll be able to show your skills to the world.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
+        {{ _('This is a <strong>remote</strong>, <strong>full time</strong> position. You are expected to have excellent written communication skills and coordinate your work over email, video conferencing, IRC, and Bugzilla.') }}
+      </p>
+    </aside>
+    <aside>
+      <h4 class="subheader-section">{{ _('You could end up working on:') }}</h4>
+      <ul class="font-md tracking-wider leading-loose mb-10 p-links-blue">
+        <li>
+          {{ _('Improving and keeping the add-ons documentation up to date.') }}
+        </li>
+        <li>
+          {{ _('Creating sample extensions utilizing the new APIs.') }}
+        </li>
+        <li>
+          {{ _('Help out with add-on reviews.') }}
+        </li>
+        <li>
+          {{ _('Engage with add-on developers to answer their questions.') }}
+        </li>
+        <li>
+          {{ _('Helping to integrate the best parts of popular add-ons directly into core.') }}
+        </li>
+        <li>
+          {{ _('Helping the Thunderbird team understand the needs of add-on authors.') }}
+        </li>
+      </ul>
+    </aside>
+    <aside>
+      <h4 class="subheader-section">{{ _('We’re looking for someone with:') }}</h4>
+      <ul class="font-md tracking-wider leading-loose mb-10 p-links-blue">
+        <li>
+          {{ _('Great written communication skills.') }}
+        </li>
+        <li>
+          {{ _('Experience of WebExtensions and preferably also of traditional Thunderbird/Firefox add-ons.') }}
+        </li>
+        <li>
+          {{ _('Proven experience developing with JavaScript/HTML/CSS.') }}
+        </li>
+        <li>
+          {{ _('Understanding of the Mozilla internal technologies (such as XPCOM).') }}
+        </li>
+      </ul>
+      <a href="#apply" class="btn-join self-start">{{ _('How to Apply')}}</a>
+    </aside>
+  </section>
+
+  <section class="pt-20 pb-20 w-full bg-calendar">
+    <section class="flex flex-wrap max-w-6xl mx-auto pl-8 pr-8">
+      <aside class="flex flex-col w-full">
+        <h3 id="apply" class="header-section">
+          <span>{{ svg('check') }}</span>
+          <aside class="flex flex-col">
+            {{ _('How to Apply')}}
+          </aside>
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+          {{ _('If a position sounds like a good fit for you, please send us your resume with a cover letter to <a href="mailto=%(jobs_email)s">jobs@thunderbird.net</a>. In the subject of the email, please state the title of the position that you’re applying for, e.g. <strong>“Application for the Thunderbird Software Engineer position”</strong>.')|format(jobs_email='jobs@thunderbird.net') }}
+        </p>
+        <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+          {{ _('A cover letter is essential to your application! Tell us about why you’re passionate about Thunderbird and this position. Also include samples of your work, either directly or as a link. If you contribute to any open source software, or maintain a blog we’d love to hear about it!') }}
+        </p>
+        <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+          {{ _('The successful applicant will be hired through the third-party service Upwork. Your work will be directed through the Thunderbird project’s technical manager. By applying for this job, you are agreeing to have your application reviewed by Thunderbird contractors and volunteers who are a part of the hiring committee as well as by staff members at the Mozilla Foundation and companies under its umbrella.') }}
+        </p>
+      </aside>
+    </section>
+  </section>
+
+  {% include '_includes/site-prefooter.html' %}
+
+{% endblock %}
+
