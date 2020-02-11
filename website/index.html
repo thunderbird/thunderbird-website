@@ -63,7 +63,12 @@
 
   <section class="bg-body">
     <section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex flex-col items-center">
-      <h3 class="header-section pr-4 pl-4">{{ _('Stay in the loop')}}</h3>
+      <h3 class="header-section pr-4 pl-4">
+        <a id="blog" class="anchor" aria-hidden="true" href="#blog">
+          {{ svg('link') }}
+        </a>
+        {{ _('Stay in the loop')}}
+      </h3>
       <p class="font-lg tracking-wider leading-loose mb-16 mt-0 max-w-xl text-center pr-4 pl-4">
         {{ _('Keep yourself up to date with recent announcements and releases by following the official Thunderbird Blog!') }}
       </p>
