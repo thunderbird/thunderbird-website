@@ -15,6 +15,9 @@
             <a href="{{ url('thunderbird.get-involved') }}" class="nav-link">{{_('Get Involved')}}</a>
           </li>
           <li>
+            <a href="{{ url('thunderbird.careers') }}" class="nav-link">{{_('Careers')}}</a>
+          </li>
+          <li>
             <a href="{{ url('support') }}" class="nav-link">{{_('Get Help')}}</a>
           </li>
           <li>
@@ -51,7 +54,7 @@
       </aside>
     </aside>
   </section>
-  <section class="self-center text-center max-w-xl mt-8">
+  <section class="self-center text-center max-w-4xl mt-8">
     <ul class="list-none p-0 flex justify-center">
       <li class="ml-2 mr-2">
         <a href="{{ url('privacy') }}" class="small-link" data-link-type="footer" data-link-name="Privacy">{{ _('Privacy') }}</a>
@@ -74,7 +77,10 @@
     </ul>
 
     <p class="mt-6 mb-6 leading-normal">
-      {%- trans url=url('foundation.licensing.website-content') -%}
+      {%- trans url=url('foundation.licensing.website-content'),mzla=url('mzla.blog-post') -%}
+      Thunderbird is now part of
+      <a href="{{ mzla }}" class="inline-link">MZLA Technologies Corporation</a>,
+      a wholly owned subsidiary of Mozilla Foundation.
       Portions of this content are ©1998–{{ current_year }} by individual
       contributors. Content available under
       a <a href="{{ url }}" class="inline-link">Creative Commons license</a>.
