@@ -89,5 +89,9 @@
 
     <a href="{{ url('contribute') }}" class="small-link font-semibold" data-link-type="footer"
       data-link-name="Contribute to this site">{{ _('Contribute to this site') }}</a>
+    {% if LANG != 'en-US' %}
+     &bull; <a href="https://pontoon.mozilla.org/{{ LANG }}/thunderbirdnet/LC_MESSAGES/messages.po/" class="small-link font-semibold"
+      data-link-type="footer" data-link-name="Translate this site">{{ _('Translate this site') }}</a>
+    {% endif %}
   </section>
 </footer>
