@@ -2,6 +2,31 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+
+  .anchor {
+    &:extend(.text-blue-dark);
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    line-height: 1;
+    opacity: 0;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .anchor {
+      opacity: 1;
+    }
+  }
+}
+
 .header-section {
   &:extend(.uppercase, .mt-0, .mb-4, .font-2xl, .text-blue-dark, .flex, .items-center, .leading-normal);
 
