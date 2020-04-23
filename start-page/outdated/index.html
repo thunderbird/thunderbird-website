@@ -1,0 +1,30 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+<!DOCTYPE html>
+<html lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <title>{% block title %}{{ _('Your Thunderbird is Not Up-to-Date!') }}{% endblock %}</title>
+    {{ l10n_css() }}
+    <!-- Fontawesome added below -->
+    <link href="/media/css/fontawesome-all.css" rel="stylesheet">
+    <!--<script defer src="/media/js/fontawesome-all.js"></script>-->
+    <style>
+      body {
+        background-color: #D46A6A;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+    <h1><b><i class="fas fa-exclamation-triangle fa-3x" style="color:#0060df"></i> {{ self.title() }}</b></h1>
+    <h2>{{ _('This version is no longer a supported Thunderbird release and does not receive security updates!') }}</h2>
+    <p class="fa-lg">{{ _('We <b>strongly recommend</b> downloading the <a href="%(download)s">latest stable version of Thunderbird</a>.')|format(download='https://thunderbird.net') }}</p>
+    <p class="fa-lg">{{ _('If you prefer, you can download the <a href="%(beta)s">latest beta version of Thunderbird</a>.')|format(beta='https://www.thunderbird.net/channel/') }}</p>
+    </main>
+  </body>
+</html>
