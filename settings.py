@@ -84,7 +84,7 @@ URL_MAPPINGS = {
     'calendar': '/calendar',
     'contribute': 'https://github.com/thundernest/thunderbird-website',
     'firefox.dnt': 'https://www.mozilla.org/firefox/dnt/',
-    'firefox.organizations.faq': 'https://www.mozilla.org/firefox/organizations/faq/',
+    'firefox.enterprise': 'https://www.mozilla.org/firefox/enterprise/',
     'foundation.licensing.website-content': 'https://www.mozilla.org/foundation/licensing/website-content/',
     'foundation.about': 'https://foundation.mozilla.org/about/',
     'guidelines': 'https://www.mozilla.org/en-US/about/governance/policies/participation/',
