@@ -31,3 +31,11 @@
   {% include '_includes/site-prefooter.html' %}
 
 {% endblock %}
+
+{% block tracker_js %}
+      <script type="text/javascript" src="/media/js/piwik.js" async defer></script>
+      <script type="text/javascript" src="/media/js/matomo404.js" charset="utf-8"></script>
+      <noscript>
+        <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
+      </noscript>
+{% endblock %}
