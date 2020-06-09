@@ -90,6 +90,7 @@ URL_MAPPINGS = {
     'guidelines': 'https://www.mozilla.org/en-US/about/governance/policies/participation/',
     'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
     'legal.index': 'https://www.mozilla.org/en-US/about/legal/terms/mozilla/',
+    'legal.infringement': 'https://www.mozilla.org/en-US/about/legal/report-infringement/',
     'mozorg.home': 'https://www.mozilla.org/',
     'mzla.blog-post': 'https://blog.thunderbird.net/2020/01/thunderbirds-new-home/',
     'privacy': 'https://www.mozilla.org/privacy/websites/',
