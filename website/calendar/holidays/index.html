@@ -99,7 +99,7 @@
             {{ _('Right-click on this calendar and choose "Export Calendar". Please use the iCalendar (ics) format.') }}
           </li>
           <li class="p-links-blue">
-            {{ _('Create a Pull Request or file an Issue on the <a href="%s">website repository</a> and attach your holiday file.')|format('https://github.com/thundernest/thunderbird-website') }}
+            {{ _('Create a Pull Request or file an Issue on the <a href="%(contribute_url)s">website repository</a> and attach your holiday file.')|format(contribute_url=url('contribute')) }}
           </li>
         </ol>
       </aside>
