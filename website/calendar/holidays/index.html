@@ -56,9 +56,9 @@
       <div class="flex w-full mt-1 mb-1 bg-grey-light rounded p-1 font-md items-center">
         <aside class="flex-1 p-2">
           {% if calendar.title %}
-            {{ _('<a href="{{ url }}" class="inline-link text-blue">{{ country }}</a> {{ title }}, thanks to {{ authors }}')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, authors=calendar.authors, title=calendar.title) }}
+            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a> %(title)s, thanks to %(authors)s')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, title=calendar.title, authors=calendar.authors ) }}
           {% else %}
-            {{ _('<a href="{{ url }}" class="inline-link text-blue">{{ country }}</a> holidays thanks to {{ authors }}')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, authors=calendar.authors) }}
+            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a> holidays thanks to %(authors)s')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, authors=calendar.authors) }}
           {% endif %}
         </aside>
         <aside class="text-right p-2 font-sm uppercase font-semibold">
