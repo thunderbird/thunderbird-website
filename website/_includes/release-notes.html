@@ -70,6 +70,7 @@
   <section class="pt-20 pb-16 w-full bg-calendar -mt-20">
     &nbsp;
   </section>
+
   {% if notes %}
     <section class="pb-10 flex flex-wrap justify-center items-center pl-8 pr-8 bg-grey-lighter">
       <aside class="flex flex-col w-full max-w-6xl lg:ml-16 lg:mr-16">
@@ -107,7 +108,7 @@
               {% set section.name = note.tag %}
               {% set release_group.name = release.groups[group] %}
 
-              <aside id="note-{{ note.id }}"
+              <aside id="note-{{ loop.index0 }}"
                 class="flex flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
                 <h4 class="font-bold uppercase m-0 p-3 w-24">
                   {% if note.tag == 'new' %}
