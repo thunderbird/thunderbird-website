@@ -1,0 +1,80 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+{% extends "_includes/base-resp.html" %}
+
+{% block page_title %}{{ _('New in Thunderbird 78') }}{% endblock %}
+
+{% block header_content %}
+  <section class="text-left text-white flex flex-col items-start lg:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-16 mt-0 p-links">
+      {{ _('This article describes some of the major changes visible to users in Thunderbird version 78. Full details of all the changes can be found in the <a href="%(release)s">Thunderbird 78 release notes</a>.')|format(release='https://www.thunderbird.net/en-US/thunderbird/78.0/releasenotes/') }}
+      </p>
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="pt-20 pb-20 flex justify-center bg-calendar">
+    <aside class="flex flex-col flex-1 max-w-6xl ml-16 mr-16">
+      <!-- Add half screenshot of dark theme -->
+      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="{{ static('/media/img/thunderbird/features/dark-theme.png') }}" alt="">
+      <h3 class="header-section">
+        <span>{{ svg('customize') }}</span>
+        {{ _('Dark mode')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-10">
+        {{ _('There is now a dark mode in Thunderbird, making working on email late at night easier on the eyes. Thunderbird will look at your operating system settings to see if you have enabled dark mode OS-wide and respect those settings.') }}
+      </p>
+    </aside>
+  </section>
+
+  <section class="pb-10 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <aside class="flex flex-col flex-1 lg:max-w-lg">
+      <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg" src="{{ static('/media/img/thunderbird/features/filelink.png') }}" alt="">
+      <h3 class="header-section">
+        <span>{{ svg('link') }}</span>
+        {{ _('Filelink Improved')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
+        {{ _('Filelink attachments that have already been uploaded can now be linked to again instead of having to re-upload them. Also, an account is no longer required to use the default Filelink provider - <strong>WeTransfer</strong>.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1 p-links-blue">
+        {{ _('Other Filelink providers like Box and Dropbox are not included by default, but can be added by grabbing the <a href="%(dropbox)s">Dropbox</a> and <a href="%(box)s">Box</a> add-ons.')|format(dropbox='https://addons.thunderbird.net/thunderbird/addon/filelink-provider-for-dropbox/',box='https://addons.thunderbird.net/thunderbird/addon/filelink-provider-for-box/') }}
+      </p>
+    </aside>
+
+    <aside class="flex flex-col flex-1 lg:max-w-lg mt-10 lg:mt-0">
+      <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg" src="{{ static('/media/img/thunderbird/features/preferences-in-tab.png') }}" alt="">
+      <h3 class="header-section">
+        <span>{{ svg('settings') }}</span>
+        {{ _('Options/Preferences in a Tab')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
+        {{ _('Thunderbirdʼs Options/Preferences have been converted from a dialog window to its own dedicated tab. The new Preferences tab provides more space which allows for better organized content and is more consistent with the look and feel of the rest of Thunderbird.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+        {{ _('The new Preferences tab also makes it easier to multi-task without the problem of losing track of where your preferences are when switching between windows.') }}
+      </p>
+    </aside>
+  </section>
+
+  <section class="pt-20 pb-20 flex justify-center bg-calendar pr-8 pl-8">
+    <aside class="flex flex-col flex-1 lg:max-w-6xl lg:ml-16 lg:mr-16">
+      <h3 class="header-section">
+        <span>{{ svg('news') }}</span>
+        {{ _('Other Notable Changes')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-6">
+        {{ _('There are many other smaller changes that make Thunderbird 68 feel polished and powerful including: a new App Menu UI, an updated To/CC/BCC selector in compose, improved attachment management, full color support across the app, filters can now be set to run periodically, and feed articles now show external attachments as links.') }}
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
+        {{ _('There are many other updates in this release, you can see a list of all of them in the <a href="%(release)s">Thunderbird 68 release notes</a>.')|format(release='https://www.thunderbird.net/en-US/thunderbird/68.0/releasenotes/') }}
+      </p>
+    </aside>
+  </section>
+
+  {% include '_includes/donate-mailing-list.html' %}
+
+{% endblock %}
