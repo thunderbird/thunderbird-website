@@ -215,8 +215,8 @@ class Site(object):
         # Build htaccess files for sysreq and release notes redirects.
         sysreq_path = os.path.join(self.renderpath, 'system-requirements')
         notes_path = os.path.join(self.renderpath, 'notes')
-        write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
-        write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes'))
+        write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url({'LANG':'en-US'},'system-requirements'))
+        write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url({'LANG':'en-US'},'releasenotes'))
 
     def build_assets(self):
         """Build assets, that is, bundle and compile the LESS and JS files in `settings.ASSETS`."""

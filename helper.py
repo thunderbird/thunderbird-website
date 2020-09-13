@@ -290,7 +290,8 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     return jinja2.Markup(html)
 
 
-def thunderbird_url(page, channel='None'):
+@jinja2.contextfunction
+def thunderbird_url(ctx, page, channel='None'):
     """
     Return a product-related URL like /thunderbird/all/ or /thunderbird/beta/60.0/releasenotes/.
     page = ('system-requirements', 'all', 'releasenotes')
@@ -300,18 +301,21 @@ def thunderbird_url(page, channel='None'):
         {{ thunderbird_url('system-requirements', channel) }}
     """
 
+    lang = ctx['LANG']
     channel = channel or 'release'
     version = thunderbird_desktop.latest_version(channel)
     # replace 'b1', 'b2' etc in beta version with just 'beta', since we don't generate
     # new notes for each beta iteration.
     version = re.sub(r"b[1-9][0-9]?", "beta", version)
 
+    # system reqs and release notes don't get localized
     url = '/en-US/thunderbird/{0}/{1}/'.format(version, page)
 
+    # but the 'all' page does
     if page == 'all':
-        url = '/en-US/thunderbird/{0}/{1}/'.format(channel, page)
+        url = '/{0}/thunderbird/{1}/{2}/'.format(lang, channel, page)
         if channel == 'release':
-            url = '/en-US/thunderbird/{0}/'.format(page)
+            url = '/{0}/thunderbird/{1}/'.format(lang, page)
 
     return url
 
