@@ -11,6 +11,10 @@
             pf = (pf === '') ? '' : pf || navigator.platform;
             ua = ua || navigator.userAgent;
 
+            // have to check ChromeOS first because it looks like Windows otherwise
+            if (/CrOS/.test(ua)) {
+                return 'chromeos';
+            }
             if (/Win(16|9[x58]|NT( [1234]| 5\.0| [^0-9]|[^ -]|$))/.test(ua) ||
                     /Windows ([MC]E|9[x58]|3\.1|4\.10|NT( [1234]\D| 5\.0| [^0-9]|[^ ]|$))/.test(ua) ||
                     /Windows_95/.test(ua)) {
