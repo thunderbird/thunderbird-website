@@ -1,0 +1,81 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+<!DOCTYPE html>
+<html lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <title>{% block title %}{{ _('Your Thunderbird is Not Up-to-Date!') }}{% endblock %}</title>
+    {{ l10n_css() }}
+    <!-- Fontawesome added below -->
+    <link href="/media/css/fontawesome-all.css" rel="stylesheet">
+    <!--<script defer src="/media/js/fontawesome-all.js"></script>-->
+    <style>
+      body {
+        background-color: #D46A6A;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+    <h1><b><i class="fas fa-exclamation-triangle fa-3x" style="color:#0060df"></i> {{ self.title() }}</b></h1>
+    <h2 id="duration">{{ _('Your version, $vers, is no longer a supported Thunderbird release and hasn’t received updates in at least $mon months.') }}</h2>
+    <p class="fa-lg">{{ _('We <b>strongly recommend</b> downloading the <a href="%(download_url)s">latest stable version of Thunderbird</a>.')|format(download_url='https://thunderbird.net') }}</p>
+    <p class="fa-lg">{{ _('For more information, please check this <a href="%(support_url)s">support article</a> on upgrading old versions.')|format(support_url='https://support.mozilla.org/en-US/products/thunderbird') }}</p>
+    </main>
+  </body>
+<script>
+
+// Date of last security release for each major version.
+version_dates = {
+  24: new Date(2014, 8, 2),
+  31: new Date(2015, 6, 17),
+  38: new Date(2016, 4, 4),
+  45: new Date(2017, 2, 7),
+  52: new Date(2018, 6, 10),
+  60: new Date(2019, 10, 5)
+}
+
+function monthDiff(dateFrom, dateTo) {
+ return dateTo.getMonth() - dateFrom.getMonth() +
+   (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+}
+
+function get_browser() {
+    var ua=navigator.userAgent,tem,M=ua.match(/(firefox|thunderbird(?=\/))\/?\s*(\d+)/i) || [];
+    M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+    if((tem=ua.match(/version\/(\d+)/i))!=null) {M.splice(1,1,tem[1]);}
+    return {
+      name: M[0],
+      version: M[1]
+    };
+ }
+
+// Clamp the version number to the closest among version_dates.
+function get_version(vers) {
+  // This instead of Object.keys() for compatibility with old versions.
+  var versions = [], i = 0;
+  for (versions[i++] in version_dates) {}
+
+  var closest = versions.reduce(function(prev, curr) {
+    return (Math.abs(curr - vers) < Math.abs(prev - vers) ? curr : prev);
+  });
+
+  return closest;
+}
+
+// browser.name = 'Thunderbird', browser.version = '60'
+var browser=get_browser();
+clamped_version = get_version(browser.version);
+
+var rel_date = version_dates[clamped_version] || new Date();
+var num_months = monthDiff(rel_date, new Date()) || 12;
+
+duration = document.getElementById('duration').innerHTML;
+document.getElementById('duration').innerHTML = duration.replace('$mon', num_months).replace('$vers', browser.version);
+
+</script>
+</html>

@@ -4,7 +4,12 @@
 
 <section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-10">
   <aside class="flex flex-col flex-1 lg:max-w-lg mb-20 lg:mb-0">
-    <h3 class="header-section">{{ _('Thunderbird is funded by users like you')}}</h3>
+    <h3 class="header-section">
+      <a id="donate" class="anchor" aria-hidden="true" href="#donate">
+          {{ svg('link') }}
+        </a>
+      {{ _('Thunderbird is funded by users like you')}}
+    </h3>
     <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
       {{ _('Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.') }}
     </p>
@@ -14,7 +19,12 @@
   </aside>
 
   <aside class="flex flex-col flex-1 lg:max-w-lg">
-    <h3 class="header-section">{{ _('Join our Newsletter')}}</h3>
+    <h3 class="header-section">
+      <a id="mailing-list" class="anchor" aria-hidden="true" href="#mailing-list">
+        {{ svg('link') }}
+      </a>
+      {{ _('Join our Newsletter')}}
+    </h3>
     <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
       {{ _('Keep up with the latest and greatest updates on news, features, events, and previews, and get a sneak peek on the upcoming releases.') }}
     </p>

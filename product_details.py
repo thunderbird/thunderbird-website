@@ -146,7 +146,8 @@ class ThunderbirdDetails():
         version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_DEVEL_VERSION')
         esr_major_versions = (
             range(10, 59, 7)
-            + range(60, int(self.current_versions[version_name].split('.')[0]) + 1, 8)
+            + [60, 68]
+            + range(78, int(self.current_versions[version_name].split('.')[0]) + 1, 12)
         )
         releases = {}
         for release in self.major_releases:

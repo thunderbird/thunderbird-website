@@ -22,7 +22,7 @@
           <span>{{ svg('envelope') }}</span> {{ _('Thunderbird for Organizations')}}
         </h3>
         <p class="font-lg tracking-wider leading-loose mb-6">
-          {{ _('Unlike the <a href="{firefox_esr}">Mozilla Firefox ESR</a>, Thunderbird does not provide a separate ESR release. This is because the <a href="/">regular Thunderbird release</a> is already an ESR release. It remains stable and on that major version for approximately one year. Only <a href="/#channel">Thunderbird Beta</a> follows the more frequent major version releases.') }}
+          {{ _('Unlike the <a href="{firefox_esr}">Mozilla Firefox ESR</a>, Thunderbird does not provide a separate ESR release. This is because the <a href="/">regular Thunderbird release</a> is already an ESR release. It remains stable and on that major version for approximately one year. Only <a href="/#channel">Thunderbird Beta</a> follows the more frequent major version releases.')|f(firefox_esr=url('firefox.enterprise')) }}
         </p>
         <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
           {{ _('We do have other resources for organizations: If you need it, you can find the Thunderbird MSI Installer on the <a href="{syslang}">Systems & Languages page</a>. For more information about deploying and configuring Thunderbird in business and enterprise environments you can also join the <a href="{maillist}">Enterprise mailing list</a>.')|f(maillist=url('thunderbird.enterprise'), syslang=url('thunderbird.latest.all')) }}

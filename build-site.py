@@ -33,20 +33,22 @@ else:
     print 'Rendering www.thunderbird.net ' + langmsg
     # Prepare data and build main website.
     version = helper.thunderbird_desktop.latest_version('release')
+    beta_version = helper.thunderbird_desktop.latest_version('beta')
     caldata = helper.load_calendar_json('media/caldata/calendars.json')
     context = {'current_year': date.today().year,
                'platform': 'desktop',
                'query': '',
                'platforms': helper.thunderbird_desktop.platforms('release'),
                'full_builds_version': version.split('.', 1)[0],
-               'full_builds': helper.thunderbird_desktop.get_filtered_full_builds('release', helper.thunderbird_desktop.latest_version()),
-               'full_builds_beta': helper.thunderbird_desktop.get_filtered_full_builds('beta', helper.thunderbird_desktop.latest_version('beta')),
+               'full_builds': helper.thunderbird_desktop.get_filtered_full_builds('release', version),
+               'full_builds_beta': helper.thunderbird_desktop.get_filtered_full_builds('beta', beta_version),
                'channel_label': 'Thunderbird',
                'releases': helper.thunderbird_desktop.list_releases(),
                'calendars': caldata['calendars'],
                'letters': caldata['letters'],
                'CALDATA_URL': settings.CALDATA_URL,
                'latest_thunderbird_version': version,
+               'latest_thunderbird_beta_version': beta_version,
                'blog_data': feedparser.parse(settings.BLOG_FEED_URL)
               }
 

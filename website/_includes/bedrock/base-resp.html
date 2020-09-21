@@ -95,13 +95,14 @@
     {% block site_js %}
       <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8"></script>
+    {% endblock %}
+    {% block tracker_js %}
       <script type="text/javascript" src="/media/js/piwik.js" async defer></script>
       <script type="text/javascript" src="/media/js/matomo.js" charset="utf-8"></script>
       <noscript>
         <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
       </noscript>
     {% endblock %}
-
     <!--[if IE 9]>
       <script src="{{ static('js/libs/matchMedia.js') }}"></script>
     <![endif]-->
