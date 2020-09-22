@@ -131,10 +131,10 @@
                 <aside class="flex-1 p-3 font-md leading-normal markup-page no-padding">
                   {{ note.note|markdown|safe }}
                 </aside>
-              {% endif %}
-            {% endfor %}
+              </aside>
+            {% endif %}
           {% endfor %}
-        {% endif %}
+        {% endfor %}
 
         {% if known_issues %}
           <h3 id="known-issues" class="header-section pt-14 pb-4">
