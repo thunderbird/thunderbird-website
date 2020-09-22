@@ -361,7 +361,7 @@ def get_blog_data(ctx, entry):
 
     parsed['summary'] = jinja2.Markup(data['entries'][entry]['summary_detail']['value'])
     parsed['title'] = data['entries'][entry]['title']
-    parsed['comments'] = data['entries'][entry]['slash_comments']
+    parsed['comments'] = data['entries'][entry].get('slash_comments', '0')
     parsed['date'] = datetime.fromtimestamp(mktime(data['entries'][entry]['published_parsed'])).strftime('%B %-m, %Y')
     parsed['link'] = data['entries'][entry]['links'][0]['href']
 
