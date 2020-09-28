@@ -89,3 +89,7 @@ The [website-build.yml](https://github.com/thundernest/thundernest-ansible/blob/
 page and thunderbird.net itself.
 
 * Completed and pushed builds from automation or the [website-build.yml](https://github.com/thundernest/thundernest-ansible/blob/master/plays/website-build.yml) script are checked into https://github.com/thundernest/tb-website-builds -- the `master` branch represents the files currently on stage, and the `prod` branch represents the files currently on the live version of thunderbird.net.
+
+# Localization
+
+You can contribute to content translation of www.thunderbird.net pages using [Pontoon](https://pontoon.mozilla.org/fr/thunderbirdnet/).
