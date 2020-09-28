@@ -92,4 +92,4 @@ page and thunderbird.net itself.
 
 # Localization
 
-You can contribute to content translation of www.thunderbird.net pages using [Pontoon](https://pontoon.mozilla.org/fr/thunderbirdnet/).
+You can contribute to content translation of www.thunderbird.net pages using [Pontoon](https://pontoon.mozilla.org/projects/thunderbirdnet/).
