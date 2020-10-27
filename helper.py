@@ -181,7 +181,7 @@ def platform_img(ctx, url, optional_attributes=None):
             img_urls[platform + '-high-res'] = convert_to_high_res(img_urls[platform])
 
     img_attrs = {}
-    for platform, image in img_urls.iteritems():
+    for platform, image in img_urls.items():
         if is_l10n:
             image = l10n_img_file_name(ctx, image)
         else:
@@ -196,7 +196,7 @@ def platform_img(ctx, url, optional_attributes=None):
 
     img_attrs.update(optional_attributes)
     attrs = ' '.join(u'%s="%s"' % (attr, val)
-                     for attr, val in img_attrs.iteritems())
+                     for attr, val in img_attrs.items())
 
     # Don't download any image until the javascript sets it based on
     # data-src so we can do platform detection. If no js, show the
@@ -239,7 +239,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     # Gather data about the build for each platform
     builds = []
 
-    for plat_os, plat_os_pretty in thunderbird_desktop.platform_labels.iteritems():
+    for plat_os, plat_os_pretty in thunderbird_desktop.platform_labels.items():
         # And generate all the info
         download_link = thunderbird_desktop.get_download_url(
             channel, version, plat_os, locale,
