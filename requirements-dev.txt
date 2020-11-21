@@ -7,7 +7,7 @@
 # 
 #   pip-compile --generate-hashes -o requirements.txt requirements-dev.txt
 #
-# to generate the hashed requirements file used by the produciton build.
+# to generate the hashed requirements file used by the production build.
 #
 babel>=2.6.0
 docopt>=0.6.2
