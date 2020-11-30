@@ -250,8 +250,26 @@
     "authors":"Joe"
   },
   {
-    "country":"UK",
+    "country":"UK [All]",
     "filename":"UKHolidays.ics",
+    "datespan":"2021-2030",
+    "authors":"KR304"
+  },
+  {
+    "country":"UK [England & Wales]",
+    "filename":"UKHolidays-EnglandWales.ics",
+    "datespan":"2021-2030",
+    "authors":"KR304"
+  },
+  {
+    "country":"UK [Northern Ireland]",
+    "filename":"UKHolidays-NIreland.ics",
+    "datespan":"2021-2030",
+    "authors":"KR304"
+  },
+  {
+    "country":"UK [Scotland]",
+    "filename":"UKHolidays-Scotland.ics",
     "datespan":"2021-2030",
     "authors":"KR304"
   },
