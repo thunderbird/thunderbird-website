@@ -95,11 +95,11 @@ if __name__ == '__main__':
     try:
         # Create a simple WSGI server and run the application.
         from wsgiref import simple_server
-        print "Running test application - point your browser at http://localhost:8000/ ..."
+        print("Running test application - point your browser at http://localhost:8000/ ...")
         httpd = simple_server.WSGIServer(('', 8000), simple_server.WSGIRequestHandler)
         httpd.set_app(application)
         httpd.serve_forever()
     except ImportError:
         # wsgiref not installed, just output html to stdout
         for content in application({}, lambda status, headers: None):
-            print content
+            print(content)

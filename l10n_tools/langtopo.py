@@ -19,5 +19,5 @@ for lang in settings.PROD_LANGUAGES:
                     entry.msgstr = ''
                 else:
                     entry.msgstr = translator.gettext(entry.msgid)
-        print "{0} language po file edited.\n".format(lang)
+        print("{0} language po file edited.\n".format(lang))
         po.save()

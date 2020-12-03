@@ -26,11 +26,11 @@ else:
     languages = settings.PROD_LANGUAGES
 
 if args.startpage:
-    print 'Rendering start page ' + langmsg
+    print('Rendering start page ' + langmsg)
     site = builder.Site(languages, settings.START_PATH, settings.START_RENDERPATH, settings.START_CSS, debug=args.debug)
     site.build_startpage()
 else:
-    print 'Rendering www.thunderbird.net ' + langmsg
+    print('Rendering www.thunderbird.net ' + langmsg)
     # Prepare data and build main website.
     version = helper.thunderbird_desktop.latest_version('release')
     beta_version = helper.thunderbird_desktop.latest_version('beta')

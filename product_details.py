@@ -2,7 +2,11 @@
 
 from collections import OrderedDict
 from operator import itemgetter
-from urllib import urlencode
+import sys
+if sys.version_info[0] == 3:
+    from urllib.parse import urlencode
+else:
+    from urllib import urlencode
 
 import json
 import os
@@ -77,7 +81,7 @@ class ThunderbirdDetails():
         f_builds = []
         builds = self.all_builds
 
-        for locale, build in builds.iteritems():
+        for locale, build in builds.items():
 
             if locale not in self.languages or not build.get(_version):
                 continue
@@ -89,7 +93,7 @@ class ThunderbirdDetails():
                 'platforms': {},
             }
 
-            for platform, label in self.platform_labels.iteritems():
+            for platform, label in self.platform_labels.items():
                 build_info['platforms'][platform] = {
                     'download_url': self.get_download_url(channel, version,
                                                           platform, locale,
@@ -145,9 +149,9 @@ class ThunderbirdDetails():
     def list_releases(self, channel='beta'):
         version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_DEVEL_VERSION')
         esr_major_versions = (
-            range(10, 59, 7)
+            list(range(10, 59, 7))
             + [60, 68]
-            + range(78, int(self.current_versions[version_name].split('.')[0]) + 1, 12)
+            + list(range(78, int(self.current_versions[version_name].split('.')[0]) + 1, 12))
         )
         releases = {}
         for release in self.major_releases:
@@ -162,7 +166,7 @@ class ThunderbirdDetails():
                 'major': release,
                 'minor': sorted(filter(lambda x: re.findall(major_pattern, x),
                                        self.minor_releases),
-                                key=lambda x: map(lambda y: int(y), x.split('.')))
+                                key=lambda x: list(map(lambda y: int(y), x.split('.'))))
             }
         return sorted(releases.items(), reverse=True)
 

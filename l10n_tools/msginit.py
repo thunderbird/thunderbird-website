@@ -15,7 +15,7 @@ def execute(command, shell=False, env={}):
     return_code = proc.wait()
     if return_code:
         raise subprocess.CalledProcessError(return_code, command)
-    print '\n'
+    print('\n')
 
 
 for lang in settings.PROD_LANGUAGES:
@@ -23,9 +23,9 @@ for lang in settings.PROD_LANGUAGES:
     init = 'msginit --no-translator --input=../messages.pot --locale={0} --output=../newlocale/{0}/LC_MESSAGES/messages.po'.format(lang)
 
     for line in execute(mkd):
-        print mkd
-        print line
+        print(mkd)
+        print(line)
 
     for line in execute(init):
-        print init
-        print line
+        print(init)
+        print(line)
