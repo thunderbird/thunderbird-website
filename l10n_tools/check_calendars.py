@@ -30,11 +30,12 @@ def run(*args):
     format_str = "Failed to parse the icalendar file: {}. {}"
     check_failed = False
     for f in ics_files:
+        print(f)
         try:
             check_if_correct_parse(f)
         except ValueError as ve:
             check_failed = True
-            print format_str.format(f, ve.message)
+            print(format_str.format(f, ve.message))
 
     if check_failed:
         sys.exit(1)

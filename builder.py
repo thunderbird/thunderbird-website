@@ -12,8 +12,12 @@ import time
 import translate
 import webassets
 
-import SocketServer
-import SimpleHTTPServer
+if sys.version_info[0] == 3:
+    import socketserver
+    import http.server
+else:
+    import SocketServer
+    import SimpleHTTPServer
 
 from dateutil.parser import parse
 from jinja2 import Environment, FileSystemLoader
@@ -129,7 +133,7 @@ class Site(object):
 
     def _concat_js(self):
         """Concatenate `js_bundles` and write to current `jsout`."""
-        for bundle_name, files in self.js_bundles.iteritems():
+        for bundle_name, files in self.js_bundles.items():
             bundle_path = self.jsout + '/' + bundle_name + '.js'
 
             js_string = '\n'.join(read_file(settings.ASSETS + '/' + file) for file in files)
@@ -149,7 +153,7 @@ class Site(object):
         """Check if a path refers to a css file that is in the current `css_bundles` or not."""
         changed_file = ntpath.basename(path).split('.')[0]
         bundle = ''
-        for bundle_name, files in self.css_bundles.iteritems():
+        for bundle_name, files in self.css_bundles.items():
             for file in files:
                 if changed_file in file:
                     bundle = bundle_name
@@ -166,20 +170,20 @@ class Site(object):
                 reg = webassets.Bundle(*css_files, filters='less', output=bundle + '.css')
                 env.register(bundle, reg)
                 env[bundle].urls()
-                print "{0}: CSS bundle rebuilt: {1}.".format(timemsg, bundle)
+                print("{0}: CSS bundle rebuilt: {1}.".format(timemsg, bundle))
             else:
-                print "{0}: All Assets rebuilt.".format(timemsg)
+                print("{0}: All Assets rebuilt.".format(timemsg))
                 self.build_assets()
         elif 'js' in path:
             if self.js_bundles:
                 self._concat_js()
-                print "{0}: JS bundles rebuilt.".format(timemsg)
+                print("{0}: JS bundles rebuilt.".format(timemsg))
             else:
-                print "{0}: All Assets rebuilt.".format(timemsg)
+                print("{0}: All Assets rebuilt.".format(timemsg))
                 self.build_assets()
         # If we can't figure out what to build partially, give up and do a full build.
         else:
-            print "{0}: All Assets rebuilt.".format(timemsg)
+            print("{0}: All Assets rebuilt.".format(timemsg))
             self.build_assets()
 
     def build_notes(self):
@@ -190,7 +194,7 @@ class Site(object):
         notelist = releasenotes.notes
         note_template = self._env.get_template('_includes/release-notes.html')
         self._env.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
-        for k, n in notelist.iteritems():
+        for k, n in notelist.items():
             if 'beta' in k:
                 self._env.globals.update(channel='Beta', channel_name='Beta')
             else:
@@ -223,7 +227,7 @@ class Site(object):
         shutil.rmtree(self.renderpath + '/media', ignore_errors=True)
         shutil.copytree(self.staticpath, self.renderpath + '/media')
         env = webassets.Environment(load_path=[settings.ASSETS], directory=self.cssout, url=settings.MEDIA_URL, cache=False, manifest=False)
-        for k, v in self.css_bundles.iteritems():
+        for k, v in self.css_bundles.items():
             reg = webassets.Bundle(*v, filters='less', output=k + '.css')
             env.register(k, reg)
             env[k].urls()
@@ -308,7 +312,7 @@ class UpdateHandler(FileSystemEventHandler):
                 self.builder.partial_asset_build(event.src_path, timemsg)
             else:
                 self.updatesite(event)
-                print "{0}: Website rebuilt.".format(timemsg)
+                print("{0}: Website rebuilt.".format(timemsg))
             self.updatetime = datetime.datetime.now()
 
     def on_modified(self, event):
@@ -326,7 +330,7 @@ def setup_httpd(port, path):
     process.daemon = True
     process.start()
     os.chdir(cwd)
-    print "HTTP Server running on localhost port {0}.".format(port)
+    print("HTTP Server running on localhost port {0}.".format(port))
     return process
 
 
@@ -339,13 +343,13 @@ def setup_observer(builder_instance, port):
     observer.schedule(handler, path=settings.MEDIA_URL.strip('/'), recursive=True)
     observer.daemon = True
     observer.start()
-    print "Updating website when templates, CSS, or JS are modified. Press Ctrl-C to end."
+    print("Updating website when templates, CSS, or JS are modified. Press Ctrl-C to end.")
     server = setup_httpd(port, builder_instance.renderpath)
     try:
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
-        print "Shutting down watcher and server..."
+        print("Shutting down watcher and server...")
         server.terminate()
         server.join()
         observer.stop()
