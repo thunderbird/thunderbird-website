@@ -28,7 +28,7 @@
   <div class="nojs-download">
     {{ alt_buttons(builds) }}
   </div>
-  <div class="unrecognized-download">
+  <div class="unrecognized-download os_android os_ios">
     {{ alt_buttons(builds) }}
   </div>
   <p class="unsupported-download p-links">
@@ -61,7 +61,7 @@
       </li>
     {% endfor %}
   </ul>
-  <p class="download-other download-other-desktop os_linux os_linux64 os_osx os_win os_win64 os_winsha1 font-sm mt-0">
+  <p class="download-other download-other-desktop os_android os_ios os_linux os_linux64 os_osx os_win os_win64 os_winsha1 font-sm mt-0">
     {% if channel != 'nightly' %}{# Nightly doesn't have an all download page or release notes. #}
       <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if channel or section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a> &bull;
       <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if channel or section == 'body' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
