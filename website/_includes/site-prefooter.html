@@ -27,20 +27,40 @@
     </article>
 
     <article class="flex flex-1 flex-col lg:max-w-md mb-10 lg:mb-0 tabs">
-      <input checked="checked" id="beta" type="radio" name="pct" class="hidden"/>
+      <input {% if active_page != 'index' %}checked="checked" {% endif %}id="release" type="radio" name="pct" class="hidden"/>
+      <input {% if active_page == 'index' %}checked="checked" {% endif %}id="beta" type="radio" name="pct" class="hidden"/>
       <input id="nightly" type="radio" name="pct" class="hidden"/>
       <aside class="self-start text-left lg:-mt-12 ml-20 md:pl-8">
         <nav>
           <ul class="list-none p-0 flex flex-wrap font-semibold tabs-nav">
-            <li id="channel" class="beta">
-              <label for="beta">Beta Channel</label>
+            <li id="channel-header">Channel:</li>
+            <li id="channel" class="release">
+              <label for="release">Release</label>
+            </li>
+            <li class="beta">
+              <label for="beta">Beta</label>
             </li>
             <li class="nightly">
-              <label for="nightly">Nightly Channel</label>
+              <label for="nightly">Nightly</label>
             </li>
           </ul>
         </nav>
       </aside>
+
+      <section class="tab release flex flex-1">
+        <aside class="w-16 md:w-24 pt-4">
+            {{ high_res_img('thunderbird/logos/release.png', {'alt': _('Thunderbird'), 'class': 'w-full h-auto'}) }}
+        </aside>
+        <main class="flex flex-col flex-1 ml-4">
+          <h3 class="header-section">{{ _('Thunderbird')}}</h3>
+          <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+            {{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}
+          </p>
+          <aside class="ml-0 mr-0 self-start text-center text-green font-semibold">
+            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Thunderbird')) }}
+          </aside>
+        </main>
+      </section>
 
       <section class="tab beta flex flex-1">
         <aside class="w-16 md:w-24 pt-4">

@@ -8,6 +8,7 @@
   }
 }
 
+#release:checked ~ section.tab.release,
 #beta:checked ~ section.tab.beta,
 #nightly:checked ~ section.tab.nightly {
   display: flex;
@@ -26,9 +27,17 @@
   li ~ li {
     &:extend(.ml-2);
   }
+
+  #channel-header {
+    &:extend(.inline-block, .uppercase, .p-1, .bg-transparent, .rounded-sm, .font-sm);
+  }
 }
 
+#release:checked ~ aside nav .tabs-nav .release label,
 #beta:checked ~ aside nav .tabs-nav .beta label,
 #nightly:checked ~ aside nav .tabs-nav .nightly label {
   &:extend(.bg-blue, .text-white);
+}
+section.tab.release a.small-link {
+  &:extend(.text-blue);
 }
