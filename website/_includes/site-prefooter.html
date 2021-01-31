@@ -26,22 +26,21 @@
       </main>
     </article>
 
-    <article class="flex flex-1 flex-col lg:max-w-md mb-10 lg:mb-0 tabs">
+    <article class="flex flex-1 flex-col lg:max-w-lg mb-10 lg:mb-0 tabs">
       <input {% if active_page != 'index' %}checked="checked" {% endif %}id="release" type="radio" name="pct" class="hidden"/>
       <input {% if active_page == 'index' %}checked="checked" {% endif %}id="beta" type="radio" name="pct" class="hidden"/>
       <input id="nightly" type="radio" name="pct" class="hidden"/>
       <aside class="self-start text-left lg:-mt-12 ml-20 md:pl-8">
         <nav>
           <ul class="list-none p-0 flex flex-wrap font-semibold tabs-nav">
-            <li id="channel-header">Channel:</li>
             <li id="channel" class="release">
-              <label for="release">Release</label>
+              <label for="release">Release Channel</label>
             </li>
             <li class="beta">
-              <label for="beta">Beta</label>
+              <label for="beta">Beta Channel</label>
             </li>
             <li class="nightly">
-              <label for="nightly">Nightly</label>
+              <label for="nightly">Nightly Channel</label>
             </li>
           </ul>
         </nav>
