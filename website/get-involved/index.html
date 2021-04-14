@@ -63,6 +63,83 @@
     </aside>
   </section>
 
+<section class="pt-10 lg:pt-20 pb-10 bg-calendar pr-8 pl-8">
+    <section id="communication" class="flex flex-col lg:flex-row flex-wrap max-w-6xl mx-auto">
+      <aside class="flex flex-col w-full mb-10">
+        <h3 class="header-section">
+          <span>{{ svg('accessibility') }}</span>
+          <aside class="flex flex-col">
+            {{ _('Communication')}}
+            <small class="font-normal font-md tracking-normal normal-case">
+              {{ _('Here are the places and ways Thunderbird communicates.') }}
+            </small>
+          </aside>
+        </h3>
+      </aside>
+
+      <aside class="flex flex-col w-full lg:w-1/2">
+        <article class="flex flex-col w-full mb-6 lg:pl-8">
+          <h4 class="subheader-section">{{ _('Discussion and Help') }}</h4>
+          <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
+            <li>{{ _('<a href="https://support.mozilla.org/en-US/questions/thunderbird">Thunderbird Support and Help Articles</a>') }}
+            </li>
+            <li>{{ _('<a href="https://thunderbird.topicbox.com/groups/announcements">Announcements List</a> - For public announcements.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://thunderbird.topicbox.com/groups/addons">Add-on Developers List</a> - For general discussions about creating add-ons, and for developers to find support in creating their add-ons.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://thunderbird.topicbox.com/groups/beta">Beta List</a> - For announcements and discussions about Thunderbird Beta.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://thunderbird.topicbox.com/groups/daily">Daily List</a> - For announcements and discussions about Thunderbird Daily.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://thunderbird.topicbox.com/groups/developers">Developer List</a> - For technical discussion about Thunderbird development.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://thunderbird.topicbox.com/groups/e2ee">Enterprise List</a> - For ADMINISTRATORS to discuss large scale deployment and configuration of Thunderbird.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://thunderbird.topicbox.com/groups/enterprise">E2EE List</a> - End-to-end Encryption using OpenPGP, OTR, and S/MIME.') }}
+            </li>
+            <li>{{ _('<a href="https://thunderbird.topicbox.com/groups/planning">Planning List</a> - For high-level discussion about Thunderbird.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://wiki.mozilla.org/Thunderbird/tb-support-crew">Support Crew</a> - Private list for volunteers to discuss management of support.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://thunderbird.topicbox.com/groups/ux">UX List</a> - List for discussion about Thunderbird’s User Experience.') }}
+            </li>
+        </article>
+      </aside>
+      <aside class="flex flex-col w-full lg:w-1/2">
+        <article class="flex flex-col w-full mb-6 lg:pl-8">
+          <h4 class="subheader-section">{{ _('Matrix Channels on chat.mozilla.org') }}</h4>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('You can use the <a href="https://riot.im/download/desktop/">Riot desktop client</a> if you don’t want to use a browser. Set the home server to "mozilla.modular.im".') }}
+          </p>
+          <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
+            <li>
+              {{ _('<a href="https://chat.mozilla.org/#/room/#thunderbird:mozilla.org">#thunderbird</a> - For general questions and support.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://chat.mozilla.org/#/room/#maildev:mozilla.org">#maildev</a> - For hacking on Thunderbird.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://chat.mozilla.org/#/room/#tb-addon-developers:mozilla.org">#tb-addon-developers</a> - For questions and discussion about Thunderbird add-on development.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://chat.mozilla.org/#/room/#openpgp:mozilla.org">#openpgp</a> - For OpenPGP discussion.') }}
+            </li>
+            <li>
+              {{ _('<a href="https://chat.mozilla.org/#/room/#tb-support-crew:mozilla.org">#tb-support-crew</a> - For management of Thunderbird support.') }}
+            </li>
+        </article>
+      </aside>
+    </section>
+  </section>
+
   <section class="pt-10 pb-10 w-full bg-grey-lighter">
     <section id="development" class="pt-10 pb-10 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
       <aside class="flex flex-col flex-grow">
@@ -217,6 +294,22 @@
   </section>
 
   <section class="pt-10 pb-10 flex flex-col lg:flex-row flex-wrap max-w-6xl mx-auto pr-8 pl-8">
+    <aside id="qualityassurance" class="flex flex-col w-full lg:w-1/2">
+      <article class="flex flex-col w-full mb-6 lg:pl-8">
+        <h3 class="header-section">
+          <span>{{ svg('popular') }}</span>
+          <aside class="flex flex-col">
+            {{ _('Quality Assurance')}}
+            <small class="font-normal font-md tracking-normal normal-case">
+              {{ _('Help catch those bugs before they get loose.') }}
+            </small>
+          </aside>
+        </h3>
+        <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+          {{ _('See <a href="https://wiki.mozilla.org/Thunderbird:Testing">Thunderbird:Testing</a> on the Mozilla Wiki.') }}
+        </p>
+      </article>
+    </aside>
     <aside id="translation" class="flex flex-col w-full lg:w-1/2">
       <article class="flex flex-col w-full mb-6 pr-8">
         <h3 class="header-section">
@@ -238,125 +331,6 @@
         </ul>
       </article>
     </aside>
-
-    <aside id="qualityassurance" class="flex flex-col w-full lg:w-1/2">
-      <article class="flex flex-col w-full mb-6 lg:pl-8">
-        <h3 class="header-section">
-          <span>{{ svg('popular') }}</span>
-          <aside class="flex flex-col">
-            {{ _('Quality Assurance')}}
-            <small class="font-normal font-md tracking-normal normal-case">
-              {{ _('Help catch those bugs before they get loose.') }}
-            </small>
-          </aside>
-        </h3>
-        <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-          {{ _('See <a href="https://wiki.mozilla.org/Thunderbird:Testing">Thunderbird:Testing</a> on the Mozilla Wiki.') }}
-        </p>
-      </article>
-    </aside>
-  </section>
-
-  <section class="pt-10 lg:pt-20 pb-10 bg-calendar pr-8 pl-8">
-    <section id="communication" class="flex flex-col lg:flex-row flex-wrap max-w-6xl mx-auto">
-      <aside class="flex flex-col w-full mb-10">
-        <h3 class="header-section">
-          <span>{{ svg('accessibility') }}</span>
-          <aside class="flex flex-col">
-            {{ _('Communication')}}
-            <small class="font-normal font-md tracking-normal normal-case">
-              {{ _('Here are the places and ways Thunderbird communicates.') }}
-            </small>
-          </aside>
-        </h3>
-      </aside>
-
-      <aside class="flex flex-col w-full lg:w-1/2">
-        <article class="flex flex-col w-full mb-6 lg:pl-8">
-          <h4 class="subheader-section">{{ _('Discussion Forums') }}</h4>
-          <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
-            <li>{{ _('<a href="https://support.mozilla.org/en-US/questions/thunderbird">Thunderbird Support Forum</a>') }}
-            </li>
-            <li>
-              {{ _('<a href="https://discourse.mozilla.org/">Mozilla’s Discourse</a>') }}
-              <ul>
-                <li>
-                  {{ _('<a href="https://discourse.mozilla.org/c/thunderbird">Thunderbird</a>') }}</li>
-                <li>
-                  {{ _('<a href="https://discourse.mozilla.org/c/thunderbird/beta">Thunderbird Beta</a>') }}
-                </li>
-                <li>
-                  {{ _('<a href="https://discourse.mozilla.org/c/thunderbird/addons">Thunderbird Add-Ons</a>') }}
-                </li>
-              </ul>
-            </li>
-            <li>
-              {{ _('<a href="http://forums.mozillazine.org/viewforum.php?f=29">Thunderbird Builds</a> on MozillaZine - For help with building Thunderbird and using daily builds.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://groups.google.com/forum/#!forum/mozilla.support.thunderbird">mozilla.support.thunderbird</a> is a Google Group for support.')}}
-            </li>
-          </ul>
-        </article>
-      </aside>
-
-      <aside class="flex flex-col w-full lg:w-1/2">
-        <article class="flex flex-col w-full mb-6 lg:pl-8">
-          <h4 class="subheader-section">{{ _('Matrix Channels on chat.mozilla.org') }}</h4>
-          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-            {{ _('You can use the <a href="https://riot.im/download/desktop/">Riot desktop client</a> if you don’t want to use a browser. Set the home server to "mozilla.modular.im".') }}
-          </p>
-          <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
-            <li>
-              {{ _('<a href="https://chat.mozilla.org/#/room/#thunderbird:mozilla.org">#thunderbird</a> - For general questions and support.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://chat.mozilla.org/#/room/#maildev:mozilla.org">#maildev</a> - For hacking on Thunderbird.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://chat.mozilla.org/#/room/#tb-addon-developers:mozilla.org">#tb-addon-developers</a> - For questions and discussion about Thunderbird add-on development.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://chat.mozilla.org/#/room/#openpgp:mozilla.org">#openpgp</a> - For OpenPGP discussion.') }}
-            </li>
-        </article>
-      </aside>
-
-      <aside class="flex flex-col w-full">
-        <article class="flex flex-col w-full mb-6 lg:pl-8">
-          <h4 class="subheader-section">{{ _('Mailing Lists') }}</h4>
-          <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
-            <li>
-              {{ _('<a href="https://wiki.mozilla.org/Thunderbird/tb-planning">tb-planning</a> (<a href="https://groups.google.com/forum/#!forum/tb-planning">Google Group Mirror</a>) - For high level topics.') }}
-            </li>
-            <li>
-              {{ _('<a href="http://lists.thunderbird.net/mailman/listinfo/maildev_lists.thunderbird.net">Maildev</a> - A moderated mailing list for Thunderbird Engineering plans.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://wiki.mozilla.org/Thunderbird/tb-support-crew">tb-support-crew</a> - For those who help the users.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://mail.mozilla.org/listinfo/thunderbird-testers">thunderbird-testers</a> - For anyone who is helping test.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://lists.mozilla.org/listinfo/dev-apps-thunderbird">dev-apps-thunderbird</a> (<a href="news://news.mozilla.org/mozilla.dev.apps.thunderbird">Newsgroup</a>) (<a href="https://groups.google.com/forum/#!forum/mozilla.dev.apps.thunderbird">Google Group Mirror</a>) - For technical and code related discussions, such as add-ons.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://wiki.mozilla.org/Thunderbird/tb-enterprise">tb-enterprise</a> - For ADMINISTRATORS to discuss large scale deployment and configuration of Thunderbird.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://thunderbird.topicbox.com/groups/addons">Add-on Developers List</a> - For general discussions about creating add-ons, and is for add-on developers who need support in creating their add-ons.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://thunderbird.topicbox.com/groups/ux">Thunderbird UX List</a> - Mailing list for discussion on UX in Thunderbird.') }}
-            </li>
-            <li>
-              {{ _('<a href="https://thunderbird.topicbox.com/groups/e2ee">Thunderbird E2EE List</a> - End-to-end Encryption using OpenPGP, OTR, and S/MIME.') }}
-            </li>
-          </ul>
-        </article>
-      </aside>
-    </section>
   </section>
 
   {% include '_includes/site-prefooter.html' %}
