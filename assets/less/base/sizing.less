@@ -34,6 +34,12 @@ each(@min-heights, #(@k, @v) {
   }
 });
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .platform-img {
+     height: 100%;
+  }
+}
+
 each(@breakpoints, #(@k, @v) {
   @media (min-width: @k) {
     each(@widths, #(@i, @r) {
