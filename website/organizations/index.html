@@ -22,14 +22,79 @@
           <span>{{ svg('envelope') }}</span> {{ _('Thunderbird for Organizations')}}
         </h3>
         <p class="font-lg tracking-wider leading-loose mb-6">
-          {{ _('Unlike the <a href="{firefox_esr}">Mozilla Firefox ESR</a>, Thunderbird does not provide a separate ESR release. This is because the <a href="/">regular Thunderbird release</a> is already an ESR release. It remains stable and on that major version for approximately one year. Only <a href="/#channel">Thunderbird Beta</a> follows the more frequent major version releases.')|f(firefox_esr=url('firefox.enterprise')) }}
-        </p>
+          {{ _('Thunderbird comes with a number of key benefits which make it an excellent choice for organizational deployments of any size. And it&#39;s more than just email: As an all-in-one communication platform with integrated calendar and chat, Thunderbird is all about efficiency. Whether you are a small business or organization, a government institution, or a large enterprise - Thunderbird has been designed to scale to your needs. Learn more about the <a href="#benefits">benefits of using Thunderbird in an organization.</a>')}}
+
+        <h3 class="subheader-section">
+          {{ _('Stability, efficiency, and security for your emails') }}
+        </h3>
         <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
-          {{ _('We do have other resources for organizations: If you need it, you can find the Thunderbird MSI Installer on the <a href="{syslang}">Systems & Languages page</a>. For more information about deploying and configuring Thunderbird in business and enterprise environments you can also join the <a href="{maillist}">Enterprise mailing list</a>.')|f(maillist=url('thunderbird.enterprise'), syslang=url('thunderbird.latest.all')) }}
+          {{ _('Provide your team with a stable communications solution which allows them to focus on getting their work done. The <a href="/">regular Thunderbird release</a> follows the so-called <a href="{firefox_release_calendar}">Extended Support Release (ESR) schedule</a> of the Mozilla platform. So to your advantage it will remain stable and feature-stable on that major version for approximately one year. Of course, we&#39;ll always keep you on the safe side with monthly minor upgrades which may contain stability, correctness and security upgrades.')|f(firefox_release_calendar=url('firefox.release-calendar')) }}
         </p>
+
+        <h3 class="subheader-section">
+          {{ _('Get Thunderbird for your organization') }}
+        </h3>
         <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
-          {{ _('For general help or questions about Thunderbird you can visit <a href="{support_site}">Thunderbird support</a>.')|f(support_site=url('support')) }}
+          {{ _('Thunderbird is available in a <a href="{syslang}">variety of languages</a> for all major operating systems (Windows / MacOS / Linux). For multi-lingual environments, you can download language pack add-ons and switch Thunderbird's user interface language on the fly. We offer a number of resources specifically for organizations:')|f(syslang=url('thunderbird.latest.all')) }}
         </p>
+
+        <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
+          <li>
+            {{ _('For Windows deployment, you can find the Thunderbird MSI Installer on the <a href="{syslang}">Systems &amp; Languages page</a>.')|f(syslang=url('thunderbird.latest.all')) }}
+          </li>
+          <li>
+            {{ _('For more information about deploying and configuring Thunderbird in business and enterprise environments, please visit our enterprise deployment portal: <a href="{thunderbird_etn}">enterprise.thunderbird.net</a>.')|f(thunderbird_etn=url('thunderbird.enterprise.documentation')) }}
+          </li>
+          <li>
+            {{ _('You can also join the <a href="{tb_list_enterprise}">Thunderbird Enterprise mailing list on Topicbox</a> to connect with other administrators and share advice on Thunderbird deployment (Please note: The <a href="tb_oldlist_enterprise">old tb-enterprise mailing list</a> has been retired).')|f(tb_list_enterprise=url('thunderbird.lists.enterprise'), tb_oldlist_enterprise=url('thunderbird.oldlists.enterprise')) }}
+          </li>
+        </ul>
+
+        <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
+          {{ _('For general help or questions about Thunderbird, you can visit <a href="{support_site}">Thunderbird support</a>.')|f(support_site=url('support')) }}
+        </p>
+
+        <h3 class="subheader-section">
+          {{ _('Benefits of using Thunderbird in an organization') }}
+        </h3>
+        <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
+          <li>
+            {{ _('Desktop email client packed with features') }}
+          </li>
+          <li>
+            {{ _('Integrated calendar application (PIM)') }}
+          </li>
+          <li>
+            {{ _('Integrated chat client') }}
+          </li>
+          <li>
+            {{ _('Advanced Search and Filter tools') }}
+          </li>
+          <li>
+            {{ _('Inbuilt message encryption (OpenPGP, S/MIME)') }}
+          </li>
+          <li>
+            {{ _('Customizable with a large variety of add-ons') }}
+          </li>
+          <li>
+            {{ _('Built on the latest Mozilla platform technology') }}
+          </li>
+          <li>
+            {{ _('Security, privacy, data ownership') }}
+          </li>
+          <li>
+            {{ _('Designed for efficiency') }}
+          </li>
+          <li>
+            {{ _('Implements accessibility standards') }}
+          </li>
+          <li>
+            {{ _('Open source code - transparency without proprietary mysteries') }}
+          </li>
+          <li>
+            {{ _('Cross-platform policy support and configuration options for large and centralized deployments') }}
+          </li>
+        </ul>
       </aside>
     </section>
   </section>
