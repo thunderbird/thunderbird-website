@@ -109,7 +109,6 @@ URL_MAPPINGS = {
     'thunderbird.index': '/',
     'thunderbird.latest.all': '/thunderbird/all/',
     'thunderbird.lists.enterprise': 'https://thunderbird.topicbox.com/groups/enterprise',
-    'thunderbird.oldlists.enterprise': 'https://groups.google.com/g/tb-enterprise',
     'thunderbird.organizations': '/organizations',
     'thunderbird.releases.index': '/thunderbird/releases',
     'thunderbird.style': 'https://style.thunderbird.net',
