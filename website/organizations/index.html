@@ -28,14 +28,14 @@
           {{ _('Stability, efficiency, and security for your emails') }}
         </h3>
         <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
-          {{ _('Provide your team with a stable communications solution which allows them to focus on getting their work done. The <a href="/">regular Thunderbird release</a> follows the so-called <a href="{firefox_release_calendar}">Extended Support Release (ESR) schedule</a> of the Mozilla platform. So to your advantage it will remain stable and feature-stable on that major version for approximately one year. Of course, we&#39;ll always keep you on the safe side with monthly minor upgrades which may contain stability, correctness and security upgrades.')|f(firefox_release_calendar=url('firefox.release-calendar')) }}
+          {{ _('Provide your team with a stable communications solution which allows them to focus on getting their work done. The <a href="/">regular Thunderbird release</a> follows the <a href="{firefox_release_calendar}">Extended Support Release (ESR) schedule</a> of the Mozilla platform. So it will remain stable and on that major version for approximately one year. Of course, we&#39;ll always keep you on the safe side with regular minor upgrades which may improve stability, correctness and security. If you want to check out and help refine the future of Thunderbird, there’s <a href="/#channel">Thunderbird Beta</a> which follows the more frequent major version <a href="{firefox_release_calendar}">release cycle</a>, usually monthly.')|f(firefox_release_calendar=url('firefox.release-calendar')) }}
         </p>
 
         <h3 class="subheader-section">
           {{ _('Get Thunderbird for your organization') }}
         </h3>
         <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
-          {{ _('Thunderbird is available in a <a href="{syslang}">variety of languages</a> for all major operating systems (Windows / MacOS / Linux). For multi-lingual environments, you can download language pack add-ons and switch Thunderbird's user interface language on the fly. We offer a number of resources specifically for organizations:')|f(syslang=url('thunderbird.latest.all')) }}
+          {{ _('Thunderbird is available in a <a href="{syslang}">variety of languages</a> for all major operating systems (Windows / MacOS / Linux). For multi-lingual environments, you can download language pack add-ons and switch Thunderbird’s user interface language on the fly. We offer a number of resources specifically for organizations:')|f(syslang=url('thunderbird.latest.all')) }}
         </p>
 
         <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
@@ -46,7 +46,7 @@
             {{ _('For more information about deploying and configuring Thunderbird in business and enterprise environments, please visit our enterprise deployment portal: <a href="{thunderbird_etn}">enterprise.thunderbird.net</a>.')|f(thunderbird_etn=url('thunderbird.enterprise.documentation')) }}
           </li>
           <li>
-            {{ _('You can also join the <a href="{tb_list_enterprise}">Thunderbird Enterprise mailing list on Topicbox</a> to connect with other administrators and share advice on Thunderbird deployment (Please note: The <a href="tb_oldlist_enterprise">old tb-enterprise mailing list</a> has been retired).')|f(tb_list_enterprise=url('thunderbird.lists.enterprise'), tb_oldlist_enterprise=url('thunderbird.oldlists.enterprise')) }}
+            {{ _('You can also join the <a href="{tb_list_enterprise}">Thunderbird Enterprise mailing list on Topicbox</a> to connect with other administrators and share advice on Thunderbird deployment.')|f(tb_list_enterprise=url('thunderbird.lists.enterprise')) }}
           </li>
         </ul>
 
@@ -54,7 +54,7 @@
           {{ _('For general help or questions about Thunderbird, you can visit <a href="{support_site}">Thunderbird support</a>.')|f(support_site=url('support')) }}
         </p>
 
-        <h3 class="subheader-section">
+        <h3 id="benefits" class="subheader-section">
           {{ _('Benefits of using Thunderbird in an organization') }}
         </h3>
         <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
@@ -71,7 +71,7 @@
             {{ _('Advanced Search and Filter tools') }}
           </li>
           <li>
-            {{ _('Inbuilt message encryption (OpenPGP, S/MIME)') }}
+            {{ _('Built-in message encryption (OpenPGP, S/MIME)') }}
           </li>
           <li>
             {{ _('Customizable with a large variety of add-ons') }}
