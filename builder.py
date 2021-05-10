@@ -324,8 +324,12 @@ def setup_httpd(port, path):
     """Setup and start the SimpleHTTPServer for the --watch command."""
     cwd = os.getcwd()
     os.chdir(path)
-    handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-    httpd = SocketServer.TCPServer(("", port), handler)
+    if sys.version_info[0] == 3:
+        handler = http.server.SimpleHTTPRequestHandler
+        httpd = socketserver.TCPServer(("", port), handler)
+    else:
+        handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+        httpd = SocketServer.TCPServer(("", port), handler)
     process = multiprocessing.Process(target=httpd.serve_forever)
     process.daemon = True
     process.start()
