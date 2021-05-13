@@ -59,7 +59,7 @@
                     pf.indexOf('iPod') !== -1 ) {
                 return 'ios';
             }
-            if (ua.indexOf('Mac OS X') !== -1) {
+            if (ua.indexOf('Mac OS') !== -1) {
                 return 'osx';
             }
             if (ua.indexOf('MSIE 5.2') !== -1) {
@@ -80,7 +80,7 @@
 
             // On OS X, Safari and Chrome have underscores instead of dots
             var match = ua.match(/Windows\ NT\ (\d+\.\d+)/) ||
-                        ua.match(/Mac\ OS\ X\ (\d+[\._]\d+)/) ||
+                        ua.match(/Mac\ OS\ [ X ]?(\d+[\._]?\d+)/) ||
                         ua.match(/Android\ (\d+\.\d+)/);
 
             return match ? match[1].replace('_', '.') : undefined;
