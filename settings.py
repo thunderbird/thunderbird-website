@@ -125,7 +125,7 @@ ENUS_ONLY = [
 ]
 
 DONATE_LINK = (
-    'https://donate.mozilla.org/thunderbird/'
+    'https://give.thunderbird.net/'
     '?utm_source={source}&utm_medium=referral&utm_content={content}'
 )
 
