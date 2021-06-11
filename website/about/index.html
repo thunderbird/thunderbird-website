@@ -59,6 +59,18 @@
 
       <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
         <article class="flex flex-col w-full mb-6">
+          <h4 class="subheader-section">{{ _('Our Mission') }}</h4>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('Email has been and continues to be the fundamental communication tool and a significant driver of freedoms on the Internet. But it is also threatened by new non-standards-based, closed and centralized messaging platforms. To prevent this erosion, the public deserves an alternative that is secure and reliable, while  protecting our privacy, enhancing our productivity and serving as a
+            platform for current and future forms of messaging.')) }}
+          </p>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('Thunderbird facilitates cross platform, decentralized, open-standard communication, which puts the user in control of their data and workflow. We aspire to offer an interoperable and extensible open-source platform for messaging and managing personal information, such as email, contacts, and appointments.')) }}
+          </p>
+        </article>
+
+      <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
+        <article class="flex flex-col w-full mb-6">
           <h4 class="subheader-section">{{ _('Our Community') }}</h4>
           <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
             {{ _('There is a passionate team of volunteers involved in developing Thunderbird and assisting its users who would welcome your involvement. Check out our <a href="%(volunteer)s">Get Involved page</a> to learn how you can participate on the Thunderbird team. We also have paid staff working full-time on Thunderbird, <a href="%(donate)s">funded by donations</a> from our users. If you’re curious about who is working on Thunderbird, check out the <a href="%(core_team)s">list of our core contributors</a>.')|format(volunteer=url('thunderbird.get-involved'), donate=donate_url('about'), core_team=url('wiki.moz', '/Thunderbird/Core_Team')) }}
@@ -78,4 +90,3 @@
   {% include '_includes/site-prefooter.html' %}
 
 {% endblock %}
-
