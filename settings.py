@@ -46,8 +46,8 @@ CANONICAL_URL = 'https://www.thunderbird.net'
 # url for the server that serves Thunderbird downloads.
 BOUNCER_URL = 'https://download.mozilla.org/'
 
-# url for the ftp server where Nightly builds are hosted.
-NIGHTLY_URL = 'https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/'
+# url for the ftp server where Daily builds are hosted.
+DAILY_URL = 'https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/'
 
 # url for the mozilla wiki used for some documentation.
 WIKI_URL = 'https://wiki.mozilla.org'
