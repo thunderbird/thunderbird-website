@@ -44,7 +44,7 @@
     </ul>
   </section>
 
-  <section class="mb-10 flex flex-col items-start lg:w-full max-w-6xl mx-auto pr-8 pl-8">
+  <section class="mb-10 flex flex-col items-start max-w-6xl mx-auto pr-8 pl-8">
     {% set letter = namespace(first='') %}
     {% for calendar in calendars -%}
       {% if letter.first != calendar.country[:1] %}
