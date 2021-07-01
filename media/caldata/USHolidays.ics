@@ -19,6 +19,7 @@ COMMENT:   *	Easter		            in 2021 is 	Apr 4
 COMMENT:	US Tax Day	            begins on 	Apr 15	
 COMMENT:	Mother's Day 	            begins on 	2nd Sunday of May
 COMMENT:	Memorial Day 	            begins on 	last Monday of May
+COMMENT:	Juneteenth                  begins on	June 19
 COMMENT:	Father's Day                begins on 	3rd Sunday of June
 COMMENT:   *	First day of summer         in 2021 is 	June 21
 COMMENT:	Independence Day            begins on	July 4
@@ -213,6 +214,19 @@ CLASS:PUBLIC
 DTSTAMP:20201115T134131Z
 CATEGORIES:Holidays
 RRULE:FREQ=YEARLY;BYMONTH=5;COUNT=10;BYDAY=-1MO
+END:VEVENT
+
+BEGIN:VEVENT
+UID:abe196a3-79fc-4852-bfad-a39d9efb15bc
+LAST-MODIFIED:20210620T040133Z
+DTSTART;VALUE=DATE:20210619
+DTEND:20210619T040001Z
+SUMMARY:Juneteenth
+DESCRIPTION:Juneteenth
+CLASS:PUBLIC
+DTSTAMP:20210620T040133Z
+CATEGORIES:Holidays
+RRULE:FREQ=YEARLY;BYMONTH=6;COUNT=10;BYMONTHDAY=19
 END:VEVENT
 
 BEGIN:VEVENT
