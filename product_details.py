@@ -151,7 +151,7 @@ class ThunderbirdDetails():
         esr_major_versions = (
             list(range(10, 59, 7))
             + [60, 68]
-            + list(range(78, int(self.current_versions[version_name].split('.')[0]) + 1, 12))
+            + list(range(78, int(self.current_versions[version_name].split('.')[0]) + 1, 13))
         )
         releases = {}
         for release in self.major_releases:
