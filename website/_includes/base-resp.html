@@ -17,9 +17,8 @@
     <section class="flex justify-between items-center p-6 flex-wrap">
       {% block site_header_logo %}
         <h2 class="mt-0 mb-0">
-          <a href="{{ url('thunderbird.index') }}" class="block w-48 md:w-16 lg:w-56" title="{{ _('Thunderbird') }}" alt="{{ _('Thunderbird Vector Wordmark') }}">
-            <i class="block md:hidden lg:block">{{ svg('logo-wordmark-white') }}</i>
-            <i class="hidden md:block lg:hidden">{{ svg('logo') }}</i>
+          <a href="{{ url('thunderbird.index') }}" class="block w-48 lg:w-56" title="{{ _('Thunderbird') }}" alt="{{ _('Thunderbird Vector Wordmark') }}">
+            <i class="block">{{ svg('logo-wordmark-white') }}</i>
           </a>
         </h2>
       {% endblock %}
