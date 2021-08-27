@@ -13,11 +13,14 @@ import translate
 import webassets
 
 if sys.version_info[0] == 3:
-    import socketserver
+    from socketserver import TCPServer
     import http.server
+    SimpleHTTPServer = http.server.HTTPServer
+    SimpleHTTPRequestHandler = http.server.SimpleHTTPRequestHandler
 else:
-    import SocketServer
+    from SocketServer import TCPServer
     import SimpleHTTPServer
+    SimpleHTTPRequestHandler = SimpleHTTPServer.SimpleHTTPRequestHandler
 
 from dateutil.parser import parse
 from jinja2 import Environment, FileSystemLoader
@@ -324,8 +327,8 @@ def setup_httpd(port, path):
     """Setup and start the SimpleHTTPServer for the --watch command."""
     cwd = os.getcwd()
     os.chdir(path)
-    handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-    httpd = SocketServer.TCPServer(("", port), handler)
+    handler = SimpleHTTPRequestHandler
+    httpd = TCPServer(("", port), handler)
     process = multiprocessing.Process(target=httpd.serve_forever)
     process.daemon = True
     process.start()
