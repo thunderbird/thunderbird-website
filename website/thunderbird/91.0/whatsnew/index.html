@@ -17,7 +17,7 @@
         {{ _('Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.') }}
       </p>
 
-      <div class="flex mb-8">
+      <div class="flex mb-20">
         <a href="{{ donate_url('home_page_body') }}" class="btn-donate btn-donate-whatsnew font-lg">
           <span class="inline-block w-4 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
         </a>
@@ -87,7 +87,23 @@
 
   <!-- Mozilla VPN banner -->
   <section class="pt-20 pb-20 flex justify-center bg-grey-light">
-    Mozilla VPN
+    <div class="flex items-center lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="lg:mr-8">
+        <img class="w-full h-auto max-w-md self-center" src="{{ static('/media/img/thunderbird/whatsnew/91/vpn_one_tap.svg') }}" alt="Mozilla VPN vector graphic">
+      </aside>
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section text-green-light">
+          <span class="green">{{ svg('accessibility') }}</span>
+          {{ _('Protect Your Privacy')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Whether its work or play, you deserve to have privacy when you are online. A VPN, Virtual Private Network, can help you create a secure, private connection to the internet. So that when you are traveling, connecting to WiFi, or simply want more online security - you know that your information is protected from prying eyes.') }}
+        </p>
+        <a href="https://www.mozilla.org/products/vpn/" class="btn-body self-start" target="_blank">
+          {{_('Learn More')}} <span>{{ svg('chevron-right') }}</span>
+        </a>
+      </aside>
+    </div>
   </section>
 
   <!-- Calendar sidebar -->
@@ -165,6 +181,8 @@
     </aside>
   </section>
 
-  {% include '_includes/donate-mailing-list.html' %}
+  <section class="bg-prefooter bg-grey-lighter -mb-10">
+    {% include '_includes/donate-mailing-list.html' %}
+  </section>
 
 {% endblock %}
