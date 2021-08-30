@@ -31,14 +31,15 @@
 {% endblock %}
 
 {% block content %}
+  <!-- Account setup -->
   <section class="pt-20 pb-20 flex justify-center">
-    <div class="flex flex-1 flex-wrap max-w-6xl ml-16 mr-16">
-      <aside class="flex-1 xl:mr-8">
-        <img class="w-full h-auto mb-10 max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/91/91-account-creation.png') }}" alt="Screenshot of Thunderbird's new account setup wizard.">
+    <div class="flex lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-1 lg:mr-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/91/91-account-creation.png') }}" alt="Screenshot of Thunderbird's new account setup wizard.">
       </aside>
       <aside class="flex-col flex-1 items-start">
         <h3 class="header-section">
-          <span>{{ svg('customize') }}</span>
+          <span>{{ svg('envelope') }}</span>
           {{ _('New Account Setup')}}
         </h3>
         <p class="font-lg tracking-wider leading-loose mb-10">
@@ -48,69 +49,101 @@
     </div>
   </section>
 
-  <section class="pb-10 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8">
-    <aside class="flex flex-col flex-1 lg:max-w-lg">
-      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="{{ static('/media/img/thunderbird/whatsnew/91/overlay-thunderbird-91.png') }}" alt="Screenshot of Thunderbird's new attachment overlay.">
-      <h3 class="header-section">
-        <span>{{ svg('link') }}</span>
-        {{ _('Attachments & Drag-and-Drop')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
-        {{ _('The attachments pane has been moved to the bottom of the compose window for better visibility of filenames as well as being able to see many at once. We’ve also added an overlay that appears when you drag-and-drop a file into the compose window asking how you would like to handle the file in that email (such as putting a picture in-line in your message or simply attaching it to the email).') }}
-      </p>
-    </aside>
-
-    <aside class="flex flex-col flex-1 lg:max-w-lg mt-10 lg:mt-0">
-      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="{{ static('/media/img/thunderbird/whatsnew/91/UI-Density-Control.png') }}" alt="Screenshot of the new UI density options in Thunderbird.">
-      <h3 class="header-section">
-        <span>{{ svg('settings') }}</span>
-        {{ _('UI Density Control')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
-        {{ _('Whether you are using it on a large desktop monitor or a small laptop touchscreen, you may want the icons and text of the interface to be larger and more spread out or very compact. In Thunderbird 91, under View -> Density in the menu, you can select the UI density for the entire application. Three options are available: compact (small), normal(medium), and touch(large).') }}
-      </p>
-    </aside>
+  <!-- Attachment overlay -->
+  <section class="pt-20 pb-20 flex justify-center bg-grey-lighter">
+    <div class="flex lg:flex-row flex-col flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('link') }}</span>
+          {{ _('Attachments & Drag-and-Drop')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('The attachments pane has been moved to the bottom of the compose window for better visibility of filenames as well as being able to see many at once. We’ve also added an overlay that appears when you drag-and-drop a file into the compose window asking how you would like to handle the file in that email (such as putting a picture in-line in your message or simply attaching it to the email).') }}
+        </p>
+      </aside>
+      <aside class="flex-1 lg:ml-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/91/thunderbird-91-attachment-overlay.gif') }}" alt="Screenshot of Thunderbird's new attachment overlay.">
+      </aside>
+    </div>
   </section>
 
-  <section class="pb-10 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8">
-    <aside class="flex flex-col flex-1 lg:max-w-lg">
-      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="{{ static('/media/img/thunderbird/whatsnew/91/calendar-sidebar.png') }}" alt="Screenshot of the new options in the Thunderbird calendar sidebar.">
-      <h3 class="header-section">
-        <span>{{ svg('link') }}</span>
-        {{ _('Calendar Sidebar')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
-        {{ _('Managing multiple calendars has been made easier with the calendar sidebar improvements in this release. There is a quick enable button for disabled calendars, as well as a show/hide icon for easily toggling what calendars are visible. There is also a lock indicator for read-only calendars. Additionally, although not a sidebar improvement, there are now better color accents to highlight the current day in the calendar.') }}
-      </p>
-    </aside>
-
-    <aside class="flex flex-col flex-1 lg:max-w-lg mt-10 lg:mt-0">
-      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="{{ static('/media/img/thunderbird/whatsnew/91/dark-theme-91.png') }}" alt="Screenshot showing the new dark theme in Thunderbird.">
-      <h3 class="header-section">
-        <span>{{ svg('settings') }}</span>
-        {{ _('Better Dark Theme')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
-        {{ _('Thunderbird’s Dark Theme got even better in this release. In the past some windows and dialogues looked a bit out of place if you had Thunderbird’s dark theme selected. Now almost every dialogue and window in Thunderbird is fully styled to respect the user’s color scheme preferences.') }}
-      </p>
-    </aside>
+  <!-- UI desnity -->
+  <section class="pt-20 pb-20 flex justify-center">
+    <div class="flex lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-1 lg:mr-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/91/thunderbird-91-density-ui.gif') }}" alt="Screenshot of the new UI density options in Thunderbird.">
+      </aside>
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('settings') }}</span>
+          {{ _('UI Density Control')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Whether you are using it on a large desktop monitor or a small laptop touchscreen, you may want the icons and text of the interface to be larger and more spread out or very compact. In Thunderbird 91, under View -> Density in the menu, you can select the UI density for the entire application. Three options are available: compact (small), normal(medium), and touch(large).') }}
+        </p>
+      </aside>
+    </div>
   </section>
 
-  <section class="pt-20 pb-20 flex justify-center bg-calendar">
-    <aside class="flex flex-col flex-1 max-w-6xl ml-16 mr-16">
-      <!-- Add half screenshot of dark theme -->
-      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="{{ static('/media/img/thunderbird/whatsnew/91/pdf-viewer-91.png') }}" alt="Screenshot of new PDF viewer in Thunderbird.">
-      <h3 class="header-section">
-        <span>{{ svg('customize') }}</span>
-        {{ _('PDF Viewer')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-10">
-        {{ _('Thunderbird now has a built-in PDF viewer, which means you can read and even do some editing on PDFs sent to you as attachments. You can do all this without ever leaving Thunderbird, allowing you to return to your inbox without missing a beat.') }}
-      </p>
-    </aside>
+  <!-- Mozilla VPN banner -->
+  <section class="pt-20 pb-20 flex justify-center bg-grey-light">
+    Mozilla VPN
   </section>
 
-  <section class="pt-20 pb-20 flex justify-center bg-calendar pr-8 pl-8">
+  <!-- Calendar sidebar -->
+  <section class="pt-20 pb-20 flex justify-center">
+    <div class="flex lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-1 lg:mr-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/91/thunderbird-91-calendar-sidebar.gif') }}" alt="Screenshot of the new options in the Thunderbird calendar sidebar.">
+      </aside>
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('calendar') }}</span>
+          {{ _('Calendar Sidebar')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Managing multiple calendars has been made easier with the calendar sidebar improvements in this release. There is a quick enable button for disabled calendars, as well as a show/hide icon for easily toggling what calendars are visible. There is also a lock indicator for read-only calendars. Additionally, although not a sidebar improvement, there are now better color accents to highlight the current day in the calendar.') }}
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Attachment overlay -->
+  <section class="pt-20 pb-20 flex justify-center bg-grey-lighter">
+    <div class="flex lg:flex-row flex-col flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('customize') }}</span>
+          {{ _('Better Dark Theme')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Thunderbird’s Dark Theme got even better in this release. In the past some windows and dialogues looked a bit out of place if you had Thunderbird’s dark theme selected. Now almost every dialogue and window in Thunderbird is fully styled to respect the user’s color scheme preferences.') }}
+        </p>
+      </aside>
+      <aside class="flex-1 lg:ml-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/91/dark-theme-91.png') }}" alt="Screenshot showing the new dark theme in Thunderbird.">
+      </aside>
+    </div>
+  </section>
+
+  <section class="pt-20 pb-20 flex justify-center">
+    <div class="flex lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-1 lg:mr-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/91/pdf-viewer-91.png') }}" alt="Screenshot of new PDF viewer in Thunderbird.">
+      </aside>
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('popular') }}</span>
+          {{ _('PDF Viewer')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Thunderbird now has a built-in PDF viewer, which means you can read and even do some editing on PDFs sent to you as attachments. You can do all this without ever leaving Thunderbird, allowing you to return to your inbox without missing a beat.') }}
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="pt-20 flex justify-center bg-calendar pr-8 pl-8">
     <aside class="flex flex-col flex-1 lg:max-w-6xl lg:ml-16 lg:mr-16">
       <h3 class="header-section">
         <span>{{ svg('news') }}</span>
@@ -119,7 +152,7 @@
       <p class="font-lg tracking-wider leading-loose mb-6">
         {{ _('There are many other big changes that make Thunderbird 91 a very large release including:') }}
       </p>
-      <ul>
+      <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
         <li>{{ _('Native support for macOS devices built with Apple Silicon CPU') }}</li>
         <li>{{ _('CardDAV Address Book Support (and CardDAV auto-detection support)') }}</li>
         <li>{{ _('Printing UI updated') }}</li>
