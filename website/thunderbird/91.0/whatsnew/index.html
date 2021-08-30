@@ -7,11 +7,26 @@
 {% block page_title %}{{ _('New in Thunderbird 91') }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-left text-white flex flex-col items-start lg:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-16 mt-0 p-links">
-      {{ _('This article describes some of the major changes visible to users in Thunderbird version 91. Full details of all the changes can be found in the <a href="%(release)s">Thunderbird release notes from 91.0 and up</a>.')|format(release=url('thunderbird.releases.index')) }}
+  <section class="text-left text-white flex justify-between pl-8 pr-8 md:pl-16 md:pr-16">
+    <aside class="flex-col items-start">
+      <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+      <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl lg:mb-16 mb-8 mt-0 p-links">
+        {{ _('This article describes some of the major changes visible to users in Thunderbird version 91. Full details of all the changes can be found in the <a href="%(release)s">Thunderbird release notes from 91.0 and up</a>.')|format(release=url('thunderbird.releases.index')) }}
       </p>
+      <p class="max-w-lg tracking-wider leading-loose mb-6 mt-0">
+        {{ _('Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.') }}
+      </p>
+
+      <div class="flex mb-8">
+        <a href="{{ donate_url('home_page_body') }}" class="btn-donate btn-donate-whatsnew font-lg">
+          <span class="inline-block w-4 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
+        </a>
+      </div>
+    </aside>
+    <aside class="xl:flex hidden xl:ml-8">
+      <img class="w-full h-auto mb-10 max-w-2xl self-center" src="{{ static('/media/img/thunderbird/whatsnew/91/91-header.png') }}" alt="Screenshot of Thunderbird's new system dark mode.">
+    </aside>
+
   </section>
 {% endblock %}
 
