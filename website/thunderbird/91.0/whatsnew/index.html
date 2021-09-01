@@ -7,7 +7,7 @@
 {% block page_title %}{{ _('New in Thunderbird 91') }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-left text-white flex justify-between pl-8 pr-8 md:pl-16 md:pr-16">
+  <section class="text-left text-white flex justify-between pl-8 pr-8 md:pl-16 md:pr-16 max-w-7xl mx-auto">
     <aside class="flex-col items-start">
       <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
       <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl lg:mb-16 mb-8 mt-0 p-links">
@@ -67,7 +67,7 @@
     </div>
   </section>
 
-  <!-- UI desnity -->
+  <!-- UI density -->
   <section class="pt-20 pb-20 flex justify-center">
     <div class="flex lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
       <aside class="flex-1 lg:mr-8">
@@ -117,7 +117,7 @@
       <aside class="flex-col flex-1 items-start">
         <h3 class="header-section">
           <span>{{ svg('calendar') }}</span>
-          {{ _('Calendar Sidebar')}}
+          {{ _('Calendar Improvements')}}
         </h3>
         <p class="font-lg tracking-wider leading-loose mb-10">
           {{ _('Managing multiple calendars has been made easier with the calendar sidebar improvements in this release. There is a quick enable button for disabled calendars, as well as a show/hide icon for easily toggling what calendars are visible. There is also a lock indicator for read-only calendars. Additionally, although not a sidebar improvement, there are now better color accents to highlight the current day in the calendar.') }}
