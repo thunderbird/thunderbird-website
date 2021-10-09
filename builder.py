@@ -52,13 +52,13 @@ def mkdir(path):
 
 
 def write_404_htaccess(path, lang):
-    """Write a .htaccess to `path` that points to 404.html for locale `lang`."""
+    """Write an .htaccess to `path` that points to 404.html for locale `lang`."""
     with open(os.path.join(path, '.htaccess'), 'w') as f:
         f.write('ErrorDocument 404 /{lang}/404.html\n'.format(lang=lang))
 
 
 def write_htaccess(path, url):
-    """Write a .htaccess to `path` that rewrites everything to `url`."""
+    """Write an .htaccess to `path` that rewrites everything to `url`."""
     mkdir(path)
     with open(os.path.join(path, '.htaccess'), 'w') as f:
         f.write('RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
@@ -152,6 +152,15 @@ class Site(object):
         self._env.install_gettext_translations(translator)
         self._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css)
 
+    def _write_favicon_htaccess(self):
+        """Write an .htaccess to `self.renderpath` that points to the favicon."""
+        htpath = os.path.join(self.renderpath, '.htaccess')
+        mode = 'w'
+        if os.path.isfile(htpath):
+            mode = 'a'
+        with open(htpath, mode) as f:
+            f.write('RewriteEngine On\nRewriteRule ^favicon\.ico$ {path}\n'.format(path=settings.FAVICON_PATH))
+
     def is_css_bundle(self, path):
         """Check if a path refers to a css file that is in the current `css_bundles` or not."""
         changed_file = ntpath.basename(path).split('.')[0]
@@ -236,6 +245,7 @@ class Site(object):
             env[k].urls()
         if self.js_bundles:
             self._concat_js()
+        self._write_favicon_htaccess()
 
     def render(self):
         """

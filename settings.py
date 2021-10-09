@@ -58,6 +58,9 @@ ASSETS = 'assets'
 # base url for media files
 MEDIA_URL = '/media'
 
+# location of the Thunderbird favicon
+FAVICON_PATH = '/media/img/thunderbird/favicon.ico'
+
 # path to the website templates
 WEBSITE_PATH = 'website/'
 
