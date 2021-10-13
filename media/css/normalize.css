@@ -17,11 +17,13 @@ html {
    ========================================================================== */
 
 /**
- * Remove the margin in all browsers.
+ * 1. Remove the margin in all browsers.
+ * 2. Fix the sidebar in the RTL website (prevent bot signups input).
  */
 
 body {
-  margin: 0;
+  margin: 0; /* 1 */
+  overflow-x: hidden; /* 2 */
 }
 
 /**
