@@ -41,16 +41,11 @@ if (typeof Mozilla === 'undefined') {
     // attach an event to all the download buttons to trigger the special
     // ie functionality if on ie
     Utils.initDownloadLinks = function() {
+        $('#submit-button').hide();
         $('.download-link').each(function() {
             var $el = $(this);
             $el.click(function() {
-                // Don't redirect if we're on the failed download page.
-                if ($( "body" ).attr('id') !== 'thunderbird-download') {
-                    // MSIE and Edge cancel the download prompt on redirect, so just leave them out.
-                    if (!(/msie\s|trident\/|edge\//i.test(navigator.userAgent))) {
-                        setTimeout( function(){ window.location.href = $el.data('donate-link') }, 5000);
-                    }
-                }
+                window.Mozilla.Donation.InitForm();
                 Utils.triggerIEDownload($el.data('direct-link'));
             });
         });
