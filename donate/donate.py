@@ -21,17 +21,16 @@ def client_token():
     return gateway.client_token.generate()
 
 
-@app.route("/donate", methods=["POST"])
+@app.route("/checkout", methods=["POST"])
 def create_donation():
-    nonce_from_the_client = flask.request.form["payment_method_nonce"]
     result = gateway.transaction.sale({
-        "amount": "10.00",
-        "payment_method_nonce": nonce_from_the_client,
-        "device_data": device_data_from_the_client,
+        "amount": flask.request.form['amount'],
+        "payment_method_nonce": flask.request.form['payment_method_nonce'],
         "options": {
           "submit_for_settlement": True
         }
     })
+    return {"success": result.is_success, "message": result.transaction.status}
 
 
 if __name__ == '__main__':
