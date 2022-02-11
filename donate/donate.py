@@ -16,9 +16,9 @@ gateway = braintree.BraintreeGateway(
 )
 
 
-@app.route("/client_token", methods=["GET"])
+@app.route("/verify_client", methods=["GET"])
 def client_token():
-    return gateway.client_token.generate()
+    return {"client_token": gateway.client_token.generate(), "success": True}
 
 
 @app.route("/checkout", methods=["POST"])

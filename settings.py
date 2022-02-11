@@ -150,7 +150,7 @@ WEBSITE_CSS = {
 
 WEBSITE_JS = {
     'common-bundle': [
-        'js/common/jquery-1.11.3.min.js', 'js/common/spin.min.js', 'js/common/mozilla-utils.js',
+        'js/common/jquery-3.6.0.min.js', 'js/common/spin.min.js', 'js/common/mozilla-utils.js',
         'js/common/form.js', 'js/common/mozilla-client.js', 'js/common/mozilla-image-helper.js',
         'js/common/nav-main-resp.js', 'js/common/class-list-polyfill.js', 'js/common/mozilla-global-nav.js',
         'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js',

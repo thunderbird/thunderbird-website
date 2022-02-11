@@ -55,12 +55,14 @@ if (typeof Mozilla === 'undefined') {
     Donation.InitForm = function() {
         $.ajax({
             type: 'GET',
-            url: braintree_URL + '/client_token'
-            }).done(function(result) {
-                if (result) {
-                    Donation.BuildForm(result)
+            url: braintree_URL + '/verify_client',
+            success: function(result) {
+                if (result.success) {
+                    console.log(result)
+                    Donation.BuildForm(result.client_token)
                 }
-            });
+            }
+        });
     };
 
     window.Mozilla.Donation = Donation;
