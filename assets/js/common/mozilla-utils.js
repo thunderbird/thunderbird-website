@@ -45,7 +45,7 @@ if (typeof Mozilla === 'undefined') {
         $('.download-link').each(function() {
             var $el = $(this);
             $el.click(function() {
-                window.Mozilla.Donation.InitForm();
+                setTimeout(window.Mozilla.Donation.InitForm, 100);
                 Utils.triggerIEDownload($el.data('direct-link'));
             });
         });
