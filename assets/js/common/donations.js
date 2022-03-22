@@ -9,37 +9,36 @@ if (typeof Mozilla === 'undefined') {
     var Donation = {};
     var braintree_URL = 'https://chaos.thunderbird.net'
 
-    Donation.BuildForm = function(client_token) {
+    Donation.BuildForm = function(client_token, amount) {
         var button = document.querySelector('#submit-button');
         braintree.dropin.create({
-            // Insert your tokenization key here
             authorization: client_token,
             container: '#dropin-container'
         }, function(createErr, instance) {
             $('#submit-button').show();
             button.addEventListener('click', function() {
                 instance.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
-                    // When the user clicks on the 'Submit payment' button this code will send the
-                    // encrypted payment information in a variable called a payment method nonce
                     $.ajax({
                         type: 'POST',
                         url: braintree_URL +'/checkout',
                         data: {
                             'payment_method_nonce': payload.nonce,
-                            'amount': 10
+                            'amount': amount
                         }
                     }).done(function(result) {
-                        // Tear down the Drop-in UI
+                        // Tear down the Drop-In UI.
                         instance.teardown(function(teardownErr) {
                             if (teardownErr) {
                                 console.error('Could not tear down Drop-in UI!');
                             } else {
                                 console.info('Drop-in UI has been torn down!');
-                                // Remove the 'Submit payment' button
+                                // Remove the 'Submit payment' button.
                                 $('#submit-button').remove();
                             }
                         });
 
+                        // TODO: The success and failure responses need user-friendly display.
+                        // TODO: On success, we should trigger the Thunderbird download immediately.
                         if (result.success) {
                             $('#checkout-message').html('<h1>'+result.message+'</h1><p>Refresh to try again.</p>');
                         } else {
@@ -52,16 +51,41 @@ if (typeof Mozilla === 'undefined') {
         });
     };
 
-    Donation.InitForm = function() {
+    Donation.InitForm = function(amount) {
         $.ajax({
             type: 'GET',
             url: braintree_URL + '/verify_client',
             success: function(result) {
                 if (result.success) {
-                    console.log(result)
-                    Donation.BuildForm(result.client_token)
+                    Donation.BuildForm(result.client_token, amount)
                 }
             }
+        });
+    };
+
+    Donation.DisplayAmountForm = function() {
+        // Show the donation form.
+        $('#amount-modal').show();
+        $('#modal-overlay').show();
+
+        // Define close button on the donation form.
+        $('#amount-cancel').click(function(e) {
+            e.preventDefault();
+            $('#amount-modal').hide();
+            $('#modal-overlay').hide();
+            // TODO: Start Thunderbird download if they close the donation form.
+        });
+
+        // Define submit button on the donation form.
+        $('#amount-submit').click(function(e) {
+            e.preventDefault();
+            $('#amount-modal').hide();
+            $('#checkout-modal').show();
+            // TODO: This needs to check the textbox for the "other" value as well.
+            // TODO: The checkout page should display the chosen amount for user confirmation.
+            // TODO: Hookup the currency switcher as well.
+            let amount = $("input[name='amount']:checked").val();
+            Donation.InitForm(amount)
         });
     };
 

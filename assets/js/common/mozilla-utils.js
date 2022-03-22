@@ -44,9 +44,10 @@ if (typeof Mozilla === 'undefined') {
         $('#submit-button').hide();
         $('.download-link').each(function() {
             var $el = $(this);
-            $el.click(function() {
-                setTimeout(window.Mozilla.Donation.InitForm, 100);
-                Utils.triggerIEDownload($el.data('direct-link'));
+            $el.click(function(e) {
+                e.preventDefault();
+                window.Mozilla.Donation.DisplayAmountForm();
+                // Utils.triggerIEDownload($el.data('direct-link'));
             });
         });
         $('.download-list').attr('role', 'presentation');
