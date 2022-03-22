@@ -167,22 +167,23 @@ START_CSS = {
 }
 
 CURRENCIES = {
-    'brl': {'symbol': 'R$', 'presets': '80,40,20,10', 'default': '40'},
-    'cad': {'symbol': '$', 'presets': '65,30,15,4', 'default': '30'},
-    'czk': {'symbol': 'Kč', 'presets': '450,220,110,70', 'default': '220'},
-    'dkk': {'symbol': 'kr', 'presets': '130,60,30,20', 'default': '60'},
-    'eur': {'symbol': '€', 'presets': '50,30,20,10', 'default': '30'},
-    'gbp': {'symbol': '£', 'presets': '40,25,15,8', 'default': '25'},
-    'huf': {'symbol': 'Ft', 'presets': '5600,2800,1400,850', 'default': '2800'},
-    'inr': {'symbol': '₹', 'presets': '1000,500,250,150', 'default': '500'},
-    'jpy': {'symbol': '¥', 'presets': '2240,1120,560,340', 'default': '1120'},
-    'mxn': {'symbol': '$', 'presets': '400,200,100,60', 'default': '200'},
-    'nok': {'symbol': 'kr', 'presets': '160,80,40,20', 'default': '80'},
-    'pln': {'symbol': 'zł', 'presets': '80,40,20,10', 'default': '40'},
-    'rub': {'symbol': '₽', 'presets': '1300,800,500,200', 'default': '800'},
-    'sek': {'symbol': 'kr', 'presets': '180,90,45,30', 'default': '90'},
-    'twd': {'symbol': 'NT$', 'presets': '480,240,150,70', 'default': '240'},
-    'usd': {'symbol': '$', 'presets': '50,30,20,10', 'default': '30'}
+    # Second value is the default.
+    'brl': {'symbol': 'R$', 'presets': ['80', '40', '20', '10'], 'default': '40'},
+    'cad': {'symbol': '$', 'presets': ['65', '30', '15', '4'], 'default': '30'},
+    'czk': {'symbol': 'Kč', 'presets': ['450', '220', '110', '70'], 'default': '220'},
+    'dkk': {'symbol': 'kr', 'presets': ['130', '60', '30', '20'], 'default': '60'},
+    'eur': {'symbol': '€', 'presets': ['50', '30', '20', '10'], 'default': '30'},
+    'gbp': {'symbol': '£', 'presets': ['40', '25', '15', '8'], 'default': '25'},
+    'huf': {'symbol': 'Ft', 'presets': ['5600', '2800', '1400', '850'], 'default': '2800'},
+    'inr': {'symbol': '₹', 'presets': ['1000', '500', '250', '150'], 'default': '500'},
+    'jpy': {'symbol': '¥', 'presets': ['2240', '1120', '560', '340'], 'default': '1120'},
+    'mxn': {'symbol': '$', 'presets': ['400', '200', '100', '60'], 'default': '200'},
+    'nok': {'symbol': 'kr', 'presets': ['160', '80', '40', '20'], 'default': '80'},
+    'pln': {'symbol': 'zł', 'presets': ['80', '40', '20', '10'], 'default': '40'},
+    'rub': {'symbol': '₽', 'presets': ['1300', '800', '500', '200'], 'default': '800'},
+    'sek': {'symbol': 'kr', 'presets': ['180', '90', '45', '30'], 'default': '90'},
+    'twd': {'symbol': 'NT$', 'presets': ['480', '240', '150', '70'], 'default': '240'},
+    'usd': {'symbol': '$', 'presets': ['50', '30', '20', '10'], 'default': '30'}
 }
 
 LOCALE_CURRENCIES = {

@@ -12,20 +12,21 @@
   {% else %}
     {% set this_currency = 'usd' %}
   {% endif %}
+  {% set this_curdata = settings.CURRENCIES[this_currency] %}
     <p>Select an amount:</p>
     <select name="currency-switcher-currency" id="id_currency-switcher-currency">
     {% for currency, vals in settings.CURRENCIES | dictsort %}
-      <option value="{{ currency }}" {% if currency == this_currency %}selected{% endif %}>{{ currency }}   {{ vals.symbol.decode('utf-8') }}</option>
+      <option value="{{ currency }}" {% if currency == this_currency %}selected{% endif %}>{{ currency.upper() }}   {{ vals.symbol.decode('utf-8') }}</option>
     {% endfor %}
     </select>
-    <input type="radio" id="amt1" name="amount" value="{{ settings.CURRENCIES[this_currency].presets.split(',')[0] }}">
-    <label for="amt1">$85</label><br>
-    <input type="radio" id="amt2" name="amount" value="{{ settings.CURRENCIES[this_currency].presets.split(',')[1] }}" checked>
-    <label for="amt2">$35</label><br>
-    <input type="radio" id="amt3" name="amount" value="{{ settings.CURRENCIES[this_currency].presets.split(',')[2] }}">
-    <label for="amt3">$15</label><br>
-    <input type="radio" id="amt4" name="amount" value="{{ settings.CURRENCIES[this_currency].presets.split(',')[3] }}">
-    <label for="amt4">$5</label><br><br>
+    <input type="radio" id="amt1" name="amount" value="{{ this_curdata.presets[0] }}">
+    <label for="amt1">{{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.presets[0] }}</label><br>
+    <input type="radio" id="amt2" name="amount" value="{{ this_curdata.default }}" checked>
+    <label for="amt2">{{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.default }}</label><br>
+    <input type="radio" id="amt3" name="amount" value="{{ this_curdata.presets[2] }}">
+    <label for="amt3">{{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.presets[2] }}</label><br>
+    <input type="radio" id="amt4" name="amount" value="{{ this_curdata.presets[3] }}">
+    <label for="amt4">{{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.presets[3] }}</label><br><br>
     <input type="radio" name="amount" value="">{{ _('Other') }}<input type="text" name="amount" />
     <button id="amount-submit">{{ _('Donate & Download') }}</button>
     <button id="amount-cancel">{{ _('No Thanks; Close & Download') }}</button>
