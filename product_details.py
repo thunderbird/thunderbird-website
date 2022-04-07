@@ -62,28 +62,24 @@ class ThunderbirdDetails():
         """Returns builds for the latest version of Thunderbird based on `channel`."""
         version = self.latest_version(channel)
 
-        # We don't really have any build data for non-release builds
-        _version = self.latest_version('release')
-
-        builds = self.all_builds
-        if locale in builds and _version in builds[locale]:
-            _builds = builds[locale][_version]
+        all_builds = self.all_builds
+        if locale in all_builds and version in all_builds[locale]:
+            builds = all_builds[locale][version]
             # Append 64-bit builds
-            if 'Linux' in _builds:
-                _builds['Linux 64-bit'] = _builds['Linux']
-            if 'Windows' in _builds:
-                _builds['Windows 64-bit'] = _builds['Windows']
-            return version, _builds
+            if 'Linux' in builds:
+                builds['Linux 64-bit'] = builds['Linux']
+            if 'Windows' in builds:
+                builds['Windows 64-bit'] = builds['Windows']
+            return version, builds
 
     def get_filtered_full_builds(self, channel, version):
         version = version or self.latest_version(channel)
-        _version = self.latest_version('release')
         f_builds = []
         builds = self.all_builds
 
         for locale, build in builds.items():
 
-            if locale not in self.languages or not build.get(_version):
+            if locale not in self.languages or not build.get(version):
                 continue
 
             build_info = {
