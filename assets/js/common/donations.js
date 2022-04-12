@@ -64,7 +64,7 @@ if (typeof Mozilla === 'undefined') {
     };
 
     Donation.DisplayAmountForm = function() {
-        // 
+        // form configuration
         const DURATION = 250;
         
         // Show the donation form.

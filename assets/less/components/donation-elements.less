@@ -8,6 +8,7 @@
     border-radius: 5px;
     box-shadow: 0 5px 15px -10px rgb(0 0 0 / 60%), 0 0 3px rgb(0 0 0 / 10%);
     background-color: #fff;
+    color: #333;
     z-index: 3; /* places the modal dialog on top of everything else */
     position: fixed;
     top: 50%;
@@ -43,6 +44,44 @@
         text-align: center;
         font-size: 3em;
         font-weight: 300;
+    }
+
+    form {
+        .description {
+            font-size: 1.25em;
+            padding: 0 1.5rem 1rem 1.5rem;
+            text-align: center;
+            line-height: 1.5em;
+        }
+        .amount {
+            background: #f8f8f8;
+            padding: 1rem 1.5rem;
+
+            .amount-selection {
+                margin: 1rem 0 .5rem 0;
+                label {
+                    padding: .5rem;
+                    border: 1px solid #ccc;
+                    background: #fff;
+                    display: flex;
+                    &:last-child {
+                        flex-grow: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    // utilities
+    .d-row {
+        display: flex;
+        flex-direction: row;
+    }
+    .space-between {
+        justify-content: space-between;
+    }
+    .gap-1 {
+        gap: 1rem;
     }
 }
 

@@ -2,6 +2,13 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
+{% if LANG in settings.LOCALE_CURRENCIES %}
+  {% set this_currency = settings.LOCALE_CURRENCIES[LANG] %}
+{% else %}
+  {% set this_currency = 'usd' %}
+{% endif %}
+{% set this_curdata = settings.CURRENCIES[this_currency] %}
+
 <div id="amount-modal" class="modal">
   <div id="close-modal">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -11,36 +18,65 @@
     </svg>
   </div>
   <h1>{{ _('Pay What You Want') }}</h1>
-  <p>{{ _('Thunderbird is independent, free, and open source software sustained by your donations. Help us keep the project alive!') }}</p>
   <form action="">
-  {% if LANG in settings.LOCALE_CURRENCIES %}
-    {% set this_currency = settings.LOCALE_CURRENCIES[LANG] %}
-  {% else %}
-    {% set this_currency = 'usd' %}
-  {% endif %}
-  {% set this_curdata = settings.CURRENCIES[this_currency] %}
-    <p>Select an amount:</p>
-    <select name="currency-switcher-currency" id="id_currency-switcher-currency">
-    {% for currency, vals in settings.CURRENCIES | dictsort %}
-      <option value="{{ currency }}" {% if currency == this_currency %}selected{% endif %}>{{ currency.upper() }}   {{ vals.symbol }}</option>
-    {% endfor %}
-    </select>
-    <input type="radio" id="amt1" name="amount" value="{{ this_curdata.presets[0] }}">
-    <label for="amt1">{{ this_curdata.symbol }}{{ this_curdata.presets[0] }}</label><br>
-    <input type="radio" id="amt2" name="amount" value="{{ this_curdata.default }}" checked>
-    <label for="amt2">{{ this_curdata.symbol }}{{ this_curdata.default }}</label><br>
-    <input type="radio" id="amt3" name="amount" value="{{ this_curdata.presets[2] }}">
-    <label for="amt3">{{ this_curdata.symbol }}{{ this_curdata.presets[2] }}</label><br>
-    <input type="radio" id="amt4" name="amount" value="{{ this_curdata.presets[3] }}">
-    <label for="amt4">{{ this_curdata.symbol }}{{ this_curdata.presets[3] }}</label><br><br>
-    <input type="radio" name="amount" value="">{{ _('Other') }}<input type="text" name="amount" />
-    <button id="amount-submit">{{ _('Donate & Download') }}</button>
-    <button id="amount-cancel">{{ _('No Thanks; Close & Download') }}</button>
+    <section class="description">
+      <p>{{ _('Thunderbird is independent, free, and Open Source software sustained by your donations. Help us keep the project alive!') }}</p>
+    </section>
+    <section class="amount">
+      <div class="d-row space-between">
+        <label>{{ _('Select an amount') }}</label>
+        <label>
+          {{ _('Currency') }}
+          <select name="currency-switcher-currency" id="id_currency-switcher-currency">
+            {% for currency, vals in settings.CURRENCIES | dictsort %}
+            <option value="{{ currency }}" {% if currency == this_currency %}selected{% endif %}>{{ currency.upper() }}   {{ vals.symbol }}</option>
+            {% endfor %}
+          </select>
+        </label>
+      </div>
+      <div class="amount-selection d-row gap-1">
+        <label>
+          <input type="radio" name="amount" value="{{ this_curdata.presets[0] }}">
+          {{ this_curdata.symbol }}{{ this_curdata.presets[0] }}
+        </label>
+        <label>
+          <input type="radio" name="amount" value="{{ this_curdata.default }}" checked>
+          {{ this_curdata.symbol }}{{ this_curdata.default }}
+        </label>
+        <label>
+          <input type="radio" name="amount" value="{{ this_curdata.presets[2] }}">
+          {{ this_curdata.symbol }}{{ this_curdata.presets[2] }}
+        </label>
+        <label>
+          <input type="radio" name="amount" value="{{ this_curdata.presets[3] }}">
+          {{ this_curdata.symbol }}{{ this_curdata.presets[3] }}
+        </label>
+        <label>
+          <input type="radio" name="amount" value="">
+          {{ _('Other') }}
+          <input type="text" name="amount" />
+        </label>
+      </div>
+    </section>
+    <section class="actions">
+      <button id="amount-submit">{{ _('Donate & Download') }}</button>
+      <button id="amount-cancel">{{ _('No Thanks, Download Now!') }}</button>
+    </section>
   </form>
+  <footer>
+    <ul>
+      <li><a href="">{{ _('Secure') }}</a></li>
+      <li><a href="">{{ _('Privacy Policy') }}</a></li>
+      <li><a href="">{{ _('Other ways to donate') }}</a></li>
+      <li><a href="">{{ _('FAQ') }}</a></li>
+    </ul>
+  </footer>
 </div>
+
 <div id="checkout-modal" class="modal">
   <div id="checkout-message"></div>
   <div id="dropin-container"></div>
   <button id="submit-button">{{ _('Submit payment') }}</button>
 </div>
+
 <div id="modal-overlay" tabindex="-1"></div>
