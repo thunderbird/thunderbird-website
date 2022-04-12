@@ -64,23 +64,31 @@ if (typeof Mozilla === 'undefined') {
     };
 
     Donation.DisplayAmountForm = function() {
+        // 
+        const DURATION = 250;
+        
         // Show the donation form.
-        $('#amount-modal').show();
-        $('#modal-overlay').show();
+        $('#amount-modal').fadeIn(DURATION);
+        $('#modal-overlay').fadeIn(DURATION);
 
         // Define close button on the donation form.
         $('#amount-cancel').click(function(e) {
             e.preventDefault();
-            $('#amount-modal').hide();
-            $('#modal-overlay').hide();
+            $('#amount-modal').fadeOut(DURATION);
+            $('#modal-overlay').fadeOut(DURATION);
             // TODO: Start Thunderbird download if they close the donation form.
+        });
+        $('#close-modal').click(function(e) {
+            e.preventDefault();
+            $('#amount-modal').fadeOut(DURATION);
+            $('#modal-overlay').fadeOut(DURATION);
         });
 
         // Define submit button on the donation form.
         $('#amount-submit').click(function(e) {
             e.preventDefault();
-            $('#amount-modal').hide();
-            $('#checkout-modal').show();
+            $('#amount-modal').fadeOut(DURATION);
+            $('#checkout-modal').fadeIn(DURATION);
             // TODO: This needs to check the textbox for the "other" value as well.
             // TODO: The checkout page should display the chosen amount for user confirmation.
             // TODO: Hookup the currency switcher as well.
