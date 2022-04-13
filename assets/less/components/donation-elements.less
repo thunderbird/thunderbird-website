@@ -4,25 +4,17 @@
 
 .modal {
     width: 100%;
-    max-width: 640px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px -10px rgb(0 0 0 / 60%), 0 0 3px rgb(0 0 0 / 10%);
-    background-color: #fff;
-    color: #333;
     z-index: 3; /* places the modal dialog on top of everything else */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: calc(50% - 250px);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
     display: none;
 
     #close-modal {
-        position: absolute;
         z-index: 1;
         top: 0;
         right: 0;
-        padding: .25rem;
-        margin: .5rem;
         cursor: pointer;
 
         svg {
@@ -39,62 +31,84 @@
         }
     }
 
-    h1 {
-        color: #245cad;
-        text-align: center;
-        font-size: 3em;
-        font-weight: 300;
-    }
-
     form {
         .description {
             font-size: 1.25em;
             padding: 0 1.5rem 1rem 1.5rem;
-            text-align: center;
             line-height: 1.5em;
         }
         .amount {
             background: #f8f8f8;
             padding: 1rem 1.5rem;
 
+            select {
+                &:extend(.inline-block, .w-24, .bg-white, .p-1);
+                border: 1px solid #ccc;
+            }
+
             .amount-selection {
-                margin: 1rem 0 .5rem 0;
                 label {
-                    padding: .5rem;
-                    border: 1px solid #ccc;
+                    height: 34px;
+                    max-width: 205px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    padding: .33rem .75rem;
+                    border: 1px solid;
+                    border-color: #ccc;
                     background: #fff;
-                    display: flex;
+                    font-size: 1.5em;
+                    font-weight: 700;
+                    &:hover {
+                        border-color: #2795fb;
+                    }
                     &:last-child {
-                        flex-grow: 1;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        padding-right: 0;
+                        background: #f6f6f6;
+                        #amount-other {
+                            width: 100%;
+                            min-width: 100px;
+                            height: 100%;
+                            box-sizing: border-box;
+                            border: none;
+                            border-left: 1px solid #ccc;
+                            font-size: 1rem;
+                            padding-left: .5rem;
+                        }
+                    }
+                    &.active {
+                        border-color: #2795fb;
+                        background-color: #e4eff9;
+                        box-shadow: none;
                     }
                 }
             }
         }
     }
 
-    // utilities
-    .d-row {
-        display: flex;
-        flex-direction: row;
-    }
-    .space-between {
-        justify-content: space-between;
-    }
-    .gap-1 {
-        gap: 1rem;
+    footer {
+        margin: 0 auto;
+        ul > li:not(:last-child)::after {
+            content: '•';
+            margin-left: .75rem;
+            color: #d2d2d2;
+            &:extend(.font-regular);
+            line-height: 6px;
+        }
     }
 }
 
 #modal-overlay {
-    width:100%;
-    height:100%;
-    z-index:2; /* Between the main page and the modal dialog */
-    background-color:#000;
-    opacity:0.5;
-    position:fixed;
-    top:0;
-    left:0;
-    display:none;
-    margin:0;
-    padding:0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Between the main page and the modal dialog */
+    background-color: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
 }

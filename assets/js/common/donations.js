@@ -84,6 +84,21 @@ if (typeof Mozilla === 'undefined') {
             $('#modal-overlay').fadeOut(DURATION);
         });
 
+        // Define active amount in amount selection.
+        $('#amount-selection > label').click(function() {
+            $('#amount-selection > label.active').removeClass('active');
+            $(this).addClass('active');
+        });
+        $('#amount-other-selection').click(function() {
+            $('#amount-other').focus();
+        });
+        $('#amount-other').click(function() {
+            $('#amount-other-selection').prop('checked', true);
+        });
+        $('#amount-other').on('input', function() {
+            $('#amount-other-selection').val($(this).val());
+        });
+
         // Define submit button on the donation form.
         $('#amount-submit').click(function(e) {
             e.preventDefault();
