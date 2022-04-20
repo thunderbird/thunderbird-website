@@ -3,112 +3,47 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 .modal {
-    width: 100%;
-    z-index: 3; /* places the modal dialog on top of everything else */
     top: calc(50% - 250px);
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    display: none;
 
     #close-modal {
-        z-index: 1;
-        top: 0;
-        right: 0;
         cursor: pointer;
 
         svg {
-            height: 20px;
-            width: 20px;
-            stroke-width: 2.5;
-            stroke: #bebebe;
-            fill: none;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+            stroke: @colors[grey];
         }
         &:hover svg {
-            stroke: #000;
+            stroke: @colors[black];
         }
     }
 
     form {
-        .description {
-            font-size: 1.25em;
-            padding: 0 1.5rem 1rem 1.5rem;
-            line-height: 1.5em;
-        }
-        .amount {
-            background: #f8f8f8;
-            padding: 1rem 1.5rem;
-
-            select {
-                &:extend(.inline-block, .w-24, .bg-white, .p-1);
-                border: 1px solid #ccc;
-            }
-
-            .amount-selection {
-                label {
-                    height: 34px;
-                    max-width: 205px;
-                    box-sizing: border-box;
-                    cursor: pointer;
-                    padding: .33rem .75rem;
-                    border: 1px solid;
-                    border-color: #ccc;
-                    background: #fff;
-                    font-size: 1.5em;
-                    font-weight: 700;
-                    &:hover {
-                        border-color: #2795fb;
+        .amount-selection {
+            label {
+                &:extend(.h-10, .pt-1, .pl-3, .pb-1, .pr-3, .border, .border-solid, .border-grey, .bg-white, .font-xl, .font-bold);
+                cursor: pointer;
+                box-sizing: border-box;
+                &:hover {
+                    &:extend(.border-blue);
+                }
+                &:last-child {
+                    &:extend(.pt-0, .pb-0, .pr-0, .bg-grey-lighter);
+                    flex-basis: @widths[w-40];
+                    #amount-other {
+                        &:extend(.w-full, .h-full, .pl-2, .border-0, .border-l, .border-solid, .border-grey, .font-xl);
+                        box-sizing: border-box;
                     }
-                    &:last-child {
-                        padding-top: 0;
-                        padding-bottom: 0;
-                        padding-right: 0;
-                        background: #f6f6f6;
-                        #amount-other {
-                            width: 100%;
-                            min-width: 100px;
-                            height: 100%;
-                            box-sizing: border-box;
-                            border: none;
-                            border-left: 1px solid #ccc;
-                            font-size: 1rem;
-                            padding-left: .5rem;
-                        }
-                    }
-                    &.active {
-                        border-color: #2795fb;
-                        background-color: #e4eff9;
-                        box-shadow: none;
-                    }
+                }
+                &.active {
+                    &:extend(.border-blue, .bg-blue-25, .shadow-none);
                 }
             }
         }
     }
 
     footer {
-        margin: 0 auto;
         ul > li:not(:last-child)::after {
             content: '•';
-            margin-left: .75rem;
-            color: #d2d2d2;
-            &:extend(.font-regular);
-            line-height: 6px;
+            &:extend(.ml-3, .text-grey, .font-regular, .leading-none);
         }
     }
-}
-
-#modal-overlay {
-    width: 100%;
-    height: 100%;
-    z-index: 2; /* Between the main page and the modal dialog */
-    background-color: #000;
-    opacity: 0.5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    margin: 0;
-    padding: 0;
 }
