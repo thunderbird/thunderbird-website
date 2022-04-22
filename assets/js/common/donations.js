@@ -91,6 +91,14 @@ if (typeof Mozilla === 'undefined') {
             $('#modal-overlay').fadeOut(DURATION);
         });
 
+        // Close modal when pressing escaoe
+        $(document).keyup(function(e) {
+            if (e.key === "Escape") {
+                $('#amount-modal').fadeOut(DURATION);
+                $('#modal-overlay').fadeOut(DURATION);
+            }
+        });
+
         // Define active amount in amount selection.
         $('#amount-selection > label').click(function() {
             $('#amount-selection > label.active').removeClass('active');
