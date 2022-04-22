@@ -32,6 +32,12 @@
                         &:extend(.w-full, .h-full, .pl-2, .border-0, .border-l, .border-solid, .border-grey, .font-xl);
                         box-sizing: border-box;
                     }
+                    
+                    &::-moz-placeholder,
+                    &::-webkit-input-placeholder,
+                    &::placeholder {
+                        &:extend(.font-md);
+                    }
                 }
                 &.active {
                     &:extend(.border-blue, .bg-blue-25, .shadow-none);
