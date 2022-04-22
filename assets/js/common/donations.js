@@ -70,18 +70,21 @@ if (typeof Mozilla === 'undefined') {
         // Show the donation form.
         $('#amount-modal').fadeIn(DURATION);
         $('#modal-overlay').fadeIn(DURATION);
+        $(document.body).addClass('overflow-hidden');
 
         // Define cancel and close button on the donation form.
         $('#amount-cancel').click(function(e) {
             e.preventDefault();
             $('#amount-modal').fadeOut(DURATION);
             $('#modal-overlay').fadeOut(DURATION);
+            $(document.body).removeClass('overflow-hidden');
             // TODO: Start Thunderbird download if they close the donation form.
         });
         $('#close-modal').click(function(e) {
             e.preventDefault();
             $('#amount-modal').fadeOut(DURATION);
             $('#modal-overlay').fadeOut(DURATION);
+            $(document.body).removeClass('overflow-hidden');
         });
 
         // Close modal when clicking the overlay
@@ -89,6 +92,7 @@ if (typeof Mozilla === 'undefined') {
             e.preventDefault();
             $('#amount-modal').fadeOut(DURATION);
             $('#modal-overlay').fadeOut(DURATION);
+            $(document.body).removeClass('overflow-hidden');
         });
 
         // Close modal when pressing escaoe
@@ -96,6 +100,7 @@ if (typeof Mozilla === 'undefined') {
             if (e.key === "Escape") {
                 $('#amount-modal').fadeOut(DURATION);
                 $('#modal-overlay').fadeOut(DURATION);
+                $(document.body).removeClass('overflow-hidden');
             }
         });
 
