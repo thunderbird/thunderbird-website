@@ -71,7 +71,7 @@ if (typeof Mozilla === 'undefined') {
         $('#amount-modal').fadeIn(DURATION);
         $('#modal-overlay').fadeIn(DURATION);
 
-        // Define close button on the donation form.
+        // Define cancel and close button on the donation form.
         $('#amount-cancel').click(function(e) {
             e.preventDefault();
             $('#amount-modal').fadeOut(DURATION);
@@ -79,6 +79,13 @@ if (typeof Mozilla === 'undefined') {
             // TODO: Start Thunderbird download if they close the donation form.
         });
         $('#close-modal').click(function(e) {
+            e.preventDefault();
+            $('#amount-modal').fadeOut(DURATION);
+            $('#modal-overlay').fadeOut(DURATION);
+        });
+
+        // Close modal when clicking the overlay
+        $('#modal-overlay').click(function(e) {
             e.preventDefault();
             $('#amount-modal').fadeOut(DURATION);
             $('#modal-overlay').fadeOut(DURATION);
