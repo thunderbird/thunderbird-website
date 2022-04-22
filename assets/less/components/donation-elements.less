@@ -3,7 +3,8 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 .modal {
-    top: calc(50% - 250px);
+    top: 50%;
+    transform: translateY(-50%);
 
     #close-modal {
         cursor: pointer;
@@ -19,25 +20,23 @@
     form {
         .amount-selection {
             label {
-                &:extend(.h-10, .pt-1, .pl-3, .pb-1, .pr-3, .border, .border-solid, .border-grey, .bg-white, .font-xl, .font-bold);
+                &:extend(.h-10, .pt-1, .pl-3, .pb-1, .pr-3, .rounded, .border, .border-solid, .border-grey, .bg-white, .font-xl, .font-bold);
                 cursor: pointer;
                 box-sizing: border-box;
                 &:hover {
                     &:extend(.border-blue);
                 }
                 &:last-child {
-                    &:extend(.pt-0, .pb-0, .pr-0, .bg-grey-lighter);
+                    &:extend(.pt-0, .pb-0, .pr-0, .bg-grey-lighter, .overflow-hidden);
                     flex-basis: @widths[w-40];
                     #amount-other {
                         &:extend(.w-full, .h-full, .pl-2, .border-0, .border-l, .border-solid, .border-grey, .font-xl);
                         box-sizing: border-box;
+                        &::placeholder {
+                            &:extend(.font-md);
+                        }
                     }
                     
-                    &::-moz-placeholder,
-                    &::-webkit-input-placeholder,
-                    &::placeholder {
-                        &:extend(.font-md);
-                    }
                 }
                 &.active {
                     &:extend(.border-blue, .bg-blue-25, .shadow-none);

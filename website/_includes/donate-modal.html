@@ -9,7 +9,7 @@
 {% endif %}
 {% set this_curdata = settings.CURRENCIES[this_currency] %}
 
-<div id="amount-modal" class="modal rounded w-full max-w-2xl shadow-lg bg-white text-black-lighter fixed z-30 mt-0 mx-auto pin-x hidden">
+<div id="amount-modal" class="modal rounded-lg w-full max-w-2xl shadow-lg bg-white text-black-lighter fixed z-30 mt-0 mx-auto pin-x hidden">
   <div id="close-modal" class="absolute p-1 m-2 z-10 pin-t pin-r">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -29,7 +29,7 @@
         <label class="uppercase font-sm">{{ _('Select an amount') }}</label>
         <label>
           {{ _('Currency') }}
-          <select id="id_currency-switcher" class="inline-block w-24 bg-white p-1 border border-solid border-grey" name="currency-switcher">
+          <select id="id_currency-switcher" class="rounded inline-block w-24 bg-white p-1 border border-solid border-grey" name="currency-switcher">
             {% for currency, vals in settings.CURRENCIES | dictsort %}
             <option value="{{ currency }}" {% if currency == this_currency %}selected{% endif %}>{{ currency.upper() }}   {{ vals.symbol.decode('utf-8') }}</option>
             {% endfor %}
