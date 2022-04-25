@@ -9,6 +9,7 @@
 
 {# channel_name is for display purposes where needed.  #}
 {% set channel_name = channel_name|default('') %}
+{% set is_beta = channel_name == "Beta" %}
 
 {% block header_content %}
   <section class="text-center text-white flex flex-col items-center xl:w-full max-w-6xl mx-auto pl-8 pr-8">
@@ -131,6 +132,11 @@
                 <aside class="flex-1 p-3 font-md leading-normal markup-page no-padding">
                   {{ note.note|markdown|safe }}
                 </aside>
+                {% if is_beta %}
+                  <aside>
+                    {{ note.bug_links|markdown|safe }}
+                  </aside>
+                {% endif %}
               </aside>
             {% endif %}
           {% endfor %}
@@ -158,6 +164,11 @@
                   </p>
                 {% endif %}
               </aside>
+                {% if is_beta %}
+                  <aside>
+                    {{ note.bug_links|markdown|safe }}
+                  </aside>
+                {% endif %}
             </aside>
           {% endfor %}
         {% endif %}
