@@ -2,39 +2,116 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
+{% if LANG in settings.LOCALE_CURRENCIES %}
+  {% set this_currency = settings.LOCALE_CURRENCIES[LANG] %}
+{% else %}
+  {% set this_currency = 'usd' %}
+{% endif %}
+{% set this_curdata = settings.CURRENCIES[this_currency] %}
 
-<div id="amount-modal" class="modal">
-<h1>{{ _('Pay What You Want') }}</h1>
-<p>{{ _('Thunderbird is independent, free, and open source software sustained by your donations. Help us keep the project alive!') }}</p>
+<div id="amount-modal" class="modal rounded-lg w-full max-w-2xl shadow-lg bg-white text-black-lighter fixed z-30 mt-0 mx-auto pin-x hidden">
+  <div id="close-modal" class="absolute p-1 m-2 z-10 pin-t pin-r">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  </div>
+  <h1 class="text-blue-dark text-center font-4xl font-light">
+    {{ _('Pay What You Want') }}
+  </h1>
   <form action="">
-  {% if LANG in settings.LOCALE_CURRENCIES %}
-    {% set this_currency = settings.LOCALE_CURRENCIES[LANG] %}
-  {% else %}
-    {% set this_currency = 'usd' %}
-  {% endif %}
-  {% set this_curdata = settings.CURRENCIES[this_currency] %}
-    <p>Select an amount:</p>
-    <select name="currency-switcher-currency" id="id_currency-switcher-currency">
-    {% for currency, vals in settings.CURRENCIES | dictsort %}
-      <option value="{{ currency }}" {% if currency == this_currency %}selected{% endif %}>{{ currency.upper() }}   {{ vals.symbol.decode('utf-8') }}</option>
-    {% endfor %}
-    </select>
-    <input type="radio" id="amt1" name="amount" value="{{ this_curdata.presets[0] }}">
-    <label for="amt1">{{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.presets[0] }}</label><br>
-    <input type="radio" id="amt2" name="amount" value="{{ this_curdata.default }}" checked>
-    <label for="amt2">{{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.default }}</label><br>
-    <input type="radio" id="amt3" name="amount" value="{{ this_curdata.presets[2] }}">
-    <label for="amt3">{{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.presets[2] }}</label><br>
-    <input type="radio" id="amt4" name="amount" value="{{ this_curdata.presets[3] }}">
-    <label for="amt4">{{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.presets[3] }}</label><br><br>
-    <input type="radio" name="amount" value="">{{ _('Other') }}<input type="text" name="amount" />
-    <button id="amount-submit">{{ _('Donate & Download') }}</button>
-    <button id="amount-cancel">{{ _('No Thanks; Close & Download') }}</button>
+    <section class="font-lg pt-0 pl-6 pb-4 pr-6 leading-normal text-center">
+      <p>{{ _('Thunderbird is independent, free, and Open Source software sustained by your donations. Help us keep the project alive!') }}</p>
+    </section>
+    <section class="bg-grey-light pt-4 pl-6 pb-4 pr-6">
+      <div class="flex justify-between items-center">
+        <label class="uppercase font-sm">{{ _('Select an amount') }}</label>
+        <label>
+          {{ _('Currency') }}
+          <select id="id_currency-switcher" class="rounded inline-block w-24 bg-white p-1 border border-solid border-grey" name="currency-switcher">
+            {% for currency, vals in settings.CURRENCIES | dictsort %}
+            <option value="{{ currency }}" {% if currency == this_currency %}selected{% endif %}>{{ currency.upper() }}   {{ vals.symbol.decode('utf-8') }}</option>
+            {% endfor %}
+          </select>
+        </label>
+      </div>
+      <div id="amount-selection" class="amount-selection flex flex-wrap mt-3">
+        <label class="flex items-center shadow-md mb-2 mr-4">
+          <input class="mr-4" type="radio" name="amount" value="{{ this_curdata.presets[0] }}">
+          {{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.presets[0] }}
+        </label>
+        <label class="flex items-center shadow-md mb-2 mr-4 active">
+          <input class="mr-4" type="radio" name="amount" value="{{ this_curdata.default }}" checked>
+          {{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.default }}
+        </label>
+        <label class="flex items-center shadow-md mb-2 mr-4">
+          <input class="mr-4" type="radio" name="amount" value="{{ this_curdata.presets[2] }}">
+          {{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.presets[2] }}
+        </label>
+        <label class="flex items-center shadow-md mb-2 mr-4">
+          <input class="mr-4" type="radio" name="amount" value="{{ this_curdata.presets[3] }}">
+          {{ this_curdata.symbol.decode('utf-8') }}{{ this_curdata.presets[3] }}
+        </label>
+        <label class="flex items-center shadow-md mb-2 flex-grow">
+          <input id="amount-other-selection" class="mr-3" type="radio" name="amount" value="0">
+          <input id="amount-other" type="number" name="other" placeholder="{{ _('Other amount') }}" min="1" step="1" />
+        </label>
+      </div>
+    </section>
+    <section class="flex justify-center mt-6 mb-6">
+      <button class="btn-body mr-2" id="amount-submit">
+        {{ _('Donate & Download') }}
+        <span>
+          <svg viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+              <path d="M6.91574413,5.89284986 C6.91574413,5.97767139 6.87333336,6.07309561 6.80971722,6.13671176 L1.86886311,11.0775659 C1.80524696,11.141182 1.70982274,11.1835928 1.62500121,11.1835928 C1.54017968,11.1835928 1.44475546,11.141182 1.38113932,11.0775659 L0.851004755,10.5474313 C0.787388608,10.4838152 0.744977843,10.3989936 0.744977843,10.3035694 C0.744977843,10.2187479 0.787388608,10.1233237 0.851004755,10.0597075 L5.0178624,5.89284986 L0.851004755,1.72599222 C0.787388608,1.66237607 0.744977843,1.56695185 0.744977843,1.48213032 C0.744977843,1.39730879 0.787388608,1.30188457 0.851004755,1.23826842 L1.38113932,0.70813386 C1.44475546,0.644517713 1.54017968,0.602106948 1.62500121,0.602106948 C1.70982274,0.602106948 1.80524696,0.644517713 1.86886311,0.70813386 L6.80971722,5.64898796 C6.87333336,5.71260411 6.91574413,5.80802833 6.91574413,5.89284986 Z"></path>
+            </g>
+          </svg>
+        </span>
+      </button>
+      <button class="btn-body btn-secondary" id="amount-cancel">
+        {{ _('No Thanks, Download Now!') }}
+        <span>
+          <svg viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+              <path d="M6.91574413,5.89284986 C6.91574413,5.97767139 6.87333336,6.07309561 6.80971722,6.13671176 L1.86886311,11.0775659 C1.80524696,11.141182 1.70982274,11.1835928 1.62500121,11.1835928 C1.54017968,11.1835928 1.44475546,11.141182 1.38113932,11.0775659 L0.851004755,10.5474313 C0.787388608,10.4838152 0.744977843,10.3989936 0.744977843,10.3035694 C0.744977843,10.2187479 0.787388608,10.1233237 0.851004755,10.0597075 L5.0178624,5.89284986 L0.851004755,1.72599222 C0.787388608,1.66237607 0.744977843,1.56695185 0.744977843,1.48213032 C0.744977843,1.39730879 0.787388608,1.30188457 0.851004755,1.23826842 L1.38113932,0.70813386 C1.44475546,0.644517713 1.54017968,0.602106948 1.62500121,0.602106948 C1.70982274,0.602106948 1.80524696,0.644517713 1.86886311,0.70813386 L6.80971722,5.64898796 C6.87333336,5.71260411 6.91574413,5.80802833 6.91574413,5.89284986 Z"></path>
+            </g>
+          </svg>
+        </span>
+      </button>
+    </section>
   </form>
+  <footer class="w-4/5 mx-auto border-0 border-t border-solid border-grey-light p-6">
+    <ul class="flex justify-center uppercase list-none font-xs p-0 m-0">
+      <li class="mr-4">
+        <a class="text-black-lightest no-underline" href="">
+          {{ _('Secure') }}
+        </a>
+      </li>
+      <li class="mr-4">
+        <a class="text-black-lightest no-underline" href="">
+          {{ _('Privacy Policy') }}
+        </a>
+      </li>
+      <li class="mr-4">
+        <a class="text-black-lightest no-underline" href="">
+          {{ _('Other ways to donate') }}
+        </a>
+      </li>
+      <li>
+        <a class="text-black-lightest no-underline" href="">
+          {{ _('FAQ') }}
+        </a>
+      </li>
+    </ul>
+  </footer>
 </div>
+
 <div id="checkout-modal" class="modal">
   <div id="checkout-message"></div>
   <div id="dropin-container"></div>
   <button id="submit-button">{{ _('Submit payment') }}</button>
 </div>
-<div id="modal-overlay" tabindex="-1"></div>
+
+<div id="modal-overlay" class="fixed pin-t pin-l m-0 p-0 w-full h-full z-20 bg-black opacity-50 hidden" tabindex="-1"></div>
