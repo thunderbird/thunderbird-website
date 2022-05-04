@@ -6,6 +6,14 @@
     top: 50%;
     transform: translateY(-50%);
 
+    #loading-container {
+        .spinner::after {
+            &:extend(.inline-block, .w-16, .h-16, .border-0, .border-l, .border-solid, .border-blue-dark, .rounded-full);
+            content: '';
+            animation: rotate 1s 0s infinite linear;
+        }
+    }
+
     #close-modal {
         cursor: pointer;
 
@@ -52,3 +60,8 @@
         }
     }
 }
+
+@keyframes rotate {
+    from { transform: rotate(0);      }
+    to   { transform: rotate(360deg); }
+  }

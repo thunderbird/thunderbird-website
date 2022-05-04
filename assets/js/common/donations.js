@@ -7,7 +7,10 @@ if (typeof Mozilla === 'undefined') {
     'use strict';
 
     var Donation = {};
+
+    // configuration
     var braintree_URL = 'https://chaos.thunderbird.net'
+    const DURATION = 250;
 
     Donation.BuildPaymentForm = function(client_token, amount, download_link) {
         // show selected donation amount
@@ -21,6 +24,7 @@ if (typeof Mozilla === 'undefined') {
             $('#amount-container').hide();
             $('#checkout-container').show();
             $('#checkout-submit').show();
+            $('#loading-container').hide();
             button.addEventListener('click', function() {
                 instance.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
                     $.ajax({
@@ -71,9 +75,6 @@ if (typeof Mozilla === 'undefined') {
     };
 
     Donation.DisplayDonateModal = function(download_link) {
-        // form configuration
-        const DURATION = 250;
-        
         // Show the donation form.
         $('#donate-modal').fadeIn(DURATION);
         $('#modal-overlay').fadeIn(DURATION);
@@ -130,6 +131,7 @@ if (typeof Mozilla === 'undefined') {
         // Define amount submit button on the donation form.
         $('#amount-submit').click(function(e) {
             e.preventDefault();
+            $('#loading-container').fadeIn(DURATION);
             // TODO: Hookup the currency switcher as well.
             let amount = $("input[name='amount']:checked").val();
             Donation.InitPaymentForm(amount, download_link)

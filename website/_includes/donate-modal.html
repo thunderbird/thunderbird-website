@@ -10,6 +10,10 @@
 {% set this_curdata = settings.CURRENCIES[this_currency] %}
 
 <div id="donate-modal" class="modal rounded-lg w-full max-w-2xl min-h-md shadow-lg bg-white text-black-lighter fixed z-30 mt-0 mx-auto pin-x hidden">
+  <!-- loading indication -->
+  <div id="loading-container" class="absolute rounded-lg w-full h-full bg-white-50 z-40 hidden">
+    <div class="spinner flex justify-center items-center w-full h-full"></div>
+  </div>
   <!-- close button for the modal, always visible -->
   <div id="close-modal" class="absolute p-1 m-2 z-10 pin-t pin-r">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
