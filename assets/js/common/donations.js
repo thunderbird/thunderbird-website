@@ -25,40 +25,48 @@ if (typeof Mozilla === 'undefined') {
             $('#checkout-container').show();
             $('#checkout-submit').show();
             $('#loading-container').hide();
-            button.addEventListener('click', function() {
-                instance.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
-                    $.ajax({
-                        type: 'POST',
-                        url: braintree_URL +'/checkout',
-                        data: {
-                            'payment_method_nonce': payload.nonce,
-                            'amount': amount
-                        }
-                    }).done(function(result) {
-                        // Tear down the Drop-In UI.
-                        instance.teardown(function(teardownErr) {
-                            if (teardownErr) {
-                                console.error('Could not tear down Drop-in UI!');
-                            } else {
-                                console.info('Drop-in UI has been torn down!');
-                                // Remove the 'Submit payment' button.
-                                $('#checkout-submit').remove();
-                            }
-                        });
-
-                        // TODO: The success and failure responses need user-friendly display.
-                        // TODO: On success, we should trigger the Thunderbird download immediately.
-                        if (result.success) {
-                            $('#checkout-message').html('<h1>'+result.message+'</h1><p>Refresh to try again.</p>');
-                            // Start Thunderbird download.
-                            window.Mozilla.Utils.doRedirect(download_link);
+            if (!createErr) {
+                button.addEventListener('click', function() {
+                    instance.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
+                        if (!requestPaymentMethodErr) {
+                            $.ajax({
+                                type: 'POST',
+                                url: braintree_URL +'/checkout',
+                                data: {
+                                    'payment_method_nonce': payload.nonce,
+                                    'amount': amount
+                                }
+                            }).done(function(result) {
+                                // Tear down the Drop-In UI.
+                                instance.teardown(function(teardownErr) {
+                                    if (!teardownErr) {
+                                        console.info('Drop-in UI has been torn down!');
+                                        // Remove the 'Submit payment' button.
+                                        $('#checkout-submit').remove();
+                                    } else {
+                                        console.error('Could not tear down Drop-in UI!');
+                                    }
+                                });
+        
+                                // TODO: The success and failure responses need user-friendly display.
+                                // TODO: On success, we should trigger the Thunderbird download immediately.
+                                if (result.success) {
+                                    $('#checkout-message').html('<h1>'+result.message+'</h1><p>Refresh to try again.</p>');
+                                    // Start Thunderbird download.
+                                    window.Mozilla.Utils.doRedirect(download_link);
+                                } else {
+                                    console.log(result);
+                                    $('#checkout-message').html('<h1>Error:'+result.message+'</h1><p>Check your console.</p>');
+                                }
+                            });
                         } else {
-                            console.log(result);
-                            $('#checkout-message').html('<h1>Error:'+result.message+'</h1><p>Check your console.</p>');
+                            console.error('Could not request Payment Method!');
                         }
                     });
                 });
-            });
+            } else {
+                console.error('Could not create Drop-in UI!');
+            }
         });
     };
 
