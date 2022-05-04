@@ -9,13 +9,18 @@ if (typeof Mozilla === 'undefined') {
     var Donation = {};
     var braintree_URL = 'https://chaos.thunderbird.net'
 
-    Donation.BuildForm = function(client_token, amount) {
-        var button = document.querySelector('#submit-button');
+    Donation.BuildPaymentForm = function(client_token, amount) {
+        // show selected donation amount
+        $('#amount-preview').text(amount);
+        // load braintree content
+        var button = document.querySelector('#checkout-submit');
         braintree.dropin.create({
             authorization: client_token,
             container: '#dropin-container'
         }, function(createErr, instance) {
-            $('#submit-button').show();
+            $('#amount-container').hide();
+            $('#checkout-container').show();
+            $('#checkout-submit').show();
             button.addEventListener('click', function() {
                 instance.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
                     $.ajax({
@@ -33,7 +38,7 @@ if (typeof Mozilla === 'undefined') {
                             } else {
                                 console.info('Drop-in UI has been torn down!');
                                 // Remove the 'Submit payment' button.
-                                $('#submit-button').remove();
+                                $('#checkout-submit').remove();
                             }
                         });
 
@@ -51,38 +56,38 @@ if (typeof Mozilla === 'undefined') {
         });
     };
 
-    Donation.InitForm = function(amount) {
+    Donation.InitPaymentForm = function(amount) {
         $.ajax({
             type: 'GET',
             url: braintree_URL + '/verify_client',
             success: function(result) {
                 if (result.success) {
-                    Donation.BuildForm(result.client_token, amount)
+                    Donation.BuildPaymentForm(result.client_token, amount)
                 }
             }
         });
     };
 
-    Donation.DisplayAmountForm = function() {
+    Donation.DisplayDonateModal = function() {
         // form configuration
         const DURATION = 250;
         
         // Show the donation form.
-        $('#amount-modal').fadeIn(DURATION);
+        $('#donate-modal').fadeIn(DURATION);
         $('#modal-overlay').fadeIn(DURATION);
         $(document.body).addClass('overflow-hidden');
 
         // Define cancel and close button on the donation form.
         $('#amount-cancel').click(function(e) {
             e.preventDefault();
-            $('#amount-modal').fadeOut(DURATION);
+            $('#donate-modal').fadeOut(DURATION);
             $('#modal-overlay').fadeOut(DURATION);
             $(document.body).removeClass('overflow-hidden');
             // TODO: Start Thunderbird download if they close the donation form.
         });
         $('#close-modal').click(function(e) {
             e.preventDefault();
-            $('#amount-modal').fadeOut(DURATION);
+            $('#donate-modal').fadeOut(DURATION);
             $('#modal-overlay').fadeOut(DURATION);
             $(document.body).removeClass('overflow-hidden');
         });
@@ -90,15 +95,15 @@ if (typeof Mozilla === 'undefined') {
         // Close modal when clicking the overlay
         $('#modal-overlay').click(function(e) {
             e.preventDefault();
-            $('#amount-modal').fadeOut(DURATION);
+            $('#donate-modal').fadeOut(DURATION);
             $('#modal-overlay').fadeOut(DURATION);
             $(document.body).removeClass('overflow-hidden');
         });
 
-        // Close modal when pressing escaoe
+        // Close modal when pressing ESC
         $(document).keyup(function(e) {
             if (e.key === "Escape") {
-                $('#amount-modal').fadeOut(DURATION);
+                $('#donate-modal').fadeOut(DURATION);
                 $('#modal-overlay').fadeOut(DURATION);
                 $(document.body).removeClass('overflow-hidden');
             }
@@ -119,16 +124,19 @@ if (typeof Mozilla === 'undefined') {
             $('#amount-other-selection').val($(this).val());
         });
 
-        // Define submit button on the donation form.
+        // Define amount submit button on the donation form.
         $('#amount-submit').click(function(e) {
             e.preventDefault();
-            $('#amount-modal').fadeOut(DURATION);
-            $('#checkout-modal').fadeIn(DURATION);
-            // TODO: This needs to check the textbox for the "other" value as well.
-            // TODO: The checkout page should display the chosen amount for user confirmation.
             // TODO: Hookup the currency switcher as well.
             let amount = $("input[name='amount']:checked").val();
-            Donation.InitForm(amount)
+            Donation.InitPaymentForm(amount)
+        });
+
+        // Define go back button to the donation amount selection.
+        $('#checkout-back').click(function(e) {
+            e.preventDefault();
+            $('#checkout-container').hide();
+            $('#amount-container').show();
         });
     };
 
