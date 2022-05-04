@@ -46,8 +46,7 @@ if (typeof Mozilla === 'undefined') {
             var $el = $(this);
             $el.click(function(e) {
                 e.preventDefault();
-                window.Mozilla.Donation.DisplayDonateModal();
-                // Utils.triggerIEDownload($el.data('direct-link'));
+                window.Mozilla.Donation.DisplayDonateModal($el.attr('href'));
             });
         });
         $('.download-list').attr('role', 'presentation');

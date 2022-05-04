@@ -9,7 +9,7 @@ if (typeof Mozilla === 'undefined') {
     var Donation = {};
     var braintree_URL = 'https://chaos.thunderbird.net'
 
-    Donation.BuildPaymentForm = function(client_token, amount) {
+    Donation.BuildPaymentForm = function(client_token, amount, download_link) {
         // show selected donation amount
         $('#amount-preview').text(amount);
         // load braintree content
@@ -46,6 +46,8 @@ if (typeof Mozilla === 'undefined') {
                         // TODO: On success, we should trigger the Thunderbird download immediately.
                         if (result.success) {
                             $('#checkout-message').html('<h1>'+result.message+'</h1><p>Refresh to try again.</p>');
+                            // Start Thunderbird download.
+                            window.Mozilla.Utils.doRedirect(download_link);
                         } else {
                             console.log(result);
                             $('#checkout-message').html('<h1>Error:'+result.message+'</h1><p>Check your console.</p>');
@@ -56,19 +58,19 @@ if (typeof Mozilla === 'undefined') {
         });
     };
 
-    Donation.InitPaymentForm = function(amount) {
+    Donation.InitPaymentForm = function(amount, download_link) {
         $.ajax({
             type: 'GET',
             url: braintree_URL + '/verify_client',
             success: function(result) {
                 if (result.success) {
-                    Donation.BuildPaymentForm(result.client_token, amount)
+                    Donation.BuildPaymentForm(result.client_token, amount, download_link)
                 }
             }
         });
     };
 
-    Donation.DisplayDonateModal = function() {
+    Donation.DisplayDonateModal = function(download_link) {
         // form configuration
         const DURATION = 250;
         
@@ -83,7 +85,8 @@ if (typeof Mozilla === 'undefined') {
             $('#donate-modal').fadeOut(DURATION);
             $('#modal-overlay').fadeOut(DURATION);
             $(document.body).removeClass('overflow-hidden');
-            // TODO: Start Thunderbird download if they close the donation form.
+            // Start Thunderbird download if they close the donation form.
+            window.Mozilla.Utils.doRedirect(download_link);
         });
         $('#close-modal').click(function(e) {
             e.preventDefault();
@@ -129,7 +132,7 @@ if (typeof Mozilla === 'undefined') {
             e.preventDefault();
             // TODO: Hookup the currency switcher as well.
             let amount = $("input[name='amount']:checked").val();
-            Donation.InitPaymentForm(amount)
+            Donation.InitPaymentForm(amount, download_link)
         });
 
         // Define go back button to the donation amount selection.
