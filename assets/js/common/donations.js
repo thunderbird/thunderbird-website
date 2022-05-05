@@ -12,21 +12,23 @@ if (typeof Mozilla === 'undefined') {
     var braintree_URL = 'https://chaos.thunderbird.net'
     const DURATION = 250;
 
+    Donation.BraintreeDropin = null;
+
     Donation.BuildPaymentForm = function(client_token, amount, download_link) {
         // show selected donation amount
         $('#amount-preview').text(amount);
         // load braintree content
-        var button = document.querySelector('#checkout-submit');
         braintree.dropin.create({
             authorization: client_token,
             container: '#dropin-container'
         }, function(createErr, instance) {
-            $('#amount-container').hide();
-            $('#checkout-container').show();
-            $('#checkout-submit').show();
-            $('#loading-container').hide();
             if (!createErr) {
-                button.addEventListener('click', function() {
+                Donation.BraintreeDropin = instance;
+                $('#amount-container').hide();
+                $('#checkout-container').show();
+                $('#checkout-submit').show();
+                $('#loading-container').hide();
+                $('#checkout-submit').click(function() {
                     instance.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
                         if (!requestPaymentMethodErr) {
                             $.ajax({
@@ -38,20 +40,15 @@ if (typeof Mozilla === 'undefined') {
                                 }
                             }).done(function(result) {
                                 // Tear down the Drop-In UI.
-                                instance.teardown(function(teardownErr) {
-                                    if (!teardownErr) {
-                                        console.info('Drop-in UI has been torn down!');
-                                        // Remove the 'Submit payment' button.
-                                        $('#checkout-submit').remove();
-                                    } else {
-                                        console.error('Could not tear down Drop-in UI!');
-                                    }
-                                });
+                                if (Donation.DropinTeardown()) {
+                                    // Remove the 'Submit payment' button.
+                                    $('#checkout-submit').remove();
+                                }
         
                                 // TODO: The success and failure responses need user-friendly display.
                                 // TODO: On success, we should trigger the Thunderbird download immediately.
                                 if (result.success) {
-                                    $('#checkout-message').html('<h1>'+result.message+'</h1><p>Refresh to try again.</p>');
+                                    $('#checkout-message').html('<h1>'+result.message+'</h1><p>Your contributing helps to ensure Thunderbird stays free for business and personal use and supports future development.</p>');
                                     // Start Thunderbird download.
                                     window.Mozilla.Utils.doRedirect(download_link);
                                 } else {
@@ -69,6 +66,22 @@ if (typeof Mozilla === 'undefined') {
             }
         });
     };
+
+    Donation.DropinTeardown = function() {
+        var instance = Donation.BraintreeDropin;
+        if (instance) {
+            instance.teardown(function(teardownErr) {
+                if (!teardownErr) {
+                    Donation.BraintreeDropin = null;
+                    return true;
+                } else {
+                    console.error('Could not tear down Drop-in UI!');
+                    return false;
+                }
+            });
+        }
+    };
+
 
     Donation.InitPaymentForm = function(amount, download_link) {
         $.ajax({
@@ -148,6 +161,7 @@ if (typeof Mozilla === 'undefined') {
         // Define go back button to the donation amount selection.
         $('#checkout-back').click(function(e) {
             e.preventDefault();
+            Donation.DropinTeardown();
             $('#checkout-container').hide();
             $('#amount-container').show();
         });
