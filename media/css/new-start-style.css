@@ -286,6 +286,10 @@ html[data-channel="daily"] .logo-img {
   text-decoration: underline;
 }
 
+p.warning svg {
+  vertical-align: middle;
+}
+
 .content-sections {
   display: flex;
   flex-direction: column;
