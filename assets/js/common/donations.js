@@ -7,95 +7,17 @@ if (typeof Mozilla === 'undefined') {
     'use strict';
 
     var Donation = {};
-
-    // configuration
-    var braintree_URL = 'https://chaos.thunderbird.net'
-    const DURATION = 250;
-
     Donation.BraintreeDropin = null;
 
-    Donation.BuildPaymentForm = function(client_token, amount, download_link) {
-        // show selected donation amount
-        $('#amount-preview').text(amount);
-        // load braintree content
-        braintree.dropin.create({
-            authorization: client_token,
-            container: '#dropin-container'
-        }, function(createErr, instance) {
-            if (!createErr) {
-                Donation.BraintreeDropin = instance;
-                $('#amount-container').hide();
-                $('#checkout-container').show();
-                $('#checkout-submit').show();
-                $('#loading-container').hide();
-                $('#checkout-submit').click(function() {
-                    instance.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
-                        if (!requestPaymentMethodErr) {
-                            $.ajax({
-                                type: 'POST',
-                                url: braintree_URL +'/checkout',
-                                data: {
-                                    'payment_method_nonce': payload.nonce,
-                                    'amount': amount
-                                }
-                            }).done(function(result) {
-                                // Tear down the Drop-In UI.
-                                if (Donation.DropinTeardown()) {
-                                    // Remove the 'Submit payment' button.
-                                    $('#checkout-submit').remove();
-                                }
-        
-                                // TODO: The success and failure responses need user-friendly display.
-                                // TODO: On success, we should trigger the Thunderbird download immediately.
-                                if (result.success) {
-                                    $('#checkout-message').html('<h1>'+result.message+'</h1><p>Your contributing helps to ensure Thunderbird stays free for business and personal use and supports future development.</p>');
-                                    // Start Thunderbird download.
-                                    window.Mozilla.Utils.doRedirect(download_link);
-                                } else {
-                                    console.log(result);
-                                    $('#checkout-message').html('<h1>Error:'+result.message+'</h1><p>Check your console.</p>');
-                                }
-                            });
-                        } else {
-                            console.error('Could not request Payment Method!');
-                        }
-                    });
-                });
-            } else {
-                console.error('Could not create Drop-in UI!');
-            }
-        });
-    };
+    // configuration
+    var braintreeUrl = 'https://chaos.thunderbird.net';
+    const DURATION = 250;
 
-    Donation.DropinTeardown = function() {
-        var instance = Donation.BraintreeDropin;
-        if (instance) {
-            instance.teardown(function(teardownErr) {
-                if (!teardownErr) {
-                    Donation.BraintreeDropin = null;
-                    return true;
-                } else {
-                    console.error('Could not tear down Drop-in UI!');
-                    return false;
-                }
-            });
-        }
-    };
-
-
-    Donation.InitPaymentForm = function(amount, download_link) {
-        $.ajax({
-            type: 'GET',
-            url: braintree_URL + '/verify_client',
-            success: function(result) {
-                if (result.success) {
-                    Donation.BuildPaymentForm(result.client_token, amount, download_link)
-                }
-            }
-        });
-    };
-
-    Donation.DisplayDonateModal = function(download_link) {
+    /**
+     * Init modal and show step 1: selection of donation amount
+     * @param {downloadLink} string direct link to download URL
+     */
+    Donation.DisplayDonateModal = function(downloadLink) {
         // Show the donation form.
         $('#donate-modal').fadeIn(DURATION);
         $('#modal-overlay').fadeIn(DURATION);
@@ -108,7 +30,7 @@ if (typeof Mozilla === 'undefined') {
             $('#modal-overlay').fadeOut(DURATION);
             $(document.body).removeClass('overflow-hidden');
             // Start Thunderbird download if they close the donation form.
-            window.Mozilla.Utils.doRedirect(download_link);
+            window.Mozilla.Utils.doRedirect(downloadLink);
         });
         $('#close-modal').click(function(e) {
             e.preventDefault();
@@ -155,7 +77,7 @@ if (typeof Mozilla === 'undefined') {
             $('#loading-container').fadeIn(DURATION);
             // TODO: Hookup the currency switcher as well.
             let amount = $("input[name='amount']:checked").val();
-            Donation.InitPaymentForm(amount, download_link)
+            Donation.InitPaymentForm(amount, downloadLink)
         });
 
         // Define go back button to the donation amount selection.
@@ -165,6 +87,106 @@ if (typeof Mozilla === 'undefined') {
             $('#checkout-container').hide();
             $('#amount-container').show();
         });
+    };
+
+    /**
+     * Init braintree payment form and build it on success
+     * @param {amount} number the user wants to donate
+     * @param {downloadLink} string direct link to download URL
+     */
+    Donation.InitPaymentForm = function(amount, downloadLink) {
+        $.ajax({
+            type: 'GET',
+            url: braintreeUrl + '/verify_client',
+            success: function(result) {
+                if (result.success) {
+                    Donation.BuildPaymentForm(result.client_token, amount, downloadLink)
+                }
+            }
+        });
+    };
+
+    /**
+     * Show step 2: payment form to checkout and submit
+     * @param {clientToken} string given token from client verification
+     * @param {amount} number the user wants to donate
+     * @param {downloadLink} string direct link to download URL
+     */
+    Donation.BuildPaymentForm = function(clientToken, amount, downloadLink) {
+        // show selected donation amount
+        $('#amount-preview').text(amount);
+        // load braintree content
+        braintree.dropin.create({
+            authorization: clientToken,
+            container: '#dropin-container'
+        }, function(createErr, instance) {
+            if (!createErr) {
+                Donation.BraintreeDropin = instance;
+                $('#amount-container').hide();
+                $('#checkout-container').show();
+                $('#checkout-submit').show();
+                $('#loading-container').hide();
+                $('#checkout-submit').click(function() {
+                    instance.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
+                        if (!requestPaymentMethodErr) {
+                            $.ajax({
+                                type: 'POST',
+                                url: braintreeUrl +'/checkout',
+                                data: {
+                                    'payment_method_nonce': payload.nonce,
+                                    'amount': amount
+                                }
+                            }).done(function(result) {
+                                // Tear down the Drop-In UI.
+                                if (Donation.DropinTeardown()) {
+                                    // Remove the 'Submit payment' button.
+                                    $('#checkout-submit').remove();
+                                }
+                                Donation.Result(result, downloadLink);
+                            });
+                        } else {
+                            console.error('Could not request Payment Method!');
+                        }
+                    });
+                });
+            } else {
+                console.error('Could not create Drop-in UI!');
+            }
+        });
+    };
+
+    /**
+     * Show step 3: payment result message and download
+     * @param {result} object ajax request result
+     * @param {downloadLink} string direct link to download URL
+     */
+    Donation.Result = function(result, downloadLink) {
+        $('#checkout-container').hide();
+        $('#message-container').show();
+        if (result.success) {
+            $('#donation-success-message').show();
+            // Start Thunderbird download.
+            window.Mozilla.Utils.doRedirect(downloadLink);
+        } else {
+            $('#donation-error-message').show();
+        }
+    }
+    /**
+     * Reset Braintree dropin to be able to recreate it if necessary
+     */
+    Donation.DropinTeardown = function() {
+        var instance = Donation.BraintreeDropin;
+        if (instance) {
+            instance.teardown(function(teardownErr) {
+                if (!teardownErr) {
+                    Donation.BraintreeDropin = null;
+                    return true;
+                } else {
+                    console.error('Could not tear down Drop-in UI!');
+                    return false;
+                }
+            });
+        }
     };
 
     window.Mozilla.Donation = Donation;
