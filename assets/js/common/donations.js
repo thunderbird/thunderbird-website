@@ -10,8 +10,8 @@ if (typeof Mozilla === 'undefined') {
     Donation.BraintreeDropin = null;
 
     // configuration
-    var braintreeUrl = 'https://chaos.thunderbird.net';
-    const DURATION = 250;
+    var braintreeUrl = 'https://chaos.thunderbird.net'; // base url for braintree
+    var duration = 250;                                 // transition duration for fade effects
 
     /**
      * Init modal and show step 1: selection of donation amount
@@ -19,8 +19,8 @@ if (typeof Mozilla === 'undefined') {
      */
     Donation.DisplayDonateModal = function(downloadLink) {
         // Show the donation modal.
-        $('#donate-modal').fadeIn(DURATION);
-        $('#modal-overlay').fadeIn(DURATION);
+        $('#donate-modal').fadeIn(duration);
+        $('#modal-overlay').fadeIn(duration);
         $(document.body).addClass('overflow-hidden');
 
         // Start with showing the amount selection
@@ -63,7 +63,7 @@ if (typeof Mozilla === 'undefined') {
         // Define amount submit button on the donation form.
         $('#amount-submit').click(function(e) {
             e.preventDefault();
-            $('#loading-container').fadeIn(DURATION);
+            $('#loading-container').fadeIn(duration);
             // TODO: Hookup the currency switcher as well.
             let amount = $("input[name='amount']:checked").val();
             Donation.InitPaymentForm(amount, downloadLink)
@@ -135,7 +135,7 @@ if (typeof Mozilla === 'undefined') {
         $('#checkout-submit').click(function() {
             Donation.BraintreeDropin.requestPaymentMethod(function(requestPaymentMethodErr, payload) {
                 if (!requestPaymentMethodErr) {
-                    $('#loading-container').fadeIn(DURATION);
+                    $('#loading-container').fadeIn(duration);
                     $.ajax({
                         type: 'POST',
                         url: braintreeUrl +'/checkout',
@@ -203,13 +203,13 @@ if (typeof Mozilla === 'undefined') {
      * @param {downloadLink} string direct link to download URL
      */
     Donation.CloseDonateModal = function(downloadLink) {
-        $('#donate-modal').fadeOut(DURATION);
-        $('#modal-overlay').fadeOut(DURATION);
-        $('#checkout-container').fadeOut(DURATION);
-        $('#result-container').fadeOut(DURATION);
+        $('#donate-modal').fadeOut(duration);
+        $('#modal-overlay').fadeOut(duration);
+        $('#checkout-container').fadeOut(duration);
+        $('#result-container').fadeOut(duration);
         setTimeout(function() {
             $('#amount-container').show();
-        }, DURATION);
+        }, duration);
         $(document.body).removeClass('overflow-hidden');
         // Reset Braintree dropin if existing
         Donation.DropinTeardown();
