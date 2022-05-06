@@ -180,6 +180,7 @@ if (typeof Mozilla === 'undefined') {
     }
     /**
      * Reset Braintree dropin to be able to recreate it if necessary
+     * @param {keepEventListeners} bool true if event listeners should be kept on teardown
      */
     Donation.DropinTeardown = function(keepEventListeners) {
         if (!keepEventListeners) {
