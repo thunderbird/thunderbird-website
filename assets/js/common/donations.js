@@ -45,6 +45,16 @@ if (typeof Mozilla === 'undefined') {
             }
         });
 
+        // Handle currency switching and set all 4 presets
+        $('#currency-switcher').change(function() {
+            var currencySymbol = $('#currency-switcher > option:selected').data('symbol');
+            var currencyPresets = $('#currency-switcher > option:selected').data('presets').split(',');
+            for (var i = 0; i < 4; i++) {
+                $('#donation-choice-' + i + ' > input').val(currencyPresets[i]);
+                $('#donation-choice-' + i + ' > span').text(currencySymbol + currencyPresets[i]);
+            }
+        });
+
         // Define active amount in amount selection.
         $('#amount-selection > label').click(function() {
             $('#amount-selection > label.active').removeClass('active');
@@ -64,9 +74,9 @@ if (typeof Mozilla === 'undefined') {
         $('#amount-submit').click(function(e) {
             e.preventDefault();
             $('#loading-container').fadeIn(duration);
-            // TODO: Hookup the currency switcher as well.
-            let amount = $("input[name='amount']:checked").val();
-            Donation.InitPaymentForm(amount, downloadLink)
+            var amount = $("input[name='amount']:checked").val();
+            var symbol = $('#currency-switcher > option:selected').data('symbol');
+            Donation.InitPaymentForm(amount, symbol, downloadLink)
         });
 
         // Define go back / start again buttons to the donation amount selection (step 2 or 3 -> step 1)
@@ -80,15 +90,16 @@ if (typeof Mozilla === 'undefined') {
     /**
      * Init braintree payment form and build it on success
      * @param {amount} number the user wants to donate
+     * @param {symbol} string currency symbol for display
      * @param {downloadLink} string direct link to download URL
      */
-    Donation.InitPaymentForm = function(amount, downloadLink) {
+    Donation.InitPaymentForm = function(amount, symbol, downloadLink) {
         $.ajax({
             type: 'GET',
             url: braintreeUrl + '/verify_client',
             success: function(result) {
                 if (result.success) {
-                    Donation.BuildDropin(result.client_token, amount, downloadLink)
+                    Donation.BuildDropin(result.client_token, amount, symbol, downloadLink)
                 }
             }
         });
@@ -99,11 +110,12 @@ if (typeof Mozilla === 'undefined') {
      * Create Braintree Dropin if it doesn't exist yet before step 2
      * @param {clientToken} string given token from client verification
      * @param {amount} number the user wants to donate
+     * @param {symbol} string currency symbol for display
      * @param {downloadLink} string direct link to download URL
      */
-     Donation.BuildDropin = function(clientToken, amount, downloadLink) {
+     Donation.BuildDropin = function(clientToken, amount, symbol, downloadLink) {
         // show selected donation amount
-        $('#amount-preview').text(amount);
+        $('#amount-preview').text(symbol + ' ' + amount);
         // create braintree dropin instance if necessary
         if (!Donation.BraintreeDropin) {
             braintree.dropin.create({
