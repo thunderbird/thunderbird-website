@@ -2,39 +2,130 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "_base-resp.html" %}
+{% extends "_new-base-resp.html" %}
 
 {% block channel %}beta{% endblock %}
-{% block title %}{{ _('Welcome to <span>Thunderbird Beta</span>') }}{% endblock %}
+{% block title %}{{ _('Welcome to <div class="tb-text">Thunderbird <small class="beta-text">Beta</small></div>') }}{% endblock %}
 
 {% block main %}
       <header>
-        <h1>{{ self.title() }}</h1>
-        <p>{{ _('You are using the beta version of Thunderbird, which means you get to experience improvements and fixes before the rest of our users! But with great power comes great responsibility, we hope you’ll take the time to report bugs and provide feedback on your experience. Thank you for helping to make the next Thunderbird release as awesome as possible. <a class="more" href="%(learn)s">Learn more about the Beta.</a>')|format(learn='https://support.mozilla.org/kb/thunderbird-beta') }}</p>
-        <p><b>{{ _('WARNING: Add-ons in Thunderbird Betas can be fragile, meaning they may not work properly in your current beta, may break in a future Thunderbird Beta, and you may have installation problems.  Anyone using or thinking of using add-ons in beta versions should read our <a href="%(addons)s">add-ons KB article</a>, especially if you are currently using Thunderbird Beta version 60 or older.')|format(addons='https://support.mozilla.org/kb/thunderbird-beta#w_add-ons')}}</b></p>
+        <div class="header-top">
+          <div class="title">
+            <div class="logo-img"></div>
+            <h1 class="title-text">{{ self.title() }}</h1>
+          </div>
+
+          <div class="donate">
+            {{ _('Support us!') }}
+            {{ '<a href="%(donate)s" class="donate-btn">'|format(donate=donate_url('paragraph_text', 'start_page_tb_beta')) }}
+              {{ svg('donate-btn-heart') }}
+              {{ _('Donate') }}
+            </a>
+          </div>
+        </div>
+        <div class="warning-panel">
+          <div>
+            <p class="warning">
+              {{ svg('beta-warning') }}
+              <strong class="uppercase">{{ _('Warning!') }}</strong>
+              {{ _('Beta can be unstable, and there is potential to lose data.') }}
+            </p>
+            <ul>
+              <li>
+                {{ _('Protect your data and other best practices.') }}
+                <a href="https://support.mozilla.org/kb/thunderbird-beta" class="warning">
+                  {{ _('Knowledge Base') }}
+                  {{ svg('external-link') }}
+                </a>
+              </li>
+              <li>
+                {{ _('Add-ons may not work properly, or not work at all.') }}
+                <a href="https://support.mozilla.org/kb/thunderbird-beta#w_add-ons" class="warning">
+                  {{ _('Add-ons Guide') }}
+                  {{ svg('external-link') }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="beta-thanks">{{ _('Thank you for using Thunderbird Beta. Your experiences with beta are important, so please report rough edges, bugs, and provide feedback in the ways suggested below - to help make the next Thunderbird release as awesome as possible.')}}</p>
       </header>
-      <div>
-        <section>
-          <h2><i class="far fa-life-ring fa-lg" style="color:#0060df"></i> {{ _('<a href="%(support)s">Get Support</a>')|format(support='https://support.mozilla.org/products/thunderbird') }}</h2>
-          <p>{{ _('Betas often have rough edges. If you need help setting up an account or learning to do something else in Thunderbird - you can check out our <a href="%(support)s">support page</a>. Visit <a href="%(discourse)s">Beta forum</a> where you can discuss the release and meet other Beta users. If you believe you are encountering a bug, please use the “report a bug” link below, otherwise you can ask a <a href="%(new)s">new question</a>.')|format(support='https://support.mozilla.org/products/thunderbird', discourse='https://discourse.mozilla.org/c/thunderbird/beta', new='https://support.mozilla.org/questions/new/thunderbird') }}</p>
-        </section>
-        <section>
-          <h2><i class="fas fa-bug fa-lg" style="color:#058b00"></i> {{ _('<a href="%(bug)s">Report a Bug</a>')|format(bug='https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird') }}</h2>
-          <p>{{ _('Think you\'ve found a problem with Thunderbird Beta? <a href="%(bug)s">Create a bug report</a> so that we can make sure it gets solved. Helping us identify and fix bugs makes for a better Thunderbird experience for all.')|format(bug='https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird') }}</p>
-        </section>
-      </div>
-      <div>
-        <section>
-          <h2><i class="fas fa-heart fa-lg"  style="color:#ff0039"></i> {{ _('<a href="%(donate)s">Donate</a>')|format(donate=donate_url('heading', 'start_page_tb_beta')) }}</h2>
-          <p>{{ _('Thunderbird is both free and freedom respecting, but we\'re also completely funded by donations! The best way for you to ensure Thunderbird remains available and awesome is to <a href="%(donate)s">donate</a> so that the project can hire developers, pay for infrastructure, and continue to improve.')|format(donate=donate_url('paragraph_text', 'start_page_tb_beta')) }}</p>
-        </section>
-        <section>
-          <h2><i class="fas fa-hands-helping fa-lg" style="color:#ed00b5"></i> {{ _('<a href="%(contribute)s">Get Involved</a>')|format(contribute='https://www.thunderbird.net/en-US/get-involved/') }}</h2>
-          <p>{{ _('Don’t just use the Beta, help other users and improve the experience! Thunderbird is an open source project, which means anyone can contribute ideas, designs, code, and time helping fellow users. <a href="%(contribute)s">Join us</a> and become a part of the team that creates Thunderbird.')|format(contribute='https://www.thunderbird.net/en-US/get-involved/') }}</p>
-        </section>
-        <section>
-          <h2><i class="fas fa-exclamation-circle fa-lg"></i> {{ _('Submit Crash Reports') }}</h2>
-          <p>{{ _('Please report every crash. The <a href="%(crash)s">Mozilla Crash Reporter</a> gives valuable data on which crashes are the most serious. And if you are comfortable doing so, please also add a public comment, and supply your email address (which is non-public) to allow us to contact you if we need to.')|format(crash='https://support.mozilla.org/en-US/kb/mozilla-crash-reporter-tb') }}</p>
-        </section>
+
+      <div class="main-content">
+        <div class="content-sections">
+          <section id="connect">
+            <h2 class="section-heading connect">
+              {{ svg('chat') }}
+              {{ _('Learn and Connect') }}
+            </h2>
+            <p>{{ _('Meet other beta users and learn more about beta.') }}</p>
+            <a href="https://discuss.thunderbird.net/groups/beta" class="connect">
+              {{ _('Beta Discussion Group') }}
+              {{ svg('external-link') }}
+            </a>
+          </section>
+
+          <section id="get-involved">
+            <h2 class="section-heading get-involved">
+              {{ svg('handshake') }}
+              {{ _('Help') }}
+            </h2>
+            <p>{{ _('Curious about helping?  You don’t need to be an expert to help other users or offer suggestions about improving the experience! Join us in this open source project where anyone can participate in the Thunderbird community (You don’t need to be an expert, and you don’t need to know how to code).') }}</p>
+            <a href="https://www.thunderbird.net/en-US/get-involved/" class="get-involved">
+              {{ _('Get Involved') }}
+              {{ svg('external-link') }}
+            </a>
+          </section>
+
+          <section id="crash">
+            <h2 class="section-heading crash">
+              {{ svg('info') }}
+              {{ _('Crashed?') }}
+            </h2>
+            <p>{{ _('If Crash Reporter appeared (when Thunderbird crashes), please provide more details to help developers') }}</p>
+            <ul>
+              <li>{{ _('In Thunderbird do Help > More Troubleshooting Information, scroll to "Crash Reports", click a recent report link to open the crash report page.') }}</li>
+              <li>{{ _('Click the Bugzilla tab, then click on an existing bug report under "Related Bugs" and add a comment to the bug, or click "Thunderbird" to submit a new bug report.') }}</li>
+            </ul>
+            <a href="https://support.mozilla.org/en-US/kb/mozilla-crash-reporter-tb" class="crash">
+              {{ _('Crash Reporter') }}
+              {{ svg('external-link') }}
+            </a>
+          </section>
+        </div>
+        <div class="content-sections">
+          <section id="support">
+            <h2 class="section-heading support">
+              {{ svg('support') }}
+              {{ _('Question? Problem?') }}
+            </h2>
+            <p>{{ _('Post your general Thunderbird usage questions or problems on the support page, where many knowledgeable users can help you.') }}</p>
+            <a href="https://support.mozilla.org/questions/new/thunderbird" class="support">
+              {{ _('Support Page') }}
+              {{ svg('external-link') }}
+            </a>
+            <p>{{ _('In the Beta Forum, you can post feedback, questions, and learn how to use beta. You can also compare experiences with other beta users.') }}</p>
+            <a href="https://discuss.thunderbird.net/groups/beta" class="support">
+              {{ _('Beta Forum') }}
+              {{ svg('external-link') }}
+            </a>
+          </section>
+
+          <section id="bug">
+            <h2 class="section-heading bug">
+              {{ svg('bug') }}
+              {{ _('Report') }}
+            </h2>
+            <p>{{ _('Think you’ve found a new problem or rough edge? Create a bug report so we can make sure it gets solved, resulting in a better Thunderbird experience for all.') }}</p>
+            <a href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird" class="bug">
+              {{ _('Report a Bug') }}
+              {{ svg('external-link') }}
+            </a>
+            <p>{{ _('Unsure? Ask for help in the beta forum.') }}</p>
+            <a href="https://discuss.thunderbird.net/groups/beta" class="bug">
+              {{ _('Beta Forum') }}
+              {{ svg('external-link') }}
+            </a>
+          </section>
       </div>
 {% endblock %}
