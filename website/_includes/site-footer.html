@@ -35,17 +35,24 @@
     <aside class="flex flex-1 flex-col text-right">
       <ul class="list-none p-0 flex justify-end">
         <li class="mr-4">
-          <a class="social-link font-semibold" title="Follow @mozthunderbird on Twitter"
+          <a class="social-link font-semibold" title="{{ _('Follow %(twitter)s on Twitter')|format(twitter='@mozthunderbird') }}"
             href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
             <span>{{ svg('twitter') }}</span>
             @mozthunderbird
           </a>
         </li>
-        <li>
+        <li class="mr-4">
           <a class="social-link font-semibold" href="https://www.facebook.com/Thunderbird/" data-link-type="footer"
             data-link-name="Facebook (Thunderbird)">
             <span>{{ svg('facebook') }}</span>
             {{ _('Thunderbird') }}
+          </a>
+        </li>
+        <li>
+          <a class="social-link font-semibold" title="{{ _('Follow %(mastodon)s on Mastodon')|format(mastodon='@thunderbird@mastodon.online') }}"
+            href="https://mastodon.online/@thunderbird" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
+            <span>{{ svg('mastodon') }}</span>
+            @thunderbird@mastodon.online
           </a>
         </li>
       </ul>
