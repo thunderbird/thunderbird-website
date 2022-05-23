@@ -16,6 +16,12 @@
     <div class="tracking-wider">
       {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download')) }}
     </div>
+    <div class="flex flex-wrap items-center justify-center pt-6">
+      <p class="font-md p-3 m-0">
+        {{ _('<span class="font-semibold">Want to try new features early?</span> Get the beta and be a part of the future of Thunderbird!') }}
+      </p>
+      <a href="https://support.mozilla.org/kb/thunderbird-beta" class="btn-beta rounded-full pt-2 pb-2 pr-3 pl-3 mb-0">{{ _('Get the Beta') }}</a>
+    </div>
   </section>
   <section class="hidden md:flex max-w-6xl self-center">
     {{ platform_img('thunderbird/landing/screenshot.png', {'alt': _('Thunderbird screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
