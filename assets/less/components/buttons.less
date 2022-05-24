@@ -132,6 +132,10 @@ button {
 .btn-beta {
   &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-beta-button, .rounded-xs, .shadow);
 
+  &.btn-beta-pill {
+    &:extend(.rounded-full, .pt-1, .pb-1, .pr-2, .pl-2, .mb-0, .tracking-normal, .font-regular, .font-bold, .leading-normal);
+  }
+
   &:hover,
   &:focus {
     &:extend(.shadow-md);
