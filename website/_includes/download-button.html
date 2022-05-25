@@ -3,7 +3,10 @@
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
 {% set button_class = 'btn-'+channel if channel else 'btn-download' %}
-{% set flex_class = 'self-start' if channel or section == 'body' else 'justify-center' %}
+{% if not flex_class %}
+  {% set flex_class = 'self-start' if channel or section == 'body' else 'justify-center' %}
+{% endif %}
+
 
 {% macro alt_buttons(builds) %}
   <div class="download download-dumb">

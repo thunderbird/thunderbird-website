@@ -105,6 +105,7 @@ URL_MAPPINGS = {
     'thunderbird.careers': '/careers',
     'thunderbird.channel': '/channel',
     'thunderbird.contact': '/contact',
+    'thunderbird.download-beta': '/download/beta',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
     'thunderbird.enterprise.documentation': 'https://enterprise.thunderbird.net/',
     'thunderbird.features': '/features',
