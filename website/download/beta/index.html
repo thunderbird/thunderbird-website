@@ -43,25 +43,31 @@
         {{ _('Are you interested in helping improve Thunderbird by testing and finding bugs? Then beta is a good place for you, because beta gets fixes and <a href="https://support.mozilla.org/en-US/kb/new-thunderbird-102">new features</a> long before they reach release. And you will join <a href="https://stats.thunderbird.net/#beta">thousands of users who use beta on a daily basis</a>!') }}
       </p>
       <p class="mb-2 mt-2">
-        {{ _('There are also considerations for you to understand before you take the plunge. But if you decide to take the plunge we have many resource and assistance items, and people, to help you. ') }}
+        {{ _('There are also considerations for you to understand before you take the plunge. But if you decide to take the plunge <a href="#resources">we have many resources and people</a> to help you. ') }}
       </p>
       <h3 class="mb-4 mt-4">{{ _('Considerations') }}</h3>
       <p class="mb-2 mt-2">
-        {{ _('Now is a good time to use beta, because through June 2022 it is more stable than normal, while development is frozen and we touch up version 102’s new features.') }}
+        <strong>
+          {{ _('Now is a good time to use beta, because through June 2022 it is more stable than normal, while development is frozen and we polish version 102’s new features.') }}
+        </strong>
       </p>
       <p class="mb-2 mt-2">
-        {{ _('You will want to do regular backups to protect your Thunderbird data profiles (profiles are described under How to install and run beta), and consider the following: ') }}
+        {{ _('You will want to do <a href="https://support.mozilla.org/en-US/kb/profiles-where-thunderbird-stores-user-data#w_backing-up-a-profile">regular backups</a> to protect your Thunderbird data profiles (profiles are described under <a href="#howto">How to install and run beta</a>), and consider the following: ') }}
       </p>
       <ul>
-        <li>{{ _('New features may be works in progress and incomplete, because some are iteratively improved over a period of weeks. The beta forum may mention how new features are making progress.') }}</li>
-        <li>{{ _('Flaws are to be expected. Flaws of potentially high impact including dataloss are very rare, but may occur because of frequent code changes. Protect yourself with backups. Flaws of low impact may not be fixed quickly, because high impact flaws get higher priority.') }}</li>
-        <li>{{ _('Expect seven updates per month, one major update per month plus several small updates. This frequency of updates allows us to ship fixes to you quickly.') }}</li>
-        <li>{{ _('Are you using pop accounts? Unlike imap accounts, the only copy of your pop mail is in your local Thunderbird profile. So your options when using pop are: a) don’t add your pop account(s) to beta, or b) add your pop account(s) to beta, then either stay there permanently or learn how to move your pop data back to the release profile after you are done with beta.') }}</li>
-        <li>{{ _('If you have mail filters that, for example, move mail to local folders, then you must decide where to run filters - in your beta profile or your other profile.') }}</li>
+        <li>{{ _('New features may be works in progress and incomplete, because some are iteratively improved over a period of weeks. The <a href="https://thunderbird.topicbox.com/groups/beta">beta forum</a> may mention how new features are making progress.') }}</li>
+        <li>{{ _('Flaws are to be expected. Flaws of potentially high impact including data loss are very rare, but may occur. <a href="https://support.mozilla.org/en-US/kb/profiles-where-thunderbird-stores-user-data#w_backing-up-a-profile">Protect yourself with backups</a>. Low impact flaws may not be fixed quickly, because fixes are prioritized based on impact.') }}</li>
+        <li>{{ _('Expect seven updates per month, one major update per month plus several small updates. This frequency of updates allows us to make fast improvements.') }}</li>
+        <li>{{ _('Are you using <a href="https://support.mozilla.org/en-US/kb/difference-between-imap-and-pop3">pop accounts</a>? Unlike imap accounts, the only copy of your pop mail is in your local Thunderbird profile. So your options when using pop are:') }}
+          <ol type='a'>
+            <li>{{ _('Don’t add your pop account(s) to beta.') }}</li>
+            <li>{{ _('Add your pop account(s) to beta, then either stay there permanently or learn how to move your pop data back to the release profile after you are done with beta.') }}</li>
+          </ol></li>
+        <li>{{ _('If you have <a href="https://support.mozilla.org/en-US/kb/organize-your-messages-using-filters">mail filters</a> that, for example, move mail to local folders, then you must decide where to run filters - in your beta profile or your other profile.') }}</li>
       </ul>
       <h3 class="mb-4 mt-4">{{ _('Add-ons') }}</h3>
       <p>
-        {{ _('Add-on authors are not obligated to have their add-ons work in beta. So expect some or all of your add-ons to not work. Or if they do work today, they may not work tomorrow. Consult the add-ons FAQ if you have difficulty. ') }}
+        {{ _('Add-on authors are not obligated to have their add-ons work in beta. So expect some or all of your add-ons to not work. Or if they do work today, they may not work tomorrow. Consult the <a href="https://support.mozilla.org/en-US/kb/thunderbird-add-ons-frequently-asked-questions#w_what-if-my-add-on-is-broken">Add-ons FAQ</a> if you have difficulty. ') }}
       </p>
     </aside>
   </section>
@@ -75,21 +81,21 @@
   <section class="font-lg leading-normal pb-5 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
     <aside class="flex flex-col flex-grow mb-4">
       <p class="mb-2 mt-2">
-        {{ _('Beta downloaded from the official download site will:') }}
+        {{ _('Beta downloaded from this site will:') }}
       </p>
       <ol type='a'>
         <li>{{ _('Install in its own Thunderbird program directory.') }}</li>
         <li>{{ _('Create a dedicated Thunderbird data profile named default-beta.') }}</li>
       </ol>
       <p>
-        {{ _('Dedicated profile per Thunderbird installation is a method which allows you to have both the release version of Thunderbird and the beta version of Thunderbird operate independently... ') }}
+        {{ _('<a href="https://support.mozilla.org/en-US/kb/dedicated-profile-thunderbird-installation">Dedicated profile per Thunderbird installation</a> is a method which allows you to have both the release version of Thunderbird and the beta version of Thunderbird operate independently: ') }}
       </p>
       <ul>
         <li>{{ _('Start the release version of Thunderbird (with beta not running) and it will use the "default" (or default-release) profile.') }}</li>
         <li>{{ _('Start the beta version of Thunderbird (with release version not running) and it will use the default-beta profile.') }}</li>
       </ul>
       <p class="mb-2 mt-2">
-        {{ _('If you want to get more complicated, such as running beta and release at the same time, please refer to Using Multiple Profiles, and Dedicated profile per Thunderbird installation and ask for help in Thunderbird support). ') }}
+        {{ _('If you want to do something more complicated, such as running beta and release at the same time, please additionally refer to <a href="https://support.mozilla.org/en-US/kb/using-multiple-profiles">Using Multiple Profiles</a> and ask for help in <a href="https://support.mozilla.org/questions/new/thunderbird/form">Thunderbird support</a> if needed.') }}
       </p>
     </aside>
   </section>
@@ -111,9 +117,9 @@
             <li><b>≡ > Help > Privacy & About > Release Notes.</b></li>
           </ul>
         </li>
-        <li>{{ _('As you normally would, post ordinary Thunderbird usage questions in Thunderbird support. ') }}</li>
-        <li>{{ _('Ask beta specific assistance questions and comments the beta forum, or just visit to see what others are saying. (The forum operates in English. So if you need assistance in another language please ask for help in Thunderbird support)') }}</li>
-        <li>{{ _('If you find a problem, try to reproduce the problem in Troubleshoot Mode, then file a bug report for Thunderbird or Calendar.') }}</li>
+        <li>{{ _('As you normally would, post ordinary Thunderbird usage questions in <a href="https://support.mozilla.org/questions/new/thunderbird/form">Thunderbird support</a>. ') }}</li>
+        <li>{{ _('Ask beta specific assistance questions and comments in <a href="https://thunderbird.topicbox.com/groups/beta">the beta forum</a>, or just visit to see what others are saying. Note that the forum operates in English, so if you need assistance in another language please ask for help in <a href="https://support.mozilla.org/questions/new/thunderbird/form">Thunderbird support</a>.') }}</li>
+        <li>{{ _('If you find a problem, try to <a href="https://support.mozilla.org/en-US/kb/troubleshoot-mode-thunderbird">reproduce the problem in Troubleshoot Mode</a>, then file a bug report for <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">Thunderbird</a> or <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Calendar">Calendar</a>.') }}</li>
         <li>{{ _('<b>≡ > Tools > Export</b> can be used to backup your profile, or get to your profile directory quickly.') }}</li>
         <li>{{ _('<b>≡ > Go > Mail Start Page (aka Beta Start Page)</b> is a handy reference which documents several of the above items and more.') }}</li>
       </ul>
