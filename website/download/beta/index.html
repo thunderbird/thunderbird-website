@@ -18,10 +18,10 @@
         <a href="#howto" class="btn-link">{{ _('How to install and run Beta') }}</a>
       </li>
       <li class="ml-2 mr-2">
-        <a href="#resources" class="btn-link">{{ _('Resources and Assistance') }}</a>
+        <a href="#uninstall" class="btn-link">{{ _('How do I go back to the regular release version?') }}</a>
       </li>
       <li class="ml-2 mr-2">
-        <a href="#uninstall" class="btn-link">{{ _('How do I go back to the regular release version?') }}</a>
+        <a href="#resources" class="btn-link">{{ _('Resources and Assistance') }}</a>
       </li>
     </ul>
   </nav>
@@ -40,34 +40,31 @@
   <section class="font-lg leading-normal pb-5 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
     <aside class="flex flex-col flex-grow mb-4">
       <p class="mb-2 mt-2">
-        {{ _('Are you interested in helping improve Thunderbird by testing and finding bugs? Then beta is a good place for you, because beta gets fixes and <a href="https://support.mozilla.org/en-US/kb/new-thunderbird-102">new features</a> long before they reach release. And you will join <a href="https://stats.thunderbird.net/#beta">thousands of users who use beta on a daily basis</a>!') }}
+        {{ _('Do you want to help the global Thunderbird community by discovering and reporting bugs? Then beta is a great choice for you, because it gets fixes and <a href="https://support.mozilla.org/kb/new-thunderbird-102">new features</a> long before they reach release!') }}
       </p>
       <p class="mb-2 mt-2">
-        {{ _('There are also considerations for you to understand before you take the plunge. But if you decide to take the plunge <a href="#resources">we have many resources and people</a> to help you. ') }}
+          {{ _('Now is a good time to jump in, because through June 2022 we expect the Thunderbird beta to be more stable than normal. That’s because development is frozen so we can touch up <a href="https://blog.thunderbird.net/2022/05/7-great-new-features-coming-to-thunderbird-102/">version 102’s new features.</a>') }}
       </p>
-      <h3 class="mb-4 mt-4">{{ _('Considerations') }}</h3>
+      <h3 class="mb-4 mt-4">{{ _('Important Considerations') }}</h3>
       <p class="mb-2 mt-2">
-        <strong>
-          {{ _('Now is a good time to use beta, because through June 2022 it is more stable than normal, while development is frozen and we polish version 102’s new features.') }}
-        </strong>
-      </p>
-      <p class="mb-2 mt-2">
-        {{ _('You will want to do <a href="https://support.mozilla.org/en-US/kb/profiles-where-thunderbird-stores-user-data#w_backing-up-a-profile">regular backups</a> to protect your Thunderbird data profiles (profiles are described under <a href="#howto">How to install and run beta</a>), and consider the following: ') }}
+        {{ _('Before you download and test the beta, there are some important considerations to be aware of:') }}
       </p>
       <ul>
-        <li>{{ _('New features may be works in progress and incomplete, because some are iteratively improved over a period of weeks. The <a href="https://thunderbird.topicbox.com/groups/beta">beta forum</a> may mention how new features are making progress.') }}</li>
-        <li>{{ _('Flaws are to be expected. Flaws of potentially high impact including data loss are very rare, but may occur. <a href="https://support.mozilla.org/en-US/kb/profiles-where-thunderbird-stores-user-data#w_backing-up-a-profile">Protect yourself with backups</a>. Low impact flaws may not be fixed quickly, because fixes are prioritized based on impact.') }}</li>
+        <li><strong>{{ _('Beta installation will <u>replace</u> your currently installed program, unless you use the instructions in <a href="#howto">How to install and run Beta</a>.') }}</strong></li>
+        <li>{{ _('Please do <a href="https://support.mozilla.org/kb/profiles-where-thunderbird-stores-user-data#w_backing-up-a-profile">regular backups</a> to protect your Thunderbird data profiles.') }}</li>
+        <li>{{ _('New features may be incomplete works in progress, because some are iteratively improved over a period of weeks. The <a href="https://thunderbird.topicbox.com/groups/beta">beta forum</a> may mention how new features are making progress.') }}</li>
+        <li>{{ _('Flaws are to be expected. High-impact flaws, including data loss, are very rare, but may occur. Protect yourself with backups. Low-impact flaws may not be fixed quickly, because fixes are prioritized based on impact.') }}</li>
         <li>{{ _('Expect seven updates per month, one major update per month plus several small updates. This frequency of updates allows us to make fast improvements.') }}</li>
-        <li>{{ _('Are you using <a href="https://support.mozilla.org/en-US/kb/difference-between-imap-and-pop3">pop accounts</a>? Unlike imap accounts, the only copy of your pop mail is in your local Thunderbird profile. So your options when using pop are:') }}
+        <li>{{ _('Are you using <a href="https://support.mozilla.org/kb/difference-between-imap-and-pop3">pop accounts</a>? Unlike imap accounts, the only copy of your pop mail is in your local Thunderbird profile. So your options when using pop are:') }}
           <ol type='a'>
             <li>{{ _('Don’t add your pop account(s) to beta.') }}</li>
             <li>{{ _('Add your pop account(s) to beta, then either stay there permanently or learn how to move your pop data back to the release profile after you are done with beta.') }}</li>
           </ol></li>
-        <li>{{ _('If you have <a href="https://support.mozilla.org/en-US/kb/organize-your-messages-using-filters">mail filters</a> that, for example, move mail to local folders, then you must decide where to run filters - in your beta profile or your other profile.') }}</li>
+        <li>{{ _('If you have <a href="https://support.mozilla.org/kb/organize-your-messages-using-filters">mail filters</a> that, for example, move mail to local folders, then you must decide where to run filters - in your beta profile or your other profile.') }}</li>
       </ul>
       <h3 class="mb-4 mt-4">{{ _('Add-ons') }}</h3>
-      <p>
-        {{ _('Add-on authors are not obligated to have their add-ons work in beta. So expect some or all of your add-ons to not work. Or if they do work today, they may not work tomorrow. Consult the <a href="https://support.mozilla.org/en-US/kb/thunderbird-add-ons-frequently-asked-questions#w_what-if-my-add-on-is-broken">Add-ons FAQ</a> if you have difficulty. ') }}
+      <p class="mb-2 mt-2">
+        {{ _('Add-on authors are not obligated to make their add-ons work in beta. Some or all of your add-ons may not work. Or if they do work today, they may not work tomorrow. Consult the <a href="https://support.mozilla.org/kb/thunderbird-add-ons-frequently-asked-questions#w_what-if-my-add-on-is-broken">Add-ons FAQ</a> if you have difficulty. ') }}
       </p>
     </aside>
   </section>
@@ -81,22 +78,51 @@
   <section class="font-lg leading-normal pb-5 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
     <aside class="flex flex-col flex-grow mb-4">
       <p class="mb-2 mt-2">
-        {{ _('Beta downloaded from this site will:') }}
+        {{ _('You have two choices for installing beta: Option 1 allows you to run the beta alongside the Stable version of Thunderbird, and Option 2 upgrades your existing installation.') }}
       </p>
-      <ol type='a'>
-        <li>{{ _('Install in its own Thunderbird program directory.') }}</li>
-        <li>{{ _('Create a dedicated Thunderbird data profile named default-beta.') }}</li>
+      <ol type='1'>
+        <li><strong>{{ _('Run Stable and Beta side-by-side (recommended).') }}</strong></li>
+        <p class="mb-2 mt-2">
+          {{ _('Install the beta program into its own program directory. On Windows use the <a href="https://support.mozilla.org/kb/custom-installation-thunderbird-windows">Windows custom install option</a> to change the destination directory. For other operating systems use a method appropriate for your OS. Then <b>create a shortcut</b> or link to the beta so it is quick and easy to start.  On Windows: <b>right click</b> on <b>Thunderbird.exe</b> and pick <b>“Pin to taskbar”</b> or <b>“Pin to Start”</b>.') }}
+        </p>
+        <p class="mb-2 mt-2">
+          {{ _('This choice has the advantage of forcing a dedicated profile for each Thunderbird, which allows you to have both the release version and the beta version operate independently. So you can:') }}
+        </p>
+        <ul>
+          <li>{{ _('Start the release version of Thunderbird (with beta not running) and it will use the <b>"default" (or default-release)</b> profile.') }}</li>
+          <li>{{ _('Start the beta version program of Thunderbird from the directory into which you installed the beta, (with release version not running) and it will use the <b>default-beta</b> profile. On first use Thunderbird will create the <b>default-beta</b> profile, and it will prompt you to define your accounts. If you need to bring some data from your release profile into the beta profile, consult the <a href="https://support.mozilla.org/kb/thunderbird-beta">beta support article.</a>') }}</li>
+        </ul>
+        <li class="mb-2 mt-2"><strong>{{ _('Upgrade your existing Thunderbird installation to beta.') }}</strong></li>
+        <p class="mb-2 mt-2">
+          {{ _('Simply install beta over top of your current program directory, using the default installer choices. Beta will then <u>use your current (production) default profile</u>. Because it uses your default profile, this choice makes it more difficult to switch back to using a release version should you wish to do so in the future. In other words, you should not switch back and forth between beta and normal release using the same profile.') }}
+        </p>
+        <p class="mb-2 mt-2">
+          {{ _('For very detailed information about both methods, please check the <a href="https://support.mozilla.org/kb/thunderbird-beta">beta support article.</a>') }}
+        </p>
       </ol>
-      <p>
-        {{ _('<a href="https://support.mozilla.org/en-US/kb/dedicated-profile-thunderbird-installation">Dedicated profile per Thunderbird installation</a> is a method which allows you to have both the release version of Thunderbird and the beta version of Thunderbird operate independently: ') }}
+    </aside>
+  </section>
+
+  <section id="uninstall" class="mt-4 mb-4 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
+    <span class="header-line flex-1"></span>
+    <h2 class="header-section pl-4 pr-4 mb-0 text-center">{{ _('How do I go back to the regular release version?') }}</h2>
+    <span class="header-line flex-1"></span>
+  </section>
+
+  <section class="font-lg leading-normal pb-5 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
+    <aside class="flex flex-col flex-grow mb-4">
+      <p class="mb-2 mt-2">
+        {{ _('If you installed the beta over the top of the release version (choice 2 above), then your process will be more complicated. Please consult this <a href="https://support.mozilla.org/kb/thunderbird-beta">beta support article.</a>') }}
+      </p>
+      <p class="mb-2 mt-2">
+        {{ _('If you installed the beta program into its own program directory (choice 1 above) and you used a Dedicated profile per Thunderbird, then start the release version of Thunderbird and it should use your release version profile data. If you no longer want to use the beta version, and do not need any of the beta data (address books, local folders, etc), and wish to remove the beta data and beta program from your system:') }}
       </p>
       <ul>
-        <li>{{ _('Start the release version of Thunderbird (with beta not running) and it will use the "default" (or default-release) profile.') }}</li>
-        <li>{{ _('Start the beta version of Thunderbird (with release version not running) and it will use the default-beta profile.') }}</li>
+        <li>{{ _('Start the release version of Thunderbird to use the <a href="https://support.mozilla.org/kb/profile-manager-create-and-remove-thunderbird-profiles">profile manager.</a>') }}</li>
+        <li>{{ _('Find and delete the beta profile, default name is <b>“default-beta”</b>.') }}</li>
+        <li>{{ _('Delete the beta version’s program directory. ') }}</li>
       </ul>
-      <p class="mb-2 mt-2">
-        {{ _('If you want to do something more complicated, such as running beta and release at the same time, please additionally refer to <a href="https://support.mozilla.org/en-US/kb/using-multiple-profiles">Using Multiple Profiles</a> and ask for help in <a href="https://support.mozilla.org/questions/new/thunderbird/form">Thunderbird support</a> if needed.') }}
-      </p>
+      <p> {{ _('If you need to copy data from the beta profile to your release profile, please consult the <a href="https://support.mozilla.org/kb/thunderbird-beta">beta support article.</a>') }}</p>
     </aside>
   </section>
 
@@ -114,41 +140,15 @@
         <li>
           {{ _('Release notes are provided for every update in:') }}
           <ul>
-            <li><b>≡ > Help > Privacy & About > Release Notes.</b></li>
+            <li><b>{{ _('≡ > Help > About > Release Notes.') }}</b></li>
           </ul>
         </li>
-        <li>{{ _('As you normally would, post ordinary Thunderbird usage questions in <a href="https://support.mozilla.org/questions/new/thunderbird/form">Thunderbird support</a>. ') }}</li>
-        <li>{{ _('Ask beta specific assistance questions and comments in <a href="https://thunderbird.topicbox.com/groups/beta">the beta forum</a>, or just visit to see what others are saying. Note that the forum operates in English, so if you need assistance in another language please ask for help in <a href="https://support.mozilla.org/questions/new/thunderbird/form">Thunderbird support</a>.') }}</li>
-        <li>{{ _('If you find a problem, try to <a href="https://support.mozilla.org/en-US/kb/troubleshoot-mode-thunderbird">reproduce the problem in Troubleshoot Mode</a>, then file a bug report for <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">Thunderbird</a> or <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Calendar">Calendar</a>.') }}</li>
-        <li>{{ _('<b>≡ > Tools > Export</b> can be used to backup your profile, or get to your profile directory quickly.') }}</li>
+        <li>{{ _('Please post questions about normal Thunderbird usage in <a href="https://support.mozilla.org/questions/new/thunderbird/form">Thunderbird support</a>. ') }}</li>
+        <li>{{ _('Ask beta specific assistance questions and comments in <a href="https://thunderbird.topicbox.com/groups/beta">the beta forum</a>, or browse it to see what other beta users are discussing. The forum operates in English, so if you need assistance in another language please ask for help in <a href="https://support.mozilla.org/questions/new/thunderbird/form">Thunderbird support</a>.') }}</li>
+        <li>{{ _('If you find a problem, try to <a href="https://support.mozilla.org/kb/troubleshoot-mode-thunderbird">reproduce the problem in Troubleshoot Mode</a>, then file a bug report for <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">Thunderbird</a> or <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Calendar">Calendar</a>.') }}</li>
+        <li>{{ _('<b>≡ > Tools > Export</b> can be used to backup your profile, or to get to your profile directory quickly.') }}</li>
         <li>{{ _('<b>≡ > Go > Mail Start Page (aka Beta Start Page)</b> is a handy reference which documents several of the above items and more.') }}</li>
       </ul>
-    </aside>
-  </section>
-
-  <section id="uninstall" class="mt-4 mb-4 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
-    <span class="header-line flex-1"></span>
-    <h2 class="header-section pl-4 pr-4 mb-0 text-center">{{ _('How do I go back to the regular release version?') }}</h2>
-    <span class="header-line flex-1"></span>
-  </section>
-
-  <section class="font-lg leading-normal pb-5 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
-    <aside class="flex flex-col flex-grow mb-4">
-      <p class="mb-2 mt-2">
-        {{ _('If you meet the following criteria, then you don’t need to do anything special. Just start the "normal release" Thunderbird program that you still have installed, which will use the "default" (or default-release) profile that you had not deleted. ') }}
-      <ul>
-        <li>{{ _('You use multiple, dedicated profiles (one for beta and one for release as recommended)') }}</li>
-        <li>{{ _('You have only imap accounts.') }}</li>
-        <li>{{ _('You don’t have address book and other information to transfer from beta to release.') }}</li>
-      </ul>
-      <p> {{ _('Dedicated profile per Thunderbird installation is a method which allows you to have both the release version of Thunderbird and the beta version of Thunderbird operate independently: ') }}</p>
-      <ul>
-        <li>Start the release version of Thunderbird (with beta not running) and it will use the "default" (or default-release) profile. </li>
-        <li>Start the beta version of Thunderbird (with release version not running) and it will use the default-beta profile. </li>
-      </ul>
-      <p class="mb-2 mt-2">
-        {{ _('If you want to get more complicated, such as running beta and release at the same time, please refer to Using Multiple Profiles, and Dedicated profile per Thunderbird installation and ask for help in Thunderbird support). ') }}
-      </p>
     </aside>
   </section>
 
