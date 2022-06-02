@@ -52,13 +52,13 @@
       <ul>
         <li><strong>{{ _('Beta installation will <u>replace</u> your currently installed program, unless you use the instructions in <a href="#howto">How to install and run Beta</a>.') }}</strong></li>
         <li>{{ _('Please do <a href="https://support.mozilla.org/kb/profiles-where-thunderbird-stores-user-data#w_backing-up-a-profile">regular backups</a> to protect your Thunderbird data profiles.') }}</li>
-        <li>{{ _('New features may be incomplete works in progress, because some are iteratively improved over a period of weeks. The <a href="https://thunderbird.topicbox.com/groups/beta">beta forum</a> may mention how new features are making progress.') }}</li>
-        <li>{{ _('Flaws are to be expected. High-impact flaws, including data loss, are very rare, but may occur. Protect yourself with backups. Low-impact flaws may not be fixed quickly, because fixes are prioritized based on impact.') }}</li>
+        <li>{{ _('New features may be incomplete works in progress, because some are completed and polished over a period of weeks. The <a href="https://thunderbird.topicbox.com/groups/beta">beta forum</a> may provide more information on feature progress.') }}</li>
+        <li>{{ _('Flaws are to be expected. High-impact flaws, including data loss, are very rare, but may occur. Protect yourself with <a href="https://support.mozilla.org/kb/profiles-where-thunderbird-stores-user-data#w_backing-up-a-profile">backups</a>. Low-impact flaws may not be fixed quickly, because fixes are prioritized based on impact.') }}</li>
         <li>{{ _('Expect seven updates per month, one major update per month plus several small updates. This frequency of updates allows us to make fast improvements.') }}</li>
-        <li>{{ _('Are you using <a href="https://support.mozilla.org/kb/difference-between-imap-and-pop3">pop accounts</a>? Unlike imap accounts, the only copy of your pop mail is in your local Thunderbird profile. So your options when using pop are:') }}
+        <li>{{ _('Are you using <a href="https://support.mozilla.org/kb/difference-between-imap-and-pop3">POP accounts</a>? Unlike IMAP accounts, the only copy of your pop mail is in your local Thunderbird profile. If you want to add a POP account to beta, your options are:') }}
           <ol type='a'>
-            <li>{{ _('Don’t add your pop account(s) to beta.') }}</li>
-            <li>{{ _('Add your pop account(s) to beta, then either stay there permanently or learn how to move your pop data back to the release profile after you are done with beta.') }}</li>
+            <li>{{ _('After set up, go to <b>≡ > Account Settings > Server Settings</b> and make sure the <b>"Leave messages on server"</b> option is <b>checked</b>, and the <b>"For at most [X] days"</b> option is <b>unchecked</b>.') }}</li>
+            <li>{{ _('Keep the default settings. Messages will be removed from the server 14 days after download, so you will need to either stay on beta, or learn how to move your POP data back to the release profile.') }}</li>
           </ol></li>
         <li>{{ _('If you have <a href="https://support.mozilla.org/kb/organize-your-messages-using-filters">mail filters</a> that, for example, move mail to local folders, then you must decide where to run filters - in your beta profile or your other profile.') }}</li>
       </ul>
@@ -83,14 +83,14 @@
       <ol type='1'>
         <li><strong>{{ _('Run Stable and Beta side-by-side (recommended).') }}</strong></li>
         <p class="mb-2 mt-2">
-          {{ _('Install the beta program into its own program directory. On Windows use the <a href="https://support.mozilla.org/kb/custom-installation-thunderbird-windows">Windows custom install option</a> to change the destination directory. For other operating systems use a method appropriate for your OS. Then <b>create a shortcut</b> or link to the beta so it is quick and easy to start.  On Windows: <b>right click</b> on <b>Thunderbird.exe</b> and pick <b>“Pin to taskbar”</b> or <b>“Pin to Start”</b>.') }}
+          {{ _('Thunderbird 102 and newer on Windows will install beta into its own program directory. For older versions on Windows consult the <a href="https://support.mozilla.org/en-US/kb/thunderbird-beta">beta support article</a>. For other operating systems use an install method appropriate for your OS to target a uniquely named directory.') }}
         </p>
         <p class="mb-2 mt-2">
-          {{ _('This choice has the advantage of forcing a dedicated profile for each Thunderbird, which allows you to have both the release version and the beta version operate independently. So you can:') }}
+          {{ _('This choice has the advantage of forcing a <a href="https://support.mozilla.org/en-US/kb/dedicated-profile-thunderbird-installation">dedicated profile</a> for each Thunderbird, which allows you to have both the release version and the beta version operate independently. So you can:') }}
         </p>
         <ul>
-          <li>{{ _('Start the release version of Thunderbird (with beta not running) and it will use the <b>"default" (or default-release)</b> profile.') }}</li>
-          <li>{{ _('Start the beta version program of Thunderbird from the directory into which you installed the beta, (with release version not running) and it will use the <b>default-beta</b> profile. On first use Thunderbird will create the <b>default-beta</b> profile, and it will prompt you to define your accounts. If you need to bring some data from your release profile into the beta profile, consult the <a href="https://support.mozilla.org/kb/thunderbird-beta">beta support article.</a>') }}</li>
+          <li>{{ _('Start the <b>release</b> version of Thunderbird (with beta not running) and it will use the <b>"default" (or default-release)</b> profile.') }}</li>
+          <li>{{ _('Start the <b>beta</b> version of Thunderbird (with release version not running) and it will use the <b>default-beta</b> profile. On first use Thunderbird will create the <b>default-beta</b> profile, and it will prompt you to define your accounts. If you need to bring some data from your release profile into the beta profile, consult the <a href="https://support.mozilla.org/kb/thunderbird-beta">beta support article.</a>') }}</li>
         </ul>
         <li class="mb-2 mt-2"><strong>{{ _('Upgrade your existing Thunderbird installation to beta.') }}</strong></li>
         <p class="mb-2 mt-2">
@@ -115,7 +115,7 @@
         {{ _('If you installed the beta over the top of the release version (choice 2 above), then your process will be more complicated. Please consult this <a href="https://support.mozilla.org/kb/thunderbird-beta">beta support article.</a>') }}
       </p>
       <p class="mb-2 mt-2">
-        {{ _('If you installed the beta program into its own program directory (choice 1 above) and you used a Dedicated profile per Thunderbird, then start the release version of Thunderbird and it should use your release version profile data. If you no longer want to use the beta version, and do not need any of the beta data (address books, local folders, etc), and wish to remove the beta data and beta program from your system:') }}
+        {{ _('If you installed the beta program into its own program directory (choice 1 above) and you used a <a href="https://support.mozilla.org/en-US/kb/dedicated-profile-thunderbird-installation">dedicated profile per Thunderbird</a>, then start the release version of Thunderbird and it should use your release version profile data. If you no longer want to use the beta version, and do not need any of the beta data (address books, local folders, pop folders, etc), and wish to remove the beta data and beta program from your system:') }}
       </p>
       <ul>
         <li>{{ _('Start the release version of Thunderbird to use the <a href="https://support.mozilla.org/kb/profile-manager-create-and-remove-thunderbird-profiles">profile manager.</a>') }}</li>
