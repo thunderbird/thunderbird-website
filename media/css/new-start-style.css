@@ -110,7 +110,8 @@
 html {
   font-family: system-ui, Open Sans, sans-serif;
   background-color: var(--bg);
-  background-image: var(--bg-gradient),
+  background-image: var(--bg-gradient);
+  font-size: 1rem;
 }
 
 body {
@@ -145,7 +146,7 @@ header {
 }
 
 .logo-img {
-  background-image: url('/media/img/thunderbird/logos/release-100.png');
+  background-image: url('/media/svg/logo.svg');
 }
 
 html[data-channel="earlybird"] .logo-img {
@@ -153,11 +154,11 @@ html[data-channel="earlybird"] .logo-img {
 }
 
 html[data-channel="beta"] .logo-img {
-  background-image: url('/media/img/thunderbird/logos/beta.png');
+  background-image: url('/media/svg/logo-beta.svg');
 }
 
 html[data-channel="daily"] .logo-img {
-  background-image: url('/media/img/thunderbird/logos/daily-100.png');
+  background-image: url('/media/svg/logo-daily.svg');
 }
 
 .logo-img {
