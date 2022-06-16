@@ -1,0 +1,153 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+{% extends "_includes/base-resp.html" %}
+
+{% block page_title %}{{ _('New in Thunderbird 102') }}{% endblock %}
+
+{% block header_content %}
+  <section class="text-left text-white flex justify-between pl-8 pr-8 md:pl-16 md:pr-16 max-w-7xl mx-auto">
+    <aside class="flex-col items-start">
+      <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+      <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl lg:mb-16 mb-8 mt-0 p-links">
+        {{ _('This article describes some of the major changes visible to users in Thunderbird version 102. Full details of all the changes can be found in the <a href="%(release)s">Thunderbird release notes from 102.0 and up</a>.')|format(release=url('thunderbird.releases.index')) }}
+      </p>
+      <p class="max-w-lg tracking-wider leading-loose mb-6 mt-0">
+        {{ _('Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.') }}
+      </p>
+
+      <div class="flex mb-20">
+        <a href="{{ donate_url('home_page_body') }}" class="btn-donate btn-donate-whatsnew font-lg">
+          <span class="inline-block w-4 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
+        </a>
+      </div>
+    </aside>
+    <aside class="xl:flex hidden xl:ml-8">
+      <img class="w-full h-auto mb-10 max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/102-header.png') }}" alt="Screenshot of Thunderbird's new system dark mode.">
+    </aside>
+
+  </section>
+{% endblock %}
+
+{% block content %}
+  <!-- Message Header Redesign -->
+  <section class="pt-20 pb-20 flex justify-center">
+    <div class="flex lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-1 lg:mr-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/message-header.gif') }}" alt="Screenshot of Thunderbird's new message header.">
+      </aside>
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('envelope') }}</span>
+          {{ _('Message Header Redesign')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Thunderbird 102 helps you be more productive with less effort. When reading your email, the redesigned message header allows you to focus on what matters as it highlights important information. It’s also more responsive and easier to navigate. Plus, you can star important messages from the message header itself, and easily convert them into a calendar event or a task.') }}
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Address Book -->
+  <section class="pt-20 pb-20 flex justify-center bg-grey-lighter">
+    <div class="flex lg:flex-row flex-col flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('addressbook') }}</span>
+          {{ _('New Address Book')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Thunderbird 102 gives your contacts a serious upgrade! The refreshed design makes it easier to navigate and interact with your contacts, and helps you better understand who you’re communicating with. The new Address Book has compatibility with vCard specs, meaning if your app can export your existing contacts into vCard format, Thunderbird can import them. Each contact card also acts as a launchpad for messaging, email, and event creation.') }}
+        </p>
+      </aside>
+      <aside class="flex-1 lg:ml-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/addressbook.png') }}" alt="Screenshot of Thunderbird's new addressbook.">
+      </aside>
+    </div>
+  </section>
+
+  <!-- Import Export Wizard -->
+  <section class="pt-20 pb-20 flex justify-center">
+    <div class="flex lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-1 lg:mr-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/import-export.png') }}" alt="Screenshot of the new import and export wizards in Thunderbird.">
+      </aside>
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('import') }}</span>
+          {{ _('New Import/Export Wizard')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Thunderbird 102 makes it quick and simple to move your accounts and data around. The new step-by-step wizard provides a guided experience for importing all that data that’s important to you. We’ve also taken extra precautions to ensure that no data is accidentally duplicated in your profile after an import. Moving from Outlook, SeaMonkey, or another Thunderbird installation is easier than ever. No add-ons required!') }}
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Spaces Toolbar -->
+  <section class="pt-20 pb-20 flex justify-center bg-grey-lighter">
+    <div class="flex lg:flex-row flex-col flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('sidebar-left') }}</span>
+          {{ _('New Spaces Toolbar')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Thunderbird 102 makes navigating the application more intuitive thanks to the the new Spaces Toolbar. Move between all of your activities with ease, whether it’s managing email, working with contacts through the awesome new address book, using the calendar and tasks functionality, chat, and even add-ons! If you want to save screen real estate, the Spaces Toolbar can be dismissed, and you can instead navigate the different activities Thunderbird offers with the new Pinned Spaces tab.') }}
+        </p>
+      </aside>
+      <aside class="flex-1 lg:ml-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/spaces-toolbar.gif') }}" alt="Screenshot showing the new matrix chat in Thunderbird.">
+      </aside>
+    </div>
+  </section>
+
+  <!-- Matrix Chat -->
+  <section class="pt-20 pb-20 flex justify-center">
+    <div class="flex lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
+      <aside class="flex-1 lg:mr-8">
+        <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/matrix-chat.png') }}" alt="Screenshot of the new spaces toolbar in Thunderbird.">
+      </aside>
+      <aside class="flex-col flex-1 items-start">
+        <h3 class="header-section">
+          <span>{{ svg('chat-proton') }}</span>
+          {{ _('New Matrix Chat Support')}}
+        </h3>
+        <p class="font-lg tracking-wider leading-loose mb-10">
+          {{ _('Thunderbird 102 offers a new way to chat privately and securely with your colleagues, friends, and family. We’ve added support for the open-source, decentralized chat protocol Matrix, and it’s usable right out of the box! (As always, we welcome your feedback since it’s an evolving service.)') }}
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="pt-20 flex justify-center bg-calendar pr-8 pl-8">
+    <aside class="flex flex-col flex-1 lg:max-w-6xl lg:ml-16 lg:mr-16">
+      <h3 class="header-section">
+        <span>{{ svg('news') }}</span>
+        {{ _('Other Notable Changes')}}
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-6">
+        {{ _('There are many other big changes that make Thunderbird 102 a very large release including:') }}
+      </p>
+      <ul class="font-md tracking-wider leading-loose mb-6 p-links-blue">
+        <li>{{ _('New Icons and Default Folder Colors') }}</li>
+        <li>{{ _('Use Thunderbird without an email account (for example, as an RSS reader)') }}</li>
+        <li>{{ _('Numerous OpenPGP improvements') }}</li>
+        <li>{{ _('CalendarLocal parser converted to javascript') }}</li>
+        <li>{{ _('Today Pane calendar UI refresh') }}</li>
+        <li>{{ _('POP3 implemented in javascript') }}</li>
+        <li>{{ _('Account settings moved to macOS application menu') }}</li>
+        <li>{{ _('Plus: Application-wide font size control, Theme fixes, FileLink fixes, Accessibility fixes, improved vCard integration, improved calendar startup performance, Calendar fixes including correct order of week view headers and days for right to left locales.') }}</li>
+      </ul>
+      <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
+        {{ _('You can see details of all our changes in the release notes for <a href="%(release)s">Thunderbird 102.0 and up</a>.')|format(release=url('thunderbird.releases.index')) }}
+      </p>
+    </aside>
+  </section>
+
+  <section class="bg-prefooter bg-grey-lighter -mb-10">
+    {% include '_includes/donate-mailing-list.html' %}
+  </section>
+
+{% endblock %}
