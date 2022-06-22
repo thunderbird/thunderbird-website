@@ -17,7 +17,7 @@
 
           <div class="donate">
             {{ _('Support us!') }}
-            {{ '<a href="%(donate)s" class="donate-btn">'|format(donate=donate_url('paragraph_text', 'start_page_tb_beta')) }}
+            {{ '<a href="%(donate)s" class="donate-btn">'|format(donate=donate_url('paragraph_text', 'start_page_tb_release')) }}
               {{ svg('donate-btn-heart') }}
               {{ _('Donate') }}
             </a>
@@ -27,6 +27,18 @@
 
       <div class="main-content">
         <div class="content-sections">
+          <section id="donate">
+            <h2 class="section-heading donate">
+              {{ svg('donate-heart') }}
+              {{ _('Support Us') }}
+            </h2>
+            <p>{{ _('Thank you for supporting Thunderbird, which is funded by users like you! Producing Thunderbird requires software engineers, designers, system administrators and server infrastructure. So if you like Thunderbird, the best way to ensure Thunderbird remains available is to make a donation.') }}</p>
+            {{ '<a href="%(donate)s" class="donate">'|format(donate=donate_url('paragraph_text', 'start_page_tb_release')) }}
+              {{ _('Donate') }}
+              {{ svg('external-link') }}
+            </a>
+          </section>
+
           <section id="get-involved">
             <h2 class="section-heading get-involved">
               {{ svg('handshake') }}
@@ -48,23 +60,8 @@
               {{ svg('external-link') }}
             </a>
           </section>
-
-          <section id="crash">
-            <h2 class="section-heading crash">
-              {{ svg('info') }}
-              {{ _('Crashed?') }}
-            </h2>
-            <p>{{ _('If Crash Reporter appears when Thunderbird crashes, please provide as many details as possible to help developers.') }}</p>
-            <ul>
-              <li>{{ _('In Thunderbird do Help > More Troubleshooting Information, scroll to "Crash Reports", click a recent report link to open the crash report page.') }}</li>
-              <li>{{ _('Click the Bugzilla tab, then click on an existing bug report under "Related Bugs" and add a comment to the bug, or click "Thunderbird" to submit a new bug report.') }}</li>
-            </ul>
-            <a href="https://support.mozilla.org/en-US/kb/mozilla-crash-reporter-tb" class="crash">
-              {{ _('Crash Reporter') }}
-              {{ svg('external-link') }}
-            </a>
-          </section>
         </div>
+
         <div class="content-sections">
           <section id="support">
             <h2 class="section-heading support">
@@ -86,6 +83,22 @@
             <p>{{ _('Think you’ve found a new problem or rough edge? Create a bug report so we can make sure it gets solved, resulting in a better Thunderbird experience for all.') }}</p>
             <a href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird" class="bug">
               {{ _('Report a Bug') }}
+              {{ svg('external-link') }}
+            </a>
+          </section>
+
+          <section id="crash">
+            <h2 class="section-heading crash">
+              {{ svg('info') }}
+              {{ _('Crashed?') }}
+            </h2>
+            <p>{{ _('If Crash Reporter appears when Thunderbird crashes, please provide as many details as possible to help developers.') }}</p>
+            <ul>
+              <li>{{ _('In Thunderbird do Help > More Troubleshooting Information, scroll to "Crash Reports", click a recent report link to open the crash report page.') }}</li>
+              <li>{{ _('Click the Bugzilla tab, then click on an existing bug report under "Related Bugs" and add a comment to the bug, or click "Thunderbird" to submit a new bug report.') }}</li>
+            </ul>
+            <a href="https://support.mozilla.org/en-US/kb/mozilla-crash-reporter-tb" class="crash">
+              {{ _('Crash Reporter') }}
               {{ svg('external-link') }}
             </a>
           </section>
