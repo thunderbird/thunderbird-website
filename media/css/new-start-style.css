@@ -216,11 +216,12 @@ html[data-channel="daily"] .logo-img {
   justify-self: end;
   background-color: #ff0039;
   background-image: linear-gradient(#FF555F, #D70022);
-  border-radius: .25rem;
+  border-radius: .12rem;
   color: white;
-  padding: .5rem 1.25rem;
+  padding: .25rem .75rem;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: .9rem;
   box-shadow: var(--shadow);
   letter-spacing: .075rem;
 }
