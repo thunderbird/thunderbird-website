@@ -81,6 +81,7 @@
 
   --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #2F2F33;
@@ -109,16 +110,14 @@
 
 html {
   font-family: system-ui, Open Sans, sans-serif;
-  background-color: var(--bg);
-  background-image: var(--bg-gradient);
   font-size: 1rem;
 }
 
 body {
-  background-image: var(--logo-wireframe);
-  background-position: bottom right;
-  background-repeat: no-repeat;
+  background-color: var(--bg);
+  background-image: var(--bg-gradient);
   color: var(--text);
+  position: relative;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -128,15 +127,15 @@ body {
 
 main {
   display: grid;
-  gap: 2rem;
-  padding: 1rem;
+  gap: 2em;
+  padding: 1em;
   margin: 0 auto;
   max-width: 100ch;
 }
 
 header {
   display: grid;
-  gap: 2rem;
+  gap: 2em;
 }
 
 .header-top {
@@ -146,7 +145,7 @@ header {
 }
 
 .logo-img {
-  background-image: url('/media/svg/logo.svg');
+  background-image: url('/media/img/thunderbird/logos/release.png');
 }
 
 html[data-channel="earlybird"] .logo-img {
@@ -154,11 +153,11 @@ html[data-channel="earlybird"] .logo-img {
 }
 
 html[data-channel="beta"] .logo-img {
-  background-image: url('/media/svg/logo-beta.svg');
+  background-image: url('/media/img/thunderbird/logos/beta.png');
 }
 
 html[data-channel="daily"] .logo-img {
-  background-image: url('/media/svg/logo-daily.svg');
+  background-image: url('/media/img/thunderbird/logos/daily.png');
 }
 
 .logo-img {
@@ -175,7 +174,7 @@ html[data-channel="daily"] .logo-img {
 
 .title {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
   margin: 0;
   padding: 0;
 }
@@ -203,7 +202,7 @@ html[data-channel="daily"] .logo-img {
 
 .donate {
   display: grid;
-  gap: .25rem;
+  gap: .25em;
   justify-self: end;
   text-align: right;
 }
@@ -216,9 +215,9 @@ html[data-channel="daily"] .logo-img {
   justify-self: end;
   background-color: #ff0039;
   background-image: linear-gradient(#FF555F, #D70022);
-  border-radius: .12rem;
+  border-radius: 3px;
   color: white;
-  padding: .25rem .75rem;
+  padding: .25em .75em;
   text-transform: uppercase;
   font-weight: 700;
   font-size: .9rem;
@@ -232,8 +231,8 @@ html[data-channel="daily"] .logo-img {
   background: var(--bg-warning);
   color: var(--text-warning);
   border: 1px solid var(--text-warning);
-  border-radius: .5rem;
-  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  padding: 0.5em 1em;
 }
 
 .uppercase {
@@ -247,11 +246,11 @@ html[data-channel="daily"] .logo-img {
 .main-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 4em;
 }
 
 .warning-panel ul {
-  padding-left: 2.5rem;
+  padding-left: 2.5em;
   list-style: none;
 }
 
@@ -265,7 +264,7 @@ html[data-channel="daily"] .logo-img {
   content: '';
   width: 3px;
   height: 3px;
-  top: 0.5rem;
+  top: 0.5em;
   left: -20px;
   border-radius: 50%;
   border: 4px solid var(--list-dot-outer);
@@ -331,6 +330,32 @@ p.warning svg {
 
 .crash {
   color: var(--text-crash);
+}
+
+.logo-wireframe-light,
+.logo-wireframe-dark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.logo-wireframe-light {
+  display: block;
+}
+
+.logo-wireframe-dark {
+  display: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-wireframe-light {
+    display: hidden;
+  }
+
+  .logo-wireframe-dark {
+    display: block;
+  }
 }
 
 @media (max-width: 800px) {
