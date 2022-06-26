@@ -22,6 +22,26 @@ button {
   }
 }
 
+.donation-appeal {
+  &:extend(.flex, .items-center, .mb-20, .max-w-lg, .bg-white, .p-4, .rounded, .shadow, .text-black-light, .no-underline);
+
+  .text-donation {
+    color: #f99298;
+  }
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+    background-image: linear-gradient(#FFF2F2, #FFDBDB);
+    color: #C23153;
+
+    .text-donation {
+      color: #E23959;
+    }
+  }
+}
+
 .btn-download {
   &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-4, .pb-4, .pl-7, .pr-7, .mb-5, .bg-download-button, .rounded-xs, .shadow);
 

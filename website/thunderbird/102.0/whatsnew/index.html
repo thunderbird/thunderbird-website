@@ -13,15 +13,14 @@
       <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl lg:mb-16 mb-8 mt-0 p-links">
         {{ _('This article describes some of the major changes visible to users in Thunderbird version 102. Full details of all the changes can be found in the <a href="%(release)s">Thunderbird release notes from 102.0 and up</a>.')|format(release=url('thunderbird.releases.index')) }}
       </p>
-      <p class="max-w-lg tracking-wider leading-loose mb-6 mt-0">
-        {{ _('Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.') }}
-      </p>
 
-      <div class="flex mb-20">
-        <a href="{{ donate_url('home_page_body') }}" class="btn-donate btn-donate-whatsnew font-lg">
-          <span class="inline-block w-4 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
-        </a>
-      </div>
+      <a href="{{ donate_url('home_page_body') }}" class="donation-appeal">
+        <div class="inline-block w-16 mr-4 text-donation">{{ svg('heart') }}</div>
+        <p class="tracking-wide leading-normal m-0">
+          {{ _('<strong>Thunderbird</strong> is both free and freedom respecting, but we’re also completely funded by donations! <strong>Help us sustain the project and continue to improve.</strong>') }}
+        </p>
+        <div class="inline-block w-6 ml-4 text-donation">{{ svg('chevron-right') }}</div>
+      </a>
     </aside>
     <aside class="xl:flex hidden xl:ml-8">
       <img class="w-full h-auto mb-10 max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/102-header.png') }}" alt="Screenshot of Thunderbird's new system dark mode.">
