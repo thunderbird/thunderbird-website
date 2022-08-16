@@ -130,7 +130,7 @@ ENUS_ONLY = [
 
 DONATE_LINK = (
     'https://give.thunderbird.net/'
-    '?utm_source={source}&utm_medium=referral&utm_content={content}'
+    '?utm_source={source}&utm_medium={medium}&utm_content={content}'
 )
 
 # WEBSITE_CSS = {
