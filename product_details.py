@@ -143,12 +143,7 @@ class ThunderbirdDetails():
         return self.platform_labels.items()
 
     def list_releases(self, channel='beta'):
-        version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_DEVEL_VERSION')
-        esr_major_versions = (
-            list(range(10, 59, 7))
-            + [60, 68]
-            + list(range(78, int(self.current_versions[version_name].split('.')[0]) + 1, 13))
-        )
+        esr_major_versions = (10, 17, 24, 31, 38, 45, 52, 60, 68, 78, 91, 102)
         releases = {}
         for release in self.major_releases:
             major_version = float(re.findall(r'^\d+\.\d+', release)[0])
