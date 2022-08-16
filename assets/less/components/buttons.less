@@ -22,23 +22,14 @@ button {
   }
 }
 
-.donation-appeal {
-  &:extend(.flex, .items-center, .mb-20, .max-w-lg, .bg-white, .p-4, .rounded, .shadow, .text-black-light, .no-underline);
-
-  .text-donation {
-    color: #f99298;
-  }
+.btn-donate-lg {
+  &:extend(.xl\:ml-6, .xl\:mr-6, .md\:ml-4, .md\:mr-4, .text-white, .font-base, .font-semibold, .font-2xl, .no-underline, .block, .mr-0, .ml-0, .pt-3, .pb-3, .pl-5, .pr-5, .bg-donate-button, .rounded, .shadow);
+  white-space: nowrap;
 
   &:hover,
   &:focus {
     &:extend(.shadow-md);
     .transform(translateY(-7%));
-    background-image: linear-gradient(#FFF2F2, #FFDBDB);
-    color: #C23153;
-
-    .text-donation {
-      color: #E23959;
-    }
   }
 }
 

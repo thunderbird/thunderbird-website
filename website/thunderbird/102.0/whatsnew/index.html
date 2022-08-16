@@ -2,28 +2,31 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
 
+{% set active_page = "whatsnew" %}
 {% extends "_includes/base-resp.html" %}
 
-{% block page_title %}{{ _('New in Thunderbird 102') }}{% endblock %}
+{% block page_title %}{{ _('What’s New in Thunderbird 102') }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-left text-white flex justify-between pl-8 pr-8 md:pl-16 md:pr-16 max-w-7xl mx-auto">
+  <section class="text-left text-white flex justify-between pl-8 pr-8 md:pl-16 md:pr-16 max-w-7xl mx-auto pt-12" style="margin-bottom: -8rem;">
     <aside class="flex-col items-start">
-      <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+      <h1 class="font-4xl md:font-hero font-thin mt-0 mb-8">{{ self.page_title() }}</h1>
       <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl lg:mb-16 mb-8 mt-0 p-links">
-        {{ _('This article describes some of the major changes visible to users in Thunderbird version 102. Full details of all the changes can be found in the <a href="%(release)s">Thunderbird release notes from 102.0 and up</a>.')|format(release=url('thunderbird.releases.index')) }}
+        {{ _('Explore the new features and changes in the new release of Thunderbird.') }}
       </p>
 
-      <a href="{{ donate_url('home_page_body') }}" class="donation-appeal">
-        <div class="inline-block w-16 mr-4 text-donation">{{ svg('heart') }}</div>
-        <p class="tracking-wide leading-normal m-0">
-          {{ _('<strong>Thunderbird</strong> is both free and freedom respecting, but we’re also completely funded by donations! <strong>Help us sustain the project and continue to improve.</strong>') }}
+      <div class="flex flex-col items-center mb-20 mx-auto xl:ml-0 xl:mr-0 max-w-xl bg-grey p-4 rounded shadow-lg text-black-light no-underline md:font-md">
+        <p class="tracking-wide leading-normal m-0 text-center">
+          {{ _('<strong>Thunderbird is completely funded by your donations.</strong> <br> Producing Thunderbird requires software engineers, designers, system administrators and server infrastructure. <strong>Help us keep Thundebird alive!</strong>') }}
         </p>
-        <div class="inline-block w-6 ml-4 text-donation">{{ svg('chevron-right') }}</div>
-      </a>
+        <a href="{{ donate_url('cta', 'whats_new_page', 'thunderbird', 'whats_new_102') }}" class="btn-donate-lg mt-4">
+          <span class="inline-block w-5 mr-1">{{ svg('heart') }}</span>
+          {{ _('Donate') }}
+        </a>
+      </div>
     </aside>
-    <aside class="xl:flex hidden xl:ml-8">
-      <img class="w-full h-auto mb-10 max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/102-header.png') }}" alt="Screenshot of Thunderbird's new system dark mode.">
+    <aside class="xl:flex hidden xl:ml-8 max-w-2xl">
+      <img class="w-full h-auto max-w-2xl self-start shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/102-header.png') }}" alt="Screenshot of Thunderbird's new system dark mode.">
     </aside>
 
   </section>
@@ -31,7 +34,7 @@
 
 {% block content %}
   <!-- Message Header Redesign -->
-  <section class="pt-20 pb-20 flex justify-center">
+  <section class="pt-20 pb-20 flex justify-center" style="margin-top: 8rem;">
     <div class="flex lg:flex-row flex-col flex-col-reverse flex-1 max-w-6xl ml-16 mr-16">
       <aside class="flex-1 lg:mr-8">
         <img class="w-full h-auto max-w-2xl self-center shadow-img" src="{{ static('/media/img/thunderbird/whatsnew/102/message-header.gif') }}" alt="Screenshot of Thunderbird's new message header.">
