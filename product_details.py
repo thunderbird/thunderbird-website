@@ -127,7 +127,8 @@ class ThunderbirdDetails():
                 'win64': 'win64.installer.exe'
             }
             platform_filename = platform_filetype.get(_platform, '')
-            daily_url = 'thunderbird-{version}.{locale}.{platform}'.format(version=_version, locale=_locale, platform=platform_filename)
+            daily_url = 'thunderbird-{version}.{locale}.{platform}'.format(
+                version=_version, locale=_locale, platform=platform_filename)
             return ''.join([settings.DAILY_URL, daily_url])
 
         # build a direct download link for 'beta' and 'release' channels.
@@ -143,26 +144,21 @@ class ThunderbirdDetails():
         return self.platform_labels.items()
 
     def list_releases(self, channel='beta'):
-        version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_DEVEL_VERSION')
-        esr_major_versions = (
-            list(range(10, 59, 7))
-            + [60, 68]
-            + list(range(78, int(self.current_versions[version_name].split('.')[0]) + 1, 13))
-        )
         releases = {}
         for release in self.major_releases:
             major_version = float(re.findall(r'^\d+\.\d+', release)[0])
-            # The version numbering scheme of Firefox changes sometimes. The second
-            # number has not been used since Firefox 4, then reintroduced with
-            # Firefox ESR 24 (Bug 870540). On this index page, 24.1.x should be
-            # fallen under 24.0. This pattern is a tricky part.
-            converter = '%g' if int(major_version) in esr_major_versions else '%s'
-            major_pattern = r'^' + re.escape(converter % round(major_version, 1))
+            # The version numbering scheme of Thunderbird has changed over the years,
+            # so there is some trickiness on major versions below 5.
+            # When updating this sorting, be careful old versions aren't broken.
+            if major_version < 5:
+                major_pattern = release + '.'
+            else:
+                major_pattern = release.split('.')[0] + '.'
             releases[major_version] = {
                 'major': release,
-                'minor': sorted(filter(lambda x: re.findall(major_pattern, x),
-                                       self.minor_releases),
-                                key=lambda x: list(map(lambda y: int(y), x.split('.'))))
+                'minor': sorted([x[0] for x in self.minor_releases.items()
+                                 if x[0].startswith(major_pattern)],
+                                 key=lambda x: [int(y) for y in x.split('.')])
             }
         return sorted(releases.items(), reverse=True)
 
