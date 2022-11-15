@@ -1,0 +1,101 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+  # License, v. 2.0. If a copy of the MPL was not distributed with this
+  # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+ {% set active_page = "eoy" %}
+ {% extends "_includes/bedrock/base-resp.html" %}
+ {% block facebook_id %}348169218537151{# facebook.com/Thunderbird #}{% endblock %}
+ {% block twitter_id %}mozthunderbird{% endblock %}
+
+ {% block page_image %}{{ static('img/thunderbird/thunderbird-256.png') }}{% endblock %}
+ {% block page_favicon %}{{ static('img/thunderbird/favicon.ico') }}{% endblock %}
+ {% block page_favicon_large %}{{ static('img/thunderbird/favicon-196.png') }}{% endblock %}
+ {% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}
+
+ {% block page_css %}<link href="/media/css/eoy.css" rel="stylesheet" type="text/css" />{% endblock %}
+
+ {% block page_title %}{{ _('Help Keep Thunderbird Alive!') }}{% endblock %}
+
+ {% block site_header %}
+ <div id="forest-bg">
+
+</div>
+<header>
+  {% block header_content %}
+  <section class="text-left flex justify-between pl-8 pr-8 md:pl-16 md:pr-16 max-w-8xl mx-auto pt-12">
+    <aside class="flex-col items-start">
+      <h1 class="accent-text">
+        <span class="font-light">{{ _('Help Keep')}}</span>
+        <br>
+        <span>{{ _('Thunderbird Alive!')}}</span>
+      </h1>
+      <p>
+        {{ _('Did you know that <strong>less than 1%</strong> of Thunderbird users fund all the work we do?')}}
+      </p>
+      <p>
+        {{ _('<strong>Not too long ago Thunderbird was on the verge of extinction.</strong> It’s because of donations from that small group of users that we are here today!')}}
+      </p>
+      <p>
+        {{ _('We don’t show advertisements or sell your data and we are completely funded by donations from our community.')}}
+      </p>
+    </aside>
+    <aside class="flex-col items-start">
+      <span id="illustration">{{ svg('tb-donate-illustration') }}</span>
+    </aside>
+  </section>
+  {% endblock %}
+</header>
+{% endblock %}
+
+{% block email_form %}
+{% endblock email_form %}
+
+{% block content %}
+<section>
+  <div class="letter-container">
+    <a href="#" class="donate-banner">
+      <div>
+        Click here to
+        <br>
+        <strong>Donate!</strong>
+      </div>
+      <div id="decoration">
+
+      </div>
+      <div class="text-right accent-text self-end">
+        Help keep
+        <br>
+        <strong>Thunderbird Alive!</strong>
+      </div>
+    </a>
+    <p>
+      {{ _('<strong>Thunderbird</strong>’s mission is to offer a time and privacy-respecting, customizable communication experience that gives you control of your data and experience. <strong>Free to everyone!</strong>')}}
+    </p>
+    <p>
+      {{ _('Accomplishing that mission means keeping <strong>Thunderbird</strong> secure, maintaining complex server infrastructure, updating old code, fixing bugs and developing new features. <strong>These activities aren’t cheap</strong> - requiring talented software engineers and robust infrastructure.')}}
+    </p>
+    <p>
+      {{ _('<strong>So today we’re asking you to help us out.</strong> If you get value from using Thunderbird, please consider giving a donation to support it!')}}
+    </p>
+    <div class="heart-container">
+      <div class="left-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div>{{ svg('donate-heart') }}</div>
+      <div class="right-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <p class="text-center accent-text"">
+      The Thunderbird Team
+    </p>
+  </div>
+</section>
+{% endblock %}
+
+{% block site_footer%}
+{% endblock site_footer %}
