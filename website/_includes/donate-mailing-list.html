@@ -37,7 +37,7 @@
     class="md:w-64 appearance-none border-none p-2 tracking-wide font-semibold font-regular" required>
     <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter">{{ _('Sign me up!') }}</button>
     <!-- Prevent Bot signups -->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+    <div style="position: absolute; {{ 'right' if DIR=='rtl' else 'left'}}: -5000px;" aria-hidden="true"><input type="text"
       name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value=""></div>
     </form>
     <!--End mc_embed_signup-->

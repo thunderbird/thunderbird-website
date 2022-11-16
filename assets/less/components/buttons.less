@@ -16,6 +16,21 @@ button {
     &:extend(.shadow-md);
     .transform(translateY(-7%));
   }
+
+  &.btn-donate-whatsnew {
+    &:extend(.mr-0, .ml-0, .pt-3, .pb-3, .pl-5, .pr-5);
+  }
+}
+
+.btn-donate-lg {
+  &:extend(.xl\:ml-6, .xl\:mr-6, .md\:ml-4, .md\:mr-4, .text-white, .font-base, .font-semibold, .font-2xl, .no-underline, .block, .mr-0, .ml-0, .pt-3, .pb-3, .pl-5, .pr-5, .bg-donate-button, .rounded, .shadow);
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    &:extend(.shadow-md);
+    .transform(translateY(-7%));
+  }
 }
 
 .btn-download {
@@ -128,6 +143,10 @@ button {
 .btn-beta {
   &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-beta-button, .rounded-xs, .shadow);
 
+  &.btn-beta-pill {
+    &:extend(.rounded-full, .pt-1, .pb-1, .pr-2, .pl-2, .mb-0, .tracking-normal, .font-regular, .font-bold, .leading-normal);
+  }
+
   &:hover,
   &:focus {
     &:extend(.shadow-md);
@@ -135,8 +154,8 @@ button {
   }
 }
 
-.btn-nightly {
-  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-nightly-button, .rounded-xs, .shadow);
+.btn-daily {
+  &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-daily-button, .rounded-xs, .shadow);
 
   &:hover,
   &:focus {

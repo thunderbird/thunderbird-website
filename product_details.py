@@ -48,7 +48,7 @@ class ThunderbirdDetails():
     dev_releases = load_json('thunderbird_history_development_releases.json')
 
     version_map = {
-        'nightly': 'LATEST_THUNDERBIRD_NIGHTLY_VERSION',
+        'daily': 'LATEST_THUNDERBIRD_NIGHTLY_VERSION',
         'beta': 'LATEST_THUNDERBIRD_DEVEL_VERSION',
         'release': 'LATEST_THUNDERBIRD_VERSION',
     }
@@ -62,28 +62,24 @@ class ThunderbirdDetails():
         """Returns builds for the latest version of Thunderbird based on `channel`."""
         version = self.latest_version(channel)
 
-        # We don't really have any build data for non-release builds
-        _version = self.latest_version('release')
-
-        builds = self.all_builds
-        if locale in builds and _version in builds[locale]:
-            _builds = builds[locale][_version]
+        all_builds = self.all_builds
+        if locale in all_builds and version in all_builds[locale]:
+            builds = all_builds[locale][version]
             # Append 64-bit builds
-            if 'Linux' in _builds:
-                _builds['Linux 64-bit'] = _builds['Linux']
-            if 'Windows' in _builds:
-                _builds['Windows 64-bit'] = _builds['Windows']
-            return version, _builds
+            if 'Linux' in builds:
+                builds['Linux 64-bit'] = builds['Linux']
+            if 'Windows' in builds:
+                builds['Windows 64-bit'] = builds['Windows']
+            return version, builds
 
     def get_filtered_full_builds(self, channel, version):
         version = version or self.latest_version(channel)
-        _version = self.latest_version('release')
         f_builds = []
         builds = self.all_builds
 
         for locale, build in builds.items():
 
-            if locale not in self.languages or not build.get(_version):
+            if locale not in self.languages or not build.get(version):
                 continue
 
             build_info = {
@@ -121,8 +117,8 @@ class ThunderbirdDetails():
             # return a direct link instead
             pass
 
-        # The 'nightly' channel is hosted on FTP and uses a different filename format.
-        if channel == 'nightly':
+        # The 'daily' channel is hosted on FTP and uses a different filename format.
+        if channel == 'daily':
             platform_filetype = {
                 'osx': 'mac.dmg',
                 'linux': 'linux-i686.tar.bz2',
@@ -131,8 +127,9 @@ class ThunderbirdDetails():
                 'win64': 'win64.installer.exe'
             }
             platform_filename = platform_filetype.get(_platform, '')
-            nightly_url = 'thunderbird-{version}.{locale}.{platform}'.format(version=_version, locale=_locale, platform=platform_filename)
-            return ''.join([settings.NIGHTLY_URL, nightly_url])
+            daily_url = 'thunderbird-{version}.{locale}.{platform}'.format(
+                version=_version, locale=_locale, platform=platform_filename)
+            return ''.join([settings.DAILY_URL, daily_url])
 
         # build a direct download link for 'beta' and 'release' channels.
         return '?'.join([settings.BOUNCER_URL,
@@ -147,26 +144,21 @@ class ThunderbirdDetails():
         return self.platform_labels.items()
 
     def list_releases(self, channel='beta'):
-        version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_DEVEL_VERSION')
-        esr_major_versions = (
-            list(range(10, 59, 7))
-            + [60, 68]
-            + list(range(78, int(self.current_versions[version_name].split('.')[0]) + 1, 12))
-        )
         releases = {}
         for release in self.major_releases:
             major_version = float(re.findall(r'^\d+\.\d+', release)[0])
-            # The version numbering scheme of Firefox changes sometimes. The second
-            # number has not been used since Firefox 4, then reintroduced with
-            # Firefox ESR 24 (Bug 870540). On this index page, 24.1.x should be
-            # fallen under 24.0. This pattern is a tricky part.
-            converter = '%g' if int(major_version) in esr_major_versions else '%s'
-            major_pattern = r'^' + re.escape(converter % round(major_version, 1))
+            # The version numbering scheme of Thunderbird has changed over the years,
+            # so there is some trickiness on major versions below 5.
+            # When updating this sorting, be careful old versions aren't broken.
+            if major_version < 5:
+                major_pattern = release + '.'
+            else:
+                major_pattern = release.split('.')[0] + '.'
             releases[major_version] = {
                 'major': release,
-                'minor': sorted(filter(lambda x: re.findall(major_pattern, x),
-                                       self.minor_releases),
-                                key=lambda x: list(map(lambda y: int(y), x.split('.'))))
+                'minor': sorted([x[0] for x in self.minor_releases.items()
+                                 if x[0].startswith(major_pattern)],
+                                 key=lambda x: [int(y) for y in x.split('.')])
             }
         return sorted(releases.items(), reverse=True)
 

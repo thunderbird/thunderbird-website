@@ -13,11 +13,14 @@ import translate
 import webassets
 
 if sys.version_info[0] == 3:
-    import socketserver
+    from socketserver import TCPServer
     import http.server
+    SimpleHTTPServer = http.server.HTTPServer
+    SimpleHTTPRequestHandler = http.server.SimpleHTTPRequestHandler
 else:
-    import SocketServer
+    from SocketServer import TCPServer
     import SimpleHTTPServer
+    SimpleHTTPRequestHandler = SimpleHTTPServer.SimpleHTTPRequestHandler
 
 from dateutil.parser import parse
 from jinja2 import Environment, FileSystemLoader
@@ -49,13 +52,13 @@ def mkdir(path):
 
 
 def write_404_htaccess(path, lang):
-    """Write a .htaccess to `path` that points to 404.html for locale `lang`."""
+    """Write an .htaccess to `path` that points to 404.html for locale `lang`."""
     with open(os.path.join(path, '.htaccess'), 'w') as f:
         f.write('ErrorDocument 404 /{lang}/404.html\n'.format(lang=lang))
 
 
 def write_htaccess(path, url):
-    """Write a .htaccess to `path` that rewrites everything to `url`."""
+    """Write an .htaccess to `path` that rewrites everything to `url`."""
     mkdir(path)
     with open(os.path.join(path, '.htaccess'), 'w') as f:
         f.write('RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
@@ -149,6 +152,15 @@ class Site(object):
         self._env.install_gettext_translations(translator)
         self._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css)
 
+    def _write_favicon_htaccess(self):
+        """Write an .htaccess to `self.renderpath` that points to the favicon."""
+        htpath = os.path.join(self.renderpath, '.htaccess')
+        mode = 'w'
+        if os.path.isfile(htpath):
+            mode = 'a'
+        with open(htpath, mode) as f:
+            f.write('RewriteEngine On\nRewriteRule ^favicon\.ico$ {path}\n'.format(path=settings.FAVICON_PATH))
+
     def is_css_bundle(self, path):
         """Check if a path refers to a css file that is in the current `css_bundles` or not."""
         changed_file = ntpath.basename(path).split('.')[0]
@@ -219,8 +231,10 @@ class Site(object):
         # Build htaccess files for sysreq and release notes redirects.
         sysreq_path = os.path.join(self.renderpath, 'system-requirements')
         notes_path = os.path.join(self.renderpath, 'notes')
+        beta_notes_path = os.path.join(self.renderpath, 'notes', 'beta')
         write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
         write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes'))
+        write_htaccess(beta_notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes', channel="beta"))
 
     def build_assets(self):
         """Build assets, that is, bundle and compile the LESS and JS files in `settings.ASSETS`."""
@@ -233,6 +247,7 @@ class Site(object):
             env[k].urls()
         if self.js_bundles:
             self._concat_js()
+        self._write_favicon_htaccess()
 
     def render(self):
         """
@@ -319,13 +334,31 @@ class UpdateHandler(FileSystemEventHandler):
         """This method is called by the watchdog observer by default when a file or directory is modified."""
         self.throttle_updates(datetime.datetime.now(), event)
 
+class RedirectingHTTPRequestHandler(SimpleHTTPRequestHandler):
+    def send_head(self):
+        path = self.translate_path(self.path)
+        if path.endswith("/"):
+            htaccess = os.path.join(path, ".htaccess")
+        else:
+            htaccess = os.path.join(os.path.dirname(path), ".htaccesss")
+        if os.path.exists(htaccess):
+            _htaccess = open(htaccess, "rb").readlines()
+            for l in _htaccess:
+                if l.startswith("RewriteRule"):
+                    RR, regex, dest = l.split(" ", 2)
+                    if regex == ".*":
+                        self.send_response(302)
+                        self.send_header("Location", dest)
+                        self.end_headers()
+                        return None
+        return SimpleHTTPRequestHandler.send_head(self)
 
 def setup_httpd(port, path):
     """Setup and start the SimpleHTTPServer for the --watch command."""
     cwd = os.getcwd()
     os.chdir(path)
-    handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-    httpd = SocketServer.TCPServer(("", port), handler)
+    handler = RedirectingHTTPRequestHandler
+    httpd = TCPServer(("", port), handler)
     process = multiprocessing.Process(target=httpd.serve_forever)
     process.daemon = True
     process.start()

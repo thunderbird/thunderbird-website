@@ -46,8 +46,8 @@ CANONICAL_URL = 'https://www.thunderbird.net'
 # url for the server that serves Thunderbird downloads.
 BOUNCER_URL = 'https://download.mozilla.org/'
 
-# url for the ftp server where Nightly builds are hosted.
-NIGHTLY_URL = 'https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/'
+# url for the ftp server where Daily builds are hosted.
+DAILY_URL = 'https://ftp.mozilla.org/pub/thunderbird/nightly/latest-comm-central-l10n/'
 
 # url for the mozilla wiki used for some documentation.
 WIKI_URL = 'https://wiki.mozilla.org'
@@ -57,6 +57,9 @@ ASSETS = 'assets'
 
 # base url for media files
 MEDIA_URL = '/media'
+
+# location of the Thunderbird favicon
+FAVICON_PATH = '/media/img/thunderbird/favicon.ico'
 
 # path to the website templates
 WEBSITE_PATH = 'website/'
@@ -102,6 +105,7 @@ URL_MAPPINGS = {
     'thunderbird.careers': '/careers',
     'thunderbird.channel': '/channel',
     'thunderbird.contact': '/contact',
+    'thunderbird.download-beta': '/download/beta',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
     'thunderbird.enterprise.documentation': 'https://enterprise.thunderbird.net/',
     'thunderbird.features': '/features',
@@ -126,7 +130,7 @@ ENUS_ONLY = [
 
 DONATE_LINK = (
     'https://give.thunderbird.net/'
-    '?utm_source={source}&utm_medium=referral&utm_content={content}'
+    '?utm_source={source}&utm_medium={medium}&utm_content={content}'
 )
 
 # WEBSITE_CSS = {

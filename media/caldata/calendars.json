@@ -74,13 +74,13 @@
   {
     "country":"Finland (Finnish)",
     "filename":"FinlandHolidays.ics",
-    "datespan":"2007-2021",
+    "datespan":"2007-2024",
     "authors":"Magnus Melin"
   },
   {
     "country":"Finland (Swedish)",
     "filename":"FinlandHolidaysSwedish.ics",
-    "datespan":"2007-2021",
+    "datespan":"2007-2024",
     "authors":"Magnus Melin"
   },
   {
@@ -115,8 +115,8 @@
   {
     "country":"Hungary",
     "filename":"HungarianHolidays.ics",
-    "datespan":"2015-2020",
-    "authors":"spiraldancing"
+    "datespan":"2015-2060",
+    "authors":"spiraldancing, tozo"
   },
   {
     "country":"Iceland",
@@ -175,11 +175,23 @@
     "country":"Netherlands",
     "filename":"DutchHolidays.ics",
     "datespan":"2010-2050",
-    "authors":"Pander"
+    "authors":"Pander, RobJE"
   },
   {
     "country":"Netherlands (English)",
     "filename":"DutchHolidaysEnglish.ics",
+    "datespan":"2010-2050",
+    "authors":"Pander"
+  },
+  {
+    "country":"Netherlands (German)",
+    "filename":"DutchHolidaysGerman.ics",
+    "datespan":"2010-2050",
+    "authors":"Pander"
+  },
+  {
+    "country":"Netherlands (French)",
+    "filename":"DutchHolidaysFrench.ics",
     "datespan":"2010-2050",
     "authors":"Pander"
   },
@@ -218,6 +230,18 @@
     "filename":"RussiaHolidays.ics",
     "datespan":"2010-2020",
     "authors":"Alexander L. Slovesnik"
+  },
+  {
+    "country":"Singapore",
+    "filename":"SingaporePublicHolidays-2021.ics",
+    "datespan":"2021",
+    "authors":"Singapore Ministry of Manpower"
+  },
+  {
+    "country":"Singapore",
+    "filename":"SingaporePublicHolidays-2022.ics",
+    "datespan":"2022",
+    "authors":"Singapore Ministry of Manpower"
   },
   {
     "country":"Slovenia",

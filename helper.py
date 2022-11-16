@@ -212,11 +212,11 @@ def platform_img(ctx, url, optional_attributes=None):
 def download_thunderbird(ctx, channel='release', dom_id=None,
                          locale=None, force_direct=False,
                          alt_copy=None, button_color='button-green',
-                         section='header'):
+                         section='header', flex_class=None):
     """ Output a "Download Thunderbird" button.
 
     :param ctx: context from calling template.
-    :param channel: name of channel: 'release', 'beta' or 'nightly'. 'alpha' has been retired.
+    :param channel: name of channel: 'release', 'beta' or 'daily'. 'alpha' has been retired.
     :param dom_id: Use this string as the id attr on the element.
     :param locale: The locale of the download. Default to locale of request.
     :param force_direct: Force the download URL to be direct.
@@ -278,6 +278,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
         'alt_copy': alt_copy,
         'button_color': button_color,
         'section': section,
+        'flex_class': flex_class
     }
     loader = jinja2.FileSystemLoader(searchpath=settings.WEBSITE_PATH)
     env = jinja2.Environment(loader=loader, extensions=['jinja2.ext.i18n'])
@@ -317,13 +318,19 @@ def thunderbird_url(page, channel='None'):
 
 
 @jinja2.contextfunction
-def donate_url(ctx, content='', source='thunderbird.net', download=False):
+def donate_url(ctx, content='', source='thunderbird.net', medium='referral', campaign='', download=False):
     # If this link is from a download button, donate.mozilla.org has thank you text.
     download_string = ''
     if download:
         download_string = '&tbdownload=true'
 
-    return settings.DONATE_LINK.format(content=content, source=source) + download_string
+    # Add utm_campaign if we are using it.
+    campaign_string = ''
+    if campaign:
+        campaign_string = '&utm_campaign={0}'.format(campaign)
+
+    return (settings.DONATE_LINK.format(content=content, source=source, medium=medium)
+            + campaign_string + download_string)
 
 
 def safe_markdown(text):
