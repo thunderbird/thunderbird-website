@@ -10,7 +10,7 @@ This repo contains the Thunderbird in-client Start page and the [www.thunderbird
 On Ubuntu, you would need to use apt-get instead of yum, and similarly for different package managers.
 
 ```
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
 git clone -b production https://github.com/mozilla-releng/product-details.git
 sudo yum install npm

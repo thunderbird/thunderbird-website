@@ -334,6 +334,7 @@ class UpdateHandler(FileSystemEventHandler):
         """This method is called by the watchdog observer by default when a file or directory is modified."""
         self.throttle_updates(datetime.datetime.now(), event)
 
+
 class RedirectingHTTPRequestHandler(SimpleHTTPRequestHandler):
     def send_head(self):
         path = self.translate_path(self.path)
@@ -353,12 +354,15 @@ class RedirectingHTTPRequestHandler(SimpleHTTPRequestHandler):
                         return None
         return SimpleHTTPRequestHandler.send_head(self)
 
+
 def setup_httpd(port, path):
     """Setup and start the SimpleHTTPServer for the --watch command."""
     cwd = os.getcwd()
     os.chdir(path)
     handler = RedirectingHTTPRequestHandler
     httpd = TCPServer(("", port), handler)
+    if sys.version_info[0] == 3:
+        multiprocessing.set_start_method("fork")
     process = multiprocessing.Process(target=httpd.serve_forever)
     process.daemon = True
     process.start()
