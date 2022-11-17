@@ -343,7 +343,7 @@ class RedirectingHTTPRequestHandler(SimpleHTTPRequestHandler):
         else:
             htaccess = os.path.join(os.path.dirname(path), ".htaccesss")
         if os.path.exists(htaccess):
-            _htaccess = open(htaccess, "rb").readlines()
+            _htaccess = open(htaccess, "r").readlines()
             for l in _htaccess:
                 if l.startswith("RewriteRule"):
                     RR, regex, dest = l.split(" ", 2)
