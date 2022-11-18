@@ -105,16 +105,27 @@ body {
 }
 
 header {
-  display: flex;
-  flex: 1;
+  margin: 0 auto;
+  max-width: 200ch;
+}
+
+#initAppeal {
+  display: grid;
+  grid-template-columns: 1fr auto;
   gap: 2em;
   padding: 1em;
   margin-bottom: 4em;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  #initAppeal {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 main {
-  display: grid;
-  gap: 2em;
   padding: 1em;
   margin: 0 auto;
   max-width: 100ch;
@@ -133,11 +144,15 @@ main {
   --accent-text: #7F1D1D;
 
   background: rgb(255,59,59);
-  background-image: linear-gradient(127deg, rgba(255,59,59,1) 0%, rgba(168,33,33,1) 45%, rgba(255,230,230,1) 45%, rgba(255,241,241,1) 100%);
+  background-image: url('/media/img/thunderbird/backgrounds/hearts-bg.png'),
+                    linear-gradient(127deg, rgba(255,59,59,1) 0%, rgba(168,33,33,1) 45%, rgba(255,230,230,1) 45%, rgba(255,241,241,1) 100%);
+  background-position: top left, center;
+  background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 3px;
   color: white;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1em;
   font-size: 1.25rem;
   padding: 1em;
@@ -145,29 +160,135 @@ main {
   margin-top: -75px;
   text-decoration: none;
   box-shadow: var(--shadow);
-  min-height: 100px;
   transition: transform 0.3s ease-in-out;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .donate-banner:hover {
   transform: scale(1.05);
 }
 
+.donate-banner:hover > #decoration > #pill-1 {
+  animation: 5s infinite alternate pill-float;
+}
+
+.donate-banner:hover > #decoration > #pill-2 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.1s;
+}
+
+.donate-banner:hover > #decoration > #pill-3 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.2s;
+}
+
+.donate-banner:hover > #decoration > #pill-4 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.3s;
+}
+
+.donate-banner:hover > #decoration > #pill-5 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.4s;
+}
+
+.donate-banner:hover > #decoration > #pill-6 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.5s;
+}
+
+.donate-banner:hover > #decoration > #pill-7 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.6s;
+}
+
+.donate-banner:hover > #decoration > #pill-8 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.7s;
+}
+
+.donate-banner:hover > #decoration > #pill-9 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.8s;
+}
+
 #decoration {
-  background-image: url('/media/img/thunderbird/backgrounds/decoration.png');
-  background-size: 100%;
-  background-position: center;
-  background-repeat: repeat-x;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  place-items: stretch;
   height: 100px;
   width: 500px;
   transform: rotate(-54deg);
 }
 
+.pill {
+  display: block;
+  background: rgba(255,59,59,0.75);
+  border-radius: 1000px;
+  transform: translateX(-50px);
+}
+
+@keyframes pill-float {
+  from {
+    transform: translateX(-50px);
+  }
+
+  to {
+    transform: translateX(100px);
+  }
+}
+
+#pill-1 {
+  grid-column: 4 / span 8;
+  grid-row: 5 / span 3;
+
+}
+
+#pill-2 {
+  grid-column: 10 / span 4;
+  grid-row: 6 / span 1;
+}
+
+#pill-3 {
+  grid-column: 8 / span 4;
+  grid-row: 3 / span 1;
+}
+
+#pill-4 {
+  grid-column: 4 / span 3;
+  grid-row: 3 / span 1;
+}
+
+#pill-5 {
+  grid-column: 6 / span 4;
+  grid-row: 9 / span 1;
+}
+
+#pill-6 {
+  grid-column: 11 / span 1;
+  grid-row: 9 / span 1;
+}
+
+#pill-7 {
+  grid-column: 13 / span 2;
+  grid-row: 9 / span 1;
+}
+
+#pill-8 {
+  grid-column: 13 / span 3;
+  grid-row: 7 / span 1;
+}
+
+#pill-9 {
+  grid-column: 14 / span 3;
+  grid-row: 4 / span 1;
+}
+
 .letter-container {
   padding: 2em;
-  padding-top: -50px;
   background: var(--bg);
   border-radius: 6px;
   box-shadow: var(--shadow);
