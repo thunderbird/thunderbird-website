@@ -22,8 +22,8 @@
 </div>
 <header>
   {% block header_content %}
-  <section class="text-left flex justify-between pl-8 pr-8 md:pl-16 md:pr-16 max-w-8xl mx-auto pt-12">
-    <aside class="flex-col items-start">
+  <section id="initAppeal" class="text-left font-xl pl-8 pr-8 md:pl-16 md:pr-16 max-w-8xl mx-auto pt-12">
+    <aside>
       <h1 class="accent-text">
         <span class="font-light">{{ _('Help Keep')}}</span>
         <br>
@@ -39,7 +39,7 @@
         {{ _('We don’t show advertisements or sell your data and we are completely funded by donations from our community.')}}
       </p>
     </aside>
-    <aside class="flex-col items-start">
+    <aside>
       <span id="illustration">{{ svg('tb-donate-illustration') }}</span>
     </aside>
   </section>
@@ -51,7 +51,7 @@
 {% endblock email_form %}
 
 {% block content %}
-<section>
+<section class="font-xl">
   <div class="letter-container">
     <a href="#" class="donate-banner">
       <div>
@@ -60,7 +60,15 @@
         <strong>Donate!</strong>
       </div>
       <div id="decoration">
-
+        <div id="pill-1" class="pill"></div>
+        <div id="pill-2" class="pill"></div>
+        <div id="pill-3" class="pill"></div>
+        <div id="pill-4" class="pill"></div>
+        <div id="pill-5" class="pill"></div>
+        <div id="pill-6" class="pill"></div>
+        <div id="pill-7" class="pill"></div>
+        <div id="pill-8" class="pill"></div>
+        <div id="pill-9" class="pill"></div>
       </div>
       <div class="text-right accent-text self-end">
         Help keep
