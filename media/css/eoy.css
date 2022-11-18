@@ -350,6 +350,7 @@ main {
 
 .left-lines > .line:nth-child(2) {
   margin-left: 3em;
+  margin-right: 0.25em;
 }
 
 .left-lines > .line:nth-child(1) {
@@ -358,6 +359,7 @@ main {
 
 .right-lines > .line:nth-child(2) {
   margin-right: 3em;
+  margin-left: 0.25em;
 }
 
 .right-lines > .line:nth-child(1) {
