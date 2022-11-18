@@ -145,7 +145,7 @@ main {
 
   background: rgb(255,59,59);
   background-image: url('/media/img/thunderbird/backgrounds/hearts-bg.png'),
-                    linear-gradient(127deg, rgba(255,59,59,1) 0%, rgba(168,33,33,1) 45%, rgba(255,230,230,1) 45%, rgba(255,241,241,1) 100%);
+                    linear-gradient(125deg, rgba(255,59,59,1) 0%, rgba(168,33,33,1) 45%, rgba(255,230,230,1) 45%, rgba(255,241,241,1) 100%);
   background-position: top left, center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -171,16 +171,16 @@ main {
 
 .donate-banner:hover > #decoration > #pill-1 {
   animation: 5s infinite alternate pill-float;
+  animation-delay: 0.2s;
 }
 
 .donate-banner:hover > #decoration > #pill-2 {
   animation: 5s infinite alternate pill-float;
-  animation-delay: 0.1s;
 }
 
 .donate-banner:hover > #decoration > #pill-3 {
   animation: 5s infinite alternate pill-float;
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 .donate-banner:hover > #decoration > #pill-4 {
@@ -213,6 +213,11 @@ main {
   animation-delay: 0.8s;
 }
 
+.donate-banner:hover > #decoration > #pill-10 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.4s;
+}
+
 #decoration {
   position: absolute;
   display: grid;
@@ -221,7 +226,7 @@ main {
   place-items: stretch;
   height: 100px;
   width: 500px;
-  transform: rotate(-54deg);
+  transform: rotate(-55deg);
 }
 
 .pill {
@@ -253,7 +258,7 @@ main {
 }
 
 #pill-3 {
-  grid-column: 8 / span 4;
+  grid-column: 8 / span 3;
   grid-row: 3 / span 1;
 }
 
@@ -274,16 +279,21 @@ main {
 
 #pill-7 {
   grid-column: 13 / span 2;
-  grid-row: 9 / span 1;
+  grid-row: 10 / span 1;
 }
 
 #pill-8 {
   grid-column: 13 / span 3;
-  grid-row: 7 / span 1;
+  grid-row: 8 / span 1;
 }
 
 #pill-9 {
   grid-column: 14 / span 3;
+  grid-row: 4 / span 1;
+}
+
+#pill-10 {
+  grid-column: 12 / span 1;
   grid-row: 4 / span 1;
 }
 
