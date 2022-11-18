@@ -82,8 +82,8 @@ html {
 body {
   background-color: #B7E0FC;
   background-image: url('/media/img/thunderbird/backgrounds/forest-bg-light.jpg');
-  background-position: top center;
-  background-size: auto 500px;
+  background-position: top left;
+  background-size: auto 400px;
   background-repeat: repeat-x;
   color: var(--text);
   position: relative;
@@ -98,9 +98,6 @@ body {
   body {
     background: #204571;
     background-image: url('/media/img/thunderbird/backgrounds/forest-bg-dark.jpg');
-    background-position: top center;
-    background-size: auto 500px;
-    background-repeat: repeat-x;
   }
 }
 
@@ -305,7 +302,7 @@ main {
   right: -4px;
   bottom: -4px;
   border-radius: 12px;
-  filter: blur(32px);
+  filter: blur(64px);
   opacity: 0.8;
   z-index: -1;
 }
@@ -342,7 +339,7 @@ main {
   margin-left: 1em;
 }
 
-.left-lines > .line:nth-child(3) {
+.left-lines > .line:nth-child(1) {
   margin-left: 2em;
 }
 
@@ -350,6 +347,6 @@ main {
   margin-right: 1em;
 }
 
-.right-lines > .line:nth-child(3) {
+.right-lines > .line:nth-child(1) {
   margin-right: 2em;
 }
