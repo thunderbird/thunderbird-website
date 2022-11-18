@@ -325,6 +325,9 @@ class UpdateHandler(FileSystemEventHandler):
             timemsg = timestamp.strftime("%H:%M:%S")
             if settings.ASSETS in event.src_path:
                 self.builder.partial_asset_build(event.src_path, timemsg)
+            elif settings.MEDIA_URL[1:] in event.src_path:
+                self.builder.build_assets()
+                print("{0}: All Assets rebuilt.".format(timemsg))
             else:
                 self.updatesite(event)
                 print("{0}: Website rebuilt.".format(timemsg))
