@@ -53,11 +53,11 @@
 {% block content %}
 <section class="font-xl">
   <div class="letter-container">
-    <a href="#" class="donate-banner">
+    <a href="https://give.thunderbird.net/?utm_source=thunderbird-client&utm_medium=referral&utm_content=EOY22" class="donate-banner">
       <div>
-        Click here to
+        {{ _('Click here to') }}
         <br>
-        <strong>Donate!</strong>
+        <strong>{{ _('Donate!') }}</strong>
       </div>
       <div id="decoration">
         <div id="pill-1" class="pill"></div>
@@ -71,9 +71,9 @@
         <div id="pill-9" class="pill"></div>
       </div>
       <div class="text-right accent-text self-end">
-        Help keep
+        {{ _('Help keep') }}
         <br>
-        <strong>Thunderbird Alive!</strong>
+        <strong>{{ _('Thunderbird Alive!') }}</strong>
       </div>
     </a>
     <p>
@@ -99,7 +99,7 @@
       </div>
     </div>
     <p class="text-center accent-text"">
-      The Thunderbird Team
+      {{ _('The Thunderbird Team') }}
     </p>
   </div>
 </section>
