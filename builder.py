@@ -15,6 +15,7 @@ import webassets
 if sys.version_info[0] == 3:
     from socketserver import TCPServer
     import http.server
+    TCPServer.allow_reuse_address = True
     SimpleHTTPServer = http.server.HTTPServer
     SimpleHTTPRequestHandler = http.server.SimpleHTTPRequestHandler
 else:
