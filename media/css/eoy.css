@@ -97,6 +97,9 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background: #204571;
+    background-position: top left;
+    background-size: auto 400px;
+    background-repeat: repeat-x;
     background-image: url('/media/img/thunderbird/backgrounds/forest-bg-dark.jpg');
   }
 }
@@ -336,17 +339,17 @@ main {
 }
 
 .left-lines > .line:nth-child(2) {
-  margin-left: 1em;
+  margin-left: 3em;
 }
 
 .left-lines > .line:nth-child(1) {
-  margin-left: 2em;
+  margin-left: 6em;
 }
 
 .right-lines > .line:nth-child(2) {
-  margin-right: 1em;
+  margin-right: 3em;
 }
 
 .right-lines > .line:nth-child(1) {
-  margin-right: 2em;
+  margin-right: 6em;
 }
