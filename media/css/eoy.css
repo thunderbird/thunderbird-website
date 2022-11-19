@@ -307,10 +307,7 @@ main {
   position: absolute;
   background: #2493EF;
   background-image: linear-gradient(127deg, #00FFFF, #DB00FF);
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
+  inset: -4px;
   border-radius: 12px;
   filter: blur(64px);
   opacity: 0.8;
