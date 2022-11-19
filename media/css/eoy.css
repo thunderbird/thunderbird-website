@@ -96,10 +96,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #204571;
-    background-position: top left;
-    background-size: auto 400px;
-    background-repeat: repeat-x;
+    background-color: #204571;
     background-image: url('/media/img/thunderbird/backgrounds/forest-bg-dark.jpg');
   }
 }
