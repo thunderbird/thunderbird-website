@@ -1,0 +1,361 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNS-Light"), local(".SFNSText-Light"), local("Segoe UI Light"), local("Ubuntu Light");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 300;
+  src: local(".SFNS-LightItalic"), local(".SFNSText-LightItalic"), local("Segoe UI Light Italic"), local("Ubuntu Light Italic");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 400;
+  src: local(".SFNS-Regular"), local(".SFNSText-Regular"), local("Segoe UI"), local("Ubuntu");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 400;
+  src: local(".SFNS-Italic"), local(".SFNSText-Italic"), local("Segoe UI Italic"), local("Ubuntu Italic");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 500;
+  src: local(".SFNS-Medium"), local(".SFNSText-Medium"), local("Segoe UI Semibold"), local("Ubuntu Medium");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 500;
+  src: local(".SFNS-MediumItalic"), local(".SFNSText-MediumItalic"), local("Segoe UI Semibold Italic"), local("Ubuntu Medium Italic");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 700;
+  src: local(".SFNS-Bold"), local(".SFNSText-Bold"), local("Segoe UI Bold"), local("Ubuntu Bold");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 700;
+  src: local(".SFNS-BoldItalic"), local(".SFNSText-BoldItalic"), local("Segoe UI Bold Italic"), local("Ubuntu Bold Italic");
+}
+
+:root {
+  --bg: #f9f9fa;
+  --text: #333;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --accent-text: #15427C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #2F2F33;
+    --text: #F9F9FA;
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    --accent-text: #DDEEFE;
+  }
+}
+
+html {
+  font-family: system-ui, Open Sans, sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  background-color: #B7E0FC;
+  background-image: url('/media/img/thunderbird/backgrounds/forest-bg-light.jpg');
+  background-position: top left;
+  background-size: auto 400px;
+  background-repeat: repeat-x;
+  color: var(--text);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #204571;
+    background-image: url('/media/img/thunderbird/backgrounds/forest-bg-dark.jpg');
+  }
+}
+
+header {
+  margin: 0 auto;
+  max-width: 200ch;
+}
+
+#initAppeal {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2em;
+  padding: 1em;
+  margin-bottom: 4em;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  #initAppeal {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+main {
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 100ch;
+}
+
+.accent-text {
+  color: var(--accent-text);
+}
+
+#illustration > svg {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.donate-banner {
+  --accent-text: #7F1D1D;
+
+  background: rgb(255,59,59);
+  background-image: url('/media/img/thunderbird/backgrounds/hearts-bg.png'),
+                    linear-gradient(125deg, rgba(255,59,59,1) 0%, rgba(168,33,33,1) 45%, rgba(255,230,230,1) 45%, rgba(255,241,241,1) 100%);
+  background-position: top left, center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  font-size: 1.25rem;
+  padding: 1em;
+  margin: 2em;
+  margin-top: -75px;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.donate-banner:hover {
+  transform: scale(1.05);
+}
+
+.donate-banner:hover > #decoration > #pill-1 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.2s;
+}
+
+.donate-banner:hover > #decoration > #pill-2 {
+  animation: 5s infinite alternate pill-float;
+}
+
+.donate-banner:hover > #decoration > #pill-3 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.1s;
+}
+
+.donate-banner:hover > #decoration > #pill-4 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.3s;
+}
+
+.donate-banner:hover > #decoration > #pill-5 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.4s;
+}
+
+.donate-banner:hover > #decoration > #pill-6 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.5s;
+}
+
+.donate-banner:hover > #decoration > #pill-7 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.6s;
+}
+
+.donate-banner:hover > #decoration > #pill-8 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.7s;
+}
+
+.donate-banner:hover > #decoration > #pill-9 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.8s;
+}
+
+.donate-banner:hover > #decoration > #pill-10 {
+  animation: 5s infinite alternate pill-float;
+  animation-delay: 0.4s;
+}
+
+#decoration {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  place-items: stretch;
+  height: 100px;
+  width: 500px;
+  transform: rotate(-55deg);
+}
+
+.pill {
+  display: block;
+  background: rgba(255,59,59,0.75);
+  border-radius: 1000px;
+  transform: translateX(-50px);
+}
+
+@keyframes pill-float {
+  from {
+    transform: translateX(-50px);
+  }
+
+  to {
+    transform: translateX(100px);
+  }
+}
+
+#pill-1 {
+  grid-column: 4 / span 8;
+  grid-row: 5 / span 3;
+
+}
+
+#pill-2 {
+  grid-column: 10 / span 4;
+  grid-row: 6 / span 1;
+}
+
+#pill-3 {
+  grid-column: 8 / span 3;
+  grid-row: 3 / span 1;
+}
+
+#pill-4 {
+  grid-column: 4 / span 3;
+  grid-row: 3 / span 1;
+}
+
+#pill-5 {
+  grid-column: 6 / span 4;
+  grid-row: 9 / span 1;
+}
+
+#pill-6 {
+  grid-column: 11 / span 1;
+  grid-row: 9 / span 1;
+}
+
+#pill-7 {
+  grid-column: 13 / span 2;
+  grid-row: 10 / span 1;
+}
+
+#pill-8 {
+  grid-column: 13 / span 3;
+  grid-row: 8 / span 1;
+}
+
+#pill-9 {
+  grid-column: 14 / span 3;
+  grid-row: 4 / span 1;
+}
+
+#pill-10 {
+  grid-column: 12 / span 1;
+  grid-row: 4 / span 1;
+}
+
+.letter-container {
+  padding: 2em;
+  background: var(--bg);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.letter-container:before {
+  content: '';
+  position: absolute;
+  background: #2493EF;
+  background-image: linear-gradient(127deg, #00FFFF, #DB00FF);
+  inset: -4px;
+  border-radius: 12px;
+  filter: blur(64px);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.heart-container {
+  color: hotpink;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1em;
+  place-items: center;
+  margin-top: 2em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .heart-container {
+    color: pink;
+  }
+}
+
+.line {
+  display: block;
+  height: 1px;
+  border-top: 1px solid dodgerblue;
+}
+
+.left-lines,
+.right-lines {
+  display: grid;
+  gap: 1px;
+  place-self: stretch;
+}
+
+.left-lines > .line:nth-child(2) {
+  margin-left: 3em;
+  margin-right: 0.25em;
+}
+
+.left-lines > .line:nth-child(1) {
+  margin-left: 6em;
+}
+
+.right-lines > .line:nth-child(2) {
+  margin-right: 3em;
+  margin-left: 0.25em;
+}
+
+.right-lines > .line:nth-child(1) {
+  margin-right: 6em;
+}
