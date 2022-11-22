@@ -121,6 +121,12 @@ START_RENDERPATH = 'site'
 
 CALDATA_URL = MEDIA_URL + '/caldata/'
 
+CALDATA_AUTOGEN_URL = 'media/caldata/autogen/'
+
+CALDATA_AUTOGEN_AUTHOR = 'Thunderbird'
+
+CALDATA_YEARS_TO_GENERATE = 3
+
 # path to product-details json files
 JSON_PATH = 'product-details/public/1.0'
 
@@ -283,3 +289,86 @@ LOCALE_CURRENCIES = {
     'te': 'inr',
     'zh-TW': 'twd'
  }
+
+CALENDARIFIC_API_URL = "https://calendarific.com/api/v2/holidays"
+
+# Country Code : Calendar Name
+CALENDAR_LOCALES = {
+    'AL': ('Albania', 'sq'),
+    'DZ': [('Algeria (Arabic)', 'ar'), ('Algeria (French)', 'fr')],
+    'AR': ('Argentina', 'es'),
+    'AM': ('Armenia', 'hy'),
+    'AU': ('Australia', 'en'),
+    'AT': ('Austrian', 'de'),
+    'BE': [('Belgian (French)', 'fr'), ('Belgian (Dutch)', 'nl')],
+    'BO': ('Bolivia', 'es'),
+    'BR': ('Brazil', 'pt'),
+    'BG': ('Bulgaria', 'bg'),
+    'CA': [('Canada (English)', 'en'), ('Canada (French)', 'fr')],
+    'CL': ('Chile', 'es'),
+    'CN': ('China', 'zh'),
+    'CO': ('Colombia', 'es'),
+    'CR': ('Costa Rica', 'es'),
+    'HR': ('Croatia', 'hr'),
+    'CZ': ('Czech', 'cs'),
+    'DK': ('Denmark', 'da'),
+    'DO': ('Dominican Republic', 'es'),
+    'NL': ('Netherlands', 'nl'),
+    'EE': ('Estonia', 'et'),
+    'FI': ('Finland', 'fi'),
+    'FR': ('France', 'fr'),
+    'DE': ('Germany', 'de'),
+    'GR': ('Greece', 'el'),
+    'GY': ('Guyana', 'en'),
+    'HT': ('Haiti', 'ht'),
+    'HK': ('Hong Kong', 'zh'),
+    'HU': ('Hungary', 'hu'),
+    'IS': ('Iceland', 'is'),
+    'IN': ('India', 'hi'),
+    'ID': ('Indonesia', 'id'),
+    'IE': [('Ireland (Irish)', 'ga'), ('Ireland (English)', 'en')],
+    'IL': ('Israel', 'en'),
+    'IT': ('Italy', 'it'),
+    'JP': ('Japan', 'ja'),
+    'KZ': ('Kazakhstan', 'kk'),
+    'KE': ('Kenya', 'sw'),
+    'LV': ('Latvia', 'lv'),
+    'LB': ('Lebanon', 'ar'),
+    'LI': ('Liechtenstein', 'de'),
+    'LT': ('Lithuania', 'lt'),
+    'LU': [('Luxembourg (French)', 'fr'), ('Luxembourg (German)', 'de')],
+    'MY': ('Malaysia', 'ms'),
+    'MT': ('Malta', 'mt'),
+    'MX': ('Mexico', 'es'),
+    'MA': ('Morocco', 'ar'),
+    'NA': ('Namibia', 'en'),
+    'NZ': ('New Zealand', 'en'),
+    'NI': ('Nicaragua', 'en'),
+    'NO': ('Norway', 'no'),
+    'PK': ('Pakistan', 'ur'),
+    'PE': ('Peru', 'es'),
+    'PH': ('Philippines', 'en'),
+    'PL': ('Polish', 'pl'),
+    'PT': ('Portugal', 'pt'),
+    'PR': ('Puerto Rico', 'en'),
+    'RO': ('Romania', 'ro'),
+    'RU': ('Russia', 'ru'),
+    'SG': ('Singapore', 'ms'),
+    'SK': ('Slovakia', 'sk'),
+    'SI': ('Slovenia', 'sl'),
+    'ZA': ('South Africa', 'en'),
+    'KR': ('South Korea', 'ko'),
+    'ES': ('Spain', 'es'),
+    'LK': ('Sri Lanka', 'en'),
+    'SE': ('Swedish', 'sv'),
+    'CH': ('Switzerland', 'en'),
+    'TW': ('Taiwan', 'zh'),
+    'TH': ('Thailand', 'th'),
+    'TT': ('Trinidad and Tobago', 'en'),
+    'TR': ('Turkey', 'tr'),
+    'GB': ('United Kingdom', 'en'),
+    'UA': ('Ukraine', 'uk'),
+    'UY': ('Uruguay', 'es'),
+    'US': ('United States', 'en'),
+    'VN': ('Vietnam', 'vi'),
+}

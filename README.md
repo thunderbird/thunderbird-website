@@ -42,6 +42,9 @@ There are additional arguments:
     * Note that this only rebuilds when you modify a file. To add or remove files, you should start a new build.
 * `--port`
     * Sets the port to be used for the localhost server. Default is 8000. Format: `--port 8000`.
+* `--buildcalendar`
+    * This builds the holiday calendars. Normally this will build every locale, but you can restrict the build to just US by using the `--enus` options.
+
 
 * thunderbird.net templates are in the `website` directory, and start page in the `start-page` dir. Assets are shared and in the `assets` dir.
 
@@ -101,3 +104,8 @@ The actual questions and answers part of the FAQ can be found in `./faq.py`. Mak
 # Tests
 
 There are several pytests located in `./tests`. To run the full test-suite, simply use the command `python3 -m pytest`.
+
+# Calendar Generation
+
+Calendar generation can be manually built by appending the option`--buildcalendar`. This queries our current calendar provider (Calendarific) and generates a `.ics` file per each locale specified in settings.py. For testing, you can limit this to just US by using the option `--enus`. 
+This option requires setting the `CALENDARIFIC_API_KEY=` environment variable. If you're using a paid plan you can also set `CALENDARIFIC_IS_FREE_TIER=false` to remove the sleep time between calls.

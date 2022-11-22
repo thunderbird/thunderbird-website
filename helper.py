@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 import inspect
+import os
 
 import jinja2
 import json
@@ -461,6 +462,14 @@ def get_form_assembly_localization_url(ctx):
     fa_locale = settings.FA_LANGUAGES.get(locale, 'en_US')
 
     return "https://mozillafoundation.tfaforms.net/wForms/3.11/js/localization-{locale}.js?v=127d5d34f78f067204f2463a3699a1688fbf2ca7".format(locale=fa_locale)
+
+
+def is_calendarific_free_tier():
+    """Returns if we're expecting to use the Calendarific free tier"""
+    try:
+        return os.environ['CALENDARIFIC_IS_FREE_TIER'].lower() == 'true'
+    except KeyError:
+        return True
 
 
 def f(s, *args, **kwargs):
