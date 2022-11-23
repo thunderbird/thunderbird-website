@@ -16,29 +16,29 @@
 
  {% block page_title %}{{ _('Help Keep Thunderbird Alive!') }}{% endblock %}
 
+ {% block site_header_unwrapped %}
+ <div id="bg-gradient"></div>
+ {% endblock %}
+
  {% block site_header %}
-<header>
-  {% block header_content %}
-  <section id="initAppeal" class="text-left font-xl pl-8 pr-8 md:pl-16 md:pr-16 max-w-8xl mx-auto pt-12">
-    <aside>
-      <h1 class="accent-text">
-        {{ _('<span class="block font-light">Help Keep</span> Thunderbird Alive!')}}
-      </h1>
-      <p>
-        {{ _('Did you know that <strong>less than 1%</strong> of Thunderbird users fund all the work we do?')}}
-      </p>
-      <p>
-        {{ _('<strong>Not too long ago Thunderbird was on the verge of extinction.</strong> It’s because of donations from that small group of users that we are here today!')}}
-      </p>
-      <p>
-        {{ _('We don’t show advertisements or sell your data and we are completely funded by donations from our community.')}}
-      </p>
-    </aside>
-    <aside>
-      <span id="illustration">{{ svg('tb-donate-illustration') }}</span>
-    </aside>
-  </section>
-  {% endblock %}
+<header id="initAppeal" >
+  <aside>
+    <h1 class="accent-text">
+      {{ _('<span class="block font-light font-4xl">Help Keep</span> Thunderbird Alive!')}}
+    </h1>
+    <p>
+      {{ _('Did you know that <strong>less than 1%</strong> of Thunderbird users fund all the work we do?')}}
+    </p>
+    <p>
+      {{ _('<strong>Not too long ago Thunderbird was on the verge of extinction.</strong> It’s because of donations from that small group of users that we are here today!')}}
+    </p>
+    <p>
+      {{ _('We don’t show advertisements or sell your data and we are completely funded by donations from our community.')}}
+    </p>
+  </aside>
+  <aside id="illustration">
+    {{ svg('tb-donate-illustration') }}
+  </aside>
 </header>
 {% endblock %}
 
@@ -46,10 +46,9 @@
 {% endblock email_form %}
 
 {% block content %}
-<section class="font-xl">
-  <div class="letter-container">
+<section class="letter-container font-xl">
     <a href="https://give.thunderbird.net/?utm_source=thunderbird-client&utm_medium=referral&utm_content=EOY22" class="donate-banner">
-      <div>
+      <div id="donate-banner-left">
         {{ _('Click here to <strong class="block">Donate!</strong>') }}
       </div>
       <div id="decoration">
@@ -64,8 +63,13 @@
         <div id="pill-9" class="pill"></div>
         <div id="pill-10" class="pill"></div>
       </div>
-      <div class="text-right accent-text self-end">
+      <div id="donate-banner-right" class="text-right accent-text self-end">
         {{ _('Help keep <strong class="block">Thunderbird Alive!</strong>') }}
+      </div>
+      <div id="hover-hearts">
+        <div id="hover-heart-1">{{ svg('donate-heart') }}</div>
+        <div id="hover-heart-2">{{ svg('donate-heart') }}</div>
+        <div id="hover-heart-3">{{ svg('donate-heart') }}</div>
       </div>
     </a>
     <p>
@@ -90,10 +94,9 @@
         <div class="line"></div>
       </div>
     </div>
-    <p class="text-center accent-text"">
+    <p class="text-center accent-text">
       {{ _('The Thunderbird Team') }}
     </p>
-  </div>
 </section>
 {% endblock %}
 
