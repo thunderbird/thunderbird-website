@@ -280,7 +280,7 @@ main {
   --accent-text: var(--color-red-80);
 
   background: var(--color-red-50);
-  background-image: linear-gradient(125deg, var(--color-red-50) 0%, var(--color-red-70) 45%, var(--color-red-10) 45%, var(--color-gray-10) 100%);
+  background-image: linear-gradient(to right, var(--color-red-10), var(--color-gray-10));
   background-position: top left, center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -290,7 +290,7 @@ main {
   display: flex;
   justify-content: space-between;
   font-size: 1.25rem;
-  padding: 12px;
+  line-height: 1.1;
   margin: 0 auto;
   margin-top: -114px;
   text-decoration: none;
@@ -298,25 +298,30 @@ main {
   transition: transform 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-  width: 400px;
-  height: 100px;
+  width: 430px;
+  height: 120px;
   z-index: 10;
+}
+
+.donate-banner::after {
+  content: '';
+  position: absolute;
+  top: -210px;
+  left: -240px;
+  height: 420px;
+  width: 420px;
+  background-color: var(--color-red-50);
+  background-image: linear-gradient(var(--color-red-50), var(--color-red-70));
+  transform: rotate(36deg);
+  transition: transform 0.3s ease-in-out;
 }
 
 .donate-banner:hover {
   transform: scale(1.05);
-  animation: .5s background-fill forwards ease-out;
 }
 
-@keyframes background-fill {
-  from {
-    background-size: 100%;
-  }
-
-  to {
-    background-size: 300%;
-    background-color: var(--color-red-70);
-  }
+.donate-banner:hover::after {
+  transform: scale(3)
 }
 
 .donate-banner:hover #decoration,
@@ -330,6 +335,7 @@ main {
 
 #donate-banner-left,
 #donate-banner-right {
+  padding: 15px;
   transition: all .5s ease-in-out;
   z-index: 1;
 }
@@ -394,7 +400,7 @@ main {
 
 #decoration {
   position: absolute;
-  left: -70px;
+  left: -59px;
   display: grid;
   gap: 3px;
   grid-template-columns: repeat(20, 1fr);
@@ -404,6 +410,7 @@ main {
   width: 500px;
   transform: rotate(-55deg);
   transition: opacity .5s ease-in-out;
+  z-index: 1;
 }
 
 .pill {
@@ -481,6 +488,7 @@ main {
   right: 36px;
   display: none;
   gap: 3px;
+  z-index: 1;
 }
 
 #hover-heart-1,
@@ -522,18 +530,17 @@ main {
 }
 
 .donate-banner:hover #hover-hearts > #hover-heart-1 {
-  animation: 2s heart-fade forwards ease-in-out;
-  animation-delay: 0.4s;
+  animation: 1s heart-fade forwards ease-in-out;
+  animation-delay: 0.1s;
 }
 
 .donate-banner:hover #hover-hearts > #hover-heart-2 {
-  animation: 2s heart-fade forwards ease-in-out;
-  animation-delay: 0.3s;
+  animation: 1s heart-fade forwards ease-in-out;
 }
 
 .donate-banner:hover #hover-hearts > #hover-heart-3 {
-  animation: 2s heart-fade forwards ease-in-out;
-  animation-delay: 0.5s;
+  animation: 1s heart-fade forwards ease-in-out;
+  animation-delay: 0.2s;
 }
 
 @keyframes heart-fade {
