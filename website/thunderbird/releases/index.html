@@ -6,12 +6,13 @@
 
 {% block page_title %}{{ _('Thunderbird Release Notes') }}{% endblock %}
 {% block page_desc %}{{ _('Release notes for each version of Thunderbird.') }}{% endblock %}
+{% block extrahead %}<link rel="alternate" type="application/atom+xml" href="{{ settings.CANONICAL_URL + url('thunderbird.releases.atom') }}" title="Release Notes Atom Feed" />{% endblock %}
 
 {% block header_content %}
   <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
     <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
     <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
-      {{ _('Thunderbird release notes are specific to each version of the application. Select your version from the list below to see the release notes for it.') }}
+      {{ _('Thunderbird release notes are specific to each version of the application. Select your version from the list below to see the release notes for it. There\'s also a <a href="%(feed)s">Atom feed available</a>.')|format(feed=url('thunderbird.releases.atom')) }}
     </p>
   </section>
 {% endblock %}

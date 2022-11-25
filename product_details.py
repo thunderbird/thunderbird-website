@@ -181,6 +181,7 @@ class ThunderbirdDetails():
         return sorted(releases.items(), reverse=True)
 
     def beta_version_to_canonical(self, version):
+        """ Transforms beta version strings to the last point release. I.e. 102.0beta -> 102.0b8 """
         last = ''
         for x in range(1, 10):
             v = re.sub(r'beta', 'b{0}'.format(x), version)
@@ -190,6 +191,7 @@ class ThunderbirdDetails():
         return last
 
     def get_release_date(self, version):
+        """ Returns the last release date from a given version. """
         date = ''
         if 'b' in version:
             version = self.beta_version_to_canonical(version)

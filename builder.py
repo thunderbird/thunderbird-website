@@ -11,6 +11,7 @@ import sys
 import time
 import translate
 import webassets
+import htmlmin
 
 from socketserver import TCPServer
 import http.server
@@ -21,8 +22,10 @@ SimpleHTTPRequestHandler = http.server.SimpleHTTPRequestHandler
 from dateutil.parser import parse
 from jinja2 import Environment, FileSystemLoader
 from thunderbird_notes import releasenotes
+from product_details import thunderbird_desktop
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+from feedgen.feed import FeedGenerator
 
 extensions = ['jinja2.ext.i18n']
 
@@ -199,6 +202,7 @@ class Site(object):
         if self.lang != 'en-US':
             self._switch_lang('en-US')
 
+        feed_items = []
         notelist = releasenotes.notes
         note_template = self._env.get_template('includes/_enonly/release-notes.html')
         self._env.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
@@ -224,6 +228,7 @@ class Site(object):
             logger.info("Rendering {0}/index.html...".format(target))
             sysreq_template.stream().dump(os.path.join(target, 'index.html'))
 
+            feed_items.append((k, n))
         # Build htaccess files for sysreq and release notes redirects.
         sysreq_path = os.path.join(self.renderpath, 'system-requirements')
         notes_path = os.path.join(self.renderpath, 'notes')
@@ -231,6 +236,99 @@ class Site(object):
         write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
         write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes'))
         write_htaccess(beta_notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes', channel="beta"))
+
+        self.build_notes_feed(feed_items)
+
+    def build_notes_feed(self, feed_items):
+        """ Builds the release notes atom.xml file. Like build_notes, this is en-US only. """
+        if len(feed_items) == 0:
+            return
+
+        # RSS follows the notes, being only en-us
+        if self.lang != 'en-US':
+            self._switch_lang('en-US')
+
+        author_name = "Thunderbird"
+        author_link = settings.CANONICAL_URL
+
+        releases_page = "{}/{}/thunderbird/releases/".format(settings.CANONICAL_URL, self.lang)
+
+        feed = FeedGenerator()
+        feed.id(settings.CANONICAL_URL)
+        feed.title("Thunderbird Release Notes")
+        feed.author({'name': author_name, 'uri': author_link})
+        feed.link({'href': releases_page})
+        feed.subtitle("Thunderbird Release Notes feed provides a simple way to keep up to date with Thunderbird releases.")
+        feed.language(self.lang)
+
+        def sort_version_by_release_date(i):
+            """ Sort using the note's release date. """
+            return i[1]['release'].get('release_date')
+
+        # Sort notes by release date
+        feed_items.sort(key=sort_version_by_release_date, reverse=True)
+
+        releases = list(filter(lambda i: 'beta' not in i[0], feed_items))
+        betas = list(filter(lambda i: 'beta' in i[0], feed_items))
+
+        # We only want to display the last 10 releases, and the last 5 betas
+        feed_items_mixed = releases[:10] + betas[:5]
+        # Sort again by release date
+        feed_items_mixed.sort(key=sort_version_by_release_date, reverse=True)
+
+        content_template = self._env.get_template('includes/release-notes-feed.html')
+
+        self._env.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
+
+        for item in feed_items_mixed:
+            version = item[0]
+            note = item[1]
+
+            release_notes = note.get('release')
+
+            if release_notes is None:
+                print("Couldn't find release key for version {}, this shouldn't happen.".format(version))
+                continue
+
+            title = "Thunderbird {}".format(version)
+
+            self._env.globals.update(channel='Release', channel_name='Release')
+
+            if settings.SHOW_BETA_NOTES_IN_RSS_FEED and 'beta' in version:
+                # Remove redundant beta from title
+                title = "Thunderbird Beta {}".format(version.replace('beta', ''))
+                self._env.globals.update(channel='Beta', channel_name='Beta')
+
+            link = "{}/{}/thunderbird/{}/releasenotes/".format(settings.CANONICAL_URL, self.lang, version)
+
+            # Mix in our notes for the template
+            self._env.globals.update(**note)
+
+            # Pull in and minify our template
+            content = htmlmin.minify(content_template.render({'version_number': version, 'link': link}))
+
+            entry = feed.add_entry()
+            entry.id(link)
+            entry.title(title)
+            entry.link({'href': link})
+            entry.content(content, type='html')
+            entry.author({'name': author_name, 'uri': author_link})
+
+            # Note: Published Date is DateTime, but Updated Date is a string!
+            published_date = release_notes.get('release_date')
+            updated_date = thunderbird_desktop.get_release_date(version)
+
+            if published_date:
+                # Force it to UTC, pubDate checks for tzinfo
+                published_date = parse("{}Z".format(published_date.isoformat()))
+                entry.pubDate(published_date)
+            if updated_date:
+                # Force it to UTC, updated checks for tzinfo
+                updated_date = parse("{}T00:00:00Z".format(updated_date))
+                entry.updated(updated_date)
+
+        with open(os.path.join(self.outpath, 'thunderbird', 'releases', 'atom.xml'), "wb") as fh:
+            fh.write(feed.atom_str())
 
     def build_assets(self):
         """Build assets, that is, bundle and compile the LESS and JS files in `settings.ASSETS`."""
@@ -290,6 +388,7 @@ class Site(object):
         if assets:
             logger.info("Building assets...")
             self.build_assets()
+
 
 
 class UpdateHandler(FileSystemEventHandler):
