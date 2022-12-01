@@ -72,7 +72,7 @@ def application(environ, start_response):
 
     req = Request(environ)
 
-    if 'thunderbird' in req.path_qs:
+    if 'thunderbird' in req.path and 'eoy' not in req.path:
         # Release notes, system requirements, and 'all' builds pages are only available in English.
         language_code = 'en-US'
     else:
