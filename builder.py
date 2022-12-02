@@ -375,7 +375,7 @@ def setup_httpd(port, path):
     return process
 
 
-def setup_observer(builder_instance, port):
+def setup_observer(builder_instance):
     """Setup and start the watchdog observer for the --watch command."""
     handler = UpdateHandler(builder_instance)
     observer = Observer()
@@ -384,8 +384,25 @@ def setup_observer(builder_instance, port):
     observer.schedule(handler, path=settings.MEDIA_URL.strip('/'), recursive=True)
     observer.daemon = True
     observer.start()
+    return observer
+
+def setup_docker_watch(builder_instance):
+    """Setup and start just the watchdog observer. Temp for now."""
+    observer = setup_observer(builder_instance)
     print("Updating website when templates, CSS, or JS are modified. Press Ctrl-C to end.")
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("Shutting down watcher...")
+        observer.stop()
+        observer.join()
+
+def setup_local_watch(builder_instance, port):
+    """Setup and start the watchdog observer, and runs a local webserver."""
+    observer = setup_observer(builder_instance)
     server = setup_httpd(port, builder_instance.renderpath)
+    print("Updating website when templates, CSS, or JS are modified. Press Ctrl-C to end.")
     try:
         while True:
             time.sleep(1)

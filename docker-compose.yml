@@ -1,10 +1,9 @@
 services:
   website:
     image: wip-thunderbird-website
-    command: sh -c "/usr/local/bin/python build-site.py --enus --watch"
-    #command: sh -c "/bin/bash"
+    command: sh -c "/usr/local/bin/python build-site.py --enus --watch --docker"
     ports:
       - 8000:8000
     working_dir: /website
     volumes:
-      - ./:/website
+      - ./:/website:ro
