@@ -11,6 +11,10 @@ RUN npm install -g less
 #RUN git clone -b production https://github.com/mozilla-releng/product-details.git
 RUN pip install -r requirements-dev.txt
 
+RUN mkdir -p /srv/www/site/
+RUN mkdir -p /srv/www/site/en-US/maintenance/
+RUN mkdir -p /srv/www/thunderbird.net/
+
 #CMD ["/usr/bin/python", "build-site.py", "--enus", "--watch"]
 #RUN python build-site.py --enus
 EXPOSE 8000
