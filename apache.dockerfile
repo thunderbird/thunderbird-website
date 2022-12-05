@@ -46,4 +46,5 @@ RUN ln -sf /proc/self/fd/1 /var/log/apache2/access.log && \
 
 # Boot apache
 EXPOSE 80
+EXPOSE 443
 CMD ["apachectl", "-D", "FOREGROUND"]

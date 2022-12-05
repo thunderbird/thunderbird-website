@@ -1,9 +1,10 @@
+import os
 import requests
 import yaml
 from jinja2 import FileSystemLoader, Environment
 
-APACHE_CONFIG = 'apache.yml'
-VHOST_TEMPLATE = 'vhost_template.j2'
+APACHE_CONFIG = './apache.yml'
+VHOST_TEMPLATE = './vhost_template.j2'
 
 APACHE_CONFIG_URL = 'https://raw.githubusercontent.com/thundernest/thundernest-ansible/master/vars/apache.yml'
 VHOST_TEMPLATE_URL = 'https://raw.githubusercontent.com/thundernest/thundernest-ansible/master/vars/vhost_template.j2'
@@ -65,6 +66,9 @@ def render_config(config_contents):
         fh.write(template_str)
 
 def main():
+    # Ensure we can use relative paths
+    os.chdir(os.path.dirname(__file__))
+
     print("Retrieving apache.yml from thundernest-ansible.")
     config = requests.get(APACHE_CONFIG_URL)
     # Save a local copy for reference

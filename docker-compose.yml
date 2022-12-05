@@ -1,6 +1,6 @@
 services:
   website-builder:
-    image: wip-thunderbird-website
+    image: thunderbird-website-build
     command: sh -c "/usr/local/bin/python build-site.py --enus --watch-only --docker"
     working_dir: /website
     profiles:
@@ -21,7 +21,7 @@ services:
       - srv-directory:/srv/www/
 
   apache:
-    image: wip-thunderbird-apache
+    image: thunderbird-website-apache
     hostname: www.thunderbird.net
     ports:
       # We don't need http, but just in case: comment this out to enable it on :8001
@@ -34,6 +34,7 @@ services:
       # Needed for WSGI rewrites
       - ./settings.py:/var/www/html/start/settings.py:ro
       - ./wsgi.py:/var/www/html/start/wsgi.py:ro
+
 
 volumes:
   srv-directory:
