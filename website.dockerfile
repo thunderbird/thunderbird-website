@@ -6,7 +6,6 @@ COPY . .
 RUN apt-get update && apt-get install -y nodejs npm
 RUN npm install -g less
 
-# Pull down some gits
 RUN pip install -r requirements-dev.txt
 
 RUN mkdir -p /srv/www/site/
