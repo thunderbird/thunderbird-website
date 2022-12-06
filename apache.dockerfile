@@ -18,6 +18,7 @@ RUN mkdir -p /var/www/tbservices/
 
 # Log directory
 RUN mkdir -p /etc/apache2/logs/
+RUN mkdir -p /var/log/httpd/autoconfig/
 # SSL directory
 RUN mkdir -p /etc/apache2/ssl/
 

@@ -3,13 +3,11 @@ services:
     image: thunderbird-website-build
     command: sh -c "/usr/local/bin/python build-site.py --enus --watch-only --render-path='/srv/www/'"
     working_dir: /website
-    profiles:
-      - website
     volumes:
       - ./:/website:ro
       - srv-directory:/srv/www/
 
-  # Can be started via docker-compose --profile startpage up
+  # Can be started via `docker-compose --profile startpage up`
   start-builder:
     image: wip-thunderbird-website
     command: sh -c "/usr/local/bin/python build-site.py --startpage --enus --watch-only --render-path='/srv/www/'"
@@ -32,7 +30,6 @@ services:
       # Needed for WSGI rewrites
       - ./settings.py:/var/www/html/start/settings.py:ro
       - ./wsgi.py:/var/www/html/start/wsgi.py:ro
-
 
 volumes:
   srv-directory:

@@ -11,6 +11,12 @@ VHOST_TEMPLATE_URL = 'https://raw.githubusercontent.com/thundernest/thundernest-
 
 VHOST_CONFIG_OUT = './built/tb_vhosts.conf'
 
+def comment_out_commands(commands, string):
+    """ Goes through a given string and comments out command that are in the commands list. """
+    for cmd in commands:
+        string = string.replace(cmd, '#{}'.format(cmd))
+    return string
+
 def render_config(config_contents):
     """ Pulls in the apache config, updates some things for local development, and renders it out. """
     print("Rendering...")
@@ -32,12 +38,40 @@ def render_config(config_contents):
     config.update({'apache_certificate_key_file': '/etc/apache2/ssl/ssl.key'})
     config.update({'apache_certificate_file': '/etc/apache2/ssl/ssl.crt'})
 
-    # Let's only pull in thunderbird.net and start.thunderbird.net for now...
-    vhosts = config.get('apache_vhosts')
-    vhosts = filter(lambda host: 'www.thunderbird.net' in host['servername']
-                                 or 'start.thunderbird.net' in host['servername'], vhosts)
+    # Remove the chain
+    config.pop('apache_certificate_chain_file')
 
-    config.update({'apache_vhosts': list(vhosts)})
+    # Some commands that don't clash well with the current apache setup.
+    comment_out = [
+        'Listen 443', # Already done
+        'LoadModule', # Already done
+        # FIXME: Errors due to file/folder not found, yet the folder is there..
+        'ErrorLog',
+        'CustomLog',
+    ]
+
+    vhosts = config.get('apache_vhosts')
+    for (index, vhost_entry) in enumerate(vhosts):
+        server_name = vhost_entry.get('servername')
+        server_alias = vhost_entry.get('serveralias')
+        extra_params = vhost_entry.get('extra_parameters')
+        # Change servername and serveralias (if avail) from .net to .test
+        if server_name is not None:
+            vhosts[index]['servername'] = server_name.replace('.net', '.test')
+        if server_alias is not None:
+            vhosts[index]['serveralias'] = server_alias.replace('.net', '.test')
+        if extra_params is not None:
+            vhosts[index]['extra_parameters'] = comment_out_commands(comment_out, extra_params)
+        else:
+            # Fix a small issue where None (type) is displayed
+            vhosts[index]['extra_parameters'] = ''
+
+    # Set our modified config
+    config.update({'apache_vhosts': vhosts})
+
+    # Remove some problematic config values
+    global_vhost_settings = comment_out_commands(comment_out, config.get('apache_global_vhost_settings'))
+    config.update({'apache_global_vhost_settings': global_vhost_settings})
 
     # Do the render
     env.globals.update(**config)
@@ -47,20 +81,6 @@ def render_config(config_contents):
     if template_str == '':
         print("Error: Rendered template is empty")
         return
-
-    # Some commands we don't need or conflict with existing config
-    comment_out = [
-        'SSLCertificateChainFile',
-        'Listen 443',
-        'LoadModule',
-    ]
-    for cmd in comment_out:
-        template_str = template_str.replace(cmd, '#{}'.format(cmd))
-
-    # Rename .net tlds to .test
-    template_str = template_str.replace('.net', '.test')
-    # and fix the directories
-    template_str = template_str.replace('start/thunderbird.test', 'start/thunderbird.net')
 
     with open(VHOST_CONFIG_OUT, 'w') as fh:
         fh.write(template_str)

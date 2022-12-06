@@ -34,7 +34,13 @@ sudo docker build -t thunderbird-website-build . -f website.dockerfile
 sudo docker build -t thunderbird-website-apache . -f apache.dockerfile
 ```
 
-Now that the docker containers are built, you can simply run `docker-compose up`, and visit [https://www.thunderbird.test](https://www.thunderbird.test). 
+You'll also need to set up some local dns entries in `/etc/hosts`:
+```
+127.0.0.1 start.thunderbird.test
+127.0.0.1 www.thunderbird.test
+```
+
+After that, you can simply run `docker-compose up`, and visit [https://www.thunderbird.test](https://www.thunderbird.test). 
 
 Optionally you can do local development against the start page, by running `docker-compose --profile startpage up`, and visiting [https://start.thunderbird.test](https://start.thunderbird.test).
 
