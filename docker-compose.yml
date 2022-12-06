@@ -9,7 +9,7 @@ services:
 
   # Can be started via `docker-compose --profile startpage up`
   start-builder:
-    image: wip-thunderbird-website
+    image: thunderbird-website-build
     command: sh -c "/usr/local/bin/python build-site.py --startpage --enus --watch-only --render-path='/srv/www/'"
     working_dir: /website
     profiles:
