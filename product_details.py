@@ -21,6 +21,31 @@ def load_json(path):
         return json.load(f)
 
 
+def load_all_builds(path):
+    """ Loads the all_builds data, and mixes in the latest beta information with all release locales. """
+    all_builds = load_json(path)
+
+    # We heavily rely on en-US, but if somehow that's no longer a locale, at least don't crash here.
+    if 'en-US' not in all_builds:
+        return all_builds
+
+    all_data = {}
+
+    # Filter just the beta builds
+    for build, info in all_builds.get('en-US').items():
+        if 'b' in build:
+            all_data.update({build: info})
+
+    for locale, build in all_builds.items():
+        # Already has beta information
+        if locale == 'en-US':
+            continue
+        # Merge the beta build information
+        all_builds[locale].update(all_data)
+
+    return all_builds
+
+
 class ThunderbirdDetails():
     """ Loads Thunderbird versioning information from product details JSON files."""
     platform_labels = OrderedDict([
@@ -37,7 +62,7 @@ class ThunderbirdDetails():
 
     current_versions = load_json('thunderbird_versions.json')
 
-    all_builds = load_json('thunderbird_primary_builds.json')
+    all_builds = load_all_builds('thunderbird_primary_builds.json')
 
     major_releases = load_json('thunderbird_history_major_releases.json')
 
