@@ -95,6 +95,14 @@
     {% block site_js %}
       <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8"></script>
+      {# FundraiseUp js snippet #}
+      <script>(function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
+      .split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+      :function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+      j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a;
+      t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+      for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
+      })(window,document,'script','FundraiseUp','ADGJGYAN');</script>
     {% endblock %}
     {% block tracker_js %}
       <script type="text/javascript" src="/media/js/piwik.js" async defer></script>
