@@ -7,63 +7,11 @@ if (typeof Mozilla === 'undefined') {
     'use strict';
 
     var Donation = {};
-    var braintree_URL = 'https://chaos.thunderbird.net'
     Donation.ANIMATION_DURATION = 250;
 
-    Donation.BuildForm = function (client_token, amount) {
-        var button = document.querySelector('#submit-button');
-        braintree.dropin.create({
-            authorization: client_token,
-            container: '#dropin-container'
-        }, function (createErr, instance) {
-            $('#submit-button').show();
-            button.addEventListener('click', function () {
-                instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
-                    $.ajax({
-                        type: 'POST',
-                        url: braintree_URL + '/checkout',
-                        data: {
-                            'payment_method_nonce': payload.nonce,
-                            'amount': amount
-                        }
-                    }).done(function (result) {
-                        // Tear down the Drop-In UI.
-                        instance.teardown(function (teardownErr) {
-                            if (teardownErr) {
-                                console.error('Could not tear down Drop-in UI!');
-                            } else {
-                                console.info('Drop-in UI has been torn down!');
-                                // Remove the 'Submit payment' button.
-                                $('#submit-button').remove();
-                            }
-                        });
-
-                        // TODO: The success and failure responses need user-friendly display.
-                        // TODO: On success, we should trigger the Thunderbird download immediately.
-                        if (result.success) {
-                            $('#checkout-message').html('<h1>' + result.message + '</h1><p>Refresh to try again.</p>');
-                        } else {
-                            console.log(result);
-                            $('#checkout-message').html('<h1>Error:' + result.message + '</h1><p>Check your console.</p>');
-                        }
-                    });
-                });
-            });
-        });
-    };
-
-    Donation.InitForm = function (amount) {
-        $.ajax({
-            type: 'GET',
-            url: braintree_URL + '/verify_client',
-            success: function (result) {
-                if (result.success) {
-                    Donation.BuildForm(result.client_token, amount)
-                }
-            }
-        });
-    };
-
+    /**
+     * Close the donation form
+     */
     Donation.CloseForm = function () {
         $('#amount-modal').fadeOut(Donation.ANIMATION_DURATION);
         $('#modal-overlay').fadeOut(Donation.ANIMATION_DURATION);
