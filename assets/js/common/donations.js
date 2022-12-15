@@ -81,9 +81,6 @@ if (typeof Mozilla === 'undefined') {
         }
     };
 
-    // Force fundraise up to be in test mode
-    window.fundraiseup_livemode = false;
-
     window.Mozilla.Donation = Donation;
 
 })();
