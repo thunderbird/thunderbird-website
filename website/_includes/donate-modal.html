@@ -9,6 +9,18 @@
 {% endif %}
 {% set this_curdata = settings.CURRENCIES[this_currency] %}
 
+{% block additional_site_js %}
+<script>
+  (function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
+  .split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+  :function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+  j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a;
+  t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+  for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
+  })(window,document,'script','FundraiseUp','ADGJGYAN');
+</script>
+{% endblock %}
+
 <div id="amount-modal" class="modal rounded-lg w-full max-w-2xl shadow-lg bg-white text-black-lighter fixed z-30 mt-0 mx-auto pin-x hidden">
   <div id="close-modal" class="absolute p-1 m-2 z-10 pin-t pin-r">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -24,6 +36,7 @@
     <section class="font-lg pt-0 pl-6 pb-4 pr-6 leading-normal text-center">
       <p>{{ _('Thunderbird is independent, free, and Open Source software sustained by your donations. Help us keep the project alive!') }}</p>
     </section>
+    {#
     <section class="bg-grey-light pt-4 pl-6 pb-4 pr-6">
       <div class="flex justify-between items-center">
         <label class="uppercase font-sm">{{ _('Select an amount') }}</label>
@@ -59,7 +72,12 @@
         </label>
       </div>
     </section>
-    <section class="flex justify-center mt-6 mb-6">
+    #}
+    <section id="donate-buttons" class="flex justify-center mt-6 mb-6">
+      <span class="fundraiseup-button">
+        <a href="#XSHRMXJE" style="display: none"></a>
+      </span>
+      {#
       <button class="btn-body mr-2" id="amount-submit">
         {{ _('Donate & Download') }}
         <span>
@@ -70,7 +88,8 @@
           </svg>
         </span>
       </button>
-      <button class="btn-body btn-secondary" id="amount-cancel">
+      #}
+      <button class="btn-body btn-secondary no-hover" id="amount-cancel">
         {{ _('No Thanks, Download Now!') }}
         <span>
           <svg viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
