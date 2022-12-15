@@ -155,7 +155,7 @@ WEBSITE_JS = {
         'js/common/form.js', 'js/common/mozilla-client.js', 'js/common/mozilla-image-helper.js',
         'js/common/nav-main-resp.js', 'js/common/class-list-polyfill.js', 'js/common/mozilla-global-nav.js',
         'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js',
-        'js/common/autodownload.js', 'js/common/donations.js'
+        'js/common/autodownload.js', 'js/common/donations.js', 'js/common/ab-testing.js'
     ],
     'site-bundle': [
         'js/base/site.js', 'js/base/dnt-helper.js', 'js/base/mozilla-cookie-helper.js',
