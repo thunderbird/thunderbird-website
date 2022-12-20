@@ -171,7 +171,7 @@ URL_MAPPINGS = {
     'thunderbird.site.bug-report': 'https://github.com/thundernest/thunderbird-website/issues',
 }
 
-BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/'
+BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
 
 ENUS_ONLY = [
     'thunderbird.contact',
