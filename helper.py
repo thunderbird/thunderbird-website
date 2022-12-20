@@ -416,11 +416,23 @@ def get_blog_data(ctx, entry):
     data = ctx.get('blog_data')
     parsed = {}
 
-    parsed['summary'] = jinja2.Markup(data['entries'][entry]['summary_detail']['value'])
-    parsed['title'] = data['entries'][entry]['title']
-    parsed['comments'] = data['entries'][entry].get('slash_comments', '0')
-    parsed['date'] = datetime.fromtimestamp(mktime(data['entries'][entry]['published_parsed'])).strftime('%B %-m, %Y')
-    parsed['link'] = data['entries'][entry]['links'][0]['href']
+    entry = data['entries'][entry]
+
+
+    parsed['summary'] = jinja2.Markup(entry['summary_detail']['value'])
+    parsed['title'] = entry['title']
+    parsed['comments'] = entry.get('thr_total', '0')  # Comment count (atom extension)
+    parsed['date'] = datetime.fromtimestamp(mktime(entry['published_parsed'])).strftime('%B %-m, %Y')
+    parsed['link'] = entry['links'][0]['href']
+    parsed['thumbnail_url'] = None
+    parsed['thumbnail_alt'] = None
+
+    # Find our thumbnail
+    for link in entry['links']:
+        if link['rel'] == 'thumbnail':
+            parsed['thumbnail_url'] = link['href']
+            parsed['thumbnail_alt'] = link['title']
+            break
 
     return parsed
 

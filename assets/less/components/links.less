@@ -73,29 +73,6 @@ a {
   }
 }
 
-.social-link-large {
-  &:extend(.social-link, .font-regular, .bg-grey, .text-blue-dark, .font-semibold, .shadow-md, .mb-4);
-  min-width: 164px;
-
-  span {
-    &:extend(.w-6, .h-6, .p-1, .bg-blue, .rounded-full, .mr-1, .text-center);
-    .transition(@transition-default);
-
-    svg {
-      &:extend(.text-grey-lighter);
-      // Make the icons just a little bit smaller
-      width: 80%;
-      height: 80%;
-      margin-top: 0.15rem;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    &:extend(.bg-blue-dark, .text-white);
-  }
-}
-
 .p-links {
   a {
     &:extend(.inline-link);
@@ -132,4 +109,5 @@ a {
       height: 200px;
     }
   }
+
 }

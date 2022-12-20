@@ -81,16 +81,21 @@
       </p>
 
       {% if LANG.startswith('en-') %}
-        <section class="flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
+        <section class="flex flex-col lg:flex-row max-w-8xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
 
           {% for x in range(3): %}
             <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg{% if x != 2 %} mb-10 lg:mb-0{% endif %}{% if x == 1 %} lg:ml-16 lg:mr-16{% endif %}">
               <a class="blog-link" href="{{ get_blog_data(x)['link'] }}" title="Continue Reading {{ get_blog_data(x)['title'] }}">
                 {{ get_blog_data(x)['title'] }}
               </a>
-              <p class="blog-body">
+              <span class="blog-body">
+                {% if get_blog_data(x)['thumbnail_url'] %}
+                <p class="thumbnail">
+                  <img src="{{ get_blog_data(x)['thumbnail_url'] }}" alt="{{ get_blog_data(x)['thumbnail_alt'] }}"/>
+                </p>
+                {% endif %}
                 {{ get_blog_data(x)['summary'] }}
-              </p>
+              </span>
               <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
                 <span>{{ get_blog_data(x)['date'] }}</span>
                 <span>COMMENTS {{ get_blog_data(x)['comments'] }}</span>
