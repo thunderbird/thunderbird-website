@@ -7,7 +7,7 @@ if (typeof Mozilla === 'undefined') {
     var Mozilla = {};
 }
 
-(function () {
+(function() {
     'use strict';
 
     var Utils = {};
@@ -20,7 +20,7 @@ if (typeof Mozilla === 'undefined') {
      * @param {userAgent} optional UA string for testing purposes.
      */
 
-    Utils.triggerIEDownload = function (link, userAgent) {
+    Utils.triggerIEDownload = function(link, userAgent) {
         'use strict';
         var ua = userAgent !== undefined ? userAgent : navigator.userAgent;
         // Only open if we got a link and this is IE < 9.
@@ -31,7 +31,7 @@ if (typeof Mozilla === 'undefined') {
     };
 
     // Add target="_blank" to all external links, so they open in a new tab by default.
-    Utils.externalLinks = function () {
+    Utils.externalLinks = function() {
         for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) {
             var b = c[a];
             b.getAttribute("href") && b.hostname !== location.hostname && b.hostname !== bouncerURL && (b.target = "_blank")
@@ -40,11 +40,11 @@ if (typeof Mozilla === 'undefined') {
 
     // attach an event to all the download buttons to trigger the special
     // ie functionality if on ie
-    Utils.initDownloadLinks = function () {
+    Utils.initDownloadLinks = function() {
         $('#submit-button').hide();
-        $('.download-link').each(function () {
+        $('.download-link').each(function() {
             var $el = $(this);
-            $el.click(function (e) {
+            $el.click(function(e) {
                 if (window.ABTest.IsInFundraiseUpBucket()) {
                     e.preventDefault();
                     window.Mozilla.Donation.DisplayAmountForm($el[0].href);
@@ -53,7 +53,7 @@ if (typeof Mozilla === 'undefined') {
                     if ($("body").attr('id') !== 'thunderbird-download') {
                         // MSIE and Edge cancel the download prompt on redirect, so just leave them out.
                         if (!(/msie\s|trident\/|edge\//i.test(navigator.userAgent))) {
-                            setTimeout(function () {
+                            setTimeout(function() {
                                 window.location.href = $el.data('donate-link')
                             }, 5000);
                         }
@@ -67,16 +67,16 @@ if (typeof Mozilla === 'undefined') {
 
     // Replace Google Play and Apple App Store links on Android and iOS devices to
     // let them open the native marketplace app
-    Utils.initMobileDownloadLinks = function () {
+    Utils.initMobileDownloadLinks = function() {
         if (site.platform === 'android') {
-            $('a[href^="https://play.google.com/store/apps/"]').each(function () {
+            $('a[href^="https://play.google.com/store/apps/"]').each(function() {
                 $(this).attr('href', $(this).attr('href')
                     .replace('https://play.google.com/store/apps/', 'market://'));
             });
         }
 
         if (site.platform === 'ios') {
-            $('a[href^="https://itunes.apple.com/"]').each(function () {
+            $('a[href^="https://itunes.apple.com/"]').each(function() {
                 $(this).attr('href', $(this).attr('href')
                     .replace('https://', 'itms-apps://'));
             });
@@ -84,28 +84,28 @@ if (typeof Mozilla === 'undefined') {
     };
 
     // Bug 1264843: link to China build of Fx4A, for display within Fx China repack
-    Utils.maybeSwitchToDistDownloadLinks = function (client) {
+    Utils.maybeSwitchToDistDownloadLinks = function(client) {
         if (!client.distribution || client.distribution === 'default') {
             return;
         }
 
         var distribution = client.distribution.toLowerCase();
-        $('a[data-' + distribution + '-link]').each(function () {
+        $('a[data-' + distribution + '-link]').each(function() {
             $(this).attr('href', $(this).data(distribution + 'Link'));
         });
     };
 
-    Utils.switchPathLanguage = function (location, newLang) {
+    Utils.switchPathLanguage = function(location, newLang) {
         // get path without locale
         var urlpath = location.pathname.slice(1).split('/').slice(1).join('/');
         return '/' + newLang + '/' + urlpath + location.search;
     };
 
     // language switcher
-    Utils.initLangSwitcher = function () {
+    Utils.initLangSwitcher = function() {
         var $language = $('#page-language-select');
         var previousLanguage = $language.val();
-        $language.on('change', function () {
+        $language.on('change', function() {
             var newLanguage = $language.val();
             window.dataLayer.push({
                 'event': 'change-language',
@@ -119,7 +119,7 @@ if (typeof Mozilla === 'undefined') {
     };
 
     // client-side redirects (handy for testing)
-    Utils.doRedirect = function (destination) {
+    Utils.doRedirect = function(destination) {
         if (destination) {
             window.location.href = destination;
         }
@@ -132,7 +132,7 @@ if (typeof Mozilla === 'undefined') {
     // to work. After this, you can access all strings defined inside the
     // string_data block in JS using Mozilla.Utils.trans('keyofstring'); Thank @mkelly
     var _$strings = $('#strings');
-    Utils.trans = function (stringId) {
+    Utils.trans = function(stringId) {
         return _$strings.data(stringId);
     };
 
