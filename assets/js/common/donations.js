@@ -73,11 +73,12 @@ if (typeof Mozilla === 'undefined') {
             // Close our modal on open
             fundraiseUp.on('checkoutOpen', function() {
                 Donation.CloseForm();
+
+                // Timeout is here to prevent url collisions with fundraiseup form.
+                window.setTimeout(function() {
+                    location.href = download_url;
+                },1000);
             });
-            // Start the download on completion
-            fundraiseUp.on('donationComplete', function() {
-                location.href = download_url;
-            })
         }
     };
 
