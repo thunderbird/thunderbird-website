@@ -45,21 +45,7 @@ if (typeof Mozilla === 'undefined') {
         $('.download-link').each(function() {
             var $el = $(this);
             $el.click(function(e) {
-                if (window.Mozilla.ABTest.IsInFundraiseUpBucket()) {
-                    e.preventDefault();
-                    window.Mozilla.Donation.DisplayAmountForm($el[0].href);
-                } else {
-                    // Don't redirect if we're on the failed download page.
-                    if ($("body").attr('id') !== 'thunderbird-download') {
-                        // MSIE and Edge cancel the download prompt on redirect, so just leave them out.
-                        if (!(/msie\s|trident\/|edge\//i.test(navigator.userAgent))) {
-                            setTimeout(function() {
-                                window.location.href = $el.data('donate-link')
-                            }, 5000);
-                        }
-                    }
-                    Utils.triggerIEDownload($el.data('direct-link'));
-                }
+                window.Mozilla.ABTest.Download(e);
             });
         });
         $('.download-list').attr('role', 'presentation');

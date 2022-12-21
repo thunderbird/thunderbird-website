@@ -41,6 +41,53 @@ if (typeof Mozilla === 'undefined') {
         return ABTest.bucket === 1;
     }
 
+    /**
+     * FundraiseUp's download functionality. This will simply raise the Donation form.
+     * @param download_url
+     * @private
+     */
+    ABTest._FundraiseUpDownload = function(download_url) {
+        window.Mozilla.Donation.DisplayAmountForm(download_url);
+    }
+
+    /**
+     * Legacy give.thunderbird.net download functionality.
+     * This will redirect them to the donation url, which will start the download.
+     * @param download_url
+     * @param donate_url
+     * @private
+     */
+    ABTest._GiveDownload = function(download_url, donate_url) {
+        // Don't redirect if we're on the failed download page.
+        if ($("body").attr('id') !== 'thunderbird-download') {
+            // MSIE and Edge cancel the download prompt on redirect, so just leave them out.
+            if (!(/msie\s|trident\/|edge\//i.test(navigator.userAgent))) {
+                setTimeout(function() {
+                    window.location.href = donate_url;
+                }, 5000);
+            }
+        }
+        window.Mozilla.Utils.triggerIEDownload(download_url);
+    }
+
+    /**
+     * Start the Download, it will handle determining what bucket we're in and what download path we need to go down.
+     * @param event : Event
+     */
+    ABTest.Download = function(event) {
+        const element = event.target;
+        const download_url = element.href;
+        const donate_url = element.dataset.donateLink || null;
+
+        if (ABTest.IsInFundraiseUpBucket()) {
+            event.preventDefault();
+            ABTest._FundraiseUpDownload(download_url);
+        } else {
+            ABTest._GiveDownload(download_url, donate_url);
+        }
+    }
+
+    // Note: Intentionally uncommented for testing.
     // Pick one!
     //ABTest.Choose();
 
