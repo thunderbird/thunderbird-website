@@ -1,3 +1,8 @@
+// Create namespace
+if (typeof Mozilla === 'undefined') {
+    var Mozilla = {};
+}
+
 (function() {
     'use strict';
 
@@ -18,7 +23,6 @@
      */
     ABTest.Choose = function() {
         ABTest.bucket = ABTest.RandomInt(0, 1);
-        console.log("Bucket: ", ABTest.bucket);
     }
 
     /**
@@ -38,7 +42,7 @@
     }
 
     // Pick one!
-    ABTest.Choose();
+    //ABTest.Choose();
 
-    window.ABTest = ABTest;
+    window.Mozilla.ABTest = ABTest;
 })();

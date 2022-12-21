@@ -30,7 +30,7 @@ if (typeof Mozilla === 'undefined') {
         }
     };
 
-    // Add target="_blank" to all external links, so they open in a new tab by default.
+    // Add target="_blank" to all external links so they open in a new tab by default.
     Utils.externalLinks = function() {
         for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) {
             var b = c[a];
@@ -45,7 +45,7 @@ if (typeof Mozilla === 'undefined') {
         $('.download-link').each(function() {
             var $el = $(this);
             $el.click(function(e) {
-                if (window.ABTest.IsInFundraiseUpBucket()) {
+                if (window.Mozilla.ABTest.IsInFundraiseUpBucket()) {
                     e.preventDefault();
                     window.Mozilla.Donation.DisplayAmountForm($el[0].href);
                 } else {
