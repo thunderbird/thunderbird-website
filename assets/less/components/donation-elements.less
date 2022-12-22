@@ -5,6 +5,7 @@
 .modal {
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
 
     #close-modal {
         cursor: pointer;
@@ -51,4 +52,9 @@
             &:extend(.ml-3, .text-grey, .font-regular, .leading-none);
         }
     }
+}
+.fundraiseup-button {
+    /* Ensure that it doesn't pop-in. */
+    min-width: 225px;
+    min-height: 57px;
 }
