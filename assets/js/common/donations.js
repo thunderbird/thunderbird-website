@@ -8,16 +8,27 @@ if (typeof Mozilla === 'undefined') {
 
     var Donation = {};
     Donation.ANIMATION_DURATION = 250;
+    /**
+     * Is the download form visible?
+     * @type {boolean}
+     */
     Donation.IsVisible = false;
+    /**
+     * Stateful download link to be retrieved by the FRU on.checkoutOpen event
+     * @type {?string}
+     */
+    Donation.CurrentDownloadLink = null;
 
     /**
      * Close the donation form
+     * This will clear any currently set download link.
      */
     Donation.CloseForm = function() {
         $('#amount-modal').fadeOut(Donation.ANIMATION_DURATION);
         $('#modal-overlay').fadeOut(Donation.ANIMATION_DURATION);
         $(document.body).removeClass('overflow-hidden');
         Donation.IsVisible = false;
+        Donation.CurrentDownloadLink = null;
     }
 
     /**
@@ -30,6 +41,7 @@ if (typeof Mozilla === 'undefined') {
         $('#modal-overlay').fadeIn(Donation.ANIMATION_DURATION);
         $(document.body).addClass('overflow-hidden');
         Donation.IsVisible = true;
+        Donation.CurrentDownloadLink = download_url;
 
         // Define cancel and close button on the donation form.
         $('#amount-cancel').click(function(e) {
@@ -80,11 +92,18 @@ if (typeof Mozilla === 'undefined') {
                     return;
                 }
 
+                // Retrieve the current download link before we close the form (as that clears it)
+                const download_link = Donation.CurrentDownloadLink;
                 Donation.CloseForm();
+
+                // No download link? Exit.
+                if (!download_link) {
+                    return;
+                }
 
                 // Timeout is here to prevent url collisions with fundraiseup form.
                 window.setTimeout(function() {
-                    location.href = download_url;
+                    location.href = download_link;
                 },1000);
             });
         }
