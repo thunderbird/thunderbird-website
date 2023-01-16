@@ -47,7 +47,7 @@ if (typeof Mozilla === 'undefined') {
      * @private
      */
     ABTest._FundraiseUpDownload = function(download_url) {
-        window.Mozilla.Donation.DisplayAmountForm(download_url);
+        window.Mozilla.Donation.DisplayDownloadForm(download_url);
     }
 
     /**
@@ -87,9 +87,46 @@ if (typeof Mozilla === 'undefined') {
         }
     }
 
-    // Note: Intentionally uncommented for testing.
-    // Pick one!
-    //ABTest.Choose();
+    /**
+     * If FRU prevent the link redirect, and call up the donation form.
+     * @param event : Event
+     */
+    ABTest.Donate = function(event) {
+        if (ABTest.IsInFundraiseUpBucket()) {
+            const element = event.target;
+            // If we somehow don't have an element, we can exit and still start any redirects.
+            if (!element) {
+                return;
+            }
+
+            event.preventDefault();
+
+            // Falsey fallback check to transform '' => null
+            const utmContent = element.getAttribute('data-donate-content') || null;
+            const utmSource = element.getAttribute('data-donate-source') || 'thunderbird.net';
+            const utmMedium = element.getAttribute('data-donate-medium') || 'referral';
+            const utmCampaign = element.getAttribute('data-donate-campaign') || null;
+
+            window.Mozilla.Donation.Donate(utmContent, utmSource, utmMedium, utmCampaign);
+        }
+    }
+
+    /**
+     * Any required initializations for our ABTest should go here
+     * Called after ABTest is added to the Mozilla namespace.
+     */
+    ABTest.Init = function() {
+        // Note: Intentionally uncommented for testing.
+        // Pick one!
+        //ABTest.Choose();
+
+        const donate_buttons = document.querySelectorAll('[data-donate-btn]');
+        for (const donate_button of donate_buttons) {
+            donate_button.addEventListener('click', ABTest.Donate);
+        }
+    }
 
     window.Mozilla.ABTest = ABTest;
+
+    ABTest.Init();
 })();
