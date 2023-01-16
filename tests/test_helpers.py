@@ -9,14 +9,15 @@ class TestFRU:
             'nonexistent': 'en-US',
             'en-NL': 'en-US',
             'en-CA': 'en-CA',
-            'fr': 'fr',
-            'nb-NO': 'nb',
             'nn-NO': 'en-US',
-            'sv-SE': 'sv',
+            'sv-SE': 'sv-SE',
+            'pt-BR': 'pt-BR',
+            'pt-PT': 'pt-PT',
+            'nb-NO': 'nb',
+            'fr': 'fr',
             'fi': 'fi',
             'da': 'da',
-            'ja': 'ja',
-            'pt-BR': 'pt',
+            'ja': 'ja'
         }
 
         for actual_input, expected_output in languages_io.items():
