@@ -93,8 +93,21 @@ if (typeof Mozilla === 'undefined') {
      */
     ABTest.Donate = function(event) {
         if (ABTest.IsInFundraiseUpBucket()) {
+            const element = event.target;
+            // If we somehow don't have an element, we can exit and still start any redirects.
+            if (!element) {
+                return;
+            }
+
             event.preventDefault();
-            window.location = "?form=support";
+
+            // Falsey fallback check to transform '' => null
+            const utmContent = element.getAttribute('data-donate-content') || null;
+            const utmSource = element.getAttribute('data-donate-source') || 'thunderbird.net';
+            const utmMedium = element.getAttribute('data-donate-medium') || 'referral';
+            const utmCampaign = element.getAttribute('data-donate-campaign') || null;
+
+            window.Mozilla.Donation.Donate(utmContent, utmSource, utmMedium, utmCampaign);
         }
     }
 

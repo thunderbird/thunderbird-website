@@ -20,6 +20,30 @@ if (typeof Mozilla === 'undefined') {
     Donation.CurrentDownloadLink = null;
 
     /**
+     * Display FRUs donation form
+     * @param utmContent {?string}
+     * @param utmSource {?string}
+     * @param utmMedium {?string}
+     * @param utmCampaign {?string}
+     */
+    Donation.Donate = function(utmContent = null, utmSource = 'thunderbird.net', utmMedium = 'referral', utmCampaign = null) {
+        let params = {
+            'form': 'support',
+            'utm_content': utmContent,
+            'utm_source': utmSource,
+            'utm_medium': utmMedium,
+            'utm_campaign': utmCampaign
+        };
+        // Filter nulls from the object (this mutates)
+        Object.keys(params).forEach((k) => params[k] == null && delete params[k]);
+
+        params = new URLSearchParams(params);
+
+        // Display the FRU form
+        location.href = `?${params.toString()}`;
+    }
+
+    /**
      * Close the donation form
      * This will clear any currently set download link.
      */
@@ -104,7 +128,7 @@ if (typeof Mozilla === 'undefined') {
                 // Timeout is here to prevent url collisions with fundraiseup form.
                 window.setTimeout(function() {
                     location.href = download_link;
-                },1000);
+                }, 1000);
             });
         }
     };
