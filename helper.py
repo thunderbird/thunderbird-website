@@ -352,11 +352,9 @@ def get_locale(lang):
 def get_fru_language(ctx):
     """
     Returns the current language if supported by FRU.
-    Supports partial matching. Defaults to English if it's not supported.
+    Defaults to English if it's not supported.
     """
     language = ctx['LANG']
-
-    # First search for the full thing
 
     try:
         if settings.FRU_LANGUAGES[language]:
