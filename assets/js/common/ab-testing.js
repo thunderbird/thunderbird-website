@@ -47,7 +47,7 @@ if (typeof Mozilla === 'undefined') {
      * @private
      */
     ABTest._FundraiseUpDownload = function(download_url) {
-        window.Mozilla.Donation.DisplayAmountForm(download_url);
+        window.Mozilla.Donation.DisplayDownloadForm(download_url);
     }
 
     /**

@@ -8,6 +8,7 @@ if (typeof Mozilla === 'undefined') {
 
     var Donation = {};
     Donation.ANIMATION_DURATION = 250;
+    Donation.IsVisible = false;
 
     /**
      * Close the donation form
@@ -16,17 +17,19 @@ if (typeof Mozilla === 'undefined') {
         $('#amount-modal').fadeOut(Donation.ANIMATION_DURATION);
         $('#modal-overlay').fadeOut(Donation.ANIMATION_DURATION);
         $(document.body).removeClass('overflow-hidden');
+        Donation.IsVisible = false;
     }
 
     /**
-     * Display the donation modal for fundraise up
+     * Display the donation download modal for fundraise up
      * @param download_url - Link to the actual file download
      */
-    Donation.DisplayAmountForm = function(download_url) {
+    Donation.DisplayDownloadForm = function(download_url) {
         // Show the donation form.
         $('#amount-modal').fadeIn(Donation.ANIMATION_DURATION);
         $('#modal-overlay').fadeIn(Donation.ANIMATION_DURATION);
         $(document.body).addClass('overflow-hidden');
+        Donation.IsVisible = true;
 
         // Define cancel and close button on the donation form.
         $('#amount-cancel').click(function(e) {
@@ -72,6 +75,11 @@ if (typeof Mozilla === 'undefined') {
             const fundraiseUp = window.FundraiseUp;
             // Close our modal on open
             fundraiseUp.on('checkoutOpen', function() {
+                // Don't start the download if we didn't come from the donation download modal
+                if (!Donation.IsVisible) {
+                    return;
+                }
+
                 Donation.CloseForm();
 
                 // Timeout is here to prevent url collisions with fundraiseup form.
