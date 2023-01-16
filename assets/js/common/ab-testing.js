@@ -87,9 +87,33 @@ if (typeof Mozilla === 'undefined') {
         }
     }
 
-    // Note: Intentionally uncommented for testing.
-    // Pick one!
-    //ABTest.Choose();
+    /**
+     * If FRU prevent the link redirect, and call up the donation form.
+     * @param event : Event
+     */
+    ABTest.Donate = function(event) {
+        if (ABTest.IsInFundraiseUpBucket()) {
+            event.preventDefault();
+            window.location = "?form=support";
+        }
+    }
+
+    /**
+     * Any required initializations for our ABTest should go here
+     * Called after ABTest is added to the Mozilla namespace.
+     */
+    ABTest.Init = function() {
+        // Note: Intentionally uncommented for testing.
+        // Pick one!
+        //ABTest.Choose();
+
+        const donate_buttons = document.querySelectorAll('[data-donate-btn]');
+        for (const donate_button of donate_buttons) {
+            donate_button.addEventListener('click', ABTest.Donate);
+        }
+    }
 
     window.Mozilla.ABTest = ABTest;
+
+    ABTest.Init();
 })();
