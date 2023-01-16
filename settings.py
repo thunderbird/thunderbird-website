@@ -37,6 +37,7 @@ FRU_LANGUAGES = {
     'pt-BR': 'pt-BR',
     'pt-PT': 'pt-PT',
     'es-MX': 'es-MX',
+    'es-AR': 'es-AR',
     'sv-SE': 'sv-SE',
     'en-CA': 'en-CA',
     'en-GB': 'en-GB',
