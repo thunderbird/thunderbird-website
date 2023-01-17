@@ -26,7 +26,7 @@ if (typeof Mozilla === 'undefined') {
      * @param utmMedium {?string}
      * @param utmCampaign {?string}
      */
-    Donation.Donate = function(utmContent = null, utmSource = 'thunderbird.net', utmMedium = 'referral', utmCampaign = null) {
+    Donation.Donate = function(utmContent = null, utmSource = 'thunderbird.net', utmMedium = 'fru', utmCampaign = 'donation_flow_2023') {
         let params = {
             'form': 'support',
             'utm_content': utmContent,

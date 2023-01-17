@@ -104,8 +104,8 @@ if (typeof Mozilla === 'undefined') {
             // Falsey fallback check to transform '' => null
             const utmContent = element.getAttribute('data-donate-content') || null;
             const utmSource = element.getAttribute('data-donate-source') || 'thunderbird.net';
-            const utmMedium = element.getAttribute('data-donate-medium') || 'referral';
-            const utmCampaign = element.getAttribute('data-donate-campaign') || null;
+            const utmMedium = element.getAttribute('data-donate-medium') || 'fru';
+            const utmCampaign = element.getAttribute('data-donate-campaign') || 'donation_flow_2023';
 
             window.Mozilla.Donation.Donate(utmContent, utmSource, utmMedium, utmCampaign);
         }
