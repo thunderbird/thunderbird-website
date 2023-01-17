@@ -93,7 +93,7 @@ if (typeof Mozilla === 'undefined') {
      */
     ABTest.Donate = function(event) {
         if (ABTest.IsInFundraiseUpBucket()) {
-            const element = event.target;
+            const element = event.currentTarget;
             // If we somehow don't have an element, we can exit and still start any redirects.
             if (!element) {
                 return;
