@@ -167,6 +167,10 @@ START_CSS = {
     'start-style': ['less.old/sandstone/fonts.less', 'less.old/thunderbird/start.less']
 }
 
+START_JS = {
+    'start-bundle': ['js/common/donations.js', 'js/common/ab-testing.js'],
+}
+
 CURRENCIES = {
     # Second value is the default.
     'brl': {'symbol': 'R$', 'presets': ['80', '40', '20', '10'], 'default': '40'},
