@@ -17,7 +17,7 @@
 
           <div class="donate">
             {{ _('Support us!') }}
-            {{ '<a href="%(donate)s" class="donate-btn">'|format(donate=donate_url('paragraph_text', 'start_page_tb_beta')) }}
+            {{ '<a href="%(donate)s" class="donate-btn" data-donate-btn data-donate-content="paragraph_text" data-donate-source="start_page_tb_beta">'|format(donate=donate_url('paragraph_text', 'start_page_tb_beta')) }}
               {{ svg('donate-btn-heart') }}
               {{ _('Donate') }}
             </a>
