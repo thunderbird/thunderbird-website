@@ -8,6 +8,7 @@ if (typeof Mozilla === 'undefined') {
 
     var Donation = {};
     Donation.ANIMATION_DURATION = 250;
+    Donation.WINDOW_POS_KEY = '_tb_donation_position';
     /**
      * Is the download form visible?
      * @type {boolean}
@@ -39,8 +40,13 @@ if (typeof Mozilla === 'undefined') {
 
         params = new URLSearchParams(params);
 
+        // Set our current position, so we can fix it on page reload.
+        // See Donation.CheckForPosition
+        window.sessionStorage.setItem(Donation.WINDOW_POS_KEY, window.scrollY.toString());
+
         // Display the FRU form
         location.href = `?${params.toString()}`;
+
     }
 
     /**
@@ -133,6 +139,21 @@ if (typeof Mozilla === 'undefined') {
         }
     };
 
+    /**
+     * Checks and applies any position parameter to the window's scrollY
+     * This makes the silly page refresh on the donation modal look less jarring
+     */
+    Donation.CheckForPosition = function () {
+        const pos = window.sessionStorage.getItem(Donation.WINDOW_POS_KEY);
+        if (pos) {
+            window.scrollTo(0, parseInt(pos));
+            window.sessionStorage.removeItem(Donation.WINDOW_POS_KEY)
+        }
+    }
+
     window.Mozilla.Donation = Donation;
+    Donation.CheckForPosition();
+
+
 
 })();
