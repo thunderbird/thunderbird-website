@@ -23,6 +23,30 @@ LANGUAGES_BIDI = ('he', 'ar', 'fa', 'ur')
 # Default main site language.
 LANGUAGE_CODE = 'en-US'
 
+# Fundraise Up's supported languages
+FRU_LANGUAGES = {
+    'da': 'da',
+    'nl': 'nl',
+    'fi': 'fi',
+    'fr': 'fr',
+    'de': 'de',
+    'hu': 'hu',
+    'it': 'it',
+    'ja': 'ja',
+    'nb-NO': 'nb',
+    'nn-NO': 'nb',
+    'pt-BR': 'pt-BR',
+    'pt-PT': 'pt-PT',
+    'es-MX': 'es-MX',
+    'es-AR': 'es-AR',
+    'es-ES': 'es-ES',
+    'es-CL': 'es-CL',
+    'sv-SE': 'sv-SE',
+    'en-CA': 'en-CA',
+    'en-GB': 'en-GB',
+    'en-US': 'en-US',
+}
+
 # Map short locale names to long, preferred locale names. This
 # will be used in urlresolvers to determine the
 # best-matching locale from the user's Accept-Language header.
