@@ -60,6 +60,35 @@ if (typeof Mozilla === 'undefined') {
                 window.open(download_link, '_self');
             }, 1000);
         });
+        fundraiseUp.on('checkoutClose', function () {
+            const toRemove = [
+                'utm_campaign', 'utm_medium', 'utm_source', 'utm_content', 'form',
+            ];
+            const fullParams = location.href.split("?")[1];
+            const fullUrl = [location.href.split("?")[0]];
+
+            if (!fullParams) {
+                return;
+            }
+
+            const params = new URLSearchParams(fullParams)
+            toRemove.map(function (item) {
+                params.delete(item);
+            });
+
+            if (params.toString().length > 0) {
+                fullUrl.push(params.toString());
+            }
+
+            // FRU "restores" the url state, but forgets our utm tags (which it supports)
+            // Listen to a popstate, so we can accurately clean up after it.
+            window.addEventListener('popstate',  function cleanUTMTags(event) {
+                // Fire only once
+                window.removeEventListener('popstate', cleanUTMTags, false );
+                // Replace the url state with our clean url
+                window.history.replaceState(null, "", fullUrl.join('?'));
+            });
+        });
 
     }
 
