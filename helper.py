@@ -318,7 +318,7 @@ def thunderbird_url(page, channel='None'):
 
 
 @jinja2.contextfunction
-def donate_url(ctx, content='', source='thunderbird.net', medium='referral', campaign='', download=False):
+def donate_url(ctx, content='', source='thunderbird.net', medium='give', campaign='donation_flow_2023', download=False):
     # If this link is from a download button, donate.mozilla.org has thank you text.
     download_string = ''
     if download:
