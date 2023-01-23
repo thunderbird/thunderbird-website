@@ -1,0 +1,30 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "_includes/base-resp.html" %}
+
+{% block page_title %}{{ _('Join our Newsletter!') }}{% endblock %}
+
+{% block header_content %}
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-hero font-thin mt-10 mb-16">{{ self.page_title() }}</h1>
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section class="pt-10 pb-10 flex justify-between items-center pr-8 pl-8">
+    <section class="flex justify-between mx-auto">
+      <aside class="flex flex-col flex-1 mr-8 ml-8 lg:mr-16 lg:ml-16 lg:pt-12 lg:max-w-4xl">
+        <p class="font-lg tracking-wider leading-loose mb-6">
+          {{ _('See exciting previews of upcoming features, read the latest desktop Thunderbird and mobile Thunderbird news, and enjoy personalized tips to protect your privacy and maximize your productivity! From the Thunderbird team directly to your inbox.') }}
+        </p>
+        {% include '_includes/newsletter-form.html' %}
+        <p class="font-sm font-semibold self-start">
+          <a class="small-link text-blue" href="https://us12.campaign-archive.com/home/?u=f8051cc8637cf3ff79661f382&id=56428f2efc" title="View previous newsletters">{{ _('View previous newsletters') }}</a>
+        </p>
+      </aside>
+    </section>
+  </section>
+  {% include '_includes/site-prefooter.html' %}
+{% endblock %}
