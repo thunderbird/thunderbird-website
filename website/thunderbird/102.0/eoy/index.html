@@ -47,7 +47,7 @@
 
 {% block content %}
 <section class="letter-container font-xl">
-    <a href="https://give.thunderbird.net/?utm_source=thunderbird-client&utm_medium=referral&utm_content=EOY22" class="donate-banner">
+    <a href="{{ donate_url('EOY22', 'thunderbird-client') }}" class="donate-banner" data-donate-btn data-donate-content="EOY22" data-donate-source="thunderbird-client">
       <div id="donate-banner-left">
         {{ _('Click here to <strong class="block">Donate!</strong>') }}
       </div>
@@ -99,6 +99,6 @@
     </p>
 </section>
 {% endblock %}
-
+{% include '_includes/donate-modal.html' %}
 {% block site_footer%}
 {% endblock site_footer %}

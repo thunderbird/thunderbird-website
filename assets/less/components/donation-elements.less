@@ -1,0 +1,60 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+.modal {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    #close-modal {
+        cursor: pointer;
+
+        svg {
+            stroke: @colors[grey];
+        }
+        &:hover svg {
+            stroke: @colors[black];
+        }
+    }
+
+    form {
+        .amount-selection {
+            label {
+                &:extend(.h-10, .pt-1, .pl-3, .pb-1, .pr-3, .rounded, .border, .border-solid, .border-grey, .bg-white, .font-xl, .font-bold);
+                cursor: pointer;
+                box-sizing: border-box;
+                &:hover {
+                    &:extend(.border-blue);
+                }
+                &:last-child {
+                    &:extend(.pt-0, .pb-0, .pr-0, .bg-grey-lighter, .overflow-hidden);
+                    flex-basis: @widths[w-40];
+                    #amount-other {
+                        &:extend(.w-full, .h-full, .pl-2, .border-0, .border-l, .border-solid, .border-grey, .font-xl);
+                        box-sizing: border-box;
+                        &::placeholder {
+                            &:extend(.font-md);
+                        }
+                    }
+                    
+                }
+                &.active {
+                    &:extend(.border-blue, .bg-blue-25, .shadow-none);
+                }
+            }
+        }
+    }
+
+    footer {
+        ul > li:not(:last-child)::after {
+            content: '•';
+            &:extend(.ml-3, .text-grey, .font-regular, .leading-none);
+        }
+    }
+}
+.fundraiseup-button {
+    /* Ensure that it doesn't pop-in. */
+    min-width: 225px;
+    min-height: 57px;
+}

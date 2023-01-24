@@ -23,6 +23,30 @@ LANGUAGES_BIDI = ('he', 'ar', 'fa', 'ur')
 # Default main site language.
 LANGUAGE_CODE = 'en-US'
 
+# Fundraise Up's supported languages
+FRU_LANGUAGES = {
+    'da': 'da',
+    'nl': 'nl',
+    'fi': 'fi',
+    'fr': 'fr',
+    'de': 'de',
+    'hu': 'hu',
+    'it': 'it',
+    'ja': 'ja',
+    'nb-NO': 'nb',
+    'nn-NO': 'nb',
+    'pt-BR': 'pt-BR',
+    'pt-PT': 'pt-PT',
+    'es-MX': 'es-MX',
+    'es-AR': 'es-AR',
+    'es-ES': 'es-ES',
+    'es-CL': 'es-CL',
+    'sv-SE': 'sv-SE',
+    'en-CA': 'en-CA',
+    'en-GB': 'en-GB',
+    'en-US': 'en-US',
+}
+
 # Map short locale names to long, preferred locale names. This
 # will be used in urlresolvers to determine the
 # best-matching locale from the user's Accept-Language header.
@@ -151,11 +175,11 @@ WEBSITE_CSS = {
 
 WEBSITE_JS = {
     'common-bundle': [
-        'js/common/jquery-1.11.3.min.js', 'js/common/spin.min.js', 'js/common/mozilla-utils.js',
+        'js/common/jquery-3.6.0.min.js', 'js/common/spin.min.js', 'js/common/mozilla-utils.js',
         'js/common/form.js', 'js/common/mozilla-client.js', 'js/common/mozilla-image-helper.js',
         'js/common/nav-main-resp.js', 'js/common/class-list-polyfill.js', 'js/common/mozilla-global-nav.js',
         'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js',
-        'js/common/autodownload.js'
+        'js/common/autodownload.js', 'js/common/donations.js', 'js/common/ab-testing.js'
     ],
     'site-bundle': [
         'js/base/site.js', 'js/base/dnt-helper.js', 'js/base/mozilla-cookie-helper.js',
@@ -166,3 +190,65 @@ WEBSITE_JS = {
 START_CSS = {
     'start-style': ['less.old/sandstone/fonts.less', 'less.old/thunderbird/start.less']
 }
+
+CURRENCIES = {
+    # Second value is the default.
+    'brl': {'symbol': 'R$', 'presets': ['80', '40', '20', '10'], 'default': '40'},
+    'cad': {'symbol': '$', 'presets': ['65', '30', '15', '4'], 'default': '30'},
+    'czk': {'symbol': 'Kč', 'presets': ['450', '220', '110', '70'], 'default': '220'},
+    'dkk': {'symbol': 'kr', 'presets': ['130', '60', '30', '20'], 'default': '60'},
+    'eur': {'symbol': '€', 'presets': ['50', '30', '20', '10'], 'default': '30'},
+    'gbp': {'symbol': '£', 'presets': ['40', '25', '15', '8'], 'default': '25'},
+    'huf': {'symbol': 'Ft', 'presets': ['5600', '2800', '1400', '850'], 'default': '2800'},
+    'inr': {'symbol': '₹', 'presets': ['1000', '500', '250', '150'], 'default': '500'},
+    'jpy': {'symbol': '¥', 'presets': ['2240', '1120', '560', '340'], 'default': '1120'},
+    'mxn': {'symbol': '$', 'presets': ['400', '200', '100', '60'], 'default': '200'},
+    'nok': {'symbol': 'kr', 'presets': ['160', '80', '40', '20'], 'default': '80'},
+    'pln': {'symbol': 'zł', 'presets': ['80', '40', '20', '10'], 'default': '40'},
+    'rub': {'symbol': '₽', 'presets': ['1300', '800', '500', '200'], 'default': '800'},
+    'sek': {'symbol': 'kr', 'presets': ['180', '90', '45', '30'], 'default': '90'},
+    'twd': {'symbol': 'NT$', 'presets': ['480', '240', '150', '70'], 'default': '240'},
+    'usd': {'symbol': '$', 'presets': ['50', '30', '20', '10'], 'default': '30'}
+}
+
+LOCALE_CURRENCIES = {
+    'ast': 'eur',
+    'ca': 'eur',
+    'cs': 'czk',
+    'cy': 'gbp',
+    'da': 'dkk',
+    'de': 'eur',
+    'dsb': 'eur',
+    'el': 'eur',
+    'en-CA': 'cad',
+    'en-GB': 'gbp',
+    'en-US': 'usd',
+    'es-ES': 'eur',
+    'es-MX': 'mxn',
+    'et': 'eur',
+    'fr': 'eur',
+    'fy-NL': 'eur',
+    'gu-IN': 'inr',
+    'hi-IN': 'inr',
+    'hsb': 'eur',
+    'hu': 'huf',
+    'it': 'eur',
+    'ja': 'jpy',
+    'lv': 'eur',
+    'ml': 'inr',
+    'mr': 'inr',
+    'nb-NO': 'nok',
+    'nl': 'eur',
+    'nn-NO': 'nok',
+    'pa-IN': 'inr',
+    'pl': 'pln',
+    'pt-BR': 'brl',
+    'pt-PT': 'eur',
+    'ru': 'rub',
+    'sk': 'eur',
+    'sl': 'eur',
+    'sv-SE': 'sek',
+    'ta': 'inr',
+    'te': 'inr',
+    'zh-TW': 'twd'
+ }

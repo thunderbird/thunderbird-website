@@ -9,7 +9,7 @@ import settings
 import sys
 import translate
 
-from babel.core import Locale, UnknownLocaleError
+from babel.core import Locale, UnknownLocaleError, get_locale_identifier
 from babel.dates import format_date
 from datetime import datetime
 from os import path
@@ -318,7 +318,7 @@ def thunderbird_url(page, channel='None'):
 
 
 @jinja2.contextfunction
-def donate_url(ctx, content='', source='thunderbird.net', medium='referral', campaign='', download=False):
+def donate_url(ctx, content='', source='thunderbird.net', medium='give', campaign='donation_flow_2023', download=False):
     # If this link is from a download button, donate.mozilla.org has thank you text.
     download_string = ''
     if download:
@@ -347,6 +347,23 @@ def get_locale(lang):
     except (UnknownLocaleError, ValueError):
         return Locale(*settings.LANGUAGE_CODE.split('-'))
 
+
+@jinja2.contextfunction
+def get_fru_language(ctx):
+    """
+    Returns the current language if supported by FRU.
+    Defaults to English if it's not supported.
+    """
+    language = ctx['LANG']
+
+    try:
+        if settings.FRU_LANGUAGES[language]:
+            return settings.FRU_LANGUAGES[language]
+    except KeyError:
+        pass
+
+    # Fallback to our default site language (en-US unless something weird happens)
+    return settings.LANGUAGE_CODE
 
 @jinja2.filters.contextfilter
 def l10n_format_date(ctx, date, format='long'):
