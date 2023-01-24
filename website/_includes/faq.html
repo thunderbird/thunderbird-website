@@ -2,35 +2,29 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% macro faq_entry(question, answer) -%}
+{% macro faq_entry(question, answer, format_options = None) -%}
   <details class="faq-entry">
     <summary class="faq-question">
-      {{ question }}
+      {{ _(question) }}
     </summary>
     <p class="faq-answer">
-      {{ answer }}
+      {% if format_options %}
+      {{ _(answer)|format(**format_options) }}
+      {% else %}
+      {{ _(answer) }}
+      {% endif %}
     </p>
   </details>
 {%- endmacro %}
 
-{# FAQ entries are loaded into a list of tuples, first tuple entry is the question, and the second is the answer. #}
-{% set faq_entries = [
-  ( _('What is Thunderbird’s relationship to MZLA Technologies Corporation?'), _('Thunderbird is a project of MZLA Technologies Corporation, which is a wholly owned subsidiary of Mozilla Foundation.') ),
-  ( _('What are the ways I can give?'), _('<a href="%(url)s">Visit this link to make a secure online donation right now via credit card or PayPal.</a>')|format(url='/donate') ),
-  ( _('Why do you need my address in order to process a gift?'), _('We understand that your privacy is very important. We ask for a minimum amount of information required to process credit card payments, including billing addresses. This allows our payment processor to verify your identity, process your payment, and prevent fraudulent charges to your credit card. We keep your information private — if you have questions, please refer to our <a href="%(url)s">Privacy Policy</a>. If you would rather not fill in your information on our online form, you can mail us a check.')|format(url='https://www.mozilla.org/privacy/websites/') ),
-  ( _('Can I give bitcoin?'), _('We are not currently accepting bitcoin.') ),
-  ( _('How can I turn off the appeal on the Thunderbird start page?'), _('The start page appeal to donate can’t currently be turned off. If you like, you can change the start page to something else. To do this, in Thunderbird go to Options | General') ),
-  ( _('How will my gift be used?'), _('Thunderbird is the leading open source cross-platform email and calendaring client, free for business and personal use. Your gift will help ensure it stays that way, and will support future development.') ),
-  ( _('Doesn’t Thunderbird earn income?'), _('Currently, the majority of Thunderbird’s revenue comes from generous gifts from users and friends of Thunderbird.') ),
-  ( _('Who gives to Thunderbird?'), _('Anyone can give, companies and individuals, to Thunderbird to support development of the product now and in the future.') ),
-  ( _('Does my gift give me access to tech support?'), _('Anyone can access tech support for Thunderbird by visiting the <a href="%(url)s">support forum</a>. Thunderbird does not provide tech support or enhanced tech support in exchange for financial gifts.')|format(url='https://support.mozilla.org/products/thunderbird') ),
-  ( _('Is my gift tax deductible?'), _('Gifts to Thunderbird are not tax-deductible, but are greatly appreciated. Giving to Thunderbird supports the development of our leading open source cross-platform email and calendaring client, free for business and personal use. Your gift will help ensure it stays that way, and will support future development.') ),
-  ( _('How do I cancel or change my recurring gift?'), _('If you used PayPal to set up a recurring gift, you’ll need to <a href="%(paypal)s">log in to your PayPal account</a> to make changes or to cancel. If you made a monthly gift using your credit card, please contact to the Donor Care team <a href="%(help)s">via this form</a>. Please include the email address and name you used to make your donation, and they’ll try to help you within two business days.')|format(paypal='https://www.paypal.com/', help='https://give.thunderbird.net/help') ),
-  ( _('Who can I email directly with questions about giving?'), _('If you have a question about giving to Thunderbird, please contact us via <a href="%(help)s">this form</a>. We will do our best to follow-up with you as soon as we can. If you need technical support, please head over to <a href="%(support)s">Thunderbird Support</a> for assistance.')|format(help='https://give.thunderbird.net/help', support='https://support.mozilla.org/products/thunderbird') ),
-]%}
+{% set faq_entries = get_faq_list() %}
 
 <section>
   {% for entry in faq_entries %}
-    {{ faq_entry(entry[0], entry[1]) }}
+    {% if entry[2] %}
+      {{ faq_entry(entry[0], entry[1], entry[2]) }}
+    {% else %}
+      {{ faq_entry(entry[0], entry[1]) }}
+    {% endif %}
   {% endfor %}
 </section>
