@@ -4,16 +4,30 @@
 
 {% extends "_includes/base-resp.html" %}
 
-{% block page_title %}{{ _('Donate') }}{% endblock %}
+{% block page_title %}{{ _('Give to Thunderbird') }}{% endblock %}
+
 
 {% block header_content %}
   <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-hero font-thin mt-10 mb-16">{{ self.page_title() }}</h1>
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
   </section>
+  <nav role="directory" class="text-left text-white flex justify-center w-full max-w-6xl mx-auto bg-black-25 rounded mb-10">
+    <ul class="list-none p-0 flex flex-wrap justify-around flex-1 m-0">
+      <li class="ml-2 mr-2">
+        <a href="#donate" class="btn-link">{{ _('Support Thunderbird') }}</a>
+      </li>
+      <li class="ml-2 mr-2">
+        <a href="#faq" class="btn-link">{{ _('Frequently Asked Questions') }}</a>
+      </li>
+      <li class="ml-2 mr-2">
+        <a href="#ways-to-give" class="btn-link">{{ _('Other Ways to Give') }}</a>
+      </li>
+    </ul>
+  </nav>
 {% endblock %}
 
 {% block content %}
-  <section class="pt-20 pb-20 flex justify-between items-center pr-8 pl-8">
+  <section id="donate" class="pt-20 pb-20 flex justify-between items-center pr-8 pl-8">
     <section class="flex flex-col md:flex-row justify-between mx-auto">
       <aside class="flex flex-col flex-1 lg:max-w-4xl mr-8 ml-8 lg:ml-16 lg:mr-16 lg:pt-12">
         <h3 class="header-section">
@@ -47,6 +61,19 @@
   <section class="pb-10 flex justify-between pr-4 pl-4 max-w-6xl items-center mx-auto">
       <aside class="mr-8 ml-8 lg:ml-16 lg:mr-16 lg:pt-12 ">
         {% include '_includes/faq.html' %}
+      </aside>
+    </section>
+  </section>
+
+  <section id="ways-to-give" class="mt-10 mb-14 flex max-w-6xl mx-auto justify-center items-center pl-8 pr-8">
+    <span class="header-line flex-1"></span>
+    <h2 class="header-section pl-4 pr-4 mb-0 text-center">{{ _('Other Ways to Give')}}</h2>
+    <span class="header-line flex-1"></span>
+  </section>
+
+  <section class="pb-10 flex justify-between pr-4 pl-4 max-w-6xl items-center mx-auto">
+      <aside class="mr-8 ml-8 lg:ml-16 lg:mr-16 lg:pt-12 ">
+        {% include '_includes/ways-to-give.html' %}
       </aside>
     </section>
   </section>
