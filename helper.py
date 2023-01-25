@@ -400,19 +400,8 @@ def get_faq_list(ctx):
     from faq import get_entries
 
     entries = get_entries(ctx)
-    formatted_faq = []
-    for entry in entries:
-        question = entry[0]
-        answer = entry[1]
-        if len(entry) > 2:
-            # Strings use the old formatting method
-            answer = answer % (entry[2])
-        formatted_faq.append({
-            'question': question,
-            'answer': answer,
-        })
 
-    return formatted_faq
+    return map(lambda entry: {'question': entry[0], 'answer': entry[1]}, entries)
 
 
 def f(s, *args, **kwargs):
