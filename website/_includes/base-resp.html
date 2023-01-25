@@ -18,7 +18,9 @@
       {% block site_header_logo %}
         <h2 class="mt-0 mb-0">
           <a href="{{ url('thunderbird.index') }}" class="block w-48 lg:w-56" title="{{ _('Thunderbird') }}" alt="{{ _('Thunderbird Vector Wordmark') }}">
-            <i class="block">{{ svg('logo-wordmark-white') }}</i>
+            <i class="block">
+              <img src="{{ static('svg/logo-wordmark-white.svg') }}" alt="{{ _('Thunderbird Vector Wordmark') }}"/>
+            </i>
           </a>
         </h2>
       {% endblock %}
