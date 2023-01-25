@@ -2,29 +2,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% macro faq_entry(question, answer, format_options = None) -%}
-  <details class="faq-entry">
-    <summary class="faq-question">
-      {{ _(question) }}
-    </summary>
-    <p class="faq-answer">
-      {% if format_options %}
-      {{ _(answer)|format(**format_options) }}
-      {% else %}
-      {{ _(answer) }}
-      {% endif %}
-    </p>
-  </details>
-{%- endmacro %}
-
 {% set faq_entries = get_faq_list() %}
 
 <section>
   {% for entry in faq_entries %}
-    {% if entry[2] %}
-      {{ faq_entry(entry[0], entry[1], entry[2]) }}
-    {% else %}
-      {{ faq_entry(entry[0], entry[1]) }}
-    {% endif %}
+  <details class="faq-entry">
+    <summary class="faq-question">
+      {{ entry['question'] }}
+    </summary>
+    <p class="faq-answer">
+      {{ entry['answer'] }}
+    </p>
+  </details>
   {% endfor %}
 </section>
