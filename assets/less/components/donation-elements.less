@@ -53,8 +53,36 @@
         }
     }
 }
-.fundraiseup-button {
-    /* Ensure that it doesn't pop-in. */
-    min-width: 225px;
-    min-height: 57px;
+
+.btn-donate-and-download {
+    &:extend(.flex,
+    .bg-white,
+    .text-green,
+    .font-lg,
+    .font-semibold,
+    .no-underline,
+  //  .uppercase,
+    .inline-block,
+    // Help centre the text
+    .pb-5,
+    .pt-6,
+    // Help balance the heart and the text
+    .pl-7,
+    .pr-8,
+    .mr-4,
+    .border-green-light,
+    .rounded-sm,
+    .border,
+    .border-solid);
+
+    .donate-heart {
+        &:extend(.w-5, .mr-2, .text-blue);
+        float: left;
+    }
+
+    &:hover,
+    &:focus {
+        &:extend(.shadow-md);
+        .transform(translateY(-7%));
+    }
 }

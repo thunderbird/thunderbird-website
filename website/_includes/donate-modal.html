@@ -38,12 +38,15 @@
   <form action="">
     <section class="font-lg pt-0 pl-6 pb-4 pr-6 leading-normal text-center">
       <p>{{ _('Thunderbird is independent, free, and Open Source software sustained by your donations. Help us keep the project alive!') }}</p>
+              <a href="#XSHRMXJE" style="display: none"></a>
+
     </section>
     <section id="donate-buttons" class="flex justify-center mt-6 mb-6">
-      <span class="fundraiseup-button">
-        <a href="#XSHRMXJE" style="display: none"></a>
-      </span>
-      <button class="btn-body btn-secondary no-hover" id="amount-cancel">
+      <button class="btn-donate-and-download" id="amount-submit">
+        <span class="donate-heart">{{ svg('heart') }}</span>
+        <span>{{ _('Donate & Download') }}</span>
+      </button>
+      <button class="btn-body btn-secondary" id="amount-cancel">
         {{ _('No Thanks, Download Now!') }}
         <span>
           <svg viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
