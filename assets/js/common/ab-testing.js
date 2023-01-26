@@ -117,10 +117,12 @@ if (typeof Mozilla === 'undefined') {
         // Pick one!
         //ABTest.Choose();
 
+        // Replace the donation button's links with the correct one.
         const donate_buttons = document.querySelectorAll('[data-donate-btn]');
         for (const donate_button of donate_buttons) {
             ABTest.ReplaceDonateLinks(donate_button);
         }
+        // Replace the download and donate button's link with the correct one.
         const download_and_donate_button = document.getElementById('amount-submit');
         ABTest.ReplaceDonateLinks(download_and_donate_button);
     }

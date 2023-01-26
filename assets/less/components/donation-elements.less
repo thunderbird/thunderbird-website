@@ -95,21 +95,6 @@
         }
     }
 
-    /*
-    TODO: Look at this later, animations reset and jump very roughly.
-    &:hover {
-        .donate-wave {
-            animation-duration: 1s;
-        }
-
-        .donate-heart {
-            svg {
-                animation-duration: 0.5s;
-            }
-        }
-    }
-    */
-
     .donate-wave {
         position: absolute;
         margin: auto;
@@ -152,17 +137,17 @@
 
 @keyframes heart-wave {
     from {
-        transform: scale(0);
+        transform: scale(0.0);
     }
     25% {
-        transform: scale(0);
+        transform: scale(0.0);
         .colour-blue(0.35);
     }
     35% {
         .colour-blue(0.15);
     }
     to {
-        transform: scale(200%);
+        transform: scale(2.0);
         .colour-blue(0.0);
     }
 }
