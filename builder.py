@@ -336,7 +336,17 @@ class UpdateHandler(FileSystemEventHandler):
 
     def on_modified(self, event):
         """This method is called by the watchdog observer by default when a file or directory is modified."""
-        self.throttle_updates(datetime.datetime.now(), event)
+        from webassets.exceptions import BundleError
+        standard_error_msg = 'An error has occurred during rendering !'
+
+        try:
+            self.throttle_updates(datetime.datetime.now(), event)
+        except IOError as err:
+            print(standard_error_msg)
+            print("{}: {} ({})\n".format(type(err).__name__, err.strerror, err.filename))
+        except BundleError as err:
+            print(standard_error_msg)
+            print("{}: {}\n".format(type(err).__name__, err.message))
 
 
 class RedirectingHTTPRequestHandler(SimpleHTTPRequestHandler):
