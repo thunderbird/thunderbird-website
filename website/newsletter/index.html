@@ -21,12 +21,13 @@
         <p class="font-lg tracking-wider leading-loose mb-6">
           {{ _('See exciting previews of upcoming features, read the latest desktop Thunderbird and mobile Thunderbird news, and enjoy personalized tips to protect your privacy and maximize your productivity! From the Thunderbird team directly to your inbox.') }}
         </p>
+        <div class="max-w-lg">
         {% include '_includes/newsletter-form.html' %}
+        </div>
         <p class="font-sm font-semibold self-start">
-          <a class="small-link text-blue" href="https://us12.campaign-archive.com/home/?u=f8051cc8637cf3ff79661f382&id=56428f2efc" title="View previous newsletters">{{ _('View previous newsletters') }}</a>
+          <a class="small-link font-regular text-blue" href="https://us12.campaign-archive.com/home/?u=f8051cc8637cf3ff79661f382&id=56428f2efc" title="View previous newsletters">{{ _('View previous newsletters') }}</a>
         </p>
       </aside>
     </section>
   </section>
-  {% include '_includes/site-prefooter.html' %}
 {% endblock %}
