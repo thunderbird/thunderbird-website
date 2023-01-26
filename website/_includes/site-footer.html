@@ -33,7 +33,7 @@
       </nav>
     </aside>
     <aside class="flex flex-col items-center">
-      <ul class="list-none p-0 flex flex-wrap items-center justify-around">
+      <ul class="list-none p-0 flex flex-wrap items-center justify-around {% if hide_social_footer %}hidden{% endif %}">
         <li class="m-1">
           <a class="social-link font-semibold" title="{{ _('Follow %(twitter)s on Twitter')|format(twitter='@mozthunderbird') }}"
             href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
