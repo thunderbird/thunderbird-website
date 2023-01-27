@@ -88,6 +88,11 @@
 
     // Make sure our donate-wave div doesn't render outside of the button
     contain: paint;
+    /*
+     * Smooths out Firefox SVG animations by rendering the Vector image in 3D (iirc this turns it into a bitmap image.)
+     * Without this *hack* the animation will shimmer and clip terribly.
+     */
+    transform: rotateZ(0.1deg);
 
     // Remove the animation if they prefer reduced motion
     @media (prefers-reduced-motion) {
@@ -121,7 +126,6 @@
     .donate-heart {
         &:extend(.mr-2, .w-4, .h-5, .text-blue, .my-auto);
         float: left;
-
         svg {
             animation: linear 1s alternate heart-bounce infinite;
         }
