@@ -59,6 +59,7 @@
     background-color: rgba(0, 128, 255, @alpha);
 }
 
+// Helper mixin to smooth out scale animations in Firefox
 .force-smooth-animation {
     rotate: .1deg;
 }
@@ -91,6 +92,10 @@
     .border-solid,
     .force-smooth-animation);
 
+    @heart-wh: 20px;
+    @heart-animation-speed: 0.60s;
+    @heart-wave-animation-speed: @heart-animation-speed * 2;
+
     // Make sure our donate-wave div doesn't render outside of the button
     contain: paint;
 
@@ -108,26 +113,31 @@
     }
 
     .donate-wave {
-        display: inline-block;
+        display: block;
         position: relative;
         margin: auto;
         // Hand crafted values from the heart. If you adjust sizing, make sure to tweak these!
-        left: calc(-256px + 8px);
-        top: calc(-256px - 12px);
+        left: -256px + (@heart-wh/2);
+        top: -256px - (@heart-wh/2);
+
         width: 512px;
         height: 512px;
         border-radius: 50%;
 
         // donate-wave should be twice the length of donate-heart animation,
         // since donate-heart bounces back and forth.
-        animation: linear 2s heart-wave infinite;
+        animation: linear @heart-wave-animation-speed heart-wave infinite;
     }
 
     .donate-heart {
-        &:extend(.mr-2, .w-4, .h-5, .text-blue, .my-auto);
-        float: left;
+        &:extend(.mr-2, .text-blue);
+
+        margin-top: 0.20rem;
+        width: var(--heart-wh);
+        height: var(--heart-wh);
+
         svg {
-            animation: linear 1s alternate heart-bounce infinite;
+            animation: linear @heart-animation-speed alternate heart-bounce infinite;
         }
     }
 
@@ -145,26 +155,26 @@
 
 @keyframes heart-bounce {
     from {
-        transform: scale(1.0);
+        scale: 1.0;
     }
     to {
-        transform: scale(1.3);
+        scale: 1.3;
     }
 }
 
 @keyframes heart-wave {
     from {
-        transform: scale(0.0);
+        scale: 0;
     }
     25% {
-        transform: scale(0.0);
+        scale: 0;
         .colour-blue(0.35);
     }
     35% {
         .colour-blue(0.15);
     }
     to {
-        transform: scale(2.0);
+        scale: 2.0;
         .colour-blue(0.0);
     }
 }
