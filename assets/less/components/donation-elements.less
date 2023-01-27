@@ -59,20 +59,27 @@
     background-color: rgba(0, 128, 255, @alpha);
 }
 
+#donate-buttons {
+    max-height: 60px;
+}
+
+#amount-cancel {
+    p {
+        &:extend(.leading-loose, .my-auto);
+    }
+}
+
 .btn-donate-and-download {
     &:extend(.flex,
     .bg-white,
     .text-green,
-    .font-lg,
+    .font-xl,
     .font-semibold,
     .no-underline,
-    .inline-block,
-    // Help centre the text
-    .pb-5,
-    .pt-6,
-    // Help balance the heart and the text
-    .pl-7,
-    .pr-8,
+    .pt-4,
+    .pb-4,
+    .pl-5,
+    .pr-6,
     .mr-4,
     .border-green-light,
     .rounded-sm,
@@ -96,26 +103,32 @@
     }
 
     .donate-wave {
-        position: absolute;
+        display: inline-block;
+        position: relative;
         margin: auto;
-        // Not the greatest, but it works
-        left: -218px;
-        top: -224px;
+        // Hand crafted values from the heart. If you adjust sizing, make sure to tweak these!
+        left: calc(-256px + 8px);
+        top: calc(-256px - 12px);
         width: 512px;
         height: 512px;
         border-radius: 50%;
+
         // donate-wave should be twice the length of donate-heart animation,
         // since donate-heart bounces back and forth.
         animation: linear 2s heart-wave infinite;
     }
 
     .donate-heart {
-        &:extend(.w-4, .mr-2, .text-blue);
+        &:extend(.mr-2, .w-4, .h-5, .text-blue, .my-auto);
         float: left;
 
         svg {
             animation: linear 1s alternate heart-bounce infinite;
         }
+    }
+
+    p {
+        &:extend(.my-auto);
     }
 
     &:hover,
