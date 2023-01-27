@@ -59,6 +59,10 @@
     background-color: rgba(0, 128, 255, @alpha);
 }
 
+.force-smooth-animation {
+    rotate: .1deg;
+}
+
 #donate-buttons {
     max-height: 60px;
 }
@@ -84,15 +88,11 @@
     .border-green-light,
     .rounded-sm,
     .border,
-    .border-solid);
+    .border-solid,
+    .force-smooth-animation);
 
     // Make sure our donate-wave div doesn't render outside of the button
     contain: paint;
-    /*
-     * Smooths out Firefox SVG animations by rendering the Vector image in 3D (iirc this turns it into a bitmap image.)
-     * Without this *hack* the animation will shimmer and clip terribly.
-     */
-    transform: rotateZ(0.1deg);
 
     // Remove the animation if they prefer reduced motion
     @media (prefers-reduced-motion) {
@@ -137,7 +137,7 @@
 
     &:hover,
     &:focus {
-        &:extend(.shadow-md);
+        &:extend(.shadow-md, .force-smooth-animation);
         .transform(translateY(-7%));
         .colour-blue(0.1);
     }
