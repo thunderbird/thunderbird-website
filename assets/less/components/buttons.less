@@ -117,7 +117,10 @@ button {
 }
 
 .btn-newsletter {
-  &:extend(.w-40, .h-8, .rounded-xs, .border-none, .bg-primary-button, .text-white, .p-2, .pl-3, .pr-3, .uppercase, .font-semibold, .appearance-none);
+  &:extend(.w-40, .font-md, .rounded-sm, .border-none, .bg-primary-button, .text-white, .p-2, .pl-3, .pr-3, .uppercase, .font-bold, .appearance-none);
+
+  // Align the button with our inputbox.
+  line-height: normal;
 
   &:hover,
   &:focus {
