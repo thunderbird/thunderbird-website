@@ -32,19 +32,10 @@ if (typeof Mozilla === 'undefined') {
         // Ensure we actually have the javascript loaded, so we can hook up our events.
         const fundraiseUp = window.FundraiseUp;
 
-        // An initial check for our donate buttons
-        Donation.CheckForPosition();
-
         /**
          * @param details - See https://fundraiseup.com/docs/parameters/
          */
         fundraiseUp.on('checkoutOpen', function(details) {
-            // Don't start the download if we didn't come from the donation download modal
-            // The absence of Download & Donate element button should handle this
-            if (!details.element || !details.element.id) {
-                return;
-            }
-
             // Retrieve the current download link before we close the form (as that clears it)
             const download_link = Donation.CurrentDownloadLink;
 
@@ -60,64 +51,6 @@ if (typeof Mozilla === 'undefined') {
                 window.open(download_link, '_self');
             }, 1000);
         });
-        fundraiseUp.on('checkoutClose', function () {
-            const toRemove = [
-                'utm_campaign', 'utm_medium', 'utm_source', 'utm_content', 'form',
-            ];
-            const fullParams = location.href.split("?")[1];
-            const fullUrl = [location.href.split("?")[0]];
-
-            if (!fullParams) {
-                return;
-            }
-
-            const params = new URLSearchParams(fullParams)
-            toRemove.map(function (item) {
-                params.delete(item);
-            });
-
-            if (params.toString().length > 0) {
-                fullUrl.push(params.toString());
-            }
-
-            // FRU "restores" the url state, but forgets our utm tags (which it supports)
-            // Listen to a popstate, so we can accurately clean up after it.
-            window.addEventListener('popstate',  function cleanUTMTags(event) {
-                // Fire only once
-                window.removeEventListener('popstate', cleanUTMTags, false );
-                // Replace the url state with our clean url
-                window.history.replaceState(null, "", fullUrl.join('?'));
-            });
-        });
-
-    }
-
-    /**
-     * Returns the stored position if available, otherwise returns null.
-     * @returns {number|null}
-     */
-    Donation.GetScrollPosition = function() {
-        const pos = window.sessionStorage.getItem(Donation.WINDOW_POS_KEY);
-
-        if (pos) {
-            return parseFloat(pos);
-        }
-        return null;
-    }
-
-    /**
-     * Set our current position, so we can fix it on page reload.
-     * @see Donation.CheckForPosition
-     */
-    Donation.SetScrollPosition = function() {
-        window.sessionStorage.setItem(Donation.WINDOW_POS_KEY, window.scrollY.toString());
-    }
-
-    /**
-     * Removes our current position.
-     */
-    Donation.RemoveScrollPosition = function() {
-        window.sessionStorage.removeItem(Donation.WINDOW_POS_KEY);
     }
 
     /**
@@ -127,7 +60,7 @@ if (typeof Mozilla === 'undefined') {
      * @param utmMedium {?string}
      * @param utmCampaign {?string}
      */
-    Donation.Donate = function(utmContent = null, utmSource = 'thunderbird.net', utmMedium = 'fru', utmCampaign = 'donation_flow_2023') {
+    Donation.MakeDonateUrl = function(utmContent = null, utmSource = 'thunderbird.net', utmMedium = 'fru', utmCampaign = 'donation_flow_2023') {
         let params = {
             'form': 'support',
             'utm_content': utmContent,
@@ -140,10 +73,7 @@ if (typeof Mozilla === 'undefined') {
 
         params = new URLSearchParams(params);
 
-        Donation.SetScrollPosition();
-
-        // Display the FRU form
-        location.href = `?${params.toString()}`;
+        return `?${params.toString()}`;
     }
 
     /**
@@ -156,7 +86,6 @@ if (typeof Mozilla === 'undefined') {
         $(document.body).removeClass('overflow-hidden');
         Donation.IsVisible = false;
         Donation.CurrentDownloadLink = null;
-        Donation.RemoveScrollPosition();
     }
 
     /**
@@ -171,11 +100,15 @@ if (typeof Mozilla === 'undefined') {
         Donation.IsVisible = true;
         Donation.CurrentDownloadLink = download_url;
 
+        // Set the "No thanks, just download" button's link
+        if ($("#amount-cancel")[0]) {
+            $("#amount-cancel")[0].href = download_url;
+        }
+
         // Define cancel and close button on the donation form.
         $('#amount-cancel').click(function(e) {
-            e.preventDefault();
+            // No prevent default
             Donation.CloseForm();
-            location.href = download_url;
         });
         $('#close-modal').click(function(e) {
             e.preventDefault();
@@ -209,21 +142,7 @@ if (typeof Mozilla === 'undefined') {
         $('#amount-other').on('input', function() {
             $('#amount-other-selection').val($(this).val());
         });
-
-        Donation.SetScrollPosition();
     };
-
-    /**
-     * Checks and applies any position parameter to the window's scrollY
-     * This makes the silly page refresh on the donation modal look less jarring
-     */
-    Donation.CheckForPosition = function() {
-        const pos = Donation.GetScrollPosition();
-        if (pos) {
-            window.scrollTo(0, pos);
-            window.sessionStorage.removeItem(Donation.WINDOW_POS_KEY)
-        }
-    }
 
     window.Mozilla.Donation = Donation;
     Donation.Init();
