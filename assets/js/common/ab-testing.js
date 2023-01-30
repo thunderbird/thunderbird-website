@@ -88,18 +88,15 @@ if (typeof Mozilla === 'undefined') {
     }
 
     /**
-     * If FRU prevent the link redirect, and call up the donation form.
-     * @param event : Event
+     * Replaces a 'HTMLAnchorElement' href tag with the bucket's (only FRU right now) equivalent url.
+     * @param element : HTMLAnchorElement
      */
-    ABTest.Donate = function(event) {
+    ABTest.ReplaceDonateLinks = function(element) {
         if (ABTest.IsInFundraiseUpBucket()) {
-            const element = event.currentTarget;
             // If we somehow don't have an element, we can exit and still start any redirects.
             if (!element) {
                 return;
             }
-
-            event.preventDefault();
 
             // Falsey fallback check to transform '' => null
             const utmContent = element.getAttribute('data-donate-content') || null;
@@ -107,7 +104,7 @@ if (typeof Mozilla === 'undefined') {
             const utmMedium = element.getAttribute('data-donate-medium') || 'fru';
             const utmCampaign = element.getAttribute('data-donate-campaign') || 'donation_flow_2023';
 
-            window.Mozilla.Donation.Donate(utmContent, utmSource, utmMedium, utmCampaign);
+            element.href = window.Mozilla.Donation.MakeDonateUrl(utmContent, utmSource, utmMedium, utmCampaign);
         }
     }
 
@@ -120,10 +117,14 @@ if (typeof Mozilla === 'undefined') {
         // Pick one!
         //ABTest.Choose();
 
+        // Replace the donation button's links with the correct one.
         const donate_buttons = document.querySelectorAll('[data-donate-btn]');
         for (const donate_button of donate_buttons) {
-            donate_button.addEventListener('click', ABTest.Donate);
+            ABTest.ReplaceDonateLinks(donate_button);
         }
+        // Replace the download and donate button's link with the correct one.
+        const download_and_donate_button = document.getElementById('amount-submit');
+        ABTest.ReplaceDonateLinks(download_and_donate_button);
     }
 
     window.Mozilla.ABTest = ABTest;
