@@ -33,6 +33,7 @@ if (typeof Mozilla === 'undefined') {
         const fundraiseUp = window.FundraiseUp;
 
         /**
+         * Event fires when the FRU checkout modal opens
          * @param details - See https://fundraiseup.com/docs/parameters/
          */
         fundraiseUp.on('checkoutOpen', function(details) {
@@ -50,6 +51,21 @@ if (typeof Mozilla === 'undefined') {
             window.setTimeout(function() {
                 window.open(download_link, '_self');
             }, 1000);
+        });
+        /**
+         * Event fires when the FRU conversion is completed successfully.
+         * @param details - See https://fundraiseup.com/docs/parameters/
+         */
+        fundraiseUp.on('donationComplete', function(details) {
+            if (!details || !details.supporter) {
+                return;
+            }
+
+            const hasSubscribedToNewsletter = details.supporter.mailingListSubscribed || false;
+
+            if (hasSubscribedToNewsletter) {
+                window.open(`/${window.siteLocale}/newsletter`, '_blank');
+            }
         });
     }
 
