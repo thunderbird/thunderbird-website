@@ -1,5 +1,7 @@
 
 .faq-entry {
+  &:extend(.bg-white, .shadow-md, .mb-5, .rounded, .p-4, .w-full);
+
   // Let it be known, I strongly dislike webkit.
   summary {
     list-style: none;
@@ -10,7 +12,7 @@
   }
 
   .faq-question {
-    &:extend(.mt-0, .mb-4, .font-2xl, .text-blue-dark, .items-center, .leading-normal);
+    &:extend(.mt-0, .font-2xl, .text-blue-dark, .items-center, .leading-normal);
 
     cursor: pointer;
     display: inline-list-item;
