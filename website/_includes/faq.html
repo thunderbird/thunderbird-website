@@ -1,0 +1,18 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set faq_entries = get_faq_list() %}
+
+<section>
+  {% for entry in faq_entries %}
+  <details class="faq-entry">
+    <summary class="faq-question">
+      {{ entry['question'] }}
+    </summary>
+    <p class="faq-answer">
+      {{ entry['answer'] }}
+    </p>
+  </details>
+  {% endfor %}
+</section>

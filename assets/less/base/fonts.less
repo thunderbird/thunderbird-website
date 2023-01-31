@@ -16,6 +16,13 @@ each(@fonts, #(@k, @v) {
   }
 });
 
+// Font Style
+each(@font-style, #(@k, @v) {
+  .@{v} {
+    font-style: @k;
+  }
+});
+
 // Font Weight
 each(@font-weight, #(@k, @v) {
   .@{v} {

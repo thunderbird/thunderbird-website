@@ -129,6 +129,8 @@ URL_MAPPINGS = {
     'thunderbird.careers': '/careers',
     'thunderbird.channel': '/channel',
     'thunderbird.contact': '/contact',
+    'thunderbird.donate': '/donate',
+    'thunderbird.donate.ways-to-give': '/donate#ways-to-give',
     'thunderbird.download-beta': '/download/beta',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
     'thunderbird.enterprise.documentation': 'https://enterprise.thunderbird.net/',

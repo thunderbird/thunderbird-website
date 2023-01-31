@@ -1,0 +1,61 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+<section class="font-md tracking-wide">
+  <h2 class="font-2xl text-blue-dark">{{ _('Bank Transfer / SEPA') }}</h2>
+  <p>{{ _('We accept contributions in Euros through Single European Payment Area (SEPA)
+    transfer, and British Pounds through BACS transfer.') }}</p>
+  <p>{{ _('Please note that for smaller (under 10 EUR or equivalent) contributions, <span class="%(class)s">and
+    especially for contributions under 5 EUR or equivalent</span>, we request that you contribute via credit card or PayPal to
+    help reduce our processing fees.')|format(class='font-bold') }}</p>
+  <p>{{ _('If your bank requests our physical address, it is 2 Harrison Street, Suite 175, San
+    Francisco, CA 94105 USA.') }}</p>
+</section>
+
+<section class="font-md tracking-wide">
+  <h3 class="font-lg text-blue-dark">{{ _('Euros:') }}</h3>
+  <ul class="ways-to-give-list-info">
+    <li><span class="font-bold">{{ _('Account Currency:') }}</span> Euro (EUR)</li>
+    <li><span class="font-bold">{{ _('Receiving Bank (Pay to):') }}</span> Standard Chartered Bank</li>
+    <li><span class="font-bold">{{ _('City & Country/Region:') }}</span> Frankfurt, Germany</li>
+    <li><span class="font-bold">{{ _('SWIFT/BIC Code:') }}</span> SCBLDEFX</li>
+    <li><span class="font-bold">{{ _('Beneficiary Name (For credit to):') }}</span> SVB - MZLA Technologies Corporation</li>
+    <li><span class="font-bold">{{ _('IBAN:') }}</span> DE05512305000500215809</li>
+    <li><span class="font-bold">{{ _('Memo field:') }}</span> Thunderbird</li>
+  </ul>
+</section>
+
+<section class="font-md tracking-wide">
+  <h3 class="font-lg text-blue-dark">{{ _('British Pound Sterling:') }}</h3>
+  <ul class="ways-to-give-list-info">
+    <li><span class="font-bold">{{ _('Account Currency:') }}</span> British Pound Sterling (GBP)</li>
+    <li><span class="font-bold">{{ _('Receiving Bank (Pay to):') }}</span> National Westminster Bank</li>
+    <li><span class="font-bold">{{ _('City & Country/Region:') }}</span> London, United Kingdom</li>
+    <li><span class="font-bold">{{ _('Bank Sort Code:') }}</span> 60-00-04</li>
+    <li><span class="font-bold">{{ _('Account Number (8 digits):') }}</span> 10020551</li>
+    <li><span class="font-bold">{{ _('Beneficiary Name (For credit to):') }}</span> MZLA Technologies Corporation</li>
+    <li>{# Line break.... #}</li>
+    <li><span class="font-bold">{{ _('SWIFT/BIC Code:') }}</span> NWBKGB2L</li>
+    <li><span class="font-bold">{{ _('IBAN:') }}</span> GB42NWBK60000410020551</li>
+    <li><span class="font-bold">{{ _('Memo field:') }}</span> Thunderbird</li>
+  </ul>
+</section>
+
+<section class="font-md tracking-wide">
+  <h2 class="font-2xl text-blue-dark">{{ _('Check (via postal service)') }}</h2>
+  <p>
+    {{ _('MZLA/Thunderbird is happy to accept your donation <span class="%(class)s">(made payable to “MZLA Technologies Corp”)</span> via check; however please
+    note that processing and acknowledgment of your gift may be delayed by changes to our office procedures due to the
+    COVID-19 pandemic. You can send checks to:')|format(class='font-bold') }}
+  </p>
+  <ul class="ways-to-give-list-info font-style-italic">
+    <li>MZLA Technologies Corporation</li>
+    <li>Attn: Thunderbird Donor Care</li>
+    <li>2 Harrison Street, Suite 175</li>
+    <li>San Francisco, CA 94105</li>
+  </ul>
+  <p>{{ _('Please include your email address on the memo line of your check to help us track and attribute your gift.') }}</p>
+
+  <p>{{ _('Please also note that MZLA/Thunderbird can only accept checks in U.S. dollars drawn on a U.S. bank.') }}</p>
+</section>

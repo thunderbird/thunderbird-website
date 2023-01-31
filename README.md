@@ -93,3 +93,7 @@ page and thunderbird.net itself.
 # Localization
 
 You can contribute to content translation of www.thunderbird.net pages using [Pontoon](https://pontoon.mozilla.org/projects/thunderbirdnet/).
+
+# Donation FAQ
+
+The actual questions and answers part of the FAQ can be found in `./faq.py`. Make sure to include the `gettext` call, otherwise we won't be able to extract the strings for localization.

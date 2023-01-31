@@ -391,6 +391,18 @@ def get_blog_data(ctx, entry):
 
     return parsed
 
+@jinja2.contextfunction
+def get_faq_list(ctx):
+    """
+    Returns a list of faq dicts: { 'question': '...', 'answer': '...' }
+    This list is pre-formatted and localized.
+    """
+    from faq import get_entries
+
+    entries = get_entries(ctx)
+
+    return map(lambda entry: {'question': entry[0], 'answer': entry[1]}, entries)
+
 
 def f(s, *args, **kwargs):
     return s.format(*args, **kwargs)
