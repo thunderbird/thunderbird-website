@@ -1,9 +1,9 @@
 <footer id="colophon" class="bg-black-light text-white flex flex-col pt-10 pb-8 pl-4 pr-4">
   <section class="flex flex-col lg:flex-col justify-between items-center self-center w-full max-w-6xl">
-    <aside class="flex flex-col items-center lg:items-start">
+    <aside class="flex flex-col items-center">
       <a href="{{ url('thunderbird.index') }}" class="block w-40" title="{{ _('Thunderbird') }}"
         alt="{{ _('Thunderbird Vector Wordmark') }}">
-        {{ svg('logo-wordmark-white') }}
+        <img src="{{ static('svg/logo-wordmark-white.svg') }}" alt="{{ _('Thunderbird Vector Wordmark') }}"/>
       </a>
 
       <nav id="footer-main" role="navigation" class="mt-2">
@@ -33,7 +33,7 @@
       </nav>
     </aside>
     <aside class="flex flex-col items-center">
-      <ul class="list-none p-0 flex flex-wrap items-center justify-around">
+      <ul class="list-none p-0 flex flex-wrap items-center justify-around {% if hide_social_footer %}hidden{% endif %}">
         <li class="m-1">
           <a class="social-link font-semibold" title="{{ _('Follow %(twitter)s on Twitter')|format(twitter='@mozthunderbird') }}"
             href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
