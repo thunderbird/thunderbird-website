@@ -14,17 +14,19 @@
 
 {% block site_header %}
   <header id="masthead" class="bg-no-repeat bg-cover bg-top flex flex-col{% if active_page == 'index' %} bg-header{% else %} bg-header-page{% endif %}">
-    <section class="flex justify-between items-center p-6 flex-wrap {% if active_page == 'whatsnew' %} hidden{% endif %}">
+    <section class="flex justify-between items-center p-6 flex-wrap {% if hide_header %} hidden{% endif %}">
       {% block site_header_logo %}
         <h2 class="mt-0 mb-0">
           <a href="{{ url('thunderbird.index') }}" class="block w-48 lg:w-56" title="{{ _('Thunderbird') }}" alt="{{ _('Thunderbird Vector Wordmark') }}">
-            <i class="block">{{ svg('logo-wordmark-white') }}</i>
+            <i class="block">
+              <img src="{{ static('svg/logo-wordmark-white.svg') }}" alt="{{ _('Thunderbird Vector Wordmark') }}"/>
+            </i>
           </a>
         </h2>
       {% endblock %}
 
       {% block site_header_nav %}
-        <a href="{{ donate_url('header') }}" class="btn-donate md:hidden">
+        <a href="{{ donate_url('header') }}" class="btn-donate md:hidden" data-donate-btn data-donate-content="header">
           <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
         </a>
         <nav id="nav-main" role="navigation" class="flex-grow md:flex-grow-0">
@@ -48,7 +50,7 @@
               <a href="{{ url('blog') }}" class="nav-link">{{_('Blog')}}</a>
             </li>
             <li class="hidden md:inline">
-              <a href="{{ donate_url('header') }}" class="btn-donate">
+              <a href="{{ donate_url('header') }}" class="btn-donate" data-donate-btn data-donate-content="header">
                 <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span> {{_('Donate')}}
               </a>
             </li>
@@ -58,6 +60,8 @@
     </section>
 
     {% block header_content %}{% endblock %}
+
+    {% include '_includes/donate-modal.html' %}
 
     {% block breadcrumbs %}{% endblock %}
 

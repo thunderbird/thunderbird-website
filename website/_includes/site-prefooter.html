@@ -17,7 +17,7 @@
           {{_('Join Us')}}
         </a>
         <p class="font-sm mt-0 text-blue font-semibold self-start">
-          <a href="{{ donate_url('pre_footer') }}" class="small-link text-blue">{{ _('Make a Donation') }}</a> &bull;
+          <a href="{{ donate_url('pre_footer') }}" class="small-link text-blue" data-donate-btn data-donate-content="pre_footer">{{ _('Make a Donation') }}</a> &bull;
           <a href="https://support.mozilla.org/products/thunderbird/"
             class="small-link text-blue">{{ _('Get Support') }}</a> &bull;
           <a href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird"
@@ -34,13 +34,13 @@
         <nav>
           <ul class="list-none p-0 flex flex-wrap font-semibold tabs-nav">
             <li id="channel" class="release">
-              <label for="release">Release Channel</label>
+              <label for="release">{{ _('Release Channel') }}</label>
             </li>
             <li class="beta">
-              <label for="beta">Beta Channel</label>
+              <label for="beta">{{ _('Beta Channel') }}</label>
             </li>
             <li class="daily">
-              <label for="daily">Daily Channel</label>
+              <label for="daily">{{ _('Daily Channel') }}</label>
             </li>
           </ul>
         </nav>

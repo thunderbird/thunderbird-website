@@ -180,7 +180,6 @@ main {
 
 .donate-banner {
   --accent-text: var(--color-red-80);
-
   background: var(--color-red-50);
   background-image: linear-gradient(to right, var(--color-red-10), var(--color-gray-10));
   background-position: top left, center;
@@ -190,8 +189,9 @@ main {
   box-shadow: 4px 4px 24px rgba(0,0,0,0.15);
   color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.1;
   margin: 0 auto;
   margin-top: -114px;
@@ -200,8 +200,8 @@ main {
   transition: transform 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-  width: 430px;
-  height: 120px;
+  max-width: 430px;
+  min-height: 120px;
   z-index: 10;
 }
 
@@ -232,22 +232,28 @@ main {
 }
 
 .donate-banner:hover #donate-banner-left {
-  transform: translate(24px, 12px);
+  transform: translate(24px, 6px);
 }
 
 #donate-banner-left,
 #donate-banner-right {
+  flex: 1;
   padding: 15px;
   transition: all .5s ease-in-out;
-  z-index: 1;
+  z-index: 2;
+}
+
+#donate-banner-right {
+  padding-inline-start: 3px;
+  text-shadow: 0 0 4px var(--color-gray-10), 0 1px 1px var(--color-gray-10);
 }
 
 #donate-banner-left > strong {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 #donate-banner-right > strong {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
 }
 
@@ -386,8 +392,8 @@ main {
 
 #hover-hearts {
   position: absolute;
-  top: 30px;
-  right: 36px;
+  inset-block-end: 12px;
+  inset-inline-end: 13px;
   display: none;
   gap: 3px;
   z-index: 1;

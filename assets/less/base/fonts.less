@@ -16,6 +16,13 @@ each(@fonts, #(@k, @v) {
   }
 });
 
+// Font Style
+each(@font-style, #(@k, @v) {
+  .@{v} {
+    font-style: @k;
+  }
+});
+
 // Font Weight
 each(@font-weight, #(@k, @v) {
   .@{v} {
@@ -64,6 +71,13 @@ each(@breakpoints, #(@k, @v) {
     each(@fonts, #(@i, @r) {
       .@{v}\:@{r} {
         font-size: @i;
+      }
+    });
+
+    // Line Height
+    each(@line-height, #(@i, @r) {
+      .@{v}\:@{r} {
+        line-height: @i;
       }
     });
 

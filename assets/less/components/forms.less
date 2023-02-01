@@ -11,3 +11,11 @@
 .form-select {
   &:extend(.block, .w-40, .rounded-sm, .border-none, .bg-grey-light, .text-black, .p-1, .pr-6, .appearance-none);
 }
+
+.newsletter-form {
+  &:extend(.shadow, .flex, .items-center, .rounded, .self-start, .p-1, .bg-grey-light);
+  input {
+    &:extend(.w-full, .rounded-sm, .appearance-none, .border-none, .p-3, .md\:p-2, .tracking-wide, .font-bold, .font-md, .md\:mr-2);
+  }
+  // Button is in buttons.less
+}
