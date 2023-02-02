@@ -64,7 +64,13 @@ if (typeof Mozilla === 'undefined') {
             const hasSubscribedToNewsletter = details.supporter.mailingListSubscribed || false;
 
             if (hasSubscribedToNewsletter) {
-                window.open(`/${window.siteLocale}/newsletter`, '_blank');
+                const url = `/${window.siteLocale}/newsletter`;
+                const opener = window.open(url, '_blank');
+
+                // If a browser doesn't want us to open a new tab (due to a pop-up blocker, or chrome's 'user must click once on a page before we allow redirect') then just redirect them.
+                if (opener === null) {
+                    location.href = url;
+                }
             }
         });
     }
