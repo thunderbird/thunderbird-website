@@ -113,9 +113,8 @@ if (typeof Mozilla === 'undefined') {
      * Called after ABTest is added to the Mozilla namespace.
      */
     ABTest.Init = function() {
-        // Note: Intentionally uncommented for testing.
         // Pick one!
-        //ABTest.Choose();
+        ABTest.Choose();
 
         // Replace the donation button's links with the correct one.
         const donate_buttons = document.querySelectorAll('[data-donate-btn]');
