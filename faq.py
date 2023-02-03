@@ -21,8 +21,8 @@ def get_entries(ctx):
             ),
             (
                 gettext(u'Why do you need my address in order to process a gift?'),
-                gettext(u'We understand that your privacy is very important. We ask for a minimum amount of information required to process credit card payments, including billing addresses. This allows our payment processor to verify your identity, process your payment, and prevent fraudulent charges to your credit card. We keep your information private — if you have questions, please refer to our <a href="%(url)s">Privacy Policy</a>. If you would rather not fill in your information on our online form, you can mail us a check.')
-                % {'url': url(ctx, 'privacy')}
+                gettext(u'We understand that your privacy is very important. We ask for a minimum amount of information required to process credit card payments, including billing addresses. This allows our payment processor to verify your identity, process your payment, and prevent fraudulent charges to your credit card. We keep your information private — if you have questions, please refer to our <a href="%(url)s">Privacy Policy</a>. If you would rather not fill in your information on our online form, you can mail us a <a href="%(check)s">check</a>.')
+                % {'url': url(ctx, 'privacy'), 'check': url(ctx, 'thunderbird.donate.ways-to-give.check')}
             ),
             (
                 gettext(u'Can I give bitcoin?'),
@@ -30,7 +30,8 @@ def get_entries(ctx):
             ),
             (
                 gettext(u'How can I turn off the appeal on the Thunderbird start page?'),
-                gettext(u'The start page appeal to donate can’t currently be turned off. If you like, you can change the start page to something else. To do this, in Thunderbird go to Options | General'),
+                gettext(u'To learn how to customize your start page please visit:<br/><a href="%(url)s">%(url)s</a>')
+                % {'url': 'https://support.mozilla.org/kb/how-disable-or-change-thunderbird-start-page'},
             ),
             (
                 gettext(u'How will my gift be used?'),
@@ -42,7 +43,7 @@ def get_entries(ctx):
             ),
             (
                 gettext(u'Who gives to Thunderbird?'),
-                gettext(u'Anyone can give, companies and individuals, to Thunderbird to support development of the product now and in the future.')
+                gettext(u'Anyone can give, companies and individuals, to support development of the product now and in the future.')
             ),
             (
                 gettext(u'Does my gift give me access to tech support?'),
@@ -55,7 +56,7 @@ def get_entries(ctx):
             ),
             (
                 gettext(u'How do I cancel or change my recurring gift?'),
-                gettext(u'If you used PayPal to set up a recurring gift, you’ll need to <a href="%(paypal)s">log in to your PayPal account</a> to make changes or to cancel. If you made a monthly gift using your credit card, please contact to the Donor Care team <a href="%(help)s">via this form</a>. Please include the email address and name you used to make your donation, and they’ll try to help you within two business days.')
+                gettext(u'If you used PayPal to set up a recurring gift, you’ll need to <a href="%(paypal)s">log in to your PayPal account</a> to make changes or to cancel. If you made a monthly gift using your credit card, please contact the Donor Care team <a href="%(help)s">via this form</a>. Please include the email address and name you used to make your donation, and they’ll try to help you within two business days.')
                 % {'paypal': 'https://www.paypal.com', 'help': 'https://give.thunderbird.net/help'}
             ),
             (
