@@ -9,6 +9,7 @@ if (typeof Mozilla === 'undefined') {
     var Donation = {};
     Donation.ANIMATION_DURATION = 250;
     Donation.WINDOW_POS_KEY = '_tb_donation_position';
+    Donation.NEWSLETTER_URL = `/${window.siteLocale}/newsletter`;
     /**
      * Is the download form visible?
      * @type {boolean}
@@ -19,6 +20,11 @@ if (typeof Mozilla === 'undefined') {
      * @type {?string}
      */
     Donation.CurrentDownloadLink = null;
+    /**
+     * Stateful check to determine if the supporter needs to be redirected after the FRU on.checkoutClose event
+     * @type {boolean}
+     */
+    Donation.NeedsNewsletterRedirect = false;
 
     /**
      * Setups our FRU javascript events
@@ -37,6 +43,9 @@ if (typeof Mozilla === 'undefined') {
          * @param details - See https://fundraiseup.com/docs/parameters/
          */
         fundraiseUp.on('checkoutOpen', function(details) {
+            // Reset any stateful variables
+            Donation.NeedsNewsletterRedirect = false;
+
             // Retrieve the current download link before we close the form (as that clears it)
             const download_link = Donation.CurrentDownloadLink;
 
@@ -53,6 +62,18 @@ if (typeof Mozilla === 'undefined') {
             }, 1000);
         });
         /**
+         * Event fires when the FRU checkout is closed.
+         * @param details - See https://fundraiseup.com/docs/parameters/
+         */
+        fundraiseUp.on('checkoutClose', function (details) {
+            if (!Donation.NeedsNewsletterRedirect) {
+                return;
+            }
+
+            // Redirect them to the newsletter landing page
+            location.href = Donation.NEWSLETTER_URL;
+        });
+        /**
          * Event fires when the FRU conversion is completed successfully.
          * @param details - See https://fundraiseup.com/docs/parameters/
          */
@@ -64,13 +85,10 @@ if (typeof Mozilla === 'undefined') {
             const hasSubscribedToNewsletter = details.supporter.mailingListSubscribed || false;
 
             if (hasSubscribedToNewsletter) {
-                const url = `/${window.siteLocale}/newsletter`;
-                const opener = window.open(url, '_blank');
+                const state = window.open(Donation.NEWSLETTER_URL, '_blank');
 
                 // If a browser doesn't want us to open a new tab (due to a pop-up blocker, or chrome's 'user must click once on a page before we allow redirect') then just redirect them.
-                if (opener === null) {
-                    location.href = url;
-                }
+                Donation.NeedsNewsletterRedirect = state === null;
             }
         });
     }
