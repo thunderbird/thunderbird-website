@@ -6,15 +6,14 @@
   <h2 class="font-2xl text-blue-dark">{{ _('Bank Transfer / SEPA') }}</h2>
   <p>{{ _('We accept contributions in Euros through Single European Payment Area (SEPA)
     transfer, and British Pounds through BACS transfer.') }}</p>
-  <p>{{ _('Please note that for smaller (under 10 EUR or equivalent) contributions, <span class="%(class)s">and
-    especially for contributions under 5 EUR or equivalent</span>, we request that you contribute via credit card or PayPal to
-    help reduce our processing fees.')|format(class='font-bold') }}</p>
+  <p>{{ _('Please note that for smaller (under 10 EUR or equivalent) contributions, we request that you contribute via credit card or PayPal to
+    help reduce our processing fees.') }}</p>
   <p>{{ _('If your bank requests our physical address, it is 2 Harrison Street, Suite 175, San
     Francisco, CA 94105 USA.') }}</p>
 </section>
 
 <section class="font-md tracking-wide">
-  <h3 class="font-lg text-blue-dark">{{ _('Euros:') }}</h3>
+  <h3 id="ways-to-give-euro" class="font-lg text-blue-dark">{{ _('Euros:') }}</h3>
   <ul class="ways-to-give-list-info">
     <li><span class="font-bold">{{ _('Account Currency:') }}</span> Euro (EUR)</li>
     <li><span class="font-bold">{{ _('Receiving Bank (Pay to):') }}</span> Standard Chartered Bank</li>
@@ -27,7 +26,7 @@
 </section>
 
 <section class="font-md tracking-wide">
-  <h3 class="font-lg text-blue-dark">{{ _('British Pound Sterling:') }}</h3>
+  <h3 id="ways-to-give-pound" class="font-lg text-blue-dark">{{ _('British Pound Sterling:') }}</h3>
   <ul class="ways-to-give-list-info">
     <li><span class="font-bold">{{ _('Account Currency:') }}</span> British Pound Sterling (GBP)</li>
     <li><span class="font-bold">{{ _('Receiving Bank (Pay to):') }}</span> National Westminster Bank</li>
@@ -43,19 +42,16 @@
 </section>
 
 <section class="font-md tracking-wide">
-  <h2 class="font-2xl text-blue-dark">{{ _('Check (via postal service)') }}</h2>
+  <h2 id="ways-to-give-check" class="font-2xl text-blue-dark">{{ _('Check (via postal service)') }}</h2>
   <p>
-    {{ _('MZLA/Thunderbird is happy to accept your donation <span class="%(class)s">(made payable to “MZLA Technologies Corp”)</span> via check; however please
-    note that processing and acknowledgment of your gift may be delayed by changes to our office procedures due to the
-    COVID-19 pandemic. You can send checks to:')|format(class='font-bold') }}
+    {{ _('MZLA/Thunderbird is happy to accept your donation <span class="%(class)s">(made payable to “MZLA Technologies Corp”)</span> via check;
+    however please note that we can only accept checks in US dollars drawn on a US bank.')|format(class='font-bold') }}
   </p>
-  <ul class="ways-to-give-list-info font-style-italic">
-    <li>MZLA Technologies Corporation</li>
+  <ul class="ways-to-give-list-info">
+    <li class="font-bold">MZLA Technologies Corporation</li>
     <li>Attn: Thunderbird Donor Care</li>
     <li>2 Harrison Street, Suite 175</li>
     <li>San Francisco, CA 94105</li>
   </ul>
   <p>{{ _('Please include your email address on the memo line of your check to help us track and attribute your gift.') }}</p>
-
-  <p>{{ _('Please also note that MZLA/Thunderbird can only accept checks in U.S. dollars drawn on a U.S. bank.') }}</p>
 </section>
