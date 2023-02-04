@@ -86,6 +86,7 @@ MEDIA_URL = '/media'
 FAVICON_PATH = '/media/img/thunderbird/favicon.ico'
 
 # path to the website templates
+# templates with paths starting with "_" or "includes" are excluded by builder.py
 WEBSITE_PATH = 'website/'
 
 # path to the start page templates

@@ -65,4 +65,3 @@ def get_entries(ctx):
                 % {'help': 'https://give.thunderbird.net/help', 'support': url(ctx, 'support')}
             )
     ]
-

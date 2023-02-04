@@ -205,7 +205,7 @@ class Site(object):
             self._switch_lang('en-US')
 
         notelist = releasenotes.notes
-        note_template = self._env.get_template('_includes/release-notes.html')
+        note_template = self._env.get_template('includes/_enonly/release-notes.html')
         self._env.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
         for k, n in notelist.items():
             if 'beta' in k:
@@ -225,7 +225,7 @@ class Site(object):
 
             target = os.path.join(self.outpath, 'thunderbird', str(k), 'system-requirements')
             mkdir(target)
-            sysreq_template = self._env.get_template('_includes/system_requirements.html')
+            sysreq_template = self._env.get_template('includes/_enonly/system_requirements.html')
             logger.info("Rendering {0}/index.html...".format(target))
             sysreq_template.stream().dump(os.path.join(target, 'index.html'))
 
@@ -256,7 +256,7 @@ class Site(object):
         '_' in front of a template or folder will force those to be skipped by this method.
         """
         for template in self._env.list_templates():
-            if not template.startswith("_"):
+            if not template.startswith("_") and not template.startswith("includes"):
                 filepath = os.path.join(self.outpath, template)
                 # Make sure the output directory exists.
                 filedir = os.path.dirname(filepath)
@@ -314,7 +314,7 @@ class UpdateHandler(FileSystemEventHandler):
             self.builder.build_startpage()
         else:
             # Reduce build time by ignoring release notes when unnecessary.
-            if '_includes' in event.src_path:
+            if 'includes' in event.src_path:
                 self.builder.build_website(assets=False, notes=True)
             else:
                 self.builder.build_website(assets=False, notes=False)

@@ -3,7 +3,7 @@
   # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
 
  {% set active_page = "eoy" %}
- {% extends "_includes/bedrock/base-resp.html" %}
+ {% extends "includes/bedrock/base-resp.html" %}
  {% block facebook_id %}348169218537151{# facebook.com/Thunderbird #}{% endblock %}
  {% block twitter_id %}mozthunderbird{% endblock %}
 
@@ -99,6 +99,6 @@
     </p>
 </section>
 {% endblock %}
-{% include '_includes/donate-modal.html' %}
+{% include 'includes/donate-modal.html' %}
 {% block site_footer%}
 {% endblock site_footer %}

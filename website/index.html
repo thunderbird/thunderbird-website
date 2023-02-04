@@ -3,7 +3,7 @@
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
 {% set active_page = "index" %}
-{% extends "_includes/base-resp.html" %}
+{% extends "includes/base-resp.html" %}
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
 {% block page_title %}{{ _('Make Email Easier.') }}{% endblock %}
@@ -107,7 +107,7 @@
     </section>
   </section>
 
-  {% include '_includes/donate-mailing-list.html' %}
+  {% include 'includes/donate-mailing-list.html' %}
 
   <section class="pt-20 pb-10 flex bg-calendar lg:pr-20">
     <section class="flex justify-between mx-auto">
@@ -143,7 +143,7 @@
     </section>
   </section>
 
-  {% include '_includes/site-prefooter.html' %}
+  {% include 'includes/site-prefooter.html' %}
 
   <div itemscope itemtype="http://schema.org/SoftwareApplication">
     <meta itemprop="name" content="{{_('Thunderbird')}}">

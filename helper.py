@@ -285,7 +285,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     translator = translate.gettext_object(locale)
     env.install_gettext_translations(translator)
     env.globals.update(**ctx)
-    template = env.get_template('_includes/download-button.html')
+    template = env.get_template('includes/download-button.html')
 
     html = template.render(data)
     return jinja2.Markup(html)
@@ -365,6 +365,7 @@ def get_fru_language(ctx):
     # Fallback to our default site language (en-US unless something weird happens)
     return settings.LANGUAGE_CODE
 
+
 @jinja2.filters.contextfilter
 def l10n_format_date(ctx, date, format='long'):
     """
@@ -390,6 +391,7 @@ def get_blog_data(ctx, entry):
     parsed['link'] = data['entries'][entry]['links'][0]['href']
 
     return parsed
+
 
 @jinja2.contextfunction
 def get_faq_list(ctx):

@@ -4,7 +4,7 @@
 
 {% set active_page = "whatsnew" %}
 {% set hide_header = True %}
-{% extends "_includes/base-resp.html" %}
+{% extends "includes/base-resp.html" %}
 
 {% block page_title %}{{ _('What’s New in Thunderbird 102') }}{% endblock %}
 
@@ -150,7 +150,7 @@
   </section>
 
   <section class="bg-prefooter bg-grey-lighter -mb-10">
-    {% include '_includes/donate-mailing-list.html' %}
+    {% include 'includes/donate-mailing-list.html' %}
   </section>
 
 {% endblock %}

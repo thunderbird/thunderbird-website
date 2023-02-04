@@ -2,7 +2,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "_includes/base-resp.html" %}
+{% extends "includes/base-resp.html" %}
 
 {% block page_title %}{{ _('Work with Us') }}{% endblock %}
 {% block page_desc %}{{ _('Come work with the Thunderbird team on the most popular open source desktop email client in the world. We are a distributed team comprised of people spread across the globe working on decentralized communication technology based on open standards.') }}{% endblock %}
@@ -62,7 +62,7 @@
     </section>
   </section>
 
-  {% include '_includes/site-prefooter.html' %}
+  {% include 'includes/site-prefooter.html' %}
 
 {% endblock %}
 
