@@ -144,7 +144,7 @@ def push_strings(localized_strings, locale, directory):
         if not any(conditions):
             continue
 
-        if entry.msgid in localized_strings:
+        if entry.msgid in localized_strings and entry.msgstr is None:
             entry.msgstr = localized_strings[entry.msgid]
 
     po_file.save(localized_po)
