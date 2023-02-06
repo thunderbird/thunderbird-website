@@ -16,7 +16,7 @@ This script will first load the messages.pot template file, pull in the msgid ke
 
 The localization for give.thunderbird.net is split into two different repos:
 - https://github.com/mozilla-l10n/thunderbird-donate-content
-- https://github.com/mozilla-l10n/mozilla-donate-content
+- https://github.com/mozilla-l10n/donate-l10n
 
 Pull those down (hint: by default the script looks in thunderbird-website/tmp), then extract the strings of the current thunderbird-website. Once that is done, run `import_wagtail_donation_script.py` from `l10n_tools/`.
 
