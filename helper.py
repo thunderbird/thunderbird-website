@@ -211,8 +211,9 @@ def platform_img(ctx, url, optional_attributes=None):
 @jinja2.contextfunction
 def download_thunderbird(ctx, channel='release', dom_id=None,
                          locale=None, force_direct=False,
-                         alt_copy=None, button_color='button-green',
-                         section='header', flex_class=None):
+                         alt_copy=None, button_class=None,
+                         section='header', flex_class=None,
+                         hide_footer_links=False):
     """ Output a "Download Thunderbird" button.
 
     :param ctx: context from calling template.
@@ -221,8 +222,9 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     :param locale: The locale of the download. Default to locale of request.
     :param force_direct: Force the download URL to be direct.
     :param alt_copy: Specifies alternate copy to use for download buttons.
-    :param button_color: color of download button. Default to 'green'.
+    :param button_class: Class of the button element. Default to `none`, and dynamically picks the class based on the channel.
     :param section: Where the button is rendered in the page. Default to 'header'.
+    :param hide_footer_links: Whether we should hide the footer links (System Requirements, What's New, Privacy Policy) display. Default to 'False'.
     :return: The button html.
     """
     alt_channel = '' if channel == 'release' else channel
@@ -276,9 +278,10 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
         'id': dom_id,
         'channel': alt_channel,
         'alt_copy': alt_copy,
-        'button_color': button_color,
+        'button_class': button_class,
         'section': section,
-        'flex_class': flex_class
+        'flex_class': flex_class,
+        'hide_footer_links': hide_footer_links,
     }
     loader = jinja2.FileSystemLoader(searchpath=settings.WEBSITE_PATH)
     env = jinja2.Environment(loader=loader, extensions=['jinja2.ext.i18n'])
