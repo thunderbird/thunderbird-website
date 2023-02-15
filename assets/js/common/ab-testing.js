@@ -103,8 +103,9 @@ if (typeof Mozilla === 'undefined') {
             const utmSource = element.getAttribute('data-donate-source') || 'thunderbird.net';
             const utmMedium = element.getAttribute('data-donate-medium') || 'fru';
             const utmCampaign = element.getAttribute('data-donate-campaign') || 'donation_flow_2023';
+            const redirect = element.hasAttribute('data-donate-redirect') || false;
 
-            element.href = window.Mozilla.Donation.MakeDonateUrl(utmContent, utmSource, utmMedium, utmCampaign);
+            element.href = window.Mozilla.Donation.MakeDonateUrl(utmContent, utmSource, utmMedium, utmCampaign, redirect);
         }
     }
 
