@@ -27,7 +27,7 @@ else:
 
 if args.startpage:
     print('Rendering start page ' + langmsg)
-    site = builder.Site(languages, settings.START_PATH, settings.START_RENDERPATH, settings.START_CSS, debug=args.debug)
+    site = builder.Site(languages, settings.START_PATH, settings.START_RENDERPATH, settings.START_CSS, js_bundles=settings.START_JS, debug=args.debug)
     site.build_startpage()
 else:
     print('Rendering www.thunderbird.net ' + langmsg)

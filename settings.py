@@ -196,6 +196,13 @@ START_CSS = {
     'start-style': ['less.old/sandstone/fonts.less', 'less.old/thunderbird/start.less']
 }
 
+START_JS = {
+    'common-bundle': [
+        # Load bearing order..Donation must come before AB testing.
+        'js/common/donations.js', 'js/common/ab-testing.js'
+    ]
+}
+
 CURRENCIES = {
     # Second value is the default.
     'brl': {'symbol': 'R$', 'presets': ['80', '40', '20', '10'], 'default': '40'},
