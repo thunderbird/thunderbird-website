@@ -12,7 +12,7 @@ if (typeof Mozilla === 'undefined') {
      * Bucket === 1 - give.thunderbird.net
      */
     const ABTest = {};
-    ABTest.bucket = 0;
+    ABTest.bucket = null;
 
     ABTest.RandomInt = function(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -20,9 +20,30 @@ if (typeof Mozilla === 'undefined') {
 
     /**
      * Pick a random int between 0 - 1.
+     * Once a bucket has been chosen, this function does nothing.
      */
     ABTest.Choose = function() {
+        if (ABTest.bucket !== null) {
+            return;
+        }
+
         ABTest.bucket = ABTest.RandomInt(0, 1);
+    }
+
+    /**
+     * Tracks our bucket choice.
+     * Called from matomo.js, registers a bucket if no bucket has been chosen.
+     */
+    ABTest.Track = function() {
+        if (ABTest.bucket === null) {
+            ABTest.Choose();
+        }
+
+        // Initialize the command queue if it's somehow not.
+        const _paq = window._paq = window._paq || [];
+
+        // TrackEvent: Category, Action, Name, Value
+        _paq.push(['trackEvent', 'AB-Test', 'Bucket Registration', 'Donation Flow 2023', ABTest.bucket === 0 ? 'fru' : 'give']);
     }
 
     /**
