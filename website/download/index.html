@@ -9,14 +9,14 @@
 {% block page_title %}{{ _('Download Thunderbird') }}{% endblock %}
 {% block page_desc %}{{ _('Thank you for downloading and installing Thunderbird!') }}{% endblock %}
 
-{% block body_id %}thunderbird-post-download{% endblock %}
+{% block body_id %}thunderbird-download{% endblock %}
 
 {% block header_content %}
   <div class="flex flex-col" style="min-height: 70vh">
     <section class="text-center text-white mx-auto my-auto">
       <p class="font-3xl tracking-wide max-w-4xl"><span class="mb-2 font-hero" style="display: block;">{{ _('Just one more step!') }}</span>{{ _('Finish installing, and start enjoying Thunderbird.') }}</p>
       <p class="tracking-wider">
-        {{ _('Having trouble? <a class="inline-link" href="%(url)s">Get help with your installation.</a>'|format(url=https://support.mozilla.org/products/thunderbird/install-migrate-and-update) }}
+        {{ _('Having trouble? <a class="inline-link" href="%(url)s">Get help with your installation.</a>')|format(url='https://support.mozilla.org/products/thunderbird/install-migrate-and-update') }}
       </p>
     </section>
 
@@ -26,7 +26,7 @@
 {% block content %}
 
 <section class="bg-black-light text-center text-white flex flex-col items-center pr-4 pl-4">
-  <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-xl mb-0">{{ _('Your download didn't start automatically?') }}</p>
+  <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-xl mb-0">{{ _('Your download didn\'t start automatically?') }}</p>
   <div class="tracking-wider mb-2">
     {{ download_thunderbird(force_direct=true, alt_copy=_('Click here to try again'), button_class='btn-link', hide_footer_links=True) }}
   </div>
