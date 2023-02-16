@@ -7,3 +7,6 @@ _paq.push(["setCookieDomain", "*.thunderbird.net"]);
 _paq.push(['setDownloadClasses', "download-link"]);
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
+if (window.Mozilla.ABTest) {
+  window.Mozilla.ABTest.Track();
+}
