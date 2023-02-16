@@ -42,8 +42,8 @@ if (typeof Mozilla === 'undefined') {
         // Initialize the command queue if it's somehow not.
         const _paq = window._paq = window._paq || [];
 
-        // TrackEvent: Category, Action, Name, Value
-        _paq.push(['trackEvent', 'AB-Test', 'Bucket Registration', 'Donation Flow 2023', ABTest.bucket === 0 ? 'fru' : 'give']);
+        // TrackEvent: Category, Action, Name
+        _paq.push(['trackEvent', 'AB-Test - Donation Flow 2023', 'Bucket Registration', ABTest.bucket === 0 ? 'fru' : 'give']);
     }
 
     /**
