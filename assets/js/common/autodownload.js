@@ -6,9 +6,15 @@
     'use strict';
 
     // Only do this on the autodownload page.
-    if ($('body').attr('id') == 'thunderbird-download') {
+    if ($('body').attr('id') === 'thunderbird-download') {
+        // IE11 safe check for determining if we've already downloaded Thunderbird
+        var lowercaseQuery = window.location.search.toLowerCase();
+        var isDownloaded = /([?|&]+downloaded=true)/.test(lowercaseQuery) === true;
+        if (isDownloaded) {
+            return;
+        }
+
         var isIELT9 = window.Mozilla.Client.platform === 'windows' && /MSIE\s[1-8]\./.test(navigator.userAgent);
-        var $directDownloadLink = $('#direct-download-link');
         var $platformLink = $('#download-button-desktop-release .download-list li:visible .download-link');
         var downloadURL;
 
