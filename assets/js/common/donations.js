@@ -55,6 +55,10 @@ if (typeof Mozilla === 'undefined') {
                 return;
             }
 
+            // Make sure _paq exists, and then send off the download event
+            window._paq = window._paq || [];
+            window._paq.push(['trackLink', download_link, 'download']);
+
             // Timeout is here to prevent url collisions with fundraiseup form.
             window.setTimeout(function() {
                 window.open(download_link, '_self');

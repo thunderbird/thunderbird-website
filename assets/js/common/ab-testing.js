@@ -44,6 +44,13 @@ if (typeof Mozilla === 'undefined') {
 
         // TrackEvent: Category, Action, Name
         _paq.push(['trackEvent', 'AB-Test - Donation Flow 2023', 'Bucket Registration', ABTest.bucket === 0 ? 'fru' : 'give']);
+
+        // If we're in the FRU bucket, we need to adjust the download link class
+        if (ABTest.IsInFundraiseUpBucket()) {
+            _paq.push(['setDownloadClasses', "donate-download-link"]);
+            // This removes the download event on the Daily download button
+            _paq.push(['removeDownloadExtensions', ['dmg', 'tar.bz2', 'exe']])
+        }
     }
 
     /**
