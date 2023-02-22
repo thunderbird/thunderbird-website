@@ -56,7 +56,7 @@
             {{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}
           </p>
           <aside class="ml-0 mr-0 self-start text-center text-green font-semibold">
-            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Thunderbird')) }}
+            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Thunderbird'), section='body') }}
           </aside>
         </main>
       </section>
@@ -71,7 +71,7 @@
             {{ _('Experience cutting edge features. Provide feedback to help refine and polish what will be in the final release.') }}
           </p>
           <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
-            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Beta'), channel='beta') }}
+            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Beta'), channel='beta', section='body') }}
           </aside>
         </main>
       </section>
@@ -92,7 +92,7 @@
             {{ _('Daily is an unstable testing and development platform, make sure you back up important data regularly!') }}
           </p>
           <aside class="ml-0 mr-0 self-start text-center text-blue font-semibold">
-            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Daily'), channel='daily') }}
+            {{ download_thunderbird(force_direct=true, alt_copy=_('Download Daily'), channel='daily', section='body') }}
           </aside>
         </main>
       </section>

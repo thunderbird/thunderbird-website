@@ -24,8 +24,8 @@
       </div>
       <div>
         <section>
-          <h2><i class="fas fa-heart fa-lg"  style="color:#ff0039"></i> {{ _('<a href="%(donate)s" data-donate-btn data-donate-redirect data-donate-content="heading" data-donate-source="start_page_tb_daily">Donate</a>')|format(donate=donate_url('heading', 'start_page_tb_daily')) }}</h2>
-          <p>{{ _('Thunderbird is both free and freedom respecting, but we\'re also completely funded by donations! The best way for you to ensure Thunderbird remains available and awesome is to <a href="%(donate)s" data-donate-btn data-donate-redirect data-donate-content="paragraph_text" data-donate-source="start_page_tb_daily">donate</a> so that the project can hire developers, pay for infrastructure, and continue to improve.')|format(donate=donate_url('paragraph_text', 'start_page_tb_daily')) }}</p>
+          <h2><i class="fas fa-heart fa-lg"  style="color:#ff0039"></i> {{ _('<a href="%(donate)s" data-donate-btn data-donate-redirect="donate" data-donate-content="heading" data-donate-source="start_page_tb_daily">Donate</a>')|format(donate=donate_url('heading', 'start_page_tb_daily')) }}</h2>
+          <p>{{ _('Thunderbird is both free and freedom respecting, but we\'re also completely funded by donations! The best way for you to ensure Thunderbird remains available and awesome is to <a href="%(donate)s" data-donate-btn data-donate-redirect="donate" data-donate-content="paragraph_text" data-donate-source="start_page_tb_daily">donate</a> so that the project can hire developers, pay for infrastructure, and continue to improve.')|format(donate=donate_url('paragraph_text', 'start_page_tb_daily')) }}</p>
         </section>
         <section>
           <h2><i class="fas fa-hands-helping fa-lg" style="color:#ed00b5"></i> {{ _('<a href="%(contribute)s">Get Involved</a>')|format(contribute='https://www.thunderbird.net/get-involved/') }}</h2>

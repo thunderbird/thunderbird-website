@@ -102,16 +102,24 @@ if (typeof Mozilla === 'undefined') {
      * @param utmSource {?string}
      * @param utmMedium {?string}
      * @param utmCampaign {?string}
-     * @param redirect {boolean} - For the start page, redirects to www.thunderbird.net/donate/
+     * @param redirect {?string} - Whether we should redirect the user to another page
      */
-    Donation.MakeDonateUrl = function(utmContent = null, utmSource = 'thunderbird.net', utmMedium = 'fru', utmCampaign = 'donation_flow_2023', redirect = false) {
+    Donation.MakeDonateUrl = function(utmContent = null, utmSource = 'thunderbird.net', utmMedium = 'fru', utmCampaign = 'donation_flow_2023', redirect = null) {
+        const is_donate_redirect = redirect === 'donate';
+        const is_download_redirect = redirect && redirect.indexOf('download-') !== -1;
+
+        // en-US gets converted to en, so fix that if needed.
+        const lang = document.documentElement.lang === 'en' ? 'en-US': document.documentElement.lang;
+
         let params = {
-            // Don't open the form automatically if we're redirecting
-            'form': redirect ? null : 'support',
+            // Don't open the form automatically if we're redirecting to donate
+            'form': is_donate_redirect ? null : 'support',
             'utm_content': utmContent,
             'utm_source': utmSource,
             'utm_medium': utmMedium,
-            'utm_campaign': utmCampaign
+            'utm_campaign': utmCampaign,
+            // Split off our download-(esr|beta|daily) query param
+            'download_channel': is_download_redirect ? redirect.split('-')[1] : null,
         };
 
         // Filter nulls from the object (this mutates)
@@ -121,9 +129,11 @@ if (typeof Mozilla === 'undefined') {
 
         const query_params = `?${params.toString()}`;
 
-        if (redirect) {
+        if (is_donate_redirect) {
             // We don't have a good way to get the current environment in javascript right now..
-            return `https://www.thunderbird.net/donate/${query_params}#donate`;
+            return `https://www.thunderbird.net/${lang}/donate/${query_params}#donate`;
+        } else if (is_download_redirect) {
+            return `/${lang}/download/${query_params}`;
         }
 
         return query_params;
