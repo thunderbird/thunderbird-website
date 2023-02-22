@@ -8,9 +8,26 @@
     // Only do this on the autodownload page.
     if ($('body').attr('id') == 'thunderbird-download') {
         var isIELT9 = window.Mozilla.Client.platform === 'windows' && /MSIE\s[1-8]\./.test(navigator.userAgent);
-        var $directDownloadLink = $('#direct-download-link');
-        var $platformLink = $('#download-button-desktop-release .download-list li:visible .download-link');
         var downloadURL;
+        var downloadChannelRegex = /download_channel=(esr|beta|daily)/;
+        var downloadChannel = downloadChannelRegex.exec(window.location.search);
+        var downloadElement = null;
+        var $platformLink = null;
+
+        // If it's not in the url, default it to esr
+        if (downloadChannel === null) {
+            downloadChannel = 'esr';
+        } else {
+            downloadChannel = downloadChannel[1];
+        }
+
+        // Each element as an id equal to their channel so: #esr, #beta, #daily.
+        downloadElement = document.getElementById(downloadChannel);
+        // Remove our display:hidden class
+        downloadElement.className = '';
+
+        // Get the platform link via the active downloadChannel
+        $platformLink = $(`#${downloadChannel} li:visible .download-link`);
 
         // Only auto-start the download if a visible platform link is detected.
         if ($platformLink.length) {

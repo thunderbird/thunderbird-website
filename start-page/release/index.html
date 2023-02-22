@@ -17,7 +17,7 @@
 
           <div class="donate">
             {{ _('Support us!') }}
-            {{ '<a href="%(donate)s" class="donate-btn" data-donate-btn data-donate-redirect data-donate-content="paragraph_text" data-donate-source="start_page_tb_release">'|format(donate=donate_url('paragraph_text', 'start_page_tb_release')) }}
+            {{ '<a href="%(donate)s" class="donate-btn" data-donate-btn data-donate-redirect="donate" data-donate-content="paragraph_text" data-donate-source="start_page_tb_release">'|format(donate=donate_url('paragraph_text', 'start_page_tb_release')) }}
               {{ svg('donate-btn-heart') }}
               {{ _('Donate') }}
             </a>
@@ -33,7 +33,7 @@
               {{ _('Support Us') }}
             </h2>
             <p>{{ _('Thank you for supporting Thunderbird, which is funded by users like you! Producing Thunderbird requires software engineers, designers, system administrators and server infrastructure. So if you like Thunderbird, the best way to ensure Thunderbird remains available is to make a donation.') }}</p>
-            {{ '<a href="%(donate)s" class="donate" data-donate-btn data-donate-redirect data-donate-content="paragraph_text" data-donate-source="start_page_tb_release">'|format(donate=donate_url('paragraph_text', 'start_page_tb_release')) }}
+            {{ '<a href="%(donate)s" class="donate" data-donate-btn data-donate-redirect="donate" data-donate-content="paragraph_text" data-donate-source="start_page_tb_release">'|format(donate=donate_url('paragraph_text', 'start_page_tb_release')) }}
               {{ _('Donate') }}
               {{ svg('external-link') }}
             </a>

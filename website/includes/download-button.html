@@ -14,7 +14,7 @@
     <ul class="list-none p-0 flex flex-wrap max-w-lg {{ flex_class }}">
       {% for plat in builds -%}
         <li class="ml-3 mr-3">
-          <a href="{{ plat.download_link_direct or plat.download_link }}" class="download-link {{ button_class }}" data-donate-link="{{ donate_url('post_download', download=True) }}">
+          <a href="{{ plat.download_link_direct or plat.download_link }}" class="download-link {{ button_class }}" data-donate-redirect="download-{{ channel or 'esr' }}" data-donate-content="post_download" data-donate-link="{{ donate_url('post_download', download=True) }}">
             {{ plat.os_arch_pretty or plat.os_pretty }}
           </a>
         </li>
@@ -45,6 +45,8 @@
       <li class="os_{{ plat.os }}{% if plat.arch %} {{ plat.arch }}{% endif %} ml-3 mr-3">
         <a class="download-link {{ button_class }}"
           href="{{ plat.download_link }}"
+          data-donate-redirect="download-{{ channel or 'esr' }}"
+          data-donate-content="post_download"
           data-donate-link="{{ donate_url('post_download', download=True) }}"
           {% if plat.download_link_direct %}
             data-direct-link="{{ plat.download_link_direct }}"
@@ -66,9 +68,9 @@
   </ul>
   <p class="download-other download-other-desktop os_android os_ios os_linux os_linux64 os_osx os_win os_win64 os_winsha1 font-sm mt-0">
     {% if channel != 'daily' %}{# Daily doesn't have an all download page or release notes. #}
-      <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if channel or section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a> &bull;
-      <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if channel or section == 'body' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
+      <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a> &bull;
+      <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
     {% endif %}
-    <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link {% if channel or section == 'body' %} text-blue {% endif %}">{{ _('Privacy') }}</a>
+    <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Privacy') }}</a>
   </p>
 </div>

@@ -44,13 +44,6 @@ if (typeof Mozilla === 'undefined') {
 
         // TrackEvent: Category, Action, Name
         _paq.push(['trackEvent', 'AB-Test - Donation Flow 2023', 'Bucket Registration', ABTest.bucket === 0 ? 'fru' : 'give']);
-
-        // If we're in the FRU bucket, we need to adjust the download link class
-        if (ABTest.IsInFundraiseUpBucket()) {
-            _paq.push(['setDownloadClasses', "donate-download-link"]);
-            // This removes the download event on the Daily download button
-            _paq.push(['removeDownloadExtensions', ['dmg', 'tar.bz2', 'exe']])
-        }
     }
 
     /**
@@ -73,6 +66,7 @@ if (typeof Mozilla === 'undefined') {
      * FundraiseUp's download functionality. This will simply raise the Donation form.
      * @param download_url
      * @private
+     * @deprecated Might be removed in a later release
      */
     ABTest._FundraiseUpDownload = function(download_url) {
         window.Mozilla.Donation.DisplayDownloadForm(download_url);
@@ -107,10 +101,7 @@ if (typeof Mozilla === 'undefined') {
         const download_url = element.href;
         const donate_url = element.dataset.donateLink || null;
 
-        if (ABTest.IsInFundraiseUpBucket()) {
-            event.preventDefault();
-            ABTest._FundraiseUpDownload(download_url);
-        } else {
+        if (ABTest.IsInGiveBucket()) {
             ABTest._GiveDownload(download_url, donate_url);
         }
     }
@@ -131,7 +122,7 @@ if (typeof Mozilla === 'undefined') {
             const utmSource = element.getAttribute('data-donate-source') || 'thunderbird.net';
             const utmMedium = element.getAttribute('data-donate-medium') || 'fru';
             const utmCampaign = element.getAttribute('data-donate-campaign') || 'donation_flow_2023';
-            const redirect = element.hasAttribute('data-donate-redirect') || false;
+            const redirect = element.getAttribute('data-donate-redirect') || null;
 
             element.href = window.Mozilla.Donation.MakeDonateUrl(utmContent, utmSource, utmMedium, utmCampaign, redirect);
         }
@@ -150,9 +141,12 @@ if (typeof Mozilla === 'undefined') {
         for (const donate_button of donate_buttons) {
             ABTest.ReplaceDonateLinks(donate_button);
         }
-        // Replace the download and donate button's link with the correct one.
-        const download_and_donate_button = document.getElementById('amount-submit');
-        ABTest.ReplaceDonateLinks(download_and_donate_button);
+
+        // Replace the download button's links with our download redirect
+        const download_buttons = document.querySelectorAll('.download-link');
+        for (const download_button of download_buttons) {
+            ABTest.ReplaceDonateLinks(download_button);
+        }
     }
 
     window.Mozilla.ABTest = ABTest;
