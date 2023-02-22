@@ -12,9 +12,17 @@
 {% block body_id %}thunderbird-download{% endblock %}
 
 {% block header_content %}
+<section class="w-full">
+  <div class="flex items-center bg-yellow-banner text-center text-black mx-auto max-w-2xl shadow-lg">
+    <p class="font-md md:font-md tracking-wide leading-none" style="margin-left: auto;">{{ _('Your download didn\'t start automatically?') }}</p>
+    <div class="leading-none mb-3" style="margin-right: auto;">
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Click here to try again'), button_class='btn-banner', hide_footer_links=True) }}
+    </div>
+  </div>
+</section>
   <div class="flex flex-col" style="min-height: 70vh">
     <section class="text-center text-white mx-auto my-auto">
-      <p class="font-3xl tracking-wide max-w-4xl"><span class="mb-2 font-hero" style="display: block;">{{ _('Just one more step!') }}</span>{{ _('Finish installing, and start enjoying Thunderbird.') }}</p>
+      <p class="font-3xl tracking-wide max-w-4xl mb-6"><span class="mb-2 font-hero" style="display: block;">{{ _('Just one more step!') }}</span>{{ _('Finish installing, and start enjoying Thunderbird.') }}</p>
       <p class="tracking-wider">
         {{ _('Having trouble? <a class="inline-link" href="%(url)s">Get help with your installation.</a>')|format(url='https://support.mozilla.org/products/thunderbird/install-migrate-and-update') }}
       </p>
@@ -24,14 +32,6 @@
 {% endblock %}
 
 {% block content %}
-
-<section class="bg-black-light text-center text-white flex flex-col items-center pr-4 pl-4">
-  <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-xl mb-0">{{ _('Your download didn\'t start automatically?') }}</p>
-  <div class="tracking-wider mb-2">
-    {{ download_thunderbird(force_direct=true, alt_copy=_('Click here to try again'), button_class='btn-link', hide_footer_links=True) }}
-  </div>
-</section>
-
 <div itemscope itemtype="http://schema.org/SoftwareApplication">
   <meta itemprop="name" content="{{_('Thunderbird')}}">
   <meta itemprop="description" content="{% block product_desc %}{{ self.page_desc() }}{% endblock %}">

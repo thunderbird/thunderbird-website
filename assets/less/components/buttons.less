@@ -173,6 +173,15 @@ button {
   }
 }
 
+.btn-banner {
+  &:extend(.bg-transparent, .text-black, .font-regular, .font-md, .font-semibold, .inline-block, .pt-3, .pb-3, .pl-4, .pr-4, .rounded-sm, .m-1);
+
+  &:hover,
+  &:focus {
+    &:extend(.no-underline);
+  }
+}
+
 // Product download buttons
 .download-button {
   .ios-download,
