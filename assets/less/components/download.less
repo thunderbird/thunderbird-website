@@ -29,9 +29,17 @@
   }
 }
 
+/* Download buttons for the retry banner */
+
+// By default we want to hide all the downloads, and then javascript will show the correct build
 .download-hidden {
   &:extend(.hidden);
 }
+// We want to hide channel titles on javascript enabled browsers
+.js .channel-title {
+  &:extend(.hidden);
+}
+// Show everything if we don't have javascript
 .no-js .download-hidden {
   display: block;
 }
