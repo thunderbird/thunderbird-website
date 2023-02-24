@@ -19,7 +19,16 @@
       <p class="font-lg tracking-wide leading-none">{{ _('Your download didn\'t start automatically?') }}</p>
     </div>
     <div class="retry-button leading-none text-center mx-auto mb-4 font-md">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Try again'), button_class='btn-newsletter no-underline', hide_footer_links=True) }}
+      <!-- Hide all the possible channels, so we can later show the one we want. -->
+      <div id="esr" class="download-hidden">
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Try again'), flex_class='justify-center', button_class='btn-newsletter no-underline', hide_footer_links=True) }}
+      </div>
+      <div id="beta" class="download-hidden">
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Try again'), channel='beta', flex_class='justify-center', button_class='btn-newsletter no-underline', hide_footer_links=True) }}
+      </div>
+      <div id="daily" class="download-hidden">
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Try again'), channel='daily', flex_class='justify-center', button_class='btn-newsletter no-underline', hide_footer_links=True) }}
+      </div>
     </div>
   </div>
 </section>

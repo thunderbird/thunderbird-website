@@ -12,7 +12,7 @@ if (typeof Mozilla === 'undefined') {
      * Bucket === 1 - give.thunderbird.net
      */
     const ABTest = {};
-    ABTest.bucket = 0;
+    ABTest.bucket = null;
 
     ABTest.RandomInt = function(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -20,9 +20,30 @@ if (typeof Mozilla === 'undefined') {
 
     /**
      * Pick a random int between 0 - 1.
+     * Once a bucket has been chosen, this function does nothing.
      */
     ABTest.Choose = function() {
+        if (ABTest.bucket !== null) {
+            return;
+        }
+
         ABTest.bucket = ABTest.RandomInt(0, 1);
+    }
+
+    /**
+     * Tracks our bucket choice.
+     * Called from matomo.js, registers a bucket if no bucket has been chosen.
+     */
+    ABTest.Track = function() {
+        if (ABTest.bucket === null) {
+            ABTest.Choose();
+        }
+
+        // Initialize the command queue if it's somehow not.
+        const _paq = window._paq = window._paq || [];
+
+        // TrackEvent: Category, Action, Name
+        _paq.push(['trackEvent', 'AB-Test - Donation Flow 2023', 'Bucket Registration', ABTest.bucket === 0 ? 'fru' : 'give']);
     }
 
     /**
@@ -45,6 +66,7 @@ if (typeof Mozilla === 'undefined') {
      * FundraiseUp's download functionality. This will simply raise the Donation form.
      * @param download_url
      * @private
+     * @deprecated Might be removed in a later release
      */
     ABTest._FundraiseUpDownload = function(download_url) {
         window.Mozilla.Donation.DisplayDownloadForm(download_url);
@@ -79,10 +101,7 @@ if (typeof Mozilla === 'undefined') {
         const download_url = element.href;
         const donate_url = element.dataset.donateLink || null;
 
-        if (ABTest.IsInFundraiseUpBucket()) {
-            event.preventDefault();
-            ABTest._FundraiseUpDownload(download_url);
-        } else {
+        if (ABTest.IsInGiveBucket()) {
             ABTest._GiveDownload(download_url, donate_url);
         }
     }
@@ -103,8 +122,9 @@ if (typeof Mozilla === 'undefined') {
             const utmSource = element.getAttribute('data-donate-source') || 'thunderbird.net';
             const utmMedium = element.getAttribute('data-donate-medium') || 'fru';
             const utmCampaign = element.getAttribute('data-donate-campaign') || 'donation_flow_2023';
+            const redirect = element.getAttribute('data-donate-redirect') || null;
 
-            element.href = window.Mozilla.Donation.MakeDonateUrl(utmContent, utmSource, utmMedium, utmCampaign);
+            element.href = window.Mozilla.Donation.MakeDonateUrl(utmContent, utmSource, utmMedium, utmCampaign, redirect);
         }
     }
 
@@ -121,9 +141,12 @@ if (typeof Mozilla === 'undefined') {
         for (const donate_button of donate_buttons) {
             ABTest.ReplaceDonateLinks(donate_button);
         }
-        // Replace the download and donate button's link with the correct one.
-        const download_and_donate_button = document.getElementById('amount-submit');
-        ABTest.ReplaceDonateLinks(download_and_donate_button);
+
+        // Replace the download button's links with our download redirect
+        const download_buttons = document.querySelectorAll('.download-link');
+        for (const download_button of download_buttons) {
+            ABTest.ReplaceDonateLinks(download_button);
+        }
     }
 
     window.Mozilla.ABTest = ABTest;
