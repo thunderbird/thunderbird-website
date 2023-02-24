@@ -143,9 +143,18 @@ if (typeof Mozilla === 'undefined') {
         }
 
         // Replace the download button's links with our download redirect
-        const download_buttons = document.querySelectorAll('.download-link');
-        for (const download_button of download_buttons) {
-            ABTest.ReplaceDonateLinks(download_button);
+        // But only do that if we're not already on the download page
+        if (window.location.href.indexOf('/download/') === -1) {
+            const download_buttons = document.querySelectorAll('.download-link');
+            for (const download_button of download_buttons) {
+                ABTest.ReplaceDonateLinks(download_button);
+
+                // If we're in FRU bucket, don't trigger download events for our non-download page buttons
+                // Otherwise we'll be getting download==thunderbird.net instead of download==download.mozilla.org
+                if (ABTest.IsInFundraiseUpBucket()) {
+                    download_button.className = download_button.className.replace('matomo-track-download', '');
+                }
+            }
         }
     }
 
