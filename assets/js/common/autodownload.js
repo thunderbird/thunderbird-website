@@ -33,6 +33,10 @@
         if ($platformLink.length) {
             downloadURL = $platformLink.attr('href');
 
+            window._paq = window._paq || [];
+            // Track auto downloads - trackLink( url, linkType )
+            window._paq.push(['trackLink', downloadURL, 'download'])
+
             // If user is not on an IE that blocks JS triggered downloads, start the
             // platform-detected download a second after DOM ready event. We don't rely on
             // the window load event as we have third-party tracking pixels.
