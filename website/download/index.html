@@ -13,10 +13,13 @@
 
 {% block header_content %}
 <section class="w-full">
-  <div class="flex items-center bg-yellow-banner text-center text-black mx-auto max-w-2xl shadow-lg">
-    <p class="font-md md:font-md tracking-wide leading-none" style="margin-left: auto;">{{ _('Your download didn\'t start automatically?') }}</p>
-    <div class="leading-none mb-3" style="margin-right: auto;">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Click here to try again'), button_class='btn-banner', hide_footer_links=True) }}
+  <div class="retry-download flex bg-white items-center text-black mx-auto max-w-xl shadow-lg h-12 rounded">
+    <div class="retry-text flex items-center text-center">
+      <span class="text-blue mr-2 ml-4">{{ svg('circle-info') }}</span>
+      <p class="font-lg tracking-wide leading-none">{{ _('Your download didn\'t start automatically?') }}</p>
+    </div>
+    <div class="retry-button leading-none text-center mx-auto mb-4 font-md">
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Try again'), button_class='btn-newsletter no-underline', hide_footer_links=True) }}
     </div>
   </div>
 </section>

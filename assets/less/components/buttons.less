@@ -119,6 +119,9 @@ button {
 .btn-newsletter {
   &:extend(.md\:w-40, .leading-none, .md\:leading-normal, .font-md, .rounded-sm, .border-none, .bg-primary-button, .text-white, .p-2, .pl-3, .pr-3, .uppercase, .font-bold, .appearance-none);
 
+  // Keeps button text one-line
+  white-space: nowrap;
+
   &:hover,
   &:focus {
     &:extend(.shadow-md);
@@ -129,6 +132,12 @@ button {
     &:extend(.bg-blue);
   }
 }
+
+// No javascript tweak
+.no-js .btn-newsletter {
+  line-height: 3rem;
+}
+
 
 .btn-join {
   &:extend(.text-white, .font-md, .font-semibold, .no-underline, .uppercase, .inline-block, .pt-3, .pb-3, .pl-6, .pr-6, .mb-5, .bg-primary-button, .rounded-xs, .shadow);
