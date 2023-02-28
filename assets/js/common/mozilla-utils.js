@@ -38,6 +38,26 @@ if (typeof Mozilla === 'undefined') {
         }
     };
 
+    /**
+     * Redirects the user to a donation url. This should be triggered after a download.
+     * @param {HTMLAnchorElement} element
+     */
+    Utils.redirectAfterDownload = function(element) {
+        const download_url = element.href;
+        const donate_url = element.getAttribute('data-donate-link') || null;
+
+        // Don't redirect if we're on the failed download page.
+        if ($("body").attr('id') !== 'thunderbird-download') {
+            // MSIE and Edge cancel the download prompt on redirect, so just leave them out.
+            if (!(/msie\s|trident\/|edge\//i.test(navigator.userAgent))) {
+                setTimeout(function() {
+                    window.location.href = donate_url;
+                }, 5000);
+            }
+        }
+        window.Mozilla.Utils.triggerIEDownload(download_url);
+    }
+
     // attach an event to all the download buttons to trigger the special
     // ie functionality if on ie
     Utils.initDownloadLinks = function() {
@@ -45,7 +65,7 @@ if (typeof Mozilla === 'undefined') {
         $('.download-link').each(function() {
             var $el = $(this);
             $el.click(function(e) {
-                window.Mozilla.ABTest.Download(e);
+                Utils.redirectAfterDownload(e.currentTarget);
             });
         });
         $('.download-list').attr('role', 'presentation');

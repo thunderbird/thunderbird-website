@@ -134,6 +134,7 @@ URL_MAPPINGS = {
     'thunderbird.donate.faq': '/donate#faq',
     'thunderbird.donate.ways-to-give': '/donate#ways-to-give',
     'thunderbird.donate.ways-to-give.check': '/donate#ways-to-give-check',
+    'thunderbird.download': '/download',
     'thunderbird.download-beta': '/download/beta',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
     'thunderbird.enterprise.documentation': 'https://enterprise.thunderbird.net/',
@@ -156,11 +157,6 @@ ENUS_ONLY = [
     'thunderbird.get-involved',
     'thunderbird.organizations',
 ]
-
-DONATE_LINK = (
-    'https://give.thunderbird.net/'
-    '?utm_source={source}&utm_medium={medium}&utm_content={content}'
-)
 
 # WEBSITE_CSS = {
 #     'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
