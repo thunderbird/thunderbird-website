@@ -344,13 +344,7 @@ def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign
         'download_channel': download_channel
     }
 
-    filtered_query = {}
-
-    # Remove any Nones
-    for item in query.items():
-        if item[1] is None:
-            continue
-        filtered_query[item[0]] = item[1]
+    filtered_query = {k: v for k, v in query.items() if v is not None}
 
     return "?{}".format(urllib.urlencode(filtered_query))
 
