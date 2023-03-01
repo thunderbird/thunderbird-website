@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
 
 import inspect
+import urllib
+
 import jinja2
 import json
 import markdown
@@ -333,23 +335,24 @@ def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign
         form = 'support'
 
     query = {
+        'form': form,
         'utm_content': content,
         'utm_source': source,
         'utm_medium': medium,
         'utm_campaign': campaign,
-        'form': form,
         'downloaded': download,
         'download_channel': download_channel
     }
 
-    query_list = []
+    filtered_query = {}
 
+    # Remove any Nones
     for item in query.items():
         if item[1] is None:
             continue
-        query_list.append("{key}={value}".format(key=item[0], value=str(item[1])))
+        filtered_query[item[0]] = item[1]
 
-    return "?{url}".format(url="&".join(query_list))
+    return "?{}".format(urllib.urlencode(filtered_query))
 
 
 @jinja2.contextfunction
