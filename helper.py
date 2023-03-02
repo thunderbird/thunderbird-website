@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
 
 import inspect
+import urllib
+
 import jinja2
 import json
 import markdown
@@ -318,19 +320,43 @@ def thunderbird_url(page, channel='None'):
 
 
 @jinja2.contextfunction
-def donate_url(ctx, content='', source='thunderbird.net', medium='give', campaign='donation_flow_2023', download=False):
-    # If this link is from a download button, donate.mozilla.org has thank you text.
-    download_string = ''
-    if download:
-        download_string = '&tbdownload=true'
+def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign='donation_2023', show_donation_modal=True, download=None, download_channel=None):
+    """Forms a donation url with the given parameters. If you pass in None for any of the fields they will be excluded from the url
+    :param content: UTM Content tag
+    :param source: UTM Source tag
+    :param medium: UTM Medium tag
+    :param campaign: UTM Campaign tag
+    :param show_donation_modal: Whether we want to append form=support that will automatically load the FRU modal
+    :param download: Whether we have already downloaded Thunderbird (Download button specific.) Boolean or None.
+    :param download_channel: What download channel to append to the url (Download button specific.) String or None.
+    """
+    form = None
+    if show_donation_modal:
+        form = 'support'
 
-    # Add utm_campaign if we are using it.
-    campaign_string = ''
-    if campaign:
-        campaign_string = '&utm_campaign={0}'.format(campaign)
+    query = {
+        'form': form,
+        'utm_content': content,
+        'utm_source': source,
+        'utm_medium': medium,
+        'utm_campaign': campaign,
+        'downloaded': download,
+        'download_channel': download_channel
+    }
 
-    return (settings.DONATE_LINK.format(content=content, source=source, medium=medium)
-            + campaign_string + download_string)
+    filtered_query = {k: v for k, v in query.items() if v is not None}
+
+    return "?{}".format(urllib.urlencode(filtered_query))
+
+
+@jinja2.contextfunction
+def redirect_donate_url(ctx, location='thunderbird.download', make_full_url=False, **kwargs):
+    """Helper function to piece together the full donation url. Defaults to the settings for our Download button."""
+    base_url = ''
+    if make_full_url:
+        base_url = settings.CANONICAL_URL
+
+    return "{url}{path}{query}".format(url=base_url, path=url(ctx, location), query=donate_url(ctx, **kwargs))
 
 
 def safe_markdown(text):

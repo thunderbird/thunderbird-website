@@ -7,8 +7,6 @@ if (typeof Mozilla === 'undefined') {
     'use strict';
 
     var Donation = {};
-    Donation.ANIMATION_DURATION = 250;
-    Donation.WINDOW_POS_KEY = '_tb_donation_position';
     Donation.NEWSLETTER_URL = `/${window.siteLocale}/newsletter`;
     /**
      * Is the download form visible?
@@ -47,8 +45,6 @@ if (typeof Mozilla === 'undefined') {
 
             // Retrieve the current download link before we close the form (as that clears it)
             const download_link = Donation.CurrentDownloadLink;
-
-            Donation.CloseForm();
 
             // No download link? Exit.
             if (!download_link) {
@@ -103,8 +99,10 @@ if (typeof Mozilla === 'undefined') {
      * @param utmMedium {?string}
      * @param utmCampaign {?string}
      * @param redirect {?string} - Whether we should redirect the user to another page
+     * @deprecated Donation url code has been migrated to static build process. This is left here in case of further AB tests.
      */
-    Donation.MakeDonateUrl = function(utmContent = null, utmSource = 'thunderbird.net', utmMedium = 'fru', utmCampaign = 'donation_flow_2023', redirect = null) {
+    Donation.MakeDonateUrl = function(utmContent = null, utmSource = 'thunderbird.net', utmMedium = 'fru', utmCampaign = 'donation_2023', redirect = null) {
+        /*
         const is_donate_redirect = redirect === 'donate';
         const is_download_redirect = redirect && redirect.indexOf('download-') !== -1;
 
@@ -137,75 +135,8 @@ if (typeof Mozilla === 'undefined') {
         }
 
         return query_params;
+        */
     }
-
-    /**
-     * Close the donation form
-     * This will clear any currently set download link.
-     */
-    Donation.CloseForm = function() {
-        $('#amount-modal').fadeOut(Donation.ANIMATION_DURATION);
-        $('#modal-overlay').fadeOut(Donation.ANIMATION_DURATION);
-        $(document.body).removeClass('overflow-hidden');
-        Donation.IsVisible = false;
-        Donation.CurrentDownloadLink = null;
-    }
-
-    /**
-     * Display the donation download modal for fundraise up
-     * @param download_url - Link to the actual file download
-     */
-    Donation.DisplayDownloadForm = function(download_url) {
-        // Show the donation form.
-        $('#amount-modal').fadeIn(Donation.ANIMATION_DURATION);
-        $('#modal-overlay').fadeIn(Donation.ANIMATION_DURATION);
-        $(document.body).addClass('overflow-hidden');
-        Donation.IsVisible = true;
-        Donation.CurrentDownloadLink = download_url;
-
-        // Set the "No thanks, just download" button's link
-        if ($("#amount-cancel")[0]) {
-            $("#amount-cancel")[0].href = download_url;
-        }
-
-        // Define cancel and close button on the donation form.
-        $('#amount-cancel').click(function(e) {
-            // No prevent default
-            Donation.CloseForm();
-        });
-        $('#close-modal').click(function(e) {
-            e.preventDefault();
-            Donation.CloseForm();
-        });
-
-        // Close modal when clicking the overlay
-        $('#modal-overlay').click(function(e) {
-            e.preventDefault();
-            Donation.CloseForm();
-        });
-
-        // Close modal when pressing escaoe
-        $(document).keyup(function(e) {
-            if (e.key === "Escape") {
-                Donation.CloseForm();
-            }
-        });
-
-        // Define active amount in amount selection.
-        $('#amount-selection > label').click(function() {
-            $('#amount-selection > label.active').removeClass('active');
-            $(this).addClass('active');
-        });
-        $('#amount-other-selection').click(function() {
-            $('#amount-other').focus();
-        });
-        $('#amount-other').click(function() {
-            $('#amount-other-selection').prop('checked', true);
-        });
-        $('#amount-other').on('input', function() {
-            $('#amount-other-selection').val($(this).val());
-        });
-    };
 
     window.Mozilla.Donation = Donation;
     Donation.Init();

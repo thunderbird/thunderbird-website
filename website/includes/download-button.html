@@ -14,7 +14,7 @@
     <ul class="list-none p-0 flex flex-wrap max-w-lg {{ flex_class }}">
       {% for plat in builds -%}
         <li class="ml-3 mr-3">
-          <a href="{{ plat.download_link_direct or plat.download_link }}" class="matomo-track-download download-link {{ button_class }}" data-donate-redirect="download-{{ channel or 'esr' }}" data-donate-content="post_download" data-donate-link="{{ donate_url('post_download', download=True) }}">
+          <a href="{{ plat.download_link_direct or plat.download_link }}" class="matomo-track-download download-link {{ button_class }}" data-donate-redirect="download-{{ channel or 'esr' }}" data-donate-content="post_download" data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}">
             {{ plat.os_arch_pretty or plat.os_pretty }}
           </a>
         </li>
@@ -47,7 +47,7 @@
           href="{{ plat.download_link }}"
           data-donate-redirect="download-{{ channel or 'esr' }}"
           data-donate-content="post_download"
-          data-donate-link="{{ donate_url('post_download', download=True) }}"
+          data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}"
           {% if plat.download_link_direct %}
             data-direct-link="{{ plat.download_link_direct }}"
           {% endif %}>
