@@ -7,34 +7,46 @@
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
 {% block page_title %}{{ _('Download Thunderbird') }}{% endblock %}
-{% block page_desc %}{{ _('Your download should begin automatically. Didn’t work? Try the button below!') }}{% endblock %}
+{% block page_desc %}{{ _('Thank you for downloading and installing Thunderbird!') }}{% endblock %}
 
 {% block body_id %}thunderbird-download{% endblock %}
 
 {% block header_content %}
-<section class="text-center text-white flex flex-col items-center mb-12 pr-4 pl-4">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-xl mb-8 md:mb-16">{{ self.page_desc() }}</p>
-    <div class="tracking-wider">
+<section class="w-full">
+  <div class="retry-download flex bg-white items-center text-black mx-auto max-w-xl shadow-lg h-12 rounded">
+    <div class="retry-text flex items-center text-center">
+      <span class="text-blue mr-2 ml-4">{{ svg('circle-info') }}</span>
+      <p class="font-lg tracking-wide leading-none">{{ _('Your download didn\'t start automatically?') }}</p>
+    </div>
+    <div class="retry-button leading-none text-center mx-auto mb-4 font-md">
       <!-- Hide all the possible channels, so we can later show the one we want. -->
-      <div id="esr" class="hidden">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download'), flex_class='justify-center') }}
+      <div id="esr" class="download-hidden">
+        <h4 class="channel-title">{{ _('Release Channel') }}</h4>
+        {{ download_thunderbird(force_direct=true, alt_copy=_('Try again'), flex_class='justify-center', button_class='btn-newsletter no-underline', hide_footer_links=True) }}
       </div>
-      <div id="beta" class="hidden">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download'), channel='beta', flex_class='justify-center') }}
+      <div id="beta" class="download-hidden">
+        <h4 class="channel-title">{{ _('Beta Channel') }}</h4>
+        {{ download_thunderbird(force_direct=true, alt_copy=_('Try again'), channel='beta', flex_class='justify-center', button_class='btn-newsletter no-underline', hide_footer_links=True) }}
       </div>
-      <div id="daily" class="hidden">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download'), channel='daily', flex_class='justify-center') }}
+      <div id="daily" class="download-hidden">
+        <h4 class="channel-title">{{ _('Daily Channel') }}</h4>
+        {{ download_thunderbird(force_direct=true, alt_copy=_('Try again'), channel='daily', flex_class='justify-center', button_class='btn-newsletter no-underline', hide_footer_links=True) }}
       </div>
     </div>
-  </section>
-  <section class="hidden md:flex max-w-5xl self-center">
-    {{ platform_img('thunderbird/landing/screenshot.png', {'alt': _('Thunderbird screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
-  </section>
+  </div>
+</section>
+  <div class="flex flex-col" style="min-height: 70vh">
+    <section class="text-center text-white mx-auto my-auto">
+      <p class="font-3xl tracking-wide max-w-4xl mb-6"><span class="mb-2 font-hero" style="display: block;">{{ _('Just one more step!') }}</span>{{ _('Finish installing, and start enjoying Thunderbird.') }}</p>
+      <p class="tracking-wider">
+        {{ _('Having trouble? <a class="inline-link" href="%(url)s">Get help with your installation.</a>')|format(url='https://support.mozilla.org/products/thunderbird/install-migrate-and-update') }}
+      </p>
+    </section>
+
+  </div>
 {% endblock %}
 
 {% block content %}
-
 <div itemscope itemtype="http://schema.org/SoftwareApplication">
   <meta itemprop="name" content="{{_('Thunderbird')}}">
   <meta itemprop="description" content="{% block product_desc %}{{ self.page_desc() }}{% endblock %}">
