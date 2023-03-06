@@ -5,9 +5,25 @@
 (function($) {
     'use strict';
 
+    /**
+     * Check to see if we can start an autodownload
+     * @returns {boolean}
+     */
+    function canAutodownload () {
+        var isIELT9 = window.Mozilla.Client.platform === 'windows' && /MSIE\s[1-8]\./.test(navigator.userAgent);
+
+        // IE11 safe check for determining if we've already downloaded Thunderbird
+        var lowercaseQuery = window.location.search.toLowerCase();
+        var isDownloaded = /([?|&]+downloaded=true)/.test(lowercaseQuery) === true;
+        
+        return !isDownloaded && !isIELT9;
+    }
+
     // Only do this on the autodownload page.
     if ($('body').attr('id') == 'thunderbird-download') {
-        var isIELT9 = window.Mozilla.Client.platform === 'windows' && /MSIE\s[1-8]\./.test(navigator.userAgent);
+        if (!canAutodownload()) {
+            return;
+        }
         var downloadURL;
         var downloadChannelRegex = /download_channel=(esr|beta|daily)/;
         var downloadChannel = downloadChannelRegex.exec(window.location.search);
@@ -37,16 +53,13 @@
             // Track auto downloads - trackLink( url, linkType )
             window._paq.push(['trackLink', downloadURL, 'download'])
 
-            // If user is not on an IE that blocks JS triggered downloads, start the
-            // platform-detected download a second after DOM ready event. We don't rely on
+            // Start the platform-detected download a second after DOM ready event. We don't rely on
             // the window load event as we have third-party tracking pixels.
-            if (!isIELT9) {
-                $(function() {
-                    setTimeout(function() {
-                        window.location.href = downloadURL;
-                    }, 1000);
-                });
-            }
+            $(function() {
+                setTimeout(function() {
+                    window.location.href = downloadURL;
+                }, 1000);
+            });
         }
     }
 })(window.jQuery);
