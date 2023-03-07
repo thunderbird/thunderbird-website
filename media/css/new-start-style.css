@@ -64,6 +64,8 @@
   --bg-warning: rgba(237, 0, 181, 0.05);
 
   --beta-gradient: linear-gradient(-270deg, #E217B6, #BD058A);
+  --daily-gradient: linear-gradient(-270deg, #e21717, #bd0505);
+
   --logo-wireframe: url('/media/svg/logo-wireframe-light.svg');
 
   --list-dot-inner: #B5007F;
@@ -89,6 +91,8 @@
     --bg-warning: rgba(181, 0, 127, 0.05);
 
     --beta-gradient: linear-gradient(-270deg, #FF83EA, #FF1AD9);
+    --daily-gradient: linear-gradient(-270deg, #ff8383, #ff1a1a);
+
     --logo-wireframe: url('/media/svg/logo-wireframe-dark.svg');
 
     --list-dot-inner: #FFB6F3;
@@ -200,6 +204,15 @@ html[data-channel="daily"] .logo-img {
   font-weight: 600;
 }
 
+.daily-text {
+  color: transparent;
+  background: var(--daily-gradient);
+  background-clip: text;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .donate {
   display: grid;
   gap: .25em;
@@ -239,7 +252,7 @@ html[data-channel="daily"] .logo-img {
   text-transform: uppercase;
 }
 
-.beta-thanks {
+.main-thanks {
   font-size: 1.25rem;
 }
 
@@ -364,7 +377,7 @@ p.warning svg {
     gap: 2rem;
   }
 
-  .beta-thanks {
+  .main-thanks {
     margin-bottom: 0;
   }
 }
