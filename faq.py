@@ -15,11 +15,6 @@ def get_entries(ctx):
                 gettext(u'Thunderbird is a project of MZLA Technologies Corporation, which is a wholly owned subsidiary of Mozilla Foundation.')
             ),
             (
-                gettext(u'What are the ways I can give?'),
-                gettext(u'<a href="%(url)s">Visit this link to make a secure online donation right now via credit card or PayPal.</a>')
-                % {'url': url(ctx, 'thunderbird.donate.ways-to-give')}
-            ),
-            (
                 gettext(u'Why do you need my address in order to process a gift?'),
                 gettext(u'We understand that your privacy is very important. We ask for a minimum amount of information required to process credit card payments, including billing addresses. This allows our payment processor to verify your identity, process your payment, and prevent fraudulent charges to your credit card. We keep your information private — if you have questions, please refer to our <a href="%(url)s">Privacy Policy</a>. If you would rather not fill in your information on our online form, you can mail us a <a href="%(check)s">check</a>.')
                 % {'url': url(ctx, 'privacy'), 'check': url(ctx, 'thunderbird.donate.ways-to-give.check')}
