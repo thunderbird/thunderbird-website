@@ -4,7 +4,7 @@
 
 {% extends "includes/base-resp.html" %}
 
-{% block page_title %}{{ _('Lightning Calendar') }}{% endblock %}
+{% block page_title %}{{ _('Calendar') }}{% endblock %}
 {% block page_desc %}{{ _('Organize your life — it&rsquo;s about time!') }}{% endblock %}
 
 {% block header_content %}
@@ -19,7 +19,7 @@
       <h3 class="header-section">
         <span>{{ svg('calendar') }}</span>
         <aside class="flex flex-col">
-          {{ _('Lightning Calendar')}}
+          {{ _('Calendar')}}
           <small class="font-normal font-md tracking-normal normal-case">
             {{ _('Organize your life — it’s about time!') }}
           </small>
@@ -32,7 +32,7 @@
     </aside>
 
     <aside class="w-3/5">
-      {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Lightning Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
+      {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
     </aside>
   </section>
 
@@ -47,7 +47,7 @@
             <aside class="flex flex-col font-lg">
               {{ _('Get Support')}}
               <small class="font-normal font-regular tracking-normal normal-case">
-                {{ _('Need help with Lightning?') }}
+                {{ _('Need help with Calendar?') }}
               </small>
             </aside>
           </h4>
@@ -84,7 +84,7 @@
       </aside>
 
       <aside class="flex flex-col w-1/2">
-        <a href="https://codetribute.mozilla.org/projects/calendar"
+        <a href="https://codetribute.mozilla.org/projects/thunderbird?project%3DCalendar%2520Frontend"
           class="flex flex-col btn-block-white m-2">
           <h4 class="header-section mb-0">
             <span>{{ svg('report') }}</span>
