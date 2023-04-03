@@ -1,0 +1,89 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "beta-appeal" %}
+{% set hide_header = True %}
+{% extends "includes/base-resp.html" %}
+
+{% block page_title %}{{ _('Experience A Taste Of Supernova!') }}{% endblock %}
+
+{% block body_id %}thunderbird-beta-appeal{% endblock %}
+
+{% block header_content %}
+  <section class="text-center text-white flex flex-row justify-between pl-4 pr-4 max-w-7xl pt-12 mt-4 mx-auto">
+    <aside>
+      <h1 class="font-4xl md:font-hero font-thin mt-0 mb-8">{{ self.page_title() }}</h1>
+
+      <div class="flex flex-col">
+        <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-12 mt-0 p-links mx-auto">
+            {{ _('Join the Beta today, and experience an exciting preview of new features that will land in Thunderbird 115 Supernova. Once Thunderbird Supernova launches later this Spring, you will be switched back to the regular update cycle.') }}
+        </p>
+
+        <div class="flex flex-col items-center mx-auto max-w-xl p-4 text-black-light no-underline font-xl">
+          <button id="tb-join-beta-btn" class="btn-beta mb-0 font-xl">
+            {{ _('Upgrade now!') }}
+          </button>
+        </div>
+      </div>
+    </aside>
+  </section>
+  <section class="flex flex-row justify-between pl-4 pr-4 max-w-8xl mt-12 mx-auto">
+    <aside class="text-center text-white">
+      <h2 class="font-4xl md:font-4xl font-thin mt-0 mb-8">{{ _('Learn more about Thunderbird 115 Supernova') }}</h2>
+    </aside>
+  </section>
+  <section class="flex flex-col lg:flex-row max-w-8xl mx-auto justify-between pl-8 pr-8 mb-20 mt-4 leading-relaxed mx-auto">
+    <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg mb-10 lg:mb-0">
+      <a class="blog-link" href="https://blog.thunderbird.net/2023/02/thunderbird-115-supernova-preview-the-new-folder-pane/" title="{{ _('Thunderbird 115 Supernova Preview: The New Folder Pane') }}">
+        {{ _('Thunderbird 115 Supernova Preview: The New Folder Pane') }}
+      </a>
+      <div class="blog-body h-4">
+        <div class="thumbnail"><img class="thumbnail" src="https://blog.thunderbird.net/files/2023/02/Sep-2022-Newsletter-1-768x432.png" alt="Article Featured Image"/></div>
+        <p>{{ _('Thunderbird 115 "Supernova" will be intuitive and welcoming to new users, while remaining familiar and comfortable for veteran users. See how we\'re accomplishing that balance with a preview of the new Folder Pane.') }}</p>
+      </div>
+      <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+        <span>{{ _('February 14, 2023') }}</span>
+        <span><a href="https://blog.thunderbird.net/2023/02/thunderbird-115-supernova-preview-the-new-folder-pane/">{{ _('Continue Reading ') }}</a></span>
+      </footer>
+    </article>
+    <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg mb-10 lg:mb-0 lg:ml-16 lg:mr-16">
+      <a class="blog-link" href="https://blog.thunderbird.net/2023/02/the-future-of-thunderbird-why-were-rebuilding-from-the-ground-up/" title="{{ _('Why We’re Rebuilding The Thunderbird Interface From Scratch') }}">
+        {{ _('Why We’re Rebuilding The Thunderbird Interface From Scratch') }}
+      </a>
+      <div class="blog-body h-4">
+        <div class="thumbnail"><img src="https://blog.thunderbird.net/files/2023/02/future-of-thunderbird-1-768x432.png" alt="Article Featured Image"/></div>
+        <p>{{ _('Why does Thunderbird look so old, and why does it take so long to change?" Let\'s answer that burning question with some important history, and a look into the future.') }}</p>
+      </div>
+      <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+        <span>{{ _('February 9, 2023') }}</span>
+        <span><a href="https://blog.thunderbird.net/2023/02/the-future-of-thunderbird-why-were-rebuilding-from-the-ground-up/">{{ _('Continue Reading') }}</a></span>
+      </footer>
+    </article>
+    <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg">
+      <a class="blog-link" href="https://blog.thunderbird.net/2022/11/thunderbird-supernova-preview-the-new-calendar-design/" title="{{ _('Thunderbird Supernova Preview: The New Calendar Design') }}">
+        {{ _('Thunderbird Supernova Preview: The New Calendar Design') }}
+      </a>
+      <div class="blog-body h-4">
+        <div class="thumbnail"><img class="thumbnail" src="https://blog.thunderbird.net/files/2022/11/115-Calendar-Mockup-MONTH-VIEW-no-comments.png" alt="Article Featured Image"/></div>
+        <p>{{ _('Life gets busy. That\'s why the new  calendar in Thunderbird Supernova is being designed to look and feel comfortable. It will help you more efficiently sift, sort, and digest all the crucial details of your day.') }}</p>
+      </div>
+      <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
+        <span>{{ _('November 9, 2022') }}</span>
+        <span><a href="https://blog.thunderbird.net/2022/11/thunderbird-supernova-preview-the-new-calendar-design/">{{ _('Continue Reading') }}</a></span>
+      </footer>
+    </article>
+  </section>
+{% endblock %}
+{% block site_footer %}
+<footer id="colophon" class="bg-black-light text-white flex flex-col pt-10 pb-8 pl-4 pr-4">
+  <section class="flex flex-col lg:flex-col justify-between items-center self-center w-full max-w-6xl">
+    <aside class="flex flex-col items-center">
+      <a href="https://www.thunderbird.net" class="block w-40" title="{{ _('Thunderbird') }}"
+        alt="{{ _('Thunderbird Vector Wordmark') }}">
+        <img src="{{ static('svg/logo-wordmark-white.svg') }}" alt="{{ _('Thunderbird Vector Wordmark') }}"/>
+      </a>
+    </aside>
+  </section>
+</footer>
+{% endblock %}
