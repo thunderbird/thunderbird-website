@@ -6,28 +6,45 @@
 {% set hide_header = True %}
 {% extends "includes/base-resp.html" %}
 
-{% block page_title %}{{ _('Experience A Taste Of Supernova!') }}{% endblock %}
+{% block page_title %}{{ _('Experience The Future Of Thunderbird') }}{% endblock %}
 
 {% block body_id %}thunderbird-beta-appeal{% endblock %}
 
 {% block header_content %}
-  <section class="text-center text-white flex flex-row justify-between pl-4 pr-4 max-w-7xl pt-12 mt-4 mx-auto">
+  <!-- step 1: pls upgrade! -->
+  <section id="ba-step-1" class="text-center text-white flex flex-row justify-between pl-4 pr-4 max-w-7xl pt-12 mt-4 mx-auto">
     <aside>
       <h1 class="font-4xl md:font-hero font-thin mt-0 mb-8">{{ self.page_title() }}</h1>
 
       <div class="flex flex-col">
         <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-12 mt-0 p-links mx-auto">
-            {{ _('Join the Beta today, and experience an exciting preview of new features that will land in Thunderbird 115 Supernova. Once Thunderbird Supernova launches later this Spring, you will be switched back to the regular update cycle.') }}
+            {{ _('Join the Beta today, and enjoy an exciting preview of the new features and visual enhancements coming to Thunderbird 115 Supernova. When Thunderbird Supernova officially launches later this Summer, you will be switched back to the stable, non-Beta version automatically.') }}
         </p>
 
         <div class="flex flex-col items-center mx-auto max-w-xl p-4 text-black-light no-underline font-xl">
-          <button id="tb-join-beta-btn" class="btn-beta mb-0 font-xl">
+          <button id="tb-join-beta-btn" class="btn-beta border-0 mb-0 font-xl">
             {{ _('Upgrade now!') }}
           </button>
         </div>
+        <p class="font-md tracking-wider leading-loose">
+            {{ _('Please be aware that Thunderbird Beta is considered early access software. Some rough edges should be expected.') }}
+        </p>
       </div>
     </aside>
   </section>
+  <!-- step 2: thank you for upgrading! -->
+  <section id="ba-step-2" class="text-center text-white flex flex-row justify-between pl-4 pr-4 max-w-7xl pt-12 mt-4 mx-auto hidden">
+      <aside>
+        <h1 class="font-4xl md:font-hero font-thin mt-0 mb-8">{{ self.page_title() }}</h1>
+
+        <div class="flex flex-col">
+          <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-12 mt-0 p-links mx-auto">
+              {{ _('Thank you! You will be prompted to restart to upgrade Thunderbird shortly.') }}
+          </p>
+        </div>
+      </aside>
+  </section>
+  <!-- learn more -->
   <section class="flex flex-row justify-between pl-4 pr-4 max-w-8xl mt-12 mx-auto">
     <aside class="text-center text-white">
       <h2 class="font-4xl md:font-4xl font-thin mt-0 mb-8">{{ _('Learn more about Thunderbird 115 Supernova') }}</h2>

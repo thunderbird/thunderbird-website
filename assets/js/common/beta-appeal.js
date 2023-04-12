@@ -14,14 +14,8 @@ if (typeof Mozilla === 'undefined') {
      * @constructor
      */
     BetaAppeal.Join = function (evt) {
-        if (evt.currentTarget.dataset.joined) {
-            return;
-        }
-
-        const joinBtn = evt.currentTarget;
-
-        // Don't run this again
-        joinBtn.setAttribute('data-joined', true);
+        document.getElementById('ba-step-1').classList.add('hidden');
+        document.getElementById('ba-step-2').classList.remove('hidden');
     }
 
     /**
