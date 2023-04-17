@@ -1,0 +1,179 @@
+# This workflow will build both website and start page, and then deploy them on AWS
+#
+name: Deploy Preview Environment
+
+# Stop any pending jobs
+concurrency:
+  group: ${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    # On PR: label, open, commit push, re-open
+    types: [ labeled, opened, synchronize, reopened ]
+
+env:
+  AWS_REGION: us-west-1
+  ECR_REPOSITORY: preview-env-test
+  ECS_CLUSTER: test-cluster
+
+  PR_ID_KEY: PullRequestId
+
+  CACHE_FILE_ID: ${{ github.run_id }}${{github.run_attempt}}
+
+  CONTAINER: thunderbird-website
+
+  WEBSITE_CONTAINER: thunderbird-website
+  WEBSITE_PR_ID_VALUE: ${{ github.ref }}/website
+  WEBSITE_DOCKER_FILE: 'preview-website.dockerfile'
+  WEBSITE_TASK_DEFINITION: .aws/website-task-definition.json
+
+  START_CONTAINER: thunderbird-start-page
+  START_PR_ID_VALUE: ${{ github.ref }}/startpage
+  START_DOCKER_FILE: 'preview-start-page.dockerfile'
+  START_TASK_DEFINITION: .aws/start-page-task-definition.json
+
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  # job.<name>.with doesn't support env inputs for some reason...
+  set_inputs:
+    runs-on: ubuntu-latest
+    name: Setting inputs from environment variables...
+    if: contains(github.event.pull_request.labels.*.name, 'preview environment')
+    outputs:
+      AWS_REGION: ${{ steps.step1.outputs.AWS_REGION }}
+      ECR_REPOSITORY: ${{ steps.step1.outputs.ECR_REPOSITORY }}
+      ECS_CLUSTER: ${{ steps.step1.outputs.ECS_CLUSTER }}
+      PR_ID_KEY: ${{ steps.step1.outputs.PR_ID_KEY }}
+      CACHE_FILE_ID: ${{ steps.step1.outputs.CACHE_FILE_ID }}
+      WEBSITE_CONTAINER: ${{ steps.step1.outputs.WEBSITE_CONTAINER }}
+      WEBSITE_PR_ID_VALUE: ${{ steps.step1.outputs.WEBSITE_PR_ID_VALUE }}
+      WEBSITE_DOCKER_FILE: ${{ steps.step1.outputs.WEBSITE_DOCKER_FILE }}
+      WEBSITE_TASK_DEFINITION: ${{ steps.step1.outputs.WEBSITE_TASK_DEFINITION }}
+      START_CONTAINER: ${{ steps.step1.outputs.START_CONTAINER }}
+      START_PR_ID_VALUE: ${{ steps.step1.outputs.START_PR_ID_VALUE }}
+      START_DOCKER_FILE: ${{ steps.step1.outputs.START_DOCKER_FILE }}
+      START_TASK_DEFINITION: ${{ steps.step1.outputs.START_TASK_DEFINITION }}
+    steps:
+      - id: step1
+        run: |
+          echo "AWS_REGION=${{ env.AWS_REGION }}" >> "$GITHUB_OUTPUT"
+          echo "ECR_REPOSITORY=${{ env.ECR_REPOSITORY }}" >> "$GITHUB_OUTPUT"
+          echo "ECS_CLUSTER=${{ env.ECS_CLUSTER }}" >> "$GITHUB_OUTPUT"
+          echo "PR_ID_KEY=${{ env.PR_ID_KEY }}" >> "$GITHUB_OUTPUT"
+          echo "CACHE_FILE_ID=${{ env.CACHE_FILE_ID }}" >> "$GITHUB_OUTPUT"
+          echo "WEBSITE_CONTAINER=${{ env.WEBSITE_CONTAINER }}" >> "$GITHUB_OUTPUT"
+          echo "WEBSITE_PR_ID_VALUE=${{ env.WEBSITE_PR_ID_VALUE }}" >> "$GITHUB_OUTPUT"
+          echo "WEBSITE_DOCKER_FILE=${{ env.WEBSITE_DOCKER_FILE }}" >> "$GITHUB_OUTPUT"
+          echo "WEBSITE_TASK_DEFINITION=${{ env.WEBSITE_TASK_DEFINITION }}" >> "$GITHUB_OUTPUT"
+          echo "START_CONTAINER=${{ env.START_CONTAINER }}" >> "$GITHUB_OUTPUT"
+          echo "START_PR_ID_VALUE=${{ env.START_PR_ID_VALUE }}" >> "$GITHUB_OUTPUT"
+          echo "START_DOCKER_FILE=${{ env.START_DOCKER_FILE }}" >> "$GITHUB_OUTPUT"
+          echo "START_TASK_DEFINITION=${{ env.START_TASK_DEFINITION }}" >> "$GITHUB_OUTPUT"
+
+  build_website:
+    name: Build Thunderbird.net
+    needs: set_inputs
+    if: |
+      contains(github.event.pull_request.labels.*.name, 'preview environment')
+    uses: ./.github/workflows/build.yml
+    secrets: inherit
+    with:
+      AWS_REGION: ${{ needs.set_inputs.outputs.AWS_REGION }}
+      ECR_REPOSITORY: ${{ needs.set_inputs.outputs.ECR_REPOSITORY }}
+      ECS_CLUSTER: ${{ needs.set_inputs.outputs.ECS_CLUSTER }}
+      ECS_TASK_DEFINITION: ${{ needs.set_inputs.outputs.WEBSITE_TASK_DEFINITION }}
+      CACHE_FILE_ID: ${{ needs.set_inputs.outputs.CACHE_FILE_ID }}
+      CONTAINER: ${{ needs.set_inputs.outputs.WEBSITE_CONTAINER }}
+      DOCKER_FILE: ${{ needs.set_inputs.outputs.WEBSITE_DOCKER_FILE }}
+
+  build_start_page:
+    name: Build Start.Thunderbird.net
+    needs: set_inputs
+    if: |
+      contains(github.event.pull_request.labels.*.name, 'preview environment')
+    uses: ./.github/workflows/build.yml
+    secrets: inherit
+    with:
+      AWS_REGION: ${{ needs.set_inputs.outputs.AWS_REGION }}
+      ECR_REPOSITORY: ${{ needs.set_inputs.outputs.ECR_REPOSITORY }}
+      ECS_CLUSTER: ${{ needs.set_inputs.outputs.ECS_CLUSTER }}
+      ECS_TASK_DEFINITION: ${{ needs.set_inputs.outputs.START_TASK_DEFINITION }}
+      CACHE_FILE_ID: ${{ needs.set_inputs.outputs.CACHE_FILE_ID }}
+      CONTAINER: ${{ needs.set_inputs.outputs.START_CONTAINER }}
+      DOCKER_FILE: ${{ needs.set_inputs.outputs.START_DOCKER_FILE }}
+
+  deploy_website:
+    name: Deploy Thunderbird.net
+    # Only run if we've labeled the PR as "preview environment"
+    if: contains(github.event.pull_request.labels.*.name, 'preview environment')
+    needs: [ set_inputs, build_website ]
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+    with:
+      AWS_REGION: ${{ needs.set_inputs.outputs.AWS_REGION }}
+      CACHE_FILE_ID: ${{ needs.set_inputs.outputs.CACHE_FILE_ID }}
+      CONTAINER: ${{ needs.set_inputs.outputs.WEBSITE_CONTAINER }}
+      PR_ID_KEY: ${{ needs.set_inputs.outputs.PR_ID_KEY }}
+      PR_ID_VALUE: ${{ needs.set_inputs.outputs.WEBSITE_PR_ID_VALUE }}
+      DOCKER_FILE: ${{ needs.set_inputs.outputs.WEBSITE_DOCKER_FILE }}
+      ECS_CLUSTER: ${{ needs.set_inputs.outputs.ECS_CLUSTER }}
+
+  deploy_start_page:
+    name: Deploy Start.Thunderbird.net
+    # Only run if we've labeled the PR as "preview environment"
+    if: contains(github.event.pull_request.labels.*.name, 'preview environment')
+    needs: [ set_inputs, build_start_page ]
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
+    with:
+      AWS_REGION: ${{ needs.set_inputs.outputs.AWS_REGION }}
+      CACHE_FILE_ID: ${{ needs.set_inputs.outputs.CACHE_FILE_ID }}
+      CONTAINER: ${{ needs.set_inputs.outputs.START_CONTAINER }}
+      PR_ID_KEY: ${{ needs.set_inputs.outputs.PR_ID_KEY }}
+      PR_ID_VALUE: ${{ needs.set_inputs.outputs.START_PR_ID_VALUE }}
+      DOCKER_FILE: ${{ needs.set_inputs.outputs.START_DOCKER_FILE }}
+      ECS_CLUSTER: ${{ needs.set_inputs.outputs.ECS_CLUSTER }}
+
+  post_comment:
+    name: Post Links In PR
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'preview environment')
+    needs: [ deploy_website, deploy_start_page ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get Cached Task Definition ARN
+        id: cache-task-arn-get-start-page
+        uses: actions/cache/restore@v3
+        with:
+          path: ./${{ env.START_CONTAINER }}-url-${{ env.CACHE_FILE_ID }}.json
+          key: ${{ env.START_CONTAINER }}-url
+
+      - name: Get Cached Task Definition ARN
+        id: cache-task-arn-get-website
+        uses: actions/cache/restore@v3
+        with:
+          path: ./${{ env.WEBSITE_CONTAINER }}-url-${{ env.CACHE_FILE_ID }}.json
+          key: ${{ env.WEBSITE_CONTAINER }}-url
+
+      - uses: actions/github-script@v6
+        name: Post Comment
+        with:
+          script: |
+            const script = require('${{github.workspace}}/.github/scripts/post-comment-with-link.js')
+            const options = {
+              core: core,
+              github: github,
+              context: context,
+              require: require,
+              website_url_file: "./${{ env.WEBSITE_CONTAINER }}-url-${{ env.CACHE_FILE_ID }}.json",
+              start_page_url_file: "./${{ env.START_CONTAINER }}-url-${{ env.CACHE_FILE_ID }}.json"
+            }
+            await script(options)

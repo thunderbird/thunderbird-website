@@ -1,0 +1,70 @@
+# This workflow will build and push a new container image to Amazon ECR,
+# and then will deploy a new task definition to Amazon ECS, when there is a push to the "staging" branch.
+
+name: Stop Preview Environment
+
+# Stop any pending jobs
+concurrency:
+  group: ${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    # On PR: label, open, commit push, re-open
+    types: [ unlabeled, closed ]
+
+env:
+  AWS_REGION: us-west-1
+  ECS_CLUSTER: test-cluster
+  PR_ID_KEY: PullRequestId
+  PR_ID_VALUE: ${{ github.ref }}
+  WEBSITE_PR_ID_VALUE: ${{ github.ref }}/website
+  START_PR_ID_VALUE: ${{ github.ref }}/startpage
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  stop_pr:
+    name: Stop Preview Environment
+    runs-on: ubuntu-latest
+    # Only run if we've removed the label "preview environment" or closed the PR
+    if: |
+      github.event.label.name == 'preview environment' ||
+      github.event.action == 'closed'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - uses: actions/github-script@v6
+        name: Clean up existing Tasks
+        with:
+          script: |
+            const script = require('${{ github.workspace }}/.github/scripts/delete-tasks.js')
+            const is_partial = "${{ github.event.label.name }}" === 'preview environment'
+            let pr_id_value = "${{ env.PR_ID_VALUE }}"
+            
+            const options = {
+              github: github,
+              context: context,
+              require: require,
+              exec: exec,
+              partial_value: is_partial,
+              pr_id_key: "${{ env.PR_ID_KEY }}",
+              pr_id_value: pr_id_value,
+              ecs_cluster: "${{ env.ECS_CLUSTER }}"
+            }
+            await script(options)
