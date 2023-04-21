@@ -10,6 +10,12 @@
 
 {% block body_id %}thunderbird-beta-appeal{% endblock %}
 
+{% block extrahead %}
+<script>
+  window.latestBuild = "{{ get_latest_build('beta') }}";
+</script>
+{% endblock %}
+
 {% block header_content %}
   <!-- step 1: pls upgrade! -->
   <section id="ba-step-1" class="text-center text-white flex flex-row justify-between pl-4 pr-4 max-w-7xl pt-12 mt-4 mx-auto">
@@ -22,9 +28,9 @@
         </p>
 
         <div class="flex flex-col items-center mx-auto max-w-xl p-4 text-black-light no-underline font-xl">
-          <button id="tb-join-beta-btn" class="btn-beta border-0 mb-0 font-xl">
+          <a href="{{ url('thunderbird.download-beta') }}" id="tb-join-beta-btn" class="btn-beta border-0 mb-0 font-xl">
             {{ _('Upgrade now!') }}
-          </button>
+          </a>
         </div>
         <p class="font-md tracking-wider leading-loose">
             {{ _('Please be aware that Thunderbird Beta is considered early access software. Some rough edges should be expected.') }}
@@ -33,13 +39,13 @@
     </aside>
   </section>
   <!-- step 2: thank you for upgrading! -->
-  <section id="ba-step-2" class="text-center text-white flex flex-row justify-between pl-4 pr-4 max-w-7xl pt-12 mt-4 mx-auto hidden">
+  <section id="ba-step-2" class="text-center text-white flex flex-row justify-between pl-4 pr-4 max-w-7xl pt-12 mt-20 mb-20 mx-auto hidden">
       <aside>
-        <h1 class="font-4xl md:font-hero font-thin mt-0 mb-8">{{ self.page_title() }}</h1>
 
         <div class="flex flex-col">
-          <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-12 mt-0 p-links mx-auto">
-              {{ _('Thank you! You will be prompted to restart to upgrade Thunderbird shortly.') }}
+          <p class="font-3xl tracking-wide mb-6"><span class="mb-2 font-hero" style="display: block;">{{ _('Just one more step!') }}</span>{{ _('Finish installing, and start enjoying Thunderbird Beta.') }}</p>
+          <p class="tracking-wider ">
+            {{ _('Having trouble? <a class="inline-link" href="%(url)s">Get help with your installation.</a>')|format(url='https://support.mozilla.org/products/thunderbird/install-migrate-and-update') }}
           </p>
         </div>
       </aside>
