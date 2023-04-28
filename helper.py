@@ -435,6 +435,12 @@ def get_faq_list(ctx):
     return map(lambda entry: {'question': entry[0], 'answer': entry[1]}, entries)
 
 
+@jinja2.contextfunction
+def get_latest_build(ctx, channel):
+    """Returns the latest build number for a given channel (e.g. 102.10.0 for release)"""
+    return thunderbird_desktop.latest_version(channel)
+
+
 def f(s, *args, **kwargs):
     return s.format(*args, **kwargs)
 
