@@ -40,6 +40,9 @@ if (typeof Mozilla === 'undefined') {
          * @param details - See https://fundraiseup.com/docs/parameters/
          */
         fundraiseUp.on('checkoutOpen', function(details) {
+            window._paq = window._paq || [];
+            window._paq.push(['trackEvent', 'Donation', 'Started']);
+
             // Reset any stateful variables
             Donation.NeedsNewsletterRedirect = false;
 
@@ -51,8 +54,7 @@ if (typeof Mozilla === 'undefined') {
                 return;
             }
 
-            // Make sure _paq exists, and then send off the download event
-            window._paq = window._paq || [];
+            // Send off the download event
             window._paq.push(['trackLink', download_link, 'download']);
 
             // Timeout is here to prevent url collisions with fundraiseup form.
@@ -77,17 +79,25 @@ if (typeof Mozilla === 'undefined') {
          * @param details - See https://fundraiseup.com/docs/parameters/
          */
         fundraiseUp.on('donationComplete', function(details) {
-            if (!details || !details.supporter) {
+            if (!details) {
                 return;
             }
 
-            const hasSubscribedToNewsletter = details.supporter.mailingListSubscribed || false;
+            window._paq = window._paq || [];
 
-            if (hasSubscribedToNewsletter) {
-                const state = window.open(Donation.NEWSLETTER_URL, '_blank');
+            // TrackEvent: Category, Action, Name
+            window._paq.push(['trackEvent', 'Donation', 'Completed']);
+            window._paq.push(['trackGoal', 7]); // Donation Completed Goal
 
-                // If a browser doesn't want us to open a new tab (due to a pop-up blocker, or chrome's 'user must click once on a page before we allow redirect') then just redirect them.
-                Donation.NeedsNewsletterRedirect = state === null;
+            if (details.supporter) {
+                const hasSubscribedToNewsletter = details.supporter.mailingListSubscribed || false;
+
+                if (hasSubscribedToNewsletter) {
+                    const state = window.open(Donation.NEWSLETTER_URL, '_blank');
+
+                    // If a browser doesn't want us to open a new tab (due to a pop-up blocker, or chrome's 'user must click once on a page before we allow redirect') then just redirect them.
+                    Donation.NeedsNewsletterRedirect = state === null;
+                }
             }
         });
     }
