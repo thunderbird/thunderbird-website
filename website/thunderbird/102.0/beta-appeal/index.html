@@ -24,17 +24,18 @@
 
       <div class="flex flex-col">
         <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-12 mt-0 p-links mx-auto">
-            {{ _('Join the Beta today, and enjoy an exciting preview of the new features and visual enhancements coming to Thunderbird 115 Supernova. When Thunderbird Supernova officially launches later this Summer, you will be switched back to the stable, non-Beta version automatically.') }}
+            {{ _('Join the Beta today, and enjoy an exciting preview of the new features and visual enhancements coming to Thunderbird 115 Supernova. You can still run Thunderbird 102 after installing Beta on Windows with no special settings, unless you are using POP mail accounts. See details in the <a href="%(beta_kb_url)s">beta knowledge base</a>.')|format(beta_kb_url='https://support.mozilla.org/kb/thunderbird-beta') }}
+        </p>
+
+        <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-12 mt-0 p-links mx-auto">
+          {{ _('Thunderbird Beta is early access software, so please report the rough edges using the Help menu.  You can “Share Ideas and Feedback” and get assistance via “Get Help” or the <a href="%(beta_topicbox_url)s">Beta Topicbox</a> forum.')|format(beta_topicbox_url='https://thunderbird.topicbox.com/groups/beta') }}
         </p>
 
         <div class="flex flex-col items-center mx-auto max-w-xl p-4 text-black-light no-underline font-xl">
           <a href="{{ url('thunderbird.download-beta') }}" id="tb-join-beta-btn" class="btn-beta border-0 mb-0 font-xl">
-            {{ _('Upgrade now!') }}
+            {{ _('Install now!') }}
           </a>
         </div>
-        <p class="font-md tracking-wider leading-loose">
-            {{ _('Please be aware that Thunderbird Beta is considered early access software. Some rough edges should be expected.') }}
-        </p>
       </div>
     </aside>
   </section>
