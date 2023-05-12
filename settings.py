@@ -111,6 +111,7 @@ URL_MAPPINGS = {
     'blog': 'https://blog.thunderbird.net/',
     'calendar': '/calendar',
     'contribute': 'https://github.com/thundernest/thunderbird-website',
+    'donor.contact': 'https://donate.mozilla.org/help/',  # Point at donate.mozilla.org for now
     'firefox.dnt': 'https://www.mozilla.org/firefox/dnt/',
     'firefox.enterprise': 'https://www.mozilla.org/firefox/enterprise/',
     'firefox.release-calendar': 'https://wiki.mozilla.org/Release_Management/Calendar',
