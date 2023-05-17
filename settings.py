@@ -47,6 +47,27 @@ FRU_LANGUAGES = {
     'en-US': 'en-US',
 }
 
+# List of supported FormAssembly locales, scoped to the dropdown on the donor contact form
+# TB Locale -> FA Locale
+FA_LANGUAGES = {
+        'zh-CN': 'zh_CN',
+        'cs': 'cs',
+        'da': 'da',
+        'nl': 'nl',
+        'en-US': 'en_US',
+        'de': 'de',
+        'fr': 'fr',
+        'it': 'it',
+        'ja': 'ja',
+        'pl': 'pl',
+        'pt-BR': 'pt_BR',
+        'ru': 'ru',
+        'es-MX': 'es',
+        'es-AR': 'es',
+        'es-ES': 'es',
+        'es-CL': 'es',
+}
+
 # Map short locale names to long, preferred locale names. This
 # will be used in urlresolvers to determine the
 # best-matching locale from the user's Accept-Language header.
@@ -111,7 +132,6 @@ URL_MAPPINGS = {
     'blog': 'https://blog.thunderbird.net/',
     'calendar': '/calendar',
     'contribute': 'https://github.com/thundernest/thunderbird-website',
-    'donor.contact': 'https://donate.mozilla.org/help/',  # Point at donate.mozilla.org for now
     'firefox.dnt': 'https://www.mozilla.org/firefox/dnt/',
     'firefox.enterprise': 'https://www.mozilla.org/firefox/enterprise/',
     'firefox.release-calendar': 'https://wiki.mozilla.org/Release_Management/Calendar',
@@ -135,6 +155,7 @@ URL_MAPPINGS = {
     'thunderbird.donate.faq': '/donate#faq',
     'thunderbird.donate.ways-to-give': '/donate#ways-to-give',
     'thunderbird.donate.ways-to-give.check': '/donate#ways-to-give-check',
+    'thunderbird.donate.contact': '/donate/help',
     'thunderbird.download': '/download',
     'thunderbird.download-beta': '/download/beta',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
