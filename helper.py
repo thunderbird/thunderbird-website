@@ -444,6 +444,15 @@ def get_latest_build(ctx, channel):
     return thunderbird_desktop.latest_version(channel)
 
 
+@jinja2.contextfunction
+def get_form_assembly_localization_url(ctx):
+    """Returns a formatted url with the correct locale for form assembly localization js"""
+    locale = ctx.get('LANG', settings.LANGUAGE_CODE)
+    fa_locale = settings.FA_LANGUAGES.get(locale, 'en_US')
+
+    return "https://mozillafoundation.tfaforms.net/wForms/3.11/js/localization-{locale}.js?v=127d5d34f78f067204f2463a3699a1688fbf2ca7".format(locale=fa_locale)
+
+
 def f(s, *args, **kwargs):
     return s.format(*args, **kwargs)
 

@@ -52,11 +52,11 @@ def get_entries(ctx):
             (
                 gettext(u'How do I cancel or change my recurring gift?'),
                 gettext(u'If you used PayPal to set up a recurring gift, you’ll need to <a href="%(paypal)s">log in to your PayPal account</a> to make changes or to cancel. If you made a monthly gift using your credit card, please contact the Donor Care team <a href="%(help)s">via this form</a>. Please include the email address and name you used to make your donation, and they’ll try to help you within two business days.')
-                % {'paypal': 'https://www.paypal.com', 'help': url(ctx, 'donor.contact')}
+                % {'paypal': 'https://www.paypal.com', 'help': url(ctx, 'thunderbird.donate.contact')}
             ),
             (
                 gettext(u'Who can I email directly with questions about giving?'),
                 gettext(u'If you have a question about giving to Thunderbird, please contact us via <a href="%(help)s">this form</a>. We will do our best to follow-up with you as soon as we can. If you need technical support, please head over to <a href="%(support)s">Thunderbird Support</a> for assistance.')
-                % {'help': url(ctx, 'donor.contact'), 'support': url(ctx, 'support')}
+                % {'help': url(ctx, 'thunderbird.donate.contact'), 'support': url(ctx, 'support')}
             )
     ]

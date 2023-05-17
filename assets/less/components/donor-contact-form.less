@@ -1,0 +1,95 @@
+/*
+ * Re-styling of the FormAssembly embedded form, class names are theirs.
+ */
+// Everything is scoped under this!!
+.wFormContainer {
+  // Submit button
+  .primaryAction {
+    &:extend(.btn-newsletter, .text-white, .mx-auto, .w-40, .h-12);
+
+    // Stick it to the bottom
+    margin-top: auto;
+    margin-bottom: 2rem;
+
+    .transition(@transition-default);
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+  }
+
+  // Container for inputs
+  .wForm {
+    &:extend(.mx-auto);
+
+    // Single field form item
+    .oneField {
+      &:extend(.md\:flex, .m-2, .mx-auto, .justify-center, .md\:max-w-2lg, .w-full);
+
+      textarea, select, input {
+        &:extend(.rounded-sm, .bg-transparent, .border, .border-solid, .p-3, .tracking-wide, .font-md);
+        box-sizing: border-box;
+        border-color: rgba(12, 12, 13, 0.2);
+      }
+
+      label {
+        &:extend(.my-auto);
+        width: 10rem;
+      }
+
+      textarea {
+        height: 8rem;
+      }
+
+      textarea, select, input {
+        &:extend(.w-full);
+
+        @media (min-width: @md) {
+          width: 30rem;
+        }
+
+      }
+    }
+
+    // Container for buttons
+    .actions {
+      &:extend(.flex, .flex-col, .text-center);
+      // Prevent captcha pop-in
+      min-height: 300px;
+    }
+
+    .captcha {
+      // Div container
+      .oneField {
+        &:extend(.flex, .flex-col-reverse, .mb-2);
+        // Actual captcha
+        .g-recaptcha {
+          &:extend(.mx-auto);
+        }
+
+        // Error
+        .g-captcha-error {
+          &:extend(.text-red, .mb-4);
+        }
+      }
+
+      .captchaHelp {
+        &:extend(.font-sm);
+      }
+    }
+
+    // Mozilla privacy policy text
+    .htmlSection {
+      &:extend(.flex, .text-center, .justify-center);
+
+      .htmlContent {
+        &:extend(.md\:max-w-2xl, .align-center, .font-md, .tracking-wider, .leading-loose);
+      }
+    }
+
+
+  }
+}

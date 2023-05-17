@@ -1,0 +1,93 @@
+<div class="wFormContainer">
+  <div class="wFormHeader"></div>
+  <div class="">
+    <div class="wForm" id="10-WRPR" dir="ltr">
+      <div class="codesection" id="code-10">
+        <script>
+          wFORMS.behaviors.paging.isConditionalSubmitAllowed = true;
+          wFORMS.behaviors.condition.isConditionalSubmitAllowed = true;
+        </script>
+      </div>
+      <form method="post" action="https://mozillafoundation.tfaforms.net/api_v2/workflow/processor"
+            class=" labelsLeftAligned" id="10" role="form">
+        <div class="oneField field-container-D    " id="tfa_1-D">
+          <label id="tfa_1-L" class="label preField " for="tfa_1">{{ _('Contact Name') }}</label>
+          <div class="inputWrapper"><input type="text" id="tfa_1" name="tfa_1" value="" title="Contact Name" class="" required>
+          </div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_10-D">
+          <label id="tfa_10-L" class="label preField " for="tfa_10">{{ _('Email') }}</label>
+          <div class="inputWrapper"><input type="text" id="tfa_10" name="tfa_10" value="" title="Email" class="" required></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_72-D">
+          <label id="tfa_72-L" class="label preField " for="tfa_72">{{ _('Language') }}</label>
+          <div class="inputWrapper"><select id="tfa_72" name="tfa_72" title="Language" class="">
+            <option value="">{{ _('Please select...') }}</option>
+            <option value="tfa_73" id="tfa_73" class="">{{ _('Chinese Simplified') }}</option>
+            <option value="tfa_74" id="tfa_74" class="">{{ _('Czech') }}</option>
+            <option value="tfa_75" id="tfa_75" class="">{{ _('Danish') }}</option>
+            <option value="tfa_76" id="tfa_76" class="">{{ _('Dutch') }}</option>
+            <option value="tfa_77" id="tfa_77" class="">{{ _('English') }}</option>
+            <option value="tfa_78" id="tfa_78" class="">{{ _('French') }}</option>
+            <option value="tfa_79" id="tfa_79" class="">{{ _('German') }}</option>
+            <option value="tfa_80" id="tfa_80" class="">{{ _('Italian') }}</option>
+            <option value="tfa_81" id="tfa_81" class="">{{ _('Japanese') }}</option>
+            <option value="tfa_82" id="tfa_82" class="">{{ _('Other') }}</option>
+            <option value="tfa_83" id="tfa_83" class="">{{ _('Polish') }}</option>
+            <option value="tfa_84" id="tfa_84" class="">{{ _('Portuguese') }}</option>
+            <option value="tfa_85" id="tfa_85" class="">{{ _('Russian') }}</option>
+            <option value="tfa_86" id="tfa_86" class="">{{ _('Spanish') }}</option>
+          </select></div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_95-D">
+          <label id="tfa_95-L" class="label preField " for="tfa_95">{{ _('Subject') }}</label>
+          <div class="inputWrapper"><input type="text" id="tfa_95" name="tfa_95" value="" title="Subject" class="" required>
+          </div>
+        </div>
+        <div id="tfa_183" class="section inline group">
+          <div class="oneField field-container-D    " id="tfa_163-D">
+            <label id="tfa_163-L" class="label preField " for="tfa_163">{{ _('Description') }}</label>
+            <div class="inputWrapper"><textarea id="tfa_163" name="tfa_163" title="Description" class="" required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="htmlSection" id="tfa_182">
+          <div class="htmlContent" id="tfa_182-HTML">{{ _('Mozilla will only use your submitted information for purposes of
+            communicating with you about your request. See our <a href="%(privacy)s">privacy
+              policy</a> for further information.')|format(privacy=url('privacy')) }}
+          </div>
+        </div>
+        <div class="actions" id="10-A" data-contentid="submit_button">
+          <div id="google-captcha" style="display: none">
+            <br>
+            <div class="captcha">
+              <div class="oneField">
+                <div class="g-recaptcha" id="g-recaptcha-render-div"></div>
+                <div class="g-captcha-error"></div>
+                <br>
+              </div>
+              <div class="captchaHelp">{{ _('reCAPTCHA helps prevent automated form spam.') }}<br>
+              </div>
+              <div id="disabled-explanation" class="captchaHelp" style="display: none">{{ _('The submit button will be
+                disabled until you complete the CAPTCHA.') }}
+              </div>
+            </div>
+          </div>
+          <input type="submit" data-label="Submit" class="primaryAction" id="submit_button" value="{{ _('Submit') }}">
+        </div>
+        <div style="clear:both"></div>
+        <input type="hidden" value="10" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value=""
+                                                                                     name="tfa_dbResponseId"
+                                                                                     id="tfa_dbResponseId"><input
+        type="hidden" value="41135116ed18d2beeb141ac0b7ce9963" name="tfa_dbControl" id="tfa_dbControl"><input
+        type="hidden" value="" name="tfa_dbWorkflowSessionUuid" id="tfa_dbWorkflowSessionUuid"><input type="hidden"
+                                                                                                      value="8"
+                                                                                                      name="tfa_dbVersionId"
+                                                                                                      id="tfa_dbVersionId"><input
+        type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+      </form>
+    </div>
+  </div>
+  <div class="wFormFooter">
+  </div>
+</div>

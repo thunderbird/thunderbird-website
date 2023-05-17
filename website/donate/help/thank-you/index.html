@@ -1,0 +1,33 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "includes/base-resp.html" %}
+
+{% block page_title %}{{ _('Donor Help') }}{% endblock %}
+
+{% block header_content %}
+  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+  </section>
+{% endblock %}
+
+{% block content %}
+  <section id="donate" class="pb-20 flex justify-between mr-2 ml-2 md:pr-8 md:pl-8">
+    <section class="flex flex-col md:flex-row justify-between mx-auto">
+      <aside class="flex flex-col flex-1 lg:max-w-4xl md:mr-8 md:ml-8 lg:ml-16 lg:mr-16 lg:pt-12">
+        <h1 class="font-2xl tracking-wider leading-loose">
+          {{ _('Thank you for contacting us. A case has been created for your issue and we will be in touch shortly.') }}
+        </h1>
+        <p class="font-lg tracking-wider leading-loose mb-6">
+          {{ _('We will get back to you soon.') }}
+        </p>
+        <a href="{{url('thunderbird.index')}}" class="btn-body" style="margin-left: 0; margin-right: auto">
+          {{ _('Return to Thunderbird.net') }}
+          <span>{{ svg('chevron-right') }}</span>
+        </a>
+      </aside>
+    </section>
+  </section>
+{% endblock %}
+
