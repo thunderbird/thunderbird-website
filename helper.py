@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 
 import inspect
-import urllib
 
 import jinja2
 import json
@@ -18,6 +17,10 @@ from os import path
 from os.path import splitext
 from product_details import thunderbird_desktop
 from time import mktime
+try:
+    from urllib.parse import urlencode
+except ImportError:
+    from urllib import urlencode
 
 babel_format_locale_map = {
     'hsb': 'de',
@@ -349,7 +352,7 @@ def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign
 
     filtered_query = {k: v for k, v in query.items() if v is not None}
 
-    return "?{}".format(urllib.urlencode(filtered_query))
+    return "?{}".format(urlencode(filtered_query))
 
 
 @jinja2.contextfunction
