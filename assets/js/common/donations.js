@@ -32,6 +32,15 @@ if (typeof Mozilla === 'undefined') {
             return;
         }
 
+        // If a user clicks on a donate button, track the donate link click goal
+        const donateButtons = document.querySelectorAll('[data-donate-btn]');
+        donateButtons.forEach(function(element) {
+            element.addEventListener('click', function() {
+                window._paq = window._paq || [];
+                window._paq.push(['trackGoal', 1]);
+            });
+        });
+
         // Ensure we actually have the javascript loaded, so we can hook up our events.
         const fundraiseUp = window.FundraiseUp;
 
