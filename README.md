@@ -24,6 +24,28 @@ git clone https://github.com/thundernest/thunderbird.net-l10n.git locale
 l10n_tools/compile.sh
 ```
 
+## Docker
+As an alternative, you can use [Docker](https://docker.com) for local development. You'll need docker already set-up, and the previously mentioned git repositories.
+
+Once that is done, you'll need to pull down and build a modified apache config (which is done via an automated script), and build the docker containers:
+```
+python docker/apache/build_apache_config.py
+sudo docker build -t thunderbird-website-build . -f website.dockerfile
+sudo docker build -t thunderbird-website-apache . -f apache.dockerfile
+```
+
+You'll also need to set up some local dns entries in `/etc/hosts`:
+```
+127.0.0.1 start.thunderbird.test
+127.0.0.1 www.thunderbird.test
+```
+
+After that, you can simply run `docker-compose up`, and visit [https://www.thunderbird.test](https://www.thunderbird.test). 
+
+Optionally you can do local development against the start page, by running `docker-compose --profile startpage up`, and visiting [https://start.thunderbird.test](https://start.thunderbird.test).
+
+**Note:** The docker container creates and uses a self-signed certificate, which will probably raise a warning on your browser. You can safely ignore this.
+
 ## Run Build
 
 A basic build is `python build-site.py`.

@@ -1,0 +1,35 @@
+services:
+  website-builder:
+    image: thunderbird-website-build
+    command: sh -c "/usr/local/bin/python build-site.py --enus --watch-only --render-path='/srv/www/'"
+    working_dir: /website
+    volumes:
+      - ./:/website:ro
+      - srv-directory:/srv/www/
+
+  # Can be started via `docker-compose --profile startpage up`
+  start-builder:
+    image: thunderbird-website-build
+    command: sh -c "/usr/local/bin/python build-site.py --startpage --enus --watch-only --render-path='/srv/www/'"
+    working_dir: /website
+    profiles:
+      - startpage
+    volumes:
+      - ./:/website:ro
+      - srv-directory:/srv/www/
+
+  apache:
+    image: thunderbird-website-apache
+    hostname: www.thunderbird.net
+    ports:
+      - 8000:80
+      - 443:443
+    volumes:
+      - ./docker/apache/built/tb_vhosts.conf:/etc/apache2/conf-enabled/tb_vhosts.conf:ro
+      - srv-directory:/var/www/html/start/
+      # Needed for WSGI rewrites
+      - ./settings.py:/var/www/html/start/settings.py:ro
+      - ./wsgi.py:/var/www/html/start/wsgi.py:ro
+
+volumes:
+  srv-directory:

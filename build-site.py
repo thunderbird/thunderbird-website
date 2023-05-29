@@ -13,6 +13,9 @@ parser.add_argument('--startpage', help='Build the start page instead of the mai
                     action='store_true')
 parser.add_argument('--watch', help='Rebuild when template and asset dirs are changed, and run a server on localhost.',
                     action='store_true')
+parser.add_argument('--watch-only', help='Rebuild when template and asset dirs are changed, does not run a server on localhost.',
+                    action='store_true')
+parser.add_argument('--render-path', help='Adjusts the render directory.', type=str)
 parser.add_argument('--port', const=8000, default=8000, type=int,
                     help='Port for the server that runs with --watch.', nargs='?')
 args = parser.parse_args()
@@ -25,9 +28,16 @@ else:
     langmsg = 'in all languages.'
     languages = settings.PROD_LANGUAGES
 
+if not args.render_path:
+    site_render_path = settings.START_RENDERPATH
+    website_render_path = settings.WEBSITE_RENDERPATH
+else:
+    site_render_path = "{}{}".format(args.render_path, settings.START_RENDERPATH)
+    website_render_path = "{}{}".format(args.render_path, settings.WEBSITE_RENDERPATH)
+
 if args.startpage:
     print('Rendering start page ' + langmsg)
-    site = builder.Site(languages, settings.START_PATH, settings.START_RENDERPATH, settings.START_CSS, debug=args.debug)
+    site = builder.Site(languages, settings.START_PATH, site_render_path, settings.START_CSS, debug=args.debug)
     site.build_startpage()
 else:
     print('Rendering www.thunderbird.net ' + langmsg)
@@ -52,9 +62,11 @@ else:
                'blog_data': feedparser.parse(settings.BLOG_FEED_URL)
               }
 
-    site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,
+    site = builder.Site(languages, settings.WEBSITE_PATH, website_render_path,
         settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS, data=context, debug=args.debug)
     site.build_website()
 
 if args.watch:
-    builder.setup_observer(site, args.port)
+    builder.setup_local_watch(site, args.port)
+elif args.watch_only:
+    builder.setup_docker_watch(site)

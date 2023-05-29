@@ -1,0 +1,15 @@
+# Dot directories
+.git
+.idea
+
+# Python venvs
+venv*
+
+# Ignore submodules?
+#product-details
+#thunderbird_notes
+
+# Ignore local build directories
+site
+thunderbird.net
+
