@@ -148,6 +148,7 @@ URL_MAPPINGS = {
     'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
     'support': 'https://support.mozilla.org/products/thunderbird/',
     'thunderbird.about': '/about',
+    'thunderbird.about.our-mission-statement': '/about#our-mission-statement',
     'thunderbird.careers': '/careers',
     'thunderbird.channel': '/channel',
     'thunderbird.contact': '/contact',
