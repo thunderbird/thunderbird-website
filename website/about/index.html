@@ -51,12 +51,13 @@
     </h3>
   </section>
 
-  <section class="pt-20 pb-20 w-full bg-calendar">
-    <section class="pt-10 flex flex-col lg:flex-row w-full max-w-6xl mx-auto mb-10">
-      <aside class="flex flex-col lg:w-1/2 pr-8 pl-8">
-        <img class="w-full max-w-4xl mb-10 lg:mb-0 h-auto shadow-lg rounded-sm" src="{{ static('img/thunderbird/team.jpg') }}" alt="Thunderbird Developers Toronto Summit 2014">
+  <section class="pt-10 pb-20 w-full bg-calendar">
+    <section class="flex flex-row justify-center w-full max-w-6xl mx-auto">
+      <aside class="flex flex-col md:w-9/12 pr-8 pl-8">
+        <img class="w-full max-w-6xl mb-10 lg:mb-0 h-auto shadow-lg rounded-sm" src="{{ static('img/thunderbird/team.jpg') }}" alt="Thunderbird Developers Toronto Summit 2014">
       </aside>
-
+    </section>
+    <section class="pt-20 flex flex-col lg:flex-row w-full max-w-6xl mx-auto mb-10">
       <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
         <article class="flex flex-col w-full mb-6">
           <h4 class="subheader-section">{{ _('Our Community') }}</h4>
@@ -69,6 +70,29 @@
           <h4 class="subheader-section">{{ _('Thunderbird Council') }}</h4>
           <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
             {{ _('The Thunderbird project is governed by seven councilors, elected by the Thunderbird community’s active contributors. You can see the current elected Thunderbird Council members <a href="%(council)s">on the Thunderbird wiki</a>.')|format(council=url('wiki.moz', '/Modules/Thunderbird#Thunderbird_Council')) }}
+          </p>
+        </article>
+      </aside>
+
+      <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
+        <article class="flex flex-col w-full mb-6">
+          <h4 class="subheader-section">{{ _('Our Mission') }}</h4>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('Email has been and continues to be the fundamental communication tool
+                  and a significant driver of freedoms on the Internet. But it is also
+                  threatened by new non-standards-based, closed and centralized messaging
+                  platforms. To prevent this erosion, the public deserves an alternative that is secure and reliable,
+                  while  protecting our privacy, enhancing our productivity and serving as a
+                  platform for current and future forms of messaging.')
+            }}
+          </p>
+          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
+            {{ _('Thunderbird facilitates cross platform, decentralized, open-standard
+                  communication, which puts the user in control of their data and workflow.
+                  We aspire to offer an interoperable and extensible open-source
+                  platform for messaging and managing personal information, such as email,
+                  contacts, and appointments.')
+            }}
           </p>
         </article>
       </aside>
