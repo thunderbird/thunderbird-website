@@ -17,7 +17,6 @@ parser.add_argument('--port', const=8000, default=8000, type=int,
                     help='Port for the server that runs with --watch.', nargs='?')
 args = parser.parse_args()
 
-
 if args.enus:
     langmsg = 'in en-US only.'
     languages = ['en-US']
@@ -50,10 +49,10 @@ else:
                'latest_thunderbird_version': version,
                'latest_thunderbird_beta_version': beta_version,
                'blog_data': feedparser.parse(settings.BLOG_FEED_URL)
-              }
+               }
 
     site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,
-        settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS, data=context, debug=args.debug)
+                        settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS, data=context, debug=args.debug)
     site.build_website()
 
 if args.watch:

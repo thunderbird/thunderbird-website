@@ -10,17 +10,14 @@ import settings
 import sys
 import translate
 
-from babel.core import Locale, UnknownLocaleError, get_locale_identifier
+from babel.core import Locale, UnknownLocaleError
 from babel.dates import format_date
 from datetime import datetime
 from os import path
 from os.path import splitext
 from product_details import thunderbird_desktop
 from time import mktime
-try:
-    from urllib.parse import urlencode
-except ImportError:
-    from urllib import urlencode
+from urllib.parse import urlencode
 
 babel_format_locale_map = {
     'hsb': 'de',
@@ -49,7 +46,7 @@ def static(filepath):
     return path.join(settings.MEDIA_URL, filepath)
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def url(ctx, key, *args):
     target_url = settings.URL_MAPPINGS.get(key, '')
     lang = ctx['LANG']
@@ -82,7 +79,7 @@ def convert_to_high_res(url):
     return add_string_to_image_url(url, 'high-res')
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def l10n_img_file_name(ctx, url):
     """Return the filename of the l10n image for use by static()"""
     url = url.lstrip('/')
@@ -101,7 +98,7 @@ def l10n_img_file_name(ctx, url):
     return path.join('img', 'l10n', locale, url)
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def l10n_img(ctx, url):
     """Output the url to a localized image.
 
@@ -139,7 +136,7 @@ def l10n_img(ctx, url):
     return static(l10n_img_file_name(ctx, url))
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def high_res_img(ctx, url, optional_attributes=None):
     url_high_res = convert_to_high_res(url)
     if optional_attributes and optional_attributes.pop('l10n', False) is True:
@@ -166,13 +163,13 @@ def high_res_img(ctx, url, optional_attributes=None):
     return jinja2.Markup(markup)
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def svg(ctx, file_name):
     file = path.join(settings.MEDIA_URL.strip('/'), 'svg/' + file_name + '.svg')
     return open(file).read()
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def platform_img(ctx, url, optional_attributes=None):
     optional_attributes = optional_attributes or {}
     img_urls = {}
@@ -213,7 +210,7 @@ def platform_img(ctx, url, optional_attributes=None):
     return jinja2.Markup(markup)
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def download_thunderbird(ctx, channel='release', dom_id=None,
                          locale=None, force_direct=False,
                          alt_copy=None, button_class=None,
@@ -229,6 +226,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     :param alt_copy: Specifies alternate copy to use for download buttons.
     :param button_class: Class of the button element. Default to `none`, and dynamically picks the class based on the channel.
     :param section: Where the button is rendered in the page. Default to 'header'.
+    :param flex_class: Adjust the flexbox positioning class
     :param hide_footer_links: Whether we should hide the footer links (System Requirements, What's New, Privacy Policy) display. Default to 'False'.
     :return: The button html.
     """
@@ -325,9 +323,10 @@ def thunderbird_url(page, channel='None'):
     return url
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign='donation_2023', show_donation_modal=True, download=None, download_channel=None):
     """Forms a donation url with the given parameters. If you pass in None for any of the fields they will be excluded from the url
+    :param ctx: Jinja context
     :param content: UTM Content tag
     :param source: UTM Source tag
     :param medium: UTM Medium tag
@@ -355,7 +354,7 @@ def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign
     return "?{}".format(urlencode(filtered_query))
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def redirect_donate_url(ctx, location='thunderbird.download', make_full_url=False, **kwargs):
     """Helper function to piece together the full donation url. Defaults to the settings for our Download button."""
     base_url = ''
@@ -380,7 +379,7 @@ def get_locale(lang):
         return Locale(*settings.LANGUAGE_CODE.split('-'))
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def get_fru_language(ctx):
     """
     Returns the current language if supported by FRU.
@@ -398,7 +397,7 @@ def get_fru_language(ctx):
     return settings.LANGUAGE_CODE
 
 
-@jinja2.filters.contextfilter
+@jinja2.filters.pass_context
 def l10n_format_date(ctx, date, format='long'):
     """
     Formats a date according to the current locale. Wraps around
@@ -411,13 +410,12 @@ def l10n_format_date(ctx, date, format='long'):
         return ''
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def get_blog_data(ctx, entry):
     data = ctx.get('blog_data')
     parsed = {}
 
     entry = data['entries'][entry]
-
 
     parsed['summary'] = jinja2.Markup(entry['summary_detail']['value'])
     parsed['title'] = entry['title']
@@ -437,7 +435,7 @@ def get_blog_data(ctx, entry):
     return parsed
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def get_faq_list(ctx):
     """
     Returns a list of faq dicts: { 'question': '...', 'answer': '...' }
@@ -450,13 +448,13 @@ def get_faq_list(ctx):
     return map(lambda entry: {'question': entry[0], 'answer': entry[1]}, entries)
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def get_latest_build(ctx, channel):
     """Returns the latest build number for a given channel (e.g. 102.10.0 for release)"""
     return thunderbird_desktop.latest_version(channel)
 
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def get_form_assembly_localization_url(ctx):
     """Returns a formatted url with the correct locale for form assembly localization js"""
     locale = ctx.get('LANG', settings.LANGUAGE_CODE)
