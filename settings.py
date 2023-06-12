@@ -86,6 +86,10 @@ CANONICAL_LOCALES = {
     'zh-hant-hk': 'zh-TW',  # Bug 1338072
 }
 
+TEST_PORT = 8889
+TEST_URL_BASE = 'http://localhost:{}'.format(TEST_PORT)
+TEST_URL = '{}/{}'.format(TEST_URL_BASE, LANGUAGE_CODE)
+
 CANONICAL_URL = 'https://www.thunderbird.net'
 
 # url for the server that serves Thunderbird downloads.
