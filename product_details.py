@@ -2,12 +2,7 @@
 
 from collections import OrderedDict
 from operator import itemgetter
-import sys
-if sys.version_info[0] == 3:
-    from urllib.parse import urlencode
-else:
-    from urllib import urlencode
-
+from urllib.parse import urlencode
 import json
 import os
 import re
@@ -67,8 +62,6 @@ class ThunderbirdDetails():
     major_releases = load_json('thunderbird_history_major_releases.json')
 
     minor_releases = load_json('thunderbird_history_stability_releases.json')
-
-    major_releases = load_json('thunderbird_history_major_releases.json')
 
     dev_releases = load_json('thunderbird_history_development_releases.json')
 

@@ -12,16 +12,11 @@ import time
 import translate
 import webassets
 
-if sys.version_info[0] == 3:
-    from socketserver import TCPServer
-    import http.server
-    TCPServer.allow_reuse_address = True
-    SimpleHTTPServer = http.server.HTTPServer
-    SimpleHTTPRequestHandler = http.server.SimpleHTTPRequestHandler
-else:
-    from SocketServer import TCPServer
-    import SimpleHTTPServer
-    SimpleHTTPRequestHandler = SimpleHTTPServer.SimpleHTTPRequestHandler
+from socketserver import TCPServer
+import http.server
+TCPServer.allow_reuse_address = True
+SimpleHTTPServer = http.server.HTTPServer
+SimpleHTTPRequestHandler = http.server.SimpleHTTPRequestHandler
 
 from dateutil.parser import parse
 from jinja2 import Environment, FileSystemLoader
@@ -375,8 +370,7 @@ def setup_httpd(port, path):
     os.chdir(path)
     handler = RedirectingHTTPRequestHandler
     httpd = TCPServer(("", port), handler)
-    if sys.version_info[0] == 3:
-        multiprocessing.set_start_method("fork")
+    multiprocessing.set_start_method("fork")
     process = multiprocessing.Process(target=httpd.serve_forever)
     process.daemon = True
     process.start()

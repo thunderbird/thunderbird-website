@@ -29,7 +29,7 @@ def get_translations(self):
         return translations
 
     for lang in settings.PROD_LANGUAGES:
-        if (lang in product_details.languages):
+        if lang in product_details.languages:
             translations[lang] = product_details.languages[lang]['native']
 
     self.cache[cache_key] = translations
