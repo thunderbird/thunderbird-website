@@ -55,8 +55,8 @@
       {% endif %}
       <div class="flex w-full mt-1 mb-1 bg-grey-light rounded p-1 font-md items-center">
         <aside class="flex-1 p-2">
-          {% if calendar.title %}
-            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a> %(title)s, thanks to %(authors)s')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, title=calendar.title, authors=calendar.authors ) }}
+          {% if calendar.author == CALDATA_AUTOGEN_AUTHOR %}
+            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a>')|format(url=CALDATA_URL + calendar.filename, country=calendar.country ) }}
           {% else %}
             {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a> holidays thanks to %(authors)s')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, authors=calendar.authors) }}
           {% endif %}
@@ -66,29 +66,6 @@
         </aside>
       </div>
     {% endfor %}
-  </section>
-
-  <section class="pt-20 pb-10 w-full bg-calendar">
-    <section class="flex max-w-4xl mx-auto pl-8 pr-8">
-      <aside class="flex flex-col w-full">
-        <h3 class="header-section">
-          {{ _('Contributing a Holiday Calendar')}}
-        </h3>
-        <p class="font-lg tracking-wider leading-loose mb-6">
-          {{ _('If you would like to send us your calendar files, please follow these steps:') }}
-        </p>
-        <ol class="font-md tracking-wider leading-loose mb-6">
-          <li>{{ _('Create a new local calendar, e.g. <i>"$Country$ Holidays"</i>.') }}</li>
-          <li>{{ _('Create the different holidays of your country in this local calendar.') }}</li>
-          <li>
-            {{ _('Right-click on this calendar and choose "Export Calendar". Please use the iCalendar (ics) format.') }}
-          </li>
-          <li class="p-links-blue">
-            {{ _('Create a Pull Request or file an Issue on the <a href="%(contribute_url)s">website repository</a> and attach your holiday file.')|format(contribute_url=url('contribute')) }}
-          </li>
-        </ol>
-      </aside>
-    </section>
   </section>
 
   {% include 'includes/site-prefooter.html' %}
