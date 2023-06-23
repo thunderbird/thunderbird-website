@@ -99,7 +99,7 @@ You can contribute to content translation of www.thunderbird.net pages using [Po
 
 # Donation FAQ
 
-The actual questions and answers part of the FAQ can be found in `./faq.py`. Make sure to include the `gettext` call, otherwise we won't be able to extract the strings for localization.
+Donation FAQ entries are found in `./website/includes/faq.html`.
 
 # Tests
 
