@@ -11,7 +11,7 @@ COMMENT:	ML King Day 	            begins on 	3rd Monday of Jan
 COMMENT:	Groundhog Day	            begins on 	Feb 2
 COMMENT:	Valentine's Day	            begins on 	Feb 14	
 COMMENT:	President's Day             begins on 	3rd Monday of Feb
-COMMENT:   **	Daylight Savings            begins on 	2nd Sunday of March
+COMMENT:   **	Daylight Saving Time begins begins on 	2nd Sunday of March
 COMMENT:	St Patrick's Day            begins on 	March 17
 COMMENT:   * 	First day of spring         in 2021 is 	March 20
 COMMENT:   * 	Good Friday	            in 2021 is 	Apr 2
@@ -28,7 +28,7 @@ COMMENT:   *	First day of autumn         in 2021 is 	Sept 22
 COMMENT:	Columbus Day 	            begins on 	2nd Monday of Oct
 COMMENT:	Halloween	            begins on 	Oct 31
 COMMENT:	Election Day 	            begins on 	First Tues of Nov
-COMMENT:   **	Daylight Savings ends       begins on	1st Sunday of Nov
+COMMENT:   **	Daylight Saving Time ends   begins on	1st Sunday of Nov
 COMMENT:	Veteran's Day               begins on 	Nov 11
 COMMENT:	Thanksgiving                begins on 	4th Thursday of Nov
 COMMENT:	Black Friday
@@ -113,8 +113,8 @@ UID:286227407165727939
 LAST-MODIFIED:20201108T223622Z
 DTSTART;VALUE=DATE:20210314
 DTEND;VALUE=DATE:20210314
-SUMMARY:Daylight Savings Time begins today
-DESCRIPTION:Daylight Savings Time begins today - set your clocks forward 1
+SUMMARY:Daylight Saving Time begins today
+DESCRIPTION:Daylight Saving Time begins today - set your clocks forward 1
  hour today
 CLASS:PUBLIC
 DTSTAMP:20201115T134131Z
@@ -123,7 +123,7 @@ RRULE:FREQ=YEARLY;BYMONTH=3;COUNT=10;BYDAY=2SU
 BEGIN:VALARM
 TRIGGER:20210314T045500Z
 ACTION:DISPLAY
-DESCRIPTION:Daylight Savings Time begins today - set your clocks forward 1
+DESCRIPTION:Daylight Saving Time begins today - set your clocks forward 1
  hour today
 END:VALARM
 END:VEVENT
@@ -336,8 +336,8 @@ UID:275814952229709415
 LAST-MODIFIED:20201108T223714Z
 DTSTART;VALUE=DATE:20211107
 DTEND;VALUE=DATE:20211107
-SUMMARY:Daylight Savings Time ends today
-DESCRIPTION:Daylight Savings Time ends today - set your clocks back 1 hour
+SUMMARY:Daylight Saving Time ends today
+DESCRIPTION:Daylight Saving Time ends today - set your clocks back 1 hour
  today
 CLASS:PUBLIC
 DTSTAMP:20201115T134131Z
@@ -346,7 +346,7 @@ RRULE:FREQ=YEARLY;BYMONTH=11;COUNT=10;BYDAY=1SU
 BEGIN:VALARM
 TRIGGER:20211107T035500Z
 ACTION:DISPLAY
-DESCRIPTION:Daylight Savings Time ends today - set your clocks back 1 hour
+DESCRIPTION:Daylight Saving Time ends today - set your clocks back 1 hour
  today
 END:VALARM
 END:VEVENT
