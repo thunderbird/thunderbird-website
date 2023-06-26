@@ -119,14 +119,20 @@ class ThunderbirdDetails():
         return sorted(f_builds, key=itemgetter('name_en'))
 
     def get_download_url(self, channel, version, platform, locale, force_direct=True):
+        """Retrieve the download url for a given channel, version, platform and locale."""
         _version = version
         _locale = 'ja-JP-mac' if platform == 'osx' and locale == 'ja' else locale
         _platform = 'win' if platform == 'winsha1' else platform
         product_url = 'thunderbird-%s-SSL'
 
+        if channel == 'daily':
+            _version = 'nightly-latest'
+
         if platform == 'msi':
             _platform = 'win64'
-            product_url = 'thunderbird-%s-msi-SSL'
+            # Daily's bouncer link doesn't support `-msi-SSL`, so we'll just make it a win64 build for now.
+            if channel != 'daily':
+                product_url = 'thunderbird-%s-msi-SSL'
 
         # Check if direct download link has been requested
         # (bypassing the transition page)
@@ -134,20 +140,6 @@ class ThunderbirdDetails():
             # Currently we don't have the transition page for Thunderbird, so
             # return a direct link instead
             pass
-
-        # The 'daily' channel is hosted on FTP and uses a different filename format.
-        if channel == 'daily':
-            platform_filetype = {
-                'osx': 'mac.dmg',
-                'linux': 'linux-i686.tar.bz2',
-                'linux64': 'linux-x86_64.tar.bz2',
-                'win': 'win32.installer.exe',
-                'win64': 'win64.installer.exe'
-            }
-            platform_filename = platform_filetype.get(_platform, '')
-            daily_url = 'thunderbird-{version}.{locale}.{platform}'.format(
-                version=_version, locale=_locale, platform=platform_filename)
-            return ''.join([settings.DAILY_URL, daily_url])
 
         # build a direct download link for 'beta' and 'release' channels.
         return '?'.join([settings.BOUNCER_URL,
