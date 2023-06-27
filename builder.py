@@ -248,17 +248,22 @@ class Site(object):
     def render(self):
         """
         Iterate through the templates loaded into Jinja2 and build them, including any needed directories.
-        '_' in front of a template or folder will force those to be skipped by this method.
+        If '_' or 'includes' are in front of a template or folder they will be skipped by this method.
+        Non-html files will also be skipped.
         """
         for template in self._env.list_templates():
-            if not template.startswith("_") and not template.startswith("includes"):
-                filepath = os.path.join(self.outpath, template)
-                # Make sure the output directory exists.
-                filedir = os.path.dirname(filepath)
-                if not os.path.exists(filedir):
-                    os.makedirs(filedir)
-                t = self._env.get_template(template)
-                t.stream().dump(filepath)
+            filename = os.path.basename(template)
+            # Ignore non-html files, or any path that starts with `_` or `includes`.
+            if not filename.endswith('.html') or template.startswith("_") or template.startswith("includes"):
+                continue
+
+            filepath = os.path.join(self.outpath, template)
+            # Make sure the output directory exists.
+            filedir = os.path.dirname(filepath)
+            if not os.path.exists(filedir):
+                os.makedirs(filedir)
+            t = self._env.get_template(template)
+            t.stream().dump(filepath)
 
     def build_startpage(self):
         """Build the start page for all `languages`."""
