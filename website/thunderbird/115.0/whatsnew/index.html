@@ -1,0 +1,289 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+{% set active_page = "whatsnew" %}
+{% set hide_header = True %}
+{% extends "includes/base-resp.html" %}
+
+{% block page_css %}<link href="/media/css/115release.css" rel="stylesheet" type="text/css" />{% endblock %}
+
+{% block page_title %}{{ _('What’s New in Thunderbird 115') }}{% endblock %}
+
+{% block site_header %}
+  <header>
+    <div class="container">
+      <h1>
+        {{_('What’s New in
+        <br>
+        <span class="tb-title">Thunderbird</span>
+        <span class="version">115</span>')}}
+      </h1>
+      <img class="supernova" src="/media/img/thunderbird/whatsnew/115/supernova.png" alt="">
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <section class="whats-new-section">
+    <figure class="container slider-box">
+      <div id="before"></div>
+      <div id="after"></div>
+      <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider" />
+      <div class="slider-bar">
+        <div class="slider-tab"></div>
+      </div>
+    </figure>
+    <figcaption>115 | 102</figcaption>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container utb">
+      <div class="info">
+        <div class="header">
+          <span class="icon">{{ svg('supernova-toolbar') }}</span>
+          <h3>{{_('Dynamic Unified Toolbar')}}</h3>
+        </div>
+        <p>
+          {{_('Supernova features a single dynamic toolbar, presenting frequently used and contextual options based on the tab
+          or Space that is currently active. Take full control by customizing the toolbar and window layout to perfectly fit your
+          workflow.')}}
+        </p>
+      </div>
+      <div class="image">
+        <img src="/media/img/thunderbird/whatsnew/115/utb.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container split reverse iconography">
+      <div class="info">
+        <div class="header">
+          <span class="icon">{{ svg('supernova-sparkle') }}</span>
+          <h3>{{_('Beautiful Iconography')}}</h3>
+        </div>
+        <p>
+          {{_('More than just a refreshed set of graphics, Supernova introduces beautiful icons with a more consistent visual
+          style unique to Thunderbird. Our new designs remain sharp and pixel-perfect at any density setting.')}}
+        </p>
+      </div>
+      <div class="image">
+        <img src="/media/img/thunderbird/whatsnew/115/iconography.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container density">
+      <div class="info">
+        <div class="header">
+          <span class="icon">{{ svg('supernova-density-relaxed') }}</span>
+          <h3>{{_('Easy Density Control')}}</h3>
+        </div>
+        <p>
+          {{_('Working with multiple monitors and display resolutions? Supernova lets you dial in the perfect density settings
+          and font sizes for the entire application, with just a single click from the App Menu.')}}
+        </p>
+      </div>
+      <div class="image split">
+        <div class="density-window">
+          <div class="button-group">
+            <button class="button icon-only">{{ svg('supernova-density-compact') }}</button>
+            <button class="button icon-only">{{ svg('supernova-density-default') }}</button>
+            <button class="button icon-only">{{ svg('supernova-density-relaxed') }}</button>
+          </div>
+          <img class="hidden" src="/media/img/thunderbird/whatsnew/115/density-compact.png" alt="">
+          <img src="/media/img/thunderbird/whatsnew/115/density-default.png" alt="">
+          <img class="hidden" src="/media/img/thunderbird/whatsnew/115/density-relaxed.png" alt="">
+        </div>
+        <div class="density-cards">
+          <img src="/media/img/thunderbird/whatsnew/115/appmenu-relaxed.png" alt="">
+          <img src="/media/img/thunderbird/whatsnew/115/appmenu-default.png" alt="">
+          <img src="/media/img/thunderbird/whatsnew/115/appmenu-compact.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container split reverse appmenu">
+      <div class="info">
+        <div class="header">
+          <span class="icon">{{ svg('supernova-contextmenu') }}</span>
+          <h3>{{_('Intuitive App Menu')}}</h3>
+        </div>
+        <p>
+          {{_('The new Application Menu (≡) in Supernova is now keyboard-accessible, and redesigned for faster, easier
+          navigation. Fewer submenus, persistent global options, and consistent iconography combine to create a much
+          more intuitive experience.')}}
+        </p>
+      </div>
+      <div class="image">
+        <img src="/media/img/thunderbird/whatsnew/115/appmenu.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container split">
+      <div class="container info">
+        <div class="folderpane">
+          <div class="header">
+            <span class="icon">{{ svg('supernova-layout') }}</span>
+            <h3>{{_('New + Sortable Folder Modes')}}</h3>
+          </div>
+          <p>
+            {{_('Supernova gives you more control by introducing sortable Folder Modes. Display all of your Tags in the Folder
+            Pane, turn on and off Local Folders, or move your favorite Folder Mode sections up and down with one click. Less
+            scrolling, more productivity.')}}
+          </p>
+        </div>
+
+        <div class="tags">
+          <div class="header">
+            <span class="icon">{{ svg('supernova-tag') }}</span>
+            <h3>{{_('Eye-Catching Tags View')}}</h3>
+          </div>
+          <p>
+            {{_('Tags are a familiar and powerful part of your workflow, so Supernova adds an eye-catching “Tags” view to the
+            Folder Pane. Quickly jump to your custom, color-coded tag categories to find and filter your messages even faster.')}}
+          </p>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="/media/img/thunderbird/whatsnew/115/folderpane.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container split reverse cardsview">
+      <div class="info">
+        <div class="header">
+          <span class="icon">{{ svg('supernova-scroll') }}</span>
+          <h3>{{_('Modernized Cards View')}}</h3>
+        </div>
+        <p>
+          {{_('Supernova’s new Card View is our version of the well-known vertical layout for the Message List, perfect for
+          people used to modern webmail. Card View emulates a mobile interface list with multi-line support, offering a more
+          comfortable appearance to reduce cognitive burden.')}}
+        </p>
+      </div>
+      <div class="image">
+        <img src="/media/img/thunderbird/whatsnew/115/msg-1.png" alt="">
+        <img src="/media/img/thunderbird/whatsnew/115/msg-2.png" alt="">
+        <img src="/media/img/thunderbird/whatsnew/115/msg-3.png" alt="">
+        <img src="/media/img/thunderbird/whatsnew/115/msg-4.png" alt="">
+        <img src="/media/img/thunderbird/whatsnew/115/msg-5.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container split reverse ab">
+      <div class="info">
+        <div class="header">
+          <span class="icon">{{ svg('supernova-address-book') }}</span>
+          <h3>{{_('Improved Address Book')}}</h3>
+        </div>
+        <p>
+          {{_('Supernova continues to iterate on the modernized Address Book introduced in Thunderbird 102. You’ll enjoy a new
+          tabular view, an improved Edit view, delete buttons, and better accessibility.')}}
+        </p>
+      </div>
+      <div class="image">
+        <img src="/media/img/thunderbird/whatsnew/115/ab.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container accessability">
+      <div class="info">
+        <div class="header">
+          <span class="icon">{{ svg('supernova-handshake') }}</span>
+          <h3>{{_('Expanded Accessability')}}</h3>
+        </div>
+        <p>
+          {{_('Supernova substantially improves Thunderbird’s keyboard navigation and screen reader accessibility across the
+          entire application. We’ve also greatly expanded the ability to navigate Mail content and buttons using the TAB and
+          arrow keys.')}}
+        </p>
+      </div>
+      <div class="image">
+        <div class="toolbar">
+          <button class="button">{{_('Button')}}</button>
+          <div class="button-group roving-group">
+            <button class="button">{{_('Button 1')}}</button>
+            <button class="button">{{_('Button 2')}}</button>
+            <button class="button">{{_('Button 3')}}</button>
+            <button class="button">{{_('Button 4')}}</button>
+          </div>
+        </div>
+        <div class="keyboard-keys">
+          <button class="key">Tab</button>
+          <button class="key">←</button>
+          <button class="key">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container calendar">
+      <div class="info">
+        <div class="header">
+          <span class="icon">{{ svg('supernova-calendar') }}</span>
+          <h3>{{_('Improved Calendar Design')}}</h3>
+        </div>
+        <p>
+          {{_('As part of an ongoing effort to modernize and upgrade Thunderbird’s Calendar, Supernova introduces an improved
+          “mini-month” layout, improvements to the day/week/month grid, a pleasing color palette, and several more minor changes.')}}
+        </p>
+      </div>
+      <div class="image">
+        <img src="/media/img/thunderbird/whatsnew/115/cal.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <div class="nebula"><img src="/media/img/thunderbird/backgrounds/nebula.png" alt=""></div>
+
+  <section class="whats-new-section">
+    <div class="container info more">
+      <h3>{{_('More to come!')}}</h3>
+      <p>
+        {{_('Supernova is constantly evolving. Throughout the next year, we’ll deliver many improvements to existing Supernova
+        features and introduce brand new ones. Upgrade to version 115 and experience the future of Thunderbird!')}}
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const root = document.documentElement;
+    const slider = document.getElementById("slider");
+    slider.addEventListener("input", (e) => {
+      root.style.setProperty("--slider", `${e.target.value}%`);
+    });
+  </script>
+{% endblock %}
