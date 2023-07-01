@@ -13,9 +13,9 @@ on:
     types: [ labeled, opened, synchronize, reopened ]
 
 env:
-  AWS_REGION: us-west-1
-  ECR_REPOSITORY: preview-env-test
-  ECS_CLUSTER: test-cluster
+  AWS_REGION: us-west-2
+  ECR_REPOSITORY: preview-repo
+  ECS_CLUSTER: preview-env-cluster
 
   PR_ID_KEY: PullRequestId
 

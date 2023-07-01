@@ -14,8 +14,10 @@ on:
     types: [ unlabeled, closed ]
 
 env:
-  AWS_REGION: us-west-1
-  ECS_CLUSTER: test-cluster
+  AWS_REGION: us-west-2
+  ECR_REPOSITORY: preview-repo
+  ECS_CLUSTER: preview-env-cluster
+  
   PR_ID_KEY: PullRequestId
   PR_ID_VALUE: ${{ github.ref }}
   WEBSITE_PR_ID_VALUE: ${{ github.ref }}/website
