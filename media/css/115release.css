@@ -155,6 +155,10 @@ body {
   font-size: 1rem;
   background-color: var(--bg);
   color: var(--txt);
+  background-image: url("/media/img/thunderbird/backgrounds/blob.png");
+  background-repeat: no-repeat;
+  background-position: center -300px;
+  background-size: 80vw;
 }
 
 header {
