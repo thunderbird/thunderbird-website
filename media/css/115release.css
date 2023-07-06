@@ -201,9 +201,9 @@ header h1 {
   background: linear-gradient(30deg, transparent 25%, var(--color-purple-20));
   -webkit-background-clip: text;
   background-clip: text;
-  margin-inline-start: -10rem;
-  margin-block-start: -12rem;
-  vertical-align: super;
+  line-height: 1;
+  align-self: end;
+  margin-block-start: -9rem;
 }
 
 .supernova {
