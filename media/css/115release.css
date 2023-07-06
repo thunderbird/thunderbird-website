@@ -172,9 +172,14 @@ header {
 }
 
 header h1 {
-  font-weight: 300;
+  font-weight: 100;
   font-size: 2.5rem;
   text-shadow: 0 2px 6px var(--color-ink-90);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  line-height: 2em;
+  margin-block: 30px 0;
 }
 
 .tb-title {
