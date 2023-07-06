@@ -386,8 +386,10 @@ input[type="range"]::-webkit-range-thumb {
 .info p {
   color: var(--info-txt);
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-block: 0.5em 1em;
+  line-height: 1.35em;
+  padding-inline-start: 44px;
 }
 
 .info .header {
