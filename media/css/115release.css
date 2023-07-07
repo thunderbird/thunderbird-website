@@ -163,10 +163,6 @@ body {
 
 header {
   --max-width: 70ch;
-  background-image: url("/media/img/thunderbird/backgrounds/blob.png");
-  background-size: min(150%, 150vh);
-  background-position: bottom;
-  background-repeat: no-repeat;
   padding-inline: 16px;
   padding-block: 50px 400px;
 }
@@ -268,12 +264,6 @@ img {
   width: 100%;
   position: relative;
   isolation: isolate;
-  opacity: 0.75;
-}
-
-.slider-box:hover,
-.slider-box:focus-within {
-  opacity: 1;
 }
 
 #before,
@@ -619,11 +609,13 @@ input[type="range"]::-webkit-range-thumb {
   width: var(--icon-size);
 }
 
+.button-group .button + .button:not(:last-child).icon-only.selected,
 .button.icon-only.selected {
-
   background-color: var(--color-blue-50);
   color: var(--color-white);
   border: var(--button-border-size) solid var(--color-blue-70);
+  outline: var(--button-border-size) solid solid var(--color-blue-70);
+  z-index: 4;
 }
 
 .button-group {
