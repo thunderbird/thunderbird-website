@@ -709,9 +709,13 @@ input[type="range"]::-webkit-range-thumb {
 /*------------------------*/
 /* Donation Appeal Styles */
 /*------------------------*/
+#initAppeal {
+  margin-block-end: 30px;
+}
+
 .logo {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   margin: 0 auto;
   margin-block-end: -80px;
 }
@@ -721,7 +725,8 @@ input[type="range"]::-webkit-range-thumb {
   background: linear-gradient(170deg, transparent, var(--color-purple-20) 60%);
   -webkit-background-clip: text;
   background-clip: text;
-  line-height: 0.45;
+  line-height: 1;
+  margin-block-start: -30px;
   margin-inline-start: 1.25em;
 }
 
