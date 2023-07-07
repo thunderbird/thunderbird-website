@@ -1,0 +1,109 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+  # License, v. 2.0. If a copy of the MPL was not distributed with this
+  # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+ {% set active_page = "appeal" %}
+ {% extends "includes/bedrock/base-resp.html" %}
+ {% block facebook_id %}348169218537151{# facebook.com/Thunderbird #}{% endblock %}
+ {% block twitter_id %}mozthunderbird{% endblock %}
+
+ {% block page_image %}{{ static('img/thunderbird/thunderbird-256.png') }}{% endblock %}
+ {% block page_favicon %}{{ static('img/thunderbird/favicon.ico') }}{% endblock %}
+ {% block page_favicon_large %}{{ static('img/thunderbird/favicon-196.png') }}{% endblock %}
+ {% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}
+
+ {% block page_css %}<link href="/media/css/115release.css" rel="stylesheet" type="text/css" />{% endblock %}
+
+ {% block page_title %}{{ _('Help Keep Thunderbird Alive!') }}{% endblock %}
+
+ {% block site_header %}
+<header id="initAppeal" >
+  <div class="container">
+    <img class="logo" src="/media/img/thunderbird/appeal/115/Thunderbird_Logo.png" alt="Thunderbird logo">
+    <h1>
+      {{ _('Help Keep
+      <br>
+      <span class="tb-title">Thunderbird</span>
+      <span class="alive">Alive</span>') }}
+    </h1>
+  </div>
+</header>
+{% endblock %}
+
+{% block email_form %}
+{% endblock email_form %}
+
+{% block content %}
+<section class="appeal-container font-xl">
+    <a href="{{ donate_url('115Appeal', 'thunderbird-client') }}" class="donate-banner" data-donate-btn
+      data-donate-content="115Appeal" data-donate-source="thunderbird-client">
+      <div id="donate-banner-left">
+        {{ _('Click here to <strong class="block">Donate!</strong>') }}
+      </div>
+      <div id="decoration">
+        <div id="pill-1" class="pill"></div>
+        <div id="pill-2" class="pill"></div>
+        <div id="pill-3" class="pill"></div>
+        <div id="pill-4" class="pill"></div>
+        <div id="pill-5" class="pill"></div>
+        <div id="pill-6" class="pill"></div>
+        <div id="pill-7" class="pill"></div>
+        <div id="pill-8" class="pill"></div>
+        <div id="pill-9" class="pill"></div>
+        <div id="pill-10" class="pill"></div>
+      </div>
+      <div id="donate-banner-right" class="text-right accent-text self-end">
+        {{ _('Help keep <strong class="block">Thunderbird Alive!</strong>') }}
+      </div>
+      <div id="hover-hearts">
+        <div id="hover-heart-1">{{ svg('supernova-star') }}</div>
+        <div id="hover-heart-2">{{ svg('supernova-heart') }}</div>
+        <div id="hover-heart-3">{{ svg('supernova-star') }}</div>
+      </div>
+    </a>
+    <div class="letter-container">
+      <p>
+        {{_('Thunderbird’s mission is to give you the best privacy-respecting, customizable communication experience possible.
+        Free for everyone to install and enjoy!')}}
+      </p>
+      <p>
+        {{_('Accomplishing that mission means maintaining expensive servers, fixing bugs, developing useful new features, and
+        hiring talented engineers to improve the software.')}}
+      </p>
+      <p>
+        {{_('Thunderbird is proud to be funded exclusively by our community, not by selling personal data or displaying ads in
+        your inbox.')}}
+      </p>
+      <p>
+        {{_('So today we’re asking for your help to keep Thunderbird alive and thriving. If you get value from using
+        Thunderbird, please consider giving a donation to support it!')}}
+      </p>
+      <div class="heart-container">
+        <div class="left-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div>{{ svg('supernova-heart') }}</div>
+        <div class="right-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <p class="text-center team-text">
+        {{ _('The Thunderbird Team') }}
+      </p>
+    </div>
+</section>
+
+<div class="nebula">
+  <img src="/media/img/thunderbird/backgrounds/nebula.png" alt="nebula">
+</div>
+<div class="nebula">
+  <img src="/media/img/thunderbird/backgrounds/nebula.png" alt="nebula">
+</div>
+{% endblock %}
+{% include 'includes/donate-modal.html' %}
+{% block site_footer%}
+{% endblock site_footer %}
