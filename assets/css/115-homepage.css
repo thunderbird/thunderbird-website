@@ -520,10 +520,15 @@ a:visited {
   width: 32px;
 }
 
+.download-button {
+  transform: translateX(-20px);
+}
+
 .btn-donate,
 .btn-donate-lg,
 .btn-download-inline,
 .btn-download-link,
+.download-link.btn-download,
 a.btn,
 button {
   font-size: 1.25rem;
@@ -541,6 +546,7 @@ button {
 .btn-donate-lg::before,
 .btn-download-inline::before,
 .btn-download-link::before,
+.download-link.btn-download::before,
 a.btn::before,
 button::before {
   content: '';
@@ -557,6 +563,7 @@ button::before {
 .btn-donate-lg::after,
 .btn-download-inline::after,
 .btn-download-link::after,
+.download-link.btn-download::after,
 a.btn::after,
 button::after {
   content: '';
@@ -567,18 +574,16 @@ button::after {
   background-position: center;
   opacity: .5;
   inset: 0;
+  inset-inline-end: 4px;
   z-index: -1;
   transition: all .3s;
 }
 
+.download-link.btn-download:hover::after,
 a.btn:hover::after,
 button:hover::after {
   opacity: .75;
   background-size: 500%;
-}
-
-.download-other {
-  display: none;
 }
 
 .download-button .ios-download,
@@ -666,6 +671,9 @@ button:hover::after {
   display: block !important;
 }
 
+p.download-other.download-other-desktop.os_android.os_ios.os_linux.os_linux64.os_osx.os_win.os_win64.os_winsha1 {
+  display: none !important;
+}
 
 .site-nav {
   box-sizing: border-box;
@@ -1257,7 +1265,7 @@ header {
 }
 
 #free-your-inbox .cta {
-  --btn-bg: color-mix(in srgb, var(--bg) 75%, transparent);
+  --btn-bg: color-mix(in srgb, var(--bg) 90%, transparent);
   display: grid;
   place-items: center;
   gap: 9px;
