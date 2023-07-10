@@ -451,7 +451,7 @@
 
   --bg: white;
   --txt: var(--color-ink-80);
-  --accent: var(--color-blue-50);
+  --accent: var(--color-blue-60);
   --glow: var(--color-purple-70);
   --separator-color: var(--color-gray-20);
   --nav-bg: transparent;
@@ -562,10 +562,10 @@ button::after {
   content: '';
   position: absolute;
   background-color: transparent;
-  background-image: radial-gradient(circle, var(--accent), transparent 20%);
-  background-size: 0;
+  background-image: radial-gradient(circle, var(--accent), var(--color-purple-60) 30%);
+  background-size: 400%;
   background-position: center;
-  opacity: 0;
+  opacity: .5;
   inset: 0;
   z-index: -1;
   transition: all .3s;
@@ -573,8 +573,8 @@ button::after {
 
 a.btn:hover::after,
 button:hover::after {
-  opacity: .25;
-  background-size: 800%;
+  opacity: .75;
+  background-size: 500%;
 }
 
 .download-other {
@@ -1247,7 +1247,7 @@ header {
   content: '';
   position: absolute;
   background-color: transparent;
-  background-image: radial-gradient(circle, var(--accent), transparent 20%);
+  background-image: radial-gradient(circle, var(--accent), var(--color-purple-60) 20%);
   background-size: 0;
   background-position: center;
   opacity: 0;
