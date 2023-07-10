@@ -198,7 +198,7 @@ ENUS_ONLY = [
 # }
 
 WEBSITE_CSS = {
-    'thunderbird-style': ['less/style.less'],
+    'thunderbird-style': ['less/style.less'], 'tb-115-style': ['css/115-homepage.css'],
 }
 
 WEBSITE_JS = {
