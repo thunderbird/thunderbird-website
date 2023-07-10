@@ -36,7 +36,7 @@ with great features!') }}{% endblock %}
           </span>
         </div>
         <div>
-        {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download')) }}
+        {{ download_thunderbird(force_direct=true, alt_copy=_('Download')) }}
         </div>
         <small>{{_('Free forever.')}} <a href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
@@ -355,7 +355,9 @@ with great features!') }}{% endblock %}
             {{ svg('download-icon-apple') }}
           </span>
         </div>
-        <!-- TODO: Download Button -->
+        <div>
+          {{ download_thunderbird(force_direct=true, alt_copy=_('Download')) }}
+        </div>
         <small>{{_('Free forever.')}} <a href="{{ donate_url('body') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
     </div>

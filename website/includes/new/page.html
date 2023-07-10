@@ -23,7 +23,9 @@
         <a href="{{ url('support') }}" class="nav-ln">{{_('Get Help')}}</a>
         <a href="{{ donate_url('header') }}" class="nav-ln" data-donate-btn
           data-donate-content="header">{{_('Donate')}}</a>
-        <!-- TODO: Download Button -->
+        <div>
+          {{ download_thunderbird(force_direct=true, alt_copy=_('Download')) }}
+        </div>
       </div>
     </div>
   </nav>
