@@ -1,185 +1,425 @@
 {# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
 {% set active_page = "index" %}
-{% extends "includes/base-resp.html" %}
+{% extends "includes/new/page.html" %}
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
-{% block page_title %}{{ _('Make Email Easier.') }}{% endblock %}
-{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block page_title %}{{ _('Free Your Inbox.') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded
+with great features!') }}{% endblock %}
 
 {% block header_content %}
-  <section class="text-center text-white flex flex-col items-center mb-6 md:mb-0 pr-4 pl-4">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-xl mb-8 md:mb-16">{{ self.page_desc() }}</p>
-    <div class="tracking-wider">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download')) }}
-    </div>
-    <div class="flex flex-wrap items-center justify-center pt-6">
-      <p class="font-md p-3 m-0">
-        <span class="font-semibold">{{ _('Want to try new features early?') }}</span>
-        {{ _('Get the beta and be a part of the future of Thunderbird!') }}
-      </p>
-      <a href="{{ url('thunderbird.download-beta') }}" class="btn-beta btn-beta-pill">{{ _('Get the Beta') }}</a>
+  <section>
+    <div class="container hero">
+      <div class="hero-text">
+        <h1 class="tagline">{{_('<span class="txt-gradient">Free</span> Your Inbox')}}</h1>
+        <p class="sub-tag">
+          {% trans %}
+          Meet <em>Supernova</em>: our fastest, most beautiful <strong>email</strong>,
+          <strong>calendar</strong>, and <strong>contacts</strong> release yet. Designed
+          to maximize your freedoms.
+          {% endtrans %}
+        </p>
+      </div>
+      <div class="hero-download">
+        <div class="os-list">
+          <span class="icon">
+            {{ svg('download-icon-windows') }}
+          </span>
+          <span class="icon">
+            {{ svg('download-icon-linux') }}
+          </span>
+          <span class="icon">
+            {{ svg('download-icon-apple') }}
+          </span>
+        </div>
+        <!-- TODO: Download Button -->
+        <small>{{_('Free forever.')}} <a href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
+      </div>
     </div>
   </section>
-  <section class="hidden md:flex max-w-6xl self-center">
-    {{ platform_img('thunderbird/landing/screenshot.png', {'alt': _('Thunderbird screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
-  </section>
+  <div class="mask">
+    {{ svg('mask') }}
+  </div>
 {% endblock %}
 
 {% block content %}
-  <section class="mt-20 mb-20 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8">
-    <aside class="flex flex-col flex-1 mb-20 lg:mb-0 lg:max-w-sm">
-      <h3 class="header-section">
-        <span>{{ svg('customize') }}</span>{{ _('Tailored for all your needs')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
-        {{ _('Thunderbird makes email better for you, bringing together speed, privacy and the latest technologies. Focus on what matters and forget about complexity.') }}
-      </p>
-      <a href="{{ url('thunderbird.features') }}" class="btn-body self-start">{{_('Explore all Features')}}
-        <span>{{ svg('chevron-right') }}</span>
-      </a>
-    </aside>
-
-    <aside class="flex flex-col flex-1 mb-20 lg:mb-0 lg:max-w-sm lg:ml-16 lg:mr-16">
-      <h3 class="header-section">
-        <span>{{ svg('lock') }}</span>{{ _('Secure &amp; Private')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
-        {{ _('Multiple features, such as built-in Do Not Track and remote content blocking, work together to ensure your safety and privacy, so you can have peace of mind.') }}
-      </p>
-      <a href="{{ url('thunderbird.features') }}#secureprotect" class="btn-body self-start">{{_('Know your rights')}}
-        <span>{{ svg('chevron-right') }}</span>
-      </a>
-    </aside>
-
-    <aside class="flex flex-col flex-1 lg:max-w-sm">
-      <h3 class="header-section">
-        <span>{{ svg('puzzle') }}</span>{{ _('Highly Customizable')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-10 flex-1">
-        {{ _('With Add-ons (Extensions & Themes) and many more features you can change the look and feel of Thunderbird in an instant.') }}
-      </p>
-      <a href="{{ url('thunderbird.features') }}#customize-email" class="btn-body self-start">{{_('Make it personal')}}
-        <span>{{ svg('chevron-right') }}</span>
-      </a>
-    </aside>
+  <section id="free-from-chaos">
+    <div class="container">
+      <div class="floating-icons">
+        <picture class="competitor-icon apple">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-apple.avif" type="image/avif">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-apple.webp" type="image/webp">
+          <img src="/media/img/thunderbird/new/competitors/floating-icon-apple.png" alt="{{_('competitor icon')}}">
+        </picture>
+        <picture class="competitor-icon gmail">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-gmail.avif" type="image/avif">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-gmail.webp" type="image/webp">
+          <img src="/media/img/thunderbird/new/competitors/floating-icon-gmail.png" alt="{{_('competitor icon')}}">
+        </picture>
+        <picture class="competitor-icon outlook">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-outlook.avif" type="image/avif">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-outlook.webp" type="image/webp">
+          <img src="/media/img/thunderbird/new/competitors/floating-icon-outlook.png" alt="{{_('competitor icon')}}">
+        </picture>
+        <picture class="competitor-icon proton">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-proton.avif" type="image/avif">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-proton.webp" type="image/webp">
+          <img src="/media/img/thunderbird/new/competitors/floating-icon-proton.png" alt="{{_('competitor icon')}}">
+        </picture>
+        <picture class="competitor-icon yahoo">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-yahoo.avif" type="image/avif">
+          <source srcset="/media/img/thunderbird/new/competitors/floating-icon-yahoo.webp" type="image/webp">
+          <img src="/media/img/thunderbird/new/competitors/floating-icon-yahoo.png" alt="{{_('competitor icon')}}">
+        </picture>
+        <div class="blank-icon box-1"></div>
+        <div class="blank-icon box-2"></div>
+        <div class="blank-icon box-3"></div>
+        <div class="blank-icon box-4"></div>
+        <div class="blank-icon box-5"></div>
+        <div class="blank-icon box-6"></div>
+        <div class="blank-icon box-7"></div>
+        <div class="blank-icon box-8"></div>
+      </div>
+      <div class="section-text">
+        <h2>{{_('<span class="txt-gradient">Freedom</span> from Chaos')}}</h2>
+        <h3>{{_('Waste less time finding browser tabs.')}}</h3>
+        <p>
+          {% trans %}
+          Access all your messages, calendars, and contacts in one fast app. Filter and organize
+          the way you like. Manage all accounts separately or in a unified inbox. Thunderbird
+          simply makes your life simpler.
+          {% endtrans %}
+        </p>
+      </div>
+      <div class="graphic">
+        <picture>
+          <source srcset="/media/img/thunderbird/new/screens/laptop-bg.avif" type="image/avif">
+          <source srcset="/media/img/thunderbird/new/screens/laptop-bg.webp" type="image/webp">
+          <img src="/media/img/thunderbird/new/screens/laptop-bg.png" alt="{{_('laptop frame')}}">
+        </picture>
+        <div class="carousel">
+          <picture>
+            <source srcset="/media/img/thunderbird/new/screens/115.avif" type="image/avif">
+            <source srcset="/media/img/thunderbird/new/screens/115.webp" type="image/webp">
+            <img src="/media/img/thunderbird/new/screens/115.png" alt="{{_('115 mail')}}">
+          </picture>
+          <picture>
+            <source srcset="/media/img/thunderbird/new/screens/115-calendar.avif" type="image/avif">
+            <source srcset="/media/img/thunderbird/new/screens/115-calendar.webp" type="image/webp">
+            <img src="/media/img/thunderbird/new/screens/115-calendar.png" alt="{{_('115 calendar')}}">
+          </picture>
+        </div>
+      </div>
+      <div class="cta">
+        <a href="#" class="cta-ln">{{_('See Compatibility')}}</a>
+      </div>
+    </div>
+    <div class="mask">
+      {{ svg('mask') }}
+    </div>
   </section>
 
-  <section class="bg-body">
-    <section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex flex-col items-center">
-      <h3 class="header-section pr-4 pl-4">
-        <a id="blog" class="anchor" aria-hidden="true" href="#blog">
-          {{ svg('link') }}
+  <section id="free-from-manipulation">
+    <div class="container">
+      <div class="section-text">
+        <h2>{{_('<span class="txt-gradient">Freedom</span> from Manipulation')}}</h2>
+        <h3>{{_('Our agenda isn’t hidden. It’s to make the world better.')}}</h3>
+        <p>
+          {% trans %}
+          Thunderbird is funded by user donations. We don’t collect personal data, sell ads in your inbox, or secretly
+          train AI
+          with your private conversations. Thunderbird is <a href="">open source</a>. As part of the <a
+            href="#">Mozilla</a> family you can be confident we
+          always put your privacy and security first.
+          {% endtrans %}
+        </p>
+        <div class="planets">
+          <div class="planet-firefox">
+            <picture>
+              <source srcset="/media/img/thunderbird/new/planets/planets-firefox.avif" type="image/avif">
+              <source srcset="/media/img/thunderbird/new/planets/planets-firefox.webp" type="image/webp">
+              <img src="/media/img/thunderbird/new/planets/planets-firefox.png" alt="{{_('Firefox planet')}}">
+            </picture>
+          </div>
+          <div class="planet-thunderbird">
+            <picture>
+              <source srcset="/media/img/thunderbird/new/planets/planets-thunderbird.avif" type="image/avif">
+              <source srcset="/media/img/thunderbird/new/planets/planets-thunderbird.webp" type="image/webp">
+              <img src="/media/img/thunderbird/new/planets/planets-thunderbird.png" alt="{{_('Thunderbird planet')}}">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="cta">
+        <a href="{{ url('thunderbird.about') }}" class="cta-ln">{{_('Discover Our Mission')}}</a>
+      </div>
+    </div>
+    <div class="mask">
+      {{ svg('mask') }}
+    </div>
+  </section>
+
+  <section id="free-to-geek">
+    <div class="container">
+      <div class="section-text">
+        <h2>{{_('<span class="txt-gradient">Freedom</span> to Geek Out')}}</h2>
+            <h3>{{_('thunderbird is yours.')}}</h3>
+            <p>
+              {% trans %}
+              Thunderbird is clean and elegant by default, but easily customizable to match your workflow and visual
+              preferences. It is loaded with unique and powerful features. Here are just a few that people love:
+              {% endtrans %}
+            </p>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial-card card-lg">
+          <div class="quote">
+            <q>
+              {% trans %}
+              Its <strong>unified inbox</strong> enables me to stay sane even in the busiest of times. I am never
+              switching e-mail clients again!
+              {% endtrans %}
+            </q>
+            <div class="attrib">
+              <div class="profile-pic">
+                <picture>
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-max.avif"
+                    type="image/avif">
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-max.webp"
+                    type="image/webp">
+                  <img src="/media/img/thunderbird/new/testimonials/testimonial-portrait-max.jpg" alt="{{_('profile image')}}">
+                </picture>
+              </div>
+              <div class="name">Max</div>
+              <div class="title">{{_('Software Developer, Austria')}}</div>
+            </div>
+          </div>
+          <div class="visual unified-inbox">
+            <picture>
+              <source srcset="/media/img/thunderbird/new/testimonials/unified-inbox.avif" type="image/avif">
+              <source srcset="/media/img/thunderbird/new/testimonials/unified-inbox.webp" type="image/webp">
+              <img src="/media/img/thunderbird/new/testimonials/unified-inbox.png" alt="{{_('unified inbox')}}">
+            </picture>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote">
+            <q>
+              {% trans %}
+              I love the <strong>tag feature</strong>. I tag something important and find it quickly.
+              {% endtrans %}
+            </q>
+            <div class="attrib">
+              <div class="profile-pic">
+                <picture>
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-juan.avif"
+                    type="image/avif">
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-juan.webp"
+                    type="image/webp">
+                  <img src="/media/img/thunderbird/new/testimonials/testimonial-portrait-juan.jpg" alt="{{_('profile image')}}">
+                </picture>
+              </div>
+              <div class="name">Juan</div>
+              <div class="title">{{_('Computer Scientist, USA')}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote">
+            <q>
+              {% trans %}
+              It is the first program I install on any PC I use / own... I use it on
+              <strong>Windows</strong> / <strong>Mac</strong> and <strong>Linux</strong>.
+              {% endtrans %}
+            </q>
+            <div class="attrib">
+              <div class="profile-pic">
+                <picture>
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-ernie.avif"
+                    type="image/avif">
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-ernie.webp"
+                    type="image/webp">
+                  <img src="/media/img/thunderbird/new/testimonials/testimonial-portrait-ernie.jpg" alt="{{_('profile image')}}">
+                </picture>
+              </div>
+              <div class="name">Ernie</div>
+              <div class="title">{{_('I.T. Manager, UK')}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote">
+            <q>
+              {% trans %}
+              Having an open source alternative [for] receiving and managing email... is great for <strong>privacy</strong>.
+              {% endtrans %}
+            </q>
+            <div class="attrib">
+              <div class="profile-pic">
+                <picture>
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-rolando.avif"
+                    type="image/avif">
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-rolando.webp"
+                    type="image/webp">
+                  <img src="/media/img/thunderbird/new/testimonials/testimonial-portrait-rolando.jpg" alt="{{_('profile image')}}">
+                </picture>
+              </div>
+              <div class="name">Rolando</div>
+              <div class="title">{{_('Web Developer, Costa Rica')}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote">
+            <q>
+              {% trans %}
+              [Thunderbird] empowers me to maintain <strong>ownership</strong> of my emails.
+              {% endtrans %}
+            </q>
+            <div class="attrib">
+              <div class="profile-pic">
+                <picture>
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-beegy.avif"
+                    type="image/avif">
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-beegy.webp"
+                    type="image/webp">
+                  <img src="/media/img/thunderbird/new/testimonials/testimonial-portrait-beegy.jpg" alt="{{_('profile image')}}">
+                </picture>
+              </div>
+              <div class="name">Beegy</div>
+              <div class="title">{{_('Engineer, USA')}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card card-lg">
+          <div class="quote">
+            <q>
+              {% trans %}
+              You'd be hard pressed to find a client more <strong>extensible</strong> than Thunderbird!
+              {% endtrans %}
+            </q>
+            <div class="attrib">
+              <div class="profile-pic">
+                <picture>
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-dom.avif"
+                    type="image/avif">
+                  <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-dom.webp"
+                    type="image/webp">
+                  <img src="/media/img/thunderbird/new/testimonials/testimonial-portrait-dom.jpg" alt="{{_('profile image')}}">
+                </picture>
+              </div>
+              <div class="name">DOM</div>
+              <div class="title">{{_('Student, UK')}}</div>
+            </div>
+          </div>
+          <div class="visual extensions">
+            <picture>
+              <source srcset="/media/img/thunderbird/new/testimonials/hex.avif" type="image/avif">
+              <source srcset="/media/img/thunderbird/new/testimonials/hex.webp" type="image/webp">
+              <img src="/media/img/thunderbird/new/testimonials/hex.png" alt="{{_('extensions')}}">
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <a href="{{ url('thunderbird.features') }}" class="cta-ln">{{_('Explore More Features')}}</a>
+      </div>
+    </div>
+    <div class="mask">
+      {{ svg('mask') }}
+    </div>
+  </section>
+
+  <section id="free-your-inbox">
+    <div class="container">
+      <div class="section-text">
+        <h2 class="cta-sub-heading">{{_('Are you ready to love email again?')}}</h2>
+            <h3 class="cta-heading">{{_('<span class="txt-gradient">Free</span> Your Inbox')}}</h3>
+      </div>
+      <div class="cta">
+        <div class="os-list">
+          <span class="icon">
+            {{ svg('download-icon-windows') }}
+          </span>
+          <span class="icon">
+            {{ svg('download-icon-linux') }}
+          </span>
+          <span class="icon">
+            {{ svg('download-icon-apple') }}
+          </span>
+        </div>
+        <!-- TODO: Download Button -->
+        <small>{{_('Free forever.')}} <a href="{{ donate_url('body') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
+      </div>
+    </div>
+    <div class="mask">
+      {{ svg('mask') }}
+    </div>
+  </section>
+
+  <section id="whats-next">
+    <div class="container">
+      <div class="section-text">
+        <h2>{{_('<span class="txt-gradient">Learn</span> What’s Next')}}</h2>
+            <p>
+              {% trans %}
+              Thunderbird keeps getting better. Subscribe to our newsletter and follow us on social media to stay
+              informed.
+              {% endtrans %}
+            </p>
+      </div>
+      <div class="newsletter">
+        <!-- Begin Mailchimp Signup Form -->
+        <form action="https://thunderbird.us12.list-manage.com/subscribe?u=f8051cc8637cf3ff79661f382&amp;id=56428f2efc"
+          class="newsletter-form" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+          <input id="mce-EMAIL" name="EMAIL" type="email" placeholder="Your Email" required="">
+          <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-text">{{_('Subscribe')}}</button>
+          <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-icon">➜</button>
+          <!-- Prevent Bot signups -->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+              name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value=""></div>
+        </form>
+        <!--End mc_embed_signup-->
+      </div>
+      <div class="social-list">
+        <a class="icon" title="{{ _('Follow %(mastodon)s on Mastodon')|format(mastodon='@thunderbird@mastodon.online') }}"
+            href="https://mastodon.online/@thunderbird" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
+          {{ svg('social-icon-mastodon') }}
         </a>
-        {{ _('Stay in the loop')}}
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-16 mt-0 max-w-xl text-center pr-4 pl-4">
-        {{ _('Keep yourself up to date with recent announcements and releases by following the official Thunderbird Blog!') }}
-      </p>
-
-      {% if LANG.startswith('en-') %}
-        <section class="flex flex-col lg:flex-row max-w-8xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
-
-          {% for x in range(3): %}
-            <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg{% if x != 2 %} mb-10 lg:mb-0{% endif %}{% if x == 1 %} lg:ml-16 lg:mr-16{% endif %}">
-              <a class="blog-link" href="{{ get_blog_data(x)['link'] }}" title="Continue Reading {{ get_blog_data(x)['title'] }}">
-                {{ get_blog_data(x)['title'] }}
-              </a>
-              <span class="blog-body">
-                {% if get_blog_data(x)['thumbnail_url'] %}
-                <p class="thumbnail">
-                  <img src="{{ get_blog_data(x)['thumbnail_url'] }}" alt="{{ get_blog_data(x)['thumbnail_alt'] }}"/>
-                </p>
-                {% endif %}
-                {{ get_blog_data(x)['summary'] }}
-              </span>
-              <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
-                <span>{{ get_blog_data(x)['date'] }}</span>
-                <span>COMMENTS {{ get_blog_data(x)['comments'] }}</span>
-              </footer>
-            </article>
-          {% endfor %}
-
-        </section>
-      {% endif %}
-
-      <a href="{{ url('blog') }}" class="btn-body mb-10">{{_('Read the Blog')}}
-        <span>{{ svg('chevron-right') }}</span>
-      </a>
-    </section>
+        <a class="icon" href="https://www.facebook.com/Thunderbird/" data-link-type="footer"
+            data-link-name="Facebook (Thunderbird)">
+          {{ svg('social-icon-facebook') }}
+        </a>
+        <a class="icon" title="{{ _('Follow %(youtube)s on YouTube')|format(youtube='@thunderbird3665') }}"
+            href="https://www.youtube.com/channel/UCuMTCmnwZPiXXVIy_TW6Bnw" data-link-type="footer" data-link-name="YouTube (Thunderbird)" rel="me">
+          {{ svg('social-icon-youtube') }}
+        </a>
+        <a class="icon" title="{{ _('Follow %(twitter)s on Twitter')|format(twitter='@mozthunderbird') }}"
+            href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
+          {{ svg('social-icon-twitter') }}
+        </a>
+        <a class="icon" title="{{ _('Follow %(linkedin)s on LinkedIn')|format(linkedin='thunderbird-email')}}"
+            href="https://www.linkedin.com/company/thunderbird-email/" data-link-type="footer" data-link-name="LinkedIn (Thunderbird)" rel="me">
+          {{ svg('social-icon-linkedin') }}
+        </a>
+      </div>
+      <div class="cta">
+        <a href="{{ url('blog') }}" class="cta-ln">{{_('Visit Our Blog')}}</a>
+      </div>
+      <div class="phone">
+        <picture>
+          <source srcset="/media/img/thunderbird/new/phone/cta-phone.avif" type="image/avif">
+          <source srcset="/media/img/thunderbird/new/phone/cta-phone.webp" type="image/webp">
+          <img src="/media/img/thunderbird/new/phone/cta-phone.png" alt="{{_('smartphone')}}">
+        </picture>
+      </div>
+    </div>
   </section>
 
-  {% include 'includes/donate-mailing-list.html' %}
-
-  <section class="pt-20 pb-10 flex bg-calendar lg:pr-20">
-    <section class="flex justify-between mx-auto">
-      <aside class="hidden lg:flex flex-1 -ml-20">
-        {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Thunderbird Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
-      </aside>
-
-      <aside class="flex flex-col flex-1 lg:max-w-md mr-8 ml-8 lg:ml-16 lg:mr-16 lg:pt-12">
-        <h3 class="header-section">
-          <span>{{ svg('calendar') }}</span>
-          <aside class="flex flex-col">
-            {{ _('Calendar')}}
-            <small class="font-normal font-md tracking-normal normal-case">
-              {{ _('Organize your life — it’s about time!') }}
-            </small>
-          </aside>
-        </h3>
-        <p class="font-lg tracking-wider leading-loose mb-6">
-          {{ _('Organize your schedule and life’s important events in a calendar that’s fully integrated with your Thunderbird email.') }}
-        </p>
-        <p class="font-lg tracking-wider leading-loose mb-10">
-          {{ _('Manage multiple calendars, create your daily to do list, invite friends to events, and subscribe to public calendars.') }}
-        </p>
-        <p class="flex justify-start">
-          <a href="{{ url('calendar') }}" class="btn-body">{{_('Explore Features')}}
-            <span>{{ svg('chevron-right') }}</span>
-          </a>
-          <a href="https://addons.thunderbird.net" class="btn-body btn-secondary ml-4">{{_('Explore Add-ons')}}
-            <span>{{ svg('chevron-right') }}</span>
-          </a>
-        </p>
-      </aside>
-    </section>
-  </section>
-
-  {% include 'includes/site-prefooter.html' %}
-
-  <div itemscope itemtype="http://schema.org/SoftwareApplication">
-    <meta itemprop="name" content="{{_('Thunderbird')}}">
-    <meta itemprop="description" content="{% block product_desc %}{{ self.page_desc() }}{% endblock %}">
-    <meta itemprop="url" content="https://www.thunderbird.net">
-    <meta itemprop="image" content="{% block product_logo %}{{ static('img/thunderbird/thunderbird-256.png') }}{% endblock %}">
-    <div itemprop="author" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="{{_('Mozilla')}}">
-    </div>
-    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-      <meta itemprop="price" content="0">
-    </div>
-    <meta itemprop="softwareVersion" content="{{ latest_thunderbird_version }}">
-    <meta itemprop="releaseNotes" content="{{ settings.CANONICAL_URL }}/thunderbird/{{ latest_thunderbird_version }}/releasenotes/">
-    <meta itemprop="applicationCategory" content="CommunicationApplication">
-    <meta itemprop="operatingSystem" content="Windows">
-    <meta itemprop="operatingSystem" content="Mac">
-    <meta itemprop="operatingSystem" content="Linux">
-  </div>
-
-  <div itemscope itemtype="http://schema.org/Product">
-    <meta itemprop="name" content="{{_('Thunderbird')}}">
-    <meta itemprop="description" content="{{ self.product_desc() }}">
-    <meta itemprop="url" content="{{ settings.CANONICAL_URL }}/thunderbird/">
-    <meta itemprop="image" content="{{ self.product_logo() }}">
-    <meta itemprop="logo" content="{{ self.product_logo() }}">
-    <div itemprop="manufacturer" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="{{_('Mozilla')}}">
-    </div>
-    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-      <meta itemprop="price" content="0">
-    </div>
-  </div>
 {% endblock %}
+
