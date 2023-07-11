@@ -671,6 +671,14 @@ button:hover::after {
   display: block !important;
 }
 
+.download-button ul {
+  list-style: none;
+}
+
+.download-button ul li {
+  margin-block: 40px;
+}
+
 p.download-other.download-other-desktop.os_android.os_ios.os_linux.os_linux64.os_osx.os_win.os_win64.os_winsha1 {
   display: none !important;
 }
