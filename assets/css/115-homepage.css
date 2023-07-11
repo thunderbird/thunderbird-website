@@ -574,7 +574,6 @@ button::after {
   background-position: center;
   opacity: .5;
   inset: 0;
-  inset-inline-end: 4px;
   z-index: -1;
   transition: all .3s;
 }
@@ -584,6 +583,13 @@ a.btn:hover::after,
 button:hover::after {
   opacity: .75;
   background-size: 500%;
+}
+
+/** HACK for Mozilla Firefox */
+@-moz-document url-prefix() {
+  .download-link.btn-download::after {
+    inset-inline-end: 4px;
+  }
 }
 
 .download-button .ios-download,
@@ -671,6 +677,14 @@ button:hover::after {
   display: block !important;
 }
 
+.download-button ul {
+  list-style: none;
+}
+
+.download-button ul li {
+  margin-block: 40px;
+}
+
 p.download-other.download-other-desktop.os_android.os_ios.os_linux.os_linux64.os_osx.os_win.os_win64.os_winsha1 {
   display: none !important;
 }
@@ -691,6 +705,16 @@ p.download-other.download-other-desktop.os_android.os_ios.os_linux.os_linux64.os
   backdrop-filter: blur(32px);
   transition: height .2s;
   z-index: 100000;
+}
+
+.site-nav .btn-donate::before,
+.site-nav .btn-donate-lg::before,
+.site-nav .btn-download-inline::before,
+.site-nav .btn-download-link::before,
+.site-nav .download-link.btn-download::before,
+.site-nav a.btn::before,
+.site-nav button::before {
+  display: none;
 }
 
 .scrolled-nav {
