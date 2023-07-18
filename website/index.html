@@ -425,5 +425,8 @@ with great features!') }}{% endblock %}
     </div>
   </section>
 
+  {% with page_desc = self.page_desc() %}
+    {% include "includes/product-metadata.html" %}
+  {% endwith %}
 {% endblock %}
 
