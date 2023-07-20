@@ -174,6 +174,7 @@ URL_MAPPINGS = {
     'thunderbird.releases.index': '/thunderbird/releases',
     'thunderbird.style': 'https://style.thunderbird.net',
     'thunderbird.site.bug-report': 'https://github.com/thundernest/thunderbird-website/issues',
+    'thunderbird.115.whatsnew': '/thunderbird/115.0/whatsnew',
 }
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
