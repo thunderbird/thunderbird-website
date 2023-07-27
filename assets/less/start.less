@@ -1,0 +1,456 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import "base/font-faces.less";
+
+:root {
+  --red-10: #fee2e2;
+  --red-20: #fecaca;
+  --red-30: #fca5a5;
+  --red-40: #f87171;
+  --red-50: #ef4444;
+  --red-60: #dc2626;
+  --red-70: #b91c1c;
+  --red-80: #991b1b;
+  --red-90: #7f1d1d;
+
+  --orange-10: #ffedd5;
+  --orange-20: #fed7aa;
+  --orange-30: #fdba74;
+  --orange-40: #fb923c;
+  --orange-50: #f97316;
+  --orange-60: #ea580c;
+  --orange-70: #c2410c;
+  --orange-80: #9a3412;
+  --orange-90: #7c2d12;
+
+  --amber-10: #fef3c7;
+  --amber-20: #fde68a;
+  --amber-30: #fcd34d;
+  --amber-40: #fbbf24;
+  --amber-50: #f59e0b;
+  --amber-60: #d97706;
+  --amber-70: #b45309;
+  --amber-80: #92400e;
+  --amber-90: #78350f;
+
+  --yellow-10: #fef9c3;
+  --yellow-20: #fef08a;
+  --yellow-30: #fde047;
+  --yellow-40: #facc15;
+  --yellow-50: #eab308;
+  --yellow-60: #ca8a04;
+  --yellow-70: #a16207;
+  --yellow-80: #854d0e;
+  --yellow-90: #713f12;
+
+  --green-10: #dcfce7;
+  --green-20: #bbf7d0;
+  --green-30: #86efac;
+  --green-40: #4ade80;
+  --green-50: #22c55e;
+  --green-60: #16a34a;
+  --green-70: #15803d;
+  --green-80: #166534;
+  --green-90: #14532d;
+
+  --teal-10: #cdfaf7;
+  --teal-20: #9ff4f0;
+  --teal-30: #62e9e6;
+  --teal-40: #27d3d6;
+  --teal-50: #0db7bd;
+  --teal-60: #0a929d;
+  --teal-70: #0e757f;
+  --teal-80: #135e67;
+  --teal-90: #144e56;
+
+  --blue-10: #ddeefe;
+  --blue-20: #bce0fd;
+  --blue-30: #88ccfc;
+  --blue-40: #4cb1f9;
+  --blue-50: #2493ef;
+  --blue-60: #1373d9;
+  --blue-70: #105bbc;
+  --blue-80: #124c9a;
+  --blue-90: #15427c;
+
+  --purple-10: #f3e8ff;
+  --purple-20: #e9d5ff;
+  --purple-30: #d8b4fe;
+  --purple-40: #c084fc;
+  --purple-50: #a855f7;
+  --purple-60: #9333ea;
+  --purple-70: #7e22ce;
+  --purple-80: #6b21a8;
+  --purple-90: #581c87;
+
+  --magenta-10: #fbe7f9;
+  --magenta-20: #f8cff3;
+  --magenta-30: #f4a9e8;
+  --magenta-40: #ee75d7;
+  --magenta-50: #e247c4;
+  --magenta-60: #cd26a5;
+  --magenta-70: #b01a86;
+  --magenta-80: #91186e;
+  --magenta-90: #79195c;
+
+  --brown-10: #f4e9d7;
+  --brown-20: #efdfc4;
+  --brown-30: #e4cdab;
+  --brown-40: #d7bc96;
+  --brown-50: #b6986c;
+  --brown-60: #96764b;
+  --brown-70: #755b38;
+  --brown-80: #51412c;
+  --brown-90: #47341f;
+
+  --grey-05: #fafafa;
+  --grey-10: #f4f4f5;
+  --grey-20: #e4e4e7;
+  --grey-30: #d4d4d8;
+  --grey-40: #a1a1aa;
+  --grey-50: #71717a;
+  --grey-60: #52525b;
+  --grey-70: #3f3f46;
+  --grey-80: #27272a;
+  --grey-90: #18181b;
+
+  --ink-10: #f1f3fa;
+  --ink-20: #e3e5f2;
+  --ink-30: #cdd0e5;
+  --ink-40: #9b9ec2;
+  --ink-50: #6e6f9b;
+  --ink-60: #52507c;
+  --ink-70: #3e3c67;
+  --ink-80: #2a284b;
+  --ink-90: #1a1838;
+
+  --font-content: 'Inter' , X-LocaleSpecific, sans-serif;
+  --font-heading: 'Metropolis', X-LocaleSpecific, sans-serif;
+
+  --bg: var(--grey-05);
+  --bg-gradient: linear-gradient(to bottom, white, var(--grey-10));
+  --text: var(--ink-80);
+  --text-donate: var(--red-60);
+  --text-connect: var(--purple-60);
+  --text-support: var(--blue-60);
+  --text-get-involved: var(--magenta-60);
+  --text-bug: var(--green-70);
+  --text-crash: var(--teal-70);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+[data-channel="daily"] {
+  --text-gradient: linear-gradient(-270deg, var(--magenta-50), var(--purple-50));
+  --bg-warning: color-mix(in srgb, var(--magenta-50) 5%, transparent);
+  --text-warning: var(--magenta-90);
+  --warning-links: var(--purple-80);
+  --list-dot-inner: var(--magenta-90);
+  --list-dot-outer: var(--magenta-10);
+}
+
+[data-channel="beta"] {
+  --text-gradient: linear-gradient(-270deg, var(--teal-50), var(--blue-50));
+  --bg-warning: color-mix(in srgb, var(--teal-50) 5%, transparent);
+  --text-warning: var(--teal-90);
+  --warning-links: var(--blue-80);
+  --list-dot-inner: var(--teal-90);
+  --list-dot-outer: var(--teal-10);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--grey-05);
+    --bg-gradient: linear-gradient(to bottom, black, var(--ink-90));
+    --text: var(--ink-10);
+    --text-donate: var(--red-30);
+    --text-connect: var(--purple-30);
+    --text-support: var(--blue-30);
+    --text-get-involved: var(--magenta-30);
+    --text-bug: var(--green-30);
+    --text-crash: var(--teal-30);
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  [data-channel="daily"] {
+    --text-gradient: linear-gradient(-270deg, var(--magenta-40), var(--purple-40));
+    --bg-warning: color-mix(in srgb, var(--magenta-50) 5%, transparent);
+    --text-warning: var(--magenta-10);
+    --warning-links: var(--purple-30);
+    --list-dot-inner: var(--magenta-30);
+    --list-dot-outer: var(--magenta-90);
+  }
+
+  [data-channel="beta"] {
+    --text-gradient: linear-gradient(-270deg, var(--teal-40), var(--blue-40));
+    --bg-warning: color-mix(in srgb, var(--teal-50) 5%, transparent);
+    --text-warning: var(--teal-10);
+    --warning-links: var(--blue-30);
+    --list-dot-inner: var(--teal-30);
+    --list-dot-outer: var(--teal-90);
+  }
+}
+
+html {
+  font-family: var(--font-content);
+  font-size: 1rem;
+}
+
+body {
+  background-color: var(--bg);
+  background-image: var(--bg-gradient);
+  color: var(--text);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+main {
+  display: grid;
+  gap: 2em;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 100ch;
+}
+
+header {
+  display: grid;
+  gap: 2em;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.logo-img {
+  background-image: url('/media/img/thunderbird/logos/release.png');
+}
+
+html[data-channel="earlybird"] .logo-img {
+  background-image: url('/media/img/thunderbird/logos/earlybird-100.png');
+}
+
+html[data-channel="beta"] .logo-img {
+  background-image: url('/media/img/thunderbird/logos/beta.png');
+}
+
+html[data-channel="daily"] .logo-img {
+  background-image: url('/media/img/thunderbird/logos/daily.png');
+}
+
+.logo-img {
+  display: inline-block;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+  width: 75px;
+  height: 75px;
+  align-self: center;
+  filter: drop-shadow(var(--shadow));
+}
+
+.title {
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.title-text {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.tb-text {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-logo);
+  line-height: 1;
+}
+
+.accent-text {
+  color: transparent;
+  background: var(--text-gradient);
+  background-clip: text;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.donate {
+  display: grid;
+  gap: .25em;
+  justify-self: end;
+  text-align: right;
+}
+
+.donate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  justify-self: end;
+  background-color: var(--red-60);
+  background-image: linear-gradient(var(--red-50), var(--red-70));
+  border-radius: 3px;
+  color: white;
+  padding: .25em .75em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  box-shadow: var(--shadow);
+  letter-spacing: .075rem;
+}
+
+.warning-panel {
+  display: grid;
+  place-items: center;
+  background: var(--bg-warning);
+  color: var(--text-warning);
+  border: 1px solid var(--text-warning);
+  border-radius: 6px;
+  padding: 0.5em 1em;
+
+  a {
+    color: var(--warning-links);
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.main-thanks {
+  font-size: 1.25rem;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4em;
+}
+
+.warning-panel ul {
+  padding-left: 2.5em;
+  list-style: none;
+}
+
+.warning-panel ul li {
+  position: relative;
+  margin-left: 10px;
+}
+
+.warning-panel ul li:before {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 3px;
+  top: 0.5em;
+  left: -20px;
+  border-radius: 50%;
+  border: 4px solid var(--list-dot-outer);
+  background: var(--list-dot-inner);
+}
+
+.warning-panel a,
+.main-content a {
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.warning-panel a:hover,
+.main-content a:hover,
+.warning-panel a:focus,
+.main-content a:focus {
+  text-decoration: underline;
+}
+
+p.warning svg {
+  vertical-align: middle;
+}
+
+.content-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-heading {
+  margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.donate {
+  color: var(--text-donate);
+}
+
+.warning {
+  color: var(--text-warning);
+}
+
+.connect {
+  color: var(--text-connect);
+}
+
+.support {
+  color: var(--text-support);
+}
+
+.get-involved {
+  color: var(--text-get-involved);
+}
+
+.bug {
+  color: var(--text-bug);
+}
+
+.crash {
+  color: var(--text-crash);
+}
+
+@media (max-width: 800px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .main-thanks {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .title-text {
+    display: none;
+  }
+}
+
+@media (max-width: 268px) {
+  .header-top {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    place-items: center;
+  }
+
+  .donate {
+    place-self: center;
+    text-align: center;
+  }
+}

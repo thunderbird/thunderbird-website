@@ -2,10 +2,10 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "_new-base-resp.html" %}
+{% extends "_base-resp.html" %}
 
 {% block channel %}daily{% endblock %}
-{% block title %}{{ _('Welcome to <div class="tb-text">Thunderbird <small class="daily-text">Daily</small></div>') }}{% endblock %}
+{% block title %}{{ _('Welcome to <div class="tb-text">Thunderbird <small class="accent-text">Daily</small></div>') }}{% endblock %}
 
 {% block main %}
       <header>
@@ -30,13 +30,15 @@
               <strong class="uppercase">{{ _('Warning!') }}</strong>
               {{ _('Daily can be unstable, and there is potential to lose data.') }}
             </p>
-            <p>
-                {{ _('Stay informed about any new features, or breaking changes.') }}
-                <a href="https://discuss.thunderbird.net/groups/daily" class="warning">
-                  {{ _('Daily Forum') }}
-                  {{ svg('external-link') }}
-                </a>
-            </p>
+            <ul>
+                <li>
+                  {{ _('Stay informed about any new features, or breaking changes.') }}
+                  <a href="https://discuss.thunderbird.net/groups/daily" class="warning">
+                    {{ _('Daily Forum') }}
+                    {{ svg('external-link') }}
+                  </a>
+                </li>
+              </ul>
           </div>
         </div>
         <p class="main-thanks">{{ _('You are using the daily version of Thunderbird, which means you get to experience the absolute newest Thunderbird - fresh out of the build system! But with great power comes great responsibility, we hope you’ll take the time to report bugs and provide feedback on your experience using the daily version and help make the next Thunderbird release as awesome as possible.') }}</p>

@@ -2,10 +2,10 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "_new-base-resp.html" %}
+{% extends "_base-resp.html" %}
 
 {% block channel %}beta{% endblock %}
-{% block title %}{{ _('Welcome to <div class="tb-text">Thunderbird <small class="beta-text">Beta</small></div>') }}{% endblock %}
+{% block title %}{{ _('Welcome to <div class="tb-text">Thunderbird <small class="accent-text">Beta</small></div>') }}{% endblock %}
 
 {% block main %}
       <header>
@@ -23,6 +23,7 @@
             </a>
           </div>
         </div>
+        
         <div class="warning-panel">
           <div>
             <p class="warning">
