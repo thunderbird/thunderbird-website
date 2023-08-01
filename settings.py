@@ -86,6 +86,21 @@ CANONICAL_LOCALES = {
     'zh-hant-hk': 'zh-TW',  # Bug 1338072
 }
 
+ENUS_ONLY = [
+    'thunderbird.contact',
+    'thunderbird.careers',
+    'thunderbird.get-involved',
+    'thunderbird.organizations',
+]
+
+# Most pages under /thunderbird/ are en-US only, except these.
+# The What's New page is not here because TB picks the locale.
+ALWAYS_LOCALIZE = [
+    '/appeal',
+    '/eoy',
+    '/beta-appeal',
+]
+
 CANONICAL_URL = 'https://www.thunderbird.net'
 
 # url for the server that serves Thunderbird downloads.
@@ -178,13 +193,6 @@ URL_MAPPINGS = {
 }
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
-
-ENUS_ONLY = [
-    'thunderbird.contact',
-    'thunderbird.careers',
-    'thunderbird.get-involved',
-    'thunderbird.organizations',
-]
 
 # WEBSITE_CSS = {
 #     'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
