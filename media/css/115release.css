@@ -373,6 +373,27 @@ input[type="range"]::-webkit-range-thumb {
   transform: rotate(-45deg);
 }
 
+.caption-ln {
+  margin-block: 9px;
+  color: currentColor;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: .12em;
+  text-decoration-style: dotted;
+  transition: font-size .2s,
+              text-decoration-color .2s;
+}
+
+.caption-ln.donate,
+.caption-ln:hover,
+.caption-ln:hover:visited {
+  text-decoration-color: var(--color-blue-50);
+}
+
+.caption-ln:visited {
+  text-decoration-color: var(--color-purple-50);
+}
+
 .info p {
   color: var(--info-txt);
   font-weight: 500;
