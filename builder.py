@@ -157,6 +157,17 @@ class Site(object):
         with open(htpath, mode) as f:
             f.write('RewriteEngine On\nRewriteRule ^favicon\.ico$ {path}\n'.format(path=settings.FAVICON_PATH))
 
+    def _copy_apple_pay_domain_verification(self):
+        """Copies over FRU's merchantid to `self.renderpath/.well-known` for Apple Pay domain verification purposes"""
+        if not settings.USE_APPLE_PAY_DOMAIN_VERIFICATION:
+            return
+
+        folder_path = "{0}/.well-known".format(self.renderpath)
+        file_name = "apple-developer-merchantid-domain-association"
+
+        mkdir(folder_path)
+        shutil.copy("{0}/misc/{1}".format(settings.ASSETS, file_name), "{0}/{1}".format(folder_path, file_name))
+
     def is_css_bundle(self, path):
         """Check if a path refers to a css file that is in the current `css_bundles` or not."""
         changed_file = ntpath.basename(path).split('.')[0]
@@ -244,6 +255,7 @@ class Site(object):
         if self.js_bundles:
             self._concat_js()
         self._write_favicon_htaccess()
+        self._copy_apple_pay_domain_verification()
 
     def render(self):
         """
