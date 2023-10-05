@@ -139,6 +139,9 @@ CALDATA_AUTOGEN_AUTHOR = 'Thunderbird'
 
 CALDATA_YEARS_TO_GENERATE = 3
 
+# Apple uses this to verify the domain every time the SSL cert expires, disabling will break Apple Pay donations.
+USE_APPLE_PAY_DOMAIN_VERIFICATION = True
+
 # path to product-details json files
 JSON_PATH = 'product-details/public/1.0'
 
