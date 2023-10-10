@@ -36,7 +36,7 @@ with great features!') }}{% endblock %}
           </span>
         </div>
         <div>
-        {{ download_thunderbird(force_direct=true, alt_copy=_('Download')) }}
+        {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="new-frontpage") }}
         </div>
         <small>{{_('Free forever.')}} <a href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
@@ -356,7 +356,7 @@ with great features!') }}{% endblock %}
           </span>
         </div>
         <div>
-          {{ download_thunderbird(force_direct=true, alt_copy=_('Download')) }}
+          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="new-frontpage") }}
         </div>
         <small>{{_('Free forever.')}} <a href="{{ donate_url('body') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
