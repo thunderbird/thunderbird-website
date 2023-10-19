@@ -1,7 +1,9 @@
-<script type="text/javascript" data-for="FA__DOMContentLoadedEventDispatch" src="https://mozillafoundation.tfaforms.net/js/FA__DOMContentLoadedEventDispatcher.js" defer></script>
+<script type="text/javascript" data-for="FA__DOMContentLoadedEventDispatch"
+        src="https://mozillafoundation.tfaforms.net/js/FA__DOMContentLoadedEventDispatcher.js" defer></script>
+<link rel="stylesheet" href="/media/css/fa-theme.min.css">
 <style>
   .captcha {
-    padding-bottom: 1em !important;
+    padding-bottom: 1em;
   }
 
   .wForm .captcha .oneField {
@@ -9,18 +11,119 @@
     padding: 0;
   }
 </style>
+<style>
+    #tfa_95,
+    *[id^="tfa_95["] {
+      width: 625px;
+    }
+
+    #tfa_95-D,
+    *[id^="tfa_95["][class~="field-container-D"] {
+      width: auto;
+    }
+
+    #tfa_95-L,
+    label[id^="tfa_95["] {
+      width: 189px;
+      min-width: 0px;
+    }
+
+    #tfa_163,
+    *[id^="tfa_163["] {
+      width: 625px;
+    }
+
+    #tfa_163-D,
+    *[id^="tfa_163["][class~="field-container-D"] {
+      width: auto;
+    }
+
+    #tfa_163-L,
+    label[id^="tfa_163["] {
+      width: 351px;
+      min-width: 0px;
+    }
+
+    #tfa_201-L,
+    label[id^="tfa_201["] {
+      width: 419px;
+      min-width: 0px;
+    }
+
+    #tfa_1,
+    *[id^="tfa_1["] {
+      width: 305px;
+    }
+
+    #tfa_1-D,
+    *[id^="tfa_1["][class~="field-container-D"] {
+      width: auto;
+    }
+
+    #tfa_1-L,
+    label[id^="tfa_1["] {
+      width: 189px;
+      min-width: 0px;
+    }
+
+    #tfa_10,
+    *[id^="tfa_10["] {
+      width: 305px;
+    }
+
+    #tfa_10-D,
+    *[id^="tfa_10["][class~="field-container-D"] {
+      width: auto;
+    }
+
+    #tfa_10-L,
+    label[id^="tfa_10["] {
+      width: 189px;
+      min-width: 0px;
+    }
+
+    #tfa_72,
+    *[id^="tfa_72["] {
+      width: 350px;
+    }
+
+    #tfa_72-D,
+    *[id^="tfa_72["][class~="field-container-D"] {
+      width: auto;
+    }
+
+    #tfa_72-L,
+    label[id^="tfa_72["] {
+      width: 189px;
+      min-width: 0px;
+    }
+
+    #tfa_163,
+    *[id^="tfa_163["] {
+      height: 60px !important
+    }
+
+    #tfa_163-D,
+    *[id^="tfa_163["][class~="field-container-D"] {
+      height: auto;
+    }
+
+    #tfa_163-L,
+    label[id^="tfa_163["],
+    *[id^="tfa_163["][id$="-L"] {
+      height: auto;
+    }
+  </style>
 <script type="text/javascript">
   // initialize our variables
   var captchaReady = 0;
   var wFORMSReady = 0;
-  var isConditionalSubmitAllowed = false;
   var isConditionalSubmitEnabled = false;
 
   // when wForms is loaded call this
   var wformsReadyCallback = function() {
     // using this var to denote if wForms is loaded
     wFORMSReady = 1;
-    isConditionalSubmitAllowed = wFORMS.behaviors.condition.isConditionalSubmitAllowed;
     isConditionalSubmitEnabled = document.getElementById('submit_button').hasAttribute('data-condition');
     // call our recaptcha function which is dependent on both
     // wForms and an async call to google
@@ -31,7 +134,6 @@
   var gCaptchaReadyCallback = function() {
     // using this var to denote if captcha is loaded
     captchaReady = 1;
-    isConditionalSubmitAllowed = wFORMS.behaviors.condition.isConditionalSubmitAllowed;
     isConditionalSubmitEnabled = document.getElementById('submit_button').hasAttribute('data-condition');
     // call our recaptcha function which is dependent on both
     // wForms and an async call to google
@@ -49,7 +151,7 @@
     var isConditionalSubmitConditionMet = wFORMS.behaviors.condition.isConditionalSubmitConditionMet;
     if (
         submitButton != null &&
-        (isConditionalSubmitAllowed && isConditionalSubmitEnabled && isConditionalSubmitConditionMet) ||
+        (isConditionalSubmitEnabled && isConditionalSubmitConditionMet) ||
         !isConditionalSubmitEnabled
     ) {
       submitButton.removeAttribute('disabled');
@@ -183,8 +285,16 @@
     }
   });
 </script>
-<link href="https://mozillafoundation.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=127d5d34f78f067204f2463a3699a1688fbf2ca7" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css"/>
-<script type="text/javascript" src="https://mozillafoundation.tfaforms.net/wForms/3.11/js/wforms.js?v=127d5d34f78f067204f2463a3699a1688fbf2ca7"></script>
+
+<link
+  href="https://mozillafoundation.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=75513df1680ccc55e2c889a1b1dff356256982a6"
+  rel="stylesheet" type="text/css"/>
+
+<link
+  href="https://mozillafoundation.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=75513df1680ccc55e2c889a1b1dff356256982a6"
+  rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css"/>
+<script type="text/javascript"
+        src="https://mozillafoundation.tfaforms.net/wForms/3.11/js/wforms.js?v=75513df1680ccc55e2c889a1b1dff356256982a6"></script>
 <script type="text/javascript">
   wFORMS.behaviors.prefill.skip = false;
 </script>
