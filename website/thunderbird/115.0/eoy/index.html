@@ -1,0 +1,81 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+  # License, v. 2.0. If a copy of the MPL was not distributed with this
+  # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+ {% set active_page = "appeal" %}
+ {% extends "includes/bedrock/base-resp.html" %}
+ {% block facebook_id %}348169218537151{# facebook.com/Thunderbird #}{% endblock %}
+ {% block twitter_id %}mozthunderbird{% endblock %}
+
+ {% block page_image %}{{ static('img/thunderbird/thunderbird-256.png') }}{% endblock %}
+ {% block page_favicon %}{{ static('img/thunderbird/favicon.ico') }}{% endblock %}
+ {% block page_favicon_large %}{{ static('img/thunderbird/favicon-196.png') }}{% endblock %}
+ {% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}
+
+ {% block page_css %}<link href="/media/css/tb-115-eoy-style.css" rel="stylesheet" type="text/css" />{% endblock %}
+
+ {% block page_title %}{{ _('Thunderbird Everywhere!') }}{% endblock %}
+
+ {% block site_header %}
+<header class="eoy-2023-appeal-header">
+  <div class="bg">
+  <div class="hero-fixed">
+    <div class="hero-content">
+      <div class="hero-text">
+      <h1>
+        {{ _('<span class="title">Thunderbird</span>
+        <span class="everywhere">Everywhere!</span>') }}
+      </h1>
+      <p class="tagline">{{ _('Help us bring Thunderbird to <span class="platform-gradient">Android</span> and <span class="platform-gradient">iOS.</span>') }}</p>
+      <p class="content">{{ _('Did you know that <strong>less than 1%</strong> of Thunderbird users fund all the work we do? We don’t show advertisements or sell your data, and we are completely funded by donations from our community.') }}</p>
+      </div>
+      <div class="donate-button-group">
+        <button class="btn-donate-appeal">
+          <span class="heart"></span><span class="text">{{ _('Donate') }}</span>
+        </button>
+        <div class="glow"></div>
+      </div>
+    </div>
+  </div>
+  <div class="mask">
+    {{ svg('eoy/115.0/mask') }}
+  </div>
+  <div class="coverup"></div>
+  </div>
+</header>
+{% endblock %}
+
+{% block email_form %}
+{% endblock email_form %}
+
+{% block content %}
+<section class="eoy-2023-appeal">
+  <div class="body-title">
+    <h2>{{ _('You kept us alive - now help us thrive!') }}</h2>
+  </div>
+  <div class="body-text">
+    <p>{{ _('This year, we delivered outstanding visual changes in Thunderbird 115 and <a href="%(url)s">other major improvements</a>. In 2024, we want to make our privacy-respecting email software available to billions. Imagine Thunderbird on your <strong>Android</strong> and <strong>iOS</strong> devices!')|format(url='https://blog.thunderbird.net/tag/2023-recap/') }}</p>
+    <p>{{ _('<strong>We can’t do this without you!</strong> If you get value from using Thunderbird, please consider giving a donation to support this goal.') }}</p>
+  </div>
+  <div class="body-devices">
+    <img src="/media/img/thunderbird/eoy/115.0/devices@2x.png" alt="{{ _('An illustration of Thunderbird on a phone, a desktop, and a tablet.') }}"/>
+  </div>
+  <div class="body-footer">
+    <div class="footer-line first"></div>
+    <div class="logo">
+      {{ svg('eoy/115.0/heart-footer') }}
+    </div>
+    <div class="footer-line second"></div>
+  </div>
+  <div class="body-logo">
+  <p>{{ _('The <strong>Thunderbird</strong> Team') }}</p>
+  <div class="logo-container">
+      {{ svg('logo') }}
+  </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block site_footer%}
+  {% include 'includes/donate-modal.html' %}
+{% endblock site_footer %}
