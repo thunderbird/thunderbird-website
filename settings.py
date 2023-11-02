@@ -210,7 +210,10 @@ BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
 # }
 
 WEBSITE_CSS = {
-    'thunderbird-style': ['less/style.less'], 'tb-115-style': ['css/115-homepage.css'],
+    'thunderbird-style': ['less/style.less'],
+    'tb-115-style': ['css/115-homepage.css'],
+    # Custom page styles
+    'tb-115-eoy-style': ['less/pages/eoy-2023-style.less'],
 }
 
 WEBSITE_JS = {

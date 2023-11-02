@@ -1,0 +1,19 @@
+a {
+  color: currentColor;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: .12em;
+  text-decoration-style: dotted;
+  transition: font-size .2s,
+              text-decoration-color .2s;
+}
+
+a.donate,
+a:hover,
+a:hover:visited {
+  text-decoration-color: var(--accent);
+}
+
+a:visited {
+  text-decoration-color: var(--color-purple-50);
+}
