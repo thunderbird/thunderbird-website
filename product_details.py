@@ -46,7 +46,7 @@ class ThunderbirdDetails():
     platform_labels = OrderedDict([
         # ('winsha1', 'Windows (XP/Vista)'),
         ('win64', 'Windows 64-bit'),
-        ('msi', 'Windows MSI 64-bit'),
+        ('msi', 'Windows MSIX 64-bit'),
         ('osx', 'macOS'),
         ('linux64', 'Linux 64-bit'),
         ('win', 'Windows 32-bit'),
@@ -132,7 +132,7 @@ class ThunderbirdDetails():
             _platform = 'win64'
             # Daily's bouncer link doesn't support `-msi-SSL`, so we'll just make it a win64 build for now.
             if channel != 'daily':
-                product_url = 'thunderbird-%s-msi-SSL'
+                product_url = 'thunderbird-%s-msix-SSL'
 
         # Check if direct download link has been requested
         # (bypassing the transition page)
