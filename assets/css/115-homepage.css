@@ -774,6 +774,11 @@ svg {
   gap: 30px;
 }
 
+/* Hide the header download button if the browser does not support javascript */
+.no-js .header-download {
+  display: none !important;
+}
+
 .nav-ln,
 .cta-ln,
 .footer-ln {
