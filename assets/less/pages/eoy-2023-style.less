@@ -43,6 +43,7 @@ body {
   }
   z-index: 20;
   margin-left: 60px;
+  height: 120px;
 
   // Button :^)
   .glow {
@@ -54,16 +55,44 @@ body {
     border-radius: 36px;
     filter: blur(22px);
     z-index: -1;
-    background: linear-gradient(93.92deg, rgba(36, 239, 239, 0.5) 0.08%, rgba(36, 147, 239, 0.5) 47.12%, rgba(168, 85, 247, 0.5) 101.18%);
+    background: linear-gradient(93.92deg, rgba(36, 239, 239, 1.0) 0.08%, rgba(36, 147, 239, 1.0) 47.12%, rgba(168, 85, 247, 1.0) 101.18%);
+    opacity: 30%;
+    transition: all .3s !important;
+
+  }
+
+  // Load bearing wrapper
+  .action-box {
+    display: inline-block;
+    height: 64px;
+
+    &:hover {
+      .glow {
+        opacity: 50%;
+      }
+    }
+    &:active {
+      .glow {
+        opacity: 60%;
+      }
+      .btn-donate-appeal {
+        box-shadow: 0px 1px 0px 0px #362ed3, inset 0px 2px 0px 0px rgba(255, 255, 255, 0.2);
+      }
+    }
   }
 
   .btn-donate-appeal {
+    display: flex;
     width: 280px;
     height: 64px;
     border-radius: 8.75px;
     border: 0;
     background: radial-gradient(115.37% 113.89% at 50% 116.67%, #818CF8 0%, #4F46E5 100%);
     box-shadow: 0 3.5px #362ed3, inset 0 1.75px rgba(255, 255, 255, 0.2);
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all .3s !important;
 
     // Text
     .heart {
@@ -72,7 +101,7 @@ body {
       width: 22px;
       height: 20px;
       margin: 4px 10px 4px 2px;
-      top: 3px;
+      top: 2px;
       background-image: url('/media/svg/eoy/115.0/heart.svg');
     }
 
