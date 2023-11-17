@@ -17,6 +17,10 @@
   --platform-color: linear-gradient(180deg, #1970D9 0%, #7828CF 100%);
   --body-text-color: linear-gradient(90.27deg, #105BBC 0%, #7E22CE 100%);
 
+  --button-normal-opacity: 50%;
+  --button-hover-opacity: 30%;
+  --button-active-opacity: 60%;
+
   @media (prefers-color-scheme: dark) {
     --bg-clouds: url('/media/img/thunderbird/eoy/115.0/clouds-dark.png');
     --bg-gradient: linear-gradient(180deg, #000000 0%, #3E3C67 100%);
@@ -28,6 +32,11 @@
     --hero-color: var(--color-gray-05);
     --platform-color: linear-gradient(180deg, #4FB0F9 0%, #B987FC 100%);
     --body-text-color: linear-gradient(90.27deg, #4CB1F9 0%, #C084FC 100%);
+
+    --button-normal-opacity: 50%;
+    --button-hover-opacity: 30%;
+    --button-active-opacity: 60%;
+
   }
 }
 
@@ -56,7 +65,7 @@ body {
     filter: blur(22px);
     z-index: -1;
     background: linear-gradient(93.92deg, rgba(36, 239, 239, 1.0) 0.08%, rgba(36, 147, 239, 1.0) 47.12%, rgba(168, 85, 247, 1.0) 101.18%);
-    opacity: 30%;
+    opacity: var(--button-normal-opacity);
     transition: all .3s !important;
 
   }
@@ -68,19 +77,19 @@ body {
 
     &:hover {
       .glow {
-        opacity: 50%;
+        opacity: var(--button-hover-opacity);
       }
       .btn-donate-appeal {
-        filter: brightness(105%);
+        background: radial-gradient(115.37% 113.89% at 50% 116.67%, #8691fd 0%, #544bea 100%);
       }
     }
     &:active {
       .glow {
-        opacity: 60%;
+        opacity: var(--button-active-opacity);
       }
       .btn-donate-appeal {
         box-shadow: 0px 1px 0px 0px #362ed3, inset 0px 2px 0px 0px rgba(255, 255, 255, 0.2);
-        filter: brightness(90%);
+        background: radial-gradient(115.37% 113.89% at 50% 116.67%, #7782ee 0%, #453cdb 100%);
       }
     }
   }
