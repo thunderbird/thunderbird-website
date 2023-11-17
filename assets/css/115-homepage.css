@@ -516,8 +516,24 @@ a:visited {
 }
 
 .icon {
+  display: inline-block;
   height: 32px;
   width: 32px;
+}
+
+.icon-apple {
+  position: relative;
+  top: -2px;
+}
+
+.icon .icon-linux-fg {
+  fill: transparent !important;
+}
+.icon-tux-alt .icon-linux-fg {
+  fill: var(--color-gray-20) !important;
+}
+.icon-tux-alt .icon-linux-bg {
+  fill: transparent !important;
 }
 
 /* Remove some list padding */
