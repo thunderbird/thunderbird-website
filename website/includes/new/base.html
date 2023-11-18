@@ -18,7 +18,6 @@
       {#- site-bundle should block html rendering so we can prevent no-js/js element flashing. -#}
       <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
       <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8" defer></script>
-      <script type="text/javascript" src="https://js.braintreegateway.com/web/dropin/1.32.1/js/dropin.min.js" charset="utf-8"></script>
     {% endblock %}
     <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{% endblock %}{% endfilter %}">
     <meta property="og:type" content="website">
