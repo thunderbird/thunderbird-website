@@ -14,6 +14,12 @@
     {#- Please sync this block with the base.html template.
         Because of blocks, we cannot use an include here. -#}
     <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} — Thunderbird{% endblock %}{% endfilter %}</title>
+    {% block site_js %}
+      {#- site-bundle should block html rendering so we can prevent no-js/js element flashing. -#}
+      <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8" defer></script>
+      <script type="text/javascript" src="https://js.braintreegateway.com/web/dropin/1.32.1/js/dropin.min.js" charset="utf-8"></script>
+    {% endblock %}
     <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{% endblock %}{% endfilter %}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ _('Thunderbird') }}">
@@ -97,11 +103,7 @@
         {% include 'includes/new/site-footer.html' %}
     {% endblock %}
 
-    {% block site_js %}
-      <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
-      <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8"></script>
-      <script type="text/javascript" src="https://js.braintreegateway.com/web/dropin/1.32.1/js/dropin.min.js" charset="utf-8"></script>
-    {% endblock %}
+
     {% block additional_site_js %}{% endblock %}
     {% block tracker_js %}
       <script type="text/javascript" src="/media/js/piwik.js" async defer></script>
