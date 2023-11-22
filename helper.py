@@ -138,7 +138,7 @@ def l10n_img(ctx, url):
 
 
 @jinja2.pass_context
-def high_res_img(ctx, url, optional_attributes=None):
+def high_res_img(ctx, url, optional_attributes=None, scale='1.5x', alt_formats=()):
     url_high_res = convert_to_high_res(url)
     if optional_attributes and optional_attributes.pop('l10n', False) is True:
         url = l10n_img(ctx, url)
@@ -157,9 +157,28 @@ def high_res_img(ctx, url, optional_attributes=None):
 
     # Use native srcset attribute for high res images
     markup = ('<img class="{class_name}" src="{url}" '
-              'srcset="{url_high_res} 1.5x"'
-              '{attrs}>').format(url=url, url_high_res=url_high_res,
+              'srcset="{url_high_res} {scale}"'
+              '{attrs}>').format(url=url, url_high_res=url_high_res, scale=scale,
                                  attrs=attrs, class_name=class_name)
+
+    # If we've specified some alternate formats we need to use the <picture> tag instead
+    if alt_formats:
+        tags = ["<picture>"]
+
+        for alt_format in alt_formats:
+            alt_url = f"{url.rsplit('.', maxsplit=1)[0]}.{alt_format}"
+            alt_high_res_url = f"{url_high_res.rsplit('.', maxsplit=1)[0]}.{alt_format}"
+
+            tags.append(
+                '<source src="{url}" srcset="{url_high_res} {scale}"/>'.format(
+                    url=alt_url, url_high_res=alt_high_res_url, scale=scale
+                )
+            )
+
+        tags.append(markup)
+        tags.append('</picture>')
+
+        return jinja2.Markup("\n".join(tags))
 
     return jinja2.Markup(markup)
 

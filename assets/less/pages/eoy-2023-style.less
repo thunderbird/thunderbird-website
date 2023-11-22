@@ -3,8 +3,27 @@
 
 :root {
   --bg-clouds: url('/media/img/thunderbird/eoy/115.0/clouds-light.png');
+  --bg-clouds-set: image-set(
+    url('/media/img/thunderbird/eoy/115.0/clouds-light.webp') type('image/webp'),
+    var(--bg-clouds) type('image/png'),
+  );
   --bg-gradient: linear-gradient(180deg, #FAFAFA 0%, #E3E5F2 100%);
   --bg-body: var(--color-gray-05);
+
+  --header-phones-bg: url('/media/img/thunderbird/eoy/115.0/header-phones-high-res.png');
+  --header-phones-set: image-set(
+      // avif
+      url('/media/img/thunderbird/eoy/115.0/header-phones.avif') type('image/avif') 1x,
+      url('/media/img/thunderbird/eoy/115.0/header-phones-high-res.avif') type('image/avif') 2x,
+
+      // webp
+      url('/media/img/thunderbird/eoy/115.0/header-phones.webp') type('image/webp') 1x,
+      url('/media/img/thunderbird/eoy/115.0/header-phones-high-res.webp') type('image/webp') 2x,
+
+      // png
+      url('/media/img/thunderbird/eoy/115.0/header-phones.png') type('image/png') 1x,
+      var(--header-phones-bg) type('image/png') 2x,
+  );
 
   --heading-font: 'Metropolis', sans-serif;
   --body-font: 'Inter', sans-serif;
@@ -23,6 +42,10 @@
 
   @media (prefers-color-scheme: dark) {
     --bg-clouds: url('/media/img/thunderbird/eoy/115.0/clouds-dark.png');
+    --bg-clouds-set: image-set(
+      url('/media/img/thunderbird/eoy/115.0/clouds-dark.webp') type('image/webp'),
+      var(--bg-clouds) type('image/png'),
+    );
     --bg-gradient: linear-gradient(180deg, #000000 0%, #3E3C67 100%);
     --bg-body: var(--color-gray-90);
 
@@ -139,6 +162,7 @@ body {
 
 .bg {
   background-image: var(--bg-clouds);
+  background-image: var(--bg-clouds-set);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 100px;
@@ -167,7 +191,8 @@ body {
     }
 
     font-family: var(--heading-font);
-    background-image: url('/media/img/thunderbird/eoy/115.0/header-phones@2x.png');
+    background-image: var(--header-phones-bg);
+    background-image: var(--header-phones-set);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: bottom -115px right;
