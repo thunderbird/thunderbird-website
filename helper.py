@@ -332,7 +332,7 @@ def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign
     :param source: UTM Source tag
     :param medium: UTM Medium tag
     :param campaign: UTM Campaign tag
-    :param show_donation_modal: Whether we want to append form=support that will automatically load the FRU modal
+    :param show_donation_modal: Whether we want to append form=#support that will automatically load the FRU modal
     :param download: Whether we have already downloaded Thunderbird (Download button specific.) Boolean or None.
     :param download_channel: What download channel to append to the url (Download button specific.) String or None.
     """
