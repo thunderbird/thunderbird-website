@@ -72,7 +72,7 @@ FA_LANGUAGES = {
 # will be used in urlresolvers to determine the
 # best-matching locale from the user's Accept-Language header.
 CANONICAL_LOCALES = {
-    'bn-BD': 'bn',  # https://github.com/thundernest/thunderbird.net-l10n/issues/1
+    'bn-BD': 'bn',  # https://github.com/thunderbird/thunderbird.net-l10n/issues/1
     'bn-IN': 'bn',  # These two locales were merged for the above issue.
     'en': 'en-US',
     'es': 'es-ES',
@@ -152,7 +152,7 @@ ALL_PLATFORMS = ('windows', 'linux', 'mac')
 URL_MAPPINGS = {
     'blog': 'https://blog.thunderbird.net/',
     'calendar': '/calendar',
-    'contribute': 'https://github.com/thundernest/thunderbird-website',
+    'contribute': 'https://github.com/thunderbird/thunderbird-website',
     'firefox.dnt': 'https://www.mozilla.org/firefox/dnt/',
     'firefox.enterprise': 'https://www.mozilla.org/firefox/enterprise/',
     'firefox.release-calendar': 'https://wiki.mozilla.org/Release_Management/Calendar',
@@ -193,7 +193,7 @@ URL_MAPPINGS = {
     'thunderbird.organizations': '/organizations',
     'thunderbird.releases.index': '/thunderbird/releases',
     'thunderbird.style': 'https://style.thunderbird.net',
-    'thunderbird.site.bug-report': 'https://github.com/thundernest/thunderbird-website/issues',
+    'thunderbird.site.bug-report': 'https://github.com/thunderbird/thunderbird-website/issues',
     'thunderbird.115.whatsnew': '/thunderbird/115.0/whatsnew',
 }
 
