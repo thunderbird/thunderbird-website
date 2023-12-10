@@ -11,7 +11,7 @@ On Ubuntu, you would need to use apt-get instead of yum, and similarly for diffe
 
 ```
 pip install -r requirements-dev.txt
-git clone https://github.com/thundernest/thunderbird-notes.git thunderbird_notes
+git clone https://github.com/thunderbird/thunderbird-notes.git thunderbird_notes
 git clone -b production https://github.com/mozilla-releng/product-details.git
 sudo yum install npm
 sudo npm install -g less
@@ -20,7 +20,7 @@ sudo npm install -g less
 If you need the localizations to display pages translated from English into other languages:
 
 ```
-git clone https://github.com/thundernest/thunderbird.net-l10n.git locale
+git clone https://github.com/thunderbird/thunderbird.net-l10n.git locale
 l10n_tools/compile.sh
 ```
 
@@ -58,7 +58,7 @@ desired locale manually in the browser, but the site should behave normally afte
 In general, you only need to manually build the website for testing and development purposes. Webhooks on each of the repositories trigger
 automatic rebuilds when:
 
-* https://github.com/thundernest/thunderbird-notes.git (Release Notes) are updated.
+* https://github.com/thunderbird/thunderbird-notes.git (Release Notes) are updated.
 * https://github.com/mozilla-releng/product-details.git (Product Details) are updated. Product details contains data on what versions of Thunderbird exist.
     * Currently stage doesn't update automatically from product-details changes.
 
@@ -69,8 +69,8 @@ update of the web server will occur.
 # Manual Site Updates
 
 Occasionally you need to update the site manually, for example to move changes made to this repo to stage and production, or because the automation
-failed, or any reason like that. You'll need to either login to the control node as described in the https://github.com/thundernest/thundernest-ansible documentation
-or check out and setup the thundernest-ansible scripts on your local machine. That is also covered in the documentation for [thundernest-ansible](https://github.com/thundernest/thundernest-ansible).
+failed, or any reason like that. You'll need to either login to the control node as described in the https://github.com/thunderbird/thundernest-ansible documentation
+or check out and setup the thundernest-ansible scripts on your local machine. That is also covered in the documentation for [thundernest-ansible](https://github.com/thunderbird/thundernest-ansible).
 
 Assuming you are logged into the control node or have thundernest-ansible set up:
 
@@ -88,10 +88,10 @@ source files/secrets.sh
 ansible-playbook --extra-vars="branch=prod" plays/website-build.yml
 ```
 
-The [website-build.yml](https://github.com/thundernest/thundernest-ansible/blob/master/plays/website-build.yml) ansible script performs complete builds of the website, including both the start
+The [website-build.yml](https://github.com/thunderbird/thundernest-ansible/blob/master/plays/website-build.yml) ansible script performs complete builds of the website, including both the start
 page and thunderbird.net itself.
 
-* Completed and pushed builds from automation or the [website-build.yml](https://github.com/thundernest/thundernest-ansible/blob/master/plays/website-build.yml) script are checked into https://github.com/thundernest/tb-website-builds -- the `master` branch represents the files currently on stage, and the `prod` branch represents the files currently on the live version of thunderbird.net.
+* Completed and pushed builds from automation or the [website-build.yml](https://github.com/thunderbird/thundernest-ansible/blob/master/plays/website-build.yml) script are checked into https://github.com/thunderbird/tb-website-builds -- the `master` branch represents the files currently on stage, and the `prod` branch represents the files currently on the live version of thunderbird.net.
 
 # Localization
 
