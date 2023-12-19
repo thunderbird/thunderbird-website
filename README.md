@@ -95,7 +95,13 @@ page and thunderbird.net itself.
 
 # Localization
 
+## For Contributors
+
 You can contribute to content translation of www.thunderbird.net pages using [Pontoon](https://pontoon.mozilla.org/projects/thunderbirdnet/).
+
+## For Developers
+
+Most paths under `/thunderbird` path aren't localized. There's an override setting named `ALWAYS_LOCALIZE` that allows specific paths to be forwarded to the users locale.
 
 # Donation FAQ
 
