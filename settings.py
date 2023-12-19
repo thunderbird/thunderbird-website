@@ -99,6 +99,7 @@ ALWAYS_LOCALIZE = [
     '/appeal',
     '/eoy',
     '/beta-appeal',
+    '/holidayeoy'
 ]
 
 CANONICAL_URL = 'https://www.thunderbird.net'
