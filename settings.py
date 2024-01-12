@@ -169,6 +169,7 @@ URL_MAPPINGS = {
     'mzla.blog-post': 'https://blog.thunderbird.net/2020/01/thunderbirds-new-home/',
     'privacy': 'https://www.mozilla.org/privacy/websites/',
     'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#data-tools',
+    'privacy.notices.donations': 'https://www.mozilla.org/privacy/websites/#donations',
     'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
     'support': 'https://support.mozilla.org/products/thunderbird/',
     'thunderbird.about': '/about',
