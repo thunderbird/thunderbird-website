@@ -6,6 +6,7 @@ import os
 import jinja2
 import json
 import markdown
+import markupsafe
 import re
 import settings
 import sys
@@ -178,9 +179,9 @@ def high_res_img(ctx, url, optional_attributes=None, scale='1.5x', alt_formats=(
         tags.append(markup)
         tags.append('</picture>')
 
-        return jinja2.Markup("\n".join(tags))
+        return markupsafe.Markup("\n".join(tags))
 
-    return jinja2.Markup(markup)
+    return markupsafe.Markup(markup)
 
 
 @jinja2.pass_context
@@ -227,7 +228,7 @@ def platform_img(ctx, url, optional_attributes=None):
               u'<noscript><img class="platform-img w-full h-auto win" src="{win_src}" {attrs}>'
               u'</noscript>').format(attrs=attrs, win_src=img_attrs[u'data-src-windows'])
 
-    return jinja2.Markup(markup)
+    return markupsafe.Markup(markup)
 
 
 @jinja2.pass_context
@@ -314,7 +315,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     template = env.get_template('includes/download-button.html')
 
     html = template.render(data)
-    return jinja2.Markup(html)
+    return markupsafe.Markup(html)
 
 
 def thunderbird_url(page, channel='None'):
@@ -387,7 +388,7 @@ def redirect_donate_url(ctx, location='thunderbird.download', make_full_url=Fals
 def safe_markdown(text):
     if not text:
         text = ''
-    return jinja2.Markup(markdown.markdown(text))
+    return markupsafe.Markup(markdown.markdown(text))
 
 
 def get_locale(lang):
@@ -437,7 +438,7 @@ def get_blog_data(ctx, entry):
 
     entry = data['entries'][entry]
 
-    parsed['summary'] = jinja2.Markup(entry['summary_detail']['value'])
+    parsed['summary'] = markupsafe.Markup(entry['summary_detail']['value'])
     parsed['title'] = entry['title']
     parsed['comments'] = entry.get('thr_total', '0')  # Comment count (atom extension)
     parsed['date'] = datetime.fromtimestamp(mktime(entry['published_parsed'])).strftime('%B %-m, %Y')

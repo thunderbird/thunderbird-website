@@ -1,7 +1,7 @@
 # coding=utf-8
 
 from product_details import thunderbird_desktop as product_details
-from jinja2 import Markup
+from markupsafe import Markup
 
 import gettext
 import os
