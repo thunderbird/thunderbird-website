@@ -2,1611 +2,1673 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Ano Novo
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220201Z
-UID:portugal/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sexta-feira Santa
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T220201Z
-UID:portugal/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Good Friday is a global Christian observanc
- e two days before Easter Sunday.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Páscoa
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T220201Z
-UID:portugal/easter-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Easter Sunday commemorates Jesus Christ’s
-  resurrection\, according to Christian belief.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia da Liberdade
-DTSTART;VALUE=DATE:20230425
-DTEND;VALUE=DATE:20230426
-DTSTAMP:20230623T220201Z
-UID:portugal/liberty-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia do Trabalhador
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220201Z
-UID:portugal/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Corpo de Deus
-DTSTART;VALUE=DATE:20230608
-DTEND;VALUE=DATE:20230609
-DTSTAMP:20230623T220201Z
-UID:portugal/corpus-christi-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Corpus Christi is a Christian feast in hono
- r of the Holy Eucharist.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia de Portugal
-DTSTART;VALUE=DATE:20230610
-DTEND;VALUE=DATE:20230611
-DTSTAMP:20230623T220201Z
-UID:portugal/portugal-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Assunção de Nossa Senhora
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230623T220201Z
-UID:portugal/assumption-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Implantação da República
-DTSTART;VALUE=DATE:20231005
-DTEND;VALUE=DATE:20231006
-DTSTAMP:20230623T220201Z
-UID:portugal/republic-implantation-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia de Todos-os-Santos
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-DTSTAMP:20230623T220201Z
-UID:portugal/all-saints-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Restauração da Independência
-DTSTART;VALUE=DATE:20231201
-DTEND;VALUE=DATE:20231202
-DTSTAMP:20230623T220201Z
-UID:portugal/restoration-of-independence-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Imaculada Conceição
-DTSTART;VALUE=DATE:20231208
-DTEND;VALUE=DATE:20231209
-DTSTAMP:20230623T220201Z
-UID:portugal/immaculate-conception-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - The Feast of the Immaculate Conception is a
-  Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Natal
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220201Z
-UID:portugal/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia dos Namorados
-DTSTART;VALUE=DATE:20230214
-DTEND;VALUE=DATE:20230215
-DTSTAMP:20230623T220201Z
-UID:portugal/valentine-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia dos Pais
-DTSTART;VALUE=DATE:20230319
-DTEND;VALUE=DATE:20230320
-DTSTAMP:20230623T220201Z
-UID:portugal/father-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinócio de Março
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T220201Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Horário de verão começou
-DTSTART;VALUE=DATE:20230326
-DTEND;VALUE=DATE:20230327
-DTSTAMP:20230623T220201Z
-UID:None-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia das Mães
-DTSTART;VALUE=DATE:20230507
-DTEND;VALUE=DATE:20230508
-DTSTAMP:20230623T220201Z
-UID:portugal/mother-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solstício de junho
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220201Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinócio de setembro
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220201Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Horário de verão terminará
-DTSTART;VALUE=DATE:20231029
-DTEND;VALUE=DATE:20231030
-DTSTAMP:20230623T220201Z
-UID:None-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solstício de dezembro
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T220201Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Véspera de Natal
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T220201Z
-UID:portugal/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Véspera de Ano Novo
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220201Z
-UID:portugal/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Entrudo
-DTSTART;VALUE=DATE:20230221
-DTEND;VALUE=DATE:20230222
-DTSTAMP:20230623T220201Z
-UID:portugal/carnival-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Optional Holiday - Shrove Tuesday is a religious holiday befor
- e the fasting period of Lent. It is celebrated by eating pancakes and hold
- ing Carnival parades.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia de São José (Santarém)
-DTSTART;VALUE=DATE:20230319
-DTEND;VALUE=DATE:20230320
-DTSTAMP:20230623T220201Z
-UID:portugal/st-joseph-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nossa Senhora de Mércoles (Castelo Branco)
-DTSTART;VALUE=DATE:20230425
-DTEND;VALUE=DATE:20230426
-DTSTAMP:20230623T220201Z
-UID:portugal/our-lady-of-mercoles-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia de Santa Joana Princesa (Aveiro)
-DTSTART;VALUE=DATE:20230512
-DTEND;VALUE=DATE:20230513
-DTSTAMP:20230623T220201Z
-UID:portugal/st-joana-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Quinta-feira da Ascensão (Beja)
-DTSTART;VALUE=DATE:20230518
-DTEND;VALUE=DATE:20230519
-DTSTAMP:20230623T220201Z
-UID:portugal/ascension-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday - Ascension Day is the 40th day of Easter. It
-  is a religious holiday that commemorates the ascension of Jesus Christ in
- to heaven.
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Elevação a cidade e criação da diocese (Leiria)
-DTSTART;VALUE=DATE:20230522
-DTEND;VALUE=DATE:20230523
-DTSTAMP:20230623T220201Z
-UID:portugal/leiria-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Elevação a cidade e a diocese (Portalegre)
-DTSTART;VALUE=DATE:20230523
-DTEND;VALUE=DATE:20230524
-DTSTAMP:20230623T220201Z
-UID:portugal/portalegre-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia dos Açores (Açores)
-DTSTART;VALUE=DATE:20230529
-DTEND;VALUE=DATE:20230530
-DTSTAMP:20230623T220201Z
-UID:portugal/azores-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia de Santo António (Lisboa\, Vila Real)
-DTSTART;VALUE=DATE:20230613
-DTEND;VALUE=DATE:20230614
-DTSTAMP:20230623T220201Z
-UID:portugal/st-anthony-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia de São João (Porto\, Braga)
-DTSTART;VALUE=DATE:20230624
-DTEND;VALUE=DATE:20230625
-DTSTAMP:20230623T220201Z
-UID:portugal/st-john-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia de São Pedro (Évora)
-DTSTART;VALUE=DATE:20230629
-DTEND;VALUE=DATE:20230630
-DTSTAMP:20230623T220201Z
-UID:portugal/st-peter-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Madeira (Madeira)
-DTSTART;VALUE=DATE:20230701
-DTEND;VALUE=DATE:20230702
-DTSTAMP:20230623T220201Z
-UID:portugal/madeira-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Rainha Santa Isabel de Portugal (Coimbra)
-DTSTART;VALUE=DATE:20230704
-DTEND;VALUE=DATE:20230705
-DTSTAMP:20230623T220201Z
-UID:portugal/st-elizabeth-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nossa Senhora da Agonia (Viana do Castelo)
-DTSTART;VALUE=DATE:20230820
-DTEND;VALUE=DATE:20230821
-DTSTAMP:20230623T220201Z
-UID:portugal/our-lady-of-sorrows-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nossa Senhora das Graças (Bragança)
-DTSTART;VALUE=DATE:20230822
-DTEND;VALUE=DATE:20230823
-DTSTAMP:20230623T220201Z
-UID:portugal/our-lady-of-graces-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Elevação a cidade (Faro)
-DTSTART;VALUE=DATE:20230907
-DTEND;VALUE=DATE:20230908
-DTSTAMP:20230623T220201Z
-UID:portugal/faro-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nascimento de Bocage (Setúbal)
-DTSTART;VALUE=DATE:20230915
-DTEND;VALUE=DATE:20230916
-DTSTAMP:20230623T220201Z
-UID:portugal/birth-of-bocage-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:São Mateus (Viseu)
-DTSTART;VALUE=DATE:20230921
-DTEND;VALUE=DATE:20230922
-DTSTAMP:20230623T220201Z
-UID:portugal/st-matthew-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Foral de D. Sancho I (Guarda)
-DTSTART;VALUE=DATE:20231127
-DTEND;VALUE=DATE:20231128
-DTSTAMP:20230623T220201Z
-UID:portugal/foral-of-sancho-i-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220201Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ano Novo
+SUMMARY:Dia de Ano Novo 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Dia de Ano Novo é o primeiro dia do ano
+ \, ou 1º de janeiro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sexta-feira Santa
+SUMMARY:Sexta-feira Santa 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Good Friday is a global Christian observanc
- e two days before Easter Sunday.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Sexta-feira Santa é uma celebração cris
+ tã global dois dias antes do Domingo de Páscoa.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Páscoa
+SUMMARY:Domingo de Páscoa 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/easter-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Sunday commemorates Jesus Christ’s
-  resurrection\, according to Christian belief.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Domingo de Páscoa comemora a ressurrei
+ ção de Jesus Cristo\, de acordo com a crença cristã.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia da Liberdade
+SUMMARY:Dia da Liberdade 
 DTSTART;VALUE=DATE:20240425
 DTEND;VALUE=DATE:20240426
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/liberty-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Dia da Liberdade é um feriado nacional 
+ em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia do Trabalhador
+SUMMARY:Dia do Trabalho/Dia de Maio 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Dia do Trabalho\, o Dia Internacional do
+ s Trabalhadores e o Dia de Maio são um dia de folga para trabalhadores em
+  muitos países ao redor do mundo.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpo de Deus
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20240530
 DTEND;VALUE=DATE:20240531
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/corpus-christi-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Corpus Christi is a Christian feast in hono
- r of the Holy Eucharist.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Corpus Christi é uma festa cristã em hom
+ enagem à Sagrada Eucaristia.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de Portugal
+SUMMARY:Dia de Portugal 
 DTSTART;VALUE=DATE:20240610
 DTEND;VALUE=DATE:20240611
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/portugal-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Dia de Portugal é um feriado nacional e
+ m Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Assunção de Nossa Senhora
+SUMMARY:Assunção de Maria 
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/assumption-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  A festa cristã da Assunção de Maria é 
+ em ou por volta de 15 de agosto na maioria dos países. Alguns celebram o 
+ Dia da Assunção em outras épocas do ano.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Implantação da República
+SUMMARY:Dia da República 
 DTSTART;VALUE=DATE:20241005
 DTEND;VALUE=DATE:20241006
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/republic-implantation-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Dia da República é um feriado nacional
+  em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de Todos-os-Santos
+SUMMARY:Dia de Todos os Santos 
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/all-saints-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Muitas igrejas honram todos os seus santos
+  no Dia de Todos os Santos\, também conhecido como Dia de Todos os Santos
+ .
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Restauração da Independência
+SUMMARY:Restauração da Independência 
 DTSTART;VALUE=DATE:20241201
 DTEND;VALUE=DATE:20241202
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/restoration-of-independence-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Restauração da Independência é um feri
+ ado nacional em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Imaculada Conceição
+SUMMARY:Festa da Imaculada Conceição 
 DTSTART;VALUE=DATE:20241208
 DTEND;VALUE=DATE:20241209
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/immaculate-conception-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Feast of the Immaculate Conception is a
-  Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  A Festa da Imaculada Conceição é uma ce
+ lebração cristã em 8 de dezembro de cada ano.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Natal
+SUMMARY:Dia de Natal 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Dia de Natal é uma das maiores celebra
+ ções cristãs e cai em 25 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Namorados
+SUMMARY:Dia dos Namorados 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/valentine-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Observance -  14 de fevereiro é Dia dos Namorados ou Festa de
+  São Valentim. O dia do amor deve suas origens às antigas tradições cr
+ istãs romanas e europeias.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Pais
+SUMMARY:O Dia dos Pais 
 DTSTART;VALUE=DATE:20240319
 DTEND;VALUE=DATE:20240320
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/father-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Observance -  O Dia dos Pais celebra a paternidade e a paterni
+ dade masculina em diferentes datas em todo o mundo.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinócio de Março
+SUMMARY:Equinócio de março 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Season -  Equinócio de março em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Horário de verão começou
+SUMMARY:O horário de verão começa 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:None-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Clock change/Daylight Saving Time -  O horário de verão come
+ ça em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia das Mães
+SUMMARY:O Dia das Mães 
 DTSTART;VALUE=DATE:20240505
 DTEND;VALUE=DATE:20240506
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/mother-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Observance -  O Dia das Mães celebra as conquistas e os esfor
+ ços das mães e figuras maternas.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstício de junho
+SUMMARY:Solstício de junho 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Season -  Solstício de junho em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinócio de setembro
+SUMMARY:Equinócio de setembro 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Season -  Equinócio de setembro em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Horário de verão terminará
+SUMMARY:Fim do horário de verão 
 DTSTART;VALUE=DATE:20241027
 DTEND;VALUE=DATE:20241028
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:None-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Clock change/Daylight Saving Time -  Fim do horário de verão
+  em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstício de dezembro
+SUMMARY:Solstício de dezembro 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Season -  Solstício de dezembro em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Véspera de Natal
+SUMMARY:Véspera de Natal 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Observance -  A véspera de Natal é um dia antes do Natal e c
+ ai em 24 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Véspera de Ano Novo
+SUMMARY:Véspera de Ano Novo 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Observance -  A véspera de Ano Novo é o último dia do ano\,
+  31 de dezembro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Entrudo
+SUMMARY:Carnaval/Terça-feira de Carnaval/Dia da Panqueca 
 DTSTART;VALUE=DATE:20240213
 DTEND;VALUE=DATE:20240214
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/carnival-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Optional Holiday - Shrove Tuesday is a religious holiday befor
- e the fasting period of Lent. It is celebrated by eating pancakes and hold
- ing Carnival parades.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Optional Holiday -  A terça-feira de carnaval é um feriado r
+ eligioso antes do período de jejum da Quaresma. É comemorado comendo pan
+ quecas e realizando desfiles de carnaval.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de São José (Santarém)
+SUMMARY:Dia de São José  (Santarém)
 DTSTART;VALUE=DATE:20240319
 DTEND;VALUE=DATE:20240320
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/st-joseph-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Dia de São José é um feriado distrital 
+ em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nossa Senhora de Mércoles (Castelo Branco)
+SUMMARY:Nossa Senhora de Mércoles  (Castelo Branco)
 DTSTART;VALUE=DATE:20240416
 DTEND;VALUE=DATE:20240417
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/our-lady-of-mercoles-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Nossa Senhora de Mércoles é um feriado d
+ istrital em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Quinta-feira da Ascensão (Beja)
+SUMMARY:Dia da Ascensão  (Beja)
 DTSTART;VALUE=DATE:20240509
 DTEND;VALUE=DATE:20240510
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/ascension-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday - Ascension Day is the 40th day of Easter. It
-  is a religious holiday that commemorates the ascension of Jesus Christ in
- to heaven.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  O Dia da Ascensão é o 40º dia da Pásco
+ a. É um feriado religioso que comemora a ascensão de Jesus Cristo ao cé
+ u.
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de Santa Joana Princesa (Aveiro)
+SUMMARY:Dia de Santa Joana  (Aveiro)
 DTSTART;VALUE=DATE:20240512
 DTEND;VALUE=DATE:20240513
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/st-joana-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Dia de Santa Joana é um feriado distrital
+  em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Açores (Açores)
+SUMMARY:Dia dos Açores  (Azores)
 DTSTART;VALUE=DATE:20240520
 DTEND;VALUE=DATE:20240521
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/azores-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Regional Holiday -  O Dia dos Açores é um feriado regional e
+ m Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Elevação a cidade e criação da diocese (Leiria)
+SUMMARY:Dia de Leiria  (Leiria)
 DTSTART;VALUE=DATE:20240522
 DTEND;VALUE=DATE:20240523
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/leiria-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Dia de Leiria é um feriado distrital em P
+ ortugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Elevação a cidade e a diocese (Portalegre)
+SUMMARY:Dia de Portalegre  (Portalegre)
 DTSTART;VALUE=DATE:20240523
 DTEND;VALUE=DATE:20240524
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/portalegre-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  O Dia de Portalegre é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de Santo António (Lisboa\, Vila Real)
+SUMMARY:Dia de Santo António  (Lisbon\, Vila Real)
 DTSTART;VALUE=DATE:20240613
 DTEND;VALUE=DATE:20240614
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/st-anthony-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Dia de Santo António é um feriado distri
+ tal em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de São João (Porto\, Braga)
+SUMMARY:Dia de São João  (Porto\, Braga)
 DTSTART;VALUE=DATE:20240624
 DTEND;VALUE=DATE:20240625
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/st-john-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Dia de São João é um feriado distrital 
+ em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de São Pedro (Évora)
+SUMMARY:Dia de São Pedro  (Évora)
 DTSTART;VALUE=DATE:20240629
 DTEND;VALUE=DATE:20240630
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/st-peter-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Dia de São Pedro é um feriado distrital 
+ em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Madeira (Madeira)
+SUMMARY:Dia da Madeira  (Madeira)
 DTSTART;VALUE=DATE:20240701
 DTEND;VALUE=DATE:20240702
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/madeira-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:Regional Holiday -  O Dia da Madeira é um feriado regional em
+  Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Rainha Santa Isabel de Portugal (Coimbra)
+SUMMARY:Dia de Santa Isabel  (Coimbra)
 DTSTART;VALUE=DATE:20240704
 DTEND;VALUE=DATE:20240705
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/st-elizabeth-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Dia de Santa Isabel é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nossa Senhora da Agonia (Viana do Castelo)
+SUMMARY:Nossa Senhora das Dores  (Viana do Castelo)
 DTSTART;VALUE=DATE:20240820
 DTEND;VALUE=DATE:20240821
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/our-lady-of-sorrows-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Nossa Senhora das Dores é um feriado dist
+ rital em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nossa Senhora das Graças (Bragança)
+SUMMARY:Nossa Senhora das Graças  (Bragança)
 DTSTART;VALUE=DATE:20240822
 DTEND;VALUE=DATE:20240823
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/our-lady-of-graces-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Nossa Senhora das Graças é um feriado di
+ strital em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Elevação a cidade (Faro)
+SUMMARY:Faro Day  (Faro)
 DTSTART;VALUE=DATE:20240907
 DTEND;VALUE=DATE:20240908
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/faro-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Faro Day é um feriado distrital em Portug
+ al
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nascimento de Bocage (Setúbal)
+SUMMARY:Nascimento de Bocage  (Setúbal)
 DTSTART;VALUE=DATE:20240915
 DTEND;VALUE=DATE:20240916
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/birth-of-bocage-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Nascimento de Bocage é um feriado distrit
+ al em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:São Mateus (Viseu)
+SUMMARY:Dia de São Mateus  (Viseu)
 DTSTART;VALUE=DATE:20240921
 DTEND;VALUE=DATE:20240922
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/st-matthew-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Dia de São Mateus é um feriado distrital
+  em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Foral de D. Sancho I (Guarda)
+SUMMARY:Foral do Sancho I  (Guarda)
 DTSTART;VALUE=DATE:20241127
 DTEND;VALUE=DATE:20241128
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094845Z
 UID:portugal/foral-of-sancho-i-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:District Holiday -  Foral do Sancho I é um feriado distrital 
+ em Portugal
+LAST-MODIFIED:20240119T094845Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ano Novo
+SUMMARY:Dia de Ano Novo 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Dia de Ano Novo é o primeiro dia do ano\,
+  ou 1º de janeiro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sexta-feira Santa
+SUMMARY:Sexta-feira Santa 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Good Friday is a global Christian observanc
- e two days before Easter Sunday.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Sexta-feira Santa é uma observância cris
+ tã global dois dias antes do Domingo de Páscoa.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Páscoa
+SUMMARY:Domingo de Páscoa 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/easter-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Sunday commemorates Jesus Christ’s
-  resurrection\, according to Christian belief.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Domingo de Páscoa comemora a ressurrei
+ ção de Jesus Cristo\, de acordo com a crença cristã.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia da Liberdade
+SUMMARY:Dia da Liberdade 
 DTSTART;VALUE=DATE:20250425
 DTEND;VALUE=DATE:20250426
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/liberty-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Dia da Liberdade é um feriado nacional 
+ em Portugal
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia do Trabalhador
+SUMMARY:Dia do Trabalho/Dia de Maio 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Dia do Trabalho\, Dia Internacional dos Tr
+ abalhadores e Dia de Maio\, é um dia de folga para trabalhadores em muito
+ s países ao redor do mundo.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de Portugal
+SUMMARY:Dia de Portugal 
 DTSTART;VALUE=DATE:20250610
 DTEND;VALUE=DATE:20250611
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/portugal-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Dia de Portugal é um feriado nacional e
+ m Portugal
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpo de Deus
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20250619
 DTEND;VALUE=DATE:20250620
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/corpus-christi-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Corpus Christi is a Christian feast in hono
- r of the Holy Eucharist.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Corpus Christi é uma festa cristã em hom
+ enagem à Sagrada Eucaristia.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Assunção de Nossa Senhora
+SUMMARY:Assunção de Maria 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/assumption-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  A festa cristã da Assunção de Maria é 
+ em ou por volta de 15 de agosto na maioria dos países. Alguns celebram o 
+ Dia da Assunção em outras épocas do ano.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Implantação da República
+SUMMARY:Dia da República 
 DTSTART;VALUE=DATE:20251005
 DTEND;VALUE=DATE:20251006
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/republic-implantation-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Dia da República é um feriado nacional e
+ m Portugal
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de Todos-os-Santos
+SUMMARY:Dia de Todos os Santos 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/all-saints-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Muitas igrejas honram todos os seus santos
+  no Dia de Todos os Santos\, também conhecido como Dia de Todos os Santos
+ .
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Restauração da Independência
+SUMMARY:Restauração da Independência 
 DTSTART;VALUE=DATE:20251201
 DTEND;VALUE=DATE:20251202
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/restoration-of-independence-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  Restauração da Independência é um feri
+ ado nacional em Portugal
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Imaculada Conceição
+SUMMARY:Festa da Imaculada Conceição 
 DTSTART;VALUE=DATE:20251208
 DTEND;VALUE=DATE:20251209
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/immaculate-conception-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Feast of the Immaculate Conception is a
-  Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  A Festa da Imaculada Conceição é uma ob
+ servância cristã em 8 de dezembro de cada ano.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Natal
+SUMMARY:Dia de Natal 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220202Z
+DTSTAMP:20240119T094846Z
 UID:portugal/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220202Z
+DESCRIPTION:National holiday -  O Dia de Natal é uma das maiores celebra
+ ções cristãs e cai em 25 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Namorados
+SUMMARY:Dia dos Namorados 
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:portugal/valentine-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Observance -  14 de fevereiro é Dia dos Namorados ou Festa de
+  São Valentim. O dia do amor deve suas origens às antigas tradições cr
+ istãs romanas e europeias.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Pais
+SUMMARY:Dia dos Pais 
 DTSTART;VALUE=DATE:20250319
 DTEND;VALUE=DATE:20250320
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:portugal/father-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Observance -  O Dia dos Pais celebra a paternidade e a paterni
+ dade masculina em diferentes datas em todo o mundo.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinócio de Março
+SUMMARY:Equinócio de março 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Season -  Equinócio de março em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Horário de verão começou
+SUMMARY:O horário de verão começa 
 DTSTART;VALUE=DATE:20250330
 DTEND;VALUE=DATE:20250331
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:None-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Clock change/Daylight Saving Time -  O horário de verão come
+ ça em Portugal
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia das Mães
+SUMMARY:Dia das Mães 
 DTSTART;VALUE=DATE:20250504
 DTEND;VALUE=DATE:20250505
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:portugal/mother-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Observance -  O Dia das Mães celebra as conquistas e os esfor
+ ços das mães e das figuras maternas.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstício de junho
+SUMMARY:Solstício de junho 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Season -  Solstício de junho em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinócio de setembro
+SUMMARY:Equinócio de setembro 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Season -  Equinócio de setembro em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Horário de verão terminará
+SUMMARY:Fim do horário de verão 
 DTSTART;VALUE=DATE:20251026
 DTEND;VALUE=DATE:20251027
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:None-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Clock change/Daylight Saving Time -  O horário de verão term
+ ina em Portugal
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstício de dezembro
+SUMMARY:Solstício de dezembro 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Season -  Solstício de dezembro em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Véspera de Natal
+SUMMARY:Véspera de Natal 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:portugal/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Observance -  A véspera de Natal é um dia antes do dia de Na
+ tal e cai em 24 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Véspera de Ano Novo
+SUMMARY:Véspera de Ano Novo 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220203Z
+DTSTAMP:20240119T094846Z
 UID:portugal/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220203Z
+DESCRIPTION:Observance -  A véspera de Ano Novo é o último dia do ano\,
+  31 de dezembro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094846Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Entrudo
+SUMMARY:Carnaval/Terça-feira Gorda/Dia da Panqueca 
 DTSTART;VALUE=DATE:20250304
 DTEND;VALUE=DATE:20250305
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/carnival-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Optional Holiday - Shrove Tuesday is a religious holiday befor
- e the fasting period of Lent. It is celebrated by eating pancakes and hold
- ing Carnival parades.
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:Optional Holiday -  A terça-feira gorda é um feriado religio
+ so antes do período de jejum da Quaresma. É comemorado comendo panquecas
+  e realizando desfiles de carnaval.
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de São José (Santarém)
+SUMMARY:Dia de São José  (Santarém)
 DTSTART;VALUE=DATE:20250319
 DTEND;VALUE=DATE:20250320
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/st-joseph-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  O Dia de São José é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nossa Senhora de Mércoles (Castelo Branco)
+SUMMARY:Nossa Senhora de Mércoles  (Castelo Branco)
 DTSTART;VALUE=DATE:20250506
 DTEND;VALUE=DATE:20250507
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/our-lady-of-mercoles-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  Nossa Senhora de Mércoles é um feriado d
+ istrital em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de Santa Joana Princesa (Aveiro)
+SUMMARY:Dia de Santa Joana  (Aveiro)
 DTSTART;VALUE=DATE:20250512
 DTEND;VALUE=DATE:20250513
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/st-joana-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  Dia de Santa Joana é um feriado distrital
+  em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Elevação a cidade e criação da diocese (Leiria)
+SUMMARY:Dia de Leiria  (Leiria)
 DTSTART;VALUE=DATE:20250522
 DTEND;VALUE=DATE:20250523
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/leiria-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  O Dia de Leiria é um feriado distrital em
+  Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Elevação a cidade e a diocese (Portalegre)
+SUMMARY:Dia de Portalegre  (Portalegre)
 DTSTART;VALUE=DATE:20250523
 DTEND;VALUE=DATE:20250524
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/portalegre-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  O Dia de Portalegre é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Quinta-feira da Ascensão (Beja)
+SUMMARY:Dia da Ascensão  (Beja)
 DTSTART;VALUE=DATE:20250529
 DTEND;VALUE=DATE:20250530
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/ascension-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday - Ascension Day is the 40th day of Easter. It
-  is a religious holiday that commemorates the ascension of Jesus Christ in
- to heaven.
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  O Dia da Ascensão é o 40º dia da Pásco
+ a. É um feriado religioso que comemora a ascensão de Jesus Cristo ao cé
+ u.
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Açores (Açores)
+SUMMARY:Dia dos Açores  (Azores)
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/azores-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:Regional Holiday -  O Dia dos Açores é um feriado regional e
+ m Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de Santo António (Lisboa\, Vila Real)
+SUMMARY:Dia de Santo António  (Lisbon\, Vila Real)
 DTSTART;VALUE=DATE:20250613
 DTEND;VALUE=DATE:20250614
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/st-anthony-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  O Dia de Santo António é um feriado dist
+ rital em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de São João (Porto\, Braga)
+SUMMARY:Dia de São João  (Porto\, Braga)
 DTSTART;VALUE=DATE:20250624
 DTEND;VALUE=DATE:20250625
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/st-john-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  O Dia de São João é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia de São Pedro (Évora)
+SUMMARY:Dia de São Pedro  (Évora)
 DTSTART;VALUE=DATE:20250629
 DTEND;VALUE=DATE:20250630
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/st-peter-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  O Dia de São Pedro é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Madeira (Madeira)
+SUMMARY:Dia da Madeira  (Madeira)
 DTSTART;VALUE=DATE:20250701
 DTEND;VALUE=DATE:20250702
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/madeira-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:Regional Holiday -  O Dia da Madeira é um feriado regional em
+  Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Rainha Santa Isabel de Portugal (Coimbra)
+SUMMARY:Dia de Santa Isabel  (Coimbra)
 DTSTART;VALUE=DATE:20250704
 DTEND;VALUE=DATE:20250705
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/st-elizabeth-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  O Dia de Santa Isabel é um feriado distri
+ tal em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nossa Senhora da Agonia (Viana do Castelo)
+SUMMARY:Nossa Senhora das Dores  (Viana do Castelo)
 DTSTART;VALUE=DATE:20250820
 DTEND;VALUE=DATE:20250821
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/our-lady-of-sorrows-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  Nossa Senhora das Dores é um feriado dist
+ rital em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nossa Senhora das Graças (Bragança)
+SUMMARY:Nossa Senhora das Graças  (Bragança)
 DTSTART;VALUE=DATE:20250822
 DTEND;VALUE=DATE:20250823
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/our-lady-of-graces-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  Nossa Senhora das Graças é um feriado di
+ strital em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Elevação a cidade (Faro)
+SUMMARY:Dia de Faro  (Faro)
 DTSTART;VALUE=DATE:20250907
 DTEND;VALUE=DATE:20250908
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/faro-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  Dia de Faro é um feriado distrital em Por
+ tugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nascimento de Bocage (Setúbal)
+SUMMARY:Nascimento de Bocage  (Setúbal)
 DTSTART;VALUE=DATE:20250915
 DTEND;VALUE=DATE:20250916
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/birth-of-bocage-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  Nascimento de Bocage é um feriado distrit
+ al em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:São Mateus (Viseu)
+SUMMARY:Dia de São Mateus  (Viseu)
 DTSTART;VALUE=DATE:20250921
 DTEND;VALUE=DATE:20250922
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/st-matthew-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  O Dia de São Mateus é um feriado distrit
+ al em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Foral de D. Sancho I (Guarda)
+SUMMARY:Foral de Sancho I  (Guarda)
 DTSTART;VALUE=DATE:20251127
 DTEND;VALUE=DATE:20251128
-DTSTAMP:20230623T220204Z
+DTSTAMP:20240119T094847Z
 UID:portugal/foral-of-sancho-i-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:District Holiday
-LAST-MODIFIED:20230623T220204Z
+DESCRIPTION:District Holiday -  Foral de Sancho I é um feriado distrital 
+ em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Ano Novo 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094847Z
+UID:portugal/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Dia de Ano Novo é o primeiro dia do ano\,
+  ou 1º de janeiro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sexta-feira Santa 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094847Z
+UID:portugal/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Sexta-feira Santa é uma observância cris
+ tã global dois dias antes do Domingo de Páscoa.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Domingo de Páscoa 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094847Z
+UID:portugal/easter-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  O Domingo de Páscoa comemora a ressurrei
+ ção de Jesus Cristo\, de acordo com a crença cristã.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia da Liberdade 
+DTSTART;VALUE=DATE:20260425
+DTEND;VALUE=DATE:20260426
+DTSTAMP:20240119T094847Z
+UID:portugal/liberty-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  O Dia da Liberdade é um feriado nacional 
+ em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia do Trabalho/Dia de Maio 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094847Z
+UID:portugal/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Dia do Trabalho\, Dia Internacional dos Tr
+ abalhadores e Dia de Maio\, é um dia de folga para trabalhadores em muito
+ s países ao redor do mundo.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corpus Christi 
+DTSTART;VALUE=DATE:20260604
+DTEND;VALUE=DATE:20260605
+DTSTAMP:20240119T094847Z
+UID:portugal/corpus-christi-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Corpus Christi é uma festa cristã em hom
+ enagem à Sagrada Eucaristia.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Portugal 
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20260611
+DTSTAMP:20240119T094847Z
+UID:portugal/portugal-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  O Dia de Portugal é um feriado nacional e
+ m Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Assunção de Maria 
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20240119T094847Z
+UID:portugal/assumption-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  A festa cristã da Assunção de Maria é 
+ em ou por volta de 15 de agosto na maioria dos países. Alguns celebram o 
+ Dia da Assunção em outras épocas do ano.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia da República 
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+DTSTAMP:20240119T094847Z
+UID:portugal/republic-implantation-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Dia da República é um feriado nacional e
+ m Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Todos os Santos 
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DTSTAMP:20240119T094847Z
+UID:portugal/all-saints-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Muitas igrejas honram todos os seus santos
+  no Dia de Todos os Santos\, também conhecido como Dia de Todos os Santos
+ .
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Restauração da Independência 
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+DTSTAMP:20240119T094847Z
+UID:portugal/restoration-of-independence-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Restauração da Independência é um feri
+ ado nacional em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festa da Imaculada Conceição 
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+DTSTAMP:20240119T094847Z
+UID:portugal/immaculate-conception-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  A Festa da Imaculada Conceição é uma ob
+ servância cristã em 8 de dezembro de cada ano.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Natal 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094847Z
+UID:portugal/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  O Dia de Natal é uma das maiores celebra
+ ções cristãs e cai em 25 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia dos Namorados 
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20240119T094847Z
+UID:portugal/valentine-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  14 de fevereiro é Dia dos Namorados ou Festa de
+  São Valentim. O dia do amor deve suas origens às antigas tradições cr
+ istãs romanas e europeias.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia dos Pais 
+DTSTART;VALUE=DATE:20260319
+DTEND;VALUE=DATE:20260320
+DTSTAMP:20240119T094847Z
+UID:portugal/father-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  O Dia dos Pais celebra a paternidade e a paterni
+ dade masculina em diferentes datas em todo o mundo.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinócio de março 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094847Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinócio de março em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:O horário de verão começa 
+DTSTART;VALUE=DATE:20260329
+DTEND;VALUE=DATE:20260330
+DTSTAMP:20240119T094847Z
+UID:None-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Clock change/Daylight Saving Time -  O horário de verão come
+ ça em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia das Mães 
+DTSTART;VALUE=DATE:20260503
+DTEND;VALUE=DATE:20260504
+DTSTAMP:20240119T094847Z
+UID:portugal/mother-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  O Dia das Mães celebra as conquistas e os esfor
+ ços das mães e das figuras maternas.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solstício de junho 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094847Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solstício de junho em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinócio de setembro 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094847Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinócio de setembro em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fim do horário de verão 
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+DTSTAMP:20240119T094847Z
+UID:None-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Clock change/Daylight Saving Time -  O horário de verão term
+ ina em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solstício de dezembro 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094847Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solstício de dezembro em Portugal (Lisboa)
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Véspera de Natal 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T094847Z
+UID:portugal/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  A véspera de Natal é um dia antes do dia de Na
+ tal e cai em 24 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Véspera de Ano Novo 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094847Z
+UID:portugal/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  A véspera de Ano Novo é o último dia do ano\,
+  31 de dezembro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Carnaval/Terça-feira Gorda/Dia da Panqueca 
+DTSTART;VALUE=DATE:20260217
+DTEND;VALUE=DATE:20260218
+DTSTAMP:20240119T094847Z
+UID:portugal/carnival-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Optional Holiday -  A terça-feira gorda é um feriado religio
+ so antes do período de jejum da Quaresma. É comemorado comendo panquecas
+  e realizando desfiles de carnaval.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de São José  (Santarém)
+DTSTART;VALUE=DATE:20260319
+DTEND;VALUE=DATE:20260320
+DTSTAMP:20240119T094847Z
+UID:portugal/st-joseph-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  O Dia de São José é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Santa Joana  (Aveiro)
+DTSTART;VALUE=DATE:20260512
+DTEND;VALUE=DATE:20260513
+DTSTAMP:20240119T094847Z
+UID:portugal/st-joana-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  Dia de Santa Joana é um feriado distrital
+  em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia da Ascensão  (Beja)
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260515
+DTSTAMP:20240119T094847Z
+UID:portugal/ascension-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  O Dia da Ascensão é o 40º dia da Pásco
+ a. É um feriado religioso que comemora a ascensão de Jesus Cristo ao cé
+ u.
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Leiria  (Leiria)
+DTSTART;VALUE=DATE:20260522
+DTEND;VALUE=DATE:20260523
+DTSTAMP:20240119T094847Z
+UID:portugal/leiria-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  O Dia de Leiria é um feriado distrital em
+  Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Portalegre  (Portalegre)
+DTSTART;VALUE=DATE:20260523
+DTEND;VALUE=DATE:20260524
+DTSTAMP:20240119T094847Z
+UID:portugal/portalegre-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  O Dia de Portalegre é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia dos Açores  (Azores)
+DTSTART;VALUE=DATE:20260525
+DTEND;VALUE=DATE:20260526
+DTSTAMP:20240119T094847Z
+UID:portugal/azores-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional Holiday -  O Dia dos Açores é um feriado regional e
+ m Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Santo António  (Lisbon\, Vila Real)
+DTSTART;VALUE=DATE:20260613
+DTEND;VALUE=DATE:20260614
+DTSTAMP:20240119T094847Z
+UID:portugal/st-anthony-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  O Dia de Santo António é um feriado dist
+ rital em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de São João  (Porto\, Braga)
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+DTSTAMP:20240119T094847Z
+UID:portugal/st-john-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  O Dia de São João é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de São Pedro  (Évora)
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+DTSTAMP:20240119T094847Z
+UID:portugal/st-peter-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  O Dia de São Pedro é um feriado distrita
+ l em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia da Madeira  (Madeira)
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+DTSTAMP:20240119T094847Z
+UID:portugal/madeira-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional Holiday -  O Dia da Madeira é um feriado regional em
+  Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Santa Isabel  (Coimbra)
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260705
+DTSTAMP:20240119T094847Z
+UID:portugal/st-elizabeth-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  O Dia de Santa Isabel é um feriado distri
+ tal em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nossa Senhora das Dores  (Viana do Castelo)
+DTSTART;VALUE=DATE:20260820
+DTEND;VALUE=DATE:20260821
+DTSTAMP:20240119T094847Z
+UID:portugal/our-lady-of-sorrows-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  Nossa Senhora das Dores é um feriado dist
+ rital em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nossa Senhora das Graças  (Bragança)
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+DTSTAMP:20240119T094847Z
+UID:portugal/our-lady-of-graces-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  Nossa Senhora das Graças é um feriado di
+ strital em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Faro  (Faro)
+DTSTART;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
+DTSTAMP:20240119T094847Z
+UID:portugal/faro-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  Dia de Faro é um feriado distrital em Por
+ tugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nascimento de Bocage  (Setúbal)
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20260916
+DTSTAMP:20240119T094847Z
+UID:portugal/birth-of-bocage-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  Nascimento de Bocage é um feriado distrit
+ al em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de São Mateus  (Viseu)
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+DTSTAMP:20240119T094847Z
+UID:portugal/st-matthew-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  O Dia de São Mateus é um feriado distrit
+ al em Portugal
+LAST-MODIFIED:20240119T094847Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Foral de Sancho I  (Guarda)
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+DTSTAMP:20240119T094847Z
+UID:portugal/foral-of-sancho-i-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:District Holiday -  Foral de Sancho I é um feriado distrital 
+ em Portugal
+LAST-MODIFIED:20240119T094847Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

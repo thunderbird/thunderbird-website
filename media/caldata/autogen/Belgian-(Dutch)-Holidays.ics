@@ -2,1302 +2,1335 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Nieuwjaarsdag
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T215925Z
-UID:belgium/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Pasen
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T215925Z
-UID:belgium/easter-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Easter Sunday commemorates Jesus Christ’s
-  resurrection\, according to Christian belief.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Paasmaandag
-DTSTART;VALUE=DATE:20230410
-DTEND;VALUE=DATE:20230411
-DTSTAMP:20230623T215925Z
-UID:belgium/easter-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Easter Monday is the day after Easter Sunda
- y.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dag van de Arbeid
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T215925Z
-UID:belgium/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:O.L.H. Hemelvaart
-DTSTART;VALUE=DATE:20230518
-DTEND;VALUE=DATE:20230519
-DTSTAMP:20230623T215925Z
-UID:belgium/ascension-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Ascension Day is the 40th day of Easter. It
-  is a religious holiday that commemorates the ascension of Jesus Christ in
- to heaven.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:pinksteren
-DTSTART;VALUE=DATE:20230528
-DTEND;VALUE=DATE:20230529
-DTSTAMP:20230623T215925Z
-UID:belgium/pentecost-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Many Christians all over the world annually
-  observe Pentecost\, also known as Whitsunday or Whit Sunday.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:pinkstermaandag
-DTSTART;VALUE=DATE:20230529
-DTEND;VALUE=DATE:20230530
-DTSTAMP:20230623T215925Z
-UID:belgium/whit-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Whit Monday\, or Pentecost Monday\, is a Ch
- ristian holiday that falls on the day after Pentecost\, which is also know
- n as Whit Sunday or Whitsunday.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:nationale Feestdag
-DTSTART;VALUE=DATE:20230721
-DTEND;VALUE=DATE:20230722
-DTSTAMP:20230623T215925Z
-UID:belgium/belgian-national-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:O.L.V. Hemelvaart
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230623T215925Z
-UID:belgium/assumption-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Allerheiligen
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-DTSTAMP:20230623T215925Z
-UID:belgium/all-saints-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:wapenstilstand
-DTSTART;VALUE=DATE:20231111
-DTEND;VALUE=DATE:20231112
-DTSTAMP:20230623T215925Z
-UID:belgium/armistice-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Kerstmis
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T215925Z
-UID:belgium/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Driekoningen
-DTSTART;VALUE=DATE:20230106
-DTEND;VALUE=DATE:20230107
-DTSTAMP:20230623T215925Z
-UID:belgium/epiphany-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
- ly on January 6 each year. It commemorates two events recorded in the Bibl
- e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Valentijnsdag
-DTSTART;VALUE=DATE:20230214
-DTEND;VALUE=DATE:20230215
-DTSTAMP:20230623T215925Z
-UID:belgium/valentine-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinox maart
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T215925Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Begin zomertijd
-DTSTART;VALUE=DATE:20230326
-DTEND;VALUE=DATE:20230327
-DTSTAMP:20230623T215925Z
-UID:None-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Goede Vrijdag
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T215925Z
-UID:belgium/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday - Good Friday is a global Christian observance tw
- o days before Easter Sunday.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Moederdag
-DTSTART;VALUE=DATE:20230514
-DTEND;VALUE=DATE:20230515
-DTSTAMP:20230623T215925Z
-UID:belgium/mothers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dag na Hemelvaartsdag
-DTSTART;VALUE=DATE:20230519
-DTEND;VALUE=DATE:20230520
-DTSTAMP:20230623T215925Z
-UID:belgium/bank-holiday-1-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Vaderdag
-DTSTART;VALUE=DATE:20230611
-DTEND;VALUE=DATE:20230612
-DTSTAMP:20230623T215925Z
-UID:belgium/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Zomerwende juni
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T215925Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinox september
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T215925Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Einde zomertijd
-DTSTART;VALUE=DATE:20231029
-DTEND;VALUE=DATE:20231030
-DTSTAMP:20230623T215925Z
-UID:None-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Halloween
-DTSTART;VALUE=DATE:20231031
-DTEND;VALUE=DATE:20231101
-DTSTAMP:20230623T215925Z
-UID:belgium/halloween-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sint-Nicolaasdag
-DTSTART;VALUE=DATE:20231206
-DTEND;VALUE=DATE:20231207
-DTSTAMP:20230623T215925Z
-UID:belgium/st-nicholas-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Winterwende december
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T215925Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Kerstavond
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T215925Z
-UID:belgium/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tweede kerstdag
-DTSTART;VALUE=DATE:20231226
-DTEND;VALUE=DATE:20231227
-DTSTAMP:20230623T215925Z
-UID:belgium/boxing-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Oudejaarsavond
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T215925Z
-UID:belgium/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215925Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dag van het Irisfeest (Brussels)
-DTSTART;VALUE=DATE:20230508
-DTEND;VALUE=DATE:20230509
-DTSTAMP:20230623T215926Z
-UID:belgium/iris-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215926Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Feest van de Vlaamse Gemeenschap (Antwerp\, Limburg\, East Flander
- s\, Flemish Brabant\, West Flanders)
-DTSTART;VALUE=DATE:20230711
-DTEND;VALUE=DATE:20230712
-DTSTAMP:20230623T215926Z
-UID:belgium/flemish-community-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215926Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Feest van het Waalse Gewest (Namur)
-DTSTART;VALUE=DATE:20230917
-DTEND;VALUE=DATE:20230918
-DTSTAMP:20230623T215926Z
-UID:belgium/walloon-region-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215926Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dag van de Franse Gemeenschap (Walloon Brabant\, Hainaut\, Liège\
- , Luxembourg\, Namur)
-DTSTART;VALUE=DATE:20230927
-DTEND;VALUE=DATE:20230928
-DTSTAMP:20230623T215926Z
-UID:belgium/french-community-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215926Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dag van de Duitse Gemeenschap (Liège)
-DTSTART;VALUE=DATE:20231115
-DTEND;VALUE=DATE:20231116
-DTSTAMP:20230623T215926Z
-UID:belgium/german-speaking-community-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215926Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nieuwjaarsdag
+SUMMARY:Nieuwjaarsdag 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Nieuwjaarsdag is de eerste dag van het jaa
+ r\, of 1 januari\, in de Gregoriaanse kalender.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pasen
+SUMMARY:Paaszondag 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/easter-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Sunday commemorates Jesus Christ’s
-  resurrection\, according to Christian belief.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Paaszondag herdenkt volgens het christelij
+ k geloof de opstanding van Jezus Christus.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Paasmaandag
+SUMMARY:Paasmaandag 
 DTSTART;VALUE=DATE:20240401
 DTEND;VALUE=DATE:20240402
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/easter-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Monday is the day after Easter Sunda
- y.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Paasmaandag is de dag na Paaszondag.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag van de Arbeid
+SUMMARY:Dag van de Arbeid/1 mei 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Dag van de Arbeid\, Internationale Arbeide
+ rsdag en Meidag is een vrije dag voor werknemers in veel landen over de he
+ le wereld.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:O.L.H. Hemelvaart
+SUMMARY:Hemelvaartsdag 
 DTSTART;VALUE=DATE:20240509
 DTEND;VALUE=DATE:20240510
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/ascension-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Ascension Day is the 40th day of Easter. It
-  is a religious holiday that commemorates the ascension of Jesus Christ in
- to heaven.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Hemelvaartsdag is de 40e dag van Pasen. He
+ t is een religieuze feestdag ter herdenking van de hemelvaart van Jezus Ch
+ ristus.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:pinksteren
+SUMMARY:Pinksterzondag 
 DTSTART;VALUE=DATE:20240519
 DTEND;VALUE=DATE:20240520
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/pentecost-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many Christians all over the world annually
-  observe Pentecost\, also known as Whitsunday or Whit Sunday.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Veel christenen over de hele wereld vieren
+  jaarlijks Pinksteren\, ook bekend als Pinksterzondag of Pinksterzondag.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:pinkstermaandag
+SUMMARY:Pinkstermaandag 
 DTSTART;VALUE=DATE:20240520
 DTEND;VALUE=DATE:20240521
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/whit-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Whit Monday\, or Pentecost Monday\, is a Ch
- ristian holiday that falls on the day after Pentecost\, which is also know
- n as Whit Sunday or Whitsunday.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Pinkstermaandag\, of Pinkstermaandag\, is 
+ een christelijke feestdag die valt op de dag na Pinksteren\, ook wel Pinks
+ terzondag of Pinksterzondag genoemd.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:nationale Feestdag
+SUMMARY:Belgische nationale feestdag 
 DTSTART;VALUE=DATE:20240721
 DTEND;VALUE=DATE:20240722
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/belgian-national-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  De Belgische nationale feestdag is een nat
+ ionale feestdag in België
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:O.L.V. Hemelvaart
+SUMMARY:Maria-Tenhemelopneming 
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/assumption-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Het christelijke feest van Maria-Tenhemelo
+ pneming is in de meeste landen op of rond 15 augustus. Enkelen vieren Heme
+ lvaart op andere momenten van het jaar.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Allerheiligen
+SUMMARY:Allerheiligen 
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/all-saints-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Veel kerken eren al hun heiligen op Allerh
+ eiligen\, ook wel bekend als Allerheiligen.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:wapenstilstand
+SUMMARY:Wapenstilstandsdag 
 DTSTART;VALUE=DATE:20241111
 DTEND;VALUE=DATE:20241112
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/armistice-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Wapenstilstandsdag is een nationale feestd
+ ag in België
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kerstmis
+SUMMARY:Kerstdag 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:National holiday -  Kerstdag is een van de grootste christelij
+ ke vieringen en valt op 25 december in de Gregoriaanse kalender.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Driekoningen
+SUMMARY:Epiphany 
 DTSTART;VALUE=DATE:20240106
 DTEND;VALUE=DATE:20240107
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/epiphany-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
- ly on January 6 each year. It commemorates two events recorded in the Bibl
- e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Observance -  Epiphany is een christelijke feestdag die elk ja
+ ar wereldwijd op 6 januari wordt gevierd. Het herdenkt twee gebeurtenissen
+  die in de Bijbel zijn opgetekend: het bezoek van de drie wijzen aan het k
+ indje Jezus en de doop van Jezus.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Valentijnsdag
+SUMMARY:Valentijnsdag 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/valentine-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Observance -  14 februari is Valentijnsdag of Sint-Valentijnsf
+ eest. De dag van de liefde dankt zijn oorsprong aan oude Romeinse en Europ
+ ese christelijke tradities.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinox maart
+SUMMARY:Maart-equinox 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Season -  Maartevening in België (Brussel)
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Goede Vrijdag
+SUMMARY:Goede Vrijdag 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday - Good Friday is a global Christian observance tw
- o days before Easter Sunday.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Bank holiday -  Goede Vrijdag is een wereldwijde christelijke 
+ viering twee dagen voor Paaszondag.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Begin zomertijd
+SUMMARY:Zomertijd begint 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:None-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Clock change/Daylight Saving Time -  Zomertijd begint in Belgi
+ ë
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag na Hemelvaartsdag
+SUMMARY:Dag na Hemelvaartsdag 
 DTSTART;VALUE=DATE:20240510
 DTEND;VALUE=DATE:20240511
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/bank-holiday-1-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Bank holiday -  De dag na Hemelvaartsdag is een officiële fee
+ stdag in België
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Moederdag
+SUMMARY:Moederdag 
 DTSTART;VALUE=DATE:20240512
 DTEND;VALUE=DATE:20240513
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/mothers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Observance -  Moederdag viert de prestaties en inspanningen va
+ n moeders en moederfiguren.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vaderdag
+SUMMARY:Vaderdag 
 DTSTART;VALUE=DATE:20240609
 DTEND;VALUE=DATE:20240610
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Observance -  Vaderdag viert vaderschap en mannelijk ouderscha
+ p op verschillende data wereldwijd.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Zomerwende juni
+SUMMARY:Juni Solstice 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Season -  Juni Solstice in België (Brussel)
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinox september
+SUMMARY:September-equinox 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Season -  September-equinox in België (Brussel)
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Einde zomertijd
+SUMMARY:Zomertijd eindigt 
 DTSTART;VALUE=DATE:20241027
 DTEND;VALUE=DATE:20241028
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:None-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Clock change/Daylight Saving Time -  Zomertijd eindigt in Belg
+ ië
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Halloween
+SUMMARY:Halloween 
 DTSTART;VALUE=DATE:20241031
 DTEND;VALUE=DATE:20241101
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/halloween-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Observance -  Halloween is een feestelijke gelegenheid die in 
+ veel landen elk jaar op 31 oktober wordt gevierd.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sint-Nicolaasdag
+SUMMARY:Sinterklaasdag 
 DTSTART;VALUE=DATE:20241206
 DTEND;VALUE=DATE:20241207
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/st-nicholas-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Observance -  Sinterklaasdag is een feestdag in België
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Winterwende december
+SUMMARY:Decemberzonnewende 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Season -  Decemberzonnewende in België (Brussel)
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kerstavond
+SUMMARY:Kerstavond 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Observance -  Kerstavond is de dag voor eerste kerstdag en val
+ t op 24 december in de Gregoriaanse kalender.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tweede kerstdag
+SUMMARY:Tweede kerstdag 
 DTSTART;VALUE=DATE:20241226
 DTEND;VALUE=DATE:20241227
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/boxing-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Bank holiday -  Tweede kerstdag is een officiële feestdag in 
+ België
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Oudejaarsavond
+SUMMARY:Oudejaarsavond 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T215926Z
+DTSTAMP:20240119T094557Z
 UID:belgium/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215926Z
+DESCRIPTION:Observance -  Oudejaarsavond is de laatste dag van het jaar\, 
+ 31 december\, in de Gregoriaanse kalender.
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag van het Irisfeest (Brussels)
+SUMMARY:Iris Day  (Brussels)
 DTSTART;VALUE=DATE:20240508
 DTEND;VALUE=DATE:20240509
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094557Z
 UID:belgium/iris-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:Regional government holiday -  Iris Day is een regionale overh
+ eidsfeestdag in België
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Feest van de Vlaamse Gemeenschap (Antwerp\, Limburg\, East Flander
- s\, Flemish Brabant\, West Flanders)
+SUMMARY:Dag van de Vlaamse Gemeenschap  (Antwerp\, Limburg\, East Flanders
+ \, Flemish Brabant\, West Flanders)
 DTSTART;VALUE=DATE:20240711
 DTEND;VALUE=DATE:20240712
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094557Z
 UID:belgium/flemish-community-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215927Z
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Feest van het Waalse Gewest (Namur)
+SUMMARY:Dag van het Waalse Gewest  (Namur)
 DTSTART;VALUE=DATE:20240915
 DTEND;VALUE=DATE:20240916
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094557Z
 UID:belgium/walloon-region-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:Regional government holiday -  Dag van het Waalse Gewest is ee
+ n feestdag van de regionale overheid in België
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag van de Franse Gemeenschap (Walloon Brabant\, Hainaut\, Liège\
- , Luxembourg\, Namur)
+SUMMARY:Dag van de Franse Gemeenschap  (Walloon Brabant\, Hainaut\, Liège
+ \, Luxembourg\, Namur)
 DTSTART;VALUE=DATE:20240927
 DTEND;VALUE=DATE:20240928
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094557Z
 UID:belgium/french-community-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:Regional government holiday -  Dag van de Franse Gemeenschap i
+ s een feestdag van de regionale overheid in België
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag van de Duitse Gemeenschap (Liège)
+SUMMARY:Dag van de Duitstalige Gemeenschap  (Liège)
 DTSTART;VALUE=DATE:20241115
 DTEND;VALUE=DATE:20241116
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094557Z
 UID:belgium/german-speaking-community-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:Regional government holiday -  Dag van de Duitstalige Gemeensc
+ hap is een regionale regeringsfeestdag in België
+LAST-MODIFIED:20240119T094557Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nieuwjaarsdag
+SUMMARY:Nieuwjaarsdag 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Nieuwjaarsdag is de eerste dag van het jaa
+ r\, of 1 januari\, in de Gregoriaanse kalender.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pasen
+SUMMARY:Paaszondag 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/easter-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Sunday commemorates Jesus Christ’s
-  resurrection\, according to Christian belief.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Paaszondag herdenkt de opstanding van Jezu
+ s Christus\, volgens het christelijk geloof.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Paasmaandag
+SUMMARY:Paasmaandag 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/easter-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Monday is the day after Easter Sunda
- y.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Paasmaandag is de dag na Paaszondag.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag van de Arbeid
+SUMMARY:Dag van de Arbeid/Meidag 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Dag van de Arbeid\, Internationale Dag van
+  de Arbeid en Meidag is een vrije dag voor werknemers in veel landen over 
+ de hele wereld.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:O.L.H. Hemelvaart
+SUMMARY:Hemelvaartsdag 
 DTSTART;VALUE=DATE:20250529
 DTEND;VALUE=DATE:20250530
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/ascension-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Ascension Day is the 40th day of Easter. It
-  is a religious holiday that commemorates the ascension of Jesus Christ in
- to heaven.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Hemelvaartsdag is de 40e dag van Pasen. He
+ t is een religieuze feestdag die de hemelvaart van Jezus Christus herdenkt
+ .
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:pinksteren
+SUMMARY:Pinksterzondag 
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/pentecost-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many Christians all over the world annually
-  observe Pentecost\, also known as Whitsunday or Whit Sunday.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Veel christenen over de hele wereld vieren
+  jaarlijks Pinksteren\, ook bekend als Pinksterzondag of Pinksterzondag.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:pinkstermaandag
+SUMMARY:Pinkstermaandag 
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/whit-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Whit Monday\, or Pentecost Monday\, is a Ch
- ristian holiday that falls on the day after Pentecost\, which is also know
- n as Whit Sunday or Whitsunday.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Pinkstermaandag\, of Pinkstermaandag\, is 
+ een christelijke feestdag die valt op de dag na Pinksteren\, ook bekend al
+ s Pinksterzondag of Pinksterzondag.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:nationale Feestdag
+SUMMARY:Belgische nationale feestdag 
 DTSTART;VALUE=DATE:20250721
 DTEND;VALUE=DATE:20250722
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/belgian-national-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  De Belgische nationale feestdag is een nat
+ ionale feestdag in België
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:O.L.V. Hemelvaart
+SUMMARY:Maria-Tenhemelopneming 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/assumption-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Het christelijke feest van Maria-Tenhemelo
+ pneming valt in de meeste landen op of rond 15 augustus. Sommigen vieren H
+ emelvaartsdag op andere momenten van het jaar.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Allerheiligen
+SUMMARY:Allerheiligen 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/all-saints-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Veel kerken eren al hun heiligen op Allerh
+ eiligen\, ook bekend als Allerheiligen.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:wapenstilstand
+SUMMARY:Wapenstilstand 
 DTSTART;VALUE=DATE:20251111
 DTEND;VALUE=DATE:20251112
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/armistice-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Wapenstilstandsdag is een nationale feestd
+ ag in België
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kerstmis
+SUMMARY:Eerste kerstdag 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T215927Z
+DTSTAMP:20240119T094558Z
 UID:belgium/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215927Z
+DESCRIPTION:National holiday -  Eerste kerstdag is een van de grootste chr
+ istelijke vieringen en valt op 25 december in de gregoriaanse kalender.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Driekoningen
+SUMMARY:Driekoningen 
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/epiphany-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
- ly on January 6 each year. It commemorates two events recorded in the Bibl
- e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Observance -  Driekoningen is een christelijke feestdag die el
+ k jaar wereldwijd op 6 januari wordt gevierd. Het herdenkt twee gebeurteni
+ ssen die in de Bijbel zijn opgetekend: het bezoek van de drie wijze mannen
+  aan het kindje Jezus en de doop van Jezus.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Valentijnsdag
+SUMMARY:Valentijnsdag 
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/valentine-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Observance -  14 februari is Valentijnsdag of Sint-Valentijnsf
+ eest. De dag van de liefde dankt zijn oorsprong aan oude Romeinse en Europ
+ ese christelijke tradities.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinox maart
+SUMMARY:Maart-equinox 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Season -  Maart-equinox in België (Brussel)
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Begin zomertijd
+SUMMARY:De zomertijd begint 
 DTSTART;VALUE=DATE:20250330
 DTEND;VALUE=DATE:20250331
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:None-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Clock change/Daylight Saving Time -  De zomertijd begint in Be
+ lgië
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Goede Vrijdag
+SUMMARY:Goede Vrijdag 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday - Good Friday is a global Christian observance tw
- o days before Easter Sunday.
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Bank holiday -  Goede Vrijdag is een wereldwijde christelijke 
+ viering twee dagen voor Paaszondag.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Moederdag
+SUMMARY:Moederdag 
 DTSTART;VALUE=DATE:20250511
 DTEND;VALUE=DATE:20250512
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/mothers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Observance -  Moederdag viert de prestaties en inspanningen va
+ n moeders en moederfiguren.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag na Hemelvaartsdag
+SUMMARY:Dag na Hemelvaartsdag 
 DTSTART;VALUE=DATE:20250530
 DTEND;VALUE=DATE:20250531
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/bank-holiday-1-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Bank holiday -  De dag na Hemelvaartsdag is een officiële fee
+ stdag in België
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vaderdag
+SUMMARY:Vaderdag 
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Observance -  Vaderdag viert het vaderschap en het ouderschap 
+ van mannen op verschillende data over de hele wereld.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Zomerwende juni
+SUMMARY:Juni Solstice 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Season -  Juni Solstice in België (Brussel)
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinox september
+SUMMARY:Septemberequinox 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Season -  Septemberequinox in België (Brussel)
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Einde zomertijd
+SUMMARY:Zomertijd eindigt 
 DTSTART;VALUE=DATE:20251026
 DTEND;VALUE=DATE:20251027
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:None-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Clock change/Daylight Saving Time -  De zomertijd eindigt in B
+ elgië
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Halloween
+SUMMARY:Halloween 
 DTSTART;VALUE=DATE:20251031
 DTEND;VALUE=DATE:20251101
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/halloween-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Observance -  Halloween is een feestelijke gelegenheid die in 
+ veel landen elk jaar op 31 oktober wordt gevierd.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sint-Nicolaasdag
+SUMMARY:Sinterklaasdag 
 DTSTART;VALUE=DATE:20251206
 DTEND;VALUE=DATE:20251207
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/st-nicholas-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Observance -  Sinterklaasdag is een feestdag in België
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Winterwende december
+SUMMARY:Decemberzonnewende 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Season -  Decemberzonnewende in België (Brussel)
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kerstavond
+SUMMARY:Kerstavond 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Observance -  Kerstavond is de dag voor eerste kerstdag en val
+ t op 24 december in de gregoriaanse kalender.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tweede kerstdag
+SUMMARY:Tweede kerstdag 
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/boxing-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Bank holiday -  Tweede kerstdag is een officiële feestdag in 
+ België
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Oudejaarsavond
+SUMMARY:Oudejaarsavond 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Observance -  Oudejaarsavond is de laatste dag van het jaar\, 
+ 31 december\, in de Gregoriaanse kalender.
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag van het Irisfeest (Brussels)
+SUMMARY:Iris Day  (Brussels)
 DTSTART;VALUE=DATE:20250508
 DTEND;VALUE=DATE:20250509
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/iris-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Regional government holiday -  Iris Day is een regionale overh
+ eidsfeestdag in België
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Feest van de Vlaamse Gemeenschap (Antwerp\, Limburg\, East Flander
- s\, Flemish Brabant\, West Flanders)
+SUMMARY:Dag van de Vlaamse Gemeenschap  (Antwerp\, Limburg\, East Flanders
+ \, Flemish Brabant\, West Flanders)
 DTSTART;VALUE=DATE:20250711
 DTEND;VALUE=DATE:20250712
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/flemish-community-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215928Z
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Feest van het Waalse Gewest (Namur)
+SUMMARY:Dag van het Waalse Gewest  (Namur)
 DTSTART;VALUE=DATE:20250921
 DTEND;VALUE=DATE:20250922
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/walloon-region-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Regional government holiday -  Dag van het Waalse Gewest is ee
+ n regionale feestdag van de overheid in België
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag van de Franse Gemeenschap (Walloon Brabant\, Hainaut\, Liège\
- , Luxembourg\, Namur)
+SUMMARY:Dag van de Franse Gemeenschap  (Walloon Brabant\, Hainaut\, Liège
+ \, Luxembourg\, Namur)
 DTSTART;VALUE=DATE:20250927
 DTEND;VALUE=DATE:20250928
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/french-community-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215928Z
+DESCRIPTION:Regional government holiday -  De dag van de Franse Gemeenscha
+ p is een regionale feestdag van de regering in België
+LAST-MODIFIED:20240119T094558Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dag van de Duitse Gemeenschap (Liège)
+SUMMARY:Dag van de Duitstalige Gemeenschap  (Liège)
 DTSTART;VALUE=DATE:20251115
 DTEND;VALUE=DATE:20251116
-DTSTAMP:20230623T215928Z
+DTSTAMP:20240119T094558Z
 UID:belgium/german-speaking-community-day-2025
 CATEGORIES:Holidays
 CLASS:public
+DESCRIPTION:Regional government holiday -  Dag van de Duitstalige Gemeensc
+ hap is een regionale regeringsfeestdag in België
+LAST-MODIFIED:20240119T094558Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nieuwjaarsdag 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094559Z
+UID:belgium/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Nieuwjaarsdag is de eerste dag van het jaa
+ r\, of 1 januari\, in de Gregoriaanse kalender.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Paaszondag 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094559Z
+UID:belgium/easter-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Paaszondag herdenkt de opstanding van Jezu
+ s Christus\, volgens het christelijk geloof.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Paasmaandag 
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20240119T094559Z
+UID:belgium/easter-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Paasmaandag is de dag na Paaszondag.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dag van de Arbeid/Meidag 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094559Z
+UID:belgium/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Dag van de Arbeid\, Internationale Dag van
+  de Arbeid en Meidag is een vrije dag voor werknemers in veel landen over 
+ de hele wereld.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hemelvaartsdag 
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260515
+DTSTAMP:20240119T094559Z
+UID:belgium/ascension-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Hemelvaartsdag is de 40e dag van Pasen. He
+ t is een religieuze feestdag die de hemelvaart van Jezus Christus herdenkt
+ .
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pinksterzondag 
+DTSTART;VALUE=DATE:20260524
+DTEND;VALUE=DATE:20260525
+DTSTAMP:20240119T094559Z
+UID:belgium/pentecost-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Veel christenen over de hele wereld vieren
+  jaarlijks Pinksteren\, ook bekend als Pinksterzondag of Pinksterzondag.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pinkstermaandag 
+DTSTART;VALUE=DATE:20260525
+DTEND;VALUE=DATE:20260526
+DTSTAMP:20240119T094559Z
+UID:belgium/whit-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Pinkstermaandag\, of Pinkstermaandag\, is 
+ een christelijke feestdag die valt op de dag na Pinksteren\, ook bekend al
+ s Pinksterzondag of Pinksterzondag.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Belgische nationale feestdag 
+DTSTART;VALUE=DATE:20260721
+DTEND;VALUE=DATE:20260722
+DTSTAMP:20240119T094559Z
+UID:belgium/belgian-national-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  De Belgische nationale feestdag is een nat
+ ionale feestdag in België
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Maria-Tenhemelopneming 
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20240119T094559Z
+UID:belgium/assumption-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Het christelijke feest van Maria-Tenhemelo
+ pneming valt in de meeste landen op of rond 15 augustus. Sommigen vieren H
+ emelvaartsdag op andere momenten van het jaar.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Allerheiligen 
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DTSTAMP:20240119T094559Z
+UID:belgium/all-saints-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Veel kerken eren al hun heiligen op Allerh
+ eiligen\, ook bekend als Allerheiligen.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Wapenstilstand 
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+DTSTAMP:20240119T094559Z
+UID:belgium/armistice-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Wapenstilstandsdag is een nationale feestd
+ ag in België
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Eerste kerstdag 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094559Z
+UID:belgium/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Eerste kerstdag is een van de grootste chr
+ istelijke vieringen en valt op 25 december in de gregoriaanse kalender.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Driekoningen 
+DTSTART;VALUE=DATE:20260106
+DTEND;VALUE=DATE:20260107
+DTSTAMP:20240119T094559Z
+UID:belgium/epiphany-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Driekoningen is een christelijke feestdag die el
+ k jaar wereldwijd op 6 januari wordt gevierd. Het herdenkt twee gebeurteni
+ ssen die in de Bijbel zijn opgetekend: het bezoek van de drie wijze mannen
+  aan het kindje Jezus en de doop van Jezus.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Valentijnsdag 
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20240119T094559Z
+UID:belgium/valentine-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  14 februari is Valentijnsdag of Sint-Valentijnsf
+ eest. De dag van de liefde dankt zijn oorsprong aan oude Romeinse en Europ
+ ese christelijke tradities.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Maart-equinox 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094559Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Maart-equinox in België (Brussel)
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:De zomertijd begint 
+DTSTART;VALUE=DATE:20260329
+DTEND;VALUE=DATE:20260330
+DTSTAMP:20240119T094559Z
+UID:None-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Clock change/Daylight Saving Time -  De zomertijd begint in Be
+ lgië
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Goede Vrijdag 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094559Z
+UID:belgium/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Goede Vrijdag is een wereldwijde christelijke 
+ viering twee dagen voor Paaszondag.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Moederdag 
+DTSTART;VALUE=DATE:20260510
+DTEND;VALUE=DATE:20260511
+DTSTAMP:20240119T094559Z
+UID:belgium/mothers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Moederdag viert de prestaties en inspanningen va
+ n moeders en moederfiguren.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dag na Hemelvaartsdag 
+DTSTART;VALUE=DATE:20260515
+DTEND;VALUE=DATE:20260516
+DTSTAMP:20240119T094559Z
+UID:belgium/bank-holiday-1-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  De dag na Hemelvaartsdag is een officiële fee
+ stdag in België
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vaderdag 
+DTSTART;VALUE=DATE:20260614
+DTEND;VALUE=DATE:20260615
+DTSTAMP:20240119T094559Z
+UID:belgium/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Vaderdag viert het vaderschap en het ouderschap 
+ van mannen op verschillende data over de hele wereld.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Juni Solstice 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094559Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Juni Solstice in België (Brussel)
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Septemberequinox 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094559Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Septemberequinox in België (Brussel)
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Zomertijd eindigt 
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+DTSTAMP:20240119T094559Z
+UID:None-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Clock change/Daylight Saving Time -  De zomertijd eindigt in B
+ elgië
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Halloween 
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20240119T094559Z
+UID:belgium/halloween-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Halloween is een feestelijke gelegenheid die in 
+ veel landen elk jaar op 31 oktober wordt gevierd.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sinterklaasdag 
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+DTSTAMP:20240119T094559Z
+UID:belgium/st-nicholas-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Sinterklaasdag is een feestdag in België
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Decemberzonnewende 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094559Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Decemberzonnewende in België (Brussel)
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Kerstavond 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T094559Z
+UID:belgium/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Kerstavond is de dag voor eerste kerstdag en val
+ t op 24 december in de gregoriaanse kalender.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tweede kerstdag 
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+DTSTAMP:20240119T094559Z
+UID:belgium/boxing-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Tweede kerstdag is een officiële feestdag in 
+ België
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Oudejaarsavond 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094559Z
+UID:belgium/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Oudejaarsavond is de laatste dag van het jaar\, 
+ 31 december\, in de Gregoriaanse kalender.
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Iris Day  (Brussels)
+DTSTART;VALUE=DATE:20260508
+DTEND;VALUE=DATE:20260509
+DTSTAMP:20240119T094559Z
+UID:belgium/iris-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional government holiday -  Iris Day is een regionale overh
+ eidsfeestdag in België
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dag van de Vlaamse Gemeenschap  (Antwerp\, Limburg\, East Flanders
+ \, Flemish Brabant\, West Flanders)
+DTSTART;VALUE=DATE:20260711
+DTEND;VALUE=DATE:20260712
+DTSTAMP:20240119T094559Z
+UID:belgium/flemish-community-day-2026
+CATEGORIES:Holidays
+CLASS:public
 DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20230623T215928Z
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dag van het Waalse Gewest  (Namur)
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+DTSTAMP:20240119T094559Z
+UID:belgium/walloon-region-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional government holiday -  Dag van het Waalse Gewest is ee
+ n regionale feestdag van de overheid in België
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dag van de Franse Gemeenschap  (Walloon Brabant\, Hainaut\, Liège
+ \, Luxembourg\, Namur)
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20260928
+DTSTAMP:20240119T094559Z
+UID:belgium/french-community-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional government holiday -  De dag van de Franse Gemeenscha
+ p is een regionale feestdag van de regering in België
+LAST-MODIFIED:20240119T094559Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dag van de Duitstalige Gemeenschap  (Liège)
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+DTSTAMP:20240119T094559Z
+UID:belgium/german-speaking-community-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional government holiday -  Dag van de Duitstalige Gemeensc
+ hap is een regionale regeringsfeestdag in België
+LAST-MODIFIED:20240119T094559Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

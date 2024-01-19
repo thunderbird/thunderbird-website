@@ -2,927 +2,939 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Joudlan
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220028Z
-UID:haiti/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday - New Year’s Day is the first day of 
- the year\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jou zansèt
-DTSTART;VALUE=DATE:20230102
-DTEND;VALUE=DATE:20230103
-DTSTAMP:20230623T220028Z
-UID:haiti/heroes-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Kanaval
-DTSTART;VALUE=DATE:20230221
-DTEND;VALUE=DATE:20230222
-DTSTAMP:20230623T220028Z
-UID:haiti/shrove-tuesday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday - Shrove Tuesday is a religious holiday
-  before the fasting period of Lent. It is celebrated by eating pancakes an
- d holding Carnival parades.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Carnival / Ash Wednesday
-DTSTART;VALUE=DATE:20230222
-DTEND;VALUE=DATE:20230223
-DTSTAMP:20230623T220028Z
-UID:haiti/carnival-wednesday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday - Ash Wednesday marks the first day of 
- Lent in western Christian churches.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Vandredi Sen
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T220028Z
-UID:haiti/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday - Good Friday is a global Christian obs
- ervance two days before Easter Sunday.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fèt Travayè
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220028Z
-UID:haiti/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday - Labor Day\, International Workers' Da
- y\, and May Day\, is a day off for workers in many countries around the wo
- rld.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fèt Drapo ak Inivèsite
-DTSTART;VALUE=DATE:20230518
-DTEND;VALUE=DATE:20230519
-DTSTAMP:20230623T220028Z
-UID:haiti/flag-and-university-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fèt Manman
-DTSTART;VALUE=DATE:20230528
-DTEND;VALUE=DATE:20230529
-DTSTAMP:20230623T220028Z
-UID:haiti/mother-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday - Mother’s Day celebrates the achieve
- ments and efforts of mothers and mother figures.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Desalin Jou
-DTSTART;VALUE=DATE:20231017
-DTEND;VALUE=DATE:20231018
-DTSTAMP:20230623T220028Z
-UID:haiti/dessalines-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Batay Vètyè
-DTSTART;VALUE=DATE:20231118
-DTEND;VALUE=DATE:20231119
-DTSTAMP:20230623T220028Z
-UID:haiti/vertieres-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jou Nowèl
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220028Z
-UID:haiti/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National/Legal Holiday - Christmas Day is one of the biggest C
- hristian celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fèt Sen Valanten
-DTSTART;VALUE=DATE:20230214
-DTEND;VALUE=DATE:20230215
-DTSTAMP:20230623T220028Z
-UID:haiti/valentine-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Mas ekinoks
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T220028Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dimanch Pak
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T220028Z
-UID:haiti/easter-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jen solstis
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220028Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fèt Papa
-DTSTART;VALUE=DATE:20230625
-DTEND;VALUE=DATE:20230626
-DTSTAMP:20230623T220028Z
-UID:haiti/father-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Septanm ekinoks
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220028Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Desanm solstis
-DTSTART;VALUE=DATE:20231221
-DTEND;VALUE=DATE:20231222
-DTSTAMP:20230623T220028Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lavèy Nwèl
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T220028Z
-UID:haiti/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lavèy joudlan
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220028Z
-UID:haiti/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Corpus Christi
-DTSTART;VALUE=DATE:20230608
-DTEND;VALUE=DATE:20230609
-DTSTAMP:20230623T220028Z
-UID:haiti/corpus-christi-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Corpus Christi is a Christian feast in honor o
- f the Holy Eucharist.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sipozisyon nan Mari
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230623T220028Z
-UID:haiti/assumption-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - The Christian feast of the Assumption of Mary 
- is on or around Aug 15 in most countries. A few celebrate Assumption Day a
- t other times of the year.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Latousen
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-DTSTAMP:20230623T220028Z
-UID:haiti/all-saints-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Many churches honor all their saints on All Sa
- ints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fètdèmo
-DTSTART;VALUE=DATE:20231102
-DTEND;VALUE=DATE:20231103
-DTSTAMP:20230623T220028Z
-UID:haiti/all-souls-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - All Souls’ Day falls on November 2 each year
- . It is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T220028Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Joudlan
+SUMMARY:Jou Nouvèl Ane/Jou Endepandans 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - New Year’s Day is the first day of 
- the year\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou nouvo ane a se premye jou nan an
+ e a\, oswa 1 janvye\, nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jou zansèt
+SUMMARY:Jou Ewo/Jou Zansèt 
 DTSTART;VALUE=DATE:20240102
 DTEND;VALUE=DATE:20240103
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/heroes-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Ewo/Jou Zansèt se yon jou ferye
+  nasyonal/legal ann Ayiti
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kanaval
+SUMMARY:Carnaval/Shrove Madi 
 DTSTART;VALUE=DATE:20240213
 DTEND;VALUE=DATE:20240214
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/shrove-tuesday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Shrove Tuesday is a religious holiday
-  before the fasting period of Lent. It is celebrated by eating pancakes an
- d holding Carnival parades.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Shrove Madi se yon jou ferye relijye
+  anvan peryòd la dejou nan Karèm. Li selebre pa manje krèp ak kenbe par
+ ad Kanaval yo.
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnival / Ash Wednesday
+SUMMARY:Kanaval/Ash Mèkredi 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/carnival-wednesday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Ash Wednesday marks the first day of 
- Lent in western Christian churches.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Sann Mèkredi make premye jou Karèm
+  nan legliz lwès kretyen.
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vandredi Sen
+SUMMARY:Bon Vandredi 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Good Friday is a global Christian obs
- ervance two days before Easter Sunday.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Bon Vandredi se yon obsèvans kretye
+ n mondyal de jou anvan Dimanch Pak.
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Travayè
+SUMMARY:Agrikilti ak Labour Day 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Labor Day\, International Workers' Da
- y\, and May Day\, is a day off for workers in many countries around the wo
- rld.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Travay\, Jou Entènasyonal Trava
+ yè yo\, ak Jou Me\, se yon jou koupe pou travayè nan anpil peyi atravè 
+ mond lan.
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Drapo ak Inivèsite
+SUMMARY:Jou Drapo/Jou Inivèsite 
 DTSTART;VALUE=DATE:20240518
 DTEND;VALUE=DATE:20240519
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/flag-and-university-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Drapo/Jou Inivèsite se yon jou 
+ ferye nasyonal/legal ann Ayiti
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Manman
+SUMMARY:Jou manman an 
 DTSTART;VALUE=DATE:20240526
 DTEND;VALUE=DATE:20240527
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/mother-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Mother’s Day celebrates the achieve
- ments and efforts of mothers and mother figures.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou manman an selebre reyalizasyon y
+ o ak efò manman ak figi manman yo.
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Desalin Jou
+SUMMARY:Jou Dessalines 
 DTSTART;VALUE=DATE:20241017
 DTEND;VALUE=DATE:20241018
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/dessalines-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Dessalines se yon jou ferye nasy
+ onal/legal ann Ayiti
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Batay Vètyè
+SUMMARY:Jou Vertières 
 DTSTART;VALUE=DATE:20241118
 DTEND;VALUE=DATE:20241119
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/vertieres-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Vertières se yon jou ferye nasy
+ onal/legal ann Ayiti
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jou Nowèl
+SUMMARY:Jou Nwèl 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094702Z
 UID:haiti/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Christmas Day is one of the biggest C
- hristian celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Nwèl la se youn nan pi gwo sele
+ brasyon kretyen yo epi li tonbe sou 25 desanm nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094702Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Sen Valanten
+SUMMARY:Jou Valentine a 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/valentine-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Observance -  14 fevriye se Jou Valentine a oswa fèt Saint Va
+ lentine a. Jou a nan renmen dwe orijin li yo nan ansyen tradisyon Women ak
+  Ewopeyen kretyen.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mas ekinoks
+SUMMARY:Mas Equinox 
 DTSTART;VALUE=DATE:20240319
 DTEND;VALUE=DATE:20240320
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Season -  Mas Equinox nan Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dimanch Pak
+SUMMARY:Dimanch Pak 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/easter-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Observance -  Dimanch Pak komemore rezirèksyon Jezikri a\, da
+ pre kwayans kretyen an.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jen solstis
+SUMMARY:Solstice jen 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Season -  Solstice jen an Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Papa
+SUMMARY:Jou Papa a 
 DTSTART;VALUE=DATE:20240630
 DTEND;VALUE=DATE:20240701
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/father-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Observance -  Jou Papa a selebre patènite ak paran gason nan 
+ dat diferan atravè lemond.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Septanm ekinoks
+SUMMARY:Septanm Equinox 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Season -  Septanm Equinox nan peyi d Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Desanm solstis
+SUMMARY:Solstice Desanm 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Season -  Solstice Desanm nan Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lavèy Nwèl
+SUMMARY:Nwèl Èv 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Observance -  Nwèl Èv se jou anvan Jou Nwèl la epi li tonbe
+  sou 24 desanm nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lavèy joudlan
+SUMMARY:Lavèy nouvèl ane 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Observance -  Lavèy nouvèl ane a se dènye jou nan ane a\, 3
+ 1 desanm\, nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpus Christi
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20240530
 DTEND;VALUE=DATE:20240531
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/corpus-christi-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - Corpus Christi is a Christian feast in honor o
- f the Holy Eucharist.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Local holiday -  Corpus Christi se yon fèt kretyen an onè na
+ n Eukarist Sentespri a.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sipozisyon nan Mari
+SUMMARY:Sipozisyon nan Mari 
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/assumption-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - The Christian feast of the Assumption of Mary 
- is on or around Aug 15 in most countries. A few celebrate Assumption Day a
- t other times of the year.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Local holiday -  Fèt kretyen an nan Sipozisyon nan Mari se so
+ u oswa alantou 15 Out nan pifò peyi yo. Yon kèk selebre Jou Sipozisyon n
+ an lòt moman nan ane a.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Latousen
+SUMMARY:All Saint 'Day 
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/all-saints-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - Many churches honor all their saints on All Sa
- ints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Local holiday -  Anpil legliz onore tout sen yo nan Jou Tout S
+ aint '\, ke yo rekonèt tou kòm Jou Tout Hallows'.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fètdèmo
+SUMMARY:Jou tout Souls' Day 
 DTSTART;VALUE=DATE:20241102
 DTEND;VALUE=DATE:20241103
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/all-souls-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - All Souls’ Day falls on November 2 each year
- . It is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:Local holiday -  Jou tout Souls 'tonbe nan dat 2 novanm chak a
+ ne. Se yon jou nan bay almis ak lapriyè pou moun ki mouri yo.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Joudlan
+SUMMARY:Jou Nouvèl Ane/Jou Endepandans 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - New Year’s Day is the first day of 
- the year\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou nouvo ane a se premye jou nan an
+ e a\, oswa 1 janvye\, nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jou zansèt
+SUMMARY:Jou Ewo/Jou Zansèt 
 DTSTART;VALUE=DATE:20250102
 DTEND;VALUE=DATE:20250103
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/heroes-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Ewo/Jou Zansèt se yon jou ferye
+  nasyonal/legal ann Ayiti
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kanaval
+SUMMARY:Carnaval/Shrove Madi 
 DTSTART;VALUE=DATE:20250304
 DTEND;VALUE=DATE:20250305
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/shrove-tuesday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Shrove Tuesday is a religious holiday
-  before the fasting period of Lent. It is celebrated by eating pancakes an
- d holding Carnival parades.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Shrove Madi se yon jou ferye relijye
+  anvan peryòd la dejou nan Karèm. Li selebre pa manje krèp ak kenbe par
+ ad Kanaval yo.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnival / Ash Wednesday
+SUMMARY:Kanaval/Ash Mèkredi 
 DTSTART;VALUE=DATE:20250305
 DTEND;VALUE=DATE:20250306
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/carnival-wednesday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Ash Wednesday marks the first day of 
- Lent in western Christian churches.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Sann Mèkredi make premye jou Karèm
+  nan legliz lwès kretyen.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vandredi Sen
+SUMMARY:Bon Vandredi 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Good Friday is a global Christian obs
- ervance two days before Easter Sunday.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Bon Vandredi se yon obsèvans kretye
+ n mondyal de jou anvan Dimanch Pak.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Travayè
+SUMMARY:Agrikilti ak Labour Day 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Labor Day\, International Workers' Da
- y\, and May Day\, is a day off for workers in many countries around the wo
- rld.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Travay\, Jou Entènasyonal Trava
+ yè yo\, ak Jou Me\, se yon jou koupe pou travayè nan anpil peyi atravè 
+ mond lan.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Drapo ak Inivèsite
+SUMMARY:Jou Drapo/Jou Inivèsite 
 DTSTART;VALUE=DATE:20250518
 DTEND;VALUE=DATE:20250519
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/flag-and-university-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Drapo/Jou Inivèsite se yon jou 
+ ferye nasyonal/legal ann Ayiti
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Manman
+SUMMARY:Jou manman an 
 DTSTART;VALUE=DATE:20250525
 DTEND;VALUE=DATE:20250526
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/mother-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Mother’s Day celebrates the achieve
- ments and efforts of mothers and mother figures.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou manman an selebre reyalizasyon y
+ o ak efò manman ak figi manman yo.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Desalin Jou
+SUMMARY:Jou Dessalines 
 DTSTART;VALUE=DATE:20251017
 DTEND;VALUE=DATE:20251018
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/dessalines-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Dessalines se yon jou ferye nasy
+ onal/legal ann Ayiti
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Batay Vètyè
+SUMMARY:Jou Vertières 
 DTSTART;VALUE=DATE:20251118
 DTEND;VALUE=DATE:20251119
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/vertieres-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Vertières se yon jou ferye nasy
+ onal/legal ann Ayiti
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jou Nowèl
+SUMMARY:Jou Nwèl 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220029Z
+DTSTAMP:20240119T094703Z
 UID:haiti/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National/Legal Holiday - Christmas Day is one of the biggest C
- hristian celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220029Z
+DESCRIPTION:National/Legal Holiday -  Jou Nwèl la se youn nan pi gwo sele
+ brasyon kretyen yo epi li tonbe sou 25 desanm nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094703Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Sen Valanten
+SUMMARY:Jou Valentine a 
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:haiti/valentine-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Observance -  14 fevriye se Jou Valentine a oswa fèt Saint Va
+ lentine a. Jou a nan renmen dwe orijin li yo nan ansyen tradisyon Women ak
+  Ewopeyen kretyen.
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mas ekinoks
+SUMMARY:Mas Equinox 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Season -  Mas Equinox nan Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dimanch Pak
+SUMMARY:Dimanch Pak 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:haiti/easter-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Observance -  Dimanch Pak komemore rezirèksyon Jezikri a\, da
+ pre kwayans kretyen an.
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jen solstis
+SUMMARY:Solstice jen 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Season -  Solstice jen an Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fèt Papa
+SUMMARY:Jou Papa a 
 DTSTART;VALUE=DATE:20250629
 DTEND;VALUE=DATE:20250630
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:haiti/father-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Observance -  Jou Papa a selebre patènite ak paran gason nan 
+ dat diferan atravè lemond.
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Septanm ekinoks
+SUMMARY:Septanm Equinox 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Season -  Septanm Equinox nan peyi d Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Desanm solstis
+SUMMARY:Solstice Desanm 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Season -  Solstice Desanm nan Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lavèy Nwèl
+SUMMARY:Nwèl Èv 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:haiti/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Observance -  Nwèl Èv se jou anvan Jou Nwèl la epi li tonbe
+  sou 24 desanm nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lavèy joudlan
+SUMMARY:Lavèy nouvèl ane 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:haiti/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Observance -  Lavèy nouvèl ane a se dènye jou nan ane a\, 3
+ 1 desanm\, nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpus Christi
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20250619
 DTEND;VALUE=DATE:20250620
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:haiti/corpus-christi-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - Corpus Christi is a Christian feast in honor o
- f the Holy Eucharist.
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Local holiday -  Corpus Christi se yon fèt kretyen an onè na
+ n Eukarist Sentespri a.
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sipozisyon nan Mari
+SUMMARY:Sipozisyon nan Mari 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:haiti/assumption-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - The Christian feast of the Assumption of Mary 
- is on or around Aug 15 in most countries. A few celebrate Assumption Day a
- t other times of the year.
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Local holiday -  Fèt kretyen an nan Sipozisyon nan Mari se so
+ u oswa alantou 15 Out nan pifò peyi yo. Yon kèk selebre Jou Sipozisyon n
+ an lòt moman nan ane a.
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Latousen
+SUMMARY:All Saint 'Day 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:haiti/all-saints-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - Many churches honor all their saints on All Sa
- ints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Local holiday -  Anpil legliz onore tout sen yo nan Jou Tout S
+ aint '\, ke yo rekonèt tou kòm Jou Tout Hallows'.
+LAST-MODIFIED:20240119T094704Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fètdèmo
+SUMMARY:Jou tout Souls' Day 
 DTSTART;VALUE=DATE:20251102
 DTEND;VALUE=DATE:20251103
-DTSTAMP:20230623T220030Z
+DTSTAMP:20240119T094704Z
 UID:haiti/all-souls-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - All Souls’ Day falls on November 2 each year
- . It is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T220030Z
+DESCRIPTION:Local holiday -  Jou tout Souls 'tonbe nan dat 2 novanm chak a
+ ne. Se yon jou nan bay almis ak lapriyè pou moun ki mouri yo.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou Nouvèl Ane/Jou Endepandans 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094704Z
+UID:haiti/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Jou nouvo ane a se premye jou nan an
+ e a\, oswa 1 janvye\, nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou Ewo/Jou Zansèt 
+DTSTART;VALUE=DATE:20260102
+DTEND;VALUE=DATE:20260103
+DTSTAMP:20240119T094704Z
+UID:haiti/heroes-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Jou Ewo/Jou Zansèt se yon jou ferye
+  nasyonal/legal ann Ayiti
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Carnaval/Shrove Madi 
+DTSTART;VALUE=DATE:20260217
+DTEND;VALUE=DATE:20260218
+DTSTAMP:20240119T094704Z
+UID:haiti/shrove-tuesday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Shrove Madi se yon jou ferye relijye
+  anvan peryòd la dejou nan Karèm. Li selebre pa manje krèp ak kenbe par
+ ad Kanaval yo.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Kanaval/Ash Mèkredi 
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260219
+DTSTAMP:20240119T094704Z
+UID:haiti/carnival-wednesday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Sann Mèkredi make premye jou Karèm
+  nan legliz lwès kretyen.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Bon Vandredi 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094704Z
+UID:haiti/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Bon Vandredi se yon obsèvans kretye
+ n mondyal de jou anvan Dimanch Pak.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Agrikilti ak Labour Day 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094704Z
+UID:haiti/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Jou Travay\, Jou Entènasyonal Trava
+ yè yo\, ak Jou Me\, se yon jou koupe pou travayè nan anpil peyi atravè 
+ mond lan.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou Drapo/Jou Inivèsite 
+DTSTART;VALUE=DATE:20260518
+DTEND;VALUE=DATE:20260519
+DTSTAMP:20240119T094704Z
+UID:haiti/flag-and-university-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Jou Drapo/Jou Inivèsite se yon jou 
+ ferye nasyonal/legal ann Ayiti
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou manman an 
+DTSTART;VALUE=DATE:20260531
+DTEND;VALUE=DATE:20260601
+DTSTAMP:20240119T094704Z
+UID:haiti/mother-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Jou manman an selebre reyalizasyon y
+ o ak efò manman ak figi manman yo.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou Dessalines 
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+DTSTAMP:20240119T094704Z
+UID:haiti/dessalines-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Jou Dessalines se yon jou ferye nasy
+ onal/legal ann Ayiti
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou Vertières 
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+DTSTAMP:20240119T094704Z
+UID:haiti/vertieres-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Jou Vertières se yon jou ferye nasy
+ onal/legal ann Ayiti
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou Nwèl 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094704Z
+UID:haiti/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National/Legal Holiday -  Jou Nwèl la se youn nan pi gwo sele
+ brasyon kretyen yo epi li tonbe sou 25 desanm nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou Valentine a 
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20240119T094704Z
+UID:haiti/valentine-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  14 fevriye se Jou Valentine a oswa fèt Saint Va
+ lentine a. Jou a nan renmen dwe orijin li yo nan ansyen tradisyon Women ak
+  Ewopeyen kretyen.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mas Equinox 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094704Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Mas Equinox nan Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dimanch Pak 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094704Z
+UID:haiti/easter-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Dimanch Pak komemore rezirèksyon Jezikri a\, da
+ pre kwayans kretyen an.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solstice jen 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094704Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solstice jen an Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou Papa a 
+DTSTART;VALUE=DATE:20260628
+DTEND;VALUE=DATE:20260629
+DTSTAMP:20240119T094704Z
+UID:haiti/father-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Jou Papa a selebre patènite ak paran gason nan 
+ dat diferan atravè lemond.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Septanm Equinox 
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+DTSTAMP:20240119T094704Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Septanm Equinox nan peyi d Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solstice Desanm 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094704Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solstice Desanm nan Ayiti (Port-au-Prince)
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nwèl Èv 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T094704Z
+UID:haiti/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Nwèl Èv se jou anvan Jou Nwèl la epi li tonbe
+  sou 24 desanm nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lavèy nouvèl ane 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094704Z
+UID:haiti/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Lavèy nouvèl ane a se dènye jou nan ane a\, 3
+ 1 desanm\, nan kalandriye gregoryen an.
+LAST-MODIFIED:20240119T094704Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corpus Christi 
+DTSTART;VALUE=DATE:20260604
+DTEND;VALUE=DATE:20260605
+DTSTAMP:20240119T094705Z
+UID:haiti/corpus-christi-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  Corpus Christi se yon fèt kretyen an onè na
+ n Eukarist Sentespri a.
+LAST-MODIFIED:20240119T094705Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sipozisyon nan Mari 
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20240119T094705Z
+UID:haiti/assumption-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  Fèt kretyen an nan Sipozisyon nan Mari se so
+ u oswa alantou 15 Out nan pifò peyi yo. Yon kèk selebre Jou Sipozisyon n
+ an lòt moman nan ane a.
+LAST-MODIFIED:20240119T094705Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:All Saint 'Day 
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DTSTAMP:20240119T094705Z
+UID:haiti/all-saints-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  Anpil legliz onore tout sen yo nan Jou Tout S
+ aint '\, ke yo rekonèt tou kòm Jou Tout Hallows'.
+LAST-MODIFIED:20240119T094705Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jou tout Souls' Day 
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+DTSTAMP:20240119T094705Z
+UID:haiti/all-souls-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  Jou tout Souls 'tonbe nan dat 2 novanm chak a
+ ne. Se yon jou nan bay almis ak lapriyè pou moun ki mouri yo.
+LAST-MODIFIED:20240119T094705Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

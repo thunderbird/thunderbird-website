@@ -2,1632 +2,1773 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Ամանոր
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T215913Z
-UID:armenia/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ամանոր (օր 2)
-DTSTART;VALUE=DATE:20230102
-DTEND;VALUE=DATE:20230103
-DTSTAMP:20230623T215913Z
-UID:armenia/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Սուրբ Ծնունդ
-DTSTART;VALUE=DATE:20230106
-DTEND;VALUE=DATE:20230107
-DTSTAMP:20230623T215913Z
-UID:armenia/armenian-christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Many Orthodox churches annually celebrate C
- hristmas Day on or around January 7. This event commemorates the story of 
- Jesus Christ’s birth\, according to the Christian Bible.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Բանակի օր
-DTSTART;VALUE=DATE:20230128
-DTEND;VALUE=DATE:20230129
-DTSTAMP:20230623T215913Z
-UID:armenia/army-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Կանանց միջազգային օր
-DTSTART;VALUE=DATE:20230308
-DTEND;VALUE=DATE:20230309
-DTSTAMP:20230623T215913Z
-UID:armenia/international-womens-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Եղեռնի զոհերի հիշատակի օր
-DTSTART;VALUE=DATE:20230424
-DTEND;VALUE=DATE:20230425
-DTSTAMP:20230623T215913Z
-UID:armenia/genocide-remembrance-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Աշխատանքի օր
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T215913Z
-UID:armenia/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Հաղթանակի եւ Խաղաղության տոն
-DTSTART;VALUE=DATE:20230509
-DTEND;VALUE=DATE:20230510
-DTSTAMP:20230623T215913Z
-UID:armenia/victory-and-peace-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Հանրապետության օր
-DTSTART;VALUE=DATE:20230528
-DTEND;VALUE=DATE:20230529
-DTSTAMP:20230623T215913Z
-UID:armenia/republic-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Սահմանադրության օր
-DTSTART;VALUE=DATE:20230705
-DTEND;VALUE=DATE:20230706
-DTSTAMP:20230623T215913Z
-UID:armenia/constitution-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Անկախության օր
-DTSTART;VALUE=DATE:20230921
-DTEND;VALUE=DATE:20230922
-DTSTAMP:20230623T215913Z
-UID:armenia/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ամանորյա անակնկալներ
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T215913Z
-UID:armenia/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Eve is the last day of the yea
- r\, December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Նախածննդյան տոներ
-DTSTART;VALUE=DATE:20230105
-DTEND;VALUE=DATE:20230106
-DTSTAMP:20230623T215913Z
-UID:armenia/armenian-christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Մեռելոց հիշատակի օր
-DTSTART;VALUE=DATE:20230107
-DTEND;VALUE=DATE:20230108
-DTSTAMP:20230623T215913Z
-UID:armenia/christmas-remembrance-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Սուրբ Վալենտինի օր
-DTSTART;VALUE=DATE:20230214
-DTEND;VALUE=DATE:20230215
-DTSTAMP:20230623T215913Z
-UID:armenia/valentine-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Սուրբ Վարդանի տոնը
-DTSTART;VALUE=DATE:20230216
-DTEND;VALUE=DATE:20230217
-DTSTAMP:20230623T215913Z
-UID:armenia/saint-vartan-feast-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Մայրենի լեզվի օր
-DTSTART;VALUE=DATE:20230221
-DTEND;VALUE=DATE:20230222
-DTSTAMP:20230623T215913Z
-UID:armenia/mother-language-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Գիշերահավասար Մարտ
-DTSTART;VALUE=DATE:20230321
-DTEND;VALUE=DATE:20230322
-DTSTAMP:20230623T215913Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ավագ ուրբաթ
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T215913Z
-UID:armenia/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Good Friday is a global Christian observance two 
- days before Easter Sunday.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Մայրության\, գեղեցկության եւ սիրո տո
- ն
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T215913Z
-UID:armenia/motherhood-and-beauty-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Սուրբ շաբաթ
-DTSTART;VALUE=DATE:20230408
-DTEND;VALUE=DATE:20230409
-DTSTAMP:20230623T215913Z
-UID:armenia/holy-saturday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Holy Saturday is the day before Easter Sunday.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Զատիկ
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T215913Z
-UID:armenia/easter-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Սուրբ Զատիկից երկուշաբթի
-DTSTART;VALUE=DATE:20230410
-DTEND;VALUE=DATE:20230411
-DTSTAMP:20230623T215913Z
-UID:armenia/easter-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Easter Monday is the day after Easter Sunday.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Հայկական կինոյի օր
-DTSTART;VALUE=DATE:20230416
-DTEND;VALUE=DATE:20230417
-DTSTAMP:20230623T215913Z
-UID:armenia/armenian-cinema-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Հարկատուի օր
-DTSTART;VALUE=DATE:20230419
-DTEND;VALUE=DATE:20230420
-DTSTAMP:20230623T215913Z
-UID:armenia/taxpayers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Քաղաքացու օր
-DTSTART;VALUE=DATE:20230429
-DTEND;VALUE=DATE:20230430
-DTSTAMP:20230623T215913Z
-UID:armenia/citizens-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Երկրապահի օր
-DTSTART;VALUE=DATE:20230508
-DTEND;VALUE=DATE:20230509
-DTSTAMP:20230623T215913Z
-UID:armenia/congress-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ընտանիքի օր
-DTSTART;VALUE=DATE:20230515
-DTEND;VALUE=DATE:20230516
-DTSTAMP:20230623T215913Z
-UID:armenia/family-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ուսանողների և երիտասարդության օր
-DTSTART;VALUE=DATE:20230516
-DTEND;VALUE=DATE:20230517
-DTSTAMP:20230623T215913Z
-UID:armenia/youth-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Երեխաների իրավունքների պաշտպանությ
- ան օր
-DTSTART;VALUE=DATE:20230601
-DTEND;VALUE=DATE:20230602
-DTSTAMP:20230623T215913Z
-UID:armenia/childrens-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Բռնադատվածների հիշատակի օր
-DTSTART;VALUE=DATE:20230614
-DTEND;VALUE=DATE:20230615
-DTSTAMP:20230623T215913Z
-UID:armenia/remembrance-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:հայրերի 'օր
-DTSTART;VALUE=DATE:20230618
-DTEND;VALUE=DATE:20230619
-DTSTAMP:20230623T215913Z
-UID:armenia/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Արևադարձ Հունիս
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T215913Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:պետական խորհրդանիշների օր
-DTSTART;VALUE=DATE:20230705
-DTEND;VALUE=DATE:20230706
-DTSTAMP:20230623T215913Z
-UID:armenia/day-of-state-symbols-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Գիտելիքի\, գրի եւ դպրության օր
-DTSTART;VALUE=DATE:20230901
-DTEND;VALUE=DATE:20230902
-DTSTAMP:20230623T215913Z
-UID:armenia/knowledge-and-literature-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Գիշերահավասար Սեպտեմբեր
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T215913Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Հայաստանի Հանրապետության ազգային փ
- ոքրամասնությունների օր
-DTSTART;VALUE=DATE:20231001
-DTEND;VALUE=DATE:20231002
-DTSTAMP:20230623T215913Z
-UID:armenia/national-minorities-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ուսուցչի օր
-DTSTART;VALUE=DATE:20231005
-DTEND;VALUE=DATE:20231006
-DTSTAMP:20230623T215913Z
-UID:armenia/teachers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Թարգմանչաց տո
-DTSTART;VALUE=DATE:20231014
-DTEND;VALUE=DATE:20231015
-DTSTAMP:20230623T215913Z
-UID:armenia/translators-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Հելոուին
-DTSTART;VALUE=DATE:20231031
-DTEND;VALUE=DATE:20231101
-DTSTAMP:20230623T215913Z
-UID:armenia/halloween-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Տեղական ինքնակառավարման օր
-DTSTART;VALUE=DATE:20231110
-DTEND;VALUE=DATE:20231111
-DTSTAMP:20230623T215913Z
-UID:armenia/local-self-government-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Երկրաշարժի զոհերի հիշատակի օր
-DTSTART;VALUE=DATE:20231207
-DTEND;VALUE=DATE:20231208
-DTSTAMP:20230623T215913Z
-UID:armenia/spitak-remembrance-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ցեղասպանության դատապարտման և կանխա
- րգելման օր
-DTSTART;VALUE=DATE:20231209
-DTEND;VALUE=DATE:20231210
-DTSTAMP:20230623T215913Z
-UID:armenia/genocide-prevention-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Արևադարձ Դեկտեմբեր
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T215913Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215913Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ամանոր
+SUMMARY:Ամանորի օր 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Ամանորի տոնը տարվա առա
+ ջին օրն է\, կամ հունվարի 1-ը\, գրեգորյան օր
+ ացույցում։
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ամանոր (օր 2)
+SUMMARY:Ամանորի օրը (Օր 2) 
 DTSTART;VALUE=DATE:20240102
 DTEND;VALUE=DATE:20240103
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Ամանորի տոնը (Օր 2) Հայա
+ ստանում ազգային տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ Ծնունդ
+SUMMARY:Սուրբ Ծննդյան օր 
 DTSTART;VALUE=DATE:20240106
 DTEND;VALUE=DATE:20240107
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/armenian-christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many Orthodox churches annually celebrate C
- hristmas Day on or around January 7. This event commemorates the story of 
- Jesus Christ’s birth\, according to the Christian Bible.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Շատ ուղղափառ եկեղեցինե
+ ր տարեկան նշում են Սուրբ Ծննդյան տոնը հո
+ ւնվարի 7-ին կամ դրա շուրջ։ Այս միջոցառում
+ ը ոգեկոչում է Հիսուս Քրիստոսի ծննդյան պա
+ տմությունը\, ըստ քրիստոնեական Աստվածաշն
+ չի:
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Բանակի օր
+SUMMARY:Բանակի օրը 
 DTSTART;VALUE=DATE:20240128
 DTEND;VALUE=DATE:20240129
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/army-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Բանակի օրը Հայաստանում
+  ազգային տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Կանանց միջազգային օր
+SUMMARY:Կանանց միջազգային օրը 
 DTSTART;VALUE=DATE:20240308
 DTEND;VALUE=DATE:20240309
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/international-womens-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Կանանց միջազգային օրը 
+ Հայաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Եղեռնի զոհերի հիշատակի օր
+SUMMARY:Ցեղասպանության հիշատակի օր 
 DTSTART;VALUE=DATE:20240424
 DTEND;VALUE=DATE:20240425
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/genocide-remembrance-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Ցեղասպանության հիշատա
+ կի օրը Հայաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Աշխատանքի օր
+SUMMARY:Աշխատանքի օր 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Աշխատանքի օր\, Աշխատավո
+ րների միջազգային օր\, և Մայիսյան օր\, աշխա
+ րհի շատ երկրներում աշխատողների համար հա
+ նգստյան օր է։
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հաղթանակի եւ Խաղաղության տոն
+SUMMARY:Հաղթանակի և խաղաղության օր 
 DTSTART;VALUE=DATE:20240509
 DTEND;VALUE=DATE:20240510
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/victory-and-peace-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Հաղթանակի և խաղաղությա
+ ն տոնը Հայաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հանրապետության օր
+SUMMARY:Հանրապետության օրը 
 DTSTART;VALUE=DATE:20240528
 DTEND;VALUE=DATE:20240529
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/republic-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Հանրապետության տոնը Հա
+ յաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սահմանադրության օր
+SUMMARY:Սահմանադրության օր 
 DTSTART;VALUE=DATE:20240705
 DTEND;VALUE=DATE:20240706
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/constitution-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Սահմանադրության օրը Հա
+ յաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Անկախության օր
+SUMMARY:Անկախության օրը 
 DTSTART;VALUE=DATE:20240921
 DTEND;VALUE=DATE:20240922
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/independence-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Անկախության տոնը Հայաս
+ տանում ազգային տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ամանորյա անակնկալներ
+SUMMARY:Ամանորի նախաշեմը 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Eve is the last day of the yea
- r\, December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:National holiday -  Ամանորի գիշերը տարվա վ
+ երջին օրն է՝ դեկտեմբերի 31-ը\, գրեգորյան տ
+ ոմարով:
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Նախածննդյան տոներ
+SUMMARY:Սուրբ Ծննդյան նախաշեմը Հայաստանում 
+ տոնախմբություն է
 DTSTART;VALUE=DATE:20240105
 DTEND;VALUE=DATE:20240106
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/armenian-christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance - Christmas Eve is a observance in Armenia
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Մեռելոց հիշատակի օր
+SUMMARY:Սուրբ Ծննդյան հիշատակի օրը 
 DTSTART;VALUE=DATE:20240107
 DTEND;VALUE=DATE:20240108
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/christmas-remembrance-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Սուրբ Ծննդյան հիշատակի օր
+ ը Հայաստանում տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ Վարդանի տոնը
+SUMMARY:Սուրբ Վարդանի տօնը 
 DTSTART;VALUE=DATE:20240208
 DTEND;VALUE=DATE:20240209
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/saint-vartan-feast-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Սուրբ Վարդանի տօնը Հայաստ
+ անի մէջ կը հանդիսանայ
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ Վալենտինի օր
+SUMMARY:Վալենտինի օրը 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/valentine-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Փետրվարի 14-ը Վալենտինի տոն
+ ն է կամ Սուրբ Վալենտինի տոնը։ Սիրո օրն իր
+  ակունքները պարտական է հին հռոմեական և ե
+ վրոպական քրիստոնեական ավանդույթներին։
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Մայրենի լեզվի օր
+SUMMARY:Մայրենի լեզվի օրը 
 DTSTART;VALUE=DATE:20240221
 DTEND;VALUE=DATE:20240222
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/mother-language-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Մայրենի լեզվի օրը Հայաստա
+ նում տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Գիշերահավասար Մարտ
+SUMMARY:Մարտյան հավասարություն 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Season -  Մարտյան հավասարույսը Հայաստ
+ անում (Երևան)
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ավագ ուրբաթ
+SUMMARY:Բարի Ուրբաթ 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Good Friday is a global Christian observance two 
- days before Easter Sunday.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Բարի Ուրբաթը համաշխարհայի
+ ն քրիստոնեական տոնախմբություն է Զատկի կ
+ իրակիից երկու օր առաջ։
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ շաբաթ
+SUMMARY:Ավագ շաբաթ 
 DTSTART;VALUE=DATE:20240330
 DTEND;VALUE=DATE:20240331
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/holy-saturday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Holy Saturday is the day before Easter Sunday.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Ավագ շաբաթ օրը Զատկի կիրակ
+ ին նախորդող օրն է։
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Զատիկ
+SUMMARY:Զատկի կիրակի 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/easter-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Զատկի կիրակին հիշատակվում
+  է Հիսուս Քրիստոսի հարությունը\, ըստ քրիս
+ տոնեական համոզմունքի։
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ Զատիկից երկուշաբթի
+SUMMARY:Զատկի երկուշաբթի 
 DTSTART;VALUE=DATE:20240401
 DTEND;VALUE=DATE:20240402
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/easter-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Monday is the day after Easter Sunday.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Զատկի երկուշաբթի օրը Զատկ
+ ի կիրակի օրից հետո։
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Մայրության\, գեղեցկության եւ սիրո տո
- ն
+SUMMARY:Մայրության և գեղեցկության օրը 
 DTSTART;VALUE=DATE:20240407
 DTEND;VALUE=DATE:20240408
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/motherhood-and-beauty-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Մայրության և գեղեցկության
+  տոնը Հայաստանում նշում է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հայկական կինոյի օր
+SUMMARY:Հայկական կինոյի օրը 
 DTSTART;VALUE=DATE:20240416
 DTEND;VALUE=DATE:20240417
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/armenian-cinema-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Հայկական կինոյի օրը Հայաս
+ տանում տոնական է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հարկատուի օր
+SUMMARY:Հարկ վճարողների օրը 
 DTSTART;VALUE=DATE:20240419
 DTEND;VALUE=DATE:20240420
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/taxpayers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Հարկատուների օրը Հայաստան
+ ում տոնական է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Քաղաքացու օր
+SUMMARY:Քաղաքացիների օրը 
 DTSTART;VALUE=DATE:20240427
 DTEND;VALUE=DATE:20240428
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/citizens-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Քաղաքացիների օրը Հայաստան
+ ում տոնախմբություն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Երկրապահի օր
+SUMMARY:Երկրապահի օրը 
 DTSTART;VALUE=DATE:20240508
 DTEND;VALUE=DATE:20240509
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/congress-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Երկրապահի օրը Հայաստանում
+  տոնախմբություն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ընտանիքի օր
+SUMMARY:Ընտանիքի օրը 
 DTSTART;VALUE=DATE:20240515
 DTEND;VALUE=DATE:20240516
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/family-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Ընտանիքի օրը Հայաստանում 
+ տոնական է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ուսանողների և երիտասարդության օր
+SUMMARY:Ուսանողների և երիտասարդների օրը 
 DTSTART;VALUE=DATE:20240516
 DTEND;VALUE=DATE:20240517
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/youth-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Ուսանողների և երիտասարդնե
+ րի օրը Հայաստանում դիտողություն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Երեխաների իրավունքների պաշտպանությ
- ան օր
+SUMMARY:Երեխաների պաշտպանության օրը 
 DTSTART;VALUE=DATE:20240601
 DTEND;VALUE=DATE:20240602
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/childrens-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Երեխաների պաշտպանության օ
+ րը Հայաստանում տոնական է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Բռնադատվածների հիշատակի օր
+SUMMARY:ՃՆՇՎԱԾՆԵՐԻ ՀԻՇԱՏԱԿԻ ՕՐԸ 
 DTSTART;VALUE=DATE:20240614
 DTEND;VALUE=DATE:20240615
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/remembrance-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  ՃՆՇՎԱԾՆԵՐԻ ՀԻՇԱՏԱԿԻ ՕՐԸ Հ
+ ԱՅԱՍՏԱՆՈՒՄ ՏՈՆԱԿԱՏԱՐՈՒԹՅՈՒՆ Է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:հայրերի 'օր
+SUMMARY:Հայրերի օրը 
 DTSTART;VALUE=DATE:20240616
 DTEND;VALUE=DATE:20240617
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Հայրերի օրը նշում է հայրու
+ թյունը և արական սեռի ծնողությունն ամբող
+ ջ աշխարհում տարբեր ամսաթվերով։
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Արևադարձ Հունիս
+SUMMARY:Հունիսյան արևադարձը 
 DTSTART;VALUE=DATE:20240621
 DTEND;VALUE=DATE:20240622
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Season -  Հունիսյան արևադարձը Հայաստա
+ նում (Երևան)
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:պետական խորհրդանիշների օր
+SUMMARY:Պետական խորհրդանիշների օրը 
 DTSTART;VALUE=DATE:20240705
 DTEND;VALUE=DATE:20240706
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/day-of-state-symbols-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Պետական խորհրդանիշների օր
+ ը տոնակատարություն է Հայաստանում
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Գիտելիքի\, գրի եւ դպրության օր
+SUMMARY:Գիտելիքի և գրականության օրը 
 DTSTART;VALUE=DATE:20240901
 DTEND;VALUE=DATE:20240902
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/knowledge-and-literature-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Գիտելիքի և գրականության օ
+ րը Հայաստանում նշում է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Գիշերահավասար Սեպտեմբեր
+SUMMARY:Սեպտեմբերյան հավասարեցում 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Season -  Սեպտեմբերյան հավասարույսը Հ
+ այաստանում (Երևան)
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ուսուցչի օր
+SUMMARY:Ուսուցիչների օրը 
 DTSTART;VALUE=DATE:20241005
 DTEND;VALUE=DATE:20241006
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/teachers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Ուսուցիչների օրը Հայաստան
+ ում տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Հայաստանի Հանրապետության ազգային փ
- ոքրամասնությունների օր
+ ոքրամասնությունների օրը 
 DTSTART;VALUE=DATE:20241006
 DTEND;VALUE=DATE:20241007
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/national-minorities-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Հայաստանի Հանրապետության 
+ ազգային փոքրամասնությունների օրը տոն է 
+ Հայաստանում
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Թարգմանչաց տո
+SUMMARY:Թարգմանչաց օրը 
 DTSTART;VALUE=DATE:20241012
 DTEND;VALUE=DATE:20241013
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/translators-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Թարգմանչաց օրը Հայաստանու
+ մ տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հելոուին
+SUMMARY:Հելոուինը 
 DTSTART;VALUE=DATE:20241031
 DTEND;VALUE=DATE:20241101
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/halloween-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Հելոուինը տոնական առիթ է\, 
+ որը շատ երկրներում նշվում է յուրաքանչյո
+ ւր տարվա հոկտեմբերի 31-ին։
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Տեղական ինքնակառավարման օր
+SUMMARY:Տեղական ինքնակառավարման օրը 
 DTSTART;VALUE=DATE:20241110
 DTEND;VALUE=DATE:20241111
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/local-self-government-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Տեղական ինքնակառավարման օ
+ րը Հայաստանում տոնախմբություն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Երկրաշարժի զոհերի հիշատակի օր
+SUMMARY:Սպիտակի հիշատակի օրը 
 DTSTART;VALUE=DATE:20241207
 DTEND;VALUE=DATE:20241208
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/spitak-remembrance-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Սպիտակի հիշատակի օրը Հայա
+ ստանում տոն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ցեղասպանության դատապարտման և կանխա
- րգելման օր
+ րգելման օր 
 DTSTART;VALUE=DATE:20241209
 DTEND;VALUE=DATE:20241210
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:armenia/genocide-prevention-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Observance -  Ցեղասպանության դատապարտմ
+ ան և կանխարգելման օրը Հայաստանում դիտող
+ ություն է
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Արևադարձ Դեկտեմբեր
+SUMMARY:Դեկտեմբերյան արևադարձ 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T215914Z
+DTSTAMP:20240119T094543Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215914Z
+DESCRIPTION:Season -  Դեկտեմբերյան արևադարձը Հայա
+ ստանում (Երևան)
+LAST-MODIFIED:20240119T094543Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ամանոր
+SUMMARY:Ամանորի օր 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Ամանորի տոնը տարվա առա
+ ջին օրն է\, կամ հունվարի 1-ը\, գրեգորյան օր
+ ացույցում։
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ամանոր (օր 2)
+SUMMARY:Ամանորի օրը (Օր 2) 
 DTSTART;VALUE=DATE:20250102
 DTEND;VALUE=DATE:20250103
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Ամանորի տոնը (Օր 2) Հայա
+ ստանում ազգային տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ Ծնունդ
+SUMMARY:Սուրբ Ծննդյան օր 
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/armenian-christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many Orthodox churches annually celebrate C
- hristmas Day on or around January 7. This event commemorates the story of 
- Jesus Christ’s birth\, according to the Christian Bible.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Շատ ուղղափառ եկեղեցինե
+ ր տարեկան նշում են Սուրբ Ծննդյան տոնը հո
+ ւնվարի 7-ին կամ դրա շուրջ։ Այս միջոցառում
+ ը ոգեկոչում է Հիսուս Քրիստոսի ծննդյան պա
+ տմությունը\, ըստ քրիստոնեական Աստվածաշն
+ չի:
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Բանակի օր
+SUMMARY:Բանակի օրը 
 DTSTART;VALUE=DATE:20250128
 DTEND;VALUE=DATE:20250129
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/army-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Բանակի օրը Հայաստանում
+  ազգային տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Կանանց միջազգային օր
+SUMMARY:Կանանց միջազգային օրը 
 DTSTART;VALUE=DATE:20250308
 DTEND;VALUE=DATE:20250309
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/international-womens-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Կանանց միջազգային օրը 
+ Հայաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Եղեռնի զոհերի հիշատակի օր
+SUMMARY:Ցեղասպանության հիշատակի օր 
 DTSTART;VALUE=DATE:20250424
 DTEND;VALUE=DATE:20250425
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/genocide-remembrance-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Ցեղասպանության հիշատա
+ կի օրը Հայաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Աշխատանքի օր
+SUMMARY:Աշխատանքի օր 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Աշխատանքի օր\, Աշխատավո
+ րների միջազգային օր\, և Մայիսյան օր\, աշխա
+ րհի շատ երկրներում աշխատողների համար հա
+ նգստյան օր է։
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հաղթանակի եւ Խաղաղության տոն
+SUMMARY:Հաղթանակի և խաղաղության օր 
 DTSTART;VALUE=DATE:20250509
 DTEND;VALUE=DATE:20250510
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/victory-and-peace-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Հաղթանակի և խաղաղությա
+ ն տոնը Հայաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հանրապետության օր
+SUMMARY:Հանրապետության օրը 
 DTSTART;VALUE=DATE:20250528
 DTEND;VALUE=DATE:20250529
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/republic-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Հանրապետության տոնը Հա
+ յաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սահմանադրության օր
+SUMMARY:Սահմանադրության օր 
 DTSTART;VALUE=DATE:20250705
 DTEND;VALUE=DATE:20250706
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/constitution-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Սահմանադրության օրը Հա
+ յաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Անկախության օր
+SUMMARY:Անկախության օրը 
 DTSTART;VALUE=DATE:20250921
 DTEND;VALUE=DATE:20250922
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/independence-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Անկախության տոնը Հայաս
+ տանում ազգային տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ամանորյա անակնկալներ
+SUMMARY:Ամանորի նախաշեմը 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Eve is the last day of the yea
- r\, December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:National holiday -  Ամանորի գիշերը տարվա վ
+ երջին օրն է՝ դեկտեմբերի 31-ը\, գրեգորյան տ
+ ոմարով:
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Նախածննդյան տոներ
+SUMMARY:Սուրբ Ծննդյան նախաշեմը Հայաստանում 
+ տոնախմբություն է
 DTSTART;VALUE=DATE:20250105
 DTEND;VALUE=DATE:20250106
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/armenian-christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance - Christmas Eve is a observance in Armenia
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Մեռելոց հիշատակի օր
+SUMMARY:Սուրբ Ծննդյան հիշատակի օրը 
 DTSTART;VALUE=DATE:20250107
 DTEND;VALUE=DATE:20250108
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/christmas-remembrance-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Սուրբ Ծննդյան հիշատակի օր
+ ը Հայաստանում տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ Վալենտինի օր
+SUMMARY:Վալենտինի օրը 
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/valentine-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Փետրվարի 14-ը Վալենտինի տոն
+ ն է կամ Սուրբ Վալենտինի տոնը։ Սիրո օրն իր
+  ակունքները պարտական է հին հռոմեական և ե
+ վրոպական քրիստոնեական ավանդույթներին։
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Մայրենի լեզվի օր
+SUMMARY:Մայրենի լեզվի օրը 
 DTSTART;VALUE=DATE:20250221
 DTEND;VALUE=DATE:20250222
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/mother-language-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Մայրենի լեզվի օրը Հայաստա
+ նում տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ Վարդանի տոնը
+SUMMARY:Սուրբ Վարդանի տօնը 
 DTSTART;VALUE=DATE:20250227
 DTEND;VALUE=DATE:20250228
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/saint-vartan-feast-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Սուրբ Վարդանի տօնը Հայաստ
+ անի մէջ կը հանդիսանայ
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Գիշերահավասար Մարտ
+SUMMARY:Մարտյան հավասարություն 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Season -  Մարտյան հավասարույսը Հայաստ
+ անում (Երևան)
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Մայրության\, գեղեցկության եւ սիրո տո
- ն
+SUMMARY:Մայրության և գեղեցկության օրը 
 DTSTART;VALUE=DATE:20250407
 DTEND;VALUE=DATE:20250408
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/motherhood-and-beauty-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Մայրության և գեղեցկության
+  տոնը Հայաստանում նշում է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հայկական կինոյի օր
+SUMMARY:Հայկական կինոյի օրը 
 DTSTART;VALUE=DATE:20250416
 DTEND;VALUE=DATE:20250417
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/armenian-cinema-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Հայկական կինոյի օրը Հայաս
+ տանում տոնական է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ավագ ուրբաթ
+SUMMARY:Բարի Ուրբաթ 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Good Friday is a global Christian observance two 
- days before Easter Sunday.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Բարի Ուրբաթը համաշխարհայի
+ ն քրիստոնեական տոնախմբություն է Զատկի կ
+ իրակիից երկու օր առաջ։
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ շաբաթ
+SUMMARY:Ավագ շաբաթ 
 DTSTART;VALUE=DATE:20250419
 DTEND;VALUE=DATE:20250420
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/holy-saturday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Holy Saturday is the day before Easter Sunday.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Ավագ շաբաթ օրը Զատկի կիրակ
+ ին նախորդող օրն է։
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հարկատուի օր
+SUMMARY:Հարկ վճարողների օրը 
 DTSTART;VALUE=DATE:20250419
 DTEND;VALUE=DATE:20250420
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/taxpayers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Հարկատուների օրը Հայաստան
+ ում տոնական է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Զատիկ
+SUMMARY:Զատկի կիրակի 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/easter-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Զատկի կիրակին հիշատակվում
+  է Հիսուս Քրիստոսի հարությունը\, ըստ քրիս
+ տոնեական համոզմունքի։
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Սուրբ Զատիկից երկուշաբթի
+SUMMARY:Զատկի երկուշաբթի 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/easter-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Monday is the day after Easter Sunday.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Զատկի երկուշաբթի օրը Զատկ
+ ի կիրակի օրից հետո։
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Քաղաքացու օր
+SUMMARY:Քաղաքացիների օրը 
 DTSTART;VALUE=DATE:20250426
 DTEND;VALUE=DATE:20250427
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/citizens-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Քաղաքացիների օրը Հայաստան
+ ում տոնախմբություն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Երկրապահի օր
+SUMMARY:Երկրապահի օրը 
 DTSTART;VALUE=DATE:20250508
 DTEND;VALUE=DATE:20250509
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/congress-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Երկրապահի օրը Հայաստանում
+  տոնախմբություն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ընտանիքի օր
+SUMMARY:Ընտանիքի օրը 
 DTSTART;VALUE=DATE:20250515
 DTEND;VALUE=DATE:20250516
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/family-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Ընտանիքի օրը Հայաստանում 
+ տոնական է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ուսանողների և երիտասարդության օր
+SUMMARY:Ուսանողների և երիտասարդների օրը 
 DTSTART;VALUE=DATE:20250516
 DTEND;VALUE=DATE:20250517
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/youth-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Ուսանողների և երիտասարդնե
+ րի օրը Հայաստանում դիտողություն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Երեխաների իրավունքների պաշտպանությ
- ան օր
+SUMMARY:Երեխաների պաշտպանության օրը 
 DTSTART;VALUE=DATE:20250601
 DTEND;VALUE=DATE:20250602
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/childrens-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Երեխաների պաշտպանության օ
+ րը Հայաստանում տոնական է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Բռնադատվածների հիշատակի օր
+SUMMARY:ՃՆՇՎԱԾՆԵՐԻ ՀԻՇԱՏԱԿԻ ՕՐԸ 
 DTSTART;VALUE=DATE:20250614
 DTEND;VALUE=DATE:20250615
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/remembrance-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  ՃՆՇՎԱԾՆԵՐԻ ՀԻՇԱՏԱԿԻ ՕՐԸ Հ
+ ԱՅԱՍՏԱՆՈՒՄ ՏՈՆԱԿԱՏԱՐՈՒԹՅՈՒՆ Է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:հայրերի 'օր
+SUMMARY:Հայրերի օրը 
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Հայրերի օրը նշում է հայրու
+ թյունը և արական սեռի ծնողությունն ամբող
+ ջ աշխարհում տարբեր ամսաթվերով։
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Արևադարձ Հունիս
+SUMMARY:Հունիսյան արևադարձը 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Season -  Հունիսյան արևադարձը Հայաստա
+ նում (Երևան)
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:պետական խորհրդանիշների օր
+SUMMARY:Պետական խորհրդանիշների օրը 
 DTSTART;VALUE=DATE:20250705
 DTEND;VALUE=DATE:20250706
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/day-of-state-symbols-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Պետական խորհրդանիշների օր
+ ը տոնակատարություն է Հայաստանում
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Գիտելիքի\, գրի եւ դպրության օր
+SUMMARY:Գիտելիքի և գրականության օրը 
 DTSTART;VALUE=DATE:20250901
 DTEND;VALUE=DATE:20250902
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/knowledge-and-literature-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Գիտելիքի և գրականության օ
+ րը Հայաստանում նշում է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Գիշերահավասար Սեպտեմբեր
+SUMMARY:Սեպտեմբերյան հավասարեցում 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Season -  Սեպտեմբերյան հավասարույսը Հ
+ այաստանում (Երևան)
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Հայաստանի Հանրապետության ազգային փ
- ոքրամասնությունների օր
+ ոքրամասնությունների օրը 
 DTSTART;VALUE=DATE:20251005
 DTEND;VALUE=DATE:20251006
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/national-minorities-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Հայաստանի Հանրապետության 
+ ազգային փոքրամասնությունների օրը տոն է 
+ Հայաստանում
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ուսուցչի օր
+SUMMARY:Ուսուցիչների օրը 
 DTSTART;VALUE=DATE:20251005
 DTEND;VALUE=DATE:20251006
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/teachers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Ուսուցիչների օրը Հայաստան
+ ում տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Թարգմանչաց տո
+SUMMARY:Թարգմանչաց օրը 
 DTSTART;VALUE=DATE:20251011
 DTEND;VALUE=DATE:20251012
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/translators-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Թարգմանչաց օրը Հայաստանու
+ մ տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Հելոուին
+SUMMARY:Հելոուինը 
 DTSTART;VALUE=DATE:20251031
 DTEND;VALUE=DATE:20251101
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/halloween-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Հելոուինը տոնական առիթ է\, 
+ որը շատ երկրներում նշվում է յուրաքանչյո
+ ւր տարվա հոկտեմբերի 31-ին։
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Տեղական ինքնակառավարման օր
+SUMMARY:Տեղական ինքնակառավարման օրը 
 DTSTART;VALUE=DATE:20251110
 DTEND;VALUE=DATE:20251111
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/local-self-government-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Տեղական ինքնակառավարման օ
+ րը Հայաստանում տոնախմբություն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Երկրաշարժի զոհերի հիշատակի օր
+SUMMARY:Սպիտակի հիշատակի օրը 
 DTSTART;VALUE=DATE:20251207
 DTEND;VALUE=DATE:20251208
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/spitak-remembrance-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Սպիտակի հիշատակի օրը Հայա
+ ստանում տոն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ցեղասպանության դատապարտման և կանխա
- րգելման օր
+ րգելման օր 
 DTSTART;VALUE=DATE:20251209
 DTEND;VALUE=DATE:20251210
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:armenia/genocide-prevention-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Observance -  Ցեղասպանության դատապարտմ
+ ան և կանխարգելման օրը Հայաստանում դիտող
+ ություն է
+LAST-MODIFIED:20240119T094544Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Արևադարձ Դեկտեմբեր
+SUMMARY:Դեկտեմբերյան արևադարձ 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T215915Z
+DTSTAMP:20240119T094544Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215915Z
+DESCRIPTION:Season -  Դեկտեմբերյան արևադարձը Հայա
+ ստանում (Երևան)
+LAST-MODIFIED:20240119T094544Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ամանորի օր 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094545Z
+UID:armenia/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ամանորի տոնը տարվա առա
+ ջին օրն է\, կամ հունվարի 1-ը\, գրեգորյան օր
+ ացույցում։
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ամանորի օրը (Օր 2) 
+DTSTART;VALUE=DATE:20260102
+DTEND;VALUE=DATE:20260103
+DTSTAMP:20240119T094545Z
+UID:armenia/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ամանորի տոնը (Օր 2) Հայա
+ ստանում ազգային տոն է
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Սուրբ Ծննդյան օր 
+DTSTART;VALUE=DATE:20260106
+DTEND;VALUE=DATE:20260107
+DTSTAMP:20240119T094545Z
+UID:armenia/armenian-christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Շատ ուղղափառ եկեղեցինե
+ ր տարեկան նշում են Սուրբ Ծննդյան տոնը հո
+ ւնվարի 7-ին կամ դրա շուրջ։ Այս միջոցառում
+ ը ոգեկոչում է Հիսուս Քրիստոսի ծննդյան պա
+ տմությունը\, ըստ քրիստոնեական Աստվածաշն
+ չի:
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Բանակի օրը 
+DTSTART;VALUE=DATE:20260128
+DTEND;VALUE=DATE:20260129
+DTSTAMP:20240119T094545Z
+UID:armenia/army-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Բանակի օրը Հայաստանում
+  ազգային տոն է
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Կանանց միջազգային օրը 
+DTSTART;VALUE=DATE:20260308
+DTEND;VALUE=DATE:20260309
+DTSTAMP:20240119T094545Z
+UID:armenia/international-womens-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Կանանց միջազգային օրը 
+ Հայաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ցեղասպանության հիշատակի օր 
+DTSTART;VALUE=DATE:20260424
+DTEND;VALUE=DATE:20260425
+DTSTAMP:20240119T094545Z
+UID:armenia/genocide-remembrance-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ցեղասպանության հիշատա
+ կի օրը Հայաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Աշխատանքի օր 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094545Z
+UID:armenia/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Աշխատանքի օր\, Աշխատավո
+ րների միջազգային օր\, և Մայիսյան օր\, աշխա
+ րհի շատ երկրներում աշխատողների համար հա
+ նգստյան օր է։
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Հաղթանակի և խաղաղության օր 
+DTSTART;VALUE=DATE:20260509
+DTEND;VALUE=DATE:20260510
+DTSTAMP:20240119T094545Z
+UID:armenia/victory-and-peace-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Հաղթանակի և խաղաղությա
+ ն տոնը Հայաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Հանրապետության օրը 
+DTSTART;VALUE=DATE:20260528
+DTEND;VALUE=DATE:20260529
+DTSTAMP:20240119T094545Z
+UID:armenia/republic-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Հանրապետության տոնը Հա
+ յաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Սահմանադրության օր 
+DTSTART;VALUE=DATE:20260705
+DTEND;VALUE=DATE:20260706
+DTSTAMP:20240119T094545Z
+UID:armenia/constitution-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Սահմանադրության օրը Հա
+ յաստանում ազգային տոն է
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Անկախության օրը 
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+DTSTAMP:20240119T094545Z
+UID:armenia/independence-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Անկախության տոնը Հայաս
+ տանում ազգային տոն է
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ամանորի նախաշեմը 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094545Z
+UID:armenia/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ամանորի գիշերը տարվա վ
+ երջին օրն է՝ դեկտեմբերի 31-ը\, գրեգորյան տ
+ ոմարով:
+LAST-MODIFIED:20240119T094545Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Սուրբ Ծննդյան նախաշեմը Հայաստանում 
+ տոնախմբություն է
+DTSTART;VALUE=DATE:20260105
+DTEND;VALUE=DATE:20260106
+DTSTAMP:20240119T094546Z
+UID:armenia/armenian-christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Christmas Eve is a observance in Armenia
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Սուրբ Ծննդյան հիշատակի օրը 
+DTSTART;VALUE=DATE:20260107
+DTEND;VALUE=DATE:20260108
+DTSTAMP:20240119T094546Z
+UID:armenia/christmas-remembrance-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Սուրբ Ծննդյան հիշատակի օր
+ ը Հայաստանում տոն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Սուրբ Վարդանի տօնը 
+DTSTART;VALUE=DATE:20260212
+DTEND;VALUE=DATE:20260213
+DTSTAMP:20240119T094546Z
+UID:armenia/saint-vartan-feast-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Սուրբ Վարդանի տօնը Հայաստ
+ անի մէջ կը հանդիսանայ
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Վալենտինի օրը 
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20240119T094546Z
+UID:armenia/valentine-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Փետրվարի 14-ը Վալենտինի տոն
+ ն է կամ Սուրբ Վալենտինի տոնը։ Սիրո օրն իր
+  ակունքները պարտական է հին հռոմեական և ե
+ վրոպական քրիստոնեական ավանդույթներին։
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Մայրենի լեզվի օրը 
+DTSTART;VALUE=DATE:20260221
+DTEND;VALUE=DATE:20260222
+DTSTAMP:20240119T094546Z
+UID:armenia/mother-language-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Մայրենի լեզվի օրը Հայաստա
+ նում տոն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Մարտյան հավասարություն 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094546Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Մարտյան հավասարույսը Հայաստ
+ անում (Երևան)
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Բարի Ուրբաթ 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094546Z
+UID:armenia/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Բարի Ուրբաթը համաշխարհայի
+ ն քրիստոնեական տոնախմբություն է Զատկի կ
+ իրակիից երկու օր առաջ։
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ավագ շաբաթ 
+DTSTART;VALUE=DATE:20260404
+DTEND;VALUE=DATE:20260405
+DTSTAMP:20240119T094546Z
+UID:armenia/holy-saturday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ավագ շաբաթ օրը Զատկի կիրակ
+ ին նախորդող օրն է։
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Զատկի կիրակի 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094546Z
+UID:armenia/easter-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Զատկի կիրակին հիշատակվում
+  է Հիսուս Քրիստոսի հարությունը\, ըստ քրիս
+ տոնեական համոզմունքի։
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Զատկի երկուշաբթի 
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20240119T094546Z
+UID:armenia/easter-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Զատկի երկուշաբթի օրը Զատկ
+ ի կիրակի օրից հետո։
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Մայրության և գեղեցկության օրը 
+DTSTART;VALUE=DATE:20260407
+DTEND;VALUE=DATE:20260408
+DTSTAMP:20240119T094546Z
+UID:armenia/motherhood-and-beauty-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Մայրության և գեղեցկության
+  տոնը Հայաստանում նշում է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Հայկական կինոյի օրը 
+DTSTART;VALUE=DATE:20260416
+DTEND;VALUE=DATE:20260417
+DTSTAMP:20240119T094546Z
+UID:armenia/armenian-cinema-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Հայկական կինոյի օրը Հայաս
+ տանում տոնական է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Հարկ վճարողների օրը 
+DTSTART;VALUE=DATE:20260419
+DTEND;VALUE=DATE:20260420
+DTSTAMP:20240119T094546Z
+UID:armenia/taxpayers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Հարկատուների օրը Հայաստան
+ ում տոնական է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Քաղաքացիների օրը 
+DTSTART;VALUE=DATE:20260425
+DTEND;VALUE=DATE:20260426
+DTSTAMP:20240119T094546Z
+UID:armenia/citizens-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Քաղաքացիների օրը Հայաստան
+ ում տոնախմբություն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Երկրապահի օրը 
+DTSTART;VALUE=DATE:20260508
+DTEND;VALUE=DATE:20260509
+DTSTAMP:20240119T094546Z
+UID:armenia/congress-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Երկրապահի օրը Հայաստանում
+  տոնախմբություն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ընտանիքի օրը 
+DTSTART;VALUE=DATE:20260515
+DTEND;VALUE=DATE:20260516
+DTSTAMP:20240119T094546Z
+UID:armenia/family-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ընտանիքի օրը Հայաստանում 
+ տոնական է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ուսանողների և երիտասարդների օրը 
+DTSTART;VALUE=DATE:20260516
+DTEND;VALUE=DATE:20260517
+DTSTAMP:20240119T094546Z
+UID:armenia/youth-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ուսանողների և երիտասարդնե
+ րի օրը Հայաստանում դիտողություն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Երեխաների պաշտպանության օրը 
+DTSTART;VALUE=DATE:20260601
+DTEND;VALUE=DATE:20260602
+DTSTAMP:20240119T094546Z
+UID:armenia/childrens-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Երեխաների պաշտպանության օ
+ րը Հայաստանում տոնական է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ՃՆՇՎԱԾՆԵՐԻ ՀԻՇԱՏԱԿԻ ՕՐԸ 
+DTSTART;VALUE=DATE:20260614
+DTEND;VALUE=DATE:20260615
+DTSTAMP:20240119T094546Z
+UID:armenia/remembrance-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  ՃՆՇՎԱԾՆԵՐԻ ՀԻՇԱՏԱԿԻ ՕՐԸ Հ
+ ԱՅԱՍՏԱՆՈՒՄ ՏՈՆԱԿԱՏԱՐՈՒԹՅՈՒՆ Է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Հայրերի օրը 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094546Z
+UID:armenia/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Հայրերի օրը նշում է հայրու
+ թյունը և արական սեռի ծնողությունն ամբող
+ ջ աշխարհում տարբեր ամսաթվերով։
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Հունիսյան արևադարձը 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094546Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Հունիսյան արևադարձը Հայաստա
+ նում (Երևան)
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Պետական խորհրդանիշների օրը 
+DTSTART;VALUE=DATE:20260705
+DTEND;VALUE=DATE:20260706
+DTSTAMP:20240119T094546Z
+UID:armenia/day-of-state-symbols-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Պետական խորհրդանիշների օր
+ ը տոնակատարություն է Հայաստանում
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Գիտելիքի և գրականության օրը 
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+DTSTAMP:20240119T094546Z
+UID:armenia/knowledge-and-literature-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Գիտելիքի և գրականության օ
+ րը Հայաստանում նշում է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Սեպտեմբերյան հավասարեցում 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094546Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Սեպտեմբերյան հավասարույսը Հ
+ այաստանում (Երևան)
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Հայաստանի Հանրապետության ազգային փ
+ ոքրամասնությունների օրը 
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261005
+DTSTAMP:20240119T094546Z
+UID:armenia/national-minorities-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Հայաստանի Հանրապետության 
+ ազգային փոքրամասնությունների օրը տոն է 
+ Հայաստանում
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ուսուցիչների օրը 
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+DTSTAMP:20240119T094546Z
+UID:armenia/teachers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ուսուցիչների օրը Հայաստան
+ ում տոն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Թարգմանչաց օրը 
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+DTSTAMP:20240119T094546Z
+UID:armenia/translators-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Թարգմանչաց օրը Հայաստանու
+ մ տոն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Հելոուինը 
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20240119T094546Z
+UID:armenia/halloween-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Հելոուինը տոնական առիթ է\, 
+ որը շատ երկրներում նշվում է յուրաքանչյո
+ ւր տարվա հոկտեմբերի 31-ին։
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Տեղական ինքնակառավարման օրը 
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+DTSTAMP:20240119T094546Z
+UID:armenia/local-self-government-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Տեղական ինքնակառավարման օ
+ րը Հայաստանում տոնախմբություն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Սպիտակի հիշատակի օրը 
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+DTSTAMP:20240119T094546Z
+UID:armenia/spitak-remembrance-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Սպիտակի հիշատակի օրը Հայա
+ ստանում տոն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ցեղասպանության դատապարտման և կանխա
+ րգելման օր 
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+DTSTAMP:20240119T094546Z
+UID:armenia/genocide-prevention-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ցեղասպանության դատապարտմ
+ ան և կանխարգելման օրը Հայաստանում դիտող
+ ություն է
+LAST-MODIFIED:20240119T094546Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Դեկտեմբերյան արևադարձ 
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+DTSTAMP:20240119T094546Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Դեկտեմբերյան արևադարձը Հայա
+ ստանում (Երևան)
+LAST-MODIFIED:20240119T094546Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

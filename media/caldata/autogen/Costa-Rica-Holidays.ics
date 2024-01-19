@@ -2,947 +2,933 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Año Nuevo
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T215952Z
-UID:costa-rica/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo
-DTSTART;VALUE=DATE:20230406
-DTEND;VALUE=DATE:20230407
-DTSTAMP:20230623T215952Z
-UID:costa-rica/maundy-thursday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Viernes Santo
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T215952Z
-UID:costa-rica/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Batalla de Rivas
-DTSTART;VALUE=DATE:20230410
-DTEND;VALUE=DATE:20230411
-DTSTAMP:20230623T215952Z
-UID:costa-rica/battle-of-rivas-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Trabajo
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T215952Z
-UID:costa-rica/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Anexión de Guanacaste
-DTSTART;VALUE=DATE:20230724
-DTEND;VALUE=DATE:20230725
-DTSTAMP:20230623T215952Z
-UID:costa-rica/annexation-of-guanacaste-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Virgen de los Ángeles
-DTSTART;VALUE=DATE:20230802
-DTEND;VALUE=DATE:20230803
-DTSTAMP:20230623T215952Z
-UID:costa-rica/our-lady-of-los-angeles-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Non Compulsory Payment Holiday
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de las madres
-DTSTART;VALUE=DATE:20230814
-DTEND;VALUE=DATE:20230815
-DTSTAMP:20230623T215952Z
-UID:costa-rica/mother-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Mother’s Day celebrates the achievements 
- and efforts of mothers and mother figures.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Day of the Black Person and Afro-Costa Rican Culture
-DTSTART;VALUE=DATE:20230903
-DTEND;VALUE=DATE:20230904
-DTSTAMP:20230623T215952Z
-UID:costa-rica/black-person-and-afro-costa-rican-culture-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Non Compulsory Payment Holiday
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Independencia
-DTSTART;VALUE=DATE:20230915
-DTEND;VALUE=DATE:20230916
-DTSTAMP:20230623T215952Z
-UID:costa-rica/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Abolición del Ejército
-DTSTART;VALUE=DATE:20231201
-DTEND;VALUE=DATE:20231202
-DTSTAMP:20230623T215952Z
-UID:costa-rica/day-of-abolition-of-the-army-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Non Compulsory Payment Holiday
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Navidad
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T215952Z
-UID:costa-rica/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Christmas Day is one of the biggest Christian cele
- brations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de San José
-DTSTART;VALUE=DATE:20230319
-DTEND;VALUE=DATE:20230320
-DTSTAMP:20230623T215952Z
-UID:costa-rica/saint-josheps-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T215952Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Batalla de Rivas
-DTSTART;VALUE=DATE:20230411
-DTEND;VALUE=DATE:20230412
-DTSTAMP:20230623T215952Z
-UID:costa-rica/battle-of-rivas-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Padre
-DTSTART;VALUE=DATE:20230618
-DTEND;VALUE=DATE:20230619
-DTSTAMP:20230623T215952Z
-UID:costa-rica/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T215952Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Anexión de Guanacaste
-DTSTART;VALUE=DATE:20230725
-DTEND;VALUE=DATE:20230726
-DTSTAMP:20230623T215952Z
-UID:costa-rica/annexation-of-guanacaste-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de las madres
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230623T215952Z
-UID:costa-rica/mother-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de los Parques Nacionales
-DTSTART;VALUE=DATE:20230824
-DTEND;VALUE=DATE:20230825
-DTSTAMP:20230623T215952Z
-UID:costa-rica/national-parks-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Niño
-DTSTART;VALUE=DATE:20230909
-DTEND;VALUE=DATE:20230910
-DTSTAMP:20230623T215952Z
-UID:costa-rica/childrens-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T215952Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de los fieles Difuntos
-DTSTART;VALUE=DATE:20231102
-DTEND;VALUE=DATE:20231103
-DTSTAMP:20230623T215952Z
-UID:costa-rica/all-souls-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - All Souls’ Day falls on November 2 each year. I
- t is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Maestro
-DTSTART;VALUE=DATE:20231122
-DTEND;VALUE=DATE:20231123
-DTSTAMP:20230623T215952Z
-UID:costa-rica/teachers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Inmaculada Concepción
-DTSTART;VALUE=DATE:20231208
-DTEND;VALUE=DATE:20231209
-DTSTAMP:20230623T215952Z
-UID:costa-rica/immaculate-conception-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - The Feast of the Immaculate Conception is a Chris
- tian observance on December 8 each year.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
-DTSTART;VALUE=DATE:20231221
-DTEND;VALUE=DATE:20231222
-DTSTAMP:20230623T215952Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Noche Vieja
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T215952Z
-UID:costa-rica/new-years-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215952Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Año Nuevo
+SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jueves Santo
+SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20240328
 DTEND;VALUE=DATE:20240329
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/maundy-thursday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Viernes Santo
+SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Batalla de Rivas
+SUMMARY:Batalla de Rivas 
 DTSTART;VALUE=DATE:20240415
 DTEND;VALUE=DATE:20240416
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/battle-of-rivas-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:National holiday -  La batalla de Rivas es una fiesta nacional
+  en Costa Rica
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Trabajo
+SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Anexión de Guanacaste
+SUMMARY:Anexión de Guanacaste 
 DTSTART;VALUE=DATE:20240729
 DTEND;VALUE=DATE:20240730
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/annexation-of-guanacaste-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:National holiday -  La anexión de Guanacaste es una fiesta na
+ cional en Costa Rica
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Virgen de los Ángeles
+SUMMARY:Nuestra Señora de Los Ángeles 
 DTSTART;VALUE=DATE:20240802
 DTEND;VALUE=DATE:20240803
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/our-lady-of-los-angeles-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Non Compulsory Payment Holiday
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Non Compulsory Payment Holiday -  Nuestra Señora de Los Ánge
+ les es un feriado de pago no obligatorio en Costa Rica
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de las madres
+SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20240819
 DTEND;VALUE=DATE:20240820
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/mother-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Mother’s Day celebrates the achievements 
- and efforts of mothers and mother figures.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:National holiday -  El Día de la Madre celebra los logros y e
+ sfuerzos de las madres y figuras maternas.
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Independencia
+SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20240915
 DTEND;VALUE=DATE:20240916
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/independence-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
+ nacional en Costa Rica
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Abolición del Ejército
+SUMMARY:Día de la Abolición del Ejército 
 DTSTART;VALUE=DATE:20241201
 DTEND;VALUE=DATE:20241202
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/day-of-abolition-of-the-army-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Non Compulsory Payment Holiday
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Non Compulsory Payment Holiday -  El Día de la Abolición del
+  Ejército es un feriado de pago no obligatorio en Costa Rica
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Navidad
+SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094625Z
 UID:costa-rica/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Christmas Day is one of the biggest Christian cele
- brations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
+ iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094625Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de San José
+SUMMARY:Día de San José 
 DTSTART;VALUE=DATE:20240319
 DTEND;VALUE=DATE:20240320
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/saint-josheps-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  El Día de San José es una celebración en Cost
+ a Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
+SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20240319
 DTEND;VALUE=DATE:20240320
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Season -  Equinoccio de marzo en Costa Rica (San José)
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Batalla de Rivas
+SUMMARY:Batalla de Rivas 
 DTSTART;VALUE=DATE:20240411
 DTEND;VALUE=DATE:20240412
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/battle-of-rivas-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  La batalla de Rivas es una celebración en Costa
+  Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Padre
+SUMMARY:Día del Padre 
 DTSTART;VALUE=DATE:20240616
 DTEND;VALUE=DATE:20240617
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  El Día del Padre celebra la paternidad y la pat
+ ernidad masculina en diferentes fechas en todo el mundo.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
+SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Season -  Solsticio de junio en Costa Rica (San José)
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Anexión de Guanacaste
+SUMMARY:Anexión de Guanacaste 
 DTSTART;VALUE=DATE:20240725
 DTEND;VALUE=DATE:20240726
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/annexation-of-guanacaste-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  La anexión de Guanacaste es una observancia en 
+ Costa Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de las madres
+SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/mother-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y esfuerz
+ os de las madres y figuras maternas.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de los Parques Nacionales
+SUMMARY:Día de los Parques Nacionales 
 DTSTART;VALUE=DATE:20240824
 DTEND;VALUE=DATE:20240825
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/national-parks-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  El Día de los Parques Nacionales es una celebra
+ ción en Costa Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Niño
+SUMMARY:Día del Niño 
 DTSTART;VALUE=DATE:20240909
 DTEND;VALUE=DATE:20240910
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/childrens-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  El Día del Niño es una celebración en Costa R
+ ica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
+SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Season -  Equinoccio de septiembre en Costa Rica (San José)
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de los fieles Difuntos
+SUMMARY:Día de los Difuntos 
 DTSTART;VALUE=DATE:20241102
 DTEND;VALUE=DATE:20241103
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/all-souls-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - All Souls’ Day falls on November 2 each year. I
- t is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  El Día de los Difuntos se celebra el 2 de novie
+ mbre de cada año. Es un día de limosna y oración por los muertos.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Maestro
+SUMMARY:Día del Maestro 
 DTSTART;VALUE=DATE:20241122
 DTEND;VALUE=DATE:20241123
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/teachers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  El Día del Maestro es una celebración en Costa
+  Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Inmaculada Concepción
+SUMMARY:Fiesta de la Inmaculada Concepción 
 DTSTART;VALUE=DATE:20241208
 DTEND;VALUE=DATE:20241209
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/immaculate-conception-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - The Feast of the Immaculate Conception is a Chris
- tian observance on December 8 each year.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  La Fiesta de la Inmaculada Concepción es una ce
+ lebración cristiana que se celebra el 8 de diciembre de cada año.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
+SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Season -  Solsticio de diciembre en Costa Rica (San José)
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Noche Vieja
+SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T215953Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/new-years-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215953Z
+DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
+  año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Año Nuevo
+SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Batalla de Rivas
+SUMMARY:Batalla de Rivas 
 DTSTART;VALUE=DATE:20250411
 DTEND;VALUE=DATE:20250412
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/battle-of-rivas-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:National holiday -  La batalla de Rivas es una fiesta nacional
+  en Costa Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jueves Santo
+SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20250417
 DTEND;VALUE=DATE:20250418
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/maundy-thursday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Viernes Santo
+SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Trabajo
+SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Anexión de Guanacaste
+SUMMARY:Anexión de Guanacaste 
 DTSTART;VALUE=DATE:20250725
 DTEND;VALUE=DATE:20250726
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/annexation-of-guanacaste-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:National holiday -  La anexión de Guanacaste es una fiesta na
+ cional en Costa Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Virgen de los Ángeles
+SUMMARY:Nuestra Señora de Los Ángeles 
 DTSTART;VALUE=DATE:20250802
 DTEND;VALUE=DATE:20250803
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/our-lady-of-los-angeles-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Non Compulsory Payment Holiday
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Non Compulsory Payment Holiday -  Nuestra Señora de Los Ánge
+ les es un feriado de pago no obligatorio en Costa Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de las madres
+SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/mother-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Mother’s Day celebrates the achievements 
- and efforts of mothers and mother figures.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:National holiday -  El Día de la Madre celebra los logros y e
+ sfuerzos de las madres y figuras maternas.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Independencia
+SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20250915
 DTEND;VALUE=DATE:20250916
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/independence-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
+ nacional en Costa Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Abolición del Ejército
+SUMMARY:Día de la Abolición del Ejército 
 DTSTART;VALUE=DATE:20251201
 DTEND;VALUE=DATE:20251202
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/day-of-abolition-of-the-army-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Non Compulsory Payment Holiday
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Non Compulsory Payment Holiday -  El Día de la Abolición del
+  Ejército es un feriado de pago no obligatorio en Costa Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Navidad
+SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Christmas Day is one of the biggest Christian cele
- brations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
+ iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de San José
+SUMMARY:Día de San José 
 DTSTART;VALUE=DATE:20250319
 DTEND;VALUE=DATE:20250320
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/saint-josheps-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Observance -  El Día de San José es una celebración en Cost
+ a Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
+SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Season -  Equinoccio de marzo en Costa Rica (San José)
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Padre
+SUMMARY:Día del Padre 
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Observance -  El Día del Padre celebra la paternidad y la pat
+ ernidad masculina en diferentes fechas en todo el mundo.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
+SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Season -  Solsticio de junio en Costa Rica (San José)
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de los Parques Nacionales
+SUMMARY:Día de los Parques Nacionales 
 DTSTART;VALUE=DATE:20250824
 DTEND;VALUE=DATE:20250825
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/national-parks-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Observance -  El Día de los Parques Nacionales es una celebra
+ ción en Costa Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Niño
+SUMMARY:Día del Niño 
 DTSTART;VALUE=DATE:20250909
 DTEND;VALUE=DATE:20250910
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/childrens-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Observance -  El Día del Niño es una celebración en Costa R
+ ica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
+SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Season -  Equinoccio de septiembre en Costa Rica (San José)
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de los fieles Difuntos
+SUMMARY:Día de los Difuntos 
 DTSTART;VALUE=DATE:20251102
 DTEND;VALUE=DATE:20251103
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/all-souls-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - All Souls’ Day falls on November 2 each year. I
- t is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Observance -  El Día de los Difuntos se celebra el 2 de novie
+ mbre de cada año. Es un día de limosna y oración por los muertos.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Maestro
+SUMMARY:Día del Maestro 
 DTSTART;VALUE=DATE:20251122
 DTEND;VALUE=DATE:20251123
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/teachers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Observance -  El Día del Maestro es una celebración en Costa
+  Rica
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Inmaculada Concepción
+SUMMARY:Fiesta de la Inmaculada Concepción 
 DTSTART;VALUE=DATE:20251208
 DTEND;VALUE=DATE:20251209
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/immaculate-conception-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - The Feast of the Immaculate Conception is a Chris
- tian observance on December 8 each year.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Observance -  La Fiesta de la Inmaculada Concepción es una ce
+ lebración cristiana que se celebra el 8 de diciembre de cada año.
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
+SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Season -  Solsticio de diciembre en Costa Rica (San José)
+LAST-MODIFIED:20240119T094626Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Noche Vieja
+SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T215954Z
+DTSTAMP:20240119T094626Z
 UID:costa-rica/new-years-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215954Z
+DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
+  año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094626Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Año Nuevo 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094627Z
+UID:costa-rica/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jueves Santo 
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+DTSTAMP:20240119T094627Z
+UID:costa-rica/maundy-thursday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Viernes Santo 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094627Z
+UID:costa-rica/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Batalla de Rivas 
+DTSTART;VALUE=DATE:20260411
+DTEND;VALUE=DATE:20260412
+DTSTAMP:20240119T094627Z
+UID:costa-rica/battle-of-rivas-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La batalla de Rivas es una fiesta nacional
+  en Costa Rica
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Trabajo/Primero de Mayo 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094627Z
+UID:costa-rica/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Anexión de Guanacaste 
+DTSTART;VALUE=DATE:20260725
+DTEND;VALUE=DATE:20260726
+DTSTAMP:20240119T094627Z
+UID:costa-rica/annexation-of-guanacaste-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La anexión de Guanacaste es una fiesta na
+ cional en Costa Rica
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nuestra Señora de Los Ángeles 
+DTSTART;VALUE=DATE:20260802
+DTEND;VALUE=DATE:20260803
+DTSTAMP:20240119T094627Z
+UID:costa-rica/our-lady-of-los-angeles-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Non Compulsory Payment Holiday -  Nuestra Señora de Los Ánge
+ les es un feriado de pago no obligatorio en Costa Rica
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Madre 
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20240119T094627Z
+UID:costa-rica/mother-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Madre celebra los logros y e
+ sfuerzos de las madres y figuras maternas.
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Independencia 
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20260916
+DTSTAMP:20240119T094627Z
+UID:costa-rica/independence-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
+ nacional en Costa Rica
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Abolición del Ejército 
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+DTSTAMP:20240119T094627Z
+UID:costa-rica/day-of-abolition-of-the-army-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Non Compulsory Payment Holiday -  El Día de la Abolición del
+  Ejército es un feriado de pago no obligatorio en Costa Rica
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Navidad 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094627Z
+UID:costa-rica/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
+ iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094627Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de San José 
+DTSTART;VALUE=DATE:20260319
+DTEND;VALUE=DATE:20260320
+DTSTAMP:20240119T094628Z
+UID:costa-rica/saint-josheps-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de San José es una celebración en Cost
+ a Rica
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de marzo 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094628Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de marzo en Costa Rica (San José)
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Padre 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094628Z
+UID:costa-rica/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día del Padre celebra la paternidad y la pat
+ ernidad masculina en diferentes fechas en todo el mundo.
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de junio 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094628Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de junio en Costa Rica (San José)
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de los Parques Nacionales 
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+DTSTAMP:20240119T094628Z
+UID:costa-rica/national-parks-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de los Parques Nacionales es una celebra
+ ción en Costa Rica
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Niño 
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+DTSTAMP:20240119T094628Z
+UID:costa-rica/childrens-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día del Niño es una celebración en Costa R
+ ica
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de septiembre 
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+DTSTAMP:20240119T094628Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de septiembre en Costa Rica (San José)
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de los Difuntos 
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+DTSTAMP:20240119T094628Z
+UID:costa-rica/all-souls-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de los Difuntos se celebra el 2 de novie
+ mbre de cada año. Es un día de limosna y oración por los muertos.
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Maestro 
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+DTSTAMP:20240119T094628Z
+UID:costa-rica/teachers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día del Maestro es una celebración en Costa
+  Rica
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fiesta de la Inmaculada Concepción 
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+DTSTAMP:20240119T094628Z
+UID:costa-rica/immaculate-conception-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  La Fiesta de la Inmaculada Concepción es una ce
+ lebración cristiana que se celebra el 8 de diciembre de cada año.
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de diciembre 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094628Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de diciembre en Costa Rica (San José)
+LAST-MODIFIED:20240119T094628Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nochevieja 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094628Z
+UID:costa-rica/new-years-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
+  año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094628Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

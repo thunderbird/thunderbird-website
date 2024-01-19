@@ -2,1365 +2,1471 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:วันขื้นปีใหม่
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220243Z
-UID:thailand/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันขื้นปีใ
- หม่
-DTSTART;VALUE=DATE:20230102
-DTEND;VALUE=DATE:20230103
-DTSTAMP:20230623T220243Z
-UID:thailand/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันมาฆบูชา
-DTSTART;VALUE=DATE:20230306
-DTEND;VALUE=DATE:20230307
-DTSTAMP:20230623T220243Z
-UID:thailand/makha-bucha-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Magha Puja Day is an important holy day tha
- t honors the Sangha\, or the Buddhist community on the first full moon day
-  of the third lunar month.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันจักรี
-DTSTART;VALUE=DATE:20230406
-DTEND;VALUE=DATE:20230407
-DTSTAMP:20230623T220243Z
-UID:thailand/chakri-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันสงกรานต์
-DTSTART;VALUE=DATE:20230413
-DTEND;VALUE=DATE:20230414
-DTSTAMP:20230623T220243Z
-UID:thailand/songkran-day-1-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันสงกรานต์
-DTSTART;VALUE=DATE:20230414
-DTEND;VALUE=DATE:20230415
-DTSTAMP:20230623T220243Z
-UID:thailand/songkran-day-2-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันแรงงานแห่งชาติ
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220243Z
-UID:thailand/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday - Labor Day\, International Workers' Day\, and Ma
- y Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันฉัตรมงคล
-DTSTART;VALUE=DATE:20230504
-DTEND;VALUE=DATE:20230505
-DTSTAMP:20230623T220243Z
-UID:thailand/coronation-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:นักขัตฤกษ์
-DTSTART;VALUE=DATE:20230505
-DTEND;VALUE=DATE:20230506
-DTSTAMP:20230623T220243Z
-UID:thailand/bridge-public-holiday-may-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันพืชมงคล
-DTSTART;VALUE=DATE:20230517
-DTEND;VALUE=DATE:20230518
-DTSTAMP:20230623T220243Z
-UID:thailand/royal-ploughing-ceremony-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Government Holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันวิสาขบูชา
-DTSTART;VALUE=DATE:20230603
-DTEND;VALUE=DATE:20230604
-DTSTAMP:20230623T220243Z
-UID:thailand/visakha-bucha-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันเฉลิมพระชนมพรรษาสมเ
- ด็จพระนางเจ้าสุทิดา
-DTSTART;VALUE=DATE:20230603
-DTEND;VALUE=DATE:20230604
-DTSTAMP:20230623T220243Z
-UID:thailand/queen-sutida-birthday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันวิสาขบู
- ชา
-DTSTART;VALUE=DATE:20230605
-DTEND;VALUE=DATE:20230606
-DTSTAMP:20230623T220243Z
-UID:thailand/visakha-bucha-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันเฉลิมพร
- ะชนมพรรษาสมเด็จพระนางเจ้
- าสุทิดา
-DTSTART;VALUE=DATE:20230605
-DTEND;VALUE=DATE:20230606
-DTSTAMP:20230623T220243Z
-UID:thailand/queen-sutida-birthday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันเฉลิมพระชนมพรรษา สม
- เด็จพระเจ้าอยู่หัวมหาวชิ
- ราลงกรณ บดินทรเทพยวรางกูร
-DTSTART;VALUE=DATE:20230728
-DTEND;VALUE=DATE:20230729
-DTSTAMP:20230623T220243Z
-UID:thailand/king-vajiralongkorn-birthday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันเข้าพรรษา
-DTSTART;VALUE=DATE:20230801
-DTEND;VALUE=DATE:20230802
-DTSTAMP:20230623T220243Z
-UID:thailand/buddhist-lent-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันเฉลิมพระชนมพรรษา สม
- เด็จพระนางเจ้าฯ พระบรมราช
- ินีนาถ
-DTSTART;VALUE=DATE:20230812
-DTEND;VALUE=DATE:20230813
-DTSTAMP:20230623T220243Z
-UID:thailand/queen-birthday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันเฉลิมพร
- ะชนมพรรษา สมเด็จพระนางเจ้
- าฯ พระบรมราชินีนาถ
-DTSTART;VALUE=DATE:20230814
-DTEND;VALUE=DATE:20230815
-DTSTAMP:20230623T220243Z
-UID:thailand/queen-birthday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันคล้ายวันสวรรคตของพร
- ะบาทสมเด็จพระปรมินทรมหาภ
- ูมิพลอดุลยเดชบรมนาถบพิตร
-DTSTART;VALUE=DATE:20231013
-DTEND;VALUE=DATE:20231014
-DTSTAMP:20230623T220243Z
-UID:thailand/anniversary-death-king-bhumibol-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันปิยมหาราช
-DTSTART;VALUE=DATE:20231023
-DTEND;VALUE=DATE:20231024
-DTSTAMP:20230623T220243Z
-UID:thailand/chulalongkorn-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันคล้ายวันพระบรมราชสม
- ภพ พระบาทสมเด็จพระบรมชนกา
- ธิเบศรมหาภูมิพลอดุลยเดชม
- หาราช บรมนาถบพิตร และวันพ่
- อแห่งชาติ
-DTSTART;VALUE=DATE:20231205
-DTEND;VALUE=DATE:20231206
-DTSTAMP:20230623T220243Z
-UID:thailand/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Father’s Day celebrates fatherhood and ma
- le parenting on different dates worldwide.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:​วันรัฐธรรมนูญ
-DTSTART;VALUE=DATE:20231210
-DTEND;VALUE=DATE:20231211
-DTSTAMP:20230623T220243Z
-UID:thailand/constitution-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ชดเชยวันรัฐธรรมนูญ
-DTSTART;VALUE=DATE:20231211
-DTEND;VALUE=DATE:20231212
-DTSTAMP:20230623T220243Z
-UID:thailand/constitution-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันส่งท้ายปีเก่า
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220243Z
-UID:thailand/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Eve is the last day of the yea
- r\, December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันเด็กแห่งชาติ
-DTSTART;VALUE=DATE:20230114
-DTEND;VALUE=DATE:20230115
-DTSTAMP:20230623T220243Z
-UID:thailand/childrens-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันครู
-DTSTART;VALUE=DATE:20230116
-DTEND;VALUE=DATE:20230117
-DTSTAMP:20230623T220243Z
-UID:thailand/teachers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันตรุษจีน
-DTSTART;VALUE=DATE:20230122
-DTEND;VALUE=DATE:20230123
-DTSTAMP:20230623T220243Z
-UID:thailand/lunar-new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Lunar New Year is the first day of the Chinese ca
- lendar\, which is a lunisolar calendar mainly used for traditional celebra
- tions.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันตรุษจีน (วันที่ 2)
-DTSTART;VALUE=DATE:20230123
-DTEND;VALUE=DATE:20230124
-DTSTAMP:20230623T220243Z
-UID:thailand/second-day-of-lunar-new-year-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันตรุษจีน (วันที่ 3)
-DTSTART;VALUE=DATE:20230124
-DTEND;VALUE=DATE:20230125
-DTSTAMP:20230623T220243Z
-UID:thailand/third-day-of-lunar-new-year-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันวาเลนไทน์
-DTSTART;VALUE=DATE:20230214
-DTEND;VALUE=DATE:20230215
-DTSTAMP:20230623T220243Z
-UID:th/valentine-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วิษุวัต มี.ค.
-DTSTART;VALUE=DATE:20230321
-DTEND;VALUE=DATE:20230322
-DTSTAMP:20230623T220243Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:อายัน มิ.ย.
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220243Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วิษุวัต ก.ย.
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220243Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันฮาโลวีน
-DTSTART;VALUE=DATE:20231031
-DTEND;VALUE=DATE:20231101
-DTSTAMP:20230623T220243Z
-UID:thailand/halloween-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:อายัน ธ.ค.
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T220243Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันคริสต์มาสอีฟ
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T220243Z
-UID:thailand/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันคริสต์มาส
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220243Z
-UID:thailand/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Day is one of the biggest Christian cel
- ebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220243Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:วันขื้นปีใหม่
+SUMMARY:วันปีใหม่ 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันปีใหม่ เป็น
+ วันแรกของปี หรือวันที่ 1 มก
+ ราคม ในปฏิทินเกรกอเรียน
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันมาฆบูชา
+SUMMARY:มะขะบูชา 
 DTSTART;VALUE=DATE:20240224
 DTEND;VALUE=DATE:20240225
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/makha-bucha-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Magha Puja Day is an important holy day tha
- t honors the Sangha\, or the Buddhist community on the first full moon day
-  of the third lunar month.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันมะขะปุจะ เป
+ ็นวันศักดิ์สิทธิ์สำคัญที
+ ่ให้เกียรติแก่สังขา หรือช
+ ุมชนพุทธในวันพระจันทร์เต
+ ็มดวงแรกของเดือนจันทรคติ
+ ที่สาม
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันมาฆบูชา
+SUMMARY:วันหยุดสำหรับมาคาบูชา 
 DTSTART;VALUE=DATE:20240226
 DTEND;VALUE=DATE:20240227
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/makha-bucha-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Magha Puja Day is an important holy day tha
- t honors the Sangha\, or the Buddhist community on the first full moon day
-  of the third lunar month.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันมะขะปุจะ เป
+ ็นวันศักดิ์สิทธิ์สำคัญที
+ ่ให้เกียรติแก่สังขา หรือช
+ ุมชนพุทธในวันพระจันทร์เต
+ ็มดวงแรกของเดือนจันทรคติ
+ ที่ 3
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันจักรี
+SUMMARY:วันจักรี 
 DTSTART;VALUE=DATE:20240406
 DTEND;VALUE=DATE:20240407
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/chakri-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันจักรี เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันจักรี
+SUMMARY:วันหยุดสำหรับวันจักรี 
 DTSTART;VALUE=DATE:20240408
 DTEND;VALUE=DATE:20240409
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/chakri-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันจักรี เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันสงกรานต์
+SUMMARY:สงกรานต์ 
 DTSTART;VALUE=DATE:20240413
 DTEND;VALUE=DATE:20240414
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/songkran-day-1-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  สงกรานต์ เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันสงกรานต์
+SUMMARY:สงกรานต์ 
 DTSTART;VALUE=DATE:20240414
 DTEND;VALUE=DATE:20240415
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/songkran-day-2-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  สงกรานต์ เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันสงกรานต์
+SUMMARY:สงกรานต์ 
 DTSTART;VALUE=DATE:20240415
 DTEND;VALUE=DATE:20240416
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/songkran-day-3-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  สงกรานต์ เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันสงกรานต
- ์
+SUMMARY:สังเกตสงกรานต์ 
 DTSTART;VALUE=DATE:20240416
 DTEND;VALUE=DATE:20240417
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/songkran-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  สงกรานต์สังเกต
+ เป็นวันหยุดประจำชาติในปร
+ ะเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันแรงงานแห่งชาติ
+SUMMARY:วันแรงงาน 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday - Labor Day\, International Workers' Day\, and Ma
- y Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Bank holiday -  วันแรงงาน วันแรง
+ งานสากล และวันพฤษภาคม เป็น
+ วันหยุดสำหรับคนงานในหลาย
+ ประเทศทั่วโลก
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันฉัตรมงคล
+SUMMARY:วันราชาภิเษก 
 DTSTART;VALUE=DATE:20240504
 DTEND;VALUE=DATE:20240505
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/coronation-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันราชาภิเษกเป
+ ็นวันหยุดประจำชาติในประเ
+ ทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันฉัตรมงค
- ล
+SUMMARY:วันหยุดวันราชาภิเษก 
 DTSTART;VALUE=DATE:20240506
 DTEND;VALUE=DATE:20240507
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/coronation-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันราชาภิเษกเป
+ ็นวันหยุดประจำชาติในประเ
+ ทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันพืชมงคล
+SUMMARY:วันพิธีไถพระราชวังหลวง
+  
 DTSTART;VALUE=DATE:20240506
 DTEND;VALUE=DATE:20240507
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/royal-ploughing-ceremony-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Government Holiday -  วันพิธีไถพระร
+ าชทานเป็นวันหยุดราชการใน
+ ประเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันเฉลิมพระชนมพรรษาสมเ
- ด็จพระนางเจ้าสุทิดา
+SUMMARY:วันเกิดของสมเด็จพระราช
+ ินีสุทธิดา 
 DTSTART;VALUE=DATE:20240603
 DTEND;VALUE=DATE:20240604
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/queen-sutida-birthday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันเกิดของสมเด
+ ็จพระราชินีสุทธิดาเป็นวั
+ นหยุดประจำชาติในประเทศไท
+ ย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันเข้าพรรษา
-DTSTART;VALUE=DATE:20240721
-DTEND;VALUE=DATE:20240722
-DTSTAMP:20230623T220244Z
+SUMMARY:วันพรรษา 
+DTSTART;VALUE=DATE:20240720
+DTEND;VALUE=DATE:20240721
+DTSTAMP:20240119T094954Z
 UID:thailand/buddhist-lent-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันพรรษา (Buddha Lent Day)
+  เป็นวันหยุดประจำชาติในปร
+ ะเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันเข้าพรร
- ษา
-DTSTART;VALUE=DATE:20240723
-DTEND;VALUE=DATE:20240724
-DTSTAMP:20230623T220244Z
+SUMMARY:วันหยุดวันพรรษา 
+DTSTART;VALUE=DATE:20240722
+DTEND;VALUE=DATE:20240723
+DTSTAMP:20240119T094954Z
 UID:thailand/buddhist-lent-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันพรรษา เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันเฉลิมพระชนมพรรษา สม
- เด็จพระเจ้าอยู่หัวมหาวชิ
- ราลงกรณ บดินทรเทพยวรางกูร
+SUMMARY:วันเกิดพระเจ้าวชิราลงก
+ รณ์ 
 DTSTART;VALUE=DATE:20240728
 DTEND;VALUE=DATE:20240729
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/king-vajiralongkorn-birthday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันเกิดพระเจ้า
+ วชิราลงกรณ์เป็นวันหยุดปร
+ ะจำชาติในประเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันเฉลิมพร
- ะชนมพรรษา สมเด็จพระเจ้าอย
- ู่หัวมหาวชิราลงกรณ บดินทร
- เทพยวรางกูร
+SUMMARY:วันหยุดวันเกิดของพระเจ
+ ้าวชิราลงกรณ์ 
 DTSTART;VALUE=DATE:20240729
 DTEND;VALUE=DATE:20240730
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/king-vajiralongkorn-birthday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันเกิดพระเจ้า
+ วชิราลงกรณ์เป็นวันหยุดปร
+ ะจำชาติในประเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันเฉลิมพระชนมพรรษา สม
- เด็จพระนางเจ้าฯ พระบรมราช
- ินีนาถ
+SUMMARY:วันเกิดของราชินี 
 DTSTART;VALUE=DATE:20240812
 DTEND;VALUE=DATE:20240813
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/queen-birthday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันเกิดของราชิ
+ นีเป็นวันหยุดประจำชาติใน
+ ประเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันคล้ายวันสวรรคตของพร
- ะบาทสมเด็จพระปรมินทรมหาภ
- ูมิพลอดุลยเดชบรมนาถบพิตร
+SUMMARY:วันครบรอบการสิ้นพระชนม
+ ์ของพระบาทสมเด็จพระปรมิน
+ ทรมหาย 
 DTSTART;VALUE=DATE:20241013
 DTEND;VALUE=DATE:20241014
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/anniversary-death-king-bhumibol-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันครบรอบพระชน
+ ม์พระบาทสมเด็จพระปรมินทร
+ มหาภูมิพลเป็นวันหยุดประจ
+ ำชาติในประเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันคล้ายวั
- นสวรรคตของพระบาทสมเด็จพร
- ะปรมินทรมหาภูมิพลอดุลยเด
- ชบรมนาถบพิตร
+SUMMARY:วันหยุดวันครบรอบการสิ้
+ นพระชนม์ของพระบาทสมเด็จพ
+ ระปรมินทรมหาย 
 DTSTART;VALUE=DATE:20241014
 DTEND;VALUE=DATE:20241015
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/anniversary-death-king-bhumibol-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันครบรอบการสิ
+ ้นพระชนม์ของพระบาทสมเด็จ
+ พระปรมินทรมหาภูมิพลเป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันปิยมหาราช
+SUMMARY:วันจุฬาลงกรณ์ 
 DTSTART;VALUE=DATE:20241023
 DTEND;VALUE=DATE:20241024
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/chulalongkorn-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันจุฬาลงกรณ์เ
+ ป็นวันหยุดประจำชาติในประ
+ เทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันคล้ายวันพระบรมราชสม
- ภพ พระบาทสมเด็จพระบรมชนกา
- ธิเบศรมหาภูมิพลอดุลยเดชม
- หาราช บรมนาถบพิตร และวันพ่
- อแห่งชาติ
+SUMMARY:วันเกิดของพระบาทสมเด็จ
+ พระปรมินทรมหาภูมิพล/วันพ่
+ อ 
 DTSTART;VALUE=DATE:20241205
 DTEND;VALUE=DATE:20241206
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Father’s Day celebrates fatherhood and ma
- le parenting on different dates worldwide.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันพ่อ เฉลิมฉล
+ องความเป็นพ่อและการเลี้ย
+ งดูชายในวันต่างๆทั่วโลก
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:​วันรัฐธรรมนูญ
+SUMMARY:วันรัฐธรรมนูญ 
 DTSTART;VALUE=DATE:20241210
 DTEND;VALUE=DATE:20241211
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/constitution-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันรัฐธรรมนูญ 
+ เป็นวันหยุดประจำชาติในปร
+ ะเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันส่งท้ายปีเก่า
+SUMMARY:วันหยุดพิเศษปีใหม่ 
+DTSTART;VALUE=DATE:20241230
+DTEND;VALUE=DATE:20241231
+DTSTAMP:20240119T094954Z
+UID:thailand/new-year-holiday-2024
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันหยุดราชการพ
+ ิเศษปีใหม่ เป็นวันหยุดประ
+ จำชาติในประเทศไทย
+LAST-MODIFIED:20240119T094954Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันส่งท้ายปีเก่า 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Eve is the last day of the yea
- r\, December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันส่งท้ายปีเก
+ ่า เป็นวันสุดท้ายของปี 31 ธั
+ นวาคม ในปฏิทินเกรกอเรียน
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันเด็กแห่งชาติ
+SUMMARY:วันเด็กแห่งชาติ 
 DTSTART;VALUE=DATE:20240113
 DTEND;VALUE=DATE:20240114
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/childrens-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Observance -  วันเด็กแห่งชาติเ
+ ป็นการเฉลิมฉลองในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันครู
+SUMMARY:วันครู 
 DTSTART;VALUE=DATE:20240116
 DTEND;VALUE=DATE:20240117
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/teachers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Observance -  วันครูเป็นวันครู
+ เฉลิมฉลองในประเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันตรุษจีน
+SUMMARY:วันตรุษจีนเป็นวันแรกขอ
+ งปฏิทินจีน 
 DTSTART;VALUE=DATE:20240210
 DTEND;VALUE=DATE:20240211
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/lunar-new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Lunar New Year is the first day of the Chinese ca
- lendar\, which is a lunisolar calendar mainly used for traditional celebra
- tions.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Observance -  วันตรุษจีนเป็นวั
+ นแรกของปฏิทินจีน ซึ่งเป็น
+ ปฏิทินจันทร์ที่ส่วนใหญ่ใ
+ ช้สำหรับการเฉลิมฉลองแบบด
+ ั้งเดิม
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันตรุษจีน (วันที่ 2)
+SUMMARY:วันที่สองของปีใหม่จันท
+ รคติ 
 DTSTART;VALUE=DATE:20240211
 DTEND;VALUE=DATE:20240212
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/second-day-of-lunar-new-year-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Observance -  วันที่สองของปีให
+ ม่จันทรคติเป็นวันเฉลิมฉล
+ องในประเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันตรุษจีน (วันที่ 3)
+SUMMARY:วันสามของปีใหม่จันทรคต
+ ิ 
 DTSTART;VALUE=DATE:20240212
 DTEND;VALUE=DATE:20240213
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/third-day-of-lunar-new-year-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Observance -  วันสามของปีใหม่จ
+ ันทรคติเป็นวันเฉลิมฉลองใ
+ นประเทศไทย
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันวาเลนไทน์
+SUMMARY:วันวาเลนไทน์ 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:th/valentine-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Observance -  วันที่ 14 กุมภาพัน
+ ธ์ เป็นวันวาเลนไทน์หรือเท
+ ศกาลนักบุญวาเลนไทน์วันแห
+ ่งความรักมีต้นกำเนิดมาจา
+ กประเพณีคริสเตียนโรมันโบ
+ ราณและยุโรป
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วิษุวัต มี.ค.
+SUMMARY:อีควิน็อกซ์มีนาคม 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Season -  อีควิน็อกซ์มีนาคม 
+ ในประเทศไทย (กรุงเทพมหานคร
+ )
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:อายัน มิ.ย.
+SUMMARY:มิถุนายนครีษมายันแดน 
 DTSTART;VALUE=DATE:20240621
 DTEND;VALUE=DATE:20240622
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Season -  มิถุนายนครีษมายัน
+ ในประเทศไทย (กรุงเทพมหานคร
+ )
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วิษุวัต ก.ย.
+SUMMARY:อีควิน็อกซ์กันยายน 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Season -  อีควิน็อกซ์กันยาย
+ น ในประเทศไทย (กรุงเทพมหาน
+ คร)
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันฮาโลวีน
+SUMMARY:ฮาโลวีน 
 DTSTART;VALUE=DATE:20241031
 DTEND;VALUE=DATE:20241101
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/halloween-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Observance -  ฮาโลวีน เป็นโอกา
+ สเฉลิมฉลองในหลายประเทศใน
+ วันที่ 31 ตุลาคมของแต่ละปี
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:อายัน ธ.ค.
+SUMMARY:ธันวาคมครีษมายันธ์ 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Season -  ธันวาคมครีษมายันใ
+ นประเทศไทย (กรุงเทพมหานคร)
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันคริสต์มาสอีฟ
+SUMMARY:คริสต์มาสอีฟ 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Observance -  คริสต์มาสอีฟ เป็
+ นวันก่อนวันคริสต์มาสและต
+ รงกับวันที่ 24 ธันวาคมในปฏิ
+ ทินเกรกอเรียน
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันคริสต์มาส
+SUMMARY:วันคริสต์มาส 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T094954Z
 UID:thailand/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Day is one of the biggest Christian cel
- ebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Observance -  วันคริสต์มาสเป็น
+ หนึ่งในงานเฉลิมฉลองคริสเ
+ ตียนที่ใหญ่ที่สุดและตรงก
+ ับวันที่ 25 ธันวาคมในปฏิทิน
+ เกรกอเรียน
+LAST-MODIFIED:20240119T094954Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันขื้นปีใหม่
+SUMMARY:วันปีใหม่ 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันปีใหม่ เป็น
+ วันแรกของปี หรือวันที่ 1 มก
+ ราคม ในปฏิทินเกรกอเรียน
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันจักรี
+SUMMARY:วันจักรี 
 DTSTART;VALUE=DATE:20250406
 DTEND;VALUE=DATE:20250407
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/chakri-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันจักรี เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันจักรี
+SUMMARY:วันหยุดสำหรับวันจักรี 
 DTSTART;VALUE=DATE:20250407
 DTEND;VALUE=DATE:20250408
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/chakri-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันจักรี เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันสงกรานต์
+SUMMARY:สงกรานต์ 
 DTSTART;VALUE=DATE:20250413
 DTEND;VALUE=DATE:20250414
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/songkran-day-1-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  สงกรานต์ เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันสงกรานต์
+SUMMARY:สงกรานต์ 
 DTSTART;VALUE=DATE:20250414
 DTEND;VALUE=DATE:20250415
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/songkran-day-2-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  สงกรานต์ เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันสงกรานต์
+SUMMARY:สงกรานต์ 
 DTSTART;VALUE=DATE:20250415
 DTEND;VALUE=DATE:20250416
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/songkran-day-3-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  สงกรานต์ เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันสงกรานต
- ์
+SUMMARY:สังเกตสงกรานต์ 
 DTSTART;VALUE=DATE:20250416
 DTEND;VALUE=DATE:20250417
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/songkran-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  สงกรานต์สังเกต
+ เป็นวันหยุดประจำชาติในปร
+ ะเทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันแรงงานแห่งชาติ
+SUMMARY:วันแรงงาน 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday - Labor Day\, International Workers' Day\, and Ma
- y Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:Bank holiday -  วันแรงงาน วันแรง
+ งานสากล และวันพฤษภาคม เป็น
+ วันหยุดสำหรับคนงานในหลาย
+ ประเทศทั่วโลก
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันฉัตรมงคล
+SUMMARY:วันราชาภิเษก 
 DTSTART;VALUE=DATE:20250504
 DTEND;VALUE=DATE:20250505
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/coronation-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันราชาภิเษกเป
+ ็นวันหยุดประจำชาติในประเ
+ ทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันหยุดชดเชยวันฉัตรมงค
- ล
+SUMMARY:วันหยุดวันราชาภิเษก 
 DTSTART;VALUE=DATE:20250505
 DTEND;VALUE=DATE:20250506
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/coronation-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันราชาภิเษกเป
+ ็นวันหยุดประจำชาติในประเ
+ ทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันเฉลิมพระชนมพรรษาสมเ
- ด็จพระนางเจ้าสุทิดา
+SUMMARY:วันเกิดของสมเด็จพระราช
+ ินีสุทธิดา 
 DTSTART;VALUE=DATE:20250603
 DTEND;VALUE=DATE:20250604
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/queen-sutida-birthday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันเกิดของสมเด
+ ็จพระราชินีสุทธิดาเป็นวั
+ นหยุดประจำชาติในประเทศไท
+ ย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันเฉลิมพระชนมพรรษา สม
- เด็จพระเจ้าอยู่หัวมหาวชิ
- ราลงกรณ บดินทรเทพยวรางกูร
+SUMMARY:วันพรรษา 
+DTSTART;VALUE=DATE:20250721
+DTEND;VALUE=DATE:20250722
+DTSTAMP:20240119T095000Z
+UID:thailand/buddhist-lent-day-2025
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันพรรษา (Buddha Lent Day)
+  เป็นวันหยุดประจำชาติในปร
+ ะเทศไทย
+LAST-MODIFIED:20240119T095000Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันเกิดพระเจ้าวชิราลงก
+ รณ์ 
 DTSTART;VALUE=DATE:20250728
 DTEND;VALUE=DATE:20250729
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/king-vajiralongkorn-birthday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันเกิดพระเจ้า
+ วชิราลงกรณ์เป็นวันหยุดปร
+ ะจำชาติในประเทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันเฉลิมพระชนมพรรษา สม
- เด็จพระนางเจ้าฯ พระบรมราช
- ินีนาถ
+SUMMARY:วันเกิดของราชินี 
 DTSTART;VALUE=DATE:20250812
 DTEND;VALUE=DATE:20250813
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/queen-birthday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันเกิดของราชิ
+ นีเป็นวันหยุดประจำชาติใน
+ ประเทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันคล้ายวันสวรรคตของพร
- ะบาทสมเด็จพระปรมินทรมหาภ
- ูมิพลอดุลยเดชบรมนาถบพิตร
+SUMMARY:วันครบรอบการสิ้นพระชนม
+ ์ของพระบาทสมเด็จพระปรมิน
+ ทรมหาย 
 DTSTART;VALUE=DATE:20251013
 DTEND;VALUE=DATE:20251014
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/anniversary-death-king-bhumibol-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันครบรอบพระชน
+ ม์พระบาทสมเด็จพระปรมินทร
+ มหาภูมิพลเป็นวันหยุดประจ
+ ำชาติในประเทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันปิยมหาราช
+SUMMARY:วันจุฬาลงกรณ์ 
 DTSTART;VALUE=DATE:20251023
 DTEND;VALUE=DATE:20251024
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/chulalongkorn-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันจุฬาลงกรณ์เ
+ ป็นวันหยุดประจำชาติในประ
+ เทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันคล้ายวันพระบรมราชสม
- ภพ พระบาทสมเด็จพระบรมชนกา
- ธิเบศรมหาภูมิพลอดุลยเดชม
- หาราช บรมนาถบพิตร และวันพ่
- อแห่งชาติ
+SUMMARY:วันเกิดของพระบาทสมเด็จ
+ พระปรมินทรมหาภูมิพล/วันพ่
+ อ 
 DTSTART;VALUE=DATE:20251205
 DTEND;VALUE=DATE:20251206
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Father’s Day celebrates fatherhood and ma
- le parenting on different dates worldwide.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันพ่อ เฉลิมฉล
+ องความเป็นพ่อและการเลี้ย
+ งดูชายในวันต่างๆทั่วโลก
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:​วันรัฐธรรมนูญ
+SUMMARY:วันรัฐธรรมนูญ 
 DTSTART;VALUE=DATE:20251210
 DTEND;VALUE=DATE:20251211
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/constitution-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันรัฐธรรมนูญ 
+ เป็นวันหยุดประจำชาติในปร
+ ะเทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันส่งท้ายปีเก่า
+SUMMARY:วันส่งท้ายปีเก่า 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220244Z
+DTSTAMP:20240119T095000Z
 UID:thailand/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Eve is the last day of the yea
- r\, December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220244Z
+DESCRIPTION:National holiday -  วันส่งท้ายปีเก
+ ่า เป็นวันสุดท้ายของปี 31 ธั
+ นวาคม ในปฏิทินเกรกอเรียน
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันเด็กแห่งชาติ
+SUMMARY:วันเด็กแห่งชาติ 
 DTSTART;VALUE=DATE:20250111
 DTEND;VALUE=DATE:20250112
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:thailand/childrens-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Observance -  วันเด็กแห่งชาติเ
+ ป็นการเฉลิมฉลองในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันครู
+SUMMARY:วันครู 
 DTSTART;VALUE=DATE:20250116
 DTEND;VALUE=DATE:20250117
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:thailand/teachers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Observance -  วันครูเป็นวันครู
+ เฉลิมฉลองในประเทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันตรุษจีน
+SUMMARY:วันตรุษจีนเป็นวันแรกขอ
+ งปฏิทินจีน 
 DTSTART;VALUE=DATE:20250129
 DTEND;VALUE=DATE:20250130
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:thailand/lunar-new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Lunar New Year is the first day of the Chinese ca
- lendar\, which is a lunisolar calendar mainly used for traditional celebra
- tions.
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Observance -  วันตรุษจีนเป็นวั
+ นแรกของปฏิทินจีน ซึ่งเป็น
+ ปฏิทินจันทร์ที่ส่วนใหญ่ใ
+ ช้สำหรับการเฉลิมฉลองแบบด
+ ั้งเดิม
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันตรุษจีน (วันที่ 2)
+SUMMARY:วันที่สองของปีใหม่จันท
+ รคติ 
 DTSTART;VALUE=DATE:20250130
 DTEND;VALUE=DATE:20250131
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:thailand/second-day-of-lunar-new-year-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Observance -  วันที่สองของปีให
+ ม่จันทรคติเป็นวันเฉลิมฉล
+ องในประเทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันตรุษจีน (วันที่ 3)
+SUMMARY:วันสามของปีใหม่จันทรคต
+ ิ 
 DTSTART;VALUE=DATE:20250131
 DTEND;VALUE=DATE:20250201
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:thailand/third-day-of-lunar-new-year-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Observance -  วันสามของปีใหม่จ
+ ันทรคติเป็นวันเฉลิมฉลองใ
+ นประเทศไทย
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันวาเลนไทน์
+SUMMARY:วันวาเลนไทน์ 
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:th/valentine-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Observance -  วันที่ 14 กุมภาพัน
+ ธ์ เป็นวันวาเลนไทน์หรือเท
+ ศกาลนักบุญวาเลนไทน์วันแห
+ ่งความรักมีต้นกำเนิดมาจา
+ กประเพณีคริสเตียนโรมันโบ
+ ราณและยุโรป
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วิษุวัต มี.ค.
+SUMMARY:อีควิน็อกซ์มีนาคม 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Season -  อีควิน็อกซ์มีนาคม 
+ ในประเทศไทย (กรุงเทพมหานคร
+ )
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:อายัน มิ.ย.
+SUMMARY:มิถุนายนครีษมายันแดน 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Season -  มิถุนายนครีษมายัน
+ ในประเทศไทย (กรุงเทพมหานคร
+ )
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วิษุวัต ก.ย.
+SUMMARY:อีควิน็อกซ์กันยายน 
 DTSTART;VALUE=DATE:20250923
 DTEND;VALUE=DATE:20250924
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Season -  อีควิน็อกซ์กันยาย
+ น ในประเทศไทย (กรุงเทพมหาน
+ คร)
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันฮาโลวีน
+SUMMARY:ฮาโลวีน 
 DTSTART;VALUE=DATE:20251031
 DTEND;VALUE=DATE:20251101
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:thailand/halloween-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Observance -  ฮาโลวีน เป็นโอกา
+ สเฉลิมฉลองในหลายประเทศใน
+ วันที่ 31 ตุลาคมของแต่ละปี
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:อายัน ธ.ค.
+SUMMARY:ธันวาคมครีษมายันธ์ 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Season -  ธันวาคมครีษมายันใ
+ นประเทศไทย (กรุงเทพมหานคร)
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันคริสต์มาสอีฟ
+SUMMARY:คริสต์มาสอีฟ 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:thailand/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Observance -  คริสต์มาสอีฟ เป็
+ นวันก่อนวันคริสต์มาสและต
+ รงกับวันที่ 24 ธันวาคมในปฏิ
+ ทินเกรกอเรียน
+LAST-MODIFIED:20240119T095000Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:วันคริสต์มาส
+SUMMARY:วันคริสต์มาส 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220245Z
+DTSTAMP:20240119T095000Z
 UID:thailand/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Day is one of the biggest Christian cel
- ebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220245Z
+DESCRIPTION:Observance -  วันคริสต์มาสเป็น
+ หนึ่งในงานเฉลิมฉลองคริสเ
+ ตียนที่ใหญ่ที่สุดและตรงก
+ ับวันที่ 25 ธันวาคมในปฏิทิน
+ เกรกอเรียน
+LAST-MODIFIED:20240119T095000Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันปีใหม่ 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T095005Z
+UID:thailand/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันปีใหม่ เป็น
+ วันแรกของปี หรือวันที่ 1 มก
+ ราคม ในปฏิทินเกรกอเรียน
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันจักรี 
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20240119T095005Z
+UID:thailand/chakri-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันจักรี เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:สงกรานต์ 
+DTSTART;VALUE=DATE:20260413
+DTEND;VALUE=DATE:20260414
+DTSTAMP:20240119T095005Z
+UID:thailand/songkran-day-1-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  สงกรานต์ เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:สงกรานต์ 
+DTSTART;VALUE=DATE:20260414
+DTEND;VALUE=DATE:20260415
+DTSTAMP:20240119T095005Z
+UID:thailand/songkran-day-2-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  สงกรานต์ เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:สงกรานต์ 
+DTSTART;VALUE=DATE:20260415
+DTEND;VALUE=DATE:20260416
+DTSTAMP:20240119T095005Z
+UID:thailand/songkran-day-3-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  สงกรานต์ เป็นว
+ ันหยุดประจำชาติในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันแรงงาน 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T095005Z
+UID:thailand/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  วันแรงงาน วันแรง
+ งานสากล และวันพฤษภาคม เป็น
+ วันหยุดสำหรับคนงานในหลาย
+ ประเทศทั่วโลก
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันราชาภิเษก 
+DTSTART;VALUE=DATE:20260504
+DTEND;VALUE=DATE:20260505
+DTSTAMP:20240119T095005Z
+UID:thailand/coronation-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันราชาภิเษกเป
+ ็นวันหยุดประจำชาติในประเ
+ ทศไทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันเกิดของสมเด็จพระราช
+ ินีสุทธิดา 
+DTSTART;VALUE=DATE:20260603
+DTEND;VALUE=DATE:20260604
+DTSTAMP:20240119T095005Z
+UID:thailand/queen-sutida-birthday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันเกิดของสมเด
+ ็จพระราชินีสุทธิดาเป็นวั
+ นหยุดประจำชาติในประเทศไท
+ ย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันเกิดพระเจ้าวชิราลงก
+ รณ์ 
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20260729
+DTSTAMP:20240119T095005Z
+UID:thailand/king-vajiralongkorn-birthday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันเกิดพระเจ้า
+ วชิราลงกรณ์เป็นวันหยุดปร
+ ะจำชาติในประเทศไทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันเกิดของราชินี 
+DTSTART;VALUE=DATE:20260812
+DTEND;VALUE=DATE:20260813
+DTSTAMP:20240119T095005Z
+UID:thailand/queen-birthday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันเกิดของราชิ
+ นีเป็นวันหยุดประจำชาติใน
+ ประเทศไทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันครบรอบการสิ้นพระชนม
+ ์ของพระบาทสมเด็จพระปรมิน
+ ทรมหาย 
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+DTSTAMP:20240119T095005Z
+UID:thailand/anniversary-death-king-bhumibol-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันครบรอบพระชน
+ ม์พระบาทสมเด็จพระปรมินทร
+ มหาภูมิพลเป็นวันหยุดประจ
+ ำชาติในประเทศไทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันจุฬาลงกรณ์ 
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+DTSTAMP:20240119T095005Z
+UID:thailand/chulalongkorn-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันจุฬาลงกรณ์เ
+ ป็นวันหยุดประจำชาติในประ
+ เทศไทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันเกิดของพระบาทสมเด็จ
+ พระปรมินทรมหาภูมิพล/วันพ่
+ อ 
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+DTSTAMP:20240119T095005Z
+UID:thailand/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันพ่อ เฉลิมฉล
+ องความเป็นพ่อและการเลี้ย
+ งดูชายในวันต่างๆทั่วโลก
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันเกิดของพระบาทสมเด็จ
+ พระปรมินทรมหาภูมิพล/วันพ่
+ อ 
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+DTSTAMP:20240119T095005Z
+UID:thailand/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันพ่อ เฉลิมฉล
+ องความเป็นพ่อและการเลี้ย
+ งดูชายในวันต่างๆทั่วโลก
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันรัฐธรรมนูญ 
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+DTSTAMP:20240119T095005Z
+UID:thailand/constitution-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันรัฐธรรมนูญ 
+ เป็นวันหยุดประจำชาติในปร
+ ะเทศไทย
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันส่งท้ายปีเก่า 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T095005Z
+UID:thailand/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  วันส่งท้ายปีเก
+ ่า เป็นวันสุดท้ายของปี 31 ธั
+ นวาคม ในปฏิทินเกรกอเรียน
+LAST-MODIFIED:20240119T095005Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันเด็กแห่งชาติ 
+DTSTART;VALUE=DATE:20260110
+DTEND;VALUE=DATE:20260111
+DTSTAMP:20240119T095006Z
+UID:thailand/childrens-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  วันเด็กแห่งชาติเ
+ ป็นการเฉลิมฉลองในประเทศไ
+ ทย
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันครู 
+DTSTART;VALUE=DATE:20260116
+DTEND;VALUE=DATE:20260117
+DTSTAMP:20240119T095006Z
+UID:thailand/teachers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  วันครูเป็นวันครู
+ เฉลิมฉลองในประเทศไทย
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันวาเลนไทน์ 
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20240119T095006Z
+UID:th/valentine-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  วันที่ 14 กุมภาพัน
+ ธ์ เป็นวันวาเลนไทน์หรือเท
+ ศกาลนักบุญวาเลนไทน์วันแห
+ ่งความรักมีต้นกำเนิดมาจา
+ กประเพณีคริสเตียนโรมันโบ
+ ราณและยุโรป
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันตรุษจีนเป็นวันแรกขอ
+ งปฏิทินจีน 
+DTSTART;VALUE=DATE:20260217
+DTEND;VALUE=DATE:20260218
+DTSTAMP:20240119T095006Z
+UID:thailand/lunar-new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  วันตรุษจีนเป็นวั
+ นแรกของปฏิทินจีน ซึ่งเป็น
+ ปฏิทินจันทร์ที่ส่วนใหญ่ใ
+ ช้สำหรับการเฉลิมฉลองแบบด
+ ั้งเดิม
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันที่สองของปีใหม่จันท
+ รคติ 
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260219
+DTSTAMP:20240119T095006Z
+UID:thailand/second-day-of-lunar-new-year-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  วันที่สองของปีให
+ ม่จันทรคติเป็นวันเฉลิมฉล
+ องในประเทศไทย
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันสามของปีใหม่จันทรคต
+ ิ 
+DTSTART;VALUE=DATE:20260219
+DTEND;VALUE=DATE:20260220
+DTSTAMP:20240119T095006Z
+UID:thailand/third-day-of-lunar-new-year-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  วันสามของปีใหม่จ
+ ันทรคติเป็นวันเฉลิมฉลองใ
+ นประเทศไทย
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:อีควิน็อกซ์มีนาคม 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T095006Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  อีควิน็อกซ์มีนาคม 
+ ในประเทศไทย (กรุงเทพมหานคร
+ )
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:มิถุนายนครีษมายันแดน 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T095006Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  มิถุนายนครีษมายัน
+ ในประเทศไทย (กรุงเทพมหานคร
+ )
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:อีควิน็อกซ์กันยายน 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T095006Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  อีควิน็อกซ์กันยาย
+ น ในประเทศไทย (กรุงเทพมหาน
+ คร)
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ฮาโลวีน 
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20240119T095006Z
+UID:thailand/halloween-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  ฮาโลวีน เป็นโอกา
+ สเฉลิมฉลองในหลายประเทศใน
+ วันที่ 31 ตุลาคมของแต่ละปี
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ธันวาคมครีษมายันธ์ 
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+DTSTAMP:20240119T095006Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  ธันวาคมครีษมายันใ
+ นประเทศไทย (กรุงเทพมหานคร)
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:คริสต์มาสอีฟ 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T095006Z
+UID:thailand/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  คริสต์มาสอีฟ เป็
+ นวันก่อนวันคริสต์มาสและต
+ รงกับวันที่ 24 ธันวาคมในปฏิ
+ ทินเกรกอเรียน
+LAST-MODIFIED:20240119T095006Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:วันคริสต์มาส 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T095006Z
+UID:thailand/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  วันคริสต์มาสเป็น
+ หนึ่งในงานเฉลิมฉลองคริสเ
+ ตียนที่ใหญ่ที่สุดและตรงก
+ ับวันที่ 25 ธันวาคมในปฏิทิน
+ เกรกอเรียน
+LAST-MODIFIED:20240119T095006Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

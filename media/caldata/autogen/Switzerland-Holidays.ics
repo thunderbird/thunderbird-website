@@ -3,892 +3,304 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:Swiss National Day
-DTSTART;VALUE=DATE:20230801
-DTEND;VALUE=DATE:20230802
-DTSTAMP:20230623T220236Z
-UID:switzerland/national-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Switzerland's National Day falls on August 
- 1.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Valentine's Day
-DTSTART;VALUE=DATE:20230214
-DTEND;VALUE=DATE:20230215
-DTSTAMP:20230623T220236Z
-UID:switzerland/valentine-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:March Equinox
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T220236Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season - March Equinox in Switzerland (Bern)
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Daylight Saving Time starts
-DTSTART;VALUE=DATE:20230326
-DTEND;VALUE=DATE:20230327
-DTSTAMP:20230623T220236Z
-UID:None-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time - Daylight Saving Time start
- s in Switzerland
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T220236Z
-UID:switzerland/easter-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sechseläuten (Zurich)
-DTSTART;VALUE=DATE:20230417
-DTEND;VALUE=DATE:20230418
-DTSTAMP:20230623T220236Z
-UID:switzerland/sechselaeuten-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Sechseläuten is an old spring festival that is c
- elebrated each year in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:May Day (Half-Day) (TG\, TI)
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220236Z
-UID:switzerland/may-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Labor Day\, International Workers' Day\, and May 
- Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Mother's Day
-DTSTART;VALUE=DATE:20230514
-DTEND;VALUE=DATE:20230515
-DTSTAMP:20230623T220236Z
-UID:switzerland/mothers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Pentecost
-DTSTART;VALUE=DATE:20230528
-DTEND;VALUE=DATE:20230529
-DTSTAMP:20230623T220236Z
-UID:switzerland/pentecost-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Many Christians all over the world annually obser
- ve Pentecost\, also known as Whitsunday or Whit Sunday.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Father's Day
-DTSTART;VALUE=DATE:20230604
-DTEND;VALUE=DATE:20230605
-DTSTAMP:20230623T220236Z
-UID:switzerland/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:June Solstice
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220236Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season - June Solstice in Switzerland (Bern)
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St. Peter and St. Paul (Ticino)
-DTSTART;VALUE=DATE:20230629
-DTEND;VALUE=DATE:20230630
-DTSTAMP:20230623T220236Z
-UID:switzerland/peter-and-paul-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - St. Peter and St. Paul is a observance in Switzer
- land
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Knabenschiessen (Zurich)
-DTSTART;VALUE=DATE:20230909
-DTEND;VALUE=DATE:20230910
-DTSTAMP:20230623T220236Z
-UID:switzerland/knabenschiessen-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
- tion in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Knabenschiessen (Zurich)
-DTSTART;VALUE=DATE:20230910
-DTEND;VALUE=DATE:20230911
-DTSTAMP:20230623T220236Z
-UID:switzerland/knabenschiessen-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
- tion in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Knabenschiessen (Zurich)
-DTSTART;VALUE=DATE:20230911
-DTEND;VALUE=DATE:20230912
-DTSTAMP:20230623T220236Z
-UID:switzerland/knabenschiessen-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
- tion in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Swiss Federal Fast (All except GE)
-DTSTART;VALUE=DATE:20230917
-DTEND;VALUE=DATE:20230918
-DTSTAMP:20230623T220236Z
-UID:switzerland/federal-fast-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Swiss Federal Fast is a observance in Switzerland
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:September Equinox
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220236Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season - September Equinox in Switzerland (Bern)
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Daylight Saving Time ends
-DTSTART;VALUE=DATE:20231029
-DTEND;VALUE=DATE:20231030
-DTSTAMP:20230623T220236Z
-UID:None-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time - Daylight Saving Time ends 
- in Switzerland
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:December Solstice
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T220236Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season - December Solstice in Switzerland (Bern)
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Eve
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T220236Z
-UID:switzerland/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New Year's Eve
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220236Z
-UID:switzerland/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220236Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New Year's Day
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220237Z
-UID:switzerland/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - New Year’s Day is the first day of th
- e year\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Berchtold Day (15 states)
-DTSTART;VALUE=DATE:20230102
-DTEND;VALUE=DATE:20230103
-DTSTAMP:20230623T220237Z
-UID:switzerland/berchtold-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Berchtold Day is a public holiday in a 
- number of Switzerland's cantons.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Epiphany (GR (partly)\, SZ\, TI\, UR)
-DTSTART;VALUE=DATE:20230106
-DTEND;VALUE=DATE:20230107
-DTSTAMP:20230623T220237Z
-UID:switzerland/epiphany-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Epiphany is a Christian holiday celebra
- ted globally on January 6 each year. It commemorates two events recorded i
- n the Bible: the three wise men’s visit to baby Jesus\; and Jesus’ bap
- tism.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Republic Day (Neuchâtel)
-DTSTART;VALUE=DATE:20230301
-DTEND;VALUE=DATE:20230302
-DTSTAMP:20230623T220237Z
-UID:switzerland/republic-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Republic Day is a common local holiday 
- in Switzerland
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Saint Joseph's Day (LU (partly)\, NW\, SO (partly)\, SZ\, TI\, UR\
- , VS)
-DTSTART;VALUE=DATE:20230319
-DTEND;VALUE=DATE:20230320
-DTSTAMP:20230623T220237Z
-UID:switzerland/saint-joseph-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - St. Joseph's Day is a public holiday in
-  the predominantly Catholic regions of Switzerland.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Näfels Procession (Glarus)
-DTSTART;VALUE=DATE:20230406
-DTEND;VALUE=DATE:20230407
-DTSTAMP:20230623T220237Z
-UID:switzerland/naefelser-fahrt-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Näfels Procession is a common local ho
- liday in Switzerland
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Good Friday (All except TI\, VS)
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T220237Z
-UID:switzerland/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Good Friday is a global Christian obser
- vance two days before Easter Sunday.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (All except LU\, NE)
-DTSTART;VALUE=DATE:20230410
-DTEND;VALUE=DATE:20230411
-DTSTAMP:20230623T220237Z
-UID:switzerland/easter-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Easter Monday is the day after Easter S
- unday.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:May Day (BL\, BS\, JU\, SH\, ZH)
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220237Z
-UID:switzerland/may-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Labor Day\, International Workers' Day\
- , and May Day\, is a day off for workers in many countries around the worl
- d.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:May Day (Half-Day) (Solothurn)
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220237Z
-UID:switzerland/may-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Half Day Holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ascension Day
-DTSTART;VALUE=DATE:20230518
-DTEND;VALUE=DATE:20230519
-DTSTAMP:20230623T220237Z
-UID:switzerland/ascension-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Ascension Day is the 40th day of Easter
- . It is a religious holiday that commemorates the ascension of Jesus Chris
- t into heaven.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Pentecost Monday (All except NE)
-DTSTART;VALUE=DATE:20230529
-DTEND;VALUE=DATE:20230530
-DTSTAMP:20230623T220237Z
-UID:switzerland/pentecost-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Whit Monday\, or Pentecost Monday\, is 
- a Christian holiday that falls on the day after Pentecost\, which is also 
- known as Whit Sunday or Whitsunday.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Corpus Christi (14 states)
-DTSTART;VALUE=DATE:20230608
-DTEND;VALUE=DATE:20230609
-DTSTAMP:20230623T220237Z
-UID:switzerland/corpus-christi-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Corpus Christi is a public holiday in a
-  number of Switzerland's cantons.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jura Independence Day (Jura)
-DTSTART;VALUE=DATE:20230623
-DTEND;VALUE=DATE:20230624
-DTSTAMP:20230623T220237Z
-UID:switzerland/jura-independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Jura Independence Day is a common local
-  holiday in Switzerland
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Assumption of Mary (12 states)
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230623T220237Z
-UID:switzerland/assumption-of-mary-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - The Christian feast of the Assumption o
- f Mary is on or around Aug 15 in most countries. A few celebrate Assumptio
- n Day at other times of the year.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Genevese Fast (Geneva)
-DTSTART;VALUE=DATE:20230907
-DTEND;VALUE=DATE:20230908
-DTSTAMP:20230623T220237Z
-UID:switzerland/jeune-genevois-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Genevese Fast is a common local holiday
-  in Switzerland
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Federal Fast Monday (VD\, NE)
-DTSTART;VALUE=DATE:20230918
-DTEND;VALUE=DATE:20230919
-DTSTAMP:20230623T220237Z
-UID:switzerland/federal-fast-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Federal Fast Monday is a common local h
- oliday in Switzerland
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Mauritius Day (Appenzell Innerrhoden)
-DTSTART;VALUE=DATE:20230922
-DTEND;VALUE=DATE:20230923
-DTSTAMP:20230623T220237Z
-UID:switzerland/mauritius-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Mauritius Day is a common local holiday
-  in Switzerland
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St. Nicholas of Flüe (Obwalden)
-DTSTART;VALUE=DATE:20230925
-DTEND;VALUE=DATE:20230926
-DTSTAMP:20230623T220237Z
-UID:switzerland/saint-nicholas-of-flue-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - St. Nicholas of Flüe is a common local
-  holiday in Switzerland
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:All Saints' Day (15 states)
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-DTSTAMP:20230623T220237Z
-UID:switzerland/all-saints-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - All Saints is a public holiday in some 
- areas of Switzerland.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Immaculate Conception (12 states)
-DTSTART;VALUE=DATE:20231208
-DTEND;VALUE=DATE:20231209
-DTSTAMP:20230623T220237Z
-UID:switzerland/immaculate-conception-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - The Feast of the Immaculate Conception 
- is a Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Day
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220237Z
-UID:switzerland/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Christmas Day is one of the biggest Chr
- istian celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St. Stephen's Day (All except VD\, GE\, JU)
-DTSTART;VALUE=DATE:20231226
-DTEND;VALUE=DATE:20231227
-DTSTAMP:20230623T220237Z
-UID:switzerland/st-stephen-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - The Feast of Saint Stephen is a public 
- holiday in large parts of Switzerland.
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Restoration Day (Geneva)
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220237Z
-UID:switzerland/restoration-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Restoration Day is a common local holid
- ay in Switzerland
-LAST-MODIFIED:20230623T220237Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Swiss National Day
 DTSTART;VALUE=DATE:20240801
 DTEND;VALUE=DATE:20240802
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/national-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Switzerland's National Day falls on August 
  1.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Valentine's Day
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/valentine-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
  's Feast. The day of love owes its origins to ancient Roman and European C
  hristian traditions.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:March Equinox
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season - March Equinox in Switzerland (Bern)
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/easter-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
  rection\, according to Christian belief.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Daylight Saving Time starts
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:None-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time - Daylight Saving Time start
  s in Switzerland
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sechseläuten (Zurich)
 DTSTART;VALUE=DATE:20240415
 DTEND;VALUE=DATE:20240416
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/sechselaeuten-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Sechseläuten is an old spring festival that is c
  elebrated each year in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:May Day (Half-Day) (TG\, TI)
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/may-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Labor Day\, International Workers' Day\, and May 
  Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mother's Day
+SUMMARY:Mothers' Day
 DTSTART;VALUE=DATE:20240512
 DTEND;VALUE=DATE:20240513
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/mothers-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
  forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pentecost
 DTSTART;VALUE=DATE:20240519
 DTEND;VALUE=DATE:20240520
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/pentecost-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Many Christians all over the world annually obser
  ve Pentecost\, also known as Whitsunday or Whit Sunday.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Father's Day
+SUMMARY:Fathers' Day
 DTSTART;VALUE=DATE:20240602
 DTEND;VALUE=DATE:20240603
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
  enting on different dates worldwide.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:June Solstice
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season - June Solstice in Switzerland (Bern)
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Peter and St. Paul (Ticino)
 DTSTART;VALUE=DATE:20240629
 DTEND;VALUE=DATE:20240630
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/peter-and-paul-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - St. Peter and St. Paul is a observance in Switzer
  land
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Knabenschiessen (Zurich)
 DTSTART;VALUE=DATE:20240907
 DTEND;VALUE=DATE:20240908
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/knabenschiessen-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
  tion in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Knabenschiessen (Zurich)
 DTSTART;VALUE=DATE:20240908
 DTEND;VALUE=DATE:20240909
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/knabenschiessen-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
  tion in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Knabenschiessen (Zurich)
 DTSTART;VALUE=DATE:20240909
 DTEND;VALUE=DATE:20240910
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/knabenschiessen-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
  tion in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Swiss Federal Fast (All except GE)
 DTSTART;VALUE=DATE:20240915
 DTEND;VALUE=DATE:20240916
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/federal-fast-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Swiss Federal Fast is a observance in Switzerland
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:September Equinox
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season - September Equinox in Switzerland (Bern)
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Daylight Saving Time ends
 DTSTART;VALUE=DATE:20241027
 DTEND;VALUE=DATE:20241028
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:None-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time - Daylight Saving Time ends 
  in Switzerland
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:December Solstice
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season - December Solstice in Switzerland (Bern)
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Eve
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
   falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Eve
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220237Z
+DTSTAMP:20240119T094926Z
 UID:switzerland/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
  cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220237Z
+LAST-MODIFIED:20240119T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Day
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - New Year’s Day is the first day of th
  e year\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Berchtold Day (15 states)
 DTSTART;VALUE=DATE:20240102
 DTEND;VALUE=DATE:20240103
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/berchtold-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Berchtold Day is a public holiday in a 
  number of Switzerland's cantons.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Epiphany (GR (partly)\, SZ\, TI\, UR)
 DTSTART;VALUE=DATE:20240106
 DTEND;VALUE=DATE:20240107
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/epiphany-2024
 CATEGORIES:Holidays
 CLASS:public
@@ -896,20 +308,20 @@ DESCRIPTION:Common local holiday - Epiphany is a Christian holiday celebra
  ted globally on January 6 each year. It commemorates two events recorded i
  n the Bible: the three wise men’s visit to baby Jesus\; and Jesus’ bap
  tism.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Republic Day (Neuchâtel)
 DTSTART;VALUE=DATE:20240301
 DTEND;VALUE=DATE:20240302
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/republic-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Republic Day is a common local holiday 
  in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -917,566 +329,566 @@ SUMMARY:Saint Joseph's Day (LU (partly)\, NW\, SO (partly)\, SZ\, TI\, UR\
  , VS)
 DTSTART;VALUE=DATE:20240319
 DTEND;VALUE=DATE:20240320
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/saint-joseph-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - St. Joseph's Day is a public holiday in
   the predominantly Catholic regions of Switzerland.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday (All except TI\, VS)
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Good Friday is a global Christian obser
  vance two days before Easter Sunday.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Monday (All except LU\, NE)
 DTSTART;VALUE=DATE:20240401
 DTEND;VALUE=DATE:20240402
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/easter-monday-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Easter Monday is the day after Easter S
  unday.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Näfels Procession (Glarus)
 DTSTART;VALUE=DATE:20240404
 DTEND;VALUE=DATE:20240405
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/naefelser-fahrt-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Näfels Procession is a common local ho
  liday in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:May Day (BL\, BS\, JU\, SH\, ZH)
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/may-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Labor Day\, International Workers' Day\
  , and May Day\, is a day off for workers in many countries around the worl
  d.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:May Day (Half-Day) (Solothurn)
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/may-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Half Day Holiday - Labor Day\, International Workers' Day\, an
  d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ascension Day
 DTSTART;VALUE=DATE:20240509
 DTEND;VALUE=DATE:20240510
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/ascension-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Ascension Day is the 40th day of Easter
  . It is a religious holiday that commemorates the ascension of Jesus Chris
  t into heaven.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pentecost Monday (All except NE)
 DTSTART;VALUE=DATE:20240520
 DTEND;VALUE=DATE:20240521
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/pentecost-monday-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Whit Monday\, or Pentecost Monday\, is 
  a Christian holiday that falls on the day after Pentecost\, which is also 
  known as Whit Sunday or Whitsunday.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Corpus Christi (14 states)
 DTSTART;VALUE=DATE:20240530
 DTEND;VALUE=DATE:20240531
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/corpus-christi-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Corpus Christi is a public holiday in a
   number of Switzerland's cantons.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jura Independence Day (Jura)
 DTSTART;VALUE=DATE:20240623
 DTEND;VALUE=DATE:20240624
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/jura-independence-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Jura Independence Day is a common local
   holiday in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Assumption of Mary (12 states)
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/assumption-of-mary-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - The Christian feast of the Assumption o
  f Mary is on or around Aug 15 in most countries. A few celebrate Assumptio
  n Day at other times of the year.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Genevese Fast (Geneva)
 DTSTART;VALUE=DATE:20240905
 DTEND;VALUE=DATE:20240906
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/jeune-genevois-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Genevese Fast is a common local holiday
   in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Federal Fast Monday (VD\, NE)
 DTSTART;VALUE=DATE:20240916
 DTEND;VALUE=DATE:20240917
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/federal-fast-monday-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Federal Fast Monday is a common local h
  oliday in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Mauritius Day (Appenzell Innerrhoden)
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/mauritius-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Mauritius Day is a common local holiday
   in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Nicholas of Flüe (Obwalden)
 DTSTART;VALUE=DATE:20240925
 DTEND;VALUE=DATE:20240926
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/saint-nicholas-of-flue-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - St. Nicholas of Flüe is a common local
   holiday in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:All Saints' Day (15 states)
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/all-saints-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - All Saints is a public holiday in some 
  areas of Switzerland.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Immaculate Conception (12 states)
 DTSTART;VALUE=DATE:20241208
 DTEND;VALUE=DATE:20241209
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/immaculate-conception-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - The Feast of the Immaculate Conception 
  is a Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Christmas Day is one of the biggest Chr
  istian celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Stephen's Day (All except VD\, GE\, JU)
 DTSTART;VALUE=DATE:20241226
 DTEND;VALUE=DATE:20241227
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/st-stephen-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - The Feast of Saint Stephen is a public 
  holiday in large parts of Switzerland.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Restoration Day (Geneva)
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/restoration-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Restoration Day is a common local holid
  ay in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Swiss National Day
 DTSTART;VALUE=DATE:20250801
 DTEND;VALUE=DATE:20250802
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/national-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Switzerland's National Day falls on August 
  1.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Valentine's Day
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/valentine-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
  's Feast. The day of love owes its origins to ancient Roman and European C
  hristian traditions.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:March Equinox
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season - March Equinox in Switzerland (Bern)
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Daylight Saving Time starts
 DTSTART;VALUE=DATE:20250330
 DTEND;VALUE=DATE:20250331
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:None-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time - Daylight Saving Time start
  s in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/easter-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
  rection\, according to Christian belief.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sechseläuten (Zurich)
 DTSTART;VALUE=DATE:20250428
 DTEND;VALUE=DATE:20250429
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/sechselaeuten-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Sechseläuten is an old spring festival that is c
  elebrated each year in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:May Day (Half-Day) (TG\, TI)
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/may-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Labor Day\, International Workers' Day\, and May 
  Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mother's Day
+SUMMARY:Mothers' Day
 DTSTART;VALUE=DATE:20250511
 DTEND;VALUE=DATE:20250512
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/mothers-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
  forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Father's Day
+SUMMARY:Fathers' Day
 DTSTART;VALUE=DATE:20250601
 DTEND;VALUE=DATE:20250602
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
  enting on different dates worldwide.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pentecost
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/pentecost-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Many Christians all over the world annually obser
  ve Pentecost\, also known as Whitsunday or Whit Sunday.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:June Solstice
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season - June Solstice in Switzerland (Bern)
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Peter and St. Paul (Ticino)
 DTSTART;VALUE=DATE:20250629
 DTEND;VALUE=DATE:20250630
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/peter-and-paul-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - St. Peter and St. Paul is a observance in Switzer
  land
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Knabenschiessen (Zurich)
 DTSTART;VALUE=DATE:20250913
 DTEND;VALUE=DATE:20250914
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/knabenschiessen-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
  tion in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Knabenschiessen (Zurich)
 DTSTART;VALUE=DATE:20250914
 DTEND;VALUE=DATE:20250915
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/knabenschiessen-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
  tion in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Knabenschiessen (Zurich)
 DTSTART;VALUE=DATE:20250915
 DTEND;VALUE=DATE:20250916
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/knabenschiessen-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
  tion in Zurich\, Switzerland.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Swiss Federal Fast (All except GE)
 DTSTART;VALUE=DATE:20250921
 DTEND;VALUE=DATE:20250922
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/federal-fast-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Swiss Federal Fast is a observance in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:September Equinox
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season - September Equinox in Switzerland (Bern)
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Daylight Saving Time ends
 DTSTART;VALUE=DATE:20251026
 DTEND;VALUE=DATE:20251027
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:None-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time - Daylight Saving Time ends 
  in Switzerland
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:December Solstice
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season - December Solstice in Switzerland (Bern)
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Eve
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
   falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Eve
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220238Z
+DTSTAMP:20240119T094927Z
 UID:switzerland/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
  cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220238Z
+LAST-MODIFIED:20240119T094927Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Day
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - New Year’s Day is the first day of th
  e year\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Berchtold Day (15 states)
 DTSTART;VALUE=DATE:20250102
 DTEND;VALUE=DATE:20250103
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/berchtold-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Berchtold Day is a public holiday in a 
  number of Switzerland's cantons.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Epiphany (GR (partly)\, SZ\, TI\, UR)
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/epiphany-2025
 CATEGORIES:Holidays
 CLASS:public
@@ -1484,20 +896,20 @@ DESCRIPTION:Common local holiday - Epiphany is a Christian holiday celebra
  ted globally on January 6 each year. It commemorates two events recorded i
  n the Bible: the three wise men’s visit to baby Jesus\; and Jesus’ bap
  tism.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Republic Day (Neuchâtel)
 DTSTART;VALUE=DATE:20250301
 DTEND;VALUE=DATE:20250302
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/republic-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Republic Day is a common local holiday 
  in Switzerland
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1505,264 +917,839 @@ SUMMARY:Saint Joseph's Day (LU (partly)\, NW\, SO (partly)\, SZ\, TI\, UR\
  , VS)
 DTSTART;VALUE=DATE:20250319
 DTEND;VALUE=DATE:20250320
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/saint-joseph-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - St. Joseph's Day is a public holiday in
   the predominantly Catholic regions of Switzerland.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Näfels Procession (Glarus)
 DTSTART;VALUE=DATE:20250403
 DTEND;VALUE=DATE:20250404
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/naefelser-fahrt-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Näfels Procession is a common local ho
  liday in Switzerland
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday (All except TI\, VS)
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Good Friday is a global Christian obser
  vance two days before Easter Sunday.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Monday (All except LU\, NE)
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/easter-monday-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Easter Monday is the day after Easter S
  unday.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:May Day (BL\, BS\, JU\, SH\, ZH)
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/may-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Labor Day\, International Workers' Day\
  , and May Day\, is a day off for workers in many countries around the worl
  d.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:May Day (Half-Day) (Solothurn)
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/may-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Half Day Holiday - Labor Day\, International Workers' Day\, an
  d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ascension Day
 DTSTART;VALUE=DATE:20250529
 DTEND;VALUE=DATE:20250530
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/ascension-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Ascension Day is the 40th day of Easter
  . It is a religious holiday that commemorates the ascension of Jesus Chris
  t into heaven.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pentecost Monday (All except NE)
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/pentecost-monday-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Whit Monday\, or Pentecost Monday\, is 
  a Christian holiday that falls on the day after Pentecost\, which is also 
  known as Whit Sunday or Whitsunday.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Corpus Christi (14 states)
 DTSTART;VALUE=DATE:20250619
 DTEND;VALUE=DATE:20250620
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/corpus-christi-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Corpus Christi is a public holiday in a
   number of Switzerland's cantons.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jura Independence Day (Jura)
 DTSTART;VALUE=DATE:20250623
 DTEND;VALUE=DATE:20250624
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/jura-independence-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Jura Independence Day is a common local
   holiday in Switzerland
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Assumption of Mary (12 states)
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/assumption-of-mary-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - The Christian feast of the Assumption o
  f Mary is on or around Aug 15 in most countries. A few celebrate Assumptio
  n Day at other times of the year.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Genevese Fast (Geneva)
 DTSTART;VALUE=DATE:20250911
 DTEND;VALUE=DATE:20250912
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/jeune-genevois-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Genevese Fast is a common local holiday
   in Switzerland
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Federal Fast Monday (VD\, NE)
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/federal-fast-monday-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Federal Fast Monday is a common local h
  oliday in Switzerland
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Mauritius Day (Appenzell Innerrhoden)
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/mauritius-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Mauritius Day is a common local holiday
   in Switzerland
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Nicholas of Flüe (Obwalden)
 DTSTART;VALUE=DATE:20250925
 DTEND;VALUE=DATE:20250926
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/saint-nicholas-of-flue-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - St. Nicholas of Flüe is a common local
   holiday in Switzerland
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:All Saints' Day (15 states)
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/all-saints-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - All Saints is a public holiday in some 
  areas of Switzerland.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Immaculate Conception (12 states)
 DTSTART;VALUE=DATE:20251208
 DTEND;VALUE=DATE:20251209
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/immaculate-conception-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - The Feast of the Immaculate Conception 
  is a Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Christmas Day is one of the biggest Chr
  istian celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Stephen's Day (All except VD\, GE\, JU)
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/st-stephen-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - The Feast of Saint Stephen is a public 
  holiday in large parts of Switzerland.
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Restoration Day (Geneva)
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220239Z
+DTSTAMP:20240119T094928Z
 UID:switzerland/restoration-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday - Restoration Day is a common local holid
  ay in Switzerland
-LAST-MODIFIED:20230623T220239Z
+LAST-MODIFIED:20240119T094928Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Swiss National Day
+DTSTART;VALUE=DATE:20260801
+DTEND;VALUE=DATE:20260802
+DTSTAMP:20240119T094928Z
+UID:switzerland/national-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday - Switzerland's National Day falls on August 
+ 1.
+LAST-MODIFIED:20240119T094928Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Valentine's Day
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20240119T094929Z
+UID:switzerland/valentine-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
+ 's Feast. The day of love owes its origins to ancient Roman and European C
+ hristian traditions.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:March Equinox
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094929Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season - March Equinox in Switzerland (Bern)
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Daylight Saving Time starts
+DTSTART;VALUE=DATE:20260329
+DTEND;VALUE=DATE:20260330
+DTSTAMP:20240119T094929Z
+UID:None-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Clock change/Daylight Saving Time - Daylight Saving Time start
+ s in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094929Z
+UID:switzerland/easter-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
+ rection\, according to Christian belief.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:May Day (Half-Day) (TG\, TI)
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094929Z
+UID:switzerland/may-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Labor Day\, International Workers' Day\, and May 
+ Day\, is a day off for workers in many countries around the world.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mothers' Day
+DTSTART;VALUE=DATE:20260510
+DTEND;VALUE=DATE:20260511
+DTSTAMP:20240119T094929Z
+UID:switzerland/mothers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
+ forts of mothers and mother figures.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pentecost
+DTSTART;VALUE=DATE:20260524
+DTEND;VALUE=DATE:20260525
+DTSTAMP:20240119T094929Z
+UID:switzerland/pentecost-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Many Christians all over the world annually obser
+ ve Pentecost\, also known as Whitsunday or Whit Sunday.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fathers' Day
+DTSTART;VALUE=DATE:20260607
+DTEND;VALUE=DATE:20260608
+DTSTAMP:20240119T094929Z
+UID:switzerland/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
+ enting on different dates worldwide.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:June Solstice
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094929Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season - June Solstice in Switzerland (Bern)
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St. Peter and St. Paul (Ticino)
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+DTSTAMP:20240119T094929Z
+UID:switzerland/peter-and-paul-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - St. Peter and St. Paul is a observance in Switzer
+ land
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Knabenschiessen (Zurich)
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260913
+DTSTAMP:20240119T094929Z
+UID:switzerland/knabenschiessen-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
+ tion in Zurich\, Switzerland.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Knabenschiessen (Zurich)
+DTSTART;VALUE=DATE:20260913
+DTEND;VALUE=DATE:20260914
+DTSTAMP:20240119T094929Z
+UID:switzerland/knabenschiessen-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
+ tion in Zurich\, Switzerland.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Knabenschiessen (Zurich)
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
+DTSTAMP:20240119T094929Z
+UID:switzerland/knabenschiessen-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Knabenschiessen is a traditional shooting competi
+ tion in Zurich\, Switzerland.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Swiss Federal Fast (All except GE)
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+DTSTAMP:20240119T094929Z
+UID:switzerland/federal-fast-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Swiss Federal Fast is a observance in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:September Equinox
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094929Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season - September Equinox in Switzerland (Bern)
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Daylight Saving Time ends
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+DTSTAMP:20240119T094929Z
+UID:None-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Clock change/Daylight Saving Time - Daylight Saving Time ends 
+ in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:December Solstice
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094929Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season - December Solstice in Switzerland (Bern)
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Eve
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T094929Z
+UID:switzerland/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
+  falls on December 24 in the Gregorian calendar.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's Eve
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094929Z
+UID:switzerland/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
+ cember 31\, in the Gregorian calendar.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's Day
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094929Z
+UID:switzerland/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - New Year’s Day is the first day of th
+ e year\, or January 1\, in the Gregorian calendar.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Berchtold Day (15 states)
+DTSTART;VALUE=DATE:20260102
+DTEND;VALUE=DATE:20260103
+DTSTAMP:20240119T094929Z
+UID:switzerland/berchtold-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Berchtold Day is a public holiday in a 
+ number of Switzerland's cantons.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Epiphany (GR (partly)\, SZ\, TI\, UR)
+DTSTART;VALUE=DATE:20260106
+DTEND;VALUE=DATE:20260107
+DTSTAMP:20240119T094929Z
+UID:switzerland/epiphany-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Epiphany is a Christian holiday celebra
+ ted globally on January 6 each year. It commemorates two events recorded i
+ n the Bible: the three wise men’s visit to baby Jesus\; and Jesus’ bap
+ tism.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Republic Day (Neuchâtel)
+DTSTART;VALUE=DATE:20260301
+DTEND;VALUE=DATE:20260302
+DTSTAMP:20240119T094929Z
+UID:switzerland/republic-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Republic Day is a common local holiday 
+ in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Saint Joseph's Day (LU (partly)\, NW\, SO (partly)\, SZ\, TI\, UR\
+ , VS)
+DTSTART;VALUE=DATE:20260319
+DTEND;VALUE=DATE:20260320
+DTSTAMP:20240119T094929Z
+UID:switzerland/saint-joseph-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - St. Joseph's Day is a public holiday in
+  the predominantly Catholic regions of Switzerland.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Näfels Procession (Glarus)
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+DTSTAMP:20240119T094929Z
+UID:switzerland/naefelser-fahrt-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Näfels Procession is a common local ho
+ liday in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Good Friday (All except TI\, VS)
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094929Z
+UID:switzerland/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Good Friday is a global Christian obser
+ vance two days before Easter Sunday.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (All except LU\, NE)
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20240119T094929Z
+UID:switzerland/easter-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Easter Monday is the day after Easter S
+ unday.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:May Day (BL\, BS\, JU\, SH\, ZH)
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094929Z
+UID:switzerland/may-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Labor Day\, International Workers' Day\
+ , and May Day\, is a day off for workers in many countries around the worl
+ d.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:May Day (Half-Day) (Solothurn)
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094929Z
+UID:switzerland/may-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Half Day Holiday - Labor Day\, International Workers' Day\, an
+ d May Day\, is a day off for workers in many countries around the world.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ascension Day
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260515
+DTSTAMP:20240119T094929Z
+UID:switzerland/ascension-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Ascension Day is the 40th day of Easter
+ . It is a religious holiday that commemorates the ascension of Jesus Chris
+ t into heaven.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pentecost Monday (All except NE)
+DTSTART;VALUE=DATE:20260525
+DTEND;VALUE=DATE:20260526
+DTSTAMP:20240119T094929Z
+UID:switzerland/pentecost-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Whit Monday\, or Pentecost Monday\, is 
+ a Christian holiday that falls on the day after Pentecost\, which is also 
+ known as Whit Sunday or Whitsunday.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corpus Christi (14 states)
+DTSTART;VALUE=DATE:20260604
+DTEND;VALUE=DATE:20260605
+DTSTAMP:20240119T094929Z
+UID:switzerland/corpus-christi-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Corpus Christi is a public holiday in a
+  number of Switzerland's cantons.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jura Independence Day (Jura)
+DTSTART;VALUE=DATE:20260623
+DTEND;VALUE=DATE:20260624
+DTSTAMP:20240119T094929Z
+UID:switzerland/jura-independence-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Jura Independence Day is a common local
+  holiday in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Assumption of Mary (12 states)
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20240119T094929Z
+UID:switzerland/assumption-of-mary-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - The Christian feast of the Assumption o
+ f Mary is on or around Aug 15 in most countries. A few celebrate Assumptio
+ n Day at other times of the year.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Genevese Fast (Geneva)
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20260911
+DTSTAMP:20240119T094929Z
+UID:switzerland/jeune-genevois-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Genevese Fast is a common local holiday
+  in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Federal Fast Monday (VD\, NE)
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+DTSTAMP:20240119T094929Z
+UID:switzerland/federal-fast-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Federal Fast Monday is a common local h
+ oliday in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mauritius Day (Appenzell Innerrhoden)
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+DTSTAMP:20240119T094929Z
+UID:switzerland/mauritius-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Mauritius Day is a common local holiday
+  in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St. Nicholas of Flüe (Obwalden)
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+DTSTAMP:20240119T094929Z
+UID:switzerland/saint-nicholas-of-flue-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - St. Nicholas of Flüe is a common local
+  holiday in Switzerland
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:All Saints' Day (15 states)
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DTSTAMP:20240119T094929Z
+UID:switzerland/all-saints-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - All Saints is a public holiday in some 
+ areas of Switzerland.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Immaculate Conception (12 states)
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+DTSTAMP:20240119T094929Z
+UID:switzerland/immaculate-conception-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - The Feast of the Immaculate Conception 
+ is a Christian observance on December 8 each year.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Day
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094929Z
+UID:switzerland/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Christmas Day is one of the biggest Chr
+ istian celebrations and falls on December 25 in the Gregorian calendar.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St. Stephen's Day (All except VD\, GE\, JU)
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+DTSTAMP:20240119T094929Z
+UID:switzerland/st-stephen-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - The Feast of Saint Stephen is a public 
+ holiday in large parts of Switzerland.
+LAST-MODIFIED:20240119T094929Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Restoration Day (Geneva)
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094929Z
+UID:switzerland/restoration-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday - Restoration Day is a common local holid
+ ay in Switzerland
+LAST-MODIFIED:20240119T094929Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR
