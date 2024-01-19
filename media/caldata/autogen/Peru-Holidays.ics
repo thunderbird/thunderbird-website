@@ -2,1056 +2,1219 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Año Nuevo
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220152Z
-UID:peru/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo
-DTSTART;VALUE=DATE:20230406
-DTEND;VALUE=DATE:20230407
-DTSTAMP:20230623T220152Z
-UID:peru/maundy-thursday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Viernes Santo
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T220152Z
-UID:peru/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Trabajo
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220152Z
-UID:peru/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:San Pedro y San Pablo
-DTSTART;VALUE=DATE:20230629
-DTEND;VALUE=DATE:20230630
-DTSTAMP:20230623T220152Z
-UID:peru/saint-peter-and-saint-paul-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Independencia
-DTSTART;VALUE=DATE:20230728
-DTEND;VALUE=DATE:20230729
-DTSTAMP:20230623T220152Z
-UID:peru/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Independencia
-DTSTART;VALUE=DATE:20230729
-DTEND;VALUE=DATE:20230730
-DTSTAMP:20230623T220152Z
-UID:peru/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Santa Rosa De Lima
-DTSTART;VALUE=DATE:20230830
-DTEND;VALUE=DATE:20230831
-DTSTAMP:20230623T220152Z
-UID:peru/santa-rosa-de-lima-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Combate de Angamos
-DTSTART;VALUE=DATE:20231008
-DTEND;VALUE=DATE:20231009
-DTSTAMP:20230623T220152Z
-UID:peru/battle-of-angamos-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Todos los Santos
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-DTSTAMP:20230623T220152Z
-UID:peru/all-saints-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Inmaculada Concepción
-DTSTART;VALUE=DATE:20231208
-DTEND;VALUE=DATE:20231209
-DTSTAMP:20230623T220152Z
-UID:peru/immaculate-conception-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - The Feast of the Immaculate Conception is a
-  Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Batalla de Ayacucho
-DTSTART;VALUE=DATE:20231209
-DTEND;VALUE=DATE:20231210
-DTSTAMP:20230623T220152Z
-UID:peru/battle-of-ayacucho-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Navidad
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220152Z
-UID:peru/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Christmas Day is one of the biggest Christian cele
- brations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de los Reyes Magos
-DTSTART;VALUE=DATE:20230106
-DTEND;VALUE=DATE:20230107
-DTSTAMP:20230623T220152Z
-UID:peru/the-three-wise-men-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
- ly on January 6 each year. It commemorates two events recorded in the Bibl
- e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T220152Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Domingo de Pascua
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T220152Z
-UID:peru/easter-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Easter Sunday commemorates Jesus Christ’s resurr
- ection\, according to Christian belief.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Madre
-DTSTART;VALUE=DATE:20230514
-DTEND;VALUE=DATE:20230515
-DTSTAMP:20230623T220152Z
-UID:peru/mothers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Bandera
-DTSTART;VALUE=DATE:20230607
-DTEND;VALUE=DATE:20230608
-DTSTAMP:20230623T220152Z
-UID:peru/flag-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Padre
-DTSTART;VALUE=DATE:20230618
-DTEND;VALUE=DATE:20230619
-DTSTAMP:20230623T220152Z
-UID:peru/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220152Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Campesino
-DTSTART;VALUE=DATE:20230624
-DTEND;VALUE=DATE:20230625
-DTSTAMP:20230623T220152Z
-UID:peru/farmer-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fiesta del Sol
-DTSTART;VALUE=DATE:20230624
-DTEND;VALUE=DATE:20230625
-DTSTAMP:20230623T220152Z
-UID:peru/inti-raymi-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220152Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de las Fuerzas Armadas
-DTSTART;VALUE=DATE:20230924
-DTEND;VALUE=DATE:20230925
-DTSTAMP:20230623T220152Z
-UID:peru/armed-forces-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Los Fieles Difuntos
-DTSTART;VALUE=DATE:20231102
-DTEND;VALUE=DATE:20231103
-DTSTAMP:20230623T220152Z
-UID:peru/all-souls-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - All Souls’ Day falls on November 2 each year. I
- t is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
-DTSTART;VALUE=DATE:20231221
-DTEND;VALUE=DATE:20231222
-DTSTAMP:20230623T220152Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nochebuena
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T220152Z
-UID:peru/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Christmas Eve is the day before Christmas Day and 
- falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Víspera de año nuevo
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220152Z
-UID:peru/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220152Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Año Nuevo
+SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o el 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jueves Santo
+SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20240328
 DTEND;VALUE=DATE:20240329
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/maundy-thursday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves durante la Semana Santa. Es el día anterior al Vier
+ nes Santo.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Viernes Santo
+SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial que se celebra dos días antes del domingo de Pascua.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Trabajo
+SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo es un día libre para los traba
+ jadores en muchos países del mundo.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:San Pedro y San Pablo
+SUMMARY:Batalla de Arica 
+DTSTART;VALUE=DATE:20240607
+DTEND;VALUE=DATE:20240608
+DTSTAMP:20240119T094832Z
+UID:peru/battle-of-arica-2024
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La batalla de Arica es fiesta nacional en 
+ Perú
+LAST-MODIFIED:20240119T094832Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:San Pedro y San Pablo 
 DTSTART;VALUE=DATE:20240629
 DTEND;VALUE=DATE:20240630
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/saint-peter-and-saint-paul-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  San Pedro y San Pablo es una fiesta nacion
+ al en Perú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Independencia
+SUMMARY:Día de la Fuerza Aérea Peruana 
+DTSTART;VALUE=DATE:20240723
+DTEND;VALUE=DATE:20240724
+DTSTAMP:20240119T094832Z
+UID:peru/peruvian-air-force-day-2024
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Fuerza Aérea Peruana es fer
+ iado nacional en Perú
+LAST-MODIFIED:20240119T094832Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20240728
 DTEND;VALUE=DATE:20240729
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/independence-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  El Día de la Independencia es una fiesta 
+ nacional en Perú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Independencia
+SUMMARY:Día de la Independencia (día 2) 
 DTSTART;VALUE=DATE:20240729
 DTEND;VALUE=DATE:20240730
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/independence-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  El Día de la Independencia (día 2) es un
+ a fiesta nacional en Perú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Santa Rosa De Lima
+SUMMARY:Batalla de Junín 
+DTSTART;VALUE=DATE:20240806
+DTEND;VALUE=DATE:20240807
+DTSTAMP:20240119T094832Z
+UID:peru/battle-of-junin-2024
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La batalla de Junín es fiesta nacional en
+  Perú
+LAST-MODIFIED:20240119T094832Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Santa Rosa De Lima 
 DTSTART;VALUE=DATE:20240830
 DTEND;VALUE=DATE:20240831
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/santa-rosa-de-lima-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  Santa Rosa De Lima es fiesta nacional en P
+ erú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Combate de Angamos
+SUMMARY:Batalla de Angamos 
 DTSTART;VALUE=DATE:20241008
 DTEND;VALUE=DATE:20241009
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/battle-of-angamos-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  La batalla de Angamos es fiesta nacional e
+ n Perú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Todos los Santos
+SUMMARY:Día de Todos los Santos 
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/all-saints-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  Muchas iglesias honran a todos sus santos 
+ el Día de Todos los Santos\, también conocido como Día de Todos los San
+ tos.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Inmaculada Concepción
+SUMMARY:Fiesta de la Inmaculada Concepción 
 DTSTART;VALUE=DATE:20241208
 DTEND;VALUE=DATE:20241209
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/immaculate-conception-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Feast of the Immaculate Conception is a
-  Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  La Fiesta de la Inmaculada Concepción es 
+ una celebración cristiana que se celebra el 8 de diciembre de cada año.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Batalla de Ayacucho
+SUMMARY:Batalla de Ayacucho 
 DTSTART;VALUE=DATE:20241209
 DTEND;VALUE=DATE:20241210
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/battle-of-ayacucho-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:National holiday -  La batalla de Ayacucho es fiesta nacional 
+ en Perú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Navidad
+SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Christmas Day is one of the biggest Christian cele
- brations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
+ iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de los Reyes Magos
+SUMMARY:El Día de los Reyes Magos 
 DTSTART;VALUE=DATE:20240106
 DTEND;VALUE=DATE:20240107
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/the-three-wise-men-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
- ly on January 6 each year. It commemorates two events recorded in the Bibl
- e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Observance -  Epifanía es una fiesta cristiana que se celebra
+  en todo el mundo el 6 de enero de cada año. Conmemora dos eventos regist
+ rados en la Biblia: la visita de los Reyes Magos al niño Jesús y el baut
+ ismo de Jesús.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
+SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20240319
 DTEND;VALUE=DATE:20240320
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Season -  Equinoccio de marzo en Perú (Lima)
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Domingo de Pascua
+SUMMARY:Domingo de Pascua 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/easter-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Easter Sunday commemorates Jesus Christ’s resurr
- ection\, according to Christian belief.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Christian -  El domingo de Pascua conmemora la resurrección d
+ e Jesucristo\, según la creencia cristiana.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Madre
+SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20240512
 DTEND;VALUE=DATE:20240513
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/mothers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y los esf
+ uerzos de las madres y las figuras maternas.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Bandera
+SUMMARY:Día de la Bandera 
 DTSTART;VALUE=DATE:20240607
 DTEND;VALUE=DATE:20240608
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/flag-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Observance -  El Día de la Bandera es una celebración en Per
+ ú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Padre
+SUMMARY:Día del Padre 
 DTSTART;VALUE=DATE:20240616
 DTEND;VALUE=DATE:20240617
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Observance -  El Día del Padre celebra la paternidad y la pat
+ ernidad masculina en diferentes fechas en todo el mundo.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
+SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Season -  Solsticio de junio en Perú (Lima)
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Campesino
+SUMMARY:Día del Agricultor 
 DTSTART;VALUE=DATE:20240624
 DTEND;VALUE=DATE:20240625
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/farmer-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Observance -  El Día del Agricultor es una celebración en Pe
+ rú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fiesta del Sol
+SUMMARY:Día del Inti Raymi 
 DTSTART;VALUE=DATE:20240624
 DTEND;VALUE=DATE:20240625
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/inti-raymi-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Observance -  El Día del Inti Raymi es una celebración en Pe
+ rú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
+SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Season -  Equinoccio de septiembre en Perú (Lima)
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de las Fuerzas Armadas
+SUMMARY:Día de las Fuerzas Armadas 
 DTSTART;VALUE=DATE:20240924
 DTEND;VALUE=DATE:20240925
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/armed-forces-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Observance -  El Día de las Fuerzas Armadas es una celebraci
+ ón en Perú
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Los Fieles Difuntos
+SUMMARY:Día de los Difuntos 
 DTSTART;VALUE=DATE:20241102
 DTEND;VALUE=DATE:20241103
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/all-souls-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - All Souls’ Day falls on November 2 each year. I
- t is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Observance -  El Día de los Difuntos cae el 2 de noviembre de
+  cada año. Es un día de limosna y oración por los difuntos.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
+SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Season -  Solsticio de diciembre en Perú (Lima)
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nochebuena
+SUMMARY:Nochebuena 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Christmas Eve is the day before Christmas Day and 
- falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Christian -  La víspera de Navidad es el día anterior al dí
+ a de Navidad y cae el 24 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Víspera de año nuevo
+SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220153Z
+DTSTAMP:20240119T094832Z
 UID:peru/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220153Z
+DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
+  año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094832Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Año Nuevo
+SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jueves Santo
+SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20250417
 DTEND;VALUE=DATE:20250418
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/maundy-thursday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Viernes Santo
+SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Trabajo
+SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:San Pedro y San Pablo
+SUMMARY:Batalla de Arica 
+DTSTART;VALUE=DATE:20250607
+DTEND;VALUE=DATE:20250608
+DTSTAMP:20240119T094834Z
+UID:peru/battle-of-arica-2025
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La batalla de Arica es una fiesta nacional
+  en Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:San Pedro y San Pablo 
 DTSTART;VALUE=DATE:20250629
 DTEND;VALUE=DATE:20250630
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/saint-peter-and-saint-paul-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  San Pedro y San Pablo es una fiesta nacion
+ al en Perú
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Independencia
+SUMMARY:Día de la Fuerza Aérea Peruana 
+DTSTART;VALUE=DATE:20250723
+DTEND;VALUE=DATE:20250724
+DTSTAMP:20240119T094834Z
+UID:peru/peruvian-air-force-day-2025
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Fuerza Aérea Peruana es un 
+ feriado nacional en Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20250728
 DTEND;VALUE=DATE:20250729
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/independence-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
+ nacional en Perú
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Independencia
+SUMMARY:Día de la Independencia (día 2) 
 DTSTART;VALUE=DATE:20250729
 DTEND;VALUE=DATE:20250730
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/independence-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  El Día de la Independencia (día 2) es un
+  feriado nacional en Perú
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Santa Rosa De Lima
+SUMMARY:Batalla de Junín 
+DTSTART;VALUE=DATE:20250806
+DTEND;VALUE=DATE:20250807
+DTSTAMP:20240119T094834Z
+UID:peru/battle-of-junin-2025
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La batalla de Junín es fiesta nacional en
+  Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Santa Rosa De Lima 
 DTSTART;VALUE=DATE:20250830
 DTEND;VALUE=DATE:20250831
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/santa-rosa-de-lima-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  Santa Rosa De Lima es una fiesta nacional 
+ en Perú
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Combate de Angamos
+SUMMARY:Batalla de Angamos 
 DTSTART;VALUE=DATE:20251008
 DTEND;VALUE=DATE:20251009
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/battle-of-angamos-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  La batalla de Angamos es fiesta nacional e
+ n Perú
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Todos los Santos
+SUMMARY:Día de Todos los Santos 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/all-saints-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  Muchas iglesias honran a todos sus santos 
+ el Día de Todos los Santos\, también conocido como Día de Todos los San
+ tos.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Inmaculada Concepción
+SUMMARY:Fiesta de la Inmaculada Concepción 
 DTSTART;VALUE=DATE:20251208
 DTEND;VALUE=DATE:20251209
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/immaculate-conception-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Feast of the Immaculate Conception is a
-  Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  La Fiesta de la Inmaculada Concepción es 
+ una celebración cristiana que se celebra el 8 de diciembre de cada año.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Batalla de Ayacucho
+SUMMARY:Batalla de Ayacucho 
 DTSTART;VALUE=DATE:20251209
 DTEND;VALUE=DATE:20251210
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/battle-of-ayacucho-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:National holiday -  La batalla de Ayacucho es una fiesta nacio
+ nal en Perú
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Navidad
+SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Christmas Day is one of the biggest Christian cele
- brations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
+ iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de los Reyes Magos
+SUMMARY:La Epifanía del Día de los Reyes Magos es una fiesta cristiana q
+ ue se celebra en todo el mundo el 6 de enero de cada año. Conmemora dos e
+ ventos registrados en la Biblia: la visita de los tres reyes magos al niñ
+ o Jesús y el bautismo de Jesús.
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/the-three-wise-men-day-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
  ly on January 6 each year. It commemorates two events recorded in the Bibl
  e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20230623T220154Z
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
+SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Season -  Equinoccio de marzo en Perú (Lima)
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Domingo de Pascua
+SUMMARY:Domingo de Pascua 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/easter-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Easter Sunday commemorates Jesus Christ’s resurr
- ection\, according to Christian belief.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Christian -  El domingo de Pascua conmemora la resurrección d
+ e Jesucristo\, según la creencia cristiana.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Madre
+SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20250511
 DTEND;VALUE=DATE:20250512
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/mothers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y esfuerz
+ os de las madres y figuras maternas.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Bandera
+SUMMARY:Día de la Bandera 
 DTSTART;VALUE=DATE:20250607
 DTEND;VALUE=DATE:20250608
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/flag-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Observance -  El Día de la Bandera es una celebración en Per
+ ú.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Padre
+SUMMARY:Día del Padre 
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Observance -  El Día del Padre celebra la paternidad y la pat
+ ernidad masculina en diferentes fechas en todo el mundo.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
+SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Season -  Solsticio de junio en Perú (Lima)
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Campesino
+SUMMARY:Día del Agricultor 
 DTSTART;VALUE=DATE:20250624
 DTEND;VALUE=DATE:20250625
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/farmer-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Observance -  El Día del Agricultor es una celebración en Pe
+ rú
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fiesta del Sol
+SUMMARY:Día del Inti Raymi 
 DTSTART;VALUE=DATE:20250624
 DTEND;VALUE=DATE:20250625
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/inti-raymi-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Observance -  El Día del Inti Raymi es una celebración en Pe
+ rú
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
+SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Season -  Equinoccio de septiembre en Perú (Lima)
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de las Fuerzas Armadas
+SUMMARY:Día de las Fuerzas Armadas 
 DTSTART;VALUE=DATE:20250924
 DTEND;VALUE=DATE:20250925
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/armed-forces-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Observance -  El Día de las Fuerzas Armadas es una celebraci
+ ón en Perú
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Los Fieles Difuntos
+SUMMARY:Día de los Difuntos 
 DTSTART;VALUE=DATE:20251102
 DTEND;VALUE=DATE:20251103
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/all-souls-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - All Souls’ Day falls on November 2 each year. I
- t is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Observance -  El Día de los Difuntos se celebra el 2 de novie
+ mbre de cada año. Es un día de limosna y oración por los muertos.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
+SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Season -  Solsticio de diciembre en Perú (Lima)
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nochebuena
+SUMMARY:Nochebuena 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Christmas Eve is the day before Christmas Day and 
- falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Christian -  La víspera de Navidad es el día anterior al dí
+ a de Navidad y cae el 24 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094834Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Víspera de año nuevo
+SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220154Z
+DTSTAMP:20240119T094834Z
 UID:peru/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220154Z
+DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
+  año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Año Nuevo 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094834Z
+UID:peru/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jueves Santo 
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+DTSTAMP:20240119T094834Z
+UID:peru/maundy-thursday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Viernes Santo 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094834Z
+UID:peru/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Trabajo/Primero de Mayo 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094834Z
+UID:peru/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Batalla de Arica 
+DTSTART;VALUE=DATE:20260607
+DTEND;VALUE=DATE:20260608
+DTSTAMP:20240119T094834Z
+UID:peru/battle-of-arica-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La batalla de Arica es una fiesta nacional
+  en Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:San Pedro y San Pablo 
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+DTSTAMP:20240119T094834Z
+UID:peru/saint-peter-and-saint-paul-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  San Pedro y San Pablo es una fiesta nacion
+ al en Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Fuerza Aérea Peruana 
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+DTSTAMP:20240119T094834Z
+UID:peru/peruvian-air-force-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Fuerza Aérea Peruana es un 
+ feriado nacional en Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Independencia 
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20260729
+DTSTAMP:20240119T094834Z
+UID:peru/independence-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
+ nacional en Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Independencia (día 2) 
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+DTSTAMP:20240119T094834Z
+UID:peru/independence-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Independencia (día 2) es un
+  feriado nacional en Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Batalla de Junín 
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+DTSTAMP:20240119T094834Z
+UID:peru/battle-of-junin-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La batalla de Junín es fiesta nacional en
+  Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Santa Rosa De Lima 
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
+DTSTAMP:20240119T094834Z
+UID:peru/santa-rosa-de-lima-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Santa Rosa De Lima es una fiesta nacional 
+ en Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Batalla de Angamos 
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+DTSTAMP:20240119T094834Z
+UID:peru/battle-of-angamos-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La batalla de Angamos es fiesta nacional e
+ n Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Todos los Santos 
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DTSTAMP:20240119T094834Z
+UID:peru/all-saints-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Muchas iglesias honran a todos sus santos 
+ el Día de Todos los Santos\, también conocido como Día de Todos los San
+ tos.
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fiesta de la Inmaculada Concepción 
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+DTSTAMP:20240119T094834Z
+UID:peru/immaculate-conception-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La Fiesta de la Inmaculada Concepción es 
+ una celebración cristiana que se celebra el 8 de diciembre de cada año.
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Batalla de Ayacucho 
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+DTSTAMP:20240119T094834Z
+UID:peru/battle-of-ayacucho-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La batalla de Ayacucho es una fiesta nacio
+ nal en Perú
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Navidad 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094834Z
+UID:peru/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
+ iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094834Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:La Epifanía del Día de los Reyes Magos es una fiesta cristiana q
+ ue se celebra en todo el mundo el 6 de enero de cada año. Conmemora dos e
+ ventos registrados en la Biblia: la visita de los tres reyes magos al niñ
+ o Jesús y el bautismo de Jesús.
+DTSTART;VALUE=DATE:20260106
+DTEND;VALUE=DATE:20260107
+DTSTAMP:20240119T094835Z
+UID:peru/the-three-wise-men-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
+ ly on January 6 each year. It commemorates two events recorded in the Bibl
+ e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de marzo 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094835Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de marzo en Perú (Lima)
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Domingo de Pascua 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094835Z
+UID:peru/easter-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El domingo de Pascua conmemora la resurrección d
+ e Jesucristo\, según la creencia cristiana.
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Madre 
+DTSTART;VALUE=DATE:20260510
+DTEND;VALUE=DATE:20260511
+DTSTAMP:20240119T094835Z
+UID:peru/mothers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y esfuerz
+ os de las madres y figuras maternas.
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Bandera 
+DTSTART;VALUE=DATE:20260607
+DTEND;VALUE=DATE:20260608
+DTSTAMP:20240119T094835Z
+UID:peru/flag-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de la Bandera es una celebración en Per
+ ú.
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Padre 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094835Z
+UID:peru/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día del Padre celebra la paternidad y la pat
+ ernidad masculina en diferentes fechas en todo el mundo.
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de junio 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094835Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de junio en Perú (Lima)
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Agricultor 
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+DTSTAMP:20240119T094835Z
+UID:peru/farmer-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día del Agricultor es una celebración en Pe
+ rú
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Inti Raymi 
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+DTSTAMP:20240119T094835Z
+UID:peru/inti-raymi-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día del Inti Raymi es una celebración en Pe
+ rú
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de septiembre 
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+DTSTAMP:20240119T094835Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de septiembre en Perú (Lima)
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de las Fuerzas Armadas 
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+DTSTAMP:20240119T094835Z
+UID:peru/armed-forces-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de las Fuerzas Armadas es una celebraci
+ ón en Perú
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de los Difuntos 
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+DTSTAMP:20240119T094835Z
+UID:peru/all-souls-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de los Difuntos se celebra el 2 de novie
+ mbre de cada año. Es un día de limosna y oración por los muertos.
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de diciembre 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094835Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de diciembre en Perú (Lima)
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nochebuena 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T094835Z
+UID:peru/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  La víspera de Navidad es el día anterior al dí
+ a de Navidad y cae el 24 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094835Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nochevieja 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094835Z
+UID:peru/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
+  año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094835Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

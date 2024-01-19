@@ -2,869 +2,988 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Жаңа жыл
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday - New Year’s Day is the first day of the year
- \, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Жаңа жыл 2
-DTSTART;VALUE=DATE:20230102
-DTEND;VALUE=DATE:20230103
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/new-year-day-2-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:демалыс күні Жаңа жыл
-DTSTART;VALUE=DATE:20230103
-DTEND;VALUE=DATE:20230104
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday - New Year’s Day is the first day of the year
- \, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Күн Рождества
-DTSTART;VALUE=DATE:20230107
-DTEND;VALUE=DATE:20230108
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday - Many Orthodox churches annually celebrate Chr
- istmas Day on or around January 7. This event commemorates the story of Je
- sus Christ’s birth\, according to the Christian Bible.
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Халықаралық әйелдер күні
-DTSTART;VALUE=DATE:20230308
-DTEND;VALUE=DATE:20230309
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/womens-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы
-DTSTART;VALUE=DATE:20230321
-DTEND;VALUE=DATE:20230322
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/nauryz-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы (күн 2)
-DTSTART;VALUE=DATE:20230322
-DTEND;VALUE=DATE:20230323
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/nauryz-day-2-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы (күн 3)
-DTSTART;VALUE=DATE:20230323
-DTEND;VALUE=DATE:20230324
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/nauryz-3-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Қазақстан халқының бірлігі мерекес
- і
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/unity-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday - Labor Day\, International Workers' Day\, and 
- May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Отан қорғаушы күні
-DTSTART;VALUE=DATE:20230507
-DTEND;VALUE=DATE:20230508
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/defender-fatherland-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:демалыс күні Отан қорғаушы күні
-DTSTART;VALUE=DATE:20230508
-DTEND;VALUE=DATE:20230509
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/defender-fatherland-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Жеңіс күні
-DTSTART;VALUE=DATE:20230509
-DTEND;VALUE=DATE:20230510
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/victory-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Құрбан айт
-DTSTART;VALUE=DATE:20230628
-DTEND;VALUE=DATE:20230629
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/eid-al-adha-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday - Eid al-Adha (Id ul-Adha) is an Islamic festiv
- al falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to c
- ommemorate the willingness of Ibrahim (Abraham) to sacrifice his son.
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Астана күні
-DTSTART;VALUE=DATE:20230706
-DTEND;VALUE=DATE:20230707
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/capital-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Конституциясы күні
-DTSTART;VALUE=DATE:20230830
-DTEND;VALUE=DATE:20230831
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/constitution-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Республика күні
-DTSTART;VALUE=DATE:20231025
-DTEND;VALUE=DATE:20231026
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/republic-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Тәуелсіздік күні
-DTSTART;VALUE=DATE:20231216
-DTEND;VALUE=DATE:20231217
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:демалыс күні Тәуелсіздік күні
-DTSTART;VALUE=DATE:20231218
-DTEND;VALUE=DATE:20231219
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:көктем
-DTSTART;VALUE=DATE:20230321
-DTEND;VALUE=DATE:20230322
-DTSTAMP:20230623T220059Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:наз
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220059Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:күз
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220059Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:қыс
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T220059Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Жаңа жылдың қарсаңы
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220059Z
-UID:kazakhstan/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220059Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Жаңа жыл
+SUMMARY:Жаңа жыл күні 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday - New Year’s Day is the first day of the year
- \, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Жаңа жыл күні — Григори
+ ан күнтізбесіндегі жылдың бірінші күні\,
+  немесе 1 қаңтар.
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Жаңа жыл 2
+SUMMARY:Жаңа жыл мерекесі 
 DTSTART;VALUE=DATE:20240102
 DTEND;VALUE=DATE:20240103
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/new-year-day-2-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Жаңа жыл мерекесі Қазақ
+ станда мемлекеттік мереке болып табылад
+ ы
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Күн Рождества
+SUMMARY:Православие Рождество күні 
 DTSTART;VALUE=DATE:20240107
 DTEND;VALUE=DATE:20240108
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday - Many Orthodox churches annually celebrate Chr
- istmas Day on or around January 7. This event commemorates the story of Je
- sus Christ’s birth\, according to the Christian Bible.
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Көптеген православие ші
+ ркеулері жыл сайын 7 қаңтарда немесе оны
+ ң айналасында Рождество күнін атап өтед
+ і. Бұл оқиға христиандық Киелі кітапқа с
+ әйкес Иса Мәсіхтің дүниеге келуі туралы 
+ оқиғаны еске алады.
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Халықаралық әйелдер күні
+SUMMARY:Халықаралық әйелдер күні 
 DTSTART;VALUE=DATE:20240308
 DTEND;VALUE=DATE:20240309
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/womens-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Халықаралық әйелдер күн
+ і — Қазақстанда мемлекеттік мереке
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы
+SUMMARY:Наурыз 
 DTSTART;VALUE=DATE:20240321
 DTEND;VALUE=DATE:20240322
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/nauryz-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Наурыз Қазақстанда мемл
+ екеттік мереке болып табылады
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы (күн 2)
+SUMMARY:Наурыз мейрамы 
 DTSTART;VALUE=DATE:20240322
 DTEND;VALUE=DATE:20240323
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/nauryz-day-2-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Наурыз мейрамы Қазақста
+ нда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы (күн 3)
+SUMMARY:Наурыз мейрамы 
 DTSTART;VALUE=DATE:20240323
 DTEND;VALUE=DATE:20240324
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/nauryz-3-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Наурыз мейрамы Қазақста
+ нда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы (күн 3) қарал-
+SUMMARY:Наурыз мерекесіне арналған демалыс 
+ күні 
 DTSTART;VALUE=DATE:20240325
 DTEND;VALUE=DATE:20240326
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/nauryz-3-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Наурыз мерекесі Қазақст
+ анда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Қазақстан халқының бірлігі мерекес
- і
+SUMMARY:Бірлік күні 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/unity-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday - Labor Day\, International Workers' Day\, and 
- May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Еңбек күні\, Халықаралық
+  жұмысшылар күні және мамыр күні\, әлемні
+ ң көптеген елдерінде жұмысшылар үшін де
+ малыс күні болып табылады.
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Отан қорғаушы күні
+SUMMARY:Отан қорғаушылар күні 
 DTSTART;VALUE=DATE:20240507
 DTEND;VALUE=DATE:20240508
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/defender-fatherland-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Отан қорғаушылар күні Қ
+ азақстанда мемлекеттік мереке
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Жеңіс күні
+SUMMARY:Жеңіс күні 
 DTSTART;VALUE=DATE:20240509
 DTEND;VALUE=DATE:20240510
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/victory-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Жеңіс күні — Қазақстанд
+ а мемлекеттік мереке
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Құрбан айт
+SUMMARY:Құрбан айт 
 DTSTART;VALUE=DATE:20240616
 DTEND;VALUE=DATE:20240617
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/eid-al-adha-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday - Eid al-Adha (Id ul-Adha) is an Islamic festiv
- al falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to c
- ommemorate the willingness of Ibrahim (Abraham) to sacrifice his son.
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Құрбан айт (Ид ул-Адха) —
+  Ибраһимнің (Ыбырайым) ұлын құрбан шалуғ
+ а дайындығын еске алу үшін Дхул хижжа (Се
+ н әл-Хижжа) айының 10-күніне түсетін ислам
+  мерекесі.
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Астана күні
+SUMMARY:Елорда күні 
 DTSTART;VALUE=DATE:20240706
 DTEND;VALUE=DATE:20240707
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/capital-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Елорда күні Қазақстанда
+  мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:демалыс күні Астана күні
+SUMMARY:Астана күніне арналған демалыс күні
+  
 DTSTART;VALUE=DATE:20240708
 DTEND;VALUE=DATE:20240709
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/capital-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Елорда күні Қазақстанда
+  мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Конституциясы күні
+SUMMARY:Конституция күні 
 DTSTART;VALUE=DATE:20240830
 DTEND;VALUE=DATE:20240831
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/constitution-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Конституция күні Қазақс
+ танда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Республика күні
+SUMMARY:Республика күні 
 DTSTART;VALUE=DATE:20241025
 DTEND;VALUE=DATE:20241026
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/republic-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Республика күні Қазақст
+ анда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Тәуелсіздік күні
+SUMMARY:Тәуелсіздік күні 
 DTSTART;VALUE=DATE:20241216
 DTEND;VALUE=DATE:20241217
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/independence-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Public holiday -  Тәуелсіздік күні Қазақс
+ танда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:көктем
+SUMMARY:Наурыз күннің теңелуі 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Season -  Қазақстандағы наурыз күннің
+  теңелуі (Астана)
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:наз
+SUMMARY:Маусым күншығысы 
 DTSTART;VALUE=DATE:20240621
 DTEND;VALUE=DATE:20240622
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Season -  Қазақстандағы маусым күншығ
+ ысы (Астана)
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:күз
+SUMMARY:Қыркүйек күннің теңелуі 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Season -  Қазақстандағы қыркүйек күнн
+ ің теңелуі (Астана)
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:қыс
+SUMMARY:Желтоқсан Solstice 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Season -  Қазақстандағы Желтоқсан күн
+  тойы (Астана)
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Жаңа жылдың қарсаңы
+SUMMARY:Жаңа жыл қарсаңы 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220100Z
+DTSTAMP:20240119T094737Z
 UID:kazakhstan/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220100Z
+DESCRIPTION:Observance -  Жаңа жыл қарсаңы — Григор
+ иан күнтізбесіндегі жылдың соңғы күні\, 
+ яғни 31 желтоқсан.
+LAST-MODIFIED:20240119T094737Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Жаңа жыл
+SUMMARY:Жаңа жыл күні 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday - New Year’s Day is the first day of the year
- \, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Жаңа жыл күні — Григори
+ ан күнтізбесіндегі жылдың бірінші күні\,
+  немесе 1 қаңтар.
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Жаңа жыл 2
+SUMMARY:Жаңа жыл мерекесі 
 DTSTART;VALUE=DATE:20250102
 DTEND;VALUE=DATE:20250103
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/new-year-day-2-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Жаңа жыл мерекесі Қазақ
+ станда мемлекеттік мереке болып табылад
+ ы
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Күн Рождества
+SUMMARY:Православие Рождество күні 
 DTSTART;VALUE=DATE:20250107
 DTEND;VALUE=DATE:20250108
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday - Many Orthodox churches annually celebrate Chr
- istmas Day on or around January 7. This event commemorates the story of Je
- sus Christ’s birth\, according to the Christian Bible.
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Көптеген православие ші
+ ркеулері жыл сайын 7 қаңтарда немесе оны
+ ң айналасында Рождество күнін атап өтед
+ і. Бұл оқиға христиандық Киелі кітапқа с
+ әйкес Иса Мәсіхтің дүниеге келуі туралы 
+ оқиғаны еске алады.
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Халықаралық әйелдер күні
+SUMMARY:Халықаралық әйелдер күні 
 DTSTART;VALUE=DATE:20250308
 DTEND;VALUE=DATE:20250309
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/womens-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Халықаралық әйелдер күн
+ і — Қазақстанда мемлекеттік мереке
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:демалыс күні Халықаралық әйелдер кү
- ні
+SUMMARY:Халықаралық әйелдер күніне арналға
+ н демалыс күні 
 DTSTART;VALUE=DATE:20250310
 DTEND;VALUE=DATE:20250311
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/womens-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Халықаралық әйелдер күн
+ і Қазақстанда мемлекеттік мереке болып 
+ табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы
+SUMMARY:Наурыз 
 DTSTART;VALUE=DATE:20250321
 DTEND;VALUE=DATE:20250322
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/nauryz-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Наурыз Қазақстанда мемл
+ екеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы (күн 2)
+SUMMARY:Наурыз мейрамы 
 DTSTART;VALUE=DATE:20250322
 DTEND;VALUE=DATE:20250323
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/nauryz-day-2-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Наурыз мейрамы Қазақста
+ нда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы (күн 3)
+SUMMARY:Наурыз мейрамы 
 DTSTART;VALUE=DATE:20250323
 DTEND;VALUE=DATE:20250324
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/nauryz-3-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Наурыз мейрамы Қазақста
+ нда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:демалыс күні Наурыз мейрамы (күн 2)
+SUMMARY:Наурыз мерекесіне арналған демалыс 
+ күні 
 DTSTART;VALUE=DATE:20250324
 DTEND;VALUE=DATE:20250325
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/nauryz-day-2-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Наурыз мерекесі Қазақст
+ анда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Наурыз мейрамы (күн 3) қарал-
+SUMMARY:Наурыз мерекесіне арналған демалыс 
+ күні 
 DTSTART;VALUE=DATE:20250324
 DTEND;VALUE=DATE:20250325
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/nauryz-3-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Наурыз мерекесі Қазақст
+ анда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Қазақстан халқының бірлігі мерекес
- і
+SUMMARY:Бірлік күні 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/unity-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday - Labor Day\, International Workers' Day\, and 
- May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Еңбек күні\, Халықаралық
+  жұмысшылар күні және мамыр күні\, әлемні
+ ң көптеген елдерінде жұмысшылар үшін де
+ малыс күні болып табылады.
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Отан қорғаушы күні
+SUMMARY:Отан қорғаушылар күні 
 DTSTART;VALUE=DATE:20250507
 DTEND;VALUE=DATE:20250508
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/defender-fatherland-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Отан қорғаушылар күні Қ
+ азақстанда мемлекеттік мереке
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Жеңіс күні
+SUMMARY:Жеңіс күні 
 DTSTART;VALUE=DATE:20250509
 DTEND;VALUE=DATE:20250510
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/victory-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Жеңіс күні — Қазақстанд
+ а мемлекеттік мереке
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Құрбан айт
+SUMMARY:Құрбан айт 
 DTSTART;VALUE=DATE:20250606
 DTEND;VALUE=DATE:20250607
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/eid-al-adha-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday - Eid al-Adha (Id ul-Adha) is an Islamic festiv
- al falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to c
- ommemorate the willingness of Ibrahim (Abraham) to sacrifice his son.
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Құрбан айт (Ид ул-Адха) —
+  Ибраһимнің (Ыбырайым) ұлын құрбан шалуғ
+ а дайындығын еске алу үшін Дхул хижжа (Се
+ н әл-Хижжа) айының 10-күніне түсетін ислам
+  мерекесі.
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Астана күні
+SUMMARY:Елорда күні 
 DTSTART;VALUE=DATE:20250706
 DTEND;VALUE=DATE:20250707
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/capital-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Елорда күні Қазақстанда
+  мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:демалыс күні Астана күні
+SUMMARY:Астана күніне арналған демалыс күні
+  
 DTSTART;VALUE=DATE:20250707
 DTEND;VALUE=DATE:20250708
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/capital-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Елорда күні Қазақстанда
+  мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Конституциясы күні
+SUMMARY:Конституция күні 
 DTSTART;VALUE=DATE:20250830
 DTEND;VALUE=DATE:20250831
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/constitution-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Конституция күні Қазақс
+ танда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:демалыс күні Конституциясы күні
+SUMMARY:Конституция күніне арналған демалы
+ с күні 
 DTSTART;VALUE=DATE:20250901
 DTEND;VALUE=DATE:20250902
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/constitution-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Конституция күні Қазақс
+ танда мемлекеттік мереке
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Республика күні
+SUMMARY:Республика күні 
 DTSTART;VALUE=DATE:20251025
 DTEND;VALUE=DATE:20251026
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/republic-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Республика күні Қазақст
+ анда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Тәуелсіздік күні
+SUMMARY:Тәуелсіздік күні 
 DTSTART;VALUE=DATE:20251216
 DTEND;VALUE=DATE:20251217
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/independence-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public holiday
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Public holiday -  Тәуелсіздік күні Қазақс
+ танда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:көктем
+SUMMARY:Наурыз күннің теңелуі 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Season -  Қазақстандағы наурыз күннің
+  теңелуі (Астана)
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:наз
+SUMMARY:Маусым күншығысы 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Season -  Қазақстандағы маусым күншығ
+ ысы (Астана)
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:күз
-DTSTART;VALUE=DATE:20250923
-DTEND;VALUE=DATE:20250924
-DTSTAMP:20230623T220101Z
+SUMMARY:Қыркүйек күннің теңелуі 
+DTSTART;VALUE=DATE:20250922
+DTEND;VALUE=DATE:20250923
+DTSTAMP:20240119T094738Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Season -  Қазақстандағы қыркүйек күнн
+ ің теңелуі (Астана)
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:қыс
+SUMMARY:Желтоқсан Solstice 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Season -  Қазақстандағы Желтоқсан күн
+  тойы (Астана)
+LAST-MODIFIED:20240119T094738Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Жаңа жылдың қарсаңы
+SUMMARY:Жаңа жыл қарсаңы 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220101Z
+DTSTAMP:20240119T094738Z
 UID:kazakhstan/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220101Z
+DESCRIPTION:Observance -  Жаңа жыл қарсаңы — Григор
+ иан күнтізбесіндегі жылдың соңғы күні\, 
+ яғни 31 желтоқсан.
+LAST-MODIFIED:20240119T094738Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Жаңа жыл күні 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Жаңа жыл күні — Григори
+ ан күнтізбесіндегі жылдың бірінші күні\,
+  немесе 1 қаңтар.
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Жаңа жыл мерекесі 
+DTSTART;VALUE=DATE:20260102
+DTEND;VALUE=DATE:20260103
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/new-year-day-2-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Жаңа жыл мерекесі Қазақ
+ станда мемлекеттік мереке болып табылад
+ ы
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Православие Рождество күні 
+DTSTART;VALUE=DATE:20260107
+DTEND;VALUE=DATE:20260108
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Көптеген православие ші
+ ркеулері жыл сайын 7 қаңтарда немесе оны
+ ң айналасында Рождество күнін атап өтед
+ і. Бұл оқиға христиандық Киелі кітапқа с
+ әйкес Иса Мәсіхтің дүниеге келуі туралы 
+ оқиғаны еске алады.
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Халықаралық әйелдер күні 
+DTSTART;VALUE=DATE:20260308
+DTEND;VALUE=DATE:20260309
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/womens-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Халықаралық әйелдер күн
+ і — Қазақстанда мемлекеттік мереке
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Халықаралық әйелдер күніне арналға
+ н демалыс күні 
+DTSTART;VALUE=DATE:20260309
+DTEND;VALUE=DATE:20260310
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/womens-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Халықаралық әйелдер күн
+ і Қазақстанда мемлекеттік мереке болып 
+ табылады
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Наурыз 
+DTSTART;VALUE=DATE:20260321
+DTEND;VALUE=DATE:20260322
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/nauryz-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Наурыз Қазақстанда мемл
+ екеттік мереке болып табылады
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Наурыз мейрамы 
+DTSTART;VALUE=DATE:20260322
+DTEND;VALUE=DATE:20260323
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/nauryz-day-2-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Наурыз мейрамы Қазақста
+ нда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Наурыз мерекесіне арналған демалыс 
+ күні 
+DTSTART;VALUE=DATE:20260323
+DTEND;VALUE=DATE:20260324
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/nauryz-day-2-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Наурыз мерекесі Қазақст
+ анда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Наурыз мейрамы 
+DTSTART;VALUE=DATE:20260323
+DTEND;VALUE=DATE:20260324
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/nauryz-3-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Наурыз мейрамы Қазақста
+ нда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Наурыз мерекесіне арналған демалыс 
+ күні 
+DTSTART;VALUE=DATE:20260324
+DTEND;VALUE=DATE:20260325
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/nauryz-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Наурыз - Қазақстанда мем
+ лекеттік мереке
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Бірлік күні 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/unity-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Еңбек күні\, Халықаралық
+  жұмысшылар күні және мамыр күні\, әлемні
+ ң көптеген елдерінде жұмысшылар үшін де
+ малыс күні болып табылады.
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Отан қорғаушылар күні 
+DTSTART;VALUE=DATE:20260507
+DTEND;VALUE=DATE:20260508
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/defender-fatherland-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Отан қорғаушылар күні Қ
+ азақстанда мемлекеттік мереке
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Жеңіс күні 
+DTSTART;VALUE=DATE:20260509
+DTEND;VALUE=DATE:20260510
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/victory-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Жеңіс күні — Қазақстанд
+ а мемлекеттік мереке
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Жеңіс күніне арналған демалыс күні 
+DTSTART;VALUE=DATE:20260511
+DTEND;VALUE=DATE:20260512
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/victory-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Жеңіс күні — Қазақстанд
+ а мемлекеттік мереке
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Құрбан айт 
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/eid-al-adha-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Құрбан айт (Ид ул-Адха) —
+  Ибраһимнің (Ыбырайым) ұлын құрбан шалуғ
+ а дайындығын еске алу үшін Дхул хижжа (Се
+ н әл-Хижжа) айының 10-күніне түсетін ислам
+  мерекесі.
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Елорда күні 
+DTSTART;VALUE=DATE:20260706
+DTEND;VALUE=DATE:20260707
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/capital-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Елорда күні Қазақстанда
+  мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Конституция күні 
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/constitution-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Конституция күні Қазақс
+ танда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Конституция күніне арналған демалы
+ с күні 
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260901
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/constitution-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Конституция күні Қазақс
+ танда мемлекеттік мереке
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Республика күні 
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/republic-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Республика күні Қазақст
+ анда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Тәуелсіздік күні 
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/independence-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public holiday -  Тәуелсіздік күні Қазақс
+ танда мемлекеттік мереке болып табылады
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Наурыз күннің теңелуі 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094739Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Қазақстандағы наурыз күннің
+  теңелуі (Астана)
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Маусым күншығысы 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094739Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Қазақстандағы маусым күншығ
+ ысы (Астана)
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Қыркүйек күннің теңелуі 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094739Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Қазақстандағы қыркүйек күнн
+ ің теңелуі (Астана)
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Желтоқсан Solstice 
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+DTSTAMP:20240119T094739Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Қазақстандағы Желтоқсан күн
+  тойы (Астана)
+LAST-MODIFIED:20240119T094739Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Жаңа жыл қарсаңы 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094739Z
+UID:kazakhstan/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Жаңа жыл қарсаңы — Григор
+ иан күнтізбесіндегі жылдың соңғы күні\, 
+ яғни 31 желтоқсан.
+LAST-MODIFIED:20240119T094739Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

@@ -2,1086 +2,1125 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Ano Novo
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T215931Z
-UID:brazil/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Carnaval (Segunda-feira)
-DTSTART;VALUE=DATE:20230220
-DTEND;VALUE=DATE:20230221
-DTSTAMP:20230623T215931Z
-UID:brazil/carnival-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Government Holiday
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Carnaval (Terça-feira)
-DTSTART;VALUE=DATE:20230221
-DTEND;VALUE=DATE:20230222
-DTSTAMP:20230623T215931Z
-UID:brazil/carnival-tuesday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Government Holiday - Carnival has several long-standing tradit
- ions in Brazil.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cinzas (até 14 horas)
-DTSTART;VALUE=DATE:20230222
-DTEND;VALUE=DATE:20230223
-DTSTAMP:20230623T215931Z
-UID:brazil/carnival-end-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Government Holiday - Ash Wednesday marks the first day of Lent
-  in western Christian churches.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Paixão de Cristo
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T215931Z
-UID:brazil/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - Good Friday is a global Christian observanc
- e two days before Easter Sunday.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tiradentes
-DTSTART;VALUE=DATE:20230421
-DTEND;VALUE=DATE:20230422
-DTSTAMP:20230623T215931Z
-UID:brazil/tiradentes-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia do Trabalho
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T215931Z
-UID:brazil/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Corpus Christi
-DTSTART;VALUE=DATE:20230608
-DTEND;VALUE=DATE:20230609
-DTSTAMP:20230623T215931Z
-UID:brazil/corpus-christi-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Government Holiday - Corpus Christi is a Christian feast in ho
- nor of the Holy Eucharist.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Independência
-DTSTART;VALUE=DATE:20230907
-DTEND;VALUE=DATE:20230908
-DTSTAMP:20230623T215931Z
-UID:brazil/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nossa Senhora de Aparecida
-DTSTART;VALUE=DATE:20231012
-DTEND;VALUE=DATE:20231013
-DTSTAMP:20230623T215931Z
-UID:brazil/holy-mary-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia do Servidor Público
-DTSTART;VALUE=DATE:20231028
-DTEND;VALUE=DATE:20231029
-DTSTAMP:20230623T215931Z
-UID:brazil/public-service-holiday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Government Holiday
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Finados
-DTSTART;VALUE=DATE:20231102
-DTEND;VALUE=DATE:20231103
-DTSTAMP:20230623T215931Z
-UID:brazil/remembrance-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - All Souls’ Day falls on November 2 each y
- ear. It is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Proclamação da República
-DTSTART;VALUE=DATE:20231115
-DTEND;VALUE=DATE:20231116
-DTSTAMP:20230623T215931Z
-UID:brazil/republic-proclamation-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Véspera de Natal (após às 14 horas)
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T215931Z
-UID:brazil/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Government Holiday - Christmas Eve is the day before Christmas
-  Day and falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Natal
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T215931Z
-UID:brazil/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Véspera de Ano Novo (após às 14 horas)
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T215931Z
-UID:brazil/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Government Holiday - New Year’s Eve is the last day of the y
- ear\, December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sexta-Feira de Carnaval
-DTSTART;VALUE=DATE:20230217
-DTEND;VALUE=DATE:20230218
-DTSTAMP:20230623T215931Z
-UID:brazil/carnival-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sábado de Carnaval
-DTSTART;VALUE=DATE:20230218
-DTEND;VALUE=DATE:20230219
-DTSTAMP:20230623T215931Z
-UID:brazil/carnival-saturday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Domingo de Carnaval
-DTSTART;VALUE=DATE:20230219
-DTEND;VALUE=DATE:20230220
-DTSTAMP:20230623T215931Z
-UID:brazil/carnival-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinócio de Março
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T215931Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Domingo de Páscoa
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T215931Z
-UID:brazil/easter-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia das Mães
-DTSTART;VALUE=DATE:20230514
-DTEND;VALUE=DATE:20230515
-DTSTAMP:20230623T215931Z
-UID:brazil/mothers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia dos Namorados
-DTSTART;VALUE=DATE:20230612
-DTEND;VALUE=DATE:20230613
-DTSTAMP:20230623T215931Z
-UID:brazil/dia-dos-namorados-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solstício de junho
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T215931Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia dos Pais
-DTSTART;VALUE=DATE:20230813
-DTEND;VALUE=DATE:20230814
-DTSTAMP:20230623T215931Z
-UID:brazil/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinócio de setembro
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T215931Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia do Professor
-DTSTART;VALUE=DATE:20231015
-DTEND;VALUE=DATE:20231016
-DTSTAMP:20230623T215931Z
-UID:brazil/teachers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dia da Consciência Negra
-DTSTART;VALUE=DATE:20231120
-DTEND;VALUE=DATE:20231121
-DTSTAMP:20230623T215931Z
-UID:brazil/black-awareness-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solstício de dezembro
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T215931Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215931Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ano Novo
+SUMMARY:Dia de Ano Novo 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:National Holiday -  O Dia de Ano Novo é o primeiro dia do ano
+ \, ou 1º de janeiro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval (Segunda-feira)
+SUMMARY:Segunda-feira de Carnaval 
 DTSTART;VALUE=DATE:20240212
 DTEND;VALUE=DATE:20240213
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/carnival-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Government Holiday -  Segunda-feira de Carnaval é feriado do 
+ governo no Brasil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval (Terça-feira)
+SUMMARY:Terça-feira de carnaval 
 DTSTART;VALUE=DATE:20240213
 DTEND;VALUE=DATE:20240214
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/carnival-tuesday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - Carnival has several long-standing tradit
- ions in Brazil.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Government Holiday -  O carnaval tem várias tradições de lo
+ nga data no Brasil.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinzas (até 14 horas)
+SUMMARY:Fim do carnaval (até às 14h) 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/carnival-end-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - Ash Wednesday marks the first day of Lent
-  in western Christian churches.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Government Holiday -  A quarta-feira de cinzas marca o primeir
+ o dia da Quaresma nas igrejas cristãs ocidentais.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Paixão de Cristo
+SUMMARY:Sexta-feira Santa 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - Good Friday is a global Christian observanc
- e two days before Easter Sunday.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:National Holiday -  Sexta-feira Santa é uma celebração cris
+ tã global dois dias antes do Domingo de Páscoa.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tiradentes
+SUMMARY:Dia de Tiradentes 
 DTSTART;VALUE=DATE:20240421
 DTEND;VALUE=DATE:20240422
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/tiradentes-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:National Holiday -  Dia de Tiradentes é feriado nacional no B
+ rasil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia do Trabalho
+SUMMARY:Dia do Trabalho/Dia de Maio 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:National Holiday -  O Dia do Trabalho\, o Dia Internacional do
+ s Trabalhadores e o Dia de Maio são um dia de folga para trabalhadores em
+  muitos países ao redor do mundo.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpus Christi
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20240530
 DTEND;VALUE=DATE:20240531
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/corpus-christi-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - Corpus Christi is a Christian feast in ho
- nor of the Holy Eucharist.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Government Holiday -  Corpus Christi é uma festa cristã em h
+ omenagem à Sagrada Eucaristia.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Independência
+SUMMARY:Dia da Independência 
 DTSTART;VALUE=DATE:20240907
 DTEND;VALUE=DATE:20240908
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/independence-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:National Holiday -  O Dia da Independência é um feriado naci
+ onal no Brasil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nossa Senhora de Aparecida
+SUMMARY:Nossa Senhora Aparecida/Dia das Crianças 
 DTSTART;VALUE=DATE:20241012
 DTEND;VALUE=DATE:20241013
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/holy-mary-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:National Holiday -  Nossa Senhora Aparecida/ Dia das Crianças
+  é um feriado nacional no Brasil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia do Servidor Público
+SUMMARY:Feriado de serviço público 
 DTSTART;VALUE=DATE:20241028
 DTEND;VALUE=DATE:20241029
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/public-service-holiday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Government Holiday -  O feriado de serviço público é um fer
+ iado governamental no Brasil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Finados
+SUMMARY:O Dia de Finados 
 DTSTART;VALUE=DATE:20241102
 DTEND;VALUE=DATE:20241103
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/remembrance-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - All Souls’ Day falls on November 2 each y
- ear. It is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:National Holiday -  O Dia de Finados cai em 2 de novembro de c
+ ada ano. É um dia de esmolas e orações pelos mortos.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Proclamação da República
+SUMMARY:Dia da Proclamação da República 
 DTSTART;VALUE=DATE:20241115
 DTEND;VALUE=DATE:20241116
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/republic-proclamation-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:National Holiday -  O Dia da Proclamação da República é um
+  feriado nacional no Brasil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Véspera de Natal (após às 14 horas)
+SUMMARY:Véspera de Natal (a partir das 14h) 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - Christmas Eve is the day before Christmas
-  Day and falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Government Holiday -  A véspera de Natal é um dia antes do N
+ atal e cai em 24 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Natal
+SUMMARY:Dia de Natal 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:National Holiday -  O Dia de Natal é uma das maiores celebra
+ ções cristãs e cai em 25 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Véspera de Ano Novo (após às 14 horas)
+SUMMARY:Véspera de Ano Novo (a partir das 14h) 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - New Year’s Eve is the last day of the y
- ear\, December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Government Holiday -  A véspera de Ano Novo é o último dia 
+ do ano\, 31 de dezembro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sexta-Feira de Carnaval
+SUMMARY:Sexta-feira de carnaval 
 DTSTART;VALUE=DATE:20240209
 DTEND;VALUE=DATE:20240210
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/carnival-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Observance -  A sexta-feira de carnaval é uma comemoração n
+ o Brasil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sábado de Carnaval
+SUMMARY:Sábado de carnaval 
 DTSTART;VALUE=DATE:20240210
 DTEND;VALUE=DATE:20240211
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/carnival-saturday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Observance -  O sábado de carnaval é uma comemoração no Br
+ asil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Domingo de Carnaval
+SUMMARY:Domingo de Carnaval 
 DTSTART;VALUE=DATE:20240211
 DTEND;VALUE=DATE:20240212
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/carnival-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Observance -  O domingo de carnaval é uma comemoração no Br
+ asil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinócio de Março
+SUMMARY:Equinócio de março 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Season -  Equinócio de março no Brasil (Brasília)
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Domingo de Páscoa
+SUMMARY:Domingo de Páscoa 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/easter-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Observance -  O Domingo de Páscoa comemora a ressurreição d
+ e Jesus Cristo\, de acordo com a crença cristã.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia das Mães
+SUMMARY:O Dia das Mães 
 DTSTART;VALUE=DATE:20240512
 DTEND;VALUE=DATE:20240513
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/mothers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Observance -  O Dia das Mães celebra as conquistas e os esfor
+ ços das mães e figuras maternas.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Namorados
+SUMMARY:Dia dos Namorados Brasileiro 
 DTSTART;VALUE=DATE:20240612
 DTEND;VALUE=DATE:20240613
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/dia-dos-namorados-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Observance -  O Dia dos Namorados Brasileiro é uma comemoraç
+ ão no Brasil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstício de junho
+SUMMARY:Solstício de junho 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Season -  Solstício de junho no Brasil (Brasília)
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Pais
+SUMMARY:O Dia dos Pais 
 DTSTART;VALUE=DATE:20240811
 DTEND;VALUE=DATE:20240812
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Observance -  O Dia dos Pais celebra a paternidade e a paterni
+ dade masculina em diferentes datas em todo o mundo.
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinócio de setembro
+SUMMARY:Equinócio de setembro 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Season -  Equinócio de setembro no Brasil (Brasília)
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia do Professor
+SUMMARY:Dia do Professor 
 DTSTART;VALUE=DATE:20241015
 DTEND;VALUE=DATE:20241016
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/teachers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Observance -  O Dia do Professor é uma comemoração no Brasi
+ l
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia da Consciência Negra
+SUMMARY:Dia da Consciência Negra 
 DTSTART;VALUE=DATE:20241120
 DTEND;VALUE=DATE:20241121
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:brazil/black-awareness-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Observance -  O Dia da Consciência Negra é uma comemoração
+  no Brasil
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstício de dezembro
+SUMMARY:Solstício de dezembro 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T215932Z
+DTSTAMP:20240119T094603Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215932Z
+DESCRIPTION:Season -  Solstício de dezembro no Brasil (Brasília)
+LAST-MODIFIED:20240119T094603Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ano Novo
+SUMMARY:Dia de Ano Novo 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:National Holiday -  Dia de Ano Novo é o primeiro dia do ano\,
+  ou 1º de janeiro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval (Segunda-feira)
+SUMMARY:Segunda-feira de carnaval 
 DTSTART;VALUE=DATE:20250303
 DTEND;VALUE=DATE:20250304
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/carnival-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Government Holiday -  A segunda-feira de carnaval é um feriad
+ o governamental no Brasil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval (Terça-feira)
+SUMMARY:Terça-feira de carnaval 
 DTSTART;VALUE=DATE:20250304
 DTEND;VALUE=DATE:20250305
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/carnival-tuesday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - Carnival has several long-standing tradit
- ions in Brazil.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Government Holiday -  O carnaval tem várias tradições de lo
+ nga data no Brasil.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cinzas (até 14 horas)
+SUMMARY:Fim do carnaval (até as 14h) 
 DTSTART;VALUE=DATE:20250305
 DTEND;VALUE=DATE:20250306
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/carnival-end-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - Ash Wednesday marks the first day of Lent
-  in western Christian churches.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Government Holiday -  A quarta-feira de cinzas marca o primeir
+ o dia da Quaresma nas igrejas cristãs ocidentais.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Paixão de Cristo
+SUMMARY:Sexta-feira Santa 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - Good Friday is a global Christian observanc
- e two days before Easter Sunday.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:National Holiday -  Sexta-feira Santa é uma observância cris
+ tã global dois dias antes do Domingo de Páscoa.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tiradentes
+SUMMARY:Dia de Tiradentes 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/tiradentes-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:National Holiday -  O Dia de Tiradentes é um feriado nacional
+  no Brasil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia do Trabalho
+SUMMARY:Dia do Trabalho/Dia de Maio 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:National Holiday -  Dia do Trabalho\, Dia Internacional dos Tr
+ abalhadores e Dia de Maio\, é um dia de folga para trabalhadores em muito
+ s países ao redor do mundo.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpus Christi
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20250619
 DTEND;VALUE=DATE:20250620
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/corpus-christi-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - Corpus Christi is a Christian feast in ho
- nor of the Holy Eucharist.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Government Holiday -  Corpus Christi é uma festa cristã em h
+ omenagem à Sagrada Eucaristia.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Independência
+SUMMARY:Dia da Independência 
 DTSTART;VALUE=DATE:20250907
 DTEND;VALUE=DATE:20250908
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/independence-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:National Holiday -  O Dia da Independência é um feriado naci
+ onal no Brasil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nossa Senhora de Aparecida
+SUMMARY:Nossa Senhora Aparecida/Dia das Crianças 
 DTSTART;VALUE=DATE:20251012
 DTEND;VALUE=DATE:20251013
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/holy-mary-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:National Holiday -  Nossa Senhora Aparecida/Dia das Crianças 
+ é um feriado nacional no Brasil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia do Servidor Público
+SUMMARY:Feriado de serviço público 
 DTSTART;VALUE=DATE:20251028
 DTEND;VALUE=DATE:20251029
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/public-service-holiday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Government Holiday -  O feriado de serviço público é um fer
+ iado governamental no Brasil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Finados
+SUMMARY:O Dia de Finados 
 DTSTART;VALUE=DATE:20251102
 DTEND;VALUE=DATE:20251103
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/remembrance-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - All Souls’ Day falls on November 2 each y
- ear. It is a day of alms giving and prayers for the dead.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:National Holiday -  O Dia de Finados cai em 2 de novembro de c
+ ada ano. É um dia de esmolas e orações pelos mortos.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Proclamação da República
+SUMMARY:Dia da Proclamação da República 
 DTSTART;VALUE=DATE:20251115
 DTEND;VALUE=DATE:20251116
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/republic-proclamation-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:National Holiday -  O Dia da Proclamação da República é um
+  feriado nacional no Brasil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Véspera de Natal (após às 14 horas)
+SUMMARY:Véspera de Natal (a partir das 14h) 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - Christmas Eve is the day before Christmas
-  Day and falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Government Holiday -  A véspera de Natal é um dia antes do d
+ ia de Natal e cai em 24 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Natal
+SUMMARY:Dia de Natal 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National Holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:National Holiday -  O Dia de Natal é uma das maiores celebra
+ ções cristãs e cai em 25 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Véspera de Ano Novo (após às 14 horas)
+SUMMARY:Véspera de Ano Novo (a partir das 14h) 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Government Holiday - New Year’s Eve is the last day of the y
- ear\, December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Government Holiday -  A véspera de Ano Novo é o último dia 
+ do ano\, 31 de dezembro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sexta-Feira de Carnaval
+SUMMARY:Sexta-feira de carnaval 
 DTSTART;VALUE=DATE:20250228
 DTEND;VALUE=DATE:20250301
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/carnival-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Observance -  A sexta-feira de carnaval é uma observância no
+  Brasil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sábado de Carnaval
+SUMMARY:Sábado de carnaval 
 DTSTART;VALUE=DATE:20250301
 DTEND;VALUE=DATE:20250302
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/carnival-saturday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Observance -  O sábado de carnaval é uma observância no Bra
+ sil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Domingo de Carnaval
+SUMMARY:Domingo de carnaval 
 DTSTART;VALUE=DATE:20250302
 DTEND;VALUE=DATE:20250303
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/carnival-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Observance -  Domingo de carnaval é uma observância no Brasi
+ l
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinócio de Março
+SUMMARY:Equinócio de março 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Season -  Equinócio de março no Brasil (Brasília)
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Domingo de Páscoa
+SUMMARY:Domingo de Páscoa 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/easter-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Observance -  O Domingo de Páscoa comemora a ressurreição d
+ e Jesus Cristo\, de acordo com a crença cristã.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia das Mães
+SUMMARY:Dia das Mães 
 DTSTART;VALUE=DATE:20250511
 DTEND;VALUE=DATE:20250512
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/mothers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Observance -  O Dia das Mães celebra as conquistas e os esfor
+ ços das mães e das figuras maternas.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Namorados
+SUMMARY:Dia dos Namorados brasileiro 
 DTSTART;VALUE=DATE:20250612
 DTEND;VALUE=DATE:20250613
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/dia-dos-namorados-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Observance -  O Dia dos Namorados brasileiro é uma comemoraç
+ ão no Brasil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstício de junho
+SUMMARY:Solstício de junho 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Season -  Solstício de junho no Brasil (Brasília)
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia dos Pais
+SUMMARY:Dia dos Pais 
 DTSTART;VALUE=DATE:20250810
 DTEND;VALUE=DATE:20250811
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Observance -  O Dia dos Pais celebra a paternidade e a paterni
+ dade masculina em diferentes datas em todo o mundo.
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinócio de setembro
+SUMMARY:Equinócio de setembro 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Season -  Equinócio de setembro no Brasil (Brasília)
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia do Professor
+SUMMARY:Dia do Professor 
 DTSTART;VALUE=DATE:20251015
 DTEND;VALUE=DATE:20251016
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/teachers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Observance -  O Dia do Professor é uma comemoração no Brasi
+ l
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dia da Consciência Negra
+SUMMARY:Dia da Consciência Negra 
 DTSTART;VALUE=DATE:20251120
 DTEND;VALUE=DATE:20251121
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:brazil/black-awareness-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Observance -  O Dia da Consciência Negra é uma comemoração
+  no Brasil
+LAST-MODIFIED:20240119T094604Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstício de dezembro
+SUMMARY:Solstício de dezembro 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T215933Z
+DTSTAMP:20240119T094604Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215933Z
+DESCRIPTION:Season -  Solstício de dezembro no Brasil (Brasília)
+LAST-MODIFIED:20240119T094604Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Ano Novo 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094605Z
+UID:brazil/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday -  Dia de Ano Novo é o primeiro dia do ano\,
+  ou 1º de janeiro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Segunda-feira de carnaval 
+DTSTART;VALUE=DATE:20260216
+DTEND;VALUE=DATE:20260217
+DTSTAMP:20240119T094605Z
+UID:brazil/carnival-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Government Holiday -  A segunda-feira de carnaval é um feriad
+ o governamental no Brasil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Terça-feira de carnaval 
+DTSTART;VALUE=DATE:20260217
+DTEND;VALUE=DATE:20260218
+DTSTAMP:20240119T094605Z
+UID:brazil/carnival-tuesday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Government Holiday -  O carnaval tem várias tradições de lo
+ nga data no Brasil.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fim do carnaval (até as 14h) 
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260219
+DTSTAMP:20240119T094605Z
+UID:brazil/carnival-end-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Government Holiday -  A quarta-feira de cinzas marca o primeir
+ o dia da Quaresma nas igrejas cristãs ocidentais.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sexta-feira Santa 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094605Z
+UID:brazil/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday -  Sexta-feira Santa é uma observância cris
+ tã global dois dias antes do Domingo de Páscoa.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Tiradentes 
+DTSTART;VALUE=DATE:20260421
+DTEND;VALUE=DATE:20260422
+DTSTAMP:20240119T094605Z
+UID:brazil/tiradentes-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday -  O Dia de Tiradentes é um feriado nacional
+  no Brasil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia do Trabalho/Dia de Maio 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094605Z
+UID:brazil/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday -  Dia do Trabalho\, Dia Internacional dos Tr
+ abalhadores e Dia de Maio\, é um dia de folga para trabalhadores em muito
+ s países ao redor do mundo.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corpus Christi 
+DTSTART;VALUE=DATE:20260604
+DTEND;VALUE=DATE:20260605
+DTSTAMP:20240119T094605Z
+UID:brazil/corpus-christi-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Government Holiday -  Corpus Christi é uma festa cristã em h
+ omenagem à Sagrada Eucaristia.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia da Independência 
+DTSTART;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260908
+DTSTAMP:20240119T094605Z
+UID:brazil/independence-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday -  O Dia da Independência é um feriado naci
+ onal no Brasil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nossa Senhora Aparecida/Dia das Crianças 
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+DTSTAMP:20240119T094605Z
+UID:brazil/holy-mary-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday -  Nossa Senhora Aparecida/Dia das Crianças 
+ é um feriado nacional no Brasil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Feriado de serviço público 
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+DTSTAMP:20240119T094605Z
+UID:brazil/public-service-holiday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Government Holiday -  O feriado de serviço público é um fer
+ iado governamental no Brasil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:O Dia de Finados 
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+DTSTAMP:20240119T094605Z
+UID:brazil/remembrance-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday -  O Dia de Finados cai em 2 de novembro de c
+ ada ano. É um dia de esmolas e orações pelos mortos.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia da Proclamação da República 
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+DTSTAMP:20240119T094605Z
+UID:brazil/republic-proclamation-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday -  O Dia da Proclamação da República é um
+  feriado nacional no Brasil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Véspera de Natal (a partir das 14h) 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T094605Z
+UID:brazil/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Government Holiday -  A véspera de Natal é um dia antes do d
+ ia de Natal e cai em 24 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia de Natal 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094605Z
+UID:brazil/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday -  O Dia de Natal é uma das maiores celebra
+ ções cristãs e cai em 25 de dezembro no calendário gregoriano.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Véspera de Ano Novo (a partir das 14h) 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094605Z
+UID:brazil/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Government Holiday -  A véspera de Ano Novo é o último dia 
+ do ano\, 31 de dezembro\, no calendário gregoriano.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sexta-feira de carnaval 
+DTSTART;VALUE=DATE:20260213
+DTEND;VALUE=DATE:20260214
+DTSTAMP:20240119T094605Z
+UID:brazil/carnival-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  A sexta-feira de carnaval é uma observância no
+  Brasil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábado de carnaval 
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20240119T094605Z
+UID:brazil/carnival-saturday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  O sábado de carnaval é uma observância no Bra
+ sil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Domingo de carnaval 
+DTSTART;VALUE=DATE:20260215
+DTEND;VALUE=DATE:20260216
+DTSTAMP:20240119T094605Z
+UID:brazil/carnival-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Domingo de carnaval é uma observância no Brasi
+ l
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinócio de março 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094605Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinócio de março no Brasil (Brasília)
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Domingo de Páscoa 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094605Z
+UID:brazil/easter-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  O Domingo de Páscoa comemora a ressurreição d
+ e Jesus Cristo\, de acordo com a crença cristã.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia das Mães 
+DTSTART;VALUE=DATE:20260510
+DTEND;VALUE=DATE:20260511
+DTSTAMP:20240119T094605Z
+UID:brazil/mothers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  O Dia das Mães celebra as conquistas e os esfor
+ ços das mães e das figuras maternas.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia dos Namorados brasileiro 
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+DTSTAMP:20240119T094605Z
+UID:brazil/dia-dos-namorados-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  O Dia dos Namorados brasileiro é uma comemoraç
+ ão no Brasil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solstício de junho 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094605Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solstício de junho no Brasil (Brasília)
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia dos Pais 
+DTSTART;VALUE=DATE:20260809
+DTEND;VALUE=DATE:20260810
+DTSTAMP:20240119T094605Z
+UID:brazil/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  O Dia dos Pais celebra a paternidade e a paterni
+ dade masculina em diferentes datas em todo o mundo.
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinócio de setembro 
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+DTSTAMP:20240119T094605Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinócio de setembro no Brasil (Brasília)
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia do Professor 
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+DTSTAMP:20240119T094605Z
+UID:brazil/teachers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  O Dia do Professor é uma comemoração no Brasi
+ l
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dia da Consciência Negra 
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+DTSTAMP:20240119T094605Z
+UID:brazil/black-awareness-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  O Dia da Consciência Negra é uma comemoração
+  no Brasil
+LAST-MODIFIED:20240119T094605Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solstício de dezembro 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094605Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solstício de dezembro no Brasil (Brasília)
+LAST-MODIFIED:20240119T094605Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

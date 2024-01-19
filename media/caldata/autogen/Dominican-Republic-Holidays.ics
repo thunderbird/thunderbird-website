@@ -2,836 +2,904 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Año Nuevo
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de los Reyes Magos
-DTSTART;VALUE=DATE:20230109
-DTEND;VALUE=DATE:20230110
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/the-three-wise-men-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Epiphany is a Christian holiday celebrated 
- globally on January 6 each year. It commemorates two events recorded in th
- e Bible: the three wise men’s visit to baby Jesus\; and Jesus’ baptism
- .
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nuestra Sra. de Altagracia
-DTSTART;VALUE=DATE:20230121
-DTEND;VALUE=DATE:20230122
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/our-lady-of-altagracia-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Feriado por el día de Duarte
-DTSTART;VALUE=DATE:20230130
-DTEND;VALUE=DATE:20230131
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/duartes-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Independencia
-DTSTART;VALUE=DATE:20230227
-DTEND;VALUE=DATE:20230228
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Viernes Santo
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Trabajo
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Corpus Christi
-DTSTART;VALUE=DATE:20230608
-DTEND;VALUE=DATE:20230609
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/corpus-christi-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Corpus Christi is a Christian feast in hono
- r of the Holy Eucharist.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Restauración
-DTSTART;VALUE=DATE:20230816
-DTEND;VALUE=DATE:20230817
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/restoration-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nuestra Sra. de Las Mercedes
-DTSTART;VALUE=DATE:20230924
-DTEND;VALUE=DATE:20230925
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/our-lady-of-las-mercedes-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Constitución
-DTSTART;VALUE=DATE:20231106
-DTEND;VALUE=DATE:20231107
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/constitution-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Navidad
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de los Reyes Magos
-DTSTART;VALUE=DATE:20230106
-DTEND;VALUE=DATE:20230107
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/the-three-wise-men-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
- ly on January 6 each year. It commemorates two events recorded in the Bibl
- e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Duarte
-DTSTART;VALUE=DATE:20230126
-DTEND;VALUE=DATE:20230127
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/duartes-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T220006Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo
-DTSTART;VALUE=DATE:20230406
-DTEND;VALUE=DATE:20230407
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/maundy-thursday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Madre
-DTSTART;VALUE=DATE:20230528
-DTEND;VALUE=DATE:20230529
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/mothers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220006Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Padre
-DTSTART;VALUE=DATE:20230730
-DTEND;VALUE=DATE:20230731
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220006Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
-DTSTART;VALUE=DATE:20231221
-DTEND;VALUE=DATE:20231222
-DTSTAMP:20230623T220006Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Noche Buena
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Noche Vieja
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220006Z
-UID:dominican-republic/new-years-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220006Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Año Nuevo
+SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de los Reyes Magos
-DTSTART;VALUE=DATE:20240109
-DTEND;VALUE=DATE:20240110
-DTSTAMP:20230623T220007Z
+SUMMARY:Epifanía 
+DTSTART;VALUE=DATE:20240106
+DTEND;VALUE=DATE:20240107
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/the-three-wise-men-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Epiphany is a Christian holiday celebrated 
- globally on January 6 each year. It commemorates two events recorded in th
- e Bible: the three wise men’s visit to baby Jesus\; and Jesus’ baptism
- .
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  La epifanía es una fiesta cristiana que s
+ e celebra en todo el mundo el 6 de enero de cada año. Conmemora dos event
+ os registrados en la Biblia: la visita de los tres reyes magos al niño Je
+ sús y el bautismo de Jesús.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nuestra Sra. de Altagracia
+SUMMARY:Nuestra Señora de la Altagracia 
 DTSTART;VALUE=DATE:20240121
 DTEND;VALUE=DATE:20240122
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/our-lady-of-altagracia-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  Nuestra Señora de la Altagracia es una fi
+ esta nacional en la República Dominicana
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Duarte
-DTSTART;VALUE=DATE:20240126
-DTEND;VALUE=DATE:20240127
-DTSTAMP:20230623T220007Z
-UID:dominican-republic/duartes-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:descanso laboral correspondiente a Día de Duarte
+SUMMARY:Día libre por el Día de Duarte 
 DTSTART;VALUE=DATE:20240129
 DTEND;VALUE=DATE:20240130
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/duartes-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El día libre por el Día de Duarte es un 
+ feriado nacional en República Dominicana
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Independencia
+SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20240227
 DTEND;VALUE=DATE:20240228
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/independence-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
+ nacional en República Dominicana
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Viernes Santo
+SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Trabajo
-DTSTART;VALUE=DATE:20240501
-DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220007Z
+SUMMARY:Día libre por el Día del Trabajo El Día del Trabajo\, el Día I
+ nternacional de los Trabajadores y el Primero de Mayo es un día libre par
+ a los trabajadores de muchos países del mundo.
+DTSTART;VALUE=DATE:20240429
+DTEND;VALUE=DATE:20240430
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
  d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220007Z
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpus Christi
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20240530
 DTEND;VALUE=DATE:20240531
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/corpus-christi-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Corpus Christi is a Christian feast in hono
- r of the Holy Eucharist.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El Corpus Christi es una fiesta cristiana 
+ en honor a la Sagrada Eucaristía.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Restauración
+SUMMARY:Día de la Restauración 
 DTSTART;VALUE=DATE:20240816
 DTEND;VALUE=DATE:20240817
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/restoration-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El Día de la Restauración es un feriado 
+ nacional en República Dominicana
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nuestra Sra. de Las Mercedes
+SUMMARY:Fiesta de Nuestra Señora de la Misericordia 
 DTSTART;VALUE=DATE:20240924
 DTEND;VALUE=DATE:20240925
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/our-lady-of-las-mercedes-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  La Fiesta de Nuestra Señora de la Miseric
+ ordia es una fiesta nacional en la República Dominicana
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Constitución
+SUMMARY:Día libre por el Día de la Constitución 
 DTSTART;VALUE=DATE:20241104
 DTEND;VALUE=DATE:20241105
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/constitution-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El día libre por el Día de la Constituci
+ ón es un feriado nacional en República Dominicana.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Navidad
+SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El día de Navidad es una de las mayores c
+ elebraciones cristianas y cae el 25 de diciembre en el calendario gregoria
+ no.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
+SUMMARY:Día de Duarte 
+DTSTART;VALUE=DATE:20240126
+DTEND;VALUE=DATE:20240127
+DTSTAMP:20240119T094637Z
+UID:dominican-republic/duartes-day-2024
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de Duarte es una celebración en Repúbl
+ ica Dominicana
+LAST-MODIFIED:20240119T094637Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20240319
 DTEND;VALUE=DATE:20240320
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Season -  Equinoccio de marzo en República Dominicana (Santo 
+ Domingo)
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jueves Santo
+SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20240328
 DTEND;VALUE=DATE:20240329
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/maundy-thursday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Madre
+SUMMARY:Día del Trabajo 
+DTSTART;VALUE=DATE:20240501
+DTEND;VALUE=DATE:20240502
+DTSTAMP:20240119T094637Z
+UID:dominican-republic/labor-day-2024
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día del Trabajo\, el Día Internacional de l
+ os Trabajadores y el Primero de Mayo son días libres para los trabajadore
+ s de muchos países del mundo.
+LAST-MODIFIED:20240119T094637Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20240526
 DTEND;VALUE=DATE:20240527
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/mothers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y esfuerz
+ os de las madres y figuras maternas.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
+SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Season -  Solsticio de junio en República Dominicana (Santo D
+ omingo)
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Padre
+SUMMARY:Día del Padre 
 DTSTART;VALUE=DATE:20240728
 DTEND;VALUE=DATE:20240729
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Observance -  El Día del Padre celebra la paternidad y la pat
+ ernidad masculina en diferentes fechas en todo el mundo.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
+SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Season -  Equinoccio de septiembre en República Dominicana (S
+ anto Domingo)
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
+SUMMARY:Día de la Constitución 
+DTSTART;VALUE=DATE:20241106
+DTEND;VALUE=DATE:20241107
+DTSTAMP:20240119T094637Z
+UID:dominican-republic/constitution-day-2024
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de la Constitución es una celebración 
+ en República Dominicana
+LAST-MODIFIED:20240119T094637Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Season -  Solsticio de diciembre en República Dominicana (San
+ to Domingo)
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Noche Buena
+SUMMARY:Nochebuena 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Observance -  La víspera de Navidad es el día anterior al d
+ ía de Navidad y cae el 24 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Noche Vieja
+SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094637Z
 UID:dominican-republic/new-years-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
+  año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094637Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Año Nuevo
+SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de los Reyes Magos
-DTSTART;VALUE=DATE:20250109
-DTEND;VALUE=DATE:20250110
-DTSTAMP:20230623T220007Z
+SUMMARY:Epifanía 
+DTSTART;VALUE=DATE:20250106
+DTEND;VALUE=DATE:20250107
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/the-three-wise-men-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Epiphany is a Christian holiday celebrated 
- globally on January 6 each year. It commemorates two events recorded in th
- e Bible: the three wise men’s visit to baby Jesus\; and Jesus’ baptism
- .
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  La epifanía es una fiesta cristiana que s
+ e celebra en todo el mundo el 6 de enero de cada año. Conmemora dos event
+ os registrados en la Biblia: la visita de los tres reyes magos al niño Je
+ sús y el bautismo de Jesús.
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nuestra Sra. de Altagracia
+SUMMARY:Nuestra Señora de la Altagracia 
 DTSTART;VALUE=DATE:20250121
 DTEND;VALUE=DATE:20250122
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/our-lady-of-altagracia-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  Nuestra Señora de la Altagracia es una fi
+ esta nacional en la República Dominicana
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Duarte
+SUMMARY:Día de Duarte 
 DTSTART;VALUE=DATE:20250126
 DTEND;VALUE=DATE:20250127
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/duartes-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El Día de Duarte es un feriado nacional e
+ n República Dominicana
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Independencia
+SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20250227
 DTEND;VALUE=DATE:20250228
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/independence-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
+ nacional en República Dominicana
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Viernes Santo
+SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Trabajo
+SUMMARY:Día del Trabajo 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo son días libres para los traba
+ jadores de muchos países del mundo.
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpus Christi
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20250619
 DTEND;VALUE=DATE:20250620
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/corpus-christi-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Corpus Christi is a Christian feast in hono
- r of the Holy Eucharist.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El Corpus Christi es una fiesta cristiana 
+ en honor a la Sagrada Eucaristía.
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Restauración
+SUMMARY:Día de la Restauración 
 DTSTART;VALUE=DATE:20250816
 DTEND;VALUE=DATE:20250817
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/restoration-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El Día de la Restauración es un feriado 
+ nacional en República Dominicana
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nuestra Sra. de Las Mercedes
+SUMMARY:Fiesta de Nuestra Señora de la Misericordia 
 DTSTART;VALUE=DATE:20250924
 DTEND;VALUE=DATE:20250925
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/our-lady-of-las-mercedes-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  La Fiesta de Nuestra Señora de la Miseric
+ ordia es una fiesta nacional en la República Dominicana
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Constitución
+SUMMARY:Día libre por el Día de la Constitución 
 DTSTART;VALUE=DATE:20251110
 DTEND;VALUE=DATE:20251111
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/constitution-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El día libre por el Día de la Constituci
+ ón es un feriado nacional en República Dominicana.
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Navidad
+SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220007Z
+DTSTAMP:20240119T094638Z
 UID:dominican-republic/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220007Z
+DESCRIPTION:National holiday -  El día de Navidad es una de las mayores c
+ elebraciones cristianas y cae el 25 de diciembre en el calendario gregoria
+ no.
+LAST-MODIFIED:20240119T094638Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
+SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220008Z
+DTSTAMP:20240119T094639Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220008Z
+DESCRIPTION:Season -  Equinoccio de marzo en República Dominicana (Santo 
+ Domingo)
+LAST-MODIFIED:20240119T094639Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jueves Santo
+SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20250417
 DTEND;VALUE=DATE:20250418
-DTSTAMP:20230623T220008Z
+DTSTAMP:20240119T094639Z
 UID:dominican-republic/maundy-thursday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T220008Z
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094639Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Madre
+SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20250525
 DTEND;VALUE=DATE:20250526
-DTSTAMP:20230623T220008Z
+DTSTAMP:20240119T094639Z
 UID:dominican-republic/mothers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220008Z
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y esfuerz
+ os de las madres y figuras maternas.
+LAST-MODIFIED:20240119T094639Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
+SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20230623T220008Z
+DTSTAMP:20240119T094639Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220008Z
+DESCRIPTION:Season -  Solsticio de junio en República Dominicana (Santo D
+ omingo)
+LAST-MODIFIED:20240119T094639Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Padre
+SUMMARY:Día del Padre 
 DTSTART;VALUE=DATE:20250727
 DTEND;VALUE=DATE:20250728
-DTSTAMP:20230623T220008Z
+DTSTAMP:20240119T094639Z
 UID:dominican-republic/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220008Z
+DESCRIPTION:Observance -  El Día del Padre celebra la paternidad y la pat
+ ernidad masculina en diferentes fechas en todo el mundo.
+LAST-MODIFIED:20240119T094639Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
+SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220008Z
+DTSTAMP:20240119T094639Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220008Z
+DESCRIPTION:Season -  Equinoccio de septiembre en República Dominicana (S
+ anto Domingo)
+LAST-MODIFIED:20240119T094639Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
+SUMMARY:Día de la Constitución 
+DTSTART;VALUE=DATE:20251106
+DTEND;VALUE=DATE:20251107
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/constitution-day-2025
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de la Constitución es una celebración 
+ en República Dominicana
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220008Z
+DTSTAMP:20240119T094639Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220008Z
+DESCRIPTION:Season -  Solsticio de diciembre en República Dominicana (San
+ to Domingo)
+LAST-MODIFIED:20240119T094639Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Noche Buena
+SUMMARY:Nochebuena 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T220008Z
+DTSTAMP:20240119T094639Z
 UID:dominican-republic/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220008Z
+DESCRIPTION:Observance -  La víspera de Navidad es el día anterior al d
+ ía de Navidad y cae el 24 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094639Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Noche Vieja
+SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220008Z
+DTSTAMP:20240119T094639Z
 UID:dominican-republic/new-years-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220008Z
+DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
+  año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Año Nuevo 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Epifanía 
+DTSTART;VALUE=DATE:20260106
+DTEND;VALUE=DATE:20260107
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/the-three-wise-men-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La epifanía es una fiesta cristiana que s
+ e celebra en todo el mundo el 6 de enero de cada año. Conmemora dos event
+ os registrados en la Biblia: la visita de los tres reyes magos al niño Je
+ sús y el bautismo de Jesús.
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nuestra Señora de la Altagracia 
+DTSTART;VALUE=DATE:20260121
+DTEND;VALUE=DATE:20260122
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/our-lady-of-altagracia-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Nuestra Señora de la Altagracia es una fi
+ esta nacional en la República Dominicana
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Duarte 
+DTSTART;VALUE=DATE:20260126
+DTEND;VALUE=DATE:20260127
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/duartes-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de Duarte es un feriado nacional e
+ n República Dominicana
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Independencia 
+DTSTART;VALUE=DATE:20260227
+DTEND;VALUE=DATE:20260228
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/independence-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
+ nacional en República Dominicana
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Viernes Santo 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Trabajo 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo son días libres para los traba
+ jadores de muchos países del mundo.
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corpus Christi 
+DTSTART;VALUE=DATE:20260604
+DTEND;VALUE=DATE:20260605
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/corpus-christi-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Corpus Christi es una fiesta cristiana 
+ en honor a la Sagrada Eucaristía.
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Restauración 
+DTSTART;VALUE=DATE:20260816
+DTEND;VALUE=DATE:20260817
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/restoration-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Restauración es un feriado 
+ nacional en República Dominicana
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fiesta de Nuestra Señora de la Misericordia 
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/our-lady-of-las-mercedes-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La Fiesta de Nuestra Señora de la Miseric
+ ordia es una fiesta nacional en la República Dominicana
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día libre por el Día de la Constitución 
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/constitution-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día libre por el Día de la Constituci
+ ón es un feriado nacional en República Dominicana.
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Navidad 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094639Z
+UID:dominican-republic/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día de Navidad es una de las mayores c
+ elebraciones cristianas y cae el 25 de diciembre en el calendario gregoria
+ no.
+LAST-MODIFIED:20240119T094639Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de marzo 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094640Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de marzo en República Dominicana (Santo 
+ Domingo)
+LAST-MODIFIED:20240119T094640Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jueves Santo 
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+DTSTAMP:20240119T094640Z
+UID:dominican-republic/maundy-thursday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094640Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Madre 
+DTSTART;VALUE=DATE:20260531
+DTEND;VALUE=DATE:20260601
+DTSTAMP:20240119T094640Z
+UID:dominican-republic/mothers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y esfuerz
+ os de las madres y figuras maternas.
+LAST-MODIFIED:20240119T094640Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de junio 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094640Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de junio en República Dominicana (Santo D
+ omingo)
+LAST-MODIFIED:20240119T094640Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Padre 
+DTSTART;VALUE=DATE:20260726
+DTEND;VALUE=DATE:20260727
+DTSTAMP:20240119T094640Z
+UID:dominican-republic/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día del Padre celebra la paternidad y la pat
+ ernidad masculina en diferentes fechas en todo el mundo.
+LAST-MODIFIED:20240119T094640Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de septiembre 
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+DTSTAMP:20240119T094640Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de septiembre en República Dominicana (S
+ anto Domingo)
+LAST-MODIFIED:20240119T094640Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Constitución 
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+DTSTAMP:20240119T094640Z
+UID:dominican-republic/constitution-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de la Constitución es una celebración 
+ en República Dominicana
+LAST-MODIFIED:20240119T094640Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de diciembre 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094640Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de diciembre en República Dominicana (San
+ to Domingo)
+LAST-MODIFIED:20240119T094640Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nochebuena 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T094640Z
+UID:dominican-republic/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  La víspera de Navidad es el día anterior al d
+ ía de Navidad y cae el 24 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094640Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nochevieja 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094640Z
+UID:dominican-republic/new-years-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
+  año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

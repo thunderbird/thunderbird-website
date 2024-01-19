@@ -2,985 +2,956 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Tết dương lịch
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220307Z
-UID:vietnam/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ngày nghỉ Tết dương lịch
-DTSTART;VALUE=DATE:20230102
-DTEND;VALUE=DATE:20230103
-DTSTAMP:20230623T220307Z
-UID:vietnam/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tết
-DTSTART;VALUE=DATE:20230120
-DTEND;VALUE=DATE:20230121
-DTSTAMP:20230623T220307Z
-UID:vietnam/tet-holiday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tết đêm giao thừa
-DTSTART;VALUE=DATE:20230121
-DTEND;VALUE=DATE:20230122
-DTSTAMP:20230623T220307Z
-UID:vietnam/spring-festival-golden-week-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Lunar New Year is the first day of the Chin
- ese calendar\, which is a lunisolar calendar mainly used for traditional c
- elebrations.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
-DTSTART;VALUE=DATE:20230122
-DTEND;VALUE=DATE:20230123
-DTSTAMP:20230623T220307Z
-UID:vietnam/tet-new-year-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
-DTSTART;VALUE=DATE:20230123
-DTEND;VALUE=DATE:20230124
-DTSTAMP:20230623T220307Z
-UID:vietnam/tet-holiday-1-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
-DTSTART;VALUE=DATE:20230124
-DTEND;VALUE=DATE:20230125
-DTSTAMP:20230623T220307Z
-UID:vietnam/tet-holiday-2-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
-DTSTART;VALUE=DATE:20230125
-DTEND;VALUE=DATE:20230126
-DTSTAMP:20230623T220307Z
-UID:vietnam/tet-holiday-3-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
-DTSTART;VALUE=DATE:20230126
-DTEND;VALUE=DATE:20230127
-DTSTAMP:20230623T220307Z
-UID:vietnam/tet-holiday-4-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Giỗ tổ Hùng Vương
-DTSTART;VALUE=DATE:20230429
-DTEND;VALUE=DATE:20230430
-DTSTAMP:20230623T220307Z
-UID:vietnam/vietnamese-kings-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ngày giải phóng
-DTSTART;VALUE=DATE:20230430
-DTEND;VALUE=DATE:20230501
-DTSTAMP:20230623T220307Z
-UID:vietnam/liberation-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ngày Quốc tế Lao động
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220307Z
-UID:vietnam/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ngày nghỉ Giỗ tổ Hùng Vương
-DTSTART;VALUE=DATE:20230502
-DTEND;VALUE=DATE:20230503
-DTSTAMP:20230623T220307Z
-UID:vietnam/vietnamese-kings-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ngày nghỉ Ngày giải phóng
-DTSTART;VALUE=DATE:20230503
-DTEND;VALUE=DATE:20230504
-DTSTAMP:20230623T220307Z
-UID:vietnam/liberation-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Quốc khánh (ngày lễ bổ sung)
-DTSTART;VALUE=DATE:20230901
-DTEND;VALUE=DATE:20230902
-DTSTAMP:20230623T220307Z
-UID:vietnam/independence-day-holiday-1-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Quốc khánh
-DTSTART;VALUE=DATE:20230902
-DTEND;VALUE=DATE:20230903
-DTSTAMP:20230623T220307Z
-UID:vietnam/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Quốc khánh (ngày lễ bổ sung)
-DTSTART;VALUE=DATE:20230903
-DTEND;VALUE=DATE:20230904
-DTSTAMP:20230623T220307Z
-UID:vietnam/independence-day-holiday-2-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Quốc khánh quan sát
-DTSTART;VALUE=DATE:20230904
-DTEND;VALUE=DATE:20230905
-DTSTAMP:20230623T220307Z
-UID:vietnam/independence-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ngày Valentine
-DTSTART;VALUE=DATE:20230214
-DTEND;VALUE=DATE:20230215
-DTSTAMP:20230623T220307Z
-UID:vietnam/valentine-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Xuân phân
-DTSTART;VALUE=DATE:20230321
-DTEND;VALUE=DATE:20230322
-DTSTAMP:20230623T220307Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:chủa nhật phục sinh
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T220307Z
-UID:vietnam/easter-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lễ Phật Đản
-DTSTART;VALUE=DATE:20230505
-DTEND;VALUE=DATE:20230506
-DTSTAMP:20230623T220307Z
-UID:vietnam/vesak-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Hạ chí
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220307Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ngày gia đình Việt Nam
-DTSTART;VALUE=DATE:20230628
-DTEND;VALUE=DATE:20230629
-DTSTAMP:20230623T220307Z
-UID:vietnam/family-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Thu phân
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220307Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ngày phụ nữ Việt Nam
-DTSTART;VALUE=DATE:20231020
-DTEND;VALUE=DATE:20231021
-DTSTAMP:20230623T220307Z
-UID:vietnam/vietnamese-women-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ngày Halloween (Ma lộ hình)
-DTSTART;VALUE=DATE:20231031
-DTEND;VALUE=DATE:20231101
-DTSTAMP:20230623T220307Z
-UID:vietnam/halloween-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
- d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Đông chí
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T220307Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Đêm Giáng sinh
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T220307Z
-UID:vietnam/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Giáng sinh/Nôen
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220307Z
-UID:vietnam/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Day is one of the biggest Christian cel
- ebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Đêm giao thừa
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220307Z
-UID:vietnam/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220307Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tết dương lịch
+SUMMARY:Ngày đầu năm mới quốc tế 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Ngày đầu năm mới là ngày đầu t
+ iên trong năm\, hay ngày 1 tháng 1\, trong lịch Gregorian.
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết đêm giao thừa
+SUMMARY:Ngày Tết 
+DTSTART;VALUE=DATE:20240208
+DTEND;VALUE=DATE:20240209
+DTSTAMP:20240119T095102Z
+UID:vietnam/tet-holiday-5-2024
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095102Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Đêm giao thừa Việt Nam 
 DTSTART;VALUE=DATE:20240209
 DTEND;VALUE=DATE:20240210
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/spring-festival-golden-week-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Lunar New Year is the first day of the Chin
- ese calendar\, which is a lunisolar calendar mainly used for traditional c
- elebrations.
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Tết Nguyên đán là ngày đầu tiên
+  của lịch Trung Quốc\, là một lịch mặt trăng chủ yếu đ
+ ược sử dụng cho các lễ kỷ niệm truyền thống.
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Năm mới Việt Nam 
 DTSTART;VALUE=DATE:20240210
 DTEND;VALUE=DATE:20240211
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/tet-new-year-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Năm mới Việt Nam là một ngày lễ
+  quốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Ngày Tết 
 DTSTART;VALUE=DATE:20240211
 DTEND;VALUE=DATE:20240212
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/tet-holiday-1-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Ngày Tết 
 DTSTART;VALUE=DATE:20240212
 DTEND;VALUE=DATE:20240213
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/tet-holiday-2-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Ngày Tết 
 DTSTART;VALUE=DATE:20240213
 DTEND;VALUE=DATE:20240214
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/tet-holiday-3-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Ngày Tết 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/tet-holiday-4-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Giỗ tổ Hùng Vương
+SUMMARY:Lễ hội Vua Hùng 
 DTSTART;VALUE=DATE:20240418
 DTEND;VALUE=DATE:20240419
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/vietnamese-kings-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Lễ hội Vua Hùng là một ngày lễ 
+ quốc gia tại Việt Nam
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày giải phóng
+SUMMARY:Ngày giải phóng/Ngày thống nhất 
 DTSTART;VALUE=DATE:20240430
 DTEND;VALUE=DATE:20240501
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/liberation-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Ngày giải phóng/Ngày thống nhất l
+ à một ngày lễ quốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày Quốc tế Lao động
+SUMMARY:Ngày Lao động Quốc tế 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Ngày Lao động\, Ngày Quốc tế Lao 
+ động\, và Ngày tháng Năm\, là ngày nghỉ của người lao đ
+ ộng ở nhiều quốc gia trên thế giới.
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Quốc khánh
+SUMMARY:Ngày Độc Lập 
 DTSTART;VALUE=DATE:20240902
 DTEND;VALUE=DATE:20240903
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095102Z
 UID:vietnam/independence-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:National holiday -  Ngày Độc Lập là một ngày lễ qu
+ ốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày Valentine
+SUMMARY:Ngày Quốc Khánh 
+DTSTART;VALUE=DATE:20240903
+DTEND;VALUE=DATE:20240904
+DTSTAMP:20240119T095102Z
+UID:vietnam/independence-day-holiday-1-2024
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ngày Quốc Khánh là một ngày lễ q
+ uốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095102Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Valentine 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:vietnam/valentine-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Observance -  Ngày 14 tháng 2 là Ngày Valentine hoặc L
+ ễ Thánh Valentine. Ngày tình yêu có nguồn gốc từ truyền th
+ ống Cơ đốc giáo La Mã cổ đại và châu Âu.
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Xuân phân
+SUMMARY:Điểm phân tháng 3 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Season -  Điểm phân tháng 3 ở Việt Nam (Hà Nội)
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:chủa nhật phục sinh
+SUMMARY:Chủ nhật Phục sinh 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:vietnam/easter-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Observance -  Chủ nhật Phục sinh kỷ niệm sự phục
+  sinh của Chúa Giê Su Ky Tô\, theo niềm tin Kitô giáo.
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lễ Phật Đản
+SUMMARY:Vesak 
 DTSTART;VALUE=DATE:20240523
 DTEND;VALUE=DATE:20240524
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:vietnam/vesak-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Observance -  Vesak là một lễ kỷ niệm ở Việt Nam
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Hạ chí
+SUMMARY:Hạ chí tháng sáu 
 DTSTART;VALUE=DATE:20240621
 DTEND;VALUE=DATE:20240622
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Season -  Hạ chí tháng sáu ở Việt Nam (Hà Nội)
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày gia đình Việt Nam
+SUMMARY:Ngày gia đình Việt Nam 
 DTSTART;VALUE=DATE:20240628
 DTEND;VALUE=DATE:20240629
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:vietnam/family-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Observance -  Ngày gia đình Việt Nam là một lễ kỷ 
+ niệm tại Việt Nam
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Thu phân
+SUMMARY:Điểm phân tháng 9 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Season -  Điểm phân tháng 9 ở Việt Nam (Hà Nội)
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày phụ nữ Việt Nam
+SUMMARY:Ngày Phụ nữ Việt Nam 
 DTSTART;VALUE=DATE:20241020
 DTEND;VALUE=DATE:20241021
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:vietnam/vietnamese-women-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Observance -  Ngày Phụ nữ Việt Nam là một lễ kỷ 
+ niệm tại Việt Nam
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày Halloween (Ma lộ hình)
+SUMMARY:Halloween là một dịp lễ hội được tổ chức ở nhi
+ ều quốc gia vào ngày 31 tháng 10 hàng năm.
 DTSTART;VALUE=DATE:20241031
 DTEND;VALUE=DATE:20241101
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:vietnam/halloween-2024
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
  d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T220308Z
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Đông chí
+SUMMARY:Hạ chí tháng mười hai 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Season -  Hạ chí tháng mười hai ở Việt Nam (Hà N
+ ội)
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Đêm Giáng sinh
+SUMMARY:Đêm Giáng sinh 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:vietnam/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Observance -  đêm Giáng sinh là ngày trước ngày Gián
+ g sinh và rơi vào ngày 24 tháng 12 trong lịch Gregorian.
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Giáng sinh/Nôen
+SUMMARY:Ngày Giáng sinh 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:vietnam/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Day is one of the biggest Christian cel
- ebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Observance -  Ngày Giáng sinh là một trong những lễ k
+ ỷ niệm lớn nhất của Cơ đốc giáo và rơi vào ngày 25 thá
+ ng 12 trong lịch Gregorian.
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Đêm giao thừa
+SUMMARY:Đêm giao thừa quốc tế 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220308Z
+DTSTAMP:20240119T095103Z
 UID:vietnam/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220308Z
+DESCRIPTION:Observance -  Giao thừa là ngày cuối cùng trong năm\, 
+ ngày 31 tháng 12\, trong lịch Gregorian.
+LAST-MODIFIED:20240119T095103Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết dương lịch
+SUMMARY:Ngày đầu năm mới quốc tế 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Ngày đầu năm mới là ngày đầu t
+ iên trong năm\, hay ngày 1 tháng 1\, trong lịch Gregorian.
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết đêm giao thừa
+SUMMARY:Đêm giao thừa Việt Nam 
 DTSTART;VALUE=DATE:20250128
 DTEND;VALUE=DATE:20250129
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/spring-festival-golden-week-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Lunar New Year is the first day of the Chin
- ese calendar\, which is a lunisolar calendar mainly used for traditional c
- elebrations.
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Tết Nguyên đán là ngày đầu tiên
+  của lịch Trung Quốc\, là một lịch mặt trăng chủ yếu đ
+ ược sử dụng cho các lễ kỷ niệm truyền thống.
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Năm mới Việt Nam 
 DTSTART;VALUE=DATE:20250129
 DTEND;VALUE=DATE:20250130
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/tet-new-year-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Năm mới Việt Nam là một ngày lễ
+  quốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Ngày Tết 
 DTSTART;VALUE=DATE:20250130
 DTEND;VALUE=DATE:20250131
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/tet-holiday-1-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Ngày Tết 
 DTSTART;VALUE=DATE:20250131
 DTEND;VALUE=DATE:20250201
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/tet-holiday-2-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Ngày Tết 
 DTSTART;VALUE=DATE:20250201
 DTEND;VALUE=DATE:20250202
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/tet-holiday-3-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tết Nguyên Đán
+SUMMARY:Ngày Tết 
 DTSTART;VALUE=DATE:20250202
 DTEND;VALUE=DATE:20250203
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/tet-holiday-4-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Giỗ tổ Hùng Vương
+SUMMARY:Lễ hội Vua Hùng 
 DTSTART;VALUE=DATE:20250407
 DTEND;VALUE=DATE:20250408
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/vietnamese-kings-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Lễ hội Vua Hùng là một ngày lễ 
+ quốc gia tại Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày giải phóng
+SUMMARY:Ngày giải phóng/Ngày thống nhất 
 DTSTART;VALUE=DATE:20250430
 DTEND;VALUE=DATE:20250501
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/liberation-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Ngày giải phóng/Ngày thống nhất l
+ à một ngày lễ quốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày Quốc tế Lao động
+SUMMARY:Ngày Lao động Quốc tế 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Ngày Lao động\, Ngày Quốc tế Lao 
+ động\, và Ngày tháng Năm\, là ngày nghỉ của người lao đ
+ ộng ở nhiều quốc gia trên thế giới.
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Quốc khánh
+SUMMARY:Ngày Độc Lập 
 DTSTART;VALUE=DATE:20250902
 DTEND;VALUE=DATE:20250903
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/independence-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:National holiday -  Ngày Độc Lập là một ngày lễ qu
+ ốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày Valentine
+SUMMARY:Ngày Valentine 
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/valentine-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Observance -  Ngày 14 tháng 2 là Ngày Valentine hoặc L
+ ễ Thánh Valentine. Ngày tình yêu có nguồn gốc từ truyền th
+ ống Cơ đốc giáo La Mã cổ đại và châu Âu.
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Xuân phân
+SUMMARY:Điểm phân tháng 3 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Season -  Điểm phân tháng 3 ở Việt Nam (Hà Nội)
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:chủa nhật phục sinh
+SUMMARY:Chủ nhật Phục sinh 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/easter-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Easter Sunday commemorates Jesus Christ’s resur
- rection\, according to Christian belief.
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Observance -  Chủ nhật Phục sinh kỷ niệm sự phục
+  sinh của Chúa Giê Su Ky Tô\, theo niềm tin Kitô giáo.
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lễ Phật Đản
+SUMMARY:Vesak 
 DTSTART;VALUE=DATE:20250512
 DTEND;VALUE=DATE:20250513
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/vesak-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Observance -  Vesak là một lễ kỷ niệm ở Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Hạ chí
+SUMMARY:Hạ chí tháng sáu 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Season -  Hạ chí tháng sáu ở Việt Nam (Hà Nội)
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày gia đình Việt Nam
+SUMMARY:Ngày gia đình Việt Nam 
 DTSTART;VALUE=DATE:20250628
 DTEND;VALUE=DATE:20250629
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/family-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Observance -  Ngày gia đình Việt Nam là một lễ kỷ 
+ niệm tại Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Thu phân
+SUMMARY:Điểm phân tháng 9 
 DTSTART;VALUE=DATE:20250923
 DTEND;VALUE=DATE:20250924
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Season -  Điểm phân tháng 9 ở Việt Nam (Hà Nội)
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày phụ nữ Việt Nam
+SUMMARY:Ngày Phụ nữ Việt Nam 
 DTSTART;VALUE=DATE:20251020
 DTEND;VALUE=DATE:20251021
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/vietnamese-women-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Observance -  Ngày Phụ nữ Việt Nam là một lễ kỷ 
+ niệm tại Việt Nam
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ngày Halloween (Ma lộ hình)
+SUMMARY:Halloween là một dịp lễ hội được tổ chức ở nhi
+ ều quốc gia vào ngày 31 tháng 10 hàng năm.
 DTSTART;VALUE=DATE:20251031
 DTEND;VALUE=DATE:20251101
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/halloween-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
  d in many countries on October 31 each year.
-LAST-MODIFIED:20230623T220309Z
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Đông chí
+SUMMARY:Hạ chí tháng mười hai 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Season -  Hạ chí tháng mười hai ở Việt Nam (Hà N
+ ội)
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Đêm Giáng sinh
+SUMMARY:Đêm Giáng sinh 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  falls on December 24 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Observance -  đêm Giáng sinh là ngày trước ngày Gián
+ g sinh và rơi vào ngày 24 tháng 12 trong lịch Gregorian.
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Giáng sinh/Nôen
+SUMMARY:Ngày Giáng sinh 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Day is one of the biggest Christian cel
- ebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Observance -  Ngày Giáng sinh là một trong những lễ k
+ ỷ niệm lớn nhất của Cơ đốc giáo và rơi vào ngày 25 thá
+ ng 12 trong lịch Gregorian.
+LAST-MODIFIED:20240119T095107Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Đêm giao thừa
+SUMMARY:Đêm giao thừa quốc tế 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220309Z
+DTSTAMP:20240119T095107Z
 UID:vietnam/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220309Z
+DESCRIPTION:Observance -  Giao thừa là ngày cuối cùng trong năm\, 
+ ngày 31 tháng 12\, trong lịch Gregorian.
+LAST-MODIFIED:20240119T095107Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày đầu năm mới quốc tế 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T095111Z
+UID:vietnam/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ngày đầu năm mới là ngày đầu t
+ iên trong năm\, hay ngày 1 tháng 1\, trong lịch Gregorian.
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Đêm giao thừa Việt Nam 
+DTSTART;VALUE=DATE:20260216
+DTEND;VALUE=DATE:20260217
+DTSTAMP:20240119T095111Z
+UID:vietnam/spring-festival-golden-week-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Tết Nguyên đán là ngày đầu tiên
+  của lịch Trung Quốc\, là một lịch mặt trăng chủ yếu đ
+ ược sử dụng cho các lễ kỷ niệm truyền thống.
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Năm mới Việt Nam 
+DTSTART;VALUE=DATE:20260217
+DTEND;VALUE=DATE:20260218
+DTSTAMP:20240119T095111Z
+UID:vietnam/tet-new-year-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Năm mới Việt Nam là một ngày lễ
+  quốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Tết 
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260219
+DTSTAMP:20240119T095111Z
+UID:vietnam/tet-holiday-1-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Tết 
+DTSTART;VALUE=DATE:20260219
+DTEND;VALUE=DATE:20260220
+DTSTAMP:20240119T095111Z
+UID:vietnam/tet-holiday-2-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Tết 
+DTSTART;VALUE=DATE:20260220
+DTEND;VALUE=DATE:20260221
+DTSTAMP:20240119T095111Z
+UID:vietnam/tet-holiday-3-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Tết 
+DTSTART;VALUE=DATE:20260221
+DTEND;VALUE=DATE:20260222
+DTSTAMP:20240119T095111Z
+UID:vietnam/tet-holiday-4-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Tết là một ngày lễ quốc gia ở 
+ Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lễ hội Vua Hùng 
+DTSTART;VALUE=DATE:20260426
+DTEND;VALUE=DATE:20260427
+DTSTAMP:20240119T095111Z
+UID:vietnam/vietnamese-kings-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Lễ hội Vua Hùng là một ngày lễ 
+ quốc gia tại Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày giải phóng/Ngày thống nhất 
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260501
+DTSTAMP:20240119T095111Z
+UID:vietnam/liberation-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ngày giải phóng/Ngày thống nhất l
+ à một ngày lễ quốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Lao động Quốc tế 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T095111Z
+UID:vietnam/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ngày Lao động\, Ngày Quốc tế Lao 
+ động\, và Ngày tháng Năm\, là ngày nghỉ của người lao đ
+ ộng ở nhiều quốc gia trên thế giới.
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Độc Lập 
+DTSTART;VALUE=DATE:20260902
+DTEND;VALUE=DATE:20260903
+DTSTAMP:20240119T095111Z
+UID:vietnam/independence-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ngày Độc Lập là một ngày lễ qu
+ ốc gia ở Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Valentine 
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20240119T095111Z
+UID:vietnam/valentine-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ngày 14 tháng 2 là Ngày Valentine hoặc L
+ ễ Thánh Valentine. Ngày tình yêu có nguồn gốc từ truyền th
+ ống Cơ đốc giáo La Mã cổ đại và châu Âu.
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Điểm phân tháng 3 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T095111Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Điểm phân tháng 3 ở Việt Nam (Hà Nội)
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Chủ nhật Phục sinh 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T095111Z
+UID:vietnam/easter-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Chủ nhật Phục sinh kỷ niệm sự phục
+  sinh của Chúa Giê Su Ky Tô\, theo niềm tin Kitô giáo.
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hạ chí tháng sáu 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T095111Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Hạ chí tháng sáu ở Việt Nam (Hà Nội)
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày gia đình Việt Nam 
+DTSTART;VALUE=DATE:20260628
+DTEND;VALUE=DATE:20260629
+DTSTAMP:20240119T095111Z
+UID:vietnam/family-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ngày gia đình Việt Nam là một lễ kỷ 
+ niệm tại Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Điểm phân tháng 9 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T095111Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Điểm phân tháng 9 ở Việt Nam (Hà Nội)
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Phụ nữ Việt Nam 
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+DTSTAMP:20240119T095111Z
+UID:vietnam/vietnamese-women-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ngày Phụ nữ Việt Nam là một lễ kỷ 
+ niệm tại Việt Nam
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Halloween là một dịp lễ hội được tổ chức ở nhi
+ ều quốc gia vào ngày 31 tháng 10 hàng năm.
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20240119T095111Z
+UID:vietnam/halloween-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Halloween is a festive occasion that is celebrate
+ d in many countries on October 31 each year.
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hạ chí tháng mười hai 
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+DTSTAMP:20240119T095111Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Hạ chí tháng mười hai ở Việt Nam (Hà N
+ ội)
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Đêm Giáng sinh 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T095111Z
+UID:vietnam/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  đêm Giáng sinh là ngày trước ngày Gián
+ g sinh và rơi vào ngày 24 tháng 12 trong lịch Gregorian.
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ngày Giáng sinh 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T095111Z
+UID:vietnam/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ngày Giáng sinh là một trong những lễ k
+ ỷ niệm lớn nhất của Cơ đốc giáo và rơi vào ngày 25 thá
+ ng 12 trong lịch Gregorian.
+LAST-MODIFIED:20240119T095111Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Đêm giao thừa quốc tế 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T095111Z
+UID:vietnam/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Giao thừa là ngày cuối cùng trong năm\, 
+ ngày 31 tháng 12\, trong lịch Gregorian.
+LAST-MODIFIED:20240119T095111Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

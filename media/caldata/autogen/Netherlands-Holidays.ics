@@ -2,951 +2,950 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Nieuwjaarsdag
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220008Z
-UID:netherlands/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - New Year's Day (nieuwjaarsdag\, oud en nieuw)
-  is the first day of a new calendar year. In the Netherlands\, it always f
- alls on January 1.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Goede Vrijdag
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T220008Z
-UID:netherlands/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - Good Friday is the Friday before Easter Sunda
- y in the Netherlands.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Eerste Paasdag
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T220008Z
-UID:netherlands/easter-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - On Easter Sunday (paaszondag\, pasen) many Ch
- ristians in the Netherlands celebrate the resurrection of Jesus after his 
- crucifixion.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tweede Paasdag
-DTSTART;VALUE=DATE:20230410
-DTEND;VALUE=DATE:20230411
-DTSTAMP:20230623T220008Z
-UID:netherlands/easter-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - Easter Monday (tweede paasdag) in the Netherl
- ands is the day after Easter Sunday.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Koningsdag
-DTSTART;VALUE=DATE:20230427
-DTEND;VALUE=DATE:20230428
-DTSTAMP:20230623T220008Z
-UID:netherlands/king-birthday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - The King’s official birthday in the Netherl
- ands is a festive occasion that is annually celebrated on April 27.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Bevrijdingsdag
-DTSTART;VALUE=DATE:20230505
-DTEND;VALUE=DATE:20230506
-DTSTAMP:20230623T220008Z
-UID:netherlands/liberation-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Sector - Liberation Day in the Netherlands celebrates t
- he end of World War II in Europe.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Hemelvaartsdag
-DTSTART;VALUE=DATE:20230518
-DTEND;VALUE=DATE:20230519
-DTSTAMP:20230623T220008Z
-UID:netherlands/ascension-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - Ascension Day (hemelvaart) in the Netherlands
-  is the 40th day of Easter and ten days before Pentecost.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Eerste Pinksterdag
-DTSTART;VALUE=DATE:20230528
-DTEND;VALUE=DATE:20230529
-DTSTAMP:20230623T220008Z
-UID:netherlands/whit-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - Pentecost (Pinksteren) in the Netherlands is 
- seven weeks after Easter Sunday. It commemorates the Holy Spirit's descent
-  from heaven onto Jesus' followers.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tweede Pinksterdag
-DTSTART;VALUE=DATE:20230529
-DTEND;VALUE=DATE:20230530
-DTSTAMP:20230623T220008Z
-UID:netherlands/whit-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - The second day of Pentecost (tweede pinksterd
- ag) in the Netherlands is on a Monday seven weeks after Easter Monday.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Eerste Kerstdag
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220008Z
-UID:netherlands/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - Christmas Day (kerst\, kerstmis) is a public 
- holiday in the Netherlands that commemorates Jesus Christ's birth. It alwa
- ys falls on December 25.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tweede Kerstdag
-DTSTART;VALUE=DATE:20231226
-DTEND;VALUE=DATE:20231227
-DTSTAMP:20230623T220008Z
-UID:netherlands/second-christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Public Holiday - The second day of Christmas is a holiday for 
- many people in the Netherlands. It always falls on December 26.
-LAST-MODIFIED:20230623T220008Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Valentijnsdag
-DTSTART;VALUE=DATE:20230214
-DTEND;VALUE=DATE:20230215
-DTSTAMP:20230623T220009Z
-UID:netherlands/valentine-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinox maart
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T220009Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dodenherdenking
-DTSTART;VALUE=DATE:20230504
-DTEND;VALUE=DATE:20230505
-DTSTAMP:20230623T220009Z
-UID:netherlands/remembrance-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Remembrance Day in the Netherlands commemorates D
- utch civilians and soldiers who lost their lives in war and during peace-k
- eeping missions.
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Moederdag
-DTSTART;VALUE=DATE:20230514
-DTEND;VALUE=DATE:20230515
-DTSTAMP:20230623T220009Z
-UID:netherlands/mothers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Vaderdag
-DTSTART;VALUE=DATE:20230618
-DTEND;VALUE=DATE:20230619
-DTSTAMP:20230623T220009Z
-UID:netherlands/father-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Zomerwende juni
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220009Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Keti Koti
-DTSTART;VALUE=DATE:20230701
-DTEND;VALUE=DATE:20230702
-DTSTAMP:20230623T220009Z
-UID:netherlands/keti-koti-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinox september
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220009Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sinterklaasavond
-DTSTART;VALUE=DATE:20231205
-DTEND;VALUE=DATE:20231206
-DTSTAMP:20230623T220009Z
-UID:netherlands/st-nicholas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - St Nicholas’ Eve honors a Christian saint who i
- s associated with gift-giving. It is a festive celebration in the Netherla
- nds on December 5.
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sinterklaas
-DTSTART;VALUE=DATE:20231206
-DTEND;VALUE=DATE:20231207
-DTSTAMP:20230623T220009Z
-UID:netherlands/st-nicholas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - St. Nicholas’ Day honors a Christian saint who 
- is associated with gift-giving. It is a festive celebration in the Netherl
- ands on December 5–6.
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Winterwende december
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T220009Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Kerstavond
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T220009Z
-UID:netherlands/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Eve in the Netherlands is the start of 
- the Dutch Christmas holidays.
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Oudejaarsavond
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220009Z
-UID:netherlands/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is one of the most exciting time
- s in The Netherlands\, farewelling the Old Year and celebrating the New Ye
- ar.
-LAST-MODIFIED:20230623T220009Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nieuwjaarsdag
+SUMMARY:Nieuwjaarsdag 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - New Year's Day (nieuwjaarsdag\, oud en nieuw)
-  is the first day of a new calendar year. In the Netherlands\, it always f
- alls on January 1.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  Nieuwjaarsdag (oud en nieuw) is de eerste da
+ g van een nieuw kalenderjaar. In Nederland valt het altijd op 1 januari.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Goede Vrijdag
+SUMMARY:Goede Vrijdag 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Good Friday is the Friday before Easter Sunda
- y in the Netherlands.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  Goede Vrijdag is de vrijdag voor Paaszondag 
+ in Nederland.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Eerste Paasdag
+SUMMARY:Paaszondag 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/easter-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - On Easter Sunday (paaszondag\, pasen) many Ch
- ristians in the Netherlands celebrate the resurrection of Jesus after his 
- crucifixion.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  Op Paaszondag (paaszondag\, pasen) vieren ve
+ el christenen in Nederland de opstanding van Jezus na zijn kruisiging.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tweede Paasdag
+SUMMARY:Paasmaandag 
 DTSTART;VALUE=DATE:20240401
 DTEND;VALUE=DATE:20240402
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/easter-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Easter Monday (tweede paasdag) in the Netherl
- ands is the day after Easter Sunday.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  Paasmaandag (tweede paasdag) in Nederland is
+  de dag na Paaszondag.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Koningsdag
+SUMMARY:Koningsverjaardag 
 DTSTART;VALUE=DATE:20240427
 DTEND;VALUE=DATE:20240428
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/king-birthday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - The King’s official birthday in the Netherl
- ands is a festive occasion that is annually celebrated on April 27.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  De officiële verjaardag van de koning in Ne
+ derland is een feestelijke gelegenheid die jaarlijks op 27 april wordt gev
+ ierd.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Bevrijdingsdag
+SUMMARY:Bevrijdingsdag 
 DTSTART;VALUE=DATE:20240505
 DTEND;VALUE=DATE:20240506
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/liberation-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Sector - Liberation Day in the Netherlands celebrates t
- he end of World War II in Europe.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Sector -  Bevrijdingsdag in Nederland viert het einde v
+ an de Tweede Wereldoorlog in Europa.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Hemelvaartsdag
+SUMMARY:Hemelvaartsdag 
 DTSTART;VALUE=DATE:20240509
 DTEND;VALUE=DATE:20240510
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/ascension-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Ascension Day (hemelvaart) in the Netherlands
-  is the 40th day of Easter and ten days before Pentecost.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  Hemelvaart is in Nederland de 40e dag van Pa
+ sen en tien dagen voor Pinksteren.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Eerste Pinksterdag
+SUMMARY:Pinksterzondag 
 DTSTART;VALUE=DATE:20240519
 DTEND;VALUE=DATE:20240520
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/whit-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Pentecost (Pinksteren) in the Netherlands is 
- seven weeks after Easter Sunday. It commemorates the Holy Spirit's descent
-  from heaven onto Jesus' followers.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  Pinksteren (Pinksteren) valt in Nederland ze
+ ven weken na Paaszondag. Het herdenkt de neerdaling van de Heilige Geest u
+ it de hemel naar de volgelingen van Jezus.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tweede Pinksterdag
+SUMMARY:Pinkstermaandag 
 DTSTART;VALUE=DATE:20240520
 DTEND;VALUE=DATE:20240521
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/whit-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - The second day of Pentecost (tweede pinksterd
- ag) in the Netherlands is on a Monday seven weeks after Easter Monday.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  De tweede pinksterdag (tweede pinksterdag) i
+ n Nederland valt op een maandag zeven weken na Paasmaandag.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Eerste Kerstdag
+SUMMARY:Kerstdag 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Christmas Day (kerst\, kerstmis) is a public 
- holiday in the Netherlands that commemorates Jesus Christ's birth. It alwa
- ys falls on December 25.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  Kerstdag (kerst\, kerstmis) is een officiël
+ e feestdag in Nederland ter herdenking van de geboorte van Jezus Christus.
+  Het valt altijd op 25 december.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tweede Kerstdag
+SUMMARY:Tweede kerstdag 
 DTSTART;VALUE=DATE:20241226
 DTEND;VALUE=DATE:20241227
-DTSTAMP:20230623T220009Z
+DTSTAMP:20240119T094640Z
 UID:netherlands/second-christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - The second day of Christmas is a holiday for 
- many people in the Netherlands. It always falls on December 26.
-LAST-MODIFIED:20230623T220009Z
+DESCRIPTION:Public Holiday -  De tweede kerstdag is voor veel mensen in Ne
+ derland een feestdag. Het valt altijd op 26 december.
+LAST-MODIFIED:20240119T094640Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Valentijnsdag
+SUMMARY:Valentijnsdag 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/valentine-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Observance -  14 februari is Valentijnsdag of Sint-Valentijnsf
+ eest. De dag van de liefde dankt zijn oorsprong aan oude Romeinse en Europ
+ ese christelijke tradities.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinox maart
+SUMMARY:Maart-equinox 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Season -  Maartevening in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dodenherdenking
+SUMMARY:Remembrance Day 
 DTSTART;VALUE=DATE:20240504
 DTEND;VALUE=DATE:20240505
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/remembrance-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Remembrance Day in the Netherlands commemorates D
- utch civilians and soldiers who lost their lives in war and during peace-k
- eeping missions.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Observance -  Remembrance Day in Nederland herdenkt Nederlands
+ e burgers en soldaten die zijn omgekomen in oorlog en tijdens vredesmissie
+ s.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Moederdag
+SUMMARY:Moederdag 
 DTSTART;VALUE=DATE:20240512
 DTEND;VALUE=DATE:20240513
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/mothers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Observance -  Moederdag viert de prestaties en inspanningen va
+ n moeders en moederfiguren.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vaderdag
+SUMMARY:Vaderdag 
 DTSTART;VALUE=DATE:20240616
 DTEND;VALUE=DATE:20240617
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/father-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Observance -  Vaderdag viert vaderschap en mannelijk ouderscha
+ p op verschillende data wereldwijd.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Zomerwende juni
+SUMMARY:Juni Solstice 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Season -  Junizonnewende in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Keti Koti
+SUMMARY:Keti Koti 
 DTSTART;VALUE=DATE:20240701
 DTEND;VALUE=DATE:20240702
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/keti-koti-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Observance -  Keti Koti is een feestdag in Nederland
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinox september
+SUMMARY:September-equinox 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Season -  September-equinox in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sinterklaasavond
+SUMMARY:Sinterklaas 
 DTSTART;VALUE=DATE:20241205
 DTEND;VALUE=DATE:20241206
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/st-nicholas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - St Nicholas’ Eve honors a Christian saint who i
- s associated with gift-giving. It is a festive celebration in the Netherla
- nds on December 5.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Observance -  Sinterklaas 
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sinterklaas
+SUMMARY:Sinterklaasdag 
 DTSTART;VALUE=DATE:20241206
 DTEND;VALUE=DATE:20241207
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/st-nicholas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - St. Nicholas’ Day honors a Christian saint who 
- is associated with gift-giving. It is a festive celebration in the Netherl
- ands on December 5–6.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Observance -  Sinterklaasdag eert een christelijke heilige die
+  geassocieerd wordt met het geven van geschenken. Het is een feestelijk fe
+ est in Nederland van 5 tot 6 december.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Winterwende december
+SUMMARY:Decemberzonnewende 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Season -  Decemberzonnewende in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kerstavond
+SUMMARY:Kerstavond 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve in the Netherlands is the start of 
- the Dutch Christmas holidays.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Observance -  Kerstavond in Nederland is het begin van de Nede
+ rlandse kerstvakantie.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Oudejaarsavond
+SUMMARY:Oudejaarsavond 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is one of the most exciting time
- s in The Netherlands\, farewelling the Old Year and celebrating the New Ye
- ar.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Observance -  Oudejaarsavond is een van de spannendste tijden 
+ in Nederland\, om het oude jaar vaarwel te zeggen en het nieuwe jaar te vi
+ eren.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nieuwjaarsdag
+SUMMARY:Nieuwjaarsdag 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - New Year's Day (nieuwjaarsdag\, oud en nieuw)
-  is the first day of a new calendar year. In the Netherlands\, it always f
- alls on January 1.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  Nieuwjaarsdag (oud en nieuw) is de eerste da
+ g van een nieuw kalenderjaar. In Nederland valt het altijd op 1 januari.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Goede Vrijdag
+SUMMARY:Goede Vrijdag 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Good Friday is the Friday before Easter Sunda
- y in the Netherlands.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  Goede Vrijdag is de vrijdag voor Paaszondag 
+ in Nederland.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Eerste Paasdag
+SUMMARY:Paaszondag 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/easter-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - On Easter Sunday (paaszondag\, pasen) many Ch
- ristians in the Netherlands celebrate the resurrection of Jesus after his 
- crucifixion.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  Op paaszondag (pasen) vieren veel christenen
+  in Nederland de opstanding van Jezus na zijn kruisiging.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tweede Paasdag
+SUMMARY:Paasmaandag 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/easter-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Easter Monday (tweede paasdag) in the Netherl
- ands is the day after Easter Sunday.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  Tweede paasdag (tweede paasdag) is in Nederl
+ and de dag na Paaszondag.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Koningsdag
+SUMMARY:Koningsverjaardag 
 DTSTART;VALUE=DATE:20250426
 DTEND;VALUE=DATE:20250427
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/king-birthday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - The King’s official birthday in the Netherl
- ands is a festive occasion that is annually celebrated on April 27.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  De officiële verjaardag van de koning in Ne
+ derland is een feestelijke gelegenheid die jaarlijks op 27 april wordt gev
+ ierd.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Bevrijdingsdag
+SUMMARY:Bevrijdingsdag 
 DTSTART;VALUE=DATE:20250505
 DTEND;VALUE=DATE:20250506
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/liberation-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Liberation Day in the Netherlands celebrates 
- the end of World War II in Europe.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  Bevrijdingsdag in Nederland viert het einde 
+ van de Tweede Wereldoorlog in Europa.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Hemelvaartsdag
+SUMMARY:Hemelvaartsdag 
 DTSTART;VALUE=DATE:20250529
 DTEND;VALUE=DATE:20250530
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/ascension-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Ascension Day (hemelvaart) in the Netherlands
-  is the 40th day of Easter and ten days before Pentecost.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  Hemelvaart (hemelvaart) is in Nederland de 4
+ 0e dag van Pasen en tien dagen voor Pinksteren.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Eerste Pinksterdag
+SUMMARY:Pinksteren valt in Nederland zeven weken na Paaszondag. Het herden
+ kt de neerdaling van de Heilige Geest uit de hemel op de volgelingen van J
+ ezus.
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/whit-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Public Holiday - Pentecost (Pinksteren) in the Netherlands is 
  seven weeks after Easter Sunday. It commemorates the Holy Spirit's descent
   from heaven onto Jesus' followers.
-LAST-MODIFIED:20230623T220010Z
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tweede Pinksterdag
+SUMMARY:Pinkstermaandag 
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/whit-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - The second day of Pentecost (tweede pinksterd
- ag) in the Netherlands is on a Monday seven weeks after Easter Monday.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  De tweede Pinksterdag in Nederland valt op e
+ en maandag zeven weken na Paasmaandag.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Eerste Kerstdag
+SUMMARY:Eerste kerstdag 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - Christmas Day (kerst\, kerstmis) is a public 
- holiday in the Netherlands that commemorates Jesus Christ's birth. It alwa
- ys falls on December 25.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  Kerstdag (kerst\, kerstmis) is een officiël
+ e feestdag in Nederland die de geboorte van Jezus Christus herdenkt. Het v
+ alt altijd op 25 december.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tweede Kerstdag
+SUMMARY:Tweede kerstdag 
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20230623T220010Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/second-christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Public Holiday - The second day of Christmas is a holiday for 
- many people in the Netherlands. It always falls on December 26.
-LAST-MODIFIED:20230623T220010Z
+DESCRIPTION:Public Holiday -  De tweede kerstdag is een feestdag voor veel
+  mensen in Nederland. Het valt altijd op 26 december.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Valentijnsdag
+SUMMARY:Valentijnsdag 
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/valentine-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - February 14 is Valentine's Day or Saint Valentine
- 's Feast. The day of love owes its origins to ancient Roman and European C
- hristian traditions.
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Observance -  14 februari is Valentijnsdag of Sint-Valentijnsf
+ eest. De dag van de liefde dankt zijn oorsprong aan oude Romeinse en Europ
+ ese christelijke tradities.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinox maart
+SUMMARY:Maart-equinox 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Season -  Maart-equinox in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dodenherdenking
+SUMMARY:Dodenherdenking 
 DTSTART;VALUE=DATE:20250504
 DTEND;VALUE=DATE:20250505
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/remembrance-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Remembrance Day in the Netherlands commemorates D
- utch civilians and soldiers who lost their lives in war and during peace-k
- eeping missions.
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Observance -  Dodenherdenking in Nederland herdenkt Nederlands
+ e burgers en soldaten die zijn omgekomen in oorlog en tijdens vredesmissie
+ s.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Moederdag
+SUMMARY:Moederdag 
 DTSTART;VALUE=DATE:20250511
 DTEND;VALUE=DATE:20250512
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/mothers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Observance -  Moederdag viert de prestaties en inspanningen va
+ n moeders en moederfiguren.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vaderdag
+SUMMARY:Vaderdag 
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/father-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Observance -  Vaderdag viert vaderschap en mannelijk ouderscha
+ p op verschillende data wereldwijd.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Zomerwende juni
+SUMMARY:Juni Solstice 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Season -  Juni Solstice in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Keti Koti
+SUMMARY:Keti Koti 
 DTSTART;VALUE=DATE:20250701
 DTEND;VALUE=DATE:20250702
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/keti-koti-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Observance -  Keti Koti is een feestdag in Nederland
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinox september
+SUMMARY:Septemberequinox 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Season -  Septemberequinox in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sinterklaasavond
+SUMMARY:Sinterklaasavond 
 DTSTART;VALUE=DATE:20251205
 DTEND;VALUE=DATE:20251206
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/st-nicholas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - St Nicholas’ Eve honors a Christian saint who i
- s associated with gift-giving. It is a festive celebration in the Netherla
- nds on December 5.
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Observance -  Sinterklaasavond eert een christelijke heilige d
+ ie geassocieerd wordt met het geven van geschenken. Het is een feestelijk 
+ feest in Nederland op 5 december.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sinterklaas
+SUMMARY:Sinterklaasdag 
 DTSTART;VALUE=DATE:20251206
 DTEND;VALUE=DATE:20251207
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/st-nicholas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - St. Nicholas’ Day honors a Christian saint who 
- is associated with gift-giving. It is a festive celebration in the Netherl
- ands on December 5–6.
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Observance -  Sinterklaasdag eert een christelijke heilige die
+  geassocieerd wordt met het geven van geschenken. Het is een feestelijk fe
+ est in Nederland op 5 en 6 december.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Winterwende december
+SUMMARY:Decemberzonnewende 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Season -  Decemberzonnewende in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kerstavond
+SUMMARY:Kerstavond 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve in the Netherlands is the start of 
- the Dutch Christmas holidays.
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Observance -  Kerstavond in Nederland is het begin van de Nede
+ rlandse kerstvakantie.
+LAST-MODIFIED:20240119T094641Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Oudejaarsavond
+SUMMARY:Oudejaarsavond 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220011Z
+DTSTAMP:20240119T094641Z
 UID:netherlands/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is one of the most exciting time
- s in The Netherlands\, farewelling the Old Year and celebrating the New Ye
- ar.
-LAST-MODIFIED:20230623T220011Z
+DESCRIPTION:Observance -  Oudejaarsavond is een van de spannendste tijden 
+ in Nederland\, het afscheid nemen van het oude jaar en het nieuwe jaar vie
+ ren.
+LAST-MODIFIED:20240119T094641Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nieuwjaarsdag 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094642Z
+UID:netherlands/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday -  Nieuwjaarsdag (oud en nieuw) is de eerste da
+ g van een nieuw kalenderjaar. In Nederland valt het altijd op 1 januari.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Goede Vrijdag 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094642Z
+UID:netherlands/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday -  Goede Vrijdag is de vrijdag voor Paaszondag 
+ in Nederland.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Paaszondag 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094642Z
+UID:netherlands/easter-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday -  Op paaszondag (pasen) vieren veel christenen
+  in Nederland de opstanding van Jezus na zijn kruisiging.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Paasmaandag 
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20240119T094642Z
+UID:netherlands/easter-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday -  Tweede paasdag (tweede paasdag) is in Nederl
+ and de dag na Paaszondag.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Koningsverjaardag 
+DTSTART;VALUE=DATE:20260427
+DTEND;VALUE=DATE:20260428
+DTSTAMP:20240119T094642Z
+UID:netherlands/king-birthday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday -  De officiële verjaardag van de koning in Ne
+ derland is een feestelijke gelegenheid die jaarlijks op 27 april wordt gev
+ ierd.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Bevrijdingsdag 
+DTSTART;VALUE=DATE:20260505
+DTEND;VALUE=DATE:20260506
+DTSTAMP:20240119T094642Z
+UID:netherlands/liberation-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Sector -  Bevrijdingsdag in Nederland viert het einde v
+ an de Tweede Wereldoorlog in Europa.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hemelvaartsdag 
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260515
+DTSTAMP:20240119T094642Z
+UID:netherlands/ascension-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday -  Hemelvaart (hemelvaart) is in Nederland de 4
+ 0e dag van Pasen en tien dagen voor Pinksteren.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pinksteren valt in Nederland zeven weken na Paaszondag. Het herden
+ kt de neerdaling van de Heilige Geest uit de hemel op de volgelingen van J
+ ezus.
+DTSTART;VALUE=DATE:20260524
+DTEND;VALUE=DATE:20260525
+DTSTAMP:20240119T094642Z
+UID:netherlands/whit-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday - Pentecost (Pinksteren) in the Netherlands is 
+ seven weeks after Easter Sunday. It commemorates the Holy Spirit's descent
+  from heaven onto Jesus' followers.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pinkstermaandag 
+DTSTART;VALUE=DATE:20260525
+DTEND;VALUE=DATE:20260526
+DTSTAMP:20240119T094642Z
+UID:netherlands/whit-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday -  De tweede Pinksterdag in Nederland valt op e
+ en maandag zeven weken na Paasmaandag.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Eerste kerstdag 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094642Z
+UID:netherlands/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday -  Kerstdag (kerst\, kerstmis) is een officiël
+ e feestdag in Nederland die de geboorte van Jezus Christus herdenkt. Het v
+ alt altijd op 25 december.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tweede kerstdag 
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+DTSTAMP:20240119T094642Z
+UID:netherlands/second-christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Public Holiday -  De tweede kerstdag is een feestdag voor veel
+  mensen in Nederland. Het valt altijd op 26 december.
+LAST-MODIFIED:20240119T094642Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Valentijnsdag 
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260215
+DTSTAMP:20240119T094643Z
+UID:netherlands/valentine-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  14 februari is Valentijnsdag of Sint-Valentijnsf
+ eest. De dag van de liefde dankt zijn oorsprong aan oude Romeinse en Europ
+ ese christelijke tradities.
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Maart-equinox 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094643Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Maart-equinox in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dodenherdenking 
+DTSTART;VALUE=DATE:20260504
+DTEND;VALUE=DATE:20260505
+DTSTAMP:20240119T094643Z
+UID:netherlands/remembrance-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Dodenherdenking in Nederland herdenkt Nederlands
+ e burgers en soldaten die zijn omgekomen in oorlog en tijdens vredesmissie
+ s.
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Moederdag 
+DTSTART;VALUE=DATE:20260510
+DTEND;VALUE=DATE:20260511
+DTSTAMP:20240119T094643Z
+UID:netherlands/mothers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Moederdag viert de prestaties en inspanningen va
+ n moeders en moederfiguren.
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vaderdag 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094643Z
+UID:netherlands/father-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Vaderdag viert vaderschap en mannelijk ouderscha
+ p op verschillende data wereldwijd.
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Juni Solstice 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094643Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Juni Solstice in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Keti Koti 
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+DTSTAMP:20240119T094643Z
+UID:netherlands/keti-koti-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Keti Koti is een feestdag in Nederland
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Septemberequinox 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094643Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Septemberequinox in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sinterklaasavond 
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+DTSTAMP:20240119T094643Z
+UID:netherlands/st-nicholas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Sinterklaasavond eert een christelijke heilige d
+ ie geassocieerd wordt met het geven van geschenken. Het is een feestelijk 
+ feest in Nederland op 5 december.
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sinterklaasdag 
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+DTSTAMP:20240119T094643Z
+UID:netherlands/st-nicholas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Sinterklaasdag eert een christelijke heilige die
+  geassocieerd wordt met het geven van geschenken. Het is een feestelijk fe
+ est in Nederland op 5 en 6 december.
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Decemberzonnewende 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094643Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Decemberzonnewende in Nederland (Amsterdam)
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Kerstavond 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T094643Z
+UID:netherlands/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Kerstavond in Nederland is het begin van de Nede
+ rlandse kerstvakantie.
+LAST-MODIFIED:20240119T094643Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Oudejaarsavond 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094643Z
+UID:netherlands/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Oudejaarsavond is een van de spannendste tijden 
+ in Nederland\, het afscheid nemen van het oude jaar en het nieuwe jaar vie
+ ren.
+LAST-MODIFIED:20240119T094643Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

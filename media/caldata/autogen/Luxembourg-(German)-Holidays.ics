@@ -2,798 +2,828 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Neujahrstag
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220118Z
-UID:luxembourg/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Um Mitternacht zwischen Silvester und Neuja
- hr fängt ein neues Jahr im Gregorianischen Kalender an.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ostermontag
-DTSTART;VALUE=DATE:20230410
-DTEND;VALUE=DATE:20230411
-DTSTAMP:20230623T220118Z
-UID:luxembourg/easter-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Der Tag nach Ostersonntag ist in vielen Lä
- ndern ein gesetzlicher Feiertag.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tag der Arbeit
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220118Z
-UID:luxembourg/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Europatag
-DTSTART;VALUE=DATE:20230509
-DTEND;VALUE=DATE:20230510
-DTSTAMP:20230623T220118Z
-UID:luxembourg/europe-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christi Himmelfahrt
-DTSTART;VALUE=DATE:20230518
-DTEND;VALUE=DATE:20230519
-DTSTAMP:20230623T220118Z
-UID:luxembourg/ascension-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Christi Himmelfahrt ist ein christliches Fe
- st\, das 39 nach Ostern gefeiert wird.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Pfingstmontag
-DTSTART;VALUE=DATE:20230529
-DTEND;VALUE=DATE:20230530
-DTSTAMP:20230623T220118Z
-UID:luxembourg/whit-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Der Pfingstsonntag ist ein christlicher Fei
- ertag\, der auf den Tag nach dem Pfingstsonntag fällt.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nationalfeiertag
-DTSTART;VALUE=DATE:20230623
-DTEND;VALUE=DATE:20230624
-DTSTAMP:20230623T220118Z
-UID:luxembourg/national-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Mariä Himmelfahrt
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230623T220118Z
-UID:luxembourg/assumption-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Mariä Himmelfahrt ist ein wichtiger christ
- licher Feiertag\, der in vielen Ländern als gesetzlicher Feiertag gilt.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Allerheiligen
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-DTSTAMP:20230623T220118Z
-UID:luxembourg/all-saints-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - An Allerheiligen ehren Christen weltweit al
- le Heiligen.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Erster Weihnachtstag
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220118Z
-UID:luxembourg/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Weihnachten ist eines der wichtigesten chri
- stlichen Feste.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Stephanstag
-DTSTART;VALUE=DATE:20231226
-DTEND;VALUE=DATE:20231227
-DTSTAMP:20230623T220118Z
-UID:luxembourg/st-stephen-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:März-Tagundnachtgleiche
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T220118Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ostern
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T220118Z
-UID:luxembourg/easter-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Der Ostersonntag ist einer der wichtigsten christl
- ichen Feiertage.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Pfingsten
-DTSTART;VALUE=DATE:20230528
-DTEND;VALUE=DATE:20230529
-DTSTAMP:20230623T220118Z
-UID:luxembourg/pentecost-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Pfingsten ist eines der wichtigsten christlichen H
- ochfeste.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Muttertag
-DTSTART;VALUE=DATE:20230611
-DTEND;VALUE=DATE:20230612
-DTSTAMP:20230623T220118Z
-UID:luxembourg/mothers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Der Muttertag ist in vielen Ländern ein Ehrentag
-  für Mütter.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Juni-Sonnenwende
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220118Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:September-Tagundnachtgleiche
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220118Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Vatertag
-DTSTART;VALUE=DATE:20231001
-DTEND;VALUE=DATE:20231002
-DTSTAMP:20230623T220118Z
-UID:luxembourg/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Vielerorts wird einmal im Jahr Vatertag gefeiert 
- - das Datum variiert von Land zu Land.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dezember-Sonnenwende
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T220118Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Silvester
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220118Z
-UID:luxembourg/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Um Mitternacht zwischen Silvester und Neujahr fä
- ngt ein neues Jahr im Gregorianischen Kalender an.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Karfreitag
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T220118Z
-UID:luxembourg/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday - Der Karfreitag ist ein wichtiger christlicher F
- eiertag\, zwei Tage vor Ostern.
-LAST-MODIFIED:20230623T220118Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Neujahrstag
+SUMMARY:Neujahrstag 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Um Mitternacht zwischen Silvester und Neuja
- hr fängt ein neues Jahr im Gregorianischen Kalender an.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Der Neujahrstag ist der erste Tag des Jahr
+ es oder der 1. Januar im gregorianischen Kalender.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ostermontag
+SUMMARY:Ostermontag 
 DTSTART;VALUE=DATE:20240401
 DTEND;VALUE=DATE:20240402
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/easter-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Der Tag nach Ostersonntag ist in vielen Lä
- ndern ein gesetzlicher Feiertag.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Der Ostermontag ist der Tag nach dem Oster
+ sonntag.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tag der Arbeit
+SUMMARY:Tag der Arbeit/1. Mai 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Der Tag der Arbeit\, der Internationale Ta
+ g der Arbeit und der 1. Mai ist ein freier Tag für Arbeitnehmer in vielen
+  Ländern der Welt.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Christi Himmelfahrt
+SUMMARY:Himmelfahrt 
 DTSTART;VALUE=DATE:20240509
 DTEND;VALUE=DATE:20240510
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/ascension-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christi Himmelfahrt ist ein christliches Fe
- st\, das 39 nach Ostern gefeiert wird.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Himmelfahrt ist der 40. Tag der Osterzeit.
+  Es ist ein religiöser Feiertag\, der an die Himmelfahrt Jesu Christi eri
+ nnert.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Europatag
+SUMMARY:Europatag 
 DTSTART;VALUE=DATE:20240509
 DTEND;VALUE=DATE:20240510
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/europe-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Der Europatag ist ein Nationalfeiertag in 
+ Luxemburg
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pfingstmontag
+SUMMARY:Pfingstmontag 
 DTSTART;VALUE=DATE:20240520
 DTEND;VALUE=DATE:20240521
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/whit-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Der Pfingstsonntag ist ein christlicher Fei
- ertag\, der auf den Tag nach dem Pfingstsonntag fällt.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Pfingstmontag oder Pfingstmontag ist ein c
+ hristlicher Feiertag\, der auf den Tag nach Pfingsten fällt\, der auch Pf
+ ingstsonntag oder Pfingstsonntag genannt wird.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nationalfeiertag
+SUMMARY:Nationalfeiertag 
 DTSTART;VALUE=DATE:20240623
 DTEND;VALUE=DATE:20240624
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/national-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Der Nationalfeiertag ist ein Nationalfeier
+ tag in Luxemburg
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mariä Himmelfahrt
+SUMMARY:Mariä Himmelfahrt 
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/assumption-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Mariä Himmelfahrt ist ein wichtiger christ
- licher Feiertag\, der in vielen Ländern als gesetzlicher Feiertag gilt.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Das christliche Fest Mariä Himmelfahrt fi
+ ndet in den meisten Ländern am oder um den 15. August statt. Einige feier
+ n Mariä Himmelfahrt zu anderen Jahreszeiten.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Allerheiligen
+SUMMARY:Allerheiligen 
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/all-saints-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - An Allerheiligen ehren Christen weltweit al
- le Heiligen.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Viele Kirchen ehren alle ihre Heiligen an 
+ Allerheiligen\, auch Allerheiligen genannt.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Erster Weihnachtstag
+SUMMARY:Weihnachten 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Weihnachten ist eines der wichtigesten chri
- stlichen Feste.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Der Weihnachtstag ist eines der größten 
+ christlichen Feste und fällt im gregorianischen Kalender auf den 25. Deze
+ mber.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Stephanstag
+SUMMARY:Stephanstag 
 DTSTART;VALUE=DATE:20241226
 DTEND;VALUE=DATE:20241227
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/st-stephen-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:National holiday -  Der Stephanstag ist ein Nationalfeiertag i
+ n Luxemburg
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:März-Tagundnachtgleiche
+SUMMARY:März-Tagundnachtgleiche 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Season -  März-Tagundnachtgleiche in Luxemburg (Luxemburg)
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ostern
+SUMMARY:Ostersonntag 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/easter-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Der Ostersonntag ist einer der wichtigsten christl
- ichen Feiertage.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Christian -  Der Ostersonntag erinnert nach christlichem Glaub
+ en an die Auferstehung Jesu Christi.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pfingsten
+SUMMARY:Pfingstsonntag 
 DTSTART;VALUE=DATE:20240519
 DTEND;VALUE=DATE:20240520
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/pentecost-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Pfingsten ist eines der wichtigsten christlichen H
- ochfeste.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Christian -  Viele Christen auf der ganzen Welt begehen jährl
+ ich Pfingsten\, auch bekannt als Pfingstsonntag oder Pfingstsonntag.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Muttertag
+SUMMARY:Muttertag 
 DTSTART;VALUE=DATE:20240609
 DTEND;VALUE=DATE:20240610
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/mothers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Der Muttertag ist in vielen Ländern ein Ehrentag
-  für Mütter.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Observance -  Der Muttertag feiert die Leistungen und Bemühun
+ gen von Müttern und Mutterfiguren.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Juni-Sonnenwende
+SUMMARY:Juni-Sonnenwende 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Season -  Juni-Sonnenwende in Luxemburg (Luxemburg)
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:September-Tagundnachtgleiche
+SUMMARY:September-Tagundnachtgleiche 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Season -  September-Tagundnachtgleiche in Luxemburg (Luxemburg
+ )
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vatertag
+SUMMARY:Vatertag 
 DTSTART;VALUE=DATE:20241006
 DTEND;VALUE=DATE:20241007
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Vielerorts wird einmal im Jahr Vatertag gefeiert 
- - das Datum variiert von Land zu Land.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Observance -  Der Vatertag feiert Vaterschaft und männliche E
+ lternschaft an verschiedenen Terminen weltweit.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dezember-Sonnenwende
+SUMMARY:Dezember-Sonnenwende 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Season -  Dezember-Sonnenwende in Luxemburg (Luxemburg)
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Silvester
+SUMMARY:Silvester 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Um Mitternacht zwischen Silvester und Neujahr fä
- ngt ein neues Jahr im Gregorianischen Kalender an.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Observance -  Silvester ist der letzte Tag des Jahres\, der 31
+ . Dezember\, im gregorianischen Kalender.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Karfreitag
+SUMMARY:Karfreitag 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T220119Z
+DTSTAMP:20240119T094800Z
 UID:luxembourg/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday - Der Karfreitag ist ein wichtiger christlicher F
- eiertag\, zwei Tage vor Ostern.
-LAST-MODIFIED:20230623T220119Z
+DESCRIPTION:Bank holiday -  Der Karfreitag ist ein globales christliches F
+ est zwei Tage vor Ostersonntag.
+LAST-MODIFIED:20240119T094800Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Neujahrstag
+SUMMARY:Neujahrstag 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Um Mitternacht zwischen Silvester und Neuja
- hr fängt ein neues Jahr im Gregorianischen Kalender an.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Der Neujahrstag ist der erste Tag des Jahr
+ es oder der 1. Januar im gregorianischen Kalender.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ostermontag
+SUMMARY:Ostermontag 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/easter-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Der Tag nach Ostersonntag ist in vielen Lä
- ndern ein gesetzlicher Feiertag.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Der Ostermontag ist der Tag nach dem Oster
+ sonntag.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tag der Arbeit
+SUMMARY:Tag der Arbeit/1. Mai 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Der Tag der Arbeit\, der Internationale Ta
+ g der Arbeit und der 1. Mai ist ein freier Tag für Arbeitnehmer in vielen
+  Ländern der Welt.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Europatag
+SUMMARY:Europatag 
 DTSTART;VALUE=DATE:20250509
 DTEND;VALUE=DATE:20250510
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/europe-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Der Europatag ist ein Nationalfeiertag in 
+ Luxemburg
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Christi Himmelfahrt
+SUMMARY:Himmelfahrt 
 DTSTART;VALUE=DATE:20250529
 DTEND;VALUE=DATE:20250530
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/ascension-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christi Himmelfahrt ist ein christliches Fe
- st\, das 39 nach Ostern gefeiert wird.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Himmelfahrt ist der 40. Tag der Osterzeit.
+  Es ist ein religiöser Feiertag\, der an die Himmelfahrt Jesu Christi eri
+ nnert.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pfingstmontag
+SUMMARY:Pfingstmontag 
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/whit-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Der Pfingstsonntag ist ein christlicher Fei
- ertag\, der auf den Tag nach dem Pfingstsonntag fällt.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Pfingstmontag oder Pfingstmontag ist ein c
+ hristlicher Feiertag\, der auf den Tag nach Pfingsten fällt\, der auch Pf
+ ingstsonntag oder Pfingstsonntag genannt wird.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nationalfeiertag
+SUMMARY:Nationalfeiertag 
 DTSTART;VALUE=DATE:20250623
 DTEND;VALUE=DATE:20250624
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/national-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Der Nationalfeiertag ist ein Nationalfeier
+ tag in Luxemburg
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mariä Himmelfahrt
+SUMMARY:Mariä Himmelfahrt 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/assumption-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Mariä Himmelfahrt ist ein wichtiger christ
- licher Feiertag\, der in vielen Ländern als gesetzlicher Feiertag gilt.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Das christliche Fest Mariä Himmelfahrt fi
+ ndet in den meisten Ländern am oder um den 15. August statt. Einige feier
+ n Mariä Himmelfahrt zu anderen Jahreszeiten.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Allerheiligen
+SUMMARY:Allerheiligen 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/all-saints-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - An Allerheiligen ehren Christen weltweit al
- le Heiligen.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Viele Kirchen ehren alle ihre Heiligen an 
+ Allerheiligen\, auch Allerheiligen genannt.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Erster Weihnachtstag
+SUMMARY:Weihnachten 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Weihnachten ist eines der wichtigesten chri
- stlichen Feste.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Der Weihnachtstag ist eines der größten 
+ christlichen Feste und fällt im gregorianischen Kalender auf den 25. Deze
+ mber.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Stephanstag
+SUMMARY:Stephanstag 
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/st-stephen-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:National holiday -  Der Stephanstag ist ein Nationalfeiertag i
+ n Luxemburg
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:März-Tagundnachtgleiche
+SUMMARY:März-Tagundnachtgleiche 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Season -  März-Tagundnachtgleiche in Luxemburg (Luxemburg)
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ostern
+SUMMARY:Ostersonntag 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/easter-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Der Ostersonntag ist einer der wichtigsten christl
- ichen Feiertage.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Christian -  Der Ostersonntag erinnert nach christlichem Glaub
+ en an die Auferstehung Jesu Christi.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pfingsten
+SUMMARY:Pfingstsonntag 
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/pentecost-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Pfingsten ist eines der wichtigsten christlichen H
- ochfeste.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Christian -  Viele Christen auf der ganzen Welt begehen jährl
+ ich Pfingsten\, auch bekannt als Pfingstsonntag oder Pfingstsonntag.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Muttertag
+SUMMARY:Muttertag 
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/mothers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Der Muttertag ist in vielen Ländern ein Ehrentag
-  für Mütter.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Observance -  Der Muttertag feiert die Leistungen und Bemühun
+ gen von Müttern und Mutterfiguren.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Juni-Sonnenwende
+SUMMARY:Juni-Sonnenwende 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Season -  Juni-Sonnenwende in Luxemburg (Luxemburg)
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:September-Tagundnachtgleiche
+SUMMARY:September-Tagundnachtgleiche 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Season -  September-Tagundnachtgleiche in Luxemburg (Luxemburg
+ )
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vatertag
+SUMMARY:Vatertag 
 DTSTART;VALUE=DATE:20251005
 DTEND;VALUE=DATE:20251006
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Vielerorts wird einmal im Jahr Vatertag gefeiert 
- - das Datum variiert von Land zu Land.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Observance -  Der Vatertag feiert Vaterschaft und männliche E
+ lternschaft an verschiedenen Terminen weltweit.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dezember-Sonnenwende
+SUMMARY:Dezember-Sonnenwende 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Season -  Dezember-Sonnenwende in Luxemburg (Luxemburg)
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Silvester
+SUMMARY:Silvester 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Um Mitternacht zwischen Silvester und Neujahr fä
- ngt ein neues Jahr im Gregorianischen Kalender an.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Observance -  Silvester ist der letzte Tag des Jahres\, der 31
+ . Dezember\, im gregorianischen Kalender.
+LAST-MODIFIED:20240119T094801Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Karfreitag
+SUMMARY:Karfreitag 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T220120Z
+DTSTAMP:20240119T094801Z
 UID:luxembourg/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday - Der Karfreitag ist ein wichtiger christlicher F
- eiertag\, zwei Tage vor Ostern.
-LAST-MODIFIED:20230623T220120Z
+DESCRIPTION:Bank holiday -  Der Karfreitag ist ein globales christliches F
+ est zwei Tage vor Ostersonntag.
+LAST-MODIFIED:20240119T094801Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Neujahrstag 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094802Z
+UID:luxembourg/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Der Neujahrstag ist der erste Tag des Jahr
+ es oder der 1. Januar im gregorianischen Kalender.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ostermontag 
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20240119T094802Z
+UID:luxembourg/easter-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Der Ostermontag ist der Tag nach dem Oster
+ sonntag.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tag der Arbeit/1. Mai 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094802Z
+UID:luxembourg/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Der Tag der Arbeit\, der Internationale Ta
+ g der Arbeit und der 1. Mai ist ein freier Tag für Arbeitnehmer in vielen
+  Ländern der Welt.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Europatag 
+DTSTART;VALUE=DATE:20260509
+DTEND;VALUE=DATE:20260510
+DTSTAMP:20240119T094802Z
+UID:luxembourg/europe-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Der Europatag ist ein Nationalfeiertag in 
+ Luxemburg
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Himmelfahrt 
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260515
+DTSTAMP:20240119T094802Z
+UID:luxembourg/ascension-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Himmelfahrt ist der 40. Tag der Osterzeit.
+  Es ist ein religiöser Feiertag\, der an die Himmelfahrt Jesu Christi eri
+ nnert.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pfingstmontag 
+DTSTART;VALUE=DATE:20260525
+DTEND;VALUE=DATE:20260526
+DTSTAMP:20240119T094802Z
+UID:luxembourg/whit-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Pfingstmontag oder Pfingstmontag ist ein c
+ hristlicher Feiertag\, der auf den Tag nach Pfingsten fällt\, der auch Pf
+ ingstsonntag oder Pfingstsonntag genannt wird.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nationalfeiertag 
+DTSTART;VALUE=DATE:20260623
+DTEND;VALUE=DATE:20260624
+DTSTAMP:20240119T094802Z
+UID:luxembourg/national-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Der Nationalfeiertag ist ein Nationalfeier
+ tag in Luxemburg
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mariä Himmelfahrt 
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20240119T094802Z
+UID:luxembourg/assumption-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Das christliche Fest Mariä Himmelfahrt fi
+ ndet in den meisten Ländern am oder um den 15. August statt. Einige feier
+ n Mariä Himmelfahrt zu anderen Jahreszeiten.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Allerheiligen 
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DTSTAMP:20240119T094802Z
+UID:luxembourg/all-saints-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Viele Kirchen ehren alle ihre Heiligen an 
+ Allerheiligen\, auch Allerheiligen genannt.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Weihnachten 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094802Z
+UID:luxembourg/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Der Weihnachtstag ist eines der größten 
+ christlichen Feste und fällt im gregorianischen Kalender auf den 25. Deze
+ mber.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Stephanstag 
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+DTSTAMP:20240119T094802Z
+UID:luxembourg/st-stephen-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Der Stephanstag ist ein Nationalfeiertag i
+ n Luxemburg
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:März-Tagundnachtgleiche 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094802Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  März-Tagundnachtgleiche in Luxemburg (Luxemburg)
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ostersonntag 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094802Z
+UID:luxembourg/easter-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  Der Ostersonntag erinnert nach christlichem Glaub
+ en an die Auferstehung Jesu Christi.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pfingstsonntag 
+DTSTART;VALUE=DATE:20260524
+DTEND;VALUE=DATE:20260525
+DTSTAMP:20240119T094802Z
+UID:luxembourg/pentecost-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  Viele Christen auf der ganzen Welt begehen jährl
+ ich Pfingsten\, auch bekannt als Pfingstsonntag oder Pfingstsonntag.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Muttertag 
+DTSTART;VALUE=DATE:20260614
+DTEND;VALUE=DATE:20260615
+DTSTAMP:20240119T094802Z
+UID:luxembourg/mothers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Der Muttertag feiert die Leistungen und Bemühun
+ gen von Müttern und Mutterfiguren.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Juni-Sonnenwende 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094802Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Juni-Sonnenwende in Luxemburg (Luxemburg)
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:September-Tagundnachtgleiche 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094802Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  September-Tagundnachtgleiche in Luxemburg (Luxemburg
+ )
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vatertag 
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261005
+DTSTAMP:20240119T094802Z
+UID:luxembourg/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Der Vatertag feiert Vaterschaft und männliche E
+ lternschaft an verschiedenen Terminen weltweit.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dezember-Sonnenwende 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094802Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Dezember-Sonnenwende in Luxemburg (Luxemburg)
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Silvester 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094802Z
+UID:luxembourg/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Silvester ist der letzte Tag des Jahres\, der 31
+ . Dezember\, im gregorianischen Kalender.
+LAST-MODIFIED:20240119T094802Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Karfreitag 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094802Z
+UID:luxembourg/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Der Karfreitag ist ein globales christliches F
+ est zwei Tage vor Ostersonntag.
+LAST-MODIFIED:20240119T094802Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

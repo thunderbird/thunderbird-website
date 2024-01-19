@@ -2,1011 +2,1035 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Novo leto
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220219Z
-UID:slovenia/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Novo leto
-DTSTART;VALUE=DATE:20230102
-DTEND;VALUE=DATE:20230103
-DTSTAMP:20230623T220219Z
-UID:slovenia/new-year-day-2-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Prešernov dan
-DTSTART;VALUE=DATE:20230208
-DTEND;VALUE=DATE:20230209
-DTSTAMP:20230623T220219Z
-UID:slovenia/preseren-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Velika noč
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T220219Z
-UID:slovenia/easter-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Easter Sunday commemorates Jesus Christ’s
-  resurrection\, according to Christian belief.
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Velikonočni ponedeljek
-DTSTART;VALUE=DATE:20230410
-DTEND;VALUE=DATE:20230411
-DTSTAMP:20230623T220219Z
-UID:slovenia/easter-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Easter Monday is the day after Easter Sunda
- y.
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan upora proti okupatorju
-DTSTART;VALUE=DATE:20230427
-DTEND;VALUE=DATE:20230428
-DTSTAMP:20230623T220219Z
-UID:slovenia/occupation-uprising-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Praznik dela
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220219Z
-UID:slovenia/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Praznik dela
-DTSTART;VALUE=DATE:20230502
-DTEND;VALUE=DATE:20230503
-DTSTAMP:20230623T220219Z
-UID:slovenia/labor-day-may-2-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Binkoštna nedelja
-DTSTART;VALUE=DATE:20230528
-DTEND;VALUE=DATE:20230529
-DTSTAMP:20230623T220219Z
-UID:slovenia/pentecost-sunday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Many Christians all over the world annually
-  observe Pentecost\, also known as Whitsunday or Whit Sunday.
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan državnosti
-DTSTART;VALUE=DATE:20230625
-DTEND;VALUE=DATE:20230626
-DTSTAMP:20230623T220219Z
-UID:slovenia/statehood-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Marijino vnebovzetje
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230623T220219Z
-UID:slovenia/assumption-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan reformacije
-DTSTART;VALUE=DATE:20231031
-DTEND;VALUE=DATE:20231101
-DTSTAMP:20230623T220219Z
-UID:slovenia/reformation-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan spomina na mrtve
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-DTSTAMP:20230623T220219Z
-UID:slovenia/all-saints-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Božič
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220219Z
-UID:slovenia/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan samostojnosti in enotnosti
-DTSTART;VALUE=DATE:20231226
-DTEND;VALUE=DATE:20231227
-DTSTAMP:20230623T220219Z
-UID:slovenia/independence-and-unity-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220219Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Enakonočje Marec
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T220220Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Mother's Day
-DTSTART;VALUE=DATE:20230325
-DTEND;VALUE=DATE:20230326
-DTSTAMP:20230623T220220Z
-UID:slovenia/mothers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan Primoža Trubarja
-DTSTART;VALUE=DATE:20230608
-DTEND;VALUE=DATE:20230609
-DTSTAMP:20230623T220220Z
-UID:slovenia/primoz-trubar-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Father's Day
-DTSTART;VALUE=DATE:20230618
-DTEND;VALUE=DATE:20230619
-DTSTAMP:20230623T220220Z
-UID:slovenia/fathers-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solsticij junij
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220220Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan združitve prekmurskih Slovencev z matičnim narodom po prvi s
- vetovni vojni
-DTSTART;VALUE=DATE:20230817
-DTEND;VALUE=DATE:20230818
-DTSTAMP:20230623T220220Z
-UID:slovenia/mother-nation-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan vrnitve Primorske k matični domovini
-DTSTART;VALUE=DATE:20230915
-DTEND;VALUE=DATE:20230916
-DTSTAMP:20230623T220220Z
-UID:slovenia/motherland-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan slovenskega športa
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220220Z
-UID:slovenia/slovenian-sports-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Enakonočje September
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220220Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan suverenosti
-DTSTART;VALUE=DATE:20231025
-DTEND;VALUE=DATE:20231026
-DTSTAMP:20230623T220220Z
-UID:slovenia/souvereignty-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dan Rudolfa Maistra
-DTSTART;VALUE=DATE:20231123
-DTEND;VALUE=DATE:20231124
-DTSTAMP:20230623T220220Z
-UID:slovenia/rudolf-maister-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solsticij december
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T220220Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220220Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Novo leto
+SUMMARY:Novoletni dan 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Novoletni dan je prvi dan v letu\, oziroma
+  1. januar\, v gregorijanskem koledarju.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Novo leto
+SUMMARY:Novoletni praznik 
 DTSTART;VALUE=DATE:20240102
 DTEND;VALUE=DATE:20240103
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/new-year-day-2-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Novoletni praznik je državni praznik v Sl
+ oveniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Prešernov dan
+SUMMARY:Prešernov dan 
 DTSTART;VALUE=DATE:20240208
 DTEND;VALUE=DATE:20240209
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/preseren-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Prešernov dan je državni praznik v Slove
+ niji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Velika noč
+SUMMARY:Velikonočna nedelja 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/easter-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Sunday commemorates Jesus Christ’s
-  resurrection\, according to Christian belief.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Velikonočna nedelja spominja na vstajenje
+  Jezusa Kristusa\, po krščanskem prepričanju.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Velikonočni ponedeljek
+SUMMARY:Velikonočni ponedeljek 
 DTSTART;VALUE=DATE:20240401
 DTEND;VALUE=DATE:20240402
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/easter-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Monday is the day after Easter Sunda
- y.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Velikonočni ponedeljek je dan po velikono
+ čni nedelji.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan upora proti okupatorju
+SUMMARY:Dan vstaje proti okupaciji 
 DTSTART;VALUE=DATE:20240427
 DTEND;VALUE=DATE:20240428
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/occupation-uprising-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Dan vstaje proti okupaciji je državni pra
+ znik v Sloveniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Praznik dela
+SUMMARY:Praznik dela/May Day 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Praznik dela\, mednarodni dan delavcev in 
+ majski dan\, je prost dan za delavce v mnogih državah po svetu.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Praznik dela
+SUMMARY:Praznik dela 
 DTSTART;VALUE=DATE:20240502
 DTEND;VALUE=DATE:20240503
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/labor-day-may-2-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Praznik dela je državni praznik v Sloveni
+ ji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Binkoštna nedelja
+SUMMARY:Bela nedelja 
 DTSTART;VALUE=DATE:20240519
 DTEND;VALUE=DATE:20240520
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/pentecost-sunday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many Christians all over the world annually
-  observe Pentecost\, also known as Whitsunday or Whit Sunday.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Mnogi kristjani po vsem svetu vsako leto p
+ raznujejo binkoščino\, znano tudi kot Whitunday ali Whit Sunday.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan državnosti
+SUMMARY:Dan državnosti 
 DTSTART;VALUE=DATE:20240625
 DTEND;VALUE=DATE:20240626
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/statehood-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Dan državnosti je državni praznik v Slov
+ eniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Marijino vnebovzetje
+SUMMARY:Marijinega vnebovzetja 
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/assumption-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Krščanski praznik Marijinega vnebovzetja
+  je v večini držav 15. avgusta ali okoli njega. Nekateri praznujejo dan 
+ vnebovzetja v drugih letnih časih.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan reformacije
+SUMMARY:Dan reformacije 
 DTSTART;VALUE=DATE:20241031
 DTEND;VALUE=DATE:20241101
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/reformation-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Dan reformacije je državni praznik v Slov
+ eniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan spomina na mrtve
+SUMMARY:Dan spomina 
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/all-saints-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Številne cerkve častijo vse svoje svetni
+ ke na dan vseh svetih\, znan tudi kot Dan vseh svetih.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Božič
+SUMMARY:Božični dan 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Božični dan je eno največjih krščansk
+ ih praznovanj in pade na 25. december v gregorijanskem koledarju.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan samostojnosti in enotnosti
+SUMMARY:Dan neodvisnosti in enotnosti 
 DTSTART;VALUE=DATE:20241226
 DTEND;VALUE=DATE:20241227
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/independence-and-unity-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:National holiday -  Dan neodvisnosti in enotnosti je državni 
+ praznik v Sloveniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Enakonočje Marec
+SUMMARY:Marčevsko enakonočje 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Season -  Marčevsko enakonočje v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mother's Day
+SUMMARY:Materinski dan 
 DTSTART;VALUE=DATE:20240325
 DTEND;VALUE=DATE:20240326
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/mothers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Observance -  Materinski dan praznuje dosežke in prizadevanja
+  mater in materinskih osebnosti.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan Primoža Trubarja
+SUMMARY:Dan Primoža Trubarja 
 DTSTART;VALUE=DATE:20240608
 DTEND;VALUE=DATE:20240609
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/primoz-trubar-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Observance -  Dan Primoža Trubarja je praznik v Sloveniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Father's Day
+SUMMARY:Dan očetov 
 DTSTART;VALUE=DATE:20240616
 DTEND;VALUE=DATE:20240617
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/fathers-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Observance -  Dan očetov praznuje očetovstvo in moško star
+ ševstvo na različne datume po vsem svetu.
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solsticij junij
+SUMMARY:Junijski solsticij 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Season -  Junijski solsticij v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan združitve prekmurskih Slovencev z matičnim narodom po prvi s
- vetovni vojni
+SUMMARY:Slovenci v Prekmurju Vključeni v dan materinega naroda 
 DTSTART;VALUE=DATE:20240817
 DTEND;VALUE=DATE:20240818
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/mother-nation-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Observance -  Slovenci v Prekmurju Vključeni v dan materinega
+  naroda je praznik v Sloveniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan vrnitve Primorske k matični domovini
+SUMMARY:Obnova Primorske na dan domovine 
 DTSTART;VALUE=DATE:20240915
 DTEND;VALUE=DATE:20240916
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/motherland-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Observance -  Obnova Primorske v domovino je praznik v Sloveni
+ ji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Enakonočje September
+SUMMARY:Septembrsko enakonočje 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Season -  Septembrsko enakonočje v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan slovenskega športa
+SUMMARY:Dan slovenskega športa 
 DTSTART;VALUE=DATE:20240923
 DTEND;VALUE=DATE:20240924
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/slovenian-sports-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Observance -  Dan slovenskega športa je praznik v Sloveniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan suverenosti
+SUMMARY:Dan suverenosti 
 DTSTART;VALUE=DATE:20241025
 DTEND;VALUE=DATE:20241026
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/souvereignty-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Observance -  Dan suverenosti je praznik v Sloveniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan Rudolfa Maistra
+SUMMARY:Dan Rudolfa Maisterja 
 DTSTART;VALUE=DATE:20241123
 DTEND;VALUE=DATE:20241124
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:slovenia/rudolf-maister-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Observance -  Dan Rudolfa Maisterja je praznik v Sloveniji
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solsticij december
+SUMMARY:Decembrski solsticij 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220220Z
+DTSTAMP:20240119T094905Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220220Z
+DESCRIPTION:Season -  Decembrski solsticij v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094905Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Novo leto
+SUMMARY:Novoletni dan 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Novoletni dan je prvi dan v letu\, oziroma
+  1. januar\, v gregorijanskem koledarju.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Novo leto
+SUMMARY:Novoletni praznik 
 DTSTART;VALUE=DATE:20250102
 DTEND;VALUE=DATE:20250103
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/new-year-day-2-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Novoletni praznik je državni praznik v Sl
+ oveniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Prešernov dan
+SUMMARY:Prešernov dan 
 DTSTART;VALUE=DATE:20250208
 DTEND;VALUE=DATE:20250209
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/preseren-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Prešernov dan je državni praznik v Slove
+ niji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Velika noč
+SUMMARY:Velikonočna nedelja 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/easter-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Sunday commemorates Jesus Christ’s
-  resurrection\, according to Christian belief.
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Velikonočna nedelja spominja na vstajenje
+  Jezusa Kristusa\, po krščanskem prepričanju.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Velikonočni ponedeljek
+SUMMARY:Velikonočni ponedeljek 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/easter-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Monday is the day after Easter Sunda
- y.
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Velikonočni ponedeljek je dan po velikono
+ čni nedelji.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan upora proti okupatorju
+SUMMARY:Dan vstaje proti okupaciji 
 DTSTART;VALUE=DATE:20250427
 DTEND;VALUE=DATE:20250428
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/occupation-uprising-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Dan vstaje proti okupaciji je državni pra
+ znik v Sloveniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Praznik dela
+SUMMARY:Praznik dela/May Day 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Praznik dela\, mednarodni dan delavcev in 
+ majski dan\, je prost dan za delavce v mnogih državah po svetu.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Praznik dela
+SUMMARY:Praznik dela 
 DTSTART;VALUE=DATE:20250502
 DTEND;VALUE=DATE:20250503
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/labor-day-may-2-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Praznik dela je državni praznik v Sloveni
+ ji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Binkoštna nedelja
+SUMMARY:Bela nedelja 
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/pentecost-sunday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many Christians all over the world annually
-  observe Pentecost\, also known as Whitsunday or Whit Sunday.
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Mnogi kristjani po vsem svetu vsako leto p
+ raznujejo binkoščino\, znano tudi kot Whitunday ali Whit Sunday.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan državnosti
+SUMMARY:Dan državnosti 
 DTSTART;VALUE=DATE:20250625
 DTEND;VALUE=DATE:20250626
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/statehood-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Dan državnosti je državni praznik v Slov
+ eniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Marijino vnebovzetje
+SUMMARY:Marijinega vnebovzetja 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/assumption-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Krščanski praznik Marijinega vnebovzetja
+  je v večini držav 15. avgusta ali okoli njega. Nekateri praznujejo dan 
+ vnebovzetja v drugih letnih časih.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan reformacije
+SUMMARY:Dan reformacije 
 DTSTART;VALUE=DATE:20251031
 DTEND;VALUE=DATE:20251101
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/reformation-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Dan reformacije je državni praznik v Slov
+ eniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan spomina na mrtve
+SUMMARY:Dan spomina 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/all-saints-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Številne cerkve častijo vse svoje svetni
+ ke na dan vseh svetih\, znan tudi kot Dan vseh svetih.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Božič
+SUMMARY:Božični dan 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Božični dan je eno največjih krščansk
+ ih praznovanj in pade na 25. december v gregorijanskem koledarju.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan samostojnosti in enotnosti
+SUMMARY:Dan neodvisnosti in enotnosti 
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20230623T220221Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/independence-and-unity-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T220221Z
+DESCRIPTION:National holiday -  Dan neodvisnosti in enotnosti je državni 
+ praznik v Sloveniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Enakonočje Marec
+SUMMARY:Marčevsko enakonočje 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Season -  Marčevsko enakonočje v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mother's Day
+SUMMARY:Materinski dan 
 DTSTART;VALUE=DATE:20250325
 DTEND;VALUE=DATE:20250326
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/mothers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
- forts of mothers and mother figures.
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Observance -  Materinski dan praznuje dosežke in prizadevanja
+  mater in materinskih osebnosti.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan Primoža Trubarja
+SUMMARY:Dan Primoža Trubarja 
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/primoz-trubar-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Observance -  Dan Primoža Trubarja je praznik v Sloveniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Father's Day
+SUMMARY:Dan očetov 
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/fathers-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
- enting on different dates worldwide.
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Observance -  Dan očetov praznuje očetovstvo in moško star
+ ševstvo na različne datume po vsem svetu.
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solsticij junij
+SUMMARY:Junijski solsticij 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Season -  Junijski solsticij v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan združitve prekmurskih Slovencev z matičnim narodom po prvi s
- vetovni vojni
+SUMMARY:Slovenci v Prekmurju Vključeni v dan materinega naroda 
 DTSTART;VALUE=DATE:20250817
 DTEND;VALUE=DATE:20250818
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/mother-nation-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Observance -  Slovenci v Prekmurju Vključeni v dan materinega
+  naroda je praznik v Sloveniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan vrnitve Primorske k matični domovini
+SUMMARY:Obnova Primorske na dan domovine 
 DTSTART;VALUE=DATE:20250915
 DTEND;VALUE=DATE:20250916
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/motherland-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Observance -  Obnova Primorske v domovino je praznik v Sloveni
+ ji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Enakonočje September
+SUMMARY:Septembrsko enakonočje 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Season -  Septembrsko enakonočje v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan slovenskega športa
+SUMMARY:Dan slovenskega športa 
 DTSTART;VALUE=DATE:20250923
 DTEND;VALUE=DATE:20250924
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/slovenian-sports-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Observance -  Dan slovenskega športa je praznik v Sloveniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan suverenosti
+SUMMARY:Dan suverenosti 
 DTSTART;VALUE=DATE:20251025
 DTEND;VALUE=DATE:20251026
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/souvereignty-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Observance -  Dan suverenosti je praznik v Sloveniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dan Rudolfa Maistra
+SUMMARY:Dan Rudolfa Maisterja 
 DTSTART;VALUE=DATE:20251123
 DTEND;VALUE=DATE:20251124
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:slovenia/rudolf-maister-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Observance -  Dan Rudolfa Maisterja je praznik v Sloveniji
+LAST-MODIFIED:20240119T094906Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solsticij december
+SUMMARY:Decembrski solsticij 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220222Z
+DTSTAMP:20240119T094906Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220222Z
+DESCRIPTION:Season -  Decembrski solsticij v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094906Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Novoletni dan 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094907Z
+UID:slovenia/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Novoletni dan je prvi dan v letu\, oziroma
+  1. januar\, v gregorijanskem koledarju.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Novoletni praznik 
+DTSTART;VALUE=DATE:20260102
+DTEND;VALUE=DATE:20260103
+DTSTAMP:20240119T094907Z
+UID:slovenia/new-year-day-2-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Novoletni praznik je državni praznik v Sl
+ oveniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Prešernov dan 
+DTSTART;VALUE=DATE:20260208
+DTEND;VALUE=DATE:20260209
+DTSTAMP:20240119T094907Z
+UID:slovenia/preseren-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Prešernov dan je državni praznik v Slove
+ niji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Velikonočna nedelja 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094907Z
+UID:slovenia/easter-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Velikonočna nedelja spominja na vstajenje
+  Jezusa Kristusa\, po krščanskem prepričanju.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Velikonočni ponedeljek 
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20240119T094907Z
+UID:slovenia/easter-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Velikonočni ponedeljek je dan po velikono
+ čni nedelji.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan vstaje proti okupaciji 
+DTSTART;VALUE=DATE:20260427
+DTEND;VALUE=DATE:20260428
+DTSTAMP:20240119T094907Z
+UID:slovenia/occupation-uprising-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Dan vstaje proti okupaciji je državni pra
+ znik v Sloveniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Praznik dela/May Day 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094907Z
+UID:slovenia/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Praznik dela\, mednarodni dan delavcev in 
+ majski dan\, je prost dan za delavce v mnogih državah po svetu.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Praznik dela 
+DTSTART;VALUE=DATE:20260502
+DTEND;VALUE=DATE:20260503
+DTSTAMP:20240119T094907Z
+UID:slovenia/labor-day-may-2-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Praznik dela je državni praznik v Sloveni
+ ji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Bela nedelja 
+DTSTART;VALUE=DATE:20260524
+DTEND;VALUE=DATE:20260525
+DTSTAMP:20240119T094907Z
+UID:slovenia/pentecost-sunday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Mnogi kristjani po vsem svetu vsako leto p
+ raznujejo binkoščino\, znano tudi kot Whitunday ali Whit Sunday.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan državnosti 
+DTSTART;VALUE=DATE:20260625
+DTEND;VALUE=DATE:20260626
+DTSTAMP:20240119T094907Z
+UID:slovenia/statehood-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Dan državnosti je državni praznik v Slov
+ eniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Marijinega vnebovzetja 
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20240119T094907Z
+UID:slovenia/assumption-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Krščanski praznik Marijinega vnebovzetja
+  je v večini držav 15. avgusta ali okoli njega. Nekateri praznujejo dan 
+ vnebovzetja v drugih letnih časih.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan reformacije 
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20240119T094907Z
+UID:slovenia/reformation-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Dan reformacije je državni praznik v Slov
+ eniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan spomina 
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DTSTAMP:20240119T094907Z
+UID:slovenia/all-saints-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Številne cerkve častijo vse svoje svetni
+ ke na dan vseh svetih\, znan tudi kot Dan vseh svetih.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Božični dan 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094907Z
+UID:slovenia/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Božični dan je eno največjih krščansk
+ ih praznovanj in pade na 25. december v gregorijanskem koledarju.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan neodvisnosti in enotnosti 
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+DTSTAMP:20240119T094907Z
+UID:slovenia/independence-and-unity-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Dan neodvisnosti in enotnosti je državni 
+ praznik v Sloveniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Marčevsko enakonočje 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094907Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Marčevsko enakonočje v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Materinski dan 
+DTSTART;VALUE=DATE:20260325
+DTEND;VALUE=DATE:20260326
+DTSTAMP:20240119T094907Z
+UID:slovenia/mothers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Materinski dan praznuje dosežke in prizadevanja
+  mater in materinskih osebnosti.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan Primoža Trubarja 
+DTSTART;VALUE=DATE:20260608
+DTEND;VALUE=DATE:20260609
+DTSTAMP:20240119T094907Z
+UID:slovenia/primoz-trubar-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Dan Primoža Trubarja je praznik v Sloveniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan očetov 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094907Z
+UID:slovenia/fathers-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Dan očetov praznuje očetovstvo in moško star
+ ševstvo na različne datume po vsem svetu.
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Junijski solsticij 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094907Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Junijski solsticij v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Slovenci v Prekmurju Vključeni v dan materinega naroda 
+DTSTART;VALUE=DATE:20260817
+DTEND;VALUE=DATE:20260818
+DTSTAMP:20240119T094907Z
+UID:slovenia/mother-nation-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Slovenci v Prekmurju Vključeni v dan materinega
+  naroda je praznik v Sloveniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Obnova Primorske na dan domovine 
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20260916
+DTSTAMP:20240119T094907Z
+UID:slovenia/motherland-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Obnova Primorske v domovino je praznik v Sloveni
+ ji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan slovenskega športa 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094907Z
+UID:slovenia/slovenian-sports-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Dan slovenskega športa je praznik v Sloveniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Septembrsko enakonočje 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094907Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Septembrsko enakonočje v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan suverenosti 
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+DTSTAMP:20240119T094907Z
+UID:slovenia/souvereignty-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Dan suverenosti je praznik v Sloveniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dan Rudolfa Maisterja 
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+DTSTAMP:20240119T094907Z
+UID:slovenia/rudolf-maister-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Dan Rudolfa Maisterja je praznik v Sloveniji
+LAST-MODIFIED:20240119T094907Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Decembrski solsticij 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094907Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Decembrski solsticij v Sloveniji (Ljubljana)
+LAST-MODIFIED:20240119T094907Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

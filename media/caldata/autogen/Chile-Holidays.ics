@@ -2,940 +2,952 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Año Nuevo
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T215942Z
-UID:chile/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:descanso laboral correspondiente a Año Nuevo
-DTSTART;VALUE=DATE:20230102
-DTEND;VALUE=DATE:20230103
-DTSTAMP:20230623T215942Z
-UID:chile/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Viernes Santo
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T215942Z
-UID:chile/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sábado Santo
-DTSTART;VALUE=DATE:20230408
-DTEND;VALUE=DATE:20230409
-DTSTAMP:20230623T215942Z
-UID:chile/holy-saturday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Holy Saturday is the day before Easter Sunday.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Trabajo
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T215942Z
-UID:chile/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Constitutional Council Elections
-DTSTART;VALUE=DATE:20230507
-DTEND;VALUE=DATE:20230508
-DTSTAMP:20230623T215942Z
-UID:chile/constitutional-council-elections-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de las Glorias Navales
-DTSTART;VALUE=DATE:20230521
-DTEND;VALUE=DATE:20230522
-DTSTAMP:20230623T215942Z
-UID:chile/navy-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día Nacional de los Pueblos Indígenas
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T215942Z
-UID:chile/national-day-of-indigenous-peoples-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:San Pedro y San Pablo
-DTSTART;VALUE=DATE:20230626
-DTEND;VALUE=DATE:20230627
-DTSTAMP:20230623T215942Z
-UID:chile/saint-peter-and-saint-paul-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Virgen del Carmen
-DTSTART;VALUE=DATE:20230716
-DTEND;VALUE=DATE:20230717
-DTSTAMP:20230623T215942Z
-UID:chile/mount-carmel-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La Asunción de la Virgen
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230623T215942Z
-UID:chile/assumption-of-mary-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:1ª Junta Nacional de Gobierno
-DTSTART;VALUE=DATE:20230918
-DTEND;VALUE=DATE:20230919
-DTSTAMP:20230623T215942Z
-UID:chile/national-holiday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de las Glorias del Ejército
-DTSTART;VALUE=DATE:20230919
-DTEND;VALUE=DATE:20230920
-DTSTAMP:20230623T215942Z
-UID:chile/army-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Encuentro de Dos Mundos
-DTSTART;VALUE=DATE:20231009
-DTEND;VALUE=DATE:20231010
-DTSTAMP:20230623T215942Z
-UID:chile/columbus-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día Nacional de las Iglesias Evangélicas y Protestantes
-DTSTART;VALUE=DATE:20231027
-DTEND;VALUE=DATE:20231028
-DTSTAMP:20230623T215942Z
-UID:chile/reformation-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Todos los Santos
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-DTSTAMP:20230623T215942Z
-UID:chile/all-saints-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Inmaculada Concepción
-DTSTART;VALUE=DATE:20231208
-DTEND;VALUE=DATE:20231209
-DTSTAMP:20230623T215942Z
-UID:chile/immaculate-conception-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - The Feast of the Immaculate Conception is a
-  Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Navidad
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T215942Z
-UID:chile/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Christmas Day is one of the biggest Christian cele
- brations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T215942Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo
-DTSTART;VALUE=DATE:20230406
-DTEND;VALUE=DATE:20230407
-DTSTAMP:20230623T215942Z
-UID:chile/maundy-thursday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Domingo de Pascua
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T215942Z
-UID:chile/easter-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Easter Sunday commemorates Jesus Christ’s resurr
- ection\, according to Christian belief.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Corpus Christi
-DTSTART;VALUE=DATE:20230608
-DTEND;VALUE=DATE:20230609
-DTSTAMP:20230623T215942Z
-UID:chile/corpus-christi-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian - Corpus Christi is a Christian feast in honor of th
- e Holy Eucharist.
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T215942Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T215942Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T215942Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215942Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fiesta de Fin de Año
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T215943Z
-UID:chile/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday - New Year’s Eve is the last day of the year\, 
- December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215943Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Año Nuevo
+SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o el 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Viernes Santo
+SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial que se celebra dos días antes del domingo de Pascua.
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sábado Santo
+SUMMARY:Sábado Santo 
 DTSTART;VALUE=DATE:20240330
 DTEND;VALUE=DATE:20240331
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/holy-saturday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Holy Saturday is the day before Easter Sunday.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Christian -  El Sábado Santo es el día anterior al domingo d
+ e Pascua.
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Trabajo
+SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo es un día libre para los traba
+ jadores en muchos países del mundo.
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de las Glorias Navales
+SUMMARY:Día de la Marina 
 DTSTART;VALUE=DATE:20240521
 DTEND;VALUE=DATE:20240522
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/navy-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  El Día de la Marina es feriado nacional e
+ n Chile
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día Nacional de los Pueblos Indígenas
+SUMMARY:Día Nacional de los Pueblos Indígenas 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/national-day-of-indigenous-peoples-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  El Día Nacional de los Pueblos Indígenas
+  es un feriado nacional en Chile
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:San Pedro y San Pablo
+SUMMARY:San Pedro y San Pablo 
 DTSTART;VALUE=DATE:20240629
 DTEND;VALUE=DATE:20240630
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/saint-peter-and-saint-paul-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  San Pedro y San Pablo es fiesta nacional e
+ n Chile
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Virgen del Carmen
+SUMMARY:Nuestra Señora del Monte Carmelo 
 DTSTART;VALUE=DATE:20240716
 DTEND;VALUE=DATE:20240717
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/mount-carmel-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  Nuestra Señora del Monte Carmelo es fiest
+ a nacional en Chile
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La Asunción de la Virgen
+SUMMARY:Asunción de María 
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/assumption-of-mary-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  La fiesta cristiana de la Asunción de Mar
+ ía es el 15 de agosto o alrededor de esa fecha en la mayoría de los paí
+ ses. Algunos celebran el Día de la Asunción en otras épocas del año.
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:1ª Junta Nacional de Gobierno
+SUMMARY:Día Nacional 
 DTSTART;VALUE=DATE:20240918
 DTEND;VALUE=DATE:20240919
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/national-holiday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  El Día Nacional es un feriado nacional en
+  Chile
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de las Glorias del Ejército
+SUMMARY:Día del Ejército 
 DTSTART;VALUE=DATE:20240919
 DTEND;VALUE=DATE:20240920
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/army-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  El Día del Ejército es feriado nacional 
+ en Chile
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fiestas Patrias
+SUMMARY:Fiesta Nacional Extendida 
 DTSTART;VALUE=DATE:20240920
 DTEND;VALUE=DATE:20240921
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/20-september-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  Fiesta Nacional Extendida es una fiesta na
+ cional en Chile
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Encuentro de Dos Mundos
+SUMMARY:Día del Descubrimiento de Dos Mundos 
 DTSTART;VALUE=DATE:20241012
 DTEND;VALUE=DATE:20241013
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/columbus-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  El Día del Descubrimiento de Dos Mundos e
+ s feriado nacional en Chile
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día Nacional de las Iglesias Evangélicas y Protestantes
+SUMMARY:Día de la Reforma 
 DTSTART;VALUE=DATE:20241031
 DTEND;VALUE=DATE:20241101
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/reformation-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  El Día de la Reforma es un feriado nacion
+ al en Chile
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Todos los Santos
+SUMMARY:Día de Todos los Santos 
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/all-saints-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  Muchas iglesias honran a todos sus santos 
+ el Día de Todos los Santos\, también conocido como Día de Todos los San
+ tos.
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Inmaculada Concepción
+SUMMARY:Día de la Inmaculada Concepción 
 DTSTART;VALUE=DATE:20241208
 DTEND;VALUE=DATE:20241209
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/immaculate-conception-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Feast of the Immaculate Conception is a
-  Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:National holiday -  La fiesta de la Inmaculada Concepción es 
+ una celebración cristiana que se celebra el 8 de diciembre de cada año.
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Navidad
+SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094616Z
 UID:chile/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Christmas Day is one of the biggest Christian cele
- brations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
+ iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094616Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
+SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094617Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Season -  Equinoccio de marzo en Chile (Santiago)
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jueves Santo
+SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20240328
 DTEND;VALUE=DATE:20240329
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094617Z
 UID:chile/maundy-thursday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves durante la Semana Santa. Es el día anterior al Vier
+ nes Santo.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Domingo de Pascua
+SUMMARY:Domingo de Pascua 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094617Z
 UID:chile/easter-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Easter Sunday commemorates Jesus Christ’s resurr
- ection\, according to Christian belief.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Christian -  El domingo de Pascua conmemora la resurrección d
+ e Jesucristo\, según la creencia cristiana.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpus Christi
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20240530
 DTEND;VALUE=DATE:20240531
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094617Z
 UID:chile/corpus-christi-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Corpus Christi is a Christian feast in honor of th
- e Holy Eucharist.
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Christian -  Corpus Christi es una fiesta cristiana en honor a
+  la Sagrada Eucaristía.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
+SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094617Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Season -  Solsticio de junio en Chile (Santiago)
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
+SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094617Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Season -  Equinoccio de septiembre en Chile (Santiago)
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
+SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T215943Z
+DTSTAMP:20240119T094617Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215943Z
+DESCRIPTION:Season -  Solsticio de diciembre en Chile (Santiago)
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fiesta de Fin de Año
+SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T215944Z
+DTSTAMP:20240119T094617Z
 UID:chile/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday - New Year’s Eve is the last day of the year\, 
- December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215944Z
+DESCRIPTION:Bank holiday -  La víspera de Año Nuevo es el último día d
+ el año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Año Nuevo
+SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year’s Day is the first day of the ye
- ar\, or January 1\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Viernes Santo
+SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Good Friday is a global Christian observance two d
- ays before Easter Sunday.
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sábado Santo
+SUMMARY:Sábado Santo 
 DTSTART;VALUE=DATE:20250419
 DTEND;VALUE=DATE:20250420
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/holy-saturday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Holy Saturday is the day before Easter Sunday.
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:Christian -  El Sábado Santo es el día anterior al Domingo d
+ e Pascua.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Trabajo
+SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Labor Day\, International Workers' Day\, an
- d May Day\, is a day off for workers in many countries around the world.
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de las Glorias Navales
+SUMMARY:Día de la Marina 
 DTSTART;VALUE=DATE:20250521
 DTEND;VALUE=DATE:20250522
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/navy-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  El Día de la Marina es un feriado naciona
+ l en Chile
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día Nacional de los Pueblos Indígenas
+SUMMARY:Día Nacional de los Pueblos Indígenas 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/national-day-of-indigenous-peoples-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  El Día Nacional de los Pueblos Indígenas
+  es un feriado nacional en Chile
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:San Pedro y San Pablo
+SUMMARY:San Pedro y San Pablo 
 DTSTART;VALUE=DATE:20250629
 DTEND;VALUE=DATE:20250630
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/saint-peter-and-saint-paul-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  San Pedro y San Pablo es una fiesta nacion
+ al en Chile
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Virgen del Carmen
+SUMMARY:Nuestra Señora del Monte Carmelo 
 DTSTART;VALUE=DATE:20250716
 DTEND;VALUE=DATE:20250717
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/mount-carmel-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  Nuestra Señora del Monte Carmelo es una f
+ iesta nacional en Chile
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La Asunción de la Virgen
+SUMMARY:Asunción de María 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/assumption-of-mary-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Christian feast of the Assumption of Ma
- ry is on or around Aug 15 in most countries. A few celebrate Assumption Da
- y at other times of the year.
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  La fiesta cristiana de la Asunción de Mar
+ ía es el 15 de agosto o alrededor de esa fecha en la mayoría de los paí
+ ses. Algunos celebran el Día de la Asunción en otras épocas del año.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:1ª Junta Nacional de Gobierno
+SUMMARY:Día Nacional 
 DTSTART;VALUE=DATE:20250918
 DTEND;VALUE=DATE:20250919
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/national-holiday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  El Día Nacional es un feriado nacional en
+  Chile
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de las Glorias del Ejército
+SUMMARY:Día del Ejército 
 DTSTART;VALUE=DATE:20250919
 DTEND;VALUE=DATE:20250920
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/army-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  El Día del Ejército es un feriado nacion
+ al en Chile
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día del Encuentro de Dos Mundos
+SUMMARY:Día del Descubrimiento de Dos Mundos 
 DTSTART;VALUE=DATE:20251012
 DTEND;VALUE=DATE:20251013
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/columbus-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  El Día del Descubrimiento de Dos Mundos e
+ s una fiesta nacional en Chile
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día Nacional de las Iglesias Evangélicas y Protestantes
+SUMMARY:Día de la Reforma 
 DTSTART;VALUE=DATE:20251031
 DTEND;VALUE=DATE:20251101
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/reformation-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  El Día de la Reforma es un feriado nacion
+ al en Chile
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de Todos los Santos
+SUMMARY:Día de Todos los Santos 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/all-saints-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Many churches honor all their saints on All
-  Saints' Day\, also known as All Hallows' Day.
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  Muchas iglesias honran a todos sus santos 
+ el Día de Todos los Santos\, también conocido como Día de Todos los San
+ tos.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la Inmaculada Concepción
+SUMMARY:Día de la Inmaculada Concepción 
 DTSTART;VALUE=DATE:20251208
 DTEND;VALUE=DATE:20251209
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/immaculate-conception-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Feast of the Immaculate Conception is a
-  Christian observance on December 8 each year.
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:National holiday -  La fiesta de la Inmaculada Concepción es 
+ una celebración cristiana que se celebra el 8 de diciembre de cada año.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Navidad
+SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T215945Z
+DTSTAMP:20240119T094617Z
 UID:chile/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Christmas Day is one of the biggest Christian cele
- brations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20230623T215945Z
+DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
+ iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo
+SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T215946Z
+DTSTAMP:20240119T094617Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215946Z
+DESCRIPTION:Season -  Equinoccio de marzo en Chile (Santiago)
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jueves Santo
+SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20250417
 DTEND;VALUE=DATE:20250418
-DTSTAMP:20230623T215946Z
+DTSTAMP:20240119T094617Z
 UID:chile/maundy-thursday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Maundy Thursday is a Christian observance on the T
- hursday during Holy Week. It is the day before Good Friday.
-LAST-MODIFIED:20230623T215946Z
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Domingo de Pascua
+SUMMARY:Domingo de Pascua 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T215946Z
+DTSTAMP:20240119T094617Z
 UID:chile/easter-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Easter Sunday commemorates Jesus Christ’s resurr
- ection\, according to Christian belief.
-LAST-MODIFIED:20230623T215946Z
+DESCRIPTION:Christian -  El domingo de Pascua conmemora la resurrección d
+ e Jesucristo\, según la creencia cristiana.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Corpus Christi
+SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20250619
 DTEND;VALUE=DATE:20250620
-DTSTAMP:20230623T215946Z
+DTSTAMP:20240119T094617Z
 UID:chile/corpus-christi-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian - Corpus Christi is a Christian feast in honor of th
- e Holy Eucharist.
-LAST-MODIFIED:20230623T215946Z
+DESCRIPTION:Christian -  El Corpus Christi es una fiesta cristiana en hono
+ r a la Sagrada Eucaristía.
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de junio
+SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20230623T215946Z
+DTSTAMP:20240119T094617Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215946Z
+DESCRIPTION:Season -  Solsticio de junio en Chile (Santiago)
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre
+SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T215946Z
+DTSTAMP:20240119T094617Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215946Z
+DESCRIPTION:Season -  Equinoccio de septiembre en Chile (Santiago)
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El Solsticio de diciembre
+SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T215946Z
+DTSTAMP:20240119T094617Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T215946Z
+DESCRIPTION:Season -  Solsticio de diciembre en Chile (Santiago)
+LAST-MODIFIED:20240119T094617Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fiesta de Fin de Año
+SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T215946Z
+DTSTAMP:20240119T094618Z
 UID:chile/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Bank holiday - New Year’s Eve is the last day of the year\, 
- December 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T215946Z
+DESCRIPTION:Bank holiday -  La víspera de Año Nuevo es el último día d
+ el año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Año Nuevo 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094618Z
+UID:chile/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Viernes Santo 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094618Z
+UID:chile/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábado Santo 
+DTSTART;VALUE=DATE:20260404
+DTEND;VALUE=DATE:20260405
+DTSTAMP:20240119T094618Z
+UID:chile/holy-saturday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Sábado Santo es el día anterior al Domingo d
+ e Pascua.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Trabajo/Primero de Mayo 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094618Z
+UID:chile/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Marina 
+DTSTART;VALUE=DATE:20260521
+DTEND;VALUE=DATE:20260522
+DTSTAMP:20240119T094618Z
+UID:chile/navy-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Marina es un feriado naciona
+ l en Chile
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día Nacional de los Pueblos Indígenas 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094618Z
+UID:chile/national-day-of-indigenous-peoples-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día Nacional de los Pueblos Indígenas
+  es un feriado nacional en Chile
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:San Pedro y San Pablo 
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+DTSTAMP:20240119T094618Z
+UID:chile/saint-peter-and-saint-paul-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  San Pedro y San Pablo es una fiesta nacion
+ al en Chile
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nuestra Señora del Monte Carmelo 
+DTSTART;VALUE=DATE:20260716
+DTEND;VALUE=DATE:20260717
+DTSTAMP:20240119T094618Z
+UID:chile/mount-carmel-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Nuestra Señora del Monte Carmelo es una f
+ iesta nacional en Chile
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Asunción de María 
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20240119T094618Z
+UID:chile/assumption-of-mary-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La fiesta cristiana de la Asunción de Mar
+ ía es el 15 de agosto o alrededor de esa fecha en la mayoría de los paí
+ ses. Algunos celebran el Día de la Asunción en otras épocas del año.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día Nacional 
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
+DTSTAMP:20240119T094618Z
+UID:chile/national-holiday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día Nacional es un feriado nacional en
+  Chile
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Ejército 
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20260920
+DTSTAMP:20240119T094618Z
+UID:chile/army-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día del Ejército es un feriado nacion
+ al en Chile
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Descubrimiento de Dos Mundos 
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+DTSTAMP:20240119T094618Z
+UID:chile/columbus-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día del Descubrimiento de Dos Mundos e
+ s una fiesta nacional en Chile
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Reforma 
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+DTSTAMP:20240119T094618Z
+UID:chile/reformation-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Reforma es un feriado nacion
+ al en Chile
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Todos los Santos 
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DTSTAMP:20240119T094618Z
+UID:chile/all-saints-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Muchas iglesias honran a todos sus santos 
+ el Día de Todos los Santos\, también conocido como Día de Todos los San
+ tos.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Inmaculada Concepción 
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+DTSTAMP:20240119T094618Z
+UID:chile/immaculate-conception-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La fiesta de la Inmaculada Concepción es 
+ una celebración cristiana que se celebra el 8 de diciembre de cada año.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Navidad 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094618Z
+UID:chile/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
+ iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de marzo 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094618Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de marzo en Chile (Santiago)
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jueves Santo 
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+DTSTAMP:20240119T094618Z
+UID:chile/maundy-thursday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
+  se celebra el jueves de Semana Santa. Es el día anterior al Viernes Sant
+ o.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Domingo de Pascua 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094618Z
+UID:chile/easter-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El domingo de Pascua conmemora la resurrección d
+ e Jesucristo\, según la creencia cristiana.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corpus Christi 
+DTSTART;VALUE=DATE:20260604
+DTEND;VALUE=DATE:20260605
+DTSTAMP:20240119T094618Z
+UID:chile/corpus-christi-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El Corpus Christi es una fiesta cristiana en hono
+ r a la Sagrada Eucaristía.
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de junio 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094618Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de junio en Chile (Santiago)
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de septiembre 
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+DTSTAMP:20240119T094618Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de septiembre en Chile (Santiago)
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de diciembre 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094618Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de diciembre en Chile (Santiago)
+LAST-MODIFIED:20240119T094618Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nochevieja 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094619Z
+UID:chile/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  La víspera de Año Nuevo es el último día d
+ el año\, el 31 de diciembre\, en el calendario gregoriano.
+LAST-MODIFIED:20240119T094619Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

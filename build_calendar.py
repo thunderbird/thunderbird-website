@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import json
 import sys
-from datetime import datetime
+from datetime import datetime, UTC
 import os
 import time
 import icalendar
@@ -77,6 +77,8 @@ def build_calendars(provider: Provider, locales: dict):
 
     calendar_metadata = []
 
+    now_utc = datetime.now(UTC)
+
     # Check if the folders exist
     if not os.path.exists(settings.CALDATA_AUTOGEN_URL):
         os.mkdir(settings.CALDATA_AUTOGEN_URL)
@@ -98,10 +100,12 @@ def build_calendars(provider: Provider, locales: dict):
             calendar_name = '{}-Holidays.ics'.format(country_name.replace(' ', '-'))
             calendar_metadata.append({
                 'country': country_name,
+                'locale': locale,
                 'language': language_code,
                 'filename': "autogen/{}".format(calendar_name),
                 'datespan': date_span,
-                'authors': settings.CALDATA_AUTOGEN_AUTHOR
+                'authors': settings.CALDATA_AUTOGEN_AUTHOR,
+                'updated': str(now_utc.replace(microsecond=0).isoformat())
             })
 
             with open('{}{}'.format(settings.CALDATA_AUTOGEN_URL, calendar_name), 'wb') as fh:

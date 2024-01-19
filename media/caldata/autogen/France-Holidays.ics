@@ -2,975 +2,998 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Jour de l'an
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230623T220016Z
-UID:france/new-year-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - New Year's Day is the first day of the year
-  in France.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Le lundi de Pâques
-DTSTART;VALUE=DATE:20230410
-DTEND;VALUE=DATE:20230411
-DTSTAMP:20230623T220016Z
-UID:france/easter-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Easter Monday is the day after Easter Sunda
- y.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La fête du Travail
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230623T220016Z
-UID:france/labor-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - People in France give loved ones flowers an
- d may celebrate or campaign for workers' rights on May Day\, also known as
-  Labor Day.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fête de la Victoire 1945
-DTSTART;VALUE=DATE:20230508
-DTEND;VALUE=DATE:20230509
-DTSTAMP:20230623T220016Z
-UID:france/wwii-victory-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - WWII Victory Day marks the anniversary of t
- he official end of World War II and is a public holiday in France.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:L'Ascension
-DTSTART;VALUE=DATE:20230518
-DTEND;VALUE=DATE:20230519
-DTSTAMP:20230623T220016Z
-UID:france/ascension-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Ascension Day marks the day that Jesus asce
- nded to heaven\, according to Christian belief.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Le lundi de Pentecôte
-DTSTART;VALUE=DATE:20230529
-DTEND;VALUE=DATE:20230530
-DTSTAMP:20230623T220016Z
-UID:france/whit-monday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Pentecost Monday is the day after Pentecost
-  Sunday. It is a public holiday in France.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La fête nationale
-DTSTART;VALUE=DATE:20230714
-DTEND;VALUE=DATE:20230715
-DTSTAMP:20230623T220016Z
-UID:france/bastille-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Bastille Day is an occasion to honor the Fr
- ench Republic. It is a public holiday in France.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:L'Assomption
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230623T220016Z
-UID:france/assumption-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - The Feast of the Assumption of Mary is an o
- ccasion for Catholics to honor the belief that God assumed the Virgin Mary
-  to heaven.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La Toussaint
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-DTSTAMP:20230623T220016Z
-UID:france/all-saints-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - All Saints' Day celebrates all Christian sa
- ints\, particularly those who have no special feast days of their own. It 
- is a public holiday in France.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:L'Armistice
-DTSTART;VALUE=DATE:20231111
-DTEND;VALUE=DATE:20231112
-DTSTAMP:20230623T220016Z
-UID:france/armistice-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Armistice Day marks the anniversary of the 
- end of World War I. It is a public holiday in France.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Noël
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20230623T220016Z
-UID:france/christmas-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Christmas Day is an occasion for Christians
-  to celebrate Jesus Christ's birth. It is public holiday in France.
-LAST-MODIFIED:20230623T220016Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Équinoxe mars
-DTSTART;VALUE=DATE:20230320
-DTEND;VALUE=DATE:20230321
-DTSTAMP:20230623T220017Z
-UID:seasons/vernal-equinox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Heure d'été
-DTSTART;VALUE=DATE:20230326
-DTEND;VALUE=DATE:20230327
-DTSTAMP:20230623T220017Z
-UID:None-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Pâques
-DTSTART;VALUE=DATE:20230409
-DTEND;VALUE=DATE:20230410
-DTSTAMP:20230623T220017Z
-UID:france/easter-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Many Christians in France celebrate Jesus Christ'
- s resurrection on Easter Sunday.
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Pentecôte
-DTSTART;VALUE=DATE:20230528
-DTEND;VALUE=DATE:20230529
-DTSTAMP:20230623T220017Z
-UID:france/pentecost-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Pentecost Sunday is 50 days after Easter Sunday. 
- It marks the Holy Spirit's descent onto Jesus' followers\, according to Ch
- ristian belief.
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fête des Mères
-DTSTART;VALUE=DATE:20230604
-DTEND;VALUE=DATE:20230605
-DTSTAMP:20230623T220017Z
-UID:france/mother-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Mothers and mother figures are honored with cards
- \, gifts and other acts of kindness on Mothers’ Day in France.
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fête des Pères
-DTSTART;VALUE=DATE:20230618
-DTEND;VALUE=DATE:20230619
-DTSTAMP:20230623T220017Z
-UID:france/father-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Families across France remember their fathers and
-  father figures on Fathers’ Day on the third Sunday in June.
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solstice juin
-DTSTART;VALUE=DATE:20230621
-DTEND;VALUE=DATE:20230622
-DTSTAMP:20230623T220017Z
-UID:seasons/june-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Équinoxe sept
-DTSTART;VALUE=DATE:20230923
-DTEND;VALUE=DATE:20230924
-DTSTAMP:20230623T220017Z
-UID:seasons/autumnal-equniox-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Heure d'hiver
-DTSTART;VALUE=DATE:20231029
-DTEND;VALUE=DATE:20231030
-DTSTAMP:20230623T220017Z
-UID:None-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solstice déc
-DTSTART;VALUE=DATE:20231222
-DTEND;VALUE=DATE:20231223
-DTSTAMP:20230623T220017Z
-UID:seasons/december-solstice-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La veille de Noël
-DTSTART;VALUE=DATE:20231224
-DTEND;VALUE=DATE:20231225
-DTSTAMP:20230623T220017Z
-UID:france/christmas-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  is an important occasion for many French families.
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:la Saint-Sylvestre
-DTSTART;VALUE=DATE:20231231
-DTEND;VALUE=DATE:20240101
-DTSTAMP:20230623T220017Z
-UID:france/new-year-eve-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Vendredi saint (Moselle\, Bas-Rhin\, Haut-Rhin)
-DTSTART;VALUE=DATE:20230407
-DTEND;VALUE=DATE:20230408
-DTSTAMP:20230623T220017Z
-UID:france/good-friday-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Good Friday is an occasion for Christians in F
- rance to commemorate Jesus Christ’s crucifixion.
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Saint Étienne (Moselle\, Bas-Rhin\, Haut-Rhin)
-DTSTART;VALUE=DATE:20231226
-DTEND;VALUE=DATE:20231227
-DTSTAMP:20230623T220017Z
-UID:france/st-stephen-day-2023
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - St Stephen's Day is an occasion for Christians
-  to honor St Stephen's life and is a public holiday in France's Alsace-Mos
- elle region.
-LAST-MODIFIED:20230623T220017Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de l'an
+SUMMARY:Jour de l'An 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/new-year-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year's Day is the first day of the year
-  in France.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
+ nnée en France.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Le lundi de Pâques
+SUMMARY:Lundi de Pâques 
 DTSTART;VALUE=DATE:20240401
 DTEND;VALUE=DATE:20240402
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/easter-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Monday is the day after Easter Sunda
- y.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
+ manche de Pâques.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La fête du Travail
+SUMMARY:Fête du travail/1er mai 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/labor-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - People in France give loved ones flowers an
- d may celebrate or campaign for workers' rights on May Day\, also known as
-  Labor Day.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  En France\, les Français offrent des fleu
+ rs à leurs proches et peuvent célébrer ou faire campagne pour les droit
+ s des travailleurs le 1er mai\, également connu sous le nom de fête du T
+ ravail.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fête de la Victoire 1945
+SUMMARY:Jour de la victoire de la Seconde Guerre mondiale 
 DTSTART;VALUE=DATE:20240508
 DTEND;VALUE=DATE:20240509
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/wwii-victory-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - WWII Victory Day marks the anniversary of t
- he official end of World War II and is a public holiday in France.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  Le jour de la victoire de la Seconde Guerr
+ e mondiale marque l'anniversaire de la fin officielle de la Seconde Guerre
+  mondiale et est un jour férié en France.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:L'Ascension
+SUMMARY:Jour de l'Ascension 
 DTSTART;VALUE=DATE:20240509
 DTEND;VALUE=DATE:20240510
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/ascension-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Ascension Day marks the day that Jesus asce
- nded to heaven\, according to Christian belief.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  Le jour de l'Ascension marque le jour où 
+ Jésus est monté au ciel\, selon la croyance chrétienne.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Le lundi de Pentecôte
+SUMMARY:Lundi de Pentecôte 
 DTSTART;VALUE=DATE:20240520
 DTEND;VALUE=DATE:20240521
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/whit-monday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Pentecost Monday is the day after Pentecost
-  Sunday. It is a public holiday in France.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  Le lundi de Pentecôte est le lendemain du
+  dimanche de Pentecôte. C'est un jour férié en France.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La fête nationale
+SUMMARY:Bastille Day 
 DTSTART;VALUE=DATE:20240714
 DTEND;VALUE=DATE:20240715
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/bastille-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Bastille Day is an occasion to honor the Fr
- ench Republic. It is a public holiday in France.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  Le 14 juillet est l'occasion d'honorer la 
+ République française. C'est un jour férié en France.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:L'Assomption
+SUMMARY:Assomption de Marie 
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/assumption-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Feast of the Assumption of Mary is an o
- ccasion for Catholics to honor the belief that God assumed the Virgin Mary
-  to heaven.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  La fête de l'Assomption de Marie est l'oc
+ casion pour les catholiques d'honorer la croyance selon laquelle Dieu a fa
+ it monter la Vierge Marie au ciel.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La Toussaint
+SUMMARY:La Toussaint 
 DTSTART;VALUE=DATE:20241101
 DTEND;VALUE=DATE:20241102
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/all-saints-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - All Saints' Day celebrates all Christian sa
- ints\, particularly those who have no special feast days of their own. It 
- is a public holiday in France.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  La Toussaint célèbre tous les saints chr
+ étiens\, en particulier ceux qui n'ont pas de fête particulière. C'est 
+ un jour férié en France.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:L'Armistice
+SUMMARY:Jour de l'Armistice 
 DTSTART;VALUE=DATE:20241111
 DTEND;VALUE=DATE:20241112
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/armistice-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Armistice Day marks the anniversary of the 
- end of World War I. It is a public holiday in France.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  Le jour de l'Armistice marque l'anniversai
+ re de la fin de la Première Guerre mondiale. C'est un jour férié en Fra
+ nce.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Noël
+SUMMARY:Jour de Noël 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/christmas-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is an occasion for Christians
-  to celebrate Jesus Christ's birth. It is public holiday in France.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:National holiday -  Le jour de Noël est l'occasion pour les c
+ hrétiens de célébrer la naissance de Jésus-Christ. C'est un jour féri
+ é en France.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Équinoxe mars
+SUMMARY:Équinoxe de mars 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:seasons/vernal-equinox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Season -  Équinoxe de mars en France (Paris)
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pâques
+SUMMARY:Dimanche de Pâques 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/easter-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Many Christians in France celebrate Jesus Christ'
- s resurrection on Easter Sunday.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Observance -  De nombreux chrétiens en France célèbrent la 
+ résurrection de Jésus-Christ le dimanche de Pâques.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Heure d'été
+SUMMARY:L'heure d'été commence 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:None-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Clock change/Daylight Saving Time -  L'heure d'été commence 
+ en France
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pentecôte
+SUMMARY:Dimanche de Pentecôte 
 DTSTART;VALUE=DATE:20240519
 DTEND;VALUE=DATE:20240520
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/pentecost-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Pentecost Sunday is 50 days after Easter Sunday. 
- It marks the Holy Spirit's descent onto Jesus' followers\, according to Ch
- ristian belief.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Observance -  Le dimanche de Pentecôte a lieu 50 jours après
+  le dimanche de Pâques. Elle marque la descente du Saint-Esprit sur les d
+ isciples de Jésus\, selon la croyance chrétienne.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fête des Mères
+SUMMARY:Fête des mères 
 DTSTART;VALUE=DATE:20240526
 DTEND;VALUE=DATE:20240527
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/mother-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mothers and mother figures are honored with cards
- \, gifts and other acts of kindness on Mothers’ Day in France.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Observance -  Les mères et les personnages maternels sont hon
+ orés par des cartes\, des cadeaux et d'autres actes de gentillesse à l'o
+ ccasion de la fête des mères en France.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fête des Pères
+SUMMARY:Fête des Pères 
 DTSTART;VALUE=DATE:20240616
 DTEND;VALUE=DATE:20240617
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/father-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Families across France remember their fathers and
-  father figures on Fathers’ Day on the third Sunday in June.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Observance -  Les familles de toute la France se souviennent d
+ e leur père et de leurs figures paternelles à l'occasion de la fête des
+  pères\, le troisième dimanche de juin.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstice juin
+SUMMARY:Solstice de juin 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:seasons/june-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Season -  Solstice de juin en France (Paris)
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Équinoxe sept
+SUMMARY:Équinoxe de septembre 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:seasons/autumnal-equniox-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Season -  Équinoxe de septembre en France (Paris)
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Heure d'hiver
+SUMMARY:L'heure d'été prend fin 
 DTSTART;VALUE=DATE:20241027
 DTEND;VALUE=DATE:20241028
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:None-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Clock change/Daylight Saving Time -  L'heure d'été prend fin
+  en France
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstice déc
+SUMMARY:Solstice de décembre 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:seasons/december-solstice-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Season -  Solstice de décembre en France (Paris)
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La veille de Noël
+SUMMARY:Veille de Noël 
 DTSTART;VALUE=DATE:20241224
 DTEND;VALUE=DATE:20241225
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/christmas-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  is an important occasion for many French families.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Observance -  La veille de Noël est la veille du jour de Noë
+ l et constitue une occasion importante pour de nombreuses familles frança
+ ises.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:la Saint-Sylvestre
+SUMMARY:Réveillon du Nouvel An 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20230623T220017Z
+DTSTAMP:20240119T094650Z
 UID:france/new-year-eve-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220017Z
+DESCRIPTION:Observance -  Le réveillon du Nouvel An est le dernier jour d
+ e l'année\, le 31 décembre\, du calendrier grégorien.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vendredi saint (Moselle\, Bas-Rhin\, Haut-Rhin)
+SUMMARY:Vendredi saint  (Moselle\, Bas-Rhin\, Haut-Rhin)
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094650Z
 UID:france/good-friday-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - Good Friday is an occasion for Christians in F
- rance to commemorate Jesus Christ’s crucifixion.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Local holiday -  Le Vendredi saint est l'occasion pour les chr
+ étiens de France de commémorer la crucifixion de Jésus-Christ.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Saint Étienne (Moselle\, Bas-Rhin\, Haut-Rhin)
+SUMMARY:Fête de la Saint-Étienne  (Moselle\, Bas-Rhin\, Haut-Rhin)
 DTSTART;VALUE=DATE:20241226
 DTEND;VALUE=DATE:20241227
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094650Z
 UID:france/st-stephen-day-2024
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - St Stephen's Day is an occasion for Christians
-  to honor St Stephen's life and is a public holiday in France's Alsace-Mos
- elle region.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Local holiday -  La Saint-Étienne est l'occasion pour les chr
+ étiens d'honorer la vie de Saint-Étienne. C'est un jour férié dans la 
+ région française d'Alsace-Moselle.
+LAST-MODIFIED:20240119T094650Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Jour de l'an
+SUMMARY:Jour de l'An 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/new-year-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - New Year's Day is the first day of the year
-  in France.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
+ nnée en France.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Le lundi de Pâques
+SUMMARY:Lundi de Pâques 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/easter-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Easter Monday is the day after Easter Sunda
- y.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
+ manche de Pâques.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La fête du Travail
+SUMMARY:Fête du travail/1er mai 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/labor-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - People in France give loved ones flowers an
- d may celebrate or campaign for workers' rights on May Day\, also known as
-  Labor Day.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  Les Français offrent des fleurs à leurs 
+ proches et peuvent célébrer ou faire campagne pour les droits des travai
+ lleurs le 1er mai\, également connu sous le nom de fête du Travail.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fête de la Victoire 1945
+SUMMARY:Jour de la Victoire de la Seconde Guerre mondiale 
 DTSTART;VALUE=DATE:20250508
 DTEND;VALUE=DATE:20250509
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/wwii-victory-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - WWII Victory Day marks the anniversary of t
- he official end of World War II and is a public holiday in France.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  Le Jour de la Victoire de la Seconde Guerr
+ e mondiale marque l'anniversaire de la fin officielle de la Seconde Guerre
+  mondiale et est un jour férié en France.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:L'Ascension
+SUMMARY:Jour de l'Ascension 
 DTSTART;VALUE=DATE:20250529
 DTEND;VALUE=DATE:20250530
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/ascension-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Ascension Day marks the day that Jesus asce
- nded to heaven\, according to Christian belief.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  Le jour de l'Ascension marque le jour où 
+ Jésus est monté au ciel\, selon la croyance chrétienne.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Le lundi de Pentecôte
+SUMMARY:Lundi de Pentecôte 
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/whit-monday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Pentecost Monday is the day after Pentecost
-  Sunday. It is a public holiday in France.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  Le lundi de Pentecôte est le lendemain du
+  dimanche de Pentecôte. C'est un jour férié en France.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La fête nationale
+SUMMARY:14 juillet 
 DTSTART;VALUE=DATE:20250714
 DTEND;VALUE=DATE:20250715
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/bastille-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Bastille Day is an occasion to honor the Fr
- ench Republic. It is a public holiday in France.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  Le 14 juillet est l'occasion d'honorer la 
+ République française. C'est un jour férié en France.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:L'Assomption
+SUMMARY:Assomption de Marie 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/assumption-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - The Feast of the Assumption of Mary is an o
- ccasion for Catholics to honor the belief that God assumed the Virgin Mary
-  to heaven.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  La fête de l'Assomption de Marie est l'oc
+ casion pour les catholiques d'honorer la croyance selon laquelle Dieu a as
+ sumé la Vierge Marie au paradis.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La Toussaint
+SUMMARY:Toussaint 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/all-saints-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - All Saints' Day celebrates all Christian sa
- ints\, particularly those who have no special feast days of their own. It 
- is a public holiday in France.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  La Toussaint célèbre tous les saints chr
+ étiens\, en particulier ceux qui n'ont pas de jours de fête particuliers
+ . C'est un jour férié en France.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:L'Armistice
+SUMMARY:Jour de l'Armistice 
 DTSTART;VALUE=DATE:20251111
 DTEND;VALUE=DATE:20251112
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/armistice-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Armistice Day marks the anniversary of the 
- end of World War I. It is a public holiday in France.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  Le jour de l'Armistice marque l'anniversai
+ re de la fin de la Première Guerre mondiale. C'est un jour férié en Fra
+ nce.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Noël
+SUMMARY:Jour de Noël 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/christmas-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is an occasion for Christians
-  to celebrate Jesus Christ's birth. It is public holiday in France.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:National holiday -  Le jour de Noël est l'occasion pour les c
+ hrétiens de célébrer la naissance de Jésus-Christ. C'est un jour féri
+ é en France.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Équinoxe mars
+SUMMARY:Équinoxe de mars 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:seasons/vernal-equinox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Season -  Équinoxe de mars en France (Paris)
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Heure d'été
+SUMMARY:L'heure d'été commence 
 DTSTART;VALUE=DATE:20250330
 DTEND;VALUE=DATE:20250331
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:None-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Clock change/Daylight Saving Time -  L'heure d'été commence 
+ en France
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pâques
+SUMMARY:Dimanche de Pâques 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/easter-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Many Christians in France celebrate Jesus Christ'
- s resurrection on Easter Sunday.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Observance -  De nombreux chrétiens de France célèbrent la 
+ résurrection de Jésus-Christ le dimanche de Pâques.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fête des Mères
+SUMMARY:Fête des mères 
 DTSTART;VALUE=DATE:20250525
 DTEND;VALUE=DATE:20250526
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/mother-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Mothers and mother figures are honored with cards
- \, gifts and other acts of kindness on Mothers’ Day in France.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Observance -  Les mères et les figures maternelles sont honor
+ ées par des cartes\, des cadeaux et d'autres actes de gentillesse à l'oc
+ casion de la fête des mères en France.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pentecôte
+SUMMARY:Dimanche de Pentecôte 
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/pentecost-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Pentecost Sunday is 50 days after Easter Sunday. 
- It marks the Holy Spirit's descent onto Jesus' followers\, according to Ch
- ristian belief.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Observance -  Le dimanche de Pentecôte tombe 50 jours après 
+ le dimanche de Pâques. Il marque la descente du Saint-Esprit sur les disc
+ iples de Jésus\, selon la croyance chrétienne.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fête des Pères
+SUMMARY:Fête des Pères 
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/father-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Families across France remember their fathers and
-  father figures on Fathers’ Day on the third Sunday in June.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Observance -  Les familles de toute la France se souviennent d
+ e leur père et de la figure paternelle à l'occasion de la fête des pèr
+ es\, le troisième dimanche de juin.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstice juin
+SUMMARY:Solstice de juin 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:seasons/june-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Season -  Solstice de juin en France (Paris)
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Équinoxe sept
+SUMMARY:Equinoxe de septembre 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:seasons/autumnal-equniox-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Season -  Équinoxe de septembre en France (Paris)
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Heure d'hiver
+SUMMARY:L'heure d'été prend fin 
 DTSTART;VALUE=DATE:20251026
 DTEND;VALUE=DATE:20251027
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:None-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Clock change/Daylight Saving Time
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Clock change/Daylight Saving Time -  L'heure d'été prend fin
+  en France
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Solstice déc
+SUMMARY:Solstice de décembre 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:seasons/december-solstice-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Season
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Season -  Solstice de décembre en France (Paris)
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La veille de Noël
+SUMMARY:La veille de Noël 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/christmas-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - Christmas Eve is the day before Christmas Day and
-  is an important occasion for many French families.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Observance -  La veille de Noël est une occasion importante p
+ our de nombreuses familles françaises.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:la Saint-Sylvestre
+SUMMARY:Réveillon du Nouvel An 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20230623T220018Z
+DTSTAMP:20240119T094651Z
 UID:france/new-year-eve-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance - New Year’s Eve is the last day of the year\, De
- cember 31\, in the Gregorian calendar.
-LAST-MODIFIED:20230623T220018Z
+DESCRIPTION:Observance -  Le réveillon du Nouvel An est le dernier jour d
+ e l'année\, le 31 décembre\, du calendrier grégorien.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Vendredi saint (Moselle\, Bas-Rhin\, Haut-Rhin)
+SUMMARY:Vendredi saint  (Moselle\, Bas-Rhin\, Haut-Rhin)
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20230623T220019Z
+DTSTAMP:20240119T094651Z
 UID:france/good-friday-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - Good Friday is an occasion for Christians in F
- rance to commemorate Jesus Christ’s crucifixion.
-LAST-MODIFIED:20230623T220019Z
+DESCRIPTION:Local holiday -  Le Vendredi saint est l'occasion pour les chr
+ étiens de France de commémorer la crucifixion de Jésus-Christ.
+LAST-MODIFIED:20240119T094651Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Saint Étienne (Moselle\, Bas-Rhin\, Haut-Rhin)
+SUMMARY:Fête de la Saint-Étienne  (Moselle\, Bas-Rhin\, Haut-Rhin)
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20230623T220019Z
+DTSTAMP:20240119T094651Z
 UID:france/st-stephen-day-2025
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local holiday - St Stephen's Day is an occasion for Christians
-  to honor St Stephen's life and is a public holiday in France's Alsace-Mos
- elle region.
-LAST-MODIFIED:20230623T220019Z
+DESCRIPTION:Local holiday -  La Saint-Étienne est l'occasion pour les chr
+ étiens d'honorer la vie de Saint-Étienne et est un jour férié dans la 
+ région française d'Alsace-Moselle.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de l'An 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20240119T094651Z
+UID:france/new-year-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
+ nnée en France.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lundi de Pâques 
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20240119T094651Z
+UID:france/easter-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
+ manche de Pâques.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fête du travail/1er mai 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20240119T094651Z
+UID:france/labor-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Les Français offrent des fleurs à leurs 
+ proches et peuvent célébrer ou faire campagne pour les droits des travai
+ lleurs le 1er mai\, également connu sous le nom de fête du Travail.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de la Victoire de la Seconde Guerre mondiale 
+DTSTART;VALUE=DATE:20260508
+DTEND;VALUE=DATE:20260509
+DTSTAMP:20240119T094651Z
+UID:france/wwii-victory-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le Jour de la Victoire de la Seconde Guerr
+ e mondiale marque l'anniversaire de la fin officielle de la Seconde Guerre
+  mondiale et est un jour férié en France.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de l'Ascension 
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260515
+DTSTAMP:20240119T094651Z
+UID:france/ascension-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de l'Ascension marque le jour où 
+ Jésus est monté au ciel\, selon la croyance chrétienne.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lundi de Pentecôte 
+DTSTART;VALUE=DATE:20260525
+DTEND;VALUE=DATE:20260526
+DTSTAMP:20240119T094651Z
+UID:france/whit-monday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le lundi de Pentecôte est le lendemain du
+  dimanche de Pentecôte. C'est un jour férié en France.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:14 juillet 
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+DTSTAMP:20240119T094651Z
+UID:france/bastille-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le 14 juillet est l'occasion d'honorer la 
+ République française. C'est un jour férié en France.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Assomption de Marie 
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+DTSTAMP:20240119T094651Z
+UID:france/assumption-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La fête de l'Assomption de Marie est l'oc
+ casion pour les catholiques d'honorer la croyance selon laquelle Dieu a as
+ sumé la Vierge Marie au paradis.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Toussaint 
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+DTSTAMP:20240119T094651Z
+UID:france/all-saints-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La Toussaint célèbre tous les saints chr
+ étiens\, en particulier ceux qui n'ont pas de jours de fête particuliers
+ . C'est un jour férié en France.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de l'Armistice 
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+DTSTAMP:20240119T094651Z
+UID:france/armistice-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de l'Armistice marque l'anniversai
+ re de la fin de la Première Guerre mondiale. C'est un jour férié en Fra
+ nce.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de Noël 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20240119T094651Z
+UID:france/christmas-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de Noël est l'occasion pour les c
+ hrétiens de célébrer la naissance de Jésus-Christ. C'est un jour féri
+ é en France.
+LAST-MODIFIED:20240119T094651Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Équinoxe de mars 
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260321
+DTSTAMP:20240119T094652Z
+UID:seasons/vernal-equinox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Équinoxe de mars en France (Paris)
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:L'heure d'été commence 
+DTSTART;VALUE=DATE:20260329
+DTEND;VALUE=DATE:20260330
+DTSTAMP:20240119T094652Z
+UID:None-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Clock change/Daylight Saving Time -  L'heure d'été commence 
+ en France
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dimanche de Pâques 
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20240119T094652Z
+UID:france/easter-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  De nombreux chrétiens de France célèbrent la 
+ résurrection de Jésus-Christ le dimanche de Pâques.
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dimanche de Pentecôte 
+DTSTART;VALUE=DATE:20260524
+DTEND;VALUE=DATE:20260525
+DTSTAMP:20240119T094652Z
+UID:france/pentecost-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Le dimanche de Pentecôte tombe 50 jours après 
+ le dimanche de Pâques. Il marque la descente du Saint-Esprit sur les disc
+ iples de Jésus\, selon la croyance chrétienne.
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fête des mères 
+DTSTART;VALUE=DATE:20260531
+DTEND;VALUE=DATE:20260601
+DTSTAMP:20240119T094652Z
+UID:france/mother-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Les mères et les figures maternelles sont honor
+ ées par des cartes\, des cadeaux et d'autres actes de gentillesse à l'oc
+ casion de la fête des mères en France.
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fête des Pères 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094652Z
+UID:france/father-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Les familles de toute la France se souviennent d
+ e leur père et de la figure paternelle à l'occasion de la fête des pèr
+ es\, le troisième dimanche de juin.
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solstice de juin 
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260622
+DTSTAMP:20240119T094652Z
+UID:seasons/june-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solstice de juin en France (Paris)
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoxe de septembre 
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+DTSTAMP:20240119T094652Z
+UID:seasons/autumnal-equniox-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Équinoxe de septembre en France (Paris)
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:L'heure d'été prend fin 
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+DTSTAMP:20240119T094652Z
+UID:None-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Clock change/Daylight Saving Time -  L'heure d'été prend fin
+  en France
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solstice de décembre 
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+DTSTAMP:20240119T094652Z
+UID:seasons/december-solstice-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solstice de décembre en France (Paris)
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:La veille de Noël 
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+DTSTAMP:20240119T094652Z
+UID:france/christmas-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  La veille de Noël est une occasion importante p
+ our de nombreuses familles françaises.
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Réveillon du Nouvel An 
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20240119T094652Z
+UID:france/new-year-eve-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Le réveillon du Nouvel An est le dernier jour d
+ e l'année\, le 31 décembre\, du calendrier grégorien.
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vendredi saint  (Moselle\, Bas-Rhin\, Haut-Rhin)
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20240119T094652Z
+UID:france/good-friday-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  Le Vendredi saint est l'occasion pour les chr
+ étiens de France de commémorer la crucifixion de Jésus-Christ.
+LAST-MODIFIED:20240119T094652Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fête de la Saint-Étienne  (Moselle\, Bas-Rhin\, Haut-Rhin)
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+DTSTAMP:20240119T094652Z
+UID:france/st-stephen-day-2026
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  La Saint-Étienne est l'occasion pour les chr
+ étiens d'honorer la vie de Saint-Étienne et est un jour férié dans la 
+ région française d'Alsace-Moselle.
+LAST-MODIFIED:20240119T094652Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR
