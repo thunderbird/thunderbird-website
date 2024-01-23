@@ -196,6 +196,11 @@ URL_MAPPINGS = {
     'thunderbird.releases.index': '/thunderbird/releases',
     'thunderbird.style': 'https://style.thunderbird.net',
     'thunderbird.site.bug-report': 'https://github.com/thunderbird/thunderbird-website/issues',
+    'thunderbird.social.twitter': 'https://twitter.com/mozthunderbird',
+    'thunderbird.social.facebook': 'https://www.facebook.com/Thunderbird/',
+    'thunderbird.social.youtube': 'https://www.youtube.com/@ThunderbirdProject',
+    'thunderbird.social.linkedin': 'https://www.linkedin.com/company/thunderbird-email/',
+    'thunderbird.social.mastodon': 'https://mastodon.online/@thunderbird',
     'thunderbird.115.whatsnew': '/thunderbird/115.0/whatsnew',
 }
 
