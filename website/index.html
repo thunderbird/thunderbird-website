@@ -392,23 +392,23 @@ with great features!') }}{% endblock %}
       </div>
       <div class="social-list">
         <a class="icon" title="{{ _('Follow %(mastodon)s on Mastodon')|format(mastodon='@thunderbird@mastodon.online') }}"
-            href="https://mastodon.online/@thunderbird" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
+            href="{{ url('thunderbird.social.mastodon') }}" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
           {{ svg('social-icon-mastodon') }}
         </a>
-        <a class="icon" href="https://www.facebook.com/Thunderbird/" data-link-type="footer"
+        <a class="icon" href="{{ url('thunderbird.social.facebook') }}" data-link-type="footer"
             data-link-name="Facebook (Thunderbird)">
           {{ svg('social-icon-facebook') }}
         </a>
         <a class="icon" title="{{ _('Follow %(youtube)s on YouTube')|format(youtube='@thunderbird3665') }}"
-            href="https://www.youtube.com/channel/UCuMTCmnwZPiXXVIy_TW6Bnw" data-link-type="footer" data-link-name="YouTube (Thunderbird)" rel="me">
+            href="{{ url('thunderbird.social.youtube') }}" data-link-type="footer" data-link-name="YouTube (Thunderbird)" rel="me">
           {{ svg('social-icon-youtube') }}
         </a>
         <a class="icon" title="{{ _('Follow %(twitter)s on Twitter')|format(twitter='@mozthunderbird') }}"
-            href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
+            href="{{ url('thunderbird.social.twitter') }}" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
           {{ svg('social-icon-twitter') }}
         </a>
         <a class="icon" title="{{ _('Follow %(linkedin)s on LinkedIn')|format(linkedin='thunderbird-email')}}"
-            href="https://www.linkedin.com/company/thunderbird-email/" data-link-type="footer" data-link-name="LinkedIn (Thunderbird)" rel="me">
+            href="{{ url('thunderbird.social.linkedin') }}" data-link-type="footer" data-link-name="LinkedIn (Thunderbird)" rel="me">
           {{ svg('social-icon-linkedin') }}
         </a>
       </div>
