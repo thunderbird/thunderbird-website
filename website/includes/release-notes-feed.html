@@ -1,0 +1,71 @@
+{% set is_beta = channel_name == "Beta" %}
+{% if notes %}
+  {% set section = namespace(name='') %}
+  {% set release_group = namespace(name='') %}
+
+  {% for group in range(release.groups|length) %}
+    {% if release.groups[group] %}
+      {% if release.groups[group] != "" %}
+        <h2>
+          {{ release.groups[group] }}
+        </h2>
+      {% endif %}
+      {% set section.name = "" %}
+    {% endif %}
+
+    {% for note in notes %}
+      {% if note.get('group', 1)-1 == group and note.tag != 'unresolved' %}
+        {# A little awkward...But if we hit a new section we need to close the old tag, so we can properly use our h3. #}
+        {% if section.name != note.tag and section.name != '' %}
+          </ul>
+        {% endif %}
+
+        {% if note.tag == 'new' and section.name != note.tag %}
+          <h3>{{ _('What’s New')}}</h3>
+        {% elif note.tag == 'changed' and section.name != note.tag %}
+          <h3>{{ _('Changed')}}</h3>
+        {% elif note.tag == 'fixed' and section.name != note.tag %}
+          <h3>{{ _('Fixed')}}</h3>
+        {% endif %}
+
+        {# Now we can open the new list tag #}
+        {% if section.name != note.tag %}
+          <ul>
+        {% endif %}
+
+        {% set section.name = note.tag %}
+        {% set release_group.name = release.groups[group] %}
+
+        <li>
+          {{ note.note|markdown|safe }}
+          {% if is_beta %}
+            ({{ note.bug_links|markdown|safe }})
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% endfor %}
+  {% if known_issues %}
+    <h3>
+      {{ _('Known Issues')}}
+    </h3>
+    <ul>
+      {% for note in known_issues %}
+        <li>
+          {{ note.note|markdown|safe }}
+          {% if note.fixed_in_release %}
+            <a href="{{ releasenotes_url(note.fixed_in_release) }}">
+              {{ _('Resolved in v{version_number}')|f(version_number=note.fixed_in_release.version) }}
+            </a>
+          {% endif %}
+          {% if is_beta %}
+            ({{ note.bug_links|markdown|safe }})
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endif %}
+<p>{{ _('As always, you’re encouraged to <a href="%(feedback)s">tell us what you think</a>, or <a href="%(bugzilla)s">file a bug in Bugzilla</a>')|format(feedback='https://support.mozilla.org/questions/new/thunderbird', bugzilla='https://bugzilla.mozilla.org/') }}</p>
+<style> li p { display: inline; } </style>
