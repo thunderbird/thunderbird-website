@@ -172,6 +172,7 @@ URL_MAPPINGS = {
     'privacy.notices.donations': 'https://www.mozilla.org/privacy/websites/#donations',
     'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
     'support': 'https://support.mozilla.org/products/thunderbird/',
+    'support.old-version-upgrade': 'https://support.mozilla.org/kb/upgrading-older-version-thunderbird',
     'thunderbird.about': '/about',
     'thunderbird.about.our-mission-statement': '/about#our-mission-statement',
     'thunderbird.careers': '/careers',
@@ -394,3 +395,5 @@ CALENDAR_LOCALES = {
     'US': ('United States', 'en'),
     'VN': ('Vietnam', 'vi'),
 }
+
+LAST_SAFE_VERSION = 102

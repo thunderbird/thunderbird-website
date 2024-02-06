@@ -8,6 +8,8 @@ import json
 import markdown
 import markupsafe
 import re
+
+import product_details
 import settings
 import sys
 import translate
@@ -469,6 +471,33 @@ def get_form_assembly_localization_url(ctx):
     fa_locale = settings.FA_LANGUAGES.get(locale, 'en_US')
 
     return "https://mozillafoundation.tfaforms.net/wForms/3.11/js/localization-{locale}.js?v=75513df1680ccc55e2c889a1b1dff356256982a6".format(locale=fa_locale)
+
+
+@jinja2.pass_context
+def get_outdated_versions(ctx):
+    """ Get a JSON str of versions and dates of the last released minor version for outdated versions. """
+    versions = product_details.thunderbird_desktop.list_releases()
+    last_stable_release = {}
+    last_safe_release = float(settings.LAST_SAFE_VERSION)
+
+    for version in versions:
+        # major is a float, minor is a string
+        major_version = version[0]
+        minor_versions = version[1]['minor']
+
+        if len(minor_versions) > 0:
+            last_version = minor_versions[-1]
+        else:
+            last_version = str(major_version)
+
+        # Don't include safe versions
+        if major_version >= last_safe_release:
+            continue
+
+        release_date = product_details.thunderbird_desktop.get_release_date(last_version)
+        last_stable_release[major_version] = release_date
+
+    return json.dumps(last_stable_release)
 
 
 def is_calendarific_free_tier():
