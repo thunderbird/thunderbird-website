@@ -97,7 +97,15 @@ def build_calendars(provider: Provider, locales: dict):
 
             ical = build_ical(provider, locale, language_code, years_to_generate)
 
-            calendar_name = '{}-Holidays.ics'.format(country_name.replace(' ', '-'))
+            calendar_name_parts = [country_name.replace(' ', ''), 'Holidays']
+            if country_name in settings.CALENDAR_REMAP:
+                new_name = settings.CALENDAR_REMAP[country_name]
+                if isinstance(new_name, tuple) and len(new_name) > 1:
+                    calendar_name_parts = [new_name[0], 'Holidays', new_name[1]]
+                else:
+                    calendar_name_parts = [new_name, 'Holidays']
+
+            calendar_name = f"{''.join(calendar_name_parts)}.ics"
             calendar_metadata.append({
                 'country': country_name,
                 'locale': locale,
