@@ -335,9 +335,9 @@ CALENDAR_LOCALES = {
     'CZ': ('Czech', 'cs'),
     'DK': ('Denmark', 'da'),
     'DO': ('Dominican Republic', 'es'),
-    'NL': ('Netherlands', 'nl'),
+    'NL': [('Netherlands (Dutch)', 'nl'), ('Netherlands (English)', 'en'), ('Netherlands (German)', 'de'), ('Netherlands (French)', 'fr')],
     'EE': ('Estonia', 'et'),
-    'FI': ('Finland', 'fi'),
+    'FI': [('Finland (Finnish)', 'fi'), ('Finland (Swedish)', 'sv')],
     'FR': ('France', 'fr'),
     'DE': ('Germany', 'de'),
     'GR': ('Greece', 'el'),
@@ -393,4 +393,42 @@ CALENDAR_LOCALES = {
     'UY': ('Uruguay', 'es'),
     'US': ('United States', 'en'),
     'VN': ('Vietnam', 'vi'),
+}
+
+# Used to normalize filenames for calendar generation
+# This is the first part of the filename, 'Holidays' is bolted on in code.
+# So 'Belgian (Dutch)' will become 'BelgianHoldays.ics'
+# If the value is a tuple, the first part is before 'Holidays' and the second part is after.
+CALENDAR_REMAP = {
+    'Algeria (French)': 'Algeria',
+    'Algeria (Arabic)': ('Algeria', 'Arabic'),
+    'Belgian (Dutch)': 'Belgian',
+    'Belgian (French)': ('Belgian', 'French'),
+    'Bulgaria': 'Bulgarian',
+    'Canada (English)': 'Canada',
+    'Canada (French)': ('Canada', 'French'),
+    'Colombia': 'Colombian',
+    'Finland (Finnish)': 'Finland',
+    'Finland (Swedish)': ('Finland', 'Swedish'),
+    'France': 'French',
+    'Germany': 'German',
+    'Hungary': 'Hungarian',
+    'Ireland (English)': 'Ireland',
+    'Ireland (Irish)': ('Ireland', 'Irish'),
+    'Italy': 'Italian',
+    'Kazakhstan': ('Kazakhstan', 'English'),
+    'Lithuania': 'Lithuanian',
+    'Luxembourg (French)': ('Luxembourg', 'French'),
+    'Luxembourg (German)': ('Luxembourg', 'German'),
+    'Netherlands (Dutch)': 'Dutch',
+    'Netherlands (English)': ('Dutch', 'English'),
+    'Netherlands (German)': ('Dutch', 'German'),
+    'Netherlands (French)': ('Dutch', 'French'),
+    'Norway': 'Norwegian',
+    'Poland': 'Polish',
+    'Slovenia': 'Slovenian',
+    'Slovakia': 'Slovak',
+    'Switzerland': 'Swiss',
+    'United Kingdom': 'UK',
+    'United States': 'US'
 }
