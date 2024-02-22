@@ -12,6 +12,6 @@ import settings
 
 for lang in settings.PROD_LANGUAGES:
     if lang != 'en-US':
-        popath = 'locale/{0}/LC_MESSAGES/messages.po'.format(lang.replace('-', '_'))
+        popath = f'{settings.LOCALE_PATH}/{lang.replace("-", "_")}/LC_MESSAGES/messages.po'
         po = polib.pofile(popath, wrapwidth=200)
         po.save()

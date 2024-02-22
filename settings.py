@@ -121,16 +121,18 @@ FAVICON_PATH = '/media/img/thunderbird/favicon.ico'
 
 # path to the website templates
 # templates with paths starting with "_" or "includes" are excluded by builder.py
-WEBSITE_PATH = 'website/'
+WEBSITE_PATH = 'sites/www.thunderbird.net/'
 
 # path to the start page templates
-START_PATH = 'start-page/'
+START_PATH = 'sites/start.thunderbird.net/'
 
 # path for the finished website artifacts.
-WEBSITE_RENDERPATH = 'thunderbird.net'
+WEBSITE_RENDERPATH = 'dist/www.thunderbird.net'
 
 # path for the finished start page artifacts.
-START_RENDERPATH = 'site'
+START_RENDERPATH = 'dist/start.thunderbird.net'
+
+LOCALE_PATH = 'libs/locale'
 
 CALDATA_URL = MEDIA_URL + '/caldata/'
 
@@ -144,7 +146,7 @@ CALDATA_YEARS_TO_GENERATE = 3
 USE_APPLE_PAY_DOMAIN_VERIFICATION = True
 
 # path to product-details json files
-JSON_PATH = 'product-details/public/1.0'
+JSON_PATH = 'libs/product-details/public/1.0'
 
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
