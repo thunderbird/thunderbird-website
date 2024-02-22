@@ -50,7 +50,7 @@ def l10n_css(self):
 
 def gettext_object(lang):
     """Setup gettext translation object and add l10n_css and get_translations methods to it."""
-    trans = gettext.translation("messages", localedir="locale", languages=[lang.replace('-', '_')], fallback=True)
+    trans = gettext.translation("messages", localedir=settings.LOCALE_PATH, languages=[lang.replace('-', '_')], fallback=True)
     trans.cache = {}
     trans.locale = lang
     trans.get_translations = get_translations.__get__(trans)

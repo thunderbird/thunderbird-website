@@ -20,7 +20,7 @@ SimpleHTTPRequestHandler = http.server.SimpleHTTPRequestHandler
 
 from dateutil.parser import parse
 from jinja2 import Environment, FileSystemLoader
-from thunderbird_notes import releasenotes
+from libs.thunderbird_notes import releasenotes
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 

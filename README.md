@@ -11,8 +11,8 @@ On Ubuntu, you would need to use apt-get instead of yum, and similarly for diffe
 
 ```
 pip install -r requirements-dev.txt
-git clone https://github.com/thunderbird/thunderbird-notes.git thunderbird_notes
-git clone -b production https://github.com/mozilla-releng/product-details.git
+git clone https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes
+git clone -b production https://github.com/mozilla-releng/product-details.git libs/product-details
 sudo yum install npm
 sudo npm install -g less
 ```
@@ -20,7 +20,7 @@ sudo npm install -g less
 If you need the localizations to display pages translated from English into other languages:
 
 ```
-git clone https://github.com/thunderbird/thunderbird.net-l10n.git locale
+git clone https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale
 l10n_tools/compile.sh
 ```
 
@@ -46,7 +46,7 @@ There are additional arguments:
     * This builds the holiday calendars. Normally this will build every locale, but you can restrict the build to just US by using the `--enus` options.
 
 
-* thunderbird.net templates are in the `website` directory, and start page in the `start-page` dir. Assets are shared and in the `assets` dir.
+* thunderbird.net templates are in the `sites/www.thunderbird.net` directory, and start page in the `sites/start.thunderbird.net` dir. Assets are shared and in the `assets` dir.
 
 ## View Website
 To view the website for testing purposes, run `python build-site.py --watch`. This also works with the start page.
@@ -105,7 +105,7 @@ Most paths under `/thunderbird` path aren't localized. There's an override setti
 
 # Donation FAQ
 
-Donation FAQ entries are found in `./website/includes/faq.html`.
+Donation FAQ entries are found in `sites/www.thunderbird.net/includes/faq.html`.
 
 # Tests
 
