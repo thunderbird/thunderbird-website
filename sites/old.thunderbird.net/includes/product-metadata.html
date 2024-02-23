@@ -1,0 +1,32 @@
+<div itemscope itemtype="http://schema.org/SoftwareApplication">
+  <meta itemprop="name" content="{{_('Thunderbird')}}">
+  <meta itemprop="description" content="{% block product_desc %}{{ page_desc }}{% endblock %}">
+  <meta itemprop="url" content="https://www.thunderbird.net">
+  <meta itemprop="image" content="{% block product_logo %}{{ static('img/thunderbird/thunderbird-256.png') }}{% endblock %}">
+  <div itemprop="author" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="{{_('Mozilla')}}">
+  </div>
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <meta itemprop="price" content="0">
+  </div>
+  <meta itemprop="softwareVersion" content="{{ latest_thunderbird_version }}">
+  <meta itemprop="releaseNotes" content="{{ settings.CANONICAL_URL }}/thunderbird/{{ latest_thunderbird_version }}/releasenotes/">
+  <meta itemprop="applicationCategory" content="CommunicationApplication">
+  <meta itemprop="operatingSystem" content="Windows">
+  <meta itemprop="operatingSystem" content="Mac">
+  <meta itemprop="operatingSystem" content="Linux">
+</div>
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="name" content="{{_('Thunderbird')}}">
+  <meta itemprop="description" content="{{ self.product_desc() }}">
+  <meta itemprop="url" content="{{ settings.CANONICAL_URL }}/thunderbird/">
+  <meta itemprop="image" content="{{ self.product_logo() }}">
+  <meta itemprop="logo" content="{{ self.product_logo() }}">
+  <div itemprop="manufacturer" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="{{_('Mozilla')}}">
+  </div>
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <meta itemprop="price" content="0">
+  </div>
+</div>

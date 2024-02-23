@@ -1,0 +1,83 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{% if not button_class %}
+  {% set button_class = 'btn-'+channel if channel else 'btn-download' %}
+{% endif %}
+{% if not flex_class %}
+  {% set flex_class = 'self-start' if channel or section == 'body' else 'justify-center' %}
+{% endif %}
+
+
+{% macro alt_buttons(builds) %}
+  <div class="download download-dumb">
+    <h4>{{ _('Download Thunderbird') }} — {{ locale_name|safe }}</h4>
+    <ul class="list-none p-0 flex flex-wrap max-w-lg {{ flex_class }}">
+      {% for plat in builds -%}
+        <li class="ml-3 mr-3">
+          <a href="{{ plat.download_link_direct or plat.download_link }}" class="matomo-track-download download-link {{ button_class }}" data-donate-redirect="download-{{ channel or 'esr' }}" data-donate-content="post_download" data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}">
+            {{ plat.os_arch_pretty or plat.os_pretty }}
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
+{% endmacro %}
+
+{% set download_class = 'download-button' %}
+{% set download_class = download_class ~ ' download-button-' ~ channel if channel else download_class %}
+
+<div id="{{ id }}" class="{{ download_class }}">
+  {# no JS #}
+  <div class="nojs-download">
+    {{ alt_buttons(builds) }}
+  </div>
+  <div class="unrecognized-download os_android os_ios">
+    {{ alt_buttons(builds) }}
+  </div>
+  <p class="unsupported-download p-links">
+    {{ _("Your system doesn't meet the <a href=\"%(url)s\">requirements</a> to run Thunderbird.")|format(url=thunderbird_url('system-requirements', channel)) }}
+  </p>
+  <p class="linux-arm-download mb-8 p-links">
+    {{ _('Please follow <a href="%(url)s">these instructions</a> to install Thunderbird.')|format(url='https://support.mozilla.org/kb/installing-thunderbird-linux') }}
+  </p>
+  <ul class="download-list list-none p-0 flex flex-wrap max-w-lg mb-0 {{ flex_class }}">
+    {% for plat in builds %}
+      <li class="os_{{ plat.os }}{% if plat.arch %} {{ plat.arch }}{% endif %} ml-3 mr-3">
+        <a class="matomo-track-download download-link {{ button_class }}"
+          href="{{ plat.download_link }}"
+          data-donate-redirect="download-{{ channel or 'esr' }}"
+          data-donate-content="post_download"
+          data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}"
+          {% if plat.download_link_direct %}
+            data-direct-link="{{ plat.download_link_direct }}"
+          {% endif %}>
+          {% if alt_copy %}
+            {{ alt_copy }}
+          {% else %}
+            {% if channel == 'beta' %}
+              {{ _('Thunderbird Beta') }}
+            {% elif channel == 'daily' %}
+              {{ _('Thunderbird Daily') }}
+            {% else %}
+              {{ _('Download Thunderbird') }}
+            {% endif %}
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% if not hide_footer_links %}
+  <p class="download-other download-other-desktop os_android os_ios os_linux os_linux64 os_osx os_win os_win64 os_winsha1 font-sm mt-0">
+    {% if section == 'new-frontpage' %}{# New frontpage should only display System & Languages #}
+      <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a>
+    {% else %}
+      {% if channel != 'daily' %}{# Daily doesn't have an all download page or release notes. #}
+        <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a> &bull;
+        <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
+      {% endif %}
+      <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Privacy') }}</a>
+    {% endif %}
+  </p>
+  {% endif %}
+</div>

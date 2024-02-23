@@ -1,0 +1,33 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% if translations|length > 1 %}
+<form id="lang_form" method="get" action="/" class="flex items-center justify-end">
+  <label for="page-language-select" class="mr-2">
+    {# Remove 'en-' conditional once all locales have translated string below. #}
+    {% if LANG.startswith('en-') %}
+      {{ _('Page language:') }}
+    {% else %}
+      {{ _('Other languages:') }}
+    {% endif %}
+  </label>
+  <aside class="relative">
+    <select id="page-language-select" name="lang" dir="ltr" class="form-select">
+      {% for code, label in translations|dictsort -%}
+        {# Don't escape the label as it may include entity references
+         # like "Português (do&nbsp;Brasil)" (Bug 861149) #}
+        <option lang="{{ code }}" value="{{ code }}" {{ 'selected' if code==LANG else '' }}>{{ label|safe|replace('English (US)', 'English') }}</option>
+      {% endfor %}
+    </select>
+    <div class="pointer-events-none absolute pin-r flex items-center pr-1 pl-1 text-black-lighter pin-t pin-b">
+      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+      </svg>
+    </div>
+  </aside>
+  <noscript>
+    <button type="submit" class="btn-inline">{{ _('Go') }}</button>
+  </noscript>
+</form>
+{% endif %}
