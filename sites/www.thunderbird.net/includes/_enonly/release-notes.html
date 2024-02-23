@@ -2,7 +2,7 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
 
-{% extends "includes/new/page.html" %}
+{% extends "includes/base/page.html" %}
 
 {% block page_title_prefix %}{% endblock %}
 {% block page_title %}{{ _('Thunderbird — {channel} Notes ({version})')|f(channel=channel_name, version=release.version) }}{% endblock %}
@@ -175,7 +175,5 @@
       </aside>
     </section>
   {% endif %}
-
-  {% include 'includes/site-prefooter.html' %}
 
 {% endblock %}

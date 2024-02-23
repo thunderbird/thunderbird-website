@@ -1,18 +1,14 @@
 <!doctype html>
-{# Note the "windows" class, without javascript platform-specific
-     assets default to windows #}
+{# Hint: This is the base template for all pages. You probably want to extend off of page.html! #}
+{# Note the "windows" class, without javascript platform-specific assets default to windows #}
 <html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
   <head>
     <meta charset="utf-8">{# Note: Must be within first 512 bytes of page #}
-
-    {% block experiments %}{% endblock %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block extra_meta %}{% endblock %}
 
     {% block shared_meta %}
-    {#- Please sync this block with the base.html template.
-        Because of blocks, we cannot use an include here. -#}
     <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} — Thunderbird{% endblock %}{% endfilter %}</title>
     {% block site_js %}
       {#- site-bundle should block html rendering so we can prevent no-js/js element flashing. -#}
@@ -79,29 +75,13 @@
       {% endif %}
     {% endblock %}
 
-    {% block messages %}
-      {% if messages %}
-        <ul class="messagelist billboard">
-          {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    {% endblock messages %}
-
     <main>
       {% block content %}{% endblock %}
     </main>
 
-    {% block email_form %}{{ email_newsletter_form() }}{% endblock %}
-
-    {# for newsletters not to be confined by #wrapper #}
-    {% block email_form_unwrapped %}{% endblock %}
-
     {% block site_footer %}
-        {% include 'includes/new/site-footer.html' %}
+        {% include 'includes/base/footer.html' %}
     {% endblock %}
-
 
     {% block additional_site_js %}{% endblock %}
     {% block tracker_js %}
@@ -111,16 +91,7 @@
         <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
       </noscript>
     {% endblock %}
-    <!--[if IE 9]>
-      <script src="{{ static('js/libs/matchMedia.js') }}"></script>
-    <![endif]-->
 
     {% block js %}{% endblock %}
-
-    {% if settings.DEV %}
-      <!--[if !lte IE 8]><!-->
-        <script src="https://pontoon.mozilla.org/pontoon.js"></script>
-      <!--<![endif]-->
-    {% endif %}
   </body>
 </html>

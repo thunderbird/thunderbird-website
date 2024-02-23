@@ -2,7 +2,7 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "includes/new/base.html" %}
+{% extends "includes/base/base.html" %}
 
 {% block facebook_id %}348169218537151{# facebook.com/Thunderbird #}{% endblock %}
 {% block twitter_id %}mozthunderbird{% endblock %}
@@ -37,7 +37,7 @@
 
     {% block header_content %}{% endblock %}
 
-    {% include 'includes/donate-modal.html' %}
+    {% include 'includes/donation-includes.html' %}
 
     {% block breadcrumbs %}{% endblock %}
 
@@ -56,6 +56,3 @@
     });
   </script>
 {% endblock %}
-
-{% block email_form %}
-{% endblock email_form %}
