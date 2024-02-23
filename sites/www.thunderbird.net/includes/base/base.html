@@ -31,7 +31,8 @@
     <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/favicon.ico') }}{% endblock %}">
     {% endblock shared_meta %}
     <link href="/media/css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="/media/css/tb-115-style.css" rel="stylesheet" type="text/css" />
+    <!-- TODO: Remove this once base-style is feature parity -->
+    <link href="/media/css/base-style.css" rel="stylesheet" type="text/css" />
 
     {{ l10n_css() }}
 

@@ -1,0 +1,20 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "who-we-are" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
+{% block page_title %}{{ _('Free Your Inbox.') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded
+with great features!') }}{% endblock %}
+
+{% block content %}
+ <section>
+   <div>
+     <h1>Meet Thunderbird</h1>
+   </div>
+ </section>
+{% endblock %}
+
