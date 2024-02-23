@@ -35,24 +35,106 @@
 {% block site_header %}
   <header id="masthead">
 
-    {% block header_content %}{% endblock %}
+    {% block breadcrumbs %}
+      <div class="breadcrumbs">
+      Home > About >
+      </div>
+    {% endblock %}
+
+    {% block header_content %}
+      <h1 class="tagline">
+        {% block page_title %}{% endblock %}
+      </h1>
+    {% endblock %}
 
     {% include 'includes/donation-includes.html' %}
 
-    {% block breadcrumbs %}{% endblock %}
+
 
     {% block site_header_share %}{% endblock %}
+
+    {% block header_separator %}
+    <div class="header-separator">
+      {{ svg('base/separators/chevron-convex') }}
+    </div>
+    {% endblock %}
 
   </header>
 {% endblock %}
 
+{% block post_content %}
+<div class="pre-footer-cover-container">
+  {% include 'includes/components/page-separator-cover.html' %}
+</div>
+<section id="whats-next">
+    <div class="container">
+      <div class="section-text">
+        <h2>{{_('<span class="txt-gradient">Learn</span> What’s Next')}}</h2>
+            <p>
+              {% trans %}
+              Thunderbird keeps getting better. Subscribe to our newsletter and follow us on social media to stay
+              informed.
+              {% endtrans %}
+            </p>
+      </div>
+      <div class="newsletter">
+        <!-- Begin Mailchimp Signup Form -->
+        <form action="https://thunderbird.us12.list-manage.com/subscribe?u=f8051cc8637cf3ff79661f382&amp;id=56428f2efc"
+          class="newsletter-form" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+          <input id="mce-EMAIL" name="EMAIL" type="email" placeholder="{{ _('Your Email') }}" required="">
+          <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-text">{{_('Subscribe')}}</button>
+          <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-icon">➜</button>
+          <!-- Prevent Bot signups -->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+              name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value=""></div>
+        </form>
+        <!--End mc_embed_signup-->
+      </div>
+      <div class="social-list">
+        <a class="icon" title="{{ _('Follow %(mastodon)s on Mastodon')|format(mastodon='@thunderbird@mastodon.online') }}"
+            href="{{ url('thunderbird.social.mastodon') }}" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
+          {{ svg('social-icon-mastodon') }}
+        </a>
+        <a class="icon" href="{{ url('thunderbird.social.facebook') }}" data-link-type="footer"
+            data-link-name="Facebook (Thunderbird)">
+          {{ svg('social-icon-facebook') }}
+        </a>
+        <a class="icon" title="{{ _('Follow %(youtube)s on YouTube')|format(youtube='@ThunderbirdProject') }}"
+            href="{{ url('thunderbird.social.youtube') }}" data-link-type="footer" data-link-name="YouTube (Thunderbird)" rel="me">
+          {{ svg('social-icon-youtube') }}
+        </a>
+        <a class="icon" title="{{ _('Follow %(twitter)s on Twitter')|format(twitter='@mozthunderbird') }}"
+            href="{{ url('thunderbird.social.twitter') }}" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
+          {{ svg('social-icon-twitter') }}
+        </a>
+        <a class="icon" title="{{ _('Follow %(linkedin)s on LinkedIn')|format(linkedin='thunderbird-email')}}"
+            href="{{ url('thunderbird.social.linkedin') }}" data-link-type="footer" data-link-name="LinkedIn (Thunderbird)" rel="me">
+          {{ svg('social-icon-linkedin') }}
+        </a>
+      </div>
+      <div class="cta">
+        <a href="{{ url('blog') }}" class="cta-ln">{{_('Visit Our Blog')}}</a>
+      </div>
+      <div class="phone">
+        <picture>
+          <source srcset="/media/img/thunderbird/new/phone/cta-phone.avif" type="image/avif">
+          <source srcset="/media/img/thunderbird/new/phone/cta-phone.webp" type="image/webp">
+          <img src="/media/img/thunderbird/new/phone/cta-phone.png" alt="{{_('smartphone')}}">
+        </picture>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
 {% block js %}
   <script>
+    /*
     const navbar = document.querySelector(".site-nav");
     window.addEventListener("scroll", () => {
       (window.scrollY > 30) ?
         navbar.classList.add("scrolled-nav") :
         navbar.classList.remove("scrolled-nav")
     });
+     */
   </script>
 {% endblock %}

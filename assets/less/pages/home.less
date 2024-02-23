@@ -1,0 +1,32 @@
+.page-index {
+  #masthead,
+  header {
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+    background-color: black;
+    background-image: url('../img/thunderbird/new/hero/hero.png'),
+    linear-gradient(to top, var(--color-ink-90), black 80%);
+    background-size: auto 80vh, 100%;
+    background-position: bottom center, center;
+    background-repeat: no-repeat;
+    color: var(--color-gray-20);
+    padding-top: var(--nav-size);
+    isolation: isolate;
+  }
+
+  // Override logo colours
+  .logo {
+    --accent: var(--color-blue-20);
+  }
+
+  .logo:hover,
+  .mozilla-logo:hover {
+    color: var(--accent);
+  }
+
+  .site-nav {
+    background: var(--nav-bg);
+    color: var(--nav-txt);
+  }
+}

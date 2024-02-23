@@ -1,0 +1,43 @@
+.page-who-we-are {
+  .icon-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .icon-item {
+    p {
+      margin: 0;
+    }
+  }
+
+  // Sections
+  .value-section {
+    display: flex;
+    text-align: left;
+  }
+  .values-freedom {
+    flex-direction: row-reverse;
+  }
+  // This should probably live with the component..
+  .cover-container {
+    position: relative;
+    img {
+      margin-bottom: -0.25rem;
+    }
+  }
+
+  .job-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    .person {
+
+      img {
+        border-radius: 100%;
+      }
+    }
+  }
+
+}

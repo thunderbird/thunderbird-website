@@ -1,7 +1,7 @@
 <!doctype html>
 {# Hint: This is the base template for all pages. You probably want to extend off of page.html! #}
 {# Note the "windows" class, without javascript platform-specific assets default to windows #}
-<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+<html class="windows x86 no-js page-{{ active_page|default('not-set') }}" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
   <head>
     <meta charset="utf-8">{# Note: Must be within first 512 bytes of page #}
 
@@ -31,7 +31,6 @@
     <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/favicon.ico') }}{% endblock %}">
     {% endblock shared_meta %}
     <link href="/media/css/normalize.css" rel="stylesheet" type="text/css" />
-    <!-- TODO: Remove this once base-style is feature parity -->
     <link href="/media/css/base-style.css" rel="stylesheet" type="text/css" />
 
     {{ l10n_css() }}
@@ -77,7 +76,9 @@
     {% endblock %}
 
     <main>
+      {% block pre_content %}{% endblock %}
       {% block content %}{% endblock %}
+      {% block post_content %}{% endblock %}
     </main>
 
     {% block site_footer %}

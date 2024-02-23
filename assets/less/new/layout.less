@@ -1,4 +1,109 @@
+// page template
+
+.header-separator {
+  // Anchor it to the bottom
+  position: absolute;
+  bottom: 0;
+  // Fix 1 pixel gap on resize
+  margin-top: -1px;
+  // We probably don't need background-color, but to be safe
+  color: var(--page-header-bg);
+  background-color: var(--bg);
+  // Give it some space
+  width: 100%;
+  min-height: 72px;
+  // Prevent any gaps on the top
+  line-height: 0;
+}
+
+.pre-footer-cover-container {
+  position: relative;
+  .page-separator-cover {
+    color: black;
+  }
+}
+
+.page-separator-cover {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+  color: var(--bg);
+}
+
+.page-separator {
+  width: 100%;
+}
+
+#masthead,
+header {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  background-color: var(--page-header-bg);
+  color: var(--txt);
+  padding-top: calc(var(--nav-height) * 2);
+  isolation: isolate;
+
+  .breadcrumbs {
+    height: 2rem;
+  }
+  .tagline {
+    margin-top: 0;
+  }
+}
+
+.logo {
+  max-height: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  height: 60px;
+  width: auto;
+  transition: color .2s;
+}
+
+.logo:hover,
+.mozilla-logo:hover {
+  color: var(--accent);
+  transform: none;
+}
+
+
+.container {
+  position: relative;
+  display: grid;
+  gap: 60px;
+  padding-inline: 1rem;
+  padding-block: 100px;
+  margin-inline: auto;
+  max-width: 1280px;
+  overflow: hidden;
+}
+
+.section-text {
+    max-inline-size: 62ch;
+    text-wrap: balance;
+    margin-inline: auto;
+    margin-bottom: 2em;
+}
+
+.section-text :where(h2) {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.section-text :where(h3) {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 2em;
+}
+
+
+
 // This is actually just the rest of the 115-homepage.css waiting to be cannibalized!
+
 html {
   font-family: 'Inter', sans-serif;
 }
@@ -59,21 +164,7 @@ svg {
   max-width: 100%;
 }
 
-.logo {
-  --accent: var(--color-blue-20);
-  max-height: 100%;
-  max-width: 300px;
-  min-width: 200px;
-  height: 60px;
-  width: auto;
-  transition: color .2s;
-}
 
-.logo:hover,
-.mozilla-logo:hover {
-  color: var(--accent);
-  transform: none;
-}
 
 .nav-links {
   display: flex;
@@ -141,23 +232,6 @@ section {
   scroll-padding: var(--nav-size);
 }
 
-
-#masthead,
-header {
-  display: grid;
-  place-items: center;
-  min-height: 80vh;
-  background-color: black;
-  background-image: url('../img/thunderbird/new/hero/hero.png'),
-                    linear-gradient(to top, var(--color-ink-90), black 80%);
-  background-size: auto 80vh, 100%;
-  background-position: bottom center, center;
-  background-repeat: no-repeat;
-  color: var(--color-gray-20);
-  padding-top: var(--nav-size);
-  isolation: isolate;
-}
-
 .container.hero {
   padding-block: 10vh 40vh;
 }
@@ -212,36 +286,6 @@ header {
   bottom: -1px;
 }
 
-.container {
-  position: relative;
-  display: grid;
-  gap: 60px;
-  padding-inline: 1rem;
-  padding-block: 200px;
-  margin-inline: auto;
-  max-width: 1280px;
-  overflow: hidden;
-}
-
-.section-text {
-    max-inline-size: 62ch;
-    text-wrap: balance;
-    margin-inline: auto;
-    margin-bottom: 2em;
-}
-
-.section-text :where(h2) {
-  font-size: 2.75rem;
-  font-weight: 800;
-  margin: 0;
-}
-
-.section-text :where(h3) {
-  font-size: 1.4rem;
-  font-weight: 300;
-  margin: 0;
-  margin-bottom: 2em;
-}
 
 .cta {
   margin-top: 80px;

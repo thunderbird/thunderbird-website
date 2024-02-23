@@ -5,16 +5,132 @@
 {% set active_page = "who-we-are" %}
 {% extends "includes/base/page.html" %}
 
-{% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
-{% block page_title %}{{ _('Free Your Inbox.') }}{% endblock %}
+{% block page_title %}{{ _('Who We Are') }}{% endblock %}
 {% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded
 with great features!') }}{% endblock %}
 
 {% block content %}
- <section>
-   <div>
-     <h1>Meet Thunderbird</h1>
-   </div>
- </section>
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h1>Meet <span class="txt-gradient">Thunderbird</span></h1>
+      <p>Thunderbird is a Mozilla-backed community project creating free and open-source software to make organizing and emailing easier. It is available because of the contributions of thousands of individuals and organizations since 2003. Email remains among the most accessible and universal ways for people to communicate across the world, but how and where people use email is changing. Thunderbird is changing, too. Learn what values, community, and organization guide that change and ensure you remain connected, productive, and free.</p>
+    </div>
+    <div class="icon-grid">
+      <div class="icon-item">
+        {{ svg('base/icons/about/values') }}
+        <p>Values</p>
+      </div>
+      <div class="icon-item">
+        {{ svg('base/icons/about/community') }}
+        <p>Community</p>
+      </div>
+      <div class="icon-item">
+        {{ svg('base/icons/about/organization') }}
+        <p>Organization</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% include 'includes/components/page-separator.html' %}
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h1>Guided by <span class="txt-gradient">Values</span></h1>
+    </div>
+    <div class="value-section values-privacy">
+      <div class="image">
+      {{ high_res_img('thunderbird/base/about/privacy.png', {'alt': _('Privacy')}) }}
+      </div>
+      <div class="section-text">
+        <h2>Privacy</h2>
+        <h3>You are not the product.</h3>
+        <p>Software makers commonly collect more personal data than necessary and leverage it for profit. Laws regulate this practice in some regions. To us, data ownership and privacy are your right wherever you live. Our commitment to your personal data is simple:</p>
+        <ul>
+          <li>We do not collect or store it unless you ask us to.</li>
+          <li>We take great care to keep it safe from misuse.</li>
+          <li>We will never sell it.</li>
+          <li>You retain ownership and control of it.</li>
+        </ul>
+        <a href="#">Read the Privacy Policy</a>
+      </div>
+    </div>
+    <div class="value-section values-freedom">
+      <div class="image">
+      {{ high_res_img('thunderbird/base/about/freedom.png', {'alt': _('Freedom')}) }}
+      </div>
+      <div class="section-text">
+        <h2>Freedom</h2>
+        <h3>Thunderbird belongs to you (and the world).</h3>
+        <p>Thunderbird is Free and Open-Source Software, which means its code is available to see, modify, use, and share freely. Its license also ensures that it will remain free forever. You can think of Thunderbird as a gift from thousands of contributors to you.</p>
+        <a href="#">Learn About MPL 2.0 ></a>
+      </div>
+    </div>
+    <div class="value-section values-voice">
+      <div class="image">
+      {{ high_res_img('thunderbird/base/about/freedom.png', {'alt': _('Voice')}) }}
+      </div>
+      <div class="section-text">
+        <h2>Voice</h2>
+        <h3>You have a part in Thunderbird's future.</h3>
+        <p>Thunderbird is free from the commercial requirements and incentives that often guide software development. Anyone can get involved in helping make Thunderbird better and available to more people. A contributor-elected council ensures Thunderbird remains true to its values and mission.</p>
+        <strong>Keep Reading...</strong>
+      </div>
+    </div>
+  </div>
+</section>
+{% include 'includes/components/page-separator.html' %}
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h1>Driven by <span class="txt-gradient">Community</span></h1>
+      <p>Anyone can help make Thunderbird better. Programmers can contribute features they are passionate about or improve the existing code. Those who are multilingual can make Thunderbird accessible to everyone. Those willing can test new versions of Thunderbird and document issues. There are many ways to become part of a thriving community that makes Thunderbird unique. And if you don't have the time to volunteer, you can help support the project through donations.</p>
+      <a href="#">Learn How to Get Involved ></a>
+    </div>
+  </div>
+</section>
+<section class="cover-container">
+  {{ high_res_img('thunderbird/base/about/contributors.png', {'alt': _('Our Contributors')}) }}
+  {% include 'includes/components/page-separator-cover.html' %}
+</section>
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h1>Supported by <span class="txt-gradient">Mozilla</span></h1>
+      <p>Mozilla is the original creator of Thunderbird and its sister application, Firefox. Thunderbird operates under a for-profit, wholly-owned subsidiary of the non-profit Mozilla Foundation. This organization grants us flexibility in hiring staff and offering optional paid services to sustain Thunderbird's development. Our backing by one of the most trusted organizations in the world, our commitment to providing freely licensed software, and our focus on fiscal stability are reasons you can rely upon Thunderbird now and far into the future.</p>
+      <p>A growing team of talented individuals are employed to support the efforts of our contributor community, interface with partner organizations, and maximize the reach of Thunderbird throughout the world.</p>
+    </div>
+    <div>
+      <div class="job-grid">
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPersonface', 'Sr Meower', 'https://placekitten.com/128/128') }}
+      </div>
+    </div>
+      <div class="section-text">
+        <a href="#">Explore Career Opportunities ></a>
+      </div>
+  </div>
+  </div>
+</section>
 {% endblock %}
 
+{% macro job_block(name, title, img) %}
+<div class="person">
+  <img class="photo" src="{{ img }}" alt="{{ name }}"/>
+  <h5>{{ name }}</h5>
+  <span>{{ title }}</span>
+</div>
+{% endmacro %}
