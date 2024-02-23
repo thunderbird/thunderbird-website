@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
   .icon-item {
     p {
       margin: 0;
@@ -13,14 +14,50 @@
   // Sections
   .value-section {
     display: flex;
-    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    gap: 10rem;
+
+    .section-text {
+      text-align: left;
+    }
+
+    img {
+      margin-left: 10rem;
+      max-width: 300px;
+    }
+
+    a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline dotted 0.12rem currentColor;
+      &::after {
+        text-decoration: none;
+      }
+    }
+    a::after {
+      content: '>';
+      margin-left: 0.5rem;
+      color: var(--color-ink-60);
+    }
   }
+
   .values-freedom {
     flex-direction: row-reverse;
+    margin-right: auto;
+    img {
+      margin-left: 0;
+      margin-right: 10rem;
+    }
   }
+
   // This should probably live with the component..
   .cover-container {
     position: relative;
+
     img {
       margin-bottom: -0.25rem;
     }

@@ -39,17 +39,20 @@
 header {
   display: flex;
   flex-direction: column;
-  min-height: 300px;
+  min-height: 200px;
   background-color: var(--page-header-bg);
   color: var(--txt);
   padding-top: calc(var(--nav-height) * 2);
   isolation: isolate;
 
   .breadcrumbs {
-    height: 2rem;
+    font-size: 0.75rem;
+    font-weight: 200;
   }
   .tagline {
-    margin-top: 0;
+    margin-top: 1rem;
+    font-size: 4rem;
+
   }
 }
 
@@ -81,25 +84,48 @@ header {
 }
 
 .section-text {
-    max-inline-size: 62ch;
-    text-wrap: balance;
-    margin-inline: auto;
-    margin-bottom: 2em;
+  max-inline-size: 60%;
+  text-wrap: balance;
+  margin-inline: auto;
+  margin-bottom: 2em;
+  font-weight: 400;
+  font-size: 16px;
+
+  &.tight {
+    max-inline-size: 50%;
+  }
+}
+
+
+.section-text :where(h1) {
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .section-text :where(h2) {
-  font-size: 2.75rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 600;
   margin: 0;
 }
 
 .section-text :where(h3) {
-  font-size: 1.4rem;
-  font-weight: 300;
-  margin: 0;
-  margin-bottom: 2em;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 2em;
 }
 
+.styled-list {
+  list-style: none;
+  margin-left: 0;
+  text-indent: -1rem;
+  line-height: 30px;
+
+  li:before {
+    content: '●';
+    color: var(--accent);
+    margin-right: 0.75rem;
+  }
+}
 
 
 // This is actually just the rest of the 115-homepage.css waiting to be cannibalized!

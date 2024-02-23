@@ -20,12 +20,18 @@
         {{ svg('Thunderbird_Logo') }}
       </a>
       <div class="nav-links">
-        <a href="{{ url('support') }}" class="nav-ln">{{_('Get Help')}}</a>
-        <a href="{{ url('thunderbird.115.whatsnew') }}" class="nav-ln">{{_('What’s New')}}</a>
-        <a href="{{ donate_url('header') }}" class="nav-ln" data-donate-btn
-          data-donate-content="header">{{_('Donate')}}</a>
+        <a href="#" class="nav-ln">{{_('Products')}}</a>
+        <a href="#" class="nav-ln">{{_('Resources')}}</a>
+        <a href="#" class="nav-ln">{{_('About')}}</a>
+        <a href="#" class="nav-ln">{{_('Contribute')}}</a>
+
         <div class="header-download">
           {{ download_thunderbird(force_direct=true, hide_footer_links=true, alt_copy=_('Download')) }}
+        </div>
+        <div class="header-donate">
+        <a href="{{ donate_url('header') }}" class="btn">
+          <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span>
+        </a>
         </div>
       </div>
     </div>
@@ -37,7 +43,7 @@
 
     {% block breadcrumbs %}
       <div class="breadcrumbs">
-      Home > About >
+      Home > {% block category %}{% endblock %} >
       </div>
     {% endblock %}
 
@@ -48,8 +54,6 @@
     {% endblock %}
 
     {% include 'includes/donation-includes.html' %}
-
-
 
     {% block site_header_share %}{% endblock %}
 
@@ -69,7 +73,7 @@
 <section id="whats-next">
     <div class="container">
       <div class="section-text">
-        <h2>{{_('<span class="txt-gradient">Learn</span> What’s Next')}}</h2>
+        <h2>{{_('Learn What’s <span class="txt-gradient">Next</span>')}}</h2>
             <p>
               {% trans %}
               Thunderbird keeps getting better. Subscribe to our newsletter and follow us on social media to stay

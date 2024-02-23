@@ -168,6 +168,7 @@ URL_MAPPINGS = {
     'mozorg.home': 'https://www.mozilla.org/',
     'mozorg.connect': 'https://connect.mozilla.org/',
     'mozorg.connect.tb': 'https://connect.mozilla.org/t5/ideas/idb-p/ideas/label-name/thunderbird',
+    'mozorg.mpl2': 'https://www.mozilla.org/MPL/',
     'mzla.blog-post': 'https://blog.thunderbird.net/2020/01/thunderbirds-new-home/',
     'privacy': 'https://www.mozilla.org/privacy/websites/',
     'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#data-tools',

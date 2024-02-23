@@ -6,6 +6,25 @@
   padding: 0;
 }
 
+// Just some temp styling
+.header-download {
+  font-weight: 500;
+  .download-link.btn-download:after {
+    background: transparent;
+  }
+}
+.header-donate {
+  a.btn {
+    max-width: 64px;
+  }
+  a.btn::after {
+    background: transparent;
+  }
+  svg {
+    width: 1rem;
+  }
+}
+
 .btn-donate,
 .btn-donate-lg,
 .btn-download-inline,
@@ -13,7 +32,7 @@
 .download-link.btn-download,
 a.btn,
 button {
-  font-size: 1.25rem;
+  font-size: 1rem;
   background: var(--btn-bg, transparent);
   border-radius: 6px;
   border: .12em solid currentColor;
