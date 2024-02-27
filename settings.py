@@ -127,10 +127,10 @@ WEBSITE_PATH = 'sites/www.thunderbird.net/'
 START_PATH = 'sites/start.thunderbird.net/'
 
 # path for the finished website artifacts.
-WEBSITE_RENDERPATH = 'dist/www.thunderbird.net'
+WEBSITE_RENDERPATH = 'thunderbird.net'  #'dist/www.thunderbird.net'
 
 # path for the finished start page artifacts.
-START_RENDERPATH = 'dist/start.thunderbird.net'
+START_RENDERPATH = 'site'  #'dist/start.thunderbird.net'
 
 LOCALE_PATH = 'libs/locale'
 
