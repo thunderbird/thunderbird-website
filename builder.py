@@ -1,5 +1,8 @@
 import datetime
 import errno
+
+import jinja2.exceptions
+
 import helper
 import logging
 import multiprocessing
@@ -83,10 +86,11 @@ class Site(object):
         `js_bundles` (dict, optional): dict containing lists of js files to be concatenated together and copied to `renderpath`.
         `data` (dict, optional): dict to be directly added to the Jinja2 global context.
         `debug` (bool, optional): Optionally write log output or not.
+        `dev_mode` (bool, optional): Enables various behaviours that would be helpful for develoeprs. Don't use on prod.
     Attributes:
         `lang`: Current language to build the site in, an element of `languages`.
     """
-    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False):
+    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False, dev_mode=False):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
@@ -100,6 +104,7 @@ class Site(object):
         self.data = data
         self._setup_env()
         self._env.globals.update(settings=settings, **helper.contextfunctions)
+        self.dev_mode = dev_mode
         if debug:
             logger.setLevel(logging.INFO)
 
@@ -274,7 +279,18 @@ class Site(object):
             filedir = os.path.dirname(filepath)
             if not os.path.exists(filedir):
                 os.makedirs(filedir)
-            t = self._env.get_template(template)
+
+            try:
+                t = self._env.get_template(template)
+            except jinja2.exceptions.TemplateSyntaxError as ex:
+                logger.error(f">> Jinja Syntax Error: \"{ex.message}\"\n>> In file \"{ex.filename}\" on line {ex.lineno}.")
+
+                # This is for dev builds, we want it to crash on production.
+                if self.dev_mode:
+                    continue
+
+                raise ex
+
             t.stream().dump(filepath)
 
     def build_startpage(self):
