@@ -1,19 +1,32 @@
 a {
   color: currentColor;
-  text-decoration-color: currentColor;
-  text-underline-offset: 0.25em;
-  text-decoration-thickness: .12em;
-  text-decoration-style: dotted;
+  text-decoration: none;
   transition: font-size .2s,
-              text-decoration-color .2s;
-}
+  text-decoration-color .2s;
 
-a.donate,
-a:hover,
-a:hover:visited {
-  text-decoration-color: var(--accent);
-}
+  &.dotted {
+    text-decoration-style: dotted;
+    text-decoration-color: currentColor;
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: .12em;
+  }
 
-a:visited {
-  text-decoration-color: var(--color-purple-50);
+  &.strong {
+    font-weight: 600;
+    &::after {
+      content: '>';
+      margin-left: 0.5rem;
+      color: var(--color-ink-60);
+    }
+  }
+
+  &.donate,
+  &:hover,
+  &:hover:visited {
+    text-decoration-color: var(--accent);
+  }
+
+  &:visited {
+    text-decoration-color: var(--color-purple-50);
+  }
 }
