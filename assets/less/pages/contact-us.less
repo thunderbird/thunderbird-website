@@ -1,0 +1,41 @@
+.page-contact-us {
+  .container {
+    gap: 0;
+  }
+
+  .block-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 200px;
+
+    @media (max-width: @lg) {
+      padding: 1rem;
+    }
+  }
+  .block {
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--color-gray-30) solid;
+    border-radius: 12px;
+    padding: 1.75rem;
+    //width: 25%;
+    width: 20rem;
+    text-align: left;
+
+    @media (max-width: @lg) {
+      width: 100%;
+    }
+  }
+  .block-head {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: left;
+    align-items: center;
+    h2 {
+      margin: 0;
+    }
+  }
+}

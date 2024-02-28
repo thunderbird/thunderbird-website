@@ -1,0 +1,62 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "contact-us" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title %}{{ _('Contact Us') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('About') }}{% endblock %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h1>Need to <span class="txt-gradient">Talk?</span></h1>
+      <p>{{ _('Direct your inquiries to the people below.') }}</p>
+    </div>
+    <div class="block-grid">
+      {% call contact_block( svg('base/icons/contact/support'), _('Support'), [(url('support'), _('Support Website'))]) %}
+        {{ _('For questions about how to use Thunderbird, visit and search our Support Website. Feel free to submit a new question if you cannot find an answer. Please remember to be courteous to our staff and volunteers.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/security'), _('Security'), [(url('thunderbird.bugzilla.new-bug'), _('Bugzilla'))]) %}
+        {{ _('To report a software vulnerability, please submit an issue on Bugzilla with the security box checked. This checkmark will make the report visible only to our security team, who can address vulnerabilities before public disclosure.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/media'), _('Security'), [('mailto:outreach@thunderbird.net', _('Outreach Team'))]) %}
+        {{ _('Thunderbird and the people who make it are amazing. Obtain access to our team for your story, review, or other content by emailing our Outreach Team.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/business'), _('Business'), [('mailto:business@thunderbird.net', _('Business Team'))]) %}
+        {{ _('Organizations wanting to sponsor software development or obtain assistance in large-scale deployments should email our Business Team. This team also handles other partnership inquiries.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/contributors'), _('Contributors'), [(url('thunderbird.contribute'), _('Contributor Page'))]) %}
+        {{ _('If you have talents you\'re interested in sharing but don\'t know where to start, learn how to get started by visiting our Contributors page. Here you\'ll find the volunteer community that matches your interests.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/legal'), _('Legal'), [(url('legal.trademark'), _('Trademark Misuse')), (url('legal.legal.fraud-report'), _('DMCA Notice'))]) %}
+        {{ _('Protect future users from malware, data mining, or being fraudulently charged for Thunderbird by reporting trademark misuse. If you believe we are infringing on your copyright or trademark, please send a DMCA notice.') }}
+      {% endcall %}
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% macro contact_block(icon, title, links) %}
+{# Generic block
+:param icon: A variable containing pre-formatted html (e.g. the result of svg() or image())
+:param title: The title of the block
+:param links: A list of tuples that link to relevant locations. First entry is the url/href value, second entry is the link text.
+:caller: The text body of the block
+#}
+<div class="block">
+  <div class="block-head">
+    <span>{{ icon }}</span>
+    <h2>{{ title }}</h2>
+  </div>
+  <div class="block-body">
+    <p>{{ caller() }}</p>
+  </div>
+  {% for link in links %}
+  <a class="strong" href="{{ link[0] }}">{{ link[1] }}</a>
+  {% endfor %}
+</div>
+{% endmacro %}
