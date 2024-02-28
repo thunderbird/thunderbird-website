@@ -1,11 +1,26 @@
 .page-who-we-are {
-  .icon-grid {
+  .icon-grid-container {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    text-align: center;
+    margin: auto;
+  }
+  .icon-grid {
+    width: 34rem;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+
+    @media (max-width: @md) {
+      width: 100%;
+      gap: 4rem;
+      flex-direction: column;
+    }
   }
 
   .icon-item {
+    min-width: 128px;
+    margin: auto;
     p {
       margin: 0;
     }
@@ -28,6 +43,18 @@
       max-width: 300px;
     }
 
+    @media(max-width: @md) {
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+
+      img {
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    // TODO: Move these
     a {
       font-weight: 600;
       text-decoration: none;
@@ -51,6 +78,17 @@
     img {
       margin-left: 0;
       margin-right: 10rem;
+    }
+
+    @media(max-width: @md) {
+      flex-direction: column;
+      width: 100%;
+
+      img {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 
