@@ -10,6 +10,7 @@
   }
 
   .section-text {
+    margin: auto;
     min-width: 50%;
   }
 
@@ -129,24 +130,4 @@
   }
 }
 
-// TODO: Organize these
-details[open] summary ~ * {
-  animation: sweep .5s ease-out;
-}
 
-@media (prefers-reduced-motion: reduce) {
-  details[open] summary ~ * {
-    animation: none;
-  }
-}
-
-@keyframes sweep {
-  0% {
-    opacity: 0;
-    margin-top: -1rem;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 1rem;
-  }
-}

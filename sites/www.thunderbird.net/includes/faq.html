@@ -2,11 +2,11 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 <section>
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('What are the ways I can give?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed donate=url('thunderbird.donate.form'), check=url('thunderbird.donate.ways-to-give.check'),
       ways_to_help=url('thunderbird.get-involved') %}
       You can <a href="{{ donate }}">donate online</a> securely by credit card or PayPal. Google Pay, Apple Pay, and
@@ -21,11 +21,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('How do I cancel or change my recurring gift? Can I change my payment method or my donation frequency?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed help=url('thunderbird.donate.contact') %}
       Access your donation account settings using the 'Manage My Donation' button on your recent donation confirmation
       email.
@@ -36,11 +36,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('Why do you need my address in order to process a gift?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed url=url('privacy.notices.donations'), website_privacy=url('privacy') %}
       We understand that your privacy is very important -- we agree, and that's a core value of ours at Thunderbird and Mozilla.
 
@@ -51,11 +51,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('Does my gift give me access to tech support?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed url=url('support') %}
       Anyone can access tech support for Thunderbird by visiting the <a href="{{ url }}">support forum</a>.
       Thunderbird does not provide tech support or enhanced tech support in exchange for financial gifts.
@@ -63,22 +63,22 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('How can I turn off the donation message on the Thunderbird start page?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed url='https://support.mozilla.org/kb/how-disable-or-change-thunderbird-start-page' %}
       To learn how to customize your start page please visit:<br/><a href="{{ url }}">{{ url }}</a>
       {% endtrans %}
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('Is my gift tax deductible?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed %}
       Gifts to Thunderbird are <strong>not tax-deductible as charitable gifts</strong>, but are greatly appreciated.
       Giving to Thunderbird supports the development of our leading open source cross-platform email and calendaring
@@ -88,11 +88,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('How can I get a business receipt?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed donate=url('thunderbird.donate.form') %}
       When you donate via our <a href="{{ donate }}">online form</a>, simply check the box 'Donate as an Organization'
       and
@@ -102,11 +102,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('Is my donation secure?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed privacy=url('privacy') %}
       Yes, we use industry-standard SSL technology to keep your information secure. We partner with Stripe, the
       industry's established payment processor trusted by some of the world's largest companies. Your sensitive
@@ -117,11 +117,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('Are there additional fees on my donation?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed %}
       We do not collect any additional fees or taxes. When you donate in your local currency you are not charged a
       conversion fee by your credit card. Optionally, you can choose to cover our transaction costs on your donation.
@@ -132,11 +132,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('What are your transaction costs on donations?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed %}
       When you opt to cover our transaction costs, you're covering both our processing and donation platform costs. The
       costs associated with our robust online donation system allows us to continue scaling sustainably as our
@@ -148,33 +148,33 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('Why do one-time donations appear as recurring in the SEPA mandates?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed %}
       When making a one-time gift through SEPA direct debit, you may notice a mention of recurrent transactions. This is because our payment processor Stripe only supports recurring transactions for this type of payment. Regardless of this, we will only charge you once and we will not make any further payments on your account without your authorization. Following the mandate, you will receive an official donation receipt that will clearly reflect the one-time donation.
       {% endtrans %}
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('Can I give in cryptocurrencies?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed %}
       <strong>No.</strong> We are not currently accepting cryptocurrency gifts.
       {% endtrans %}
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('How will my gift be used?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed %}
       Thunderbird is the leading open source cross-platform email and calendaring client, free for business and personal
       use. Your gift will help ensure it stays that way, and will support future development.
@@ -182,11 +182,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('What is Thunderbird’s relationship to MZLA Technologies Corporation?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed %}
       Thunderbird is a project of MZLA Technologies Corporation, which is a wholly owned subsidiary of Mozilla
       Foundation.
@@ -194,11 +194,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('Doesn’t Thunderbird earn income?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed %}
       Currently, the majority of Thunderbird’s revenue comes from generous gifts from users and friends of Thunderbird.
       Companies and individuals support the development of the product now and in the future.
@@ -206,11 +206,11 @@
     </p>
   </details>
 
-  <details class="faq-entry">
-    <summary class="faq-question">
+  <details class="accordion">
+    <summary class="question">
       {{ _('Who can I email directly with questions about giving?') }}
     </summary>
-    <p class="faq-answer">
+    <p class="answer">
       {% trans trimmed help=url('thunderbird.donate.contact'), support=url('support') %}
       If you have a question about giving to Thunderbird, please contact us via <a href="{{ help }}">this form</a>. If you
       need technical support, please head over to <a href="{{ support }}">Thunderbird Support</a> for assistance.
