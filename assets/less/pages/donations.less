@@ -1,0 +1,137 @@
+.page-donations {
+  .image {
+    padding: 6rem;
+
+    @media (max-width: @lg) {
+      order: -1;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .section-text {
+    text-align: left;
+    min-width: 50%;
+  }
+
+  .double-paned {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 4rem;
+
+    @media (max-width: @lg) {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  .donation-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 480px;
+
+    iframe {
+      width: 100%;
+      // Fade in so it's not super jarring...
+      animation-duration: 2s;
+      animation-name: fade-in;
+      transition: all .5s ease-in;
+
+      border: 1px solid #DEDEE0;
+      border-radius: 6px;
+      box-shadow: var(--shadow-xl);
+
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .card-list {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    list-style: none;
+  }
+
+
+  .faq-entry {
+    position: relative;
+    width: 100%;
+
+    min-height: 16px;
+    margin-bottom: 2rem;
+    text-align: left;
+
+    // Let it be known, I strongly dislike webkit.
+    summary {
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-question {
+      //    &:extend(.mt-0, .mb-4, .font-2xl, .text-blue-dark, .items-center, .leading-normal);
+      border-radius: 6px;
+      border: 1px solid var(--color-gray-30);
+      padding: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        position: absolute;
+        margin: auto auto;
+        right: 0;
+        padding-right: 0.5rem;
+        content: url("/media/svg/zoom-out.svg");
+      }
+    }
+
+    &[open] {
+      .faq-question::after {
+        content: url("/media/svg/zoom-in.svg");
+      }
+    }
+
+    .faq-answer {
+      padding: 1rem;
+      //    &:extend(.font-md, .tracking-wide, .leading-loose, .mr-8, .ml-8);
+
+    }
+
+
+  }
+
+
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  details[open] summary ~ * {
+    animation: none;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: -1rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 1rem;
+  }
+}

@@ -186,6 +186,7 @@ URL_MAPPINGS = {
     'thunderbird.donate': '/donate',
     'thunderbird.donate.form': '/donate?form=support',
     'thunderbird.donate.faq': '/donate#faq',
+    'thunderbird.donate.modify': 'https://supporter.thunderbird.net/',
     'thunderbird.donate.ways-to-give': '/donate#ways-to-give',
     'thunderbird.donate.ways-to-give.check': '/donate#ways-to-give-check',
     'thunderbird.donate.contact': '/donate/help',

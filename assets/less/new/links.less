@@ -1,10 +1,11 @@
 a {
   color: currentColor;
-  text-decoration: none;
+  text-decoration: underline;
   transition: font-size .2s,
   text-decoration-color .2s;
 
   &.dotted {
+    text-decoration-line: underline;
     text-decoration-style: dotted;
     text-decoration-color: currentColor;
     text-underline-offset: 0.25em;
@@ -12,6 +13,7 @@ a {
   }
 
   &.strong {
+    text-decoration: none;
     font-weight: 600;
     &::after {
       content: '>';

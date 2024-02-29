@@ -120,6 +120,7 @@ header {
 .section-text :where(h1) {
   font-size: 2.5rem;
   font-weight: 800;
+  margin-bottom: 0;
 }
 
 .section-text :where(h2) {
@@ -131,14 +132,20 @@ header {
 .section-text :where(h3) {
   font-size: 1.25rem;
   font-weight: 400;
-  margin: 0 0 2em;
+  margin: 0 0 1em;
 }
 
 .styled-list {
   list-style: none;
   margin-left: 0;
+  margin-bottom: 1.5rem;
   text-indent: -1rem;
   line-height: 30px;
+
+
+  li {
+    margin-bottom: 0.5rem;
+  }
 
   li:before {
     content: '●';

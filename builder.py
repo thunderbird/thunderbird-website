@@ -374,7 +374,7 @@ class UpdateHandler(FileSystemEventHandler):
             print("{}: {} ({})\n".format(type(err).__name__, err.strerror, err.filename))
         except BundleError as err:
             print(standard_error_msg)
-            print("{}: {}\n".format(type(err).__name__, err.message))
+            print("{}: {}\n".format(type(err).__name__, str(err)))
 
 
 class RedirectingHTTPRequestHandler(SimpleHTTPRequestHandler):
