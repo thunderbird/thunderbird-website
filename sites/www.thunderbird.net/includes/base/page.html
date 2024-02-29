@@ -26,11 +26,13 @@
         <a href="#" class="nav-ln">{{_('Contribute')}}</a>
 
         <div class="header-download">
-          {{ download_thunderbird(force_direct=true, hide_footer_links=true, alt_copy=_('Download')) }}
+          <a href="{{ url('thunderbird.download') }}" class="btn download-link btn-download">
+            <span>{{ _('Download') }}</span>
+          </a>
         </div>
         <div class="header-donate">
         <a href="{{ donate_url('header') }}" class="btn">
-          <span class="inline-block w-3 mr-1">{{ svg('heart') }}</span>
+          <span>{{ svg('heart') }}</span>
         </a>
         </div>
       </div>
