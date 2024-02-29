@@ -12,7 +12,7 @@
 {% block content %}
 <section>
   <div class="container two-columns">
-    <div class="section-text tight">
+    <div class="section-text tight info-column">
       <h1>{{ _('Become a <span class="txt-gradient">Supporter</span>') }}</h1>
       <h3>{{ _('Help us make Thunderbird better.') }}</h3>
       <p>{{ _('MZLA Corporation is the for-profit organization sustaining the free software mission of Thunderbird. Our work is to provide open source apps that are secure, private and free for users around the world. When you donate you help us:') }}</p>
@@ -31,7 +31,7 @@
         <li>{{ svg('base/icons/donate/payment-more') }}</li>
       </ul>
     </div>
-    <div class="section-text donation-panel">
+    <div class="section-text donation-column">
       <!-- TODO: Replace with the actual element, this is just a clone. -->
       <a href="#XVBPRKMH" style="display: none"></a>
       <p><a class="dotted" href="{{ url('thunderbird.donate.modify') }}">Modify</a> an existing monthly donation.</p>
@@ -57,9 +57,8 @@
 {% include 'includes/components/page-separator.html' %}
 <section>
   <div class="container">
-    <div class="section-text">
+    <div class="section-text wide faq">
       <h1>{{ _('Frequently Asked Questions') }}</h1>
-
       {% include 'includes/faq.html' %}
     </div>
   </div>

@@ -10,7 +10,6 @@
   }
 
   .section-text {
-    text-align: left;
     min-width: 50%;
   }
 
@@ -24,44 +23,60 @@
       flex-direction: column;
       margin: 0;
     }
-  }
 
-  .donation-panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 480px;
+    .info-column {
+      text-align: left;
+      min-width: 50%;
 
-    iframe {
-      width: 100%;
-      // Fade in so it's not super jarring...
-      animation-duration: 2s;
-      animation-name: fade-in;
-      transition: all .5s ease-in;
-
-      border: 1px solid #DEDEE0;
-      border-radius: 6px;
-      box-shadow: var(--shadow-xl);
-
+      .card-list {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+        list-style: none;
+      }
     }
 
-    p {
-      font-size: var(--font-sm);
-      width: 100%;
+    .donation-column {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 480px;
+
+
+      iframe {
+        width: 100%;
+        // Fade in so it's not super jarring...
+        animation-duration: 2s;
+        animation-name: fade-in;
+        transition: all .5s ease-in;
+
+        border: 1px solid #DEDEE0;
+        border-radius: 6px;
+        box-shadow: var(--shadow-xl);
+
+      }
+
+      p {
+        position: absolute;
+        bottom: -1rem;
+        font-size: var(--font-sm);
+        width: 100%;
+      }
     }
   }
 
-  .card-list {
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 0.75rem;
-    list-style: none;
+  .faq {
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
   }
 
-
+  // Mostly from the old site
   .faq-entry {
     position: relative;
     width: 100%;
@@ -114,6 +129,7 @@
   }
 }
 
+// TODO: Organize these
 details[open] summary ~ * {
   animation: sweep .5s ease-out;
 }

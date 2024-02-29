@@ -104,15 +104,20 @@ header {
   &.tight {
     max-inline-size: 50%;
   }
+  &.wide {
+    max-inline-size: 70%;
+  }
 
   @media (max-width: @md) {
     max-inline-size: 90%;
     margin-inline: unset;
     padding-inline: 1rem;
 
-    &.tight {
+    &.tight,
+    &.wide {
       max-inline-size: 90%;
     }
+
   }
 }
 
