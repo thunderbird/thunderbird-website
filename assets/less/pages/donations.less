@@ -14,11 +14,11 @@
     min-width: 50%;
   }
 
-  .double-paned {
+  .two-columns {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    margin: 4rem;
+    margin: auto;
 
     @media (max-width: @lg) {
       flex-direction: column;
@@ -48,6 +48,7 @@
     }
 
     p {
+      font-size: var(--font-sm);
       width: 100%;
     }
   }
