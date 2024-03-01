@@ -1,0 +1,155 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "participate" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title %}{{ _('Participate') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('Contribute') }}{% endblock %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h1>{{ _('We Need <span class="txt-gradient">You</span>') }}</h1>
+      <h3>{{ _('Here are some of the ways you can help.') }}</h3>
+    </div>
+    {% call accordion(svg('base/icons/participate/code'), _('Code')) %}
+    <p>
+      {% trans trimmed %}
+      If you have programming experience there are a lot of ways to contribute to the Thunderbird project. Get started by identifying the area where you have the most experience and interest and following the steps to get started:
+      Desktop Development
+      {% endtrans %}
+    </p>
+    <div class="three-columns">
+      <div>
+        <h3>Desktop Development:</h3>
+        <ul class="styled-list">
+          <li>Explore the docs</li>
+          <li>Join the repository</li>
+          <li>Say hello in Matrix</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Android Development:</h3>
+        <ul class="styled-list">
+          <li>Explore the docs</li>
+          <li>Join the repository</li>
+          <li>Say hello in Matrix</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Website Development:</h3>
+        <ul class="styled-list">
+          <li>Explore the docs</li>
+          <li>Join the repository</li>
+          <li>Say hello in Matrix</li>
+        </ul>
+      </div>
+      {% endcall %}
+      {% call accordion(svg('base/icons/participate/design'), _('Design')) %}
+      <marquee>Awaiting copy :^)</marquee>
+      {% endcall %}
+      {% call accordion(svg('base/icons/participate/test'), _('Test')) %}
+      <marquee>Awaiting copy :^)</marquee>
+      {% endcall %}
+      {% call accordion(svg('base/icons/participate/translate'), _('Translate')) %}
+      <marquee>Awaiting copy :^)</marquee>
+      {% endcall %}
+      {% call accordion(svg('base/icons/participate/document'), _('Document')) %}
+      <marquee>Awaiting copy :^)</marquee>
+      {% endcall %}
+      {% call accordion(svg('base/icons/participate/support'), _('Support')) %}
+      <marquee>Awaiting copy :^)</marquee>
+      {% endcall %}
+      {% call accordion(svg('base/icons/participate/promote'), _('Promote')) %}
+      <marquee>Awaiting copy :^)</marquee>
+      {% endcall %}
+    </div>
+  </div>
+</section>
+{% include 'includes/components/page-separator.html' %}
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h1>{{ _('Contributor <span class="txt-gradient">Experience</span>') }}</h1>
+      <h3>{{ _('The ways and reasons to get involved are as diverse as the people who do.') }}</h3>
+      <p>{{ _('Volunteers create Thunderbird and ensure it is accessible throughout the world in dozens of languages. They write the documentation and answer the questions that help regular people use Thunderbird. They come from diverse backgrounds and bring unique talents. They\'re making Thunderbird better for themselves and better for the world at the same time. You can join them.') }}</p>
+    </div>
+  </div>
+  <div class="testimonials">
+    {% call testimonial_card('<img src="https://placekitten.com/64/64" alt="Mr Meows"/>', 'Mr Meow', 'Sr Meow-Stack Engineer, Canada') %}
+    Meow meow meow meow...
+    {% endcall %}
+    {% call testimonial_card('<img src="https://placekitten.com/64/64" alt="Mr Meows"/>', 'Mr Meow', 'Sr Meow-Stack Engineer, Canada') %}
+    Meow meow meow meow...
+    {% endcall %}
+    {% call testimonial_card('<img src="https://placekitten.com/64/64" alt="Mr Meows"/>', 'Mr Meow', 'Sr Meow-Stack Engineer, Canada') %}
+    Meow meow meow meow...
+    {% endcall %}
+    {% call testimonial_card('<img src="https://placekitten.com/64/64" alt="Mr Meows"/>', 'Mr Meow', 'Sr Meow-Stack Engineer, Canada') %}
+    Meow meow meow meow...
+    {% endcall %}
+    {% call testimonial_card('<img src="https://placekitten.com/64/64" alt="Mr Meows"/>', 'Mr Meow', 'Sr Meow-Stack Engineer, Canada') %}
+    Meow meow meow meow...
+    {% endcall %}
+    {% call testimonial_card('<img src="https://placekitten.com/64/64" alt="Mr Meows"/>', 'Mr Meow', 'Sr Meow-Stack Engineer, Canada') %}
+    Meow meow meow meow...
+    {% endcall %}
+  </div>
+</section>
+{% include 'includes/components/page-separator.html' %}
+<section>
+  <div class="two-columns">
+    <div class="section-text tight">
+      <h2>{{ _('Shape the <span class="txt-gradient">Future</span>') }}</h2>
+      <h3>{{ _('Improve software and lives by volunteering.') }}</h3>
+      <p>{{ _('Craft tools you want to use. Help others find and use software that respects their privacy and freedom. Become part of a better future for yourself and others by putting your talents to work at Thunderbird. Read further to learn how.') }}</p>
+    </div>
+    <div class="image">
+      {{ high_res_img('thunderbird/base/participate/gears.png', {'alt': _('Various gears all working in tandem with a heart, a code symbol, a magnifying glass displaying a very small bug, and the Thunderbird Logo in the centre of it all.')}) }}
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% macro accordion(icon, title) %}
+{# Formatted accordion with inner contents being the html
+:param icon: A variable containing pre-formatted html (e.g. the result of svg() or image())
+:param title: The title of the accordion
+:caller: The text body, shows up when you click on the title or accordion.
+#}
+<details class="accordion">
+  <summary class="question">
+    <span>{{ icon }}</span>
+    {{ title }}
+  </summary>
+  <div class="answer">
+    {{ caller() }}
+  </div>
+</details>
+{% endmacro %}
+
+{% macro testimonial_card(photo, name, title) %}
+{# Generic block
+:param icon: A variable containing pre-formatted html (e.g. the result of svg() or image())
+:param title: The title of the block
+:caller: The text body of the block
+#}
+<div class="testimonial-card">
+  <div class="quote">
+    <q>
+      {{ caller() }}
+    </q>
+    <div class="attrib">
+      <div class="profile-pic">
+        {{ photo }}
+      </div>
+      <div class="name">{{ name }}</div>
+      <div class="title">{{ title }}</div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
