@@ -76,58 +76,6 @@
       margin-bottom: 1rem;
     }
   }
-
-  // Mostly from the old site
-  .faq-entry {
-    position: relative;
-    width: 100%;
-
-    min-height: 16px;
-    margin-bottom: 2rem;
-    text-align: left;
-
-    // Let it be known, I strongly dislike webkit.
-    summary {
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-question {
-      border-radius: 6px;
-      border: 1px solid var(--color-gray-30);
-      padding: 1rem 2rem 1rem 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-
-      &::after {
-        position: absolute;
-        margin: auto auto;
-        right: 0;
-        padding-right: 0.5rem;
-        content: url("/media/svg/zoom-out.svg");
-      }
-    }
-
-    &[open] {
-      .faq-question::after {
-        content: url("/media/svg/zoom-in.svg");
-      }
-    }
-
-    .faq-answer {
-      padding: 1rem;
-
-      // This feels wrong, but it works!
-      br {
-        margin-bottom: 1rem;
-      }
-    }
-  }
 }
 
 
