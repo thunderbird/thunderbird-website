@@ -90,7 +90,8 @@ header {
   overflow: hidden;
 
   @media (max-width: @md) {
-    width: 100%;
+    // Give them some space to breath
+    width: calc(100% - 1rem);
     padding-inline: 0;
   }
 }
@@ -547,92 +548,6 @@ section {
   height: 280px;
   width: 280px;
   filter: drop-shadow(0 0 50px var(--color-orange-40));
-}
-
-.testimonials {
-  display: grid;
-  gap: 60px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  margin-inline: auto;
-  margin-block: 0 60px;
-  max-width: 1000px;
-  text-align: left;
-}
-
-.testimonial-card {
-  display: grid;
-  place-items: center;
-  grid-column: span 1;
-  grid-row: span 1;
-  padding: 1.5rem;
-  border-radius: 24px;
-  box-shadow: 0 4px 12px -2px var(--color-gray-30);
-  overflow: hidden;
-}
-
-.card-lg {
-  --accent: var(--color-purple-20);
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-column: span 2;
-  grid-row: span 2;
-  background-image: linear-gradient(to left, var(--accent), transparent 90%);
-}
-
-.card-lg:nth-child(even) {
-  --accent: var(--color-blue-20);
-  grid-column: 2 / span 2;
-  grid-row: 3 / span 2;
-}
-
-.quote {
-  font-weight: 400;
-  display: grid;
-  gap: 15px;
-  grid-column: span 2;
-  z-index: 2;
-}
-
-.visual {
-  position: absolute;
-  overflow: hidden;
-  width: 200%;
-}
-
-.visual.unified-inbox {
-  left: 10%;
-}
-
-.visual.extensions {
-  left: 30%;
-}
-
-.attrib {
-  display: grid;
-  align-items: center;
-  column-gap: 15px;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  line-height: 1.3;
-}
-
-.profile-pic {
-  height: 50px;
-  width: 50px;
-  grid-row: span 2;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.name {
-  align-self: end;
-}
-
-.title {
-  align-self: start;
-  font-size: .9rem;
 }
 
 .cta-sub-heading {
