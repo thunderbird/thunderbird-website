@@ -28,9 +28,27 @@
     width: 100%;
     margin-bottom: 200px;
 
+    div:first-child {
+      margin-left: 5rem;
+
+      @media (max-width: @lg) {
+        margin: 0;
+      }
+    }
+    div:nth-child(2) {
+      margin-right: 5rem;
+      @media (max-width: @lg) {
+        margin: 0;
+      }
+    }
+
     .section-text {
       text-align: left;
       max-width: 500px;
+    }
+
+    @media (max-width: @lg) {
+      flex-direction: column-reverse;
     }
   }
 
