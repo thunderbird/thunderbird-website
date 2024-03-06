@@ -282,6 +282,7 @@ class Site(object):
 
             try:
                 t = self._env.get_template(template)
+                t.stream().dump(filepath)
             except jinja2.exceptions.TemplateSyntaxError as ex:
                 logger.error(f">> Jinja Syntax Error: \"{ex.message}\"\n>> In file \"{ex.filename}\" on line {ex.lineno}.")
 
@@ -290,8 +291,13 @@ class Site(object):
                     continue
 
                 raise ex
+            except jinja2.exceptions.TemplateError as ex:
+                logger.error(f">> Jinja Template Error: \"{ex.message}\".")
 
-            t.stream().dump(filepath)
+                if self.dev_mode:
+                    continue
+
+                raise ex
 
     def build_startpage(self):
         """Build the start page for all `languages`."""
@@ -408,7 +414,7 @@ def setup_httpd(port, path):
     process.daemon = True
     process.start()
     os.chdir(cwd)
-    print("HTTP Server running on localhost port {0}.".format(port))
+    print(f"HTTP Server running on: http://localhost:{port}")
     return process
 
 
