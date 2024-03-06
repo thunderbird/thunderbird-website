@@ -4,13 +4,43 @@
       {{ svg('Thunderbird_Logo') }}
     </a>
     <div class="site-links">
-      <a href="{{ url('support') }}" class="footer-ln">{{_('Get Support')}}</a>
-      <a href="{{ url('thunderbird.get-involved') }}" class="footer-ln">{{_('Get Involved')}}</a>
-      <a href="{{ url('blog') }}" class="footer-ln">{{_('Blog')}}</a>
-      <a href="{{ url('thunderbird.about') }}" class="footer-ln">{{_('About Us')}}</a>
-      <a href="{{ url('thunderbird.contact') }}" class="footer-ln">{{_('Contact Us')}}</a>
-      <a href="{{ donate_url('footer') }}" class="footer-ln">{{_('Donate')}}</a>
-      <a href="{{ url('thunderbird.download') }}" class="footer-ln">{{_('Download')}}</a>
+      <div class="site-link-section">
+        <ul>
+          <li><a href="{{ url('support') }}" class="dotted home">{{_('Home')}}</a></li>
+        </ul>
+      </div>
+      <div class="site-link-section">
+        <h4>{{ _('Products') }}</h4>
+        <ul>
+          <li><a href="{{ url('support') }}" class="dotted">{{_('Thunderbird Desktop')}}</a></li>
+          <li><a href="{{ url('support') }}" class="dotted">{{_('Thunderbird Mobile')}}</a></li>
+        </ul>
+      </div>
+      <div class="site-link-section">
+        <h4>{{ _('Resources') }}</h4>
+        <ul>
+          <li><a href="{{ url('blog') }}" class="dotted">{{_('Blog')}}</a></li>
+          <li><a href="{{ url('support') }}" class="dotted">{{_('Get Help')}}</a></li>
+          <li><a href="{{ url('blog') }}" class="dotted">{{_('Podcasts')}}</a></li>
+          <li><a href="{{ url('thunderbird.download') }}" class="dotted">{{_('Downloads')}}</a></li>
+          <li><a href="{{ url('support') }}" class="dotted">{{_('Release Notes')}}</a></li>
+        </ul>
+      </div>
+      <div class="site-link-section">
+        <h4>{{ _('About') }}</h4>
+        <ul>
+          <li><a href="{{ url('thunderbird.about') }}" class="dotted">{{_('Who We Are')}}</a></li>
+          <li><a href="{{ url('thunderbird.contact') }}" class="dotted">{{_('Contact Us')}}</a></li>
+          <li><a href="{{ url('support') }}" class="dotted">{{_('Careers')}}</a></li>
+        </ul>
+      </div>
+      <div class="site-link-section">
+        <h4>{{ _('Contribute') }}</h4>
+        <ul>
+          <li><a href="{{ url('thunderbird.donate.form') }}" class="dotted">{{_('Donations')}}</a></li>
+          <li><a href="{{ url('thunderbird.participate') }}" class="dotted">{{_('Participation')}}</a></li>
+        </ul>
+      </div>
     </div>
     <div class="mzla">
       <a href="https://mozilla.org" class="mozilla-logo">

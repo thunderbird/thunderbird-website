@@ -200,6 +200,7 @@ URL_MAPPINGS = {
     'thunderbird.latest.all': '/thunderbird/all/',
     'thunderbird.lists.enterprise': 'https://thunderbird.topicbox.com/groups/enterprise',
     'thunderbird.organizations': '/organizations',
+    'thunderbird.participate': '/participate',
     'thunderbird.releases.index': '/thunderbird/releases',
     'thunderbird.style': 'https://style.thunderbird.net',
     'thunderbird.site.bug-report': 'https://github.com/thunderbird/thunderbird-website/issues',

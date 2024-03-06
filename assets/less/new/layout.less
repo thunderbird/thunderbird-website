@@ -92,7 +92,7 @@ header {
   @media (max-width: @md) {
     // Give them some space to breath
     width: calc(100% - 1rem);
-    padding-inline: 0;
+    box-sizing: border-box;
   }
 }
 
@@ -164,6 +164,54 @@ header {
     text-indent: -2.5rem;
     li:before {
       margin-right: 1rem;
+    }
+  }
+}
+
+.site-links {
+  font-size: var(--font-md);
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  grid-template:
+                "a c d e" 60px
+                "b c d e";
+  .site-link-section {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding-left: 40px;
+    }
+
+    .home {
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    // Help our grid template pick the correct b...
+    &:nth-child(2) {
+      grid-area: b;
+    }
+  }
+
+  @media (max-width: @md) {
+    display: flex;
+    flex-direction: column;
+
+    .site-link-section {
+      height: auto;
     }
   }
 }
@@ -688,7 +736,6 @@ footer {
   font-size: 1.1rem;
 }
 
-.site-links,
 .legal-links {
   display: flex;
   gap: 30px;
