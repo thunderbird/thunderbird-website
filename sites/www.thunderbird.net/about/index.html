@@ -104,21 +104,21 @@
     </div>
     <div>
       <div class="job-grid">
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
-        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', 'https://placekitten.com/128/128') }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
+        {{ job_block('Person McPurrsonface', 'Meow-Stack Engineer', high_res_img('thunderbird/base/placeholder/placeholder.png', optional_attributes={'alt': _('My cat Beatrice') }, scale='2x', alt_formats=('avif', 'webp'))) }}
       </div>
     </div>
       <div class="section-text">
@@ -131,7 +131,7 @@
 
 {% macro job_block(name, title, img) %}
 <div class="person">
-  <img class="photo" src="{{ img }}" alt="{{ name }}"/>
+  {{ img }}
   <h5>{{ name }}</h5>
   <span>{{ title }}</span>
 </div>
