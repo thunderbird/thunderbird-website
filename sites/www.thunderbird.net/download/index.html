@@ -1,0 +1,122 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "download" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title %}{{ _('Downloads') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('Resources') }}{% endblock %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="two-columns">
+      <div class="column">
+        <div class="section-text">
+          <div class="section-title">
+            <h1>{{ _('Thunderbird <span class="txt-gradient">Desktop</span>') }}</h1>
+          </div>
+          <p>{{ _('These are officially maintained and distributed by Thunderbird Desktop. Download the latest release unless you wish to test the beta version and report bugs.') }}</p>
+        </div>
+
+        {% for os, platforms in get_platforms().items() %}
+        <div class="platform-release">
+          <div class="platform-icon">
+          {{ svg(get_platform_icon(platform=platforms[0][0])) }}
+          </div>
+          <div class="platform-text">
+            <div>
+              <h4 class="platform-title">{{ os }}</h4>
+            </div>
+              {% for channel, channel_name in get_channels().items() %}
+            <div class="platform-list-builds {{ channel }}">
+              <h5>{{ channel_name }}:</h5>
+              <ul>
+                {% for platform_tuple in platforms %}
+                {% set platform = platform_tuple[0] %}
+                {% set platform_name = platform_tuple[1] %}
+                <li>
+                  <a class="dotted" href="{{ download_url(platform_os=platform, channel=channel) }}">{{ _(platform_name) }}</a>
+                </li>
+                {% if not loop.last %}<li>|</li>{% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+              {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+        <div class="platform-release">
+          <div>
+            <h4>{{ _('Other Downloads') }}</h4>
+            <ul>
+              <li>
+                <a class="dotted" href="https://apps.microsoft.com/detail/9pm5vm1s3vmq">{{ _('Microsoft Apps Store') }}</a>
+              </li>
+              <li>|</li>
+              <li><a class="dotted" href="https://flathub.org/apps/org.mozilla.Thunderbird">{{ _('Flathub') }}</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="platform-release">
+          <div>
+            <strong>More Information</strong>
+            <ul>
+              <li>
+                <a class="dotted" href="https://docs.k9mail.app/en/6.400/setup/installation/">{{ _('System Requirements') }}</a>
+              </li>
+              <li>|</li>
+              <li><a class="dotted" href="https://github.com/thunderbird/thunderbird-android/releases">{{ _('Release Notes') }}</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+        <div class="section-text">
+          <div class="section-title">
+            <h1>{{ _('Thunderbird <span class="txt-gradient">Mobile</span>') }}</h1>
+            <span class="beta-badge">{{ _('Beta') }}</span>
+          </div>
+          <p>{{ _('These are officially maintained and distributed versions of Thunderbird Mobile.') }}</p>
+        </div>
+        <div class="platform-release">
+          <div class="platform-icon">
+          {{ svg('base/icons/download/android-dark') }}
+          </div>
+          <div class="platform-text">
+            <div>
+              <h4 class="platform-title">Android</h4>
+            </div>
+            <ul>
+              <li>
+                <a class="dotted" href="https://play.google.com/store/apps/details?id=com.fsck.k9">{{ _('Google Play Store') }}</a>
+              </li>
+              <li>|</li>
+              <li><a class="dotted" href="https://f-droid.org/packages/com.fsck.k9/">{{ _('F-Droid') }}</a></li>
+              <li>|</li>
+              <li>
+                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/releases">{{ _('Binary (.apk)') }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="platform-release">
+          <div>
+            <strong>More Information</strong>
+            <ul>
+              <li>
+                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#minimum-android-version-compatibility">{{ _('System Requirements') }}</a>
+              </li>
+              <li>|</li>
+              <li><a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#change-logs">{{ _('Release Notes') }}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

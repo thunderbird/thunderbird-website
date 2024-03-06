@@ -232,6 +232,54 @@ def platform_img(ctx, url, optional_attributes=None):
 
 
 @jinja2.pass_context
+def download_url(ctx, platform_os, version=None, channel='release', locale=None):
+    """Return a specific download url for a given version, platform, channel and optionally force a locale"""
+    locale = ctx.get('LANG', locale)
+
+    if version is None:
+        l_version = thunderbird_desktop.latest_builds(locale, channel)
+        if l_version:
+            version, platforms = l_version
+        else:
+            locale = 'en-US'
+            version, platforms = thunderbird_desktop.latest_builds('en-US', channel)
+
+    return thunderbird_desktop.get_download_url(
+        channel, version, platform_os, locale,
+    )
+
+
+@jinja2.pass_context
+def get_platform_icon(ctx, platform):
+    windows_icon = 'base/icons/download/windows-dark'
+    mac_icon = 'base/icons/download/apple-dark'
+    linux_icon = 'base/icons/download/linux-dark'
+    android_icon = 'base/icons/download/android-dark'
+
+    platform_icons = {
+        'win64': windows_icon,
+        'msi': windows_icon,
+        'win': windows_icon,
+        'linux64': linux_icon,
+        'linux': linux_icon,
+        'osx': mac_icon,
+        'android': android_icon
+    }
+
+    return platform_icons.get(platform, None)
+
+
+@jinja2.pass_context
+def get_platforms(ctx):
+    return thunderbird_desktop.grouped_platform_labels
+
+
+@jinja2.pass_context
+def get_channels(ctx):
+    return thunderbird_desktop.channel_labels
+
+
+@jinja2.pass_context
 def download_thunderbird(ctx, channel='release', dom_id=None,
                          locale=None, force_direct=False,
                          alt_copy=None, button_class=None,

@@ -53,6 +53,13 @@ class ThunderbirdDetails():
         ('linux', 'Linux 32-bit')
     ])
 
+    # Grouped by platform
+    grouped_platform_labels = OrderedDict({
+        'Windows': [('win64', '64-bit (.exe)'), ('msi', '64-bit (.msi)'), ('win', '32-bit (.exe)')],
+        'Linux': [('linux64', '64-bit (binary)'), ('linux', '32-bit (binary)')],
+        'MacOS': [('osx', '64-bit (.dmg)')]
+    })
+
     languages = load_json('languages.json')
 
     current_versions = load_json('thunderbird_versions.json')
@@ -70,6 +77,12 @@ class ThunderbirdDetails():
         'beta': 'LATEST_THUNDERBIRD_DEVEL_VERSION',
         'release': 'LATEST_THUNDERBIRD_VERSION',
     }
+
+    channel_labels = OrderedDict({
+        'release': 'Release',
+        'beta': 'Beta',
+        'daily': 'Daily'
+    })
 
     def latest_version(self, channel='release'):
         """Returns the latest release version of Thunderbird by default, or other `channel`."""
