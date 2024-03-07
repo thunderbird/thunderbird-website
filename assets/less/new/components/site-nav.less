@@ -61,8 +61,16 @@
   gap: 30px;
   list-style: none;
 
+  // Pt1. Provide a larger hover area
+  margin-top: 0;
+
   .nav-entry {
     position: relative;
+
+    // Pt2. Provide a larger hover area
+    cursor: pointer;
+    padding-top: 18px;
+
 
     // Pop-over menu
     .sub-nav-container {
@@ -73,7 +81,6 @@
 
       // Actual physical panel
       .sub-nav-panel {
-        cursor: pointer;
         background-color: var(--bg);
         color: var(--txt);
         border-radius: 12px;
@@ -116,6 +123,7 @@
         }
 
         li {
+          cursor: pointer;
           list-style: none;
           padding-top: 1rem;
 
