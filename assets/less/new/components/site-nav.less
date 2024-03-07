@@ -54,3 +54,111 @@
   max-width: 1280px;
   margin: 0 auto;
 }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+
+  .nav-entry {
+    position: relative;
+
+    // Pop-over menu
+    .sub-nav-container {
+      display: none;
+      position: absolute;
+      margin-left: -2rem;
+      min-width: 500px;
+
+      // Actual physical panel
+      .sub-nav-panel {
+        cursor: pointer;
+        background-color: var(--bg);
+        color: var(--txt);
+        border-radius: 12px;
+
+        // Add a large shadow to help the panel contrast against
+        box-shadow: var(--shadow-2xl);
+
+        // This clashes a little too much with white backgrounds for my liking.
+        // So let's help high-contrast users with a small border around the area.
+        @media (prefers-contrast: more) {
+          border: 2px solid var(--color-ink-70);
+        }
+
+        // Make sure they have some space to move their cursor over any gaps!
+        margin: 1rem 1rem 1rem 0;
+        padding: 1rem 2rem;
+
+        .nav-icon {
+          display: flex;
+          margin: 0.5rem;
+          min-width: 48px;
+          height: 100%;
+          justify-content: center;
+
+          svg {
+            width: 100%;
+          }
+        }
+
+        .nav-text {
+          h2, h6 {
+            margin: 0;
+          }
+
+          h6 {
+            font-weight: 500;
+          }
+
+          padding-right: 2rem;
+        }
+
+        li {
+          list-style: none;
+          padding-top: 1rem;
+
+          &:hover {
+            h2 {
+              &:extend(.txt-gradient);
+            }
+          }
+        }
+
+        li > a {
+          display: flex;
+          min-height: 4rem;
+          padding-bottom: 1rem;
+          border-bottom: 2px var(--color-gray-30) solid;
+          text-decoration: none;
+        }
+
+        li:last-child > a {
+          border: none;
+        }
+      }
+    }
+
+    // Make sub-nav pop-up on hover, or on focus-within (needed for keyboard users)
+    &:hover,
+    &:focus-within {
+      .sub-nav-container {
+        display: block;
+      }
+    }
+  }
+
+  // Make sub-nav pop-up on focus (tab)
+  .nav-ln:focus + .sub-nav-container {
+    display: block;
+  }
+
+  // One day we'll have a previous sibling selector, until then there's this lol.
+  // Select nav-ln::after that have a hover or focus-within sub-nav-container state.
+  .nav-ln:has(+ .sub-nav-container:hover)::after,
+  .nav-ln:has(+ .sub-nav-container:focus-within)::after {
+    // For that sweet underline.
+    width: 100%;
+  }
+}

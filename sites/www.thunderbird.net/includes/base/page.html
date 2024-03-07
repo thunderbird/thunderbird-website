@@ -1,6 +1,6 @@
 {# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
 {% extends "includes/base/base.html" %}
 
@@ -13,59 +13,96 @@
 {% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}
 
 {% block site_nav %}
-  <nav class="site-nav">
-    <div class="nav-container">
-      <a href="{{ url('thunderbird.index') }}" class="logo" title="{{ _('Thunderbird') }}"
-        alt="{{ _('Thunderbird Vector Wordmark') }}">
-        {{ svg('Thunderbird_Logo') }}
-      </a>
-      <div class="nav-links">
+<nav class="site-nav">
+  <div class="nav-container">
+    <a href="{{ url('thunderbird.index') }}" class="logo" title="{{ _('Thunderbird') }}" alt="{{ _('Thunderbird Vector Wordmark') }}">
+      {{ svg('Thunderbird_Logo') }}
+    </a>
+    <ul class="nav-links">
+      <li class="nav-entry">
         <a href="#" class="nav-ln">{{_('Products')}}</a>
+        <div class="sub-nav-container">
+          <ul class="sub-nav-panel">
+            {{ nav_entry(svg('base/icons/menu/desktop'), _('Thunderbird Desktop'), _('Meet the powerful email, calendar, and contacts app for Windows, Linux, and macOS.'), url('thunderbird.products.desktop')) }}
+            {{ nav_entry(svg('base/icons/menu/mobile'), _('Thunderbird Mobile'), _('Learn about the leading open-source email app for Android.'), url('thunderbird.products.mobile')) }}
+          </ul>
+        </div>
+      </li>
+      <li class="nav-entry">
         <a href="#" class="nav-ln">{{_('Resources')}}</a>
-        <a href="./about/" class="nav-ln">{{_('About')}}</a>
+        <div class="sub-nav-container">
+          <ul class="sub-nav-panel">
+            {{ nav_entry(svg('base/icons/menu/blog'), _('Blog'), _('Learn about new product releases, community events, tech tips, and more.'), url('blog')) }}
+            {{ nav_entry(svg('base/icons/menu/help'), _('Get Help'), _('Find the help you need configuring and using Thunderbird.'), url('support')) }}
+            {{ nav_entry(svg('base/icons/menu/podcasts'), _('Podcasts'), _('Meet interesting people and hear their Thunderbird stories.'), url('blog')) }}
+            {{ nav_entry(svg('base/icons/menu/downloads'), _('Downloads'), _('Find the latest version of Thunderbird.'), url('thunderbird.download')) }}
+          </ul>
+        </div>
+      </li>
+      <li class="nav-entry">
+        <a href="#" class="nav-ln">{{_('About')}}</a>
+        <div class="sub-nav-container">
+          <ul class="sub-nav-panel">
+            {{ nav_entry(svg('base/icons/menu/about'), _('Who We Are'), _('Learn how our values, community, and organization shape the future of Thunderbird.'), url('thunderbird.about')) }}
+            {{ nav_entry(svg('base/icons/menu/contact'), _('Contact Us'), _('Find out who to contact and how.'), url('thunderbird.contact')) }}
+            {{ nav_entry(svg('base/icons/menu/careers'), _('Careers'), _('We have an enthusiastic team with diverse talents. Learn how to join us.'), url('thunderbird.careers')) }}
+          </ul>
+        </div>
+      </li>
+      <li class="nav-entry">
         <a href="#" class="nav-ln">{{_('Contribute')}}</a>
-
+        <div class="sub-nav-container">
+          <ul class="sub-nav-panel">
+            {{ nav_entry(svg('base/icons/menu/donations'), _('Donations'), _('Learn how to donate as an individual or business to support Thunderbird and open source.'), url('thunderbird.donate')) }}
+            {{ nav_entry(svg('base/icons/menu/participate'), _('Participate'), _('We need helping hands of all kinds. Learn how you can help Thunderbird and others.'), url('thunderbird.participate')) }}
+          </ul>
+        </div>
+      </li>
+      <li>
         <div class="header-download">
           <a href="{{ url('thunderbird.download') }}" class="btn download-link btn-download">
             <span>{{ _('Download') }}</span>
           </a>
         </div>
+      </li>
+      <li>
         <div class="header-donate">
-        <a href="{{ donate_url('header') }}" class="btn">
-          <span>{{ svg('heart') }}</span>
-        </a>
+          <a href="{{ donate_url('header') }}" class="btn">
+            <span>{{ svg('heart') }}</span>
+          </a>
         </div>
-      </div>
-    </div>
-  </nav>
+      </li>
+    </ul>
+  </div>
+</nav>
 {% endblock %}
 
 {% block site_header %}
-  <header id="masthead">
+<header id="masthead">
 
-    {% block breadcrumbs %}
-      <div class="breadcrumbs">
-      Home > {% block category %}{% endblock %} >
-      </div>
-    {% endblock %}
+  {% block breadcrumbs %}
+  <div class="breadcrumbs">
+    Home > {% block category %}{% endblock %} >
+  </div>
+  {% endblock %}
 
-    {% block header_content %}
-      <h1 class="tagline">
-        {% block page_title %}{% endblock %}
-      </h1>
-    {% endblock %}
+  {% block header_content %}
+  <h1 class="tagline">
+    {% block page_title %}{% endblock %}
+  </h1>
+  {% endblock %}
 
-    {% include 'includes/donation-includes.html' %}
+  {% include 'includes/donation-includes.html' %}
 
-    {% block site_header_share %}{% endblock %}
+  {% block site_header_share %}{% endblock %}
 
-    {% block header_separator %}
-    <div class="header-separator">
-      {{ svg('base/separators/chevron-convex') }}
-    </div>
-    {% endblock %}
+  {% block header_separator %}
+  <div class="header-separator">
+    {{ svg('base/separators/chevron-convex') }}
+  </div>
+  {% endblock %}
 
-  </header>
+</header>
 {% endblock %}
 
 {% block post_content %}
@@ -73,74 +110,89 @@
   {% include 'includes/components/page-separator-cover.html' %}
 </div>
 <section id="whats-next">
-    <div class="container">
-      <div class="section-text">
-        <h2>{{_('Learn What’s <span class="txt-gradient">Next</span>')}}</h2>
-            <p>
-              {% trans %}
-              Thunderbird keeps getting better. Subscribe to our newsletter and follow us on social media to stay
-              informed.
-              {% endtrans %}
-            </p>
-      </div>
-      <div class="newsletter">
-        <!-- Begin Mailchimp Signup Form -->
-        <form action="https://thunderbird.us12.list-manage.com/subscribe?u=f8051cc8637cf3ff79661f382&amp;id=56428f2efc"
-          class="newsletter-form" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
-          <input id="mce-EMAIL" name="EMAIL" type="email" placeholder="{{ _('Your Email') }}" required="">
-          <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-text">{{_('Subscribe')}}</button>
-          <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-icon">➜</button>
-          <!-- Prevent Bot signups -->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-              name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value=""></div>
-        </form>
-        <!--End mc_embed_signup-->
-      </div>
-      <div class="social-list">
-        <a class="icon" title="{{ _('Follow %(mastodon)s on Mastodon')|format(mastodon='@thunderbird@mastodon.online') }}"
-            href="{{ url('thunderbird.social.mastodon') }}" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
-          {{ svg('social-icon-mastodon') }}
-        </a>
-        <a class="icon" href="{{ url('thunderbird.social.facebook') }}" data-link-type="footer"
-            data-link-name="Facebook (Thunderbird)">
-          {{ svg('social-icon-facebook') }}
-        </a>
-        <a class="icon" title="{{ _('Follow %(youtube)s on YouTube')|format(youtube='@ThunderbirdProject') }}"
-            href="{{ url('thunderbird.social.youtube') }}" data-link-type="footer" data-link-name="YouTube (Thunderbird)" rel="me">
-          {{ svg('social-icon-youtube') }}
-        </a>
-        <a class="icon" title="{{ _('Follow %(twitter)s on Twitter')|format(twitter='@mozthunderbird') }}"
-            href="{{ url('thunderbird.social.twitter') }}" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
-          {{ svg('social-icon-twitter') }}
-        </a>
-        <a class="icon" title="{{ _('Follow %(linkedin)s on LinkedIn')|format(linkedin='thunderbird-email')}}"
-            href="{{ url('thunderbird.social.linkedin') }}" data-link-type="footer" data-link-name="LinkedIn (Thunderbird)" rel="me">
-          {{ svg('social-icon-linkedin') }}
-        </a>
-      </div>
-      <div class="cta">
-        <a href="{{ url('blog') }}" class="cta-ln">{{_('Visit Our Blog')}}</a>
-      </div>
-      <div class="phone">
-        <picture>
-          <source srcset="/media/img/thunderbird/new/phone/cta-phone.avif" type="image/avif">
-          <source srcset="/media/img/thunderbird/new/phone/cta-phone.webp" type="image/webp">
-          <img src="/media/img/thunderbird/new/phone/cta-phone.png" alt="{{_('smartphone')}}">
-        </picture>
-      </div>
+  <div class="container">
+    <div class="section-text">
+      <h2>{{_('Learn What’s <span class="txt-gradient">Next</span>')}}</h2>
+      <p>
+        {% trans %}
+        Thunderbird keeps getting better. Subscribe to our newsletter and follow us on social media to stay
+        informed.
+        {% endtrans %}
+      </p>
     </div>
-  </section>
+    <div class="newsletter">
+      <!-- Begin Mailchimp Signup Form -->
+      <form action="https://thunderbird.us12.list-manage.com/subscribe?u=f8051cc8637cf3ff79661f382&amp;id=56428f2efc"
+            class="newsletter-form" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+        <input id="mce-EMAIL" name="EMAIL" type="email" placeholder="{{ _('Your Email') }}" required="">
+        <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-text">{{_('Subscribe')}}</button>
+        <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-icon">➜</button>
+        <!-- Prevent Bot signups -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                                                                  name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value="">
+        </div>
+      </form>
+      <!--End mc_embed_signup-->
+    </div>
+    <div class="social-list">
+      <a class="icon" title="{{ _('Follow %(mastodon)s on Mastodon')|format(mastodon='@thunderbird@mastodon.online') }}"
+         href="{{ url('thunderbird.social.mastodon') }}" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
+        {{ svg('social-icon-mastodon') }}
+      </a>
+      <a class="icon" href="{{ url('thunderbird.social.facebook') }}" data-link-type="footer"
+         data-link-name="Facebook (Thunderbird)">
+        {{ svg('social-icon-facebook') }}
+      </a>
+      <a class="icon" title="{{ _('Follow %(youtube)s on YouTube')|format(youtube='@ThunderbirdProject') }}"
+         href="{{ url('thunderbird.social.youtube') }}" data-link-type="footer" data-link-name="YouTube (Thunderbird)" rel="me">
+        {{ svg('social-icon-youtube') }}
+      </a>
+      <a class="icon" title="{{ _('Follow %(twitter)s on Twitter')|format(twitter='@mozthunderbird') }}"
+         href="{{ url('thunderbird.social.twitter') }}" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
+        {{ svg('social-icon-twitter') }}
+      </a>
+      <a class="icon" title="{{ _('Follow %(linkedin)s on LinkedIn')|format(linkedin='thunderbird-email')}}"
+         href="{{ url('thunderbird.social.linkedin') }}" data-link-type="footer" data-link-name="LinkedIn (Thunderbird)" rel="me">
+        {{ svg('social-icon-linkedin') }}
+      </a>
+    </div>
+    <div class="cta">
+      <a href="{{ url('blog') }}" class="cta-ln">{{_('Visit Our Blog')}}</a>
+    </div>
+    <div class="phone">
+      <picture>
+        <source srcset="/media/img/thunderbird/new/phone/cta-phone.avif" type="image/avif">
+        <source srcset="/media/img/thunderbird/new/phone/cta-phone.webp" type="image/webp">
+        <img src="/media/img/thunderbird/new/phone/cta-phone.png" alt="{{_('smartphone')}}">
+      </picture>
+    </div>
+  </div>
+</section>
 {% endblock %}
 
 {% block js %}
-  <script>
-    /*
-    const navbar = document.querySelector(".site-nav");
-    window.addEventListener("scroll", () => {
-      (window.scrollY > 30) ?
-        navbar.classList.add("scrolled-nav") :
-        navbar.classList.remove("scrolled-nav")
-    });
-     */
-  </script>
+<script>
+  /*
+  const navbar = document.querySelector(".site-nav");
+  window.addEventListener("scroll", () => {
+    (window.scrollY > 30) ?
+      navbar.classList.add("scrolled-nav") :
+      navbar.classList.remove("scrolled-nav")
+  });
+   */
+</script>
 {% endblock %}
+
+{% macro nav_entry(icon, title, description, location) %}
+<li>
+  <a href="{{ location }}">
+    <div class="nav-icon">
+      {{ icon }}
+    </div>
+    <div class="nav-text">
+      <h2>{{ title }}</h2>
+      <h6>{{ description }}</h6>
+    </div>
+  </a>
+</li>
+{% endmacro %}

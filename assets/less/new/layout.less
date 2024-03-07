@@ -284,12 +284,6 @@ svg {
 }
 
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
 /* Hide the header download button if the browser does not support javascript */
 .no-js .header-download {
   display: none !important;
@@ -334,6 +328,7 @@ svg {
   transition: width .3s;
 }
 
+.nav-ln:focus::after,
 .nav-ln:hover::after,
 .footer-ln:hover::after {
   width: 100%;
