@@ -37,6 +37,10 @@
     grid-column: span 2;
     grid-row: span 2;
     background-image: linear-gradient(to left, var(--accent), transparent 90%);
+
+    @media (max-width: @md) {
+      display: flex;
+    }
   }
 
   .card-lg:nth-child(even) {
@@ -58,6 +62,10 @@
     position: absolute;
     overflow: hidden;
     width: 200%;
+
+    @media (max-width: @md) {
+      display: none;
+    }
   }
 
   .visual.unified-inbox {

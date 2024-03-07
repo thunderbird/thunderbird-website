@@ -32,6 +32,10 @@
 
   .section-text {
     max-inline-size: 50%;
+
+    @media (max-width: @md) {
+      max-inline-size: 100%;
+    }
   }
 
   .section-text :where(h2) {
@@ -45,5 +49,11 @@
     font-weight: 300;
     margin: 0;
     margin-bottom: 2em;
+  }
+
+  .testimonials {
+    @media (max-width: @lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
