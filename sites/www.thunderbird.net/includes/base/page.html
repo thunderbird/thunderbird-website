@@ -18,15 +18,23 @@
     <a href="{{ url('thunderbird.index') }}" class="logo" title="{{ _('Thunderbird') }}" alt="{{ _('Thunderbird Vector Wordmark') }}">
       {{ svg('Thunderbird_Logo') }}
     </a>
-    <button id="mobile-hamburger-button" class="hamburger-btn" aria-expanded="false" aria-controls="nav-menu" data-expanded="false">
-      {{ _('=') }}
+    <button
+      id="mobile-hamburger-button"
+      class="hamburger-btn"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="{{ _('Open or close site navigation') }}"
+      data-expanded="false"
+      type="button"
+    >
+      <span aria-hidden="true">{{ _('=') }}</span>
     </button>
     {% include 'includes/base/nav.html' %}
   </div>
 </nav>
 <noscript>
   <!-- Provide a nav if they don't have javascript enabled. -->
-  <div class="always-show">
+  <div class="always-show-for-nojs-on-mobile">
     {% include 'includes/base/nav.html' %}
   </div>
 </noscript>
@@ -137,17 +145,3 @@
    */
 </script>
 {% endblock %}
-
-{% macro nav_entry(icon, title, description, location) %}
-<li class="desktop-nav-container">
-  <a href="{{ location }}">
-    <div class="nav-icon">
-      {{ icon }}
-    </div>
-    <div class="nav-text">
-      <h2>{{ title }}</h2>
-      <h6>{{ description }}</h6>
-    </div>
-  </a>
-</li>
-{% endmacro %}

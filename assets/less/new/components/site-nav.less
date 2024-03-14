@@ -106,7 +106,7 @@
         margin: 1rem 1rem 1rem 0;
         padding: 1rem 2rem;
 
-        .nav-icon {
+        .entry-icon {
           display: flex;
           margin: 0.5rem;
           min-width: 48px;
@@ -118,7 +118,7 @@
           }
         }
 
-        .nav-text {
+        .entry-text {
           h2, h6 {
             margin: 0;
           }
@@ -130,7 +130,7 @@
           padding-right: 2rem;
         }
 
-        .desktop-nav-container {
+        .entry-container {
           cursor: pointer;
           list-style: none;
           padding-top: 1rem;
@@ -143,7 +143,7 @@
           }
         }
 
-        .desktop-nav-container > a {
+        .entry-container > a {
           display: flex;
           min-height: 4rem;
           padding-bottom: 1rem;
@@ -151,7 +151,7 @@
           text-decoration: none;
         }
 
-        .desktop-nav-container:last-child > a {
+        .entry-container:last-child > a {
           border: none;
         }
       }
@@ -210,7 +210,44 @@
       border-bottom: 2px var(--color-gray-30) solid;
 
       .sub-nav-container {
+        margin-left: 0;
+        min-width: 100%;
         position: relative;
+
+        .sub-nav-panel {
+          border-radius: 0;
+          box-shadow: none;
+          margin: 0;
+
+          .entry-container {
+            padding: 0;
+          }
+
+          .entry-container > a {
+            min-height: 1rem;
+            border-bottom: none;
+          }
+
+          .entry-icon {
+            display: none;
+
+            svg {
+              width: 0;
+            }
+          }
+
+          .entry-text {
+            padding: 0;
+            
+            h6 {
+              display: none;
+            }
+
+            h2 {
+              font-size: 1rem;
+            }
+          }
+        }
       }
     }
 
@@ -220,13 +257,15 @@
   }
 }
 
-.always-show {
+// By default
+.always-show-for-nojs-on-mobile {
   display: none;
 }
 
 // For those no-js folks on tiny screens
+// We don't use the .no-js here because that could cause a flash
 @media (max-width: @lg) {
-  .always-show {
+  .always-show-for-nojs-on-mobile {
     position: relative;
     display: flex;
     width: 100%;
@@ -237,6 +276,14 @@
       position: static;
       left: 0;
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: @lg) {
+  .no-js {
+    .hamburger-btn {
+      display: none;
     }
   }
 }

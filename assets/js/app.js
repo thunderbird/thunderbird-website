@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const navMenu = document.getElementById('nav-menu');
     const isExpanded = hamburgerBtn.dataset['expanded'] === 'true';
 
-    console.log(navMenu, isExpanded);
-
     if (!isExpanded) {
       navMenu.classList.add('expanded');
     } else {

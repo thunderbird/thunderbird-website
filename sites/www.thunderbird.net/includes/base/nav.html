@@ -1,3 +1,16 @@
+{% macro nav_entry(icon, title, description, location) %}
+<li class="entry-container">
+  <a href="{{ location }}">
+    <div class="entry-icon">
+      {{ icon }}
+    </div>
+    <div class="entry-text">
+      <h2>{{ title }}</h2>
+      <h6>{{ description }}</h6>
+    </div>
+  </a>
+</li>
+{% endmacro %}
 <ul id="nav-menu" class="nav-links">
   <li class="nav-entry">
     <a href="#" class="nav-ln">{{_('Products')}}</a>
