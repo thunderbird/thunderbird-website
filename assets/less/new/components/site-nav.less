@@ -57,9 +57,57 @@
 
 .hamburger-btn {
   display: none;
+  height: 2.5rem;
+  width: 2.5rem;
+
+  padding: 0;
+
+  &::after {
+    background: none;
+  }
 
   @media (max-width: @lg) {
     display: block;
+  }
+}
+
+&[aria-expanded="true"].hamburger-btn::after {
+  background-color: white;
+  opacity: 100%;
+}
+
+&[aria-expanded="true"] > .hamburger-icon {
+  // This isn't quite right...
+  @offsetY: 180%;
+
+  span {
+    border-color: black;
+  }
+
+  span:nth-child(1) {
+    transform: translate(0, @offsetY) rotateZ(45deg);
+  }
+
+  span:nth-child(2) {
+    transform: translate(0, -@offsetY) rotateZ(-45deg);
+  }
+
+}
+
+.hamburger-icon {
+  content: '';
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  span {
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    border-bottom: 2px solid var(--color-gray-30);
+
+    min-height: 1px;
+    transition: all 0.3s ease-in;
   }
 }
 
@@ -81,14 +129,14 @@
 
 
     // Pop-over menu
-    .sub-nav-container {
+    .popover-container {
       display: none;
       position: absolute;
       margin-left: -2rem;
       min-width: 500px;
 
       // Actual physical panel
-      .sub-nav-panel {
+      .popover-panel {
         background-color: var(--bg);
         color: var(--txt);
         border-radius: var(--border-radius-lg);
@@ -157,24 +205,24 @@
       }
     }
 
-    // Make sub-nav pop-up on hover, or on focus-within (needed for keyboard users)
+    // Make popover on hover, or on focus-within (needed for keyboard users)
     &:hover,
     &:focus-within {
-      .sub-nav-container {
+      .popover-container {
         display: block;
       }
     }
   }
 
-  // Make sub-nav pop-up on focus (tab)
-  .nav-ln:focus + .sub-nav-container {
+  // Make popover on focus (tab)
+  .nav-ln:focus + .popover-container {
     display: block;
   }
 
   // One day we'll have a previous sibling selector, until then there's this lol.
-  // Select nav-ln::after that have a hover or focus-within sub-nav-container state.
-  .nav-ln:has(+ .sub-nav-container:hover)::after,
-  .nav-ln:has(+ .sub-nav-container:focus-within)::after {
+  // Select nav-ln::after that have a hover or focus-within popover-container state.
+  .nav-ln:has(+ .popover-container:hover)::after,
+  .nav-ln:has(+ .popover-container:focus-within)::after {
     // For that sweet underline.
     width: 100%;
   }
@@ -209,12 +257,12 @@
     .nav-entry {
       border-bottom: 2px var(--color-gray-30) solid;
 
-      .sub-nav-container {
+      .popover-container {
         margin-left: 0;
         min-width: 100%;
         position: relative;
 
-        .sub-nav-panel {
+        .popover-panel {
           border-radius: 0;
           box-shadow: none;
           margin: 0;
@@ -238,7 +286,7 @@
 
           .entry-text {
             padding: 0;
-            
+
             h6 {
               display: none;
             }
