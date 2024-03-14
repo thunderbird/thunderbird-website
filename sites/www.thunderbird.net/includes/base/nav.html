@@ -12,18 +12,28 @@
 </li>
 {% endmacro %}
 <ul id="nav-menu" class="nav-links">
-  <li class="nav-entry">
-    <a href="#" class="nav-ln">{{_('Products')}}</a>
-    <div class="popover-container">
+  <li class="nav-entry nav-expandable">
+    <button
+      aria-controls="nav-cat-products"
+      class="nav-ln nav-expandable"
+    >
+      {{_('Products')}}
+    </button>
+    <div id="nav-cat-products" class="popover-container">
       <ul class="popover-panel">
         {{ nav_entry(svg('base/icons/menu/desktop'), _('Thunderbird Desktop'), _('Meet the powerful email, calendar, and contacts app for Windows, Linux, and macOS.'), url('thunderbird.products.desktop')) }}
         {{ nav_entry(svg('base/icons/menu/mobile'), _('Thunderbird Mobile'), _('Learn about the leading open-source email app for Android.'), url('thunderbird.products.mobile')) }}
       </ul>
     </div>
   </li>
-  <li class="nav-entry">
-    <a href="#" class="nav-ln">{{_('Resources')}}</a>
-    <div class="popover-container">
+  <li class="nav-entry nav-expandable">
+    <button
+      aria-controls="nav-cat-resources"
+      class="nav-ln"
+    >
+      {{_('Resources')}}
+    </button>
+    <div id="nav-cat-resources" class="popover-container">
       <ul class="popover-panel">
         {{ nav_entry(svg('base/icons/menu/blog'), _('Blog'), _('Learn about new product releases, community events, tech tips, and more.'), url('blog')) }}
         {{ nav_entry(svg('base/icons/menu/help'), _('Get Help'), _('Find the help you need configuring and using Thunderbird.'), url('support')) }}
@@ -32,9 +42,14 @@
       </ul>
     </div>
   </li>
-  <li class="nav-entry">
-    <a href="#" class="nav-ln">{{_('About')}}</a>
-    <div class="popover-container">
+  <li class="nav-entry nav-expandable">
+    <button
+      aria-controls="nav-cat-about"
+      class="nav-ln"
+    >
+      {{_('About')}}
+    </button>
+    <div id="nav-cat-about" class="popover-container">
       <ul class="popover-panel">
         {{ nav_entry(svg('base/icons/menu/about'), _('Who We Are'), _('Learn how our values, community, and organization shape the future of Thunderbird.'), url('thunderbird.about')) }}
         {{ nav_entry(svg('base/icons/menu/contact'), _('Contact Us'), _('Find out who to contact and how.'), url('thunderbird.contact')) }}
@@ -42,23 +57,28 @@
       </ul>
     </div>
   </li>
-  <li class="nav-entry no-border">
-    <a href="#" class="nav-ln">{{_('Contribute')}}</a>
-    <div class="popover-container">
+  <li class="nav-entry no-border nav-expandable">
+    <button
+      aria-controls="nav-cat-contribute"
+      class="nav-ln"
+    >
+      {{_('Contribute')}}
+    </button>
+    <div id="nav-cat-contribute" class="popover-container">
       <ul class="popover-panel">
         {{ nav_entry(svg('base/icons/menu/donations'), _('Donations'), _('Learn how to donate as an individual or business to support Thunderbird and open source.'), url('thunderbird.donate')) }}
         {{ nav_entry(svg('base/icons/menu/participate'), _('Participate'), _('We need helping hands of all kinds. Learn how you can help Thunderbird and others.'), url('thunderbird.participate')) }}
       </ul>
     </div>
   </li>
-  <li class="nav-entry no-border">
+  <li class="nav-entry no-border no-mobile">
     <div class="header-download">
       <a href="{{ url('thunderbird.download') }}" class="btn download-link btn-download">
         <span>{{ _('Download') }}</span>
       </a>
     </div>
   </li>
-  <li class="nav-entry no-border">
+  <li class="nav-entry no-border no-mobile">
     <div class="header-donate">
       <a href="{{ donate_url('header') }}" class="btn">
         <span>{{ svg('heart') }}</span>

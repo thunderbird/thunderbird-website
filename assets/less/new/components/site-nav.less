@@ -61,6 +61,7 @@
 }
 
 .hamburger-btn {
+  cursor: pointer;
   display: none;
   height: 2.5rem;
   width: 2.5rem;
@@ -70,8 +71,7 @@
   padding: 0;
 
   &::after {
-    background: none;
-    background-color: var(--hamburger-background-inactive);
+    background: var(--hamburger-background-inactive) none;
   }
 
   @media (max-width: @lg) {
@@ -97,7 +97,7 @@
   }
 
   span:nth-child(2) {
-    transform: translate(0, -@offsetY) rotateZ(-45deg);
+    transform: translate(0, -@offsetY) rotateZ(-44deg);
   }
 
 }
@@ -214,11 +214,28 @@
     }
 
     // Make popover on hover, or on focus-within (needed for keyboard users)
-    &:hover,
     &:focus-within {
       .popover-container {
         display: block;
       }
+    }
+
+    @media (min-width: @lg) {
+      &:hover {
+        .popover-container {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .nav-ln {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+
+    &::after {
+      height: 3px;
     }
   }
 
@@ -243,9 +260,12 @@
     background-color: var(--color-white);
     color: var(--txt);
 
+    // Add a large shadow to help the panel contrast against
+    box-shadow: var(--shadow-2xl);
+
     width: 60%;
-    right: 0;
-    top: 64px;
+    right: 1.25rem;
+    top: var(--nav-height);
 
     &.expanded {
       display: block;
@@ -254,8 +274,7 @@
     border-radius: 12px;
     align-items: unset;
 
-    .header-download,
-    .header-donate {
+    .no-mobile {
       display: none;
     }
 
@@ -263,6 +282,7 @@
     padding-right: 1rem;
 
     .nav-entry {
+      padding: 1rem 1rem;
       border-bottom: 2px var(--color-gray-30) solid;
 
       .popover-container {
@@ -274,6 +294,7 @@
           border-radius: 0;
           box-shadow: none;
           margin: 0;
+          padding: 1rem 1rem;
 
           .entry-container {
             padding: 0;

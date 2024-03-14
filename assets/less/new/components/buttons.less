@@ -49,8 +49,7 @@ button {
 .btn-download-inline::before,
 .btn-download-link::before,
 .download-link.btn-download::before,
-a.btn::before,
-button::before {
+a.btn::before {
   content: '';
   position: absolute;
   background: var(--glow);
@@ -66,8 +65,7 @@ button::before {
 .btn-download-inline::after,
 .btn-download-link::after,
 .download-link.btn-download::after,
-a.btn::after,
-button::after {
+a.btn::after {
   content: '';
   position: absolute;
   background-color: transparent;
@@ -75,7 +73,7 @@ button::after {
   background-size: 400%;
   background-position: center;
   opacity: .5;
-  inset: 0;
+//  inset: 0;
   z-index: -1;
   transition: all .3s;
 }

@@ -3,8 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const hamburgerBtn = document.getElementById('mobile-hamburger-button');
+  const navExpandables = document.getElementsByClassName("nav-expandable");
 
   /**
    * HamburgerBtn On Click
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     evt.preventDefault();
 
     const navMenu = document.getElementById('nav-menu');
-    const isExpanded = hamburgerBtn.dataset['expanded'] === 'true';
+    const isExpanded = hamburgerBtn.ariaExpanded;
 
     if (!isExpanded) {
       navMenu.classList.add('expanded');
@@ -23,7 +24,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Flip the data attr.
-    hamburgerBtn.dataset['expanded'] = isExpanded ? 'false' : 'true';
-    hamburgerBtn.ariaExpanded = hamburgerBtn.dataset['expanded'];
+    hamburgerBtn.ariaExpanded = isExpanded ? 'false' : 'true';
   });
+
+  /**
+   * For each nav-expandable's button child: adjust the ariaExpanded attribute depending on hover/focus state
+   */
+  for (const item of navExpandables) {
+    const children = item.children;
+    const button = children[0];
+
+    item.addEventListener('focusin', function(evt) {
+      button.ariaExpanded = "true";
+    });
+    item.addEventListener('mouseenter', function(evt) {
+      button.ariaExpanded = "true";
+    });
+    item.addEventListener('focusout', function(evt) {
+      button.ariaExpanded = "false";
+    });
+    item.addEventListener('mouseleave', function(evt) {
+      button.ariaExpanded = "false";
+    });
+  }
+
 });
