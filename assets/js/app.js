@@ -32,20 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
    * For each nav-expandable's button child: adjust the ariaExpanded attribute depending on hover/focus state
    */
   for (const item of navExpandables) {
-    const children = item.children;
-    const button = children[0];
-
     item.addEventListener('focusin', function(evt) {
-      button.ariaExpanded = "true";
+      item.children[0].ariaExpanded = "true";
     });
     item.addEventListener('mouseenter', function(evt) {
-      button.ariaExpanded = "true";
+      item.children[0].ariaExpanded = "true";
     });
     item.addEventListener('focusout', function(evt) {
-      button.ariaExpanded = "false";
+      item.children[0].ariaExpanded = "false";
     });
     item.addEventListener('mouseleave', function(evt) {
-      button.ariaExpanded = "false";
+      item.children[0].ariaExpanded = "false";
     });
   }
 
