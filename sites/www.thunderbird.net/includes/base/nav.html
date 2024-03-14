@@ -1,0 +1,55 @@
+<ul id="nav-menu" class="nav-links">
+  <li class="nav-entry">
+    <a href="#" class="nav-ln">{{_('Products')}}</a>
+    <div class="sub-nav-container">
+      <ul class="sub-nav-panel">
+        {{ nav_entry(svg('base/icons/menu/desktop'), _('Thunderbird Desktop'), _('Meet the powerful email, calendar, and contacts app for Windows, Linux, and macOS.'), url('thunderbird.products.desktop')) }}
+        {{ nav_entry(svg('base/icons/menu/mobile'), _('Thunderbird Mobile'), _('Learn about the leading open-source email app for Android.'), url('thunderbird.products.mobile')) }}
+      </ul>
+    </div>
+  </li>
+  <li class="nav-entry">
+    <a href="#" class="nav-ln">{{_('Resources')}}</a>
+    <div class="sub-nav-container">
+      <ul class="sub-nav-panel">
+        {{ nav_entry(svg('base/icons/menu/blog'), _('Blog'), _('Learn about new product releases, community events, tech tips, and more.'), url('blog')) }}
+        {{ nav_entry(svg('base/icons/menu/help'), _('Get Help'), _('Find the help you need configuring and using Thunderbird.'), url('support')) }}
+        {{ nav_entry(svg('base/icons/menu/podcasts'), _('Podcasts'), _('Meet interesting people and hear their Thunderbird stories.'), url('blog')) }}
+        {{ nav_entry(svg('base/icons/menu/downloads'), _('Downloads'), _('Find the latest version of Thunderbird.'), url('thunderbird.download')) }}
+      </ul>
+    </div>
+  </li>
+  <li class="nav-entry">
+    <a href="#" class="nav-ln">{{_('About')}}</a>
+    <div class="sub-nav-container">
+      <ul class="sub-nav-panel">
+        {{ nav_entry(svg('base/icons/menu/about'), _('Who We Are'), _('Learn how our values, community, and organization shape the future of Thunderbird.'), url('thunderbird.about')) }}
+        {{ nav_entry(svg('base/icons/menu/contact'), _('Contact Us'), _('Find out who to contact and how.'), url('thunderbird.contact')) }}
+        {{ nav_entry(svg('base/icons/menu/careers'), _('Careers'), _('We have an enthusiastic team with diverse talents. Learn how to join us.'), url('thunderbird.careers')) }}
+      </ul>
+    </div>
+  </li>
+  <li class="nav-entry">
+    <a href="#" class="nav-ln">{{_('Contribute')}}</a>
+    <div class="sub-nav-container">
+      <ul class="sub-nav-panel">
+        {{ nav_entry(svg('base/icons/menu/donations'), _('Donations'), _('Learn how to donate as an individual or business to support Thunderbird and open source.'), url('thunderbird.donate')) }}
+        {{ nav_entry(svg('base/icons/menu/participate'), _('Participate'), _('We need helping hands of all kinds. Learn how you can help Thunderbird and others.'), url('thunderbird.participate')) }}
+      </ul>
+    </div>
+  </li>
+  <li>
+    <div class="header-download">
+      <a href="{{ url('thunderbird.download') }}" class="btn download-link btn-download">
+        <span>{{ _('Download') }}</span>
+      </a>
+    </div>
+  </li>
+  <li>
+    <div class="header-donate">
+      <a href="{{ donate_url('header') }}" class="btn">
+        <span>{{ svg('heart') }}</span>
+      </a>
+    </div>
+  </li>
+</ul>
