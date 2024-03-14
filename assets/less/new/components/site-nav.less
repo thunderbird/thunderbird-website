@@ -1,4 +1,9 @@
 .site-nav {
+  --hamburger-background-inactive: var(--color-white);
+  --hamburger-foreground-inactive: var(--color-black);
+  --hamburger-background-active: var(--color-white);
+  --hamburger-foreground-active: var(--color-black);
+
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -59,11 +64,14 @@
   display: none;
   height: 2.5rem;
   width: 2.5rem;
+  margin-right: 4px;
+  margin-top: 8px;
 
   padding: 0;
 
   &::after {
     background: none;
+    background-color: var(--hamburger-background-inactive);
   }
 
   @media (max-width: @lg) {
@@ -72,7 +80,7 @@
 }
 
 &[aria-expanded="true"].hamburger-btn::after {
-  background-color: white;
+  background-color: var(--hamburger-background-active);
   opacity: 100%;
 }
 
@@ -81,7 +89,7 @@
   @offsetY: 180%;
 
   span {
-    border-color: black;
+    border-color: var(--hamburger-foreground-active);
   }
 
   span:nth-child(1) {
@@ -104,7 +112,7 @@
     margin: auto;
     width: 50%;
     height: 100%;
-    border-bottom: 2px solid var(--color-gray-30);
+    border-bottom: 2px solid var(--hamburger-foreground-inactive);
 
     min-height: 1px;
     transition: all 0.3s ease-in;
@@ -299,7 +307,7 @@
       }
     }
 
-    .nav-entry:last-child {
+    .nav-entry.no-border {
       border: none;
     }
   }
