@@ -33,16 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
    */
   for (const item of navExpandables) {
     item.addEventListener('focusin', function(evt) {
-      item.children[0].ariaExpanded = "true";
+      evt.target.ariaExpanded = "true";
     });
     item.addEventListener('mouseenter', function(evt) {
-      item.children[0].ariaExpanded = "true";
+      evt.target.ariaExpanded = "true";
     });
     item.addEventListener('focusout', function(evt) {
-      item.children[0].ariaExpanded = "false";
+      evt.target.ariaExpanded = "false";
     });
     item.addEventListener('mouseleave', function(evt) {
-      item.children[0].ariaExpanded = "false";
+      evt.target.ariaExpanded = "false";
     });
   }
 
