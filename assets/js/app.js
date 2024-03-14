@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     evt.preventDefault();
 
     const navMenu = document.getElementById('nav-menu');
-    const isExpanded = hamburgerBtn.ariaExpanded;
+    const isExpanded = hamburgerBtn.ariaExpanded === 'true';
 
     if (!isExpanded) {
       navMenu.classList.add('expanded');
@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
       navMenu.classList.remove('expanded');
     }
 
-    // Flip the data attr.
+    // Flip the aria attr.
     hamburgerBtn.ariaExpanded = isExpanded ? 'false' : 'true';
+
   });
 
   /**
