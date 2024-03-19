@@ -28,7 +28,9 @@
             {% for code, label in translations|dictsort -%}
               {# Don't escape the label as it may include entity references
                # like "Português (do&nbsp;Brasil)" (Bug 861149) #}
+              {% if has_localized_download(code, channel) %}
               <option lang="{{ code }}" value="{{ code }}" {{ 'selected' if code==LANG else '' }}>{{ label|safe|replace('English (US)', 'English') }}</option>
+              {% endif %}
             {% endfor %}
           </select>
         </div>
@@ -50,7 +52,9 @@
                 {% set platform_name = platform_tuple[1] %}
                 <li>
                   {% for code, label in translations|dictsort -%}
+                    {% if has_localized_download(code, channel) %}
                     <a class="dotted lang-link" lang="{{ code }}" href="{{ download_url(platform_os=platform, channel=channel, locale=code) }}">{{ _(platform_name) }}</a>
+                    {% endif %}
                   {% endfor %}
                 </li>
                 {% endfor %}

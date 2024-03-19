@@ -251,6 +251,12 @@ def download_url(ctx, platform_os, version=None, channel='release', locale=None)
 
 
 @jinja2.pass_context
+def has_localized_download(ctx, locale, channel='release'):
+    """Determine if a locale has a localized download link (or if it just defaults to en-US)"""
+    return bool(thunderbird_desktop.latest_builds(locale, channel))
+
+
+@jinja2.pass_context
 def get_platform_icon(ctx, platform):
     windows_icon = 'base/icons/download/windows-dark'
     mac_icon = 'base/icons/download/apple-dark'
