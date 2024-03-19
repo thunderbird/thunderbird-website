@@ -18,7 +18,8 @@
           <div class="section-title">
             <h1>{{ _('Thunderbird <span class="txt-gradient">Desktop</span>') }}</h1>
           </div>
-          <p>{{ _('These are officially maintained and distributed by Thunderbird Desktop. Download the latest release unless you wish to test the beta version and report bugs.') }}</p>
+          <p>{{ _('These are officially maintained and distributed by Thunderbird Desktop. Download the latest <span class="txt-gradient">Release version</span> unless you wish to test the <span class="txt-gradient beta">Beta version</span> and report bugs.') }}</p>
+          <p>{{ _('The <span class="txt-gradient daily">Daily version</span> is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
         </div>
         <div class="section-text">
           <label class="pretend-to-be-h6" for="download-language-select">
@@ -29,7 +30,7 @@
               {# Don't escape the label as it may include entity references
                # like "Português (do&nbsp;Brasil)" (Bug 861149) #}
               {% if has_localized_download(code, channel) %}
-              <option lang="{{ code }}" value="{{ code }}" {{ 'selected' if code==LANG else '' }}>{{ label|safe|replace('English (US)', 'English') }}</option>
+              <option lang="{{ code }}" value="{{ code }}" {{ 'selected' if code==LANG else '' }}>{{ label|safe }}</option>
               {% endif %}
             {% endfor %}
           </select>
@@ -45,7 +46,7 @@
             </div>
               {% for channel, channel_name in get_channels().items() %}
             <div class="platform-list-builds {{ channel }}">
-              <h5>{{ channel_name }}:</h5>
+              <h5 class="txt-gradient {{ channel }}">{{ channel_name }}:</h5>
               <ul>
                 {% for platform_tuple in platforms %}
                 {% set platform = platform_tuple[0] %}
