@@ -1,7 +1,7 @@
 {% macro nav_entry(icon, title, description, location) %}
 <li class="entry-container">
   <a href="{{ location }}">
-    <div class="entry-icon">
+    <div class="entry-icon" aria-hidden="true">
       {{ icon }}
     </div>
     <div class="entry-text">
@@ -26,7 +26,7 @@
       </ul>
     </div>
   </li>
-  <li class="nav-entry nav-expandable" tabindex="1">
+  <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-resources"
       class="nav-ln"
@@ -42,7 +42,7 @@
       </ul>
     </div>
   </li>
-  <li class="nav-entry nav-expandable" tabindex="2">
+  <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-about"
       class="nav-ln"
@@ -57,7 +57,7 @@
       </ul>
     </div>
   </li>
-  <li class="nav-entry no-border nav-expandable" tabindex="3">
+  <li class="nav-entry no-border nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-contribute"
       class="nav-ln"
@@ -80,7 +80,7 @@
   </li>
   <li class="nav-entry no-border no-mobile">
     <div class="header-donate">
-      <a href="{{ donate_url('header') }}" class="btn">
+      <a href="{{ donate_url('header') }}" class="btn" aria-label="Donate">
         <span>{{ svg('heart') }}</span>
       </a>
     </div>

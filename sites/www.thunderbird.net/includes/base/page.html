@@ -15,7 +15,7 @@
 {% block site_nav %}
 <nav class="site-nav">
   <div class="nav-container">
-    <a href="{{ url('thunderbird.index') }}" class="logo" title="{{ _('Thunderbird') }}" alt="{{ _('Thunderbird Vector Wordmark') }}">
+    <a href="{{ url('thunderbird.index') }}" class="logo" title="{{ _('Thunderbird') }}" aria-label="{{ _('Thunderbird Logo') }}">
       {{ svg('Thunderbird_Logo') }}
     </a>
     <button
@@ -64,7 +64,7 @@
   {% block site_header_share %}{% endblock %}
 
   {% block header_separator %}
-  <div class="header-separator">
+  <div class="header-separator" aria-hidden="true">
     {{ svg('base/separators/chevron-convex') }}
   </div>
   {% endblock %}
