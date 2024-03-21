@@ -185,15 +185,10 @@ def high_res_img(ctx, url, optional_attributes=None, scale='1.5x', alt_formats=(
 
 
 @jinja2.pass_context
-def svg(ctx, file_name, aria_hidden=True):
+def svg(ctx, file_name):
     """Returns an inlined svg element, optionally (and by default) wraps a span around it to allow screen readers to ignore it."""
     file = path.join(settings.MEDIA_URL.strip('/'), 'svg/' + file_name + '.svg')
-    element = open(file).read()
-
-    if aria_hidden:
-        element = f'<span aria-hidden="true">{element}</span>'
-
-    return element
+    return open(file).read()
 
 
 @jinja2.pass_context
