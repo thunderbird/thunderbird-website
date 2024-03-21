@@ -40,6 +40,12 @@
   backdrop-filter: blur(24px) saturate(120%);
   transition: all .5s;
   z-index: 100000;
+
+  .hamburger-btn {
+    --hamburger-foreground-inactive: var(--nav-txt);
+    margin: 0;
+    transition: margin .2s;
+  }
 }
 
 .scrolled-nav .nav-ln,
@@ -68,7 +74,7 @@
   width: 2.5rem;
   margin-right: 4px;
   margin-top: 8px;
-
+  transition: margin .2s;
   padding: 0;
 
   &::after {
