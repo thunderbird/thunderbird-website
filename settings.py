@@ -167,6 +167,7 @@ URL_MAPPINGS = {
     'legal.infringement': 'https://www.mozilla.org/en-US/about/legal/report-infringement/',
     'legal.trademark': 'https://www.mozilla.org/about/legal/defend-mozilla-trademarks/',
     'mozorg.home': 'https://www.mozilla.org/',
+    'mozorg.careers.tb': 'https://www.mozilla.org/careers/listings/?team=MZLA%2FThunderbird',
     'mozorg.connect': 'https://connect.mozilla.org/',
     'mozorg.connect.tb': 'https://connect.mozilla.org/t5/ideas/idb-p/ideas/label-name/thunderbird',
     'mozorg.mpl2': 'https://www.mozilla.org/MPL/',
