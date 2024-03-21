@@ -5,7 +5,7 @@
 {% set active_page = "release-notes" %}
 {% extends "includes/base/page.html" %}
 
-{% block page_title %}{{ _('Release Notes') }}{% endblock %}
+{% block page_title %}{{ _('Releases') }}{% endblock %}
 {% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
 {% block category %}{{ _('Products') }} > {{ _('Thunderbird Desktop') }}{% endblock %}
 
@@ -13,7 +13,11 @@
 <section>
   <div class="container">
 
-    <aside class="flex flex-col w-full pr-8 pl-8">
+    <div class="section-text">
+      <p>{{ _('Thunderbird release notes are specific to each version of the application. Select your version from the list below to see the release notes for it. ') }}</p>
+    </div>
+
+    <div class="section-text">
         {% for int_version, versions in releases -%}
           <aside class="flex flex-col lg:flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
             <h4 class="font-2xl font-bold m-0 p-3 lg:w-24">
@@ -44,7 +48,7 @@
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.9.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.9</a>
           </aside>
         </aside>
-      </aside>
+      </div>
 
   </div>
 </section>
