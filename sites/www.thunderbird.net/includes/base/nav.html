@@ -12,7 +12,7 @@
 </li>
 {% endmacro %}
 <ul id="nav-menu" class="nav-links">
-  <!--
+  {#
   <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-products"
@@ -27,7 +27,7 @@
       </ul>
     </div>
   </li>
-  -->
+  #}
   <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-resources"
@@ -39,7 +39,7 @@
       <ul class="popover-panel">
         {{ nav_entry(svg('base/icons/menu/blog'), _('Blog'), _('Learn about new product releases, community events, tech tips, and more.'), url('blog')) }}
         {{ nav_entry(svg('base/icons/menu/help'), _('Get Help'), _('Find the help you need configuring and using Thunderbird.'), url('support')) }}
-        <!--{{ nav_entry(svg('base/icons/menu/podcasts'), _('Podcasts'), _('Meet interesting people and hear their Thunderbird stories.'), url('blog')) }}-->
+        {# {{ nav_entry(svg('base/icons/menu/podcasts'), _('Podcasts'), _('Meet interesting people and hear their Thunderbird stories.'), url('blog')) }} #}
         {{ nav_entry(svg('base/icons/menu/downloads'), _('Downloads'), _('Find the latest version of Thunderbird.'), url('thunderbird.download')) }}
       </ul>
     </div>
