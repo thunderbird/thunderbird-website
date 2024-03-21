@@ -33,7 +33,7 @@
 {% if notes %}
 <section>
   <div class="container">
-    <div class="section-text">
+    <div class="section-text wide">
 
       {% set section = namespace(name='') %}
       {% set release_group = namespace(name='') %}
@@ -64,35 +64,35 @@
       {% set section.name = note.tag %}
       {% set release_group.name = release.groups[group] %}
 
-      <aside id="note-{{ loop.index0 }}"
+      <div id="note-{{ loop.index0 }}"
              class="note-container">
-        <h4 class="note-entry">
+        <h4 class="note-category">
           {% if note.tag == 'new' %}
-          <aside class="note-line">
-            <span class="note-icon">{{ svg('bookmark') }}</span>
+          <div class="category-container">
+            <span class="category-icon">{{ svg('bookmark') }}</span>
             {{ note.tag }}
-          </aside>
+          </div>
           {% elif note.tag == 'changed' %}
-          <aside class="note-line">
-            <span class="note-icon">{{ svg('sync') }}</span>
+          <div class="category-container">
+            <span class="category-icon">{{ svg('sync') }}</span>
             {{ note.tag }}
-          </aside>
+          </div>
           {% elif note.tag == 'fixed' %}
-          <aside class="note-line">
-            <span class="note-icon">{{ svg('check') }}</span>
+          <div class="category-container">
+            <span class="category-icon">{{ svg('check') }}</span>
             {{ note.tag }}
-          </aside>
+          </div>
           {% endif %}
         </h4>
-        <aside class="note-text">
+        <div class="note-text">
           {{ note.note|markdown|safe }}
-        </aside>
+        </div>
         {% if is_beta %}
         <aside class="note-bug-numbers">
           {{ note.bug_links|markdown|safe }}
         </aside>
         {% endif %}
-      </aside>
+      </div>
       {% endif %}
       {% endfor %}
       {% endfor %}
@@ -103,12 +103,12 @@
       </h2>
       {% for note in known_issues %}
       <aside id="note-{{ note.id }}" class="note-container">
-        <h4 class="note-entry">
-          <aside class="note-line">
-            <span class="note-icon">{{ svg('bookmark') }}</span>
+        <div class="note-category">
+          <aside class="category-container">
+            <span class="category-icon">{{ svg('bookmark') }}</span>
             {{ _('unresolved') }}
           </aside>
-        </h4>
+        </div>
         <aside class="note-text">
           {{ note.note|markdown|safe }}
           {% if note.fixed_in_release %}

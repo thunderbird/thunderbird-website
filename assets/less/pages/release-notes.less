@@ -1,4 +1,8 @@
 .page-release-notes {
+  .wide {
+    width: 60%;
+  }
+
   .header-section {
     margin-top: 6rem;
     margin-bottom: 2rem;
@@ -13,24 +17,25 @@
     grid-template-columns: 7rem 2fr;
     grid-template-rows: 1fr 1fr;
     align-items: start;
-    margin-bottom: 1rem;
+    //margin-bottom: 0.5rem;
   }
 
-  .note-line {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-transform: capitalize;
-  }
 
-  .note-icon {
-    width: 1.5rem;
-    color: var(--color-blue-70);
-  }
-
-  .note-entry {
+  .note-category {
     margin: 0 1rem 0 0;
     grid-row: 1;
+
+    .category-icon {
+      width: 1.5rem;
+      color: var(--color-blue-70);
+    }
+
+    .category-container {
+      display: flex;
+      //align-items: center;
+      gap: 0.5rem;
+      text-transform: capitalize;
+    }
   }
 
   .note-text {
@@ -59,6 +64,7 @@
     a::after {
       content: ',';
     }
+
     a:last-child::after {
       content: '';
     }
