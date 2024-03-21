@@ -36,9 +36,17 @@ with great features!') }}{% endblock %}
           <span class="icon icon-apple">
             {{ svg('download-icon-apple') }}
           </span>
+          <span class="icon icon-android">
+            {{ svg('base/icons/download/android-light') }}
+          </span>
         </div>
-        <div>
-        {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="new-frontpage") }}
+        <div class="download-button">
+          <a href="{{ url('thunderbird.download') }}" class="btn download-link btn-download">
+            <span>{{ _('Download') }}</span>
+          </a>
+          <p class="download-other">
+            <a href="{{ url('thunderbird.download') }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Download options and other languages') }}</a>
+          </p>
         </div>
         <small>{{_('Free forever.')}} <a href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
