@@ -17,9 +17,11 @@
   a.btn {
     padding: .5em 1em;
   }
+
   a.btn::after {
     background: transparent;
   }
+
   svg {
     width: 1rem;
   }
@@ -183,4 +185,12 @@ button:hover::after {
 
 .download-button ul li {
   margin-block: 40px;
+}
+
+// Make the smart download button a bit larger
+.download-button {
+  .btn-download {
+    font-size: var(--font-lg);
+    font-weight: 400;
+  }
 }
