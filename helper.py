@@ -539,7 +539,6 @@ def split_system_requirements(ctx):
         title_regex = r"^([#]{2} ([\w\/]+))"
         # Split by section
         requirement_list = requirements.split('---')
-        raise Exception
         system_requirements = {}
 
         for system_req in requirement_list:
@@ -555,7 +554,7 @@ def split_system_requirements(ctx):
 
         return system_requirements
     except Exception:
-        # Ah beans
+        # Ah beans, well don't crash the page.
         return {}
 
 
