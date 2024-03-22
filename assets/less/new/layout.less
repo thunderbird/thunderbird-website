@@ -89,6 +89,10 @@ header {
   max-width: 1280px;
   overflow: hidden;
 
+  &.no-gap {
+    gap: 0;
+  }
+
   @media (max-width: @md) {
     // Give them some space to breath
     width: calc(100% - 1rem);

@@ -26,17 +26,17 @@ with great features!') }}{% endblock %}
         </p>
       </div>
       <div class="hero-download">
-        <div class="os-list">
-          <span class="icon">
+        <div class="os-list" aria-label="{{ _('Available on Windows, Linux, Mac, and Android') }}">
+          <span class="icon" aria-hidden="true">
             {{ svg('download-icon-windows') }}
           </span>
-          <span class="icon icon-tux-alt">
+          <span class="icon icon-tux-alt" aria-hidden="true">
             {{ svg('download-icon-linux') }}
           </span>
-          <span class="icon icon-apple">
+          <span class="icon icon-apple" aria-hidden="true">
             {{ svg('download-icon-apple') }}
           </span>
-          <span class="icon icon-android">
+          <span class="icon icon-android" aria-hidden="true">
             {{ svg('base/icons/download/android-light') }}
           </span>
         </div>
@@ -63,7 +63,7 @@ with great features!') }}{% endblock %}
 {% block content %}
   <section id="free-from-chaos">
     <div class="container">
-      <div class="floating-icons">
+      <div class="floating-icons" aria-hidden="true">
         <picture class="competitor-icon apple">
           <source srcset="/media/img/thunderbird/new/competitors/floating-icon-apple.avif" type="image/avif">
           <source srcset="/media/img/thunderbird/new/competitors/floating-icon-apple.webp" type="image/webp">
@@ -109,7 +109,7 @@ with great features!') }}{% endblock %}
           {% endtrans %}
         </p>
       </div>
-      <div class="graphic">
+      <div class="graphic" aria-hidden="true">
         <picture>
           <source srcset="/media/img/thunderbird/new/screens/laptop-bg.avif" type="image/avif">
           <source srcset="/media/img/thunderbird/new/screens/laptop-bg.webp" type="image/webp">
@@ -132,7 +132,7 @@ with great features!') }}{% endblock %}
         <!-- <a href="#" class="cta-ln">{{_('See Compatibility')}}</a> -->
       </div>
     </div>
-    <div class="mask">
+    <div class="mask" aria-hidden="true">
       {{ svg('mask') }}
     </div>
   </section>
@@ -151,7 +151,7 @@ with great features!') }}{% endblock %}
           always put your privacy and security first.
           {% endtrans %}
         </p>
-        <div class="planets">
+        <div class="planets" aria-hidden="true">
           <div class="planet-firefox">
             <picture>
               <source srcset="/media/img/thunderbird/new/planets/planets-firefox.avif" type="image/avif">
@@ -172,7 +172,7 @@ with great features!') }}{% endblock %}
         <!-- <a href="{{ url('thunderbird.about') }}" class="cta-ln">{{_('Discover Our Mission')}}</a> -->
       </div>
     </div>
-    <div class="mask">
+    <div class="mask" aria-hidden="true">
       {{ svg('mask') }}
     </div>
   </section>
@@ -200,7 +200,7 @@ with great features!') }}{% endblock %}
               {% endtrans %}
             </q>
             <div class="attrib">
-              <div class="profile-pic">
+              <div class="profile-pic" aria-hidden="true">
                 <picture>
                   <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-max.avif"
                     type="image/avif">
@@ -213,7 +213,7 @@ with great features!') }}{% endblock %}
               <div class="title">{{_('Software Developer, Austria')}}</div>
             </div>
           </div>
-          <div class="visual unified-inbox">
+          <div class="visual unified-inbox" aria-hidden="true">
             <picture>
               <source srcset="/media/img/thunderbird/new/testimonials/unified-inbox.avif" type="image/avif">
               <source srcset="/media/img/thunderbird/new/testimonials/unified-inbox.webp" type="image/webp">
@@ -229,7 +229,7 @@ with great features!') }}{% endblock %}
               {% endtrans %}
             </q>
             <div class="attrib">
-              <div class="profile-pic">
+              <div class="profile-pic" aria-hidden="true">
                 <picture>
                   <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-juan.avif"
                     type="image/avif">
@@ -252,7 +252,7 @@ with great features!') }}{% endblock %}
               {% endtrans %}
             </q>
             <div class="attrib">
-              <div class="profile-pic">
+              <div class="profile-pic" aria-hidden="true">
                 <picture>
                   <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-ernie.avif"
                     type="image/avif">
@@ -274,7 +274,7 @@ with great features!') }}{% endblock %}
               {% endtrans %}
             </q>
             <div class="attrib">
-              <div class="profile-pic">
+              <div class="profile-pic" aria-hidden="true">
                 <picture>
                   <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-rolando.avif"
                     type="image/avif">
@@ -296,7 +296,7 @@ with great features!') }}{% endblock %}
               {% endtrans %}
             </q>
             <div class="attrib">
-              <div class="profile-pic">
+              <div class="profile-pic" aria-hidden="true">
                 <picture>
                   <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-beegy.avif"
                     type="image/avif">
@@ -318,7 +318,7 @@ with great features!') }}{% endblock %}
               {% endtrans %}
             </q>
             <div class="attrib">
-              <div class="profile-pic">
+              <div class="profile-pic" aria-hidden="true">
                 <picture>
                   <source srcset="/media/img/thunderbird/new/testimonials/testimonial-portrait-dom.avif"
                     type="image/avif">
@@ -331,7 +331,7 @@ with great features!') }}{% endblock %}
               <div class="title">{{_('Student, UK')}}</div>
             </div>
           </div>
-          <div class="visual extensions">
+          <div class="visual extensions" aria-hidden="true">
             <picture>
               <source srcset="/media/img/thunderbird/new/testimonials/hex.avif" type="image/avif">
               <source srcset="/media/img/thunderbird/new/testimonials/hex.webp" type="image/webp">
@@ -345,29 +345,29 @@ with great features!') }}{% endblock %}
         <!-- <a href="{{ url('thunderbird.features') }}" class="cta-ln">{{_('Explore More Features')}}</a> -->
       </div>
     </div>
-    <div class="mask">
+    <div class="mask" aria-hidden="true">
       {{ svg('mask') }}
     </div>
   </section>
 
   <section id="free-your-inbox">
-    <div class="container">
+    <div class="container no-gap">
       <div class="section-text">
         <h2 class="cta-sub-heading">{{_('Are you ready to love email again?')}}</h2>
         <h3 class="cta-heading">{{_('<span class="txt-gradient">Free</span> Your Inbox')}}</h3>
       </div>
       <div class="cta">
-        <div class="os-list">
-          <span class="icon">
+        <div class="os-list" aria-label="{{ _('Available on Windows, Linux, Mac, and Android') }}">
+          <span class="icon" aria-hidden="true">
             {{ svg('download-icon-windows') }}
           </span>
-          <span class="icon">
+          <span class="icon" aria-hidden="true">
             {{ svg('download-icon-linux') }}
           </span>
-          <span class="icon icon-apple">
+          <span class="icon icon-apple" aria-hidden="true">
             {{ svg('download-icon-apple') }}
           </span>
-          <span class="icon icon-android">
+          <span class="icon icon-android" aria-hidden="true">
             {{ svg('base/icons/download/android-dark') }}
           </span>
         </div>
@@ -382,7 +382,7 @@ with great features!') }}{% endblock %}
         <small>{{_('Free forever.')}} <a href="{{ donate_url('body') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
     </div>
-    <div class="mask">
+    <div class="mask" aria-hidden="true">
       {{ svg('mask') }}
     </div>
   </section>

@@ -1,9 +1,9 @@
 <footer>
   <div class="container footer">
-    <a href="{{ url('thunderbird.index') }}" class="logo">
+    <a href="{{ url('thunderbird.index') }}" class="logo" aria-hidden="true">
       {{ svg('Thunderbird_Logo') }}
     </a>
-    <div class="site-links">
+    <div class="site-links" role="navigation">
       <div class="site-link-section">
         <ul>
           <li><a href="{{ url('thunderbird.index') }}" class="dotted home">{{_('Home')}}</a></li>
