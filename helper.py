@@ -544,19 +544,18 @@ def split_system_requirements(ctx):
         for system_req in requirement_list:
             match = re.findall(title_regex, system_req, re.MULTILINE | re.IGNORECASE)
             if len(match) == 0:
-                print("??? > ", system_req)
                 continue
+
             match = match[0]
             # Remove the entire sequence
             system_req = system_req.replace(match[0], '')
-            # Dict by platform name, and convert the markdown to html
+            # Key by platform name, and convert the markdown to html
             system_requirements[match[1]] = safe_markdown(system_req)
 
         return system_requirements
     except Exception:
         # Ah beans, well don't crash the page.
         return {}
-
 
 
 def is_calendarific_free_tier():
