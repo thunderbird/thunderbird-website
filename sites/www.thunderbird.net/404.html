@@ -1,0 +1,25 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "not-found" %}
+{% extends "includes/base/page.html" %}
+
+{% set not_found_message = _('The page you are looking for doesn’t exist.<br/>If you think this is a bug, you can <a href="%(bug_report_url)s">report an issue here</a>.')|format(bug_report_url=url('thunderbird.site.bug-report')) %}
+
+{% block page_title %}{{ _('There\'s Nothing Here') }}{% endblock %}
+{% block page_desc %}{{ not_found_message }}{% endblock %}
+{% block category %}{{ _('????') }}{% endblock %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h4>{{ not_found_message }}</h4>
+    </div>
+    <div>
+      <img src="{{ static('img/thunderbird/404/nest.png') }}" alt="{{ _('Empty nest') }}" class="flex w-full max-w-3xl mx-auto pr-8 pl-8">
+    </div>
+  </div>
+</section>
+{% endblock %}
