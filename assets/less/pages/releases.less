@@ -1,4 +1,8 @@
 .page-releases {
+  .container-closer {
+    gap: 0;
+  }
+
   .release-container {
     display: flex;
     flex-direction: row;
@@ -10,6 +14,9 @@
     padding-bottom: 2rem;
     @media (max-width: @md) {
       flex-direction: column;
+    }
+    &:last-child {
+      border: none;
     }
   }
 
