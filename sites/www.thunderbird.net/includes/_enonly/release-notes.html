@@ -29,16 +29,16 @@
       </div>
       <div class="system-requirements">
         {% for platform, req in split_system_requirements().items(): %}
-          {% set icon_name = platform|lower %}
-          {% if platform == 'GNU/Linux' %}
-            {% set icon_name = 'linux' %}
-          {% elif platform == 'Mac' %}
-            {% set icon_name = 'apple' %}
-          {% endif %}
-          {% set icon_path = 'base/icons/download/%(icon_name)s-dark'|format(icon_name=icon_name) %}
-          {% call accordion(svg(icon_path), platform) %}
-            {{ req }}
-          {% endcall %}
+        {% set icon_name = platform|lower %}
+        {% if platform == 'GNU/Linux' %}
+        {% set icon_name = 'linux' %}
+        {% elif platform == 'Mac' %}
+        {% set icon_name = 'apple' %}
+        {% endif %}
+        {% set icon_path = 'base/icons/download/%(icon_name)s-dark'|format(icon_name=icon_name) %}
+        {% call accordion(svg(icon_path), platform) %}
+        {{ req }}
+        {% endcall %}
         {% endfor %}
       </div>
     </div>
@@ -79,27 +79,29 @@
       {% set release_group.name = release.groups[group] %}
 
       <div id="note-{{ loop.index0 }}"
-             class="note-container">
-        <h4 class="note-category">
-          {% if note.tag == 'new' %}
-          <div class="category-container">
-            <span class="category-icon">{{ svg('bookmark') }}</span>
-            {{ note.tag }}
+           class="note-container">
+        <div class="note-flex">
+          <h4 class="note-category">
+            {% if note.tag == 'new' %}
+            <div class="category-container">
+              <span class="category-icon">{{ svg('bookmark') }}</span>
+              {{ note.tag }}
+            </div>
+            {% elif note.tag == 'changed' %}
+            <div class="category-container">
+              <span class="category-icon">{{ svg('sync') }}</span>
+              {{ note.tag }}
+            </div>
+            {% elif note.tag == 'fixed' %}
+            <div class="category-container">
+              <span class="category-icon">{{ svg('check') }}</span>
+              {{ note.tag }}
+            </div>
+            {% endif %}
+          </h4>
+          <div class="note-text">
+            {{ note.note|markdown|safe }}
           </div>
-          {% elif note.tag == 'changed' %}
-          <div class="category-container">
-            <span class="category-icon">{{ svg('sync') }}</span>
-            {{ note.tag }}
-          </div>
-          {% elif note.tag == 'fixed' %}
-          <div class="category-container">
-            <span class="category-icon">{{ svg('check') }}</span>
-            {{ note.tag }}
-          </div>
-          {% endif %}
-        </h4>
-        <div class="note-text">
-          {{ note.note|markdown|safe }}
         </div>
         {% if is_beta %}
         <aside class="note-bug-numbers">
