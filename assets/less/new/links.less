@@ -16,7 +16,17 @@ a {
     text-decoration: none;
     font-weight: 600;
     &::after {
-      content: '>';
+      position: relative;
+
+      top: 0.17rem;
+      left: -0.25rem;
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('/media/svg/chevron-right.svg');
+      content: '';
       margin-left: 0.5rem;
       color: var(--color-ink-60);
     }
