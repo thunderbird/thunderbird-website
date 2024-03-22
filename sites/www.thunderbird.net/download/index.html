@@ -18,8 +18,8 @@
           <div class="section-title">
             <h1>{{ _('Thunderbird <span class="txt-gradient">Desktop</span>') }}</h1>
           </div>
-          <p>{{ _('These are officially maintained and distributed by Thunderbird Desktop. Download the latest <span class="txt-gradient">Release version</span> unless you wish to test the <span class="txt-gradient beta">Beta version</span> and report bugs.') }}</p>
-          <p>{{ _('The <span class="txt-gradient daily">Daily version</span> is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
+          <p>{{ _('These are officially maintained and distributed by Thunderbird Desktop. Download the latest Release version unless you wish to test the Beta version and report bugs.') }}</p>
+          <p>{{ _('The Daily version is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
         </div>
         <div class="section-text">
           <label class="pretend-to-be-h6" for="download-language-select">
@@ -46,7 +46,7 @@
             </div>
               {% for channel, channel_name in get_channels().items() %}
             <div class="platform-list-builds {{ channel }}">
-              <h5 class="txt-gradient {{ channel }}">{{ channel_name }}:</h5>
+              <h5 class="channel-name {{ channel }}">{{ channel_name }}:</h5>
               <ul>
                 {% for platform_tuple in platforms %}
                 {% set platform = platform_tuple[0] %}
@@ -139,6 +139,8 @@
     </div>
   </div>
 </section>
+{% endblock %}
+{% block page_css %}
 <style>
   /* Fallback for no :has support - Only display the current locale's download. */
   .lang-link {
