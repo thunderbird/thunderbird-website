@@ -95,8 +95,7 @@
         <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-text">{{_('Subscribe')}}</button>
         <button type="submit" id="mc-embedded-subscribe" class="btn-newsletter btn-newsletter-icon">➜</button>
         <!-- Prevent Bot signups -->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                                                                  name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value="">
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value="">
         </div>
       </form>
       <!--End mc_embed_signup-->
@@ -106,8 +105,8 @@
          href="{{ url('thunderbird.social.mastodon') }}" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
         {{ svg('social-icon-mastodon') }}
       </a>
-      <a class="icon" href="{{ url('thunderbird.social.facebook') }}" data-link-type="footer"
-         data-link-name="Facebook (Thunderbird)">
+      <a class="icon" href="{{ url('thunderbird.social.facebook') }}" title="{{ _('Follow %(facebook)s on Facebook')|format(facebook='Thunderbird') }}"
+         data-link-type="footer" data-link-name="Facebook (Thunderbird)">
         {{ svg('social-icon-facebook') }}
       </a>
       <a class="icon" title="{{ _('Follow %(youtube)s on YouTube')|format(youtube='@ThunderbirdProject') }}"
