@@ -527,6 +527,33 @@ def get_form_assembly_localization_url(ctx):
     return "https://mozillafoundation.tfaforms.net/wForms/3.11/js/localization-{locale}.js?v=75513df1680ccc55e2c889a1b1dff356256982a6".format(locale=fa_locale)
 
 
+@jinja2.pass_context
+def split_system_requirements(ctx):
+    """For release notes, we have the entire object in ctx"""
+    release_notes: dict = ctx.get('release')
+    requirements: str = release_notes.get('system_requirements')
+
+    # Match the platform header as: (Entire sequence, Platform name)
+    # We use the entire sequence to remove it from the text, and platform name for ordering.
+    title_regex = r"^([#]{2} ([\w\/]+))"
+    # Split by section
+    requirement_list = requirements.split('---')
+
+    system_requirements = {}
+    for system_req in requirement_list:
+        match = re.findall(title_regex, system_req, re.MULTILINE | re.IGNORECASE)
+        if len(match) == 0:
+            print("??? > ", system_req)
+            continue
+        match = match[0]
+        # Remove the entire sequence
+        system_req = system_req.replace(match[0], '')
+        # Dict by platform name, and convert the markdown to html
+        system_requirements[match[1]] = safe_markdown(system_req)
+
+    return system_requirements
+
+
 def is_calendarific_free_tier():
     """Returns if we're expecting to use the Calendarific free tier"""
     try:

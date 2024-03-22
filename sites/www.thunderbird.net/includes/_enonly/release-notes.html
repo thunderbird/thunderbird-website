@@ -24,9 +24,23 @@
         <a href="%(feedback)s">tell us what you think</a>, or
         <a href="%(bugzilla)s">file a bug in Bugzilla</a>.')|format(feedback='https://support.mozilla.org/questions/new/thunderbird', bugzilla='https://bugzilla.mozilla.org/') }}
       </p>
-      <aside>
+      <div class="release-text">
         {{ release.text|markdown|safe }}
-      </aside>
+      </div>
+      <div>
+        {% for platform, req in split_system_requirements().items(): %}
+          {% set icon_name = platform|lower %}
+          {% if platform == 'GNU/Linux' %}
+            {% set icon_name = 'linux' %}
+          {% elif platform == 'Mac' %}
+            {% set icon_name = 'apple' %}
+          {% endif %}
+          {% set icon_path = 'base/icons/download/%(icon_name)s-dark'|format(icon_name=icon_name) %}
+          {% call accordion(svg(icon_path), platform) %}
+            {{ req }}
+          {% endcall %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
@@ -135,3 +149,19 @@
 {% endif %}
 
 {% endblock %}
+{% macro accordion(icon, title) %}
+{# Formatted accordion with inner contents being the html
+:param icon: A variable containing pre-formatted html (e.g. the result of svg() or image())
+:param title: The title of the accordion
+:caller: The text body, shows up when you click on the title or accordion.
+#}
+<details class="accordion">
+  <summary class="question">
+    <span>{{ icon }}</span>
+    {{ title }}
+  </summary>
+  <div class="answer">
+    {{ caller() }}
+  </div>
+</details>
+{% endmacro %}
