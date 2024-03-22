@@ -27,7 +27,7 @@
       <div class="release-text">
         {{ release.text|markdown|safe }}
       </div>
-      <div>
+      <div class="system-requirements">
         {% for platform, req in split_system_requirements().items(): %}
           {% set icon_name = platform|lower %}
           {% if platform == 'GNU/Linux' %}
@@ -46,7 +46,7 @@
 </section>
 {% if notes %}
 <section>
-  <div class="container">
+  <div class="container release-notes-container">
     <div class="section-text wide">
 
       {% set section = namespace(name='') %}
