@@ -28,7 +28,8 @@
           </label>
           <select id="download-language-select" name="lang" dir="ltr" class="form-select">
             {% for code, label in translations|dictsort -%}
-            {% if has_localized_download(code, channel) %}
+            {# We're just verifying release builds! #}
+            {% if has_localized_download(code, None) %}
             <option lang="{{ code }}" value="{{ code }}" {{ 'selected' if code==LANG else '' }}>{{ label|safe }}</option>
             {% endif %}
             {% endfor %}
@@ -43,16 +44,15 @@
             {% set option_name = 'Thunderbird %(channel_name)s'|format(channel_name=channel_name) if channel != 'release' else 'Thunderbird' %}
             <option value="{{ channel }}">{{ _(option_name) }}</option>
             {% endfor %}
-            <option value="android">{{ _('Thunderbird Mobile') }}</option>
           </select>
 
-          <!-- 3. Platform -->
-          <label class="pretend-to-be-h6" for="download-platform-select">
-            <strong>{{ _('Platform') }}</strong>
+          <!-- 3. OS -->
+          <label class="pretend-to-be-h6" for="download-os-select">
+            <strong>{{ _('Operating System') }}</strong>
           </label>
-          <select id="download-platform-select" name="lang" dir="ltr" class="form-select">
+          <select id="download-os-select" name="lang" dir="ltr" class="form-select">
             {% for os, platforms in get_platforms().items() %}
-            <option value="{{ os }}">{{ os }}</option>
+            <option data-is-mobile="{{ is_os_mobile(os) }}" value="{{ os }}">{{ os }}</option>
             {% endfor %}
           </select>
 
@@ -76,7 +76,14 @@
           </details>
 
           <div class="download-button">
-            <a id="download-btn" class="btn" href="{{ download_url(platform_os=win64) }}">
+            <a
+              id="download-btn"
+              class="btn btn-download download-link"
+              href="{{ download_url(platform_os=win64) }}"
+              data-donate-redirect="download-{{ channel or 'esr' }}"
+              data-donate-content="post_download"
+              data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}"
+            >
               <!--
               <span id="download-icon" class="platform-icon" aria-hidden="true">
                 {{ svg(get_platform_icon(platform='win64')) }}
@@ -93,7 +100,6 @@
           <div class="section-title">
             <h1>{{ _('Release Information') }}</h1>
           </div>
-          <p>{{ _('') }}</p>
         </div>
         <div class="platform-release">
           <div>
@@ -110,7 +116,7 @@
         </div>
         <div class="platform-release" data-for-app="desktop">
           <div>
-            <h4>{{ _('More Information') }}</h4>
+            <h4>{{ _('More Information For Desktop') }}</h4>
             <ul>
               <li>
                 <a class="dotted" href="#">{{ _('System Requirements') }}</a>
@@ -123,7 +129,7 @@
         </div>
         <div class="platform-release" data-for-app="android">
           <div>
-            <h4>{{ _('More Information') }}</h4>
+            <h4>{{ _('More Information For Mobile') }}</h4>
             <ul>
               <li>
                 <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#minimum-android-version-compatibility">{{ _('System Requirements') }}</a>
@@ -135,39 +141,6 @@
           </div>
         </div>
       </div>
-      <!--
-      <div class="column">
-        <div class="section-text">
-          <div class="section-title">
-            <h1>{{ _('Thunderbird <span class="txt-gradient">Mobile</span>') }}</h1>
-            <span class="beta-badge">{{ _('Beta') }}</span>
-          </div>
-          <p>{{ _('These are officially maintained and distributed versions of Thunderbird Mobile.') }}</p>
-        </div>
-        <div class="platform-release">
-          <div class="platform-icon">
-            {{ svg('base/icons/download/android-dark') }}
-          </div>
-          <div class="platform-text">
-            <div>
-              <h4 class="platform-title">Android</h4>
-            </div>
-            <ul>
-              <li>
-                <a class="dotted" href="https://play.google.com/store/apps/details?id=com.fsck.k9">{{ _('Google Play Store') }}</a>
-              </li>
-              <li>
-                <a class="dotted" href="https://f-droid.org/packages/com.fsck.k9/">{{ _('F-Droid') }}</a>
-              </li>
-              <li>
-                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/releases">{{ _('Binary (.apk)') }}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-      -->
     </div>
   </div>
 </section>

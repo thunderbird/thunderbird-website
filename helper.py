@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 import inspect
 import os
+from collections import OrderedDict
 
 import jinja2
 import json
@@ -278,13 +279,40 @@ def get_platform_icon(ctx, platform):
 
 
 @jinja2.pass_context
-def get_platforms(ctx):
-    return thunderbird_desktop.grouped_platform_labels
+def get_platforms(ctx, include_mobile=True):
+    """Returns a list of dict of available platforms per os. Includes mobile by default."""
+    grouped_platform_labels = thunderbird_desktop.grouped_platform_labels.copy()
+
+    if not include_mobile:
+        return grouped_platform_labels
+
+    return OrderedDict({
+        **grouped_platform_labels,
+        'Android': [('play', 'Google Play Store'), ('fdroid', 'F-Droid'), ('binary', 'Binary (.apk)')],
+    })
 
 
 @jinja2.pass_context
-def get_channels(ctx):
-    return thunderbird_desktop.channel_labels
+def is_os_mobile(ctx, os):
+    """Simple helper to determine if a given os is mobile. JavaScript friendly."""
+    return 'true' if os == 'Android' else 'false'
+
+
+@jinja2.pass_context
+def get_channels(ctx, include_mobile=True):
+    """Returns a dict of available channels. Includes mobile channels by default."""
+    channel_labels = thunderbird_desktop.channel_labels.copy()
+    if not include_mobile:
+        return channel_labels
+
+    # We want Release to be followed with Android, and then the beta/daily builds.
+    channel_labels.pop('release')
+
+    return OrderedDict({
+        'release': "Release",
+        'mobile': "Mobile",
+        **channel_labels
+    })
 
 
 @jinja2.pass_context
