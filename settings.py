@@ -191,8 +191,9 @@ URL_MAPPINGS = {
     'thunderbird.donate.ways-to-give': '/donate#ways-to-give',
     'thunderbird.donate.ways-to-give.check': '/donate#ways-to-give-check',
     'thunderbird.donate.contact': '/donate/help',
-    'thunderbird.download': '/download',
+    'thunderbird.download': '/download',  # Doesn't exist anymore!
     'thunderbird.download-beta': '/download/beta',
+    'thunderbird.download.all': '/download/all',
     'thunderbird.download.thank-you': '/download/thank-you',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
     'thunderbird.enterprise.documentation': 'https://enterprise.thunderbird.net/',

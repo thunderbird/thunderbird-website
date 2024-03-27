@@ -5,162 +5,17 @@
 {% set active_page = "download" %}
 {% extends "includes/base/page.html" %}
 
-{% block page_title %}{{ _('Downloads') }}{% endblock %}
+{% block page_title %}{{ _('Placeholder Page :^)') }}{% endblock %}
 {% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
 {% block category %}{{ _('Resources') }}{% endblock %}
 
 {% block content %}
 <section>
   <div class="container">
-    <div class="two-columns">
-      <div class="column">
-        <div class="section-text">
-          <div class="section-title">
-            <h1>{{ _('Thunderbird <span class="txt-gradient">Desktop</span>') }}</h1>
-          </div>
-          <p>{{ _('These are officially maintained and distributed by Thunderbird Desktop. Download the latest Release version unless you wish to test the Beta version and report bugs.') }}</p>
-          <p>{{ _('The Daily version is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
-        </div>
-        <div class="section-text">
-          <label class="pretend-to-be-h6" for="download-language-select">
-            <strong>{{ _('Localized Direct Downloads') }}</strong>
-          </label>
-          <select id="download-language-select" name="lang" dir="ltr" class="form-select">
-            {% for code, label in translations|dictsort -%}
-              {# Don't escape the label as it may include entity references
-               # like "Português (do&nbsp;Brasil)" (Bug 861149) #}
-              {% if has_localized_download(code, channel) %}
-              <option lang="{{ code }}" value="{{ code }}" {{ 'selected' if code==LANG else '' }}>{{ label|safe }}</option>
-              {% endif %}
-            {% endfor %}
-          </select>
-        </div>
-        {% for os, platforms in get_platforms().items() %}
-        <div class="platform-release">
-          <div class="platform-icon">
-          {{ svg(get_platform_icon(platform=platforms[0][0])) }}
-          </div>
-          <div class="platform-text">
-            <div>
-              <h4 class="platform-title">{{ os }}</h4>
-            </div>
-              {% for channel, channel_name in get_channels().items() %}
-            <div class="platform-list-builds {{ channel }}">
-              <h5 class="channel-name {{ channel }}">{{ channel_name }}:</h5>
-              <ul>
-                {% for platform_tuple in platforms %}
-                {% set platform = platform_tuple[0] %}
-                {% set platform_name = platform_tuple[1] %}
-                <li>
-                  {% for code, label in translations|dictsort -%}
-                    {% if has_localized_download(code, channel) %}
-                    <a class="dotted lang-link" lang="{{ code }}" href="{{ download_url(platform_os=platform, channel=channel, locale=code) }}">{{ _(platform_name) }}</a>
-                    {% endif %}
-                  {% endfor %}
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
-              {% endfor %}
-          </div>
-        </div>
-        {% endfor %}
-        <div class="platform-release">
-          <div>
-            <h4>{{ _('Other Downloads') }}</h4>
-            <ul>
-              <li>
-                <a class="dotted" href="https://apps.microsoft.com/detail/9pm5vm1s3vmq">{{ _('Microsoft Apps Store') }}</a>
-              </li>
-              <li>
-                <a class="dotted" href="https://flathub.org/apps/org.mozilla.Thunderbird">{{ _('Flathub') }}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="platform-release">
-          <div>
-            <h4>{{ _('More Information') }}</h4>
-            <ul>
-              <li>
-                <a class="dotted" href="#">{{ _('System Requirements') }}</a>
-              </li>
-              <li>
-                <a class="dotted" href="{{ url('thunderbird.releases.index') }}">{{ _('Release Notes') }}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-      <div class="column">
-        <div class="section-text">
-          <div class="section-title">
-            <h1>{{ _('Thunderbird <span class="txt-gradient">Mobile</span>') }}</h1>
-            <span class="beta-badge">{{ _('Beta') }}</span>
-          </div>
-          <p>{{ _('These are officially maintained and distributed versions of Thunderbird Mobile.') }}</p>
-        </div>
-        <div class="platform-release">
-          <div class="platform-icon">
-          {{ svg('base/icons/download/android-dark') }}
-          </div>
-          <div class="platform-text">
-            <div>
-              <h4 class="platform-title">Android</h4>
-            </div>
-            <ul>
-              <li>
-                <a class="dotted" href="https://play.google.com/store/apps/details?id=com.fsck.k9">{{ _('Google Play Store') }}</a>
-              </li>
-              <li>
-                <a class="dotted" href="https://f-droid.org/packages/com.fsck.k9/">{{ _('F-Droid') }}</a>
-              </li>
-              <li>
-                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/releases">{{ _('Binary (.apk)') }}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="platform-release">
-          <div>
-            <h4>{{ _('More Information') }}</h4>
-            <ul>
-              <li>
-                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#minimum-android-version-compatibility">{{ _('System Requirements') }}</a>
-              </li>
-              <li>
-                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#change-logs">{{ _('Release Notes') }}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="section-text">
+      <h1>Download <span class="txt-gradient">Thunderbird</span></h1>
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-bottom") }}
     </div>
   </div>
 </section>
-{% endblock %}
-{% block page_css %}
-<style>
-  /* Fallback for no :has support - Only display the current locale's download. */
-  .lang-link {
-    display: none;
-  }
-  .lang-link[lang='{{ LANG }}'] {
-    display: inline-block;
-  }
-  /*
-  Maybe being too smart here to avoid having to create a no-js download page...
-  We use has for the display:none so browsers without has support will still display the current page's download links.
-  */
-  {% for code, label in translations|dictsort -%}
-    li:has(.lang-link[lang='{{ code }}']) > a {
-      display: none;
-    }
-    .section-text:has(#download-language-select > option[value='{{ code }}']:checked) ~ .platform-release .lang-link[lang='{{ code }}'] {
-      display: inline-block;
-    }
-  {% endfor %}
-
-</style>
 {% endblock %}
