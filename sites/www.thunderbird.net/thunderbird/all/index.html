@@ -1,0 +1,174 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "download" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title %}{{ _('Download') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('Resources') }}{% endblock %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="two-columns">
+      <div class="column">
+        <div class="section-text">
+          <div class="section-title">
+            <h1>{{ _('Get <span class="txt-gradient">Thunderbird</span>') }}</h1>
+          </div>
+          <p>{{ _('These are officially maintained and distributed by Thunderbird Desktop. Download the latest Release version unless you wish to test the Beta version and report bugs.') }}</p>
+          <p>{{ _('The Daily version is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
+        </div>
+        <div class="section-text">
+          <!-- 1. Locale -->
+          <label class="pretend-to-be-h6" for="download-language-select">
+            <strong>{{ _('Locale') }}</strong>
+          </label>
+          <select id="download-language-select" name="lang" dir="ltr" class="form-select">
+            {% for code, label in translations|dictsort -%}
+            {% if has_localized_download(code, channel) %}
+            <option lang="{{ code }}" value="{{ code }}" {{ 'selected' if code==LANG else '' }}>{{ label|safe }}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+
+          <!-- 2. Channel -->
+          <label class="pretend-to-be-h6" for="download-browser-select">
+            <strong>{{ _('Browser Channel') }}</strong>
+          </label>
+          <select id="download-browser-select" name="download" dir="ltr" class="form-select">
+            {% for channel, channel_name in get_channels().items() %}
+            {% set option_name = 'Thunderbird %(channel_name)s'|format(channel_name=channel_name) if channel != 'release' else 'Thunderbird' %}
+            <option value="{{ channel }}">{{ _(option_name) }}</option>
+            {% endfor %}
+            <option value="android">{{ _('Thunderbird Mobile') }}</option>
+          </select>
+
+          <!-- 3. Platform -->
+          <label class="pretend-to-be-h6" for="download-platform-select">
+            <strong>{{ _('Platform') }}</strong>
+          </label>
+          <select id="download-platform-select" name="lang" dir="ltr" class="form-select">
+            {% for os, platforms in get_platforms().items() %}
+            <option value="{{ os }}">{{ os }}</option>
+            {% endfor %}
+          </select>
+
+          <!-- 4. Advanced Platform (Optional) -->
+          <details class="accordion">
+            <summary>{{ svg('chevron-down') }} Need a specific installer?</summary>
+            <div>
+              <label class="pretend-to-be-h6" for="download-advanced-platform-select">
+                <strong>{{ _('Installer Type') }}</strong>
+              </label>
+              <select id="download-advanced-platform-select" name="lang" dir="ltr" class="form-select">
+                {% for os, platforms in get_platforms().items() %}
+                {% for platform_tuple in platforms %}
+                {% set platform = platform_tuple[0] %}
+                {% set platform_name = platform_tuple[1] %}
+                <option data-for-os="{{ os }}" value="{{ platform }}">{{ platform_name }}</option>
+                {% endfor %}
+                {% endfor %}
+              </select>
+            </div>
+          </details>
+
+          <div class="download-button">
+            <a id="download-btn" class="btn" href="{{ download_url(platform_os=win64) }}">
+              <!--
+              <span id="download-icon" class="platform-icon" aria-hidden="true">
+                {{ svg(get_platform_icon(platform='win64')) }}
+              </span>
+              -->
+              Download
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="section-text">
+          <div class="section-title">
+            <h1>{{ _('Release Information') }}</h1>
+          </div>
+          <p>{{ _('') }}</p>
+        </div>
+        <div class="platform-release">
+          <div>
+            <h4>{{ _('Other Downloads') }}</h4>
+            <ul>
+              <li>
+                <a class="dotted" href="https://apps.microsoft.com/detail/9pm5vm1s3vmq">{{ _('Microsoft Apps Store') }}</a>
+              </li>
+              <li>
+                <a class="dotted" href="https://flathub.org/apps/org.mozilla.Thunderbird">{{ _('Flathub') }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="platform-release" data-for-app="desktop">
+          <div>
+            <h4>{{ _('More Information') }}</h4>
+            <ul>
+              <li>
+                <a class="dotted" href="#">{{ _('System Requirements') }}</a>
+              </li>
+              <li>
+                <a class="dotted" href="{{ url('thunderbird.releases.index') }}">{{ _('Release Notes') }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="platform-release" data-for-app="android">
+          <div>
+            <h4>{{ _('More Information') }}</h4>
+            <ul>
+              <li>
+                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#minimum-android-version-compatibility">{{ _('System Requirements') }}</a>
+              </li>
+              <li>
+                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#change-logs">{{ _('Release Notes') }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--
+      <div class="column">
+        <div class="section-text">
+          <div class="section-title">
+            <h1>{{ _('Thunderbird <span class="txt-gradient">Mobile</span>') }}</h1>
+            <span class="beta-badge">{{ _('Beta') }}</span>
+          </div>
+          <p>{{ _('These are officially maintained and distributed versions of Thunderbird Mobile.') }}</p>
+        </div>
+        <div class="platform-release">
+          <div class="platform-icon">
+            {{ svg('base/icons/download/android-dark') }}
+          </div>
+          <div class="platform-text">
+            <div>
+              <h4 class="platform-title">Android</h4>
+            </div>
+            <ul>
+              <li>
+                <a class="dotted" href="https://play.google.com/store/apps/details?id=com.fsck.k9">{{ _('Google Play Store') }}</a>
+              </li>
+              <li>
+                <a class="dotted" href="https://f-droid.org/packages/com.fsck.k9/">{{ _('F-Droid') }}</a>
+              </li>
+              <li>
+                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/releases">{{ _('Binary (.apk)') }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      -->
+    </div>
+  </div>
+</section>
+{% endblock %}
