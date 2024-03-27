@@ -19,6 +19,7 @@ if (typeof Mozilla === 'undefined') {
   let osSelect = document.getElementById('download-os-select');
   let installerSelect = document.getElementById('download-advanced-platform-select');
   let downloadButton = document.getElementById('download-btn');
+  let defaultOS = 'Windows';
 
   /**
    * Hooks up onChange event handlers, and sets the installer dropdown options / download link
@@ -42,12 +43,6 @@ if (typeof Mozilla === 'undefined') {
 
     // Set some defaults
     DownloadInfo.SetDefaults();
-
-    // Setup download link
-    DownloadInfo.Update();
-    // Channel Selection calls OS Selection
-    DownloadInfo.OnChannelSelection(channelSelect.value);
-    DownloadInfo.SetDownloadLink();
   }
 
   DownloadInfo.SetDefaults = function () {
@@ -64,7 +59,14 @@ if (typeof Mozilla === 'undefined') {
       'android': 'Android'
     };
 
-    osSelect.value = platformMap[platform];
+    // Setup download link
+    DownloadInfo.Update();
+
+    defaultOS = platformMap[platform];
+
+    // Channel Selection calls OS Selection
+    DownloadInfo.OnChannelSelection(channelSelect.value);
+    DownloadInfo.SetDownloadLink();
   }
 
   /**
@@ -82,15 +84,21 @@ if (typeof Mozilla === 'undefined') {
    * Generic helper function to hide some selectors, and show others, and selects the first item.
    * @param selectorHide
    * @param selectorShow
+   * @param selectFn - Bad hack, I need to re-write this flow.
    */
-  DownloadInfo.ChangeSelection = function (selectorHide, selectorShow) {
+  DownloadInfo.ChangeSelection = function (selectorHide, selectorShow, selectFn) {
     document.querySelectorAll(selectorHide).forEach((element) => {
       element.classList.add('hidden');
       element.removeAttribute('selected');
     });
     document.querySelectorAll(selectorShow).forEach((element) => element.classList.remove('hidden'));
-    const firstItem = document.querySelector(selectorShow);
-    firstItem.setAttribute('selected', 'true');
+
+    if (selectFn) {
+      selectFn();
+    } else {
+      const firstItem = document.querySelector(selectorShow);
+      firstItem.setAttribute('selected', 'true');
+    }
 
     DownloadInfo.Update();
   };
@@ -110,7 +118,7 @@ if (typeof Mozilla === 'undefined') {
   DownloadInfo.OnChannelSelection = function(channel) {
     const isMobile = channel === 'mobile';
 
-    DownloadInfo.ChangeSelection('[data-is-mobile]', `[data-is-mobile="${isMobile}"]`)
+    DownloadInfo.ChangeSelection('[data-is-mobile]', `[data-is-mobile="${isMobile}"]`, () => osSelect.value = defaultOS);
     DownloadInfo.OnOSSelection(osSelect.value);
   }
 
