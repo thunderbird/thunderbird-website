@@ -69,7 +69,7 @@
   </ul>
   {% if not hide_footer_links %}
   <p class="download-other download-other-desktop os_android os_ios os_linux os_linux64 os_osx os_win os_win64 os_winsha1 font-sm mt-0">
-    {% if section == 'new-frontpage' %}{# New frontpage should only display System & Languages #}
+    {% if section == 'homepage-hero' %}{# New frontpage should only display System & Languages #}
       <a href="{{ url('thunderbird.download') }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Download options and other languages') }}</a>
     {% else %}
       {% if channel != 'daily' %}{# Daily doesn't have an all download page or release notes. #}

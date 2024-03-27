@@ -193,6 +193,7 @@ URL_MAPPINGS = {
     'thunderbird.donate.contact': '/donate/help',
     'thunderbird.download': '/download',
     'thunderbird.download-beta': '/download/beta',
+    'thunderbird.download.thank-you': '/download/thank-you',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/tb-enterprise',
     'thunderbird.enterprise.documentation': 'https://enterprise.thunderbird.net/',
     'thunderbird.features': '/features',

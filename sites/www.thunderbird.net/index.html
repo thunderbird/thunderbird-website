@@ -41,12 +41,7 @@ with great features!') }}{% endblock %}
           </span>
         </div>
         <div class="download-button">
-          <a href="{{ url('thunderbird.download') }}" class="btn download-link btn-download">
-            <span>{{ _('Download') }}</span>
-          </a>
-          <p class="download-other">
-            <a href="{{ url('thunderbird.download') }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Download options and other languages') }}</a>
-          </p>
+          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-hero") }}
         </div>
         <small>{{_('Free forever.')}} <a href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
@@ -372,12 +367,7 @@ with great features!') }}{% endblock %}
           </span>
         </div>
         <div class="download-button">
-          <a href="{{ url('thunderbird.download') }}" class="btn download-link btn-download">
-            <span>{{ _('Download') }}</span>
-          </a>
-          <p class="download-other">
-            <a href="{{ url('thunderbird.download') }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Download options and other languages') }}</a>
-          </p>
+          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-bottom") }}
         </div>
         <small>{{_('Free forever.')}} <a href="{{ donate_url('body') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
