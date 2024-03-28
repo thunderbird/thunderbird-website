@@ -18,7 +18,7 @@ from babel.dates import format_date
 from datetime import datetime
 from os import path
 from os.path import splitext
-from product_details import thunderbird_desktop
+from product_details import thunderbird_desktop, thunderbird_mobile
 from time import mktime
 from urllib.parse import urlencode
 
@@ -288,7 +288,7 @@ def get_platforms(ctx, include_mobile=True):
 
     return OrderedDict({
         **grouped_platform_labels,
-        'Android': [('play', 'Google Play Store'), ('fdroid', 'F-Droid'), ('binary', 'Binary (.apk)')],
+        **thunderbird_mobile.grouped_platform_labels,
     })
 
 
@@ -310,7 +310,7 @@ def get_channels(ctx, include_mobile=True):
 
     return OrderedDict({
         'release': "Release",
-        'mobile': "Mobile",
+        **thunderbird_mobile.channel_labels,
         **channel_labels
     })
 

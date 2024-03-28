@@ -141,11 +141,11 @@ if (typeof Mozilla === 'undefined') {
   DownloadInfo.DownloadLink = function(locale, channel, os, installer) {
     if (os === 'Android') {
       switch(installer) {
-        case 'play':
+        case 'gplay':
           return 'https://play.google.com/store/apps/details?id=com.fsck.k9';
         case 'fdroid':
           return 'https://f-droid.org/packages/com.fsck.k9/';
-        case 'binary':
+        case 'apk':
           return 'https://github.com/thunderbird/thunderbird-android/releases';
         default:
           return 'https://play.google.com/store/apps/details?id=com.fsck.k9';

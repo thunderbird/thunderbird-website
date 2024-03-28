@@ -209,4 +209,38 @@ class ThunderbirdDetails():
         return date
 
 
+class ThunderbirdMobileDetails():
+    """Shim for Thunderbird Mobile."""
+    platform_labels = OrderedDict([
+        ('gplay', 'Google Play Store'),
+        ('fdroid', 'F-Droid'),
+        ('apk', 'Binary')
+    ])
+
+    # Grouped by platform
+    grouped_platform_labels = OrderedDict({
+        'Android': [('gplay', 'Google Play Store'), ('fdroid', 'F-Droid'), ('apk', 'Binary (.apk)')],
+    })
+
+    version_map = {
+        'release': 'LATEST_THUNDERBIRD_VERSION',
+    }
+
+    channel_labels = OrderedDict({
+        'mobile': 'Mobile',
+    })
+
+    def get_download_url(self, channel, version, platform, locale, force_direct=True):
+        """Retrieve the download url for a given channel, version, platform and locale."""
+
+        # Nice and simple
+        if platform == 'gplay':
+            return settings.URL_MAPPINGS.get('download.android.gplay')
+        elif platform == 'fdroid':
+            return settings.URL_MAPPINGS.get('download.android.fdroid')
+        else:
+            return settings.URL_MAPPINGS.get('download.android.binary')
+
+
 thunderbird_desktop = ThunderbirdDetails()
+thunderbird_mobile = ThunderbirdMobileDetails()
