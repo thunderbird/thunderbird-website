@@ -20,9 +20,12 @@
             <h1>{{ _('Get <span class="txt-gradient">Thunderbird</span>') }}</h1>
           </div>
           <p>{{ _('These are officially maintained and distributed by Thunderbird. Download the latest Release version unless you wish to test the Beta version and report bugs.') }}</p>
-          <p>{{ _('The Daily version is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
         </div>
         <div class="section-text">
+          <div id="daily-warning" class="warning-panel hidden">
+            <p>{{ _('The Daily version is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
+          </div>
+
           <!-- 1. Locale -->
           <label class="pretend-to-be-h6" for="download-language-select">
             <strong>{{ _('Locale') }}</strong>

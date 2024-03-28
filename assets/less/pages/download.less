@@ -221,13 +221,16 @@
       font-size: var(--font-4xl);
       color: var(--color-ink-70);
     }
+
     .product-row {
       display: flex;
       flex-direction: column;
     }
+
     .product-row-downloads {
       display: flex;
       flex-direction: column;
+
       div {
         display: flex;
         flex-direction: row;
@@ -236,6 +239,29 @@
         gap: 2rem;
         margin-bottom: 1rem;
       }
+    }
+  }
+
+  // Steal this from start for now
+  .warning-panel {
+    --text-gradient: linear-gradient(-270deg, var(--color-magenta-50), var(--color-purple-50));
+    --bg-warning: color-mix(in srgb, var(--color-magenta-50) 5%, transparent);
+    --text-warning: var(--color-magenta-90);
+    --warning-links: var(--color-purple-80);
+    --list-dot-inner: var(--color-magenta-90);
+    --list-dot-outer: var(--color-magenta-10);
+
+    place-items: center;
+    background: var(--bg-warning);
+    color: var(--text-warning);
+    border: 1px solid var(--text-warning);
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    p {
+      margin: 0;
+    }
+    a {
+      color: var(--warning-links);
     }
   }
 }

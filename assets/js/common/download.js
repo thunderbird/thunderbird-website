@@ -121,6 +121,13 @@ if (typeof Mozilla === 'undefined') {
    */
   DownloadInfo.OnChannelSelection = function(channel) {
     const isMobile = channel === 'mobile';
+    const dailyWarning = document.getElementById('daily-warning');
+
+    if (channel === 'daily') {
+      dailyWarning.classList.remove('hidden');
+    } else {
+      dailyWarning.classList.add('hidden');
+    }
 
     DownloadInfo.ChangeSelection('[data-is-mobile]', `[data-is-mobile="${isMobile}"]`, () => osSelect.value = defaultOS);
     DownloadInfo.OnOSSelection(osSelect.value);
