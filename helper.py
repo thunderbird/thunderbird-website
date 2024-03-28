@@ -279,7 +279,7 @@ def get_platform_icon(ctx, platform):
 
 
 @jinja2.pass_context
-def get_platforms(ctx, include_mobile=True):
+def get_platforms(ctx, include_mobile=False):
     """Returns a list of dict of available platforms per os. Includes mobile by default."""
     grouped_platform_labels = thunderbird_desktop.grouped_platform_labels.copy()
 
@@ -299,7 +299,7 @@ def is_os_mobile(ctx, os):
 
 
 @jinja2.pass_context
-def get_channels(ctx, include_mobile=True):
+def get_channels(ctx, include_mobile=False):
     """Returns a dict of available channels. Includes mobile channels by default."""
     channel_labels = thunderbird_desktop.channel_labels.copy()
     if not include_mobile:
