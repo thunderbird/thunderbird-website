@@ -2,6 +2,7 @@
  # License, v. 2.0. If a copy of the MPL was not distributed with this
  # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
 
+{% set active_page = "system-requirements" %}
 {% extends "includes/base/page.html" %}
 
 {% block page_title_prefix %}{% endblock %}
@@ -16,10 +17,10 @@
 {% endblock %}
 
 {% block content %}
-  <section class="mt-10 flex justify-between items-center pl-8 pr-8">
-    <aside class="flex flex-col w-full lg:ml-16 lg:mr-16 font-lg tracking-wider leading-loose -mb-20 markup-page">
+  <section class="section-text">
+    <div class="release-notes-container">
       {{ release.system_requirements|markdown|safe }}
-    </aside>
+    </div>
   </section>
 
   <section class="pt-20 pb-20 flex bg-calendar">
