@@ -152,6 +152,15 @@ if (typeof Mozilla === 'undefined') {
       }
     }
 
+    // For release channel just pull from the hidden no-js section.
+    if (channel === 'release') {
+      const link = document.querySelector(`[data-download-locale="${locale}"][data-download-version="${installer}"]`)?.href;
+      // Ensure it's actually a download.mozilla.org link!
+      if (link && link.indexOf('https://download.mozilla.org/') === 0) {
+        return link;
+      }
+    }
+
     // Download links are sleepier than they appear.
     // download.mozilla.org uses the term nightly, while we use daily.
     if (channel === 'daily') {
