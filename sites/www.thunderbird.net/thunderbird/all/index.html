@@ -4,6 +4,7 @@
 
 {% set active_page = "download" %}
 {% extends "includes/base/page.html" %}
+{% from "includes/_enonly/product-all-macros.html" import build_table with context %}
 
 {% block page_title %}{{ _('Download') }}{% endblock %}
 {% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
@@ -12,7 +13,7 @@
 {% block content %}
 <section>
   <div class="container">
-    <div class="two-columns">
+    <div id="select-download" class="two-columns">
       <div class="column">
         <div class="section-text">
           <div class="section-title">
@@ -30,7 +31,8 @@
             {% for code, label in translations|dictsort -%}
             {# We're just verifying release builds! #}
             {% if has_localized_download(code, None) %}
-            <option lang="{{ code }}" value="{{ code }}" {{ 'selected' if code==LANG else '' }}>{{ label|safe }}</option>
+            <option lang="{{ code }}" value="{{ code }}" {{
+            'selected' if code==LANG else '' }}>{{ label|safe }}</option>
             {% endif %}
             {% endfor %}
           </select>
@@ -106,10 +108,10 @@
             <h4>{{ _('Other Downloads') }}</h4>
             <ul>
               <li>
-                <a class="dotted" href="https://apps.microsoft.com/detail/9pm5vm1s3vmq">{{ _('Microsoft Apps Store') }}</a>
+                <a class="dotted" href="{{ url('download.desktop.msstore') }}">{{ _('Microsoft Apps Store') }}</a>
               </li>
               <li>
-                <a class="dotted" href="https://flathub.org/apps/org.mozilla.Thunderbird">{{ _('Flathub') }}</a>
+                <a class="dotted" href="{{ url('download.desktop.flathub') }}">{{ _('Flathub') }}</a>
               </li>
             </ul>
           </div>
@@ -140,6 +142,33 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+
+    {# No javascript / source of truth for download links #}
+    <div id="all-downloads" class="pb-10 w-full bg-grey-lighter" data-thunderbird-version="{{ latest_thunderbird_version }}">
+      <div class="section-text">
+        <h1>{{ _('Get <span class="txt-gradient">Thunderbird</span>') }}</h1>
+        <p>{{ _('These are officially maintained and distributed by Thunderbird.') }}</p>
+        <p>{{ _('Jump to the language you wish to download by using the legend below.') }}</p>
+      </div>
+      <div class="all-downloads-legend">
+        <ul>
+        {% set letter = namespace(first='') %}
+        {% for build in full_builds -%}
+          {% if letter.first != build.name_en[:1] %}
+            {% set letter.first = build.name_en[:1] %}
+            <li>
+              <a href="#{{ letter.first }}" class="btn-link text-blue-dark">
+                {{ letter.first }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor -%}
+      </ul>
+      </div>
+      <div class="all-downloads-container">
+        {{ build_table(platforms, full_builds) }}
       </div>
     </div>
   </div>
