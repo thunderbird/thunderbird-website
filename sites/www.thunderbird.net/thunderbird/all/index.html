@@ -118,13 +118,13 @@
         </div>
         <div class="platform-release" data-for-app="desktop">
           <div>
-            <h4>{{ _('More Information For Desktop') }}</h4>
+            <h4>{{ _('More Information') }}</h4>
             <ul>
               <li>
-                <a class="dotted" href="#">{{ _('System Requirements') }}</a>
+                <a class="dotted" href="{{ url('thunderbird.sysreq', latest_thunderbird_version) }}">{{ _('System Requirements') }}</a>
               </li>
               <li>
-                <a class="dotted" href="{{ url('thunderbird.releases.index') }}">{{ _('Release Notes') }}</a>
+                <a class="dotted" href="{{ thunderbird_url('releasenotes', 'release') }}">{{ _('Release Notes') }}</a>
               </li>
             </ul>
           </div>
