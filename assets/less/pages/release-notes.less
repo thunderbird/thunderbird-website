@@ -1,4 +1,6 @@
 .page-release-notes {
+  --heading-spacing: 6rem;
+
   .accordion {
     width: 100%;
     min-width: auto;
@@ -11,6 +13,11 @@
   }
   .release-notes-container {
     padding-top: 0;
+  }
+
+  .release-group {
+    text-transform: capitalize;
+    margin-top: var(--heading-spacing);
   }
 
   .release-text {
@@ -37,7 +44,7 @@
   }
 
   .header-section {
-    margin-top: 6rem;
+    margin-top: var(--heading-spacing);
     margin-bottom: 2rem;
 
     &:first-child {

@@ -55,9 +55,9 @@
       {% set release_group = namespace(name='') %}
       {% for group in range(release.groups|length) %}
       {% if release.groups[group]|trim %}
-      <h2>
+      <h1 class="release-group">
         {{ release.groups[group] }}
-      </h2>
+      </h1>
       {% set section.name = "" %}
       {% endif %}
 
