@@ -358,14 +358,15 @@ class UpdateHandler(FileSystemEventHandler):
         delta = timestamp - self.updatetime
         if delta.seconds > 0:
             timemsg = timestamp.strftime("%H:%M:%S")
+            print("{0}: Starting update...".format(timemsg))
             if settings.ASSETS in event.src_path:
                 self.builder.partial_asset_build(event.src_path, timemsg)
             elif settings.MEDIA_URL[1:] in event.src_path:
                 self.builder.build_assets()
-                print("{0}: All Assets rebuilt.".format(timemsg))
+                print("{0}: All Assets rebuilt.".format(datetime.datetime.now().strftime("%H:%M:%S")))
             else:
                 self.updatesite(event)
-                print("{0}: Website rebuilt.".format(timemsg))
+                print("{0}: Website rebuilt.".format(datetime.datetime.now().strftime("%H:%M:%S")))
             self.updatetime = datetime.datetime.now()
 
     def on_modified(self, event):
