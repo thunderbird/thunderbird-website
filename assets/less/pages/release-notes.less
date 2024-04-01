@@ -6,12 +6,16 @@
     margin-right: auto;
   }
 
+  .release-text-container {
+    padding-bottom: 2rem;
+  }
   .release-notes-container {
     padding-top: 0;
   }
 
   .release-text {
     text-align: left;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     li {
       list-style: none;
@@ -25,7 +29,11 @@
   }
 
   .wide {
-    width: 60%;
+    max-inline-size: 60%;
+
+    @media (max-width: @md) {
+      max-inline-size: 90%;
+    }
   }
 
   .header-section {

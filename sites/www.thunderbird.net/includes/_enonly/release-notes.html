@@ -15,8 +15,8 @@
 
 {% block content %}
 <section>
-  <div class="container">
-    <div class="section-text">
+  <div class="container release-text-container">
+    <div class="section-text wide">
       <h1>{{ _('Thunderbird <span class="txt-gradient">Desktop</span>') }}</h1>
       <h3>{{ _('Version {version}'|f(version=release.version)) }} | {{ _('Released {release}'|f(release=release.release_date|l10n_format_date)) }}</h3>
       <p>
@@ -28,6 +28,7 @@
         {{ release.text|markdown|safe }}
       </div>
       <div class="system-requirements">
+        {#
         {% for platform, req in split_system_requirements().items(): %}
         {% set icon_name = platform|lower %}
         {% if platform == 'GNU/Linux' %}
@@ -40,6 +41,7 @@
         {{ req }}
         {% endcall %}
         {% endfor %}
+        #}
       </div>
     </div>
   </div>
@@ -52,7 +54,7 @@
       {% set section = namespace(name='') %}
       {% set release_group = namespace(name='') %}
       {% for group in range(release.groups|length) %}
-      {% if release.groups[group] %}
+      {% if release.groups[group]|trim %}
       <h2>
         {{ release.groups[group] }}
       </h2>
