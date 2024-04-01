@@ -63,7 +63,10 @@
 
           <!-- 4. Advanced Platform (Optional) -->
           <details class="accordion">
-            <summary>{{ svg('chevron-down') }} Need a specific installer?</summary>
+            <summary>
+              <span class="chevron-svg">{{ svg('chevron-down') }}</span>
+              {{ _('Need a specific installer?') }}
+            </summary>
             <div>
               <label class="pretend-to-be-h6" for="download-advanced-platform-select">
                 <strong>{{ _('Installer Type') }}</strong>
@@ -159,18 +162,18 @@
       </div>
       <div class="all-downloads-legend">
         <ul>
-        {% set letter = namespace(first='') %}
-        {% for build in full_builds -%}
+          {% set letter = namespace(first='') %}
+          {% for build in full_builds -%}
           {% if letter.first != build.name_en[:1] %}
-            {% set letter.first = build.name_en[:1] %}
-            <li>
-              <a href="#{{ letter.first }}" class="btn-link text-blue-dark">
-                {{ letter.first }}
-              </a>
-            </li>
+          {% set letter.first = build.name_en[:1] %}
+          <li>
+            <a href="#{{ letter.first }}" class="btn-link text-blue-dark">
+              {{ letter.first }}
+            </a>
+          </li>
           {% endif %}
-        {% endfor -%}
-      </ul>
+          {% endfor -%}
+        </ul>
       </div>
       <div class="all-downloads-container">
         {{ build_table(platforms, full_builds) }}

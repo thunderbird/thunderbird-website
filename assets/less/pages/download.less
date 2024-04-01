@@ -8,8 +8,19 @@
 
 .page-download {
   .accordion {
+    cursor: pointer;
     margin-top: 1rem;
     min-width: auto;
+
+    summary {
+      display: flex;
+    }
+  }
+
+  .accordion[open=""] {
+    .chevron {
+      transform: rotateZ(-90deg);
+    }
   }
 
   // TODO: Fix this in place
