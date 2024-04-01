@@ -29,11 +29,8 @@ if (typeof Mozilla === 'undefined') {
       return;
     }
 
-    osSelect.addEventListener('change', function(event) {
-      DownloadInfo.OnOSSelection(event.currentTarget.value);
-    });
     channelSelect.addEventListener('change', function(event) {
-      DownloadInfo.OnChannelSelection(event.currentTarget.value);
+      DownloadInfo.ToggleDailyWarning(event.currentTarget.value);
     });
     [localeSelect, channelSelect, osSelect, installerSelect].forEach(function(element) {
       element.addEventListener('change', function(event) {
@@ -65,7 +62,7 @@ if (typeof Mozilla === 'undefined') {
     defaultOS = platformMap[platform] ?? defaultOS;
 
     // Channel Selection calls OS Selection
-    DownloadInfo.OnChannelSelection(channelSelect.value);
+    DownloadInfo.OnOSSelection(defaultOS);
     DownloadInfo.SetDownloadLink();
   }
 
@@ -81,46 +78,18 @@ if (typeof Mozilla === 'undefined') {
   };
 
   /**
-   * Generic helper function to hide some selectors, and show others, and selects the first item.
-   * @param selectorHide
-   * @param selectorShow
-   * @param selectFn - Bad hack, I need to re-write this flow.
-   */
-  DownloadInfo.ChangeSelection = function (selectorHide, selectorShow, selectFn) {
-    document.querySelectorAll(selectorHide).forEach((element) => {
-      element.classList.add('hidden');
-      element.removeAttribute('selected');
-    });
-    document.querySelectorAll(selectorShow).forEach((element) => element.classList.remove('hidden'));
-
-    if (selectFn) {
-      selectFn();
-    } else {
-      const firstItem = document.querySelector(selectorShow);
-      firstItem.setAttribute('selected', 'true');
-    }
-
-    DownloadInfo.Update();
-  };
-
-  /**
-   * Hides the non-relevant installer options, and selects the first one that's relevant.
+   * Selects a specific entry from the OS Selection
    * @param os {string}
    */
   DownloadInfo.OnOSSelection = function(os) {
-    if (!os) {
-      DownloadInfo.ChangeSelection('[data-for-os]', `[data-for-os='Windows']`);
-      return;
-    }
-    DownloadInfo.ChangeSelection('[data-for-os]', `[data-for-os=${os}]`);
+    osSelect.value = os;
   }
 
   /**
-   * Hides the non-relevant channel options, and selects the first one that's relevant.
+   * Hides/Shows daily warning
    * @param channel {string}
    */
-  DownloadInfo.OnChannelSelection = function(channel) {
-    const isMobile = channel === 'mobile';
+  DownloadInfo.ToggleDailyWarning = function(channel) {
     const dailyWarning = document.getElementById('daily-warning');
 
     if (channel === 'daily') {
@@ -128,9 +97,6 @@ if (typeof Mozilla === 'undefined') {
     } else {
       dailyWarning.classList.add('hidden');
     }
-
-    DownloadInfo.ChangeSelection('[data-is-mobile]', `[data-is-mobile="${isMobile}"]`, () => osSelect.value = defaultOS);
-    DownloadInfo.OnOSSelection(osSelect.value);
   }
 
   /**
