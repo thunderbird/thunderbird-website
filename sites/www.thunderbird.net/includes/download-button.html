@@ -29,6 +29,7 @@
 
 <div id="{{ id }}" class="{{ download_class }}">
   {# no JS #}
+  {% if section != 'header' %}
   <div class="nojs-download">
     {{ alt_buttons(builds) }}
   </div>
@@ -41,6 +42,7 @@
   <p class="linux-arm-download mb-8 p-links">
     {{ _('Please follow <a href="%(url)s">these instructions</a> to install Thunderbird.')|format(url='https://support.mozilla.org/kb/installing-thunderbird-linux') }}
   </p>
+  {% endif %}
   <ul class="download-list list-none p-0 flex flex-wrap max-w-lg mb-0 {{ flex_class }}">
     {% for plat in builds %}
       <li class="os_{{ plat.os }}{% if plat.arch %} {{ plat.arch }}{% endif %} ml-3 mr-3">

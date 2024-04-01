@@ -75,9 +75,7 @@
   </li>
   <li class="nav-entry no-border no-mobile">
     <div class="header-download">
-      <a href="{{ url('thunderbird.download') }}" class="btn download-link btn-download">
-        <span>{{ _('Download') }}</span>
-      </a>
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="header", hide_footer_links=True) }}
     </div>
   </li>
   <li class="nav-entry no-border no-mobile">
