@@ -33,6 +33,9 @@ if (typeof Mozilla === 'undefined') {
     channelSelect.addEventListener('change', function(event) {
       DownloadInfo.ToggleDailyWarning(event.currentTarget.value);
     });
+    osSelect.addEventListener('change', function(event) {
+      DownloadInfo.OnOSSelection(event.currentTarget.value);
+    });
     [localeSelect, channelSelect, osSelect, installerSelect].forEach(function(element) {
       element.addEventListener('change', function(event) {
         DownloadInfo.SetDownloadLink();
@@ -84,6 +87,23 @@ if (typeof Mozilla === 'undefined') {
    */
   DownloadInfo.OnOSSelection = function(os) {
     osSelect.value = os;
+
+    let firstInstaller = null;
+
+    document.querySelectorAll('[data-for-os]').forEach(function (element) {
+      if (element.dataset.forOs === os) {
+        element.classList.remove('hidden');
+        if (!firstInstaller) {
+          firstInstaller = element.value;
+        }
+      } else {
+        element.classList.add('hidden');
+      }
+    });
+
+    if (firstInstaller) {
+      installerSelect.value = firstInstaller;
+    }
   }
 
   /**
