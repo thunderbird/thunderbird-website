@@ -25,7 +25,8 @@ if (typeof Mozilla === 'undefined') {
    * Hooks up onChange event handlers, and sets the installer dropdown options / download link
    */
   DownloadInfo.Init = function() {
-    if (!isDownloadPage) {
+    // We only have to check for one of these dropdowns.
+    if (!isDownloadPage || !channelSelect) {
       return;
     }
 
