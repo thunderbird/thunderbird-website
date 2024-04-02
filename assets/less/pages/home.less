@@ -100,6 +100,21 @@
     filter: drop-shadow(0 0 50px var(--color-orange-30));
   }
 
+
+  #free-your-inbox {
+    .cta {
+      --btn-bg: color-mix(in srgb, var(--bg) 90%, transparent);
+      display: grid;
+      place-items: center;
+      gap: 9px;
+    }
+
+    .mask {
+      --bg: black;
+    }
+  }
+
+
   @media (max-width: @md) {
     #free-from-manipulation {
       .container {
