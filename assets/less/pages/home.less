@@ -1,12 +1,19 @@
 .page-index {
   #masthead,
   header {
+    --bg-hero-gradient: linear-gradient(to top, var(--color-ink-90), black 80%);
+    --bg-hero: url('/media/img/thunderbird/new/hero/hero.png');
+    --bg-hero-set: image-set(url('/media/img/thunderbird/new/hero/hero.avif') type('image/avif'),
+    url('/media/img/thunderbird/new/hero/hero.webp') type('image/webp'),
+    var(--bg-hero) type('image/png'));
+
     display: grid;
     place-items: center;
     min-height: 80vh;
     background-color: black;
-    background-image: url('../img/thunderbird/new/hero/hero.png'),
-    linear-gradient(to top, var(--color-ink-90), black 80%);
+    background-image: var(--bg-hero), var(--bg-hero-gradient);
+    background-image: var(--bg-hero-set), var(--bg-hero-gradient);
+
     background-size: auto 80vh, 100%;
     background-position: bottom center, center;
     background-repeat: no-repeat;

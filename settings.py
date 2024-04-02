@@ -185,6 +185,7 @@ URL_MAPPINGS = {
     'thunderbird.about': '/about',
     'thunderbird.about.our-mission-statement': '/about#our-mission-statement',
     'thunderbird.bugzilla.new-bug': 'https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird',
+    'thunderbird.calendar.holiday': '/calendar/holidays',
     'thunderbird.careers': '/careers',
     'thunderbird.channel': '/channel',
     'thunderbird.contact': '/contact',
