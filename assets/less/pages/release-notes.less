@@ -11,6 +11,7 @@
   .release-text-container {
     padding-bottom: 2rem;
   }
+
   .release-notes-container {
     padding-top: 0;
   }
@@ -24,6 +25,7 @@
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+
     li {
       list-style: none;
     }
@@ -112,5 +114,24 @@
   .see-all-releases {
     margin-top: 6rem;
     font-size: var(--font-lg);
+  }
+
+  @media (max-width: @md) {
+    // Fallback <code> to basically the single backtick behaviour on mobile.
+    code {
+      line-break: anywhere;
+    }
+
+    .section-text.wide {
+      padding: 0;
+      max-inline-size: none;
+      width: 100%;
+    }
+    .note-flex {
+      flex-direction: column;
+    }
+    .category-icon {
+      display: none;
+    }
   }
 }
