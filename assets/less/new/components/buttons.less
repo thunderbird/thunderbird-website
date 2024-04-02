@@ -226,6 +226,14 @@ button:hover::after {
   }
 }
 
+.btn-no-bg {
+  --btn-background-color: var(--color-white);
+}
+
+.btn-white-bg {
+  --btn-background-color: var(--color-white);
+}
+
 .btn-no-bg::after {
   background: transparent;
 }
@@ -236,11 +244,12 @@ button:hover::after {
 
 .btn-white-bg:hover,
 .btn-no-bg:hover {
-  background: linear-gradient(white, white) padding-box,
-          linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+  background: linear-gradient(var(--btn-background-color), var(--btn-background-color)) padding-box,
+  linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
   border-color: transparent;
   transition: all 250ms;
   color: black;
+
   &::after {
     opacity: 0.75;
   }
