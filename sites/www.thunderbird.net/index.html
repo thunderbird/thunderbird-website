@@ -148,7 +148,12 @@ with great features!') }}{% endblock %}
           always put your privacy and security first.
           {% endtrans %}
         </p>
-        <div class="planets" aria-hidden="true">
+        <div class="cta">
+          <a href="{{ url('thunderbird.about') }}" class="strong">{{_('Learn Who We Are')}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="planets" aria-hidden="true">
           <div class="planet-firefox">
             <picture>
               <source srcset="/media/img/thunderbird/new/planets/planets-firefox.avif" type="image/avif">
@@ -164,11 +169,6 @@ with great features!') }}{% endblock %}
             </picture>
           </div>
         </div>
-      </div>
-      <div class="cta">
-        <!-- <a href="{{ url('thunderbird.about') }}" class="cta-ln">{{_('Discover Our Mission')}}</a> -->
-      </div>
-    </div>
     <div class="mask" aria-hidden="true">
       {{ svg('mask') }}
     </div>

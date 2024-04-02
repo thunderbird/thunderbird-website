@@ -28,7 +28,7 @@
   .site-nav {
     color: var(--nav-txt);
 
-    
+
     --hamburger-background-inactive: var(--color-black);
     --hamburger-foreground-inactive: var(--color-gray-30);
     --hamburger-background-active: var(--color-white);
@@ -43,23 +43,85 @@
     }
   }
 
-  
+
   .section-heading {
     font-size: 2.75rem;
     font-weight: 800;
     margin: 0;
   }
-/*
-  .section-text :where(h3) {
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin: 0;
-    margin-bottom: 2em;
-  }
-*/
+
   .testimonials {
     @media (max-width: @lg) {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  #free-from-manipulation {
+    background-image: linear-gradient(to top, color-mix(in srgb, var(--color-purple-10) 50%, transparent), transparent 20%);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .container {
+      margin-bottom: 330px;
+    }
+
+    .cta {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .planets {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .planet-thunderbird {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    filter: drop-shadow(0 0 50px var(--color-blue-20));
+
+    left: -11.5%;
+
+    picture, img {
+      max-width: 110%;
+      width: 110%;
+    }
+  }
+
+  .planet-firefox {
+    position: absolute;
+    right: 7%;
+    bottom: 25%;
+    height: 200px;
+    width: 200px;
+    filter: drop-shadow(0 0 50px var(--color-orange-30));
+  }
+
+  @media (max-width: @md) {
+    #free-from-manipulation {
+      .container {
+        margin-bottom: 100px;
+      }
+    }
+
+    .planet-thunderbird {
+      // Cover up a gap!
+      margin-bottom: -10px;
+    }
+
+    .planet-firefox {
+      display: none;
+    }
+  }
+
+  @media (max-width: @sm) {
+    #free-from-manipulation {
+      .container {
+        margin-bottom: 50px;
+      }
     }
   }
 }
