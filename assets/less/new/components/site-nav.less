@@ -1,3 +1,16 @@
+// Here for page-index override...
+@btn-no-bg-styling: {
+  &::after {
+    background-color: var(--hamburger-background-active);
+  }
+
+  &:hover {
+    background: linear-gradient(var(--hamburger-foreground-active), var(--hamburger-foreground-active)) padding-box,
+    linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+    color: var(--hamburger-background-active);
+  }
+}
+
 .site-nav {
   --hamburger-background-inactive: var(--color-white);
   --hamburger-foreground-inactive: var(--color-black);
@@ -33,6 +46,11 @@
   }
 }
 
+// Homepage hack
+.page-index .btn-no-bg {
+  @btn-no-bg-styling();
+}
+
 .scrolled-nav {
   --nav-height: 60px;
   border-color: rgba(255, 255, 255, .25);
@@ -47,6 +65,10 @@
     --hamburger-foreground-inactive: var(--nav-txt);
     margin: 0;
     transition: margin .2s;
+  }
+
+  .btn-no-bg {
+    @btn-no-bg-styling();
   }
 }
 
