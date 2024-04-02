@@ -11,6 +11,7 @@
 .download-dumb > ul {
   padding: 0;
 }
+
 .download-button > ul {
   padding: 0;
 }
@@ -18,10 +19,12 @@
 // Just some temp styling
 .header-download {
   font-weight: 500;
+
   .download-link.btn-download:after {
     background: transparent;
   }
 }
+
 .header-donate {
   margin-top: -0.05rem;
   margin-left: -1rem;
@@ -38,6 +41,10 @@
   svg {
     width: 1rem;
   }
+}
+
+.btn-newsletter {
+  cursor: pointer;
 }
 
 .btn-donate,
@@ -115,6 +122,7 @@ button:hover::after {
 .download-button .nojs-download {
   display: none;
 }
+
 .download-button .os_msi,
 .download-button .os_winsha1,
 .download-button .os_win64,
@@ -133,6 +141,7 @@ button:hover::after {
 .other .download-list {
   display: none !important;
 }
+
 .win7up.x86.x64 .download-button .os_win64,
 .linux .download-button .os_linux,
 .linux.x86.x64 .download-button .os_linux64,
@@ -150,6 +159,7 @@ button:hover::after {
 .other .download-button small.os_win {
   display: block !important;
 }
+
 .windows.arm .download-button .unsupported-download,
 .linux.arm .download-button .linux-arm-download,
 .chromeos .download-button .unsupported-download,
@@ -158,6 +168,7 @@ button:hover::after {
   display: block;
   max-width: 250px;
 }
+
 .windows.arm .download-button .fx-privacy-link,
 .linux.arm .download-button .fx-privacy-link,
 .chromeos .download-button .fx-privacy-link,
@@ -165,29 +176,36 @@ button:hover::after {
 .oldmac .download-button .fx-privacy-link {
   display: none;
 }
+
 .android .download-button-desktop .nojs-download,
 .ios .download-button-desktop .nojs-download,
 .no-js .download-button .nojs-download {
   display: block;
 }
+
 .other .download-button .unrecognized-download {
   display: block;
 }
+
 .download-button .download-list .os_android.x86,
 .download-button .download-other.os_android .api-15,
 .android.x86 .download-button .download-list .os_android.armv7up,
 .android.x86 .download-button .download-other.os_android .x86 {
   display: none !important;
 }
+
 .android.x86 .download-button .download-list .os_android.x86 {
   display: block !important;
 }
+
 .android.x86 .download-button .download-other.os_android .armv7up {
   display: inline !important;
 }
+
 .windows.sha-1 .download-button .os_win {
   display: none !important;
 }
+
 .windows.sha-1 .download-button .os_winsha1 {
   display: block !important;
 }
@@ -206,4 +224,20 @@ button:hover::after {
     font-size: var(--font-lg);
     font-weight: 400;
   }
+}
+
+.btn-no-bg::after {
+  background: transparent;
+}
+
+.btn-white-bg::after {
+  background: var(--color-white);
+}
+
+.btn-white-bg:hover,
+.btn-no-bg:hover {
+  background: linear-gradient(white, white) padding-box,
+          linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+  border-color: transparent;
+  transition: all 250ms;
 }

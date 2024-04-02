@@ -75,12 +75,12 @@
   </li>
   <li class="nav-entry no-border no-mobile">
     <div class="header-download">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="header", hide_footer_links=True) }}
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="header", hide_footer_links=True, button_class="btn-download btn-no-bg") }}
     </div>
   </li>
   <li class="nav-entry no-border no-mobile">
     <div class="header-donate">
-      <a href="{{ donate_url('header') }}" class="btn" aria-label="{{ _('Donate') }}" title="{{ _('Donate') }}">
+      <a href="{{ donate_url('header') }}" class="btn btn-no-bg" aria-label="{{ _('Donate') }}" title="{{ _('Donate') }}">
         <span aria-hidden="true">{{ svg('heart') }}</span>
       </a>
     </div>
