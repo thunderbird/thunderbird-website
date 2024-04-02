@@ -7,14 +7,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block extra_meta %}{% endblock %}
+    <link rel="preload" as="script" href="/media/js/site-bundle.js">
+    <link rel="preload" as="script" href="/media/js/common-bundle.js">
 
     {% block shared_meta %}
     <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} — Thunderbird{% endblock %}{% endfilter %}</title>
-    {% block site_js %}
-      {#- site-bundle should block html rendering so we can prevent no-js/js element flashing. -#}
-      <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
-      <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8" defer></script>
-    {% endblock %}
     <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{% endblock %}{% endfilter %}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ _('Thunderbird') }}">
@@ -32,6 +29,11 @@
     {% endblock shared_meta %}
     <link href="/media/css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="/media/css/base-style.css" rel="stylesheet" type="text/css" />
+    {% block site_js %}
+      {#- site-bundle should block html rendering so we can prevent no-js/js element flashing. -#}
+      <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8" defer></script>
+    {% endblock %}
 
     {{ l10n_css() }}
 

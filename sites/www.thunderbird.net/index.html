@@ -12,6 +12,11 @@ with great features!') }}{% endblock %}
 
 {% block breadcrumbs %}{% endblock %}
 
+{% block extrahead %}
+  {# Preload the most common format here #}
+  <link rel="preload" as="image" href="{{ static('/media/img/thunderbird/new/hero/hero.avif') }}">
+{% endblock %}
+
 {% block header_content %}
   <section>
     <div class="container hero">
