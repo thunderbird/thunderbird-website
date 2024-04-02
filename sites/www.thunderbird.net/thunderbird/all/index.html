@@ -27,7 +27,7 @@
           </div>
 
           <!-- 1. Locale -->
-          <label class="pretend-to-be-h6" for="download-language-select">
+          <label class="pretend-to-be-h6" for="download-language-select" role="group">
             <strong>{{ _('Locale') }}</strong>
           </label>
           <select id="download-language-select" name="lang" dir="ltr" class="form-select">
@@ -41,7 +41,7 @@
           </select>
 
           <!-- 2. Channel -->
-          <label class="pretend-to-be-h6" for="download-browser-select">
+          <label class="pretend-to-be-h6" for="download-browser-select" role="group">
             <strong>{{ _('Browser Channel') }}</strong>
           </label>
           <select id="download-browser-select" name="download" dir="ltr" class="form-select">
@@ -52,7 +52,7 @@
           </select>
 
           <!-- 3. OS -->
-          <label class="pretend-to-be-h6" for="download-os-select">
+          <label class="pretend-to-be-h6" for="download-os-select" role="group">
             <strong>{{ _('Operating System') }}</strong>
           </label>
           <select id="download-os-select" name="lang" dir="ltr" class="form-select">
@@ -64,11 +64,11 @@
           <!-- 4. Advanced Platform (Optional) -->
           <details class="accordion">
             <summary>
-              <span class="chevron-svg">{{ svg('chevron-down') }}</span>
+              <span class="chevron-svg" aria-hidden="true">{{ svg('chevron-down') }}</span>
               {{ _('Need a specific installer?') }}
             </summary>
             <div>
-              <label class="pretend-to-be-h6" for="download-advanced-platform-select">
+              <label class="pretend-to-be-h6" for="download-advanced-platform-select" role="group">
                 <strong>{{ _('Installer Type') }}</strong>
               </label>
               <select id="download-advanced-platform-select" name="lang" dir="ltr" class="form-select">
