@@ -12,6 +12,10 @@ with great features!') }}{% endblock %}
 
 {% block breadcrumbs %}{% endblock %}
 
+{% block site_header_unwrapped %}
+{% include 'includes/announcement.html' %}
+{% endblock %}
+
 {% block extrahead %}
   {# Preload the most common format here #}
   <link rel="preload" as="image" href="{{ static('/media/img/thunderbird/new/hero/hero.avif') }}">
