@@ -19,7 +19,9 @@ a {
   &.strong {
     text-decoration: none;
     font-weight: 600;
+
     &::after {
+      --bg-img: url('/media/svg/chevron-right.svg');
       position: relative;
 
       top: 0.17rem;
@@ -29,10 +31,17 @@ a {
       height: 1rem;
       background-position: center;
       background-repeat: no-repeat;
-      background-image: url('/media/svg/chevron-right.svg');
+      background-image: var(--bg-img);
       content: '';
       margin-left: 0.5rem;
-      color: var(--color-ink-60);
+
+      // Colour mask
+      background-color: var(--color-ink-50);
+      mask-image: var(--bg-img);
+      mask-repeat: no-repeat;
+      // Blah
+      -webkit-mask-image: var(--bg-img);
+      -webkit-mask-repeat: no-repeat;
     }
   }
 
