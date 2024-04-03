@@ -1,0 +1,46 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "holiday-calendar" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title %}{{ _('Calendar') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('Resources') }}{% endblock %}
+
+{% block content %}
+<section class="flex justify-between items-center bg-grey-light rounded lg:w-full max-w-6xl mx-auto">
+    <ul class="list-none p-0 flex flex-wrap justify-center flex-1 m-0">
+      {% for letter in letters -%}
+      <li>
+        <a href="#{{ letter }}" class="btn-link text-blue-dark">{{ letter }}</a>
+      </li>
+      {% endfor -%}
+    </ul>
+  </section>
+
+  <section class="mb-10 flex flex-col items-start max-w-6xl mx-auto pr-8 pl-8">
+    {% set letter = namespace(first='') %}
+    {% for calendar in calendars -%}
+      {% if letter.first != calendar.country[:1] %}
+        {% set letter.first = calendar.country[:1] %}
+        <h4 id="{{ letter.first }}" class="header-section lg:w-full mb-0 pt-6 pl-3">
+          {{ letter.first }}
+        </h4>
+      {% endif %}
+      <div class="flex w-full mt-1 mb-1 bg-grey-light rounded p-1 font-md items-center">
+        <aside class="flex-1 p-2">
+          {% if calendar.author == CALDATA_AUTOGEN_AUTHOR %}
+            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a>')|format(url=CALDATA_URL + calendar.filename, country=calendar.country ) }}
+          {% else %}
+            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a> holidays thanks to %(authors)s')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, authors=calendar.authors) }}
+          {% endif %}
+        </aside>
+        <aside class="text-right p-2 font-sm uppercase font-semibold">
+          {{ calendar.datespan }}
+        </aside>
+      </div>
+    {% endfor %}
+  </section>
+{% endblock %}
