@@ -92,11 +92,11 @@
               data-donate-content="post_download"
               data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}"
             >
-              <!--
+              {#
               <span id="download-icon" class="platform-icon" aria-hidden="true">
                 {{ svg(get_platform_icon(platform='win64')) }}
               </span>
-              -->
+              #}
               {{ _('Download') }}
             </a>
           </div>
@@ -116,8 +116,13 @@
               <li>
                 <a class="dotted" href="{{ url('download.desktop.msstore') }}">{{ _('Microsoft Apps Store') }}</a>
               </li>
+            </ul>
+            <ul>
               <li>
                 <a class="dotted" href="{{ url('download.desktop.flathub') }}">{{ _('Flathub') }}</a>
+              </li>
+              <li>
+                <a class="dotted" href="{{ url('download.desktop.snap') }}">{{ _('Snap Store') }}</a>
               </li>
             </ul>
           </div>

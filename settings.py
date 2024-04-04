@@ -161,6 +161,7 @@ URL_MAPPINGS = {
     'download.android.binary': 'https://github.com/thunderbird/thunderbird-android/releases',
     'download.desktop.flathub': 'https://flathub.org/apps/org.mozilla.Thunderbird',
     'download.desktop.msstore': 'https://apps.microsoft.com/detail/9pm5vm1s3vmq',
+    'download.desktop.snap': 'https://snapcraft.io/thunderbird',
     'firefox.dnt': 'https://www.mozilla.org/firefox/dnt/',
     'firefox.enterprise': 'https://www.mozilla.org/firefox/enterprise/',
     'firefox.release-calendar': 'https://wiki.mozilla.org/Release_Management/Calendar',
