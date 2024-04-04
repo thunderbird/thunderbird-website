@@ -67,10 +67,6 @@
 
   .section-text {
     max-inline-size: 50%;
-
-    @media (max-width: @md) {
-      max-inline-size: 100%;
-    }
   }
 
 
@@ -291,6 +287,16 @@
   }
 
   @media (max-width: @md) {
+    .section-text {
+      max-inline-size: 100%;
+    }
+
+    #free-your-inbox {
+      .section-text {
+        max-inline-size: 100%;
+      }
+    }
+
     #free-from-manipulation {
       .container {
         margin-bottom: 100px;
