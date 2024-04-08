@@ -49,23 +49,35 @@
         </ul>
       </div>
       {% endcall %}
-      {% call accordion(svg('base/icons/participate/design'), _('Design')) %}
-      <marquee>Awaiting copy :^)</marquee>
-      {% endcall %}
       {% call accordion(svg('base/icons/participate/test'), _('Test')) %}
-      <marquee>Awaiting copy :^)</marquee>
+      <div>
+        <p>{{ _('With so many unique hardware environments and workflows, community members who test pre-release builds of Thunderbird play a vital role in the quality of the software. Plus, you help catch bugs before they can reach the general public!') }}</p>
+      </div>
       {% endcall %}
       {% call accordion(svg('base/icons/participate/translate'), _('Translate')) %}
-      <marquee>Awaiting copy :^)</marquee>
-      {% endcall %}
-      {% call accordion(svg('base/icons/participate/document'), _('Document')) %}
-      <marquee>Awaiting copy :^)</marquee>
+      <div>
+      <p>{{ _('The entire world deserves free and open source software, and Thunderbird is currently translated in more than 50 languages! Use your multilingual talents to help make Thunderbird more widely available than ever.') }}</p>
+      </div>
       {% endcall %}
       {% call accordion(svg('base/icons/participate/support'), _('Support')) %}
-      <marquee>Awaiting copy :^)</marquee>
+      <div>
+      <p>{{ _('Are you an experienced Thunderbird user who loves lending a helping hand? Put your knowledge to great use by joining our Support Crew and helping users around the world with their Thunderbird questions.') }}</p>
+      </div>
+      {% endcall %}
+      {% call accordion(svg('base/icons/participate/document'), _('Document')) %}
+      <div>
+      <p>{{ _('Help ensure the answers are written down before the question is even asked! From documenting features or APIs to frequently asked user support questions, put your knowledge and writing skills to use for the benefit of the entire Thunderbird community.') }}</p>
+      </div>
       {% endcall %}
       {% call accordion(svg('base/icons/participate/promote'), _('Promote')) %}
-      <marquee>Awaiting copy :^)</marquee>
+      <div>
+      <p>{{ _('Advocacy is one of the easiest ways to contribute to Thunderbird! Boosting our posts on Mastodon, showcasing the software to a friend, upvoting a helpful answer on Reddit; anything that adds visibility is a huge help. Here’s where to find us on various social platforms, and how to get involved.') }}</p>
+      </div>
+      {% endcall %}
+      {% call accordion(svg('base/icons/participate/design'), _('Design')) %}
+      <div>
+        <p>{{ _('Share your ideas, and contribute to the ongoing conversations around Thunderbird’s UX and UI. We welcome your feedback on our UX mailing list, and our companion Matrix room.') }}</p>
+      </div>
       {% endcall %}
       <div class="section-text tight">
         <p>{{ _('One more way you can contribute is by sharing <strong>ideas</strong>, <strong>priorities</strong>, and <strong>feedback</strong>. Thunderbird is yours and we\'re listening.') }}</p>
