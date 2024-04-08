@@ -150,6 +150,11 @@ section {
   line-height: 1;
 }
 
+#initAppeal p:nth-of-type(2) > strong {
+  /* Apply a new line for the bold text. This seems to play nice on the locales I've tested. */
+  display: block;
+}
+
 @media (max-width: 720px) {
   #initAppeal {
     flex-direction: column-reverse;
@@ -169,21 +174,11 @@ main {
   position: relative;
 }
 
-#bg-gradient {
-  position: absolute;
-  inset: 0;
-  top: 500px;
-  /*background-image: linear-gradient(rgba(76,177,249,0.2), var(--color-blue-40));*/
-  z-index: -1;
-}
-@media (prefers-color-scheme: dark) {
-  /*
-  #bg-gradient {
-    background-image: linear-gradient(rgba(19,115,217,0.2), var(--color-blue-90));
+@media (max-width: 600px) {
+  main {
+    padding: 0;
   }
-   */
 }
-
 
 .accent-text {
   color: var(--accent-text);
@@ -200,14 +195,23 @@ main {
 }
 #appeal-heading span {
   width: 100%;
-  font-size: 3.5rem;
+  font-size: 3.7rem;
   font-weight: 300;
   line-height: 115%;
   margin: 0;
 }
 
+@media (max-width: 600px) {
+  #appeal-heading {
+    font-size: 3.7rem !important;
+  }
+  #appeal-heading span {
+    font-size: 2rem;
+  }
+}
+
 #illustration {
-  width: 40%;
+  width: 60%;
   position: relative;
 }
 
@@ -220,6 +224,14 @@ main {
   position: absolute;
   left: 23px;
   top: -233px;
+}
+
+@media(max-width: 720px) {
+  #illustration {
+    width: 100%;
+    justify-content: center;
+    min-height: 300px;
+  }
 }
 
 .donate-banner {
@@ -514,6 +526,12 @@ main {
   box-shadow: var(--shadow);
   position: relative;
   margin-bottom: 121px;
+}
+
+@media (max-width: 600px) {
+  .letter-container {
+    padding: 1rem;
+  }
 }
 
 .letter-container:before {
