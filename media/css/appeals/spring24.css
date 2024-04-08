@@ -88,9 +88,10 @@
   --color-white: #ffffff;
 
   --color-appeal-txt: #175491;
+  --color-appeal-bg: #7fc2f5;
 
   --bg2: var(--color-white);
-  --bg: #74BFF4;
+  --bg: var(--color-appeal-bg);
   --txt: var(--color-appeal-txt);
   --bg-img: url('/media/svg/appeals/spring24/background.svg');
   --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -118,7 +119,7 @@ body {
   background-color: var(--bg);
   background-image: var(--bg-img);
   background-position: top center;
-  background-size: auto 1400px; /*500px;*/
+  background-size: auto 1800px; /*500px;*/
   background-repeat: no-repeat; /*repeat-x;*/
   color: var(--txt);
   position: relative;
@@ -551,12 +552,6 @@ main {
   margin-bottom: 121px;
 }
 
-@media (max-width: 600px) {
-  .letter-container {
-    padding: 1rem;
-  }
-}
-
 .letter-container:before {
   content: '';
   position: absolute;
@@ -574,6 +569,15 @@ main {
 
 .letter-container p:nth-child(4) {
   margin-bottom: 90px;
+}
+
+@media (max-width: 600px) {
+  .letter-container {
+    padding: 1rem;
+  }
+  .letter-container:before {
+    inset: 0;
+  }
 }
 
 .heart-container {

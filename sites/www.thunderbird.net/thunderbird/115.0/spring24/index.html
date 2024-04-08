@@ -16,6 +16,21 @@
 
  {% block page_title %}{{ _('Thunderbird is Powered by You!') }}{% endblock %}
 
+{% block extrahead %}
+<script type="application/javascript">
+  /**
+   * Fix for using <strong> instead of <b> which causes anything in strong to be split out by Mac VoiceOver.
+   * This adds the role="presentation" to each strong tag. Allowing the text to be read together without requiring additional input.
+   * Can't fix it in the code because localization has already gone out. Ah well.
+   */
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('strong').forEach(function (item) {
+      item.role = 'presentation';
+    });
+  });
+</script>
+{% endblock %}
+
  {% block site_header %}
 <header id="initAppeal" >
   <aside>
