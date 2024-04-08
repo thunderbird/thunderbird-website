@@ -12,7 +12,7 @@
  {% block page_favicon_large %}{{ static('img/thunderbird/favicon-196.png') }}{% endblock %}
  {% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}
 
- {% block page_css %}<link href="/media/css/eoy.css" rel="stylesheet" type="text/css" />{% endblock %}
+ {% block page_css %}<link href="/media/css/appeals/spring24.css" rel="stylesheet" type="text/css" />{% endblock %}
 
  {% block page_title %}{{ _('Thunderbird is Powered by You!') }}{% endblock %}
 
@@ -23,8 +23,8 @@
  {% block site_header %}
 <header id="initAppeal" >
   <aside>
-    <h1 class="accent-text">
-      {{ _('Thunderbird is Powered by You!')}}
+    <h1 id="appeal-heading" class="accent-text" aria-label="{{ _('Thunderbird is Powered by You!') }}">
+      {{ _('Thunderbird <span>is Powered by You!</span>') }}
     </h1>
     <p>
       {{ _('<strong>Did you know Thunderbird is funded only by donations from users like you?</strong>')}}
@@ -36,8 +36,13 @@
       {{ _('<strong>Without you, Thunderbird can’t exist.</strong> Giving a gift today means Thunderbird continues to remain available!')}}
     </p>
   </aside>
-  <aside id="illustration">
-    {{ svg('tb-donate-illustration') }}
+  <aside id="illustration" aria-hidden="true">
+    <div id="ill-body">
+      {{ svg('appeals/spring24/ill-body') }}
+    </div>
+    <div id="ill-hearts">
+      {{ svg('appeals/spring24/ill-hearts') }}
+    </div>
   </aside>
 </header>
 {% endblock %}
@@ -46,7 +51,7 @@
 {% endblock email_form %}
 
 {% block content %}
-<section class="letter-container font-xl">
+<section id="appeal-body" class="letter-container font-xl">
     <a href="{{ donate_url(content='cta', campaign='holiday_eoy_appeal_2023', source='thunderbird-client') }}" class="donate-banner" data-donate-btn>
       <div id="donate-banner-left">
         {{ _('Click here to <strong class="block">Donate!</strong>') }}
