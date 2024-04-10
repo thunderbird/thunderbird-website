@@ -180,41 +180,35 @@
   --color-white: #ffffff;
 
   --color-appeal-txt: #175491;
-  --color-appeal-bg: #7fc2f5;
+  --color-appeal-bg: #82C3F5;
+  --color-appeal-main-bg: var(--color-white);
+  --color-footer-txt: #105BBC;
 
-  --bg2: var(--color-white);
+  --bg2: var(--color-appeal-main-bg);
   --bg: var(--color-appeal-bg);
   --txt: var(--color-appeal-txt);
   --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   --accent-text: var(--color-appeal-txt);
+  --closing-text: var(--color-footer-txt);
+  --bg-img: none; /*radial-gradient(600.22% 100% at 50% 0%, #FCF8D8 2.5%, #F7E4FE 22.17%, #74BFF4 100%);*/
 
-
-  --bg-img: url('/media/svg/appeal/spring24/clouds.svg');
-
-  --bg-img-set: image-set(
-    url('/media/img/thunderbird/appeal/spring24/background.avif') type('image/avif'),
-      /*url('/media/img/thunderbird/appeal/spring24/background.webp') type('image/webp'),*/ var(--bg-img) type('image/png')
-  );
-
-  --bg-img: radial-gradient(600.22% 100% at 50% 0%, #FCF8D8 2.5%, #F7E4FE 22.17%, #74BFF4 100%);
 }
 
 @media (prefers-color-scheme: dark) {
-  /*
   :root {
-    --bg: var(--color-gray-80);
-    --txt: var(--color-ink-10);
-    --bg-img: url('/media/img/thunderbird/backgrounds/forest-bg-dark.png');
+    --color-appeal-bg: #334B75;
+    --color-appeal-txt: #F2F7FC;
+    --color-appeal-main-bg: #2C343E;
+    --color-footer-txt: #89BCFF;
+
     --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    --accent-text: var(--color-blue-30);
   }
-  */
 }
 
 .clouds-bg {
   --clouds-bg: url('/media/svg/appeal/spring24/clouds.svg');
-  --clouds-size: auto 1300px;
-  --clouds-position: right -1px top -500px;
+  --clouds-size: 856px 820px;
+  --clouds-position: right -2px top -50px;
   position: absolute;
   top: 0;
   display: flex;
@@ -222,6 +216,12 @@
   height: 1300px;
   justify-content: center;
   z-index: -1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .clouds-bg {
+    --clouds-bg: url('/media/svg/appeal/spring24/clouds-dark.svg');
+  }
 }
 
 .clouds-bg .left {
@@ -255,11 +255,15 @@ body {
   background-size: auto 1800px; /*500px;*/
   background-repeat: no-repeat; /*repeat-x;*/
   color: var(--txt);
-  margin: 8rem 0 0;
+  margin: 3rem 0 0;
   padding: 0;
   min-height: 100vh;
   max-width: 100%;
   line-height: 1.6;
+}
+
+.closing-text {
+  color: var(--color-footer-txt);
 }
 
 section {
@@ -267,11 +271,13 @@ section {
 }
 
 #initAppeal {
+  position: relative;
+  left: -50px;
+
   display: flex;
   gap: 9px;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  padding: 24px;
+  margin: 0 auto 100px;
+  padding: 0 24px 24px;
 
   max-width: 900px;
   align-items: center;
@@ -290,6 +296,8 @@ section {
 
 @media (max-width: 920px) {
   #initAppeal {
+    padding-top: 4rem;
+    position: static;
     flex-direction: column-reverse;
     justify-items: center;
   }
@@ -319,18 +327,18 @@ main {
 
 #appeal-heading {
   width: 100%;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  font-size: 6rem !important;
+  font-size: 5.35rem !important;
   font-weight: 700;
   margin: 0;
 }
 
 #appeal-heading span {
   width: 100%;
-  font-size: 3.7rem;
-  font-weight: 300;
+  font-size: 3.5rem;
+  font-weight: 600;
   line-height: 115%;
   margin: 0;
 }
@@ -360,8 +368,8 @@ main {
 }
 
 #illustration > #ill-hearts {
-  left: 23px;
-  top: -233px;
+  left: 32px;
+  top: -245px;
 }
 
 @media (max-width: 920px) {
