@@ -214,7 +214,7 @@
 .clouds-bg {
   --clouds-bg: url('/media/svg/appeal/spring24/clouds.svg');
   --clouds-size: auto 1300px;
-  --clouds-position: -550px -500px;
+  --clouds-position: right -1px top -500px;
   position: absolute;
   top: 0;
   display: flex;
