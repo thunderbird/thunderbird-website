@@ -160,7 +160,7 @@ class Site(object):
         if os.path.isfile(htpath):
             mode = 'a'
         with open(htpath, mode) as f:
-            f.write('RewriteEngine On\nRewriteRule ^favicon\.ico$ {path}\n'.format(path=settings.FAVICON_PATH))
+            f.write('RewriteEngine On\nRewriteRule ^favicon.ico$ {path}\n'.format(path=settings.FAVICON_PATH))
 
     def _copy_apple_pay_domain_verification(self):
         """Copies over FRU's merchantid to `self.renderpath/.well-known` for Apple Pay domain verification purposes"""
@@ -321,6 +321,11 @@ class Site(object):
             self._switch_lang(lang)
             self.render()
             write_404_htaccess(self.outpath, self.lang)
+
+            # Write download page redirect
+            downloads_path = os.path.join(self.renderpath, self.lang, 'download')
+            write_htaccess(downloads_path, settings.CANONICAL_URL)
+
             if lang == 'en-US':
                 # 404 page for root accesses outside lang dirs.
                 write_404_htaccess(self.renderpath, self.lang)
