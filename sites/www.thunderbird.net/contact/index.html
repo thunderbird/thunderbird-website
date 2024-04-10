@@ -10,11 +10,11 @@
 {% block category %}{{ _('About') }}{% endblock %}
 
 {% block content %}
-<section>
+<section id="need-to-talk">
   <div class="container no-gap">
     <div class="section-text">
-      <h1>Need to <span class="txt-gradient">Talk?</span></h1>
-      <h3>{{ _('Direct your inquiries to the people below.') }}</h3>
+      <h2>Need to <span class="txt-gradient">Talk?</span></h2>
+      <h4>{{ _('Direct your inquiries to the people below.') }}</h4>
     </div>
     <div class="block-grid">
       {% call contact_block( svg('base/icons/contact/support'), _('Support'), [(url('support'), _('Support Website'))]) %}
@@ -32,7 +32,7 @@
       {% call contact_block( svg('base/icons/contact/contributors'), _('Contributors'), [(url('thunderbird.contribute'), _('Contributor Page'))]) %}
         {{ _('If you have talents you\'re interested in sharing but don\'t know where to start, learn how to get started by visiting our Contributors page. Here you\'ll find the volunteer community that matches your interests.') }}
       {% endcall %}
-      {% call contact_block( svg('base/icons/contact/legal'), _('Legal'), [(url('legal.trademark'), _('Trademark Misuse')), (url('legal.legal.fraud-report'), _('DMCA Notice'))]) %}
+      {% call contact_block( svg('base/icons/contact/legal'), _('Legal'), [(url('legal.trademark'), _('Trademark Misuse')), (url('legal.infringement'), _('DMCA Notice'))]) %}
         {{ _('Protect future users from malware, data mining, or being fraudulently charged for Thunderbird by reporting trademark misuse. If you believe we are infringing on your copyright or trademark, please send a DMCA notice.') }}
       {% endcall %}
     </div>

@@ -10,11 +10,11 @@
 {% block category %}{{ _('Contribute') }}{% endblock %}
 
 {% block content %}
-<section>
+<section id="we-need-you">
   <div class="container no-gap">
     <div class="section-text">
-      <h1>{{ _('We Need <span class="txt-gradient">You</span>') }}</h1>
-      <h3>{{ _('Here are some of the ways you can help.') }}</h3>
+      <h2>{{ _('We Need <span class="txt-gradient">You</span>') }}</h2>
+      <h4>{{ _('Here are some of the ways you can help.') }}</h4>
     </div>
     {% call accordion(svg('base/icons/participate/code'), _('Code')) %}
     <p>
@@ -25,7 +25,7 @@
     </p>
     <div class="three-columns">
       <div>
-        <h3>Desktop Development:</h3>
+        <h4>Desktop Development:</h4>
         <ul class="styled-list">
           <li>Explore the docs</li>
           <li>Join the repository</li>
@@ -33,7 +33,7 @@
         </ul>
       </div>
       <div>
-        <h3>Android Development:</h3>
+        <h4>Android Development:</h4>
         <ul class="styled-list">
           <li>Explore the docs</li>
           <li>Join the repository</li>
@@ -41,7 +41,7 @@
         </ul>
       </div>
       <div>
-        <h3>Website Development:</h3>
+        <h4>Website Development:</h4>
         <ul class="styled-list">
           <li>Explore the docs</li>
           <li>Join the repository</li>
@@ -87,11 +87,11 @@
   </div>
 </section>
 {% include 'includes/components/page-separator.html' %}
-<section>
+<section id="contributor-experience">
   <div class="container no-gap">
     <div class="section-text">
-      <h1>{{ _('Contributor <span class="txt-gradient">Experience</span>') }}</h1>
-      <h3>{{ _('The ways and reasons to get involved are as diverse as the people who do.') }}</h3>
+      <h2>{{ _('Contributor <span class="txt-gradient">Experience</span>') }}</h2>
+      <h4>{{ _('The ways and reasons to get involved are as diverse as the people who do.') }}</h4>
       <p>{{ _('Volunteers create Thunderbird and ensure it is accessible throughout the world in dozens of languages. They write the documentation and answer the questions that help regular people use Thunderbird. They come from diverse backgrounds and bring unique talents. They\'re making Thunderbird better for themselves and better for the world at the same time. You can join them.') }}</p>
     </div>
   </div>
@@ -119,12 +119,12 @@
   </div>
 </section>
 {% include 'includes/components/page-separator.html' %}
-<section>
+<section id="shape-the-future">
   <div class="container no-gap">
     <div class="two-columns">
       <div class="section-text tight">
         <h2>{{ _('Shape the <span class="txt-gradient">Future</span>') }}</h2>
-        <h3>{{ _('Improve software and lives by volunteering.') }}</h3>
+        <h4>{{ _('Improve software and lives by volunteering.') }}</h4>
         <p>{{ _('Craft tools you want to use. Help others find and use software that respects their privacy and freedom. Become part of a better future for yourself and others by putting your talents to work at Thunderbird. Read further to learn how.') }}</p>
       </div>
       <div class="image">

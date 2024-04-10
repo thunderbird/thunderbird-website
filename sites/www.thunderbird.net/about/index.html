@@ -10,10 +10,10 @@
 {% block category %}{{ _('About') }}{% endblock %}
 
 {% block content %}
-<section>
+<section id="meet-thunderbird">
   <div class="container">
     <div class="section-text">
-      <h1>Meet <span class="txt-gradient">Thunderbird</span></h1>
+      <h2>Meet <span class="txt-gradient">Thunderbird</span></h2>
       <p>{{ _('Thunderbird is a free and open-source software project founded in 2003 to make organizing and communicating easier. We are supported by the talent and donations of thousands of generous individuals and are backed by Mozilla. Essential values guide us and make our work relevant. Read further to learn more.') }}</p>
     </div>
     <div class="icon-grid-container">
@@ -35,18 +35,18 @@
   </div>
 </section>
 {% include 'includes/components/page-separator.html' %}
-<section>
+<section id="guided-by-values">
   <div class="container">
     <div class="section-text">
-      <h1>Guided by <span class="txt-gradient">Values</span></h1>
+      <h2>Guided by <span class="txt-gradient">Values</span></h2>
     </div>
     <div class="value-section values-privacy">
       <div class="image">
       {{ high_res_img('thunderbird/base/about/privacy.png', {'alt': _('A shield with the Thunderbird logo.')}) }}
       </div>
       <div class="section-text tight">
-        <h2>Privacy</h2>
-        <h3>You are not the product.</h3>
+        <h3>Privacy</h3>
+        <h4>You are not the product.</h4>
         <p>To us, data ownership and privacy are your right wherever you live. Our commitment to <strong>your personal data</strong> is simple:</p>
         <ul class="styled-list">
           <li>We do not collect or store it unless you ask us to.</li>
@@ -62,8 +62,8 @@
       {{ high_res_img('thunderbird/base/about/freedom.png', {'alt': _('A key with the Thunderbird logo.')}) }}
       </div>
       <div class="section-text tight">
-        <h2>Freedom</h2>
-        <h3>Thunderbird belongs to you (and the world).</h3>
+        <h3>Freedom</h3>
+        <h4>Thunderbird belongs to you (and the world).</h4>
         <p>Thunderbird is Free and Open-Source Software, which means its code is available to see, modify, use, and share freely. Its license also ensures that it will remain free forever. You can think of Thunderbird as a gift from thousands of contributors to you.</p>
         <a class="strong" href="{{ url('mozorg.mpl2') }}">Learn About MPL 2.0</a>
       </div>
@@ -73,8 +73,8 @@
       {{ high_res_img('thunderbird/base/about/voice.png', {'alt': _('A speech bubble with the Thunderbird logo.')}) }}
       </div>
       <div class="section-text tight">
-        <h2>Voice</h2>
-        <h3>You have a part in Thunderbird's future.</h3>
+        <h3>Voice</h3>
+        <h4>You have a part in Thunderbird's future.</h4>
         <p>Thunderbird is free from the commercial requirements and incentives that often guide software development. Anyone can get involved in helping make Thunderbird better and available to more people. A contributor-elected council ensures Thunderbird remains true to its values and mission.</p>
         <strong>Keep Reading...</strong>
       </div>
@@ -82,10 +82,10 @@
   </div>
 </section>
 {% include 'includes/components/page-separator.html' %}
-<section>
+<section id="driven-by-community">
   <div class="container">
     <div class="section-text">
-      <h1>Driven by <span class="txt-gradient">Community</span></h1>
+      <h2>Driven by <span class="txt-gradient">Community</span></h2>
       <p>Anyone can help make Thunderbird better. Programmers can contribute features they are passionate about or improve the existing code. Those who are multilingual can make Thunderbird accessible to everyone. Those willing can test new versions of Thunderbird and document issues. There are many ways to become part of a thriving community that makes Thunderbird unique. And if you don't have the time to volunteer, you can help support the project through donations.</p>
       <a class="strong" href="#">Learn How to Get Involved</a>
     </div>
@@ -95,10 +95,10 @@
   {{ high_res_img('thunderbird/base/about/contributors.png', {'alt': _('Our Contributors')}) }}
   {% include 'includes/components/page-separator-cover.html' %}
 </section>
-<section>
+<section id="supported-by-mozilla">
   <div class="container">
     <div class="section-text">
-      <h1>Supported by <span class="txt-gradient">Mozilla</span></h1>
+      <h2>Supported by <span class="txt-gradient">Mozilla</span></h2>
       <p>Thunderbird operates as a for-profit subsidiary of the non-profit Mozilla Foundation. This grants us flexibility in hiring and offering optional paid services to sustain Thunderbird's development of free and open-source software far into the future.</p>
       <p>We have a growing team of talented individuals employed to support the efforts of our contributor community, interface with partner organizations, and maximize the reach of Thunderbird throughout the world.</p>
     </div>
