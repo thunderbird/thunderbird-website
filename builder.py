@@ -105,6 +105,7 @@ class Site(object):
         self._setup_env()
         self._env.globals.update(settings=settings, **helper.contextfunctions)
         self.dev_mode = dev_mode
+        self.is_start_page = self.searchpath == settings.START_PATH
         if debug:
             logger.setLevel(logging.INFO)
 
@@ -160,7 +161,16 @@ class Site(object):
         if os.path.isfile(htpath):
             mode = 'a'
         with open(htpath, mode) as f:
-            f.write('RewriteEngine On\nRewriteRule ^favicon\.ico$ {path}\n'.format(path=settings.FAVICON_PATH))
+            f.write('RewriteEngine On\nRewriteRule ^favicon.ico$ {path}\n'.format(path=settings.FAVICON_PATH))
+
+    def _write_tbnet_download_htaccess(self):
+        """Write an .htaccess to `self.renderpath` that redirects /download to home."""
+        htpath = os.path.join(f'{self.renderpath}', '.htaccess')
+        mode = 'w'
+        if os.path.isfile(htpath):
+            mode = 'a'
+        with open(htpath, mode) as f:
+            f.write('Redirect 302 /download/index.html /index.html')
 
     def _copy_apple_pay_domain_verification(self):
         """Copies over FRU's merchantid to `self.renderpath/.well-known` for Apple Pay domain verification purposes"""
@@ -260,6 +270,8 @@ class Site(object):
         if self.js_bundles:
             self._concat_js()
         self._write_favicon_htaccess()
+        if not self.is_start_page:
+            self._write_tbnet_download_htaccess()
         self._copy_apple_pay_domain_verification()
 
     def render(self):
@@ -344,7 +356,7 @@ class UpdateHandler(FileSystemEventHandler):
 
     def updatesite(self, event):
         """Build the startpage or the website, ignoring assets or notes based on the `event`."""
-        if self.builder.searchpath == settings.START_PATH:
+        if self.builder.is_start_page:
             self.builder.build_startpage()
         else:
             # Reduce build time by ignoring release notes when unnecessary.
