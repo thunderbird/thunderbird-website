@@ -185,9 +185,16 @@
   --bg2: var(--color-white);
   --bg: var(--color-appeal-bg);
   --txt: var(--color-appeal-txt);
-  --bg-img: url('/media/svg/appeals/spring24/background.svg');
   --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   --accent-text: var(--color-appeal-txt);
+
+
+  --bg-img: url('/media/img/thunderbird/appeal/spring24/background.png');
+  --bg-img-set: image-set(
+      url('/media/img/thunderbird/appeal/spring24/background.avif') type('image/avif'),
+      /*url('/media/img/thunderbird/appeal/spring24/background.webp') type('image/webp'),*/
+      var(--bg-img) type('image/png')
+  );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -210,6 +217,7 @@ html {
 body {
   background-color: var(--bg);
   background-image: var(--bg-img);
+  background-image: var(--bg-img-set);
   background-position: top center;
   background-size: auto 1800px; /*500px;*/
   background-repeat: no-repeat; /*repeat-x;*/
