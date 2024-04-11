@@ -184,6 +184,7 @@
   --color-appeal-main-bg: var(--color-white);
   --color-footer-txt: #105BBC;
 
+  --bg-appeal-glow: linear-gradient(129.83deg, #00FFFF 0%, #DB00FF 100%) !important;
   --bg2: var(--color-appeal-main-bg);
   --bg: var(--color-appeal-bg);
   --txt: var(--color-appeal-txt);
@@ -296,7 +297,6 @@ main {
   max-width: 800px;
   position: relative;
 }
-
 
 .accent-text {
   color: var(--accent-text);
@@ -635,7 +635,7 @@ main {
 .letter-container:before {
   content: '';
   position: absolute;
-  background: linear-gradient(129.83deg, #00FFFF 0%, #DB00FF 100%) !important;
+  background: var(--bg-appeal-glow);
   inset: -4px;
   border-radius: 12px;
   filter: blur(64px);
