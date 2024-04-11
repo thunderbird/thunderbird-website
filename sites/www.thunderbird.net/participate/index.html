@@ -97,22 +97,22 @@
   </div>
   <div class="container no-gap">
     <div class="testimonials">
-      {% call testimonial_card(high_res_img('thunderbird/logos/release.png', optional_attributes={'alt': _('Berna') }, scale='2x', alt_formats=()), _('Berna'), _('Leadership, Switzerland')) %}
+      {% call testimonial_card(_('Berna'), _('Leadership, Switzerland')) %}
       {{ _("Thunderbird is a testament to the power of the open-source community's contribution to driving innovation and efficiency.") }}
       {% endcall %}
-      {% call testimonial_card(high_res_img('thunderbird/logos/beta.png', optional_attributes={'alt': _('Arthur') }, scale='2x', alt_formats=()), _('Arthur'), _('Bug Triager, USA')) %}
+      {% call testimonial_card(_('Arthur'), _('Bug Triager, USA')) %}
       {{ _("If you don't have skin in the game, you can't complain about the direction the product is going in.") }}
       {% endcall %}
-      {% call testimonial_card(high_res_img('thunderbird/logos/daily.png', optional_attributes={'alt': _('Hartmut') }, scale='2x', alt_formats=()), _('Hartmut'), _('Developer, Germany')) %}
+      {% call testimonial_card(_('Hartmut'), _('Developer, Germany')) %}
       {{ _("It is great to be able to improve the software by fixing little things that affect me and other users") }}
       {% endcall %}
-      {% call testimonial_card(high_res_img('thunderbird/logos/release.png', optional_attributes={'alt': _('Doug') }, scale='2x', alt_formats=()), _('Doug'), _('Tester & Bug Triager, USA')) %}
+      {% call testimonial_card(_('Doug'), _('Tester & Bug Triager, USA')) %}
       {{ _("I volunteer to use the beta versions as soon as they are built, report issues I find, and test fixes.") }}
       {% endcall %}
-      {% call testimonial_card(high_res_img('thunderbird/logos/beta.png', optional_attributes={'alt': _('Toad-Hall') }, scale='2x', alt_formats=()), _('Toad-Hall'), _('Support & Bug Triager, United Kingdom')) %}
+      {% call testimonial_card(_('Toad-Hall'), _('Support & Bug Triager, United Kingdom')) %}
       {{ _("I volunteer to assist others in the Thunderbird Support Forum which I find a very rewarding experience.") }}
       {% endcall %}
-      {% call testimonial_card(high_res_img('thunderbird/logos/daily.png', optional_attributes={'alt': _('Bogo') }, scale='2x', alt_formats=()), _('Bogo'), _('Translator, Bug Triager & Leadership, Bulgaria')) %}
+      {% call testimonial_card(_('Bogo'), _('Translator, Bug Triager & Leadership, Bulgaria')) %}
       {{ _("I began by contributing translations, thinking that people who speak my language deserve localized versions.") }}
       {% endcall %}
     </div>
@@ -152,7 +152,7 @@
 </details>
 {% endmacro %}
 
-{% macro testimonial_card(photo, name, title) %}
+{% macro testimonial_card(name, title) %}
 {# Generic block
 :param icon: A variable containing pre-formatted html (e.g. the result of svg() or image())
 :param title: The title of the block
@@ -163,10 +163,7 @@
     <q>
       {{ caller() }}
     </q>
-    <div class="attrib">
-      <div class="profile-pic">
-        {{ photo }}
-      </div>
+    <div class="attrib no-photo">
       <div class="name">{{ name }}</div>
       <div class="title">{{ title }}</div>
     </div>
