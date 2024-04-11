@@ -219,10 +219,13 @@
 @media (prefers-color-scheme: dark) {
   .clouds-bg {
     --clouds-bg: url('/media/svg/appeal/spring24/clouds-dark.svg');
+    /* Helps with contrast on hero copy */
+    opacity: 0.9;
   }
 }
 
-.clouds-bg .left {
+.clouds-bg .left,
+.clouds-bg .right {
   background: var(--clouds-bg);
   background-repeat: no-repeat;
   background-position: var(--clouds-position);
@@ -231,11 +234,6 @@
 }
 
 .clouds-bg .right {
-  background: var(--clouds-bg);
-  background-repeat: no-repeat;
-  background-position: var(--clouds-position);
-  background-size: var(--clouds-size);
-  width: 100%;
   transform: scaleX(-100%);
 }
 
