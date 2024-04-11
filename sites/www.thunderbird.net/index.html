@@ -34,26 +34,9 @@ with great features!') }}{% endblock %}
         </p>
       </div>
       <div class="hero-download">
-        <div class="os-list" aria-label="{{ _('Available on Windows, Linux, Mac, and Android') }}">
-          <span class="icon" aria-hidden="true">
-            {{ svg('download-icon-windows') }}
-          </span>
-          <span class="icon icon-tux-alt" aria-hidden="true">
-            {{ svg('download-icon-linux') }}
-          </span>
-          <span class="icon icon-apple" aria-hidden="true">
-            {{ svg('download-icon-apple') }}
-          </span>
-          {#
-          <span class="icon icon-android" aria-hidden="true">
-            {{ svg('base/icons/download/android-light') }}
-          </span>
-          #}
-        </div>
         <div class="download-button">
           {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-hero") }}
         </div>
-        <small>{{_('Free forever.')}} <a href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
     </div>
   </section>
@@ -362,26 +345,9 @@ with great features!') }}{% endblock %}
         <h4 class="cta-heading">{{_('<span class="txt-gradient">Free</span> Your Inbox')}}</h4>
       </div>
       <div class="cta">
-        <div class="os-list" aria-label="{{ _('Available on Windows, Linux, Mac, and Android') }}">
-          <span class="icon" aria-hidden="true">
-            {{ svg('download-icon-windows') }}
-          </span>
-          <span class="icon" aria-hidden="true">
-            {{ svg('download-icon-linux') }}
-          </span>
-          <span class="icon icon-apple" aria-hidden="true">
-            {{ svg('download-icon-apple') }}
-          </span>
-          {#
-          <span class="icon icon-android" aria-hidden="true">
-            {{ svg('base/icons/download/android-dark') }}
-          </span>
-          #}
-        </div>
         <div class="download-button">
           {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-bottom",  button_class="btn-download btn-white-bg") }}
         </div>
-        <small>{{_('Free forever.')}} <a href="{{ donate_url('body') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
       </div>
     </div>
     <div class="mask" aria-hidden="true">
