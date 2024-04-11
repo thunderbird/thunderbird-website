@@ -52,7 +52,12 @@
   }
 
   .answer {
-    padding: 1rem;
+    // Maaaybe revisit this...
+    p {
+      padding: 1rem;
+    }
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
     // This feels wrong, but it works!
     br {
@@ -62,7 +67,7 @@
 
   // Animations
   &[open] summary ~ * {
-    animation: sweep .5s ease-out;
+    animation: sweep 0.5s ease-out;
   }
 
   @media (prefers-reduced-motion: reduce) {
