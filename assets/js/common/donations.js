@@ -25,6 +25,12 @@ if (typeof Mozilla === 'undefined') {
     Donation.NeedsNewsletterRedirect = false;
 
     /**
+     * Stateful copy of the location.href value on page load. Used to fix tracking url after donation checkout close
+     * @type {string}
+     */
+    Donation.OriginalHref = '';
+
+    /**
      * Setups our FRU javascript events
      */
     Donation.Init = function() {
@@ -44,12 +50,16 @@ if (typeof Mozilla === 'undefined') {
         // Ensure we actually have the javascript loaded, so we can hook up our events.
         const fundraiseUp = window.FundraiseUp;
 
+        // Note: This won't play well this any location history adjustments!
+        Donation.OriginalHref = location.href;
+
         /**
          * Event fires when the FRU checkout modal opens
          * @param details - See https://fundraiseup.com/docs/parameters/
          */
         fundraiseUp.on('checkoutOpen', function(details) {
             window._paq = window._paq || [];
+            window._paq.push(['setCustomUrl', location.href]);
             window._paq.push(['trackEvent', 'Donation', 'Started']);
 
             // Reset any stateful variables
@@ -77,6 +87,8 @@ if (typeof Mozilla === 'undefined') {
          */
         fundraiseUp.on('checkoutClose', function (details) {
             if (!Donation.NeedsNewsletterRedirect) {
+                // Set the tracking url the original page load url
+                window._paq.push(['setCustomUrl', Donation.OriginalHref]);
                 return;
             }
 
