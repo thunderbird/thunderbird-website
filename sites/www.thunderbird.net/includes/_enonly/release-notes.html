@@ -17,8 +17,8 @@
 <section>
   <div class="container release-text-container">
     <div class="section-text wide">
-      <h1>{{ _('Thunderbird <span class="txt-gradient">Desktop</span>') }}</h1>
-      <h3>{{ _('Version {version}'|f(version=release.version)) }} | {{ _('Released {release}'|f(release=release.release_date|l10n_format_date)) }}</h3>
+      <h2>{{ _('Thunderbird <span class="txt-gradient">Desktop</span>') }}</h2>
+      <h4>{{ _('Version {version}'|f(version=release.version)) }} | {{ _('Released {release}'|f(release=release.release_date|l10n_format_date)) }}</h4>
       <p>
         {{ _('Check out the notes below for this version of Thunderbird. As always, you’re encouraged to
         <a href="%(feedback)s">tell us what you think</a>, or
@@ -55,26 +55,26 @@
       {% set release_group = namespace(name='') %}
       {% for group in range(release.groups|length) %}
       {% if release.groups[group] and release.groups[group]|trim %}
-      <h1 class="release-group">
+      <h2 class="release-group">
         {{ release.groups[group] }}
-      </h1>
+      </h2>
       {% set section.name = "" %}
       {% endif %}
 
       {% for note in notes %}
       {% if note.get('group', 1)-1 == group and note.tag != 'unresolved' %}
       {% if note.tag == 'new' and section.name != note.tag %}
-      <h2 id="whatsnew" class="header-section">
+      <h3 id="whatsnew" class="header-section">
         {{ _('What’s New')}}
-      </h2>
+      </h3>
       {% elif note.tag == 'changed' and section.name != note.tag %}
-      <h2 id="changes" class="header-section">
+      <h3 id="changes" class="header-section">
         {{ _('What’s Changed')}}
-      </h2>
+      </h3>
       {% elif note.tag == 'fixed' and section.name != note.tag %}
-      <h2 id="fixes" class="header-section">
+      <h3 id="fixes" class="header-section">
         {{ _('What’s Fixed')}}
-      </h2>
+      </h3>
       {% endif %}
 
       {% set section.name = note.tag %}
@@ -106,9 +106,9 @@
           </div>
         </div>
         {% if show_bugs %}
-        <aside class="note-bug-numbers">
+        <div class="note-bug-numbers">
           {{ note.bug_links|markdown|safe }}
-        </aside>
+        </div>
         {% endif %}
       </div>
       {% endif %}
@@ -116,33 +116,35 @@
       {% endfor %}
 
       {% if known_issues %}
-      <h2 id="known-issues" class="header-section">
+      <h3 id="known-issues" class="header-section">
         {{ _('Known Issues')}}
-      </h2>
+      </h3>
       {% for note in known_issues %}
-      <aside id="note-{{ note.id }}" class="note-container">
-        <div class="note-category">
-          <aside class="category-container">
-            <span class="category-icon">{{ svg('bookmark') }}</span>
-            {{ _('unresolved') }}
-          </aside>
+      <div id="note-{{ note.id }}" class="note-container">
+        <div class="note-flex">
+          <h4 class="note-category">
+            <span class="category-container">
+              <span class="category-icon">{{ svg('warning') }}</span>
+              {{ note.tag }}
+            </span>
+          </h4>
+          <div class="note-text">
+            {{ note.note|markdown|safe }}
+            {% if note.fixed_in_release %}
+            <p class="note">
+              <a href="{{ releasenotes_url(note.fixed_in_release) }}">
+                {{ _('Resolved in v{version_number}')|f(version_number=note.fixed_in_release.version) }}
+              </a>
+            </p>
+            {% endif %}
+          </div>
         </div>
-        <aside class="note-text">
-          {{ note.note|markdown|safe }}
-          {% if note.fixed_in_release %}
-          <p class="note">
-            <a href="{{ releasenotes_url(note.fixed_in_release) }}">
-              {{ _('Resolved in v{version_number}')|f(version_number=note.fixed_in_release.version) }}
-            </a>
-          </p>
-          {% endif %}
-        </aside>
-        {% if is_beta %}
-        <aside>
+        {% if show_bugs %}
+        <div class="note-bug-numbers">
           {{ note.bug_links|markdown|safe }}
-        </aside>
+        </div>
         {% endif %}
-      </aside>
+      </div>
       {% endfor %}
       {% endif %}
       <div class="see-all-releases">

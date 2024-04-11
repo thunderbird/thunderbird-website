@@ -6,25 +6,16 @@
 {% extends "includes/base/page.html" %}
 
 {% block page_title_prefix %}{% endblock %}
-{% block page_title %}{{ _('Thunderbird — {version} System Requirements')|f(version=version) }}{% endblock %}
-
-{% block header_content %}
-<section class="text-left text-white flex flex-col items-start lg:w-full max-w-6xl mx-auto pl-8 pr-8">
-  <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-16">
-    {{ _('System Requirements - {version}')|f(version=version) }}
-  </h1>
-</section>
-{% endblock %}
+{% block page_title %}{{ _('System Requirements') }}{% endblock %}
+{% block category %}{{ _('Products') }} > {{ _('Thunderbird Desktop') }}{% endblock %}
 
 {% block content %}
   <section class="section-text">
+    <div class="section-heading">
+      <h2>{{ _('Version <span class="txt-gradient">%(version)s</span>'|format(version=version)) }}</h2>
+    </div>
     <div class="release-notes-container">
       {{ release.system_requirements|markdown|safe }}
     </div>
   </section>
-
-  <section class="pt-20 pb-20 flex bg-calendar">
-    &nbsp;
-  </section>
-
 {% endblock %}

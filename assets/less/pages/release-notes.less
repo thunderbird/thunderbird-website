@@ -1,5 +1,6 @@
 .page-release-notes {
   --heading-spacing: 6rem;
+  --line-height: 30px;
 
   .accordion {
     width: 100%;
@@ -28,6 +29,9 @@
 
     li {
       list-style: none;
+    }
+    ul {
+      padding: 0;
     }
   }
 
@@ -69,8 +73,11 @@
 
   .note-category {
     margin: 0 1rem 0 0;
+    line-height: var(--line-height);
 
     .category-icon {
+      display: flex;
+      align-items: center;
       width: 1.5rem;
       color: var(--color-blue-70);
     }
@@ -79,12 +86,16 @@
       display: flex;
       gap: 0.5rem;
       text-transform: capitalize;
+      font-weight: 700;
+      align-items: center;
+      font-size: 16px;
     }
   }
 
   .note-text {
     text-align: left;
     font-weight: 500;
+    line-height: var(--line-height);
 
     p {
       margin: 0;

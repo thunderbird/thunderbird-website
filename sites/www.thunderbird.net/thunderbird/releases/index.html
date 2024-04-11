@@ -18,9 +18,9 @@
     <div class="section-text">
         {% for int_version, versions in releases -%}
           <div class="release-container">
-            <h4 class="release-major txt-gradient">
+            <h2 class="release-major txt-gradient">
               {{ get_link(int_version, versions.major) }}
-            </h4>
+            </h2>
             {% if versions.minor -%}
             <div class="release-minors">
               {% for version in versions.minor -%}
@@ -32,9 +32,9 @@
         {% endfor -%}
 
         <div class="release-container">
-          <h4 class="release-major txt-gradient">
+          <h2 class="release-major txt-gradient">
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.1.html" class="inline-link text-blue-dark font-bold no-underline">0.1</a>
-          </h4>
+          </h2>
           <div class="release-minors">
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.2.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.2</a>
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.3.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.3</a>
