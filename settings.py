@@ -178,6 +178,15 @@ URL_MAPPINGS = {
     'mozorg.connect.tb': 'https://connect.mozilla.org/t5/ideas/idb-p/ideas/label-name/thunderbird',
     'mozorg.mpl2': 'https://www.mozilla.org/MPL/',
     'mzla.blog-post': 'https://blog.thunderbird.net/2020/01/thunderbirds-new-home/',
+    'participate.desktop.docs': 'https://developer.thunderbird.net/',
+    'participate.desktop.repo': 'https://developer.thunderbird.net/thunderbird-development/codebase-overview',
+    'participate.desktop.matrix': 'https://matrix.to/#/#maildev:mozilla.org:mozilla.org',
+    'participate.android.docs': 'https://github.com/thunderbird/thunderbird-android/tree/main/docs',
+    'participate.android.repo': 'https://github.com/thunderbird/thunderbird-android',
+    'participate.android.matrix': 'https://matrix.to/#/#tb-android:mozilla.org',
+    'participate.website.docs': 'https://github.com/thunderbird/thunderbird-website/blob/master/README.md',
+    'participate.website.repo': 'https://github.com/thunderbird/thunderbird-website',
+    'participate.website.matrix': 'https://matrix.to/#/#tb-infrastructure:mozilla.org',
     'privacy': 'https://www.mozilla.org/privacy/websites/',
     'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#data-tools',
     'privacy.notices.donations': 'https://www.mozilla.org/privacy/websites/#donations',
@@ -237,7 +246,6 @@ BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
 
 WEBSITE_CSS = {
     'thunderbird-style': ['less/style.less'],
-    #'tb-115-style': ['css/115-homepage.css'],
     # 2024 Redesign
     'base-style': ['less/base-style.less'],
     # Custom page styles
