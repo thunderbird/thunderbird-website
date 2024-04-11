@@ -291,6 +291,10 @@ section {
   font-weight: 400;
 }
 
+#appeal-body strong {
+  font-weight: 600;
+}
+
 main {
   padding: 1em;
   margin: 0 auto;
@@ -624,7 +628,7 @@ main {
 }
 
 .letter-container {
-  padding: 60px;
+  padding: 60px 60px 30px;
   background: var(--bg2);
   border-radius: 6px;
   box-shadow: var(--shadow);
