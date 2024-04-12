@@ -183,6 +183,7 @@
   --color-appeal-bg: #82C3F5;
   --color-appeal-main-bg: var(--color-white);
   --color-footer-txt: #105BBC;
+  --color-legal-txt: var(--color-ink-70);
 
   --bg-appeal-glow: linear-gradient(129.83deg, #00FFFF 0%, #DB00FF 100%) !important;
   --bg2: var(--color-appeal-main-bg);
@@ -199,6 +200,7 @@
     --color-appeal-txt: #F2F7FC;
     --color-appeal-main-bg: #2C343E;
     --color-footer-txt: #89BCFF;
+    --color-legal-txt: var(--color-white);
 
     --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   }
@@ -719,9 +721,7 @@ main {
 #footer {
   font-size: 18px;
   line-height: 1.5;
-  font-weight: 300;
-  background: black;
-  color: white;
+  font-weight: 400;
   width: 100%;
 }
 
@@ -731,7 +731,6 @@ main {
   display: grid;
   gap: 60px;
   padding-inline: 1rem;
-  padding-block: 200px;
   margin-inline: auto;
   overflow: hidden;
   box-sizing: border-box;
@@ -740,15 +739,15 @@ main {
 #footer.container.footer {
   place-items: center;
   padding-inline: 1rem;
-  padding-block: 6rem;
+  padding-block: 1.25rem;
 }
 
 #footer a {
-  color: currentColor;
-  text-decoration-color: currentColor;
+  color: var(--color-legal-txt);
+  text-decoration-color: var(--color-legal-txt);
   text-underline-offset: 0.25em;
   text-decoration-thickness: .12em;
-  text-decoration-style: dotted;
+  text-decoration-style: solid;
   transition: font-size .2s,
               text-decoration-color .2s;
 }

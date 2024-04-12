@@ -16,19 +16,4 @@
     <a href="{{ url('guidelines') }}" data-link-type="footer"
       data-link-name="guidelines">{{ _('Participation Guidelines') }}</a>
   </div>
-  <p>
-    {%trans%}
-    <small>
-      Thunderbird is part of <a href="https://blog.thunderbird.net/2020/01/thunderbirds-new-home/">MZLA Technologies Corporation</a>, a wholly owned subsidiary of Mozilla Foundation.
-      Portions of this content are ©1998–2023 by individual contributors. Content available under a
-      <a href="https://www.mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>.
-    </small>
-    {% endtrans %}
-  </p>
-  <small><a href="{{ url('contribute') }}" data-link-type="footer"
-    data-link-name="Contribute to this site">{{ _('Contribute to this site') }}</a></small>
-  {% if LANG != 'en-US' %}
-  &bull; <small><a href="https://pontoon.mozilla.org/{{ LANG }}/thunderbirdnet/LC_MESSAGES/messages.po/"
-    data-link-type="footer" data-link-name="Translate this site">{{ _('Translate this site') }}</a></small>
-    {% endif %}
 </div>
