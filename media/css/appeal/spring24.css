@@ -791,36 +791,6 @@ main {
  * Media Queries
  */
 
-@media (max-width: 512px) {
-  #footer.container {
-    padding-inline: 0.25rem;
-    padding-block: 32px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  main {
-    padding: 0;
-  }
-
-  #appeal-heading {
-    font-size: 3.7rem !important;
-  }
-
-  #appeal-heading span {
-    font-size: 2rem;
-  }
-
-  .letter-container {
-    padding: 1rem;
-  }
-
-  .letter-container:before {
-    inset: 0;
-  }
-}
-
 @media (max-width: 1000px) {
   #initAppeal {
     padding-top: 4rem;
@@ -860,5 +830,44 @@ main {
   #illustration > #ill-body {
     left: 0;
     top: 175px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  main {
+    padding: 0;
+  }
+
+  #appeal-heading {
+    font-size: 3.7rem !important;
+  }
+
+  #appeal-heading span {
+    font-size: 2rem;
+  }
+
+  .letter-container {
+    padding: 1rem;
+  }
+
+  .letter-container:before {
+    inset: 0;
+  }
+}
+
+@media (max-width: 512px) {
+  #footer.container {
+    padding-inline: 0.25rem;
+    padding-block: 32px;
+  }
+
+  #initAppeal {
+    padding: 4rem 1rem 1rem;
+  }
+
+  #appeal-heading {
+    font-size: 3rem !important;
   }
 }
