@@ -7,8 +7,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block extra_meta %}{% endblock %}
-    <link rel="preload" as="script" href="/media/js/site-bundle.js">
-    <link rel="preload" as="script" href="/media/js/common-bundle.js">
+    <link rel="preload" as="script" href="{{ static('js/site-bundle.js') }}">
+    <link rel="preload" as="script" href="{{ static('js/common-bundle.js') }}">
 
     {% block shared_meta %}
     <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} — Thunderbird{% endblock %}{% endfilter %}</title>
@@ -27,12 +27,12 @@
     <link rel="icon" type="image/png" sizes="196x196" href="{% block page_favicon_large %}{{ static('img/favicon/favicon-196x196.png') }}{% endblock %}">
     <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/favicon.ico') }}{% endblock %}">
     {% endblock shared_meta %}
-    <link href="/media/css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="/media/css/base-style.css" rel="stylesheet" type="text/css" />
+    <link href="{{ static('css/normalize.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ static('css/base-style.css') }}" rel="stylesheet" type="text/css" />
     {% block site_js %}
       {#- site-bundle should block html rendering so we can prevent no-js/js element flashing. -#}
-      <script type="text/javascript" src="/media/js/site-bundle.js" charset="utf-8"></script>
-      <script type="text/javascript" src="/media/js/common-bundle.js" charset="utf-8" defer></script>
+      <script type="text/javascript" src="{{ static('js/site-bundle.js') }}" charset="utf-8"></script>
+      <script type="text/javascript" src="{{ static('js/common-bundle.js') }}" charset="utf-8" defer></script>
     {% endblock %}
 
     {{ l10n_css() }}
@@ -89,8 +89,8 @@
 
     {% block additional_site_js %}{% endblock %}
     {% block tracker_js %}
-      <script type="text/javascript" src="/media/js/piwik.js" async defer></script>
-      <script type="text/javascript" src="/media/js/matomo.js" charset="utf-8"></script>
+      <script type="text/javascript" src="{{ static('js/piwik.js') }}" async defer></script>
+      <script type="text/javascript" src="{{ static('js/matomo.js') }}" charset="utf-8"></script>
       <noscript>
         <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
       </noscript>
