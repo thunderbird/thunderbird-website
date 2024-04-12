@@ -1,0 +1,722 @@
+/* - Metropolis -*/
+@font-face {
+  font-family: metropolis;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-Regular.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-RegularItalic.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-RegularItalic.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-ExtraLight.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-Light.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-Light.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-Thin.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-ExtraLightItalic.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-ExtraLightItalic.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-LightItalic.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-LightItalic.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-ThinItalic.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-ThinItalic.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-Medium.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-SemiBold.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-Bold.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-BoldItalic.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-BoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-MediumItalic.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-MediumItalic.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-SemiBoldItalic.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-SemiBoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-ExtraBold.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-ExtraBoldItalic.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-ExtraBoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-Black.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-Black.woff") format("woff");
+}
+@font-face {
+  font-family: metropolis;
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/media/fonts/Metropolis/Metropolis-BlackItalic.woff2") format("woff2"), url("/media/fonts/Metropolis/Metropolis-BlackItalic.woff") format("woff");
+}
+/* - Inter -*/
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-Thin.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-Thin.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-ThinItalic.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-ThinItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-ExtraLight.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-ExtraLight.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-ExtraLightItalic.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-ExtraLightItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-Light.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-Light.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-LightItalic.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-LightItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-Regular.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-Regular.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-Italic.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-Italic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-Medium.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-Medium.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-MediumItalic.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-MediumItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-SemiBoldItalic.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-SemiBoldItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-Bold.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-Bold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-BoldItalic.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-BoldItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-ExtraBold.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-ExtraBold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-ExtraBoldItalic.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-ExtraBoldItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-Black.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-Black.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/media/fonts/Inter/Inter-BlackItalic.woff2?v=3.19") format("woff2"), url("/media/fonts/Inter/Inter-BlackItalic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("/media/fonts/Inter/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("/media/fonts/Inter/Inter-italic.var.woff2?v=3.19") format("woff2");
+}
+:root {
+  --color-red-10: #fee2e2;
+  --color-red-20: #fecaca;
+  --color-red-30: #fca5a5;
+  --color-red-40: #f87171;
+  --color-red-50: #ef4444;
+  --color-red-60: #dc2626;
+  --color-red-70: #b91c1c;
+  --color-red-80: #991b1b;
+  --color-red-90: #7f1d1d;
+  --color-orange-10: #ffedd5;
+  --color-orange-20: #fed7aa;
+  --color-orange-30: #fdba74;
+  --color-orange-40: #fb923c;
+  --color-orange-50: #f97316;
+  --color-orange-60: #ea580c;
+  --color-orange-70: #c2410c;
+  --color-orange-80: #9a3412;
+  --color-orange-90: #7c2d12;
+  --color-amber-10: #fef3c7;
+  --color-amber-20: #fde68a;
+  --color-amber-30: #fcd34d;
+  --color-amber-40: #fbbf24;
+  --color-amber-50: #f59e0b;
+  --color-amber-60: #d97706;
+  --color-amber-70: #b45309;
+  --color-amber-80: #92400e;
+  --color-amber-90: #78350f;
+  --color-yellow-10: #fef9c3;
+  --color-yellow-20: #fef08a;
+  --color-yellow-30: #fde047;
+  --color-yellow-40: #facc15;
+  --color-yellow-50: #eab308;
+  --color-yellow-60: #ca8a04;
+  --color-yellow-70: #a16207;
+  --color-yellow-80: #854d0e;
+  --color-yellow-90: #713f12;
+  --color-green-10: #dcfce7;
+  --color-green-20: #bbf7d0;
+  --color-green-30: #86efac;
+  --color-green-40: #4ade80;
+  --color-green-50: #22c55e;
+  --color-green-60: #16a34a;
+  --color-green-70: #15803d;
+  --color-green-80: #166534;
+  --color-green-90: #14532d;
+  --color-teal-10: #cdfaf7;
+  --color-teal-20: #9ff4f0;
+  --color-teal-30: #62e9e6;
+  --color-teal-40: #27d3d6;
+  --color-teal-50: #0db7bd;
+  --color-teal-60: #0a929d;
+  --color-teal-70: #0e757f;
+  --color-teal-80: #135e67;
+  --color-teal-90: #144e56;
+  --color-blue-10: #ddeefe;
+  --color-blue-20: #bce0fd;
+  --color-blue-30: #88ccfc;
+  --color-blue-40: #4cb1f9;
+  --color-blue-50: #2493ef;
+  --color-blue-60: #1373d9;
+  --color-blue-70: #105bbc;
+  --color-blue-80: #124c9a;
+  --color-blue-90: #15427c;
+  --color-purple-10: #f3e8ff;
+  --color-purple-20: #e9d5ff;
+  --color-purple-30: #d8b4fe;
+  --color-purple-40: #c084fc;
+  --color-purple-50: #a855f7;
+  --color-purple-60: #9333ea;
+  --color-purple-70: #7e22ce;
+  --color-purple-80: #6b21a8;
+  --color-purple-90: #581c87;
+  --color-magenta-10: #fbe7f9;
+  --color-magenta-20: #f8cff3;
+  --color-magenta-30: #f4a9e8;
+  --color-magenta-40: #ee75d7;
+  --color-magenta-50: #e247c4;
+  --color-magenta-60: #cd26a5;
+  --color-magenta-70: #b01a86;
+  --color-magenta-80: #91186e;
+  --color-magenta-90: #79195c;
+  --color-brown-10: #f4e9d7;
+  --color-brown-20: #efdfc4;
+  --color-brown-30: #e4cdab;
+  --color-brown-40: #d7bc96;
+  --color-brown-50: #b6986c;
+  --color-brown-60: #96764b;
+  --color-brown-70: #755b38;
+  --color-brown-80: #51412c;
+  --color-brown-90: #47341f;
+  --color-gray-05: #fafafa;
+  --color-gray-10: #f4f4f5;
+  --color-gray-20: #e4e4e7;
+  --color-gray-30: #d4d4d8;
+  --color-gray-40: #a1a1aa;
+  --color-gray-50: #71717a;
+  --color-gray-60: #52525b;
+  --color-gray-70: #3f3f46;
+  --color-gray-80: #27272a;
+  --color-gray-90: #18181b;
+  --color-ink-10: #f1f3fa;
+  --color-ink-20: #e3e5f2;
+  --color-ink-30: #cdd0e5;
+  --color-ink-40: #9b9ec2;
+  --color-ink-50: #6e6f9b;
+  --color-ink-60: #52507c;
+  --color-ink-70: #3e3c67;
+  --color-ink-80: #2a284b;
+  --color-ink-90: #1a1838;
+  --bg: white;
+  --txt: var(--color-ink-80);
+  --accent: var(--color-blue-60);
+  --glow: var(--color-purple-70);
+  --separator-color: var(--color-gray-20);
+  --nav-bg: transparent;
+  --nav-txt: white;
+  --nav-height: 80px;
+  --offset-x: 0;
+  --offset-y: 0;
+}
+a {
+  color: currentColor;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 0.12em;
+  text-decoration-style: dotted;
+  transition: font-size 0.2s, text-decoration-color 0.2s;
+}
+a.donate,
+a:hover,
+a:hover:visited {
+  text-decoration-color: var(--accent);
+}
+a:visited {
+  text-decoration-color: var(--color-purple-50);
+}
+/*-------------------------
+* Media Queries
+*--------------------------*/
+:root {
+  --bg-clouds: url('/media/img/thunderbird/eoy/115.0/clouds-light.png');
+  --bg-clouds-set: image-set(url('/media/img/thunderbird/eoy/115.0/clouds-light.webp') type('image/webp'), var(--bg-clouds) type('image/png'));
+  --bg-gradient: linear-gradient(180deg, #FAFAFA 0%, #E3E5F2 100%);
+  --bg-body: var(--color-gray-05);
+  --header-phones-bg: url('/media/img/thunderbird/eoy/115.0/header-phones-high-res.png');
+  --header-phones-set: image-set(url('/media/img/thunderbird/eoy/115.0/header-phones.avif') type('image/avif') 1x, url('/media/img/thunderbird/eoy/115.0/header-phones-high-res.avif') type('image/avif') 2x, url('/media/img/thunderbird/eoy/115.0/header-phones.webp') type('image/webp') 1x, url('/media/img/thunderbird/eoy/115.0/header-phones-high-res.webp') type('image/webp') 2x, url('/media/img/thunderbird/eoy/115.0/header-phones.png') type('image/png') 1x, var(--header-phones-bg) type('image/png') 2x);
+  --heading-font: 'Metropolis', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  --text-color: var(--color-gray-80);
+  --thunderbird-color: var(--color-ink-70);
+  --everywhere-color: linear-gradient(93.98deg, #1373D9 0%, #7E22CE 66%);
+  --hero-color: var(--color-ink-80);
+  --platform-color: linear-gradient(180deg, #1970D9 0%, #7828CF 100%);
+  --body-text-color: linear-gradient(90.27deg, #105BBC 0%, #7E22CE 100%);
+  --button-normal-opacity: 50%;
+  --button-hover-opacity: 30%;
+  --button-active-opacity: 60%;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-clouds: url('/media/img/thunderbird/eoy/115.0/clouds-dark.png');
+    --bg-clouds-set: image-set(url('/media/img/thunderbird/eoy/115.0/clouds-dark.webp') type('image/webp'), var(--bg-clouds) type('image/png'));
+    --bg-gradient: linear-gradient(180deg, #000000 0%, #3E3C67 100%);
+    --bg-body: var(--color-gray-90);
+    --text-color: var(--color-gray-05);
+    --thunderbird-color: var(--color-ink-10);
+    --everywhere-color: linear-gradient(93.98deg, #4DB1F9 0%, #B987FC 66%);
+    --hero-color: var(--color-gray-05);
+    --platform-color: linear-gradient(180deg, #4FB0F9 0%, #B987FC 100%);
+    --body-text-color: linear-gradient(90.27deg, #4CB1F9 0%, #C084FC 100%);
+    --button-normal-opacity: 50%;
+    --button-hover-opacity: 30%;
+    --button-active-opacity: 60%;
+  }
+}
+body {
+  color: var(--text-color);
+  background-color: var(--bg-body);
+}
+.donate-button-group {
+  z-index: 20;
+  margin-left: 60px;
+  height: 120px;
+}
+@media (max-width: 768px) {
+  .donate-button-group {
+    margin: 0 auto;
+  }
+}
+.donate-button-group .glow {
+  position: relative;
+  top: -50px;
+  left: 8px;
+  width: 264px;
+  height: 66px;
+  border-radius: 36px;
+  filter: blur(22px);
+  z-index: -1;
+  background: linear-gradient(93.92deg, #24efef 0.08%, #2493ef 47.12%, #a855f7 101.18%);
+  opacity: var(--button-normal-opacity);
+  transition: all 0.3s !important;
+}
+.donate-button-group .action-box {
+  display: inline-block;
+  height: 64px;
+}
+.donate-button-group .action-box:hover .glow {
+  opacity: var(--button-hover-opacity);
+}
+.donate-button-group .action-box:hover .btn-donate-appeal {
+  background: radial-gradient(115.37% 113.89% at 50% 116.67%, #8691fd 0%, #544bea 100%);
+}
+.donate-button-group .action-box:active .glow {
+  opacity: var(--button-active-opacity);
+}
+.donate-button-group .action-box:active .btn-donate-appeal {
+  box-shadow: 0px 1px 0px 0px #362ed3, inset 0px 2px 0px 0px rgba(255, 255, 255, 0.2);
+  background: radial-gradient(115.37% 113.89% at 50% 116.67%, #7782ee 0%, #453cdb 100%);
+}
+.donate-button-group .btn-donate-appeal {
+  display: flex;
+  min-width: 260px;
+  height: 64px;
+  border-radius: 8.75px;
+  border: 0;
+  background: radial-gradient(115.37% 113.89% at 50% 116.67%, #818CF8 0%, #4F46E5 100%);
+  box-shadow: 0 3.5px #362ed3, inset 0 1.75px rgba(255, 255, 255, 0.2);
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s !important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.donate-button-group .btn-donate-appeal .heart {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+  margin: 4px 10px 4px 2px;
+  top: 2px;
+  background-image: url('/media/svg/eoy/115.0/heart.svg');
+}
+.donate-button-group .btn-donate-appeal .text {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 42px;
+  min-width: 124px;
+  background: linear-gradient(180deg, #F9FAFB 0%, #E2E5E8 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  filter: drop-shadow(0px 2px #2B259ACC);
+}
+.bg {
+  background-image: var(--bg-clouds);
+  background-image: var(--bg-clouds-set);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+}
+.eoy-2023-appeal-header {
+  background: var(--bg-gradient);
+}
+.eoy-2023-appeal-header .hero-fixed {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+@media (max-width: 480px) {
+  .eoy-2023-appeal-header .hero-fixed {
+    max-width: 100%;
+  }
+}
+.eoy-2023-appeal-header .hero-content {
+  font-family: var(--heading-font);
+  background-image: var(--header-phones-bg);
+  background-image: var(--header-phones-set);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: bottom -115px right;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 5% 15% 9%;
+}
+@media (max-width: 768px) {
+  .eoy-2023-appeal-header .hero-content {
+    background: none;
+  }
+}
+@media (max-width: 640px) {
+  .eoy-2023-appeal-header .hero-content {
+    padding: 2% 2% 5% 3%;
+  }
+}
+.eoy-2023-appeal-header .hero-content h1 {
+  display: flex;
+  flex-direction: column;
+}
+.eoy-2023-appeal-header .hero-content .title {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0;
+  text-align: left;
+  color: var(--thunderbird-color);
+}
+@media (max-width: 640px) {
+  .eoy-2023-appeal-header .hero-content .title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+.eoy-2023-appeal-header .hero-content .everywhere {
+  position: relative;
+  font-size: 96px;
+  font-weight: 200;
+  line-height: 96px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  background: var(--everywhere-color);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+@media (max-width: 640px) {
+  .eoy-2023-appeal-header .hero-content .everywhere {
+    font-size: 56px;
+    line-height: 56px;
+  }
+}
+.eoy-2023-appeal-header .hero-content .tagline {
+  font-family: var(--body-font);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+.eoy-2023-appeal-header .hero-content .content {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  max-width: 500px;
+  margin-bottom: 64px;
+}
+.eoy-2023-appeal-header .hero-content .platform-gradient {
+  background: var(--platform-color);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 800;
+}
+.mask {
+  position: relative;
+  z-index: 200;
+  margin-top: -15%;
+  background-color: transparent;
+  width: 100%;
+  pointer-events: none;
+  color: var(--bg-body);
+}
+.mask > svg {
+  width: 100%;
+}
+.coverup {
+  background-color: var(--bg-body);
+  position: relative;
+  top: 2px;
+  height: 32px;
+  margin-top: -4%;
+  z-index: 2;
+}
+.eoy-2023-appeal {
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 300;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .eoy-2023-appeal {
+    padding: 2% 2% 5% 3%;
+  }
+}
+.eoy-2023-appeal .body-title {
+  font-family: var(--heading-font);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: left;
+}
+.eoy-2023-appeal .body-title h2 {
+  background: var(--body-text-color);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.eoy-2023-appeal .body-text {
+  font-family: var(--body-font);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.eoy-2023-appeal .body-devices {
+  margin: 0 auto;
+}
+.eoy-2023-appeal .body-footer {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+.eoy-2023-appeal .body-footer .first {
+  background: linear-gradient(90deg, #A855F7 0%, #A855F7 0%, #2493EF 100%);
+  border-image-source: linear-gradient(90deg, #A855F7 0%, #A855F7 0%, #2493EF 100%);
+}
+.eoy-2023-appeal .body-footer .second {
+  background: linear-gradient(90deg, #2493EF 0%, #A855F7 100%);
+  border-image-source: linear-gradient(90deg, #2493EF 0%, #A855F7 100%);
+}
+.eoy-2023-appeal .body-footer .footer-line {
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin: 8px;
+}
+.eoy-2023-appeal .body-logo {
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.eoy-2023-appeal .body-logo > p {
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+}
+.eoy-2023-appeal .logo-container > svg {
+  width: 50px;
+  height: 50px;
+}

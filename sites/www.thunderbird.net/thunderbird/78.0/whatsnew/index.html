@@ -1,0 +1,833 @@
+
+
+<!doctype html>
+
+<html class="windows x86 no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <title>New in Thunderbird 78 — Thunderbird</title>
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Thunderbird">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
+    <meta property="og:title" content="New in Thunderbird 78">
+    <meta property="og:description" content="">
+    <meta property="fb:page_id" content="348169218537151">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mozthunderbird">
+    <meta name="twitter:domain" content="thunderbird.net">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/media/archived/img/thunderbird/ios-icon-180.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="/media/archived/img/thunderbird/favicon-196.png">
+    <link rel="shortcut icon" href="/media/archived/img/thunderbird/favicon.ico">
+    
+    <link href="/media/archived/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/media/archived/css/thunderbird-style.css" rel="stylesheet" type="text/css" />
+
+    
+
+    <!--[if !lte IE 8]><!-->
+    
+    
+
+    
+    
+    <!--<![endif]-->
+
+    
+      
+    
+    <script>
+      window.siteLocale = "en-US";
+    </script>
+  </head>
+
+  <body class="html-ltr " >
+    <div id="strings" ></div>
+
+    
+    
+
+    
+  <header id="masthead" class="bg-no-repeat bg-cover bg-top flex flex-col bg-header-page">
+    <section class="flex justify-between items-center p-6 flex-wrap  hidden">
+      
+        <h2 class="mt-0 mb-0">
+          <a href="/en-US/" class="block w-48 lg:w-56" title="Thunderbird" alt="Thunderbird Vector Wordmark">
+            <i class="block">
+              <img src="/media/archived/svg/logo-wordmark-white.svg" alt="Thunderbird Vector Wordmark"/>
+            </i>
+          </a>
+        </h2>
+      
+
+      
+        <a href="?form=support&utm_content=header&utm_source=thunderbird.net&utm_medium=fru&utm_campaign=donation_2023" class="btn-donate md:hidden" data-donate-btn data-donate-content="header">
+          <span class="inline-block w-3 mr-1"><svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
+    </g>
+</svg>
+</span> Donate
+        </a>
+        <nav id="nav-main" role="navigation" class="flex-grow md:flex-grow-0">
+          <ul id="nav-main-menu" class="list-none p-0 flex flex-wrap items-center text-white font-md font-semibold justify-around">
+            <li>
+              <a href="/en-US/features" class="nav-link">Features</a>
+            </li>
+            <li>
+              <a href="https://addons.thunderbird.net" class="nav-link">Add-ons</a>
+            </li>
+            <li>
+              <a href="/en-US/get-involved" class="nav-link">Get Involved</a>
+            </li>
+            <li>
+              <a href="https://support.mozilla.org/products/thunderbird/" class="nav-link">Get Help</a>
+            </li>
+            <li>
+              <a href="/en-US/about" class="nav-link">About Us</a>
+            </li>
+            <li>
+              <a href="https://blog.thunderbird.net/" class="nav-link">Blog</a>
+            </li>
+            <li class="hidden md:inline">
+              <a href="?form=support&utm_content=header&utm_source=thunderbird.net&utm_medium=fru&utm_campaign=donation_2023" class="btn-donate" data-donate-btn data-donate-content="header">
+                <span class="inline-block w-3 mr-1"><svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
+    </g>
+</svg>
+</span> Donate
+              </a>
+            </li>
+          </ul>
+        </nav>
+      
+    </section>
+
+    
+  <section class="text-left text-white flex flex-col items-start lg:w-full max-w-6xl mx-auto pl-8 pr-8">
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">New in Thunderbird 78</h1>
+    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-16 mt-0 p-links">
+      This article describes some of the major changes visible to users in Thunderbird version 78. Full details of all the changes can be found in the <a href="/en-US/thunderbird/releases">Thunderbird release notes from 78.0 and up</a>.
+      </p>
+  </section>
+
+
+    
+  
+
+
+
+
+<script>
+  (function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
+  .split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+  :function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+  j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a;
+  t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+  for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
+  })(window,document,'script','FundraiseUp','ADGJGYAN');
+
+  // Set FRU's language
+  window._lang = "en-US";
+</script>
+
+
+<div id="amount-modal" class="modal rounded-lg w-full max-w-2xl shadow-lg bg-white text-black-lighter fixed z-30 mt-0 mx-auto pin-x hidden">
+  <div id="close-modal" class="absolute p-1 m-2 z-10 pin-t pin-r">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  </div>
+  <h1 class="text-blue-dark text-center font-4xl font-light">
+    Pay What You Want
+  </h1>
+  <form action="">
+    <section class="font-lg pt-0 pl-6 pb-4 pr-6 leading-normal text-center">
+      <p>Thunderbird is independent, free, and Open Source software sustained by your donations. Help us keep the project alive!</p>
+    </section>
+    <section id="donate-buttons" class="flex justify-center mt-6 mb-6 mx-auto">
+      <a href="#" class="btn-donate-and-download" id="amount-submit" data-donate-content="post_download">
+        <span class="donate-heart">
+          <svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
+    </g>
+</svg>
+
+          <span class="donate-wave">
+          <!-- o/ -->
+          </span>
+        </span>
+        <p>Donate & Download</p>
+      </a>
+      <a href="#" class="btn-body btn-secondary donate-download-link" id="amount-cancel">
+        <p>No Thanks, Download Now!</p>
+        <span>
+          <svg viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+              <path d="M6.91574413,5.89284986 C6.91574413,5.97767139 6.87333336,6.07309561 6.80971722,6.13671176 L1.86886311,11.0775659 C1.80524696,11.141182 1.70982274,11.1835928 1.62500121,11.1835928 C1.54017968,11.1835928 1.44475546,11.141182 1.38113932,11.0775659 L0.851004755,10.5474313 C0.787388608,10.4838152 0.744977843,10.3989936 0.744977843,10.3035694 C0.744977843,10.2187479 0.787388608,10.1233237 0.851004755,10.0597075 L5.0178624,5.89284986 L0.851004755,1.72599222 C0.787388608,1.66237607 0.744977843,1.56695185 0.744977843,1.48213032 C0.744977843,1.39730879 0.787388608,1.30188457 0.851004755,1.23826842 L1.38113932,0.70813386 C1.44475546,0.644517713 1.54017968,0.602106948 1.62500121,0.602106948 C1.70982274,0.602106948 1.80524696,0.644517713 1.86886311,0.70813386 L6.80971722,5.64898796 C6.87333336,5.71260411 6.91574413,5.80802833 6.91574413,5.89284986 Z"></path>
+            </g>
+          </svg>
+        </span>
+      </a>
+    </section>
+  </form>
+  <footer class="w-4/5 mx-auto border-0 border-t border-solid border-grey-light p-6">
+    <ul class="flex justify-center uppercase list-none font-xs p-0 m-0">
+      <li class="mr-4">
+        <a class="text-black-lightest no-underline" href="">
+          Secure
+        </a>
+      </li>
+      <li class="mr-4">
+        <a class="text-black-lightest no-underline" href="https://www.mozilla.org/en-US/privacy/websites/">
+          Privacy Policy
+        </a>
+      </li>
+      <li class="mr-4">
+        <a class="text-black-lightest no-underline" href="https://give.thunderbird.net/en-CA/ways-to-give/">
+          Other ways to donate
+        </a>
+      </li>
+      <li>
+        <a class="text-black-lightest no-underline" href="https://give.thunderbird.net/en-CA/faq/">
+          FAQ
+        </a>
+      </li>
+    </ul>
+  </footer>
+</div>
+
+<div id="modal-overlay" class="fixed pin-t pin-l m-0 p-0 w-full h-full z-20 bg-black opacity-50 hidden" tabindex="-1"></div>
+
+    
+
+    
+
+  </header>
+
+
+    
+      
+    
+
+    <main>
+      
+  <section class="pt-20 pb-20 flex justify-center bg-calendar">
+    <aside class="flex flex-col flex-1 max-w-6xl ml-16 mr-16">
+      <!-- Add half screenshot of dark theme -->
+      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="/media/archived/img/thunderbird/whatsnew/78/Dark-Mode.png" alt="Thunderbird Dark Mode screenshot">
+      <h3 class="header-section">
+        <span><svg viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M17.5122185,9.1439567 L21.7633396,4.89283556 L20.2108824,3.34037835 L15.9597613,7.59149949 L17.5122185,9.1439567 Z M23.9977173,4.89283556 C23.9977173,5.13948764 23.9106636,5.37163077 23.7365563,5.54573812 L5.07805187,24.2042425 C4.90394452,24.3783499 4.67180139,24.4654035 4.42514931,24.4654035 C4.17849723,24.4654035 3.94635409,24.3783499 3.77224674,24.2042425 L0.899475463,21.3314712 C0.725368112,21.1573639 0.638314437,20.9252207 0.638314437,20.6785687 C0.638314437,20.4319166 0.725368112,20.1997734 0.899475463,20.0256661 L19.5579798,1.36716171 C19.7320872,1.19305436 19.9642303,1.10600069 20.2108824,1.10600069 C20.4575345,1.10600069 20.6896776,1.19305436 20.863785,1.36716171 L23.7365563,4.23993299 C23.9106636,4.41404034 23.9977173,4.64618348 23.9977173,4.89283556 Z M4.39613142,2.13613584 L5.81800811,2.57140422 L4.39613142,3.00667259 L3.96086304,4.42854929 L3.52559466,3.00667259 L2.10371797,2.57140422 L3.52559466,2.13613584 L3.96086304,0.714259148 L4.39613142,2.13613584 Z M9.47426247,4.48658507 L12.3180159,5.35712183 L9.47426247,6.22765858 L8.60372572,9.07141197 L7.73318897,6.22765858 L4.88943558,5.35712183 L7.73318897,4.48658507 L8.60372572,1.64283168 L9.47426247,4.48658507 Z M22.9675821,11.4218612 L24.3894588,11.8571296 L22.9675821,12.2923979 L22.5323138,13.7142746 L22.0970454,12.2923979 L20.6751687,11.8571296 L22.0970454,11.4218612 L22.5323138,9.9999845 L22.9675821,11.4218612 Z M13.6818568,2.13613584 L15.1037335,2.57140422 L13.6818568,3.00667259 L13.2465884,4.42854929 L12.81132,3.00667259 L11.3894433,2.57140422 L12.81132,2.13613584 L13.2465884,0.714259148 L13.6818568,2.13613584 Z"></path>
+    </g>
+</svg>
+</span>
+        Dark mode
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-10">
+        There is now a dark mode in Thunderbird, making late-night email easier on the eyes. To enable, Thunderbird will use your operating system settings to see if you have enabled dark mode OS-wide.
+      </p>
+    </aside>
+  </section>
+
+  <section class="pb-10 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8">
+    <aside class="flex flex-col flex-1 lg:max-w-lg">
+      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="/media/archived/img/thunderbird/whatsnew/78/account-setup.png" alt="New Account Setup and Account Central screenshot.">
+      <h3 class="header-section">
+        <span><svg viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M15.0803746,12.7857105 C15.0803746,12.5245494 14.979928,12.2834777 14.7991242,12.1026739 L12.709836,10.0133857 C12.5290323,9.83258193 12.2779159,9.73213539 12.0267995,9.73213539 C11.7355045,9.73213539 11.5044775,9.84262659 11.3035844,10.0535643 C11.635058,10.3850379 12.0267995,10.6662883 12.0267995,11.1785657 C12.0267995,11.7109324 11.5948794,12.1428525 11.0625126,12.1428525 C10.5502352,12.1428525 10.2689849,11.751111 9.9375113,11.4196374 C9.72657355,11.6205305 9.60603769,11.8515576 9.60603769,12.1528972 C9.60603769,12.4040136 9.70648424,12.6551299 9.88728803,12.8359337 L11.9564869,14.9151773 C12.1372907,15.0959811 12.3884071,15.186383 12.6395235,15.186383 C12.8906398,15.186383 13.1417562,15.0959811 13.32256,14.9252219 L14.7991242,13.4587023 C14.979928,13.2778985 15.0803746,13.0368268 15.0803746,12.7857105 Z M8.01898223,5.7042288 C8.01898223,5.45311243 7.91853568,5.20199606 7.7377319,5.02119227 L5.668533,2.94194872 C5.48772921,2.76114493 5.23661284,2.66069838 4.98549647,2.66069838 C4.7343801,2.66069838 4.48326373,2.76114493 4.30245994,2.93190406 L2.82589568,4.39842367 C2.6450919,4.57922746 2.54464535,4.82029917 2.54464535,5.07141554 C2.54464535,5.33257657 2.6450919,5.57364829 2.82589568,5.75445207 L4.91518389,7.84374028 C5.09598767,8.02454406 5.34710405,8.11494596 5.59822042,8.11494596 C5.88951541,8.11494596 6.12054247,8.01449941 6.32143556,7.80356166 C5.98996195,7.47208805 5.59822042,7.19083771 5.59822042,6.67856032 C5.59822042,6.14619361 6.03014057,5.71427345 6.56250728,5.71427345 C7.07478468,5.71427345 7.35603501,6.10601499 7.68750862,6.4374886 C7.89844637,6.2365955 8.01898223,6.00556844 8.01898223,5.7042288 Z M17.0089483,12.7857105 C17.0089483,13.5491042 16.697564,14.2924087 16.1551526,14.8247754 L14.6785884,16.291295 C14.136177,16.8337064 13.4029172,17.1250013 12.6395235,17.1250013 C11.866085,17.1250013 11.1328252,16.8236617 10.5904139,16.2712057 L8.52121497,14.1919621 C7.97880361,13.6495508 7.68750862,12.916291 7.68750862,12.1528972 C7.68750862,11.3593695 8.00893758,10.6060204 8.57143825,10.0535643 L7.68750862,9.16963471 C7.13505261,9.73213539 6.39174815,10.0535643 5.59822042,10.0535643 C4.83482665,10.0535643 4.09152219,9.75222469 3.54911083,9.20981333 L1.45982263,7.12052513 C0.90736661,6.56806911 0.61607162,5.84485397 0.61607162,5.07141554 C0.61607162,4.30802178 0.92745592,3.56471732 1.46986728,3.03235061 L2.94643154,1.56583101 C3.4888429,1.02341965 4.2221027,0.732124656 4.98549647,0.732124656 C5.75893489,0.732124656 6.4921947,1.0334643 7.03460606,1.58592032 L9.10380495,3.66516387 C9.64621631,4.20757523 9.9375113,4.94083503 9.9375113,5.7042288 C9.9375113,6.49775653 9.61608235,7.25110564 9.05358168,7.80356166 L9.9375113,8.68749128 C10.4899673,8.12499061 11.2332718,7.80356166 12.0267995,7.80356166 C12.7901933,7.80356166 13.5334977,8.1049013 14.0759091,8.64731266 L16.1651973,10.7366009 C16.7176533,11.2890569 17.0089483,12.012272 17.0089483,12.7857105 Z"></path>
+    </g>
+</svg>
+</span>
+        Account Setup & Account Central Updated
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
+        The Account Setup window and the Account Central tab have both been updated. The Account Central tab appears when you do not have an account setup, or when you select an existing account in the folder tree.
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1 p-links-blue">
+        The layout and dialogues have been improved to make it easier to understand the information displayed and to find relevant settings. The Account Central tab also has new information about the Thunderbird project and displays the version you are using.
+      </p>
+    </aside>
+
+    <aside class="flex flex-col flex-1 lg:max-w-lg mt-10 lg:mt-0">
+      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="/media/archived/img/thunderbird/whatsnew/78/compose-window.png" alt="Screenshot showing various updates to the compose window for 78.">
+      <h3 class="header-section">
+        <span><svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M10.8839408,8.57142091 C10.8839408,7.15512458 9.72880553,5.99998927 8.3125092,5.99998927 C6.89621286,5.99998927 5.74107756,7.15512458 5.74107756,8.57142091 C5.74107756,9.98771724 6.89621286,11.1428525 8.3125092,11.1428525 C9.72880553,11.1428525 10.8839408,9.98771724 10.8839408,8.57142091 Z M16.0268041,7.47655353 L16.0268041,9.7064669 C16.0268041,9.85713673 15.9062682,10.0379405 15.7455538,10.0680745 L13.8872926,10.3493248 C13.7768014,10.6707538 13.6562656,10.9720934 13.4955511,11.2633884 C13.8370694,11.7555765 14.1986769,12.1975413 14.5703292,12.6495508 C14.6305971,12.7198634 14.6707757,12.8102652 14.6707757,12.9006671 C14.6707757,12.991069 14.6406417,13.0613816 14.5803738,13.1316942 C14.3393021,13.4531232 12.9832737,14.9296874 12.6417554,14.9296874 C12.5513535,14.9296874 12.4609516,14.8895088 12.3805944,14.8392855 L10.994432,13.7544628 C10.703137,13.9051326 10.3917527,14.0357131 10.0803684,14.1361597 C10.0100559,14.7488836 9.94978793,15.4017862 9.78907346,16.0044655 C9.74889484,16.16518 9.60826967,16.2857158 9.42746588,16.2857158 L7.19755251,16.2857158 C7.01674872,16.2857158 6.85603425,16.1551353 6.83594494,15.9843762 L6.5546946,14.1361597 C6.2433103,14.0357131 5.94197066,13.9151773 5.65067567,13.7645075 L4.23437933,14.8392855 C4.16406675,14.8995535 4.07366486,14.9296874 3.98326296,14.9296874 C3.89286107,14.9296874 3.80245918,14.8895088 3.73214659,14.8191962 C3.19977989,14.3370528 2.49665405,13.7142842 2.07477855,13.1316942 C2.02455527,13.0613816 2.00446596,12.9810244 2.00446596,12.9006671 C2.00446596,12.8102652 2.03459993,12.7399527 2.0848232,12.6696401 C2.42634147,12.207586 2.79799369,11.7656211 3.13951196,11.2935224 C2.96875283,10.9720934 2.82812766,10.6406198 2.72768111,10.2991015 L0.889509276,10.0278959 C0.718750144,9.99776189 0.598214286,9.83704742 0.598214286,9.66628828 L0.598214286,7.43637491 C0.598214286,7.28570509 0.718750144,7.1049013 0.869419966,7.07476734 L2.73772576,6.793517 C2.83817231,6.47208805 2.96875283,6.1707484 3.1294673,5.86940876 C2.78794904,5.38726533 2.42634147,4.93525586 2.05468924,4.48324639 C1.99442131,4.41293381 1.95424269,4.33257657 1.95424269,4.24217468 C1.95424269,4.15177278 1.99442131,4.0814602 2.04464458,4.01114761 C2.2857163,3.67967401 3.6417447,2.2131544 3.98326296,2.2131544 C4.07366486,2.2131544 4.16406675,2.25333302 4.24442399,2.31360095 L5.63058636,3.38837902 C5.92188135,3.23770919 6.23326565,3.10712868 6.54464995,3.00668213 C6.61496253,2.39395819 6.67523046,1.74105562 6.83594494,1.13837633 C6.87612356,0.977661856 7.01674872,0.857125998 7.19755251,0.857125998 L9.42746588,0.857125998 C9.60826967,0.857125998 9.76898415,0.98770651 9.78907346,1.15846564 L10.0703238,3.00668213 C10.3817081,3.10712868 10.6830477,3.22766454 10.9743427,3.37833436 L12.4006837,2.30355629 C12.4609516,2.24328836 12.5513535,2.2131544 12.6417554,2.2131544 C12.7321573,2.2131544 12.8225592,2.25333302 12.8928718,2.31360095 C13.4252385,2.80578903 14.1283643,3.42855763 14.5502398,4.02119227 C14.6004631,4.0814602 14.6205524,4.16181744 14.6205524,4.24217468 C14.6205524,4.33257657 14.5904185,4.40288915 14.5401952,4.47320174 C14.1986769,4.93525586 13.8270247,5.37722067 13.4855064,5.84931945 C13.6562656,6.1707484 13.7968907,6.50222201 13.8973373,6.83369562 L15.7355091,7.11494596 C15.9062682,7.14507992 16.0268041,7.3057944 16.0268041,7.47655353 Z"></path>
+    </g>
+</svg>
+</span>
+        Redesigned Compose Window
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
+        The compose window has been reworked to make composing a message faster, easier and more straightforward. The compose window now also takes up less space with recipients listed in “pills” instead of an entire line for each address.
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+        The redesigned compose window makes it easier to manage many email recipients, and the new intuitive layout helps users to discover its features.
+      </p>
+    </aside>
+  </section>
+
+  <section class="pt-20 pb-20 flex justify-center bg-calendar">
+    <aside class="flex flex-col flex-1 max-w-6xl ml-16 mr-16">
+      <!-- Add half screenshot of dark theme -->
+      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="/media/archived/img/thunderbird/whatsnew/78/e2eprefs.png" alt="Screenshot of the PGP preferences window.">
+      <h3 class="header-section">
+        <span><svg viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M17.5122185,9.1439567 L21.7633396,4.89283556 L20.2108824,3.34037835 L15.9597613,7.59149949 L17.5122185,9.1439567 Z M23.9977173,4.89283556 C23.9977173,5.13948764 23.9106636,5.37163077 23.7365563,5.54573812 L5.07805187,24.2042425 C4.90394452,24.3783499 4.67180139,24.4654035 4.42514931,24.4654035 C4.17849723,24.4654035 3.94635409,24.3783499 3.77224674,24.2042425 L0.899475463,21.3314712 C0.725368112,21.1573639 0.638314437,20.9252207 0.638314437,20.6785687 C0.638314437,20.4319166 0.725368112,20.1997734 0.899475463,20.0256661 L19.5579798,1.36716171 C19.7320872,1.19305436 19.9642303,1.10600069 20.2108824,1.10600069 C20.4575345,1.10600069 20.6896776,1.19305436 20.863785,1.36716171 L23.7365563,4.23993299 C23.9106636,4.41404034 23.9977173,4.64618348 23.9977173,4.89283556 Z M4.39613142,2.13613584 L5.81800811,2.57140422 L4.39613142,3.00667259 L3.96086304,4.42854929 L3.52559466,3.00667259 L2.10371797,2.57140422 L3.52559466,2.13613584 L3.96086304,0.714259148 L4.39613142,2.13613584 Z M9.47426247,4.48658507 L12.3180159,5.35712183 L9.47426247,6.22765858 L8.60372572,9.07141197 L7.73318897,6.22765858 L4.88943558,5.35712183 L7.73318897,4.48658507 L8.60372572,1.64283168 L9.47426247,4.48658507 Z M22.9675821,11.4218612 L24.3894588,11.8571296 L22.9675821,12.2923979 L22.5323138,13.7142746 L22.0970454,12.2923979 L20.6751687,11.8571296 L22.0970454,11.4218612 L22.5323138,9.9999845 L22.9675821,11.4218612 Z M13.6818568,2.13613584 L15.1037335,2.57140422 L13.6818568,3.00667259 L13.2465884,4.42854929 L12.81132,3.00667259 L11.3894433,2.57140422 L12.81132,2.13613584 L13.2465884,0.714259148 L13.6818568,2.13613584 Z"></path>
+    </g>
+</svg>
+</span>
+        End-to-End Encrypted Email Support
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-10">
+        End-to-end encryption for email can be used to ensure that only the sender and the recipients of a message can read the contents. Without this protection it is easy for email providers and mass surveillance to read your messages. If you would like to learn more about how end-to-end encryption in Thunderbird works, check out our article: <a href="https://support.mozilla.org/kb/introduction-to-e2e-encryption">Introduction to End-to-end encryption in Thunderbird</a>.
+      </p>
+    </aside>
+  </section>
+
+  <section class="pt-20 pb-20 flex justify-center bg-calendar pr-8 pl-8">
+    <aside class="flex flex-col flex-1 lg:max-w-6xl lg:ml-16 lg:mr-16">
+      <h3 class="header-section">
+        <span><svg viewBox="0 0 22 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M10.8125123,4.71427345 L6.95536481,4.71427345 L6.95536481,8.57142091 L10.8125123,8.57142091 L10.8125123,4.71427345 Z M12.0982281,11.1428525 L12.0982281,12.4285684 L5.66964899,12.4285684 L5.66964899,11.1428525 L12.0982281,11.1428525 Z M12.0982281,3.42855763 L12.0982281,9.85713673 L5.66964899,9.85713673 L5.66964899,3.42855763 L12.0982281,3.42855763 Z M18.5268072,11.1428525 L18.5268072,12.4285684 L13.3839439,12.4285684 L13.3839439,11.1428525 L18.5268072,11.1428525 Z M18.5268072,8.57142091 L18.5268072,9.85713673 L13.3839439,9.85713673 L13.3839439,8.57142091 L18.5268072,8.57142091 Z M18.5268072,5.99998927 L18.5268072,7.28570509 L13.3839439,7.28570509 L13.3839439,5.99998927 L18.5268072,5.99998927 Z M18.5268072,3.42855763 L18.5268072,4.71427345 L13.3839439,4.71427345 L13.3839439,3.42855763 L18.5268072,3.42855763 Z M3.09821735,13.0714263 L3.09821735,3.42855763 L1.81250153,3.42855763 L1.81250153,13.0714263 C1.81250153,13.4229892 2.10379652,13.7142842 2.45535944,13.7142842 C2.80692236,13.7142842 3.09821735,13.4229892 3.09821735,13.0714263 Z M19.812523,13.0714263 L19.812523,2.14284182 L4.38393317,2.14284182 L4.38393317,13.0714263 C4.38393317,13.2924087 4.34375455,13.5133911 4.27344197,13.7142842 L19.1696651,13.7142842 C19.521228,13.7142842 19.812523,13.4229892 19.812523,13.0714263 Z M21.0982388,0.857125998 L21.0982388,13.0714263 C21.0982388,14.1361597 20.2343985,15 19.1696651,15 L2.45535944,15 C1.39062603,15 0.526785714,14.1361597 0.526785714,13.0714263 L0.526785714,2.14284182 L3.09821735,2.14284182 L3.09821735,0.857125998 L21.0982388,0.857125998 Z"></path>
+    </g>
+</svg>
+</span>
+        Other Notable Changes
+      </h3>
+      <p class="font-lg tracking-wider leading-loose mb-6">
+        There are many other big changes that make Thunderbird 78 a very large release including: calendar and tasks are now integrated into Thunderbird, folder icons are now updated and their colors are customizable, the preferences are now searchable, and minimize to tray is now supported on Windows.
+      </p>
+      <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
+        You can see details of all our changes in the release notes for <a href="/en-US/thunderbird/releases">Thunderbird 78.0 and up</a>.
+      </p>
+    </aside>
+  </section>
+
+  <section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-10">
+  <aside class="flex flex-col flex-1 lg:max-w-lg mb-20 lg:mb-0">
+    <h3 class="header-section">
+      <a id="donate" class="anchor" aria-hidden="true" href="#donate">
+          <svg viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M15.0803746,12.7857105 C15.0803746,12.5245494 14.979928,12.2834777 14.7991242,12.1026739 L12.709836,10.0133857 C12.5290323,9.83258193 12.2779159,9.73213539 12.0267995,9.73213539 C11.7355045,9.73213539 11.5044775,9.84262659 11.3035844,10.0535643 C11.635058,10.3850379 12.0267995,10.6662883 12.0267995,11.1785657 C12.0267995,11.7109324 11.5948794,12.1428525 11.0625126,12.1428525 C10.5502352,12.1428525 10.2689849,11.751111 9.9375113,11.4196374 C9.72657355,11.6205305 9.60603769,11.8515576 9.60603769,12.1528972 C9.60603769,12.4040136 9.70648424,12.6551299 9.88728803,12.8359337 L11.9564869,14.9151773 C12.1372907,15.0959811 12.3884071,15.186383 12.6395235,15.186383 C12.8906398,15.186383 13.1417562,15.0959811 13.32256,14.9252219 L14.7991242,13.4587023 C14.979928,13.2778985 15.0803746,13.0368268 15.0803746,12.7857105 Z M8.01898223,5.7042288 C8.01898223,5.45311243 7.91853568,5.20199606 7.7377319,5.02119227 L5.668533,2.94194872 C5.48772921,2.76114493 5.23661284,2.66069838 4.98549647,2.66069838 C4.7343801,2.66069838 4.48326373,2.76114493 4.30245994,2.93190406 L2.82589568,4.39842367 C2.6450919,4.57922746 2.54464535,4.82029917 2.54464535,5.07141554 C2.54464535,5.33257657 2.6450919,5.57364829 2.82589568,5.75445207 L4.91518389,7.84374028 C5.09598767,8.02454406 5.34710405,8.11494596 5.59822042,8.11494596 C5.88951541,8.11494596 6.12054247,8.01449941 6.32143556,7.80356166 C5.98996195,7.47208805 5.59822042,7.19083771 5.59822042,6.67856032 C5.59822042,6.14619361 6.03014057,5.71427345 6.56250728,5.71427345 C7.07478468,5.71427345 7.35603501,6.10601499 7.68750862,6.4374886 C7.89844637,6.2365955 8.01898223,6.00556844 8.01898223,5.7042288 Z M17.0089483,12.7857105 C17.0089483,13.5491042 16.697564,14.2924087 16.1551526,14.8247754 L14.6785884,16.291295 C14.136177,16.8337064 13.4029172,17.1250013 12.6395235,17.1250013 C11.866085,17.1250013 11.1328252,16.8236617 10.5904139,16.2712057 L8.52121497,14.1919621 C7.97880361,13.6495508 7.68750862,12.916291 7.68750862,12.1528972 C7.68750862,11.3593695 8.00893758,10.6060204 8.57143825,10.0535643 L7.68750862,9.16963471 C7.13505261,9.73213539 6.39174815,10.0535643 5.59822042,10.0535643 C4.83482665,10.0535643 4.09152219,9.75222469 3.54911083,9.20981333 L1.45982263,7.12052513 C0.90736661,6.56806911 0.61607162,5.84485397 0.61607162,5.07141554 C0.61607162,4.30802178 0.92745592,3.56471732 1.46986728,3.03235061 L2.94643154,1.56583101 C3.4888429,1.02341965 4.2221027,0.732124656 4.98549647,0.732124656 C5.75893489,0.732124656 6.4921947,1.0334643 7.03460606,1.58592032 L9.10380495,3.66516387 C9.64621631,4.20757523 9.9375113,4.94083503 9.9375113,5.7042288 C9.9375113,6.49775653 9.61608235,7.25110564 9.05358168,7.80356166 L9.9375113,8.68749128 C10.4899673,8.12499061 11.2332718,7.80356166 12.0267995,7.80356166 C12.7901933,7.80356166 13.5334977,8.1049013 14.0759091,8.64731266 L16.1651973,10.7366009 C16.7176533,11.2890569 17.0089483,12.012272 17.0089483,12.7857105 Z"></path>
+    </g>
+</svg>
+
+        </a>
+      Thunderbird is funded by users like you
+    </h3>
+    <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+      Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.
+    </p>
+    <a href="?form=support&utm_content=home_page_body&utm_source=thunderbird.net&utm_medium=fru&utm_campaign=donation_2023" class="btn-donate self-start ml-0 mr-0 font-lg lg:font-base" data-donate-btn data-donate-content="home_page_body">
+      <span class="inline-block w-3 mr-1"><svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
+    </g>
+</svg>
+</span> Donate
+    </a>
+  </aside>
+
+  <aside class="flex flex-col flex-1 lg:max-w-lg">
+    <h3 class="header-section">
+      <a id="mailing-list" class="anchor" aria-hidden="true" href="#mailing-list">
+        <svg viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M15.0803746,12.7857105 C15.0803746,12.5245494 14.979928,12.2834777 14.7991242,12.1026739 L12.709836,10.0133857 C12.5290323,9.83258193 12.2779159,9.73213539 12.0267995,9.73213539 C11.7355045,9.73213539 11.5044775,9.84262659 11.3035844,10.0535643 C11.635058,10.3850379 12.0267995,10.6662883 12.0267995,11.1785657 C12.0267995,11.7109324 11.5948794,12.1428525 11.0625126,12.1428525 C10.5502352,12.1428525 10.2689849,11.751111 9.9375113,11.4196374 C9.72657355,11.6205305 9.60603769,11.8515576 9.60603769,12.1528972 C9.60603769,12.4040136 9.70648424,12.6551299 9.88728803,12.8359337 L11.9564869,14.9151773 C12.1372907,15.0959811 12.3884071,15.186383 12.6395235,15.186383 C12.8906398,15.186383 13.1417562,15.0959811 13.32256,14.9252219 L14.7991242,13.4587023 C14.979928,13.2778985 15.0803746,13.0368268 15.0803746,12.7857105 Z M8.01898223,5.7042288 C8.01898223,5.45311243 7.91853568,5.20199606 7.7377319,5.02119227 L5.668533,2.94194872 C5.48772921,2.76114493 5.23661284,2.66069838 4.98549647,2.66069838 C4.7343801,2.66069838 4.48326373,2.76114493 4.30245994,2.93190406 L2.82589568,4.39842367 C2.6450919,4.57922746 2.54464535,4.82029917 2.54464535,5.07141554 C2.54464535,5.33257657 2.6450919,5.57364829 2.82589568,5.75445207 L4.91518389,7.84374028 C5.09598767,8.02454406 5.34710405,8.11494596 5.59822042,8.11494596 C5.88951541,8.11494596 6.12054247,8.01449941 6.32143556,7.80356166 C5.98996195,7.47208805 5.59822042,7.19083771 5.59822042,6.67856032 C5.59822042,6.14619361 6.03014057,5.71427345 6.56250728,5.71427345 C7.07478468,5.71427345 7.35603501,6.10601499 7.68750862,6.4374886 C7.89844637,6.2365955 8.01898223,6.00556844 8.01898223,5.7042288 Z M17.0089483,12.7857105 C17.0089483,13.5491042 16.697564,14.2924087 16.1551526,14.8247754 L14.6785884,16.291295 C14.136177,16.8337064 13.4029172,17.1250013 12.6395235,17.1250013 C11.866085,17.1250013 11.1328252,16.8236617 10.5904139,16.2712057 L8.52121497,14.1919621 C7.97880361,13.6495508 7.68750862,12.916291 7.68750862,12.1528972 C7.68750862,11.3593695 8.00893758,10.6060204 8.57143825,10.0535643 L7.68750862,9.16963471 C7.13505261,9.73213539 6.39174815,10.0535643 5.59822042,10.0535643 C4.83482665,10.0535643 4.09152219,9.75222469 3.54911083,9.20981333 L1.45982263,7.12052513 C0.90736661,6.56806911 0.61607162,5.84485397 0.61607162,5.07141554 C0.61607162,4.30802178 0.92745592,3.56471732 1.46986728,3.03235061 L2.94643154,1.56583101 C3.4888429,1.02341965 4.2221027,0.732124656 4.98549647,0.732124656 C5.75893489,0.732124656 6.4921947,1.0334643 7.03460606,1.58592032 L9.10380495,3.66516387 C9.64621631,4.20757523 9.9375113,4.94083503 9.9375113,5.7042288 C9.9375113,6.49775653 9.61608235,7.25110564 9.05358168,7.80356166 L9.9375113,8.68749128 C10.4899673,8.12499061 11.2332718,7.80356166 12.0267995,7.80356166 C12.7901933,7.80356166 13.5334977,8.1049013 14.0759091,8.64731266 L16.1651973,10.7366009 C16.7176533,11.2890569 17.0089483,12.012272 17.0089483,12.7857105 Z"></path>
+    </g>
+</svg>
+
+      </a>
+      Join our Newsletter
+    </h3>
+    <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+      Keep up with the latest and greatest updates on news, features, events, and previews, and get a sneak peek on the upcoming releases.
+    </p>
+    <div class="max-w-lg">
+      <!-- Begin Mailchimp Signup Form -->
+<form action="https://thunderbird.us12.list-manage.com/subscribe?u=f8051cc8637cf3ff79661f382&id=56428f2efc"
+class="newsletter-form"
+method="post" id="mc-embedded-subscribe-form"
+name="mc-embedded-subscribe-form">
+<input id="mce-EMAIL" name="EMAIL" type="email" placeholder="Your Email" required>
+<button type="submit" id="mc-embedded-subscribe" class="btn-newsletter">Sign me up!</button>
+<!-- Prevent Bot signups -->
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+  name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value=""></div>
+</form>
+<!--End mc_embed_signup-->
+    </div>
+  </aside>
+</section>
+
+
+
+    </main>
+
+    
+
+
+    
+    
+
+    
+        <footer id="colophon" class="bg-black-light text-white flex flex-col pt-10 pb-8 pl-4 pr-4">
+  <section class="flex flex-col lg:flex-col justify-between items-center self-center w-full max-w-6xl">
+    <aside class="flex flex-col items-center">
+      <a href="/en-US/" class="block w-40" title="Thunderbird"
+        alt="Thunderbird Vector Wordmark">
+        <img src="/media/svg/logo-wordmark-white.svg" alt="Thunderbird Vector Wordmark"/>
+      </a>
+
+      <nav id="footer-main" role="navigation" class="mt-2">
+        <ul class="list-none p-0 flex flex-wrap items-center text-white nav-footer justify-around">
+          <li>
+            <a href="/en-US/organizations" class="nav-link">For Organizations</a>
+          </li>
+          <li>
+            <a href="/en-US/get-involved" class="nav-link">Get Involved</a>
+          </li>
+          <li>
+            <a href="/en-US/careers" class="nav-link">Careers</a>
+          </li>
+          <li>
+            <a href="https://support.mozilla.org/products/thunderbird/" class="nav-link">Get Help</a>
+          </li>
+          <li>
+            <a href="https://blog.thunderbird.net/" class="nav-link">Blog</a>
+          </li>
+          <li>
+            <a href="/en-US/about" class="nav-link">About Us</a>
+          </li>
+          <li>
+            <a href="/en-US/contact" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <aside class="flex flex-col items-center">
+      <ul class="list-none p-0 flex flex-wrap items-center justify-around ">
+        <li class="m-1">
+          <a class="social-link font-semibold" title="Follow @mozthunderbird on Twitter"
+            href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
+            <span><svg viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M10.9263515,1.73214611 C10.6317083,2.16071805 10.2634042,2.54241494 9.84152874,2.85045102 C9.84822517,2.94420113 9.84822517,3.03795124 9.84822517,3.13170135 C9.84822517,5.99107976 7.67188329,9.28572655 3.69419998,9.28572655 C2.46875209,9.28572655 1.33035788,8.93081541 0.37276745,8.31474325 C0.5468748,8.33483256 0.714285714,8.34152899 0.895089501,8.34152899 C1.90625142,8.34152899 2.8370561,8.00001073 3.58036056,7.41742075 C2.62946657,7.39733144 1.83259062,6.77456284 1.55803672,5.91741896 C1.69196545,5.93750827 1.82589418,5.95090114 1.96651935,5.95090114 C2.16071601,5.95090114 2.35491267,5.9241154 2.53571646,5.87724034 C1.54464385,5.67634724 0.801339389,4.80581049 0.801339389,3.75446995 C0.801339389,3.74777352 0.801339389,3.73438064 0.801339389,3.72768421 C1.08928616,3.88839868 1.42410799,3.98884523 1.77901913,4.00223811 C1.19642915,3.61384479 0.814732263,2.95089757 0.814732263,2.20089667 C0.814732263,1.79911048 0.921875247,1.43080647 1.10937547,1.10937751 C2.17410888,2.42187908 3.77455722,3.27902296 5.56920222,3.37277307 C5.53572003,3.21205859 5.51563072,3.04464768 5.51563072,2.87723676 C5.51563072,1.68527106 6.47991759,0.714287758 7.67857973,0.714287758 C8.30134833,0.714287758 8.863849,0.975448783 9.25893876,1.39732429 C9.74777863,1.30357417 10.2165292,1.12277039 10.6317083,0.875002235 C10.4709938,1.37723498 10.1294755,1.79911048 9.68081426,2.06696794 C10.1160826,2.02009289 10.5379581,1.89955703 10.9263515,1.73214611 Z"></path>
+    </g>
+</svg>
+</span>
+            @mozthunderbird
+          </a>
+        </li>
+        <li class="m-1">
+          <a class="social-link font-semibold" href="https://www.facebook.com/Thunderbird/" data-link-type="footer"
+            data-link-name="Facebook (Thunderbird)">
+            <span><svg viewBox="0 0 6 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M5.78572118,0.0803572387 L5.78572118,1.84821649 L4.73438064,1.84821649 C3.91071895,1.84821649 3.75670091,2.24330625 3.75670091,2.81250335 L3.75670091,4.07812986 L5.71875682,4.07812986 L5.45759579,6.06027508 L3.75670091,6.06027508 L3.75670091,11.1428704 L1.70759132,11.1428704 L1.70759132,6.06027508 L0,6.06027508 L0,4.07812986 L1.70759132,4.07812986 L1.70759132,2.61830669 C1.70759132,0.924108244 2.74553899,0 4.25893365,0 C4.9821488,0 5.6049174,0.0535714924 5.78572118,0.0803572387 Z"></path>
+    </g>
+</svg>
+</span>
+            Thunderbird
+          </a>
+        </li>
+        <li class="m-1">
+          <a class="social-link font-semibold" title="Follow @ThunderbirdProject on YouTube"
+            href="https://www.youtube.com/@ThunderbirdProject" data-link-type="footer" data-link-name="YouTube (Thunderbird)" rel="me">
+            <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="32"
+   height="22.545456"
+   viewBox="0 0 32 22.545456"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath18">
+      <path
+         d="M 0,192 H 192 V 0 H 0 Z"
+         id="path16" />
+    </clipPath>
+  </defs>
+  <g
+     id="g10"
+     transform="matrix(0.18181818,0,0,-0.18181818,-1.4545454,28.727291)">
+    <g
+       id="g12">
+      <g
+         id="g14"
+         clip-path="url(#clipPath18)">
+        <g
+           id="g20"
+           fill="currentColor"
+           transform="translate(78,69.8311)">
+          <path
+             d="M 0,0 V 52.338 L 46,26.168 Z M 102.322,68.806 C 100.298,76.428 94.334,82.43 86.762,84.467 73.037,88.169 18,88.169 18,88.169 c 0,0 -55.037,0 -68.762,-3.702 C -58.334,82.43 -64.298,76.428 -66.322,68.806 -70,54.992 -70,26.169 -70,26.169 c 0,0 0,-28.822 3.678,-42.637 2.024,-7.622 7.988,-13.624 15.56,-15.662 13.725,-3.701 68.762,-3.701 68.762,-3.701 0,0 55.037,0 68.762,3.701 7.572,2.038 13.536,8.04 15.56,15.662 C 106,-2.653 106,26.169 106,26.169 c 0,0 0,28.823 -3.678,42.637"
+             style="fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path22" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+</span>
+            Thunderbird
+          </a>
+        </li>
+        <li class="m-1">
+          <a class="social-link font-semibold" title="Follow thunderbird-email on LinkedIn"
+            href="https://www.linkedin.com/company/thunderbird-email/" data-link-type="footer" data-link-name="LinkedIn (Thunderbird)" rel="me">
+            <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Group_1282"
+   data-name="Group 1282"
+   width="32"
+   height="31.998905"
+   viewBox="0 0 32 31.998907"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <path
+     id="Path_2520"
+     data-name="Path 2520"
+     d="m 27.265515,27.265225 h -4.741399 v -7.425229 c 0,-1.770616 -0.03161,-4.049945 -2.466022,-4.049945 -2.469478,0 -2.847309,1.929157 -2.847309,3.921038 v 7.553642 H 12.469386 V 11.99545 h 4.551743 v 2.086709 h 0.06371 a 4.9883471,4.9883471 0 0 1 4.490994,-2.466515 c 4.805606,0 5.691655,3.160933 5.691655,7.273109 z M 7.1195073,9.9082463 A 2.7514933,2.7514933 0 1 1 9.8705067,7.1562591 2.7514933,2.7514933 0 0 1 7.1195073,9.9082463 M 9.490207,27.265225 H 4.7438687 V 11.99545 H 9.490207 Z M 29.6293,0.00217907 H 2.3613156 A 2.3351391,2.3351391 0 0 0 0,2.3086723 V 29.689759 a 2.3366208,2.3366208 0 0 0 2.3613156,2.308963 H 29.6293 A 2.3415598,2.3415598 0 0 0 32,29.689759 V 2.3066967 A 2.3400781,2.3400781 0 0 0 29.6293,2.0349351e-4"
+     style="fill:currentColor;stroke-width:0.493896" />
+</svg>
+</span>
+            Thunderbird
+          </a>
+        </li>
+        <li class="m-1">
+          <a class="social-link font-semibold" title="Follow @thunderbird@mastodon.online on Mastodon"
+            href="https://mastodon.online/@thunderbird" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
+            <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   height="12"
+   width="11.193398"
+   id="svg3"
+   version="1.1"
+   viewBox="0 0 11.193399 12">
+  <path
+     style="fill:currentColor;fill-rule:evenodd"
+     d="m 5.5790063,0 c -1.534141,0.0125 -3.0098524,0.17863 -3.8698611,0.57359 0,0 -1.70561599,0.76301 -1.70561599,3.36618 0,0.5961 -0.01160514,1.30889 0.00727341,2.06474 0.06193718,2.54576 0.46672702,5.05472 2.82046908,5.67771 1.0852583,0.28725 2.0170112,0.34734 2.7674335,0.30609 1.3608723,-0.0754 2.1248476,-0.4856 2.1248476,-0.4856 l -0.044954,-0.98737 c 0,0 -0.9724634,0.30659 -2.0646395,0.26922 C 4.5318688,10.74746 3.3895546,10.66792 3.21454,9.33937 3.198377,9.22267 3.190295,9.09786 3.190295,8.96681 c 0,0 1.0622137,0.25967 2.4084096,0.32134 C 6.4218613,9.32595 7.193777,9.23985 7.9778189,9.14632 9.4813795,8.96678 10.79053,8.04041 10.95507,7.19391 11.214327,5.86046 11.192972,3.93977 11.192972,3.93977 11.192972,1.3366 9.4874568,0.57359 9.4874568,0.57359 8.6275128,0.17863 7.1508275,0.01254 5.6166863,0 Z M 3.8427816,2.03403 c 0.6390261,0 1.1228982,0.24565 1.4428639,0.73694 L 5.596685,3.29233 5.9078258,2.77097 c 0.319901,-0.49129 0.8037728,-0.73694 1.4428636,-0.73694 0.5522624,0 0.9972822,0.19415 1.3370962,0.57288 0.3294049,0.37874 0.4933804,0.8906 0.4933804,1.5348 V 7.29372 H 7.9323605 V 4.23444 c 0,-0.64491 -0.271258,-0.97231 -0.8140164,-0.97231 -0.6001053,0 -0.9008935,0.38835 -0.9008935,1.15617 V 6.0928 H 4.9760202 V 4.4183 c 0,-0.76782 -0.3007881,-1.15617 -0.9008934,-1.15617 -0.5427584,0 -0.8141175,0.3274 -0.8141175,0.97231 V 7.29372 H 2.0122042 V 4.14171 c 0,-0.6442 0.1640115,-1.15606 0.4934811,-1.5348 C 2.8454347,2.22818 3.2904545,2.03403 3.8427816,2.03403 Z"
+     id="path2" />
+</svg>
+</span>
+            @thunderbird@mastodon.online
+          </a>
+        </li>
+      </ul>
+      <aside class="mt-2">
+        
+<form id="lang_form" method="get" action="/" class="flex items-center justify-end">
+  <label for="page-language-select" class="mr-2">
+    
+    
+      Page language:
+    
+  </label>
+  <aside class="relative">
+    <select id="page-language-select" name="lang" dir="ltr" class="form-select">
+      
+        <option lang="ach" value="ach" >Acholi</option>
+      
+        <option lang="af" value="af" >Afrikaans</option>
+      
+        <option lang="an" value="an" >aragonés</option>
+      
+        <option lang="ar" value="ar" >عربي</option>
+      
+        <option lang="as" value="as" >অসমীয়া</option>
+      
+        <option lang="ast" value="ast" >Asturianu</option>
+      
+        <option lang="az" value="az" >Azərbaycanca</option>
+      
+        <option lang="be" value="be" >Беларуская</option>
+      
+        <option lang="bg" value="bg" >Български</option>
+      
+        <option lang="bn" value="bn" >বাংলা</option>
+      
+        <option lang="br" value="br" >Brezhoneg</option>
+      
+        <option lang="bs" value="bs" >Bosanski</option>
+      
+        <option lang="ca" value="ca" >Català</option>
+      
+        <option lang="cak" value="cak" >Maya Kaqchikel</option>
+      
+        <option lang="cs" value="cs" >Čeština</option>
+      
+        <option lang="cy" value="cy" >Cymraeg</option>
+      
+        <option lang="da" value="da" >Dansk</option>
+      
+        <option lang="de" value="de" >Deutsch</option>
+      
+        <option lang="dsb" value="dsb" >Dolnoserbšćina</option>
+      
+        <option lang="el" value="el" >Ελληνικά</option>
+      
+        <option lang="en-CA" value="en-CA" >English (Canadian)</option>
+      
+        <option lang="en-GB" value="en-GB" >English (British)</option>
+      
+        <option lang="en-US" value="en-US" selected>English</option>
+      
+        <option lang="en-ZA" value="en-ZA" >English (South African)</option>
+      
+        <option lang="eo" value="eo" >Esperanto</option>
+      
+        <option lang="es-AR" value="es-AR" >Español (de Argentina)</option>
+      
+        <option lang="es-CL" value="es-CL" >Español (de Chile)</option>
+      
+        <option lang="es-ES" value="es-ES" >Español (de España)</option>
+      
+        <option lang="es-MX" value="es-MX" >Español (de México)</option>
+      
+        <option lang="et" value="et" >Eesti keel</option>
+      
+        <option lang="eu" value="eu" >Euskara</option>
+      
+        <option lang="fa" value="fa" >فارسی</option>
+      
+        <option lang="ff" value="ff" >Pulaar-Fulfulde</option>
+      
+        <option lang="fi" value="fi" >suomi</option>
+      
+        <option lang="fr" value="fr" >Français</option>
+      
+        <option lang="fy-NL" value="fy-NL" >Frysk</option>
+      
+        <option lang="ga-IE" value="ga-IE" >Gaeilge</option>
+      
+        <option lang="gd" value="gd" >Gàidhlig</option>
+      
+        <option lang="gl" value="gl" >Galego</option>
+      
+        <option lang="gn" value="gn" >Avañe'ẽ</option>
+      
+        <option lang="gu-IN" value="gu-IN" >ગુજરાતી (ભારત)</option>
+      
+        <option lang="he" value="he" >עברית</option>
+      
+        <option lang="hi-IN" value="hi-IN" >हिन्दी (भारत)</option>
+      
+        <option lang="hr" value="hr" >Hrvatski</option>
+      
+        <option lang="hsb" value="hsb" >Hornjoserbsce</option>
+      
+        <option lang="hu" value="hu" >magyar</option>
+      
+        <option lang="hy-AM" value="hy-AM" >Հայերեն</option>
+      
+        <option lang="id" value="id" >Bahasa Indonesia</option>
+      
+        <option lang="is" value="is" >íslenska</option>
+      
+        <option lang="it" value="it" >Italiano</option>
+      
+        <option lang="ja" value="ja" >日本語</option>
+      
+        <option lang="ka" value="ka" >ქართული</option>
+      
+        <option lang="kab" value="kab" >Taqbaylit</option>
+      
+        <option lang="kk" value="kk" >Қазақ</option>
+      
+        <option lang="km" value="km" >ខ្មែរ</option>
+      
+        <option lang="kn" value="kn" >ಕನ್ನಡ</option>
+      
+        <option lang="ko" value="ko" >한국어</option>
+      
+        <option lang="lij" value="lij" >Ligure</option>
+      
+        <option lang="lt" value="lt" >Lietuvių</option>
+      
+        <option lang="ltg" value="ltg" >Latgaliešu valoda</option>
+      
+        <option lang="lv" value="lv" >Latviešu</option>
+      
+        <option lang="mai" value="mai" >मैथिली মৈথিলী</option>
+      
+        <option lang="mk" value="mk" >Македонски</option>
+      
+        <option lang="ml" value="ml" >മലയാളം</option>
+      
+        <option lang="mr" value="mr" >मराठी</option>
+      
+        <option lang="ms" value="ms" >Melayu</option>
+      
+        <option lang="my" value="my" >မြန်မာဘာသာ</option>
+      
+        <option lang="nb-NO" value="nb-NO" >Norsk bokmål</option>
+      
+        <option lang="ne-NP" value="ne-NP" >नेपाली</option>
+      
+        <option lang="nl" value="nl" >Nederlands</option>
+      
+        <option lang="nn-NO" value="nn-NO" >Norsk nynorsk</option>
+      
+        <option lang="oc" value="oc" >occitan (lengadocian)</option>
+      
+        <option lang="or" value="or" >ଓଡ଼ିଆ</option>
+      
+        <option lang="pa-IN" value="pa-IN" >ਪੰਜਾਬੀ (ਭਾਰਤ)</option>
+      
+        <option lang="pl" value="pl" >Polski</option>
+      
+        <option lang="pt-BR" value="pt-BR" >Português (do Brasil)</option>
+      
+        <option lang="pt-PT" value="pt-PT" >Português (Europeu)</option>
+      
+        <option lang="rm" value="rm" >rumantsch</option>
+      
+        <option lang="ro" value="ro" >Română</option>
+      
+        <option lang="ru" value="ru" >Русский</option>
+      
+        <option lang="si" value="si" >සිංහල</option>
+      
+        <option lang="sk" value="sk" >slovenčina</option>
+      
+        <option lang="sl" value="sl" >Slovenščina</option>
+      
+        <option lang="son" value="son" >Soŋay</option>
+      
+        <option lang="sq" value="sq" >Shqip</option>
+      
+        <option lang="sr" value="sr" >Српски</option>
+      
+        <option lang="sv-SE" value="sv-SE" >Svenska</option>
+      
+        <option lang="ta" value="ta" >தமிழ்</option>
+      
+        <option lang="te" value="te" >తెలుగు</option>
+      
+        <option lang="th" value="th" >ไทย</option>
+      
+        <option lang="tr" value="tr" >Türkçe</option>
+      
+        <option lang="uk" value="uk" >Українська</option>
+      
+        <option lang="ur" value="ur" >اُردو</option>
+      
+        <option lang="uz" value="uz" >Oʻzbek tili</option>
+      
+        <option lang="vi" value="vi" >Tiếng Việt</option>
+      
+        <option lang="xh" value="xh" >isiXhosa</option>
+      
+        <option lang="zh-CN" value="zh-CN" >中文 (简体)</option>
+      
+        <option lang="zh-TW" value="zh-TW" >正體中文 (繁體)</option>
+      
+        <option lang="zu" value="zu" >isiZulu</option>
+      
+    </select>
+    <div class="pointer-events-none absolute pin-r flex items-center pr-1 pl-1 text-black-lighter pin-t pin-b">
+      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+      </svg>
+    </div>
+  </aside>
+  <noscript>
+    <button type="submit" class="btn-inline">Go</button>
+  </noscript>
+</form>
+
+      </aside>
+    </aside>
+  </section>
+  <section class="self-center text-center max-w-5xl mt-8">
+    <ul class="list-none p-0 flex justify-center flex-wrap -mt-2">
+      <li class="ml-2 mr-2 mt-2">
+        <a href="https://www.mozilla.org/privacy/websites/" class="small-link" data-link-type="footer" data-link-name="Privacy">Privacy</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="https://www.mozilla.org/privacy/websites/#data-tools" class="small-link" data-link-type="footer" data-link-name="Cookies">Cookies</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="https://www.mozilla.org/en-US/about/legal/terms/mozilla/" class="small-link" data-link-type="footer"
+          data-link-name="Legal">Legal</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/" class="small-link" data-link-type="footer"
+          data-link-name="guidelines">Participation Guidelines</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="https://www.mozilla.org/en-US/about/legal/report-infringement/" class="small-link" data-link-type="footer"
+          data-link-name="infringement">Report Trademark or Copyright Infringement</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="https://www.mozilla.org/about/legal/fraud-report/" class="small-link" data-link-type="footer"
+          data-link-name="Report Trademark Misuse">Report Misuse of Thunderbird Trademark</a>
+      </li>
+    </ul>
+
+    <p class="mt-6 mb-6 leading-normal">Thunderbird is part of
+      <a href="https://blog.thunderbird.net/2020/01/thunderbirds-new-home/" class="inline-link">MZLA Technologies Corporation</a>,
+      a wholly owned subsidiary of Mozilla Foundation.
+      Portions of this content are ©1998–2024 by individual
+      contributors. Content available under
+      a <a href="https://www.mozilla.org/foundation/licensing/website-content/" class="inline-link">Creative Commons license</a>.</p>
+
+    <a href="https://github.com/thunderbird/thunderbird-website" class="small-link font-semibold" data-link-type="footer"
+      data-link-name="Contribute to this site">Contribute to this site</a>
+    
+  </section>
+</footer>
+    
+
+    
+      <script type="text/javascript" src="/media/archived/js/site-bundle.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/archived/js/common-bundle.js" charset="utf-8"></script>
+    
+    
+    
+      <script type="text/javascript" src="/media/archived/js/matomo-config.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/archived/js/matomo.js" async defer></script>
+      <noscript>
+        <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
+      </noscript>
+    
+    <!--[if IE 9]>
+      <script src="/media/archived/js/libs/matchMedia.js"></script>
+    <![endif]-->
+
+    
+
+    
+  </body>
+</html>
