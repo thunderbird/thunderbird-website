@@ -5,19 +5,17 @@
 {% set active_page = "post-download" %}
 {% extends "includes/base/page.html" %}
 
-{% block page_title %}{{ _('Placeholder page :^)') }}{% endblock %}
+{% block page_title %}{{ _('Just one more step!') }}{% endblock %}
 {% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
 {% block category %}{{ _('Resources') }}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
 
 {% block content %}
 <section>
   <div class="container">
-    <div class="section-text">
-      <div class="section-title">
-        <h1>{{ _('Thank you for downloading and installing <span class="txt-gradient">Thunderbird</span>') }}</h1>
-      </div>
-      <p class="font-3xl tracking-wide max-w-4xl mb-6"><span class="mb-2 font-hero" style="display: block;">{{ _('Just one more step!') }}</span>{{ _('Finish installing, and start enjoying Thunderbird.') }}</p>
-      <p class="tracking-wider">
+    <div class="section-text wide">
+      <h3>{{ _('Finish installing, and start enjoying <span class="txt-gradient">Thunderbird</span>.') }}</h3>
+      <p>
         {{ _('Having trouble? <a class="inline-link" href="%(url)s">Get help with your installation.</a>')|format(url='https://support.mozilla.org/products/thunderbird/install-migrate-and-update') }}
       </p>
     </div>
