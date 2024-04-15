@@ -28,7 +28,7 @@
         {{ release.text|markdown|safe }}
       </div>
       <div class="system-requirements">
-        {#
+        {# Note: This is disabled until we can more reliably get system requirements
         {% for platform, req in split_system_requirements().items(): %}
         {% set icon_name = platform|lower %}
         {% if platform == 'GNU/Linux' %}
