@@ -3,7 +3,7 @@
  
  <!doctype html>
 
-<html class="windows x86 no-js" lang="en" dir="ltr">
+<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
   <head>
     <meta charset="utf-8">
 
@@ -12,13 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>Help Keep Thunderbird Alive! — Thunderbird</title>
+    <title>{{ _('Help Keep Thunderbird Alive!') }} — Thunderbird</title>
     <meta name="description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Thunderbird">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="{{ _('Thunderbird') }}">
+    <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
     <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
-    <meta property="og:title" content="Help Keep Thunderbird Alive!">
+    <meta property="og:title" content="{{ _('Help Keep Thunderbird Alive!') }}">
     <meta property="og:description" content="">
     <meta property="fb:page_id" content="348169218537151">
     <meta name="twitter:card" content="summary">
@@ -45,7 +45,7 @@
       
     
     <script>
-      window.siteLocale = "en-US";
+      window.siteLocale = "{{ LANG }}";
     </script>
   </head>
 
@@ -60,10 +60,10 @@
   <div class="container">
     <img class="logo" src="/media/archived/img/thunderbird/appeal/115/Thunderbird_Logo.png" alt="Thunderbird logo">
     <h1>
-      Help Keep
+      {{ _('Help Keep
       <br>
       <span class="tb-title">Thunderbird</span>
-      <span class="alive">Alive</span>
+      <span class="alive">Alive</span>') }}
     </h1>
   </div>
 </header>
@@ -79,7 +79,7 @@
     <a href="?form=support&utm_content=115Appeal&utm_source=thunderbird-client&utm_medium=fru&utm_campaign=donation_2023" class="donate-banner" data-donate-btn
       data-donate-content="115Appeal" data-donate-source="thunderbird-client">
       <div id="donate-banner-left">
-        Click here to <strong class="block">Donate!</strong>
+        {{ _('Click here to <strong class="block">Donate!</strong>') }}
       </div>
       <div id="decoration">
         <div id="pill-1" class="pill"></div>
@@ -94,7 +94,7 @@
         <div id="pill-10" class="pill"></div>
       </div>
       <div id="donate-banner-right" class="text-right accent-text self-end">
-        Help keep <strong class="block">Thunderbird Alive!</strong>
+        {{ _('Help keep <strong class="block">Thunderbird Alive!</strong>') }}
       </div>
       <div id="hover-hearts">
         <div id="hover-heart-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -116,20 +116,20 @@
     </a>
     <div class="letter-container">
       <p>
-        Thunderbird’s mission is to give you the best privacy-respecting, customizable communication experience possible.
-        Free for everyone to install and enjoy!
+        {{_('Thunderbird’s mission is to give you the best privacy-respecting, customizable communication experience possible.
+        Free for everyone to install and enjoy!')}}
       </p>
       <p>
-        Accomplishing that mission means maintaining expensive servers, fixing bugs, developing useful new features, and
-        hiring talented engineers to improve the software.
+        {{_('Accomplishing that mission means maintaining expensive servers, fixing bugs, developing useful new features, and
+        hiring talented engineers to improve the software.')}}
       </p>
       <p>
-        Thunderbird is proud to be funded exclusively by our community, not by selling personal data or displaying ads in
-        your inbox.
+        {{_('Thunderbird is proud to be funded exclusively by our community, not by selling personal data or displaying ads in
+        your inbox.')}}
       </p>
       <p>
-        So today we’re asking for your help to keep Thunderbird alive and thriving. If you get value from using
-        Thunderbird, please consider giving a donation to support it!
+        {{_('So today we’re asking for your help to keep Thunderbird alive and thriving. If you get value from using
+        Thunderbird, please consider giving a donation to support it!')}}
       </p>
       <div class="heart-container">
         <div class="left-lines">
@@ -149,7 +149,7 @@
         </div>
       </div>
       <p class="text-center team-text">
-        The Thunderbird Team
+        {{ _('The Thunderbird Team') }}
       </p>
     </div>
 </section>
@@ -186,77 +186,11 @@
   })(window,document,'script','FundraiseUp','ADGJGYAN');
 
   // Set FRU's language
-  window._lang = "en-US";
+  window._lang = "{{ get_fru_language() }}";
 </script>
 
 
-<div id="amount-modal" class="modal rounded-lg w-full max-w-2xl shadow-lg bg-white text-black-lighter fixed z-30 mt-0 mx-auto pin-x hidden">
-  <div id="close-modal" class="absolute p-1 m-2 z-10 pin-t pin-r">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
-  </div>
-  <h1 class="text-blue-dark text-center font-4xl font-light">
-    Pay What You Want
-  </h1>
-  <form action="">
-    <section class="font-lg pt-0 pl-6 pb-4 pr-6 leading-normal text-center">
-      <p>Thunderbird is independent, free, and Open Source software sustained by your donations. Help us keep the project alive!</p>
-    </section>
-    <section id="donate-buttons" class="flex justify-center mt-6 mb-6 mx-auto">
-      <a href="#" class="btn-donate-and-download" id="amount-submit" data-donate-content="post_download">
-        <span class="donate-heart">
-          <svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
-    </g>
-</svg>
 
-          <span class="donate-wave">
-          <!-- o/ -->
-          </span>
-        </span>
-        <p>Donate & Download</p>
-      </a>
-      <a href="#" class="btn-body btn-secondary donate-download-link" id="amount-cancel">
-        <p>No Thanks, Download Now!</p>
-        <span>
-          <svg viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-              <path d="M6.91574413,5.89284986 C6.91574413,5.97767139 6.87333336,6.07309561 6.80971722,6.13671176 L1.86886311,11.0775659 C1.80524696,11.141182 1.70982274,11.1835928 1.62500121,11.1835928 C1.54017968,11.1835928 1.44475546,11.141182 1.38113932,11.0775659 L0.851004755,10.5474313 C0.787388608,10.4838152 0.744977843,10.3989936 0.744977843,10.3035694 C0.744977843,10.2187479 0.787388608,10.1233237 0.851004755,10.0597075 L5.0178624,5.89284986 L0.851004755,1.72599222 C0.787388608,1.66237607 0.744977843,1.56695185 0.744977843,1.48213032 C0.744977843,1.39730879 0.787388608,1.30188457 0.851004755,1.23826842 L1.38113932,0.70813386 C1.44475546,0.644517713 1.54017968,0.602106948 1.62500121,0.602106948 C1.70982274,0.602106948 1.80524696,0.644517713 1.86886311,0.70813386 L6.80971722,5.64898796 C6.87333336,5.71260411 6.91574413,5.80802833 6.91574413,5.89284986 Z"></path>
-            </g>
-          </svg>
-        </span>
-      </a>
-    </section>
-  </form>
-  <footer class="w-4/5 mx-auto border-0 border-t border-solid border-grey-light p-6">
-    <ul class="flex justify-center uppercase list-none font-xs p-0 m-0">
-      <li class="mr-4">
-        <a class="text-black-lightest no-underline" href="">
-          Secure
-        </a>
-      </li>
-      <li class="mr-4">
-        <a class="text-black-lightest no-underline" href="https://www.mozilla.org/en-US/privacy/websites/">
-          Privacy Policy
-        </a>
-      </li>
-      <li class="mr-4">
-        <a class="text-black-lightest no-underline" href="https://give.thunderbird.net/en-CA/ways-to-give/">
-          Other ways to donate
-        </a>
-      </li>
-      <li>
-        <a class="text-black-lightest no-underline" href="https://give.thunderbird.net/en-CA/faq/">
-          FAQ
-        </a>
-      </li>
-    </ul>
-  </footer>
-</div>
 
 <div id="modal-overlay" class="fixed pin-t pin-l m-0 p-0 w-full h-full z-20 bg-black opacity-50 hidden" tabindex="-1"></div>
 

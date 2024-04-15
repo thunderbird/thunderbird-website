@@ -3,7 +3,7 @@
  
  <!doctype html>
 
-<html class="windows x86 no-js" lang="en" dir="ltr">
+<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
   <head>
     <meta charset="utf-8">
 
@@ -12,13 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>Thunderbird Everywhere! — Thunderbird</title>
+    <title>{{ _('Thunderbird Everywhere!') }} — Thunderbird</title>
     <meta name="description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Thunderbird">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="{{ _('Thunderbird') }}">
+    <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
     <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
-    <meta property="og:title" content="Thunderbird Everywhere!">
+    <meta property="og:title" content="{{ _('Thunderbird Everywhere!') }}">
     <meta property="og:description" content="">
     <meta property="fb:page_id" content="348169218537151">
     <meta name="twitter:card" content="summary">
@@ -45,7 +45,7 @@
       
     
     <script>
-      window.siteLocale = "en-US";
+      window.siteLocale = "{{ LANG }}";
     </script>
   </head>
 
@@ -62,16 +62,16 @@
     <div class="hero-content">
       <div class="hero-text">
       <h1>
-        <span class="title">Thunderbird</span>
-        <span class="everywhere">Everywhere!</span>
+        {{ _('<span class="title">Thunderbird</span>
+        <span class="everywhere">Everywhere!</span>') }}
       </h1>
-      <p class="tagline">Help us bring Thunderbird to <span class="platform-gradient">Android</span> and <span class="platform-gradient">iOS.</span></p>
-      <p class="content">Did you know that <strong>less than 1%</strong> of Thunderbird users fund all the work we do? We don’t show advertisements or sell your data, and we are completely funded by donations from our community.</p>
+      <p class="tagline">{{ _('Help us bring Thunderbird to <span class="platform-gradient">Android</span> and <span class="platform-gradient">iOS.</span>') }}</p>
+      <p class="content">{{ _('Did you know that <strong>less than 1%</strong> of Thunderbird users fund all the work we do? We don’t show advertisements or sell your data, and we are completely funded by donations from our community.') }}</p>
       </div>
       <div class="donate-button-group">
         <span class="action-box">
           <a href="?form=support&utm_content=cta&utm_source=thunderbird-client&utm_medium=fru&utm_campaign=eoy_appeal_2023" class="btn-donate-appeal" data-donate-btn>
-            <span class="heart"></span><span class="text">Donate</span>
+            <span class="heart"></span><span class="text">{{ _('Donate') }}</span>
           </a>
           <div class="glow"></div>
         </span>
@@ -111,17 +111,17 @@
       
 <section class="eoy-2023-appeal">
   <div class="body-title">
-    <h2>You kept us alive - now help us thrive!</h2>
+    <h2>{{ _('You kept us alive - now help us thrive!') }}</h2>
   </div>
   <div class="body-text">
-    <p>This year, we delivered outstanding visual changes in Thunderbird 115 and <a href="https://blog.thunderbird.net/tag/2023-recap/">other major improvements</a>. In 2024, we want to make our privacy-respecting email software available to billions. Imagine Thunderbird on your <strong>Android</strong> and <strong>iOS</strong> devices!</p>
-    <p><strong>We can’t do this without you!</strong> If you get value from using Thunderbird, please consider giving a donation to support this goal.</p>
+    <p>{{ _('This year, we delivered outstanding visual changes in Thunderbird 115 and <a href="%(url)s">other major improvements</a>. In 2024, we want to make our privacy-respecting email software available to billions. Imagine Thunderbird on your <strong>Android</strong> and <strong>iOS</strong> devices!')|format(url='https://blog.thunderbird.net/tag/2023-recap/') }}</p>
+    <p>{{ _('<strong>We can’t do this without you!</strong> If you get value from using Thunderbird, please consider giving a donation to support this goal.') }}</p>
   </div>
   <div class="body-devices">
     <picture>
 <source src="/media/img/thunderbird/eoy/115.0/devices.avif" srcset="/media/img/thunderbird/eoy/115.0/devices-high-res.avif 2x"/>
 <source src="/media/img/thunderbird/eoy/115.0/devices.webp" srcset="/media/img/thunderbird/eoy/115.0/devices-high-res.webp 2x"/>
-<img class="" src="/media/img/thunderbird/eoy/115.0/devices.png" srcset="/media/img/thunderbird/eoy/115.0/devices-high-res.png 2x" alt="An illustration of Thunderbird on a phone, a desktop, and a tablet.">
+<img class="" src="/media/img/thunderbird/eoy/115.0/devices.png" srcset="/media/img/thunderbird/eoy/115.0/devices-high-res.png 2x" alt="{{ _('An illustration of Thunderbird on a phone, a desktop, and a tablet.') }}">
 </picture>
   </div>
   <div class="body-footer">
@@ -136,8 +136,8 @@
     <div class="footer-line second"></div>
   </div>
   <div class="body-logo">
-  <p>The <strong>Thunderbird</strong> Team</p>
-  <div class="logo-container">
+  <p>{{ _('The <strong>Thunderbird</strong> Team') }}</p>
+    <div class="logo-container">
       <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M439.521 260.215H439.594C466.262 166.986 582.468 121.479 700.889 121.479C782.721 121.479 856.179 147.384 906.538 188.512C876.485 189.929 846.811 195.826 818.5 206.008C859.192 221.133 894.148 244.401 920.054 273.186C900.509 269.822 880.689 268.323 860.861 268.709C909.595 339.304 935.631 423.086 935.493 508.867C935.493 742.757 745.889 932.362 511.999 932.362C281.715 932.362 88.5049 739.551 88.5049 508.867C88.5049 472.435 93.3448 434.816 102.746 399.533C105.215 392.128 108.651 385.025 113.213 382.424C118.924 379.169 124.127 388.873 124.962 392.031C131.154 415.226 139.486 437.797 149.851 459.451C148.944 411.1 169.598 367.057 198.008 328.967C216.957 303.569 234.526 280.035 242.633 212.118C243.177 207.557 247.497 204.278 251.865 205.706C313.525 225.888 346.485 328.567 341.367 414.428C375.428 419.304 375.271 383.719 375.271 383.719C364.381 350.25 371.641 288.045 439.4 260.215H439.521Z" fill="url(#paint0_linear_4383_20931)"/>
 <path opacity="0.9" d="M921.638 401.023C931.935 633.945 740.456 834.767 506.965 834.767C288.382 834.767 109.268 665.816 93.0661 451.383C90.1756 471.463 88.6556 491.717 88.5166 512.003C90.1743 741.441 282.912 932.364 512.011 932.364C745.9 932.364 935.505 742.759 935.505 508.869C935.505 471.602 930.677 435.46 921.638 401.023Z" fill="url(#paint1_radial_4383_20931)"/>
@@ -233,77 +233,11 @@
   })(window,document,'script','FundraiseUp','ADGJGYAN');
 
   // Set FRU's language
-  window._lang = "en-US";
+  window._lang = "{{ get_fru_language() }}";
 </script>
 
 
-<div id="amount-modal" class="modal rounded-lg w-full max-w-2xl shadow-lg bg-white text-black-lighter fixed z-30 mt-0 mx-auto pin-x hidden">
-  <div id="close-modal" class="absolute p-1 m-2 z-10 pin-t pin-r">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
-  </div>
-  <h1 class="text-blue-dark text-center font-4xl font-light">
-    Pay What You Want
-  </h1>
-  <form action="">
-    <section class="font-lg pt-0 pl-6 pb-4 pr-6 leading-normal text-center">
-      <p>Thunderbird is independent, free, and Open Source software sustained by your donations. Help us keep the project alive!</p>
-    </section>
-    <section id="donate-buttons" class="flex justify-center mt-6 mb-6 mx-auto">
-      <a href="#" class="btn-donate-and-download" id="amount-submit" data-donate-content="post_download">
-        <span class="donate-heart">
-          <svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
-    </g>
-</svg>
 
-          <span class="donate-wave">
-          <!-- o/ -->
-          </span>
-        </span>
-        <p>Donate & Download</p>
-      </a>
-      <a href="#" class="btn-body btn-secondary donate-download-link" id="amount-cancel">
-        <p>No Thanks, Download Now!</p>
-        <span>
-          <svg viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-              <path d="M6.91574413,5.89284986 C6.91574413,5.97767139 6.87333336,6.07309561 6.80971722,6.13671176 L1.86886311,11.0775659 C1.80524696,11.141182 1.70982274,11.1835928 1.62500121,11.1835928 C1.54017968,11.1835928 1.44475546,11.141182 1.38113932,11.0775659 L0.851004755,10.5474313 C0.787388608,10.4838152 0.744977843,10.3989936 0.744977843,10.3035694 C0.744977843,10.2187479 0.787388608,10.1233237 0.851004755,10.0597075 L5.0178624,5.89284986 L0.851004755,1.72599222 C0.787388608,1.66237607 0.744977843,1.56695185 0.744977843,1.48213032 C0.744977843,1.39730879 0.787388608,1.30188457 0.851004755,1.23826842 L1.38113932,0.70813386 C1.44475546,0.644517713 1.54017968,0.602106948 1.62500121,0.602106948 C1.70982274,0.602106948 1.80524696,0.644517713 1.86886311,0.70813386 L6.80971722,5.64898796 C6.87333336,5.71260411 6.91574413,5.80802833 6.91574413,5.89284986 Z"></path>
-            </g>
-          </svg>
-        </span>
-      </a>
-    </section>
-  </form>
-  <footer class="w-4/5 mx-auto border-0 border-t border-solid border-grey-light p-6">
-    <ul class="flex justify-center uppercase list-none font-xs p-0 m-0">
-      <li class="mr-4">
-        <a class="text-black-lightest no-underline" href="">
-          Secure
-        </a>
-      </li>
-      <li class="mr-4">
-        <a class="text-black-lightest no-underline" href="https://www.mozilla.org/en-US/privacy/websites/">
-          Privacy Policy
-        </a>
-      </li>
-      <li class="mr-4">
-        <a class="text-black-lightest no-underline" href="https://give.thunderbird.net/en-CA/ways-to-give/">
-          Other ways to donate
-        </a>
-      </li>
-      <li>
-        <a class="text-black-lightest no-underline" href="https://give.thunderbird.net/en-CA/faq/">
-          FAQ
-        </a>
-      </li>
-    </ul>
-  </footer>
-</div>
 
 <div id="modal-overlay" class="fixed pin-t pin-l m-0 p-0 w-full h-full z-20 bg-black opacity-50 hidden" tabindex="-1"></div>
 

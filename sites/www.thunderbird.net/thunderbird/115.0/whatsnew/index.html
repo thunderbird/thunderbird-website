@@ -4,7 +4,7 @@
 
 <!doctype html>
 
-<html class="windows x86 no-js" lang="en" dir="ltr">
+<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
   <head>
     <meta charset="utf-8">
 
@@ -13,13 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>What’s New in Thunderbird 115 — Thunderbird</title>
+    <title>{{_('What’s New in Thunderbird 115')}} — Thunderbird</title>
     <meta name="description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Thunderbird">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="{{ _('Thunderbird') }}">
+    <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
     <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
-    <meta property="og:title" content="What’s New in Thunderbird 115">
+    <meta property="og:title" content="{{ _('What’s New in Thunderbird 115') }}">
     <meta property="og:description" content="">
     <meta property="fb:page_id" content="348169218537151">
     <meta name="twitter:card" content="summary">
@@ -46,7 +46,7 @@
       
     
     <script>
-      window.siteLocale = "en-US";
+      window.siteLocale = "{{ LANG }}";
     </script>
   </head>
 
@@ -60,13 +60,13 @@
   <header>
     <div class="container">
       <h1>
-        What’s New in
+         {{_('What’s New in
         <br>
         <span class="tb-title">Thunderbird</span>
         <span class="version">115</span>
-        <span class="sr-only">Supernova</span>
+        <span class="sr-only">Supernova</span>')}}
       </h1>
-      <img class="supernova" src="/media/archived/img/thunderbird/whatsnew/115/supernova.png" alt="Supernova wordmark">
+      <img class="supernova" src="/media/archived/img/thunderbird/whatsnew/115/supernova.png" alt="{{_('Supernova wordmark')}}">
     </div>
   </header>
 
@@ -88,11 +88,11 @@
     </figure>
     <figcaption class="text-center">
       115 | 102
-      <a class="block caption-ln" href="https://blog.thunderbird.net/2023/08/make-thunderbird-yours-how-to-get-the-thunderbird-115-supernova-look/">Learn how to get the new look</a>
+      <a class="block caption-ln" href="https://blog.thunderbird.net/2023/08/make-thunderbird-yours-how-to-get-the-thunderbird-115-supernova-look/">{{_('Learn how to get the new look')}}</a>
     </figcaption>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container utb">
@@ -103,21 +103,21 @@
   <path d="M1 4C1 2.34316 2.34315 1 4 1H12C13.6569 1 15 2.34316 15 4V5.5V12C15 13.6569 13.6569 15 12 15H6.5H4C2.34315 15 1 13.6569 1 12V5.5V4ZM12 2H4C3.723 2 3.46015 2.05531 3.22071 2.15625C2.74184 2.35812 2.35812 2.74184 2.15625 3.22071C2.10578 3.34043 2.06756 3.46527 2.04102 3.59571V3.59766C2.02793 3.66227 2.0165 3.72817 2.00977 3.79492C2.00294 3.86216 2 3.93096 2 4V5H14V4C14 3.93096 13.9971 3.86216 13.9903 3.79492C13.9836 3.72817 13.9722 3.66227 13.9591 3.59766V3.59571C13.9325 3.46528 13.8942 3.34043 13.8438 3.22071C13.6419 2.74184 13.2583 2.35813 12.7794 2.15626C12.6603 2.1059 12.5339 2.06765 12.4044 2.04102H12.4024C12.3373 2.02769 12.2723 2.01659 12.2051 2.00977C12.1377 2.00296 12.0693 2 12 2ZM5 6H2V12C2 12.0693 2.00296 12.1377 2.00977 12.2051C2.01659 12.2723 2.02769 12.3373 2.04102 12.4024C2.06758 12.5335 2.10555 12.659 2.15626 12.7793C2.35813 13.2582 2.74184 13.6418 3.22071 13.8438C3.34043 13.8942 3.46528 13.9324 3.59571 13.959H3.59766C3.72751 13.9853 3.86216 14 4 14H5H6H7H8H12C12.2761 14 12.54 13.9449 12.7793 13.8438C13.2582 13.6418 13.6418 13.2582 13.8438 12.7793C13.9449 12.54 14 12.2761 14 12V6H8H7H6H5Z" />
 </svg>
 </span>
-          <h3>Dynamic Unified Toolbar</h3>
+          <h3>{{_('Dynamic Unified Toolbar')}}</h3>
         </div>
         <p>
-          Supernova features a single dynamic toolbar, presenting frequently used and contextual options based on the tab
+          {{_('Supernova features a single dynamic toolbar, presenting frequently used and contextual options based on the tab
           or Space that is currently active. Take full control by customizing the toolbar and window layout to perfectly fit your
-          workflow.
+          workflow.')}}
         </p>
       </div>
       <div class="image">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/utb.png" alt="The all new Unified Toolbar">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/utb.png" alt="{{_('The all new Unified Toolbar')}}">
       </div>
     </div>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container split reverse iconography">
@@ -128,20 +128,20 @@
   <path d="M4 1C3.77863 1 3.61349 1.1166 3.51953 1.21289C3.42557 1.30918 3.37207 1.40293 3.32227 1.49805C3.22266 1.68829 3.152 1.89331 3.08398 2.09766C3.01597 2.30201 2.95288 2.50444 2.89844 2.65625C2.84399 2.80806 2.74536 2.92652 2.83594 2.83594C2.92652 2.74536 2.80806 2.84399 2.65625 2.89844C2.50444 2.95288 2.30201 3.01597 2.09766 3.08398C1.89331 3.152 1.68829 3.22266 1.49805 3.32227C1.40293 3.37207 1.30918 3.42557 1.21289 3.51953C1.1166 3.61349 1 3.77863 1 4C1 4.22137 1.1166 4.38651 1.21289 4.48047C1.30918 4.57443 1.40293 4.62793 1.49805 4.67773C1.68829 4.77734 1.89331 4.848 2.09766 4.91602C2.30201 4.98403 2.50444 5.04712 2.65625 5.10156C2.80806 5.15601 2.92652 5.25464 2.83594 5.16406C2.74536 5.07348 2.84399 5.19194 2.89844 5.34375C2.95288 5.49556 3.01597 5.69799 3.08398 5.90234C3.152 6.10669 3.22266 6.31171 3.32227 6.50195C3.37207 6.59707 3.42557 6.69082 3.51953 6.78711C3.61349 6.8834 3.77863 7 4 7C4.22137 7 4.38651 6.8834 4.48047 6.78711C4.57443 6.69082 4.62793 6.59707 4.67773 6.50195C4.77734 6.31171 4.848 6.10669 4.91602 5.90234C4.98403 5.69799 5.04712 5.49556 5.10156 5.34375C5.15601 5.19194 5.25464 5.07348 5.16406 5.16406C5.07348 5.25464 5.19194 5.15601 5.34375 5.10156C5.49556 5.04712 5.69799 4.98403 5.90234 4.91602C6.10669 4.848 6.31171 4.77734 6.50195 4.67773C6.59707 4.62793 6.69082 4.57443 6.78711 4.48047C6.8834 4.38651 7 4.22137 7 4C7 3.77863 6.8834 3.61349 6.78711 3.51953C6.69082 3.42557 6.59707 3.37207 6.50195 3.32227C6.31171 3.22266 6.10669 3.152 5.90234 3.08398C5.69799 3.01597 5.49556 2.95288 5.34375 2.89844C5.19194 2.84399 5.07348 2.74536 5.16406 2.83594C5.25464 2.92652 5.15601 2.80806 5.10156 2.65625C5.04712 2.50444 4.98403 2.30201 4.91602 2.09766C4.848 1.89331 4.77734 1.68829 4.67773 1.49805C4.62793 1.40293 4.57443 1.30918 4.48047 1.21289C4.38651 1.1166 4.22137 1 4 1ZM10 1.97656C9.72107 1.97656 9.49946 2.13457 9.36133 2.28906C9.2232 2.44355 9.13035 2.61479 9.04492 2.80273C8.87407 3.17862 8.74234 3.62946 8.61719 4.08984C8.49204 4.55023 8.37641 5.01706 8.26367 5.38672C8.15093 5.75638 7.98237 6.04497 8.01367 6.01367C8.04497 5.98237 7.75638 6.15093 7.38672 6.26367C7.01706 6.37641 6.55023 6.49204 6.08984 6.61719C5.62946 6.74234 5.17862 6.87407 4.80273 7.04492C4.61479 7.13035 4.44355 7.2232 4.28906 7.36133C4.13457 7.49946 3.97656 7.72107 3.97656 8C3.97656 8.27893 4.13457 8.50054 4.28906 8.63867C4.44355 8.7768 4.61479 8.86965 4.80273 8.95508C5.17862 9.12593 5.62946 9.25766 6.08984 9.38281C6.55023 9.50796 7.01706 9.62359 7.38672 9.73633C7.75638 9.84907 8.04497 10.0176 8.01367 9.98633C7.98237 9.95503 8.15093 10.2436 8.26367 10.6133C8.37641 10.9829 8.49204 11.4498 8.61719 11.9102C8.74234 12.3705 8.87407 12.8214 9.04492 13.1973C9.13035 13.3852 9.2232 13.5564 9.36133 13.7109C9.49946 13.8654 9.72107 14.0234 10 14.0234C10.2789 14.0234 10.5005 13.8654 10.6387 13.7109C10.7768 13.5564 10.8697 13.3852 10.9551 13.1973C11.1259 12.8214 11.2577 12.3705 11.3828 11.9102C11.508 11.4498 11.6236 10.9829 11.7363 10.6133C11.8491 10.2436 12.0176 9.95503 11.9863 9.98633C11.955 10.0176 12.2436 9.84907 12.6133 9.73633C12.9829 9.62359 13.4498 9.50796 13.9102 9.38281C14.3705 9.25766 14.8214 9.12593 15.1973 8.95508C15.3852 8.86965 15.5564 8.7768 15.7109 8.63867C15.8654 8.50054 16.0234 8.27893 16.0234 8C16.0234 7.72107 15.8654 7.49946 15.7109 7.36133C15.5564 7.2232 15.3852 7.13035 15.1973 7.04492C14.8214 6.87407 14.3705 6.74234 13.9102 6.61719C13.4498 6.49204 12.9829 6.37641 12.6133 6.26367C12.2436 6.15093 11.955 5.98237 11.9863 6.01367C12.0176 6.04497 11.8491 5.75638 11.7363 5.38672C11.6236 5.01706 11.508 4.55023 11.3828 4.08984C11.2577 3.62946 11.1259 3.17862 10.9551 2.80273C10.8697 2.61479 10.7768 2.44355 10.6387 2.28906C10.5005 2.13457 10.2789 1.97656 10 1.97656ZM4 2.50781C4.05253 2.66935 4.10384 2.83712 4.16016 2.99414C4.22734 3.18146 4.24718 3.33311 4.45703 3.54297C4.66689 3.75282 4.81854 3.77266 5.00586 3.83984C5.16288 3.89616 5.33065 3.94747 5.49219 4C5.33065 4.05253 5.16288 4.10384 5.00586 4.16016C4.81854 4.22734 4.66689 4.24718 4.45703 4.45703C4.24718 4.66689 4.22734 4.81854 4.16016 5.00586C4.10384 5.16288 4.05253 5.33065 4 5.49219C3.94747 5.33065 3.89616 5.16288 3.83984 5.00586C3.77266 4.81854 3.75282 4.66689 3.54297 4.45703C3.33311 4.24718 3.18146 4.22734 2.99414 4.16016C2.83712 4.10384 2.66935 4.05253 2.50781 4C2.66935 3.94747 2.83712 3.89616 2.99414 3.83984C3.18146 3.77266 3.33311 3.75282 3.54297 3.54297C3.75282 3.33311 3.77266 3.18146 3.83984 2.99414C3.89616 2.83712 3.94747 2.66935 4 2.50781ZM10 3.13867C10.0175 3.17111 10.0267 3.17667 10.0449 3.2168C10.1675 3.4865 10.297 3.90641 10.418 4.35156C10.539 4.79671 10.6542 5.26756 10.7793 5.67773C10.9044 6.08791 10.9795 6.42091 11.2793 6.7207C11.5791 7.0205 11.9121 7.09561 12.3223 7.2207C12.7324 7.3458 13.2033 7.46102 13.6484 7.58203C14.0936 7.70304 14.5135 7.83249 14.7832 7.95508C14.8233 7.97332 14.8289 7.98251 14.8613 8C14.8289 8.01749 14.8233 8.02668 14.7832 8.04492C14.5135 8.16751 14.0936 8.29696 13.6484 8.41797C13.2033 8.53898 12.7324 8.6542 12.3223 8.7793C11.9121 8.90439 11.5791 8.97951 11.2793 9.2793C10.9795 9.57909 10.9044 9.91209 10.7793 10.3223C10.6542 10.7324 10.539 11.2033 10.418 11.6484C10.297 12.0936 10.1675 12.5135 10.0449 12.7832C10.0267 12.8233 10.0175 12.8289 10 12.8613C9.98251 12.8289 9.97332 12.8233 9.95508 12.7832C9.83249 12.5135 9.70304 12.0936 9.58203 11.6484C9.46102 11.2033 9.3458 10.7324 9.2207 10.3223C9.09561 9.91209 9.0205 9.57909 8.7207 9.2793C8.42091 8.9795 8.08791 8.90439 7.67773 8.7793C7.26756 8.6542 6.79671 8.53898 6.35156 8.41797C5.90641 8.29696 5.4865 8.16751 5.2168 8.04492C5.17667 8.02668 5.17111 8.01749 5.13867 8C5.17111 7.98251 5.17667 7.97332 5.2168 7.95508C5.4865 7.83249 5.90641 7.70304 6.35156 7.58203C6.79671 7.46102 7.26756 7.3458 7.67773 7.2207C8.08791 7.09561 8.42091 7.0205 8.7207 6.7207C9.0205 6.42091 9.09561 6.08791 9.2207 5.67773C9.3458 5.26756 9.46102 4.79671 9.58203 4.35156C9.70304 3.90641 9.83249 3.4865 9.95508 3.2168C9.97332 3.17667 9.98251 3.17111 10 3.13867ZM4 9C3.77864 9 3.61349 9.1166 3.51953 9.21289C3.42557 9.30918 3.37207 9.40293 3.32227 9.49805C3.22266 9.68829 3.152 9.89331 3.08398 10.0977C3.01597 10.302 2.95288 10.5044 2.89844 10.6562C2.84399 10.8081 2.74536 10.9265 2.83594 10.8359C2.92652 10.7454 2.80806 10.844 2.65625 10.8984C2.50444 10.9529 2.30201 11.016 2.09766 11.084C1.89331 11.152 1.68829 11.2227 1.49805 11.3223C1.40293 11.3721 1.30918 11.4256 1.21289 11.5195C1.1166 11.6135 1 11.7786 1 12C1 12.2214 1.1166 12.3865 1.21289 12.4805C1.30918 12.5744 1.40293 12.6279 1.49805 12.6777C1.68829 12.7773 1.89331 12.848 2.09766 12.916C2.30201 12.984 2.50444 13.0471 2.65625 13.1016C2.80806 13.156 2.92652 13.2546 2.83594 13.1641C2.74536 13.0735 2.84399 13.1919 2.89844 13.3438C2.95288 13.4956 3.01597 13.698 3.08398 13.9023C3.152 14.1067 3.22266 14.3117 3.32227 14.502C3.37207 14.5971 3.42557 14.6908 3.51953 14.7871C3.61349 14.8834 3.77864 15 4 15C4.22136 15 4.38651 14.8834 4.48047 14.7871C4.57443 14.6908 4.62793 14.5971 4.67773 14.502C4.77734 14.3117 4.848 14.1067 4.91602 13.9023C4.98403 13.698 5.04712 13.4956 5.10156 13.3438C5.15601 13.1919 5.25464 13.0735 5.16406 13.1641C5.07348 13.2546 5.19194 13.156 5.34375 13.1016C5.49556 13.0471 5.69799 12.984 5.90234 12.916C6.10669 12.848 6.31171 12.7773 6.50195 12.6777C6.59707 12.6279 6.69082 12.5744 6.78711 12.4805C6.8834 12.3865 7 12.2214 7 12C7 11.7786 6.8834 11.6135 6.78711 11.5195C6.69082 11.4256 6.59707 11.3721 6.50195 11.3223C6.31171 11.2227 6.10669 11.152 5.90234 11.084C5.69799 11.016 5.49556 10.9529 5.34375 10.8984C5.19194 10.844 5.07348 10.7454 5.16406 10.8359C5.25464 10.9265 5.15601 10.8081 5.10156 10.6562C5.04712 10.5044 4.98403 10.302 4.91602 10.0977C4.848 9.89331 4.77734 9.68829 4.67773 9.49805C4.62793 9.40293 4.57443 9.30918 4.48047 9.21289C4.38651 9.1166 4.22136 9 4 9ZM4 10.5078C4.05253 10.6694 4.10384 10.8371 4.16016 10.9941C4.22734 11.1815 4.24718 11.3331 4.45703 11.543C4.66689 11.7528 4.81854 11.7727 5.00586 11.8398C5.16288 11.8962 5.33065 11.9475 5.49219 12C5.33065 12.0525 5.16288 12.1038 5.00586 12.1602C4.81854 12.2273 4.66689 12.2472 4.45703 12.457C4.24718 12.6669 4.22734 12.8185 4.16016 13.0059C4.10384 13.1629 4.05253 13.3307 4 13.4922C3.94747 13.3307 3.89616 13.1629 3.83984 13.0059C3.77266 12.8185 3.75282 12.6669 3.54297 12.457C3.33311 12.2472 3.18146 12.2273 2.99414 12.1602C2.83712 12.1038 2.66935 12.0525 2.50781 12C2.66935 11.9475 2.83712 11.8962 2.99414 11.8398C3.18146 11.7727 3.33311 11.7528 3.54297 11.543C3.75282 11.3331 3.77266 11.1815 3.83984 10.9941C3.89616 10.8371 3.94747 10.6694 4 10.5078Z" />
 </svg>
 </span>
-          <h3>Beautiful Iconography</h3>
+          <h3>{{_('Beautiful Iconography')}}</h3>
         </div>
         <p>
-          More than just a refreshed set of graphics, Supernova introduces beautiful icons with a more consistent visual
-          style unique to Thunderbird. Our new designs remain sharp and pixel-perfect at any density setting.
+          {{_('More than just a refreshed set of graphics, Supernova introduces beautiful icons with a more consistent visual
+          style unique to Thunderbird. Our new designs remain sharp and pixel-perfect at any density setting.')}}
         </p>
       </div>
       <div class="image">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/iconography.png" alt="The improved icons">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/iconography.png" alt="{{_('The improved icons')}}">
       </div>
     </div>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container density">
@@ -152,11 +152,11 @@
   <path d="M1.5 1C1.45645 1.00022 1.41311 1.00613 1.37109 1.01758C1.2862 1.04008 1.20874 1.08454 1.14648 1.14648C1.11701 1.17636 1.09142 1.20983 1.07031 1.24609C1.069 1.24739 1.0677 1.24869 1.06641 1.25C1.06575 1.2513 1.0651 1.2526 1.06445 1.25391C1.04394 1.29083 1.02819 1.33021 1.01758 1.37109C1.00613 1.41311 1.00022 1.45645 1 1.5V4.5C1 4.63261 1.05268 4.75981 1.14645 4.85358C1.24021 4.94734 1.36739 5 1.5 5C1.63261 5 1.75979 4.94734 1.85355 4.85358C1.94732 4.75981 2 4.63261 2 4.5V2.70703L4.14648 4.85352C4.24024 4.94729 4.3674 4.99998 4.5 5C4.6326 4.99998 4.75976 4.94729 4.85352 4.85352C4.94726 4.75975 4.99993 4.63259 4.99993 4.5C4.99993 4.36741 4.94726 4.24025 4.85352 4.14648L2.70703 2H4.5C4.63261 2 4.75979 1.94734 4.85355 1.85358C4.94732 1.75981 5 1.63261 5 1.5C5 1.36739 4.94732 1.24019 4.85355 1.14642C4.75979 1.05266 4.63261 1 4.5 1H1.5ZM11.5 1C11.3674 1 11.2402 1.05266 11.1464 1.14642C11.0527 1.24019 11 1.36739 11 1.5C11 1.63261 11.0527 1.75981 11.1464 1.85358C11.2402 1.94734 11.3674 2 11.5 2H13.293L11.1465 4.14648C11.0527 4.24024 11 4.3674 11 4.5C11 4.6326 11.0527 4.75976 11.1465 4.85352C11.2402 4.94726 11.3674 4.99994 11.5 4.99994C11.6326 4.99994 11.7598 4.94726 11.8535 4.85352L14 2.70703V4.5C14 4.63261 14.0527 4.75981 14.1464 4.85358C14.2402 4.94734 14.3674 5 14.5 5C14.6326 5 14.7598 4.94734 14.8536 4.85358C14.9473 4.75981 15 4.63261 15 4.5V1.5C14.9998 1.45645 14.9939 1.41311 14.9824 1.37109C14.9599 1.2862 14.9155 1.20874 14.8535 1.14648C14.8236 1.11701 14.7902 1.09142 14.7539 1.07031C14.7526 1.06901 14.7513 1.0677 14.75 1.06641C14.7487 1.06575 14.7474 1.0651 14.7461 1.06445C14.7092 1.04394 14.6698 1.02819 14.6289 1.01758C14.5869 1.00613 14.5436 1.00022 14.5 1H11.5ZM6.5 5C5.67765 5 5 5.67765 5 6.5V9.5C5 10.3224 5.67765 11 6.5 11H9.5C10.3223 11 11 10.3224 11 9.5V6.5C11 5.67765 10.3223 5 9.5 5H6.5ZM6.5 6H9.5C9.78564 6 10 6.21435 10 6.5V9.5C10 9.78565 9.78564 10 9.5 10H6.5C6.21435 10 6 9.78565 6 9.5V6.5C6 6.21435 6.21435 6 6.5 6ZM1.5 11C1.36739 11 1.24021 11.0527 1.14645 11.1464C1.05268 11.2402 1 11.3674 1 11.5V14.5C1.00022 14.5436 1.00613 14.5869 1.01758 14.6289C1.04008 14.7138 1.08454 14.7913 1.14648 14.8535C1.17636 14.883 1.20983 14.9086 1.24609 14.9297C1.24739 14.931 1.24869 14.9323 1.25 14.9336C1.2513 14.9343 1.2526 14.9349 1.25391 14.9355C1.29083 14.9561 1.33021 14.9718 1.37109 14.9824C1.41311 14.9939 1.45645 14.9998 1.5 15H4.5C4.63261 15 4.75979 14.9473 4.85355 14.8536C4.94732 14.7598 5 14.6326 5 14.5C5 14.3674 4.94732 14.2402 4.85355 14.1464C4.75979 14.0527 4.63261 14 4.5 14H2.70703L4.85352 11.8535C4.94729 11.7598 4.99998 11.6326 5 11.5C4.99998 11.3674 4.94729 11.2402 4.85352 11.1465C4.75975 11.0527 4.63259 11.0001 4.5 11.0001C4.36741 11.0001 4.24025 11.0527 4.14648 11.1465L2 13.293V11.5C2 11.3674 1.94732 11.2402 1.85355 11.1464C1.75979 11.0527 1.63261 11 1.5 11ZM11.5 11C11.3674 11 11.2402 11.0527 11.1465 11.1465C11.0527 11.2402 11.0001 11.3674 11.0001 11.5C11.0001 11.6326 11.0527 11.7598 11.1465 11.8535L13.293 14H11.5C11.3674 14 11.2402 14.0527 11.1464 14.1464C11.0527 14.2402 11 14.3674 11 14.5C11 14.6326 11.0527 14.7598 11.1464 14.8536C11.2402 14.9473 11.3674 15 11.5 15H14.5C14.5436 14.9998 14.5869 14.9939 14.6289 14.9824C14.7138 14.9599 14.7913 14.9155 14.8535 14.8535C14.883 14.8236 14.9086 14.7902 14.9297 14.7539C14.931 14.7526 14.9323 14.7513 14.9336 14.75C14.9343 14.7487 14.9349 14.7474 14.9355 14.7461C14.9561 14.7092 14.9718 14.6698 14.9824 14.6289C14.9939 14.5869 14.9998 14.5436 15 14.5V11.5C15 11.3674 14.9473 11.2402 14.8536 11.1464C14.7598 11.0527 14.6326 11 14.5 11C14.3674 11 14.2402 11.0527 14.1464 11.1464C14.0527 11.2402 14 11.3674 14 11.5V13.293L11.8535 11.1465C11.7598 11.0527 11.6326 11 11.5 11V11Z" />
 </svg>
 </span>
-          <h3>Easy Density Control</h3>
+          <h3>{{_('Easy Density Control')}}</h3>
         </div>
         <p>
-          Working with multiple monitors and display resolutions? Supernova lets you dial in the perfect density settings
-          and font sizes for the entire application, with just a single click from the App Menu.
+          {{_('Working with multiple monitors and display resolutions? Supernova lets you dial in the perfect density settings
+          and font sizes for the entire application, with just a single click from the App Menu.')}}
         </p>
       </div>
       <div class="image split">
@@ -178,20 +178,20 @@
 </svg>
 </button>
           </div>
-          <img class="hidden" src="/media/archived/img/thunderbird/whatsnew/115/density-compact.png" alt="Compact density icon">
-          <img src="/media/archived/img/thunderbird/whatsnew/115/density-default.png" alt="Default density icon">
-          <img class="hidden" src="/media/archived/img/thunderbird/whatsnew/115/density-relaxed.png" alt="Relaxed density icon">
+          <img class="hidden" src="/media/archived/img/thunderbird/whatsnew/115/density-compact.png" alt="{{_('Compact density icon')}}">
+          <img src="/media/archived/img/thunderbird/whatsnew/115/density-default.png" alt="{{_('Default density icon')}}">
+          <img class="hidden" src="/media/archived/img/thunderbird/whatsnew/115/density-relaxed.png" alt="{{_('Relaxed density icon')}}">
         </div>
         <div class="density-cards">
-          <img src="/media/archived/img/thunderbird/whatsnew/115/appmenu-relaxed.png" alt="An example of the relaxed density">
-          <img src="/media/archived/img/thunderbird/whatsnew/115/appmenu-default.png" alt="An example of the relaxed density">
-          <img src="/media/archived/img/thunderbird/whatsnew/115/appmenu-compact.png" alt="An example of the relaxed density">
+          <img src="/media/archived/img/thunderbird/whatsnew/115/appmenu-relaxed.png" alt="{{_('An example of the relaxed density')}}">
+          <img src="/media/archived/img/thunderbird/whatsnew/115/appmenu-default.png" alt="{{_('An example of the relaxed density')}}">
+          <img src="/media/archived/img/thunderbird/whatsnew/115/appmenu-compact.png" alt="{{_('An example of the relaxed density')}}">
         </div>
       </div>
     </div>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container split reverse appmenu">
@@ -201,21 +201,21 @@
   <path d="M1 4C1 2.34665 2.34666 1 4 1H12C13.6533 1 15 2.34665 15 4V12C15 13.6533 13.6533 15 12 15H4C2.34666 15 1 13.6533 1 12V4ZM5 2H4C2.88336 2 2 2.88336 2 4V12C2 13.1166 2.88336 14 4 14H5H6H12C13.1166 14 14 13.1166 14 12V4C14 2.88336 13.1166 2 12 2H6H5ZM5 5C5 4.93434 4.98706 4.86932 4.96194 4.80865C4.93681 4.74799 4.89999 4.69285 4.85356 4.64642C4.80713 4.59999 4.752 4.56321 4.69134 4.53808C4.63068 4.51296 4.56566 4.5 4.5 4.5C4.43434 4.5 4.36932 4.51296 4.30866 4.53808C4.248 4.56321 4.19287 4.59999 4.14644 4.64642C4.10001 4.69285 4.06319 4.74799 4.03806 4.80865C4.01294 4.86932 4 4.93434 4 5C4 5.06565 4.01294 5.1307 4.03806 5.19135C4.06319 5.252 4.10001 5.30715 4.14644 5.3536C4.19287 5.4 4.248 5.4368 4.30866 5.4619C4.36932 5.48705 4.43434 5.5 4.5 5.5C4.56566 5.5 4.63068 5.48705 4.69134 5.4619C4.752 5.4368 4.80713 5.4 4.85356 5.3536C4.89999 5.30715 4.93681 5.252 4.96194 5.19135C4.98706 5.1307 5 5.06565 5 5ZM5 8C5 7.93435 4.98706 7.8693 4.96194 7.80865C4.93681 7.748 4.89999 7.69285 4.85356 7.6464C4.80713 7.6 4.752 7.5632 4.69134 7.5381C4.63068 7.51295 4.56566 7.5 4.5 7.5C4.43434 7.5 4.36932 7.51295 4.30866 7.5381C4.248 7.5632 4.19287 7.6 4.14644 7.6464C4.10001 7.69285 4.06319 7.748 4.03806 7.80865C4.01294 7.8693 4 7.93435 4 8C4 8.06565 4.01294 8.1307 4.03806 8.19135C4.06319 8.252 4.10001 8.30715 4.14644 8.3536C4.19287 8.4 4.248 8.4368 4.30866 8.4619C4.36932 8.48705 4.43434 8.5 4.5 8.5C4.56566 8.5 4.63068 8.48705 4.69134 8.4619C4.752 8.4368 4.80713 8.4 4.85356 8.3536C4.89999 8.30715 4.93681 8.252 4.96194 8.19135C4.98706 8.1307 5 8.06565 5 8ZM5 11C5 11.0657 4.98706 11.1307 4.96194 11.1913C4.93681 11.252 4.89999 11.3071 4.85356 11.3536C4.80713 11.4 4.752 11.4368 4.69134 11.4619C4.63068 11.487 4.56566 11.5 4.5 11.5C4.43434 11.5 4.36932 11.487 4.30866 11.4619C4.248 11.4368 4.19287 11.4 4.14644 11.3536C4.10001 11.3071 4.06319 11.252 4.03806 11.1913C4.01294 11.1307 4 11.0657 4 11C4 10.9343 4.01294 10.8693 4.03806 10.8087C4.06319 10.748 4.10001 10.6929 4.14644 10.6464C4.19287 10.6 4.248 10.5632 4.30866 10.5381C4.36932 10.513 4.43434 10.5 4.5 10.5C4.56566 10.5 4.63068 10.513 4.69134 10.5381C4.752 10.5632 4.80713 10.6 4.85356 10.6464C4.89999 10.6929 4.93681 10.748 4.96194 10.8087C4.98706 10.8693 5 10.9343 5 11ZM7 4.93946C7 4.69648 7.223 4.5 7.5 4.5H11.5C11.777 4.5 12 4.69648 12 4.93946V5.06055C12 5.30355 11.777 5.5 11.5 5.5H7.5C7.223 5.5 7 5.30355 7 5.06055V4.93946ZM7 7.959C7 7.70505 7.223 7.5 7.5 7.5H11.5C11.777 7.5 12 7.70505 12 7.959V8.041C12 8.29495 11.777 8.5 11.5 8.5H7.5C7.223 8.5 7 8.29495 7 8.041V7.959ZM7 11C7 10.723 7.223 10.5 7.5 10.5H11.5C11.777 10.5 12 10.723 12 11C12 11.277 11.777 11.5 11.5 11.5H7.5C7.223 11.5 7 11.277 7 11Z" />
 </svg>
 </span>
-          <h3>Intuitive App Menu</h3>
+          <h3>{{_('Intuitive App Menu')}}</h3>
         </div>
         <p>
-          The new Application Menu (≡) in Supernova is now keyboard-accessible, and redesigned for faster, easier
+          {{_('The new Application Menu (≡) in Supernova is now keyboard-accessible, and redesigned for faster, easier
           navigation. Fewer submenus, persistent global options, and consistent iconography combine to create a much
-          more intuitive experience.
+          more intuitive experience.')}}
         </p>
       </div>
       <div class="image">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/appmenu.png" alt="The new AppMenu">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/appmenu.png" alt="{{_('The new AppMenu')}}">
       </div>
     </div>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container split">
@@ -227,12 +227,12 @@
   <path d="M4 1C2.34314 1 1 2.34315 1 4V5.5V12C1 13.6569 2.34314 15 4 15H6.5H12C13.6569 15 15 13.6569 15 12V5.5V4C15 2.34315 13.6569 1 12 1H4ZM4 2H12C12.0693 2 12.1377 2.00296 12.2051 2.00977C12.2723 2.01659 12.3372 2.02769 12.4023 2.04102H12.4043C12.5338 2.06765 12.6602 2.10589 12.7793 2.15625C13.2582 2.35812 13.6419 2.74184 13.8438 3.22071C13.8942 3.34043 13.9324 3.46528 13.959 3.59571V3.59766C13.9721 3.66227 13.9836 3.72817 13.9903 3.79492C13.9971 3.86216 14 3.93096 14 4V5H2V4C2 3.93096 2.00294 3.86216 2.00977 3.79492C2.0165 3.72817 2.02793 3.66227 2.04102 3.59766V3.59571C2.06756 3.46527 2.10578 3.34042 2.15625 3.2207C2.35812 2.74183 2.74183 2.35812 3.2207 2.15625C3.46014 2.05531 3.723 2 4 2ZM2 6H6V14H4C3.86216 14 3.72751 13.9853 3.59766 13.959H3.59571C3.46527 13.9324 3.34043 13.8942 3.22071 13.8437C2.74184 13.6418 2.35812 13.2582 2.15625 12.7793C2.10554 12.659 2.06758 12.5334 2.04102 12.4023C2.02769 12.3372 2.01659 12.2723 2.00977 12.2051C2.00296 12.1377 2 12.0693 2 12V6ZM7 6H14V12C14 12.2761 13.9449 12.54 13.8438 12.7793C13.6418 13.2582 13.2582 13.6418 12.7793 13.8438C12.54 13.9449 12.2761 14 12 14H7V6Z" />
 </svg>
 </span>
-            <h3>New + Sortable Folder Modes</h3>
+            <h3>{{_('New + Sortable Folder Modes')}}</h3>
           </div>
           <p>
-            Supernova gives you more control by introducing sortable Folder Modes. Display all of your Tags in the Folder
+            {{_('Supernova gives you more control by introducing sortable Folder Modes. Display all of your Tags in the Folder
             Pane, turn on and off Local Folders, or move your favorite Folder Mode sections up and down with one click. Less
-            scrolling, more productivity.
+            scrolling, more productivity.')}}
           </p>
         </div>
 
@@ -243,22 +243,22 @@
   <path d="M6.15051 2.1442C6.24409 2.05181 6.3703 2 6.50181 2H13.5018C13.778 2 14.0018 2.22386 14.0018 2.5V9.5C14.0018 9.63151 13.95 9.75772 13.8576 9.8513L8.21874 15.5624C7.6317 16.1558 6.68057 16.1499 6.09532 15.5647L0.437121 9.90647C-0.14814 9.32121 -0.154317 8.37046 0.439011 7.78342L6.15051 2.1442ZM6.70705 3L1.14234 8.49429C1.14229 8.49434 1.14239 8.49424 1.14234 8.49429C0.948186 8.68655 0.946082 9.00122 1.14423 9.19936L6.80243 14.8576C7.00059 15.0557 7.31509 15.0538 7.50729 14.8597C7.50735 14.8596 7.50722 14.8597 7.50729 14.8597L13.0018 9.29476V3H6.70705ZM10.0018 5C9.44952 5 9.00181 5.44771 9.00181 6C9.00181 6.55229 9.44952 7 10.0018 7C10.5541 7 11.0018 6.55229 11.0018 6C11.0018 5.44771 10.5541 5 10.0018 5ZM8.00181 6C8.00181 4.89543 8.89724 4 10.0018 4C11.1064 4 12.0018 4.89543 12.0018 6C12.0018 7.10457 11.1064 8 10.0018 8C8.89724 8 8.00181 7.10457 8.00181 6Z" />
 </svg>
 </span>
-            <h3>Eye-Catching Tags View</h3>
+            <h3>{{_('Eye-Catching Tags View')}}</h3>
           </div>
           <p>
-            Tags are a familiar and powerful part of your workflow, so Supernova adds an eye-catching “Tags” view to the
-            Folder Pane. Quickly jump to your custom, color-coded tag categories to find and filter your messages even faster.
+            {{_('Tags are a familiar and powerful part of your workflow, so Supernova adds an eye-catching “Tags” view to the
+            Folder Pane. Quickly jump to your custom, color-coded tag categories to find and filter your messages even faster.')}}
           </p>
         </div>
       </div>
 
       <div class="image">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/folderpane.png" alt="The improved folder pane">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/folderpane.png" alt="{{_('The improved folder pane')}}">
       </div>
     </div>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container split reverse cardsview">
@@ -269,25 +269,25 @@
   <path d="M2.5 2C2.77614 2 3 2.22386 3 2.5V4H9V2.5C9 2.22386 9.22386 2 9.5 2C9.77614 2 10 2.22386 10 2.5V4C10 4.55314 9.55314 5 9 5H3C2.44686 5 2 4.55314 2 4V2.5C2 2.22386 2.22386 2 2.5 2ZM2 7C2 6.44772 2.44772 6 3 6H9C9.55229 6 10 6.44772 10 7V9C10 9.55228 9.55229 10 9 10H3C2.44772 10 2 9.55228 2 9V7ZM9 7H3V9H9V7ZM2 12C2 11.4469 2.44686 11 3 11H9C9.55314 11 10 11.4469 10 12V13.5C10 13.7761 9.77614 14 9.5 14C9.22386 14 9 13.7761 9 13.5V12H3V13.5C3 13.7761 2.77614 14 2.5 14C2.22386 14 2 13.7761 2 13.5V12Z" />
 </svg>
 </span>
-          <h3>Modernized Cards View</h3>
+          <h3>{{_('Modernized Cards View')}}</h3>
         </div>
         <p>
-          Supernova’s new Card View is our version of the well-known vertical layout for the Message List, perfect for
+          {{_('Supernova’s new Card View is our version of the well-known vertical layout for the Message List, perfect for
           people used to modern webmail. Card View emulates a mobile interface list with multi-line support, offering a more
-          comfortable appearance to reduce cognitive burden.
+          comfortable appearance to reduce cognitive burden.')}}
         </p>
       </div>
       <div class="image">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-1.png" alt="An example of a message in card view">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-2.png" alt="An example of a message in card view">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-3.png" alt="An example of a message in card view">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-4.png" alt="An example of a message in card view">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-5.png" alt="An example of a message in card view">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-1.png" alt="{{_('An example of a message in card view')}}">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-2.png" alt="{{_('An example of a message in card view')}}">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-3.png" alt="{{_('An example of a message in card view')}}">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-4.png" alt="{{_('An example of a message in card view')}}">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/msg-5.png" alt="{{_('An example of a message in card view')}}">
       </div>
     </div>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container split reverse ab">
@@ -298,20 +298,20 @@
   <path d="M4 1C2.9007 1 2 1.90065 2 3H1.5C1.223 3 1 3.223 1 3.5C1 3.777 1.223 4 1.5 4H2V6H1.5C1.223 6 1 6.223 1 6.5C1 6.777 1.223 7 1.5 7H2V9H1.5C1.223 9 1 9.223 1 9.5C1 9.777 1.223 10 1.5 10H2C2 10.0795 2.00652 10.1572 2.01562 10.2344C2.01491 10.5953 2.01382 11.4601 2.01172 12H1.5C1.223 12 1 12.223 1 12.5C1 12.777 1.223 13 1.5 13H2C2 14.0993 2.9007 15 4 15H12C13.0993 15 14 14.0993 14 13V12.5V11V3C14 1.90065 13.0993 1 12 1H4ZM4 2H12C12.1407 2 12.2744 2.02637 12.3945 2.07617C12.4546 2.10107 12.5114 2.13247 12.5645 2.16797C12.6176 2.20347 12.666 2.24406 12.7109 2.28906C12.7559 2.33396 12.7965 2.38245 12.832 2.43555C12.8675 2.48865 12.8989 2.54537 12.9238 2.60547C12.9736 2.72557 13 2.8593 13 3V11V12.7285V13C13 13.5626 12.5626 14 12 14H4C3.4374 14 3 13.5626 3 13H3.5C3.777 13 4 12.777 4 12.5C4 12.223 3.777 12 3.5 12H3V10H3.5C3.777 10 4 9.777 4 9.5C4 9.223 3.777 9 3.5 9H3V7H3.5C3.777 7 4 6.777 4 6.5C4 6.223 3.777 6 3.5 6H3V4H3.5C3.777 4 4 3.777 4 3.5C4 3.223 3.777 3 3.5 3H3C3 3 3.00246 2.93058 3.00586 2.89648C3.01586 2.79418 3.03877 2.69557 3.07617 2.60547C3.10107 2.54537 3.13247 2.48865 3.16797 2.43555C3.20347 2.38245 3.24406 2.33396 3.28906 2.28906C3.33396 2.24406 3.38245 2.20347 3.43555 2.16797C3.48865 2.13247 3.54537 2.10107 3.60547 2.07617C3.72557 2.02637 3.8593 2 4 2ZM8 4C6.9014 4 6 4.9014 6 6C6 7.0986 6.9014 8 8 8C9.0986 8 10 7.0986 10 6C10 4.9014 9.0986 4 8 4ZM8 5C8.5582 5 9 5.4418 9 6C9 6.5582 8.5582 7 8 7C7.4418 7 7 6.5582 7 6C7 5.4418 7.4418 5 8 5ZM6.5 8C5.6777 8 5 8.6777 5 9.5V10.5C5 10.6326 5.05278 10.7597 5.14648 10.8535C5.24028 10.9472 5.3674 11 5.5 11C5.6326 11 5.75972 10.9472 5.85352 10.8535C5.94722 10.7597 6 10.6326 6 10.5V9.5C6 9.2144 6.2144 9 6.5 9C6.6326 9 6.75972 8.94722 6.85352 8.85352C6.94722 8.75972 7 8.6326 7 8.5C7 8.3674 6.94722 8.24028 6.85352 8.14648C6.75972 8.05278 6.6326 8 6.5 8ZM9.5 8C9.3674 8 9.24028 8.05278 9.14648 8.14648C9.05278 8.24028 9 8.3674 9 8.5C9 8.6326 9.05278 8.75972 9.14648 8.85352C9.24028 8.94722 9.3674 9 9.5 9C9.7856 9 10 9.2144 10 9.5V10.5C10 10.6326 10.0528 10.7597 10.1465 10.8535C10.2403 10.9472 10.3674 11 10.5 11C10.6326 11 10.7597 10.9472 10.8535 10.8535C10.9472 10.7597 11 10.6326 11 10.5V9.5C11 8.6777 10.3223 8 9.5 8Z" />
 </svg>
 </span>
-          <h3>Improved Address Book</h3>
+          <h3>{{_('Improved Address Book')}}</h3>
         </div>
         <p>
-          Supernova continues to iterate on the modernized Address Book introduced in Thunderbird 102. You’ll enjoy a new
-          tabular view, an improved Edit view, delete buttons, and better accessibility.
+          {{_('Supernova continues to iterate on the modernized Address Book introduced in Thunderbird 102. You’ll enjoy a new
+          tabular view, an improved Edit view, delete buttons, and better accessibility.')}}
         </p>
       </div>
       <div class="image">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/ab.png" alt="The improved address book edit pane">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/ab.png" alt="{{_('The improved address book edit pane')}}">
       </div>
     </div>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container accessability">
@@ -322,22 +322,22 @@
   <path d="M4.84375 2C3.8613 2 2.8749 2.37949 2.125 3.12891C1.35765 3.89574 1 4.96606 1 6C1 7.03393 1.39203 7.94914 2.125 8.68164C2.12629 8.68295 2.1276 8.68425 2.12891 8.68555C3.74795 10.2642 5.2402 11.747 6.76172 13.4043C6.76681 13.4096 6.77202 13.4148 6.77735 13.4199C7.05278 13.6952 7.4491 14 7.99609 14C8.54309 14 8.94136 13.6952 9.2168 13.4199C9.22352 13.4129 9.23003 13.4058 9.23633 13.3984C10.7161 11.7252 12.2591 10.2887 13.8672 8.68164C14.5989 7.95043 15 7.03655 15 6C15 4.96345 14.6332 3.89445 13.8672 3.12891C13.1173 2.3795 12.1309 2 11.1484 2C10.0762 2 9.14006 2.65143 8.43164 3.35938L7.99609 3.79297L7.94141 3.73828L7.86328 3.65625C7.85878 3.65292 7.85422 3.64966 7.84961 3.64648L7.5625 3.35938C6.85409 2.65144 5.91604 2 4.84375 2ZM4.84375 3C5.48109 3 6.25387 3.46521 6.85547 4.06641L7.13672 4.3457L7.17578 4.38672L8.84375 6.13672C9.05095 6.35433 9.05543 6.6516 8.85352 6.85352C8.75377 6.95326 8.66374 6.98049 8.53516 6.97656C8.40657 6.97263 8.24051 6.91881 8.08984 6.80664L5.79688 5.09961C5.57603 4.93612 5.26464 4.98148 5.09961 5.20117C4.93522 5.42287 4.98155 5.73583 5.20312 5.90039L5.88477 6.4082L3.58203 8.71094C3.33283 8.46604 3.08639 8.22067 2.83203 7.97266C2.25499 7.39598 2 6.7982 2 6C2 5.20179 2.28937 4.37824 2.83203 3.83594C3.39212 3.27621 4.11656 3 4.84375 3ZM11.1484 3C11.8756 3 12.6001 3.27621 13.1602 3.83594C13.7041 4.37953 14 5.2044 14 6C14 6.79559 13.7385 7.39469 13.1602 7.97266C11.5752 9.55661 10.0227 11.0052 8.50977 12.7129C8.35213 12.8704 8.09874 13 7.99609 13C7.89345 13 7.64204 12.8704 7.48438 12.7129C7.40499 12.6265 7.32727 12.5445 7.24805 12.459L8.85352 10.8535C9.04873 10.6583 9.04873 10.3417 8.85352 10.1465C8.75589 10.0489 8.62794 10 8.5 10C8.37206 10 8.24411 10.0489 8.14648 10.1465L6.5625 11.7305C6.30392 11.4579 6.04427 11.1886 5.78516 10.9219L6.85352 9.85352C7.04873 9.65826 7.04873 9.34174 6.85352 9.14648C6.75976 9.05271 6.6326 9.00002 6.5 9C6.3674 9.00002 6.24024 9.05271 6.14648 9.14648L5.08594 10.207C4.82363 9.94197 4.5586 9.67803 4.29297 9.41406L6.69531 7.01172L7.49414 7.60742C7.78784 7.82609 8.13441 7.96527 8.50391 7.97656C8.8734 7.98786 9.26856 7.85253 9.56055 7.56055C10.1421 6.97899 10.1272 6.03405 9.57031 5.44922L8.68555 4.51953L9.13867 4.06641C9.74025 3.46522 10.5111 3 11.1484 3V3Z" />
 </svg>
 </span>
-          <h3>Expanded Accessibility</h3>
+          <h3>{{_('Expanded Accessibility')}}</h3>
         </div>
         <p>
-          Supernova substantially improves Thunderbird’s keyboard navigation and screen reader accessibility across the
+          {{_('Supernova substantially improves Thunderbird’s keyboard navigation and screen reader accessibility across the
           entire application. We’ve also greatly expanded the ability to navigate Mail content and buttons using the TAB and
-          arrow keys.
+          arrow keys.')}}
         </p>
       </div>
       <div class="image">
         <div class="toolbar">
-          <button class="button">Button</button>
+          <button class="button">{{_('Button')}}</button>
           <div class="button-group roving-group">
-            <button class="button">Button 1</button>
-            <button class="button">Button 2</button>
-            <button class="button">Button 3</button>
-            <button class="button">Button 4</button>
+            <button class="button">{{_('Button 1')}}</button>
+            <button class="button">{{_('Button 2')}}</button>
+            <button class="button">{{_('Button 3')}}</button>
+            <button class="button">{{_('Button 4')}}</button>
           </div>
         </div>
         <div class="keyboard-keys">
@@ -349,7 +349,7 @@
     </div>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container calendar">
@@ -360,27 +360,27 @@
   <path d="M5 3.5C5 3.22386 4.77614 3 4.5 3C4.22386 3 4 3.22386 4 3.5H5ZM4 5.5C4 5.77614 4.22386 6 4.5 6C4.77614 6 5 5.77614 5 5.5H4ZM12 3.5C12 3.22386 11.7761 3 11.5 3C11.2239 3 11 3.22386 11 3.5H12ZM11 5.5C11 5.77614 11.2239 6 11.5 6C11.7761 6 12 5.77614 12 5.5H11ZM4.5 7C4.22386 7 4 7.22386 4 7.5C4 7.77614 4.22386 8 4.5 8V7ZM5.5 8C5.77614 8 6 7.77614 6 7.5C6 7.22386 5.77614 7 5.5 7V8ZM7.51562 7C7.23948 7 7.01562 7.22386 7.01562 7.5C7.01562 7.77614 7.23948 8 7.51562 8V7ZM8.51562 8C8.79177 8 9.01562 7.77614 9.01562 7.5C9.01562 7.22386 8.79177 7 8.51562 7V8ZM10.5 7C10.2239 7 10 7.22386 10 7.5C10 7.77614 10.2239 8 10.5 8V7ZM11.5 8C11.7761 8 12 7.77614 12 7.5C12 7.22386 11.7761 7 11.5 7V8ZM4.5 9C4.22386 9 4 9.22386 4 9.5C4 9.77614 4.22386 10 4.5 10V9ZM5.5 10C5.77614 10 6 9.77614 6 9.5C6 9.22386 5.77614 9 5.5 9V10ZM7.51562 9C7.23948 9 7.01562 9.22386 7.01562 9.5C7.01562 9.77614 7.23948 10 7.51562 10V9ZM8.51562 10C8.79177 10 9.01562 9.77614 9.01562 9.5C9.01562 9.22386 8.79177 9 8.51562 9V10ZM10.5 9C10.2239 9 10 9.22386 10 9.5C10 9.77614 10.2239 10 10.5 10V9ZM11.5 10C11.7761 10 12 9.77614 12 9.5C12 9.22386 11.7761 9 11.5 9V10ZM4.5 11C4.22386 11 4 11.2239 4 11.5C4 11.7761 4.22386 12 4.5 12V11ZM5.5 12C5.77614 12 6 11.7761 6 11.5C6 11.2239 5.77614 11 5.5 11V12ZM7.51562 11C7.23948 11 7.01562 11.2239 7.01562 11.5C7.01562 11.7761 7.23948 12 7.51562 12V11ZM8.51562 12C8.79177 12 9.01562 11.7761 9.01562 11.5C9.01562 11.2239 8.79177 11 8.51562 11V12ZM10.5 11C10.2239 11 10 11.2239 10 11.5C10 11.7761 10.2239 12 10.5 12V11ZM11.5 12C11.7761 12 12 11.7761 12 11.5C12 11.2239 11.7761 11 11.5 11V12ZM4 2H12V1H4V2ZM12 2C13.1046 2 14 2.89543 14 4H15C15 2.34315 13.6569 1 12 1V2ZM14 4V12H15V4H14ZM14 12C14 13.1046 13.1046 14 12 14V15C13.6569 15 15 13.6569 15 12H14ZM12 14H4V15H12V14ZM4 14C2.89543 14 2 13.1046 2 12H1C1 13.6569 2.34314 15 4 15V14ZM2 12V4H1V12H2ZM2 4C2 2.89543 2.89543 2 4 2V1C2.34314 1 1 2.34315 1 4H2ZM1.5 5H14.5V4H1.5V5ZM4 3.5V5.5H5V3.5H4ZM11 3.5V5.5H12V3.5H11ZM4.5 8H5.5V7H4.5V8ZM7.51562 8H8.51562V7H7.51562V8ZM10.5 8H11.5V7H10.5V8ZM4.5 10H5.5V9H4.5V10ZM7.51562 10H8.51562V9H7.51562V10ZM10.5 10H11.5V9H10.5V10ZM4.5 12H5.5V11H4.5V12ZM7.51562 12H8.51562V11H7.51562V12ZM10.5 12H11.5V11H10.5V12Z" />
 </svg>
 </span>
-          <h3>Improved Calendar Design</h3>
+          <h3>{{_('Improved Calendar Design')}}</h3>
         </div>
         <p>
-          As part of an ongoing effort to modernize and upgrade Thunderbird’s Calendar, Supernova introduces an improved
-          “mini-month” layout, improvements to the day/week/month grid, a pleasing color palette, and several more minor changes.
+          {{_('As part of an ongoing effort to modernize and upgrade Thunderbird’s Calendar, Supernova introduces an improved
+          “mini-month” layout, improvements to the day/week/month grid, a pleasing color palette, and several more minor changes.')}}
         </p>
       </div>
       <div class="image">
-        <img src="/media/archived/img/thunderbird/whatsnew/115/cal.png" alt="The improved calendar">
+        <img src="/media/archived/img/thunderbird/whatsnew/115/cal.png" alt="{{_('The improved calendar')}}">
       </div>
     </div>
   </section>
 
-  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="A nebula of stars"></div>
+  <div class="nebula"><img src="/media/archived/img/thunderbird/backgrounds/nebula.png" alt="{{_('A nebula of stars')}}"></div>
 
   <section class="whats-new-section">
     <div class="container info more">
-      <h3>More to come!</h3>
+      <h3>{{_('More to come!')}}</h3>
       <p>
-        Supernova is constantly evolving. Throughout the next year, we’ll deliver many improvements to existing Supernova
-        features and introduce brand new ones. Upgrade to version 115 and experience the future of Thunderbird!
+        {{_('Supernova is constantly evolving. Throughout the next year, we’ll deliver many improvements to existing Supernova
+        features and introduce brand new ones. Upgrade to version 115 and experience the future of Thunderbird!')}}
       </p>
     </div>
   </section>
@@ -420,414 +420,49 @@
         <img src="/media/svg/logo-wordmark-white.svg" alt="Thunderbird Vector Wordmark"/>
       </a>
 
-      <nav id="footer-main" role="navigation" class="mt-2">
-        <ul class="list-none p-0 flex flex-wrap items-center text-white nav-footer justify-around">
-          <li>
-            <a href="/en-US/organizations" class="nav-link">For Organizations</a>
-          </li>
-          <li>
-            <a href="/en-US/get-involved" class="nav-link">Get Involved</a>
-          </li>
-          <li>
-            <a href="/en-US/careers" class="nav-link">Careers</a>
-          </li>
-          <li>
-            <a href="https://support.mozilla.org/products/thunderbird/" class="nav-link">Get Help</a>
-          </li>
-          <li>
-            <a href="https://blog.thunderbird.net/" class="nav-link">Blog</a>
-          </li>
-          <li>
-            <a href="/en-US/about" class="nav-link">About Us</a>
-          </li>
-          <li>
-            <a href="/en-US/contact" class="nav-link">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-    <aside class="flex flex-col items-center">
-      <ul class="list-none p-0 flex flex-wrap items-center justify-around ">
-        <li class="m-1">
-          <a class="social-link font-semibold" title="Follow @mozthunderbird on Twitter"
-            href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
-            <span><svg viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <path d="M10.9263515,1.73214611 C10.6317083,2.16071805 10.2634042,2.54241494 9.84152874,2.85045102 C9.84822517,2.94420113 9.84822517,3.03795124 9.84822517,3.13170135 C9.84822517,5.99107976 7.67188329,9.28572655 3.69419998,9.28572655 C2.46875209,9.28572655 1.33035788,8.93081541 0.37276745,8.31474325 C0.5468748,8.33483256 0.714285714,8.34152899 0.895089501,8.34152899 C1.90625142,8.34152899 2.8370561,8.00001073 3.58036056,7.41742075 C2.62946657,7.39733144 1.83259062,6.77456284 1.55803672,5.91741896 C1.69196545,5.93750827 1.82589418,5.95090114 1.96651935,5.95090114 C2.16071601,5.95090114 2.35491267,5.9241154 2.53571646,5.87724034 C1.54464385,5.67634724 0.801339389,4.80581049 0.801339389,3.75446995 C0.801339389,3.74777352 0.801339389,3.73438064 0.801339389,3.72768421 C1.08928616,3.88839868 1.42410799,3.98884523 1.77901913,4.00223811 C1.19642915,3.61384479 0.814732263,2.95089757 0.814732263,2.20089667 C0.814732263,1.79911048 0.921875247,1.43080647 1.10937547,1.10937751 C2.17410888,2.42187908 3.77455722,3.27902296 5.56920222,3.37277307 C5.53572003,3.21205859 5.51563072,3.04464768 5.51563072,2.87723676 C5.51563072,1.68527106 6.47991759,0.714287758 7.67857973,0.714287758 C8.30134833,0.714287758 8.863849,0.975448783 9.25893876,1.39732429 C9.74777863,1.30357417 10.2165292,1.12277039 10.6317083,0.875002235 C10.4709938,1.37723498 10.1294755,1.79911048 9.68081426,2.06696794 C10.1160826,2.02009289 10.5379581,1.89955703 10.9263515,1.73214611 Z"></path>
-    </g>
-</svg>
-</span>
-            @mozthunderbird
-          </a>
-        </li>
-        <li class="m-1">
-          <a class="social-link font-semibold" href="https://www.facebook.com/Thunderbird/" data-link-type="footer"
-            data-link-name="Facebook (Thunderbird)">
-            <span><svg viewBox="0 0 6 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <path d="M5.78572118,0.0803572387 L5.78572118,1.84821649 L4.73438064,1.84821649 C3.91071895,1.84821649 3.75670091,2.24330625 3.75670091,2.81250335 L3.75670091,4.07812986 L5.71875682,4.07812986 L5.45759579,6.06027508 L3.75670091,6.06027508 L3.75670091,11.1428704 L1.70759132,11.1428704 L1.70759132,6.06027508 L0,6.06027508 L0,4.07812986 L1.70759132,4.07812986 L1.70759132,2.61830669 C1.70759132,0.924108244 2.74553899,0 4.25893365,0 C4.9821488,0 5.6049174,0.0535714924 5.78572118,0.0803572387 Z"></path>
-    </g>
-</svg>
-</span>
-            Thunderbird
-          </a>
-        </li>
-        <li class="m-1">
-          <a class="social-link font-semibold" title="Follow @ThunderbirdProject on YouTube"
-            href="https://www.youtube.com/@ThunderbirdProject" data-link-type="footer" data-link-name="YouTube (Thunderbird)" rel="me">
-            <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   version="1.1"
-   id="svg2"
-   width="32"
-   height="22.545456"
-   viewBox="0 0 32 22.545456"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs6">
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath18">
-      <path
-         d="M 0,192 H 192 V 0 H 0 Z"
-         id="path16" />
-    </clipPath>
-  </defs>
-  <g
-     id="g10"
-     transform="matrix(0.18181818,0,0,-0.18181818,-1.4545454,28.727291)">
-    <g
-       id="g12">
-      <g
-         id="g14"
-         clip-path="url(#clipPath18)">
-        <g
-           id="g20"
-           fill="currentColor"
-           transform="translate(78,69.8311)">
-          <path
-             d="M 0,0 V 52.338 L 46,26.168 Z M 102.322,68.806 C 100.298,76.428 94.334,82.43 86.762,84.467 73.037,88.169 18,88.169 18,88.169 c 0,0 -55.037,0 -68.762,-3.702 C -58.334,82.43 -64.298,76.428 -66.322,68.806 -70,54.992 -70,26.169 -70,26.169 c 0,0 0,-28.822 3.678,-42.637 2.024,-7.622 7.988,-13.624 15.56,-15.662 13.725,-3.701 68.762,-3.701 68.762,-3.701 0,0 55.037,0 68.762,3.701 7.572,2.038 13.536,8.04 15.56,15.662 C 106,-2.653 106,26.169 106,26.169 c 0,0 0,28.823 -3.678,42.637"
-             style="fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path22" />
-        </g>
-      </g>
-    </g>
-  </g>
-</svg>
-</span>
-            Thunderbird
-          </a>
-        </li>
-        <li class="m-1">
-          <a class="social-link font-semibold" title="Follow thunderbird-email on LinkedIn"
-            href="https://www.linkedin.com/company/thunderbird-email/" data-link-type="footer" data-link-name="LinkedIn (Thunderbird)" rel="me">
-            <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   id="Group_1282"
-   data-name="Group 1282"
-   width="32"
-   height="31.998905"
-   viewBox="0 0 32 31.998907"
-   version="1.1"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs8" />
-  <path
-     id="Path_2520"
-     data-name="Path 2520"
-     d="m 27.265515,27.265225 h -4.741399 v -7.425229 c 0,-1.770616 -0.03161,-4.049945 -2.466022,-4.049945 -2.469478,0 -2.847309,1.929157 -2.847309,3.921038 v 7.553642 H 12.469386 V 11.99545 h 4.551743 v 2.086709 h 0.06371 a 4.9883471,4.9883471 0 0 1 4.490994,-2.466515 c 4.805606,0 5.691655,3.160933 5.691655,7.273109 z M 7.1195073,9.9082463 A 2.7514933,2.7514933 0 1 1 9.8705067,7.1562591 2.7514933,2.7514933 0 0 1 7.1195073,9.9082463 M 9.490207,27.265225 H 4.7438687 V 11.99545 H 9.490207 Z M 29.6293,0.00217907 H 2.3613156 A 2.3351391,2.3351391 0 0 0 0,2.3086723 V 29.689759 a 2.3366208,2.3366208 0 0 0 2.3613156,2.308963 H 29.6293 A 2.3415598,2.3415598 0 0 0 32,29.689759 V 2.3066967 A 2.3400781,2.3400781 0 0 0 29.6293,2.0349351e-4"
-     style="fill:currentColor;stroke-width:0.493896" />
-</svg>
-</span>
-            Thunderbird
-          </a>
-        </li>
-        <li class="m-1">
-          <a class="social-link font-semibold" title="Follow @thunderbird@mastodon.online on Mastodon"
-            href="https://mastodon.online/@thunderbird" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
-            <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   height="12"
-   width="11.193398"
-   id="svg3"
-   version="1.1"
-   viewBox="0 0 11.193399 12">
-  <path
-     style="fill:currentColor;fill-rule:evenodd"
-     d="m 5.5790063,0 c -1.534141,0.0125 -3.0098524,0.17863 -3.8698611,0.57359 0,0 -1.70561599,0.76301 -1.70561599,3.36618 0,0.5961 -0.01160514,1.30889 0.00727341,2.06474 0.06193718,2.54576 0.46672702,5.05472 2.82046908,5.67771 1.0852583,0.28725 2.0170112,0.34734 2.7674335,0.30609 1.3608723,-0.0754 2.1248476,-0.4856 2.1248476,-0.4856 l -0.044954,-0.98737 c 0,0 -0.9724634,0.30659 -2.0646395,0.26922 C 4.5318688,10.74746 3.3895546,10.66792 3.21454,9.33937 3.198377,9.22267 3.190295,9.09786 3.190295,8.96681 c 0,0 1.0622137,0.25967 2.4084096,0.32134 C 6.4218613,9.32595 7.193777,9.23985 7.9778189,9.14632 9.4813795,8.96678 10.79053,8.04041 10.95507,7.19391 11.214327,5.86046 11.192972,3.93977 11.192972,3.93977 11.192972,1.3366 9.4874568,0.57359 9.4874568,0.57359 8.6275128,0.17863 7.1508275,0.01254 5.6166863,0 Z M 3.8427816,2.03403 c 0.6390261,0 1.1228982,0.24565 1.4428639,0.73694 L 5.596685,3.29233 5.9078258,2.77097 c 0.319901,-0.49129 0.8037728,-0.73694 1.4428636,-0.73694 0.5522624,0 0.9972822,0.19415 1.3370962,0.57288 0.3294049,0.37874 0.4933804,0.8906 0.4933804,1.5348 V 7.29372 H 7.9323605 V 4.23444 c 0,-0.64491 -0.271258,-0.97231 -0.8140164,-0.97231 -0.6001053,0 -0.9008935,0.38835 -0.9008935,1.15617 V 6.0928 H 4.9760202 V 4.4183 c 0,-0.76782 -0.3007881,-1.15617 -0.9008934,-1.15617 -0.5427584,0 -0.8141175,0.3274 -0.8141175,0.97231 V 7.29372 H 2.0122042 V 4.14171 c 0,-0.6442 0.1640115,-1.15606 0.4934811,-1.5348 C 2.8454347,2.22818 3.2904545,2.03403 3.8427816,2.03403 Z"
-     id="path2" />
-</svg>
-</span>
-            @thunderbird@mastodon.online
-          </a>
-        </li>
-      </ul>
-      <aside class="mt-2">
-        
-<form id="lang_form" method="get" action="/" class="flex items-center justify-end">
-  <label for="page-language-select" class="mr-2">
-    
-    
-      Page language:
-    
-  </label>
-  <aside class="relative">
-    <select id="page-language-select" name="lang" dir="ltr" class="form-select">
-      
-        <option lang="ach" value="ach" >Acholi</option>
-      
-        <option lang="af" value="af" >Afrikaans</option>
-      
-        <option lang="an" value="an" >aragonés</option>
-      
-        <option lang="ar" value="ar" >عربي</option>
-      
-        <option lang="as" value="as" >অসমীয়া</option>
-      
-        <option lang="ast" value="ast" >Asturianu</option>
-      
-        <option lang="az" value="az" >Azərbaycanca</option>
-      
-        <option lang="be" value="be" >Беларуская</option>
-      
-        <option lang="bg" value="bg" >Български</option>
-      
-        <option lang="bn" value="bn" >বাংলা</option>
-      
-        <option lang="br" value="br" >Brezhoneg</option>
-      
-        <option lang="bs" value="bs" >Bosanski</option>
-      
-        <option lang="ca" value="ca" >Català</option>
-      
-        <option lang="cak" value="cak" >Maya Kaqchikel</option>
-      
-        <option lang="cs" value="cs" >Čeština</option>
-      
-        <option lang="cy" value="cy" >Cymraeg</option>
-      
-        <option lang="da" value="da" >Dansk</option>
-      
-        <option lang="de" value="de" >Deutsch</option>
-      
-        <option lang="dsb" value="dsb" >Dolnoserbšćina</option>
-      
-        <option lang="el" value="el" >Ελληνικά</option>
-      
-        <option lang="en-CA" value="en-CA" >English (Canadian)</option>
-      
-        <option lang="en-GB" value="en-GB" >English (British)</option>
-      
-        <option lang="en-US" value="en-US" selected>English</option>
-      
-        <option lang="en-ZA" value="en-ZA" >English (South African)</option>
-      
-        <option lang="eo" value="eo" >Esperanto</option>
-      
-        <option lang="es-AR" value="es-AR" >Español (de Argentina)</option>
-      
-        <option lang="es-CL" value="es-CL" >Español (de Chile)</option>
-      
-        <option lang="es-ES" value="es-ES" >Español (de España)</option>
-      
-        <option lang="es-MX" value="es-MX" >Español (de México)</option>
-      
-        <option lang="et" value="et" >Eesti keel</option>
-      
-        <option lang="eu" value="eu" >Euskara</option>
-      
-        <option lang="fa" value="fa" >فارسی</option>
-      
-        <option lang="ff" value="ff" >Pulaar-Fulfulde</option>
-      
-        <option lang="fi" value="fi" >suomi</option>
-      
-        <option lang="fr" value="fr" >Français</option>
-      
-        <option lang="fy-NL" value="fy-NL" >Frysk</option>
-      
-        <option lang="ga-IE" value="ga-IE" >Gaeilge</option>
-      
-        <option lang="gd" value="gd" >Gàidhlig</option>
-      
-        <option lang="gl" value="gl" >Galego</option>
-      
-        <option lang="gn" value="gn" >Avañe'ẽ</option>
-      
-        <option lang="gu-IN" value="gu-IN" >ગુજરાતી (ભારત)</option>
-      
-        <option lang="he" value="he" >עברית</option>
-      
-        <option lang="hi-IN" value="hi-IN" >हिन्दी (भारत)</option>
-      
-        <option lang="hr" value="hr" >Hrvatski</option>
-      
-        <option lang="hsb" value="hsb" >Hornjoserbsce</option>
-      
-        <option lang="hu" value="hu" >magyar</option>
-      
-        <option lang="hy-AM" value="hy-AM" >Հայերեն</option>
-      
-        <option lang="id" value="id" >Bahasa Indonesia</option>
-      
-        <option lang="is" value="is" >íslenska</option>
-      
-        <option lang="it" value="it" >Italiano</option>
-      
-        <option lang="ja" value="ja" >日本語</option>
-      
-        <option lang="ka" value="ka" >ქართული</option>
-      
-        <option lang="kab" value="kab" >Taqbaylit</option>
-      
-        <option lang="kk" value="kk" >Қазақ</option>
-      
-        <option lang="km" value="km" >ខ្មែរ</option>
-      
-        <option lang="kn" value="kn" >ಕನ್ನಡ</option>
-      
-        <option lang="ko" value="ko" >한국어</option>
-      
-        <option lang="lij" value="lij" >Ligure</option>
-      
-        <option lang="lt" value="lt" >Lietuvių</option>
-      
-        <option lang="ltg" value="ltg" >Latgaliešu valoda</option>
-      
-        <option lang="lv" value="lv" >Latviešu</option>
-      
-        <option lang="mai" value="mai" >मैथिली মৈথিলী</option>
-      
-        <option lang="mk" value="mk" >Македонски</option>
-      
-        <option lang="ml" value="ml" >മലയാളം</option>
-      
-        <option lang="mr" value="mr" >मराठी</option>
-      
-        <option lang="ms" value="ms" >Melayu</option>
-      
-        <option lang="my" value="my" >မြန်မာဘာသာ</option>
-      
-        <option lang="nb-NO" value="nb-NO" >Norsk bokmål</option>
-      
-        <option lang="ne-NP" value="ne-NP" >नेपाली</option>
-      
-        <option lang="nl" value="nl" >Nederlands</option>
-      
-        <option lang="nn-NO" value="nn-NO" >Norsk nynorsk</option>
-      
-        <option lang="oc" value="oc" >occitan (lengadocian)</option>
-      
-        <option lang="or" value="or" >ଓଡ଼ିଆ</option>
-      
-        <option lang="pa-IN" value="pa-IN" >ਪੰਜਾਬੀ (ਭਾਰਤ)</option>
-      
-        <option lang="pl" value="pl" >Polski</option>
-      
-        <option lang="pt-BR" value="pt-BR" >Português (do Brasil)</option>
-      
-        <option lang="pt-PT" value="pt-PT" >Português (Europeu)</option>
-      
-        <option lang="rm" value="rm" >rumantsch</option>
-      
-        <option lang="ro" value="ro" >Română</option>
-      
-        <option lang="ru" value="ru" >Русский</option>
-      
-        <option lang="si" value="si" >සිංහල</option>
-      
-        <option lang="sk" value="sk" >slovenčina</option>
-      
-        <option lang="sl" value="sl" >Slovenščina</option>
-      
-        <option lang="son" value="son" >Soŋay</option>
-      
-        <option lang="sq" value="sq" >Shqip</option>
-      
-        <option lang="sr" value="sr" >Српски</option>
-      
-        <option lang="sv-SE" value="sv-SE" >Svenska</option>
-      
-        <option lang="ta" value="ta" >தமிழ்</option>
-      
-        <option lang="te" value="te" >తెలుగు</option>
-      
-        <option lang="th" value="th" >ไทย</option>
-      
-        <option lang="tr" value="tr" >Türkçe</option>
-      
-        <option lang="uk" value="uk" >Українська</option>
-      
-        <option lang="ur" value="ur" >اُردو</option>
-      
-        <option lang="uz" value="uz" >Oʻzbek tili</option>
-      
-        <option lang="vi" value="vi" >Tiếng Việt</option>
-      
-        <option lang="xh" value="xh" >isiXhosa</option>
-      
-        <option lang="zh-CN" value="zh-CN" >中文 (简体)</option>
-      
-        <option lang="zh-TW" value="zh-TW" >正體中文 (繁體)</option>
-      
-        <option lang="zu" value="zu" >isiZulu</option>
-      
-    </select>
-    <div class="pointer-events-none absolute pin-r flex items-center pr-1 pl-1 text-black-lighter pin-t pin-b">
-      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-      </svg>
-    </div>
-  </aside>
-  <noscript>
-    <button type="submit" class="btn-inline">Go</button>
-  </noscript>
-</form>
-
-      </aside>
-    </aside>
-  </section>
   <section class="self-center text-center max-w-5xl mt-8">
     <ul class="list-none p-0 flex justify-center flex-wrap -mt-2">
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/privacy/websites/" class="small-link" data-link-type="footer" data-link-name="Privacy">Privacy</a>
+        <a href="{{ url('privacy') }}" class="small-link" data-link-type="footer" data-link-name="Privacy">{{ _('Privacy') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/privacy/websites/#data-tools" class="small-link" data-link-type="footer" data-link-name="Cookies">Cookies</a>
+        <a href="{{ url('privacy.notices.websites') }}" class="small-link" data-link-type="footer" data-link-name="Cookies">{{ _('Cookies') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/en-US/about/legal/terms/mozilla/" class="small-link" data-link-type="footer"
-          data-link-name="Legal">Legal</a>
+        <a href="{{ url('legal.index') }}" class="small-link" data-link-type="footer"
+          data-link-name="Legal">{{ _('Legal') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/" class="small-link" data-link-type="footer"
-          data-link-name="guidelines">Participation Guidelines</a>
+        <a href="{{ url('guidelines') }}" class="small-link" data-link-type="footer"
+          data-link-name="guidelines">{{ _('Participation Guidelines') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/en-US/about/legal/report-infringement/" class="small-link" data-link-type="footer"
-          data-link-name="infringement">Report Trademark or Copyright Infringement</a>
+        <a href="{{ url('legal.infringement') }}" class="small-link" data-link-type="footer"
+          data-link-name="infringement">{{ _('Report Trademark or Copyright Infringement') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/about/legal/fraud-report/" class="small-link" data-link-type="footer"
-          data-link-name="Report Trademark Misuse">Report Misuse of Thunderbird Trademark</a>
+        <a href="{{ url('legal.fraud-report') }}" class="small-link" data-link-type="footer"
+          data-link-name="Report Trademark Misuse">{{ _('Report Misuse of Thunderbird Trademark') }}</a>
       </li>
     </ul>
 
-    <p class="mt-6 mb-6 leading-normal">Thunderbird is part of
-      <a href="https://blog.thunderbird.net/2020/01/thunderbirds-new-home/" class="inline-link">MZLA Technologies Corporation</a>,
+    <p class="mt-6 mb-6 leading-normal">
+      {%- trans url=url('foundation.licensing.website-content'),mzla=url('mzla.blog-post') -%}
+      Thunderbird is part of
+      <a href="{{ mzla }}" class="inline-link">MZLA Technologies Corporation</a>,
       a wholly owned subsidiary of Mozilla Foundation.
-      Portions of this content are ©1998–2024 by individual
+      Portions of this content are ©1998–{{ current_year }} by individual
       contributors. Content available under
-      a <a href="https://www.mozilla.org/foundation/licensing/website-content/" class="inline-link">Creative Commons license</a>.</p>
+      a <a href="{{ url }}" class="inline-link">Creative Commons license</a>.
+      {%- endtrans -%}
+    </p>
 
-    <a href="https://github.com/thunderbird/thunderbird-website" class="small-link font-semibold" data-link-type="footer"
-      data-link-name="Contribute to this site">Contribute to this site</a>
-    
+    <a href="{{ url('contribute') }}" class="small-link font-semibold" data-link-type="footer"
+      data-link-name="Contribute to this site">{{ _('Contribute to this site') }}</a>
+    {% if LANG != 'en-US' %}
+     &bull; <a href="https://pontoon.mozilla.org/{{ LANG }}/thunderbirdnet/LC_MESSAGES/messages.po/" class="small-link font-semibold"
+      data-link-type="footer" data-link-name="Translate this site">{{ _('Translate this site') }}</a>
+    {% endif %}
   </section>
 </footer>
     

@@ -2,7 +2,7 @@
 
 <!doctype html>
 
-<html class="windows x86 no-js" lang="en" dir="ltr">
+<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
   <head>
     <meta charset="utf-8">
 
@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>New in Thunderbird 78 — Thunderbird</title>
+    <title>{{ _('New in Thunderbird 78') }} — Thunderbird</title>
     <meta name="description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Thunderbird">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="{{ _('Thunderbird') }}">
+    <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
     <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
-    <meta property="og:title" content="New in Thunderbird 78">
+    <meta property="og:title" content="{{ _('New in Thunderbird 78') }}">
     <meta property="og:description" content="">
     <meta property="fb:page_id" content="348169218537151">
     <meta name="twitter:card" content="summary">
@@ -44,7 +44,7 @@
       
     
     <script>
-      window.siteLocale = "en-US";
+      window.siteLocale = "{{ LANG }}";
     </script>
   </head>
 
@@ -56,67 +56,14 @@
 
     
   <header id="masthead" class="bg-no-repeat bg-cover bg-top flex flex-col bg-header-page">
-    <section class="flex justify-between items-center p-6 flex-wrap  hidden">
-      
-        <h2 class="mt-0 mb-0">
-          <a href="/en-US/" class="block w-48 lg:w-56" title="Thunderbird" alt="Thunderbird Vector Wordmark">
-            <i class="block">
-              <img src="/media/archived/svg/logo-wordmark-white.svg" alt="Thunderbird Vector Wordmark"/>
-            </i>
-          </a>
-        </h2>
-      
 
-      
-        <a href="?form=support&utm_content=header&utm_source=thunderbird.net&utm_medium=fru&utm_campaign=donation_2023" class="btn-donate md:hidden" data-donate-btn data-donate-content="header">
-          <span class="inline-block w-3 mr-1"><svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
-    </g>
-</svg>
-</span> Donate
-        </a>
-        <nav id="nav-main" role="navigation" class="flex-grow md:flex-grow-0">
-          <ul id="nav-main-menu" class="list-none p-0 flex flex-wrap items-center text-white font-md font-semibold justify-around">
-            <li>
-              <a href="/en-US/features" class="nav-link">Features</a>
-            </li>
-            <li>
-              <a href="https://addons.thunderbird.net" class="nav-link">Add-ons</a>
-            </li>
-            <li>
-              <a href="/en-US/get-involved" class="nav-link">Get Involved</a>
-            </li>
-            <li>
-              <a href="https://support.mozilla.org/products/thunderbird/" class="nav-link">Get Help</a>
-            </li>
-            <li>
-              <a href="/en-US/about" class="nav-link">About Us</a>
-            </li>
-            <li>
-              <a href="https://blog.thunderbird.net/" class="nav-link">Blog</a>
-            </li>
-            <li class="hidden md:inline">
-              <a href="?form=support&utm_content=header&utm_source=thunderbird.net&utm_medium=fru&utm_campaign=donation_2023" class="btn-donate" data-donate-btn data-donate-content="header">
-                <span class="inline-block w-3 mr-1"><svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
-    </g>
-</svg>
-</span> Donate
-              </a>
-            </li>
-          </ul>
-        </nav>
-      
-    </section>
 
     
   <section class="text-left text-white flex flex-col items-start lg:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">New in Thunderbird 78</h1>
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ _('New in Thunderbird 78') }}</h1>
     <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-16 mt-0 p-links">
-      This article describes some of the major changes visible to users in Thunderbird version 78. Full details of all the changes can be found in the <a href="/en-US/thunderbird/releases">Thunderbird release notes from 78.0 and up</a>.
-      </p>
+      {{ _('This article describes some of the major changes visible to users in Thunderbird version 78. Full details of all the changes can be found in the <a href="%(release)s">Thunderbird release notes from 78.0 and up</a>.')|format(release=url('thunderbird.releases.index')) }}
+    </p>
   </section>
 
 
@@ -136,77 +83,11 @@
   })(window,document,'script','FundraiseUp','ADGJGYAN');
 
   // Set FRU's language
-  window._lang = "en-US";
+  window._lang = "{{ get_fru_language() }}";
 </script>
 
 
-<div id="amount-modal" class="modal rounded-lg w-full max-w-2xl shadow-lg bg-white text-black-lighter fixed z-30 mt-0 mx-auto pin-x hidden">
-  <div id="close-modal" class="absolute p-1 m-2 z-10 pin-t pin-r">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
-  </div>
-  <h1 class="text-blue-dark text-center font-4xl font-light">
-    Pay What You Want
-  </h1>
-  <form action="">
-    <section class="font-lg pt-0 pl-6 pb-4 pr-6 leading-normal text-center">
-      <p>Thunderbird is independent, free, and Open Source software sustained by your donations. Help us keep the project alive!</p>
-    </section>
-    <section id="donate-buttons" class="flex justify-center mt-6 mb-6 mx-auto">
-      <a href="#" class="btn-donate-and-download" id="amount-submit" data-donate-content="post_download">
-        <span class="donate-heart">
-          <svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
-    </g>
-</svg>
 
-          <span class="donate-wave">
-          <!-- o/ -->
-          </span>
-        </span>
-        <p>Donate & Download</p>
-      </a>
-      <a href="#" class="btn-body btn-secondary donate-download-link" id="amount-cancel">
-        <p>No Thanks, Download Now!</p>
-        <span>
-          <svg viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-              <path d="M6.91574413,5.89284986 C6.91574413,5.97767139 6.87333336,6.07309561 6.80971722,6.13671176 L1.86886311,11.0775659 C1.80524696,11.141182 1.70982274,11.1835928 1.62500121,11.1835928 C1.54017968,11.1835928 1.44475546,11.141182 1.38113932,11.0775659 L0.851004755,10.5474313 C0.787388608,10.4838152 0.744977843,10.3989936 0.744977843,10.3035694 C0.744977843,10.2187479 0.787388608,10.1233237 0.851004755,10.0597075 L5.0178624,5.89284986 L0.851004755,1.72599222 C0.787388608,1.66237607 0.744977843,1.56695185 0.744977843,1.48213032 C0.744977843,1.39730879 0.787388608,1.30188457 0.851004755,1.23826842 L1.38113932,0.70813386 C1.44475546,0.644517713 1.54017968,0.602106948 1.62500121,0.602106948 C1.70982274,0.602106948 1.80524696,0.644517713 1.86886311,0.70813386 L6.80971722,5.64898796 C6.87333336,5.71260411 6.91574413,5.80802833 6.91574413,5.89284986 Z"></path>
-            </g>
-          </svg>
-        </span>
-      </a>
-    </section>
-  </form>
-  <footer class="w-4/5 mx-auto border-0 border-t border-solid border-grey-light p-6">
-    <ul class="flex justify-center uppercase list-none font-xs p-0 m-0">
-      <li class="mr-4">
-        <a class="text-black-lightest no-underline" href="">
-          Secure
-        </a>
-      </li>
-      <li class="mr-4">
-        <a class="text-black-lightest no-underline" href="https://www.mozilla.org/en-US/privacy/websites/">
-          Privacy Policy
-        </a>
-      </li>
-      <li class="mr-4">
-        <a class="text-black-lightest no-underline" href="https://give.thunderbird.net/en-CA/ways-to-give/">
-          Other ways to donate
-        </a>
-      </li>
-      <li>
-        <a class="text-black-lightest no-underline" href="https://give.thunderbird.net/en-CA/faq/">
-          FAQ
-        </a>
-      </li>
-    </ul>
-  </footer>
-</div>
 
 <div id="modal-overlay" class="fixed pin-t pin-l m-0 p-0 w-full h-full z-20 bg-black opacity-50 hidden" tabindex="-1"></div>
 
@@ -234,10 +115,10 @@
     </g>
 </svg>
 </span>
-        Dark mode
+        {{ _('Dark mode')}}
       </h3>
       <p class="font-lg tracking-wider leading-loose mb-10">
-        There is now a dark mode in Thunderbird, making late-night email easier on the eyes. To enable, Thunderbird will use your operating system settings to see if you have enabled dark mode OS-wide.
+        {{ _('There is now a dark mode in Thunderbird, making late-night email easier on the eyes. To enable, Thunderbird will use your operating system settings to see if you have enabled dark mode OS-wide.') }}
       </p>
     </aside>
   </section>
@@ -252,13 +133,13 @@
     </g>
 </svg>
 </span>
-        Account Setup & Account Central Updated
+        {{ _('Account Setup & Account Central Updated')}}
       </h3>
       <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
-        The Account Setup window and the Account Central tab have both been updated. The Account Central tab appears when you do not have an account setup, or when you select an existing account in the folder tree.
+        {{ _('The Account Setup window and the Account Central tab have both been updated. The Account Central tab appears when you do not have an account setup, or when you select an existing account in the folder tree.') }}
       </p>
       <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1 p-links-blue">
-        The layout and dialogues have been improved to make it easier to understand the information displayed and to find relevant settings. The Account Central tab also has new information about the Thunderbird project and displays the version you are using.
+        {{ _('The layout and dialogues have been improved to make it easier to understand the information displayed and to find relevant settings. The Account Central tab also has new information about the Thunderbird project and displays the version you are using.') }}
       </p>
     </aside>
 
@@ -271,13 +152,13 @@
     </g>
 </svg>
 </span>
-        Redesigned Compose Window
+        {{ _('Redesigned Compose Window')}}
       </h3>
       <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
-        The compose window has been reworked to make composing a message faster, easier and more straightforward. The compose window now also takes up less space with recipients listed in “pills” instead of an entire line for each address.
+        {{ _('The compose window has been reworked to make composing a message faster, easier and more straightforward. The compose window now also takes up less space with recipients listed in “pills” instead of an entire line for each address.') }}
       </p>
       <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
-        The redesigned compose window makes it easier to manage many email recipients, and the new intuitive layout helps users to discover its features.
+        {{ _('The redesigned compose window makes it easier to manage many email recipients, and the new intuitive layout helps users to discover its features.') }}
       </p>
     </aside>
   </section>
@@ -293,10 +174,10 @@
     </g>
 </svg>
 </span>
-        End-to-End Encrypted Email Support
+        {{ _('End-to-End Encrypted Email Support')}}
       </h3>
       <p class="font-lg tracking-wider leading-loose mb-10">
-        End-to-end encryption for email can be used to ensure that only the sender and the recipients of a message can read the contents. Without this protection it is easy for email providers and mass surveillance to read your messages. If you would like to learn more about how end-to-end encryption in Thunderbird works, check out our article: <a href="https://support.mozilla.org/kb/introduction-to-e2e-encryption">Introduction to End-to-end encryption in Thunderbird</a>.
+        {{ _('End-to-end encryption for email can be used to ensure that only the sender and the recipients of a message can read the contents. Without this protection it is easy for email providers and mass surveillance to read your messages. If you would like to learn more about how end-to-end encryption in Thunderbird works, check out our article: <a href="%(encryption)s">Introduction to End-to-end encryption in Thunderbird</a>.')|format(encryption='https://support.mozilla.org/kb/introduction-to-e2e-encryption') }}
       </p>
     </aside>
   </section>
@@ -310,18 +191,19 @@
     </g>
 </svg>
 </span>
-        Other Notable Changes
+        {{ _('Other Notable Changes')}}
       </h3>
       <p class="font-lg tracking-wider leading-loose mb-6">
-        There are many other big changes that make Thunderbird 78 a very large release including: calendar and tasks are now integrated into Thunderbird, folder icons are now updated and their colors are customizable, the preferences are now searchable, and minimize to tray is now supported on Windows.
+        {{ _('There are many other big changes that make Thunderbird 78 a very large release including: calendar and tasks are now integrated into Thunderbird, folder icons are now updated and their colors are customizable, the preferences are now searchable, and minimize to tray is now supported on Windows.') }}
       </p>
       <p class="font-lg tracking-wider leading-loose mb-10 p-links-blue">
-        You can see details of all our changes in the release notes for <a href="/en-US/thunderbird/releases">Thunderbird 78.0 and up</a>.
+        {{ _('You can see details of all our changes in the release notes for <a href="%(release)s">Thunderbird 78.0 and up</a>.')|format(release=url('thunderbird.releases.index')) }}
       </p>
     </aside>
   </section>
 
-  <section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-10">
+  <section class="bg-prefooter bg-grey-lighter -mb-10">
+    <section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-10">
   <aside class="flex flex-col flex-1 lg:max-w-lg mb-20 lg:mb-0">
     <h3 class="header-section">
       <a id="donate" class="anchor" aria-hidden="true" href="#donate">
@@ -332,10 +214,10 @@
 </svg>
 
         </a>
-      Thunderbird is funded by users like you
+      {{ _('Thunderbird is funded by users like you')}}
     </h3>
     <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
-      Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.
+      {{ _('Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.') }}
     </p>
     <a href="?form=support&utm_content=home_page_body&utm_source=thunderbird.net&utm_medium=fru&utm_campaign=donation_2023" class="btn-donate self-start ml-0 mr-0 font-lg lg:font-base" data-donate-btn data-donate-content="home_page_body">
       <span class="inline-block w-3 mr-1"><svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -343,7 +225,7 @@
         <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
     </g>
 </svg>
-</span> Donate
+</span> {{_('Donate')}}
     </a>
   </aside>
 
@@ -357,10 +239,10 @@
 </svg>
 
       </a>
-      Join our Newsletter
+      {{ _('Join our Newsletter')}}
     </h3>
     <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
-      Keep up with the latest and greatest updates on news, features, events, and previews, and get a sneak peek on the upcoming releases.
+      {{ _('Keep up with the latest and greatest updates on news, features, events, and previews, and get a sneak peek on the upcoming releases.') }}
     </p>
     <div class="max-w-lg">
       <!-- Begin Mailchimp Signup Form -->
@@ -368,8 +250,8 @@
 class="newsletter-form"
 method="post" id="mc-embedded-subscribe-form"
 name="mc-embedded-subscribe-form">
-<input id="mce-EMAIL" name="EMAIL" type="email" placeholder="Your Email" required>
-<button type="submit" id="mc-embedded-subscribe" class="btn-newsletter">Sign me up!</button>
+<input id="mce-EMAIL" name="EMAIL" type="email" placeholder="{{ _('Your Email') }}" required>
+<button type="submit" id="mc-embedded-subscribe" class="btn-newsletter">{{ _('Sign me up!') }}</button>
 <!-- Prevent Bot signups -->
 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
   name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value=""></div>
@@ -378,6 +260,8 @@ name="mc-embedded-subscribe-form">
     </div>
   </aside>
 </section>
+
+  </section>
 
 
 
@@ -398,414 +282,53 @@ name="mc-embedded-subscribe-form">
         <img src="/media/svg/logo-wordmark-white.svg" alt="Thunderbird Vector Wordmark"/>
       </a>
 
-      <nav id="footer-main" role="navigation" class="mt-2">
-        <ul class="list-none p-0 flex flex-wrap items-center text-white nav-footer justify-around">
-          <li>
-            <a href="/en-US/organizations" class="nav-link">For Organizations</a>
-          </li>
-          <li>
-            <a href="/en-US/get-involved" class="nav-link">Get Involved</a>
-          </li>
-          <li>
-            <a href="/en-US/careers" class="nav-link">Careers</a>
-          </li>
-          <li>
-            <a href="https://support.mozilla.org/products/thunderbird/" class="nav-link">Get Help</a>
-          </li>
-          <li>
-            <a href="https://blog.thunderbird.net/" class="nav-link">Blog</a>
-          </li>
-          <li>
-            <a href="/en-US/about" class="nav-link">About Us</a>
-          </li>
-          <li>
-            <a href="/en-US/contact" class="nav-link">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-    <aside class="flex flex-col items-center">
-      <ul class="list-none p-0 flex flex-wrap items-center justify-around ">
-        <li class="m-1">
-          <a class="social-link font-semibold" title="Follow @mozthunderbird on Twitter"
-            href="https://twitter.com/mozthunderbird" data-link-type="footer" data-link-name="Twitter (Thunderbird)">
-            <span><svg viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <path d="M10.9263515,1.73214611 C10.6317083,2.16071805 10.2634042,2.54241494 9.84152874,2.85045102 C9.84822517,2.94420113 9.84822517,3.03795124 9.84822517,3.13170135 C9.84822517,5.99107976 7.67188329,9.28572655 3.69419998,9.28572655 C2.46875209,9.28572655 1.33035788,8.93081541 0.37276745,8.31474325 C0.5468748,8.33483256 0.714285714,8.34152899 0.895089501,8.34152899 C1.90625142,8.34152899 2.8370561,8.00001073 3.58036056,7.41742075 C2.62946657,7.39733144 1.83259062,6.77456284 1.55803672,5.91741896 C1.69196545,5.93750827 1.82589418,5.95090114 1.96651935,5.95090114 C2.16071601,5.95090114 2.35491267,5.9241154 2.53571646,5.87724034 C1.54464385,5.67634724 0.801339389,4.80581049 0.801339389,3.75446995 C0.801339389,3.74777352 0.801339389,3.73438064 0.801339389,3.72768421 C1.08928616,3.88839868 1.42410799,3.98884523 1.77901913,4.00223811 C1.19642915,3.61384479 0.814732263,2.95089757 0.814732263,2.20089667 C0.814732263,1.79911048 0.921875247,1.43080647 1.10937547,1.10937751 C2.17410888,2.42187908 3.77455722,3.27902296 5.56920222,3.37277307 C5.53572003,3.21205859 5.51563072,3.04464768 5.51563072,2.87723676 C5.51563072,1.68527106 6.47991759,0.714287758 7.67857973,0.714287758 C8.30134833,0.714287758 8.863849,0.975448783 9.25893876,1.39732429 C9.74777863,1.30357417 10.2165292,1.12277039 10.6317083,0.875002235 C10.4709938,1.37723498 10.1294755,1.79911048 9.68081426,2.06696794 C10.1160826,2.02009289 10.5379581,1.89955703 10.9263515,1.73214611 Z"></path>
-    </g>
-</svg>
-</span>
-            @mozthunderbird
-          </a>
-        </li>
-        <li class="m-1">
-          <a class="social-link font-semibold" href="https://www.facebook.com/Thunderbird/" data-link-type="footer"
-            data-link-name="Facebook (Thunderbird)">
-            <span><svg viewBox="0 0 6 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <path d="M5.78572118,0.0803572387 L5.78572118,1.84821649 L4.73438064,1.84821649 C3.91071895,1.84821649 3.75670091,2.24330625 3.75670091,2.81250335 L3.75670091,4.07812986 L5.71875682,4.07812986 L5.45759579,6.06027508 L3.75670091,6.06027508 L3.75670091,11.1428704 L1.70759132,11.1428704 L1.70759132,6.06027508 L0,6.06027508 L0,4.07812986 L1.70759132,4.07812986 L1.70759132,2.61830669 C1.70759132,0.924108244 2.74553899,0 4.25893365,0 C4.9821488,0 5.6049174,0.0535714924 5.78572118,0.0803572387 Z"></path>
-    </g>
-</svg>
-</span>
-            Thunderbird
-          </a>
-        </li>
-        <li class="m-1">
-          <a class="social-link font-semibold" title="Follow @ThunderbirdProject on YouTube"
-            href="https://www.youtube.com/@ThunderbirdProject" data-link-type="footer" data-link-name="YouTube (Thunderbird)" rel="me">
-            <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-<svg
-   version="1.1"
-   id="svg2"
-   width="32"
-   height="22.545456"
-   viewBox="0 0 32 22.545456"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs6">
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath18">
-      <path
-         d="M 0,192 H 192 V 0 H 0 Z"
-         id="path16" />
-    </clipPath>
-  </defs>
-  <g
-     id="g10"
-     transform="matrix(0.18181818,0,0,-0.18181818,-1.4545454,28.727291)">
-    <g
-       id="g12">
-      <g
-         id="g14"
-         clip-path="url(#clipPath18)">
-        <g
-           id="g20"
-           fill="currentColor"
-           transform="translate(78,69.8311)">
-          <path
-             d="M 0,0 V 52.338 L 46,26.168 Z M 102.322,68.806 C 100.298,76.428 94.334,82.43 86.762,84.467 73.037,88.169 18,88.169 18,88.169 c 0,0 -55.037,0 -68.762,-3.702 C -58.334,82.43 -64.298,76.428 -66.322,68.806 -70,54.992 -70,26.169 -70,26.169 c 0,0 0,-28.822 3.678,-42.637 2.024,-7.622 7.988,-13.624 15.56,-15.662 13.725,-3.701 68.762,-3.701 68.762,-3.701 0,0 55.037,0 68.762,3.701 7.572,2.038 13.536,8.04 15.56,15.662 C 106,-2.653 106,26.169 106,26.169 c 0,0 0,28.823 -3.678,42.637"
-             style="fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path22" />
-        </g>
-      </g>
-    </g>
-  </g>
-</svg>
-</span>
-            Thunderbird
-          </a>
-        </li>
-        <li class="m-1">
-          <a class="social-link font-semibold" title="Follow thunderbird-email on LinkedIn"
-            href="https://www.linkedin.com/company/thunderbird-email/" data-link-type="footer" data-link-name="LinkedIn (Thunderbird)" rel="me">
-            <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   id="Group_1282"
-   data-name="Group 1282"
-   width="32"
-   height="31.998905"
-   viewBox="0 0 32 31.998907"
-   version="1.1"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs8" />
-  <path
-     id="Path_2520"
-     data-name="Path 2520"
-     d="m 27.265515,27.265225 h -4.741399 v -7.425229 c 0,-1.770616 -0.03161,-4.049945 -2.466022,-4.049945 -2.469478,0 -2.847309,1.929157 -2.847309,3.921038 v 7.553642 H 12.469386 V 11.99545 h 4.551743 v 2.086709 h 0.06371 a 4.9883471,4.9883471 0 0 1 4.490994,-2.466515 c 4.805606,0 5.691655,3.160933 5.691655,7.273109 z M 7.1195073,9.9082463 A 2.7514933,2.7514933 0 1 1 9.8705067,7.1562591 2.7514933,2.7514933 0 0 1 7.1195073,9.9082463 M 9.490207,27.265225 H 4.7438687 V 11.99545 H 9.490207 Z M 29.6293,0.00217907 H 2.3613156 A 2.3351391,2.3351391 0 0 0 0,2.3086723 V 29.689759 a 2.3366208,2.3366208 0 0 0 2.3613156,2.308963 H 29.6293 A 2.3415598,2.3415598 0 0 0 32,29.689759 V 2.3066967 A 2.3400781,2.3400781 0 0 0 29.6293,2.0349351e-4"
-     style="fill:currentColor;stroke-width:0.493896" />
-</svg>
-</span>
-            Thunderbird
-          </a>
-        </li>
-        <li class="m-1">
-          <a class="social-link font-semibold" title="Follow @thunderbird@mastodon.online on Mastodon"
-            href="https://mastodon.online/@thunderbird" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
-            <span><?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns="http://www.w3.org/2000/svg"
-   height="12"
-   width="11.193398"
-   id="svg3"
-   version="1.1"
-   viewBox="0 0 11.193399 12">
-  <path
-     style="fill:currentColor;fill-rule:evenodd"
-     d="m 5.5790063,0 c -1.534141,0.0125 -3.0098524,0.17863 -3.8698611,0.57359 0,0 -1.70561599,0.76301 -1.70561599,3.36618 0,0.5961 -0.01160514,1.30889 0.00727341,2.06474 0.06193718,2.54576 0.46672702,5.05472 2.82046908,5.67771 1.0852583,0.28725 2.0170112,0.34734 2.7674335,0.30609 1.3608723,-0.0754 2.1248476,-0.4856 2.1248476,-0.4856 l -0.044954,-0.98737 c 0,0 -0.9724634,0.30659 -2.0646395,0.26922 C 4.5318688,10.74746 3.3895546,10.66792 3.21454,9.33937 3.198377,9.22267 3.190295,9.09786 3.190295,8.96681 c 0,0 1.0622137,0.25967 2.4084096,0.32134 C 6.4218613,9.32595 7.193777,9.23985 7.9778189,9.14632 9.4813795,8.96678 10.79053,8.04041 10.95507,7.19391 11.214327,5.86046 11.192972,3.93977 11.192972,3.93977 11.192972,1.3366 9.4874568,0.57359 9.4874568,0.57359 8.6275128,0.17863 7.1508275,0.01254 5.6166863,0 Z M 3.8427816,2.03403 c 0.6390261,0 1.1228982,0.24565 1.4428639,0.73694 L 5.596685,3.29233 5.9078258,2.77097 c 0.319901,-0.49129 0.8037728,-0.73694 1.4428636,-0.73694 0.5522624,0 0.9972822,0.19415 1.3370962,0.57288 0.3294049,0.37874 0.4933804,0.8906 0.4933804,1.5348 V 7.29372 H 7.9323605 V 4.23444 c 0,-0.64491 -0.271258,-0.97231 -0.8140164,-0.97231 -0.6001053,0 -0.9008935,0.38835 -0.9008935,1.15617 V 6.0928 H 4.9760202 V 4.4183 c 0,-0.76782 -0.3007881,-1.15617 -0.9008934,-1.15617 -0.5427584,0 -0.8141175,0.3274 -0.8141175,0.97231 V 7.29372 H 2.0122042 V 4.14171 c 0,-0.6442 0.1640115,-1.15606 0.4934811,-1.5348 C 2.8454347,2.22818 3.2904545,2.03403 3.8427816,2.03403 Z"
-     id="path2" />
-</svg>
-</span>
-            @thunderbird@mastodon.online
-          </a>
-        </li>
-      </ul>
-      <aside class="mt-2">
-        
-<form id="lang_form" method="get" action="/" class="flex items-center justify-end">
-  <label for="page-language-select" class="mr-2">
-    
-    
-      Page language:
-    
-  </label>
-  <aside class="relative">
-    <select id="page-language-select" name="lang" dir="ltr" class="form-select">
-      
-        <option lang="ach" value="ach" >Acholi</option>
-      
-        <option lang="af" value="af" >Afrikaans</option>
-      
-        <option lang="an" value="an" >aragonés</option>
-      
-        <option lang="ar" value="ar" >عربي</option>
-      
-        <option lang="as" value="as" >অসমীয়া</option>
-      
-        <option lang="ast" value="ast" >Asturianu</option>
-      
-        <option lang="az" value="az" >Azərbaycanca</option>
-      
-        <option lang="be" value="be" >Беларуская</option>
-      
-        <option lang="bg" value="bg" >Български</option>
-      
-        <option lang="bn" value="bn" >বাংলা</option>
-      
-        <option lang="br" value="br" >Brezhoneg</option>
-      
-        <option lang="bs" value="bs" >Bosanski</option>
-      
-        <option lang="ca" value="ca" >Català</option>
-      
-        <option lang="cak" value="cak" >Maya Kaqchikel</option>
-      
-        <option lang="cs" value="cs" >Čeština</option>
-      
-        <option lang="cy" value="cy" >Cymraeg</option>
-      
-        <option lang="da" value="da" >Dansk</option>
-      
-        <option lang="de" value="de" >Deutsch</option>
-      
-        <option lang="dsb" value="dsb" >Dolnoserbšćina</option>
-      
-        <option lang="el" value="el" >Ελληνικά</option>
-      
-        <option lang="en-CA" value="en-CA" >English (Canadian)</option>
-      
-        <option lang="en-GB" value="en-GB" >English (British)</option>
-      
-        <option lang="en-US" value="en-US" selected>English</option>
-      
-        <option lang="en-ZA" value="en-ZA" >English (South African)</option>
-      
-        <option lang="eo" value="eo" >Esperanto</option>
-      
-        <option lang="es-AR" value="es-AR" >Español (de Argentina)</option>
-      
-        <option lang="es-CL" value="es-CL" >Español (de Chile)</option>
-      
-        <option lang="es-ES" value="es-ES" >Español (de España)</option>
-      
-        <option lang="es-MX" value="es-MX" >Español (de México)</option>
-      
-        <option lang="et" value="et" >Eesti keel</option>
-      
-        <option lang="eu" value="eu" >Euskara</option>
-      
-        <option lang="fa" value="fa" >فارسی</option>
-      
-        <option lang="ff" value="ff" >Pulaar-Fulfulde</option>
-      
-        <option lang="fi" value="fi" >suomi</option>
-      
-        <option lang="fr" value="fr" >Français</option>
-      
-        <option lang="fy-NL" value="fy-NL" >Frysk</option>
-      
-        <option lang="ga-IE" value="ga-IE" >Gaeilge</option>
-      
-        <option lang="gd" value="gd" >Gàidhlig</option>
-      
-        <option lang="gl" value="gl" >Galego</option>
-      
-        <option lang="gn" value="gn" >Avañe'ẽ</option>
-      
-        <option lang="gu-IN" value="gu-IN" >ગુજરાતી (ભારત)</option>
-      
-        <option lang="he" value="he" >עברית</option>
-      
-        <option lang="hi-IN" value="hi-IN" >हिन्दी (भारत)</option>
-      
-        <option lang="hr" value="hr" >Hrvatski</option>
-      
-        <option lang="hsb" value="hsb" >Hornjoserbsce</option>
-      
-        <option lang="hu" value="hu" >magyar</option>
-      
-        <option lang="hy-AM" value="hy-AM" >Հայերեն</option>
-      
-        <option lang="id" value="id" >Bahasa Indonesia</option>
-      
-        <option lang="is" value="is" >íslenska</option>
-      
-        <option lang="it" value="it" >Italiano</option>
-      
-        <option lang="ja" value="ja" >日本語</option>
-      
-        <option lang="ka" value="ka" >ქართული</option>
-      
-        <option lang="kab" value="kab" >Taqbaylit</option>
-      
-        <option lang="kk" value="kk" >Қазақ</option>
-      
-        <option lang="km" value="km" >ខ្មែរ</option>
-      
-        <option lang="kn" value="kn" >ಕನ್ನಡ</option>
-      
-        <option lang="ko" value="ko" >한국어</option>
-      
-        <option lang="lij" value="lij" >Ligure</option>
-      
-        <option lang="lt" value="lt" >Lietuvių</option>
-      
-        <option lang="ltg" value="ltg" >Latgaliešu valoda</option>
-      
-        <option lang="lv" value="lv" >Latviešu</option>
-      
-        <option lang="mai" value="mai" >मैथिली মৈথিলী</option>
-      
-        <option lang="mk" value="mk" >Македонски</option>
-      
-        <option lang="ml" value="ml" >മലയാളം</option>
-      
-        <option lang="mr" value="mr" >मराठी</option>
-      
-        <option lang="ms" value="ms" >Melayu</option>
-      
-        <option lang="my" value="my" >မြန်မာဘာသာ</option>
-      
-        <option lang="nb-NO" value="nb-NO" >Norsk bokmål</option>
-      
-        <option lang="ne-NP" value="ne-NP" >नेपाली</option>
-      
-        <option lang="nl" value="nl" >Nederlands</option>
-      
-        <option lang="nn-NO" value="nn-NO" >Norsk nynorsk</option>
-      
-        <option lang="oc" value="oc" >occitan (lengadocian)</option>
-      
-        <option lang="or" value="or" >ଓଡ଼ିଆ</option>
-      
-        <option lang="pa-IN" value="pa-IN" >ਪੰਜਾਬੀ (ਭਾਰਤ)</option>
-      
-        <option lang="pl" value="pl" >Polski</option>
-      
-        <option lang="pt-BR" value="pt-BR" >Português (do Brasil)</option>
-      
-        <option lang="pt-PT" value="pt-PT" >Português (Europeu)</option>
-      
-        <option lang="rm" value="rm" >rumantsch</option>
-      
-        <option lang="ro" value="ro" >Română</option>
-      
-        <option lang="ru" value="ru" >Русский</option>
-      
-        <option lang="si" value="si" >සිංහල</option>
-      
-        <option lang="sk" value="sk" >slovenčina</option>
-      
-        <option lang="sl" value="sl" >Slovenščina</option>
-      
-        <option lang="son" value="son" >Soŋay</option>
-      
-        <option lang="sq" value="sq" >Shqip</option>
-      
-        <option lang="sr" value="sr" >Српски</option>
-      
-        <option lang="sv-SE" value="sv-SE" >Svenska</option>
-      
-        <option lang="ta" value="ta" >தமிழ்</option>
-      
-        <option lang="te" value="te" >తెలుగు</option>
-      
-        <option lang="th" value="th" >ไทย</option>
-      
-        <option lang="tr" value="tr" >Türkçe</option>
-      
-        <option lang="uk" value="uk" >Українська</option>
-      
-        <option lang="ur" value="ur" >اُردو</option>
-      
-        <option lang="uz" value="uz" >Oʻzbek tili</option>
-      
-        <option lang="vi" value="vi" >Tiếng Việt</option>
-      
-        <option lang="xh" value="xh" >isiXhosa</option>
-      
-        <option lang="zh-CN" value="zh-CN" >中文 (简体)</option>
-      
-        <option lang="zh-TW" value="zh-TW" >正體中文 (繁體)</option>
-      
-        <option lang="zu" value="zu" >isiZulu</option>
-      
-    </select>
-    <div class="pointer-events-none absolute pin-r flex items-center pr-1 pl-1 text-black-lighter pin-t pin-b">
-      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-      </svg>
-    </div>
-  </aside>
-  <noscript>
-    <button type="submit" class="btn-inline">Go</button>
-  </noscript>
-</form>
-
-      </aside>
     </aside>
+
   </section>
-  <section class="self-center text-center max-w-5xl mt-8">
+    <section class="self-center text-center max-w-5xl mt-8">
     <ul class="list-none p-0 flex justify-center flex-wrap -mt-2">
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/privacy/websites/" class="small-link" data-link-type="footer" data-link-name="Privacy">Privacy</a>
+        <a href="{{ url('privacy') }}" class="small-link" data-link-type="footer" data-link-name="Privacy">{{ _('Privacy') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/privacy/websites/#data-tools" class="small-link" data-link-type="footer" data-link-name="Cookies">Cookies</a>
+        <a href="{{ url('privacy.notices.websites') }}" class="small-link" data-link-type="footer" data-link-name="Cookies">{{ _('Cookies') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/en-US/about/legal/terms/mozilla/" class="small-link" data-link-type="footer"
-          data-link-name="Legal">Legal</a>
+        <a href="{{ url('legal.index') }}" class="small-link" data-link-type="footer"
+          data-link-name="Legal">{{ _('Legal') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/" class="small-link" data-link-type="footer"
-          data-link-name="guidelines">Participation Guidelines</a>
+        <a href="{{ url('guidelines') }}" class="small-link" data-link-type="footer"
+          data-link-name="guidelines">{{ _('Participation Guidelines') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/en-US/about/legal/report-infringement/" class="small-link" data-link-type="footer"
-          data-link-name="infringement">Report Trademark or Copyright Infringement</a>
+        <a href="{{ url('legal.infringement') }}" class="small-link" data-link-type="footer"
+          data-link-name="infringement">{{ _('Report Trademark or Copyright Infringement') }}</a>
       </li>
       <li class="ml-2 mr-2 mt-2">
-        <a href="https://www.mozilla.org/about/legal/fraud-report/" class="small-link" data-link-type="footer"
-          data-link-name="Report Trademark Misuse">Report Misuse of Thunderbird Trademark</a>
+        <a href="{{ url('legal.fraud-report') }}" class="small-link" data-link-type="footer"
+          data-link-name="Report Trademark Misuse">{{ _('Report Misuse of Thunderbird Trademark') }}</a>
       </li>
     </ul>
 
-    <p class="mt-6 mb-6 leading-normal">Thunderbird is part of
-      <a href="https://blog.thunderbird.net/2020/01/thunderbirds-new-home/" class="inline-link">MZLA Technologies Corporation</a>,
+    <p class="mt-6 mb-6 leading-normal">
+      {%- trans url=url('foundation.licensing.website-content'),mzla=url('mzla.blog-post') -%}
+      Thunderbird is part of
+      <a href="{{ mzla }}" class="inline-link">MZLA Technologies Corporation</a>,
       a wholly owned subsidiary of Mozilla Foundation.
-      Portions of this content are ©1998–2024 by individual
+      Portions of this content are ©1998–{{ current_year }} by individual
       contributors. Content available under
-      a <a href="https://www.mozilla.org/foundation/licensing/website-content/" class="inline-link">Creative Commons license</a>.</p>
+      a <a href="{{ url }}" class="inline-link">Creative Commons license</a>.
+      {%- endtrans -%}
+    </p>
 
-    <a href="https://github.com/thunderbird/thunderbird-website" class="small-link font-semibold" data-link-type="footer"
-      data-link-name="Contribute to this site">Contribute to this site</a>
-    
+    <a href="{{ url('contribute') }}" class="small-link font-semibold" data-link-type="footer"
+      data-link-name="Contribute to this site">{{ _('Contribute to this site') }}</a>
+    {% if LANG != 'en-US' %}
+     &bull; <a href="https://pontoon.mozilla.org/{{ LANG }}/thunderbirdnet/LC_MESSAGES/messages.po/" class="small-link font-semibold"
+      data-link-type="footer" data-link-name="Translate this site">{{ _('Translate this site') }}</a>
+    {% endif %}
   </section>
 </footer>
     
