@@ -56,11 +56,15 @@ def write_404_htaccess(path, lang):
         f.write('ErrorDocument 404 /{lang}/404.html\n'.format(lang=lang))
 
 
-def write_htaccess(path, url):
+def write_htaccess(path, url, condition=None):
     """Write an .htaccess to `path` that rewrites everything to `url`."""
     mkdir(path)
     with open(os.path.join(path, '.htaccess'), 'w') as f:
-        f.write('RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
+
+        f.write('Rewrite Engine On\n')
+        if condition:
+            f.write(condition)
+        f.write('RewriteRule .* {url}\n'.format(url=url))
 
 
 def delete_contents(dirpath):
@@ -324,7 +328,7 @@ class Site(object):
 
             # Write download page redirect
             downloads_path = os.path.join(self.renderpath, self.lang, 'download')
-            write_htaccess(downloads_path, settings.CANONICAL_URL)
+            write_htaccess(downloads_path, settings.CANONICAL_URL, 'RewriteCond %{REQUEST_URI} !^thank-you\n')
 
             if lang == 'en-US':
                 # 404 page for root accesses outside lang dirs.
