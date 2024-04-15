@@ -41,7 +41,7 @@
 header {
   display: flex;
   flex-direction: column;
-  min-height: 200px;
+  min-height: 12.5rem; // 200px
   background-color: var(--page-header-bg);
   color: var(--txt);
   padding-top: calc(var(--nav-height) * 2);
@@ -108,7 +108,7 @@ header {
   margin-inline: auto;
   margin-bottom: 2em;
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--font-md);
 
   &.tight {
     max-inline-size: 42%;
@@ -225,7 +225,7 @@ img {
 }
 
 body {
-  font-size: 18px;
+  font-size: var(--font-body);
   line-height: 1.5;
   font-weight: 300;
   background: var(--bg);
