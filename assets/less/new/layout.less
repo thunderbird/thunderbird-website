@@ -58,11 +58,15 @@ header {
   }
 
   @media (max-width: @md) {
-    min-height: 300px;
+    min-height: 18.75rem;
 
     .tagline {
       font-size: 4rem;
     }
+  }
+  // Fix for no hidpi 4k
+  @media (min-width: @xl) {
+    min-height: 18.75rem;
   }
 }
 
