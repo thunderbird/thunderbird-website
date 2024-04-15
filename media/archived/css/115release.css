@@ -155,7 +155,7 @@ body {
   font-size: 1rem;
   background-color: var(--bg);
   color: var(--txt);
-  background-image: url("/media/img/thunderbird/backgrounds/blob.png");
+  background-image: url("/media/archived/img/thunderbird/backgrounds/blob.png");
   background-repeat: no-repeat;
   background-position: center -300px;
   background-size: 80vw;
@@ -256,7 +256,7 @@ img {
 }
 
 .slider-box {
-  background-image: url("/media/img/thunderbird/whatsnew/115/new-old-fade.png");
+  background-image: url("/media/archived/img/thunderbird/whatsnew/115/new-old-fade.png");
   background-size: auto 95%;
   background-position: center;
   background-repeat: no-repeat;
@@ -277,12 +277,12 @@ img {
 }
 
 #before {
-  background-image: url("/media/img/thunderbird/whatsnew/115/102.png");
+  background-image: url("/media/archived/img/thunderbird/whatsnew/115/102.png");
   z-index: 0;
 }
 
 #after {
-  background-image: url("/media/img/thunderbird/whatsnew/115/115.png");
+  background-image: url("/media/archived/img/thunderbird/whatsnew/115/115.png");
   z-index: 1;
   width: calc(var(--slider) - 9px);
 }

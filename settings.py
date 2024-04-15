@@ -248,8 +248,6 @@ WEBSITE_CSS = {
     'thunderbird-style': ['less/style.less'],
     # 2024 Redesign
     'base-style': ['less/base-style.less'],
-    # Custom page styles
-    'tb-115-eoy-style': ['less/pages/eoy-2023-style.less'],
 }
 
 WEBSITE_JS = {

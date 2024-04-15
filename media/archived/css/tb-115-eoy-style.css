@@ -409,12 +409,12 @@ a:visited {
 * Media Queries
 *--------------------------*/
 :root {
-  --bg-clouds: url('/media/img/thunderbird/eoy/115.0/clouds-light.png');
-  --bg-clouds-set: image-set(url('/media/img/thunderbird/eoy/115.0/clouds-light.webp') type('image/webp'), var(--bg-clouds) type('image/png'));
+  --bg-clouds: url('/media/archived/img/thunderbird/eoy/115.0/clouds-light.png');
+  --bg-clouds-set: image-set(url('/media/archived/img/thunderbird/eoy/115.0/clouds-light.webp') type('image/webp'), var(--bg-clouds) type('image/png'));
   --bg-gradient: linear-gradient(180deg, #FAFAFA 0%, #E3E5F2 100%);
   --bg-body: var(--color-gray-05);
-  --header-phones-bg: url('/media/img/thunderbird/eoy/115.0/header-phones-high-res.png');
-  --header-phones-set: image-set(url('/media/img/thunderbird/eoy/115.0/header-phones.avif') type('image/avif') 1x, url('/media/img/thunderbird/eoy/115.0/header-phones-high-res.avif') type('image/avif') 2x, url('/media/img/thunderbird/eoy/115.0/header-phones.webp') type('image/webp') 1x, url('/media/img/thunderbird/eoy/115.0/header-phones-high-res.webp') type('image/webp') 2x, url('/media/img/thunderbird/eoy/115.0/header-phones.png') type('image/png') 1x, var(--header-phones-bg) type('image/png') 2x);
+  --header-phones-bg: url('/media/archived/img/thunderbird/eoy/115.0/header-phones-high-res.png');
+  --header-phones-set: image-set(url('/media/archived/img/thunderbird/eoy/115.0/header-phones.avif') type('image/avif') 1x, url('/media/archived/img/thunderbird/eoy/115.0/header-phones-high-res.avif') type('image/avif') 2x, url('/media/archived/img/thunderbird/eoy/115.0/header-phones.webp') type('image/webp') 1x, url('/media/archived/img/thunderbird/eoy/115.0/header-phones-high-res.webp') type('image/webp') 2x, url('/media/archived/img/thunderbird/eoy/115.0/header-phones.png') type('image/png') 1x, var(--header-phones-bg) type('image/png') 2x);
   --heading-font: 'Metropolis', sans-serif;
   --body-font: 'Inter', sans-serif;
   --text-color: var(--color-gray-80);
@@ -429,8 +429,8 @@ a:visited {
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-clouds: url('/media/img/thunderbird/eoy/115.0/clouds-dark.png');
-    --bg-clouds-set: image-set(url('/media/img/thunderbird/eoy/115.0/clouds-dark.webp') type('image/webp'), var(--bg-clouds) type('image/png'));
+    --bg-clouds: url('/media/archived/img/thunderbird/eoy/115.0/clouds-dark.png');
+    --bg-clouds-set: image-set(url('/media/archived/img/thunderbird/eoy/115.0/clouds-dark.webp') type('image/webp'), var(--bg-clouds) type('image/png'));
     --bg-gradient: linear-gradient(180deg, #000000 0%, #3E3C67 100%);
     --bg-body: var(--color-gray-90);
     --text-color: var(--color-gray-05);
