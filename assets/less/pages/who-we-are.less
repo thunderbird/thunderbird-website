@@ -11,6 +11,7 @@
     text-align: center;
     margin: auto;
   }
+
   .icon-grid {
     width: 34rem;
     display: flex;
@@ -27,6 +28,7 @@
   .icon-item {
     min-width: 128px;
     margin: auto;
+
     p {
       margin: 0;
     }
@@ -49,7 +51,7 @@
       max-width: 300px;
     }
 
-    @media(max-width: @lg) {
+    @media (max-width: @lg) {
       flex-direction: column;
       width: 100%;
       gap: 1rem;
@@ -64,12 +66,13 @@
   .values-freedom {
     flex-direction: row-reverse;
     margin-right: auto;
+
     img {
       margin-left: 0;
       margin-right: 10rem;
     }
 
-    @media(max-width: @lg) {
+    @media (max-width: @lg) {
       flex-direction: column;
       width: 100%;
 
@@ -94,17 +97,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4rem;
+    gap: 8rem;
 
     .person {
+      width: 8rem;
 
-      img {
+      picture, img {
+        width: 8rem;
         border-radius: 100%;
       }
+
       h5 {
-        margin: 0;
-        word-wrap: break-word;
+        font-size: var(--font-lg);
+        margin: auto;
+        width: min-content;
       }
+
       span {
         font-size: var(--font-regular);
       }
