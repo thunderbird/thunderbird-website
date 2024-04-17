@@ -223,6 +223,7 @@
       width: 100%;
       gap: 2rem;
       justify-content: center;
+      padding: 0;
     }
 
     li {
@@ -243,11 +244,17 @@
     .product-row {
       display: flex;
       flex-direction: column;
+      margin-bottom: 2rem;
     }
 
     .product-row-downloads {
       display: flex;
       flex-direction: column;
+
+      // Remove the glow here, it's just too much with that many buttons!
+      a.btn::before {
+        background: none !important;
+      }
 
       div {
         display: flex;

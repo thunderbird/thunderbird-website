@@ -60,19 +60,19 @@
 
 {% macro build_row(platforms, build) %}
   <div id="{{ build.locale }}" data-search="{{ build.name_en|lower }}, {{ build.name_native|lower }}" class="product-row">
-    <h4 class="subheader-section flex flex-col flex-1 items-center lg:items-start mb-0 p-2 pl-3 pr-3">
+    <h4>
       {{ build.name_en }}
-      <small class="font-normal font-regular tracking-normal normal-case text-black-lightest">
+      <small>
         {{ build.name_native }}
       </small>
     </h4>
     <div class="product-row-downloads">
-      <div class="flex flex-row flex-wrap justify-center">
+      <div class="download-button download-button-page">
         {% for p_name, p_label in (platforms|list())[:4] %}
           {{ build_button(build, p_name, _('Download for %(platform)s in %(locale)s')|format(platform=p_label|replace('\n', ' '), locale=build.name_en), _('%(platform)s')|format(platform=p_label|replace('\n', ' '))) }}
         {% endfor %}
       </div>
-      <div class="flex flex-row flex-wrap justify-center mt-2 mb-2 lg:mb-0">
+      <div class="download-button download-button-page">
         {% for p_name, p_label in (platforms|list())[-2:] %}
           {{ build_link(build, p_name, _('Download for %(platform)s in %(locale)s')|format(platform=p_label|replace('\n', ' '), locale=build.name_en), _('%(platform)s')|format(platform=p_label|replace('\n', ' '))) }}
         {% endfor %}
@@ -89,7 +89,7 @@
 {% macro build_button(build, platform, tooltip, text) %}
   {% if build.platforms[platform] %}
     <a href="{{ build.platforms[platform].download_url }}" title="{{ tooltip }}"
-      class="btn-download-inline"
+      class="btn btn-download-inline btn-download download-link btn-white-bg"
       data-download-version="{{ platform }}"
       data-download-language="{{ build.name_en|lower}}"
       data-download-locale="{{ build.locale }}"
@@ -97,7 +97,7 @@
       {% if platform == 'android' %} data-download-os="Android"
       {% elif platform == 'ios' %} data-download-os="iOS"
       {% else %} data-download-os="Desktop"{% endif %}>
-        <span class="inline-block w-3 mr-1" style="width: 1rem; display: inline-block">{{ svg('download') }}</span> {{ text }}
+        <span style="width: 1rem; display: inline-block">{{ svg('download') }}</span> {{ text }}
     </a>
   {% endif %}
 {% endmacro %}
@@ -105,7 +105,7 @@
 {% macro build_link(build, platform, tooltip, text) %}
   {% if build.platforms[platform] %}
     <a href="{{ build.platforms[platform].download_url }}" title="{{ tooltip }}"
-      class="btn-download-link"
+      class="btn-download-link btn btn-download download-link btn-white-bg"
       data-download-version="{{ platform }}"
       data-download-language="{{ build.name_en|lower}}"
       data-download-locale="{{ build.locale }}"
@@ -113,7 +113,7 @@
       {% if platform == 'android' %} data-download-os="Android"
       {% elif platform == 'ios' %} data-download-os="iOS"
       {% else %} data-download-os="Desktop"{% endif %}>
-        <span class="inline-block w-3 mr-1" style="width: 1rem; display: inline-block">{{ svg('download') }}</span> {{ text }}
+        <span style="width: 1rem; display: inline-block">{{ svg('download') }}</span> {{ text }}
     </a>
   {% endif %}
 {% endmacro %}

@@ -5,42 +5,58 @@
 {% set active_page = "holiday-calendar" %}
 {% extends "includes/base/page.html" %}
 
-{% block page_title %}{{ _('Calendar') }}{% endblock %}
+{% block page_title %}{{ _('Holiday Calendar') }}{% endblock %}
 {% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
 {% block category %}{{ _('Resources') }}{% endblock %}
 
 {% block content %}
-<section class="flex justify-between items-center bg-grey-light rounded lg:w-full max-w-6xl mx-auto">
-    <ul class="list-none p-0 flex flex-wrap justify-center flex-1 m-0">
+  <section id="all-holidays">
+    <div class="section-text wide">
+      <h2>{{ _('Add your nation’s holidays to <span class="txt-gradient">Calendar</span>!') }}</h2>
+      <p>
+        {{ _('We’ve got some holiday calendar files available for download. You can either download and then import them into Calendar or you can just subscribe to these calendars by copying their URL and then adding them as new remote calendar files. More information on installing a holiday calendar can be found in the <a href="%s">Adding a holiday calendar article</a>.')|format('https://support.mozilla.org/kb/adding-a-holiday-calendar') }}
+      </p>
+      <p>
+        {{ _('You can also find calendars to subscribe to at <a href="%s">iCalShare.com</a>.')|format('http://icalshare.com') }}
+      </p>
+    </div>
+    <div class="all-holiday-legend">
+      <ul>
       {% for letter in letters -%}
-      <li>
-        <a href="#{{ letter }}" class="btn-link text-blue-dark">{{ letter }}</a>
-      </li>
-      {% endfor -%}
-    </ul>
+          <li>
+            <a href="#{{ letter }}">
+              {{ letter }}
+            </a>
+          </li>
+        {% endfor -%}
+      </ul>
+    </div>
+  </section>
+  <section id="holidays">
+    <div class="holiday-container">
+      {% set letter = namespace(first='') %}
+      {% for calendar in calendars -%}
+        {% if letter.first != calendar.country[:1] %}
+          {% set letter.first = calendar.country[:1] %}
+          <h4 id="{{ letter.first }}" class="products-letter-legend">
+            {{ letter.first }}
+          </h4>
+        {% endif %}
+
+        <div class="product-row">
+            <div>
+              {% if calendar.author == CALDATA_AUTOGEN_AUTHOR %}
+                {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a>')|format(url=CALDATA_URL + calendar.filename, country=calendar.country ) }}
+              {% else %}
+                {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a> holidays thanks to %(authors)s')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, authors=calendar.authors) }}
+              {% endif %}
+            </div>
+            <div class="text-right p-2 font-sm uppercase font-semibold">
+              {{ calendar.datespan }}
+            </div>
+        </div>
+      {% endfor %}
+    </div>
   </section>
 
-  <section class="mb-10 flex flex-col items-start max-w-6xl mx-auto pr-8 pl-8">
-    {% set letter = namespace(first='') %}
-    {% for calendar in calendars -%}
-      {% if letter.first != calendar.country[:1] %}
-        {% set letter.first = calendar.country[:1] %}
-        <h4 id="{{ letter.first }}" class="header-section lg:w-full mb-0 pt-6 pl-3">
-          {{ letter.first }}
-        </h4>
-      {% endif %}
-      <div class="flex w-full mt-1 mb-1 bg-grey-light rounded p-1 font-md items-center">
-        <aside class="flex-1 p-2">
-          {% if calendar.author == CALDATA_AUTOGEN_AUTHOR %}
-            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a>')|format(url=CALDATA_URL + calendar.filename, country=calendar.country ) }}
-          {% else %}
-            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a> holidays thanks to %(authors)s')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, authors=calendar.authors) }}
-          {% endif %}
-        </aside>
-        <aside class="text-right p-2 font-sm uppercase font-semibold">
-          {{ calendar.datespan }}
-        </aside>
-      </div>
-    {% endfor %}
-  </section>
 {% endblock %}
