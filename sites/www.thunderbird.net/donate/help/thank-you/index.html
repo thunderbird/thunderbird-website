@@ -4,29 +4,25 @@
 
 {% extends "includes/base/page.html" %}
 
+{% set active_page = "donations-help" %}
 {% block page_title %}{{ _('Donor Help') }}{% endblock %}
-
-{% block header_content %}
-  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
-  </section>
-{% endblock %}
+{% block category %}{{ _('Contribute') }}{% endblock %}
 
 {% block content %}
-  <section id="donate" class="pb-20 flex justify-between mr-2 ml-2 md:pr-8 md:pl-8" style="min-height: 400px;">
-    <section class="flex flex-col md:flex-row justify-between mx-auto">
-      <aside class="flex flex-col flex-1 lg:max-w-4xl md:mr-8 md:ml-8 lg:ml-16 lg:mr-16 lg:pt-12">
-        <h1 class="font-2xl tracking-wider leading-loose">
+  <section id="donate" style="min-height: 16rem;">
+    <div class="container">
+      <div class="section-text">
+        <h4>
           {{ _('Thank you for contacting us. A case has been created for your issue and we will be in touch shortly.') }}
-        </h1>
-        <p class="font-lg tracking-wider leading-loose mb-6">
+        </h4>
+        <p>
           {{ _('We will get back to you soon.') }}
         </p>
-        <a href="{{url('thunderbird.index')}}" class="btn-body" style="margin-left: 0; margin-right: auto">
+        <a href="{{ url('thunderbird.index') }}" class="btn-body" style="margin-left: 0; margin-right: auto">
           {{ _('Return to Thunderbird.net') }}
         </a>
-      </aside>
-    </section>
+      </div>
+    </div>
   </section>
 {% endblock %}
 
