@@ -119,6 +119,21 @@
 
   <details class="accordion">
     <summary class="question">
+      {{ _('Can I request a refund?') }}
+    </summary>
+    <p class="answer">
+      {% trans trimmed help=url('thunderbird.donate.contact') %}
+        Your donation may be eligible for a refund. You must contact us within 15 days after the date of the donation.
+        If you believe this donation was made without your authorization, please contact us immediately. Donations made
+        via ACH or SEPA direct debit are ineligible for refunds. Due to the nature of these transactions our policy
+        prioritizes minimizing refund fraud. We sincerely appreciate your understanding. If you have any further
+        questions, <a href="{{ help }}">please contact us</a>.
+      {% endtrans %}
+    </p>
+  </details>
+
+  <details class="accordion">
+    <summary class="question">
       {{ _('Are there additional fees on my donation?') }}
     </summary>
     <p class="answer">
