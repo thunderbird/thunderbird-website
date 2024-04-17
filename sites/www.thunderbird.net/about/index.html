@@ -42,7 +42,7 @@
     </div>
     <div class="value-section values-privacy">
       <div class="image">
-      {{ high_res_img('thunderbird/base/about/privacy.png', {'alt': _('A shield with the Thunderbird logo.')}) }}
+      {{ high_res_img('thunderbird/base/about/privacy.png', {'alt': _('A shield with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
       </div>
       <div class="section-text tight">
         <h3>Privacy</h3>
@@ -59,7 +59,7 @@
     </div>
     <div class="value-section values-freedom">
       <div class="image">
-      {{ high_res_img('thunderbird/base/about/freedom.png', {'alt': _('A key with the Thunderbird logo.')}) }}
+      {{ high_res_img('thunderbird/base/about/freedom.png', {'alt': _('A key with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
       </div>
       <div class="section-text tight">
         <h3>Freedom</h3>
@@ -70,7 +70,7 @@
     </div>
     <div class="value-section values-voice">
       <div class="image">
-      {{ high_res_img('thunderbird/base/about/voice.png', {'alt': _('A speech bubble with the Thunderbird logo.')}) }}
+      {{ high_res_img('thunderbird/base/about/voice.png', {'alt': _('A speech bubble with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
       </div>
       <div class="section-text tight">
         <h3>Voice</h3>
@@ -92,7 +92,7 @@
   </div>
 </section>
 <section class="cover-container">
-  {{ high_res_img('thunderbird/base/about/contributors.png', {'alt': _('Our Contributors')}) }}
+  {{ high_res_img('thunderbird/base/about/contributors.png', {'alt': _('Our Contributors')}, alt_formats=('avif', 'webp')) }}
   {% include 'includes/components/page-separator-cover.html' %}
 </section>
 <section id="supported-by-mozilla">
