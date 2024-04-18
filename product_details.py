@@ -53,6 +53,13 @@ class ThunderbirdDetails():
         ('linux', 'Linux 32-bit')
     ])
 
+    # Grouped by platform
+    grouped_platform_labels = OrderedDict({
+        'Windows': [('win64', '64-bit (.exe)'), ('msi', '64-bit (.msi)'), ('win', '32-bit (.exe)')],
+        'Linux': [('linux64', '64-bit (binary)'), ('linux', '32-bit (binary)')],
+        'MacOS': [('osx', '64-bit (.dmg)')]
+    })
+
     languages = load_json('languages.json')
 
     current_versions = load_json('thunderbird_versions.json')
@@ -70,6 +77,12 @@ class ThunderbirdDetails():
         'beta': 'LATEST_THUNDERBIRD_DEVEL_VERSION',
         'release': 'LATEST_THUNDERBIRD_VERSION',
     }
+
+    channel_labels = OrderedDict({
+        'release': 'Release',
+        'beta': 'Beta',
+        'daily': 'Daily'
+    })
 
     def latest_version(self, channel='release'):
         """Returns the latest release version of Thunderbird by default, or other `channel`."""
@@ -196,4 +209,38 @@ class ThunderbirdDetails():
         return date
 
 
+class ThunderbirdMobileDetails():
+    """Shim for Thunderbird Mobile."""
+    platform_labels = OrderedDict([
+        ('gplay', 'Google Play Store'),
+        ('fdroid', 'F-Droid'),
+        ('apk', 'Binary')
+    ])
+
+    # Grouped by platform
+    grouped_platform_labels = OrderedDict({
+        'Android': [('gplay', 'Google Play Store'), ('fdroid', 'F-Droid'), ('apk', 'Binary (.apk)')],
+    })
+
+    version_map = {
+        'release': 'LATEST_THUNDERBIRD_VERSION',
+    }
+
+    channel_labels = OrderedDict({
+        'mobile': 'Mobile',
+    })
+
+    def get_download_url(self, channel, version, platform, locale, force_direct=True):
+        """Retrieve the download url for a given channel, version, platform and locale."""
+
+        # Nice and simple
+        if platform == 'gplay':
+            return settings.URL_MAPPINGS.get('download.android.gplay')
+        elif platform == 'fdroid':
+            return settings.URL_MAPPINGS.get('download.android.fdroid')
+        else:
+            return settings.URL_MAPPINGS.get('download.android.binary')
+
+
 thunderbird_desktop = ThunderbirdDetails()
+thunderbird_mobile = ThunderbirdMobileDetails()

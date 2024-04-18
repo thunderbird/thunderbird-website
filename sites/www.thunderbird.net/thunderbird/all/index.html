@@ -1,91 +1,189 @@
 {# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
-{% set channel = 'release' %}
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "download" %}
+{% extends "includes/base/page.html" %}
 {% from "includes/_enonly/product-all-macros.html" import build_table with context %}
-{% extends "includes/base-resp.html" %}
 
-{% block extra_meta %}<meta name="robots" content="noindex">{% endblock %}
-
-{% block page_title %}{{ _('Download Thunderbird in your language') }}{% endblock %}
-
-{% block page_desc %}
-  {% if channel != 'release' %}
-    {{ _('Be one of the first to try the newest features in Thunderbird. By giving us your feedback, you’ll help us to refine the features that will be included in the final version.') }}
-  {% else %}
-    {{ _('Get the award-winning email application from Mozilla. Import your existing mail and enjoy our new features like tabbed email and advanced search.') }}
-  {% endif %}
-{% endblock %}
-
-{% block body_class -%}
-  sky {{ platform }} {{ channel }}
-{% endblock %}
-
-{% block header_content %}
-  <section class="text-center text-white flex flex-col items-center xl:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
-      {{ self.page_desc() }}
-    </p>
-  </section>
-  {% if channel != 'alpha' %}{# Earlybird release notes are not available yet #}
-    <nav class="text-left text-white flex justify-center mx-auto bg-black-25 rounded mb-10">
-      <ul class="list-none p-0 flex flex-wrap justify-around flex-1 m-0">
-        <li class="ml-2 mr-2">
-          <a href="{{ thunderbird_url('system-requirements', channel) }}" class="btn-link">{{ _('Check the system requirements') }}</a>
-        </li>
-        <li class="ml-2 mr-2">
-          <a href="{{ thunderbird_url('releasenotes', channel) }}" class="btn-link">{{ _('Release notes') }}</a>
-        </li>
-        <li class="ml-2 mr-2">
-          <a href="{{ url('thunderbird.releases.index') }}" class="btn-link">{{ _('All Releases') }}</a>
-        </li>
-      </ul>
-    </nav>
-  {% endif %}
-{% endblock %}
+{% block page_title %}{{ _('Download') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('Resources') }}{% endblock %}
 
 {% block content %}
+<section>
+  <div class="container" id="get-thunderbird">
+    <div id="select-download" class="two-columns">
+      <div class="column">
+        <div class="section-text">
+          <div class="section-title">
+            <h2>{{ _('Get <span class="txt-gradient">Thunderbird</span>') }}</h2>
+          </div>
+          <p>{{ _('These are officially maintained and distributed by Thunderbird. Download the latest Release version unless you wish to test the Beta version and report bugs.') }}</p>
+        </div>
+        <div class="section-text">
+          <div id="daily-warning" class="warning-panel hidden">
+            <p>{{ _('The Daily version is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
+          </div>
 
-  <section class="pt-10 flex flex-wrap max-w-6xl mx-auto">
-    <aside class="flex flex-col w-full pr-8 pl-8 mb-6">
-      <h3 class="header-section">
-        <span>{{ svg('dictionaries') }}</span>
-        <aside class="flex flex-col">
-          {{ _('Fully localized versions')}}
-          <small class="font-normal font-md tracking-normal normal-case">
-            {{ _('Choose your Language and Operating System') }}
-          </small>
-        </aside>
-      </h3>
-    </aside>
-  </section>
+          <!-- 1. Locale -->
+          <label class="pretend-to-be-h6" for="download-language-select" role="group">
+            <strong>{{ _('Locale') }}</strong>
+          </label>
+          <select id="download-language-select" name="lang" dir="ltr" class="form-select">
+            {% for code, label in translations|dictsort -%}
+            {# We're just verifying release builds! #}
+            {% if has_localized_download(code, None) %}
+            <option lang="{{ code }}" value="{{ code }}" {{
+            'selected' if code==LANG else '' }}>{{ label|safe }}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
 
-  <section class="pt-10 pb-20 w-full bg-calendar">
-    <section class="flex justify-between items-center w-full max-w-6xl mx-auto mb-10">
-      <ul class="list-none p-0 flex flex-wrap justify-center flex-1 m-0 bg-grey-light rounded mr-8 ml-8">
-        {% set letter = namespace(first='') %}
-        {% for build in full_builds -%}
+          <!-- 2. Channel -->
+          <label class="pretend-to-be-h6" for="download-browser-select" role="group">
+            <strong>{{ _('Browser Channel') }}</strong>
+          </label>
+          <select id="download-browser-select" name="download" dir="ltr" class="form-select">
+            {% for channel, channel_name in get_channels().items() %}
+            {% set option_name = 'Thunderbird %(channel_name)s'|format(channel_name=channel_name) if channel != 'release' else 'Thunderbird' %}
+            <option value="{{ channel }}">{{ _(option_name) }}</option>
+            {% endfor %}
+          </select>
+
+          <!-- 3. OS -->
+          <label class="pretend-to-be-h6" for="download-os-select" role="group">
+            <strong>{{ _('Operating System') }}</strong>
+          </label>
+          <select id="download-os-select" name="lang" dir="ltr" class="form-select">
+            {% for os, platforms in get_platforms().items() %}
+            <option data-is-mobile="{{ is_os_mobile(os) }}" value="{{ os }}">{{ os }}</option>
+            {% endfor %}
+          </select>
+
+          <!-- 4. Advanced Platform (Optional) -->
+          <details class="accordion">
+            <summary>
+              <span class="chevron-svg" aria-hidden="true">{{ svg('chevron-down') }}</span>
+              {{ _('Need a specific installer?') }}
+            </summary>
+            <div>
+              <label class="pretend-to-be-h6" for="download-advanced-platform-select" role="group">
+                <strong>{{ _('Installer Type') }}</strong>
+              </label>
+              <select id="download-advanced-platform-select" name="lang" dir="ltr" class="form-select">
+                {% for os, platforms in get_platforms().items() %}
+                {% for platform_tuple in platforms %}
+                {% set platform = platform_tuple[0] %}
+                {% set platform_name = platform_tuple[1] %}
+                <option data-for-os="{{ os }}" value="{{ platform }}">{{ platform_name }}</option>
+                {% endfor %}
+                {% endfor %}
+              </select>
+            </div>
+          </details>
+
+          <div class="download-button download-button-page">
+            <a
+              id="download-btn"
+              class="btn btn-download download-link btn-white-bg"
+              href="{{ download_url(platform_os=win64) }}"
+              data-donate-redirect="download-{{ channel or 'esr' }}"
+              data-donate-content="post_download"
+              data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}"
+            >
+              {#
+              <span id="download-icon" class="platform-icon" aria-hidden="true">
+                {{ svg(get_platform_icon(platform='win64')) }}
+              </span>
+              #}
+              {{ _('Download') }}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="section-text release-information">
+          <div class="section-title">
+            <h2>{{ _('Release Information') }}</h2>
+          </div>
+        </div>
+        <div class="platform-release">
+          <div>
+            <h4>{{ _('Other Downloads') }}</h4>
+            <ul>
+              <li>
+                <a class="dotted" href="{{ url('download.desktop.msstore') }}">{{ _('Microsoft Apps Store') }}</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a class="dotted" href="{{ url('download.desktop.flathub') }}">{{ _('Flathub') }}</a>
+              </li>
+              <li>
+                <a class="dotted" href="{{ url('download.desktop.snap') }}">{{ _('Snap Store') }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="platform-release" data-for-app="desktop">
+          <div>
+            <h4>{{ _('More Information') }}</h4>
+            <ul>
+              <li>
+                <a class="dotted" href="{{ url('thunderbird.sysreq', latest_thunderbird_version) }}">{{ _('System Requirements') }}</a>
+              </li>
+              <li>
+                <a class="dotted" href="{{ thunderbird_url('releasenotes', 'release') }}">{{ _('Release Notes') }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--
+        <div class="platform-release" data-for-app="android">
+          <div>
+            <h4>{{ _('More Information For Mobile') }}</h4>
+            <ul>
+              <li>
+                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#minimum-android-version-compatibility">{{ _('System Requirements') }}</a>
+              </li>
+              <li>
+                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#change-logs">{{ _('Release Notes') }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+
+    {# No javascript / source of truth for download links #}
+    <div id="all-downloads" data-thunderbird-version="{{ latest_thunderbird_version }}">
+      <div class="section-text">
+        <h1>{{ _('Get <span class="txt-gradient">Thunderbird</span>') }}</h1>
+        <p>{{ _('These are officially maintained and distributed by Thunderbird.') }}</p>
+        <p>{{ _('Jump to the language you wish to download by using the legend below.') }}</p>
+      </div>
+      <div class="all-downloads-legend">
+        <ul>
+          {% set letter = namespace(first='') %}
+          {% for build in full_builds -%}
           {% if letter.first != build.name_en[:1] %}
-            {% set letter.first = build.name_en[:1] %}
-            <li>
-              <a href="#{{ letter.first }}" class="btn-link text-blue-dark">
-                {{ letter.first }}
-              </a>
-            </li>
+          {% set letter.first = build.name_en[:1] %}
+          <li>
+            <a href="#{{ letter.first }}" class="btn-link text-blue-dark">
+              {{ letter.first }}
+            </a>
+          </li>
           {% endif %}
-        {% endfor -%}
-      </ul>
-    </section>
-  </section>
-
-  <section id="all-downloads" class="pb-10 w-full bg-grey-lighter" data-thunderbird-version="{{ latest_thunderbird_version }}">
-    <section class="flex max-w-6xl mx-auto pl-8 pr-8">
-      <aside class="flex flex-col w-full pr-8 pl-8">
+          {% endfor -%}
+        </ul>
+      </div>
+      <div class="all-downloads-container">
         {{ build_table(platforms, full_builds) }}
-      </aside>
-    </section>
-  </section>
-
-  {% include 'includes/site-prefooter.html' %}
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}

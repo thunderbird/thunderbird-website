@@ -1,0 +1,87 @@
+.page-participate {
+  .accordion {
+    width: 60%;
+    min-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    span {
+      display: flex;
+      align-content: center;
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: @md) {
+      width: 100%;
+    }
+  }
+
+  .two-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 200px;
+
+    div:first-child {
+      margin-left: 5rem;
+
+      @media (max-width: @lg) {
+        margin: 0;
+      }
+    }
+
+    div:nth-child(2) {
+      margin-right: 5rem;
+      @media (max-width: @lg) {
+        margin: 0;
+      }
+    }
+
+    .section-text {
+      text-align: left;
+      max-width: 500px;
+    }
+
+    @media (max-width: @lg) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .three-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    font-weight: 400;
+
+
+    @media (max-width: @sm) {
+      gap: 1rem;
+    }
+
+    .styled-list {
+      text-indent: -2.5rem;
+    }
+  }
+
+  .testimonials {
+    grid-template-rows: auto;
+  }
+
+  .styled-list {
+    font-weight: 400;
+    li {
+      font-size: 1.05rem;
+    }
+
+    a {
+      text-decoration-style: dotted;
+    }
+  }
+}

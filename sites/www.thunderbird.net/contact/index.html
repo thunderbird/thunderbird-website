@@ -2,94 +2,61 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "includes/base-resp.html" %}
+{% set active_page = "contact-us" %}
+{% extends "includes/base/page.html" %}
 
 {% block page_title %}{{ _('Contact Us') }}{% endblock %}
-
-{% block page_desc %}
-{{ _('How to contact Thunderbird.') }}
-{% endblock %}
-
-{% block header_content %}
-  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-16">{{ self.page_title() }}</h1>
-  </section>
-{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('About') }}{% endblock %}
 
 {% block content %}
-  <section class="pt-20 pb-10 flex flex-col items-center">
-    <h3 class="header-section">{{ _('Get Support')}}</h3>
-    <p class="font-lg tracking-wider leading-loose mb-10 mt-0 max-w-xl text-center">
-      {{ _('How to get support for Thunderbird.') }}
-    </p>
-
-    <section class="flex xl:w-full flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-12 leading-relaxed">
-      <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg">
-        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
-          {{ _('<a href="%(support)s" class="header-link">Mozilla Support Website</a>')|format(support=url('support')) }}
-        </h4>
-        <p class="mt-0 mb-6 flex-1 p-links-blue">
-          {{ _('The best place to start looking for answers if you have questions about Thunderbird is the Mozilla Support website, <a href="%(support)s">specifically the Thunderbird page</a>. There you can search for articles, ask questions, and read tutorials.')|format(support=url('support')) }}
-        </p>
-      </article>
-
-      <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg lg:ml-8 lg:mr-8">
-        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
-          {{ _('<a href="https://support.mozilla.org/questions/new/thunderbird" class="header-link">Ask a Question</a>') }}
-        </h4>
-        <p class="mt-0 mb-6 flex-1">
-          {{ _('You can ask a question on the support website. <b>Remember to be courteous</b>, as most of the people providing support on this site are volunteers and fellow Thunderbird users like you!') }}
-        </p>
-      </article>
-
-            <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg lg:mr-8">
-        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
-          {{ _('<a href="%(donor_care)s" class="header-link">Donation Support</a>')|format(donor_care=url('thunderbird.donate.contact')) }}
-        </h4>
-        <p class="mt-0 mb-6 flex-1 p-links-blue">
-          {{ _('If you have a question about a donation you\'ve made, you can contact us over at the <a href="%(donor_care)s">Donor Help page</a>. Our donor care team will be happy to assist you! The donor care team <strong>does not</strong> offer technical support, for that see our <a href="%(support)s">support page</a>.')|format(donor_care=url('thunderbird.donate.contact'), support=url('support')) }}
-        </p>
-      </article>
-
-      <article class="flex flex-col p-4 flex-1 lg:max-w-sm mb-10 lg:mb-0 bg-white rounded shadow-lg">
-        <h4 class="mt-0 mb-4 uppercase text-blue font-md">
-          {{ _('<a href="https://matrix.to/#/#thunderbird:mozilla.org?web-instance%5Belement.io%5D=chat.mozilla.org" class="header-link">Live Chat on Matrix</a>') }}
-        </h4>
-        <p class="mt-0 mb-6 flex-1 p-links-blue">
-          {{ _('You can chat with other users and members of the Thunderbird team on the <a href="https://matrix.to/#/#thunderbird:mozilla.org?web-instance%5Belement.io%5D=chat.mozilla.org">#thunderbird channel on Mozilla’s Matrix chat server</a>. You can log onto Matrix by <a href="https://wiki.mozilla.org/Matrix">following instructions on the wiki</a>. Matrix support is also available in Thunderbird!') }}
-        </p>
-      </article>
-    </section>
-  </section>
-
-  <section class="pt-20 pb-10 w-full bg-calendar">
-    <section class="flex flex-col lg:flex-row max-w-6xl mx-auto">
-      <aside class="flex flex-col lg:w-1/2 pr-8 pl-8">
-        <article class="flex flex-col w-full mb-6 lg:pr-8">
-          <h4 class="subheader-section">{{ _('Security') }}</h4>
-          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-            {{ _('To report a security issue related to Thunderbird, describe the issue in a new Thunderbird <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird">bug report on Bugzilla</a>. If you select the <i>Security checkmark</i> before you submit, then only members of our security team will have access to your report.') }}
-          </p>
-        </article>
-      </aside>
-
-      <aside class="flex flex-col lg:w-1/2 pr-8 pl-8">
-        <article class="flex flex-col w-full mb-6 lg:pl-8">
-          <h4 class="subheader-section">{{ _('Partnerships') }}</h4>
-          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-            {{ _('Are you interested in partnering with the Thunderbird project? Do you provide services that could improve the experience of using Thunderbird? Do you deploy Thunderbird at scale and want to provide a better experience for your users? Please send us your proposal at <a href="mailto:partnerships@thunderbird.net">partnerships@thunderbird.net</a>.') }}
-          </p>
-        </article>
-
-        <article class="flex flex-col w-full lg:pl-8">
-          <h4 class="subheader-section">{{ _('Press Inquiries') }}</h4>
-          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-            {{ _('Are you a member of the press who would like to ask us a question about Thunderbird? You can reach our team at <a href="mailto:press@thunderbird.net">press@thunderbird.net</a>.') }}
-          </p>
-        </article>
-      </aside>
-    </section>
-  </section>
-
-  {% include 'includes/site-prefooter.html' %}
+<section id="need-to-talk">
+  <div class="container no-gap">
+    <div class="section-text">
+      <h2>Need to <span class="txt-gradient">Talk?</span></h2>
+      <h4>{{ _('Direct your inquiries to the people below.') }}</h4>
+    </div>
+    <div class="block-grid">
+      {% call contact_block( svg('base/icons/contact/support'), _('Support'), [(url('support'), _('Support Website'))]) %}
+        {{ _('For questions about how to use Thunderbird, visit and search our Support Website. Feel free to submit a new question if you cannot find an answer. Please remember to be courteous to our staff and volunteers.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/security'), _('Security'), [(url('thunderbird.bugzilla.new-bug'), _('Bugzilla'))]) %}
+        {{ _('To report a software vulnerability, please submit an issue on Bugzilla with the security box checked. This checkmark will make the report visible only to our security team, who can address vulnerabilities before public disclosure.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/media'), _('Media'), [('mailto:outreach@thunderbird.net', _('Outreach Team'))]) %}
+        {{ _('Thunderbird and the people who make it are amazing. Obtain access to our team for your story, review, or other content by emailing our Outreach Team.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/business'), _('Business'), [('mailto:business@thunderbird.net', _('Business Team'))]) %}
+        {{ _('Organizations wanting to sponsor software development or obtain assistance in large-scale deployments should email our Business Team. This team also handles other partnership inquiries.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/contributors'), _('Contributors'), [(url('thunderbird.contribute'), _('Contributor Page'))]) %}
+        {{ _('If you have talents you\'re interested in sharing but don\'t know where to start, learn how to get started by visiting our Contributors page. Here you\'ll find the volunteer community that matches your interests.') }}
+      {% endcall %}
+      {% call contact_block( svg('base/icons/contact/legal'), _('Legal'), [(url('legal.trademark'), _('Trademark Misuse')), (url('legal.infringement'), _('DMCA Notice'))]) %}
+        {{ _('Protect future users from malware, data mining, or being fraudulently charged for Thunderbird by reporting trademark misuse. If you believe we are infringing on your copyright or trademark, please send a DMCA notice.') }}
+      {% endcall %}
+    </div>
+  </div>
+</section>
 {% endblock %}
+
+{% macro contact_block(icon, title, links) %}
+{# Generic block
+:param icon: A variable containing pre-formatted html (e.g. the result of svg() or image())
+:param title: The title of the block
+:param links: A list of tuples that link to relevant locations. First entry is the url/href value, second entry is the link text.
+:caller: The text body of the block
+#}
+<div class="block">
+  <div class="block-head">
+    <span>{{ icon }}</span>
+    <h2>{{ title }}</h2>
+  </div>
+  <div class="block-body">
+    <p>{{ caller() }}</p>
+  </div>
+  {% for link in links %}
+  <a class="strong" href="{{ link[0] }}">{{ link[1] }}</a>
+  {% endfor %}
+</div>
+{% endmacro %}

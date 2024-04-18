@@ -1,0 +1,120 @@
+// Pre-footer
+#whats-next {
+  background-color: black;
+  background-image: linear-gradient(to top, var(--color-ink-90), black 600px);
+  background-size: auto 80vh, 100%;
+  background-position: bottom center, center;
+  background-repeat: no-repeat;
+  color: var(--color-gray-20);
+  overflow: hidden;
+
+  .cta {
+    margin-top: 5rem; //80px;
+  }
+
+  .container {
+    gap: 0;
+  }
+
+  p {
+    margin-block: 0;
+    max-inline-size: 45ch;
+  }
+
+
+  .social-list {
+    display: flex;
+    gap: 1.5rem; // 24px;
+    justify-content: center;
+    margin-block: 3.75rem; //60px;
+  }
+
+  .newsletter {
+    display: grid;
+    place-items: center;
+    margin: 0;
+  }
+
+  .newsletter-form {
+    border: 0.125rem solid currentColor;
+    border-radius: 0.375rem; //6px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .btn-newsletter-text {
+    font-weight: 600;
+  }
+
+  .newsletter-form input {
+    background: none;
+    border: none;
+    color: currentColor;
+    padding: .75rem 1rem;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  @media (max-width: @md) {
+    .newsletter-form {
+      display: flex;
+
+      input {
+        width: 100%;
+      }
+
+      button {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  .btn-newsletter {
+    position: relative;
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-inline-start: 2px solid currentColor;
+    padding: .75rem 2.5rem;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .btn-newsletter::after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    background-image: radial-gradient(circle, var(--accent), var(--color-purple-60) 20%);
+    background-size: 0;
+    background-position: center;
+    opacity: 0;
+    inset: 0;
+    z-index: 0;
+    transition: all .3s;
+  }
+
+  .btn-newsletter:hover::after {
+    opacity: .25;
+    background-size: 800%;
+  }
+
+  .btn-newsletter-icon {
+    display: none;
+    padding: .75em 1em;
+  }
+
+  .social-list a {
+    text-decoration: none;
+  }
+
+  .phone {
+    max-width: calc(100vw - 2rem);
+    width: 31.25rem; //500px;
+    margin-inline: auto;
+    margin-block: -7.8125rem -40.625rem;//-125px -650px;
+  }
+
+}

@@ -1,52 +1,41 @@
 {# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "includes/base-resp.html" %}
+{% set active_page = "releases" %}
+{% extends "includes/base/page.html" %}
 
-{% block page_title %}{{ _('Thunderbird Release Notes') }}{% endblock %}
-{% block page_desc %}{{ _('Release notes for each version of Thunderbird.') }}{% endblock %}
-
-{% block header_content %}
-  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
-    <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-10 mt-0">
-      {{ _('Thunderbird release notes are specific to each version of the application. Select your version from the list below to see the release notes for it.') }}
-    </p>
-  </section>
-{% endblock %}
+{% block page_title %}{{ _('Releases') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('Products') }} > {{ _('Thunderbird Desktop') }}{% endblock %}
 
 {% block content %}
-
-  <section class="mt-10 pt-10 pb-10 w-full bg-calendar">
-    <section class="flex justify-between items-center max-w-6xl mx-auto mb-10 pr-8 pl-8">
-      <h3 class="subheader-section">{{ _('Release notes for each version of Thunderbird.') }}</h3>
-    </section>
-  </section>
-
-  <section class="pb-10 w-full bg-grey-lighter">
-    <section class="flex max-w-6xl mx-auto pl-8 pr-8">
-      <aside class="flex flex-col w-full pr-8 pl-8">
+<section>
+  <div class="container no-gap">
+    <div class="section-text">
+      <p>{{ _('Thunderbird release notes are specific to each version of the application. Select your version from the list below to see the release notes for it. ') }}</p>
+    </div>
+    <div class="section-text">
         {% for int_version, versions in releases -%}
-          <aside class="flex flex-col lg:flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
-            <h4 class="font-2xl font-bold m-0 p-3 lg:w-24">
+          <div class="release-container">
+            <h2 class="release-major txt-gradient">
               {{ get_link(int_version, versions.major) }}
-            </h4>
+            </h2>
             {% if versions.minor -%}
-            <aside class="flex-1 p-3">
+            <div class="release-minors">
               {% for version in versions.minor -%}
                 {{ get_link(int_version, version, true) }}
               {% endfor -%}
-            </aside>
+            </div>
             {% endif -%}
-          </aside>
+          </div>
         {% endfor -%}
 
-        <aside class="flex flex-col lg:flex-row flex-wrap items-center bg-white shadow-md mb-4 rounded">
-          <h4 class="font-2xl font-bold m-0 p-3 lg:w-24">
+        <div class="release-container">
+          <h2 class="release-major txt-gradient">
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.1.html" class="inline-link text-blue-dark font-bold no-underline">0.1</a>
-          </h4>
-          <aside class="flex-1 p-3">
+          </h2>
+          <div class="release-minors">
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.2.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.2</a>
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.3.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.3</a>
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.4.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.4</a>
@@ -55,15 +44,30 @@
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.7.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.7</a>
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.8.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.8</a>
             <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.9.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.9</a>
-          </aside>
-        </aside>
-      </aside>
-    </section>
-  </section>
+          </div>
+        </div>
+      </div>
 
-  {% include 'includes/site-prefooter.html' %}
-
+  </div>
+</section>
 {% endblock %}
+
+{% macro accordion(icon, title) %}
+{# Formatted accordion with inner contents being the html
+:param icon: A variable containing pre-formatted html (e.g. the result of svg() or image())
+:param title: The title of the accordion
+:caller: The text body, shows up when you click on the title or accordion.
+#}
+<details class="accordion">
+  <summary class="question">
+    <span>{{ icon }}</span>
+    {{ title }}
+  </summary>
+  <div class="answer">
+    {{ caller() }}
+  </div>
+</details>
+{% endmacro %}
 
 {% macro get_link(int_version, version, point_release = false) %}
   {% set class = ' btn-body btn-secondary btn-release' if point_release else '' %}

@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 import inspect
 import os
+from collections import OrderedDict
 
 import jinja2
 import json
@@ -17,7 +18,7 @@ from babel.dates import format_date
 from datetime import datetime
 from os import path
 from os.path import splitext
-from product_details import thunderbird_desktop
+from product_details import thunderbird_desktop, thunderbird_mobile
 from time import mktime
 from urllib.parse import urlencode
 
@@ -186,6 +187,7 @@ def high_res_img(ctx, url, optional_attributes=None, scale='1.5x', alt_formats=(
 
 @jinja2.pass_context
 def svg(ctx, file_name):
+    """Returns an inlined svg element, optionally (and by default) wraps a span around it to allow screen readers to ignore it."""
     file = path.join(settings.MEDIA_URL.strip('/'), 'svg/' + file_name + '.svg')
     return open(file).read()
 
@@ -229,6 +231,88 @@ def platform_img(ctx, url, optional_attributes=None):
               u'</noscript>').format(attrs=attrs, win_src=img_attrs[u'data-src-windows'])
 
     return markupsafe.Markup(markup)
+
+
+@jinja2.pass_context
+def download_url(ctx, platform_os, version=None, channel='release', locale=None):
+    """Return a specific download url for a given version, platform, channel and optionally force a locale"""
+    if locale is None:
+        locale = ctx.get('LANG')
+
+    if version is None:
+        l_version = thunderbird_desktop.latest_builds(locale, channel)
+        if l_version:
+            version, platforms = l_version
+        else:
+            locale = 'en-US'
+            version, platforms = thunderbird_desktop.latest_builds('en-US', channel)
+
+    return thunderbird_desktop.get_download_url(
+        channel, version, platform_os, locale,
+    )
+
+
+@jinja2.pass_context
+def has_localized_download(ctx, locale, channel='release'):
+    """Determine if a locale has a localized download link (or if it just defaults to en-US)"""
+    return bool(thunderbird_desktop.latest_builds(locale, channel))
+
+
+@jinja2.pass_context
+def get_platform_icon(ctx, platform):
+    windows_icon = 'base/icons/download/windows-dark'
+    mac_icon = 'base/icons/download/apple-dark'
+    linux_icon = 'base/icons/download/linux-dark'
+    android_icon = 'base/icons/download/android-dark'
+
+    platform_icons = {
+        'win64': windows_icon,
+        'msi': windows_icon,
+        'win': windows_icon,
+        'linux64': linux_icon,
+        'linux': linux_icon,
+        'osx': mac_icon,
+        'android': android_icon
+    }
+
+    return platform_icons.get(platform, None)
+
+
+@jinja2.pass_context
+def get_platforms(ctx, include_mobile=False):
+    """Returns a list of dict of available platforms per os. Includes mobile by default."""
+    grouped_platform_labels = thunderbird_desktop.grouped_platform_labels.copy()
+
+    if not include_mobile:
+        return grouped_platform_labels
+
+    return OrderedDict({
+        **grouped_platform_labels,
+        **thunderbird_mobile.grouped_platform_labels,
+    })
+
+
+@jinja2.pass_context
+def is_os_mobile(ctx, os):
+    """Simple helper to determine if a given os is mobile. JavaScript friendly."""
+    return 'true' if os == 'Android' else 'false'
+
+
+@jinja2.pass_context
+def get_channels(ctx, include_mobile=False):
+    """Returns a dict of available channels. Includes mobile channels by default."""
+    channel_labels = thunderbird_desktop.channel_labels.copy()
+    if not include_mobile:
+        return channel_labels
+
+    # We want Release to be followed with Android, and then the beta/daily builds.
+    channel_labels.pop('release')
+
+    return OrderedDict({
+        'release': "Release",
+        **thunderbird_mobile.channel_labels,
+        **channel_labels
+    })
 
 
 @jinja2.pass_context
@@ -376,7 +460,7 @@ def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign
 
 
 @jinja2.pass_context
-def redirect_donate_url(ctx, location='thunderbird.download', make_full_url=False, **kwargs):
+def redirect_donate_url(ctx, location='thunderbird.download.thank-you', make_full_url=False, **kwargs):
     """Helper function to piece together the full donation url. Defaults to the settings for our Download button."""
     base_url = ''
     if make_full_url:
@@ -469,6 +553,37 @@ def get_form_assembly_localization_url(ctx):
     fa_locale = settings.FA_LANGUAGES.get(locale, 'en_US')
 
     return "https://mozillafoundation.tfaforms.net/wForms/3.11/js/localization-{locale}.js?v=75513df1680ccc55e2c889a1b1dff356256982a6".format(locale=fa_locale)
+
+
+@jinja2.pass_context
+def split_system_requirements(ctx):
+    """For release notes, we have the entire object in ctx"""
+    try:
+        release_notes: dict = ctx.get('release')
+        requirements: str = release_notes.get('system_requirements')
+
+        # Match the platform header as: (Entire sequence, Platform name)
+        # We use the entire sequence to remove it from the text, and platform name for ordering.
+        title_regex = r"^([#]{2} ([\w\/]+))"
+        # Split by section
+        requirement_list = requirements.split('---')
+        system_requirements = {}
+
+        for system_req in requirement_list:
+            match = re.findall(title_regex, system_req, re.MULTILINE | re.IGNORECASE)
+            if len(match) == 0:
+                continue
+
+            match = match[0]
+            # Remove the entire sequence
+            system_req = system_req.replace(match[0], '')
+            # Key by platform name, and convert the markdown to html
+            system_requirements[match[1]] = safe_markdown(system_req)
+
+        return system_requirements
+    except Exception:
+        # Ah beans, well don't crash the page.
+        return {}
 
 
 def is_calendarific_free_tier():

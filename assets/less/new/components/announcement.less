@@ -1,0 +1,29 @@
+:root {
+  --site-announcement-height: 2.625rem; // 42px;
+}
+
+.site-announcement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: var(--site-announcement-height);
+  z-index: 99;
+
+  background-color: var(--color-ink-90);
+  color: var(--color-white);
+  font-size: 80%;
+  font-weight: 500;
+}
+
+.site-announcement ~ .site-nav {
+  top: var(--site-announcement-height);
+}
+
+.site-announcement ~ .scrolled-nav {
+  top: 0;
+}

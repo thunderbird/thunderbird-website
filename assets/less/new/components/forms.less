@@ -1,0 +1,22 @@
+.form-select {
+  width: 100%;
+  background-color: var(--color-white);
+  padding: 0.75rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-gray-30);
+  appearance: none;
+  background-image: url("/media/svg/chevron-down.svg");
+  background-position: calc(100% - 0.5rem);
+  background-repeat: no-repeat;
+}
+
+#lang_form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+
+  .form-select {
+    font-size: 0.9rem;
+  }
+}

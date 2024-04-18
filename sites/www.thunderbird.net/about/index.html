@@ -2,104 +2,142 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "includes/base-resp.html" %}
+{% set active_page = "who-we-are" %}
+{% extends "includes/base/page.html" %}
 
-{% block page_title %}{{ _('About Us') }}{% endblock %}
-
-{% block header_content %}
-  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-hero font-thin mt-10 mb-16">{{ self.page_title() }}</h1>
-  </section>
-{% endblock %}
+{% block page_title %}{{ _('Who We Are') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('About') }}{% endblock %}
 
 {% block content %}
-  <section class="pt-20 pb-20 flex justify-between items-center pr-8 pl-8 overflow-hidden">
-    <section class="flex justify-between mx-auto">
-      <aside class="flex flex-col flex-1 lg:max-w-4xl mr-8 ml-8 lg:ml-16 lg:mr-16 lg:pt-12">
-        <h3 class="header-section">
-          <span>{{ svg('envelope') }}</span>
-          <aside class="flex flex-col">
-            {{ _('What is Thunderbird?')}}
-            <small class="font-normal font-md tracking-normal normal-case">
-              {{ _('Software made to make email easier.') }}
-            </small>
-          </aside>
-        </h3>
-        <p class="font-lg tracking-wider leading-loose mb-6">
-          {{ _('Thunderbird is a free and open source email, newsfeed, chat, and calendaring client, that’s easy to set up and customize. One of the core principles of Thunderbird is the use and promotion of open standards - this focus is a rejection of our world of closed platforms and services that can’t communicate with each other. We want our users to have freedom and choice in how they communicate.') }}
-        </p>
-        <aside class="ml-0 mr-0 self-start text-left text-blue font-semibold">
-          {{ download_thunderbird(force_direct=true, alt_copy=_('Free Download'), section='body') }}
-        </aside>
-      </aside>
-
-      <aside class="hidden lg:flex flex-1 max-w-xl -mr-20">
-        {{ platform_img('thunderbird/calendar/screenshot.png', {'alt': _('Calendar screenshot'), 'high-res': True, 'l10n': True, 'platforms': ('windows', 'linux', 'mac')}) }}
-      </aside>
-    </section>
-  </section>
-
-  <section class="pt-10 flex max-w-6xl mx-auto justify-between pl-8 pr-8">
-    <h3 class="header-section">
-      <span>{{ svg('accessibility') }}</span>
-      <aside class="flex flex-col">
-        {{ _('Who We Are')}}
-        <small class="font-normal font-md tracking-normal normal-case">
-          {{ _('We are a community making communication free and open.') }}
-        </small>
-      </aside>
-    </h3>
-  </section>
-
-  <section class="pt-10 pb-20 w-full bg-calendar">
-    <section class="flex flex-row justify-center w-full max-w-6xl mx-auto">
-      <aside class="flex flex-col md:w-9/12 pr-8 pl-8">
-        <img class="w-full max-w-6xl mb-10 lg:mb-0 h-auto shadow-lg rounded-sm" src="{{ static('img/thunderbird/team.jpg') }}" alt="Thunderbird Developers Toronto Summit 2014">
-      </aside>
-    </section>
-    <section class="pt-20 flex flex-col lg:flex-row w-full max-w-6xl mx-auto mb-10">
-      <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
-        <article class="flex flex-col w-full mb-6">
-          <h4 class="subheader-section">{{ _('Our Community') }}</h4>
-          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-            {{ _('There is a passionate team of volunteers involved in developing Thunderbird and assisting its users who would welcome your involvement. Check out our <a href="%(volunteer)s">Get Involved page</a> to learn how you can participate on the Thunderbird team. We also have paid staff working full-time on Thunderbird, <a href="%(donate)s" data-donate-btn data-donate-content="about">funded by donations</a> from our users. If you’re curious about who is working on Thunderbird, check out the <a href="%(core_team)s">list of our core contributors</a>.')|format(volunteer=url('thunderbird.get-involved'), donate=donate_url('about'), core_team=url('wiki.moz', '/Thunderbird/Core_Team')) }}
-          </p>
-        </article>
-
-        <article class="flex flex-col w-full">
-          <h4 class="subheader-section">{{ _('Thunderbird Council') }}</h4>
-          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-            {{ _('The Thunderbird project is governed by seven councilors, elected by the Thunderbird community’s active contributors. You can see the current elected Thunderbird Council members <a href="%(council)s">on the Thunderbird wiki</a>.')|format(council=url('wiki.moz', '/Modules/Thunderbird#Thunderbird_Council')) }}
-          </p>
-        </article>
-      </aside>
-
-      <aside class="flex flex-col lg:w-1/2 pl-8 pr-8">
-        <article class="flex flex-col w-full mb-6">
-          <h4 class="subheader-section">{{ _('Our Mission') }}</h4>
-          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-            {{ _('Email has been and continues to be the fundamental communication tool
-                  and a significant driver of freedoms on the Internet. But it is also
-                  threatened by new non-standards-based, closed and centralized messaging
-                  platforms. To prevent this erosion, the public deserves an alternative that is secure and reliable,
-                  while  protecting our privacy, enhancing our productivity and serving as a
-                  platform for current and future forms of messaging.')
-            }}
-          </p>
-          <p class="font-md tracking-wide leading-loose mb-6 mt-0 p-links-blue">
-            {{ _('Thunderbird facilitates cross platform, decentralized, open-standard
-                  communication, which puts the user in control of their data and workflow.
-                  We aspire to offer an interoperable and extensible open-source
-                  platform for messaging and managing personal information, such as email,
-                  contacts, and appointments.')
-            }}
-          </p>
-        </article>
-      </aside>
-    </section>
-  </section>
-
-  {% include 'includes/site-prefooter.html' %}
-
+<section id="meet-thunderbird">
+  <div class="container">
+    <div class="section-text">
+      <h2>{{ _('Meet <span class="txt-gradient">Thunderbird</span>') }}</h2>
+      <p>{{ _('Thunderbird is a free and open-source software project founded in 2003 to make organizing and communicating easier. We are supported by the talent and donations of thousands of generous individuals and are backed by Mozilla. Essential values guide us and make our work relevant. Read further to learn more.') }}</p>
+    </div>
+    <div class="icon-grid-container">
+      <div class="icon-grid">
+        <div class="icon-item">
+          {{ svg('base/icons/about/values') }}
+          <p>{{ _('Values') }}</p>
+        </div>
+        <div class="icon-item">
+          {{ svg('base/icons/about/community') }}
+          <p>Community</p>
+        </div>
+        <div class="icon-item">
+          {{ svg('base/icons/about/organization') }}
+          <p>Organization</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include 'includes/components/page-separator.html' %}
+<section id="guided-by-values">
+  <div class="container">
+    <div class="section-text">
+      <h2>{{ _('Guided by <span class="txt-gradient">Values</span>') }}</h2>
+    </div>
+    <div class="value-section values-privacy">
+      <div class="image">
+      {{ high_res_img('thunderbird/base/about/privacy.png', {'alt': _('A shield with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
+      </div>
+      <div class="section-text tight">
+        <h3>{{ _('Privacy') }}</h3>
+        <h4>{{ _('You are not the product.') }}</h4>
+        <p>{{ _('To us, data ownership and privacy are your right wherever you live. Our commitment to <strong>your personal data</strong> is simple:') }}</p>
+        <ul class="styled-list">
+          <li>{{ _('We do not collect or store it unless you ask us to.') }}</li>
+          <li>{{ _('We take great care to keep it safe from misuse.') }}</li>
+          <li>{{ _('We will never sell it.') }}</li>
+          <li>{{ _('You retain ownership and control of it.') }}</li>
+        </ul>
+        <a class="strong" href="{{ url('privacy') }}">{{ _('Read the Privacy Policy') }}</a>
+      </div>
+    </div>
+    <div class="value-section values-freedom">
+      <div class="image">
+      {{ high_res_img('thunderbird/base/about/freedom.png', {'alt': _('A key with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
+      </div>
+      <div class="section-text tight">
+        <h3>{{ _('Freedom') }}</h3>
+        <h4>{{ _('Thunderbird belongs to you (and the world).') }}</h4>
+        <p>{{ _('Thunderbird is Free and Open-Source Software, which means its code is available to see, modify, use, and share freely. Its license also ensures that it will remain free forever. You can think of Thunderbird as a gift from thousands of contributors to you.') }}</p>
+        <a class="strong" href="{{ url('mozorg.mpl2') }}">{{ _('Learn About MPL 2.0') }}</a>
+      </div>
+    </div>
+    <div class="value-section values-voice">
+      <div class="image">
+      {{ high_res_img('thunderbird/base/about/voice.png', {'alt': _('A speech bubble with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
+      </div>
+      <div class="section-text tight">
+        <h3>{{ _('Voice') }}</h3>
+        <h4>{{ _('You have a part in Thunderbird\'s future.') }}</h4>
+        <p>{{ _('Thunderbird is free from the commercial requirements and incentives that often guide software development. Anyone can get involved in helping make Thunderbird better and available to more people. A contributor-elected council ensures Thunderbird remains true to its values and mission.') }}</p>
+        <strong>{{ _('Keep Reading...') }}</strong>
+      </div>
+    </div>
+  </div>
+</section>
+{% include 'includes/components/page-separator.html' %}
+<section id="driven-by-community">
+  <div class="container">
+    <div class="section-text">
+      <h2>{{ _('Driven by <span class="txt-gradient">Community</span>') }}</h2>
+      <p>{{ _('Anyone can help make Thunderbird better. Programmers can contribute features they are passionate about or improve the existing code. Those who are multilingual can make Thunderbird accessible to everyone. Those willing can test new versions of Thunderbird and document issues. There are many ways to become part of a thriving community that makes Thunderbird unique. And if you don\'t have the time to volunteer, you can help support the project through donations.') }}</p>
+      <a class="strong" href="{{ url('thunderbird.participate') }}">{{ _('Learn How to Get Involved') }}</a>
+    </div>
+  </div>
+</section>
+<section class="cover-container">
+  {{ high_res_img('thunderbird/base/about/contributors.png', {'alt': _('Our Contributors')}, alt_formats=('avif', 'webp')) }}
+  {% include 'includes/components/page-separator-cover.html' %}
+</section>
+<section id="supported-by-mozilla">
+  <div class="container">
+    <div class="section-text">
+      <h2>{{ _('Supported by <span class="txt-gradient">Mozilla</span>') }}</h2>
+      <p>{{ _('Thunderbird operates as a for-profit subsidiary of the non-profit Mozilla Foundation. This grants us flexibility in hiring and offering optional paid services to sustain Thunderbird\'s development of free and open-source software far into the future.') }}</p>
+      <p>{{ _('We have a growing team of talented individuals employed to support the efforts of our contributor community, interface with partner organizations, and maximize the reach of Thunderbird throughout the world.') }}</p>
+    </div>
+    <div>
+      <div class="job-grid">
+        {{ job_block('', 'Alessandro Castellani', high_res_img('thunderbird/staff/alessandro_castellani.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Andrei Hajdukewycz', high_res_img('thunderbird/staff/andrei_hajdukewycz.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Brendan Abolivier', high_res_img('thunderbird/staff/brendan_abolivier.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Chris Aquino', high_res_img('thunderbird/staff/chris_aquino.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Heather Ellsworth', high_res_img('thunderbird/staff/heather_ellsworth.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Ikey Doherty', high_res_img('thunderbird/staff/ikey_doherty.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Jason Evangelho', high_res_img('thunderbird/staff/jason_evangelho.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Joseph Bass', high_res_img('thunderbird/staff/joseph_bass.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Kai Engert', high_res_img('thunderbird/staff/kai_engert.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'kelly', high_res_img('thunderbird/staff/kelly.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Laurel Terlesky', high_res_img('thunderbird/staff/laurel_terlesky.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Magnus Melin', high_res_img('thunderbird/staff/magnus_melin.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Malini Das', high_res_img('thunderbird/staff/malini_das.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Margaret Baker ', high_res_img('thunderbird/staff/margaret_baker.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Martin Giger', high_res_img('thunderbird/staff/martin_giger.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Melissa Autumn', high_res_img('thunderbird/staff/melissa_autumn.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Micah Ilbery', high_res_img('thunderbird/staff/micah_ilbery.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Natalie Ivanova', high_res_img('thunderbird/staff/natalie_ivanova.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Roland Tanglao', high_res_img('thunderbird/staff/roland_tanglao.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Vineet Deo', high_res_img('thunderbird/staff/vineet_deo.png', scale='2x', alt_formats=('webp',))) }}
+        {{ job_block('', 'Wolf Montwé', high_res_img('thunderbird/staff/wolf_montwe.png', scale='2x', alt_formats=('webp',))) }}
+      </div>
+    </div>
+      <div class="section-text">
+        <a class="strong" href="{{ url('mozorg.careers.tb') }}">{{ _('Explore Career Opportunities') }}</a>
+      </div>
+  </div>
+</section>
 {% endblock %}
 
+{% macro job_block(title, name, img) %}
+<div class="person">
+  {{ img }}
+  <h5>{{ name }}</h5>
+  <span>{{ title }}</span>
+</div>
+{% endmacro %}

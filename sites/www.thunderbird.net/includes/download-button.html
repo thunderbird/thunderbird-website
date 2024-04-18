@@ -28,7 +28,37 @@
 {% set download_class = download_class ~ ' download-button-' ~ channel if channel else download_class %}
 
 <div id="{{ id }}" class="{{ download_class }}">
+  {% if not hide_footer_links %}
+  {# All downloads link #}
+  <div class="all-downloads-link">
+    <a href="{{ url('thunderbird.latest.all') }}" class="small-link dotted">
+    <div class="os-list" aria-label="{{ _('Available on Windows, Linux, Mac') }}">
+      <span class="icon" aria-hidden="true">
+        {{ svg('download-icon-windows') }}
+      </span>
+      {% if section != 'homepage-hero' %}
+        <span class="icon" aria-hidden="true">
+        {{ svg('download-icon-linux') }}
+        </span>
+      {% else %}
+        <span class="icon icon-tux-alt" aria-hidden="true">
+        {{ svg('download-icon-linux') }}
+        </span>
+      {% endif %}
+      <span class="icon icon-apple" aria-hidden="true">
+        {{ svg('download-icon-apple') }}
+      </span>
+      {#
+      <span class="icon icon-android" aria-hidden="true">
+        {{ svg('base/icons/download/android-light') }}
+      </span>
+      #}
+    </div>
+    {{ _('Download and languages options') }}</a>
+  </div>
+  {% endif %}
   {# no JS #}
+  {% if section != 'header' %}
   <div class="nojs-download">
     {{ alt_buttons(builds) }}
   </div>
@@ -41,9 +71,10 @@
   <p class="linux-arm-download mb-8 p-links">
     {{ _('Please follow <a href="%(url)s">these instructions</a> to install Thunderbird.')|format(url='https://support.mozilla.org/kb/installing-thunderbird-linux') }}
   </p>
+  {% endif %}
   <ul class="download-list list-none p-0 flex flex-wrap max-w-lg mb-0 {{ flex_class }}">
     {% for plat in builds %}
-      <li class="os_{{ plat.os }}{% if plat.arch %} {{ plat.arch }}{% endif %} ml-3 mr-3">
+      <li class="os_{{ plat.os }}{% if plat.arch %} {{ plat.arch }}{% endif %}">
         <a class="matomo-track-download download-link {{ button_class }}"
           href="{{ plat.download_link }}"
           data-donate-redirect="download-{{ channel or 'esr' }}"
@@ -68,16 +99,6 @@
     {% endfor %}
   </ul>
   {% if not hide_footer_links %}
-  <p class="download-other download-other-desktop os_android os_ios os_linux os_linux64 os_osx os_win os_win64 os_winsha1 font-sm mt-0">
-    {% if section == 'new-frontpage' %}{# New frontpage should only display System & Languages #}
-      <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a>
-    {% else %}
-      {% if channel != 'daily' %}{# Daily doesn't have an all download page or release notes. #}
-        <a href="{{ thunderbird_url('all', channel) }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Systems &amp; Languages') }}</a> &bull;
-        <a href="{{ thunderbird_url('releasenotes', channel) }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('What’s New') }}</a> &bull;
-      {% endif %}
-      <a href="{{ url('privacy.notices.thunderbird') }}" class="small-link {% if section == 'body' %} text-blue {% endif %}">{{ _('Privacy') }}</a>
-    {% endif %}
-  </p>
+  <small>{{_('Free forever.')}} <a class="dotted" href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
   {% endif %}
 </div>

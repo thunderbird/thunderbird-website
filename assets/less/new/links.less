@@ -1,19 +1,52 @@
+@import "./functions.less";
+
 a {
+  @outline();
+
   color: currentColor;
-  text-decoration-color: currentColor;
-  text-underline-offset: 0.25em;
-  text-decoration-thickness: .12em;
-  text-decoration-style: dotted;
+  text-decoration: underline;
   transition: font-size .2s,
-              text-decoration-color .2s;
-}
+  text-decoration-color .2s;
 
-a.donate,
-a:hover,
-a:hover:visited {
-  text-decoration-color: var(--accent);
-}
+  &.dotted {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: currentColor;
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: .12em;
+  }
 
-a:visited {
-  text-decoration-color: var(--color-purple-50);
+  &.strong {
+    text-decoration: none;
+    font-weight: 600;
+
+    &::after {
+      --bg-img: url('/media/svg/chevron-right.svg');
+      position: relative;
+
+      top: 0.17rem;
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: var(--bg-img);
+      content: '';
+      margin-left: 0.5rem;
+
+      // Colour mask
+      background-color: var(--color-blue-50);
+      mask-image: var(--bg-img);
+      mask-repeat: no-repeat;
+      // Blah
+      -webkit-mask-image: var(--bg-img);
+      -webkit-mask-repeat: no-repeat;
+    }
+  }
+
+  &.donate,
+  &:hover,
+  &:hover:visited {
+    text-decoration-color: var(--accent);
+  }
 }

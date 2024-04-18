@@ -1,0 +1,30 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "post-download" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title %}{{ _('Just one more step!') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('Resources') }}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+{% block extra_meta %}
+<meta name="robots" content="noindex,nofollow" />
+{% endblock %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="section-text wide">
+      <div class="image">
+      {{ high_res_img('thunderbird/base/thank-you/happy-laptop.png', {'alt': _('A laptop with an stylized envelop floating in front of the screen. Three hearts of descending size float above the envelop.')}, alt_formats=('avif', 'webp')) }}
+      </div>
+      <h3>{{ _('Finish installing, and start enjoying <span class="txt-gradient">Thunderbird</span>.') }}</h3>
+      <p>
+        {{ _('Having trouble? <a class="inline-link" href="%(url)s">Get help with your installation.</a>')|format(url='https://support.mozilla.org/products/thunderbird/install-migrate-and-update') }}
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

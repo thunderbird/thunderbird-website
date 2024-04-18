@@ -1,0 +1,401 @@
+// Here for page-index override...
+@btn-no-bg-styling: {
+  &::after {
+    background-color: var(--btn-background-color);
+  }
+
+  &:hover {
+    background: linear-gradient(var(--btn-background-color), var(--btn-background-color)) padding-box,
+    linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+    color: currentColor;
+  }
+}
+
+.site-nav {
+  --hamburger-background-inactive: var(--color-white);
+  --hamburger-foreground-inactive: var(--color-black);
+  --hamburger-background-active: var(--color-white);
+  --hamburger-foreground-active: var(--color-black);
+
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  display: flex;
+  padding-inline: 1rem;
+  padding-block: 12px;
+  background: var(--nav-bg);
+  color: var(--txt);
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  height: var(--nav-height);
+  backdrop-filter: blur(32px);
+  transition: height .2s;
+  z-index: 100000;
+
+  max-width: 100vw;
+}
+
+.site-nav {
+  .btn-donate::before,
+  .btn-donate-lg::before,
+  .btn-download-inline::before,
+  .btn-download-link::before,
+  .download-link.btn-download::before,
+  a.btn::before,
+  button::before {
+    display: none;
+  }
+
+  .download-link {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+// Homepage hack
+.page-index .btn-no-bg {
+  --btn-background-color: rgba(0, 0, 0, 0.8);
+  @btn-no-bg-styling();
+}
+
+.scrolled-nav {
+  --nav-height: 3.75rem;//60px;
+  border-color: rgba(255, 255, 255, .25);
+  box-shadow: 0 4px 8px -2px rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, .8);
+  color: var(--nav-txt);
+  backdrop-filter: blur(24px) saturate(120%);
+  transition: all .5s;
+  z-index: 100000;
+
+  .hamburger-btn {
+    --hamburger-foreground-inactive: var(--nav-txt);
+    margin: 0;
+    transition: margin .2s;
+  }
+
+  .btn-no-bg {
+    --btn-background-color: rgba(0, 0, 0, 0.8);
+    @btn-no-bg-styling();
+  }
+}
+
+.nav-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hamburger-btn {
+  cursor: pointer;
+  display: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 4px;
+  margin-top: 8px;
+  transition: margin .2s;
+  padding: 0;
+
+  &::after {
+    background: var(--hamburger-background-inactive) none;
+  }
+
+  @media (max-width: @lg) {
+    display: block;
+  }
+}
+
+&[aria-expanded="true"].hamburger-btn {
+  background-color: var(--hamburger-background-active);
+  opacity: 100%;
+}
+
+&[aria-expanded="true"] > .hamburger-icon {
+  // This isn't quite right...
+  @offsetY: 195%;
+
+  span {
+    border-color: var(--hamburger-foreground-active);
+  }
+
+  span:nth-child(1) {
+    transform: translate(1px, @offsetY) rotateZ(45deg);
+  }
+
+  span:nth-child(2) {
+    opacity: 0;
+  }
+
+  span:nth-child(3) {
+    transform: translate(0, -@offsetY) rotateZ(-45deg);
+  }
+
+}
+
+.hamburger-icon {
+  content: '';
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  span {
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    border-bottom: 2px solid var(--hamburger-foreground-inactive);
+
+    min-height: 1px;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+
+  // Pt1. Provide a larger hover area
+  margin-top: 0;
+
+  .nav-entry {
+    position: relative;
+
+    // Pt2. Provide a larger hover area
+    cursor: pointer;
+    padding-top: 18px;
+
+
+    // Pop-over menu
+    .popover-container {
+      display: none;
+      position: absolute;
+      margin-left: -2rem;
+      min-width: 470px;
+
+      // Actual physical panel
+      .popover-panel {
+        background-color: var(--bg);
+        color: var(--txt);
+        border-radius: var(--border-radius-lg);
+
+        // Add a large shadow to help the panel contrast against
+        box-shadow: var(--shadow-2xl);
+
+        // This clashes a little too much with white backgrounds for my liking.
+        // So let's help high-contrast users with a small border around the area.
+        @media (prefers-contrast: more) {
+          border: 2px solid var(--color-ink-70);
+        }
+
+        // Make sure they have some space to move their cursor over any gaps!
+        margin: 1rem 1rem 1rem 0;
+        padding: 1rem 1rem;
+
+        .entry-icon {
+          display: flex;
+          margin: 0.5rem;
+          min-width: 48px;
+          height: 100%;
+          justify-content: center;
+
+          svg {
+            width: 100%;
+          }
+        }
+
+        .entry-text {
+          h2, h6 {
+            margin: 0;
+          }
+
+          h6 {
+            font-weight: 600;
+          }
+
+          padding-right: 2rem;
+        }
+
+        .entry-container {
+          cursor: pointer;
+          list-style: none;
+          padding-top: 1rem;
+
+          &:hover,
+          &:focus-within {
+            h2 {
+              &:extend(.txt-gradient);
+            }
+          }
+        }
+
+        .entry-container > a {
+          display: flex;
+          min-height: 4rem;
+          padding-bottom: 1rem;
+          border-bottom: 2px var(--color-gray-30) solid;
+          text-decoration: none;
+        }
+
+        .entry-container:last-child > a {
+          border: none;
+        }
+      }
+    }
+
+    // Make popover on hover, or on focus-within (needed for keyboard users)
+    &:focus-within {
+      .popover-container {
+        display: block;
+      }
+    }
+
+    @media (min-width: @lg) {
+      &:hover {
+        .popover-container {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .nav-ln {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    font-weight: 600;
+    font-size: 1.125rem;
+
+    &::after {
+      height: 3px;
+    }
+  }
+
+  // Make popover on focus (tab)
+  .nav-ln:focus + .popover-container {
+    display: block;
+  }
+
+  // One day we'll have a previous sibling selector, until then there's this lol.
+  // Select nav-ln::after that have a hover or focus-within popover-container state.
+  .nav-ln:has(+ .popover-container:hover)::after,
+  .nav-ln:has(+ .popover-container:focus-within)::after {
+    // For that sweet underline.
+    width: 100%;
+  }
+
+
+  @media (max-width: @lg) {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--color-white);
+    color: var(--txt);
+
+    // Add a large shadow to help the panel contrast against
+    box-shadow: var(--shadow-2xl);
+
+    width: 60%;
+    right: 1.25rem;
+    top: var(--nav-height);
+
+    &.expanded {
+      display: block;
+    }
+
+    border-radius: 12px;
+    align-items: unset;
+
+    .no-mobile {
+      display: none;
+    }
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .nav-entry {
+      padding: 1rem 1rem;
+      border-bottom: 2px var(--color-gray-30) solid;
+
+      .popover-container {
+        margin-left: 0;
+        min-width: 100%;
+        position: relative;
+
+        .popover-panel {
+          border-radius: 0;
+          box-shadow: none;
+          margin: 0;
+          padding: 1rem 1rem;
+
+          .entry-container {
+            padding: 0;
+          }
+
+          .entry-container > a {
+            min-height: 1rem;
+            border-bottom: none;
+          }
+
+          .entry-icon {
+            display: none;
+
+            svg {
+              width: 0;
+            }
+          }
+
+          .entry-text {
+            padding: 0;
+
+            h6 {
+              display: none;
+            }
+
+            h2 {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .nav-entry.no-border {
+      border: none;
+    }
+  }
+}
+
+// By default
+.always-show-for-nojs-on-mobile {
+  display: none;
+}
+
+// For those no-js folks on tiny screens
+// We don't use the .no-js here because that could cause a flash
+@media (max-width: @lg) {
+  .always-show-for-nojs-on-mobile {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: var(--nav-height);
+
+    .nav-links {
+      display: block;
+      position: static;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: @lg) {
+  .no-js {
+    .hamburger-btn {
+      display: none;
+    }
+  }
+}

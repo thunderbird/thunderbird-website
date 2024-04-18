@@ -1,26 +1,69 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% set active_page = "beta-appeal" %}
-{% set hide_header = True %}
-{% extends "includes/base-resp.html" %}
 
-{% block page_title %}{{ _('Experience The Future Of Thunderbird') }}{% endblock %}
+<!doctype html>
 
-{% block body_id %}thunderbird-beta-appeal{% endblock %}
+<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+  <head>
+    <meta charset="utf-8">
 
-{% block extrahead %}
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <title>{{ _('Experience The Future Of Thunderbird') }} — Thunderbird</title>
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ _('Thunderbird') }}">
+    <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
+    <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
+    <meta property="og:title" content="{{ _('Experience The Future Of Thunderbird') }}">
+    <meta property="og:description" content="">
+    <meta property="fb:page_id" content="348169218537151">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mozthunderbird">
+    <meta name="twitter:domain" content="thunderbird.net">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/media/archived/img/thunderbird/ios-icon-180.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="/media/archived/img/thunderbird/favicon-196.png">
+    <link rel="shortcut icon" href="/media/archived/img/thunderbird/favicon.ico">
+    
+    <link href="/media/archived/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/media/archived/css/thunderbird-style.css" rel="stylesheet" type="text/css" />
+
+    
+
+    <!--[if !lte IE 8]><!-->
+    
+    
+
+    
+    
+    <!--<![endif]-->
+
+    
 <script>
-  window.latestBuild = "{{ get_latest_build('beta') }}";
+  window.latestBuild = "125.0b2";
 </script>
-{% endblock %}
 
-{% block header_content %}
+    <script>
+      window.siteLocale = "{{ LANG }}";
+    </script>
+  </head>
+
+  <body id="thunderbird-beta-appeal" class="html-ltr " >
+    <div id="strings" ></div>
+
+    
+    
+
+    
+  <header id="masthead" class="bg-no-repeat bg-cover bg-top flex flex-col bg-header-page">
+
+    
   <!-- step 1: pls upgrade! -->
   <section id="ba-step-1" class="text-center text-white flex flex-row justify-between pl-4 pr-4 max-w-7xl pt-12 mt-4 mx-auto">
     <aside>
-      <h1 class="font-4xl md:font-hero font-thin mt-0 mb-8">{{ self.page_title() }}</h1>
+      <h1 class="font-4xl md:font-hero font-thin mt-0 mb-8">{{ _('Experience The Future Of Thunderbird') }}</h1>
 
       <div class="flex flex-col">
         <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-12 mt-0 p-links mx-auto">
@@ -59,7 +102,7 @@
   </section>
   <section class="flex flex-col lg:flex-row max-w-8xl mx-auto justify-between pl-8 pr-8 mb-20 mt-4 leading-relaxed mx-auto">
     <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg mb-10 lg:mb-0">
-      <a class="blog-link" href="https://blog.thunderbird.net/2023/02/thunderbird-115-supernova-preview-the-new-folder-pane/" title="{{ _('Thunderbird 115 Supernova Preview: The New Folder Pane') }}">
+      <a class="blog-link" href="https://blog.thunderbird.net/2023/02/thunderbird-115-supernova-preview-the-new-folder-pane/" title="Thunderbird 115 Supernova Preview: The New Folder Pane">
         {{ _('Thunderbird 115 Supernova Preview: The New Folder Pane') }}
       </a>
       <div class="blog-body h-4">
@@ -68,11 +111,11 @@
       </div>
       <footer class="flex justify-between items-center pt-4 border-grey-light border-solid border-0 border-t uppercase text-blue-dark font-bold tracking-tight">
         <span>{{ _('February 14, 2023') }}</span>
-        <span><a href="https://blog.thunderbird.net/2023/02/thunderbird-115-supernova-preview-the-new-folder-pane/">{{ _('Continue Reading ') }}</a></span>
+        <span><a href="https://blog.thunderbird.net/2023/02/thunderbird-115-supernova-preview-the-new-folder-pane/">{{ _('Continue Reading') }}</a></span>
       </footer>
     </article>
     <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg mb-10 lg:mb-0 lg:ml-16 lg:mr-16">
-      <a class="blog-link" href="https://blog.thunderbird.net/2023/02/the-future-of-thunderbird-why-were-rebuilding-from-the-ground-up/" title="{{ _('Why We’re Rebuilding The Thunderbird Interface From Scratch') }}">
+      <a class="blog-link" href="https://blog.thunderbird.net/2023/02/the-future-of-thunderbird-why-were-rebuilding-from-the-ground-up/" title="Why We’re Rebuilding The Thunderbird Interface From Scratch">
         {{ _('Why We’re Rebuilding The Thunderbird Interface From Scratch') }}
       </a>
       <div class="blog-body h-4">
@@ -85,7 +128,7 @@
       </footer>
     </article>
     <article class="flex flex-col p-4 flex-1 lg:max-w-sm bg-white rounded shadow-lg">
-      <a class="blog-link" href="https://blog.thunderbird.net/2022/11/thunderbird-supernova-preview-the-new-calendar-design/" title="{{ _('Thunderbird Supernova Preview: The New Calendar Design') }}">
+      <a class="blog-link" href="https://blog.thunderbird.net/2022/11/thunderbird-supernova-preview-the-new-calendar-design/" title="Thunderbird Supernova Preview: The New Calendar Design">
         {{ _('Thunderbird Supernova Preview: The New Calendar Design') }}
       </a>
       <div class="blog-body h-4">
@@ -98,16 +141,84 @@
       </footer>
     </article>
   </section>
-{% endblock %}
-{% block site_footer %}
+
+
+    
+  
+
+
+
+
+<script>
+  (function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
+  .split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+  :function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+  j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a;
+  t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+  for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
+  })(window,document,'script','FundraiseUp','ADGJGYAN');
+
+  // Set FRU's language
+  window._lang = "{{ get_fru_language() }}";
+</script>
+
+
+
+
+<div id="modal-overlay" class="fixed pin-t pin-l m-0 p-0 w-full h-full z-20 bg-black opacity-50 hidden" tabindex="-1"></div>
+
+    
+
+    
+
+  </header>
+
+
+    
+      
+    
+
+    <main>
+      
+    </main>
+
+    
+
+
+    
+    
+
+    
 <footer id="colophon" class="bg-black-light text-white flex flex-col pt-10 pb-8 pl-4 pr-4">
   <section class="flex flex-col lg:flex-col justify-between items-center self-center w-full max-w-6xl">
     <aside class="flex flex-col items-center">
-      <a href="https://www.thunderbird.net" class="block w-40" title="{{ _('Thunderbird') }}"
-        alt="{{ _('Thunderbird Vector Wordmark') }}">
-        <img src="{{ static('svg/logo-wordmark-white.svg') }}" alt="{{ _('Thunderbird Vector Wordmark') }}"/>
+      <a href="https://www.thunderbird.net" class="block w-40" title="Thunderbird"
+        alt="Thunderbird Vector Wordmark">
+        <img src="/media/archived/svg/logo-wordmark-white.svg" alt="Thunderbird Vector Wordmark"/>
       </a>
     </aside>
   </section>
 </footer>
-{% endblock %}
+
+
+    
+      <script type="text/javascript" src="/media/archived/js/site-bundle.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/archived/js/common-bundle.js" charset="utf-8"></script>
+    
+    
+    
+      <script type="text/javascript" src="/media/archived/js/matomo-config.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/archived/js/matomo.js" async defer></script>
+      <noscript>
+        <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
+      </noscript>
+    
+    <!--[if IE 9]>
+      <script src="/media/archived/js/libs/matchMedia.js"></script>
+    <![endif]-->
+
+    
+
+    
+  </body>
+</html>

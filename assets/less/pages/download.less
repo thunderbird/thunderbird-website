@@ -1,0 +1,292 @@
+/* thunderbird/all/index.html */
+
+.js #all-downloads {
+  display: none;
+}
+
+.no-js #select-download {
+  display: none;
+}
+
+.page-download {
+  .accordion {
+    cursor: pointer;
+    margin-top: 1rem;
+    min-width: auto;
+
+    summary {
+      display: flex;
+    }
+  }
+
+  .accordion[open=""] {
+    .chevron {
+      transform: rotateZ(-90deg);
+    }
+  }
+
+  // TODO: Fix this in place
+  .download-button-page {
+    margin-top: 5rem;
+    color: var(--txt);
+    text-align: center;
+
+    a::after {
+      background: var(--color-white);
+    }
+  }
+
+  .channel-name {
+    &.beta,
+    &.daily {
+      font-size: 70%;
+    }
+  }
+
+  .pretend-to-be-h6 {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+  }
+
+  .two-columns {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    gap: 4rem;
+
+    .column {
+      max-width: 40%;
+
+      .release-information {
+        margin-bottom: 0;
+      }
+
+      .section-text {
+        width: 100%;
+        max-inline-size: 100%;
+
+        p {
+          // Pull up the text a bit
+          margin-top: 0;
+        }
+
+        @media (max-width: @lg) {
+          padding: 0;
+        }
+      }
+    }
+
+    @media (max-width: @lg) {
+      flex-direction: column;
+
+      .column {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: @md) {
+      width: 100%;
+
+      .column {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+  .beta-badge {
+    display: inline-block;
+    margin-left: 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    background-color: var(--color-blue-70);
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    line-height: var(--font-2xl);
+    width: 4rem;
+  }
+
+  .platform-release {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    strong {
+      font-weight: 600;
+    }
+
+    .platform-title {
+      margin: 0;
+
+      @media (max-width: @md) {
+        text-align: center;
+      }
+    }
+
+    .platform-icon {
+      @media (max-width: @md) {
+        margin: auto;
+      }
+    }
+
+    .platform-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: @md) {
+        justify-content: center;
+        margin: auto;
+      }
+    }
+
+    .platform-list-builds {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+
+      h5 {
+        margin: 0;
+        font-weight: 300;
+      }
+
+      &.release > h5 {
+        font-weight: 500;
+      }
+
+
+      @media (max-width: @md) {
+        flex-direction: column;
+        margin-bottom: 1rem;
+      }
+    }
+
+    ul {
+      font-size: var(--font-md);
+      font-weight: 400;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      width: 100%;
+
+      li {
+        white-space: nowrap;
+      }
+
+      li::after {
+        display: inline;
+        content: '|';
+        padding-left: 0.5rem;
+      }
+
+      li:last-child::after {
+        content: '';
+      }
+    }
+
+    @media (max-width: @md) {
+      // I can't think of a nicer way to adjust the icon, so we'll just tie it together with a nice-ish border.
+      border-left: 3px solid var(--color-ink-70);
+      border-radius: 3px;
+      padding-left: 1rem;
+      margin-left: -1rem;
+    }
+  }
+
+
+  // These need to be moved into a global file for products-all-macros eventually!
+  .all-downloads-legend {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 2rem;
+      justify-content: center;
+      padding: 0;
+    }
+
+    li {
+      font-size: var(--font-lg);
+      color: var(--color-ink-70);
+    }
+  }
+
+  .all-downloads-container {
+    display: flex;
+    flex-direction: column;
+
+    .products-letter-legend {
+      font-size: var(--font-4xl);
+      color: var(--color-ink-70);
+    }
+
+    .product-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
+    .product-row-downloads {
+      display: flex;
+      flex-direction: column;
+
+      // Remove the glow here, it's just too much with that many buttons!
+      a.btn::before {
+        background: none !important;
+      }
+
+      div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // Steal this from start for now
+  .warning-panel {
+    --text-gradient: linear-gradient(-270deg, var(--color-magenta-50), var(--color-purple-50));
+    --bg-warning: color-mix(in srgb, var(--color-magenta-50) 5%, transparent);
+    --text-warning: var(--color-magenta-90);
+    --warning-links: var(--color-purple-80);
+    --list-dot-inner: var(--color-magenta-90);
+    --list-dot-outer: var(--color-magenta-10);
+
+    place-items: center;
+    background: var(--bg-warning);
+    color: var(--text-warning);
+    border: 1px solid var(--text-warning);
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    p {
+      margin: 0;
+    }
+    a {
+      color: var(--warning-links);
+    }
+  }
+}

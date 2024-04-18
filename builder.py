@@ -1,5 +1,8 @@
 import datetime
 import errno
+
+import jinja2.exceptions
+
 import helper
 import logging
 import multiprocessing
@@ -83,10 +86,11 @@ class Site(object):
         `js_bundles` (dict, optional): dict containing lists of js files to be concatenated together and copied to `renderpath`.
         `data` (dict, optional): dict to be directly added to the Jinja2 global context.
         `debug` (bool, optional): Optionally write log output or not.
+        `dev_mode` (bool, optional): Enables various behaviours that would be helpful for develoeprs. Don't use on prod.
     Attributes:
         `lang`: Current language to build the site in, an element of `languages`.
     """
-    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False):
+    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False, dev_mode=False):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
@@ -100,6 +104,7 @@ class Site(object):
         self.data = data
         self._setup_env()
         self._env.globals.update(settings=settings, **helper.contextfunctions)
+        self.dev_mode = dev_mode
         if debug:
             logger.setLevel(logging.INFO)
 
@@ -155,7 +160,7 @@ class Site(object):
         if os.path.isfile(htpath):
             mode = 'a'
         with open(htpath, mode) as f:
-            f.write('RewriteEngine On\nRewriteRule ^favicon\.ico$ {path}\n'.format(path=settings.FAVICON_PATH))
+            f.write('RewriteEngine On\nRewriteRule ^favicon.ico$ {path}\n'.format(path=settings.FAVICON_PATH))
 
     def _copy_apple_pay_domain_verification(self):
         """Copies over FRU's merchantid to `self.renderpath/.well-known` for Apple Pay domain verification purposes"""
@@ -274,8 +279,25 @@ class Site(object):
             filedir = os.path.dirname(filepath)
             if not os.path.exists(filedir):
                 os.makedirs(filedir)
-            t = self._env.get_template(template)
-            t.stream().dump(filepath)
+
+            try:
+                t = self._env.get_template(template)
+                t.stream().dump(filepath)
+            except jinja2.exceptions.TemplateSyntaxError as ex:
+                logger.error(f">> Jinja Syntax Error: \"{ex.message}\"\n>> In file \"{ex.filename}\" on line {ex.lineno}.")
+
+                # This is for dev builds, we want it to crash on production.
+                if self.dev_mode:
+                    continue
+
+                raise ex
+            except jinja2.exceptions.TemplateError as ex:
+                logger.error(f">> Jinja Template Error: \"{ex.message}\".")
+
+                if self.dev_mode:
+                    continue
+
+                raise ex
 
     def build_startpage(self):
         """Build the start page for all `languages`."""
@@ -299,6 +321,11 @@ class Site(object):
             self._switch_lang(lang)
             self.render()
             write_404_htaccess(self.outpath, self.lang)
+
+            # Write download page redirect
+            downloads_path = os.path.join(self.renderpath, self.lang, 'download')
+            write_htaccess(downloads_path, settings.CANONICAL_URL)
+
             if lang == 'en-US':
                 # 404 page for root accesses outside lang dirs.
                 write_404_htaccess(self.renderpath, self.lang)
@@ -336,14 +363,15 @@ class UpdateHandler(FileSystemEventHandler):
         delta = timestamp - self.updatetime
         if delta.seconds > 0:
             timemsg = timestamp.strftime("%H:%M:%S")
+            print("{0}: Starting update...".format(timemsg))
             if settings.ASSETS in event.src_path:
                 self.builder.partial_asset_build(event.src_path, timemsg)
             elif settings.MEDIA_URL[1:] in event.src_path:
                 self.builder.build_assets()
-                print("{0}: All Assets rebuilt.".format(timemsg))
+                print("{0}: All Assets rebuilt.".format(datetime.datetime.now().strftime("%H:%M:%S")))
             else:
                 self.updatesite(event)
-                print("{0}: Website rebuilt.".format(timemsg))
+                print("{0}: Website rebuilt.".format(datetime.datetime.now().strftime("%H:%M:%S")))
             self.updatetime = datetime.datetime.now()
 
     def on_modified(self, event):
@@ -358,7 +386,7 @@ class UpdateHandler(FileSystemEventHandler):
             print("{}: {} ({})\n".format(type(err).__name__, err.strerror, err.filename))
         except BundleError as err:
             print(standard_error_msg)
-            print("{}: {}\n".format(type(err).__name__, err.message))
+            print("{}: {}\n".format(type(err).__name__, str(err)))
 
 
 class RedirectingHTTPRequestHandler(SimpleHTTPRequestHandler):
@@ -392,7 +420,7 @@ def setup_httpd(port, path):
     process.daemon = True
     process.start()
     os.chdir(cwd)
-    print("HTTP Server running on localhost port {0}.".format(port))
+    print(f"HTTP Server running on: http://localhost:{port}")
     return process
 
 

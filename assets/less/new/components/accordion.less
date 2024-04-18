@@ -1,0 +1,79 @@
+.accordion {
+  position: relative;
+  width: 100%;
+
+  span {
+    display: flex;
+    align-content: center;
+    margin-right: 0.5rem;
+  }
+
+  // Need a min-width that's the length of the answers text, 900px works..
+  min-width: 900px;
+  min-height: 16px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+
+  @media (max-width: @xl) {
+    min-width: 100%;
+  }
+
+  // Let it be known, I strongly dislike webkit.
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .question {
+    border-radius: 6px;
+    border: 1px solid var(--color-gray-30);
+    padding: 1rem 2rem 1rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      position: absolute;
+      margin: auto auto;
+      right: 0;
+      padding-right: 1.0rem;
+      content: url("/media/svg/zoom-out.svg");
+    }
+  }
+
+  &[open] {
+    .question::after {
+      content: url("/media/svg/zoom-in.svg");
+    }
+  }
+
+  .answer {
+    // Maaaybe revisit this...
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    // This feels wrong, but it works!
+    br {
+      margin-bottom: 1rem;
+    }
+  }
+
+
+
+  // Animations
+  &[open] summary ~ * {
+    animation: sweep 0.5s ease-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &[open] summary ~ * {
+      animation: none;
+    }
+  }
+}

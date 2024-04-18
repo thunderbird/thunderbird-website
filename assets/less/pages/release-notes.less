@@ -1,0 +1,157 @@
+.page-release-notes {
+  --heading-spacing: 6rem;
+  --line-height: 30px;
+
+  kbd {
+    border-radius: 4px;
+    padding: 1px 2px 0;
+    border: 1px solid black;
+  }
+
+  .accordion {
+    width: 100%;
+    min-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .release-text-container {
+    padding-bottom: 2rem;
+  }
+
+  .release-notes-container {
+    padding-top: 0;
+  }
+
+  .release-group {
+    text-transform: capitalize;
+    margin-top: var(--heading-spacing);
+  }
+
+  .release-text {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    li {
+      list-style: none;
+    }
+
+    ul {
+      padding: 0;
+    }
+  }
+
+  .system-requirements {
+    ul {
+      .styled-list();
+    }
+  }
+
+  .wide {
+    max-inline-size: 60%;
+
+    @media (max-width: @md) {
+      max-inline-size: 90%;
+    }
+  }
+
+  .header-section {
+    margin-top: var(--heading-spacing);
+    margin-bottom: 2rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .note-flex {
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+  }
+
+  .note-container {
+    display: flex;
+    align-items: start;
+    margin-bottom: 1rem;
+    flex-direction: column;
+  }
+
+  .note-category {
+    margin: 0 1rem 0 0;
+    line-height: var(--line-height);
+
+    .category-icon {
+      display: flex;
+      align-items: center;
+      width: 1.5rem;
+      color: var(--color-blue-70);
+    }
+
+    .category-container {
+      display: flex;
+      gap: 0.5rem;
+      text-transform: capitalize;
+      font-weight: 700;
+      align-items: center;
+      font-size: 16px;
+    }
+  }
+
+  .note-text {
+    text-align: left;
+    font-weight: 500;
+    line-height: var(--line-height);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .note-bug-numbers {
+    width: 100%;
+
+    p {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      gap: 1rem;
+    }
+
+    // per each bug
+    a::after {
+      content: ',';
+    }
+
+    a:last-child::after {
+      content: '';
+    }
+  }
+
+  .see-all-releases {
+    margin-top: 6rem;
+    font-size: var(--font-lg);
+  }
+
+  @media (max-width: @md) {
+    // Fallback <code> to basically the single backtick behaviour on mobile.
+    code {
+      line-break: anywhere;
+    }
+
+    .section-text.wide {
+      padding: 0;
+      max-inline-size: none;
+      width: 100%;
+    }
+
+    .note-flex {
+      flex-direction: column;
+    }
+
+    .category-icon {
+      display: none;
+    }
+  }
+}

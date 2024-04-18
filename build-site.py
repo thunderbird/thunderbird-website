@@ -24,6 +24,7 @@ parser.add_argument('--watch', help='Rebuild when template and asset dirs are ch
                     action='store_true')
 parser.add_argument('--port', const=8000, default=8000, type=int,
                     help='Port for the server that runs with --watch.', nargs='?')
+parser.add_argument('--devmode', help='Enables various behaviours that would be helpful for development. (e.g. not hard crashing on jinja syntax errors.)', action='store_true')
 args = parser.parse_args()
 
 if args.enus:
@@ -37,7 +38,7 @@ else:
 
 if args.startpage:
     print('Rendering start page ' + langmsg)
-    site = builder.Site(languages, settings.START_PATH, settings.START_RENDERPATH, settings.START_CSS, debug=args.debug)
+    site = builder.Site(languages, settings.START_PATH, settings.START_RENDERPATH, settings.START_CSS, debug=args.debug, dev_mode=args.devmode)
     site.build_startpage()
 elif args.buildcalendars:
     print("Building calendar files")
@@ -77,7 +78,7 @@ else:
                }
 
     site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,
-                        settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS, data=context, debug=args.debug)
+                        settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS, data=context, debug=args.debug, dev_mode=args.devmode)
     site.build_website()
 
 if args.watch:

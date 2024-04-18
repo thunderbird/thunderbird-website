@@ -1,0 +1,122 @@
+.page-who-we-are {
+  #meet-thunderbird {
+    .section-text {
+      margin-bottom: 0;
+    }
+  }
+
+  .icon-grid-container {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin: auto;
+  }
+
+  .icon-grid {
+    width: 34rem;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+
+    @media (max-width: @lg) {
+      width: 100%;
+      gap: 4rem;
+      flex-direction: column;
+    }
+  }
+
+  .icon-item {
+    min-width: 128px;
+    margin: auto;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // Sections
+  .value-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    gap: 10rem;
+
+    .section-text {
+      text-align: left;
+    }
+
+    img {
+      margin-left: 10rem;
+      max-width: 300px;
+    }
+
+    @media (max-width: @lg) {
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+
+      img {
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .values-freedom {
+    flex-direction: row-reverse;
+    margin-right: auto;
+
+    img {
+      margin-left: 0;
+      margin-right: 10rem;
+    }
+
+    @media (max-width: @lg) {
+      flex-direction: column;
+      width: 100%;
+
+      img {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  // This should probably live with the component..
+  .cover-container {
+    position: relative;
+
+    img {
+      margin-bottom: -0.25rem;
+    }
+  }
+
+  .job-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+
+    .person {
+      width: 8rem;
+
+      picture, img {
+        width: 8rem;
+        border-radius: 100%;
+      }
+
+      h5 {
+        font-size: var(--font-lg);
+        margin: auto;
+        width: min-content;
+      }
+
+      span {
+        font-size: var(--font-regular);
+      }
+    }
+  }
+
+}

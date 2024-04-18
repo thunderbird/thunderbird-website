@@ -1,0 +1,30 @@
+.page-releases {
+  .release-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 1rem;
+    border-bottom: var(--border-size) solid;
+    border-color: var(--border-color);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @media (max-width: @md) {
+      flex-direction: column;
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .release-major {
+    font-size: 150%;
+    min-width: 15%;
+    margin-top: 0;
+  }
+
+  .release-minors {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+}

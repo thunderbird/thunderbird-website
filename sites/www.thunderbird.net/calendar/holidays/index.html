@@ -1,72 +1,62 @@
 {# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% extends "includes/base-resp.html" %}
+{% set active_page = "holiday-calendar" %}
+{% extends "includes/base/page.html" %}
 
-{% block page_title %}{{ _('Holiday Calendars') }}{% endblock %}
-
-{% block header_content %}
-  <section class="text-left text-white flex flex-col items-start xl:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-16">{{ self.page_title() }}</h1>
-  </section>
-{% endblock %}
+{% block page_title %}{{ _('Holiday Calendar') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('Resources') }}{% endblock %}
 
 {% block content %}
-
-  <section class="mt-10 mb-20 flex justify-center items-center pl-8 pr-8">
-    <aside class="flex flex-col w-full max-w-6xl lg:ml-16 lg:mr-16">
-      <h3 class="header-section">
-        <span>{{ svg('calendar') }}</span>
-        <aside class="flex flex-col">
-          {{ _('Holiday Calendars')}}
-          <small class="font-normal font-md tracking-normal normal-case">
-            {{ _('Add your nation’s holidays to Calendar!') }}
-          </small>
-        </aside>
-      </h3>
-      <p class="font-lg tracking-wider leading-loose mb-6 p-links-blue">
+  <section id="all-holidays">
+    <div class="section-text wide">
+      <h2>{{ _('Add your nation’s holidays to <span class="txt-gradient">Calendar</span>!') }}</h2>
+      <p>
         {{ _('We’ve got some holiday calendar files available for download. You can either download and then import them into Calendar or you can just subscribe to these calendars by copying their URL and then adding them as new remote calendar files. More information on installing a holiday calendar can be found in the <a href="%s">Adding a holiday calendar article</a>.')|format('https://support.mozilla.org/kb/adding-a-holiday-calendar') }}
       </p>
-      <p class="font-lg tracking-wider leading-loose mb-10 mt-0 p-links-blue">
+      <p>
         {{ _('You can also find calendars to subscribe to at <a href="%s">iCalShare.com</a>.')|format('http://icalshare.com') }}
       </p>
-    </aside>
-  </section>
-
-  <section class="flex justify-between items-center bg-grey-light rounded lg:w-full max-w-6xl mx-auto">
-    <ul class="list-none p-0 flex flex-wrap justify-center flex-1 m-0">
+    </div>
+    <div class="all-holiday-legend">
+      <ul>
       {% for letter in letters -%}
-      <li>
-        <a href="#{{ letter }}" class="btn-link text-blue-dark">{{ letter }}</a>
-      </li>
-      {% endfor -%}
-    </ul>
+          <li>
+            <a href="#{{ letter }}">
+              {{ letter }}
+            </a>
+          </li>
+        {% endfor -%}
+      </ul>
+    </div>
+  </section>
+  <section id="holidays">
+    <div class="holiday-container">
+      {% set letter = namespace(first='') %}
+      {% for calendar in calendars -%}
+        {% if letter.first != calendar.country[:1] %}
+          {% set letter.first = calendar.country[:1] %}
+          <h4 id="{{ letter.first }}" class="products-letter-legend">
+            {{ letter.first }}
+          </h4>
+        {% endif %}
+
+        <div class="product-row">
+            <div>
+              {% if calendar.author == CALDATA_AUTOGEN_AUTHOR %}
+                {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a>')|format(url=CALDATA_URL + calendar.filename, country=calendar.country ) }}
+              {% else %}
+                {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a> holidays thanks to %(authors)s')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, authors=calendar.authors) }}
+              {% endif %}
+            </div>
+            <div class="text-right p-2 font-sm uppercase font-semibold">
+              {{ calendar.datespan }}
+            </div>
+        </div>
+      {% endfor %}
+    </div>
   </section>
 
-  <section class="mb-10 flex flex-col items-start max-w-6xl mx-auto pr-8 pl-8">
-    {% set letter = namespace(first='') %}
-    {% for calendar in calendars -%}
-      {% if letter.first != calendar.country[:1] %}
-        {% set letter.first = calendar.country[:1] %}
-        <h4 id="{{ letter.first }}" class="header-section lg:w-full mb-0 pt-6 pl-3">
-          {{ letter.first }}
-        </h4>
-      {% endif %}
-      <div class="flex w-full mt-1 mb-1 bg-grey-light rounded p-1 font-md items-center">
-        <aside class="flex-1 p-2">
-          {% if calendar.author == CALDATA_AUTOGEN_AUTHOR %}
-            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a>')|format(url=CALDATA_URL + calendar.filename, country=calendar.country ) }}
-          {% else %}
-            {{ _('<a href="%(url)s" class="inline-link text-blue">%(country)s</a> holidays thanks to %(authors)s')|format(url=CALDATA_URL + calendar.filename, country=calendar.country, authors=calendar.authors) }}
-          {% endif %}
-        </aside>
-        <aside class="text-right p-2 font-sm uppercase font-semibold">
-          {{ calendar.datespan }}
-        </aside>
-      </div>
-    {% endfor %}
-  </section>
-
-  {% include 'includes/site-prefooter.html' %}
 {% endblock %}

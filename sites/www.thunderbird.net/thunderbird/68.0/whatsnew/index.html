@@ -1,27 +1,120 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
 
-{% extends "includes/base-resp.html" %}
 
-{% block page_title %}{{ _('New in Thunderbird 68') }}{% endblock %}
+<!doctype html>
 
-{% block header_content %}
+<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+  <head>
+    <meta charset="utf-8">
+
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <title>{{ _('New in Thunderbird 68') }} — Thunderbird</title>
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ _('Thunderbird') }}">
+    <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
+    <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
+    <meta property="og:title" content="{{ _('New in Thunderbird 68') }}">
+    <meta property="og:description" content="">
+    <meta property="fb:page_id" content="348169218537151">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mozthunderbird">
+    <meta name="twitter:domain" content="thunderbird.net">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/media/archived/img/thunderbird/ios-icon-180.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="/media/archived/img/thunderbird/favicon-196.png">
+    <link rel="shortcut icon" href="/media/archived/img/thunderbird/favicon.ico">
+    
+    <link href="/media/archived/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/media/archived/css/thunderbird-style.css" rel="stylesheet" type="text/css" />
+
+    
+
+    <!--[if !lte IE 8]><!-->
+    
+    
+
+    
+    
+    <!--<![endif]-->
+
+    
+      
+    
+    <script>
+      window.siteLocale = "{{ LANG }}";
+    </script>
+  </head>
+
+  <body class="html-ltr " >
+    <div id="strings" ></div>
+
+    
+    
+
+    
+  <header id="masthead" class="bg-no-repeat bg-cover bg-top flex flex-col bg-header-page">
+
+
+    
   <section class="text-left text-white flex flex-col items-start lg:w-full max-w-6xl mx-auto pl-8 pr-8">
-    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ self.page_title() }}</h1>
+    <h1 class="font-4xl md:font-hero font-thin md:mt-10 mb-8">{{ _('New in Thunderbird 68') }}</h1>
     <p class="font-lg md:font-xl tracking-wide leading-relaxed max-w-4xl mb-16 mt-0 p-links">
       {{ _('This article describes some of the major changes visible to users in Thunderbird version 68.0. Full details of all the changes can be found in the <a href="%(release)s">Thunderbird 68 release notes</a>.')|format(release='https://www.thunderbird.net/en-US/thunderbird/68.0/releasenotes/') }}
-      </p>
+    </p>
   </section>
-{% endblock %}
 
-{% block content %}
+
+    
+  
+
+
+
+
+<script>
+  (function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
+  .split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+  :function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+  j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a;
+  t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+  for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
+  })(window,document,'script','FundraiseUp','ADGJGYAN');
+
+  // Set FRU's language
+  window._lang = "{{ get_fru_language() }}";
+</script>
+
+
+
+
+<div id="modal-overlay" class="fixed pin-t pin-l m-0 p-0 w-full h-full z-20 bg-black opacity-50 hidden" tabindex="-1"></div>
+
+    
+
+    
+
+  </header>
+
+
+    
+      
+    
+
+    <main>
+      
   <section class="pt-20 pb-20 flex justify-center bg-calendar">
     <aside class="flex flex-col flex-1 max-w-6xl ml-16 mr-16">
       <!-- Add half screenshot of dark theme -->
-      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="{{ static('/media/img/thunderbird/features/dark-theme.png') }}" alt="">
+      <img class="w-full h-auto mb-10 max-w-lg self-center shadow-lg" src="/media/archived/img/thunderbird/features/dark-theme.png" alt="">
       <h3 class="header-section">
-        <span>{{ svg('customize') }}</span>
+        <span><svg viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M17.5122185,9.1439567 L21.7633396,4.89283556 L20.2108824,3.34037835 L15.9597613,7.59149949 L17.5122185,9.1439567 Z M23.9977173,4.89283556 C23.9977173,5.13948764 23.9106636,5.37163077 23.7365563,5.54573812 L5.07805187,24.2042425 C4.90394452,24.3783499 4.67180139,24.4654035 4.42514931,24.4654035 C4.17849723,24.4654035 3.94635409,24.3783499 3.77224674,24.2042425 L0.899475463,21.3314712 C0.725368112,21.1573639 0.638314437,20.9252207 0.638314437,20.6785687 C0.638314437,20.4319166 0.725368112,20.1997734 0.899475463,20.0256661 L19.5579798,1.36716171 C19.7320872,1.19305436 19.9642303,1.10600069 20.2108824,1.10600069 C20.4575345,1.10600069 20.6896776,1.19305436 20.863785,1.36716171 L23.7365563,4.23993299 C23.9106636,4.41404034 23.9977173,4.64618348 23.9977173,4.89283556 Z M4.39613142,2.13613584 L5.81800811,2.57140422 L4.39613142,3.00667259 L3.96086304,4.42854929 L3.52559466,3.00667259 L2.10371797,2.57140422 L3.52559466,2.13613584 L3.96086304,0.714259148 L4.39613142,2.13613584 Z M9.47426247,4.48658507 L12.3180159,5.35712183 L9.47426247,6.22765858 L8.60372572,9.07141197 L7.73318897,6.22765858 L4.88943558,5.35712183 L7.73318897,4.48658507 L8.60372572,1.64283168 L9.47426247,4.48658507 Z M22.9675821,11.4218612 L24.3894588,11.8571296 L22.9675821,12.2923979 L22.5323138,13.7142746 L22.0970454,12.2923979 L20.6751687,11.8571296 L22.0970454,11.4218612 L22.5323138,9.9999845 L22.9675821,11.4218612 Z M13.6818568,2.13613584 L15.1037335,2.57140422 L13.6818568,3.00667259 L13.2465884,4.42854929 L12.81132,3.00667259 L11.3894433,2.57140422 L12.81132,2.13613584 L13.2465884,0.714259148 L13.6818568,2.13613584 Z"></path>
+    </g>
+</svg>
+</span>
         {{ _('Better Dark Theme')}}
       </h3>
       <p class="font-lg tracking-wider leading-loose mb-10">
@@ -32,9 +125,14 @@
 
   <section class="pb-10 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8">
     <aside class="flex flex-col flex-1 lg:max-w-lg">
-      <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg" src="{{ static('/media/img/thunderbird/features/filelink.png') }}" alt="">
+      <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg" src="/media/archived/img/thunderbird/features/filelink.png" alt="">
       <h3 class="header-section">
-        <span>{{ svg('link') }}</span>
+        <span><svg viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M15.0803746,12.7857105 C15.0803746,12.5245494 14.979928,12.2834777 14.7991242,12.1026739 L12.709836,10.0133857 C12.5290323,9.83258193 12.2779159,9.73213539 12.0267995,9.73213539 C11.7355045,9.73213539 11.5044775,9.84262659 11.3035844,10.0535643 C11.635058,10.3850379 12.0267995,10.6662883 12.0267995,11.1785657 C12.0267995,11.7109324 11.5948794,12.1428525 11.0625126,12.1428525 C10.5502352,12.1428525 10.2689849,11.751111 9.9375113,11.4196374 C9.72657355,11.6205305 9.60603769,11.8515576 9.60603769,12.1528972 C9.60603769,12.4040136 9.70648424,12.6551299 9.88728803,12.8359337 L11.9564869,14.9151773 C12.1372907,15.0959811 12.3884071,15.186383 12.6395235,15.186383 C12.8906398,15.186383 13.1417562,15.0959811 13.32256,14.9252219 L14.7991242,13.4587023 C14.979928,13.2778985 15.0803746,13.0368268 15.0803746,12.7857105 Z M8.01898223,5.7042288 C8.01898223,5.45311243 7.91853568,5.20199606 7.7377319,5.02119227 L5.668533,2.94194872 C5.48772921,2.76114493 5.23661284,2.66069838 4.98549647,2.66069838 C4.7343801,2.66069838 4.48326373,2.76114493 4.30245994,2.93190406 L2.82589568,4.39842367 C2.6450919,4.57922746 2.54464535,4.82029917 2.54464535,5.07141554 C2.54464535,5.33257657 2.6450919,5.57364829 2.82589568,5.75445207 L4.91518389,7.84374028 C5.09598767,8.02454406 5.34710405,8.11494596 5.59822042,8.11494596 C5.88951541,8.11494596 6.12054247,8.01449941 6.32143556,7.80356166 C5.98996195,7.47208805 5.59822042,7.19083771 5.59822042,6.67856032 C5.59822042,6.14619361 6.03014057,5.71427345 6.56250728,5.71427345 C7.07478468,5.71427345 7.35603501,6.10601499 7.68750862,6.4374886 C7.89844637,6.2365955 8.01898223,6.00556844 8.01898223,5.7042288 Z M17.0089483,12.7857105 C17.0089483,13.5491042 16.697564,14.2924087 16.1551526,14.8247754 L14.6785884,16.291295 C14.136177,16.8337064 13.4029172,17.1250013 12.6395235,17.1250013 C11.866085,17.1250013 11.1328252,16.8236617 10.5904139,16.2712057 L8.52121497,14.1919621 C7.97880361,13.6495508 7.68750862,12.916291 7.68750862,12.1528972 C7.68750862,11.3593695 8.00893758,10.6060204 8.57143825,10.0535643 L7.68750862,9.16963471 C7.13505261,9.73213539 6.39174815,10.0535643 5.59822042,10.0535643 C4.83482665,10.0535643 4.09152219,9.75222469 3.54911083,9.20981333 L1.45982263,7.12052513 C0.90736661,6.56806911 0.61607162,5.84485397 0.61607162,5.07141554 C0.61607162,4.30802178 0.92745592,3.56471732 1.46986728,3.03235061 L2.94643154,1.56583101 C3.4888429,1.02341965 4.2221027,0.732124656 4.98549647,0.732124656 C5.75893489,0.732124656 6.4921947,1.0334643 7.03460606,1.58592032 L9.10380495,3.66516387 C9.64621631,4.20757523 9.9375113,4.94083503 9.9375113,5.7042288 C9.9375113,6.49775653 9.61608235,7.25110564 9.05358168,7.80356166 L9.9375113,8.68749128 C10.4899673,8.12499061 11.2332718,7.80356166 12.0267995,7.80356166 C12.7901933,7.80356166 13.5334977,8.1049013 14.0759091,8.64731266 L16.1651973,10.7366009 C16.7176533,11.2890569 17.0089483,12.012272 17.0089483,12.7857105 Z"></path>
+    </g>
+</svg>
+</span>
         {{ _('Filelink Improved')}}
       </h3>
       <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
@@ -46,9 +144,14 @@
     </aside>
 
     <aside class="flex flex-col flex-1 lg:max-w-lg mt-10 lg:mt-0">
-      <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg" src="{{ static('/media/img/thunderbird/features/preferences-in-tab.png') }}" alt="">
+      <img class="w-full h-auto mb-10 max-w-sm self-center shadow-lg" src="/media/archived/img/thunderbird/features/preferences-in-tab.png" alt="">
       <h3 class="header-section">
-        <span>{{ svg('settings') }}</span>
+        <span><svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M10.8839408,8.57142091 C10.8839408,7.15512458 9.72880553,5.99998927 8.3125092,5.99998927 C6.89621286,5.99998927 5.74107756,7.15512458 5.74107756,8.57142091 C5.74107756,9.98771724 6.89621286,11.1428525 8.3125092,11.1428525 C9.72880553,11.1428525 10.8839408,9.98771724 10.8839408,8.57142091 Z M16.0268041,7.47655353 L16.0268041,9.7064669 C16.0268041,9.85713673 15.9062682,10.0379405 15.7455538,10.0680745 L13.8872926,10.3493248 C13.7768014,10.6707538 13.6562656,10.9720934 13.4955511,11.2633884 C13.8370694,11.7555765 14.1986769,12.1975413 14.5703292,12.6495508 C14.6305971,12.7198634 14.6707757,12.8102652 14.6707757,12.9006671 C14.6707757,12.991069 14.6406417,13.0613816 14.5803738,13.1316942 C14.3393021,13.4531232 12.9832737,14.9296874 12.6417554,14.9296874 C12.5513535,14.9296874 12.4609516,14.8895088 12.3805944,14.8392855 L10.994432,13.7544628 C10.703137,13.9051326 10.3917527,14.0357131 10.0803684,14.1361597 C10.0100559,14.7488836 9.94978793,15.4017862 9.78907346,16.0044655 C9.74889484,16.16518 9.60826967,16.2857158 9.42746588,16.2857158 L7.19755251,16.2857158 C7.01674872,16.2857158 6.85603425,16.1551353 6.83594494,15.9843762 L6.5546946,14.1361597 C6.2433103,14.0357131 5.94197066,13.9151773 5.65067567,13.7645075 L4.23437933,14.8392855 C4.16406675,14.8995535 4.07366486,14.9296874 3.98326296,14.9296874 C3.89286107,14.9296874 3.80245918,14.8895088 3.73214659,14.8191962 C3.19977989,14.3370528 2.49665405,13.7142842 2.07477855,13.1316942 C2.02455527,13.0613816 2.00446596,12.9810244 2.00446596,12.9006671 C2.00446596,12.8102652 2.03459993,12.7399527 2.0848232,12.6696401 C2.42634147,12.207586 2.79799369,11.7656211 3.13951196,11.2935224 C2.96875283,10.9720934 2.82812766,10.6406198 2.72768111,10.2991015 L0.889509276,10.0278959 C0.718750144,9.99776189 0.598214286,9.83704742 0.598214286,9.66628828 L0.598214286,7.43637491 C0.598214286,7.28570509 0.718750144,7.1049013 0.869419966,7.07476734 L2.73772576,6.793517 C2.83817231,6.47208805 2.96875283,6.1707484 3.1294673,5.86940876 C2.78794904,5.38726533 2.42634147,4.93525586 2.05468924,4.48324639 C1.99442131,4.41293381 1.95424269,4.33257657 1.95424269,4.24217468 C1.95424269,4.15177278 1.99442131,4.0814602 2.04464458,4.01114761 C2.2857163,3.67967401 3.6417447,2.2131544 3.98326296,2.2131544 C4.07366486,2.2131544 4.16406675,2.25333302 4.24442399,2.31360095 L5.63058636,3.38837902 C5.92188135,3.23770919 6.23326565,3.10712868 6.54464995,3.00668213 C6.61496253,2.39395819 6.67523046,1.74105562 6.83594494,1.13837633 C6.87612356,0.977661856 7.01674872,0.857125998 7.19755251,0.857125998 L9.42746588,0.857125998 C9.60826967,0.857125998 9.76898415,0.98770651 9.78907346,1.15846564 L10.0703238,3.00668213 C10.3817081,3.10712868 10.6830477,3.22766454 10.9743427,3.37833436 L12.4006837,2.30355629 C12.4609516,2.24328836 12.5513535,2.2131544 12.6417554,2.2131544 C12.7321573,2.2131544 12.8225592,2.25333302 12.8928718,2.31360095 C13.4252385,2.80578903 14.1283643,3.42855763 14.5502398,4.02119227 C14.6004631,4.0814602 14.6205524,4.16181744 14.6205524,4.24217468 C14.6205524,4.33257657 14.5904185,4.40288915 14.5401952,4.47320174 C14.1986769,4.93525586 13.8270247,5.37722067 13.4855064,5.84931945 C13.6562656,6.1707484 13.7968907,6.50222201 13.8973373,6.83369562 L15.7355091,7.11494596 C15.9062682,7.14507992 16.0268041,7.3057944 16.0268041,7.47655353 Z"></path>
+    </g>
+</svg>
+</span>
         {{ _('Options/Preferences in a Tab')}}
       </h3>
       <p class="font-lg tracking-wider leading-loose mb-8 mt-0">
@@ -63,7 +166,12 @@
   <section class="pt-20 pb-20 flex justify-center bg-calendar pr-8 pl-8">
     <aside class="flex flex-col flex-1 lg:max-w-6xl lg:ml-16 lg:mr-16">
       <h3 class="header-section">
-        <span>{{ svg('news') }}</span>
+        <span><svg viewBox="0 0 22 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M10.8125123,4.71427345 L6.95536481,4.71427345 L6.95536481,8.57142091 L10.8125123,8.57142091 L10.8125123,4.71427345 Z M12.0982281,11.1428525 L12.0982281,12.4285684 L5.66964899,12.4285684 L5.66964899,11.1428525 L12.0982281,11.1428525 Z M12.0982281,3.42855763 L12.0982281,9.85713673 L5.66964899,9.85713673 L5.66964899,3.42855763 L12.0982281,3.42855763 Z M18.5268072,11.1428525 L18.5268072,12.4285684 L13.3839439,12.4285684 L13.3839439,11.1428525 L18.5268072,11.1428525 Z M18.5268072,8.57142091 L18.5268072,9.85713673 L13.3839439,9.85713673 L13.3839439,8.57142091 L18.5268072,8.57142091 Z M18.5268072,5.99998927 L18.5268072,7.28570509 L13.3839439,7.28570509 L13.3839439,5.99998927 L18.5268072,5.99998927 Z M18.5268072,3.42855763 L18.5268072,4.71427345 L13.3839439,4.71427345 L13.3839439,3.42855763 L18.5268072,3.42855763 Z M3.09821735,13.0714263 L3.09821735,3.42855763 L1.81250153,3.42855763 L1.81250153,13.0714263 C1.81250153,13.4229892 2.10379652,13.7142842 2.45535944,13.7142842 C2.80692236,13.7142842 3.09821735,13.4229892 3.09821735,13.0714263 Z M19.812523,13.0714263 L19.812523,2.14284182 L4.38393317,2.14284182 L4.38393317,13.0714263 C4.38393317,13.2924087 4.34375455,13.5133911 4.27344197,13.7142842 L19.1696651,13.7142842 C19.521228,13.7142842 19.812523,13.4229892 19.812523,13.0714263 Z M21.0982388,0.857125998 L21.0982388,13.0714263 C21.0982388,14.1361597 20.2343985,15 19.1696651,15 L2.45535944,15 C1.39062603,15 0.526785714,14.1361597 0.526785714,13.0714263 L0.526785714,2.14284182 L3.09821735,2.14284182 L3.09821735,0.857125998 L21.0982388,0.857125998 Z"></path>
+    </g>
+</svg>
+</span>
         {{ _('Other Notable Changes')}}
       </h3>
       <p class="font-lg tracking-wider leading-loose mb-6">
@@ -75,6 +183,155 @@
     </aside>
   </section>
 
-  {% include 'includes/donate-mailing-list.html' %}
+  <section class="bg-prefooter bg-grey-lighter -mb-10">
+    <section class="pt-10 pb-10 lg:pt-20 lg:pb-20 flex flex-col lg:flex-row max-w-6xl mx-auto justify-between pl-8 pr-8 mb-10">
+  <aside class="flex flex-col flex-1 lg:max-w-lg mb-20 lg:mb-0">
+    <h3 class="header-section">
+      <a id="donate" class="anchor" aria-hidden="true" href="#donate">
+          <svg viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M15.0803746,12.7857105 C15.0803746,12.5245494 14.979928,12.2834777 14.7991242,12.1026739 L12.709836,10.0133857 C12.5290323,9.83258193 12.2779159,9.73213539 12.0267995,9.73213539 C11.7355045,9.73213539 11.5044775,9.84262659 11.3035844,10.0535643 C11.635058,10.3850379 12.0267995,10.6662883 12.0267995,11.1785657 C12.0267995,11.7109324 11.5948794,12.1428525 11.0625126,12.1428525 C10.5502352,12.1428525 10.2689849,11.751111 9.9375113,11.4196374 C9.72657355,11.6205305 9.60603769,11.8515576 9.60603769,12.1528972 C9.60603769,12.4040136 9.70648424,12.6551299 9.88728803,12.8359337 L11.9564869,14.9151773 C12.1372907,15.0959811 12.3884071,15.186383 12.6395235,15.186383 C12.8906398,15.186383 13.1417562,15.0959811 13.32256,14.9252219 L14.7991242,13.4587023 C14.979928,13.2778985 15.0803746,13.0368268 15.0803746,12.7857105 Z M8.01898223,5.7042288 C8.01898223,5.45311243 7.91853568,5.20199606 7.7377319,5.02119227 L5.668533,2.94194872 C5.48772921,2.76114493 5.23661284,2.66069838 4.98549647,2.66069838 C4.7343801,2.66069838 4.48326373,2.76114493 4.30245994,2.93190406 L2.82589568,4.39842367 C2.6450919,4.57922746 2.54464535,4.82029917 2.54464535,5.07141554 C2.54464535,5.33257657 2.6450919,5.57364829 2.82589568,5.75445207 L4.91518389,7.84374028 C5.09598767,8.02454406 5.34710405,8.11494596 5.59822042,8.11494596 C5.88951541,8.11494596 6.12054247,8.01449941 6.32143556,7.80356166 C5.98996195,7.47208805 5.59822042,7.19083771 5.59822042,6.67856032 C5.59822042,6.14619361 6.03014057,5.71427345 6.56250728,5.71427345 C7.07478468,5.71427345 7.35603501,6.10601499 7.68750862,6.4374886 C7.89844637,6.2365955 8.01898223,6.00556844 8.01898223,5.7042288 Z M17.0089483,12.7857105 C17.0089483,13.5491042 16.697564,14.2924087 16.1551526,14.8247754 L14.6785884,16.291295 C14.136177,16.8337064 13.4029172,17.1250013 12.6395235,17.1250013 C11.866085,17.1250013 11.1328252,16.8236617 10.5904139,16.2712057 L8.52121497,14.1919621 C7.97880361,13.6495508 7.68750862,12.916291 7.68750862,12.1528972 C7.68750862,11.3593695 8.00893758,10.6060204 8.57143825,10.0535643 L7.68750862,9.16963471 C7.13505261,9.73213539 6.39174815,10.0535643 5.59822042,10.0535643 C4.83482665,10.0535643 4.09152219,9.75222469 3.54911083,9.20981333 L1.45982263,7.12052513 C0.90736661,6.56806911 0.61607162,5.84485397 0.61607162,5.07141554 C0.61607162,4.30802178 0.92745592,3.56471732 1.46986728,3.03235061 L2.94643154,1.56583101 C3.4888429,1.02341965 4.2221027,0.732124656 4.98549647,0.732124656 C5.75893489,0.732124656 6.4921947,1.0334643 7.03460606,1.58592032 L9.10380495,3.66516387 C9.64621631,4.20757523 9.9375113,4.94083503 9.9375113,5.7042288 C9.9375113,6.49775653 9.61608235,7.25110564 9.05358168,7.80356166 L9.9375113,8.68749128 C10.4899673,8.12499061 11.2332718,7.80356166 12.0267995,7.80356166 C12.7901933,7.80356166 13.5334977,8.1049013 14.0759091,8.64731266 L16.1651973,10.7366009 C16.7176533,11.2890569 17.0089483,12.012272 17.0089483,12.7857105 Z"></path>
+    </g>
+</svg>
 
-{% endblock %}
+        </a>
+      {{ _('Thunderbird is funded by users like you')}}
+    </h3>
+    <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+      {{ _('Thunderbird is both free and freedom respecting, but we’re also completely funded by donations! Help us sustain the project and continue to improve.') }}
+    </p>
+    <a href="?form=support&utm_content=home_page_body&utm_source=thunderbird.net&utm_medium=fru&utm_campaign=donation_2023" class="btn-donate self-start ml-0 mr-0 font-lg lg:font-base" data-donate-btn data-donate-content="home_page_body">
+      <span class="inline-block w-3 mr-1"><svg viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M7.00000834,12.0000012 C6.8750082,12.0000012 6.75000805,11.9531261 6.65625793,11.859376 L1.78125212,7.15624542 C1.71875205,7.10155785 0,5.53124348 0,3.65624125 C0,1.36717602 1.39843917,-1.31130219e-05 3.73437945,-1.31130219e-05 C5.10156858,-1.31130219e-05 6.38282011,1.07811317 7.00000834,1.6874889 C7.61719658,1.07811317 8.89844811,-1.31130219e-05 10.2656372,-1.31130219e-05 C12.6015775,-1.31130219e-05 14.0000167,1.36717602 14.0000167,3.65624125 C14.0000167,5.53124348 12.2812646,7.10155785 12.2109521,7.17187044 L7.34375875,11.859376 C7.25000864,11.9531261 7.12500849,12.0000012 7.00000834,12.0000012 Z"></path>
+    </g>
+</svg>
+</span> {{_('Donate')}}
+    </a>
+  </aside>
+
+  <aside class="flex flex-col flex-1 lg:max-w-lg">
+    <h3 class="header-section">
+      <a id="mailing-list" class="anchor" aria-hidden="true" href="#mailing-list">
+        <svg viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="UI" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <path d="M15.0803746,12.7857105 C15.0803746,12.5245494 14.979928,12.2834777 14.7991242,12.1026739 L12.709836,10.0133857 C12.5290323,9.83258193 12.2779159,9.73213539 12.0267995,9.73213539 C11.7355045,9.73213539 11.5044775,9.84262659 11.3035844,10.0535643 C11.635058,10.3850379 12.0267995,10.6662883 12.0267995,11.1785657 C12.0267995,11.7109324 11.5948794,12.1428525 11.0625126,12.1428525 C10.5502352,12.1428525 10.2689849,11.751111 9.9375113,11.4196374 C9.72657355,11.6205305 9.60603769,11.8515576 9.60603769,12.1528972 C9.60603769,12.4040136 9.70648424,12.6551299 9.88728803,12.8359337 L11.9564869,14.9151773 C12.1372907,15.0959811 12.3884071,15.186383 12.6395235,15.186383 C12.8906398,15.186383 13.1417562,15.0959811 13.32256,14.9252219 L14.7991242,13.4587023 C14.979928,13.2778985 15.0803746,13.0368268 15.0803746,12.7857105 Z M8.01898223,5.7042288 C8.01898223,5.45311243 7.91853568,5.20199606 7.7377319,5.02119227 L5.668533,2.94194872 C5.48772921,2.76114493 5.23661284,2.66069838 4.98549647,2.66069838 C4.7343801,2.66069838 4.48326373,2.76114493 4.30245994,2.93190406 L2.82589568,4.39842367 C2.6450919,4.57922746 2.54464535,4.82029917 2.54464535,5.07141554 C2.54464535,5.33257657 2.6450919,5.57364829 2.82589568,5.75445207 L4.91518389,7.84374028 C5.09598767,8.02454406 5.34710405,8.11494596 5.59822042,8.11494596 C5.88951541,8.11494596 6.12054247,8.01449941 6.32143556,7.80356166 C5.98996195,7.47208805 5.59822042,7.19083771 5.59822042,6.67856032 C5.59822042,6.14619361 6.03014057,5.71427345 6.56250728,5.71427345 C7.07478468,5.71427345 7.35603501,6.10601499 7.68750862,6.4374886 C7.89844637,6.2365955 8.01898223,6.00556844 8.01898223,5.7042288 Z M17.0089483,12.7857105 C17.0089483,13.5491042 16.697564,14.2924087 16.1551526,14.8247754 L14.6785884,16.291295 C14.136177,16.8337064 13.4029172,17.1250013 12.6395235,17.1250013 C11.866085,17.1250013 11.1328252,16.8236617 10.5904139,16.2712057 L8.52121497,14.1919621 C7.97880361,13.6495508 7.68750862,12.916291 7.68750862,12.1528972 C7.68750862,11.3593695 8.00893758,10.6060204 8.57143825,10.0535643 L7.68750862,9.16963471 C7.13505261,9.73213539 6.39174815,10.0535643 5.59822042,10.0535643 C4.83482665,10.0535643 4.09152219,9.75222469 3.54911083,9.20981333 L1.45982263,7.12052513 C0.90736661,6.56806911 0.61607162,5.84485397 0.61607162,5.07141554 C0.61607162,4.30802178 0.92745592,3.56471732 1.46986728,3.03235061 L2.94643154,1.56583101 C3.4888429,1.02341965 4.2221027,0.732124656 4.98549647,0.732124656 C5.75893489,0.732124656 6.4921947,1.0334643 7.03460606,1.58592032 L9.10380495,3.66516387 C9.64621631,4.20757523 9.9375113,4.94083503 9.9375113,5.7042288 C9.9375113,6.49775653 9.61608235,7.25110564 9.05358168,7.80356166 L9.9375113,8.68749128 C10.4899673,8.12499061 11.2332718,7.80356166 12.0267995,7.80356166 C12.7901933,7.80356166 13.5334977,8.1049013 14.0759091,8.64731266 L16.1651973,10.7366009 C16.7176533,11.2890569 17.0089483,12.012272 17.0089483,12.7857105 Z"></path>
+    </g>
+</svg>
+
+      </a>
+      {{ _('Join our Newsletter')}}
+    </h3>
+    <p class="font-lg tracking-wider leading-loose mb-8 mt-0 flex-1">
+      {{ _('Keep up with the latest and greatest updates on news, features, events, and previews, and get a sneak peek on the upcoming releases.') }}
+    </p>
+    <div class="max-w-lg">
+      <!-- Begin Mailchimp Signup Form -->
+<form action="https://thunderbird.us12.list-manage.com/subscribe?u=f8051cc8637cf3ff79661f382&id=56428f2efc"
+class="newsletter-form"
+method="post" id="mc-embedded-subscribe-form"
+name="mc-embedded-subscribe-form">
+<input id="mce-EMAIL" name="EMAIL" type="email" placeholder="{{ _('Your Email') }}" required>
+<button type="submit" id="mc-embedded-subscribe" class="btn-newsletter">{{ _('Sign me up!') }}</button>
+<!-- Prevent Bot signups -->
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+  name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value=""></div>
+</form>
+<!--End mc_embed_signup-->
+    </div>
+  </aside>
+</section>
+
+  </section>
+
+
+
+    </main>
+
+    
+
+
+    
+    
+
+    
+        <footer id="colophon" class="bg-black-light text-white flex flex-col pt-10 pb-8 pl-4 pr-4">
+  <section class="flex flex-col lg:flex-col justify-between items-center self-center w-full max-w-6xl">
+    <aside class="flex flex-col items-center">
+      <a href="/en-US/" class="block w-40" title="Thunderbird"
+        alt="Thunderbird Vector Wordmark">
+        <img src="/media/svg/logo-wordmark-white.svg" alt="Thunderbird Vector Wordmark"/>
+      </a>
+
+
+    </aside>
+
+  </section>
+    <section class="self-center text-center max-w-5xl mt-8">
+    <ul class="list-none p-0 flex justify-center flex-wrap -mt-2">
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('privacy') }}" class="small-link" data-link-type="footer" data-link-name="Privacy">{{ _('Privacy') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('privacy.notices.websites') }}" class="small-link" data-link-type="footer" data-link-name="Cookies">{{ _('Cookies') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('legal.index') }}" class="small-link" data-link-type="footer"
+          data-link-name="Legal">{{ _('Legal') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('guidelines') }}" class="small-link" data-link-type="footer"
+          data-link-name="guidelines">{{ _('Participation Guidelines') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('legal.infringement') }}" class="small-link" data-link-type="footer"
+          data-link-name="infringement">{{ _('Report Trademark or Copyright Infringement') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('legal.fraud-report') }}" class="small-link" data-link-type="footer"
+          data-link-name="Report Trademark Misuse">{{ _('Report Misuse of Thunderbird Trademark') }}</a>
+      </li>
+    </ul>
+
+    <p class="mt-6 mb-6 leading-normal">
+      {%- trans url=url('foundation.licensing.website-content'),mzla=url('mzla.blog-post') -%}
+      Thunderbird is part of
+      <a href="{{ mzla }}" class="inline-link">MZLA Technologies Corporation</a>,
+      a wholly owned subsidiary of Mozilla Foundation.
+      Portions of this content are ©1998–{{ current_year }} by individual
+      contributors. Content available under
+      a <a href="{{ url }}" class="inline-link">Creative Commons license</a>.
+      {%- endtrans -%}
+    </p>
+    
+    <a href="{{ url('contribute') }}" class="small-link font-semibold" data-link-type="footer"
+      data-link-name="Contribute to this site">{{ _('Contribute to this site') }}</a>
+    {% if LANG != 'en-US' %}
+     &bull; <a href="https://pontoon.mozilla.org/{{ LANG }}/thunderbirdnet/LC_MESSAGES/messages.po/" class="small-link font-semibold"
+      data-link-type="footer" data-link-name="Translate this site">{{ _('Translate this site') }}</a>
+    {% endif %}
+  </section>
+</footer>
+    
+
+    
+      <script type="text/javascript" src="/media/archived/js/site-bundle.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/archived/js/common-bundle.js" charset="utf-8"></script>
+    
+    
+    
+      <script type="text/javascript" src="/media/archived/js/matomo-config.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/archived/js/matomo.js" async defer></script>
+      <noscript>
+        <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
+      </noscript>
+    
+    <!--[if IE 9]>
+      <script src="/media/archived/js/libs/matchMedia.js"></script>
+    <![endif]-->
+
+    
+
+    
+  </body>
+</html>
