@@ -25,6 +25,12 @@ if (typeof Mozilla === 'undefined') {
     Donation.NeedsNewsletterRedirect = false;
 
     /**
+     * Stateful copy of the location.href value on page load. Used to fix tracking url after donation checkout close
+     * @type {string}
+     */
+    Donation.OriginalHref = '';
+
+    /**
      * Setups our FRU javascript events
      */
     Donation.Init = function() {
@@ -32,9 +38,22 @@ if (typeof Mozilla === 'undefined') {
             return;
         }
 
+        const searchParams = new URLSearchParams(window.location.search);
+        const utmSourceNewsletter = 'newsletter';
+        const utmSource = searchParams.get('utm_source');
+
         // If a user clicks on a donate button, track the donate link click goal
         const donateButtons = document.querySelectorAll('[data-donate-btn]');
         donateButtons.forEach(function(element) {
+            // Correct the utmSource
+            if (utmSource === utmSourceNewsletter) {
+                const href = new URL(element.href);
+                // Adjust the utm source to newsletter
+                href.searchParams.set('utm_source', utmSourceNewsletter);
+                // Set the new href
+                element.href = href.toString();
+            }
+
             element.addEventListener('click', function() {
                 window._paq = window._paq || [];
                 window._paq.push(['trackGoal', 1]);
@@ -44,12 +63,16 @@ if (typeof Mozilla === 'undefined') {
         // Ensure we actually have the javascript loaded, so we can hook up our events.
         const fundraiseUp = window.FundraiseUp;
 
+        // Note: This won't play well this any location history adjustments!
+        Donation.OriginalHref = location.href;
+
         /**
          * Event fires when the FRU checkout modal opens
          * @param details - See https://fundraiseup.com/docs/parameters/
          */
         fundraiseUp.on('checkoutOpen', function(details) {
             window._paq = window._paq || [];
+            window._paq.push(['setCustomUrl', location.href]);
             window._paq.push(['trackEvent', 'Donation', 'Started']);
 
             // Reset any stateful variables
@@ -77,6 +100,8 @@ if (typeof Mozilla === 'undefined') {
          */
         fundraiseUp.on('checkoutClose', function (details) {
             if (!Donation.NeedsNewsletterRedirect) {
+                // Set the tracking url the original page load url
+                window._paq.push(['setCustomUrl', Donation.OriginalHref]);
                 return;
             }
 
