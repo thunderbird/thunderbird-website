@@ -28,7 +28,9 @@
     <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/favicon.ico') }}{% endblock %}">
     {% endblock shared_meta %}
     <link href="{{ static('css/normalize.css') }}" rel="stylesheet" type="text/css" />
+    {% block base_css %}
     <link href="{{ static('css/base-style.css') }}" rel="stylesheet" type="text/css" />
+    {% endblock %}
     {% block site_js %}
       {#- site-bundle should block html rendering so we can prevent no-js/js element flashing. -#}
       <script type="text/javascript" src="{{ static('js/site-bundle.js') }}" charset="utf-8"></script>

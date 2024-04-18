@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const hamburgerBtn = document.getElementById('mobile-hamburger-button');
   const navExpandables = document.getElementsByClassName("nav-expandable");
 
+  if (!hamburgerBtn || !navExpandables) {
+    return;
+  }
+
   /**
    * HamburgerBtn On Click
    * Toggle the navigation when the hamburger button is clicked. This also affects the aria attributes.

@@ -242,6 +242,7 @@
 
 html {
   font-family: Open Sans, system-ui, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
 }
 
@@ -253,7 +254,23 @@ body {
   min-height: 100vh;
   max-width: 100%;
   line-height: 1.6;
+  letter-spacing: 0.025em;
+  font-size: 13px;
 }
+
+/* Minor fixes with new design START */
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.text-right {
+  text-align: right;
+}
+/* Minor fixes with new design END */
 
 .closing-text {
   text-align: center;
