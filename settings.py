@@ -176,6 +176,7 @@ URL_MAPPINGS = {
     'mozorg.connect': 'https://connect.mozilla.org/',
     'mozorg.connect.tb': 'https://connect.mozilla.org/t5/ideas/idb-p/ideas/label-name/thunderbird',
     'mozorg.mpl2': 'https://www.mozilla.org/MPL/',
+    'mozwiki.support-languages': 'https://wiki.mozilla.org/Thunderbird/Support/Community_support_based_on_languages',
     'mzla.blog-post': 'https://blog.thunderbird.net/2020/01/thunderbirds-new-home/',
     'participate.desktop.docs': 'https://developer.thunderbird.net/',
     'participate.desktop.repo': 'https://developer.thunderbird.net/thunderbird-development/codebase-overview',

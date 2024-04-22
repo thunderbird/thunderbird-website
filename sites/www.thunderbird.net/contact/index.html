@@ -19,6 +19,13 @@
     <div class="block-grid">
       {% call contact_block( svg('base/icons/contact/support'), _('Support'), [(url('support'), _('Support Website'))]) %}
         {{ _('For questions about how to use Thunderbird, visit and search our Support Website. Feel free to submit a new question if you cannot find an answer. Please remember to be courteous to our staff and volunteers.') }}
+        {% if not LANG.startswith('en-') %}
+        <p>
+          {% trans trimmed lang=translations[LANG], link=url('mozwiki.support-languages') %}
+          To get the best support, please ask your question in English. If you prefer to ask a question in {{ lang }} you can try this non-Mozilla community forum <a class="dotted" href="{{ link }}">link</a>.
+          {% endtrans %}
+        </p>
+        {% endif %}
       {% endcall %}
       {% call contact_block( svg('base/icons/contact/security'), _('Security'), [(url('thunderbird.bugzilla.new-bug'), _('Bugzilla'))]) %}
         {{ _('To report a software vulnerability, please submit an issue on Bugzilla with the security box checked. This checkmark will make the report visible only to our security team, who can address vulnerabilities before public disclosure.') }}
