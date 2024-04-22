@@ -87,10 +87,7 @@ CANONICAL_LOCALES = {
 }
 
 ENUS_ONLY = [
-    'thunderbird.contact',
-    'thunderbird.careers',
-    'thunderbird.get-involved',
-    'thunderbird.organizations',
+    # We don't have any english-only non /thunderbird/ links
 ]
 
 # Most pages under /thunderbird/ are en-US only, except these.
@@ -101,6 +98,7 @@ ALWAYS_LOCALIZE = [
     '/beta-appeal',
     '/holidayeoy',
     '/spring24',
+    '/all',
 ]
 
 CANONICAL_URL = 'https://www.thunderbird.net'
