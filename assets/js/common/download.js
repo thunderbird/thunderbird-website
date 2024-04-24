@@ -15,7 +15,7 @@ if (typeof Mozilla === 'undefined') {
 
   const isDownloadPage = document.getElementsByClassName('page-download').length > 0;
   let localeSelect = document.getElementById('download-language-select');
-  let channelSelect = document.getElementById('download-browser-select');
+  let channelSelect = document.getElementById('download-release-select');
   let osSelect = document.getElementById('download-os-select');
   let installerSelect = document.getElementById('download-advanced-platform-select');
   let downloadButton = document.getElementById('download-btn');
@@ -75,7 +75,7 @@ if (typeof Mozilla === 'undefined') {
    */
   DownloadInfo.Update = function() {
     localeSelect = document.getElementById('download-language-select');
-    channelSelect = document.getElementById('download-browser-select');
+    channelSelect = document.getElementById('download-release-select');
     osSelect = document.getElementById('download-os-select');
     installerSelect = document.getElementById('download-advanced-platform-select');
     downloadButton = document.getElementById('download-btn');

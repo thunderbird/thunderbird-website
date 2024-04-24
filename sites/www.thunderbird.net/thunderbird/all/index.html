@@ -41,10 +41,10 @@
           </select>
 
           <!-- 2. Channel -->
-          <label class="pretend-to-be-h6" for="download-browser-select" role="group">
-            <strong>{{ _('Browser Channel') }}</strong>
+          <label class="pretend-to-be-h6" for="download-release-select" role="group">
+            <strong>{{ _('Release Channel') }}</strong>
           </label>
-          <select id="download-browser-select" name="download" dir="ltr" class="form-select">
+          <select id="download-release-select" name="download" dir="ltr" class="form-select">
             {% for channel, channel_name in get_channels().items() %}
             {% set option_name = 'Thunderbird %(channel_name)s'|format(channel_name=channel_name) if channel != 'release' else 'Thunderbird' %}
             <option value="{{ channel }}">{{ _(option_name) }}</option>
