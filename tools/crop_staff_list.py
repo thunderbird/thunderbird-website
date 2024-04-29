@@ -80,6 +80,8 @@ def handle_crop():
 
     for root, dirs, files in os.walk('../media/img/thunderbird/staff/uncropped'):
         for file in files:
+            if not file.endswith(('.png', 'jpeg', '.jpg', '.webm')):
+                continue
             with Image.open(f"{root}/{file}") as im:
                 width = im.width
                 height = im.height
