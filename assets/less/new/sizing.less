@@ -11,22 +11,41 @@
   --font-4xl: 2.5625rem;      // 41px
   --font-hero: 3.6875rem;     // 59px
   --font-body: 1.125rem;      // 18px
+
+  --font-tagline: 5rem;
+  --font-h2: 2.75rem;
+  --font-h3: 2rem;
+  --font-h4: 1.25rem;
+}
+
+@media (max-width: @md) {
+  :root {
+    --font-tagline: 4rem;
+    --font-h2: 2.5rem;
+    --font-h3: 2rem;
+    --font-h4: 1.25rem;
+  }
+  // TODO: Integrate this with l10n css.
+  // Langs: Upper Sorbian
+  html[lang="hsb"] {
+    --font-tagline: 3rem;
+  }
 }
 
 .section-text :where(h2) {
-  font-size: 2.75rem;
+  font-size: var(--font-h2);
   font-weight: 800;
   margin-bottom: 0;
 }
 
 .section-text :where(h3) {
-  font-size: 2rem;
+  font-size: var(--font-h3);
   font-weight: 600;
   margin-bottom: 0;
 }
 
 .section-text :where(h4) {
-  font-size: 1.25rem;
+  font-size: var(--font-h4);
   font-weight: 300;
   margin: 0 0 1em;
 }
