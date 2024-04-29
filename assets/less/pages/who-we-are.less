@@ -112,13 +112,19 @@
       }
 
       h5 {
-        font-size: var(--font-lg);
-        margin: auto;
-        width: min-content;
+        font-size: var(--font-md);
+        margin: auto auto 0.25rem;
+        white-space: break-spaces;
+        align-content: center;
+        min-height: calc(1.5rem * 2);
       }
 
-      span {
-        font-size: var(--font-regular);
+      .job-title {
+        display: flex;
+        flex-direction: column;
+        span {
+          font-size: var(--font-regular);
+        }
       }
     }
   }

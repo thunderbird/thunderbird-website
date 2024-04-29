@@ -146,9 +146,15 @@
 {% endblock %}
 
 {% macro job_block(title, name, img) %}
+  {% set name = name.replace(' ', '\n') %}
+  {% set title_lines = split_keep_delimiter(title, ',') %}
 <div class="person">
   {{ img }}
   <h5>{{ name }}</h5>
-  <span>{{ title }}</span>
+  <div class="job-title">
+    {% for line in title_lines %}
+    <span>{{ line }}</span>
+    {% endfor %}
+  </div>
 </div>
 {% endmacro %}

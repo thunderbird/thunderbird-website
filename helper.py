@@ -594,6 +594,12 @@ def is_calendarific_free_tier():
         return True
 
 
+@jinja2.pass_context
+def split_keep_delimiter(ctx, string: str, split: str):
+    lines = string.split(split)
+    return [f"{line}," for line in string.split(split)[:-1]] + lines[-1:]
+
+
 def f(s, *args, **kwargs):
     return s.format(*args, **kwargs)
 
