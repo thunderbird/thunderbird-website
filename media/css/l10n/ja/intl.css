@@ -96,3 +96,7 @@
     /* !important required for locale specific override */
     font-style: normal !important;  /* stylelint-disable-line declaration-no-important */
 }
+
+:root {
+  --font-tagline: 4.5rem;
+}
