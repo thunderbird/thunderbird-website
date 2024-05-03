@@ -1,0 +1,6 @@
+.page-index #masthead, header {
+    --bg-hero: url('/media/img/l10n/fr/thunderbird/base/home/banner-high-res.png');
+    --bg-hero-set: image-set(url('/media/img/l10n/fr/thunderbird/base/home/banner-high-res.avif') type('image/avif'),
+    url('/media/img/l10n/fr/thunderbird/base/home/banner-high-res.webp') type('image/webp'),
+    var(--bg-hero) type('image/png'));
+}
