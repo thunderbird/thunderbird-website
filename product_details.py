@@ -11,10 +11,8 @@ import settings
 
 def filter_major_versions(versions):
     """Filters out some version numbers not meant for human consumption."""
-    versions_to_filter = ["125.0", "126.0", "127.0"]
-
     # Preserves json ordering
-    for version in versions_to_filter:
+    for version in settings.VERSIONS_TO_FILTER:
         if version in versions:
             del versions[version]
 

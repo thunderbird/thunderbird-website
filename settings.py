@@ -473,3 +473,6 @@ CALENDAR_REMAP = {
     'United Kingdom': 'UK',
     'United States': 'US'
 }
+
+# Filter out specific versions for the release notes page
+VERSIONS_TO_FILTER = ["125.0", "126.0", "127.0"]
