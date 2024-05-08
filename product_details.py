@@ -9,6 +9,16 @@ import re
 import settings
 
 
+def filter_major_versions(versions):
+    """Filters out some version numbers not meant for human consumption."""
+    # Preserves json ordering
+    for version in settings.VERSIONS_TO_FILTER:
+        if version in versions:
+            del versions[version]
+
+    return versions
+
+
 def load_json(path):
     """Load the .json at `path` and return data."""
     path = os.path.join(settings.JSON_PATH, path)
@@ -66,7 +76,7 @@ class ThunderbirdDetails():
 
     all_builds = load_all_builds('thunderbird_primary_builds.json')
 
-    major_releases = load_json('thunderbird_history_major_releases.json')
+    major_releases = filter_major_versions(load_json('thunderbird_history_major_releases.json'))
 
     minor_releases = load_json('thunderbird_history_stability_releases.json')
 
