@@ -1,0 +1,43 @@
+
+footer {
+  background-color: black;
+  color: var(--color-gray-20);
+}
+
+.container.footer {
+  place-items: center;
+  padding-inline: 1rem;
+  padding-block: 6rem;
+  // Prevent overflow on smol devices
+  box-sizing: border-box;
+  // Always have this. (FIXME: This should be done cleaner)
+  gap: 60px !important;
+}
+
+.footer-ln {
+  font-size: 1.1rem;
+}
+
+.legal-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legal-links {
+  font-size: 1rem;
+}
+
+.mzla {
+  display: grid;
+  place-items: center;
+  gap: 15px;
+  text-align: center;
+  max-inline-size: 75ch;
+}
+
+.mozilla-logo {
+  --accent: white;
+  max-width: 200px;
+}
