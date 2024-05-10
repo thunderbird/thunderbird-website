@@ -326,6 +326,16 @@ class Site(object):
             downloads_path = os.path.join(self.renderpath, self.lang, 'download')
             write_htaccess(downloads_path, settings.CANONICAL_URL)
 
+            # Write get-involved page redirect
+            get_involved_path = os.path.join(self.renderpath, self.lang, 'get-involved')
+            os.makedirs(get_involved_path, exist_ok=True)
+            write_htaccess(get_involved_path, helper.url({'LANG': self.lang}, 'thunderbird.participate'))
+
+            # Write contribute page redirect
+            contribute_path = os.path.join(self.renderpath, self.lang, 'contribute')
+            os.makedirs(contribute_path, exist_ok=True)
+            write_htaccess(contribute_path, helper.url({'LANG': self.lang}, 'thunderbird.participate'))
+
             if lang == 'en-US':
                 # 404 page for root accesses outside lang dirs.
                 write_404_htaccess(self.renderpath, self.lang)
