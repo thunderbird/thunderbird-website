@@ -20,6 +20,7 @@ if (typeof Mozilla === 'undefined') {
   let installerSelect = document.getElementById('download-advanced-platform-select');
   let downloadButton = document.getElementById('download-btn');
   let defaultOS = 'Windows';
+  let defaultReleaseChannel = 'release';
 
   /**
    * Hooks up onChange event handlers, and sets the installer dropdown options / download link
@@ -28,6 +29,13 @@ if (typeof Mozilla === 'undefined') {
     // We only have to check for one of these dropdowns.
     if (!isDownloadPage || !channelSelect) {
       return;
+    }
+
+    // Check to see if we want to show a different release channel on load
+    const url = new URL(location.href);
+    const overrideRelease = url.searchParams.get('release');
+    if (['release', 'beta', 'daily'].indexOf(overrideRelease) !== -1) {
+      defaultReleaseChannel = overrideRelease;
     }
 
     channelSelect.addEventListener('change', function(event) {
@@ -64,6 +72,7 @@ if (typeof Mozilla === 'undefined') {
     DownloadInfo.Update();
 
     defaultOS = platformMap[platform] ?? defaultOS;
+    channelSelect.value = defaultReleaseChannel;
 
     // Channel Selection calls OS Selection
     DownloadInfo.OnOSSelection(defaultOS);
