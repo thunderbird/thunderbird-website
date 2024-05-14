@@ -27,21 +27,21 @@
       <div class="release-text">
         {{ release.text|markdown|safe }}
       </div>
-      <div class="system-requirements">
-        {# Note: This is disabled until we can more reliably get system requirements
-        {% for platform, req in split_system_requirements().items(): %}
-        {% set icon_name = platform|lower %}
-        {% if platform == 'GNU/Linux' %}
-        {% set icon_name = 'linux' %}
-        {% elif platform == 'Mac' %}
-        {% set icon_name = 'apple' %}
+      <div class="system-requirements remove-h2">
+        {% if is_system_requirements_dict() %}
+          {% for platform, req in get_system_requirements_for_release_notes().items() %}
+            {% set icon_name = platform|lower %}
+              {% if platform == 'linux' %}
+              {% set icon_name = 'linux' %}
+              {% elif platform == 'mac' %}
+              {% set icon_name = 'apple' %}
+            {% endif %}
+            {% set icon_path = 'base/icons/download/%(icon_name)s-dark'|format(icon_name=icon_name) %}
+            {% call accordion(svg(icon_path), platform) %}
+              {{ req|markdown|safe }}
+            {% endcall %}
+          {% endfor %}
         {% endif %}
-        {% set icon_path = 'base/icons/download/%(icon_name)s-dark'|format(icon_name=icon_name) %}
-        {% call accordion(svg(icon_path), platform) %}
-        {{ req }}
-        {% endcall %}
-        {% endfor %}
-        #}
       </div>
     </div>
   </div>
@@ -164,6 +164,10 @@
 :param title: The title of the accordion
 :caller: The text body, shows up when you click on the title or accordion.
 #}
+{# Title hack, sorry. #}
+{% if title == 'linux' %}
+  {% set title = 'GNU/Linux' %}
+{% endif %}
 <details class="accordion">
   <summary class="question">
     <span>{{ icon }}</span>

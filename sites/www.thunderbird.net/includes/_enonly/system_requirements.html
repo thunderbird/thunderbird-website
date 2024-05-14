@@ -15,7 +15,13 @@
       <h2>{{ _('Version <span class="txt-gradient">%(version)s</span>')|format(version=version) }}</h2>
     </div>
     <div class="release-notes-container">
-      {{ release.system_requirements|markdown|safe }}
+      {% if is_system_requirements_dict() %}
+        {% for platform, platform_text in release.system_requirements|items %}
+          {{ platform_text|markdown|safe }}
+        {% endfor %}
+      {% else %}
+          {{ release.system_requirements|markdown|safe }}
+      {% endif %}
     </div>
   </section>
 {% endblock %}

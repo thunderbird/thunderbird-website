@@ -556,34 +556,22 @@ def get_form_assembly_localization_url(ctx):
 
 
 @jinja2.pass_context
-def split_system_requirements(ctx):
+def is_system_requirements_dict(ctx) -> bool:
+    release_notes: dict = ctx.get('release')
+    system_requirements = release_notes.get('system_requirements')
+    return isinstance(system_requirements, dict)
+
+
+@jinja2.pass_context
+def get_system_requirements_for_release_notes(ctx):
     """For release notes, we have the entire object in ctx"""
-    try:
-        release_notes: dict = ctx.get('release')
-        requirements: str = release_notes.get('system_requirements')
+    release_notes: dict = ctx.get('release')
+    system_requirements = release_notes.get('system_requirements')
 
-        # Match the platform header as: (Entire sequence, Platform name)
-        # We use the entire sequence to remove it from the text, and platform name for ordering.
-        title_regex = r"^([#]{2} ([\w\/]+))"
-        # Split by section
-        requirement_list = requirements.split('---')
-        system_requirements = {}
+    if isinstance(system_requirements, str):
+        return None
 
-        for system_req in requirement_list:
-            match = re.findall(title_regex, system_req, re.MULTILINE | re.IGNORECASE)
-            if len(match) == 0:
-                continue
-
-            match = match[0]
-            # Remove the entire sequence
-            system_req = system_req.replace(match[0], '')
-            # Key by platform name, and convert the markdown to html
-            system_requirements[match[1]] = safe_markdown(system_req)
-
-        return system_requirements
-    except Exception:
-        # Ah beans, well don't crash the page.
-        return {}
+    return system_requirements
 
 
 def is_calendarific_free_tier():
