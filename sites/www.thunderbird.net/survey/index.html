@@ -1,0 +1,43 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "survey" %}
+{% extends "includes/base/base.html" %}
+
+{% block page_title %}{{ _('User Survey') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+{% block extra_meta %}
+<meta name="robots" content="noindex,nofollow" />
+{% endblock %}
+
+{% block content %}
+<nav class="site-nav">
+  <div class="nav-container">
+      <a href="{{ url('thunderbird.index') }}" class="logo" aria-hidden="true">
+    {{ svg('Thunderbird_Logo') }}
+    </a>
+  </div>
+</nav>
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h1>{{ _('User Survey') }}</h1>
+      {% trans trimmed %}
+        <p>Hello from the Thunderbird team! We'd love if you could take approximately 5 minutes to share your experience using Thunderbird. Your anonymous feedback will help us identify our strengths and the areas we need to improve.</p>
+        <p>Thanks for helping us make Thunderbird better for everyone!</p>
+      {% endtrans %}
+    </div>
+    <div>
+      <a class="btn btn-white-bg" href="{{ settings.ACTIVE_SURVEY_URL }}">{{ _('Start') }}</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block site_footer %}
+  {% include 'includes/donation-includes.html' %}
+  <div id="footer" class="container footer">
+    {% include 'includes/appeal-footer.html' %}
+  </div>
+{% endblock site_footer %}
