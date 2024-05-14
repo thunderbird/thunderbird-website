@@ -6,19 +6,24 @@
     <summary class="question">
       {{ _('What are the ways I can give?') }}
     </summary>
-    <p class="answer">
-      {% trans trimmed donate=url('thunderbird.donate.form'), check=url('thunderbird.donate.ways-to-give.check'),
+    <div class="answer">
+      {% trans trimmed donate=url('thunderbird.donate.form'),
       ways_to_help=url('thunderbird.participate') %}
-      You can <a href="{{ donate }}">donate online</a> securely by credit card or PayPal. Google Pay, Apple Pay, and
+      <p>You can <a href="{{ donate }}">donate online</a> securely by credit card or PayPal. Google Pay, Apple Pay, and
       bank transfers through SEPA, iDEAL and ACH are also available online.<br/>
       <strong>Give in your local currency!</strong> On <a href="{{ donate }}">our online form</a>, use the drop down
       menu next to the amount. You will be charged in the currency you choose to give with.<br/>
-      <strong>Additionally you can</strong> give offline in USD by <a href="{{ check }}">mailing a check or money
-      order</a>.<br/>
-      <strong>Give the gift of your time!</strong> If you would like to learn how to contribute to Thunderbird in other
-      ways such as coding, translating or testing, please visit our <a href="{{ ways_to_help }}">Get Involved</a> page.
+      <strong>Additionally you can</strong> give offline in USD by mailing a check or money order made payable to "MZLA Technologies Corp". Mail to:</p>
+      <ul class="check-address">
+        <li>MZLA</li>
+        <li>PO Box 25718</li>
+        <li>Pasadena CA 91185-5718</li>
+      </ul>
+      <p>Please include your email address on the memo line of your check to help us track and attribute your gift.</p>
+      <p><strong>Give the gift of your time!</strong> If you would like to learn how to contribute to Thunderbird in other
+        ways such as coding, translating or testing, please visit our <a href="{{ ways_to_help }}">Participate</a> page.</p>
       {% endtrans %}
-    </p>
+    </div>
   </details>
 
   <details class="accordion">
@@ -223,7 +228,7 @@
 
   <details class="accordion">
     <summary class="question">
-      {{ _('Who can I email directly with questions about giving?') }}
+      {{ _('Contact us') }}
     </summary>
     <p class="answer">
       {% trans trimmed help=url('thunderbird.donate.contact'), support=url('support') %}

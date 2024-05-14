@@ -14,7 +14,7 @@
   <div class="container no-gap">
     <div class="section-text">
       <h2>{{ _('Need to <span class="txt-gradient">Talk?</span>') }}</h2>
-      <h4>{{ _('Direct your inquiries to the people below.') }}</h4>
+      <h4>{{ _('Direct your inquiries to the teams below.') }}</h4>
     </div>
     <div class="block-grid">
       {% call contact_block( svg('base/icons/contact/support'), _('Support'), [(url('support'), _('Support Website'))]) %}
@@ -36,8 +36,8 @@
       {% call contact_block( svg('base/icons/contact/business'), _('Business'), [('mailto:partnerships@thunderbird.net', _('Business Team'))]) %}
         {{ _('Organizations wanting to sponsor software development or obtain assistance in large-scale deployments should email our Business Team. This team also handles other partnership inquiries.') }}
       {% endcall %}
-      {% call contact_block( svg('base/icons/contact/contributors'), _('Contributors'), [(url('thunderbird.participate'), _('Contributor Page'))]) %}
-        {{ _('If you have talents you\'re interested in sharing but don\'t know where to start, learn how to get started by visiting our Contributors page. Here you\'ll find the volunteer community that matches your interests.') }}
+      {% call contact_block( svg('base/icons/contact/contributors'), _('Participate'), [(url('thunderbird.participate'), _('Participate Page'))]) %}
+        {{ _('If you have talents you\'re interested in sharing but don\'t know where to start, learn how to get started by visiting our Participate page. Here you\'ll find the volunteer community that matches your interests.') }}
       {% endcall %}
       {% call contact_block( svg('base/icons/contact/legal'), _('Legal'), [(url('legal.trademark'), _('Trademark Misuse')), (url('legal.infringement'), _('DMCA Notice'))]) %}
         {{ _('Protect future users from malware, data mining, or being fraudulently charged for Thunderbird by reporting trademark misuse. If you believe we are infringing on your copyright or trademark, please send a DMCA notice.') }}
