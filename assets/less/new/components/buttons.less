@@ -6,6 +6,13 @@
   @outline();
 }
 
+.btn {
+  cursor: pointer;
+}
+.btn:disabled {
+  cursor: not-allowed;
+  filter: grayscale(50%);
+}
 
 /* Remove some list padding */
 .download-dumb > ul {
@@ -52,7 +59,7 @@
 .btn-download-inline,
 .btn-download-link,
 .download-link.btn-download,
-a.btn,
+.btn,
 button {
   font-size: 1rem;
   background: var(--btn-bg, transparent);
@@ -71,7 +78,7 @@ button {
 .btn-download-inline::before,
 .btn-download-link::before,
 .download-link.btn-download::before,
-a.btn::before {
+.btn::before {
   content: '';
   position: absolute;
   background: var(--glow);
@@ -87,7 +94,7 @@ a.btn::before {
 .btn-download-inline::after,
 .btn-download-link::after,
 .download-link.btn-download::after,
-a.btn::after {
+.btn::after {
   content: '';
   position: absolute;
   background-color: transparent;
@@ -101,7 +108,7 @@ a.btn::after {
 }
 
 .download-link.btn-download:hover::after,
-a.btn:hover::after,
+.btn:hover::after,
 button:hover::after {
   opacity: .75;
   background-size: 500%;
