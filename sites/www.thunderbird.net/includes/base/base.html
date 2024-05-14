@@ -16,16 +16,17 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ _('Thunderbird') }}">
     <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
-    <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
+    <meta property="og:image" content="{{ static('img/thunderbird/thunderbird-256.png') }}">
     <meta property="og:title" content="{% filter striptags|e %}{% block page_og_title %}{{ self.page_title_full() }}{% endblock %}{% endfilter %}">
     <meta property="og:description" content="{% filter striptags|e %}{% block page_og_desc %}{{ self.page_desc() }}{% endblock %}{% endfilter %}">
-    <meta property="fb:page_id" content="{% block facebook_id %}262134952380{# facebook.com/mozilla #}{% endblock %}">
+    <meta property="fb:page_id" content="{% block facebook_id %}348169218537151{% endblock %}">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@{% block twitter_id %}mozilla{% endblock %}">
+    <meta name="twitter:site" content="@{% block twitter_id %}mozthunderbird{% endblock %}">
     <meta name="twitter:domain" content="thunderbird.net">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{% block page_ios_icon %}{{ static('img/favicon/apple-touch-icon-180x180.png') }}{% endblock %}">
-    <link rel="icon" type="image/png" sizes="196x196" href="{% block page_favicon_large %}{{ static('img/favicon/favicon-196x196.png') }}{% endblock %}">
-    <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/favicon.ico') }}{% endblock %}">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}">
+    <link rel="icon" type="image/png" sizes="196x196" href="{% block page_favicon_large %}{{ static('img/thunderbird/favicon-196.png') }}{% endblock %}">
+    <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/thunderbird/favicon.ico') }}{% endblock %}">
+
     {% endblock shared_meta %}
     <link href="{{ static('css/normalize.css') }}" rel="stylesheet" type="text/css" />
     {% block base_css %}
