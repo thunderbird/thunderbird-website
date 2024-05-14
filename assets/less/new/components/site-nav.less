@@ -16,6 +16,8 @@
   --hamburger-foreground-inactive: var(--color-black);
   --hamburger-background-active: var(--color-white);
   --hamburger-foreground-active: var(--color-black);
+  
+  --popover-left-align: -2rem;
 
   box-sizing: border-box;
   position: fixed;
@@ -34,6 +36,12 @@
   z-index: 100000;
 
   max-width: 100vw;
+}
+
+@media (max-width: @xl) {
+  .site-nav #nav-cat-contribute {
+    --popover-left-align: -6rem;
+  }
 }
 
 .site-nav {
@@ -173,7 +181,7 @@
     .popover-container {
       display: none;
       position: absolute;
-      margin-left: -2rem;
+      margin-left: var(--popover-left-align);
       min-width: 470px;
 
       // Actual physical panel
