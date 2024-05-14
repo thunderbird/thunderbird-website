@@ -1,4 +1,5 @@
 @import "../functions.less";
+@import '../mixins.less';
 
 .btn,
 .btn-download,
@@ -48,10 +49,6 @@
   svg {
     width: 1rem;
   }
-}
-
-.btn-newsletter {
-  cursor: pointer;
 }
 
 .btn-donate,
@@ -253,6 +250,10 @@ button:hover::after {
   --btn-background-color: var(--color-white);
 }
 
+.btn-black-bg {
+  --btn-background-color: var(--color-black);
+}
+
 .btn-no-bg::after {
   background: transparent;
 }
@@ -261,6 +262,11 @@ button:hover::after {
   background: var(--color-white);
 }
 
+.btn-black-bg::after {
+  background: var(--color-black);
+}
+
+.btn-black-bg:hover,
 .btn-white-bg:hover,
 .btn-no-bg:hover {
   background: linear-gradient(var(--btn-background-color), var(--btn-background-color)) padding-box,
@@ -271,5 +277,32 @@ button:hover::after {
 
   &::after {
     opacity: 0.75;
+  }
+}
+
+.btn-newsletter {
+  position: relative;
+  border: none;
+  border-radius: 0;
+  border-inline-start: 2px solid currentColor;
+  padding: .75rem 2.5rem;
+  margin: 0;
+  font-size: 1rem;
+  // FIXME: This needs to get cleaned up and applied to btns generically
+  --btn-background-color: rgba(0, 0, 0, 0.8);
+  @btn-no-bg-styling();
+}
+
+.btn-newsletter-icon {
+  display: none;
+  padding: .75em 1em;
+}
+
+@media (max-width: @sm) {
+  .btn-newsletter-text {
+    display: none;
+  }
+  .btn-newsletter-icon {
+    display: block;
   }
 }

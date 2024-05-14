@@ -73,40 +73,6 @@
     }
   }
 
-  .btn-newsletter {
-    position: relative;
-    background: none;
-    border: none;
-    border-radius: 0;
-    border-inline-start: 2px solid currentColor;
-    padding: .75rem 2.5rem;
-    margin: 0;
-    font-size: 1rem;
-  }
-
-  .btn-newsletter::after {
-    content: '';
-    position: absolute;
-    background-color: transparent;
-    background-image: radial-gradient(circle, var(--accent), var(--color-purple-60) 20%);
-    background-size: 0;
-    background-position: center;
-    opacity: 0;
-    inset: 0;
-    z-index: 0;
-    transition: all .3s;
-  }
-
-  .btn-newsletter:hover::after {
-    opacity: .25;
-    background-size: 800%;
-  }
-
-  .btn-newsletter-icon {
-    display: none;
-    padding: .75em 1em;
-  }
-
   .social-list a {
     text-decoration: none;
   }
