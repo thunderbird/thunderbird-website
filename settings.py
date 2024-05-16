@@ -248,6 +248,8 @@ URL_MAPPINGS = {
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
 
+SHOW_BETA_NOTES_IN_RSS_FEED = False
+
 ACTIVE_SURVEY_URL = '/'
 
 # WEBSITE_CSS = {

@@ -17,6 +17,9 @@ import webassets
 
 from socketserver import TCPServer
 import http.server
+
+from product_details import thunderbird_desktop
+
 TCPServer.allow_reuse_address = True
 SimpleHTTPServer = http.server.HTTPServer
 SimpleHTTPRequestHandler = http.server.SimpleHTTPRequestHandler
@@ -219,6 +222,7 @@ class Site(object):
         notelist = releasenotes.notes
         note_template = self._env.get_template('includes/_enonly/release-notes.html')
         self._env.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
+        feed_items = []
         for k, n in notelist.items():
             if 'beta' in k:
                 self._env.globals.update(channel='Beta', channel_name='Beta')
@@ -240,6 +244,7 @@ class Site(object):
             sysreq_template = self._env.get_template('includes/_enonly/system_requirements.html')
             logger.info("Rendering {0}/index.html...".format(target))
             sysreq_template.stream().dump(os.path.join(target, 'index.html'))
+            feed_items.append((k, n))
 
         # Build htaccess files for sysreq and release notes redirects.
         sysreq_path = os.path.join(self.renderpath, 'system-requirements')
@@ -248,6 +253,105 @@ class Site(object):
         write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
         write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes'))
         write_htaccess(beta_notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes', channel="beta"))
+
+        self.build_notes_feed(feed_items)
+
+    def build_notes_feed(self, feed_items):
+        """ Builds the release notes atom.xml file. Like build_notes, this is en-US only. """
+        if len(feed_items) == 0:
+            return
+
+        # RSS follows the notes, being only en-us
+        if self.lang != 'en-US':
+            self._switch_lang('en-US')
+
+        author_name = "Thunderbird"
+        author_link = settings.CANONICAL_URL
+
+        releases_page = "{}/{}/thunderbird/releases/".format(settings.CANONICAL_URL, self.lang)
+
+
+        def sort_version_by_release_date(i):
+            """ Sort using the note's release date. """
+            return i[1]['release'].get('release_date')
+
+        # Sort notes by release date
+        feed_items.sort(key=sort_version_by_release_date, reverse=True)
+
+        releases = list(filter(lambda i: 'beta' not in i[0], feed_items))
+        betas = list(filter(lambda i: 'beta' in i[0], feed_items))
+
+        # We only want to display the last 10 releases, and the last 5 betas
+        feed_items_mixed = releases[:10] + betas[:5]
+        # Sort again by release date
+        feed_items_mixed.sort(key=sort_version_by_release_date, reverse=True)
+
+        feed_template = self._env.get_template('includes/atom-feed.html')
+        content_template = self._env.get_template('includes/release-notes-feed.html')
+
+        self._env.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
+
+        fake_context = {'LANG': 'en-US'}
+        feed_context = {
+            'feed_url': os.path.join(settings.CANONICAL_URL, 'thunderbird', 'releases', 'atom.xml'),
+            'feed_icon': f'{settings.CANONICAL_URL}{settings.MEDIA_URL}/img/thunderbird/thunderbird-256.png',
+            'feed_index': f'{settings.CANONICAL_URL}/{helper.url(fake_context, 'thunderbird.releases.index')}'
+        }
+        print("Feed context:", feed_context)
+        entries = []
+
+        for item in feed_items_mixed:
+            version = item[0]
+            note = item[1]
+
+            release_notes = note.get('release')
+
+            if release_notes is None:
+                print("Couldn't find release key for version {}, this shouldn't happen.".format(version))
+                continue
+
+            title = "Thunderbird {}".format(version)
+
+            self._env.globals.update(channel='Release', channel_name='Release')
+
+            if settings.SHOW_BETA_NOTES_IN_RSS_FEED and 'beta' in version:
+                # Remove redundant beta from title
+                title = "Thunderbird Beta {}".format(version.replace('beta', ''))
+                self._env.globals.update(channel='Beta', channel_name='Beta')
+
+            link = "{}/{}/thunderbird/{}/releasenotes/".format(settings.CANONICAL_URL, self.lang, version)
+
+            # Mix in our notes for the template
+            self._env.globals.update(**note)
+
+            # Pull in and minify our template
+            content = content_template.render({'version_number': version, 'link': link})
+
+            # Note: Published Date is DateTime, but Updated Date is a string!
+            published_date = release_notes.get('release_date')
+            updated_date = thunderbird_desktop.get_release_date(version)
+
+            if published_date:
+                # Force it to UTC, pubDate checks for tzinfo
+                published_date = parse("{}Z".format(published_date.isoformat()))
+            if updated_date:
+                # Force it to UTC, updated checks for tzinfo
+                updated_date = parse("{}T00:00:00Z".format(updated_date))
+
+            entries.append({
+                'id': link,
+                'title': title,
+                'url': link,
+                'summary': '',
+                'content': content,
+                'published': published_date,
+                'updated': updated_date,
+            })
+
+        feed_xml = feed_template.render({'entries': entries, **feed_context})
+
+        with open(os.path.join(self.outpath, 'thunderbird', 'releases', 'atom.xml'), "w") as fh:
+            fh.write(feed_xml)
 
     def build_assets(self):
         """Build assets, that is, bundle and compile the LESS and JS files in `settings.ASSETS`."""
