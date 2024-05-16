@@ -294,7 +294,7 @@ class Site(object):
             'feed_url': os.path.join(settings.CANONICAL_URL, 'thunderbird', 'releases', 'atom.xml'),
             'feed_icon': f'{settings.CANONICAL_URL}{settings.MEDIA_URL}/img/thunderbird/favicon-196.png',
             'feed_logo': f'{settings.CANONICAL_URL}{settings.MEDIA_URL}/img/thunderbird/thunderbird-256.png',
-            'feed_index': f'{settings.CANONICAL_URL}/{helper.url(fake_context, 'thunderbird.releases.index')}'
+            'feed_index': f'{settings.CANONICAL_URL}/{helper.url(fake_context, "thunderbird.releases.index")}'
         }
 
         entries = []
