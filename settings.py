@@ -236,6 +236,7 @@ URL_MAPPINGS = {
     'thunderbird.organizations': '/organizations',
     'thunderbird.participate': '/participate',
     'thunderbird.releases.index': '/thunderbird/releases',
+    'thunderbird.releases.atom': '/thunderbird/releases/atom.xml',
     'thunderbird.style': 'https://style.thunderbird.net',
     'thunderbird.site.bug-report': 'https://github.com/thunderbird/thunderbird-website/issues',
     'thunderbird.social.twitter': 'https://twitter.com/mozthunderbird',
@@ -247,6 +248,8 @@ URL_MAPPINGS = {
 }
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
+
+SHOW_BETA_NOTES_IN_RSS_FEED = False
 
 ACTIVE_SURVEY_URL = '/'
 

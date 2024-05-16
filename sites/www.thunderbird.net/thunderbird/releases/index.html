@@ -8,12 +8,21 @@
 {% block page_title %}{{ _('Releases') }}{% endblock %}
 {% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
 {% block category %}{{ _('Products') }} > {{ _('Thunderbird Desktop') }}{% endblock %}
-
+{% block extrahead %}
+  <link rel="alternate" type="application/atom+xml" title="{{ _('Thunderbird Release Notes Atom Feed') }}" href="{{ url('thunderbird.releases.atom') }}">
+{% endblock %}
 {% block content %}
 <section>
   <div class="container no-gap">
-    <div class="section-text">
-      <p>{{ _('Thunderbird release notes are specific to each version of the application. Select your version from the list below to see the release notes for it. ') }}</p>
+    <div class="section-text two-columns">
+      <div>
+      <p>{{ _('Thunderbird release notes are specific to each version of the application. Select your version from the list below to see the release notes for it.') }}</p>
+      </div>
+      <div class="atom-feed">
+        <a href="{{ url('thunderbird.releases.atom') }}" title="{{ _('Thunderbird Release Notes Atom Feed') }}">
+          {{ svg('rss') }}
+        </a>
+      </div>
     </div>
     <div class="section-text">
         {% for int_version, versions in releases -%}
