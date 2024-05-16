@@ -248,7 +248,7 @@ URL_MAPPINGS = {
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
 
-ACTIVE_SURVEY_URL = '#'
+ACTIVE_SURVEY_URL = '/'
 
 # WEBSITE_CSS = {
 #     'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],

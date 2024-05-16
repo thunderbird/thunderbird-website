@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 import inspect
 import os
+from urllib.parse import urlparse
 from collections import OrderedDict
 
 import jinja2
@@ -572,6 +573,13 @@ def get_system_requirements_for_release_notes(ctx):
         return None
 
     return system_requirements
+
+
+@jinja2.pass_context
+def get_domain_from_link(ctx, link):
+    if not link:
+        return ''
+    return urlparse(link).hostname
 
 
 def is_calendarific_free_tier():

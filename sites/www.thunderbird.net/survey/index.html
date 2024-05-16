@@ -28,6 +28,11 @@
         <p>Hello from the Thunderbird team! We'd love if you could take approximately 5 minutes to share your experience using Thunderbird. Your anonymous feedback will help us identify our strengths and the areas we need to improve.</p>
         <p>Thanks for helping us make Thunderbird better for everyone!</p>
       {% endtrans %}
+      {% if settings.ACTIVE_SURVEY_URL and not settings.ACTIVE_SURVEY_URL.startswith('/') %}
+      <small>
+        <span>{{ _('Please note: you will be redirected to <u>%(domain)s</u> to complete this survey')|format(domain=get_domain_from_link(settings.ACTIVE_SURVEY_URL)) }}</span>
+      </small>
+      {% endif %}
     </div>
     <div>
       <a class="btn btn-white-bg" href="{{ settings.ACTIVE_SURVEY_URL }}">{{ _('Start') }}</a>
