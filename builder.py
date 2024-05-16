@@ -124,7 +124,8 @@ class Site(object):
         """Set dict to add to Jinja2 context to set locale and text direction."""
         self.context = {
             'LANG': self.lang,
-            'DIR': self._text_dir()
+            'DIR': self._text_dir(),
+            'NOW': datetime.datetime.now(datetime.UTC)
         }
 
     def _setup_env(self):
