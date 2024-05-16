@@ -30,7 +30,7 @@
       {% endtrans %}
       {% if settings.ACTIVE_SURVEY_URL and not settings.ACTIVE_SURVEY_URL.startswith('/') %}
       <small>
-        <span>{{ _('Please note: you will be redirected to <u>%(domain)s</u> to complete this survey')|format(domain=get_domain_from_link(settings.ACTIVE_SURVEY_URL)) }}</span>
+        <span>{{ _('Please note: you will be redirected to <u>%(domain)s</u> to complete this survey.')|format(domain=get_domain_from_link(settings.ACTIVE_SURVEY_URL)) }}</span>
       </small>
       {% endif %}
     </div>
