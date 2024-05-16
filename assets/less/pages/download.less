@@ -19,8 +19,18 @@
     margin-top: 1rem;
     min-width: auto;
 
+    .answer {
+      padding: 0;
+      margin: 0;
+    }
+
     summary {
       display: flex;
+    }
+
+    // Animations
+    &[open] summary ~ * {
+      animation: sweep-no-margin 0.5s ease-out !important;
     }
   }
 
@@ -29,6 +39,7 @@
       transform: rotateZ(-90deg);
     }
   }
+
 
   // TODO: Fix this in place
   .download-button-page {
