@@ -8,7 +8,8 @@
   <title>Thunderbird Release Notes</title>
   <subtitle type="text">Thunderbird Release Notes feed provides a simple way to keep up to date with Thunderbird releases.</subtitle>
 
-  <updated>{{ NOW }}</updated>
+  <updated>{{ NOW.isoformat() }}</updated>
+  <logo>{{ feed_logo }}</logo>
   <icon>{{ feed_icon }}</icon>
 
   <link rel="alternate" type="text/html" href="{{ feed_index }}"/>
@@ -20,7 +21,7 @@
     <id>{{ entry.id }}</id>
     <title type="html">{{ entry.title }}</title>
     <author>
-      <name>{{ entry.name }}</name>
+      <name>{{ entry.author }}</name>
       <uri>{{ settings.CANONICAL_URL }}</uri>
     </author>
     <link rel="alternate" type="text/html" href="{{ entry.url }}"/>

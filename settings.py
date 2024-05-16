@@ -236,6 +236,7 @@ URL_MAPPINGS = {
     'thunderbird.organizations': '/organizations',
     'thunderbird.participate': '/participate',
     'thunderbird.releases.index': '/thunderbird/releases',
+    'thunderbird.releases.atom': '/thunderbird/releases/atom.xml',
     'thunderbird.style': 'https://style.thunderbird.net',
     'thunderbird.site.bug-report': 'https://github.com/thunderbird/thunderbird-website/issues',
     'thunderbird.social.twitter': 'https://twitter.com/mozthunderbird',
