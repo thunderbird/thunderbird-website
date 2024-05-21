@@ -32,10 +32,19 @@ if (typeof Mozilla === 'undefined') {
     }
 
     // Check to see if we want to show a different release channel on load
+    const regex = /\/download\/(beta|daily)\/?$/gm;
     const url = new URL(location.href);
-    const overrideRelease = url.searchParams.get('release');
+    const overrideReleasePath = regex.exec(url.pathname)
+
+    // Check for ?release=<channel> or /download/<channel>
+    let overrideRelease = url.searchParams.get('release');
+    if (!overrideRelease && overrideReleasePath) {
+      overrideRelease = overrideReleasePath[1];
+    }
+
     if (['release', 'beta', 'daily'].indexOf(overrideRelease) !== -1) {
       defaultReleaseChannel = overrideRelease;
+      DownloadInfo.ToggleDailyWarning(defaultReleaseChannel);
     }
 
     channelSelect.addEventListener('change', function(event) {
