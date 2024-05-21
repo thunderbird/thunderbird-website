@@ -232,6 +232,7 @@ URL_MAPPINGS = {
     'thunderbird.get-involved': '/get-involved',
     'thunderbird.index': '/',
     'thunderbird.latest.all': '/thunderbird/all/',
+    'thunderbird.latest.beta': '/thunderbird/all/?release=beta',
     'thunderbird.lists.enterprise': 'https://thunderbird.topicbox.com/groups/enterprise',
     'thunderbird.organizations': '/organizations',
     'thunderbird.participate': '/participate',
