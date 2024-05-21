@@ -53,17 +53,21 @@ def mkdir(path):
             raise
 
 
-def write_404_htaccess(path, lang):
-    """Write an .htaccess to `path` that points to 404.html for locale `lang`."""
+def write_htaccess_custom(path, rules: str):
+    """Write an .htaccess to `path` that rewrites based on custom rules"""
+    os.makedirs(path, exist_ok=True)
     with open(os.path.join(path, '.htaccess'), 'w') as f:
-        f.write('ErrorDocument 404 /{lang}/404.html\n'.format(lang=lang))
+        f.write(rules)
 
 
 def write_htaccess(path, url):
     """Write an .htaccess to `path` that rewrites everything to `url`."""
-    mkdir(path)
-    with open(os.path.join(path, '.htaccess'), 'w') as f:
-        f.write('RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
+    write_htaccess_custom(path, 'RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
+
+
+def write_404_htaccess(path, lang):
+    """Write an .htaccess to `path` that points to 404.html for locale `lang`."""
+    write_htaccess_custom(path, 'ErrorDocument 404 /{lang}/404.html\n'.format(lang=lang))
 
 
 def delete_contents(dirpath):
@@ -431,7 +435,14 @@ class Site(object):
 
             # Write download page redirect
             downloads_path = os.path.join(self.renderpath, self.lang, 'download')
-            write_htaccess(downloads_path, settings.CANONICAL_URL)
+            all_releases_path = helper.url({'LANG': lang}, 'thunderbird.latest.all')
+            beta_releases_path = helper.url({'LANG': lang}, 'thunderbird.latest.beta')
+            htaccess_rule = [
+                'RewriteEngine On',
+                f'RewriteRule download/beta {beta_releases_path} [L]',  # Stop testing if we get a hit on the beta rule
+                f'RewriteRule .* {all_releases_path}',
+            ]
+            write_htaccess_custom(downloads_path, "\n".join(htaccess_rule))
 
             # Write get-involved page redirect
             get_involved_path = os.path.join(self.renderpath, self.lang, 'get-involved')
