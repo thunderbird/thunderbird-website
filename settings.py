@@ -252,7 +252,7 @@ BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
 
 SHOW_BETA_NOTES_IN_RSS_FEED = False
 
-ACTIVE_SURVEY_URL = '/'
+ACTIVE_SURVEY_URL = 'https://www.surveymonkey.com/r/69C9LSH'
 
 # WEBSITE_CSS = {
 #     'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
