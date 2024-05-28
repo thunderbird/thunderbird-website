@@ -1,0 +1,66 @@
+.page-beta-appeal-24 {
+  body {
+    font-family: 'Metropolis', sans-serif;
+    font-size: var(--font-md);
+    line-height: 1.875rem;
+    font-weight: 400;
+
+    --nav-height: 18px;
+  }
+
+  .tagline {
+    text-wrap: balance;
+    margin: auto !important;
+    max-width: 56.25rem;
+  }
+
+  .appeal-footer-container {
+    background-color: var(--color-black);
+    color: var(--color-gray-20);
+  }
+
+  .page-separator-cover {
+    margin-bottom: -2px;
+  }
+
+  .footer {
+    padding-bottom: 1rem;
+  }
+
+  .two-columns {
+    display: flex;
+
+    a {
+      color: var(--color-link);
+    }
+
+
+    .image {
+      max-width: 20rem; // 320px~
+      margin: auto;
+    }
+
+    .section-text {
+      text-align: left;
+      max-inline-size: 100%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      p {
+        margin: auto;
+        max-width: 45.125rem; // 722px~
+      }
+    }
+  }
+
+  @media (max-width: @md) {
+    .two-columns {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}
+
+

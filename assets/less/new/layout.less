@@ -41,11 +41,14 @@
 header {
   display: flex;
   flex-direction: column;
-  min-height: 12.5rem; // 200px
+  min-height: clamp(12.5rem, 18vh, 14.25rem);
+  //min-height: 12.5rem; // 200px
   background-color: var(--page-header-bg);
   color: var(--txt);
   padding-top: calc(var(--nav-height) * 2);
   isolation: isolate;
+  // Counter the top separator
+  padding-bottom: 72px;
 
   .breadcrumbs {
     font-size: 0.75rem;
@@ -54,17 +57,9 @@ header {
 
   .tagline {
     margin-top: 1rem;
-    font-size: var(--font-tagline);
-
+    font-size: var(--font-tagline-clamp);
   }
 
-  @media (max-width: @md) {
-    min-height: 18.75rem;
-  }
-  // Fix for no hidpi 4k
-  @media (min-width: @xl) {
-    min-height: 18.75rem;
-  }
 }
 
 .logo {
