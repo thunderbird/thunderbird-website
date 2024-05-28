@@ -1,5 +1,7 @@
 // page template
-
+body {
+  --separator-height: 72px;
+}
 .header-separator {
   // Anchor it to the bottom
   position: absolute;
@@ -11,7 +13,7 @@
   background-color: var(--bg);
   // Give it some space
   width: 100%;
-  min-height: 72px;
+  min-height: var(--separator-height);
   // Prevent any gaps on the top
   line-height: 0;
 }
@@ -37,18 +39,25 @@
   width: 100%;
 }
 
+#masthead {
+  --min-height-ideal: 18vh;
+  --min-height-min: 12.5rem;
+  --min-height-max: 14.25rem;
+  --min-height-clamp: clamp(var(--min-height-min), var(--min-height-ideal), var(--min-height-max));
+}
+
 #masthead,
 header {
   display: flex;
   flex-direction: column;
-  min-height: clamp(12.5rem, 18vh, 14.25rem);
+  min-height: var(--min-height-clamp);
   //min-height: 12.5rem; // 200px
   background-color: var(--page-header-bg);
   color: var(--txt);
   padding-top: calc(var(--nav-height) * 2);
   isolation: isolate;
   // Counter the top separator
-  padding-bottom: 72px;
+  padding-bottom: var(--separator-height);
 
   .breadcrumbs {
     font-size: 0.75rem;
@@ -83,7 +92,7 @@ header {
   display: grid;
   gap: 60px;
   padding-inline: 1rem;
-  padding-block: 100px;
+  padding-block: clamp(1rem, 8.0vw, 6.25rem); // 6.25rem~
   margin-inline: auto;
   max-width: 1280px;
   overflow: hidden;
