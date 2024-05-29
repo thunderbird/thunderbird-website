@@ -5,6 +5,11 @@
 .btn-download,
 [type="button"] {
   @outline();
+  // Moved from @outline
+  &:focus {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+  }
 }
 
 .btn {
