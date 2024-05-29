@@ -11,18 +11,21 @@
   --font-4xl: 2.5625rem;      // 41px
   --font-body: 1.125rem;      // 18px
 
-  --font-tagline: 5rem;
-  --font-hero: 1.4rem;        // 22.4px
+  --font-tagline-ideal: 7.5vw; // 5rem-ish at vw=1280px
+  --font-tagline-max: 5rem;
+  --font-tagline-min: 2.75rem;
+  --font-tagline-clamp: clamp(var(--font-tagline-min), var(--font-tagline-ideal), var(--font-tagline-max));
 
+  --font-hero: 1.4rem;        // 22.4px
   --font-cta: 5rem;
   --font-h2: 2.75rem;
   --font-h3: 2rem;
   --font-h4: 1.25rem;
+
 }
 
 @media (max-width: @md) {
   :root {
-    --font-tagline: 4rem;
     --font-cta: 2.75rem;
     --font-h2: 2.5rem;
     --font-h3: 2rem;
@@ -32,7 +35,6 @@
 
 @media (max-width: @xs) {
   :root {
-    --font-tagline: 2.75rem;
     --font-hero: 1.25rem;
     --font-cta: 2.5rem;
     --font-h2: 2.25rem;
