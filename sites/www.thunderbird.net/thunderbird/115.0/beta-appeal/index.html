@@ -39,8 +39,8 @@
     <div class="container">
       <div class="two-columns">
         <div class="section-text">
-          {% trans trimmed knowledge_base_url='https://support.mozilla.org/kb/thunderbird-beta', topic_box_url='https://thunderbird.topicbox.com/groups/beta' %}
-            <p>Join the Beta today, and enjoy an exciting preview of the new features and visual enhancements coming to Thunderbird 128. You can still run Thunderbird 115 after installing Beta on Windows with no special settings, unless you are using POP mail accounts. See details in the <a href="{{ knowledge_base_url }}">beta knowledge base</a>.</p>
+          {% trans trimmed beta_version=128, current_version=115, knowledge_base_url='https://support.mozilla.org/kb/thunderbird-beta', topic_box_url='https://thunderbird.topicbox.com/groups/beta' %}
+            <p>Join the Beta today, and enjoy an exciting preview of the new features and visual enhancements coming to Thunderbird {{ beta_version }}. You can still run Thunderbird {{ current_version }} after installing Beta on Windows with no special settings, unless you are using POP mail accounts. See details in the <a href="{{ knowledge_base_url }}">beta knowledge base</a>.</p>
             <p>Thunderbird Beta is early access software, so please report the rough edges using the Help menu. You can find assistance via “Get Help” and “Share Ideas and Feedback” as well as the <a href="{{ topic_box_url }}">Beta Topicbox</a> forum.</p>
           {% endtrans %}
         </div>
