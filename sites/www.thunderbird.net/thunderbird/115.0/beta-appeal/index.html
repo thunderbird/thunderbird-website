@@ -48,8 +48,15 @@
           {{ high_res_img('thunderbird/base/donate/rocket.png', {'alt': _('A rocket with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
         </div>
       </div>
-      <div>
-        <a class="btn btn-white-bg" href="{{ url('thunderbird.download-beta') }}">{{ _('Install now') }}</a>
+      <div class="btn-container win64bit">
+        <a class="btn btn-white-bg" href="{{ download_url(platform_os='win64', channel='beta') }}">{{ _('Install now') }}</a>
+      </div>
+      <div class="btn-container win32bit">
+        <a class="btn btn-white-bg " href="{{ download_url(platform_os='win', channel='beta') }}">{{ _('Install now') }}</a>
+      </div>
+      <!-- Default button -->
+      <div class="btn-container default">
+        <a class="btn btn-white-bg default" href="{{ url('thunderbird.download-beta') }}">{{ _('Install now') }}</a>
       </div>
     </div>
   </section>

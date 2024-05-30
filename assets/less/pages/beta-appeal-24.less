@@ -1,3 +1,26 @@
+.windows.x86.page-beta-appeal-24 {
+  .btn-container.default {
+    display: none !important;
+  }
+  .btn-container.win32bit {
+    display: block !important;
+  }
+  .btn-container.win64bit {
+    display: none !important;
+  }
+}
+.windows.x86.x64.page-beta-appeal-24 {
+  .btn-container.default {
+    display: none !important;
+  }
+  .btn-container.win32bit {
+    display: none !important;
+  }
+  .btn-container.win64bit {
+    display: block !important;
+  }
+}
+
 .page-beta-appeal-24 {
   body {
     font-family: 'Metropolis', sans-serif;
@@ -21,6 +44,13 @@
   .container {
     gap: 20px;
     padding-bottom: 6rem; // Hardcoded to help button have some space
+  }
+
+  .btn-container {
+    &.win64bit,
+    &.win32bit {
+      display: none;
+    }
   }
 
   .btn {
