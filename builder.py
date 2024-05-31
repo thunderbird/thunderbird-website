@@ -97,7 +97,7 @@ class Site(object):
     Attributes:
         `lang`: Current language to build the site in, an element of `languages`.
     """
-    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False, dev_mode=False):
+    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False, dev_mode=False, no_notes=False):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
@@ -112,6 +112,7 @@ class Site(object):
         self._setup_env()
         self._env.globals.update(settings=settings, **helper.contextfunctions)
         self.dev_mode = dev_mode
+        self.build_notes = not no_notes  # Makes code a little less confusing in use.
         if debug:
             logger.setLevel(logging.INFO)
 
@@ -482,7 +483,7 @@ class UpdateHandler(FileSystemEventHandler):
         else:
             # Reduce build time by ignoring release notes when unnecessary.
             if 'includes' in event.src_path:
-                self.builder.build_website(assets=False, notes=True)
+                self.builder.build_website(assets=False, notes=self.builder.build_notes)
             else:
                 self.builder.build_website(assets=False, notes=False)
 
