@@ -2,6 +2,195 @@
 @import '../mixins.less';
 
 .btn,
+//button,
+[type="button"],
+[type="submit"] {
+  // Local variables with defaults
+  --after-opacity: var(--btn-after-opacity, 0.5);
+  --border-color: var(--btn-border-colour, currentColor);
+  --background-color: var(--btn-background-color, var(--color-white));
+  --font-size: var(--btn-font-size, var(--font-md));
+  --transition: all 250ms;
+
+  font-size: var(--font-size);
+  background: var(--background-color);
+  border-radius: 0.375rem ; //6px;
+  border: .125em solid var(--border-color);
+  color: currentColor;
+  padding: .5em 3em;
+  position: relative;
+  // ?
+  transition: font-size .2s;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    --after-opacity: 0.75;
+
+    background: linear-gradient(var(--background-color), var(--background-color)) padding-box,
+    linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+    border-color: transparent;
+    color: currentColor;
+    transition: var(--transition);
+  }
+  &:active {
+    background: linear-gradient(var(--background-color-hover), var(--background-color-hover)) padding-box,
+    linear-gradient(to right, var(--color-button-border-active), var(--color-button-border-active)) border-box;
+    border-color: transparent;
+    transition: var(--transition);
+
+    // Remove the focus state
+    outline: none;
+  }
+  &:focus,
+  &:focus-visible,
+  &.focused {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: var(--glow);
+    border-radius: 50%;
+    filter: blur(32px);
+    opacity: .25;
+    inset: -.25em -5em;
+    z-index: -2;
+  }
+  &::after {
+    content: '';
+    background-color: transparent;
+    background-image: radial-gradient(circle, var(--accent), var(--color-purple-60) 30%);
+    background-size: 400%;
+    background-position: center;
+    opacity: var(--after-opacity);
+    inset: 0;
+    transition: var(--transition);
+
+    position: absolute;
+    z-index: -1;
+
+    // Firefox requires this little hack
+    @-moz-document url-prefix() {
+        inset-inline-end: 4px;
+    }
+  }
+}
+
+.btn-light {
+  --btn-background-color: var(--color-white);
+}
+.btn-gray {
+  --btn-background-color: rgba(0, 0, 0, .8);
+}
+.btn-dark {
+  --btn-background-color: var(--color-black);
+}
+.btn-no-glow {
+  &:before {
+    background: none;
+    filter: none;
+  }
+}
+.btn-download {
+  --font-size: var(--font-lg);
+  --btn-background-color: transparent;
+  font-weight: 600;
+
+  &:hover {
+    background: none;
+    border-color: var(--border-color);
+  }
+  &:active {
+    border-color: var(--border-color);
+  }
+}
+
+/*
+ * Styling for download-button.html
+ */
+
+.download-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 0;
+  list-style: none;
+}
+
+// Call to action name (e.g. "Download Thunderbird")
+.nice-name {
+  display: inline-block;
+}
+// Platform name (e.g. "Windows 64-bit")
+.full-platform-name {
+  display: none;
+}
+
+// By default the os buttons are hidden
+.linux-arm-download,
+.unsupported-download,
+.os_win64,
+.os_msi,
+.os_win,
+.os_linux64,
+.os_linux,
+.os_osx {
+  display: none;
+}
+
+// Show buttons if a supported platform is detected
+.windows .os_win,
+.win7up.x86.x64 .os_win64,
+.linux:not(.x64) .os_linux,  // Maybe we should just combine .x86-64 as one class to avoid :not
+.linux.x86.x64 .os_linux64,
+.osx .os_osx
+{
+  display: block;
+}
+
+// Linux arm is special
+.linux.arm .linux-arm-download,
+// Unsupported platforms
+.windows.arm .unsupported-download,
+.chromeos .unsupported-download,
+.oldwin .unsupported-download,
+.oldmac .unsupported-download {
+  display: block;
+}
+
+// Platforms that should show the entire list
+.android,
+.ios,
+.fxos, // lol
+.chromeos,
+.oldwin,
+.oldmac,
+.other,
+.no-js {
+  .os_win64,
+  .os_msi,
+  .os_win,
+  .os_linux64,
+  .os_linux,
+  .os_osx {
+    display: block;
+  }
+
+  .nice-name {
+    display: none;
+  }
+  .full-platform-name {
+    display: inline-block;
+  }
+
+}
+
+/*
+.btn,
 .btn-download,
 [type="button"] {
   @outline();
@@ -20,7 +209,6 @@
   filter: grayscale(50%);
 }
 
-/* Remove some list padding */
 .download-dumb > ul {
   padding: 0;
 }
@@ -117,7 +305,6 @@ button:hover::after {
 }
 
 /*
-/** HACK for Mozilla Firefox */
 @-moz-document url-prefix() {
   .download-link.btn-download::after {
     inset-inline-end: 0.25rem; //4px;
@@ -324,3 +511,4 @@ button:hover::after {
     display: block;
   }
 }
+*/
