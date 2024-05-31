@@ -139,10 +139,15 @@
 {% block js %}
 <script>
   const navbar = document.querySelector(".site-nav");
+  let hasClass = navbar.classList.contains('scrolled-nav');
   window.addEventListener("scroll", () => {
-    (window.scrollY > 30) ?
-      navbar.classList.add("scrolled-nav") :
-      navbar.classList.remove("scrolled-nav")
+    if (!hasClass && window.scrollY > 30) {
+      navbar.classList.add('scrolled-nav');
+      hasClass = true;
+    } else if (hasClass && window.scrollY <= 30) {
+      navbar.classList.remove('scrolled-nav');
+      hasClass = false;
+    }
   });
 </script>
 {% endblock %}
