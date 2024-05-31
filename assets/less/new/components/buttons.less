@@ -1,22 +1,30 @@
 @import "../functions.less";
 @import '../mixins.less';
 
-.btn,
-//button,
+[type="submit"],
 [type="button"],
-[type="submit"] {
+button {
+  @btn-no-bg-styling();
+  all: unset;
+}
+
+.btn {
   // Local variables with defaults
   --after-opacity: var(--btn-after-opacity, 0.5);
-  --border-color: var(--btn-border-colour, currentColor);
+  --border-color: var(--btn-border-color, currentColor);
+  --txt-color: var(--btn-txt-color, currentColor);
+  --txt-color-hover: var(--btn-txt-color-hover, var(--txt-color));
   --background-color: var(--btn-background-color, var(--color-white));
-  --font-size: var(--btn-font-size, var(--font-md));
+  --background-color-hover: var(--btn-background-color-hover, var(--background-color));
+  --font-size: var(--btn-font-size, var(--font-lg));
   --transition: all 250ms;
 
+  cursor: pointer;
   font-size: var(--font-size);
   background: var(--background-color);
-  border-radius: 0.375rem ; //6px;
+  border-radius: 0.375rem; //6px;
   border: .125em solid var(--border-color);
-  color: currentColor;
+  color: var(--txt-color);
   padding: .5em 3em;
   position: relative;
   // ?
@@ -26,27 +34,31 @@
 
   &:hover {
     --after-opacity: 0.75;
-
-    background: linear-gradient(var(--background-color), var(--background-color)) padding-box,
+    background: linear-gradient(var(--background-color-hover), var(--background-color-hover)) padding-box,
     linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
     border-color: transparent;
-    color: currentColor;
+    color: var(--txt-color-hover);
     transition: var(--transition);
   }
+
   &:active {
     background: linear-gradient(var(--background-color-hover), var(--background-color-hover)) padding-box,
     linear-gradient(to right, var(--color-button-border-active), var(--color-button-border-active)) border-box;
     border-color: transparent;
+    color: var(--txt-color-hover);
     transition: var(--transition);
-
-    // Remove the focus state
-    outline: none;
   }
+
   &:focus,
   &:focus-visible,
   &.focused {
     outline: var(--focus-outline);
     outline-offset: var(--focus-outline-offset);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    filter: grayscale(50%);
   }
 
   &::before {
@@ -59,6 +71,7 @@
     inset: -.25em -5em;
     z-index: -2;
   }
+
   &::after {
     content: '';
     background-color: transparent;
@@ -74,7 +87,7 @@
 
     // Firefox requires this little hack
     @-moz-document url-prefix() {
-        inset-inline-end: 4px;
+      inset-inline-end: 4px;
     }
   }
 }
@@ -82,19 +95,41 @@
 .btn-light {
   --btn-background-color: var(--color-white);
 }
+
 .btn-gray {
   --btn-background-color: rgba(0, 0, 0, .8);
 }
+
 .btn-dark {
   --btn-background-color: var(--color-black);
 }
+
 .btn-no-glow {
   &:before {
     background: none;
     filter: none;
   }
 }
-.btn-download {
+
+.btn-transparent {
+  --btn-background-color: transparent;
+  --btn-background-color-hover: var(--color-white);
+  --txt-color: currentColor;
+
+  &:after {
+    background: transparent;
+  }
+}
+
+// Special cases:
+// 1. Homepage initial nav is dark, so use the dark scheme
+// 2. scrolled-nav has a dark background, so use the dark scheme
+.page-index .btn-transparent,
+nav.scrolled-nav .btn-transparent {
+  --btn-background-color-hover: rgba(0, 0, 0, 0.8);
+}
+
+.btn-hero-download {
   --font-size: var(--font-lg);
   --btn-background-color: transparent;
   font-weight: 600;
@@ -103,10 +138,82 @@
     background: none;
     border-color: var(--border-color);
   }
+
   &:active {
     border-color: var(--border-color);
   }
 }
+
+.scrolled-nav .btn-hamburger {
+  margin: -0.3rem 0 0;
+  transition: margin .2s;
+}
+
+.btn-hamburger {
+  background: transparent;
+  cursor: pointer;
+  display: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 4px;
+  margin-top: 8px;
+  transition: margin .2s;
+  padding: 0;
+
+  @media (max-width: @lg) {
+    display: block;
+  }
+}
+
+
+// Just some temp styling
+.header-download {
+  font-weight: 500;
+}
+
+.header-donate {
+  margin-top: -0.05rem;
+  margin-left: -1rem;
+
+  .btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  svg {
+    width: 1rem;
+  }
+}
+
+
+.btn-newsletter {
+  position: relative;
+  border: none;
+  border-radius: 0;
+  border-inline-start: 2px solid currentColor;
+  padding: .75rem 2.5rem;
+  margin: 0;
+  font-size: var(--font-md);
+  // FIXME: This needs to get cleaned up and applied to btns generically
+  --btn-background-color: rgba(0, 0, 0, 0.8);
+  @btn-no-bg-styling();
+}
+
+.btn-newsletter-icon {
+  display: none;
+  padding: .75em 1em;
+}
+
+@media (max-width: @sm) {
+  .btn-newsletter-text {
+    display: none;
+  }
+
+  .btn-newsletter-icon {
+    display: block;
+  }
+}
+
 
 /*
  * Styling for download-button.html
@@ -116,15 +223,33 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
   padding: 0;
   list-style: none;
+}
+
+nav .download-list {
+  display: none;
+}
+
+.windows,
+.win7up.x86.x64,
+.linux:not(.x64),
+.linux.x86.x64,
+.osx {
+  nav .download-list {
+    display: block;
+  }
+}
+
+.all-downloads-link {
+  margin-bottom: 3.75rem; //60px;
 }
 
 // Call to action name (e.g. "Download Thunderbird")
 .nice-name {
   display: inline-block;
 }
+
 // Platform name (e.g. "Windows 64-bit")
 .full-platform-name {
   display: none;
@@ -145,10 +270,9 @@
 // Show buttons if a supported platform is detected
 .windows .os_win,
 .win7up.x86.x64 .os_win64,
-.linux:not(.x64) .os_linux,  // Maybe we should just combine .x86-64 as one class to avoid :not
+.linux:not(.x64) .os_linux, // Maybe we should just combine .x86-64 as one class to avoid :not
 .linux.x86.x64 .os_linux64,
-.osx .os_osx
-{
+.osx .os_osx {
   display: block;
 }
 
@@ -183,10 +307,10 @@
   .nice-name {
     display: none;
   }
+
   .full-platform-name {
     display: inline-block;
   }
-
 }
 
 /*

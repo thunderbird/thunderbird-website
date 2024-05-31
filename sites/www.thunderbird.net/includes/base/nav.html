@@ -12,7 +12,7 @@
 </li>
 {% endmacro %}
 <ul id="nav-menu" class="nav-links">
-  <!--
+  {#
   <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-products"
@@ -27,7 +27,7 @@
       </ul>
     </div>
   </li>
-  -->
+  #}
   <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-resources"
@@ -75,12 +75,12 @@
   </li>
   <li class="nav-entry no-border no-mobile">
     <div class="header-download">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="header", hide_footer_links=True, button_class="btn-download btn-no-bg") }}
+      {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="header", hide_footer_links=True, button_class="btn-download btn-transparent") }}
     </div>
   </li>
   <li class="nav-entry no-border no-mobile">
     <div class="header-donate">
-      <a href="{{ donate_url('header') }}" class="btn btn-no-bg" aria-label="{{ _('Donate') }}" title="{{ _('Donate') }}">
+      <a href="{{ donate_url('header') }}" class="btn btn-transparent" aria-label="{{ _('Donate') }}" title="{{ _('Donate') }}">
         <span aria-hidden="true">{{ svg('heart') }}</span>
       </a>
     </div>
