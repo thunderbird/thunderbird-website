@@ -67,7 +67,7 @@ class ThunderbirdDetails():
     grouped_platform_labels = OrderedDict({
         'Windows': [('win64', '64-bit (.exe)'), ('msi', '64-bit (.msi)'), ('win', '32-bit (.exe)')],
         'Linux': [('linux64', '64-bit (binary)'), ('linux', '32-bit (binary)')],
-        'MacOS': [('osx', '64-bit (.dmg)')]
+        'macOS': [('osx', '64-bit (.dmg)')]
     })
 
     languages = load_json('languages.json')
