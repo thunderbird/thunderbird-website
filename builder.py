@@ -112,7 +112,7 @@ class Site(object):
         self._setup_env()
         self._env.globals.update(settings=settings, **helper.contextfunctions)
         self.dev_mode = dev_mode
-        self.build_notes = not no_notes  # Makes code a little less confusing in use.
+        self.should_build_notes = not no_notes  # Makes code a little less confusing in use.
         if debug:
             logger.setLevel(logging.INFO)
 
@@ -483,7 +483,7 @@ class UpdateHandler(FileSystemEventHandler):
         else:
             # Reduce build time by ignoring release notes when unnecessary.
             if 'includes' in event.src_path:
-                self.builder.build_website(assets=False, notes=self.builder.build_notes)
+                self.builder.build_website(assets=False, notes=self.builder.should_build_notes)
             else:
                 self.builder.build_website(assets=False, notes=False)
 
