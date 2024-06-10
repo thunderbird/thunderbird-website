@@ -87,7 +87,8 @@ CANONICAL_LOCALES = {
 }
 
 ENUS_ONLY = [
-    # We don't have any english-only non /thunderbird/ links
+    # Atom feed is only generated on en-US
+    'thunderbird.releases.atom'
 ]
 
 # Most pages under /thunderbird/ are en-US only, except these.
