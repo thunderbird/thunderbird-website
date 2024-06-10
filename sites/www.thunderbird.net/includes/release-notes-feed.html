@@ -1,4 +1,4 @@
-{% set is_beta = channel_name == "Beta" %}
+{% set show_bugs = channel_name == "Beta" or is_preview|default(False) %}
 {% if notes %}
   {% set section = namespace(name='') %}
   {% set release_group = namespace(name='') %}
@@ -38,7 +38,7 @@
 
         <li>
           {{ note.note|markdown|safe }}
-          {% if is_beta %}
+          {% if show_bugs and note_bug_links %}
             ({{ note.bug_links|markdown|safe }})
           {% endif %}
         </li>
@@ -59,7 +59,7 @@
               {{ _('Resolved in v{version_number}')|f(version_number=note.fixed_in_release.version) }}
             </a>
           {% endif %}
-          {% if is_beta %}
+          {% if show_bugs and note_bug_links %}
             ({{ note.bug_links|markdown|safe }})
           {% endif %}
         </li>
