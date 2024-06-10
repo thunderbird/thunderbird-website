@@ -59,7 +59,7 @@
               {{ _('Resolved in v{version_number}')|f(version_number=note.fixed_in_release.version) }}
             </a>
           {% endif %}
-          {% if show_bugs %}
+          {% if show_bugs and note_bug_links %}
             ({{ note.bug_links|markdown|safe }})
           {% endif %}
         </li>
