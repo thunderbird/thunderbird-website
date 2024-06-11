@@ -1,12 +1,8 @@
 @import '../mixins.less';
 
 .site-nav {
-  --hamburger-background-inactive: var(--color-white);
-  --hamburger-foreground-inactive: var(--color-black);
-  --hamburger-background-active: var(--color-white);
-  --hamburger-foreground-active: var(--color-black);
-  
   --popover-left-align: -2rem;
+  --nav-txt: var(--txt);
 
   box-sizing: border-box;
   position: fixed;
@@ -16,7 +12,7 @@
   padding-inline: 1rem;
   padding-block: 12px;
   background: var(--nav-bg);
-  color: var(--txt);
+  color: var(--nav-txt);
   border-bottom: 1px solid transparent;
   box-shadow: none;
   height: var(--nav-height);
@@ -50,32 +46,15 @@
   }
 }
 
-// Homepage hack
-.page-index .btn-no-bg {
-  --btn-background-color: rgba(0, 0, 0, 0.8);
-  @btn-no-bg-styling();
-}
-
 .scrolled-nav {
   --nav-height: 3.75rem;//60px;
+  --nav-txt: var(--color-white);
   border-color: rgba(255, 255, 255, .25);
   box-shadow: 0 4px 8px -2px rgba(0, 0, 0, .25);
   background-color: rgba(0, 0, 0, .8);
-  color: var(--nav-txt);
   backdrop-filter: blur(24px) saturate(120%);
   transition: all .5s;
   z-index: 100000;
-
-  .hamburger-btn {
-    --hamburger-foreground-inactive: var(--nav-txt);
-    margin: 0;
-    transition: margin .2s;
-  }
-
-  .btn-no-bg {
-    --btn-background-color: rgba(0, 0, 0, 0.8);
-    @btn-no-bg-styling();
-  }
 }
 
 .nav-container {
@@ -86,36 +65,12 @@
   margin: 0 auto;
 }
 
-.hamburger-btn {
-  cursor: pointer;
-  display: none;
-  height: 2.5rem;
-  width: 2.5rem;
-  margin-right: 4px;
-  margin-top: 8px;
-  transition: margin .2s;
-  padding: 0;
-
-  &::after {
-    background: var(--hamburger-background-inactive) none;
-  }
-
-  @media (max-width: @lg) {
-    display: block;
-  }
-}
-
-&[aria-expanded="true"].hamburger-btn {
-  background-color: var(--hamburger-background-active);
-  opacity: 100%;
-}
-
 &[aria-expanded="true"] > .hamburger-icon {
   // This isn't quite right...
   @offsetY: 195%;
 
   span {
-    border-color: var(--hamburger-foreground-active);
+    border-color: var(--nav-txt);
   }
 
   span:nth-child(1) {
@@ -142,7 +97,7 @@
     margin: auto;
     width: 50%;
     height: 100%;
-    border-bottom: 2px solid var(--hamburger-foreground-inactive);
+    border-bottom: 2px solid var(--nav-txt);
 
     min-height: 1px;
     transition: all 0.3s ease-in;
@@ -394,7 +349,7 @@
 
 @media (max-width: @lg) {
   .no-js {
-    .hamburger-btn {
+    .btn-hamburger {
       display: none;
     }
   }
