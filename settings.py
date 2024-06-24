@@ -202,6 +202,7 @@ URL_MAPPINGS = {
     'participate.promote.twitter': 'https://twitter.com/MozThunderbird',
     'participate.promote.youtube': 'https://youtube.com/@ThunderbirdProject',
     'participate.promote.tilvids': 'https://tilvids.com/a/thunderbird',
+    'participate.promote.linkedin': 'https://www.linkedin.com/company/thunderbird-email/',
     'participate.support.matrix': 'https://matrix.to/#/#thunderbird:mozilla.org',
     'participate.support.linkedin': 'https://www.linkedin.com/company/thunderbird-email/',
     'privacy': 'https://www.mozilla.org/privacy/websites/',
