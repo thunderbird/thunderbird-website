@@ -204,7 +204,6 @@ URL_MAPPINGS = {
     'participate.promote.tilvids': 'https://tilvids.com/a/thunderbird',
     'participate.promote.linkedin': 'https://www.linkedin.com/company/thunderbird-email/',
     'participate.support.matrix': 'https://matrix.to/#/#thunderbird:mozilla.org',
-    'participate.support.linkedin': 'https://www.linkedin.com/company/thunderbird-email/',
     'privacy': 'https://www.mozilla.org/privacy/websites/',
     'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#data-tools',
     'privacy.notices.donations': 'https://www.mozilla.org/privacy/websites/#donations',
