@@ -7,6 +7,10 @@ This repo contains the Thunderbird in-client Start page and the [www.thunderbird
 # Build Instructions
 
 ## Dependencies
+
+* Python >= 3.11
+* Less
+
 On Ubuntu, you would need to use apt-get instead of yum, and similarly for different package managers.
 
 ```
