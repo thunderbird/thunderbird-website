@@ -73,7 +73,7 @@ if (typeof Mozilla === 'undefined') {
       'win': 'Windows',
       'linux64': 'Linux',
       'linux': 'Linux',
-      'osx': 'MacOS',
+      'osx': 'macOS',
       //'android': 'Android'
     };
 
