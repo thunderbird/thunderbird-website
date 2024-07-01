@@ -1,0 +1,215 @@
+
+
+
+
+<!doctype html>
+
+<html class="windows x86 no-js" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+  <head>
+    <meta charset="utf-8">
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>{{ _('Help Keep Thunderbird Alive!') }} — Thunderbird</title>
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ _('Thunderbird') }}">
+    <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
+    <meta property="og:image" content="https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png">
+    <meta property="og:title" content="{{ _('Help Keep Thunderbird Alive!') }}">
+    <meta property="og:description" content="">
+    <meta property="fb:page_id" content="348169218537151">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mozthunderbird">
+    <meta name="twitter:domain" content="thunderbird.net">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/media/archived/img/thunderbird/ios-icon-180.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="/media/archived/img/thunderbird/favicon-196.png">
+    <link rel="shortcut icon" href="/media/archived/img/thunderbird/favicon.ico">
+
+    <link href="/media/archived/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/media/archived/css/thunderbird-style.css" rel="stylesheet" type="text/css" />
+
+
+
+    <!--[if !lte IE 8]><!-->
+
+
+
+
+    <link href="/media/archived/css/115release.css" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+
+
+
+
+    <script>
+      window.siteLocale = "{{ LANG }}";
+    </script>
+  </head>
+
+  <body class="html-ltr " >
+    <div id="strings" ></div>
+
+
+
+
+
+  <header>
+    <div class="container">
+      <h1>
+        {{_('<span class="tb-title">Thunderbird</span>
+        <span class="version">128</span>
+        <span class="sr-only">nebula</span>')}}
+      </h1>
+    </div>
+  </header>
+
+
+    <main>
+      <section class="appeal-welcome">
+        <header>
+          {{_('Welcome to the evolution of Supernova!')}}
+        </header>
+        <p>
+          {{_('With revolutionary code improvements, Nebula sets the stage for faster delivery of new features, reinforced stability, stellar quality-of-life enhancements and visual refinements.')}}
+        </p>
+      </section>
+
+
+      <section class="speed">
+        <header>
+          {{_('')}}
+        </header>
+        <p>
+          {{_('')}}
+        </p>
+      </section>
+
+
+      <section class="cards-view">
+        <header>
+          {{_('Cards View')}}
+        </header>
+        <p>
+          {{_('The updated design makes scanning your emails faster, with a more attractive layout and an improved threads experience. Plus, the height of email cards adjusts automatically based on your settings, so everything looks just right.')}}
+        </p>
+      </section>
+
+
+      <section class="accent-colors">
+        <header>
+          {{_('Accent Colors')}}
+        </header>
+        <p>
+          {{_('Enhanced theme compatibility, especially for Linux users on Ubuntu and Mint. Your Thunderbird will better blend with your desktop environment, seamlessly matching the system’s accent colors.')}}
+        </p>
+      </section>
+
+
+      <section class="folder-pane">
+        <header>
+          {{_('Folder Pane')}}
+        </header>
+        <p>
+          {{_('A bundle of improvements including faster rendering and searching of unified folders, multi-folder selection capabilities, and better recall of message thread states.')}}
+        </p>
+      </section>
+
+
+      <section class="rust-revolution">
+        <header>
+          {{_('Rust Revolution')}}
+        </header>
+        <p>
+          {{_("We've overcome major roadblocks to bring Rust into Thunderbird. This paves the way for better code, shared features between desktop and mobile, and faster development time. It's a game-changer for our developers and for our users.")}}
+        </p>
+      </section>
+
+    </main>
+
+
+
+
+
+
+
+
+        <footer id="colophon" class="bg-black-light text-white flex flex-col pt-10 pb-8 pl-4 pr-4">
+  <section class="flex flex-col lg:flex-col justify-between items-center self-center w-full max-w-6xl">
+    <aside class="flex flex-col items-center">
+      <a href="/en-US/" class="block w-40" title="Thunderbird"
+        alt="Thunderbird Vector Wordmark">
+        <img src="/media/svg/logo-wordmark-white.svg" alt="Thunderbird Vector Wordmark"/>
+      </a>
+
+  <section class="self-center text-center max-w-5xl mt-8">
+    <ul class="list-none p-0 flex justify-center flex-wrap -mt-2">
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('privacy') }}" class="small-link" data-link-type="footer" data-link-name="Privacy">{{ _('Privacy') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('privacy.notices.websites') }}" class="small-link" data-link-type="footer" data-link-name="Cookies">{{ _('Cookies') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('legal.index') }}" class="small-link" data-link-type="footer"
+          data-link-name="Legal">{{ _('Legal') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('guidelines') }}" class="small-link" data-link-type="footer"
+          data-link-name="guidelines">{{ _('Participation Guidelines') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('legal.infringement') }}" class="small-link" data-link-type="footer"
+          data-link-name="infringement">{{ _('Report Trademark or Copyright Infringement') }}</a>
+      </li>
+      <li class="ml-2 mr-2 mt-2">
+        <a href="{{ url('legal.fraud-report') }}" class="small-link" data-link-type="footer"
+          data-link-name="Report Trademark Misuse">{{ _('Report Misuse of Thunderbird Trademark') }}</a>
+      </li>
+    </ul>
+
+    <p class="mt-6 mb-6 leading-normal">
+      {%- trans url=url('foundation.licensing.website-content'),mzla=url('mzla.blog-post') -%}
+      Thunderbird is part of
+      <a href="{{ mzla }}" class="inline-link">MZLA Technologies Corporation</a>,
+      a wholly owned subsidiary of Mozilla Foundation.
+      Portions of this content are ©1998–{{ current_year }} by individual
+      contributors. Content available under
+      a <a href="{{ url }}" class="inline-link">Creative Commons license</a>.
+      {%- endtrans -%}
+    </p>
+
+    <a href="{{ url('contribute') }}" class="small-link font-semibold" data-link-type="footer"
+      data-link-name="Contribute to this site">{{ _('Contribute to this site') }}</a>
+    {% if LANG != 'en-US' %}
+     &bull; <a href="https://pontoon.mozilla.org/{{ LANG }}/thunderbirdnet/LC_MESSAGES/messages.po/" class="small-link font-semibold"
+      data-link-type="footer" data-link-name="Translate this site">{{ _('Translate this site') }}</a>
+    {% endif %}
+  </section>
+</footer>
+
+
+
+      <script type="text/javascript" src="/media/archived/js/site-bundle.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/archived/js/common-bundle.js" charset="utf-8"></script>
+
+
+
+      <script type="text/javascript" src="/media/archived/js/matomo-config.js" charset="utf-8"></script>
+      <script type="text/javascript" src="/media/archived/js/matomo.js" async defer></script>
+      <noscript>
+        <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
+      </noscript>
+
+    <!--[if IE 9]>
+      <script src="/media/archived/js/libs/matchMedia.js"></script>
+    <![endif]-->
+
+
+
+
+  </body>
+</html>
