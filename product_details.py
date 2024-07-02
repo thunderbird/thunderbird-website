@@ -83,9 +83,9 @@ class ThunderbirdDetails():
     dev_releases = load_json('thunderbird_history_development_releases.json')
 
     version_map = {
-        'daily': 'LATEST_THUNDERBIRD_NIGHTLY_VERSION',
-        'beta': 'LATEST_THUNDERBIRD_DEVEL_VERSION',
-        'release': 'LATEST_THUNDERBIRD_VERSION',
+        'daily': ('LATEST_THUNDERBIRD_NIGHTLY_VERSION',),
+        'beta': ('LATEST_THUNDERBIRD_DEVEL_VERSION',),
+        'release': ('THUNDERBIRD_ESR_NEXT', 'THUNDERBIRD_ESR'),
     }
 
     channel_labels = OrderedDict({
@@ -96,8 +96,15 @@ class ThunderbirdDetails():
 
     def latest_version(self, channel='release'):
         """Returns the latest release version of Thunderbird by default, or other `channel`."""
-        version_name = self.version_map.get(channel, 'LATEST_THUNDERBIRD_VERSION')
-        return self.current_versions[version_name]
+        # Force release by default
+        version_names = self.version_map.get(channel or 'release')
+
+        version = self.current_versions.get(version_names[0])
+        # ESR_NEXT can be an empty string, so we have to fallback to ESR
+        if len(version_names) > 1 and version == '':
+            version = self.current_versions.get(version_names[1])
+
+        return version
 
     def latest_builds(self, locale, channel='release'):
         """Returns builds for the latest version of Thunderbird based on `channel`."""

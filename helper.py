@@ -403,7 +403,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     return markupsafe.Markup(html)
 
 
-def thunderbird_url(page, channel='None'):
+def thunderbird_url(page, channel=None):
     """
     Return a product-related URL like /thunderbird/all/ or /thunderbird/beta/60.0/releasenotes/.
     page = ('system-requirements', 'all', 'releasenotes')
