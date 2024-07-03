@@ -6,7 +6,6 @@
 {% extends "includes/base/base.html" %}
 
 {% block base_css %}<link href="/media/css/appeal/spring24.css" rel="stylesheet" type="text/css" />{% endblock %}
-
 {% block page_title %}{{ _('Thank you for choosing Thunderbird!') }}{% endblock %}
 
 {% block site_header_unwrapped %}
@@ -44,7 +43,7 @@
 <section id="appeal-body" class="letter-container font-xl">
     <a href="{{ donate_url(content='cta', campaign='128_appeal', source='thunderbird-client') }}" class="donate-banner" data-donate-btn>
       <div id="donate-banner-left">
-        {{ _('Click here to <b class="block">Donate!</b>') }}
+        {{ _('Click here to <b>Donate!</b>') }}
       </div>
       <div id="decoration">
         <div id="pill-1" class="pill"></div>
@@ -59,7 +58,7 @@
         <div id="pill-10" class="pill"></div>
       </div>
       <div id="donate-banner-right" class="text-right accent-text self-end">
-        {{ _('Help keep <b class="block">Thunderbird Alive!</b>') }}
+        {{ _('Help keep <b>Thunderbird Alive!</b>') }}
       </div>
       <div id="hover-hearts">
         <div id="hover-heart-1">{{ svg('donate-heart') }}</div>
