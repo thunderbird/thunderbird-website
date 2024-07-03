@@ -1,14 +1,19 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public #
-License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
-can obtain one at http://mozilla.org/MPL/2.0/. -#} {% set active_page =
-"appeal-128" %} {% set page_title_text = _('Experience the future of
-Thunderbird') %} {% extends "includes/base/base.html" %} {% block page_title
-%}{{ page_title_text }}{% endblock %} {% block page_desc %}{{ _('Thunderbird is
-a free email application that’s easy to set up and customize - and it’s loaded
-with great features!') }}{% endblock %} {% block breadcrumbs %}{% endblock %} {%
-block extra_meta %}
-<meta name="robots" content="noindex,nofollow" />
-{% endblock %} {% block content %}
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "beta-appeal-24" %}
+{% set page_title_text = _('Experience the future of Thunderbird') %}
+{% extends "includes/base/base.html" %}
+
+{% block page_title %}{{ page_title_text }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+{% block extra_meta %}
+  <meta name="robots" content="noindex,nofollow"/>
+{% endblock %}
+
+{% block content %}
 <section>
   <div class="container">
     <section class="appeal-welcome">
@@ -21,8 +26,8 @@ block extra_meta %}
     </section>
 
     <section class="speed">
-      <header>{{_('')}}</header>
-      <p>{{_('')}}</p>
+      <header>{{_('tbd header speed')}}</header>
+      <p>{{_('tbd body speed')}}</p>
     </section>
 
     <section class="cards-view">
@@ -62,16 +67,52 @@ block extra_meta %}
         developers and for our users.")}}
       </p>
     </section>
+
+    <section class="streamlined-menu full-width">
+      <p>
+        {{_('Streamlined menu navigation with better visual cues and less cognitive burden to make your email experience more efficient and more enjoyable.')}}
+      </p>
+    </section>
+
+    <section class="additional-features three-column">
+      <div class="column">
+        <header>{{ _('Native Windows Notifications')}}</header>
+        <p>
+          {{ _('Fixed and fully functional! Clicking a notification dismisses it, brings Thunderbird to the foreground, and selects the message. Notifications now disappear when Thunderbird closes.')}}
+        </p>
+      </div>
+      <div class="column">
+        <header>{{ _('Context Menu Improvements')}}</header>
+        <p>
+          {{ _('Reorganized for a smoother experience, with primary actions now as icons for quick access.')}}
+        </p>
+      </div>
+      <div class="column">
+        <header>{{ _('Account Color Customization')}}</header>
+        <p>
+          {{ _('By popular demand, you can now customize the color of your account icons. These colors also show up in the “From” selection when composing emails.')}}
+        </p>
+      </div>
+    </section>
+    <section class="nebula-enables full-width">
+      <p>
+        {{_('“Nebula” enables an email experience that shines brighter than ever.  Expect more updates and helpful new features to materialize over the upcoming months.'')}}
+      </p>
+    </section>
   </div>
 </section>
-{% endblock %} {% block site_footer %}
-<div class="appeal-footer-container">
-  <div class="pre-footer-cover-container">
-    {% include 'includes/components/page-separator-cover.html' %}
+{% endblock %}
+
+{% block site_footer %}
+  <div class="appeal-footer-container">
+    <div class="pre-footer-cover-container">
+      {% include 'includes/components/page-separator-cover.html' %}
+    </div>
+    <div id="footer" class="container footer">
+      {% include 'includes/appeal-footer.html' %}
+    </div>
+    {% include 'includes/donation-includes.html' %}
   </div>
-  <div id="footer" class="container footer">
-    {% include 'includes/appeal-footer.html' %}
-  </div>
-  {% include 'includes/donation-includes.html' %}
-</div>
 {% endblock site_footer %}
+
+
