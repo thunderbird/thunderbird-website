@@ -65,19 +65,6 @@
     {% block site_nav %}{% endblock %}
 
     {% block site_header %}
-      {% if not LANG.startswith('en-') %}
-      <header id="masthead">
-
-        {% block site_header_nav %}{% endblock %}
-
-        {% block site_header_logo %}{% endblock %}
-
-        {% block breadcrumbs %}{% endblock %}
-
-        {% block site_header_share %}{% endblock %}
-
-      </header>
-      {% endif %}
     {% endblock %}
 
     <main>
