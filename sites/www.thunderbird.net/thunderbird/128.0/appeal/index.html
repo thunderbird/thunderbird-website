@@ -5,32 +5,27 @@
 {% set active_page = "128-appeal" %}
 {% extends "includes/base/base.html" %}
 
-{% block base_css %}<link href="/media/css/appeal/spring24.css" rel="stylesheet" type="text/css" />{% endblock %}
+{% block base_css %}<link href="/media/css/appeal-128.css" rel="stylesheet" type="text/css" />{% endblock %}
 {% block page_title %}{{ _('Thank you for choosing Thunderbird!') }}{% endblock %}
 
 {% block site_header_unwrapped %}
-<div class="clouds-bg">
-  <div class="left"></div>
-  <div class="right"></div>
-</div>
+<div class="overlay"></div>
+<div class="nebula-bg"></div>
 {% endblock %}
 
 {% block site_header %}
-<div id="initAppeal" >
-  <aside>
-    <h1 id="appeal-heading" class="accent-text" aria-label="{{ _('Thank you for choosing Thunderbird!') }}">
+<div id="appeal-header">
+  <header>
+    <h1 id="appeal-heading" aria-label="{{ _('Thank you for choosing Thunderbird!') }}">
       {{ _('Thank you for choosing <span>Thunderbird!</span>') }}
     </h1>
     <p>
       {{ _('Thunderbird is proud to be funded by our community, not by selling personal data or showing ads in your inbox.')}}
     </p>
-  </aside>
+  </header>
   <aside id="illustration" aria-hidden="true">
-    <div id="ill-body">
-      {{ svg('appeal/spring24/ill-body2') }}
-    </div>
-    <div id="ill-hearts">
-      {{ svg('appeal/spring24/ill-hearts') }}
+    <div id="roc">
+      {{ svg('appeal/appeal-128/space-roc') }}
     </div>
   </aside>
 </div>
