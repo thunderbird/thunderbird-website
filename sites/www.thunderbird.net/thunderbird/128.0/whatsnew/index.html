@@ -2,8 +2,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% set active_page = "appeal-128" %}
-{% set page_title_text = _('Experience the future of Thunderbird') %}
+{% set active_page = "whatsnew-128" %}
+{% set page_title_text = _('Welcome to the evolution of Supernova!') %}
 {% extends "includes/base/base.html" %}
 
 {% block page_title %}{{ page_title_text }}{% endblock %}
@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block page_css %}
-<link href="{{ static('css/appeal-128.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ static('css/whatsnew-128.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 
@@ -30,9 +30,9 @@
       </p>
     </section>
 
-    <section class="speed">
-      <header>{{_('tbd header speed')}}</header>
-      <p>{{_('tbd body speed')}}</p>
+    <section class="fast-and-fluid">
+      <header>{{_('Fast and Fluid')}}</header>
+      <p>{{_('Feel the difference smarter code makes possible! Interactions with your message list are faster, the email space is more responsive, and Thunderbird is more stable and reliable.')}}</p>
     </section>
 
     <section class="cards-view">
