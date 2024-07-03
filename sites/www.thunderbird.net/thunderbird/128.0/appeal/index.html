@@ -2,7 +2,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% set active_page = "beta-appeal-24" %}
+{% set active_page = "appeal-128" %}
 {% set page_title_text = _('Experience the future of Thunderbird') %}
 {% extends "includes/base/base.html" %}
 
@@ -12,6 +12,11 @@
 {% block extra_meta %}
   <meta name="robots" content="noindex,nofollow"/>
 {% endblock %}
+
+{% block page_css %}
+<link href="{{ static('css/appeal-128.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 
 {% block content %}
 <section>
@@ -96,7 +101,7 @@
     </section>
     <section class="nebula-enables full-width">
       <p>
-        {{_('“Nebula” enables an email experience that shines brighter than ever.  Expect more updates and helpful new features to materialize over the upcoming months.'')}}
+        {{_('“Nebula” enables an email experience that shines brighter than ever.  Expect more updates and helpful new features to materialize over the upcoming months.')}}
       </p>
     </section>
   </div>
