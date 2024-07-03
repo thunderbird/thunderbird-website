@@ -1,0 +1,158 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "whatsnew-128" %}
+{% set page_title_text = _('Welcome to the evolution of Supernova!') %}
+{% extends "includes/base/base.html" %}
+
+{% block page_title %}{{ page_title_text }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+{% block extra_meta %}
+  <meta name="robots" content="noindex,nofollow"/>
+{% endblock %}
+
+{% block page_css %}
+<link href="{{ static('css/whatsnew-128.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block content %}
+<section>
+  <div class="container">
+    <section class="appeal-welcome">
+      <header>{{_('Welcome to the evolution of Supernova!')}}</header>
+      <p>
+        {% trans trimmed %}
+        With revolutionary code improvements, Nebula sets the stage for
+        faster delivery of new features, reinforced stability, stellar
+        quality-of-life enhancements and visual refinements.
+        {% endtrans %}
+      </p>
+    </section>
+
+    <section class="fast-and-fluid">
+      <header>{{_('Fast and Fluid')}}</header>
+      <p>
+        {% trans trimmed %}
+        Feel the difference smarter code makes possible! Interactions with your
+        message list are faster, the email space is more responsive, and
+        Thunderbird is more stable and reliable.
+        {% endtrans %}
+      </p>
+    </section>
+
+    <section class="cards-view">
+      <header>{{_('Cards View')}}</header>
+      <p>
+        {% trans trimmed %}
+        The updated design makes scanning your emails faster, with a more
+        attractive layout and an improved threads experience. Plus, the height
+        of email cards adjusts automatically based on your settings, so
+        everything looks just right.
+        {% endtrans %}
+      </p>
+    </section>
+
+    <section class="accent-colors">
+      <header>{{_('Accent Colors')}}</header>
+      <p>
+        {% trans trimmed %}
+        Enhanced theme compatibility, especially for Linux users on Ubuntu
+        and Mint. Your Thunderbird will better blend with your desktop
+        environment, seamlessly matching the system’s accent colors.
+        {% endtrans %}
+      </p>
+    </section>
+
+    <section class="folder-pane">
+      <header>{{_('Folder Pane')}}</header>
+      <p>
+        {% trans trimmed %}
+        A bundle of improvements including faster rendering and searching
+        of unified folders, multi-folder selection capabilities, and better
+        recall of message thread states.
+        {% endtrans %}
+      </p>
+    </section>
+
+    <section class="rust-revolution">
+      <header>{{_('Rust Revolution')}}</header>
+      <p>
+        {% trans trimmed %}
+        We've overcome major roadblocks to bring Rust into Thunderbird.
+        This paves the way for better code, shared features between desktop and
+        mobile, and faster development time. It's a game-changer for our
+        developers and for our users.
+        {% endtrans %}
+      </p>
+    </section>
+
+    <section class="streamlined-menu full-width">
+      <p>
+        {% trans trimmed %}
+        Streamlined menu navigation with better visual cues and less
+        cognitive burden to make your email experience more efficient
+        and more enjoyable.
+        {% endtrans %}
+      </p>
+    </section>
+
+    <section class="additional-features three-column">
+      <div class="column">
+        <header>{{ _('Native Windows Notifications')}}</header>
+        <p>
+          {% trans trimmed %}
+          Fixed and fully functional! Clicking a notification dismisses it,
+          brings Thunderbird to the foreground, and selects the message.
+          Notifications now disappear when Thunderbird closes.
+          {% endtrans %}
+        </p>
+      </div>
+      <div class="column">
+        <header>{{ _('Context Menu Improvements')}}</header>
+        <p>
+          {% trans trimmed %}
+          Reorganized for a smoother experience, with primary actions
+          now as icons for quick access.
+          {% endtrans %}
+        </p>
+      </div>
+      <div class="column">
+        <header>{{ _('Account Color Customization')}}</header>
+        <p>
+          {% trans trimmed %}
+          By popular demand, you can now customize the color of your account
+          icons. These colors also show up in the “From” selection
+          when composing emails.
+          {% endtrans %}
+        </p>
+      </div>
+    </section>
+    <section class="nebula-enables full-width">
+      <p>
+        {% trans trimmed %}
+        “Nebula” enables an email experience that shines brighter than ever.
+        Expect more updates and helpful new features to materialize over
+        the upcoming months.
+        {% endtrans %}
+      </p>
+    </section>
+  </div>
+</section>
+{% endblock %}
+
+{% block site_footer %}
+  <div class="appeal-footer-container">
+    <div class="pre-footer-cover-container">
+      {% include 'includes/components/page-separator-cover.html' %}
+    </div>
+    <div id="footer" class="container footer">
+      {% include 'includes/appeal-footer.html' %}
+    </div>
+    {% include 'includes/donation-includes.html' %}
+  </div>
+{% endblock site_footer %}
+
+
