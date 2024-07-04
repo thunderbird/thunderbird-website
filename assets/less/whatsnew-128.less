@@ -67,7 +67,12 @@ p {
 }
 
 .main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  gap: 100px;
 
   .overlay {
     position: absolute;
@@ -81,7 +86,7 @@ p {
               linear-gradient(0deg, rgba(23, 41, 78, 0.5), rgba(23, 41, 78, 0.5));
     // Figma produces some funky gradient css
     transform: scaleY(-1);
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -1;
   }
 }
@@ -109,24 +114,26 @@ p {
 
 
 .two-column {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  grid-gap: 10px;
+  display: flex;
+  max-width: 1065px;
+  gap: 95px;
+
+  justify-content: center;
+  align-items: start;
+
+  .copy {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    margin-top: -40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
 
   @media (min-width: @lg) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "left-top right"
-      "left-bottom right";
-
-    header {
-      grid-area: left-top;
-    }
-
-    p {
-      grid-area: left-bottom;
-    }
 
     .picture {
       grid-area: right;
@@ -136,9 +143,7 @@ p {
 
   &.flipped {
     @media (min-width: @lg) {
-      grid-template-areas:
-        "left right-top"
-        "left right-bottom";
+      flex-direction: row-reverse;
 
       header {
         grid-area: right-top;
@@ -168,26 +173,34 @@ p {
   width: 100%;
   position: relative;
   text-align: left;
+  margin-bottom: 160px;
 
   .header-collection {
     display: flex;
-    margin: auto;
     justify-content: center;
+    gap: 4rem;
     width: 100%;
+    overflow: hidden;
+
+    // Up until the largest of widths cut off the right side
+    @media(max-width: @xxl) {
+      justify-content: start;
+    }
   }
 
+
   .space-things {
+    padding-top: 40px;
     z-index: -1;
-    top: 0;
-    left: 0;
   }
 
   .screenshot-128 {
     z-index: -1;
-    top: 58px;
-    right: 0;
+    padding-top: 70px;
     img {
       height: 569.66px;
+      width: 911px;
+      max-width: 911px;
     }
   }
 
@@ -225,7 +238,7 @@ p {
 
   img {
     margin: auto;
-    width: 462.92px;
+    max-width: 462.92px;
     height: 481px;
   }
 }
@@ -260,12 +273,15 @@ p {
   linear-gradient(131.3deg, #37ADF9 -4.69%, #AE55F7 106.58%) border-box;
   border-radius: 24px;
   border: 2px solid transparent;
+  box-shadow: -8px -12px 18px -7px rgba(0, 133, 255, 0.25), 8px 25px 18px -7px rgba(0, 133, 255, 0.32), 0px 0px 32px 0px rgba(0, 0, 0, 0.50);
 }
+
 
 .picture.with-frame {
   display: flex;
   justify-content: center;
   justify-self: center;
+  flex-shrink: 0;
 }
 
 .picture.rocket {

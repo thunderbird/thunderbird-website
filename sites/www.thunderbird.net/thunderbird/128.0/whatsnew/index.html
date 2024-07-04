@@ -21,6 +21,7 @@
   <main>
     <div class="main-content">
       <div class="overlay"></div>
+      <div class="nebula"></div>
       <section class="appeal-welcome">
         <div class="header-collection">
           <div class="space-things">
@@ -29,19 +30,22 @@
           <div class="screenshot-128">
             {{ high_res_img('thunderbird/appeal/whatsnew-128/128-screenshot.png', {'alt': _('')}) }}
           </div>
+
         </div>
           <div class="nebula-branding" aria-label="{{ _('Thunderbird 128 Nebula') }}">
             {{ svg('appeal/whatsnew-128/nebula-branding') }}
           </div>
         <div class="welcome-message with-frame">
-          <header>{{ _('Welcome to the evolution of Supernova!') }}</header>
-          <p>
-            {% trans trimmed %}
-              With revolutionary code improvements, Nebula sets the stage for
-              faster delivery of new features, reinforced stability, stellar
-              quality-of-life enhancements and visual refinements.
-            {% endtrans %}
-          </p>
+          <section class="copy">
+            <h2>{{ _('Welcome to the evolution of Supernova!') }}</h2>
+            <p>
+              {% trans trimmed %}
+                With revolutionary code improvements, Nebula sets the stage for
+                faster delivery of new features, reinforced stability, stellar
+                quality-of-life enhancements and visual refinements.
+              {% endtrans %}
+            </p>
+          </section>
         </div>
 
         <div class="non-carousel-carousel">
@@ -49,38 +53,49 @@
         </div>
       </section>
 
-      <section class="fast-and-fluid two-column">
-        <h2>{{ _('Fast and Fluid') }}</h2>
-        <p>
-          {% trans trimmed %}
-            Feel the difference smarter code makes possible! Interactions with your
-            message list are faster, the email space is more responsive, and
-            Thunderbird is more stable and reliable.
-          {% endtrans %}
-        </p>
-        <div class="picture rocket">
+      <div class="fast-and-fluid two-column">
+        <section class="copy">
+          <h2>{{ _('Fast and Fluid') }}</h2>
+          <p>
+            {% trans trimmed %}
+              Feel the difference smarter code makes possible! Interactions with your
+              message list are faster, the email space is more responsive, and
+              Thunderbird is more stable and reliable.
+            {% endtrans %}
+          </p>
+        </section>
+        <aside class="picture rocket">
           {{ svg('appeal/whatsnew-128/fast-and-fluid-rocket') }}
           {{ svg('appeal/whatsnew-128/fast-and-fluid-stars') }}
-        </div>
-      </section>
+        </aside>
+      </div>
 
-      <section class="cards-view two-column flipped">
-        <h3>{{ _('Cards View') }}</h3>
-        <p>
-          {% trans trimmed %}
-            The updated design makes scanning your emails faster, with a more
-            attractive layout and an improved threads experience. Plus, the height
-            of email cards adjusts automatically based on your settings, so
-            everything looks just right.
-          {% endtrans %}
-        </p>
-        <div class="picture with-frame">
+      <div class="cards-view two-column flipped">
+        <section class="copy">
+          <h3>
+            {{ _('Cards View') }}
+            <span aria-hidden="true">{{ svg('appeal/whatsnew-128/cards-view-icon') }}</span>
+          </h3>
+          <p>
+            {% trans trimmed %}
+              The updated design makes scanning your emails faster, with a more
+              attractive layout and an improved threads experience. Plus, the height
+              of email cards adjusts automatically based on your settings, so
+              everything looks just right.
+            {% endtrans %}
+          </p>
+        </section>
+        <aside class="picture with-frame">
           {{ high_res_img('thunderbird/appeal/whatsnew-128/cards-view.png', {'alt': _('')}) }}
-        </div>
-      </section>
+        </aside>
+      </div>
 
-      <section class="accent-colors two-column">
-        <h3>{{ _('Accent Colors') }}</h3>
+      <div class="accent-colors two-column">
+        <section class="copy">
+        <h3>
+          {{ _('Accent Colors') }}
+          <span aria-hidden="true">{{ svg('appeal/whatsnew-128/accent-colors-icon') }}</span>
+        </h3>
         <p>
           {% trans trimmed %}
             Enhanced theme compatibility, especially for Linux users on Ubuntu
@@ -88,38 +103,46 @@
             environment, seamlessly matching the system’s accent colors.
           {% endtrans %}
         </p>
-        <div class="picture with-frame">
+        </section>
+        <aside class="picture with-frame">
           {{ high_res_img('thunderbird/appeal/whatsnew-128/accent-colors-items.png', {'alt': _('')}) }}
-        </div>
-      </section>
+        </aside>
+      </div>
 
-      <section class="folder-pane two-column flipped">
-        <h3>{{ _('Folder Pane') }}</h3>
-        <p>
-          {% trans trimmed %}
-            A bundle of improvements including faster rendering and searching
-            of unified folders, multi-folder selection capabilities, and better
-            recall of message thread states.
-          {% endtrans %}
-        </p>
-        <div class="picture">
+      <div class="folder-pane two-column flipped">
+        <section class="copy">
+          <h3>
+            {{ _('Folder Pane') }}
+            <span aria-hidden="true">{{ svg('appeal/whatsnew-128/folder-pane-icon') }}</span>
+          </h3>
+          <p>
+            {% trans trimmed %}
+              A bundle of improvements including faster rendering and searching
+              of unified folders, multi-folder selection capabilities, and better
+              recall of message thread states.
+            {% endtrans %}
+          </p>
+        </section>
+        <aside class="picture">
           {{ svg('appeal/whatsnew-128/folder-pane') }}
-        </div>
-      </section>
+        </aside>
+      </div>
 
       <section class="rust-revolution two-column">
-        <h2>{{ _('Rust Revolution') }}</h2>
-        <p>
-          {% trans trimmed %}
-            We've overcome major roadblocks to bring Rust into Thunderbird.
-            This paves the way for better code, shared features between desktop and
-            mobile, and faster development time. It's a game-changer for our
-            developers and for our users.
-          {% endtrans %}
-        </p>
-        <div class="picture">
+        <section class="copy">
+          <h2>{{ _('Rust Revolution') }}</h2>
+          <p>
+            {% trans trimmed %}
+              We've overcome major roadblocks to bring Rust into Thunderbird.
+              This paves the way for better code, shared features between desktop and
+              mobile, and faster development time. It's a game-changer for our
+              developers and for our users.
+            {% endtrans %}
+          </p>
+        </section>
+        <aside class="picture">
           {{ svg('appeal/whatsnew-128/rust-gears') }}
-        </div>
+        </aside>
       </section>
     </div>
     <div class="container pre-footer">
