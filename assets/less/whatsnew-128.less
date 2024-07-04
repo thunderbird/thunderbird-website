@@ -16,11 +16,18 @@
 
 :root {
   --text-color: var(--color-white);
+  --extension-background: #1A202C;
   --appeal-background: linear-gradient(169.85deg, #121621 2.48%, #16294D 32.48%);
   --font-content: 'Inter', sans-serif;
 }
 
+html {
+  background-color: var(--extension-background);
+}
+
 body {
+  margin: auto;
+  max-width: 1280px;
   background: var(--appeal-background);
   color: var(--text-color);
   font-family: var(--font-content);
@@ -87,7 +94,21 @@ p {
     // Figma produces some funky gradient css
     transform: scaleY(-1);
     opacity: 0.2;
-    z-index: -1;
+    z-index: 0;
+  }
+
+  .sticky-nebula {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-image: url('/media/img/thunderbird/appeal/whatsnew-128/nebula-background.png');
+    background-repeat: no-repeat;
+    background-size: 1067px 983px;
+    background-position: top -85px center;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
   }
 }
 
@@ -117,6 +138,7 @@ p {
   display: flex;
   max-width: 1065px;
   gap: 95px;
+  z-index: 1;
 
   justify-content: center;
   align-items: start;
@@ -191,16 +213,13 @@ p {
 
   .space-things {
     padding-top: 40px;
-    z-index: -1;
   }
 
   .screenshot-128 {
-    z-index: -1;
     padding-top: 70px;
     img {
-      height: 569.66px;
-      width: 911px;
-      max-width: 911px;
+      height: 570px;
+      width: 100%;
     }
   }
 
