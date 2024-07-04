@@ -199,40 +199,42 @@ p {
 
   .header-collection {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 4rem;
     width: 100%;
     overflow: hidden;
-
-    // Up until the largest of widths cut off the right side
-    @media(max-width: @xxl) {
-      justify-content: start;
-    }
   }
 
 
   .space-things {
+    margin-left: 15px;
+    margin-right: -15px;
     padding-top: 40px;
   }
 
   .screenshot-128 {
-    padding-top: 70px;
+    padding-top: 58px;
+    margin: auto;
+    flex-shrink: 0;
+
     img {
-      height: 570px;
+      max-height: 597px;
       width: 100%;
     }
   }
 
   .nebula-branding {
-    margin-top: -20rem;
+    margin-top: -23.5rem;
+    margin-bottom: 40px;
   }
 
   .welcome-message {
     position: relative;
-    // max-width: 573px;
-    padding: 24px 36px;
+    width: 573px;
+
+    padding: 35px 42px;
     color: var(--color-white);
-    margin-left: 4rem;
+    margin-left: 4.25rem;
     margin-bottom: -3.4375rem;
     z-index: 1;
 
@@ -286,7 +288,8 @@ p {
 
 
 .with-frame {
-  max-width: 519px;
+  width: 519px;
+  box-sizing: border-box;
 
   background: linear-gradient(#121420 0 0) padding-box,
   linear-gradient(131.3deg, #37ADF9 -4.69%, #AE55F7 106.58%) border-box;
