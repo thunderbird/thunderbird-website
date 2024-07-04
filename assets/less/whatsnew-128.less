@@ -136,7 +136,7 @@ p {
 
 .two-column {
   display: flex;
-  max-width: 1065px;
+  max-width: 1100px;
   gap: 95px;
   z-index: 1;
 
@@ -146,6 +146,8 @@ p {
   .copy {
     display: flex;
     flex-direction: column;
+    gap: 29px;
+    max-width: 485px;
   }
 
   h3 {
@@ -156,7 +158,6 @@ p {
   }
 
   @media (min-width: @lg) {
-
     .picture {
       grid-area: right;
       justify-self: end;
@@ -195,7 +196,7 @@ p {
   width: 100%;
   position: relative;
   text-align: left;
-  margin-bottom: 160px;
+  margin-bottom: 30px;
 
   .header-collection {
     display: flex;
@@ -231,6 +232,7 @@ p {
   .welcome-message {
     position: relative;
     width: 573px;
+    box-shadow: -8px -12px 18px -7px rgba(0, 133, 255, 0.25), 8px 25px 18px -7px rgba(0, 133, 255, 0.32), 0px 0px 32px 0px rgba(0, 0, 0, 0.50);
 
     padding: 35px 42px;
     color: var(--color-white);
@@ -251,6 +253,10 @@ p {
     bottom: 0;
     left: 0;
   }
+}
+
+.fast-and-fluid {
+  gap: 10px;
 }
 
 .cards-view .with-frame {
@@ -295,7 +301,7 @@ p {
   linear-gradient(131.3deg, #37ADF9 -4.69%, #AE55F7 106.58%) border-box;
   border-radius: 24px;
   border: 2px solid transparent;
-  box-shadow: -8px -12px 18px -7px rgba(0, 133, 255, 0.25), 8px 25px 18px -7px rgba(0, 133, 255, 0.32), 0px 0px 32px 0px rgba(0, 0, 0, 0.50);
+  box-shadow: -8px -8px 18.7px -7px rgba(0, 133, 255, 0.25);
 }
 
 
