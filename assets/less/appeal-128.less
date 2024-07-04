@@ -19,7 +19,8 @@
   --appeal-bg-gradient: linear-gradient(169.85deg, #121621 2.48%, #16294D 32.48%);
   --appeal-overlay-bg-gradient: linear-gradient(0deg, rgba(23, 41, 78, 0.50) 0%, rgba(23, 41, 78, 0.50) 100%), radial-gradient(128% 50% at 0% 100%, #25A6A0 0%, rgba(163, 236, 227, 0.00) 100%), radial-gradient(162.43% 111.8% at 0% 0%, #AE55F7 0%, rgba(174, 85, 247, 0.00) 100%), radial-gradient(106.95% 103.6% at 100.87% 101.99%, #EA7308 0%, rgba(234, 115, 8, 0.00) 100%);
 
-  --bg-appeal-glow: linear-gradient(130deg, #58C9FF 0%, #A3ECE3 100%);
+
+  --bg-appeal-glow: linear-gradient(129.83deg, #37ADF9 0%, #AE55F7 100%);;
 
   --color-appeal-bg: #82C3F5;
   --color-appeal-main-bg: var(--color-white);
@@ -56,6 +57,8 @@
     radial-gradient(106.95% 103.6% at 100.87% 101.99%,
     #FEC18A 0%,
     rgba(234, 115, 8, 0.00) 100%);
+
+    --bg-appeal-glow: linear-gradient(129.83deg, #58C9FF 0%, #A3ECE3 100%);
 
     --color-appeal-title: #FEFFFF;
     --color-appeal-sub: #F2F7FC;
@@ -240,8 +243,9 @@ main {
   position: absolute;
   background: var(--bg-appeal-glow);
   inset: -4px;
+  margin: -12px 18px;
   border-radius: 0.75rem;
-  filter: blur(64px);
+  filter: blur(32px);
   opacity: 0.8;
   z-index: -1;
 }
