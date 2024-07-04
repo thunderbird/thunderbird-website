@@ -1,0 +1,68 @@
+#footer.container {
+  position: relative;
+  display: grid;
+  gap: 60px;
+  padding-inline: 1rem;
+  margin-inline: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#footer.container.footer {
+  place-items: center;
+  padding-inline: 1rem;
+  padding-block: 1.25rem;
+}
+
+#footer a {
+  color: var(--color-legal-txt);
+  text-decoration-color: var(--color-legal-txt);
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: .12em;
+  text-decoration-style: solid;
+  transition: font-size .2s,
+              text-decoration-color .2s;
+}
+
+#footer a.donate,
+#footer a:hover,
+#footer a:hover:visited {
+  text-decoration-color: var(--accent);
+}
+
+#footer a:visited {
+  text-decoration-color: var(--color-purple-50);
+}
+
+#footer .mzla {
+  display: grid;
+  place-items: center;
+  gap: 15px;
+  text-align: center;
+  max-inline-size: 75ch;
+}
+
+#footer .mozilla-logo {
+  --accent: white;
+  max-width: 200px;
+}
+
+#footer .site-links,
+#footer .legal-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#footer .legal-links {
+  font-size: 1rem;
+}
+
+
+@media (max-width: 512px) {
+  #footer.container {
+    padding-inline: 0.25rem;
+    padding-block: 32px;
+  }
+}
