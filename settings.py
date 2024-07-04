@@ -272,6 +272,7 @@ WEBSITE_CSS = {
     # 2024 Redesign
     'base-style': ['less/base-style.less'],
     'whatsnew-128': ['less/whatsnew-128.less'],
+    'appeal-128': ['less/appeal-128.less'],
 }
 
 WEBSITE_JS = {
