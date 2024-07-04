@@ -22,17 +22,31 @@
 <section>
   <div class="container">
     <section class="appeal-welcome">
-      <header>{{_('Welcome to the evolution of Supernova!')}}</header>
-      <p>
-        {% trans trimmed %}
-        With revolutionary code improvements, Nebula sets the stage for
-        faster delivery of new features, reinforced stability, stellar
-        quality-of-life enhancements and visual refinements.
-        {% endtrans %}
-      </p>
+      <div class="space-things">
+        {{ svg('appeal/whatsnew-128/space-things') }}
+      </div>
+      <div class="screenshot-128">
+        {{ high_res_img('thunderbird/appeal/whatsnew-128/128-screenshot.png', {'alt': _('')}) }}
+      </div>
+      <div class="nebula-branding">
+        {{ svg('appeal/whatsnew-128/nebula-branding') }}
+      </div>
+      <div class="non-carousel-carousel">
+        {{ high_res_img('thunderbird/appeal/whatsnew-128/non-carousel-carousel.png', {'alt': _('')}) }}
+      </div>
+      <div class="welcome-message with-frame">
+        <header>{{_('Welcome to the evolution of Supernova!')}}</header>
+        <p>
+          {% trans trimmed %}
+          With revolutionary code improvements, Nebula sets the stage for
+          faster delivery of new features, reinforced stability, stellar
+          quality-of-life enhancements and visual refinements.
+          {% endtrans %}
+        </p>
+      </div>
     </section>
 
-    <section class="fast-and-fluid">
+    <section class="fast-and-fluid two-column">
       <header>{{_('Fast and Fluid')}}</header>
       <p>
         {% trans trimmed %}
@@ -41,9 +55,13 @@
         Thunderbird is more stable and reliable.
         {% endtrans %}
       </p>
+      <div class="picture rocket">
+        {{ svg('appeal/whatsnew-128/fast-and-fluid-rocket') }}
+        {{ svg('appeal/whatsnew-128/fast-and-fluid-stars') }}
+      </div>
     </section>
 
-    <section class="cards-view">
+    <section class="cards-view two-column flipped">
       <header>{{_('Cards View')}}</header>
       <p>
         {% trans trimmed %}
@@ -53,9 +71,12 @@
         everything looks just right.
         {% endtrans %}
       </p>
+      <div class="picture with-frame">
+        {{ high_res_img('thunderbird/appeal/whatsnew-128/cards-view.png', {'alt': _('')}) }}
+      </div>
     </section>
 
-    <section class="accent-colors">
+    <section class="accent-colors two-column">
       <header>{{_('Accent Colors')}}</header>
       <p>
         {% trans trimmed %}
@@ -64,9 +85,12 @@
         environment, seamlessly matching the system’s accent colors.
         {% endtrans %}
       </p>
+      <div class="picture with-frame">
+        {{ high_res_img('thunderbird/appeal/whatsnew-128/accent-colors-items.png', {'alt': _('')}) }}
+      </div>
     </section>
 
-    <section class="folder-pane">
+    <section class="folder-pane two-column flipped">
       <header>{{_('Folder Pane')}}</header>
       <p>
         {% trans trimmed %}
@@ -75,9 +99,12 @@
         recall of message thread states.
         {% endtrans %}
       </p>
+      <div class="picture">
+        {{ svg('appeal/whatsnew-128/folder-pane') }}
+      </div>
     </section>
 
-    <section class="rust-revolution">
+    <section class="rust-revolution two-column">
       <header>{{_('Rust Revolution')}}</header>
       <p>
         {% trans trimmed %}
@@ -87,6 +114,9 @@
         developers and for our users.
         {% endtrans %}
       </p>
+      <div class="picture">
+        {{ svg('appeal/whatsnew-128/rust-gears') }}
+      </div>
     </section>
 
     <section class="streamlined-menu full-width">
