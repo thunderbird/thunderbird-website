@@ -19,7 +19,7 @@
   --extension-background: #1A202C;
   --appeal-background: linear-gradient(169.85deg, #121621 2.48%, #16294D 32.48%);
   --font-content: 'Inter', sans-serif;
-  --canvas-width: 1280px;
+  --canvas-width: 80.0rem;
 }
 
 html {
@@ -48,17 +48,17 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-weight: 200;
-  font-size: 48px;
+  font-size: 3.0rem;
 }
 
 h3 {
   font-weight: 600;
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 h4 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 #footer {
@@ -66,7 +66,7 @@ h4 {
 }
 
 #footer.container {
-  height: 135px;
+  height: 8.4375rem;
   max-width: 100%;
 }
 
@@ -75,7 +75,7 @@ p {
   padding: 0;
   margin: 0;
   text-align: left;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.375;
 }
 
@@ -85,7 +85,7 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
-  gap: 100px;
+  gap: 6.25rem;
 
   .overlay {
     position: absolute;
@@ -109,8 +109,8 @@ p {
     position: fixed;
     background-image: url('/media/img/thunderbird/appeal/whatsnew-128/nebula-background.png');
     background-repeat: no-repeat;
-    background-size: 1067px 983px;
-    background-position: top -85px center;
+    background-size: 66.6875rem 61.4375rem;
+    background-position: top -5.3125rem center;
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -119,8 +119,8 @@ p {
 }
 
 .pre-footer {
-  padding-top: 100px;
-  padding-bottom: 60px; // There's about 40 pixels of fake pre-footer after this
+  padding-top: 6.25rem;
+  padding-bottom: 3.75rem; // There's about 40 pixels of fake pre-footer after this
   display: flex;
   flex-direction: column;
   background-color: #0f1d36;
@@ -130,22 +130,22 @@ p {
   background-size: 100% 100%;
   z-index: 1;
   position: relative;
-  min-height: 600px;
+  min-height: 37.5rem;
 
   .additional-features {
-    padding: 80px 0;
+    padding: 5.0rem 0;
   }
 
   .nebula-enables {
-    max-width: 575px;
+    max-width: 35.9375rem;
     p {
-      font-size: 21px;
+      font-size: 1.3125rem;
     }
   }
 
   section {
     margin: auto;
-    max-width: 1070px;
+    max-width: 66.875rem;
 
     p {
       text-align: center;
@@ -161,8 +161,8 @@ p {
 
 .two-column {
   display: flex;
-  max-width: 1100px;
-  gap: 95px;
+  max-width: 68.75rem;
+  gap: 5.9375rem;
   z-index: 1;
 
   justify-content: center;
@@ -171,12 +171,12 @@ p {
   .copy {
     display: flex;
     flex-direction: column;
-    gap: 29px;
-    max-width: 485px;
+    gap: 1.8125rem;
+    max-width: 30.3125rem;
   }
 
   h3 {
-    margin-top: -40px;
+    margin-top: -2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -221,13 +221,15 @@ p {
   width: 100%;
   margin: auto;
   justify-content: center;
-  gap: 30px;
+  gap: 1.875rem;
 
   .column {
-    width: 300px;
+    width: 18.75rem;
     display: flex;
 
     .feature {
+      position: relative;
+      left: 1rem;
       height: 100%;
     }
 
@@ -237,7 +239,7 @@ p {
     }
 
     p {
-      font-size: 16px;
+      font-size: 1.0rem;
       text-align: left;
     }
   }
@@ -247,7 +249,7 @@ p {
   width: 100%;
   position: relative;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 
   .header-collection {
     display: flex;
@@ -259,33 +261,33 @@ p {
 
 
   .space-things {
-    margin-left: 15px;
-    margin-right: -15px;
-    padding-top: 40px;
+    margin-left: 0.9375rem;
+    margin-right: -0.9375rem;
+    padding-top: 2.5rem;
   }
 
   .screenshot-128 {
-    padding-top: 58px;
-    margin: auto;
+    padding-top: 3.625rem;
+    margin: auto 0 auto auto;
     flex-shrink: 0;
 
     img {
-      max-height: 597px;
+      max-height: 37.3125rem;
       width: 100%;
     }
   }
 
   .nebula-branding {
     margin-top: -23.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 
   .welcome-message {
     position: relative;
-    width: 573px;
-    box-shadow: -8px -12px 18px -7px rgba(0, 133, 255, 0.25), 8px 25px 18px -7px rgba(0, 133, 255, 0.32), 0px 0px 32px 0px rgba(0, 0, 0, 0.50);
+    width: 35.8125rem;
+    box-shadow: -0.5rem -0.75rem 1.125rem -0.4375rem rgba(0, 133, 255, 0.25), 0.5rem 1.5625rem 1.125rem -0.4375rem rgba(0, 133, 255, 0.32), 0px 0px 2.0rem 0px rgba(0, 0, 0, 0.50);
 
-    padding: 35px 42px;
+    padding: 2.1875rem 2.625rem;
     color: var(--color-white);
     margin-left: 4.25rem;
     margin-bottom: -3.4375rem;
@@ -293,7 +295,7 @@ p {
 
     header {
       color: var(--color-white);
-      font-size: 34px;
+      font-size: 2.125rem;
       font-weight: 600;
     }
 
@@ -307,23 +309,23 @@ p {
 }
 
 .fast-and-fluid {
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .cards-view .with-frame {
-  width: 495px;
-  height: 573px;
+  width: 30.9375rem;
+  height: 35.8125rem;
 
   img {
     margin: auto;
-    max-width: 462.92px;
-    height: 481px;
+    max-width: 28.9325rem;
+    height: 30.0625rem;
   }
 }
 
 .accent-colors .with-frame {
-  width: 492px;
-  height: 570px;
+  width: 30.75rem;
+  height: 35.625rem;
 
   img {
     // Full-width :^)
@@ -333,26 +335,26 @@ p {
 }
 
 .folder-pane .with-frame {
-  width: 495px;
-  height: 529px;
+  width: 30.9375rem;
+  height: 33.0625rem;
 
   img {
     margin: auto;
-    width: 484.75px;
-    height: 466.1px;
+    width: 30.296875rem;
+    height: 29.13125rem;
   }
 }
 
 
 .with-frame {
-  width: 519px;
+  width: 32.4375rem;
   box-sizing: border-box;
 
   background: linear-gradient(#121420 0 0) padding-box,
   linear-gradient(131.3deg, #37ADF9 -4.69%, #AE55F7 106.58%) border-box;
-  border-radius: 24px;
-  border: 2px solid transparent;
-  box-shadow: -8px -8px 18.7px -7px rgba(0, 133, 255, 0.25);
+  border-radius: 1.5rem;
+  border: 0.125rem solid transparent;
+  box-shadow: -0.5rem -0.5rem 1.16875rem -0.4375rem rgba(0, 133, 255, 0.25);
 }
 
 
