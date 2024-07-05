@@ -114,7 +114,6 @@ p {
     width: 100%;
     height: 100%;
     z-index: 0;
-
   }
 }
 
@@ -138,6 +137,7 @@ p {
 
   .nebula-enables {
     max-width: 35.9375rem;
+
     p {
       font-size: 1.3125rem;
     }
@@ -193,6 +193,11 @@ p {
     .picture {
       margin-right: 0;
       margin-left: auto;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -200,18 +205,6 @@ p {
     @media (min-width: @lg) {
       flex-direction: row-reverse;
 
-      header {
-        grid-area: right-top;
-      }
-
-      p {
-        grid-area: right-bottom;
-      }
-
-      .picture {
-        grid-area: left;
-        justify-self: start;
-      }
     }
   }
 }
@@ -280,6 +273,7 @@ p {
   .nebula-branding {
     margin-top: -23.5rem;
     margin-bottom: 2.5rem;
+    overflow: hidden;
   }
 
   .welcome-message {
@@ -391,4 +385,127 @@ p {
   width: 100%;
   line-height: 0;
   color: var(--color-black);
+}
+
+// Make <1280px bearable
+@media (max-width: @lg) {
+  .two-column {
+    margin: 1rem;
+    gap: 1rem;
+
+    &.rust-revolution .copy {
+      margin: 1rem;
+    }
+  }
+}
+
+@media (max-width: @md) {
+  .picture {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    flex-shrink: 0;
+  }
+
+  .two-column {
+    padding: 0 0.25rem;
+    flex-direction: column-reverse;
+
+    &.flipped {
+      flex-direction: column-reverse;
+    }
+
+
+    .picture svg {
+      max-width: 100% !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .with-frame {
+    padding: 1rem;
+    margin: auto;
+    width: 100% !important;
+    height: 100% !important;
+
+    img, svg {
+      max-width: 100% !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .appeal-welcome {
+    .header-collection {
+      flex-direction: column;
+
+      .space-things {
+        display: none;
+      }
+
+      .screenshot-128 {
+        padding-bottom: 24rem;
+      }
+    }
+
+    .nebula-branding {
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .welcome-message {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .pre-footer {
+    .three-column {
+      flex-direction: column;
+
+      .column {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// For smol devices
+@media (max-width: @sm) {
+  .main-content .sticky-nebula {
+    display: none;
+  }
+
+  .appeal-welcome {
+    .header-collection {
+      flex-direction: column;
+
+      .space-things {
+        display: none;
+      }
+
+      .screenshot-128 {
+        padding-bottom: 24rem;
+      }
+    }
+
+    .nebula-branding {
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .welcome-message {
+      width: 100%;
+      margin: 0;
+    }
+
+    .non-carousel-carousel {
+      display: none;
+    }
+  }
 }
