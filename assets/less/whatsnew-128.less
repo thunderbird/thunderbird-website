@@ -2,13 +2,511 @@
 @import "new/fonts.less";
 @import "new/colours.less";
 @import "new/links.less";
+@import "new/components/appeal-footer.less";
 
 /*-------------------------
 * Media Queries
 *--------------------------*/
-@xs: 30rem;     // 480px
-@sm: 40rem;     // 640px
-@md: 48rem;     // 768px
-@lg: 64rem;     // 1024px
-@xl: 80rem;     // 1280px
-@xxl: 90rem;    // 1440px
+@xs: 30rem; // 480px
+@sm: 40rem; // 640px
+@md: 48rem; // 768px
+@lg: 64rem; // 1024px
+@xl: 80rem; // 1280px
+@xxl: 90rem; // 1440px
+
+:root {
+  --text-color: var(--color-white);
+  --extension-background: #1A202C;
+  --appeal-background: linear-gradient(169.85deg, #121621 2.48%, #16294D 32.48%);
+  --font-content: 'Inter', sans-serif;
+  --canvas-width: 80.0rem;
+}
+
+html {
+  background-color: var(--extension-background);
+}
+
+body {
+  margin: auto;
+  max-width: var(--canvas-width);
+  background: var(--appeal-background);
+  color: var(--text-color);
+  font-family: var(--font-content);
+}
+
+header {
+  background: none;
+  display: block;
+  padding: 0;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
+  line-height: 1.21;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 3.0rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+#footer {
+  background: var(--color-black);
+}
+
+#footer.container {
+  height: 8.4375rem;
+  max-width: 100%;
+}
+
+
+p {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 1.375;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 6.25rem;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(68.19% 101.99% at 100.87% 101.99%, #EA7308 0%, rgba(234, 115, 8, 0) 100%),
+    radial-gradient(100% 128% at 0% 0%, #AE55F7 0%, rgba(174, 85, 247, 0) 100%),
+    radial-gradient(50% 128% at 0% 100%, #25A6A0 0%, rgba(163, 236, 227, 0) 100%),
+    linear-gradient(0deg, rgba(23, 41, 78, 0.5), rgba(23, 41, 78, 0.5));
+    // Figma produces some funky gradient css
+    transform: scaleY(-1);
+    opacity: 0.2;
+    z-index: 0;
+  }
+
+  .sticky-nebula {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-image: url('/media/img/thunderbird/appeal/whatsnew-128/nebula-background.png');
+    background-repeat: no-repeat;
+    background-size: 66.6875rem 61.4375rem;
+    background-position: top -5.3125rem center;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+
+.pre-footer {
+  padding-top: 6.25rem;
+  padding-bottom: 3.75rem; // There's about 40 pixels of fake pre-footer after this
+  display: flex;
+  flex-direction: column;
+  background-color: #0f1d36;
+  background-image: url('/media/svg/appeal/whatsnew-128/blurred-blobs-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  z-index: 1;
+  position: relative;
+  min-height: 37.5rem;
+
+  .additional-features {
+    padding: 5.0rem 0;
+  }
+
+  .nebula-enables {
+    max-width: 35.9375rem;
+
+    p {
+      font-size: 1.3125rem;
+    }
+  }
+
+  section {
+    margin: auto;
+    max-width: 66.875rem;
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.appeal-footer-container {
+  // So z-index doesn't bleed
+  position: relative;
+  background-color: #0f1d36;
+}
+
+.two-column {
+  display: flex;
+  max-width: 68.75rem;
+  gap: 5.9375rem;
+  z-index: 1;
+
+  justify-content: center;
+  align-items: start;
+
+  .copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8125rem;
+    max-width: 30.3125rem;
+  }
+
+  h3 {
+    margin-top: -2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &.rust-revolution {
+    width: 100%;
+    max-width: var(--canvas-width);
+
+    .copy {
+      margin-left: auto;
+    }
+
+    .picture {
+      margin-right: 0;
+      margin-left: auto;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &.flipped {
+    @media (min-width: @lg) {
+      flex-direction: row-reverse;
+
+    }
+  }
+}
+
+.three-column {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  gap: 1.875rem;
+
+  .column {
+    width: 18.75rem;
+    display: flex;
+
+    .feature {
+      position: relative;
+      left: 1rem;
+      height: 100%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 1.0rem;
+      text-align: left;
+    }
+  }
+}
+
+.appeal-welcome {
+  width: 100%;
+  position: relative;
+  text-align: left;
+  margin-bottom: 1.875rem;
+
+  .header-collection {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  .space-things {
+    margin-left: 0.9375rem;
+    margin-right: -0.9375rem;
+    padding-top: 2.5rem;
+  }
+
+  .screenshot-128 {
+    padding-top: 3.625rem;
+    margin: auto 0 auto auto;
+    flex-shrink: 0;
+
+    img, picture {
+      max-height: 37.3125rem;
+      width: 100%;
+    }
+  }
+
+  .nebula-branding {
+    margin-top: -23.5rem;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+  }
+
+  .welcome-message {
+    position: relative;
+    width: 35.8125rem;
+    box-shadow: -0.5rem -0.75rem 1.125rem -0.4375rem rgba(0, 133, 255, 0.25), 0.5rem 1.5625rem 1.125rem -0.4375rem rgba(0, 133, 255, 0.32), 0px 0px 2.0rem 0px rgba(0, 0, 0, 0.50);
+
+    padding: 2.1875rem 2.625rem;
+    color: var(--color-white);
+    margin-left: 4.25rem;
+    margin-bottom: -3.4375rem;
+    z-index: 1;
+
+    header {
+      color: var(--color-white);
+      font-size: 2.125rem;
+      font-weight: 600;
+    }
+
+  }
+
+  .non-carousel-carousel {
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.fast-and-fluid {
+  gap: 0.625rem;
+}
+
+.cards-view .with-frame {
+  width: 30.9375rem;
+  height: 35.8125rem;
+
+  img, picture {
+    margin: auto;
+    max-width: 28.9325rem;
+    height: 30.0625rem;
+  }
+}
+
+.accent-colors .with-frame {
+  width: 30.75rem;
+  height: 35.625rem;
+
+  img, picture {
+    // Full-width :^)
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.folder-pane .with-frame {
+  width: 30.9375rem;
+  height: 33.0625rem;
+
+  img, picture {
+    margin: auto;
+    width: 30.296875rem;
+    height: 29.13125rem;
+  }
+}
+
+
+.with-frame {
+  width: 32.4375rem;
+  box-sizing: border-box;
+
+  background: linear-gradient(#121420 0 0) padding-box,
+  linear-gradient(131.3deg, #37ADF9 -4.69%, #AE55F7 106.58%) border-box;
+  border-radius: 1.5rem;
+  border: 0.125rem solid transparent;
+  box-shadow: -0.5rem -0.5rem 1.16875rem -0.4375rem rgba(0, 133, 255, 0.25);
+}
+
+
+.picture.with-frame {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  flex-shrink: 0;
+}
+
+.picture.rocket {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  & > :first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.accent-colors .picture {
+  @media (min-width: @lg) {
+    justify-self: end;
+  }
+}
+
+.page-separator-cover {
+  position: relative;
+  pointer-events: none;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+  color: var(--color-black);
+}
+
+// Make <1280px bearable
+@media (max-width: @lg) {
+  .two-column {
+    margin: 1rem;
+    gap: 1rem;
+
+    &.rust-revolution .copy {
+      margin: 1rem;
+    }
+  }
+}
+
+@media (max-width: @md) {
+  .picture {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    flex-shrink: 0;
+  }
+
+  .two-column {
+    padding: 0 0.25rem;
+    flex-direction: column-reverse;
+    gap: 4rem;
+
+    &.flipped {
+      flex-direction: column-reverse;
+    }
+
+
+    .picture svg {
+      max-width: 100% !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .with-frame {
+    padding: 1rem;
+    margin: auto;
+    width: 100% !important;
+    height: 100% !important;
+
+    img, svg, picture {
+      max-width: 100% !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .appeal-welcome {
+    .header-collection {
+      flex-direction: column;
+
+      .space-things {
+        display: none;
+      }
+
+      .screenshot-128 {
+        padding-bottom: 24rem;
+      }
+    }
+
+    .nebula-branding {
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .welcome-message {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .pre-footer {
+    .three-column {
+      flex-direction: column;
+
+      .column {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// For smol devices
+@media (max-width: @sm) {
+  .main-content .sticky-nebula {
+    display: none;
+  }
+
+  .appeal-welcome {
+    .header-collection {
+      flex-direction: column;
+
+      .space-things {
+        display: none;
+      }
+
+      .screenshot-128 {
+        padding-bottom: 24rem;
+      }
+    }
+
+    .nebula-branding {
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .welcome-message {
+      width: 100%;
+      margin: 0;
+    }
+
+    .non-carousel-carousel {
+      display: none;
+    }
+  }
+}
