@@ -192,6 +192,22 @@ def svg(ctx, file_name):
     file = path.join(settings.MEDIA_URL.strip('/'), 'svg/' + file_name + '.svg')
     return open(file).read()
 
+@jinja2.pass_context
+def svg_img(ctx, file_name, alt='', class_list=[]):
+    """Returns an img using a svg as the source"""
+    file = path.join(settings.MEDIA_URL, 'svg/' + file_name + '.svg')
+
+    element = [
+        '<img',
+        f'src="{file}"',
+        f'alt="{alt}"',
+    ]
+    if len(class_list):
+        element.append(f'class="{' '.join(class_list)}"')
+    element.append('/>')
+
+    return ' '.join(element)
+
 
 @jinja2.pass_context
 def platform_img(ctx, url, optional_attributes=None):
