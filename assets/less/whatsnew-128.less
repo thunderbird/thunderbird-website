@@ -19,6 +19,7 @@
   --extension-background: #1A202C;
   --appeal-background: linear-gradient(169.85deg, #121621 2.48%, #16294D 32.48%);
   --font-content: 'Inter', sans-serif;
+  --canvas-width: 1280px;
 }
 
 html {
@@ -27,7 +28,7 @@ html {
 
 body {
   margin: auto;
-  max-width: 1280px;
+  max-width: var(--canvas-width);
   background: var(--appeal-background);
   color: var(--text-color);
   font-family: var(--font-content);
@@ -53,6 +54,11 @@ h2 {
 h3 {
   font-weight: 600;
   font-size: 36px;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 24px;
 }
 
 #footer {
@@ -88,9 +94,9 @@ p {
     width: 100%;
     height: 100%;
     background: radial-gradient(68.19% 101.99% at 100.87% 101.99%, #EA7308 0%, rgba(234, 115, 8, 0) 100%),
-              radial-gradient(100% 128% at 0% 0%, #AE55F7 0%, rgba(174, 85, 247, 0) 100%),
-              radial-gradient(50% 128% at 0% 100%, #25A6A0 0%, rgba(163, 236, 227, 0) 100%),
-              linear-gradient(0deg, rgba(23, 41, 78, 0.5), rgba(23, 41, 78, 0.5));
+    radial-gradient(100% 128% at 0% 0%, #AE55F7 0%, rgba(174, 85, 247, 0) 100%),
+    radial-gradient(50% 128% at 0% 100%, #25A6A0 0%, rgba(163, 236, 227, 0) 100%),
+    linear-gradient(0deg, rgba(23, 41, 78, 0.5), rgba(23, 41, 78, 0.5));
     // Figma produces some funky gradient css
     transform: scaleY(-1);
     opacity: 0.2;
@@ -112,27 +118,46 @@ p {
   }
 }
 
-.container {
+.pre-footer {
+  padding-top: 100px;
+  padding-bottom: 60px; // There's about 40 pixels of fake pre-footer after this
+  display: flex;
+  flex-direction: column;
+  background-color: #0f1d36;
+  background-image: url('/media/svg/appeal/whatsnew-128/blurred-blobs-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  z-index: 1;
   position: relative;
-  display: grid;
-  gap: 60px;
-  padding-inline: 1rem;
-  padding-block: clamp(1rem, 5.469vw, 4.375rem); // 4.375rem~
-  margin-inline: auto;
-  max-width: 1280px;
-  overflow: hidden;
+  min-height: 600px;
 
-  &.no-gap {
-    gap: 0;
+  .additional-features {
+    padding: 80px 0;
   }
 
-  @media (max-width: @md) {
-    // Give them some space to breath
-    width: calc(100% - 1rem);
-    box-sizing: border-box;
+  .nebula-enables {
+    max-width: 575px;
+    p {
+      font-size: 21px;
+    }
+  }
+
+  section {
+    margin: auto;
+    max-width: 1070px;
+
+    p {
+      text-align: center;
+    }
   }
 }
 
+.appeal-footer-container {
+  // So z-index doesn't bleed
+  position: relative;
+  background-color: #0f1d36;
+}
 
 .two-column {
   display: flex;
@@ -157,10 +182,17 @@ p {
     align-items: end;
   }
 
-  @media (min-width: @lg) {
+  &.rust-revolution {
+    width: 100%;
+    max-width: var(--canvas-width);
+
+    .copy {
+      margin-left: auto;
+    }
+
     .picture {
-      grid-area: right;
-      justify-self: end;
+      margin-right: 0;
+      margin-left: auto;
     }
   }
 
@@ -185,10 +217,29 @@ p {
 }
 
 .three-column {
-  @media (min-width: @lg) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  gap: 30px;
 
+  .column {
+    width: 300px;
+    display: flex;
+
+    .feature {
+      height: 100%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: left;
+    }
   }
 }
 

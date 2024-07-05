@@ -145,7 +145,7 @@
       </aside>
     </section>
   </div>
-  <div class="container pre-footer">
+  <div class="pre-footer">
     <section class="streamlined-menu full-width">
       <p>
         {% trans trimmed %}
@@ -158,33 +158,48 @@
 
     <section class="additional-features three-column">
       <div class="column">
-        <h3>{{ _('Native Windows Notifications') }}</h3>
-        <p>
-          {% trans trimmed %}
-            Fixed and fully functional! Clicking a notification dismisses it,
-            brings Thunderbird to the foreground, and selects the message.
-            Notifications now disappear when Thunderbird closes.
-          {% endtrans %}
-        </p>
+        <div class="feature" aria-hidden="true">{{ svg('appeal/whatsnew-128/native-windows-notifications-icon') }}</div>
+        <div class="content">
+          <h4>
+            {{ _('Native Windows Notifications') }}
+          </h4>
+          <p>
+            {% trans trimmed %}
+              Fixed and fully functional! Clicking a notification dismisses it,
+              brings Thunderbird to the foreground, and selects the message.
+              Notifications now disappear when Thunderbird closes.
+            {% endtrans %}
+          </p>
+        </div>
       </div>
       <div class="column">
-        <h3>{{ _('Context Menu Improvements') }}</h3>
-        <p>
-          {% trans trimmed %}
-            Reorganized for a smoother experience, with primary actions
-            now as icons for quick access.
-          {% endtrans %}
-        </p>
+        <div class="feature" aria-hidden="true">{{ svg('appeal/whatsnew-128/context-menu-improvements-icon') }}</div>
+        <div class="content">
+          <h4>
+            {{ _('Context Menu Improvements') }}
+          </h4>
+          <p>
+            {% trans trimmed %}
+              Reorganized for a smoother experience, with primary actions
+              now as icons for quick access.
+            {% endtrans %}
+          </p>
+        </div>
       </div>
       <div class="column">
-        <h3>{{ _('Account Color Customization') }}</h3>
-        <p>
-          {% trans trimmed %}
-            By popular demand, you can now customize the color of your account
-            icons. These colors also show up in the “From” selection
-            when composing emails.
-          {% endtrans %}
-        </p>
+        <div class="feature" aria-hidden="true">{{ svg('appeal/whatsnew-128/account-color-customization-icon') }}</div>
+        <div class="content">
+          <h4>
+            {{ _('Account Color Customization') }}
+          </h4>
+          <p>
+            {% trans trimmed %}
+              By popular demand, you can now customize the color of your account
+              icons. These colors also show up in the “From” selection
+              when composing emails.
+            {% endtrans %}
+          </p>
+        </div>
       </div>
     </section>
     <section class="nebula-enables full-width">
