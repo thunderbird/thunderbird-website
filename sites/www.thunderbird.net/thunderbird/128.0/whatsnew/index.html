@@ -17,6 +17,10 @@
   <link href="{{ static('css/whatsnew-128.css') }}" rel="stylesheet" type="text/css"/>
 {% endblock %}
 
+{% macro svg_img(file_name, alt_text='') %}
+<img src="{{ static('svg/{file_name}.svg'.format(file_name=file_name)) }}" alt="{{ alt_text }}"/>
+{% endmacro %}
+
 {% block content %}
   <div class="main-content">
     <div class="overlay"></div>
