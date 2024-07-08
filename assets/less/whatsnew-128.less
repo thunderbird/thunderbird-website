@@ -84,12 +84,13 @@ p {
 }
 
 .main-content {
+  --main-content-gap: 6.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  gap: 6.25rem;
+  gap: var(--main-content-gap);
 
   .overlay {
     position: absolute;
@@ -165,9 +166,12 @@ p {
 
 .two-column {
   display: flex;
-  max-width: 68.75rem;
+  position: relative;
+
+  width: 100%;
   gap: 5.9375rem;
   z-index: 1;
+  max-width: 66.875rem;
 
   justify-content: center;
   align-items: start;
@@ -177,7 +181,6 @@ p {
     flex-grow: 1;
     flex-direction: column;
     gap: 1.8125rem;
-    max-width: 30.3125rem;
   }
 
   h3 {
@@ -189,22 +192,11 @@ p {
 
   &.rust-revolution {
     width: 100%;
-    max-width: var(--canvas-width);
+    margin-bottom: calc(-1 * var(--main-content-gap));
 
     .copy {
-      margin-left: auto;
-    }
-
-    .picture {
-      margin-right: 0;
-      margin-left: auto;
-      margin-bottom: -1rem;
-
-      img {
-        max-width: 36.25rem;
-        width: 100%;
-        height: 100%;
-      }
+      max-width: 59%;
+      margin-right: auto;
     }
   }
 
@@ -213,6 +205,18 @@ p {
       flex-direction: row-reverse;
 
     }
+  }
+}
+
+.right-wrap {
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: -1rem;
+
+  img {
+    max-width: 36.25rem;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -260,7 +264,6 @@ p {
     width: 100%;
     overflow: hidden;
   }
-
 
   .space-things {
     margin-left: 0.9375rem;
@@ -380,16 +383,14 @@ p {
 @media (max-width: @xl) {
   .two-column {
     margin: 0 1rem;
+
+    &.rust-revolution {
+      .copy {
+        max-width: 80%
+      }
+    }
   }
 
-  // Fast and Fluid & Rust Revolution are both width: 100%;
-  // So they need a little push on the copy side..
-  // This is reset to auto in @lg
-  .two-column.fast-and-fluid .copy,
-  .two-column.rust-revolution .copy {
-    margin-left: 1rem;
-
-  }
 }
 
 @media (max-width: @lg) {
@@ -439,10 +440,12 @@ p {
         margin-left: auto;
       }
 
-      .picture {
-        margin-bottom: -6rem;
-      }
+
     }
+  }
+
+  .right-wrap {
+    margin-bottom: -6rem;
   }
 
   .three-column {
