@@ -371,6 +371,16 @@ p {
   color: var(--color-black);
 }
 
+@media (max-width: @xl) {
+  .two-column {
+    margin: 0 1rem;
+  }
+
+  .two-column.rust-revolution .copy {
+    margin-left: 1rem;
+  }
+}
+
 @media (max-width: @lg) {
   .appeal-welcome {
     .nebula-branding {
@@ -405,6 +415,10 @@ p {
     }
 
     &.rust-revolution {
+      .copy {
+        margin-left: auto;
+      }
+
       .picture {
         margin-bottom: -6rem;
       }
@@ -426,6 +440,7 @@ p {
   .pre-footer {
     padding-left: 1rem;
     padding-right: 1rem;
+    background-image: url('/media/svg/appeal/whatsnew-128/blurred-blobs-bg-90deg.svg');
 
     .additional-features {
       padding: 5rem 1rem;
@@ -441,25 +456,31 @@ p {
   .appeal-welcome .welcome-message {
     width: 100%;
   }
+
   .two-column .with-frame {
     width: 100%;
   }
+
   .three-column {
     .column {
       flex-direction: column;
+
       .feature {
         left: 0;
         top: 0;
         text-align: center;
       }
+
       .content, p {
         text-align: center;
       }
     }
   }
+
   .pre-footer {
     .additional-features {
       padding: 5rem 0;
     }
   }
+
 }
