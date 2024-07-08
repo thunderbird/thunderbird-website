@@ -15,6 +15,9 @@
 @xxl: 90rem; // 1440px
 
 :root {
+  // New palette
+  --color-purple-20: #F5E8FF;
+
   --text-color: var(--color-white);
   --extension-background: #1A202C;
   --appeal-background: linear-gradient(169.85deg, #121621 2.48%, #16294D 32.48%);
@@ -47,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
+  color: var(--color-purple-20);
   font-weight: 200;
   font-size: 3.0rem;
 }
@@ -109,8 +113,8 @@ p {
     position: fixed;
     background-image: url('/media/img/thunderbird/appeal/whatsnew-128/nebula-background.png');
     background-repeat: no-repeat;
-    background-size: 66.6875rem 61.4375rem;
-    background-position: top -5.3125rem center;
+    background-size: min(90%, 66.75rem);
+    background-position: top center;
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -417,7 +421,7 @@ p {
 
     .with-frame {
       margin: auto;
-      width: 90%;
+      width: 80%;
     }
 
     // Reset the margin-left so it's centre aligned
@@ -427,6 +431,7 @@ p {
         margin-left: auto;
       }
     }
+
     &.rust-revolution {
       .copy {
         margin-left: auto;
