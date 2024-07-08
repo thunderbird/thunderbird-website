@@ -4,3 +4,8 @@
     url('/media/img/l10n/fr/thunderbird/base/home/banner-high-res.webp') type('image/webp'),
     var(--bg-hero) type('image/png'));
 }
+
+/* Donation appeal button */
+.donate-banner #donate-banner-right > b {
+    font-size: 1.4rem;
+}
