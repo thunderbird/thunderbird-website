@@ -170,6 +170,7 @@ p {
 
   .copy {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     gap: 1.8125rem;
     max-width: 30.3125rem;
@@ -193,6 +194,7 @@ p {
     .picture {
       margin-right: 0;
       margin-left: auto;
+      margin-bottom: -1rem;
 
       img {
         max-width: 36.25rem;
@@ -216,11 +218,11 @@ p {
   margin: auto;
   justify-content: center;
   gap: 1.875rem;
+  box-sizing: border-box;
 
   .column {
-    width: 18.75rem;
     display: flex;
-
+    flex-basis: 28%;
 
     .feature {
       position: relative;
@@ -308,40 +310,6 @@ p {
   gap: 0.625rem;
 }
 
-.cards-view .with-frame {
-  width: 30.9375rem;
-  height: 35.8125rem;
-
-  img, picture {
-    margin: auto;
-    max-width: 28.9325rem;
-    height: 30.0625rem;
-  }
-}
-
-.accent-colors .with-frame {
-  width: 30.75rem;
-  height: 35.625rem;
-
-  img, picture {
-    // Full-width :^)
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.folder-pane .with-frame {
-  width: 30.9375rem;
-  height: 33.0625rem;
-
-  img, picture {
-    margin: auto;
-    width: 30.296875rem;
-    height: 29.13125rem;
-  }
-}
-
-
 .with-frame {
   width: 32.4375rem;
   box-sizing: border-box;
@@ -359,6 +327,20 @@ p {
   justify-content: center;
   justify-self: center;
   flex-shrink: 0;
+
+  box-sizing: border-box;
+  width: 30.75rem;
+  padding: 2rem 1rem;
+
+  img, picture {
+    width: 100%;
+  }
+}
+
+.accent-colors {
+  .with-frame.picture {
+    padding-right: 0;
+  }
 }
 
 .picture.rocket {
@@ -389,130 +371,95 @@ p {
   color: var(--color-black);
 }
 
-// Make <1280px bearable
 @media (max-width: @lg) {
-  .two-column {
-    margin: 1rem;
-    gap: 1rem;
-
-    &.rust-revolution .copy {
-      margin: 1rem;
-    }
-  }
-}
-
-@media (max-width: @md) {
-  .picture {
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    flex-shrink: 0;
-  }
-
-  .two-column {
-    padding: 0 0.25rem;
-    flex-direction: column-reverse;
-    gap: 4rem;
-
-    &.flipped {
-      flex-direction: column-reverse;
-    }
-
-
-    .picture img {
-      max-width: 100% !important;
-      width: 100% !important;
-      height: 100% !important;
-    }
-  }
-
-  .with-frame {
-    padding: 1rem;
-    margin: auto;
-    width: 100% !important;
-    height: 100% !important;
-
-    img, svg, picture {
-      max-width: 100% !important;
-      width: 100% !important;
-      height: 100% !important;
-    }
-  }
-
   .appeal-welcome {
-    .header-collection {
-      flex-direction: column;
-
-      .space-things {
-        display: none;
-      }
-
-      .screenshot-128 {
-        padding-bottom: 24rem;
-      }
+    .nebula-branding {
+      margin: -4.5rem auto 4.375rem;
     }
 
-    .nebula-branding {
-      img {
-        width: 100%;
-        height: 100%;
-      }
+    .screenshot-128 {
+      display: none;
+    }
+
+    .non-carousel-carousel {
+      margin-top: 5rem;
     }
 
     .welcome-message {
-      width: 100%;
-      margin: 0;
+      margin: auto;
+      width: 90%;
+    }
+  }
+
+  .two-column {
+    flex-direction: column;
+
+    .copy {
+      max-width: 80%;
+      margin: auto;
+    }
+
+    .with-frame {
+      margin: auto;
+      width: 90%;
+    }
+
+    &.rust-revolution {
+      .picture {
+        margin-bottom: -6rem;
+      }
+    }
+  }
+
+  .three-column {
+    flex-direction: column;
+
+    .content {
+      flex-basis: 80%;
+    }
+
+    .feature {
+      top: -1rem;
     }
   }
 
   .pre-footer {
-    max-width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
 
-    .three-column {
-      flex-direction: column;
-
-      .column {
-        width: 100%;
-      }
+    .additional-features {
+      padding: 5rem 1rem;
     }
+  }
+
+  #footer {
+    min-height: 16rem;
   }
 }
 
-// For smol devices
 @media (max-width: @sm) {
-  .main-content .sticky-nebula {
-    display: none;
+  .appeal-welcome .welcome-message {
+    width: 100%;
   }
-
-  .appeal-welcome {
-    .header-collection {
+  .two-column .with-frame {
+    width: 100%;
+  }
+  .three-column {
+    .column {
       flex-direction: column;
-
-      .space-things {
-        display: none;
+      .feature {
+        left: 0;
+        top: 0;
+        text-align: center;
       }
-
-      .screenshot-128 {
-        padding-bottom: 24rem;
-      }
-    }
-
-    .nebula-branding {
-      img {
-        width: 100%;
-        height: 100%;
+      .content, p {
+        text-align: center;
       }
     }
-
-    .welcome-message {
-      width: 100%;
-      margin: 0;
-    }
-
-    .non-carousel-carousel {
-      display: none;
+  }
+  .pre-footer {
+    .additional-features {
+      padding: 5rem 0;
     }
   }
 }
