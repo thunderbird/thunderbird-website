@@ -201,9 +201,9 @@ p {
   }
 
   &.flipped {
-    @media (min-width: @lg) {
-      flex-direction: row-reverse;
-
+    flex-direction: row-reverse;
+    @media (max-width: @lg) {
+      flex-direction: column;
     }
   }
 }
@@ -364,12 +364,6 @@ p {
 
 }
 
-.accent-colors .picture {
-  @media (min-width: @lg) {
-    justify-self: end;
-  }
-}
-
 .page-separator-cover {
   position: relative;
   pointer-events: none;
@@ -390,6 +384,9 @@ p {
     }
   }
 
+  .right-wrap {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: @lg) {
@@ -409,7 +406,7 @@ p {
 
     .welcome-message {
       margin: auto;
-      width: 90%;
+      width: 80%;
     }
   }
 
@@ -444,7 +441,6 @@ p {
   }
 
   .right-wrap {
-    margin-top: 0;
     margin-bottom: -6rem;
   }
 
