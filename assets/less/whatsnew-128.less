@@ -308,6 +308,7 @@ p {
 
 .fast-and-fluid {
   gap: 0.625rem;
+  width: 100%;
 }
 
 .with-frame {
@@ -343,17 +344,18 @@ p {
   }
 }
 
+
 .picture.rocket {
   position: relative;
+  min-height: 400px;
   height: 100%;
   width: 100%;
 
-  & > :first-of-type {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  background-image: url('/media/svg/appeal/whatsnew-128/fast-and-fluid-rocket.svg'), url('/media/svg/appeal/whatsnew-128/fast-and-fluid-stars.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+
 }
 
 .accent-colors .picture {
@@ -376,6 +378,10 @@ p {
     margin: 0 1rem;
   }
 
+  // Fast and Fluid & Rust Revolution are both width: 100%;
+  // So they need a little push on the copy side..
+  // This is reset to auto in @lg
+  .two-column.fast-and-fluid .copy,
   .two-column.rust-revolution .copy {
     margin-left: 1rem;
   }
@@ -414,6 +420,13 @@ p {
       width: 90%;
     }
 
+    // Reset the margin-left so it's centre aligned
+    // Same for rust-revolution
+    &.fast-and-fluid {
+      .copy {
+        margin-left: auto;
+      }
+    }
     &.rust-revolution {
       .copy {
         margin-left: auto;
