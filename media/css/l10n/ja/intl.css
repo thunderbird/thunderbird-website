@@ -107,3 +107,14 @@
 :root {
   --font-tagline: 4.5rem;
 }
+
+/* Donation appeal button */
+.donate-banner #donate-banner-left > b {
+    font-size: 1.65rem;
+}
+.donate-banner #donate-banner-right {
+    font-size: 1.4rem;
+}
+.donate-banner #donate-banner-right > b {
+    font-size: 1.4rem;
+}
