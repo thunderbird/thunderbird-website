@@ -488,3 +488,14 @@ CALENDAR_REMAP = {
 
 # Filter out specific versions for the release notes page
 VERSIONS_TO_FILTER = ["125.0", "126.0", "127.0"]
+
+# Old path (excluding locale) -> helper.url key
+WEBSITE_REDIRECTS = {
+    'download': 'thunderbird.latest.all',
+    ('download', 'beta'): 'thunderbird.latest.beta',
+    'get-involved': 'thunderbird.participate',
+    'contribute': 'thunderbird.participate',
+    'features': 'thunderbird.index',
+    ('thunderbird', '128.0esr', 'whatsnew'): 'thunderbird.128.whatsnew',
+    ('thunderbird', '128.0', 'releasenotes'): 'thunderbird.128esr.releasenotes',
+}

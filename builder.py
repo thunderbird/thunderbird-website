@@ -53,6 +53,17 @@ def mkdir(path):
             raise
 
 
+def write_site_htaccess(renderpath: str, lang: str, redirects: dict):
+    """Writes .htaccess files from a given redirects dictionary for the given language."""
+    for path, url_key in redirects.items():
+        # Normalize non-tuples
+        if type(path) is not tuple:
+            path = (path,)
+        path = os.path.join(renderpath, lang, *path)
+        redirect_path = helper.url({'LANG': lang}, url_key)
+        write_htaccess(path, redirect_path)
+
+
 def write_htaccess_custom(path, rules: str):
     """Write an .htaccess to `path` that rewrites based on custom rules"""
     os.makedirs(path, exist_ok=True)
@@ -433,42 +444,7 @@ class Site(object):
             self.render()
             write_404_htaccess(self.outpath, self.lang)
 
-            # Write download page redirect
-            downloads_path = os.path.join(self.renderpath, self.lang, 'download')
-            all_releases_path = helper.url({'LANG': lang}, 'thunderbird.latest.all')
-            beta_releases_path = helper.url({'LANG': lang}, 'thunderbird.latest.beta')
-            htaccess_rule = [
-                'RewriteEngine On',
-                f'RewriteRule download/beta {beta_releases_path} [L]',  # Stop testing if we get a hit on the beta rule
-                f'RewriteRule .* {all_releases_path}',
-            ]
-            write_htaccess_custom(downloads_path, "\n".join(htaccess_rule))
-
-            # Write get-involved page redirect
-            get_involved_path = os.path.join(self.renderpath, self.lang, 'get-involved')
-            os.makedirs(get_involved_path, exist_ok=True)
-            write_htaccess(get_involved_path, helper.url({'LANG': self.lang}, 'thunderbird.participate'))
-
-            # Write contribute page redirect
-            contribute_path = os.path.join(self.renderpath, self.lang, 'contribute')
-            os.makedirs(contribute_path, exist_ok=True)
-            write_htaccess(contribute_path, helper.url({'LANG': self.lang}, 'thunderbird.participate'))
-
-            """
-            Our lovingly-home-made pages live in thunderbird/128.0/*.
-            The releasenotes and system requirements live in thunderbird/128.0esr/*.
-            Going forward this will be fixed...
-            """
-
-            # Write 128.0esr/whatsnew -> 128.0/whatsnew just in case
-            whatsnew_path = os.path.join(self.renderpath, self.lang, 'thunderbird', '128.0esr', 'whatsnew')
-            os.makedirs(whatsnew_path, exist_ok=True)
-            write_htaccess(whatsnew_path, helper.url({'LANG': self.lang}, 'thunderbird.128.whatsnew'))
-
-            # Write 128.0/releasenotes -> 128.0esr/releasenotes
-            releasenotes_path = os.path.join(self.renderpath, self.lang, 'thunderbird', '128.0', 'releasenotes')
-            os.makedirs(releasenotes_path, exist_ok=True)
-            write_htaccess(releasenotes_path, helper.url({'LANG': self.lang}, 'thunderbird.128esr.releasenotes'))
+            write_site_htaccess(self.renderpath, self.lang, settings.WEBSITE_REDIRECTS)
 
             if lang == 'en-US':
                 # 404 page for root accesses outside lang dirs.
