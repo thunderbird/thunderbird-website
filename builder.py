@@ -454,6 +454,11 @@ class Site(object):
             os.makedirs(contribute_path, exist_ok=True)
             write_htaccess(contribute_path, helper.url({'LANG': self.lang}, 'thunderbird.participate'))
 
+            # Write 128.0esr/whatsnew -> 128.0/whatsnew just in case
+            whatsnew_path = os.path.join(self.renderpath, self.lang, 'thunderbird', '128.0esr', 'whatsnew')
+            os.makedirs(whatsnew_path, exist_ok=True)
+            write_htaccess(whatsnew_path, helper.url({'LANG': self.lang}, 'thunderbird.128.whatsnew'))
+
             if lang == 'en-US':
                 # 404 page for root accesses outside lang dirs.
                 write_404_htaccess(self.renderpath, self.lang)
