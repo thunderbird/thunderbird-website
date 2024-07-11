@@ -454,10 +454,21 @@ class Site(object):
             os.makedirs(contribute_path, exist_ok=True)
             write_htaccess(contribute_path, helper.url({'LANG': self.lang}, 'thunderbird.participate'))
 
+            """
+            Our lovingly-home-made pages live in thunderbird/128.0/*.
+            The releasenotes and system requirements live in thunderbird/128.0esr/*.
+            Going forward this will be fixed...
+            """
+
             # Write 128.0esr/whatsnew -> 128.0/whatsnew just in case
             whatsnew_path = os.path.join(self.renderpath, self.lang, 'thunderbird', '128.0esr', 'whatsnew')
             os.makedirs(whatsnew_path, exist_ok=True)
             write_htaccess(whatsnew_path, helper.url({'LANG': self.lang}, 'thunderbird.128.whatsnew'))
+
+            # Write 128.0/releasenotes -> 128.0esr/releasenotes
+            releasenotes_path = os.path.join(self.renderpath, self.lang, 'thunderbird', '128.0', 'releasenotes')
+            os.makedirs(releasenotes_path, exist_ok=True)
+            write_htaccess(releasenotes_path, helper.url({'LANG': self.lang}, 'thunderbird.128esr.releasenotes'))
 
             if lang == 'en-US':
                 # 404 page for root accesses outside lang dirs.

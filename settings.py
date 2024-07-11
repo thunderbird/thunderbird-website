@@ -248,6 +248,7 @@ URL_MAPPINGS = {
     'thunderbird.social.mastodon': 'https://mastodon.online/@thunderbird',
     'thunderbird.115.whatsnew': '/thunderbird/115.0/whatsnew',
     'thunderbird.128.whatsnew': '/thunderbird/128.0/whatsnew',
+    'thunderbird.128esr.releasenotes': '/thunderbird/128.0esr/releasenotes',
 }
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
