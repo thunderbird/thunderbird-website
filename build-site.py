@@ -25,6 +25,7 @@ parser.add_argument('--watch', help='Rebuild when template and asset dirs are ch
 parser.add_argument('--port', const=8000, default=8000, type=int,
                     help='Port for the server that runs with --watch.', nargs='?')
 parser.add_argument('--devmode', help='Enables various behaviours that would be helpful for development. (e.g. not hard crashing on jinja syntax errors.)', action='store_true')
+parser.add_argument('--nonotes', help='Speeds up development by disabling notes on www.thunderbird.net.', action='store_true')
 args = parser.parse_args()
 
 if args.enus:
@@ -78,8 +79,8 @@ else:
                }
 
     site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,
-                        settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS, data=context, debug=args.debug, dev_mode=args.devmode)
-    site.build_website()
+                        settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS, data=context, debug=args.debug, dev_mode=args.devmode, no_notes=args.nonotes)
+    site.build_website(notes=not args.nonotes)
 
 if args.watch:
     builder.setup_observer(site, args.port)
