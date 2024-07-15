@@ -60,14 +60,17 @@ class ThunderbirdDetails():
         ('osx', 'macOS'),
         ('linux64', 'Linux 64-bit'),
         ('win', 'Windows 32-bit'),
-        ('linux', 'Linux 32-bit')
+        ('linux', 'Linux 32-bit'),
+        ('win8-64', 'Windows 64-bit (7/8.1)'),
+        ('win8', 'Windows 32-bit (7/8.1)'),
     ])
 
     # Grouped by platform
     grouped_platform_labels = OrderedDict({
         'Windows': [('win64', '64-bit (.exe)'), ('msi', '64-bit (.msi)'), ('win', '32-bit (.exe)')],
+        'Windows (7/8.1)': [('win8-64', '64-bit (.exe)'), ('win8', '32-bit (.exe)')],
         'Linux': [('linux64', '64-bit (binary)'), ('linux', '32-bit (binary)')],
-        'MacOS': [('osx', '64-bit (.dmg)')]
+        'macOS': [('osx', '64-bit (.dmg)')]
     })
 
     languages = load_json('languages.json')
@@ -86,6 +89,8 @@ class ThunderbirdDetails():
         'daily': ('LATEST_THUNDERBIRD_NIGHTLY_VERSION',),
         'beta': ('LATEST_THUNDERBIRD_DEVEL_VERSION',),
         'release': ('THUNDERBIRD_ESR_NEXT', 'THUNDERBIRD_ESR'),
+        # Win7/8.1 only support up to 115
+        'release_win7_8': ('THUNDERBIRD_ESR',)
     }
 
     channel_labels = OrderedDict({
@@ -163,6 +168,13 @@ class ThunderbirdDetails():
             # Daily's bouncer link doesn't support `-msi-SSL`, so we'll just make it a win64 build for now.
             if channel != 'daily':
                 product_url = 'thunderbird-%s-msi-SSL'
+
+        if platform == 'win8-64':
+            _platform = 'win64'
+            _version = self.latest_version('release_win7_8')
+        elif platform == 'win8':
+            _platform = 'win'
+            _version = self.latest_version('release_win7_8')
 
         # Check if direct download link has been requested
         # (bypassing the transition page)
