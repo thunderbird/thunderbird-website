@@ -22,6 +22,17 @@ if (typeof Mozilla === 'undefined') {
   let defaultOS = 'Windows';
   let defaultReleaseChannel = 'release';
 
+  // Platform map
+  const platformMap = {
+    'windows': 'Windows',
+    'windows-7-8': 'Windows (7/8.1)',
+    'linux64': 'Linux',
+    'linux': 'Linux',
+    'osx': 'macOS',
+    //'android': 'Android'
+  };
+
+
   /**
    * Hooks up onChange event handlers, and sets the installer dropdown options / download link
    */
@@ -66,16 +77,6 @@ if (typeof Mozilla === 'undefined') {
   DownloadInfo.SetDefaults = function () {
     const platform = window.site.getPlatform();
     const version = window.site.getPlatformVersion();
-
-    // Okay we need to work our way backwards...
-    const platformMap = {
-      'windows': 'Windows',
-      'windows-7-8': 'Windows (7/8.1)',
-      'linux64': 'Linux',
-      'linux': 'Linux',
-      'osx': 'macOS',
-      //'android': 'Android'
-    };
 
     // Setup download link
     DownloadInfo.Update();
@@ -126,6 +127,18 @@ if (typeof Mozilla === 'undefined') {
 
     if (firstInstaller) {
       installerSelect.value = firstInstaller;
+    }
+
+    // Hack: We need to hide beta and daily for Windows 7/8.1 builds, and force the release channel.
+    if (os === platformMap['windows-7-8']) {
+      document.querySelector('#download-release-select [value="beta"]').classList.add('hidden');
+      document.querySelector('#download-release-select [value="daily"]').classList.add('hidden');
+      // Force release build
+      channelSelect.value = 'release';
+      DownloadInfo.ToggleDailyWarning(channelSelect.value);
+    } else {
+      document.querySelector('#download-release-select [value="beta"]').classList.remove('hidden');
+      document.querySelector('#download-release-select [value="daily"]').classList.remove('hidden');
     }
   }
 
