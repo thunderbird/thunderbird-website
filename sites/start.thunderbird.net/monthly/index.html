@@ -1,0 +1,27 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+<!DOCTYPE html>
+<html lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>{% block title %}{{ _('Unsupported Thunderbird Version!') }}{% endblock %}</title>
+  {{ l10n_css() }}
+  <style>
+    body {
+      background-color: #D46A6A;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1><b>{{ _('This is an unsupported version of Thunderbird!!') }}</b></h1>
+  <h2>{{ _('Thunderbird monthly releases are not considered stable for general use.') }}</h2>
+  <p><i>{{ _('Use at your own risk, this build is the same quality as Thunderbird Beta.') }}</i></p>
+  <p><b>{{ _('We recommend downloading the <a href="%(download_url)s">latest stable version of Thunderbird</a>.')|format(download_url='https://www.thunderbird.net') }}</b></p>
+</main>
+</body>
+</html>

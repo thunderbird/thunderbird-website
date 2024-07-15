@@ -9,9 +9,6 @@
     <meta name="robots" content="noindex">
     <title>{% block title %}{{ _('Your Thunderbird is Not Up-to-Date!') }}{% endblock %}</title>
     {{ l10n_css() }}
-    <!-- Fontawesome added below -->
-    <link href="/media/css/fontawesome-all.css" rel="stylesheet">
-    <!--<script defer src="/media/js/fontawesome-all.js"></script>-->
     <style>
       body {
         background-color: #D46A6A;
@@ -21,7 +18,7 @@
   </head>
   <body>
     <main>
-    <h1><b><i class="fas fa-exclamation-triangle fa-3x" style="color:#0060df"></i> {{ self.title() }}</b></h1>
+    <h1><b>{{ self.title() }}</b></h1>
     <h2 id="duration">{{ _('Your version, $vers, is no longer a supported Thunderbird release and hasn’t received updates in at least $mon months.') }}</h2>
     <p class="fa-lg">{{ _('We <b>strongly recommend</b> downloading the <a href="%(download_url)s">latest stable version of Thunderbird</a>.')|format(download_url='https://thunderbird.net') }}</p>
     <p class="fa-lg">{{ _('For more information, please check this <a href="%(support_url)s">support article</a> on upgrading old versions.')|format(support_url='https://support.mozilla.org/en-US/products/thunderbird') }}</p>
@@ -36,7 +33,11 @@ version_dates = {
   38: new Date(2016, 4, 4),
   45: new Date(2017, 2, 7),
   52: new Date(2018, 6, 10),
-  60: new Date(2019, 10, 5)
+  60: new Date(2019, 10, 5),
+  68: new Date(2020, 7, 25),
+  78: new Date(2021, 8, 7),
+  98: new Date(2022, 8, 19),
+  102: new Date(2023, 8, 12),
 }
 
 function monthDiff(dateFrom, dateTo) {
