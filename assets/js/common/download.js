@@ -65,22 +65,27 @@ if (typeof Mozilla === 'undefined') {
 
   DownloadInfo.SetDefaults = function () {
     const platform = window.site.getPlatform();
+    const version = window.site.getPlatformVersion();
 
     // Okay we need to work our way backwards...
     const platformMap = {
-      'win64': 'Windows',
-      'msi': 'Windows',
-      'win': 'Windows',
+      'windows': 'Windows',
+      'windows-7-8': 'Windows (7/8.1)',
       'linux64': 'Linux',
       'linux': 'Linux',
-      'osx': 'MacOS',
+      'osx': 'macOS',
       //'android': 'Android'
     };
 
     // Setup download link
     DownloadInfo.Update();
 
-    defaultOS = platformMap[platform] ?? defaultOS;
+    // If they're on windows and within the NT 6.1 - NT 10.0 then force windows-7-8 to display
+    if (platform === 'windows' && version >= 6.1 && version < 10.0) {
+      defaultOS = platformMap['windows-7-8'] ?? defaultOS;
+    } else {
+      defaultOS = platformMap[platform] ?? defaultOS;
+    }
     channelSelect.value = defaultReleaseChannel;
 
     // Channel Selection calls OS Selection

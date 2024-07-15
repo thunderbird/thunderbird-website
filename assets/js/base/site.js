@@ -163,10 +163,14 @@
         var platform = window.site.platform = window.site.getPlatform();
         var version = window.site.platformVersion = window.site.getPlatformVersion();
 
+
         if (platform === 'windows') {
-            // Add class to support downloading Firefox for Windows 64-bit on Windows 7 and later
-            if (version && parseFloat(version) >= 6.1) {
-                h.className += ' win7up';
+            // Add class to support downloading Firefox for Windows 64-bit on Windows 10 and later
+            if (version && parseFloat(version) >= 10.0) {
+                h.className += ' win10up';
+            // Windows 7 - 8.1
+            } else if (version && parseFloat(version) >= 6.1) {
+                h.className += ' win7-8';
             } else if (window.site.needsSha1()) {
                 // Add class to support sha-1 downloads for IE on Windows XP, Server 2003, Vista.
                 h.className += ' sha-1';
