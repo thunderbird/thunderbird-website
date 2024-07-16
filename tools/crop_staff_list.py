@@ -49,6 +49,8 @@ def process_crop_command(image: Image, scale: int, horz=HorzCropCommands.CENTER,
     right = 0
     bottom = 0
 
+    print(f"Cropping - [H={horz},V={vert}]")
+
     if horz == HorzCropCommands.CENTER:
         left = (image.width - scale) / 2
         right = (image.width + scale) / 2
@@ -82,6 +84,7 @@ def handle_crop():
         for file in files:
             if not file.endswith(('.png', 'jpeg', '.jpg', '.webm')):
                 continue
+            print(f"{root}/{file}")
             with Image.open(f"{root}/{file}") as im:
                 width = im.width
                 height = im.height
