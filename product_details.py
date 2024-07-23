@@ -75,6 +75,8 @@ class ThunderbirdDetails():
 
     languages = load_json('languages.json')
 
+    releases: dict = load_json('thunderbird.json')
+
     current_versions = load_json('thunderbird_versions.json')
 
     all_builds = load_all_builds('thunderbird_primary_builds.json')
@@ -197,21 +199,59 @@ class ThunderbirdDetails():
 
     def list_releases(self, channel='beta'):
         releases = {}
-        for release in self.major_releases:
-            major_version = float(re.findall(r'^\d+\.\d+', release)[0])
+
+        def needs_esr_fixup(version_ints: list[int]):
+            if version_ints[0] != 115:
+                return False
+
+            if version_ints[1] >= 11:
+                return True
+            elif len(version_ints) >= 2 and version_ints[1] == 10 and version_ints[2] >= 2:
+                return True
+
+            return False
+
+        major_versions = []
+        minor_versions = []
+        for key, data in self.releases['releases'].items():
+            category: str = data.get('category')
+            version: str = data.get('version')
+
+            if category == 'dev' or version in settings.VERSIONS_TO_FILTER:
+                continue
+
+            version_dots = version.count('.')
+            version_int = [int(y) for y in version.split('.')]
+
+            is_major = category == 'major'
+            is_stability = category == 'stability'
+            # 115.10.2 and up are mislabelled as stability releases
+            is_esr = (category == 'esr' and version_int[0] >= 128) or needs_esr_fixup(version_int)
+
+            if is_esr:
+                version = f'{version}esr'
+
+            if is_major or is_esr and version_dots == 1:
+                major_versions.append((version, version_int))
+            elif is_stability or is_esr:
+                minor_versions.append((version, version_int))
+
+        for release in major_versions:
+            major_version = float(release[1][0])
             # The version numbering scheme of Thunderbird has changed over the years,
             # so there is some trickiness on major versions below 5.
             # When updating this sorting, be careful old versions aren't broken.
             if major_version < 5:
-                major_pattern = release + '.'
+                major_pattern = release[0] + '.'
             else:
-                major_pattern = release.split('.')[0] + '.'
+                major_pattern = release[0].split('.')[0] + '.'
             releases[major_version] = {
-                'major': release,
-                'minor': sorted([x[0] for x in self.minor_releases.items()
+                'major': release[0],
+                'minor': sorted([x for x in minor_versions
                                  if x[0].startswith(major_pattern)],
-                                 key=lambda x: [int(y) for y in x.split('.')])
+                                 key=lambda x: [int(y) for y in x[1]])
             }
+            releases[major_version]['minor'] = list(map(lambda x: x[0], releases[major_version]['minor']))
         return sorted(releases.items(), reverse=True)
 
     def beta_version_to_canonical(self, version):
