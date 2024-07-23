@@ -200,6 +200,17 @@ class ThunderbirdDetails():
     def list_releases(self):
         releases = {}
 
+        def needs_major_fixup(version_ints: list[int]):
+            """38 started with a point release, so uhhh fix that."""
+            if version_ints[0] != 38:
+                return False
+
+            # If 38.0.1
+            if len(version_ints) >= 2 and version_ints[1] == 0 and version_ints[2] == 1:
+                return True
+
+            return False
+
         def needs_esr_fixup(version_ints: list[int]):
             """115.10.2 up until 128.0esr are mislabelled and should be esr builds"""
             if version_ints[0] != 115:
@@ -227,7 +238,7 @@ class ThunderbirdDetails():
 
             version_int = [int(y) for y in version.split('.')]
 
-            is_major = category == 'major'
+            is_major = category == 'major' or needs_major_fixup(version_int)
             is_stability = category == 'stability'
             # We only count 128.0 and up as esr (and specific 115.0 versions)
             is_esr = (category == 'esr' and version_int[0] >= 128) or needs_esr_fixup(version_int)
@@ -235,9 +246,11 @@ class ThunderbirdDetails():
             if is_esr:
                 version = f'{version}esr'
 
-            if (is_major or is_esr) and version.count('.') == 1:
+            # These aren't if/elif because 38.0.1 needs to be a major and stability release :c
+            if is_major or (is_esr and version.count('.')) == 1:
                 major_versions.append((version, version_int))
-            elif is_stability or is_esr:
+
+            if is_stability or (is_esr and version.count('.')) >= 2:
                 minor_versions.append((version, version_int))
 
         for release in major_versions:
