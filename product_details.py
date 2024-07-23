@@ -197,41 +197,45 @@ class ThunderbirdDetails():
     def platforms(self, channel='release'):
         return self.platform_labels.items()
 
-    def list_releases(self, channel='beta'):
+    def list_releases(self):
         releases = {}
 
         def needs_esr_fixup(version_ints: list[int]):
+            """115.10.2 up until 128.0esr are mislabelled and should be esr builds"""
             if version_ints[0] != 115:
                 return False
 
+            # If >=115.11
             if version_ints[1] >= 11:
                 return True
+            # If >=115.10.2
             elif len(version_ints) >= 2 and version_ints[1] == 10 and version_ints[2] >= 2:
                 return True
 
             return False
 
+        # Split off release and esr builds into major and minor
         major_versions = []
         minor_versions = []
         for key, data in self.releases['releases'].items():
             category: str = data.get('category')
             version: str = data.get('version')
 
+            # Ignore dev releases or anything we want filtered
             if category == 'dev' or version in settings.VERSIONS_TO_FILTER:
                 continue
 
-            version_dots = version.count('.')
             version_int = [int(y) for y in version.split('.')]
 
             is_major = category == 'major'
             is_stability = category == 'stability'
-            # 115.10.2 and up are mislabelled as stability releases
+            # We only count 128.0 and up as esr (and specific 115.0 versions)
             is_esr = (category == 'esr' and version_int[0] >= 128) or needs_esr_fixup(version_int)
 
             if is_esr:
                 version = f'{version}esr'
 
-            if is_major or is_esr and version_dots == 1:
+            if (is_major or is_esr) and version.count('.') == 1:
                 major_versions.append((version, version_int))
             elif is_stability or is_esr:
                 minor_versions.append((version, version_int))
@@ -245,13 +249,21 @@ class ThunderbirdDetails():
                 major_pattern = release[0] + '.'
             else:
                 major_pattern = release[0].split('.')[0] + '.'
+
+            # Reparse the float. Fixes 1.5 releases being merged in with 1.0...
+            major_version = float(f"{major_pattern.strip('.')}")
+
             releases[major_version] = {
                 'major': release[0],
                 'minor': sorted([x for x in minor_versions
                                  if x[0].startswith(major_pattern)],
                                  key=lambda x: [int(y) for y in x[1]])
             }
+
+            # We returned a tuple, so we could sort properly.
+            # Now remake that list and select the string from the tuple.
             releases[major_version]['minor'] = list(map(lambda x: x[0], releases[major_version]['minor']))
+
         return sorted(releases.items(), reverse=True)
 
     def beta_version_to_canonical(self, version):
