@@ -24,7 +24,7 @@
         </a>
       </div>
     </div>
-    <div class="section-text">
+    <div class="section-text release-list">
         {% for int_version, versions in releases -%}
           <div class="release-container">
             <h2 class="release-major txt-gradient">
@@ -32,9 +32,11 @@
             </h2>
             {% if versions.minor -%}
             <div class="release-minors">
+              <ul aria-label="{{ _('Stability releases for version %(version)s'|format(version=versions.major)) }}">
               {% for version in versions.minor -%}
-                {{ get_link(int_version, version, true) }}
+                <li>{{ get_link(int_version, version, true) }}</li>
               {% endfor -%}
+              </ul>
             </div>
             {% endif -%}
           </div>
