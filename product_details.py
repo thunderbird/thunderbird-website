@@ -247,10 +247,10 @@ class ThunderbirdDetails():
                 version = f'{version}esr'
 
             # These aren't if/elif because 38.0.1 needs to be a major and stability release :c
-            if is_major or (is_esr and version.count('.')) == 1:
+            if is_major or (is_esr and version.count('.') == 1):
                 major_versions.append((version, version_int))
 
-            if is_stability or (is_esr and version.count('.')) >= 2:
+            if is_stability or (is_esr and version.count('.')  >= 2):
                 minor_versions.append((version, version_int))
 
         for release in major_versions:
