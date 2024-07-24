@@ -15,6 +15,7 @@
     @media (max-width: @md) {
       flex-direction: column;
     }
+
     &:last-child {
       border: none;
     }
@@ -33,9 +34,11 @@
 
   .release-minors ul {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
-    grid-template-rows: repeat(6, max-content);
+    grid-template-rows: repeat(auto-fit, minmax(0, 2rem));
+    grid-template-columns: repeat(auto-fit, minmax(0, 8.5rem));
     grid-auto-flow: column;
+    max-height: 20rem;
+
     text-align: left;
 
     width: 100%;
@@ -65,10 +68,11 @@
     align-items: center;
   }
 
-  @media (max-width: @sm) {
+  @media (max-width: @xs) {
     .release-minors ul {
+      /* More of a hack than anything */
+      max-height: 40rem;
       padding: 0;
-      max-height: none;
     }
   }
 }
