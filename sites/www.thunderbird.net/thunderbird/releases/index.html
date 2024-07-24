@@ -24,7 +24,7 @@
         </a>
       </div>
     </div>
-    <div class="section-text">
+    <div class="section-text release-list">
         {% for int_version, versions in releases -%}
           <div class="release-container">
             <h2 class="release-major txt-gradient">
@@ -32,9 +32,11 @@
             </h2>
             {% if versions.minor -%}
             <div class="release-minors">
+              <ul aria-label="{{ _('Stability releases for version %(version)s'|format(version=versions.major)) }}">
               {% for version in versions.minor -%}
-                {{ get_link(int_version, version, true) }}
+                <li>{{ get_link(int_version, version, true) }}</li>
               {% endfor -%}
+              </ul>
             </div>
             {% endif -%}
           </div>
@@ -42,17 +44,19 @@
 
         <div class="release-container">
           <h2 class="release-major txt-gradient">
-            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.1.html" class="inline-link text-blue-dark font-bold no-underline">0.1</a>
+            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.1.html">0.1</a>
           </h2>
           <div class="release-minors">
-            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.2.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.2</a>
-            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.3.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.3</a>
-            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.4.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.4</a>
-            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.5.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.5</a>
-            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.6.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.6</a>
-            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.7.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.7</a>
-            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.8.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.8</a>
-            <a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.9.html" class="inline-link text-blue-dark font-bold no-underline btn-body btn-secondary btn-release">0.9</a>
+            <ul aria-label="{{ _('Stability releases for version %(version)s'|format(version=0.1)) }}">
+            <li><a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.2.html">0.2</a></li>
+            <li><a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.3.html">0.3</a></li>
+            <li><a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.4.html">0.4</a></li>
+            <li><a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.5.html">0.5</a></li>
+            <li><a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.6.html">0.6</a></li>
+            <li><a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.7.html">0.7</a></li>
+            <li><a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.8.html">0.8</a></li>
+            <li><a href="http://website-archive.mozilla.org/www.mozilla.org/thunderbird_releasenotes/en-US/thunderbird/releases/0.9.html">0.9</a></li>
+            </ul>
           </div>
         </div>
       </div>
