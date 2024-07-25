@@ -210,7 +210,7 @@ URL_MAPPINGS = {
     'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
     'support': 'https://support.mozilla.org/products/thunderbird/',
     'thunderbird.about': '/about',
-    'thunderbird.about.our-mission-statement': '/about#our-mission-statement',
+    'thunderbird.about.our-mission-statement': '/about/mission-statement',
     'thunderbird.bugzilla.new-bug': 'https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird',
     'thunderbird.calendar.holiday': '/calendar/holidays',
     'thunderbird.careers': '/careers',

@@ -1,0 +1,48 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "mission-statement" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title %}{{ _('Our Mission Statement') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block category %}{{ _('About') }}{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <div class="section-text">
+        <h2>{{ _('Preamble') }}</h2>
+        <p>
+          {% trans trimmed %}
+            Email has been and continues to be the fundamental communication tool
+            and a significant driver of freedoms on the Internet. But it is also
+            threatened by new non-standards-based, closed and centralized messaging
+            platforms. To prevent this erosion, the public deserves an alternative that is secure and reliable,
+            while  protecting our privacy, enhancing our productivity and serving as a
+            platform for current and future forms of messaging.
+          {% endtrans %}
+        </p>
+      </div>
+    </div>
+    {% include 'includes/components/page-separator.html' %}
+    <div class="container no-gap">
+      <div class="section-text">
+        <h2>{{ _('Thunderbird’s <span class="txt-gradient">Mission</span>') }}</h2>
+        <p>
+          {% trans trimmed %}
+            Thunderbird facilitates cross platform, decentralized, open-standard
+            communication, which puts the user in control of their data and workflow.
+            We aspire to offer an interoperable and extensible open-source
+            platform for messaging and managing personal information, such as email,
+            contacts, and appointments.
+          {% endtrans %}
+        </p>
+      </div>
+      <div class="back">
+        <a class="strong" href="{{ url('thunderbird.about') }}">{{ _('About Us') }}</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}
