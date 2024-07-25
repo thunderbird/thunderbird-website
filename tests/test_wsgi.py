@@ -18,6 +18,18 @@ class TestWSGI:
         assert len(langs) > 0
         assert langs.get(settings.LANGUAGE_CODE.lower())
 
+    def test_get_language_map_aliases(self):
+        """Test get_language_map aliases to ensure they resolve correctly"""
+        try:
+            langs = wsgi.get_language_map()
+        except TypeError:
+            pytest.fail("TypeError occurred when expecting no Errors")
+
+        assert langs
+        assert 'en' in langs
+        assert langs.get('en') == 'en-US'
+        assert langs.get('pt') == 'pt-BR'
+
     def test_get_best_language(self):
         """Test get_best_language to ensure the input locales return as expected."""
         langs = {
@@ -26,6 +38,8 @@ class TestWSGI:
             'DE': 'de',  # upper case
             'ja-jp-mac': 'ja',  # canonical locale
             'foo': 'en-US',  # doesn't exist, so fallbacks to default locale
+            'en': 'en-US', # alias
+            'pt': 'pt-BR', # alias
         }
 
         for lang_in, lang_out in langs.items():
