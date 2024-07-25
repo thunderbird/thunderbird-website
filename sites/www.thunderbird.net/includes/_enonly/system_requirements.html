@@ -11,17 +11,19 @@
 
 {% block content %}
   <section class="section-text">
-    <div class="section-heading">
-      <h2>{{ _('Version <span class="txt-gradient">%(version)s</span>')|format(version=version) }}</h2>
-    </div>
-    <div class="release-notes-container">
-      {% if is_system_requirements_dict() %}
-        {% for platform, platform_text in release.system_requirements|items %}
-          {{ platform_text|markdown|safe }}
-        {% endfor %}
-      {% else %}
-          {{ release.system_requirements|markdown|safe }}
-      {% endif %}
+    <div class="container">
+      <div class="section-heading">
+        <h2>{{ _('Version <span class="txt-gradient">%(version)s</span>')|format(version=version) }}</h2>
+      </div>
+      <div class="release-notes-container">
+        {% if is_system_requirements_dict() %}
+          {% for platform, platform_text in release.system_requirements|items %}
+            {{ platform_text|markdown|safe }}
+          {% endfor %}
+        {% else %}
+            {{ release.system_requirements|markdown|safe }}
+        {% endif %}
+      </div>
     </div>
   </section>
 {% endblock %}
