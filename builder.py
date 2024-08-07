@@ -29,6 +29,7 @@ from jinja2 import Environment, FileSystemLoader
 from libs.thunderbird_notes import releasenotes
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+import urllib.parse
 
 extensions = ['jinja2.ext.i18n']
 
@@ -240,6 +241,8 @@ class Site(object):
         feed_items = []
         for k, n in notelist.items():
             is_beta = 'beta' in k
+            is_115_esr = k.startswith('115.') and k.endswith('esr')
+
             if is_beta:
                 self._env.globals.update(channel='Beta', channel_name='Beta')
             else:
@@ -260,6 +263,14 @@ class Site(object):
             sysreq_template = self._env.get_template('includes/_enonly/system_requirements.html')
             logger.info("Rendering {0}/index.html...".format(target))
             sysreq_template.stream().dump(os.path.join(target, 'index.html'))
+
+            # 115 swapped to esr midway through. So add an 115 alias for 115esr builds
+            if is_115_esr:
+                for path in ['releasenotes', 'system-requirements']:
+                    k_noesr = k.replace('esr', '')
+                    source = os.path.join(self.outpath, 'thunderbird', str(k_noesr), path)
+                    mkdir(source)
+                    write_htaccess(source, urllib.parse.urljoin(settings.CANONICAL_URL, f'thunderbird/{str(k)}/{path}'))
 
             # Add entry to our feed items, optionally filter out beta notes
             if not is_beta or (is_beta and settings.SHOW_BETA_NOTES_IN_RSS_FEED):
