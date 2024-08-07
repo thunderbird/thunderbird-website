@@ -68,13 +68,8 @@
     </h4>
     <div class="product-row-downloads">
       <div class="download-button download-button-page">
-        {% for p_name, p_label in (platforms|list())[:4] %}
+        {% for p_name, p_label in (platforms|list()) %}
           {{ build_button(build, p_name, _('Download for %(platform)s in %(locale)s')|format(platform=p_label|replace('\n', ' '), locale=build.name_en), _('%(platform)s')|format(platform=p_label|replace('\n', ' '))) }}
-        {% endfor %}
-      </div>
-      <div class="download-button download-button-page">
-        {% for p_name, p_label in (platforms|list())[-2:] %}
-          {{ build_link(build, p_name, _('Download for %(platform)s in %(locale)s')|format(platform=p_label|replace('\n', ' '), locale=build.name_en), _('%(platform)s')|format(platform=p_label|replace('\n', ' '))) }}
         {% endfor %}
       </div>
     </div>
