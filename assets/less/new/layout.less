@@ -426,10 +426,11 @@ section {
   inset: 0;
   opacity: 1;
   z-index: 3;
+  width: 70%;
+  left: 15%;
+  top: 10%;
 }
 
-/*
-// Paused for now!
 .carousel > picture:last-child {
   opacity: 0;
   animation-duration: 30s;
@@ -437,7 +438,10 @@ section {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-*/
+
+.carousel > picture > img, .carousel > picture > source {
+  border-radius: 4px;
+}
 
 .fill-current {
   display: none;
