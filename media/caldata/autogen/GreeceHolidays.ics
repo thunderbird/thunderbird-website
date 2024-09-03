@@ -5,22 +5,22 @@ BEGIN:VEVENT
 SUMMARY:Η Πρωτοχρονιά 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20240401T090129Z
-UID:greece/new-year-day-2024
+DTSTAMP:20240903T094824Z
+UID:31880adf1dfa95734c98ee45fecacdc1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Πρωτοχρονιά είναι η πρ
  ώτη ημέρα του έτους\, ή η 1η Ιανουαρίου\, σ
  το Γρηγοριανό ημερολόγιο.
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Τα Θεοφάνεια 
 DTSTART;VALUE=DATE:20240106
 DTEND;VALUE=DATE:20240107
-DTSTAMP:20240401T090129Z
-UID:greece/epiphany-2024
+DTSTAMP:20240903T094824Z
+UID:42152519cbd3e480e9d2607202e63dfa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Τα Θεοφάνεια είναι μια 
@@ -29,20 +29,20 @@ DESCRIPTION:De facto holiday -  Τα Θεοφάνεια είναι μια
  άζει δύο γεγονότα που καταγράφονται στη 
  Βίβλο: την επίσκεψη των τριών σοφών στο μ
  ωρό Ιησού και το βάπτισμα του Ιησού.
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Καθαρή Δευτέρα 
 DTSTART;VALUE=DATE:20240318
 DTEND;VALUE=DATE:20240319
-DTSTAMP:20240401T090129Z
-UID:greece/clean-monday-2024
+DTSTAMP:20240903T094824Z
+UID:079a1e641cbeb62a48b3eb29fd71f3b1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Η Καθαρή Δευτέρα είναι 
  ντε φάκτο αργία στην Ελλάδα
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -50,41 +50,26 @@ SUMMARY:Η Ημέρα της Ελληνικής Ανεξαρτησίας
  είναι εθνική εορτή στην Ελλάδα
 DTSTART;VALUE=DATE:20240325
 DTEND;VALUE=DATE:20240326
-DTSTAMP:20240401T090129Z
-UID:greece/25th-of-march-2024
+DTSTAMP:20240903T094824Z
+UID:891ca0832085e48459d09ea2a17d337f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Greek Independence Day is a national holida
  y in Greece
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ο Ευαγγελισμός της Θεοτόκου 
 DTSTART;VALUE=DATE:20240325
 DTEND;VALUE=DATE:20240326
-DTSTAMP:20240401T090129Z
-UID:greece/annunciation-2024
+DTSTAMP:20240903T094824Z
+UID:ad0a000ae159e53b62950a52d88b2576
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ο Ευαγγελισμός της Θεο
  τόκου είναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090129Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Εργατική Ημέρα/Πρωτομαγιά 
-DTSTART;VALUE=DATE:20240501
-DTEND;VALUE=DATE:20240502
-DTSTAMP:20240401T090129Z
-UID:greece/labor-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Ημέρα Εργασίας\, Διεθνή
- ς Ημέρα Εργαζομένων και Πρωτομαγιά\, είν
- αι μια αργία για τους εργαζόμενους σε πο
- λλές χώρες σε όλο τον κόσμο.
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -95,28 +80,43 @@ SUMMARY:Εκατομμύρια Ορθόδοξοι Χριστιανοί σ
   Χριστού.
 DTSTART;VALUE=DATE:20240503
 DTEND;VALUE=DATE:20240504
-DTSTAMP:20240401T090129Z
-UID:greece/good-friday-2024
+DTSTAMP:20240903T094824Z
+UID:4eff96358b73d5d2fd69fcebb45c1ecc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday - Millions of Orthodox Christians around the 
  world annually observe Good Friday to commemorate the events leading up to
   Jesus Christ's crucifixion.
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ορθόδοξη Δευτέρα του Πάσχα 
 DTSTART;VALUE=DATE:20240506
 DTEND;VALUE=DATE:20240507
-DTSTAMP:20240401T090129Z
-UID:greece/easter-monday-2024
+DTSTAMP:20240903T094824Z
+UID:32ccde9ad0a7d4396da8031c5a904b8b
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ορθόδοξη Δευτέρα του Π
  άσχα είναι η επομένη της Ορθόδοξης Κυρια
  κής
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Εργατική Ημέρα/Πρωτομαγιά 
+DTSTART;VALUE=DATE:20240507
+DTEND;VALUE=DATE:20240508
+DTSTAMP:20240903T094824Z
+UID:e0ef5e02ae41402f3e2e06d4b7660da7
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ημέρα Εργασίας\, Διεθνή
+ ς Ημέρα Εργαζομένων και Πρωτομαγιά\, είν
+ αι μια αργία για τους εργαζόμενους σε πο
+ λλές χώρες σε όλο τον κόσμο.
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -125,21 +125,21 @@ SUMMARY:Η Δευτέρα του Αγίου Πνεύματος της Ορ
  ναι ντε φάκτο αργία στην Ελλάδα
 DTSTART;VALUE=DATE:20240624
 DTEND;VALUE=DATE:20240625
-DTSTAMP:20240401T090129Z
-UID:greece/holy-spirit-monday-2024
+DTSTAMP:20240903T094824Z
+UID:bb1479599f7e36507e89c7797862cb68
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday - Orthodox Holy Spirit Monday is a de facto h
  oliday in Greece
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Κοίμηση της Θεοτόκου 
 DTSTART;VALUE=DATE:20240815
 DTEND;VALUE=DATE:20240816
-DTSTAMP:20240401T090129Z
-UID:greece/assumption-of-mary-2024
+DTSTAMP:20240903T094824Z
+UID:d98ede4b3004f962a21660ae7cc74b71
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
@@ -148,20 +148,20 @@ DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
  Μερικοί γιορτάζουν την Ημέρα της Κοίμησ
  ης της Θεοτόκου σε άλλες εποχές του χρόν
  ου.
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ημέρα της Όχης 
 DTSTART;VALUE=DATE:20241028
 DTEND;VALUE=DATE:20241029
-DTSTAMP:20240401T090129Z
-UID:greece/ochi-day-2024
+DTSTAMP:20240903T094824Z
+UID:fe323b4de32860ab6f8754d69fefc4cc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Η ημέρα της Όχης είναι 
  μια de facto γιορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -171,47 +171,47 @@ SUMMARY:Η ημέρα των Χριστουγέννων είναι μια
  ριανό ημερολόγιο.
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20240401T090129Z
-UID:greece/christmas-day-2024
+DTSTAMP:20240903T094824Z
+UID:6b3a68e85ea8d78ceba326c6f7eaf779
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
  an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Σύναξη της Θεοτόκου 
 DTSTART;VALUE=DATE:20241226
 DTEND;VALUE=DATE:20241227
-DTSTAMP:20240401T090129Z
-UID:greece/synaxis-of-the-mother-of-god-2024
+DTSTAMP:20240903T094824Z
+UID:0343cfd36d1caecba156a1be796944df
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Συνάξις της Θεοτόκου ε
  ίναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090129Z
+LAST-MODIFIED:20240903T094824Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Οι Τρεις Άγιοι Ιεράρχες 
 DTSTART;VALUE=DATE:20240130
 DTEND;VALUE=DATE:20240131
-DTSTAMP:20240401T090130Z
-UID:greece/three-holy-hierarchs-2024
+DTSTAMP:20240903T094825Z
+UID:04cbfa7db5ce351060a0a6a51f76b9d3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Οι Τρεις Άγιοι Ιεράρχες εί
  ναι μια εορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ημέρα του Αγίου Βαλεντίνου 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20240401T090130Z
-UID:greece/valentine-day-2024
+DTSTAMP:20240903T094825Z
+UID:938f4b2f6a3f55ef12eaff6110972131
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Φεβρουάριος είναι η Ημέρα 
@@ -219,20 +219,35 @@ DESCRIPTION:Observance -  Φεβρουάριος είναι η Ημέρα
  Βαλεντίνου. Η ημέρα της αγάπης οφείλει τ
  ην προέλευσή της στις αρχαίες ρωμαϊκές κ
  αι ευρωπαϊκές χριστιανικές παραδόσεις.
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ισημερία Μαρτίου 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20240401T090130Z
-UID:seasons/vernal-equinox-2024
+DTSTAMP:20240903T094825Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Ισημερία Μαρτίου στην Ελλάδ
  α (Αθήνα)
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Εργατική Ημέρα/Πρωτομαγιά 
+DTSTART;VALUE=DATE:20240501
+DTEND;VALUE=DATE:20240502
+DTSTAMP:20240903T094825Z
+UID:e0ef5e02ae41402f3e2e06d4b7660da7
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Ημέρα Εργασίας\, Διεθνής Η
+ μέρα Εργαζομένων και Πρωτομαγιά\, είναι 
+ μια αργία για τους εργαζόμενους σε πολλέ
+ ς χώρες σε όλο τον κόσμο.
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -244,14 +259,14 @@ SUMMARY:Η Ορθόδοξη Κυριακή του Πάσχα Εκατομ
  κλησίες.
 DTSTART;VALUE=DATE:20240505
 DTEND;VALUE=DATE:20240506
-DTSTAMP:20240401T090130Z
-UID:greece/easter-sunday-2024
+DTSTAMP:20240903T094825Z
+UID:33c16e16f40de472ea06d77253fe55f5
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Millions of Orthodox Christians around the world 
  often celebrate Easter Sunday at a different time to the date set by many 
  western churches.
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -260,13 +275,13 @@ SUMMARY:Η Ημέρα της Μητέρας γιορτάζει τα επι
  ν και των μητρικών φιγούρων.
 DTSTART;VALUE=DATE:20240512
 DTEND;VALUE=DATE:20240513
-DTSTAMP:20240401T090130Z
-UID:greece/mothers-day-2024
+DTSTAMP:20240903T094825Z
+UID:21d84703ade2cbd304ccb8701566bef9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
  forts of mothers and mother figures.
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -275,26 +290,26 @@ SUMMARY:Η Ημέρα του Πατέρα γιορτάζει την πατ
  αφορετικές ημερομηνίες παγκοσμίως.
 DTSTART;VALUE=DATE:20240616
 DTEND;VALUE=DATE:20240617
-DTSTAMP:20240401T090130Z
-UID:greece/fathers-day-2024
+DTSTAMP:20240903T094825Z
+UID:b4129103f312de94867537eaf9216b74
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
  enting on different dates worldwide.
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ηλιοστάσιο Ιουνίου 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20240401T090130Z
-UID:seasons/june-solstice-2024
+DTSTAMP:20240903T094825Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Ηλιοστάσιο Ιουνίου στην Ελλ
  άδα (Αθήνα)
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -302,100 +317,100 @@ SUMMARY:Η Ορθόδοξη Κυριακή του Αγίου Πνεύμα
  τος είναι μια γιορτή στην Ελλάδα
 DTSTART;VALUE=DATE:20240623
 DTEND;VALUE=DATE:20240624
-DTSTAMP:20240401T090130Z
-UID:greece/holy-spirit-sunday-2024
+DTSTAMP:20240903T094825Z
+UID:05905f91af014764314775b3ae22d243
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Orthodox Holy Spirit Sunday is a observance in Gr
  eece
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Αποκατάσταση της Δημοκρατίας 
 DTSTART;VALUE=DATE:20240724
 DTEND;VALUE=DATE:20240725
-DTSTAMP:20240401T090130Z
-UID:greece/restoration-of-democracy-2024
+DTSTAMP:20240903T094825Z
+UID:0bce88a2471dd88e584a01562699228f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Η Αποκατάσταση της Δημοκρ
  ατίας είναι μια γιορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ισημερία Σεπτεμβρίου 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20240401T090130Z
-UID:seasons/autumnal-equniox-2024
+DTSTAMP:20240903T094825Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Η ισημερία Σεπτεμβρίου στην 
  Ελλάδα (Αθήνα)
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Το Πολυτεχνείο 
 DTSTART;VALUE=DATE:20241117
 DTEND;VALUE=DATE:20241118
-DTSTAMP:20240401T090130Z
-UID:greece/polytechneio-2024
+DTSTAMP:20240903T094825Z
+UID:29773661fad1061fe26bed361dcd3eb1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Το Πολυτεχνείο είναι μια γ
  ιορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ημέρα των Ενόπλων Δυνάμεων 
 DTSTART;VALUE=DATE:20241121
 DTEND;VALUE=DATE:20241122
-DTSTAMP:20240401T090130Z
-UID:greece/armed-forces-day-2024
+DTSTAMP:20240903T094825Z
+UID:c8818185cfbaeff53113a4c9cf757b90
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Η Ημέρα των Ενόπλων Δυνάμε
  ων εορτάζεται στην Ελλάδα
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ηλιοστάσιο Δεκεμβρίου 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20240401T090130Z
-UID:seasons/december-solstice-2024
+DTSTAMP:20240903T094825Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Ηλιοστάσιο Δεκεμβρίου στην 
  Ελλάδα (Αθήνα)
-LAST-MODIFIED:20240401T090130Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Πρωτοχρονιά 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20240401T090131Z
-UID:greece/new-year-day-2025
+DTSTAMP:20240903T094825Z
+UID:31880adf1dfa95734c98ee45fecacdc1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Πρωτοχρονιά είναι η πρ
  ώτη ημέρα του έτους\, ή η 1η Ιανουαρίου\, σ
  το Γρηγοριανό ημερολόγιο.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Τα Θεοφάνεια 
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
-DTSTAMP:20240401T090131Z
-UID:greece/epiphany-2025
+DTSTAMP:20240903T094825Z
+UID:42152519cbd3e480e9d2607202e63dfa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Τα Θεοφάνεια είναι μια 
@@ -404,20 +419,20 @@ DESCRIPTION:De facto holiday -  Τα Θεοφάνεια είναι μια
  άζει δύο γεγονότα που καταγράφονται στη 
  Βίβλο: την επίσκεψη των τριών σοφών στο μ
  ωρό Ιησού και το βάπτισμα του Ιησού.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Καθαρή Δευτέρα 
 DTSTART;VALUE=DATE:20250303
 DTEND;VALUE=DATE:20250304
-DTSTAMP:20240401T090131Z
-UID:greece/clean-monday-2025
+DTSTAMP:20240903T094825Z
+UID:079a1e641cbeb62a48b3eb29fd71f3b1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Η Καθαρή Δευτέρα είναι 
  ντε φάκτο αργία στην Ελλάδα
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -425,26 +440,26 @@ SUMMARY:Η Ημέρα της Ελληνικής Ανεξαρτησίας
  είναι εθνική εορτή στην Ελλάδα
 DTSTART;VALUE=DATE:20250325
 DTEND;VALUE=DATE:20250326
-DTSTAMP:20240401T090131Z
-UID:greece/25th-of-march-2025
+DTSTAMP:20240903T094825Z
+UID:891ca0832085e48459d09ea2a17d337f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Greek Independence Day is a national holida
  y in Greece
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ο Ευαγγελισμός της Θεοτόκου 
 DTSTART;VALUE=DATE:20250325
 DTEND;VALUE=DATE:20250326
-DTSTAMP:20240401T090131Z
-UID:greece/annunciation-2025
+DTSTAMP:20240903T094825Z
+UID:ad0a000ae159e53b62950a52d88b2576
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ο Ευαγγελισμός της Θεο
  τόκου είναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -455,43 +470,43 @@ SUMMARY:Εκατομμύρια Ορθόδοξοι Χριστιανοί σ
   Χριστού.
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20240401T090131Z
-UID:greece/good-friday-2025
+DTSTAMP:20240903T094825Z
+UID:4eff96358b73d5d2fd69fcebb45c1ecc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday - Millions of Orthodox Christians around the 
  world annually observe Good Friday to commemorate the events leading up to
   Jesus Christ's crucifixion.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ορθόδοξη Δευτέρα του Πάσχα 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20240401T090131Z
-UID:greece/easter-monday-2025
+DTSTAMP:20240903T094825Z
+UID:32ccde9ad0a7d4396da8031c5a904b8b
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ορθόδοξη Δευτέρα του Π
  άσχα είναι η επομένη της Ορθόδοξης Κυρια
  κής
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Εργατική Ημέρα/Πρωτομαγιά 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20240401T090131Z
-UID:greece/labor-day-2025
+DTSTAMP:20240903T094825Z
+UID:e0ef5e02ae41402f3e2e06d4b7660da7
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ημέρα Εργασίας\, Διεθνή
  ς Ημέρα Εργαζομένων και Πρωτομαγιά\, είν
  αι μια αργία για τους εργαζόμενους σε πο
  λλές χώρες σε όλο τον κόσμο.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -500,21 +515,21 @@ SUMMARY:Η Δευτέρα του Αγίου Πνεύματος της Ορ
  ναι ντε φάκτο αργία στην Ελλάδα
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20240401T090131Z
-UID:greece/holy-spirit-monday-2025
+DTSTAMP:20240903T094825Z
+UID:bb1479599f7e36507e89c7797862cb68
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday - Orthodox Holy Spirit Monday is a de facto h
  oliday in Greece
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Κοίμηση της Θεοτόκου 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20240401T090131Z
-UID:greece/assumption-of-mary-2025
+DTSTAMP:20240903T094825Z
+UID:d98ede4b3004f962a21660ae7cc74b71
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
@@ -523,20 +538,20 @@ DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
  Μερικοί γιορτάζουν την Ημέρα της Κοίμησ
  ης της Θεοτόκου σε άλλες εποχές του χρόν
  ου.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ημέρα της Όχης 
 DTSTART;VALUE=DATE:20251028
 DTEND;VALUE=DATE:20251029
-DTSTAMP:20240401T090131Z
-UID:greece/ochi-day-2025
+DTSTAMP:20240903T094825Z
+UID:fe323b4de32860ab6f8754d69fefc4cc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Η ημέρα της Όχης είναι 
  μια de facto γιορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -546,47 +561,47 @@ SUMMARY:Η ημέρα των Χριστουγέννων είναι μια
  ριανό ημερολόγιο.
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20240401T090131Z
-UID:greece/christmas-day-2025
+DTSTAMP:20240903T094825Z
+UID:6b3a68e85ea8d78ceba326c6f7eaf779
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
  an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Σύναξη της Θεοτόκου 
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20240401T090131Z
-UID:greece/synaxis-of-the-mother-of-god-2025
+DTSTAMP:20240903T094825Z
+UID:0343cfd36d1caecba156a1be796944df
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Συνάξις της Θεοτόκου ε
  ίναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Οι Τρεις Άγιοι Ιεράρχες 
 DTSTART;VALUE=DATE:20250130
 DTEND;VALUE=DATE:20250131
-DTSTAMP:20240401T090131Z
-UID:greece/three-holy-hierarchs-2025
+DTSTAMP:20240903T094825Z
+UID:04cbfa7db5ce351060a0a6a51f76b9d3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Οι Τρεις Άγιοι Ιεράρχες εί
  ναι μια εορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ημέρα του Αγίου Βαλεντίνου 
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20240401T090131Z
-UID:greece/valentine-day-2025
+DTSTAMP:20240903T094825Z
+UID:938f4b2f6a3f55ef12eaff6110972131
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Φεβρουάριος είναι η Ημέρα 
@@ -594,20 +609,20 @@ DESCRIPTION:Observance -  Φεβρουάριος είναι η Ημέρα
  Βαλεντίνου. Η ημέρα της αγάπης οφείλει τ
  ην προέλευσή της στις αρχαίες ρωμαϊκές κ
  αι ευρωπαϊκές χριστιανικές παραδόσεις.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ισημερία Μαρτίου 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20240401T090131Z
-UID:seasons/vernal-equinox-2025
+DTSTAMP:20240903T094825Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Ισημερία Μαρτίου στην Ελλάδ
  α (Αθήνα)
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -619,14 +634,14 @@ SUMMARY:Η Ορθόδοξη Κυριακή του Πάσχα Εκατομ
  κλησίες.
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20240401T090131Z
-UID:greece/easter-sunday-2025
+DTSTAMP:20240903T094825Z
+UID:33c16e16f40de472ea06d77253fe55f5
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Millions of Orthodox Christians around the world 
  often celebrate Easter Sunday at a different time to the date set by many 
  western churches.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -635,13 +650,13 @@ SUMMARY:Η Ημέρα της Μητέρας γιορτάζει τα επι
  ν και των μητρικών φιγούρων.
 DTSTART;VALUE=DATE:20250511
 DTEND;VALUE=DATE:20250512
-DTSTAMP:20240401T090131Z
-UID:greece/mothers-day-2025
+DTSTAMP:20240903T094825Z
+UID:21d84703ade2cbd304ccb8701566bef9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
  forts of mothers and mother figures.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -649,13 +664,13 @@ SUMMARY:Η Ορθόδοξη Κυριακή του Αγίου Πνεύμα
  τος είναι μια γιορτή στην Ελλάδα
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20240401T090131Z
-UID:greece/holy-spirit-sunday-2025
+DTSTAMP:20240903T094825Z
+UID:05905f91af014764314775b3ae22d243
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Orthodox Holy Spirit Sunday is a observance in Gr
  eece
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -664,113 +679,113 @@ SUMMARY:Η Ημέρα του Πατέρα γιορτάζει την πατ
  αφορετικές ημερομηνίες παγκοσμίως.
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
-DTSTAMP:20240401T090131Z
-UID:greece/fathers-day-2025
+DTSTAMP:20240903T094825Z
+UID:b4129103f312de94867537eaf9216b74
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
  enting on different dates worldwide.
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ηλιοστάσιο Ιουνίου 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20240401T090131Z
-UID:seasons/june-solstice-2025
+DTSTAMP:20240903T094825Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Ηλιοστάσιο Ιουνίου στην Ελλ
  άδα (Αθήνα)
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Αποκατάσταση της Δημοκρατίας 
 DTSTART;VALUE=DATE:20250724
 DTEND;VALUE=DATE:20250725
-DTSTAMP:20240401T090131Z
-UID:greece/restoration-of-democracy-2025
+DTSTAMP:20240903T094825Z
+UID:0bce88a2471dd88e584a01562699228f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Η Αποκατάσταση της Δημοκρ
  ατίας είναι μια γιορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ισημερία Σεπτεμβρίου 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20240401T090131Z
-UID:seasons/autumnal-equniox-2025
+DTSTAMP:20240903T094825Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Η ισημερία Σεπτεμβρίου στην 
  Ελλάδα (Αθήνα)
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Το Πολυτεχνείο 
 DTSTART;VALUE=DATE:20251117
 DTEND;VALUE=DATE:20251118
-DTSTAMP:20240401T090131Z
-UID:greece/polytechneio-2025
+DTSTAMP:20240903T094825Z
+UID:29773661fad1061fe26bed361dcd3eb1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Το Πολυτεχνείο είναι μια γ
  ιορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ημέρα των Ενόπλων Δυνάμεων 
 DTSTART;VALUE=DATE:20251121
 DTEND;VALUE=DATE:20251122
-DTSTAMP:20240401T090131Z
-UID:greece/armed-forces-day-2025
+DTSTAMP:20240903T094825Z
+UID:c8818185cfbaeff53113a4c9cf757b90
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Η Ημέρα των Ενόπλων Δυνάμε
  ων εορτάζεται στην Ελλάδα
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ηλιοστάσιο Δεκεμβρίου 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20240401T090131Z
-UID:seasons/december-solstice-2025
+DTSTAMP:20240903T094825Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Ηλιοστάσιο Δεκεμβρίου στην 
  Ελλάδα (Αθήνα)
-LAST-MODIFIED:20240401T090131Z
+LAST-MODIFIED:20240903T094825Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Πρωτοχρονιά 
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20240401T090132Z
-UID:greece/new-year-day-2026
+DTSTAMP:20240903T094826Z
+UID:31880adf1dfa95734c98ee45fecacdc1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Πρωτοχρονιά είναι η πρ
  ώτη ημέρα του έτους\, ή η 1η Ιανουαρίου\, σ
  το Γρηγοριανό ημερολόγιο.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Τα Θεοφάνεια 
 DTSTART;VALUE=DATE:20260106
 DTEND;VALUE=DATE:20260107
-DTSTAMP:20240401T090132Z
-UID:greece/epiphany-2026
+DTSTAMP:20240903T094826Z
+UID:42152519cbd3e480e9d2607202e63dfa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Τα Θεοφάνεια είναι μια 
@@ -779,20 +794,20 @@ DESCRIPTION:De facto holiday -  Τα Θεοφάνεια είναι μια
  άζει δύο γεγονότα που καταγράφονται στη 
  Βίβλο: την επίσκεψη των τριών σοφών στο μ
  ωρό Ιησού και το βάπτισμα του Ιησού.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Καθαρή Δευτέρα 
 DTSTART;VALUE=DATE:20260223
 DTEND;VALUE=DATE:20260224
-DTSTAMP:20240401T090132Z
-UID:greece/clean-monday-2026
+DTSTAMP:20240903T094826Z
+UID:079a1e641cbeb62a48b3eb29fd71f3b1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Η Καθαρή Δευτέρα είναι 
  ντε φάκτο αργία στην Ελλάδα
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -800,26 +815,26 @@ SUMMARY:Η Ημέρα της Ελληνικής Ανεξαρτησίας
  είναι εθνική εορτή στην Ελλάδα
 DTSTART;VALUE=DATE:20260325
 DTEND;VALUE=DATE:20260326
-DTSTAMP:20240401T090132Z
-UID:greece/25th-of-march-2026
+DTSTAMP:20240903T094826Z
+UID:891ca0832085e48459d09ea2a17d337f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Greek Independence Day is a national holida
  y in Greece
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ο Ευαγγελισμός της Θεοτόκου 
 DTSTART;VALUE=DATE:20260325
 DTEND;VALUE=DATE:20260326
-DTSTAMP:20240401T090132Z
-UID:greece/annunciation-2026
+DTSTAMP:20240903T094826Z
+UID:ad0a000ae159e53b62950a52d88b2576
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ο Ευαγγελισμός της Θεο
  τόκου είναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -830,43 +845,43 @@ SUMMARY:Εκατομμύρια Ορθόδοξοι Χριστιανοί σ
   Χριστού.
 DTSTART;VALUE=DATE:20260410
 DTEND;VALUE=DATE:20260411
-DTSTAMP:20240401T090132Z
-UID:greece/good-friday-2026
+DTSTAMP:20240903T094826Z
+UID:4eff96358b73d5d2fd69fcebb45c1ecc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday - Millions of Orthodox Christians around the 
  world annually observe Good Friday to commemorate the events leading up to
   Jesus Christ's crucifixion.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ορθόδοξη Δευτέρα του Πάσχα 
 DTSTART;VALUE=DATE:20260413
 DTEND;VALUE=DATE:20260414
-DTSTAMP:20240401T090132Z
-UID:greece/easter-monday-2026
+DTSTAMP:20240903T094826Z
+UID:32ccde9ad0a7d4396da8031c5a904b8b
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ορθόδοξη Δευτέρα του Π
  άσχα είναι η επομένη της Ορθόδοξης Κυρια
  κής
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Εργατική Ημέρα/Πρωτομαγιά 
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-DTSTAMP:20240401T090132Z
-UID:greece/labor-day-2026
+DTSTAMP:20240903T094826Z
+UID:e0ef5e02ae41402f3e2e06d4b7660da7
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ημέρα Εργασίας\, Διεθνή
  ς Ημέρα Εργαζομένων και Πρωτομαγιά\, είν
  αι μια αργία για τους εργαζόμενους σε πο
  λλές χώρες σε όλο τον κόσμο.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -875,21 +890,21 @@ SUMMARY:Η Δευτέρα του Αγίου Πνεύματος της Ορ
  ναι ντε φάκτο αργία στην Ελλάδα
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
-DTSTAMP:20240401T090132Z
-UID:greece/holy-spirit-monday-2026
+DTSTAMP:20240903T094826Z
+UID:bb1479599f7e36507e89c7797862cb68
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday - Orthodox Holy Spirit Monday is a de facto h
  oliday in Greece
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Κοίμηση της Θεοτόκου 
 DTSTART;VALUE=DATE:20260815
 DTEND;VALUE=DATE:20260816
-DTSTAMP:20240401T090132Z
-UID:greece/assumption-of-mary-2026
+DTSTAMP:20240903T094826Z
+UID:d98ede4b3004f962a21660ae7cc74b71
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
@@ -898,20 +913,20 @@ DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
  Μερικοί γιορτάζουν την Ημέρα της Κοίμησ
  ης της Θεοτόκου σε άλλες εποχές του χρόν
  ου.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ημέρα της Όχης 
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DTSTAMP:20240401T090132Z
-UID:greece/ochi-day-2026
+DTSTAMP:20240903T094826Z
+UID:fe323b4de32860ab6f8754d69fefc4cc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:De facto holiday -  Η ημέρα της Όχης είναι 
  μια de facto γιορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -921,47 +936,47 @@ SUMMARY:Η ημέρα των Χριστουγέννων είναι μια
  ριανό ημερολόγιο.
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20240401T090132Z
-UID:greece/christmas-day-2026
+DTSTAMP:20240903T094826Z
+UID:6b3a68e85ea8d78ceba326c6f7eaf779
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
  an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Σύναξη της Θεοτόκου 
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
-DTSTAMP:20240401T090132Z
-UID:greece/synaxis-of-the-mother-of-god-2026
+DTSTAMP:20240903T094826Z
+UID:0343cfd36d1caecba156a1be796944df
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Συνάξις της Θεοτόκου ε
  ίναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094826Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Οι Τρεις Άγιοι Ιεράρχες 
 DTSTART;VALUE=DATE:20260130
 DTEND;VALUE=DATE:20260131
-DTSTAMP:20240401T090132Z
-UID:greece/three-holy-hierarchs-2026
+DTSTAMP:20240903T094827Z
+UID:04cbfa7db5ce351060a0a6a51f76b9d3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Οι Τρεις Άγιοι Ιεράρχες εί
  ναι μια εορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ημέρα του Αγίου Βαλεντίνου 
 DTSTART;VALUE=DATE:20260214
 DTEND;VALUE=DATE:20260215
-DTSTAMP:20240401T090132Z
-UID:greece/valentine-day-2026
+DTSTAMP:20240903T094827Z
+UID:938f4b2f6a3f55ef12eaff6110972131
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Φεβρουάριος είναι η Ημέρα 
@@ -969,20 +984,20 @@ DESCRIPTION:Observance -  Φεβρουάριος είναι η Ημέρα
  Βαλεντίνου. Η ημέρα της αγάπης οφείλει τ
  ην προέλευσή της στις αρχαίες ρωμαϊκές κ
  αι ευρωπαϊκές χριστιανικές παραδόσεις.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ισημερία Μαρτίου 
 DTSTART;VALUE=DATE:20260320
 DTEND;VALUE=DATE:20260321
-DTSTAMP:20240401T090132Z
-UID:seasons/vernal-equinox-2026
+DTSTAMP:20240903T094827Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Ισημερία Μαρτίου στην Ελλάδ
  α (Αθήνα)
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -994,14 +1009,14 @@ SUMMARY:Η Ορθόδοξη Κυριακή του Πάσχα Εκατομ
  κλησίες.
 DTSTART;VALUE=DATE:20260412
 DTEND;VALUE=DATE:20260413
-DTSTAMP:20240401T090132Z
-UID:greece/easter-sunday-2026
+DTSTAMP:20240903T094827Z
+UID:33c16e16f40de472ea06d77253fe55f5
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Millions of Orthodox Christians around the world 
  often celebrate Easter Sunday at a different time to the date set by many 
  western churches.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1010,13 +1025,13 @@ SUMMARY:Η Ημέρα της Μητέρας γιορτάζει τα επι
  ν και των μητρικών φιγούρων.
 DTSTART;VALUE=DATE:20260510
 DTEND;VALUE=DATE:20260511
-DTSTAMP:20240401T090132Z
-UID:greece/mothers-day-2026
+DTSTAMP:20240903T094827Z
+UID:21d84703ade2cbd304ccb8701566bef9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mother’s Day celebrates the achievements and ef
  forts of mothers and mother figures.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1024,13 +1039,13 @@ SUMMARY:Η Ορθόδοξη Κυριακή του Αγίου Πνεύμα
  τος είναι μια γιορτή στην Ελλάδα
 DTSTART;VALUE=DATE:20260531
 DTEND;VALUE=DATE:20260601
-DTSTAMP:20240401T090132Z
-UID:greece/holy-spirit-sunday-2026
+DTSTAMP:20240903T094827Z
+UID:05905f91af014764314775b3ae22d243
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Orthodox Holy Spirit Sunday is a observance in Gr
  eece
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1039,91 +1054,91 @@ SUMMARY:Η Ημέρα του Πατέρα γιορτάζει την πατ
  αφορετικές ημερομηνίες παγκοσμίως.
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
-DTSTAMP:20240401T090132Z
-UID:greece/fathers-day-2026
+DTSTAMP:20240903T094827Z
+UID:b4129103f312de94867537eaf9216b74
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Father’s Day celebrates fatherhood and male par
  enting on different dates worldwide.
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ηλιοστάσιο Ιουνίου 
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
-DTSTAMP:20240401T090132Z
-UID:seasons/june-solstice-2026
+DTSTAMP:20240903T094827Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Ηλιοστάσιο Ιουνίου στην Ελλ
  άδα (Αθήνα)
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Αποκατάσταση της Δημοκρατίας 
 DTSTART;VALUE=DATE:20260724
 DTEND;VALUE=DATE:20260725
-DTSTAMP:20240401T090132Z
-UID:greece/restoration-of-democracy-2026
+DTSTAMP:20240903T094827Z
+UID:0bce88a2471dd88e584a01562699228f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Η Αποκατάσταση της Δημοκρ
  ατίας είναι μια γιορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ισημερία Σεπτεμβρίου 
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
-DTSTAMP:20240401T090132Z
-UID:seasons/autumnal-equniox-2026
+DTSTAMP:20240903T094827Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Η ισημερία Σεπτεμβρίου στην 
  Ελλάδα (Αθήνα)
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Το Πολυτεχνείο 
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
-DTSTAMP:20240401T090132Z
-UID:greece/polytechneio-2026
+DTSTAMP:20240903T094827Z
+UID:29773661fad1061fe26bed361dcd3eb1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Το Πολυτεχνείο είναι μια γ
  ιορτή στην Ελλάδα
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ημέρα των Ενόπλων Δυνάμεων 
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
-DTSTAMP:20240401T090132Z
-UID:greece/armed-forces-day-2026
+DTSTAMP:20240903T094827Z
+UID:c8818185cfbaeff53113a4c9cf757b90
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Η Ημέρα των Ενόπλων Δυνάμε
  ων εορτάζεται στην Ελλάδα
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ηλιοστάσιο Δεκεμβρίου 
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
-DTSTAMP:20240401T090132Z
-UID:seasons/december-solstice-2026
+DTSTAMP:20240903T094827Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Ηλιοστάσιο Δεκεμβρίου στην 
  Ελλάδα (Αθήνα)
-LAST-MODIFIED:20240401T090132Z
+LAST-MODIFIED:20240903T094827Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

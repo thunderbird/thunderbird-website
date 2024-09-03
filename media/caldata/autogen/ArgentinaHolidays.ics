@@ -5,1092 +5,1095 @@ BEGIN:VEVENT
 SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20240401T090011Z
-UID:argentina/new-year-day-2024
+DTSTAMP:20240903T094715Z
+UID:86ac4eb2afe0781e3aceb1522f2f6d84
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
- l año\, o el 1 de enero\, en el calendario gregoriano.
-LAST-MODIFIED:20240401T090011Z
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval/lunes de carnaval 
+SUMMARY:Carnaval/Lunes de Carnaval 
 DTSTART;VALUE=DATE:20240212
 DTEND;VALUE=DATE:20240213
-DTSTAMP:20240401T090011Z
-UID:argentina/carnival-monday-2024
+DTSTAMP:20240903T094715Z
+UID:91bd0824c5275773f77deee3eba7c3ef
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El carnaval/lunes de carnaval es un feriad
- o nacional en Argentina
-LAST-MODIFIED:20240401T090011Z
+DESCRIPTION:National holiday -  Carnaval/Lunes de Carnaval es un feriado n
+ acional en Argentina
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval/martes de carnaval/Día de las tortitas 
+SUMMARY:Carnaval/Martes de Carnaval/Día de las Tortitas 
 DTSTART;VALUE=DATE:20240213
 DTEND;VALUE=DATE:20240214
-DTSTAMP:20240401T090011Z
-UID:argentina/carnival-tuesday-2024
+DTSTAMP:20240903T094715Z
+UID:bf3292f82ef5964f19ed9230b590f5bb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El martes de carnaval es una fiesta religi
  osa antes del período de ayuno de la Cuaresma. Se celebra comiendo tortit
- as y organizando desfiles de carnaval.
-LAST-MODIFIED:20240401T090011Z
+ as y realizando desfiles de carnaval.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Caídos 
 DTSTART;VALUE=DATE:20240324
 DTEND;VALUE=DATE:20240325
-DTSTAMP:20240401T090011Z
-UID:argentina/memorial-day-2024
+DTSTAMP:20240903T094715Z
+UID:ab713aacd9df5efac2497989ad4e6d03
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de los Caídos es un feriado nacio
  nal en Argentina
-LAST-MODIFIED:20240401T090011Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo 
-DTSTART;VALUE=DATE:20240328
-DTEND;VALUE=DATE:20240329
-DTSTAMP:20240401T090011Z
-UID:argentina/maundy-thursday-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
-  se celebra el jueves durante la Semana Santa. Es el día anterior al Vier
- nes Santo.
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20240329
 DTEND;VALUE=DATE:20240330
-DTSTAMP:20240401T090011Z
-UID:argentina/good-friday-2024
+DTSTAMP:20240903T094715Z
+UID:c07aae6e67eab6e6d07fcc8483e4552a
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
- ndial que se celebra dos días antes del domingo de Pascua.
-LAST-MODIFIED:20240401T090011Z
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240903T094715Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:El feriado del puente turístico 
+DTSTART;VALUE=DATE:20240401
+DTEND;VALUE=DATE:20240402
+DTSTAMP:20240903T094715Z
+UID:dac0a24ae3d8e3c84a81c71280cc2760
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El feriado del puente turístico es un fer
+ iado nacional en Argentina.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Veteranos 
 DTSTART;VALUE=DATE:20240402
 DTEND;VALUE=DATE:20240403
-DTSTAMP:20240401T090011Z
-UID:argentina/the-veterans-day-2024
+DTSTAMP:20240903T094715Z
+UID:b906723ede70217c6e7ab80fd2da500a
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de los Veteranos es un feriado nac
  ional en Argentina
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20240401T090011Z
-UID:argentina/labor-day-2024
+DTSTAMP:20240903T094715Z
+UID:b3536ba5e11b70388b9a10ec0b27717c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
- l de los Trabajadores y el Primero de Mayo es un día libre para los traba
- jadores en muchos países del mundo.
-LAST-MODIFIED:20240401T090011Z
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día Nacional/Revolución de mayo de 1810 
 DTSTART;VALUE=DATE:20240525
 DTEND;VALUE=DATE:20240526
-DTSTAMP:20240401T090011Z
-UID:argentina/national-day-may-1810-revolution-2024
+DTSTAMP:20240903T094715Z
+UID:bcd0bb1deff35f5e0e58b3a030e04c73
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Día Nacional/Revolución de mayo de 1810 
  es una fiesta nacional en Argentina
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Conmemoración del General Don Martín Miguel de Güemes 
+SUMMARY:Conmemoración del general Don Martín Miguel de Güemes 
 DTSTART;VALUE=DATE:20240617
 DTEND;VALUE=DATE:20240618
-DTSTAMP:20240401T090011Z
-UID:argentina/general-guemes-day-2024
+DTSTAMP:20240903T094715Z
+UID:287eda083308d1c7f3c859f268d8cccb
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  La conmemoración del General Don Martín 
+DESCRIPTION:National holiday -  La conmemoración del general Don Martín 
  Miguel de Güemes es una fiesta nacional en Argentina
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Bandera 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20240401T090011Z
-UID:argentina/flag-day-2024
+DTSTAMP:20240903T094715Z
+UID:6c6649f92dc2026260fd057dd85d46e4
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Bandera es un feriado nacion
  al en Argentina
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:El feriado del puente turístico 
+DTSTART;VALUE=DATE:20240621
+DTEND;VALUE=DATE:20240622
+DTSTAMP:20240903T094715Z
+UID:a479e1911c654884af3053d32bffbe8f
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El feriado del puente turístico es un fer
+ iado nacional en Argentina.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20240709
 DTEND;VALUE=DATE:20240710
-DTSTAMP:20240401T090011Z
-UID:argentina/independence-day-2024
+DTSTAMP:20240903T094715Z
+UID:a59ea3a864e043f28c047a3239acdbdf
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El día de la independencia es una fiesta 
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
  nacional en Argentina
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de San Martín 
-DTSTART;VALUE=DATE:20240819
-DTEND;VALUE=DATE:20240820
-DTSTAMP:20240401T090011Z
-UID:argentina/san-martin-day-2024
+DTSTART;VALUE=DATE:20240817
+DTEND;VALUE=DATE:20240818
+DTSTAMP:20240903T094715Z
+UID:5c27fd469ce20e918b4eea2fb3d5fb2a
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El Día de San Martín es feriado nacional
-  en Argentina
-LAST-MODIFIED:20240401T090011Z
+DESCRIPTION:National holiday -  El Día de San Martín es un feriado nacio
+ nal en Argentina.
+LAST-MODIFIED:20240903T094715Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:El feriado del puente turístico 
+DTSTART;VALUE=DATE:20241011
+DTEND;VALUE=DATE:20241012
+DTSTAMP:20240903T094715Z
+UID:8bbf4464b3f372481c5b44a1a3348e08
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El feriado del puente turístico es un fer
+ iado nacional en Argentina.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Respeto a la Diversidad Cultural 
-DTSTART;VALUE=DATE:20241014
-DTEND;VALUE=DATE:20241015
-DTSTAMP:20240401T090011Z
-UID:argentina/day-of-respect-for-cultural-diversity-2024
+DTSTART;VALUE=DATE:20241012
+DTEND;VALUE=DATE:20241013
+DTSTAMP:20240903T094715Z
+UID:136c59428c151b3dc7962bea0c0c53cd
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día del Respeto a la Diversidad Cultur
- al es feriado nacional en Argentina
-LAST-MODIFIED:20240401T090011Z
+ al es un feriado nacional en Argentina
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Soberanía Nacional 
 DTSTART;VALUE=DATE:20241118
 DTEND;VALUE=DATE:20241119
-DTSTAMP:20240401T090011Z
-UID:argentina/sovereignty-day-2024
+DTSTAMP:20240903T094715Z
+UID:931c9be3268c49fb8eb283514274da0d
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Soberanía Nacional es un fe
  riado nacional en Argentina
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Inmaculada Concepción 
 DTSTART;VALUE=DATE:20241208
 DTEND;VALUE=DATE:20241209
-DTSTAMP:20240401T090011Z
-UID:argentina/immaculate-conception-day-2024
+DTSTAMP:20240903T094715Z
+UID:17aee19b66da175c7b0c29104dfe9fc4
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fiesta de la Inmaculada Concepción es 
  una celebración cristiana que se celebra el 8 de diciembre de cada año.
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20240401T090011Z
-UID:argentina/christmas-day-2024
+DTSTAMP:20240903T094715Z
+UID:c9505e0b9f5bae47f2905f1b11139c27
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
  iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Inicio del Ramadán 
+SUMMARY:Inicio del Ramadán El Ramadán es un período de oración\, refle
+ xión y ayuno para muchos musulmanes de todo el mundo. Es el noveno mes de
+ l calendario islámico.
 DTSTART;VALUE=DATE:20240311
 DTEND;VALUE=DATE:20240312
-DTSTAMP:20240401T090011Z
-UID:argentina/ramadan-begins-2024
+DTSTAMP:20240903T094715Z
+UID:11ae9f61adfebae17dd0ccf71a487ef2
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  El Ramadán es un período de oración\, reflexi
- ón y ayuno para muchos musulmanes de todo el mundo. Es el noveno mes del 
- calendario islámico.
-LAST-MODIFIED:20240401T090011Z
+DESCRIPTION:Observance - Ramadan is a period of prayer\, reflection and fa
+ sting for many Muslims worldwide. It is the ninth month in the Islamic cal
+ endar.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20240401T090011Z
-UID:seasons/vernal-equinox-2024
+DTSTAMP:20240903T094715Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de marzo en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Domingo de Pascua 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20240401T090011Z
-UID:argentina/easter-sunday-2024
+DTSTAMP:20240903T094715Z
+UID:510fee43c87aff56d92cd28f7f96bffb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El domingo de Pascua conmemora la resurrección d
  e Jesucristo\, según la creencia cristiana.
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La víspera de la Pascua 
+SUMMARY:Víspera de Pascua 
 DTSTART;VALUE=DATE:20240422
 DTEND;VALUE=DATE:20240423
-DTSTAMP:20240401T090011Z
-UID:argentina/passover-eve-2024
+DTSTAMP:20240903T094715Z
+UID:c4c9b3ced7d09ab047f231d83e803ef8
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  La víspera de la Pascua es una celebración en 
- Argentina
-LAST-MODIFIED:20240401T090011Z
+DESCRIPTION:Observance -  La víspera de Pascua es una celebración en Arg
+ entina.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Acción por la Tolerancia y el Respeto entre las Personas 
 DTSTART;VALUE=DATE:20240424
 DTEND;VALUE=DATE:20240425
-DTSTAMP:20240401T090011Z
-UID:argentina/day-for-tolerance-and-respect-2024
+DTSTAMP:20240903T094715Z
+UID:34286da474d115454598016f62292bf1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Acción por la Tolerancia y el Respet
  o entre las Personas es una celebración en Argentina
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El sexto día de la Pascua 
+SUMMARY:El sexto día de la Pascua judía 
 DTSTART;VALUE=DATE:20240428
 DTEND;VALUE=DATE:20240429
-DTSTAMP:20240401T090011Z
-UID:argentina/sixth-day-of-passover-2024
+DTSTAMP:20240903T094715Z
+UID:11b28e497cc6846d9566119f0f984ddc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El sexto día de la Pascua es una celebración e
- n Argentina.
-LAST-MODIFIED:20240401T090011Z
+ n Argentina
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20240401T090011Z
-UID:seasons/june-solstice-2024
+DTSTAMP:20240903T094715Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de junio en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20240401T090011Z
-UID:seasons/autumnal-equniox-2024
+DTSTAMP:20240903T094715Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de septiembre en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20241020
 DTEND;VALUE=DATE:20241021
-DTSTAMP:20240401T090011Z
-UID:argentina/mothers-day-2024
+DTSTAMP:20240903T094715Z
+UID:ac30f3445c0f94a62aa89d89b995f4c6
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  El Día de la Madre celebra los logros y los esf
- uerzos de las madres y las figuras maternas.
-LAST-MODIFIED:20240401T090011Z
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y esfuerz
+ os de las madres y figuras maternas.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20240401T090011Z
-UID:seasons/december-solstice-2024
+DTSTAMP:20240903T094715Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de diciembre en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20241231
 DTEND;VALUE=DATE:20250101
-DTSTAMP:20240401T090011Z
-UID:argentina/new-year-eve-2024
+DTSTAMP:20240903T094715Z
+UID:2e04e439f932ce78f55c8ad1806bfc2f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
   año\, el 31 de diciembre\, en el calendario gregoriano.
-LAST-MODIFIED:20240401T090011Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20240401T090012Z
-UID:argentina/new-year-day-2025
+DTSTAMP:20240903T094715Z
+UID:86ac4eb2afe0781e3aceb1522f2f6d84
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
- l año\, o el 1 de enero\, en el calendario gregoriano.
-LAST-MODIFIED:20240401T090012Z
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval/lunes de carnaval 
+SUMMARY:Carnaval/Lunes de Carnaval 
 DTSTART;VALUE=DATE:20250303
 DTEND;VALUE=DATE:20250304
-DTSTAMP:20240401T090012Z
-UID:argentina/carnival-monday-2025
+DTSTAMP:20240903T094715Z
+UID:91bd0824c5275773f77deee3eba7c3ef
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El carnaval/lunes de carnaval es un feriad
- o nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+DESCRIPTION:National holiday -  Carnaval/Lunes de Carnaval es un feriado n
+ acional en Argentina
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval/martes de carnaval/Día de las tortitas 
+SUMMARY:Carnaval/Martes de Carnaval/Día de las Tortitas 
 DTSTART;VALUE=DATE:20250304
 DTEND;VALUE=DATE:20250305
-DTSTAMP:20240401T090012Z
-UID:argentina/carnival-tuesday-2025
+DTSTAMP:20240903T094715Z
+UID:bf3292f82ef5964f19ed9230b590f5bb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El martes de carnaval es una fiesta religi
  osa antes del período de ayuno de la Cuaresma. Se celebra comiendo tortit
- as y organizando desfiles de carnaval.
-LAST-MODIFIED:20240401T090012Z
+ as y realizando desfiles de carnaval.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Caídos 
 DTSTART;VALUE=DATE:20250324
 DTEND;VALUE=DATE:20250325
-DTSTAMP:20240401T090012Z
-UID:argentina/memorial-day-2025
+DTSTAMP:20240903T094715Z
+UID:ab713aacd9df5efac2497989ad4e6d03
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de los Caídos es un feriado nacio
  nal en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Veteranos 
 DTSTART;VALUE=DATE:20250402
 DTEND;VALUE=DATE:20250403
-DTSTAMP:20240401T090012Z
-UID:argentina/the-veterans-day-2025
+DTSTAMP:20240903T094715Z
+UID:b906723ede70217c6e7ab80fd2da500a
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de los Veteranos es un feriado nac
  ional en Argentina
-LAST-MODIFIED:20240401T090012Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo 
-DTSTART;VALUE=DATE:20250417
-DTEND;VALUE=DATE:20250418
-DTSTAMP:20240401T090012Z
-UID:argentina/maundy-thursday-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
-  se celebra el jueves durante la Semana Santa. Es el día anterior al Vier
- nes Santo.
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20240401T090012Z
-UID:argentina/good-friday-2025
+DTSTAMP:20240903T094715Z
+UID:c07aae6e67eab6e6d07fcc8483e4552a
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
- ndial que se celebra dos días antes del domingo de Pascua.
-LAST-MODIFIED:20240401T090012Z
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20240401T090012Z
-UID:argentina/labor-day-2025
+DTSTAMP:20240903T094715Z
+UID:b3536ba5e11b70388b9a10ec0b27717c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
- l de los Trabajadores y el Primero de Mayo es un día libre para los traba
- jadores en muchos países del mundo.
-LAST-MODIFIED:20240401T090012Z
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día Nacional/Revolución de mayo de 1810 
 DTSTART;VALUE=DATE:20250525
 DTEND;VALUE=DATE:20250526
-DTSTAMP:20240401T090012Z
-UID:argentina/national-day-may-1810-revolution-2025
+DTSTAMP:20240903T094715Z
+UID:bcd0bb1deff35f5e0e58b3a030e04c73
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Día Nacional/Revolución de mayo de 1810 
  es una fiesta nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Conmemoración del General Don Martín Miguel de Güemes 
+SUMMARY:Conmemoración del general Don Martín Miguel de Güemes 
 DTSTART;VALUE=DATE:20250617
 DTEND;VALUE=DATE:20250618
-DTSTAMP:20240401T090012Z
-UID:argentina/general-guemes-day-2025
+DTSTAMP:20240903T094715Z
+UID:287eda083308d1c7f3c859f268d8cccb
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  La conmemoración del General Don Martín 
+DESCRIPTION:National holiday -  La conmemoración del general Don Martín 
  Miguel de Güemes es una fiesta nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Bandera 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20240401T090012Z
-UID:argentina/flag-day-2025
+DTSTAMP:20240903T094715Z
+UID:6c6649f92dc2026260fd057dd85d46e4
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Bandera es un feriado nacion
  al en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20250709
 DTEND;VALUE=DATE:20250710
-DTSTAMP:20240401T090012Z
-UID:argentina/independence-day-2025
+DTSTAMP:20240903T094715Z
+UID:a59ea3a864e043f28c047a3239acdbdf
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El día de la independencia es una fiesta 
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
  nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de San Martín 
 DTSTART;VALUE=DATE:20250818
 DTEND;VALUE=DATE:20250819
-DTSTAMP:20240401T090012Z
-UID:argentina/san-martin-day-2025
+DTSTAMP:20240903T094715Z
+UID:5c27fd469ce20e918b4eea2fb3d5fb2a
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El Día de San Martín es feriado nacional
-  en Argentina
-LAST-MODIFIED:20240401T090012Z
+DESCRIPTION:National holiday -  El Día de San Martín es un feriado nacio
+ nal en Argentina.
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Respeto a la Diversidad Cultural 
 DTSTART;VALUE=DATE:20251013
 DTEND;VALUE=DATE:20251014
-DTSTAMP:20240401T090012Z
-UID:argentina/day-of-respect-for-cultural-diversity-2025
+DTSTAMP:20240903T094715Z
+UID:136c59428c151b3dc7962bea0c0c53cd
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día del Respeto a la Diversidad Cultur
- al es feriado nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+ al es un feriado nacional en Argentina
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Soberanía Nacional 
 DTSTART;VALUE=DATE:20251117
 DTEND;VALUE=DATE:20251118
-DTSTAMP:20240401T090012Z
-UID:argentina/sovereignty-day-2025
+DTSTAMP:20240903T094715Z
+UID:931c9be3268c49fb8eb283514274da0d
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Soberanía Nacional es un fe
  riado nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Inmaculada Concepción 
 DTSTART;VALUE=DATE:20251208
 DTEND;VALUE=DATE:20251209
-DTSTAMP:20240401T090012Z
-UID:argentina/immaculate-conception-day-2025
+DTSTAMP:20240903T094715Z
+UID:17aee19b66da175c7b0c29104dfe9fc4
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fiesta de la Inmaculada Concepción es 
  una celebración cristiana que se celebra el 8 de diciembre de cada año.
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20240401T090012Z
-UID:argentina/christmas-day-2025
+DTSTAMP:20240903T094715Z
+UID:c9505e0b9f5bae47f2905f1b11139c27
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
  iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094715Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Inicio del Ramadán 
+SUMMARY:Inicio del Ramadán El Ramadán es un período de oración\, refle
+ xión y ayuno para muchos musulmanes de todo el mundo. Es el noveno mes de
+ l calendario islámico.
 DTSTART;VALUE=DATE:20250301
 DTEND;VALUE=DATE:20250302
-DTSTAMP:20240401T090012Z
-UID:argentina/ramadan-begins-2025
+DTSTAMP:20240903T094716Z
+UID:11ae9f61adfebae17dd0ccf71a487ef2
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  El Ramadán es un período de oración\, reflexi
- ón y ayuno para muchos musulmanes de todo el mundo. Es el noveno mes del 
- calendario islámico.
-LAST-MODIFIED:20240401T090012Z
+DESCRIPTION:Observance - Ramadan is a period of prayer\, reflection and fa
+ sting for many Muslims worldwide. It is the ninth month in the Islamic cal
+ endar.
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20240401T090012Z
-UID:seasons/vernal-equinox-2025
+DTSTAMP:20240903T094716Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de marzo en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La víspera de la Pascua 
+SUMMARY:Víspera de Pascua 
 DTSTART;VALUE=DATE:20250412
 DTEND;VALUE=DATE:20250413
-DTSTAMP:20240401T090012Z
-UID:argentina/passover-eve-2025
+DTSTAMP:20240903T094716Z
+UID:c4c9b3ced7d09ab047f231d83e803ef8
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  La víspera de la Pascua es una celebración en 
- Argentina
-LAST-MODIFIED:20240401T090012Z
+DESCRIPTION:Observance -  La víspera de Pascua es una celebración en Arg
+ entina.
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El sexto día de la Pascua 
+SUMMARY:El sexto día de la Pascua judía 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20240401T090012Z
-UID:argentina/sixth-day-of-passover-2025
+DTSTAMP:20240903T094716Z
+UID:11b28e497cc6846d9566119f0f984ddc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El sexto día de la Pascua es una celebración e
- n Argentina.
-LAST-MODIFIED:20240401T090012Z
+ n Argentina
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Domingo de Pascua 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20240401T090012Z
-UID:argentina/easter-sunday-2025
+DTSTAMP:20240903T094716Z
+UID:510fee43c87aff56d92cd28f7f96bffb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El domingo de Pascua conmemora la resurrección d
  e Jesucristo\, según la creencia cristiana.
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Acción por la Tolerancia y el Respeto entre las Personas 
 DTSTART;VALUE=DATE:20250424
 DTEND;VALUE=DATE:20250425
-DTSTAMP:20240401T090012Z
-UID:argentina/day-for-tolerance-and-respect-2025
+DTSTAMP:20240903T094716Z
+UID:34286da474d115454598016f62292bf1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Acción por la Tolerancia y el Respet
  o entre las Personas es una celebración en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20240401T090012Z
-UID:seasons/june-solstice-2025
+DTSTAMP:20240903T094716Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de junio en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20240401T090012Z
-UID:seasons/autumnal-equniox-2025
+DTSTAMP:20240903T094716Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de septiembre en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20251019
 DTEND;VALUE=DATE:20251020
-DTSTAMP:20240401T090012Z
-UID:argentina/mothers-day-2025
+DTSTAMP:20240903T094716Z
+UID:ac30f3445c0f94a62aa89d89b995f4c6
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  El Día de la Madre celebra los logros y los esf
- uerzos de las madres y las figuras maternas.
-LAST-MODIFIED:20240401T090012Z
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y esfuerz
+ os de las madres y figuras maternas.
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20240401T090012Z
-UID:seasons/december-solstice-2025
+DTSTAMP:20240903T094716Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de diciembre en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20240401T090012Z
-UID:argentina/new-year-eve-2025
+DTSTAMP:20240903T094716Z
+UID:2e04e439f932ce78f55c8ad1806bfc2f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
   año\, el 31 de diciembre\, en el calendario gregoriano.
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20240401T090012Z
-UID:argentina/new-year-day-2026
+DTSTAMP:20240903T094716Z
+UID:86ac4eb2afe0781e3aceb1522f2f6d84
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El día de Año Nuevo es el primer día de
- l año\, o el 1 de enero\, en el calendario gregoriano.
-LAST-MODIFIED:20240401T090012Z
+ l año\, o 1 de enero\, en el calendario gregoriano.
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval/lunes de carnaval 
+SUMMARY:Carnaval/Lunes de Carnaval 
 DTSTART;VALUE=DATE:20260216
 DTEND;VALUE=DATE:20260217
-DTSTAMP:20240401T090012Z
-UID:argentina/carnival-monday-2026
+DTSTAMP:20240903T094716Z
+UID:91bd0824c5275773f77deee3eba7c3ef
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El carnaval/lunes de carnaval es un feriad
- o nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+DESCRIPTION:National holiday -  Carnaval/Lunes de Carnaval es un feriado n
+ acional en Argentina
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Carnaval/martes de carnaval/Día de las tortitas 
+SUMMARY:Carnaval/Martes de Carnaval/Día de las Tortitas 
 DTSTART;VALUE=DATE:20260217
 DTEND;VALUE=DATE:20260218
-DTSTAMP:20240401T090012Z
-UID:argentina/carnival-tuesday-2026
+DTSTAMP:20240903T094716Z
+UID:bf3292f82ef5964f19ed9230b590f5bb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El martes de carnaval es una fiesta religi
  osa antes del período de ayuno de la Cuaresma. Se celebra comiendo tortit
- as y organizando desfiles de carnaval.
-LAST-MODIFIED:20240401T090012Z
+ as y realizando desfiles de carnaval.
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Caídos 
 DTSTART;VALUE=DATE:20260324
 DTEND;VALUE=DATE:20260325
-DTSTAMP:20240401T090012Z
-UID:argentina/memorial-day-2026
+DTSTAMP:20240903T094716Z
+UID:ab713aacd9df5efac2497989ad4e6d03
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de los Caídos es un feriado nacio
  nal en Argentina
-LAST-MODIFIED:20240401T090012Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo 
-DTSTART;VALUE=DATE:20260402
-DTEND;VALUE=DATE:20260403
-DTSTAMP:20240401T090012Z
-UID:argentina/maundy-thursday-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  El Jueves Santo es una celebración cristiana que
-  se celebra el jueves durante la Semana Santa. Es el día anterior al Vier
- nes Santo.
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Veteranos 
 DTSTART;VALUE=DATE:20260402
 DTEND;VALUE=DATE:20260403
-DTSTAMP:20240401T090012Z
-UID:argentina/the-veterans-day-2026
+DTSTAMP:20240903T094716Z
+UID:b906723ede70217c6e7ab80fd2da500a
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de los Veteranos es un feriado nac
  ional en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20260403
 DTEND;VALUE=DATE:20260404
-DTSTAMP:20240401T090012Z
-UID:argentina/good-friday-2026
+DTSTAMP:20240903T094716Z
+UID:c07aae6e67eab6e6d07fcc8483e4552a
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El Viernes Santo es una celebración cristiana mu
- ndial que se celebra dos días antes del domingo de Pascua.
-LAST-MODIFIED:20240401T090012Z
+ ndial dos días antes del Domingo de Pascua.
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-DTSTAMP:20240401T090012Z
-UID:argentina/labor-day-2026
+DTSTAMP:20240903T094716Z
+UID:b3536ba5e11b70388b9a10ec0b27717c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día del Trabajo\, el Día Internaciona
- l de los Trabajadores y el Primero de Mayo es un día libre para los traba
- jadores en muchos países del mundo.
-LAST-MODIFIED:20240401T090012Z
+ l de los Trabajadores y el Primero de Mayo son un día libre para los trab
+ ajadores de muchos países del mundo.
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día Nacional/Revolución de mayo de 1810 
 DTSTART;VALUE=DATE:20260525
 DTEND;VALUE=DATE:20260526
-DTSTAMP:20240401T090012Z
-UID:argentina/national-day-may-1810-revolution-2026
+DTSTAMP:20240903T094716Z
+UID:bcd0bb1deff35f5e0e58b3a030e04c73
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Día Nacional/Revolución de mayo de 1810 
  es una fiesta nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Conmemoración del General Don Martín Miguel de Güemes 
+SUMMARY:Conmemoración del general Don Martín Miguel de Güemes 
 DTSTART;VALUE=DATE:20260617
 DTEND;VALUE=DATE:20260618
-DTSTAMP:20240401T090012Z
-UID:argentina/general-guemes-day-2026
+DTSTAMP:20240903T094716Z
+UID:287eda083308d1c7f3c859f268d8cccb
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  La conmemoración del General Don Martín 
+DESCRIPTION:National holiday -  La conmemoración del general Don Martín 
  Miguel de Güemes es una fiesta nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Bandera 
 DTSTART;VALUE=DATE:20260620
 DTEND;VALUE=DATE:20260621
-DTSTAMP:20240401T090012Z
-UID:argentina/flag-day-2026
+DTSTAMP:20240903T094716Z
+UID:6c6649f92dc2026260fd057dd85d46e4
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Bandera es un feriado nacion
  al en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20260709
 DTEND;VALUE=DATE:20260710
-DTSTAMP:20240401T090012Z
-UID:argentina/independence-day-2026
+DTSTAMP:20240903T094716Z
+UID:a59ea3a864e043f28c047a3239acdbdf
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El día de la independencia es una fiesta 
+DESCRIPTION:National holiday -  El Día de la Independencia es un feriado 
  nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de San Martín 
 DTSTART;VALUE=DATE:20260817
 DTEND;VALUE=DATE:20260818
-DTSTAMP:20240401T090012Z
-UID:argentina/san-martin-day-2026
+DTSTAMP:20240903T094716Z
+UID:5c27fd469ce20e918b4eea2fb3d5fb2a
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El Día de San Martín es feriado nacional
-  en Argentina
-LAST-MODIFIED:20240401T090012Z
+DESCRIPTION:National holiday -  El Día de San Martín es un feriado nacio
+ nal en Argentina.
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Respeto a la Diversidad Cultural 
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
-DTSTAMP:20240401T090012Z
-UID:argentina/day-of-respect-for-cultural-diversity-2026
+DTSTAMP:20240903T094716Z
+UID:136c59428c151b3dc7962bea0c0c53cd
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día del Respeto a la Diversidad Cultur
- al es feriado nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+ al es un feriado nacional en Argentina
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Soberanía Nacional 
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
-DTSTAMP:20240401T090012Z
-UID:argentina/sovereignty-day-2026
+DTSTAMP:20240903T094716Z
+UID:931c9be3268c49fb8eb283514274da0d
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Soberanía Nacional es un fe
  riado nacional en Argentina
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Inmaculada Concepción 
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
-DTSTAMP:20240401T090012Z
-UID:argentina/immaculate-conception-day-2026
+DTSTAMP:20240903T094716Z
+UID:17aee19b66da175c7b0c29104dfe9fc4
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fiesta de la Inmaculada Concepción es 
  una celebración cristiana que se celebra el 8 de diciembre de cada año.
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20240401T090012Z
-UID:argentina/christmas-day-2026
+DTSTAMP:20240903T094716Z
+UID:c9505e0b9f5bae47f2905f1b11139c27
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El día de Navidad es una de las mayores celebrac
  iones cristianas y cae el 25 de diciembre en el calendario gregoriano.
-LAST-MODIFIED:20240401T090012Z
+LAST-MODIFIED:20240903T094716Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Inicio del Ramadán 
+SUMMARY:Inicio del Ramadán El Ramadán es un período de oración\, refle
+ xión y ayuno para muchos musulmanes de todo el mundo. Es el noveno mes de
+ l calendario islámico.
 DTSTART;VALUE=DATE:20260218
 DTEND;VALUE=DATE:20260219
-DTSTAMP:20240401T090013Z
-UID:argentina/ramadan-begins-2026
+DTSTAMP:20240903T094717Z
+UID:11ae9f61adfebae17dd0ccf71a487ef2
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  El Ramadán es un período de oración\, reflexi
- ón y ayuno para muchos musulmanes de todo el mundo. Es el noveno mes del 
- calendario islámico.
-LAST-MODIFIED:20240401T090013Z
+DESCRIPTION:Observance - Ramadan is a period of prayer\, reflection and fa
+ sting for many Muslims worldwide. It is the ninth month in the Islamic cal
+ endar.
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20260320
 DTEND;VALUE=DATE:20260321
-DTSTAMP:20240401T090013Z
-UID:seasons/vernal-equinox-2026
+DTSTAMP:20240903T094717Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de marzo en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090013Z
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La víspera de la Pascua 
+SUMMARY:Víspera de Pascua 
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
-DTSTAMP:20240401T090013Z
-UID:argentina/passover-eve-2026
+DTSTAMP:20240903T094717Z
+UID:c4c9b3ced7d09ab047f231d83e803ef8
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  La víspera de la Pascua es una celebración en 
- Argentina
-LAST-MODIFIED:20240401T090013Z
+DESCRIPTION:Observance -  La víspera de Pascua es una celebración en Arg
+ entina.
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Domingo de Pascua 
 DTSTART;VALUE=DATE:20260405
 DTEND;VALUE=DATE:20260406
-DTSTAMP:20240401T090013Z
-UID:argentina/easter-sunday-2026
+DTSTAMP:20240903T094717Z
+UID:510fee43c87aff56d92cd28f7f96bffb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El domingo de Pascua conmemora la resurrección d
  e Jesucristo\, según la creencia cristiana.
-LAST-MODIFIED:20240401T090013Z
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:El sexto día de la Pascua 
+SUMMARY:El sexto día de la Pascua judía 
 DTSTART;VALUE=DATE:20260407
 DTEND;VALUE=DATE:20260408
-DTSTAMP:20240401T090013Z
-UID:argentina/sixth-day-of-passover-2026
+DTSTAMP:20240903T094717Z
+UID:11b28e497cc6846d9566119f0f984ddc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El sexto día de la Pascua es una celebración e
- n Argentina.
-LAST-MODIFIED:20240401T090013Z
+ n Argentina
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Acción por la Tolerancia y el Respeto entre las Personas 
 DTSTART;VALUE=DATE:20260424
 DTEND;VALUE=DATE:20260425
-DTSTAMP:20240401T090013Z
-UID:argentina/day-for-tolerance-and-respect-2026
+DTSTAMP:20240903T094717Z
+UID:34286da474d115454598016f62292bf1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Acción por la Tolerancia y el Respet
  o entre las Personas es una celebración en Argentina
-LAST-MODIFIED:20240401T090013Z
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
-DTSTAMP:20240401T090013Z
-UID:seasons/june-solstice-2026
+DTSTAMP:20240903T094717Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de junio en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090013Z
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
-DTSTAMP:20240401T090013Z
-UID:seasons/autumnal-equniox-2026
+DTSTAMP:20240903T094717Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de septiembre en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090013Z
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20261018
 DTEND;VALUE=DATE:20261019
-DTSTAMP:20240401T090013Z
-UID:argentina/mothers-day-2026
+DTSTAMP:20240903T094717Z
+UID:ac30f3445c0f94a62aa89d89b995f4c6
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  El Día de la Madre celebra los logros y los esf
- uerzos de las madres y las figuras maternas.
-LAST-MODIFIED:20240401T090013Z
+DESCRIPTION:Observance -  El Día de la Madre celebra los logros y esfuerz
+ os de las madres y figuras maternas.
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
-DTSTAMP:20240401T090013Z
-UID:seasons/december-solstice-2026
+DTSTAMP:20240903T094717Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de diciembre en Argentina (Buenos Aires)
-LAST-MODIFIED:20240401T090013Z
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20240401T090013Z
-UID:argentina/new-year-eve-2026
+DTSTAMP:20240903T094717Z
+UID:2e04e439f932ce78f55c8ad1806bfc2f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  La víspera de Año Nuevo es el último día del
   año\, el 31 de diciembre\, en el calendario gregoriano.
-LAST-MODIFIED:20240401T090013Z
+LAST-MODIFIED:20240903T094717Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

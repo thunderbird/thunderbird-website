@@ -5,15 +5,15 @@ BEGIN:VEVENT
 SUMMARY:Новий рік (призупинений) 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20240401T090409Z
-UID:ukraine/new-year-day-2024
+DTSTAMP:20240903T095101Z
+UID:1baa271ca0c2acf569fa6edca8953a82
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Новий рік щорічно
   відзначається як вихідний день в Україн
  і 1 січня\, відзначаючи початок Нового ро
  ку.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -24,56 +24,42 @@ SUMMARY:Богоявлення — це християнське свят
  немовляти Ісуса\; і хрещення Ісуса.
 DTSTART;VALUE=DATE:20240106
 DTEND;VALUE=DATE:20240107
-DTSTAMP:20240401T090409Z
-UID:ukraine/epiphany-2024
+DTSTAMP:20240903T095101Z
+UID:b4add188a0895fe3e23534eb37d6faf3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
  ly on January 6 each year. It commemorates two events recorded in the Bibl
  e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Православний Новий рік 
 DTSTART;VALUE=DATE:20240114
 DTEND;VALUE=DATE:20240115
-DTSTAMP:20240401T090409Z
-UID:ukraine/orthodox-new-year-2024
+DTSTAMP:20240903T095101Z
+UID:3635bf861c685bf9d9ca4c930eb0392c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Orthodox -  Православний Новий рік\, та
  кож відомий як Старий Новий рік\, відзнач
  ається 14 січня в Україні.
-LAST-MODIFIED:20240401T090409Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День єдності України 
-DTSTART;VALUE=DATE:20240122
-DTEND;VALUE=DATE:20240123
-DTSTAMP:20240401T090409Z
-UID:ukraine/ukrainian-unity-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  День єдності України — це 
- українське свято\, яке відзначає Договір
-  про єдність\, підписаний 22 січня 1919 року.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Святого Валентина 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20240401T090409Z
-UID:ukraine/valentine-day-2024
+DTSTAMP:20240903T095101Z
+UID:06e95ce73c4128b2888483bb61d00629
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Багато українців святкуют
  ь День Святого Валентина як романтичний 
  день 14 лютого.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -81,41 +67,41 @@ SUMMARY:Міжнародний жіночий день (призупине
  ний) 
 DTSTART;VALUE=DATE:20240308
 DTEND;VALUE=DATE:20240309
-DTSTAMP:20240401T090409Z
-UID:ukraine/international-women-day-2024
+DTSTAMP:20240903T095101Z
+UID:06898f07908d124ba0c7da0a4994b0df
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Міжнародний жіно
  чий день є державним святом в Україні\, я
  кий відзначається приблизно 8 березня ко
  жного року.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Березневе рівнодення 
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
-DTSTAMP:20240401T090409Z
-UID:seasons/vernal-equinox-2024
+DTSTAMP:20240903T095101Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Березневе рівнодення в Укра
  їні (Київ)
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Починається літній час 
 DTSTART;VALUE=DATE:20240331
 DTEND;VALUE=DATE:20240401
-DTSTAMP:20240401T090409Z
-UID:None-2024
+DTSTAMP:20240903T095101Z
+UID:37ec9c7d8016af391a0e381a2aa3b716
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time -  В Україні поч
  инається літній час
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -124,28 +110,28 @@ SUMMARY:Першоквітневий День дурня відзнача
  в Україні.
 DTSTART;VALUE=DATE:20240401
 DTEND;VALUE=DATE:20240402
-DTSTAMP:20240401T090409Z
-UID:ukraine/april-fools-2024
+DTSTAMP:20240903T095101Z
+UID:292c02d2c218850307817707d61568ef
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - April Fool’s Day is celebrated as a day of joke
  s and trickery on April 1 in Ukraine.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День праці (призупинений) 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20240401T090409Z
-UID:ukraine/labour-day-2024
+DTSTAMP:20240903T095101Z
+UID:7d94599da29f803a7d42c91e34dcac74
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День праці\, Міжна
  родний день праці та Першотравневий ден
  ь є вихідним днем для працівників у бага
  тьох країнах світу.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -153,8 +139,8 @@ SUMMARY:Православний День Пасхи (Призупинен
  ий) 
 DTSTART;VALUE=DATE:20240505
 DTEND;VALUE=DATE:20240506
-DTSTAMP:20240401T090409Z
-UID:ukraine/easter-sunday-2024
+DTSTAMP:20240903T095101Z
+UID:7e98baf84dd7acdb4591311d35f77edb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Великдень є одноч
@@ -162,22 +148,35 @@ DESCRIPTION:Suspended National Holiday -  Великдень є одноч
  Україні. Дата Великодня заснована на кал
  ендарі православної християнської церк
  ви.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Перемоги (призупинений) 
-DTSTART;VALUE=DATE:20240509
-DTEND;VALUE=DATE:20240510
-DTSTAMP:20240401T090409Z
-UID:ukraine/victory-day-2024
+DTSTART;VALUE=DATE:20240508
+DTEND;VALUE=DATE:20240509
+DTSTAMP:20240903T095101Z
+UID:2a438967893a988e57631a6d3b507743
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Перемоги в У
- країні відзначається як державне свято 9
+ країні відзначається як державне свято 8
   травня на честь поразки нацистів у Друг
  ій світовій війні.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:День Європи 
+DTSTART;VALUE=DATE:20240509
+DTEND;VALUE=DATE:20240510
+DTSTAMP:20240903T095101Z
+UID:6ce2af494a09496274cfc81d2af2dcb2
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  День Європи відзначається
+  в Україні третіх вихідних травня.
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -185,93 +184,94 @@ SUMMARY:День матері в Україні відзначається
   у другу неділю травня кожного року.
 DTSTART;VALUE=DATE:20240512
 DTEND;VALUE=DATE:20240513
-DTSTAMP:20240401T090409Z
-UID:ukraine/mother-day-2024
+DTSTAMP:20240903T095101Z
+UID:655088461dd018e4d029066b78dbb025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mother’s Day is observed in Ukraine on the seco
  nd Sunday in May each year.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:День Європи 
-DTSTART;VALUE=DATE:20240518
-DTEND;VALUE=DATE:20240519
-DTSTAMP:20240401T090409Z
-UID:ukraine/europe-day-2024
+SUMMARY:День сім'ї 
+DTSTART;VALUE=DATE:20240515
+DTEND;VALUE=DATE:20240516
+DTSTAMP:20240903T095101Z
+UID:0e52a90b8950b280b31d32e3f0834429
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  День Європи відзначається
-  в Україні третіх вихідних травня.
-LAST-MODIFIED:20240401T090409Z
+DESCRIPTION:Observance -  День сім'ї - свято\, яке від
+ значається в Україні 8 липня кожного рок
+ у.
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Києва 
 DTSTART;VALUE=DATE:20240526
 DTEND;VALUE=DATE:20240527
-DTSTAMP:20240401T090409Z
-UID:ukraine/kyiv-day-2024
+DTSTAMP:20240903T095101Z
+UID:bdf89775400bf706a68b228291f4d760
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День Києва відзначається 
  в столиці України\, Києві (також відомому
   як Київ)\, в останні вихідні травня.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День захисту дітей 
 DTSTART;VALUE=DATE:20240601
 DTEND;VALUE=DATE:20240602
-DTSTAMP:20240401T090409Z
-UID:ukraine/child-protection-day-2024
+DTSTAMP:20240903T095101Z
+UID:0b2419bcafbf51a0dd6e636b8c492d65
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День захисту дітей - свято 
  в Україні
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День журналіста 
 DTSTART;VALUE=DATE:20240606
 DTEND;VALUE=DATE:20240607
-DTSTAMP:20240401T090409Z
-UID:ukraine/journalist-day-2024
+DTSTAMP:20240903T095101Z
+UID:a033fd9765fe0eee90bcbc15354836e8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День журналіста — свято в 
  Україні
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День батька 
 DTSTART;VALUE=DATE:20240616
 DTEND;VALUE=DATE:20240617
-DTSTAMP:20240401T090409Z
-UID:ukraine/fathers-day-2024
+DTSTAMP:20240903T095101Z
+UID:1a9832ce43a1fb91862780b4d6f253a3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День батька святкує батьк
  івство та батьківство чоловіків у різні 
  дати у всьому світі.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Червневе сонцестояння 
 DTSTART;VALUE=DATE:20240620
 DTEND;VALUE=DATE:20240621
-DTSTAMP:20240401T090409Z
-UID:seasons/june-solstice-2024
+DTSTAMP:20240903T095101Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Червневе сонцестояння в Укр
  аїні (Київ)
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -279,13 +279,13 @@ SUMMARY:День жалоби та вшанування пам'яті же
  ртв війни 
 DTSTART;VALUE=DATE:20240622
 DTEND;VALUE=DATE:20240623
-DTSTAMP:20240401T090409Z
-UID:ukraine/war-victims-day-2024
+DTSTAMP:20240903T095101Z
+UID:384ab468cfb530c595a93cd0a332a385
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День жалоби та вшанування 
  пам'яті жертв війни - це свято в Україні
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -293,15 +293,15 @@ SUMMARY:Православна П'ятидесятниця (Призупи
  нена) 
 DTSTART;VALUE=DATE:20240623
 DTEND;VALUE=DATE:20240624
-DTSTAMP:20240401T090409Z
-UID:ukraine/trinity-2024
+DTSTAMP:20240903T095101Z
+UID:8a8b0dcdb44759e1c281eac47a99a50f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Святої Трійц
  і\, або по-українськи Трійця\, широко відз
  начається в Україні і є вихідним днем ро
  боти для українців.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -311,110 +311,96 @@ SUMMARY:День Конституції України (призупине
  ї країни.
 DTSTART;VALUE=DATE:20240628
 DTEND;VALUE=DATE:20240629
-DTSTAMP:20240401T090409Z
-UID:ukraine/constitution-day-2024
+DTSTAMP:20240903T095101Z
+UID:9bba9fafd0eb7c97994f9a475f3f6185
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday - Ukraine’s Constitution Day is a
   public holiday on June 28 to celebrate the country’s constitution.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Купальська ніч 
 DTSTART;VALUE=DATE:20240706
 DTEND;VALUE=DATE:20240707
-DTSTAMP:20240401T090409Z
-UID:ukraine/ivan-kupala-day-2024
+DTSTAMP:20240903T095101Z
+UID:0dfa74adccab776edb7d1ad92fd0456e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Купальська ніч відзначаєт
  ься в Україні 7 липня кожного року.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День ВМС 
 DTSTART;VALUE=DATE:20240707
 DTEND;VALUE=DATE:20240708
-DTSTAMP:20240401T090409Z
-UID:ukraine/navy-day-2024
+DTSTAMP:20240903T095101Z
+UID:2c77a202316160e4d9291edaa98981ec
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День військово-морського 
  флоту — національне свято України\, яке 
  відзначається щороку в останню неділю л
  ипня.
-LAST-MODIFIED:20240401T090409Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День сім'ї 
-DTSTART;VALUE=DATE:20240708
-DTEND;VALUE=DATE:20240709
-DTSTAMP:20240401T090409Z
-UID:ukraine/family-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  День сім'ї - свято\, яке від
- значається в Україні 8 липня кожного рок
- у.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День державності України 
 DTSTART;VALUE=DATE:20240715
 DTEND;VALUE=DATE:20240716
-DTSTAMP:20240401T090409Z
-UID:ukraine/statehood-day-2024
+DTSTAMP:20240903T095101Z
+UID:02ed2ba62d2d50c5e1d318fedb1950a3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День державності 
  України - призупинене національне свято 
  в Україні
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Хрещення Київської Русі 
 DTSTART;VALUE=DATE:20240728
 DTEND;VALUE=DATE:20240729
-DTSTAMP:20240401T090409Z
-UID:ukraine/baptism-of-kyivan-rus-2024
+DTSTAMP:20240903T095101Z
+UID:3d9017ee98cd4c87e1b7c018a9963e9c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Хрещення Київської Русі —
   свято в Україні
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День незалежності (призупинено) 
 DTSTART;VALUE=DATE:20240824
 DTEND;VALUE=DATE:20240825
-DTSTAMP:20240401T090409Z
-UID:ukraine/independence-day-2024
+DTSTAMP:20240903T095101Z
+UID:b3c52f51a3295d9c8d1a8738c4204749
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Незалежност
  і України щорічно відзначається 24 серпн
  я з нагоди річниці проголошення незалеж
  ності країни в 1991 році.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Вересневе рівнодення 
 DTSTART;VALUE=DATE:20240922
 DTEND;VALUE=DATE:20240923
-DTSTAMP:20240401T090409Z
-UID:seasons/autumnal-equniox-2024
+DTSTAMP:20240903T095101Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Вересневе рівнодення в Укра
  їні (Київ)
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -422,28 +408,28 @@ SUMMARY:День захисників і захисників Україн
  и (призупинений) 
 DTSTART;VALUE=DATE:20241001
 DTEND;VALUE=DATE:20241002
-DTSTAMP:20240401T090409Z
-UID:ukraine/day-of-defenders-and-defenders-of-ukraine-2024
+DTSTAMP:20240903T095101Z
+UID:beb701ff0b4fbed2f0fa13d9ad241f78
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День захисників і
   захисників України — національне украї
  нське свято\, яке відзначає місцевих гер
  оїв та підтримує націоналізм.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Закінчується літній час 
 DTSTART;VALUE=DATE:20241027
 DTEND;VALUE=DATE:20241028
-DTSTAMP:20240401T090409Z
-UID:None-2024
+DTSTAMP:20240903T095101Z
+UID:77b6082282be84a3101e54edb8201421
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time -  В Україні зак
  інчується літній час
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -451,14 +437,14 @@ SUMMARY:День визволення України від фашистс
  ьких загарбників 
 DTSTART;VALUE=DATE:20241028
 DTEND;VALUE=DATE:20241029
-DTSTAMP:20240401T090409Z
-UID:ukraine/day-of-liberation-of-ukraine-from-fascist-invaders-2024
+DTSTAMP:20240903T095101Z
+UID:01ed5506cffec5bed5b23dafb28216cb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День визволення України в
  ід фашистських загарбників відзначаєть
  ся в Україні
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -466,99 +452,95 @@ SUMMARY:День працівників культури та народн
  их художників 
 DTSTART;VALUE=DATE:20241109
 DTEND;VALUE=DATE:20241110
-DTSTAMP:20240401T090409Z
-UID:ukraine/cultural-workers-folk-artists-day-2024
+DTSTAMP:20240903T095101Z
+UID:df4b346754c01ccfbcbb33ce476812f8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Багато українців відзнача
  ють День працівників культури та народн
  их художників у третю неділю травня.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Гідності і Свободи 
 DTSTART;VALUE=DATE:20241121
 DTEND;VALUE=DATE:20241122
-DTSTAMP:20240401T090409Z
-UID:ukraine/dignity-freedom-day-2024
+DTSTAMP:20240903T095101Z
+UID:118c753fc275715e16055b1e2c251aa8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День Гідності і Свободи — 
  національне українське свято\, яке відзн
  ачає гідність і свободу країни.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День армії 
 DTSTART;VALUE=DATE:20241206
 DTEND;VALUE=DATE:20241207
-DTSTAMP:20240401T090409Z
-UID:ukraine/army-day-2024
+DTSTAMP:20240903T095101Z
+UID:d09c2f5bdee60bdcc03a94be82777c46
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День армії в Україні — осо
  бливе щорічне свято\, присвячене збройни
  м силам країни 6 грудня.
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Святого Миколая 
 DTSTART;VALUE=DATE:20241206
 DTEND;VALUE=DATE:20241207
-DTSTAMP:20240401T090409Z
-UID:ukraine/saint-nicholas-2024
+DTSTAMP:20240903T095101Z
+UID:f8ca4f5868e00428a1882dbd6a80023e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Orthodox -  День Святого Миколая - свят
  о і православне свято в Україні
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Грудневе сонцестояння 
 DTSTART;VALUE=DATE:20241221
 DTEND;VALUE=DATE:20241222
-DTSTAMP:20240401T090409Z
-UID:seasons/december-solstice-2024
+DTSTAMP:20240903T095101Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Грудневе сонцестояння в Укр
  аїні (Київ)
-LAST-MODIFIED:20240401T090409Z
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Різдво є одним з найбільших христия
- нських свят і припадає на 25 грудня за гри
- горіанським календарем.
+SUMMARY:Різдво 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20240401T090409Z
-UID:ukraine/christmas-day-2024
+DTSTAMP:20240903T095101Z
+UID:6f319e346cfefab68e9c68139c364c6c
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Suspended National Holiday - Christmas Day is one of the bigge
- st Christian celebrations and falls on December 25 in the Gregorian calend
- ar.
-LAST-MODIFIED:20240401T090409Z
+DESCRIPTION:Suspended National Holiday
+LAST-MODIFIED:20240903T095101Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новий рік (призупинений) 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20240401T090410Z
-UID:ukraine/new-year-day-2025
+DTSTAMP:20240903T095102Z
+UID:1baa271ca0c2acf569fa6edca8953a82
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Новий рік щорічно
   відзначається як вихідний день в Україн
  і 1 січня\, відзначаючи початок Нового ро
  ку.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -569,56 +551,42 @@ SUMMARY:Богоявлення — це християнське свят
  немовляти Ісуса\; і хрещення Ісуса.
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
-DTSTAMP:20240401T090410Z
-UID:ukraine/epiphany-2025
+DTSTAMP:20240903T095102Z
+UID:b4add188a0895fe3e23534eb37d6faf3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
  ly on January 6 each year. It commemorates two events recorded in the Bibl
  e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Православний Новий рік 
 DTSTART;VALUE=DATE:20250114
 DTEND;VALUE=DATE:20250115
-DTSTAMP:20240401T090410Z
-UID:ukraine/orthodox-new-year-2025
+DTSTAMP:20240903T095102Z
+UID:3635bf861c685bf9d9ca4c930eb0392c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Orthodox -  Православний Новий рік\, та
  кож відомий як Старий Новий рік\, відзнач
  ається 14 січня в Україні.
-LAST-MODIFIED:20240401T090410Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День єдності України 
-DTSTART;VALUE=DATE:20250122
-DTEND;VALUE=DATE:20250123
-DTSTAMP:20240401T090410Z
-UID:ukraine/ukrainian-unity-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  День єдності України — це 
- українське свято\, яке відзначає Договір
-  про єдність\, підписаний 22 січня 1919 року.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Святого Валентина 
 DTSTART;VALUE=DATE:20250214
 DTEND;VALUE=DATE:20250215
-DTSTAMP:20240401T090410Z
-UID:ukraine/valentine-day-2025
+DTSTAMP:20240903T095102Z
+UID:06e95ce73c4128b2888483bb61d00629
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Багато українців святкуют
  ь День Святого Валентина як романтичний 
  день 14 лютого.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -626,15 +594,15 @@ SUMMARY:Міжнародний жіночий день (призупине
  ний) 
 DTSTART;VALUE=DATE:20250308
 DTEND;VALUE=DATE:20250309
-DTSTAMP:20240401T090410Z
-UID:ukraine/international-women-day-2025
+DTSTAMP:20240903T095102Z
+UID:06898f07908d124ba0c7da0a4994b0df
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Міжнародний жіно
  чий день є державним святом в Україні\, я
  кий відзначається приблизно 8 березня ко
  жного року.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -642,41 +610,41 @@ SUMMARY:Міжнародний жіночий день (призупине
  ний)\, відзначається 
 DTSTART;VALUE=DATE:20250310
 DTEND;VALUE=DATE:20250311
-DTSTAMP:20240401T090410Z
-UID:ukraine/international-women-day-2025
+DTSTAMP:20240903T095102Z
+UID:06898f07908d124ba0c7da0a4994b0df
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Міжнародний жіно
  чий день є державним святом в Україні\, я
  кий відзначається приблизно 8 березня ко
  жного року.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Березневе рівнодення 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20240401T090410Z
-UID:seasons/vernal-equinox-2025
+DTSTAMP:20240903T095102Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Березневе рівнодення в Укра
  їні (Київ)
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Починається літній час 
 DTSTART;VALUE=DATE:20250330
 DTEND;VALUE=DATE:20250331
-DTSTAMP:20240401T090410Z
-UID:None-2025
+DTSTAMP:20240903T095102Z
+UID:37ec9c7d8016af391a0e381a2aa3b716
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time -  В Україні поч
  инається літній час
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -685,13 +653,13 @@ SUMMARY:Першоквітневий День дурня відзнача
  в Україні.
 DTSTART;VALUE=DATE:20250401
 DTEND;VALUE=DATE:20250402
-DTSTAMP:20240401T090410Z
-UID:ukraine/april-fools-2025
+DTSTAMP:20240903T095102Z
+UID:292c02d2c218850307817707d61568ef
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - April Fool’s Day is celebrated as a day of joke
  s and trickery on April 1 in Ukraine.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -699,8 +667,8 @@ SUMMARY:Православний День Пасхи (Призупинен
  ий) 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20240401T090410Z
-UID:ukraine/easter-sunday-2025
+DTSTAMP:20240903T095102Z
+UID:7e98baf84dd7acdb4591311d35f77edb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Великдень є одноч
@@ -708,37 +676,50 @@ DESCRIPTION:Suspended National Holiday -  Великдень є одноч
  Україні. Дата Великодня заснована на кал
  ендарі православної християнської церк
  ви.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День праці (призупинений) 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20240401T090410Z
-UID:ukraine/labour-day-2025
+DTSTAMP:20240903T095102Z
+UID:7d94599da29f803a7d42c91e34dcac74
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День праці\, Міжна
  родний день праці та Першотравневий ден
  ь є вихідним днем для працівників у бага
  тьох країнах світу.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Перемоги (призупинений) 
-DTSTART;VALUE=DATE:20250509
-DTEND;VALUE=DATE:20250510
-DTSTAMP:20240401T090410Z
-UID:ukraine/victory-day-2025
+DTSTART;VALUE=DATE:20250508
+DTEND;VALUE=DATE:20250509
+DTSTAMP:20240903T095102Z
+UID:2a438967893a988e57631a6d3b507743
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Перемоги в У
- країні відзначається як державне свято 9
+ країні відзначається як державне свято 8
   травня на честь поразки нацистів у Друг
  ій світовій війні.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:День Європи 
+DTSTART;VALUE=DATE:20250509
+DTEND;VALUE=DATE:20250510
+DTSTAMP:20240903T095102Z
+UID:6ce2af494a09496274cfc81d2af2dcb2
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  День Європи відзначається
+  в Україні третіх вихідних травня.
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -746,66 +727,67 @@ SUMMARY:День матері в Україні відзначається
   у другу неділю травня кожного року.
 DTSTART;VALUE=DATE:20250511
 DTEND;VALUE=DATE:20250512
-DTSTAMP:20240401T090410Z
-UID:ukraine/mother-day-2025
+DTSTAMP:20240903T095102Z
+UID:655088461dd018e4d029066b78dbb025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mother’s Day is observed in Ukraine on the seco
  nd Sunday in May each year.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:День Європи 
-DTSTART;VALUE=DATE:20250517
-DTEND;VALUE=DATE:20250518
-DTSTAMP:20240401T090410Z
-UID:ukraine/europe-day-2025
+SUMMARY:День сім'ї 
+DTSTART;VALUE=DATE:20250515
+DTEND;VALUE=DATE:20250516
+DTSTAMP:20240903T095102Z
+UID:0e52a90b8950b280b31d32e3f0834429
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  День Європи відзначається
-  в Україні третіх вихідних травня.
-LAST-MODIFIED:20240401T090410Z
+DESCRIPTION:Observance -  День сім'ї - свято\, яке від
+ значається в Україні 8 липня кожного рок
+ у.
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Києва 
 DTSTART;VALUE=DATE:20250525
 DTEND;VALUE=DATE:20250526
-DTSTAMP:20240401T090410Z
-UID:ukraine/kyiv-day-2025
+DTSTAMP:20240903T095102Z
+UID:bdf89775400bf706a68b228291f4d760
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День Києва відзначається 
  в столиці України\, Києві (також відомому
   як Київ)\, в останні вихідні травня.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День захисту дітей 
 DTSTART;VALUE=DATE:20250601
 DTEND;VALUE=DATE:20250602
-DTSTAMP:20240401T090410Z
-UID:ukraine/child-protection-day-2025
+DTSTAMP:20240903T095102Z
+UID:0b2419bcafbf51a0dd6e636b8c492d65
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День захисту дітей - свято 
  в Україні
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День журналіста 
 DTSTART;VALUE=DATE:20250606
 DTEND;VALUE=DATE:20250607
-DTSTAMP:20240401T090410Z
-UID:ukraine/journalist-day-2025
+DTSTAMP:20240903T095102Z
+UID:a033fd9765fe0eee90bcbc15354836e8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День журналіста — свято в 
  Україні
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -813,42 +795,42 @@ SUMMARY:Православна П'ятидесятниця (Призупи
  нена) 
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20240401T090410Z
-UID:ukraine/trinity-2025
+DTSTAMP:20240903T095102Z
+UID:8a8b0dcdb44759e1c281eac47a99a50f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Святої Трійц
  і\, або по-українськи Трійця\, широко відз
  начається в Україні і є вихідним днем ро
  боти для українців.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День батька 
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
-DTSTAMP:20240401T090410Z
-UID:ukraine/fathers-day-2025
+DTSTAMP:20240903T095102Z
+UID:1a9832ce43a1fb91862780b4d6f253a3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День батька святкує батьк
  івство та батьківство чоловіків у різні 
  дати у всьому світі.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Червневе сонцестояння 
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20240401T090410Z
-UID:seasons/june-solstice-2025
+DTSTAMP:20240903T095102Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Червневе сонцестояння в Укр
  аїні (Київ)
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -856,13 +838,13 @@ SUMMARY:День жалоби та вшанування пам'яті же
  ртв війни 
 DTSTART;VALUE=DATE:20250622
 DTEND;VALUE=DATE:20250623
-DTSTAMP:20240401T090410Z
-UID:ukraine/war-victims-day-2025
+DTSTAMP:20240903T095102Z
+UID:384ab468cfb530c595a93cd0a332a385
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День жалоби та вшанування 
  пам'яті жертв війни - це свято в Україні
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -872,13 +854,13 @@ SUMMARY:День Конституції України (призупине
  ї країни.
 DTSTART;VALUE=DATE:20250628
 DTEND;VALUE=DATE:20250629
-DTSTAMP:20240401T090410Z
-UID:ukraine/constitution-day-2025
+DTSTAMP:20240903T095102Z
+UID:9bba9fafd0eb7c97994f9a475f3f6185
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday - Ukraine’s Constitution Day is a
   public holiday on June 28 to celebrate the country’s constitution.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -886,98 +868,84 @@ SUMMARY:День Конституції (призупинений)\, ві
  дзначений 
 DTSTART;VALUE=DATE:20250630
 DTEND;VALUE=DATE:20250701
-DTSTAMP:20240401T090410Z
-UID:ukraine/constitution-day-2025
+DTSTAMP:20240903T095102Z
+UID:9bba9fafd0eb7c97994f9a475f3f6185
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Конституції 
  України\, є державним святом 28 червня для
   відзначення конституції країни.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День ВМС 
 DTSTART;VALUE=DATE:20250706
 DTEND;VALUE=DATE:20250707
-DTSTAMP:20240401T090410Z
-UID:ukraine/navy-day-2025
+DTSTAMP:20240903T095102Z
+UID:2c77a202316160e4d9291edaa98981ec
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День військово-морського 
  флоту — національне свято України\, яке 
  відзначається щороку в останню неділю л
  ипня.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Купальська ніч 
 DTSTART;VALUE=DATE:20250706
 DTEND;VALUE=DATE:20250707
-DTSTAMP:20240401T090410Z
-UID:ukraine/ivan-kupala-day-2025
+DTSTAMP:20240903T095102Z
+UID:0dfa74adccab776edb7d1ad92fd0456e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Купальська ніч відзначаєт
  ься в Україні 7 липня кожного року.
-LAST-MODIFIED:20240401T090410Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День сім'ї 
-DTSTART;VALUE=DATE:20250708
-DTEND;VALUE=DATE:20250709
-DTSTAMP:20240401T090410Z
-UID:ukraine/family-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  День сім'ї - свято\, яке від
- значається в Україні 8 липня кожного рок
- у.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День державності України 
 DTSTART;VALUE=DATE:20250715
 DTEND;VALUE=DATE:20250716
-DTSTAMP:20240401T090410Z
-UID:ukraine/statehood-day-2025
+DTSTAMP:20240903T095102Z
+UID:02ed2ba62d2d50c5e1d318fedb1950a3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День державності 
  України - призупинене національне свято 
  в Україні
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Хрещення Київської Русі 
 DTSTART;VALUE=DATE:20250728
 DTEND;VALUE=DATE:20250729
-DTSTAMP:20240401T090410Z
-UID:ukraine/baptism-of-kyivan-rus-2025
+DTSTAMP:20240903T095102Z
+UID:3d9017ee98cd4c87e1b7c018a9963e9c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Хрещення Київської Русі —
   свято в Україні
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День незалежності (призупинено) 
 DTSTART;VALUE=DATE:20250824
 DTEND;VALUE=DATE:20250825
-DTSTAMP:20240401T090410Z
-UID:ukraine/independence-day-2025
+DTSTAMP:20240903T095102Z
+UID:b3c52f51a3295d9c8d1a8738c4204749
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Незалежност
  і України щорічно відзначається 24 серпн
  я з нагоди річниці проголошення незалеж
  ності країни в 1991 році.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -987,27 +955,27 @@ SUMMARY:День Незалежності України (призупин
  і країни в 1991 році.
 DTSTART;VALUE=DATE:20250825
 DTEND;VALUE=DATE:20250826
-DTSTAMP:20240401T090410Z
-UID:ukraine/independence-day-2025
+DTSTAMP:20240903T095102Z
+UID:b3c52f51a3295d9c8d1a8738c4204749
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday - Ukraine’s Independence Day is a
  nnually celebrated on August 24 to mark the anniversary of the country’s
   declaration of independence in 1991.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Вересневе рівнодення 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20240401T090410Z
-UID:seasons/autumnal-equniox-2025
+DTSTAMP:20240903T095102Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Вересневе рівнодення в Укра
  їні (Київ)
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1015,28 +983,28 @@ SUMMARY:День захисників і захисників Україн
  и (призупинений) 
 DTSTART;VALUE=DATE:20251001
 DTEND;VALUE=DATE:20251002
-DTSTAMP:20240401T090410Z
-UID:ukraine/day-of-defenders-and-defenders-of-ukraine-2025
+DTSTAMP:20240903T095102Z
+UID:beb701ff0b4fbed2f0fa13d9ad241f78
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День захисників і
   захисників України — національне украї
  нське свято\, яке відзначає місцевих гер
  оїв та підтримує націоналізм.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Закінчується літній час 
 DTSTART;VALUE=DATE:20251026
 DTEND;VALUE=DATE:20251027
-DTSTAMP:20240401T090410Z
-UID:None-2025
+DTSTAMP:20240903T095102Z
+UID:77b6082282be84a3101e54edb8201421
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time -  В Україні зак
  інчується літній час
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1044,14 +1012,14 @@ SUMMARY:День визволення України від фашистс
  ьких загарбників 
 DTSTART;VALUE=DATE:20251028
 DTEND;VALUE=DATE:20251029
-DTSTAMP:20240401T090410Z
-UID:ukraine/day-of-liberation-of-ukraine-from-fascist-invaders-2025
+DTSTAMP:20240903T095102Z
+UID:01ed5506cffec5bed5b23dafb28216cb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День визволення України в
  ід фашистських загарбників відзначаєть
  ся в Україні
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1059,99 +1027,95 @@ SUMMARY:День працівників культури та народн
  их художників 
 DTSTART;VALUE=DATE:20251109
 DTEND;VALUE=DATE:20251110
-DTSTAMP:20240401T090410Z
-UID:ukraine/cultural-workers-folk-artists-day-2025
+DTSTAMP:20240903T095102Z
+UID:df4b346754c01ccfbcbb33ce476812f8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Багато українців відзнача
  ють День працівників культури та народн
  их художників у третю неділю травня.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Гідності і Свободи 
 DTSTART;VALUE=DATE:20251121
 DTEND;VALUE=DATE:20251122
-DTSTAMP:20240401T090410Z
-UID:ukraine/dignity-freedom-day-2025
+DTSTAMP:20240903T095102Z
+UID:118c753fc275715e16055b1e2c251aa8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День Гідності і Свободи — 
  національне українське свято\, яке відзн
  ачає гідність і свободу країни.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День армії 
 DTSTART;VALUE=DATE:20251206
 DTEND;VALUE=DATE:20251207
-DTSTAMP:20240401T090410Z
-UID:ukraine/army-day-2025
+DTSTAMP:20240903T095102Z
+UID:d09c2f5bdee60bdcc03a94be82777c46
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День армії в Україні — осо
  бливе щорічне свято\, присвячене збройни
  м силам країни 6 грудня.
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Святого Миколая 
 DTSTART;VALUE=DATE:20251206
 DTEND;VALUE=DATE:20251207
-DTSTAMP:20240401T090410Z
-UID:ukraine/saint-nicholas-2025
+DTSTAMP:20240903T095102Z
+UID:f8ca4f5868e00428a1882dbd6a80023e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Orthodox -  День Святого Миколая - свят
  о і православне свято в Україні
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Грудневе сонцестояння 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20240401T090410Z
-UID:seasons/december-solstice-2025
+DTSTAMP:20240903T095102Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Грудневе сонцестояння в Укр
  аїні (Київ)
-LAST-MODIFIED:20240401T090410Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Різдво є одним з найбільших христия
- нських свят і припадає на 25 грудня за гри
- горіанським календарем.
+SUMMARY:Різдво 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20240401T090410Z
-UID:ukraine/christmas-day-2025
+DTSTAMP:20240903T095102Z
+UID:6f319e346cfefab68e9c68139c364c6c
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Suspended National Holiday - Christmas Day is one of the bigge
- st Christian celebrations and falls on December 25 in the Gregorian calend
- ar.
-LAST-MODIFIED:20240401T090410Z
+DESCRIPTION:Suspended National Holiday
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новий рік (призупинений) 
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20240401T090411Z
-UID:ukraine/new-year-day-2026
+DTSTAMP:20240903T095102Z
+UID:1baa271ca0c2acf569fa6edca8953a82
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Новий рік щорічно
   відзначається як вихідний день в Україн
  і 1 січня\, відзначаючи початок Нового ро
  ку.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1162,56 +1126,42 @@ SUMMARY:Богоявлення — це християнське свят
  немовляти Ісуса\; і хрещення Ісуса.
 DTSTART;VALUE=DATE:20260106
 DTEND;VALUE=DATE:20260107
-DTSTAMP:20240401T090411Z
-UID:ukraine/epiphany-2026
+DTSTAMP:20240903T095102Z
+UID:b4add188a0895fe3e23534eb37d6faf3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Epiphany is a Christian holiday celebrated global
  ly on January 6 each year. It commemorates two events recorded in the Bibl
  e: the three wise men’s visit to baby Jesus\; and Jesus’ baptism.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Православний Новий рік 
 DTSTART;VALUE=DATE:20260114
 DTEND;VALUE=DATE:20260115
-DTSTAMP:20240401T090411Z
-UID:ukraine/orthodox-new-year-2026
+DTSTAMP:20240903T095102Z
+UID:3635bf861c685bf9d9ca4c930eb0392c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Orthodox -  Православний Новий рік\, та
  кож відомий як Старий Новий рік\, відзнач
  ається 14 січня в Україні.
-LAST-MODIFIED:20240401T090411Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День єдності України 
-DTSTART;VALUE=DATE:20260122
-DTEND;VALUE=DATE:20260123
-DTSTAMP:20240401T090411Z
-UID:ukraine/ukrainian-unity-day-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  День єдності України — це 
- українське свято\, яке відзначає Договір
-  про єдність\, підписаний 22 січня 1919 року.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Святого Валентина 
 DTSTART;VALUE=DATE:20260214
 DTEND;VALUE=DATE:20260215
-DTSTAMP:20240401T090411Z
-UID:ukraine/valentine-day-2026
+DTSTAMP:20240903T095102Z
+UID:06e95ce73c4128b2888483bb61d00629
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Багато українців святкуют
  ь День Святого Валентина як романтичний 
  день 14 лютого.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1219,15 +1169,15 @@ SUMMARY:Міжнародний жіночий день (призупине
  ний) 
 DTSTART;VALUE=DATE:20260308
 DTEND;VALUE=DATE:20260309
-DTSTAMP:20240401T090411Z
-UID:ukraine/international-women-day-2026
+DTSTAMP:20240903T095102Z
+UID:06898f07908d124ba0c7da0a4994b0df
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Міжнародний жіно
  чий день є державним святом в Україні\, я
  кий відзначається приблизно 8 березня ко
  жного року.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1235,41 +1185,41 @@ SUMMARY:Міжнародний жіночий день (призупине
  ний)\, відзначається 
 DTSTART;VALUE=DATE:20260309
 DTEND;VALUE=DATE:20260310
-DTSTAMP:20240401T090411Z
-UID:ukraine/international-women-day-2026
+DTSTAMP:20240903T095102Z
+UID:06898f07908d124ba0c7da0a4994b0df
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Міжнародний жіно
  чий день є державним святом в Україні\, я
  кий відзначається приблизно 8 березня ко
  жного року.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Березневе рівнодення 
 DTSTART;VALUE=DATE:20260320
 DTEND;VALUE=DATE:20260321
-DTSTAMP:20240401T090411Z
-UID:seasons/vernal-equinox-2026
+DTSTAMP:20240903T095102Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Березневе рівнодення в Укра
  їні (Київ)
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Починається літній час 
 DTSTART;VALUE=DATE:20260329
 DTEND;VALUE=DATE:20260330
-DTSTAMP:20240401T090411Z
-UID:None-2026
+DTSTAMP:20240903T095102Z
+UID:37ec9c7d8016af391a0e381a2aa3b716
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time -  В Україні поч
  инається літній час
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1278,13 +1228,13 @@ SUMMARY:Першоквітневий День дурня відзнача
  в Україні.
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
-DTSTAMP:20240401T090411Z
-UID:ukraine/april-fools-2026
+DTSTAMP:20240903T095102Z
+UID:292c02d2c218850307817707d61568ef
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - April Fool’s Day is celebrated as a day of joke
  s and trickery on April 1 in Ukraine.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1292,8 +1242,8 @@ SUMMARY:Православний День Пасхи (Призупинен
  ий) 
 DTSTART;VALUE=DATE:20260412
 DTEND;VALUE=DATE:20260413
-DTSTAMP:20240401T090411Z
-UID:ukraine/easter-sunday-2026
+DTSTAMP:20240903T095102Z
+UID:7e98baf84dd7acdb4591311d35f77edb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  Великдень є одноч
@@ -1301,37 +1251,50 @@ DESCRIPTION:Suspended National Holiday -  Великдень є одноч
  Україні. Дата Великодня заснована на кал
  ендарі православної християнської церк
  ви.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День праці (призупинений) 
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-DTSTAMP:20240401T090411Z
-UID:ukraine/labour-day-2026
+DTSTAMP:20240903T095102Z
+UID:7d94599da29f803a7d42c91e34dcac74
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День праці\, Міжна
  родний день праці та Першотравневий ден
  ь є вихідним днем для працівників у бага
  тьох країнах світу.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Перемоги (призупинений) 
-DTSTART;VALUE=DATE:20260509
-DTEND;VALUE=DATE:20260510
-DTSTAMP:20240401T090411Z
-UID:ukraine/victory-day-2026
+DTSTART;VALUE=DATE:20260508
+DTEND;VALUE=DATE:20260509
+DTSTAMP:20240903T095102Z
+UID:2a438967893a988e57631a6d3b507743
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Перемоги в У
- країні відзначається як державне свято 9
+ країні відзначається як державне свято 8
   травня на честь поразки нацистів у Друг
  ій світовій війні.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:День Європи 
+DTSTART;VALUE=DATE:20260509
+DTEND;VALUE=DATE:20260510
+DTSTAMP:20240903T095102Z
+UID:6ce2af494a09496274cfc81d2af2dcb2
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  День Європи відзначається
+  в Україні третіх вихідних травня.
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1339,56 +1302,41 @@ SUMMARY:День матері в Україні відзначається
   у другу неділю травня кожного року.
 DTSTART;VALUE=DATE:20260510
 DTEND;VALUE=DATE:20260511
-DTSTAMP:20240401T090411Z
-UID:ukraine/mother-day-2026
+DTSTAMP:20240903T095102Z
+UID:655088461dd018e4d029066b78dbb025
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mother’s Day is observed in Ukraine on the seco
  nd Sunday in May each year.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:День Перемоги (призупинений)\, відзн
- ачений 
-DTSTART;VALUE=DATE:20260511
-DTEND;VALUE=DATE:20260512
-DTSTAMP:20240401T090411Z
-UID:ukraine/victory-day-2026
+SUMMARY:День сім'ї 
+DTSTART;VALUE=DATE:20260515
+DTEND;VALUE=DATE:20260516
+DTSTAMP:20240903T095102Z
+UID:0e52a90b8950b280b31d32e3f0834429
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Suspended National Holiday -  День Перемоги в У
- країні\, відзначається як державне свято
-  9 травня на честь поразки нацистів у Дру
- гій світовій війні.
-LAST-MODIFIED:20240401T090411Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День Європи 
-DTSTART;VALUE=DATE:20260516
-DTEND;VALUE=DATE:20260517
-DTSTAMP:20240401T090411Z
-UID:ukraine/europe-day-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  День Європи відзначається
-  в Україні третіх вихідних травня.
-LAST-MODIFIED:20240401T090411Z
+DESCRIPTION:Observance -  День сім'ї - свято\, яке від
+ значається в Україні 8 липня кожного рок
+ у.
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Києва 
 DTSTART;VALUE=DATE:20260531
 DTEND;VALUE=DATE:20260601
-DTSTAMP:20240401T090411Z
-UID:ukraine/kyiv-day-2026
+DTSTAMP:20240903T095102Z
+UID:bdf89775400bf706a68b228291f4d760
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День Києва відзначається 
  в столиці України\, Києві (також відомому
   як Київ)\, в останні вихідні травня.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1396,68 +1344,68 @@ SUMMARY:Православна П'ятидесятниця (Призупи
  нена) 
 DTSTART;VALUE=DATE:20260531
 DTEND;VALUE=DATE:20260601
-DTSTAMP:20240401T090411Z
-UID:ukraine/trinity-2026
+DTSTAMP:20240903T095102Z
+UID:8a8b0dcdb44759e1c281eac47a99a50f
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Святої Трійц
  і\, або по-українськи Трійця\, широко відз
  начається в Україні і є вихідним днем ро
  боти для українців.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День захисту дітей 
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
-DTSTAMP:20240401T090411Z
-UID:ukraine/child-protection-day-2026
+DTSTAMP:20240903T095102Z
+UID:0b2419bcafbf51a0dd6e636b8c492d65
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День захисту дітей - свято 
  в Україні
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День журналіста 
 DTSTART;VALUE=DATE:20260606
 DTEND;VALUE=DATE:20260607
-DTSTAMP:20240401T090411Z
-UID:ukraine/journalist-day-2026
+DTSTAMP:20240903T095102Z
+UID:a033fd9765fe0eee90bcbc15354836e8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День журналіста — свято в 
  Україні
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День батька 
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
-DTSTAMP:20240401T090411Z
-UID:ukraine/fathers-day-2026
+DTSTAMP:20240903T095102Z
+UID:1a9832ce43a1fb91862780b4d6f253a3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День батька святкує батьк
  івство та батьківство чоловіків у різні 
  дати у всьому світі.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Червневе сонцестояння 
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
-DTSTAMP:20240401T090411Z
-UID:seasons/june-solstice-2026
+DTSTAMP:20240903T095102Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Червневе сонцестояння в Укр
  аїні (Київ)
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1465,13 +1413,13 @@ SUMMARY:День жалоби та вшанування пам'яті же
  ртв війни 
 DTSTART;VALUE=DATE:20260622
 DTEND;VALUE=DATE:20260623
-DTSTAMP:20240401T090411Z
-UID:ukraine/war-victims-day-2026
+DTSTAMP:20240903T095102Z
+UID:384ab468cfb530c595a93cd0a332a385
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День жалоби та вшанування 
  пам'яті жертв війни - це свято в Україні
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1481,13 +1429,13 @@ SUMMARY:День Конституції України (призупине
  ї країни.
 DTSTART;VALUE=DATE:20260628
 DTEND;VALUE=DATE:20260629
-DTSTAMP:20240401T090411Z
-UID:ukraine/constitution-day-2026
+DTSTAMP:20240903T095102Z
+UID:9bba9fafd0eb7c97994f9a475f3f6185
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday - Ukraine’s Constitution Day is a
   public holiday on June 28 to celebrate the country’s constitution.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1495,111 +1443,97 @@ SUMMARY:День Конституції (призупинений)\, ві
  дзначений 
 DTSTART;VALUE=DATE:20260629
 DTEND;VALUE=DATE:20260630
-DTSTAMP:20240401T090411Z
-UID:ukraine/constitution-day-2026
+DTSTAMP:20240903T095102Z
+UID:9bba9fafd0eb7c97994f9a475f3f6185
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Конституції 
  України\, є державним святом 28 червня для
   відзначення конституції країни.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День ВМС 
 DTSTART;VALUE=DATE:20260705
 DTEND;VALUE=DATE:20260706
-DTSTAMP:20240401T090411Z
-UID:ukraine/navy-day-2026
+DTSTAMP:20240903T095102Z
+UID:2c77a202316160e4d9291edaa98981ec
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День військово-морського 
  флоту — національне свято України\, яке 
  відзначається щороку в останню неділю л
  ипня.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Купальська ніч 
 DTSTART;VALUE=DATE:20260706
 DTEND;VALUE=DATE:20260707
-DTSTAMP:20240401T090411Z
-UID:ukraine/ivan-kupala-day-2026
+DTSTAMP:20240903T095102Z
+UID:0dfa74adccab776edb7d1ad92fd0456e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Купальська ніч відзначаєт
  ься в Україні 7 липня кожного року.
-LAST-MODIFIED:20240401T090411Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День сім'ї 
-DTSTART;VALUE=DATE:20260708
-DTEND;VALUE=DATE:20260709
-DTSTAMP:20240401T090411Z
-UID:ukraine/family-day-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  День сім'ї - свято\, яке від
- значається в Україні 8 липня кожного рок
- у.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День державності України 
 DTSTART;VALUE=DATE:20260715
 DTEND;VALUE=DATE:20260716
-DTSTAMP:20240401T090411Z
-UID:ukraine/statehood-day-2026
+DTSTAMP:20240903T095102Z
+UID:02ed2ba62d2d50c5e1d318fedb1950a3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День державності 
  України - призупинене національне свято 
  в Україні
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Хрещення Київської Русі 
 DTSTART;VALUE=DATE:20260728
 DTEND;VALUE=DATE:20260729
-DTSTAMP:20240401T090411Z
-UID:ukraine/baptism-of-kyivan-rus-2026
+DTSTAMP:20240903T095102Z
+UID:3d9017ee98cd4c87e1b7c018a9963e9c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Хрещення Київської Русі —
   свято в Україні
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День незалежності (призупинено) 
 DTSTART;VALUE=DATE:20260824
 DTEND;VALUE=DATE:20260825
-DTSTAMP:20240401T090411Z
-UID:ukraine/independence-day-2026
+DTSTAMP:20240903T095102Z
+UID:b3c52f51a3295d9c8d1a8738c4204749
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День Незалежност
  і України щорічно відзначається 24 серпн
  я з нагоди річниці проголошення незалеж
  ності країни в 1991 році.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Вересневе рівнодення 
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
-DTSTAMP:20240401T090411Z
-UID:seasons/autumnal-equniox-2026
+DTSTAMP:20240903T095102Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Вересневе рівнодення в Укра
  їні (Київ)
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1607,28 +1541,28 @@ SUMMARY:День захисників і захисників Україн
  и (призупинений) 
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
-DTSTAMP:20240401T090411Z
-UID:ukraine/day-of-defenders-and-defenders-of-ukraine-2026
+DTSTAMP:20240903T095102Z
+UID:beb701ff0b4fbed2f0fa13d9ad241f78
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Suspended National Holiday -  День захисників і
   захисників України — національне украї
  нське свято\, яке відзначає місцевих гер
  оїв та підтримує націоналізм.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Закінчується літній час 
 DTSTART;VALUE=DATE:20261025
 DTEND;VALUE=DATE:20261026
-DTSTAMP:20240401T090411Z
-UID:None-2026
+DTSTAMP:20240903T095102Z
+UID:77b6082282be84a3101e54edb8201421
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Clock change/Daylight Saving Time -  В Україні зак
  інчується літній час
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1636,14 +1570,14 @@ SUMMARY:День визволення України від фашистс
  ьких загарбників 
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DTSTAMP:20240401T090411Z
-UID:ukraine/day-of-liberation-of-ukraine-from-fascist-invaders-2026
+DTSTAMP:20240903T095102Z
+UID:01ed5506cffec5bed5b23dafb28216cb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День визволення України в
  ід фашистських загарбників відзначаєть
  ся в Україні
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1651,84 +1585,80 @@ SUMMARY:День працівників культури та народн
  их художників 
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
-DTSTAMP:20240401T090411Z
-UID:ukraine/cultural-workers-folk-artists-day-2026
+DTSTAMP:20240903T095102Z
+UID:df4b346754c01ccfbcbb33ce476812f8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Багато українців відзнача
  ють День працівників культури та народн
  их художників у третю неділю травня.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Гідності і Свободи 
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
-DTSTAMP:20240401T090411Z
-UID:ukraine/dignity-freedom-day-2026
+DTSTAMP:20240903T095102Z
+UID:118c753fc275715e16055b1e2c251aa8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День Гідності і Свободи — 
  національне українське свято\, яке відзн
  ачає гідність і свободу країни.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День армії 
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
-DTSTAMP:20240401T090411Z
-UID:ukraine/army-day-2026
+DTSTAMP:20240903T095102Z
+UID:d09c2f5bdee60bdcc03a94be82777c46
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  День армії в Україні — осо
  бливе щорічне свято\, присвячене збройни
  м силам країни 6 грудня.
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Святого Миколая 
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
-DTSTAMP:20240401T090411Z
-UID:ukraine/saint-nicholas-2026
+DTSTAMP:20240903T095102Z
+UID:f8ca4f5868e00428a1882dbd6a80023e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Orthodox -  День Святого Миколая - свят
  о і православне свято в Україні
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Грудневе сонцестояння 
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
-DTSTAMP:20240401T090411Z
-UID:seasons/december-solstice-2026
+DTSTAMP:20240903T095102Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Грудневе сонцестояння в Укр
  аїні (Київ)
-LAST-MODIFIED:20240401T090411Z
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Різдво є одним з найбільших христия
- нських свят і припадає на 25 грудня за гри
- горіанським календарем.
+SUMMARY:Різдво 
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20240401T090411Z
-UID:ukraine/christmas-day-2026
+DTSTAMP:20240903T095102Z
+UID:6f319e346cfefab68e9c68139c364c6c
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Suspended National Holiday - Christmas Day is one of the bigge
- st Christian celebrations and falls on December 25 in the Gregorian calend
- ar.
-LAST-MODIFIED:20240401T090411Z
+DESCRIPTION:Suspended National Holiday
+LAST-MODIFIED:20240903T095102Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

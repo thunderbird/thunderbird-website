@@ -5,841 +5,844 @@ BEGIN:VEVENT
 SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20240101
 DTEND;VALUE=DATE:20240102
-DTSTAMP:20240401T090233Z
-UID:mexico/new-year-day-2024
+DTSTAMP:20240903T094924Z
+UID:1285b0842805322f18887ff5197b8c60
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El día de Año Nuevo\, el 1 de enero\, es
   el primer día del año.
-LAST-MODIFIED:20240401T090233Z
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Constitución 
 DTSTART;VALUE=DATE:20240205
 DTEND;VALUE=DATE:20240206
-DTSTAMP:20240401T090233Z
-UID:mexico/memorial-day-2024
+DTSTAMP:20240903T094924Z
+UID:e7e833623692cbf472bef1e7d81c83ba
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Constitución de México se 
  celebra el primer lunes de febrero para conmemorar la Constitución de 191
  7.
-LAST-MODIFIED:20240401T090233Z
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Conmemoración del cumpleaños de Benito Juárez 
+SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
 DTSTART;VALUE=DATE:20240318
 DTEND;VALUE=DATE:20240319
-DTSTAMP:20240401T090233Z
-UID:mexico/benito-juarez-2024
+DTSTAMP:20240903T094924Z
+UID:e7a9eac455c65bb178a38b6e52ab5b83
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de Benito Juárez (Natalicio de Be
  nito Juárez) es un feriado nacional en México para honrar el cumpleaños
-  de uno de los más grandes presidentes del país.
-LAST-MODIFIED:20240401T090233Z
+  de uno de los mejores presidentes del país.
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20240501
 DTEND;VALUE=DATE:20240502
-DTSTAMP:20240401T090233Z
-UID:mexico/labor-day-2024
+DTSTAMP:20240903T094924Z
+UID:27788f9dd2565504c0c9649a31dd9098
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El Día del Trabajo de México se celebra 
+DESCRIPTION:National holiday -  El Día del Trabajo en México se celebra 
  como un día libre del trabajo y la escuela el primer día de mayo.
-LAST-MODIFIED:20240401T090233Z
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de las elecciones generales 
-DTSTART;VALUE=DATE:20240707
-DTEND;VALUE=DATE:20240708
-DTSTAMP:20240401T090233Z
-UID:mexico/election-day-2024
+DTSTART;VALUE=DATE:20240602
+DTEND;VALUE=DATE:20240603
+DTSTAMP:20240903T094924Z
+UID:53800cdb35dd7b696f28218a965cd9cb
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  Las elecciones generales de México se cel
- ebran en todo el país el primer domingo de julio cada seis años.
-LAST-MODIFIED:20240401T090233Z
+DESCRIPTION:National holiday -  Las elecciones generales de México se lle
+ van a cabo en todo el país el primer domingo de julio de cada seis años.
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20240916
 DTEND;VALUE=DATE:20240917
-DTSTAMP:20240401T090233Z
-UID:mexico/independence-day-2024
+DTSTAMP:20240903T094924Z
+UID:08039237e44e1a07fd8266431a5fbfe0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Independencia de México es 
  un día festivo nacional para celebrar la libertad del país del dominio e
  spañol.
-LAST-MODIFIED:20240401T090233Z
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Día de la toma de posesión 
+SUMMARY:Día de la inauguración 
 DTSTART;VALUE=DATE:20241001
 DTEND;VALUE=DATE:20241002
-DTSTAMP:20240401T090233Z
-UID:mexico/change-of-federal-government-2024
+DTSTAMP:20240903T094924Z
+UID:30b732fe0e79ae90573765bf91cac6ba
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El día de la toma de posesión presidenci
- al de México es un feriado nacional\, en el que se toma posesión un nuev
- o presidente en diciembre cada 6 años.
-LAST-MODIFIED:20240401T090233Z
+ al de México es un feriado nacional\, en el que se inaugura un nuevo pres
+ idente en diciembre cada 6 años.
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:El Día de la Revolución 
 DTSTART;VALUE=DATE:20241118
 DTEND;VALUE=DATE:20241119
-DTSTAMP:20240401T090233Z
-UID:mexico/revolution-day-2024
+DTSTAMP:20240903T094924Z
+UID:1bb4d0ea0c9379e774eec193d4729b03
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  El Día de la Revolución se celebra el te
- rcer lunes de noviembre para conmemorar el inicio de la revolución mexica
- na que derrocó a la dictadura de Porfirio Díaz en 1910.
-LAST-MODIFIED:20240401T090233Z
+DESCRIPTION:National holiday -  Día de la Revolución se celebra el terce
+ r lunes de noviembre para conmemorar el inicio de la revolución mexicana 
+ para derrocar a la dictadura de Porfirio Díaz en 1910.
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20241225
 DTEND;VALUE=DATE:20241226
-DTSTAMP:20240401T090233Z
-UID:mexico/christmas-day-2024
+DTSTAMP:20240903T094924Z
+UID:b9a17400af185af82dc7551e1d3f6b80
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
  xico para celebrar el nacimiento de Jesucristo.
-LAST-MODIFIED:20240401T090233Z
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Santos Reyes 
 DTSTART;VALUE=DATE:20240106
 DTEND;VALUE=DATE:20240107
-DTSTAMP:20240401T090233Z
-UID:mexico/holy-kings-2024
+DTSTAMP:20240903T094924Z
+UID:e21d78bf9f3f77f54a6a866a5e361c85
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  El Día de los Santos Reyes Magos es una celebra
- ción cristiana en la que los niños de México reciben regalos de los Rey
- es Magos.
-LAST-MODIFIED:20240401T090233Z
+DESCRIPTION:Observance -  El Día de los Santos Reyes es una celebración 
+ cristiana en la que los niños de México reciben regalos de los tres reye
+ s magos.
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:La Candelaria 
+SUMMARY:Candelaria 
 DTSTART;VALUE=DATE:20240202
 DTEND;VALUE=DATE:20240203
-DTSTAMP:20240401T090233Z
-UID:mexico/candlemas-2024
+DTSTAMP:20240903T094924Z
+UID:d9d735e21d6b5a630132bb0defd83c9b
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Observance -  La Candelaria también se conoce como la Fiesta 
- de la Presentación del Señor. Se celebra el 2 de febrero de cada año.
-LAST-MODIFIED:20240401T090233Z
+DESCRIPTION:Observance -  La candelaria también se conoce como la Fiesta 
+ de la Presentación del Señor. Es el 2 de febrero de cada año.
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de San Valentín 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20240401T090233Z
-UID:mexico/valentine-day-2024
+DTSTAMP:20240903T094924Z
+UID:1df28d828e07ae89e9ae0a725fe16c49
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El día de San Valentín en México no es solo p
  ara el romance\, también es un momento para mostrar aprecio por los amigo
  s.
-LAST-MODIFIED:20240401T090233Z
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Miércoles de Ceniza 
 DTSTART;VALUE=DATE:20240214
 DTEND;VALUE=DATE:20240215
-DTSTAMP:20240401T090233Z
-UID:mexico/ash-wednesday-2024
+DTSTAMP:20240903T094924Z
+UID:946735c5e27641ec3c1b1218659e55c5
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Christian -  Los católicos en México celebran el Miércoles 
- de Ceniza\, que es el comienzo del ayuno cuaresmal que dura 40 días (exce
- pto los domingos).
-LAST-MODIFIED:20240401T090233Z
+DESCRIPTION:Christian -  Los católicos en México observan el Miércoles 
+ de Ceniza\, que es el comienzo del ayuno cuaresmal que dura 40 días (excl
+ uyendo los domingos).
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Bandera 
 DTSTART;VALUE=DATE:20240224
 DTEND;VALUE=DATE:20240225
-DTSTAMP:20240401T090233Z
-UID:mexico/flag-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de la Bandera de México celebra la band
- era nacional\, que presenta franjas verticales de color rojo\, blanco y ve
- rde con el escudo nacional en medio de la franja blanca.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Expropiación Petrolera 
-DTSTART;VALUE=DATE:20240318
-DTEND;VALUE=DATE:20240319
-DTSTAMP:20240401T090233Z
-UID:mexico/oil-expropriation-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de la Expropiación Petrolera sirve como
-  un recordatorio nacional de cuando el presidente mexicano Lázaro Cárden
- as proclamó la expropiación de todas las reservas minerales y petroleras
-  de México.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de marzo 
-DTSTART;VALUE=DATE:20240319
-DTEND;VALUE=DATE:20240320
-DTSTAMP:20240401T090233Z
-UID:seasons/vernal-equinox-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season -  Equinoccio de marzo en México (Ciudad de México)
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Conmemoración del cumpleaños de Benito Juárez 
-DTSTART;VALUE=DATE:20240321
-DTEND;VALUE=DATE:20240322
-DTSTAMP:20240401T090233Z
-UID:mexico/benito-juarez-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de Benito Juárez (Natalicio de Benito J
- uárez) es un feriado nacional en México para honrar el cumpleaños de un
- o de los más grandes presidentes del país.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Domingo de Ramos 
-DTSTART;VALUE=DATE:20240324
-DTEND;VALUE=DATE:20240325
-DTSTAMP:20240401T090233Z
-UID:mexico/palm-sunday-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  Los cristianos en México celebran el Domingo de 
- Ramos\, que honra la entrada triunfal de Jesucristo en Jerusalén.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sábado Santo 
-DTSTART;VALUE=DATE:20240330
-DTEND;VALUE=DATE:20240331
-DTSTAMP:20240401T090233Z
-UID:mexico/holy-saturday-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  Los mexicanos celebran el Sábado Santo como par
- te de la Semana Santa\, que conmemora los últimos momentos de la vida\, m
- uerte y resurrección de Jesús.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Domingo de Pascua 
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20240401T090233Z
-UID:mexico/easter-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  El domingo de Pascua es una de las ocasiones más
-  festivas del año en México: celebra la resurrección de Jesucristo.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Niño 
-DTSTART;VALUE=DATE:20240430
-DTEND;VALUE=DATE:20240501
-DTSTAMP:20240401T090233Z
-UID:mexico/children-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día del Niño es una celebración mexicana q
- ue honra y aprecia a los niños.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Ascensión 
-DTSTART;VALUE=DATE:20240509
-DTEND;VALUE=DATE:20240510
-DTSTAMP:20240401T090233Z
-UID:mexico/ascension-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  Las iglesias de México conmemoran la historia d
- e la ascensión de Jesús al cielo el Día de la Ascensión.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Madre 
-DTSTART;VALUE=DATE:20240510
-DTEND;VALUE=DATE:20240511
-DTSTAMP:20240401T090233Z
-UID:mexico/mother-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  Muchos mexicanos celebran el Día de la Madre co
- mo un evento familiar festivo en el que las madres reciben tarjetas\, flor
- es y regalos.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Maestro 
-DTSTART;VALUE=DATE:20240515
-DTEND;VALUE=DATE:20240516
-DTSTAMP:20240401T090233Z
-UID:mexico/teacher-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de agradecimiento a los maestros es un e
- vento festivo para honrar a los maestros y otros trabajadores de la educac
- ión en México.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Domingo de Pentecostés 
-DTSTART;VALUE=DATE:20240519
-DTEND;VALUE=DATE:20240520
-DTSTAMP:20240401T090233Z
-UID:mexico/pentecost-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  Pentecostés es una fiesta cristiana que conmemo
- ra la historia del Espíritu Santo descendiendo sobre los discípulos de J
- esús. También se conoce como Pentecostés.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Corpus Christi 
-DTSTART;VALUE=DATE:20240530
-DTEND;VALUE=DATE:20240531
-DTSTAMP:20240401T090233Z
-UID:mexico/corpus-christi-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  Las iglesias de todo México celebran la Sagrada
-  Eucaristía\, o la comunión del pan y el vino\, durante Corpus Christi.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Padre 
-DTSTART;VALUE=DATE:20240616
-DTEND;VALUE=DATE:20240617
-DTSTAMP:20240401T090233Z
-UID:mexico/father-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  Los padres y las figuras paternas reciben tarjet
- as\, chocolates y otros regalos el Día del Padre en México.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solsticio de junio 
-DTSTART;VALUE=DATE:20240620
-DTEND;VALUE=DATE:20240621
-DTSTAMP:20240401T090233Z
-UID:seasons/june-solstice-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season -  Solsticio de junio en México (Ciudad de México)
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Asunción de María 
-DTSTART;VALUE=DATE:20240815
-DTEND;VALUE=DATE:20240816
-DTSTAMP:20240401T090233Z
-UID:mexico/assumption-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  Las iglesias católicas de México celebran la A
- sunción de María para honrar la creencia de la partida de la Virgen Mar
- ía de la tierra al cielo.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Grito de Dolores 
-DTSTART;VALUE=DATE:20240915
-DTEND;VALUE=DATE:20240916
-DTSTAMP:20240401T090233Z
-UID:mexico/grito-de-dolores-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El día del Grito de Dolores es un evento import
- ante previo a las celebraciones del Día de la Independencia de México.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Equinoccio de septiembre 
-DTSTART;VALUE=DATE:20240922
-DTEND;VALUE=DATE:20240923
-DTSTAMP:20240401T090233Z
-UID:seasons/autumnal-equniox-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season -  Equinoccio de septiembre en México (Ciudad de Méxi
- co)
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Raza 
-DTSTART;VALUE=DATE:20241012
-DTEND;VALUE=DATE:20241013
-DTSTAMP:20240401T090233Z
-UID:mexico/columbus-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de la Hispanidad se celebra en México e
- n honor a un explorador italiano que llegó a las Américas durante el sig
- lo XV.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Halloween 
-DTSTART;VALUE=DATE:20241031
-DTEND;VALUE=DATE:20241101
-DTSTAMP:20240401T090233Z
-UID:mexico/halloween-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  Halloween se celebra en México el último día 
- de octubre\, un día antes del Día de Todos los Santos.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Todos los Santos 
-DTSTART;VALUE=DATE:20241101
-DTEND;VALUE=DATE:20241102
-DTSTAMP:20240401T090233Z
-UID:mexico/all-saints-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de Todos los Santos es una celebración 
- religiosa en México que se celebra el 1 de noviembre para recordar a todo
- s los santos de la Iglesia Católica.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Día de los Difuntos 
-DTSTART;VALUE=DATE:20241102
-DTEND;VALUE=DATE:20241103
-DTSTAMP:20240401T090233Z
-UID:mexico/all-souls-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de los Difuntos\, conocido popularmente 
- como el Día de los Muertos\, es un día festivo en México para recordar 
- a los familiares y amigos fallecidos el 2 de noviembre.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Cristo Rey 
-DTSTART;VALUE=DATE:20241124
-DTEND;VALUE=DATE:20241125
-DTSTAMP:20240401T090233Z
-UID:mexico/christ-the-king-day-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de Cristo Rey es una celebración cristi
- ana que reconoce el poder y la autoridad de Jesús en la iglesia cristiana
- .
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fiesta de la Inmaculada Concepción 
-DTSTART;VALUE=DATE:20241208
-DTEND;VALUE=DATE:20241209
-DTSTAMP:20240401T090233Z
-UID:mexico/immaculate-conception-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  Los católicos en México celebran la Fiesta de 
- la Inmaculada Concepción para honrar la idea de que la concepción de la 
- Virgen María fue pura e impecable.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Solsticio de diciembre 
-DTSTART;VALUE=DATE:20241221
-DTEND;VALUE=DATE:20241222
-DTSTAMP:20240401T090233Z
-UID:seasons/december-solstice-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Season -  Solsticio de diciembre en México (Ciudad de México
- )
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nochebuena 
-DTSTART;VALUE=DATE:20241224
-DTEND;VALUE=DATE:20241225
-DTSTAMP:20240401T090233Z
-UID:mexico/christmas-eve-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  La mayoría de los mexicanos celebran la Nochebue
- na el 24 de diciembre asistiendo a misas en la iglesia\, visitando a famil
- iares y amigos y disfrutando de cenas navideñas especiales.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de los Santos Inocentes 
-DTSTART;VALUE=DATE:20241228
-DTEND;VALUE=DATE:20241229
-DTSTAMP:20240401T090233Z
-UID:mexico/day-of-the-holy-innocents-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  La Iglesia Católica en México celebra el Día 
- de los Santos Inocentes en memoria de la ejecución de bebés varones en B
- elén por orden de Herodes.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nochevieja 
-DTSTART;VALUE=DATE:20241231
-DTEND;VALUE=DATE:20250101
-DTSTAMP:20240401T090233Z
-UID:mexico/new-year-eve-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  La víspera de Año Nuevo\, el 31 de diciembre\,
-  es el último día del año.
-LAST-MODIFIED:20240401T090233Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo 
-DTSTART;VALUE=DATE:20240328
-DTEND;VALUE=DATE:20240329
-DTSTAMP:20240401T090234Z
-UID:mexico/maundy-thursday-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday -  Los mexicanos celebran el Jueves Santo como pa
- rte de la Semana Santa\, que conmemora los últimos momentos de la vida de
-  Jesús\, su muerte y resurrección.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Viernes Santo 
-DTSTART;VALUE=DATE:20240329
-DTEND;VALUE=DATE:20240330
-DTSTAMP:20240401T090234Z
-UID:mexico/good-friday-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday -  Los mexicanos celebran el Viernes Santo como e
- l día en que Jesús murió en la cruz hace unos 2000 años.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Batalla de Puebla (Cinco de Mayo) 
-DTSTART;VALUE=DATE:20240505
-DTEND;VALUE=DATE:20240506
-DTSTAMP:20240401T090234Z
-UID:mexico/cinco-de-mayo-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado guberna
- mental y escolar anual dedicado a la victoria del ejército mexicano en la
-  Batalla de Puebla.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Virgen de Guadalupe 
-DTSTART;VALUE=DATE:20241212
-DTEND;VALUE=DATE:20241213
-DTSTAMP:20240401T090234Z
-UID:mexico/day-of-virgin-guadalupe-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday -  Uno de los días más celebrados del calendari
- o mexicano es el Día de Nuestra Señora de Guadalupe\, que conmemora la c
- reencia de que la madre de Jesús apareció en México en 1531.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Año Nuevo 
-DTSTART;VALUE=DATE:20250101
-DTEND;VALUE=DATE:20250102
-DTSTAMP:20240401T090234Z
-UID:mexico/new-year-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El día de Año Nuevo\, el 1 de enero\, es
-  el primer día del año.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Constitución 
-DTSTART;VALUE=DATE:20250203
-DTEND;VALUE=DATE:20250204
-DTSTAMP:20240401T090234Z
-UID:mexico/memorial-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día de la Constitución de México se 
- celebra el primer lunes de febrero para conmemorar la Constitución de 191
- 7.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
-DTSTART;VALUE=DATE:20250317
-DTEND;VALUE=DATE:20250318
-DTSTAMP:20240401T090234Z
-UID:mexico/benito-juarez-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día de Benito Juárez (Natalicio de Be
- nito Juárez) es un feriado nacional en México para honrar el cumpleaños
-  de uno de los mejores presidentes del país.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Trabajo/Primero de Mayo 
-DTSTART;VALUE=DATE:20250501
-DTEND;VALUE=DATE:20250502
-DTSTAMP:20240401T090234Z
-UID:mexico/labor-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día del Trabajo en México se celebra 
- como un día libre del trabajo y la escuela el primer día de mayo.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Independencia 
-DTSTART;VALUE=DATE:20250916
-DTEND;VALUE=DATE:20250917
-DTSTAMP:20240401T090234Z
-UID:mexico/independence-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día de la Independencia de México es 
- un día festivo nacional para celebrar la libertad del país del dominio e
- spañol.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Día de la Revolución 
-DTSTART;VALUE=DATE:20251117
-DTEND;VALUE=DATE:20251118
-DTSTAMP:20240401T090234Z
-UID:mexico/revolution-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Día de la Revolución se celebra el terce
- r lunes de noviembre para conmemorar el inicio de la revolución mexicana 
- para derrocar a la dictadura de Porfirio Díaz en 1910.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Navidad 
-DTSTART;VALUE=DATE:20251225
-DTEND;VALUE=DATE:20251226
-DTSTAMP:20240401T090234Z
-UID:mexico/christmas-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
- xico para celebrar el nacimiento de Jesucristo.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de los Santos Reyes 
-DTSTART;VALUE=DATE:20250106
-DTEND;VALUE=DATE:20250107
-DTSTAMP:20240401T090234Z
-UID:mexico/holy-kings-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de los Santos Reyes es una celebración 
- cristiana en la que los niños de México reciben regalos de los tres reye
- s magos.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Candelaria 
-DTSTART;VALUE=DATE:20250202
-DTEND;VALUE=DATE:20250203
-DTSTAMP:20240401T090234Z
-UID:mexico/candlemas-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  La candelaria también se conoce como la Fiesta 
- de la Presentación del Señor. Es el 2 de febrero de cada año.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Constitución 
-DTSTART;VALUE=DATE:20250205
-DTEND;VALUE=DATE:20250206
-DTSTAMP:20240401T090234Z
-UID:mexico/memorial-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El Día de la Constitución de México se celebr
- a el primer lunes de febrero para conmemorar la Constitución de 1917.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de San Valentín 
-DTSTART;VALUE=DATE:20250214
-DTEND;VALUE=DATE:20250215
-DTSTAMP:20240401T090234Z
-UID:mexico/valentine-day-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Observance -  El día de San Valentín en México no es solo p
- ara el romance\, también es un momento para mostrar aprecio por los amigo
- s.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Bandera 
-DTSTART;VALUE=DATE:20250224
-DTEND;VALUE=DATE:20250225
-DTSTAMP:20240401T090234Z
-UID:mexico/flag-day-2025
+DTSTAMP:20240903T094924Z
+UID:5e83394710e75c6e9c985092d59252f8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de la Bandera de México celebra la band
  era nacional\, que presenta franjas verticales de color rojo\, blanco y ve
  rde con el escudo de armas nacional en el centro de la franja blanca.
-LAST-MODIFIED:20240401T090234Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Miércoles de Ceniza 
-DTSTART;VALUE=DATE:20250305
-DTEND;VALUE=DATE:20250306
-DTSTAMP:20240401T090234Z
-UID:mexico/ash-wednesday-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  Los católicos en México observan el Miércoles 
- de Ceniza\, que es el comienzo del ayuno cuaresmal que dura 40 días (excl
- uyendo los domingos).
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094924Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la expropiación petrolera 
-DTSTART;VALUE=DATE:20250318
-DTEND;VALUE=DATE:20250319
-DTSTAMP:20240401T090234Z
-UID:mexico/oil-expropriation-2025
+DTSTART;VALUE=DATE:20240318
+DTEND;VALUE=DATE:20240319
+DTSTAMP:20240903T094924Z
+UID:31028eb3963ad320abff26f044f2b9dd
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El día de la expropiación petrolera sirve como
   recordatorio nacional de cuando el presidente mexicano Lázaro Cárdenas 
  proclamó la expropiación de todas las reservas minerales y petroleras de
   México.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de marzo 
+DTSTART;VALUE=DATE:20240319
+DTEND;VALUE=DATE:20240320
+DTSTAMP:20240903T094924Z
+UID:8510987907f8aa352d8180560c85d9f9
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de marzo en México (Ciudad de México)
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
+DTSTART;VALUE=DATE:20240321
+DTEND;VALUE=DATE:20240322
+DTSTAMP:20240903T094924Z
+UID:e7a9eac455c65bb178a38b6e52ab5b83
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de Benito Juárez (Natalicio de Benito J
+ uárez) es un feriado nacional en México para honrar el cumpleaños de un
+ o de los mejores presidentes del país.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Domingo de Ramos 
+DTSTART;VALUE=DATE:20240324
+DTEND;VALUE=DATE:20240325
+DTSTAMP:20240903T094924Z
+UID:bf29f23a602c0cd8e015c5b3b9bf7ba2
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  Los cristianos en México celebran el Domingo de 
+ Ramos\, que honra la entrada triunfal de Jesucristo en Jerusalén.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sábado Santo Los mexicanos celebran el Sábado Santo como parte d
+ e la Semana Santa\, que conmemora los últimos momentos de la vida de Jes
+ ús\, su muerte y resurrección.
+DTSTART;VALUE=DATE:20240330
+DTEND;VALUE=DATE:20240331
+DTSTAMP:20240903T094924Z
+UID:3c5761100f07563af7c28120baf4abbb
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance - Mexicans observe Holy Saturday as part of Holy We
+ ek (Semana Santa)\, which commemorates Jesus’ last moments of life\, his
+  death\, and resurrection.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Domingo de Pascua 
+DTSTART;VALUE=DATE:20240331
+DTEND;VALUE=DATE:20240401
+DTSTAMP:20240903T094924Z
+UID:29c63ab07abcbe0ee632c841e5029cb7
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El domingo de Pascua es una de las ocasiones más
+  festivas del año en México: celebra la resurrección de Jesucristo.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Niño 
+DTSTART;VALUE=DATE:20240430
+DTEND;VALUE=DATE:20240501
+DTSTAMP:20240903T094924Z
+UID:2e998dfd906ecbe45d1c62f02b8f4ec1
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día del Niño es una celebración mexicana q
+ ue honra y aprecia a los niños.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Ascensión 
+DTSTART;VALUE=DATE:20240509
+DTEND;VALUE=DATE:20240510
+DTSTAMP:20240903T094924Z
+UID:41f675bbd9ddad29f1322ed1dde9d4d7
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Las iglesias de México conmemoran la historia d
+ e la ascensión de Jesús al cielo el Día de la Ascensión.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Madre 
+DTSTART;VALUE=DATE:20240510
+DTEND;VALUE=DATE:20240511
+DTSTAMP:20240903T094924Z
+UID:400f0e880cc32bf6ac34070264310afc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Muchos mexicanos celebran el Día de la Madre co
+ mo un evento familiar festivo en el que las madres reciben tarjetas\, flor
+ es y regalos.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Maestro 
+DTSTART;VALUE=DATE:20240515
+DTEND;VALUE=DATE:20240516
+DTSTAMP:20240903T094924Z
+UID:f9f63d0f388ec8834f235c174f3ed947
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de Agradecimiento a los Maestros es un e
+ vento festivo para honrar a los maestros y otros trabajadores de la educac
+ ión en México.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Domingo de Pentecostés 
+DTSTART;VALUE=DATE:20240519
+DTEND;VALUE=DATE:20240520
+DTSTAMP:20240903T094924Z
+UID:18b1cf9628048981f1f45fc54bab9e03
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El domingo de Pentecostés es una fiesta cristia
+ na que conmemora la historia del Espíritu Santo que descendió sobre los 
+ discípulos de Jesús. También se conoce como Pentecostés.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Corpus Christi 
+DTSTART;VALUE=DATE:20240530
+DTEND;VALUE=DATE:20240531
+DTSTAMP:20240903T094924Z
+UID:60ac6c6f8112782fc9b1c242ab303f4b
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Las iglesias de todo México celebran la Sagrada
+  Eucaristía\, o la comunión de pan y vino\, durante el Corpus Christi.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Padre 
+DTSTART;VALUE=DATE:20240616
+DTEND;VALUE=DATE:20240617
+DTSTAMP:20240903T094924Z
+UID:794fc360521b46cdc28fc60bca11bb55
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Los padres y las figuras paternas reciben tarjet
+ as\, chocolates y otros regalos el Día del Padre en México.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de junio 
+DTSTART;VALUE=DATE:20240620
+DTEND;VALUE=DATE:20240621
+DTSTAMP:20240903T094924Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de junio en México (Ciudad de México)
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Asunción de María 
+DTSTART;VALUE=DATE:20240815
+DTEND;VALUE=DATE:20240816
+DTSTAMP:20240903T094924Z
+UID:8a7c6b75a4dc15640801cc62e41013f1
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Las iglesias católicas de México celebran la A
+ sunción de María para honrar la creencia de la partida de la Virgen Mar
+ ía de la tierra al cielo.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Grito de Dolores 
+DTSTART;VALUE=DATE:20240915
+DTEND;VALUE=DATE:20240916
+DTSTAMP:20240903T094924Z
+UID:7b52cef334231a95d81ff5464c1196e4
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El día del Grito de Dolores es un evento import
+ ante que precede a las celebraciones del Día de la Independencia de Méxi
+ co.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinoccio de septiembre 
+DTSTART;VALUE=DATE:20240922
+DTEND;VALUE=DATE:20240923
+DTSTAMP:20240903T094924Z
+UID:79c4f6e32924c5355db32aa994e3362e
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Equinoccio de septiembre en México (Ciudad de Méxi
+ co)
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Raza 
+DTSTART;VALUE=DATE:20241012
+DTEND;VALUE=DATE:20241013
+DTSTAMP:20240903T094924Z
+UID:00801b19b520f856b09d472a10d976c3
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de la Hispanidad se celebra en México e
+ n honor a un explorador italiano que llegó a las Américas durante el sig
+ lo XV.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Halloween 
+DTSTART;VALUE=DATE:20241031
+DTEND;VALUE=DATE:20241101
+DTSTAMP:20240903T094924Z
+UID:6b8d13f0ff19af79dcb0929cd451d097
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Halloween se celebra en México el último día 
+ de octubre\, un día antes del Día de Todos los Santos.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Todos los Santos 
+DTSTART;VALUE=DATE:20241101
+DTEND;VALUE=DATE:20241102
+DTSTAMP:20240903T094924Z
+UID:32cb52d234f62aa0e4cdd8893f5453ba
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de Todos los Santos es una celebración 
+ religiosa en México el 1 de noviembre para recordar a todos los santos de
+  la Iglesia Católica.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de los Difuntos 
+DTSTART;VALUE=DATE:20241102
+DTEND;VALUE=DATE:20241103
+DTSTAMP:20240903T094924Z
+UID:bbbe620ac123a7c87245f5808c7262cd
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de los Difuntos\, conocido popularmente 
+ como el Día de los Muertos\, es un feriado bancario en México para recor
+ dar a familiares y amigos fallecidos el 2 de noviembre.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:El Día de Cristo Rey 
+DTSTART;VALUE=DATE:20241124
+DTEND;VALUE=DATE:20241125
+DTSTAMP:20240903T094924Z
+UID:9a9c23e278446bb31d5dd4818093c054
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de Cristo Rey es una celebración cristi
+ ana que reconoce el poder y la autoridad de Jesús en la iglesia cristiana
+ .
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fiesta de la Inmaculada Concepción 
+DTSTART;VALUE=DATE:20241208
+DTEND;VALUE=DATE:20241209
+DTSTAMP:20240903T094924Z
+UID:e2e0ac3f85dc7407d0ad91141ccd1be5
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  Los católicos en México celebran la Fiesta de 
+ la Inmaculada Concepción para honrar la idea de que la concepción de la 
+ Virgen María fue pura e impecable.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Solsticio de diciembre 
+DTSTART;VALUE=DATE:20241221
+DTEND;VALUE=DATE:20241222
+DTSTAMP:20240903T094924Z
+UID:182f9d9462ef40cca60e6528e842a5c0
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Season -  Solsticio de diciembre en México (Ciudad de México
+ )
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nochebuena 
+DTSTART;VALUE=DATE:20241224
+DTEND;VALUE=DATE:20241225
+DTSTAMP:20240903T094924Z
+UID:c9de36b37b9720585011f339f6b40e2c
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  La mayoría de los mexicanos celebran la Nochebue
+ na el 24 de diciembre asistiendo a las misas de la iglesia\, visitando a f
+ amiliares y amigos y disfrutando de cenas especiales de Navidad.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de los Santos Inocentes 
+DTSTART;VALUE=DATE:20241228
+DTEND;VALUE=DATE:20241229
+DTSTAMP:20240903T094924Z
+UID:f3f22c2a7b2b7e1ce34c3ace8226b52d
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  La Iglesia Católica en México celebra el Día 
+ de los Santos Inocentes en memoria de cuando los bebés varones en Belén 
+ fueron ejecutados por orden de Herodes.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nochevieja 
+DTSTART;VALUE=DATE:20241231
+DTEND;VALUE=DATE:20250101
+DTSTAMP:20240903T094924Z
+UID:07c594072ea7cd9d76cc014a55a5edee
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  La víspera de Año Nuevo\, el 31 de diciembre\,
+  es el último día del año.
+LAST-MODIFIED:20240903T094924Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jueves Santo 
+DTSTART;VALUE=DATE:20240328
+DTEND;VALUE=DATE:20240329
+DTSTAMP:20240903T094925Z
+UID:cf9e945fccccb327bce596bb7d68f960
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Los mexicanos celebran el Jueves Santo como pa
+ rte de la Semana Santa\, que conmemora los últimos momentos de la vida de
+  Jesús\, su muerte y resurrección.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Viernes Santo 
+DTSTART;VALUE=DATE:20240329
+DTEND;VALUE=DATE:20240330
+DTSTAMP:20240903T094925Z
+UID:a6d78e4d058a7d948f2d4d9f762d723b
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Los mexicanos observan el Viernes Santo como e
+ l día en que Jesús murió en la cruz hace unos 2000 años.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Batalla de Puebla (Cinco de Mayo) 
+DTSTART;VALUE=DATE:20240505
+DTEND;VALUE=DATE:20240506
+DTSTAMP:20240903T094925Z
+UID:fd081446262206aa0f684f7a4351ea30
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado escolar
+  y gubernamental anual dedicado a la victoria del ejército mexicano en la
+  Batalla de Puebla.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Virgen de Guadalupe 
+DTSTART;VALUE=DATE:20241212
+DTEND;VALUE=DATE:20241213
+DTSTAMP:20240903T094925Z
+UID:7412581c2c41d96f4bd866a92ad0bc7a
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Uno de los días más celebrados del calendari
+ o mexicano es el Día de Nuestra Señora Guadalupe\, que conmemora la cree
+ ncia de que la madre de Jesús apareció en México en 1531.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Año Nuevo 
+DTSTART;VALUE=DATE:20250101
+DTEND;VALUE=DATE:20250102
+DTSTAMP:20240903T094925Z
+UID:1285b0842805322f18887ff5197b8c60
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día de Año Nuevo\, el 1 de enero\, es
+  el primer día del año.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Constitución 
+DTSTART;VALUE=DATE:20250203
+DTEND;VALUE=DATE:20250204
+DTSTAMP:20240903T094925Z
+UID:e7e833623692cbf472bef1e7d81c83ba
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Constitución de México se 
+ celebra el primer lunes de febrero para conmemorar la Constitución de 191
+ 7.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
+DTSTART;VALUE=DATE:20250317
+DTEND;VALUE=DATE:20250318
+DTSTAMP:20240903T094925Z
+UID:e7a9eac455c65bb178a38b6e52ab5b83
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de Benito Juárez (Natalicio de Be
+ nito Juárez) es un feriado nacional en México para honrar el cumpleaños
+  de uno de los mejores presidentes del país.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Trabajo/Primero de Mayo 
+DTSTART;VALUE=DATE:20250501
+DTEND;VALUE=DATE:20250502
+DTSTAMP:20240903T094925Z
+UID:27788f9dd2565504c0c9649a31dd9098
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día del Trabajo en México se celebra 
+ como un día libre del trabajo y la escuela el primer día de mayo.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Independencia 
+DTSTART;VALUE=DATE:20250916
+DTEND;VALUE=DATE:20250917
+DTSTAMP:20240903T094925Z
+UID:08039237e44e1a07fd8266431a5fbfe0
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Independencia de México es 
+ un día festivo nacional para celebrar la libertad del país del dominio e
+ spañol.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:El Día de la Revolución 
+DTSTART;VALUE=DATE:20251117
+DTEND;VALUE=DATE:20251118
+DTSTAMP:20240903T094925Z
+UID:1bb4d0ea0c9379e774eec193d4729b03
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Día de la Revolución se celebra el terce
+ r lunes de noviembre para conmemorar el inicio de la revolución mexicana 
+ para derrocar a la dictadura de Porfirio Díaz en 1910.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Navidad 
+DTSTART;VALUE=DATE:20251225
+DTEND;VALUE=DATE:20251226
+DTSTAMP:20240903T094925Z
+UID:b9a17400af185af82dc7551e1d3f6b80
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
+ xico para celebrar el nacimiento de Jesucristo.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de los Santos Reyes 
+DTSTART;VALUE=DATE:20250106
+DTEND;VALUE=DATE:20250107
+DTSTAMP:20240903T094925Z
+UID:e21d78bf9f3f77f54a6a866a5e361c85
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de los Santos Reyes es una celebración 
+ cristiana en la que los niños de México reciben regalos de los tres reye
+ s magos.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Candelaria 
+DTSTART;VALUE=DATE:20250202
+DTEND;VALUE=DATE:20250203
+DTSTAMP:20240903T094925Z
+UID:d9d735e21d6b5a630132bb0defd83c9b
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  La candelaria también se conoce como la Fiesta 
+ de la Presentación del Señor. Es el 2 de febrero de cada año.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Constitución 
+DTSTART;VALUE=DATE:20250205
+DTEND;VALUE=DATE:20250206
+DTSTAMP:20240903T094925Z
+UID:e7e833623692cbf472bef1e7d81c83ba
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de la Constitución de México se celebr
+ a el primer lunes de febrero para conmemorar la Constitución de 1917.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de San Valentín 
+DTSTART;VALUE=DATE:20250214
+DTEND;VALUE=DATE:20250215
+DTSTAMP:20240903T094925Z
+UID:1df28d828e07ae89e9ae0a725fe16c49
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El día de San Valentín en México no es solo p
+ ara el romance\, también es un momento para mostrar aprecio por los amigo
+ s.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Bandera 
+DTSTART;VALUE=DATE:20250224
+DTEND;VALUE=DATE:20250225
+DTSTAMP:20240903T094925Z
+UID:5e83394710e75c6e9c985092d59252f8
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El Día de la Bandera de México celebra la band
+ era nacional\, que presenta franjas verticales de color rojo\, blanco y ve
+ rde con el escudo de armas nacional en el centro de la franja blanca.
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Miércoles de Ceniza 
+DTSTART;VALUE=DATE:20250305
+DTEND;VALUE=DATE:20250306
+DTSTAMP:20240903T094925Z
+UID:946735c5e27641ec3c1b1218659e55c5
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  Los católicos en México observan el Miércoles 
+ de Ceniza\, que es el comienzo del ayuno cuaresmal que dura 40 días (excl
+ uyendo los domingos).
+LAST-MODIFIED:20240903T094925Z
+TRANSP:transparent
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la expropiación petrolera 
+DTSTART;VALUE=DATE:20250318
+DTEND;VALUE=DATE:20250319
+DTSTAMP:20240903T094925Z
+UID:31028eb3963ad320abff26f044f2b9dd
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Observance -  El día de la expropiación petrolera sirve como
+  recordatorio nacional de cuando el presidente mexicano Lázaro Cárdenas 
+ proclamó la expropiación de todas las reservas minerales y petroleras de
+  México.
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-DTSTAMP:20240401T090234Z
-UID:seasons/vernal-equinox-2025
+DTSTAMP:20240903T094925Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de marzo en México (Ciudad de México)
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
 DTSTART;VALUE=DATE:20250321
 DTEND;VALUE=DATE:20250322
-DTSTAMP:20240401T090234Z
-UID:mexico/benito-juarez-2025
+DTSTAMP:20240903T094925Z
+UID:e7a9eac455c65bb178a38b6e52ab5b83
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Benito Juárez (Natalicio de Benito J
  uárez) es un feriado nacional en México para honrar el cumpleaños de un
  o de los mejores presidentes del país.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Domingo de Ramos 
 DTSTART;VALUE=DATE:20250413
 DTEND;VALUE=DATE:20250414
-DTSTAMP:20240401T090234Z
-UID:mexico/palm-sunday-2025
+DTSTAMP:20240903T094925Z
+UID:bf29f23a602c0cd8e015c5b3b9bf7ba2
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  Los cristianos en México celebran el Domingo de 
  Ramos\, que honra la entrada triunfal de Jesucristo en Jerusalén.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -848,597 +851,597 @@ SUMMARY:Sábado Santo Los mexicanos celebran el Sábado Santo como parte d
  ús\, su muerte y resurrección.
 DTSTART;VALUE=DATE:20250419
 DTEND;VALUE=DATE:20250420
-DTSTAMP:20240401T090234Z
-UID:mexico/holy-saturday-2025
+DTSTAMP:20240903T094925Z
+UID:3c5761100f07563af7c28120baf4abbb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mexicans observe Holy Saturday as part of Holy We
  ek (Semana Santa)\, which commemorates Jesus’ last moments of life\, his
   death\, and resurrection.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Domingo de Pascua 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20240401T090234Z
-UID:mexico/easter-2025
+DTSTAMP:20240903T094925Z
+UID:29c63ab07abcbe0ee632c841e5029cb7
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El domingo de Pascua es una de las ocasiones más
   festivas del año en México: celebra la resurrección de Jesucristo.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Niño 
 DTSTART;VALUE=DATE:20250430
 DTEND;VALUE=DATE:20250501
-DTSTAMP:20240401T090234Z
-UID:mexico/children-day-2025
+DTSTAMP:20240903T094925Z
+UID:2e998dfd906ecbe45d1c62f02b8f4ec1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día del Niño es una celebración mexicana q
  ue honra y aprecia a los niños.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20250510
 DTEND;VALUE=DATE:20250511
-DTSTAMP:20240401T090234Z
-UID:mexico/mother-day-2025
+DTSTAMP:20240903T094925Z
+UID:400f0e880cc32bf6ac34070264310afc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Muchos mexicanos celebran el Día de la Madre co
  mo un evento familiar festivo en el que las madres reciben tarjetas\, flor
  es y regalos.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Maestro 
 DTSTART;VALUE=DATE:20250515
 DTEND;VALUE=DATE:20250516
-DTSTAMP:20240401T090234Z
-UID:mexico/teacher-day-2025
+DTSTAMP:20240903T094925Z
+UID:f9f63d0f388ec8834f235c174f3ed947
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Agradecimiento a los Maestros es un e
  vento festivo para honrar a los maestros y otros trabajadores de la educac
  ión en México.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Ascensión 
 DTSTART;VALUE=DATE:20250529
 DTEND;VALUE=DATE:20250530
-DTSTAMP:20240401T090234Z
-UID:mexico/ascension-day-2025
+DTSTAMP:20240903T094925Z
+UID:41f675bbd9ddad29f1322ed1dde9d4d7
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Las iglesias de México conmemoran la historia d
  e la ascensión de Jesús al cielo el Día de la Ascensión.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Domingo de Pentecostés 
 DTSTART;VALUE=DATE:20250608
 DTEND;VALUE=DATE:20250609
-DTSTAMP:20240401T090234Z
-UID:mexico/pentecost-2025
+DTSTAMP:20240903T094925Z
+UID:18b1cf9628048981f1f45fc54bab9e03
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El domingo de Pentecostés es una fiesta cristia
  na que conmemora la historia del Espíritu Santo que descendió sobre los 
  discípulos de Jesús. También se conoce como Pentecostés.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Padre 
 DTSTART;VALUE=DATE:20250615
 DTEND;VALUE=DATE:20250616
-DTSTAMP:20240401T090234Z
-UID:mexico/father-day-2025
+DTSTAMP:20240903T094925Z
+UID:794fc360521b46cdc28fc60bca11bb55
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Los padres y las figuras paternas reciben tarjet
  as\, chocolates y otros regalos el Día del Padre en México.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20250619
 DTEND;VALUE=DATE:20250620
-DTSTAMP:20240401T090234Z
-UID:mexico/corpus-christi-2025
+DTSTAMP:20240903T094925Z
+UID:60ac6c6f8112782fc9b1c242ab303f4b
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Las iglesias de todo México celebran la Sagrada
   Eucaristía\, o la comunión de pan y vino\, durante el Corpus Christi.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20250620
 DTEND;VALUE=DATE:20250621
-DTSTAMP:20240401T090234Z
-UID:seasons/june-solstice-2025
+DTSTAMP:20240903T094925Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de junio en México (Ciudad de México)
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Asunción de María 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20240401T090234Z
-UID:mexico/assumption-day-2025
+DTSTAMP:20240903T094925Z
+UID:8a7c6b75a4dc15640801cc62e41013f1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Las iglesias católicas de México celebran la A
  sunción de María para honrar la creencia de la partida de la Virgen Mar
  ía de la tierra al cielo.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Grito de Dolores 
 DTSTART;VALUE=DATE:20250915
 DTEND;VALUE=DATE:20250916
-DTSTAMP:20240401T090234Z
-UID:mexico/grito-de-dolores-2025
+DTSTAMP:20240903T094925Z
+UID:7b52cef334231a95d81ff5464c1196e4
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El día del Grito de Dolores es un evento import
  ante que precede a las celebraciones del Día de la Independencia de Méxi
  co.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-DTSTAMP:20240401T090234Z
-UID:seasons/autumnal-equniox-2025
+DTSTAMP:20240903T094925Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de septiembre en México (Ciudad de Méxi
  co)
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Raza 
 DTSTART;VALUE=DATE:20251012
 DTEND;VALUE=DATE:20251013
-DTSTAMP:20240401T090234Z
-UID:mexico/columbus-day-2025
+DTSTAMP:20240903T094925Z
+UID:00801b19b520f856b09d472a10d976c3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de la Hispanidad se celebra en México e
  n honor a un explorador italiano que llegó a las Américas durante el sig
  lo XV.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Halloween 
 DTSTART;VALUE=DATE:20251031
 DTEND;VALUE=DATE:20251101
-DTSTAMP:20240401T090234Z
-UID:mexico/halloween-2025
+DTSTAMP:20240903T094925Z
+UID:6b8d13f0ff19af79dcb0929cd451d097
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Halloween se celebra en México el último día 
  de octubre\, un día antes del Día de Todos los Santos.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Todos los Santos 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20240401T090234Z
-UID:mexico/all-saints-day-2025
+DTSTAMP:20240903T094925Z
+UID:32cb52d234f62aa0e4cdd8893f5453ba
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Todos los Santos es una celebración 
  religiosa en México el 1 de noviembre para recordar a todos los santos de
   la Iglesia Católica.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Difuntos 
 DTSTART;VALUE=DATE:20251102
 DTEND;VALUE=DATE:20251103
-DTSTAMP:20240401T090234Z
-UID:mexico/all-souls-day-2025
+DTSTAMP:20240903T094925Z
+UID:bbbe620ac123a7c87245f5808c7262cd
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de los Difuntos\, conocido popularmente 
  como el Día de los Muertos\, es un feriado bancario en México para recor
  dar a familiares y amigos fallecidos el 2 de noviembre.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:El Día de Cristo Rey 
 DTSTART;VALUE=DATE:20251123
 DTEND;VALUE=DATE:20251124
-DTSTAMP:20240401T090234Z
-UID:mexico/christ-the-king-day-2025
+DTSTAMP:20240903T094925Z
+UID:9a9c23e278446bb31d5dd4818093c054
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Cristo Rey es una celebración cristi
  ana que reconoce el poder y la autoridad de Jesús en la iglesia cristiana
  .
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fiesta de la Inmaculada Concepción 
 DTSTART;VALUE=DATE:20251208
 DTEND;VALUE=DATE:20251209
-DTSTAMP:20240401T090234Z
-UID:mexico/immaculate-conception-2025
+DTSTAMP:20240903T094925Z
+UID:e2e0ac3f85dc7407d0ad91141ccd1be5
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Los católicos en México celebran la Fiesta de 
  la Inmaculada Concepción para honrar la idea de que la concepción de la 
  Virgen María fue pura e impecable.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-DTSTAMP:20240401T090234Z
-UID:seasons/december-solstice-2025
+DTSTAMP:20240903T094925Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de diciembre en México (Ciudad de México
  )
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nochebuena 
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20240401T090234Z
-UID:mexico/christmas-eve-2025
+DTSTAMP:20240903T094925Z
+UID:c9de36b37b9720585011f339f6b40e2c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  La mayoría de los mexicanos celebran la Nochebue
  na el 24 de diciembre asistiendo a las misas de la iglesia\, visitando a f
  amiliares y amigos y disfrutando de cenas especiales de Navidad.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Santos Inocentes 
 DTSTART;VALUE=DATE:20251228
 DTEND;VALUE=DATE:20251229
-DTSTAMP:20240401T090234Z
-UID:mexico/day-of-the-holy-innocents-2025
+DTSTAMP:20240903T094925Z
+UID:f3f22c2a7b2b7e1ce34c3ace8226b52d
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  La Iglesia Católica en México celebra el Día 
  de los Santos Inocentes en memoria de cuando los bebés varones en Belén 
  fueron ejecutados por orden de Herodes.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20240401T090234Z
-UID:mexico/new-year-eve-2025
+DTSTAMP:20240903T094925Z
+UID:07c594072ea7cd9d76cc014a55a5edee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  La víspera de Año Nuevo\, el 31 de diciembre\,
   es el último día del año.
-LAST-MODIFIED:20240401T090234Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20250417
 DTEND;VALUE=DATE:20250418
-DTSTAMP:20240401T090235Z
-UID:mexico/maundy-thursday-2025
+DTSTAMP:20240903T094925Z
+UID:cf9e945fccccb327bce596bb7d68f960
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank holiday -  Los mexicanos celebran el Jueves Santo como pa
  rte de la Semana Santa\, que conmemora los últimos momentos de la vida de
   Jesús\, su muerte y resurrección.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20240401T090235Z
-UID:mexico/good-friday-2025
+DTSTAMP:20240903T094925Z
+UID:a6d78e4d058a7d948f2d4d9f762d723b
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank holiday -  Los mexicanos observan el Viernes Santo como e
  l día en que Jesús murió en la cruz hace unos 2000 años.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Batalla de Puebla (Cinco de Mayo) 
 DTSTART;VALUE=DATE:20250505
 DTEND;VALUE=DATE:20250506
-DTSTAMP:20240401T090235Z
-UID:mexico/cinco-de-mayo-2025
+DTSTAMP:20240903T094925Z
+UID:fd081446262206aa0f684f7a4351ea30
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado escolar
   y gubernamental anual dedicado a la victoria del ejército mexicano en la
   Batalla de Puebla.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Virgen de Guadalupe 
 DTSTART;VALUE=DATE:20251212
 DTEND;VALUE=DATE:20251213
-DTSTAMP:20240401T090235Z
-UID:mexico/day-of-virgin-guadalupe-2025
+DTSTAMP:20240903T094925Z
+UID:7412581c2c41d96f4bd866a92ad0bc7a
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank holiday -  Uno de los días más celebrados del calendari
  o mexicano es el Día de Nuestra Señora Guadalupe\, que conmemora la cree
  ncia de que la madre de Jesús apareció en México en 1531.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094925Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20240401T090235Z
-UID:mexico/new-year-day-2026
+DTSTAMP:20240903T094926Z
+UID:1285b0842805322f18887ff5197b8c60
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El día de Año Nuevo\, el 1 de enero\, es
   el primer día del año.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Constitución 
 DTSTART;VALUE=DATE:20260202
 DTEND;VALUE=DATE:20260203
-DTSTAMP:20240401T090235Z
-UID:mexico/memorial-day-2026
+DTSTAMP:20240903T094926Z
+UID:e7e833623692cbf472bef1e7d81c83ba
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Constitución de México se 
  celebra el primer lunes de febrero para conmemorar la Constitución de 191
  7.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
 DTSTART;VALUE=DATE:20260316
 DTEND;VALUE=DATE:20260317
-DTSTAMP:20240401T090235Z
-UID:mexico/benito-juarez-2026
+DTSTAMP:20240903T094926Z
+UID:e7a9eac455c65bb178a38b6e52ab5b83
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de Benito Juárez (Natalicio de Be
  nito Juárez) es un feriado nacional en México para honrar el cumpleaños
   de uno de los mejores presidentes del país.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Trabajo/Primero de Mayo 
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-DTSTAMP:20240401T090235Z
-UID:mexico/labor-day-2026
+DTSTAMP:20240903T094926Z
+UID:27788f9dd2565504c0c9649a31dd9098
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día del Trabajo en México se celebra 
  como un día libre del trabajo y la escuela el primer día de mayo.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Independencia 
 DTSTART;VALUE=DATE:20260916
 DTEND;VALUE=DATE:20260917
-DTSTAMP:20240401T090235Z
-UID:mexico/independence-day-2026
+DTSTAMP:20240903T094926Z
+UID:08039237e44e1a07fd8266431a5fbfe0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Independencia de México es 
  un día festivo nacional para celebrar la libertad del país del dominio e
  spañol.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:El Día de la Revolución 
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
-DTSTAMP:20240401T090235Z
-UID:mexico/revolution-day-2026
+DTSTAMP:20240903T094926Z
+UID:1bb4d0ea0c9379e774eec193d4729b03
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Día de la Revolución se celebra el terce
  r lunes de noviembre para conmemorar el inicio de la revolución mexicana 
  para derrocar a la dictadura de Porfirio Díaz en 1910.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Navidad 
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20240401T090235Z
-UID:mexico/christmas-day-2026
+DTSTAMP:20240903T094926Z
+UID:b9a17400af185af82dc7551e1d3f6b80
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
  xico para celebrar el nacimiento de Jesucristo.
-LAST-MODIFIED:20240401T090235Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Santos Reyes 
 DTSTART;VALUE=DATE:20260106
 DTEND;VALUE=DATE:20260107
-DTSTAMP:20240401T090236Z
-UID:mexico/holy-kings-2026
+DTSTAMP:20240903T094926Z
+UID:e21d78bf9f3f77f54a6a866a5e361c85
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de los Santos Reyes es una celebración 
  cristiana en la que los niños de México reciben regalos de los tres reye
  s magos.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Candelaria 
 DTSTART;VALUE=DATE:20260202
 DTEND;VALUE=DATE:20260203
-DTSTAMP:20240401T090236Z
-UID:mexico/candlemas-2026
+DTSTAMP:20240903T094926Z
+UID:d9d735e21d6b5a630132bb0defd83c9b
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  La candelaria también se conoce como la Fiesta 
  de la Presentación del Señor. Es el 2 de febrero de cada año.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Constitución 
 DTSTART;VALUE=DATE:20260205
 DTEND;VALUE=DATE:20260206
-DTSTAMP:20240401T090236Z
-UID:mexico/memorial-day-2026
+DTSTAMP:20240903T094926Z
+UID:e7e833623692cbf472bef1e7d81c83ba
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de la Constitución de México se celebr
  a el primer lunes de febrero para conmemorar la Constitución de 1917.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de San Valentín 
 DTSTART;VALUE=DATE:20260214
 DTEND;VALUE=DATE:20260215
-DTSTAMP:20240401T090236Z
-UID:mexico/valentine-day-2026
+DTSTAMP:20240903T094926Z
+UID:1df28d828e07ae89e9ae0a725fe16c49
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El día de San Valentín en México no es solo p
  ara el romance\, también es un momento para mostrar aprecio por los amigo
  s.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Miércoles de Ceniza 
 DTSTART;VALUE=DATE:20260218
 DTEND;VALUE=DATE:20260219
-DTSTAMP:20240401T090236Z
-UID:mexico/ash-wednesday-2026
+DTSTAMP:20240903T094926Z
+UID:946735c5e27641ec3c1b1218659e55c5
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  Los católicos en México observan el Miércoles 
  de Ceniza\, que es el comienzo del ayuno cuaresmal que dura 40 días (excl
  uyendo los domingos).
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Bandera 
 DTSTART;VALUE=DATE:20260224
 DTEND;VALUE=DATE:20260225
-DTSTAMP:20240401T090236Z
-UID:mexico/flag-day-2026
+DTSTAMP:20240903T094926Z
+UID:5e83394710e75c6e9c985092d59252f8
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de la Bandera de México celebra la band
  era nacional\, que presenta franjas verticales de color rojo\, blanco y ve
  rde con el escudo de armas nacional en el centro de la franja blanca.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la expropiación petrolera 
 DTSTART;VALUE=DATE:20260318
 DTEND;VALUE=DATE:20260319
-DTSTAMP:20240401T090236Z
-UID:mexico/oil-expropriation-2026
+DTSTAMP:20240903T094926Z
+UID:31028eb3963ad320abff26f044f2b9dd
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El día de la expropiación petrolera sirve como
   recordatorio nacional de cuando el presidente mexicano Lázaro Cárdenas 
  proclamó la expropiación de todas las reservas minerales y petroleras de
   México.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de marzo 
 DTSTART;VALUE=DATE:20260320
 DTEND;VALUE=DATE:20260321
-DTSTAMP:20240401T090236Z
-UID:seasons/vernal-equinox-2026
+DTSTAMP:20240903T094926Z
+UID:8510987907f8aa352d8180560c85d9f9
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de marzo en México (Ciudad de México)
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
 DTSTART;VALUE=DATE:20260321
 DTEND;VALUE=DATE:20260322
-DTSTAMP:20240401T090236Z
-UID:mexico/benito-juarez-2026
+DTSTAMP:20240903T094926Z
+UID:e7a9eac455c65bb178a38b6e52ab5b83
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Benito Juárez (Natalicio de Benito J
  uárez) es un feriado nacional en México para honrar el cumpleaños de un
  o de los mejores presidentes del país.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Domingo de Ramos 
 DTSTART;VALUE=DATE:20260329
 DTEND;VALUE=DATE:20260330
-DTSTAMP:20240401T090236Z
-UID:mexico/palm-sunday-2026
+DTSTAMP:20240903T094926Z
+UID:bf29f23a602c0cd8e015c5b3b9bf7ba2
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  Los cristianos en México celebran el Domingo de 
  Ramos\, que honra la entrada triunfal de Jesucristo en Jerusalén.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
@@ -1447,366 +1450,366 @@ SUMMARY:Sábado Santo Los mexicanos celebran el Sábado Santo como parte d
  ús\, su muerte y resurrección.
 DTSTART;VALUE=DATE:20260404
 DTEND;VALUE=DATE:20260405
-DTSTAMP:20240401T090236Z
-UID:mexico/holy-saturday-2026
+DTSTAMP:20240903T094926Z
+UID:3c5761100f07563af7c28120baf4abbb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance - Mexicans observe Holy Saturday as part of Holy We
  ek (Semana Santa)\, which commemorates Jesus’ last moments of life\, his
   death\, and resurrection.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Domingo de Pascua 
 DTSTART;VALUE=DATE:20260405
 DTEND;VALUE=DATE:20260406
-DTSTAMP:20240401T090236Z
-UID:mexico/easter-2026
+DTSTAMP:20240903T094926Z
+UID:29c63ab07abcbe0ee632c841e5029cb7
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  El domingo de Pascua es una de las ocasiones más
   festivas del año en México: celebra la resurrección de Jesucristo.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Niño 
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
-DTSTAMP:20240401T090236Z
-UID:mexico/children-day-2026
+DTSTAMP:20240903T094926Z
+UID:2e998dfd906ecbe45d1c62f02b8f4ec1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día del Niño es una celebración mexicana q
  ue honra y aprecia a los niños.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Madre 
 DTSTART;VALUE=DATE:20260510
 DTEND;VALUE=DATE:20260511
-DTSTAMP:20240401T090236Z
-UID:mexico/mother-day-2026
+DTSTAMP:20240903T094926Z
+UID:400f0e880cc32bf6ac34070264310afc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Muchos mexicanos celebran el Día de la Madre co
  mo un evento familiar festivo en el que las madres reciben tarjetas\, flor
  es y regalos.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Ascensión 
 DTSTART;VALUE=DATE:20260514
 DTEND;VALUE=DATE:20260515
-DTSTAMP:20240401T090236Z
-UID:mexico/ascension-day-2026
+DTSTAMP:20240903T094926Z
+UID:41f675bbd9ddad29f1322ed1dde9d4d7
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Las iglesias de México conmemoran la historia d
  e la ascensión de Jesús al cielo el Día de la Ascensión.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Maestro 
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260516
-DTSTAMP:20240401T090236Z
-UID:mexico/teacher-day-2026
+DTSTAMP:20240903T094926Z
+UID:f9f63d0f388ec8834f235c174f3ed947
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Agradecimiento a los Maestros es un e
  vento festivo para honrar a los maestros y otros trabajadores de la educac
  ión en México.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Domingo de Pentecostés 
 DTSTART;VALUE=DATE:20260524
 DTEND;VALUE=DATE:20260525
-DTSTAMP:20240401T090236Z
-UID:mexico/pentecost-2026
+DTSTAMP:20240903T094926Z
+UID:18b1cf9628048981f1f45fc54bab9e03
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El domingo de Pentecostés es una fiesta cristia
  na que conmemora la historia del Espíritu Santo que descendió sobre los 
  discípulos de Jesús. También se conoce como Pentecostés.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Corpus Christi 
 DTSTART;VALUE=DATE:20260604
 DTEND;VALUE=DATE:20260605
-DTSTAMP:20240401T090236Z
-UID:mexico/corpus-christi-2026
+DTSTAMP:20240903T094926Z
+UID:60ac6c6f8112782fc9b1c242ab303f4b
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Las iglesias de todo México celebran la Sagrada
   Eucaristía\, o la comunión de pan y vino\, durante el Corpus Christi.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Padre 
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
-DTSTAMP:20240401T090236Z
-UID:mexico/father-day-2026
+DTSTAMP:20240903T094926Z
+UID:794fc360521b46cdc28fc60bca11bb55
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Los padres y las figuras paternas reciben tarjet
  as\, chocolates y otros regalos el Día del Padre en México.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de junio 
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
-DTSTAMP:20240401T090236Z
-UID:seasons/june-solstice-2026
+DTSTAMP:20240903T094926Z
+UID:235b1350a5a7cafa47569b8c7ec2aeee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de junio en México (Ciudad de México)
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Asunción de María 
 DTSTART;VALUE=DATE:20260815
 DTEND;VALUE=DATE:20260816
-DTSTAMP:20240401T090236Z
-UID:mexico/assumption-day-2026
+DTSTAMP:20240903T094926Z
+UID:8a7c6b75a4dc15640801cc62e41013f1
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Las iglesias católicas de México celebran la A
  sunción de María para honrar la creencia de la partida de la Virgen Mar
  ía de la tierra al cielo.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Grito de Dolores 
 DTSTART;VALUE=DATE:20260915
 DTEND;VALUE=DATE:20260916
-DTSTAMP:20240401T090236Z
-UID:mexico/grito-de-dolores-2026
+DTSTAMP:20240903T094926Z
+UID:7b52cef334231a95d81ff5464c1196e4
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El día del Grito de Dolores es un evento import
  ante que precede a las celebraciones del Día de la Independencia de Méxi
  co.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Equinoccio de septiembre 
 DTSTART;VALUE=DATE:20260922
 DTEND;VALUE=DATE:20260923
-DTSTAMP:20240401T090236Z
-UID:seasons/autumnal-equniox-2026
+DTSTAMP:20240903T094926Z
+UID:79c4f6e32924c5355db32aa994e3362e
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Equinoccio de septiembre en México (Ciudad de Méxi
  co)
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Raza 
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
-DTSTAMP:20240401T090236Z
-UID:mexico/columbus-day-2026
+DTSTAMP:20240903T094926Z
+UID:00801b19b520f856b09d472a10d976c3
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de la Hispanidad se celebra en México e
  n honor a un explorador italiano que llegó a las Américas durante el sig
  lo XV.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Halloween 
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
-DTSTAMP:20240401T090236Z
-UID:mexico/halloween-2026
+DTSTAMP:20240903T094926Z
+UID:6b8d13f0ff19af79dcb0929cd451d097
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Halloween se celebra en México el último día 
  de octubre\, un día antes del Día de Todos los Santos.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de Todos los Santos 
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20240401T090236Z
-UID:mexico/all-saints-day-2026
+DTSTAMP:20240903T094926Z
+UID:32cb52d234f62aa0e4cdd8893f5453ba
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Todos los Santos es una celebración 
  religiosa en México el 1 de noviembre para recordar a todos los santos de
   la Iglesia Católica.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Difuntos 
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
-DTSTAMP:20240401T090236Z
-UID:mexico/all-souls-day-2026
+DTSTAMP:20240903T094926Z
+UID:bbbe620ac123a7c87245f5808c7262cd
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de los Difuntos\, conocido popularmente 
  como el Día de los Muertos\, es un feriado bancario en México para recor
  dar a familiares y amigos fallecidos el 2 de noviembre.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:El Día de Cristo Rey 
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
-DTSTAMP:20240401T090236Z
-UID:mexico/christ-the-king-day-2026
+DTSTAMP:20240903T094926Z
+UID:9a9c23e278446bb31d5dd4818093c054
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  El Día de Cristo Rey es una celebración cristi
  ana que reconoce el poder y la autoridad de Jesús en la iglesia cristiana
  .
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fiesta de la Inmaculada Concepción 
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
-DTSTAMP:20240401T090236Z
-UID:mexico/immaculate-conception-2026
+DTSTAMP:20240903T094926Z
+UID:e2e0ac3f85dc7407d0ad91141ccd1be5
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  Los católicos en México celebran la Fiesta de 
  la Inmaculada Concepción para honrar la idea de que la concepción de la 
  Virgen María fue pura e impecable.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Solsticio de diciembre 
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
-DTSTAMP:20240401T090236Z
-UID:seasons/december-solstice-2026
+DTSTAMP:20240903T094926Z
+UID:182f9d9462ef40cca60e6528e842a5c0
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Season -  Solsticio de diciembre en México (Ciudad de México
  )
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nochebuena 
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
-DTSTAMP:20240401T090236Z
-UID:mexico/christmas-eve-2026
+DTSTAMP:20240903T094926Z
+UID:c9de36b37b9720585011f339f6b40e2c
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Christian -  La mayoría de los mexicanos celebran la Nochebue
  na el 24 de diciembre asistiendo a las misas de la iglesia\, visitando a f
  amiliares y amigos y disfrutando de cenas especiales de Navidad.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de los Santos Inocentes 
 DTSTART;VALUE=DATE:20261228
 DTEND;VALUE=DATE:20261229
-DTSTAMP:20240401T090236Z
-UID:mexico/day-of-the-holy-innocents-2026
+DTSTAMP:20240903T094926Z
+UID:f3f22c2a7b2b7e1ce34c3ace8226b52d
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  La Iglesia Católica en México celebra el Día 
  de los Santos Inocentes en memoria de cuando los bebés varones en Belén 
  fueron ejecutados por orden de Herodes.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nochevieja 
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20240401T090236Z
-UID:mexico/new-year-eve-2026
+DTSTAMP:20240903T094926Z
+UID:07c594072ea7cd9d76cc014a55a5edee
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Observance -  La víspera de Año Nuevo\, el 31 de diciembre\,
   es el último día del año.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20260402
 DTEND;VALUE=DATE:20260403
-DTSTAMP:20240401T090236Z
-UID:mexico/maundy-thursday-2026
+DTSTAMP:20240903T094926Z
+UID:cf9e945fccccb327bce596bb7d68f960
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank holiday -  Los mexicanos celebran el Jueves Santo como pa
  rte de la Semana Santa\, que conmemora los últimos momentos de la vida de
   Jesús\, su muerte y resurrección.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20260403
 DTEND;VALUE=DATE:20260404
-DTSTAMP:20240401T090236Z
-UID:mexico/good-friday-2026
+DTSTAMP:20240903T094926Z
+UID:a6d78e4d058a7d948f2d4d9f762d723b
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank holiday -  Los mexicanos observan el Viernes Santo como e
  l día en que Jesús murió en la cruz hace unos 2000 años.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Batalla de Puebla (Cinco de Mayo) 
 DTSTART;VALUE=DATE:20260505
 DTEND;VALUE=DATE:20260506
-DTSTAMP:20240401T090236Z
-UID:mexico/cinco-de-mayo-2026
+DTSTAMP:20240903T094926Z
+UID:fd081446262206aa0f684f7a4351ea30
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado escolar
   y gubernamental anual dedicado a la victoria del ejército mexicano en la
   Batalla de Puebla.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Virgen de Guadalupe 
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
-DTSTAMP:20240401T090236Z
-UID:mexico/day-of-virgin-guadalupe-2026
+DTSTAMP:20240903T094926Z
+UID:7412581c2c41d96f4bd866a92ad0bc7a
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank holiday -  Uno de los días más celebrados del calendari
  o mexicano es el Día de Nuestra Señora Guadalupe\, que conmemora la cree
  ncia de que la madre de Jesús apareció en México en 1531.
-LAST-MODIFIED:20240401T090236Z
+LAST-MODIFIED:20240903T094926Z
 TRANSP:transparent
 END:VEVENT
 END:VCALENDAR

@@ -45,7 +45,7 @@ class Calendar(object):
         ievt = icalendar.Event()
 
         data = {
-            'uid': "{}-{}".format(self.unique_id, self.year),
+            'uid': self.unique_id,
             'last-modified': datetime.now(),
             'dtstart': self.iso_date.date(),
             'dtend': self.iso_date.date() + timedelta(days=1),

@@ -30,11 +30,12 @@ class CalendarificProvider(Provider):
             'api_key': self.api_key,
             'country': country,
             'year': year,
-            'type': calendar_type
+            'type': calendar_type,
         }
 
         if not self.is_free_tier:
             payload['language'] = language
+            payload['uuid'] = True
 
         response = requests.get(settings.CALENDARIFIC_API_URL, params=payload)
         response.raise_for_status()
