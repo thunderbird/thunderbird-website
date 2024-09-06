@@ -198,6 +198,13 @@ class ThunderbirdDetails():
         return self.platform_labels.items()
 
     def list_releases(self):
+        """Generate a list of releases for the releases page. This also fixes some quirks with the release information.
+
+        Quirks:
+        - 38.0.1 starts with a point release and is added twice, once as a major and second as a stability release.
+        - 115 releases are patched up to be ESR builds.
+        - non-esr builds post 115 are ignored.
+        """
         releases = {}
 
         def needs_major_fixup(version_ints: list[int]):
@@ -242,6 +249,10 @@ class ThunderbirdDetails():
             is_stability = category == 'stability'
             # We only count 128.0 and up as esr (and specific 115.0 versions)
             is_esr = (category == 'esr' and version_int[0] >= 128) or needs_esr_fixup(version_int)
+
+            # Skip any post-115 non-esr builds (monthly) for now!
+            if not is_esr and version_int[0] > 115:
+                continue
 
             if is_esr:
                 version = f'{version}esr'

@@ -487,7 +487,7 @@ CALENDAR_REMAP = {
 }
 
 # Filter out specific versions for the release notes page
-VERSIONS_TO_FILTER = ["125.0", "126.0", "127.0", "129.0"]
+VERSIONS_TO_FILTER = []
 
 # Old path (excluding locale) -> helper.url key
 WEBSITE_REDIRECTS = {
