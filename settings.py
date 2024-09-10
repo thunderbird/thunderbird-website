@@ -207,7 +207,7 @@ URL_MAPPINGS = {
     'privacy': 'https://www.mozilla.org/privacy/websites/',
     'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#data-tools',
     'privacy.notices.donations': 'https://www.mozilla.org/privacy/websites/#donations',
-    'privacy.notices.thunderbird': 'https://www.mozilla.org/privacy/thunderbird/',
+    'privacy.notices.thunderbird': '/privacy',
     'support': 'https://support.mozilla.org/products/thunderbird/',
     'thunderbird.about': '/about',
     'thunderbird.about.our-mission-statement': '/about/mission-statement',
