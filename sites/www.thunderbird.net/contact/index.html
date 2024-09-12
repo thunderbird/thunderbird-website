@@ -17,7 +17,7 @@
       <h4>{{ _('Direct your inquiries to the teams below.') }}</h4>
     </div>
     <div class="block-grid">
-      {% call contact_block( svg('base/icons/contact/support'), _('Support'), [(url('support'), _('Support Website'))]) %}
+      {% call contact_block( svg('base/icons/contact/support'), _('Support'), [(url('support'), _('Support Website')), (url('thunderbird.donate.contact'), _('Donor Help'))]) %}
         {{ _('For questions about how to use Thunderbird, visit and search our Support Website. Feel free to submit a new question if you cannot find an answer. Please remember to be courteous to our staff and volunteers.') }}
         {% if not LANG.startswith('en-') %}
         <p>
