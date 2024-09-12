@@ -88,7 +88,8 @@ CANONICAL_LOCALES = {
 
 ENUS_ONLY = [
     # Atom feed is only generated on en-US
-    'thunderbird.releases.atom'
+    'thunderbird.releases.atom',
+    'thunderbird.privacy'
 ]
 
 # Most pages under /thunderbird/ are en-US only, except these.
@@ -237,6 +238,7 @@ URL_MAPPINGS = {
     'thunderbird.lists.enterprise': 'https://thunderbird.topicbox.com/groups/enterprise',
     'thunderbird.organizations': '/organizations',
     'thunderbird.participate': '/participate',
+    'thunderbird.privacy': '/privacy',
     'thunderbird.releases.index': '/thunderbird/releases',
     'thunderbird.releases.atom': '/thunderbird/releases/atom.xml',
     'thunderbird.style': 'https://style.thunderbird.net',
