@@ -38,6 +38,15 @@
   </div>
 </section>
 {% include 'includes/components/page-separator.html' %}
+<section id="faq">
+  <div class="container">
+    <div class="section-text wide faq">
+      <h2>{{ _('Frequently Asked Questions') }}</h2>
+      {% include 'includes/faq.html' %}
+    </div>
+  </div>
+</section>
+{% include 'includes/components/page-separator.html' %}
 <section id="become-a-corporate-supporter">
   <div class="container">
     <div class="section-text">
@@ -50,15 +59,6 @@
     </div>
     <div class="image">
       {{ high_res_img('thunderbird/base/donate/rocket.png', {'alt': _('A rocket with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
-    </div>
-  </div>
-</section>
-{% include 'includes/components/page-separator.html' %}
-<section id="faq">
-  <div class="container">
-    <div class="section-text wide faq">
-      <h2>{{ _('Frequently Asked Questions') }}</h2>
-      {% include 'includes/faq.html' %}
     </div>
   </div>
 </section>
