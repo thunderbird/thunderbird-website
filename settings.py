@@ -207,7 +207,7 @@ URL_MAPPINGS = {
     'privacy': 'https://www.mozilla.org/privacy/websites/',
     'privacy.notices.websites': 'https://www.mozilla.org/privacy/websites/#data-tools',
     'privacy.notices.donations': 'https://www.mozilla.org/privacy/websites/#donations',
-    'privacy.notices.thunderbird': 'https://www.thunderbird.net/privacy/',
+    'privacy.notices.thunderbird': '/privacy',
     'support': 'https://support.mozilla.org/products/thunderbird/',
     'thunderbird.about': '/about',
     'thunderbird.about.our-mission-statement': '/about/mission-statement',
@@ -256,6 +256,8 @@ BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
 SHOW_BETA_NOTES_IN_RSS_FEED = False
 
 ACTIVE_SURVEY_URL = 'https://www.surveymonkey.com/r/69C9LSH'
+
+THUNDERBIRD_DESKTOP_PRIVACY_POLICY_URL = 'https://raw.githubusercontent.com/mozilla/legal-docs/main/en/thunderbird_privacy_policy.md'
 
 # WEBSITE_CSS = {
 #     'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],

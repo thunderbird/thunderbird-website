@@ -44,7 +44,9 @@ There are additional arguments:
     * Sets the port to be used for the localhost server. Default is 8000. Format: `--port 8000`.
 * `--buildcalendar`
     * This builds the holiday calendars. Normally this will build every locale, but you can restrict the build to just US by using the `--enus` options.
-
+* `--downloadlegal`
+    * This downloads the latest Thunderbird privacy policy document, renders it into html from markdown and puts it in the includes folder. 
+    * You only need to run this when the document updates.
 
 * thunderbird.net templates are in the `sites/www.thunderbird.net` directory, and start page in the `sites/start.thunderbird.net` dir. Assets are shared and in the `assets` dir.
 

@@ -20,6 +20,7 @@ parser.add_argument('--startpage', help='Build the start page instead of the mai
                     action='store_true')
 parser.add_argument('--buildcalendars', help='Builds the ics calendar files, instead of the websites.',
                     action='store_true')
+parser.add_argument('--downloadlegal', help='Download the Thunderbird privacy policy document.', action='store_true')
 parser.add_argument('--watch', help='Rebuild when template and asset dirs are changed, and run a server on localhost.',
                     action='store_true')
 parser.add_argument('--port', const=8000, default=8000, type=int,
@@ -49,6 +50,10 @@ elif args.buildcalendars:
         sys.exit("No `CALENDARIFIC_API_KEY` defined.")
 
     build_calendar.build_calendars(CalendarificProvider({'api_key': api_key}), calendar_locales)
+elif args.downloadlegal:
+    print("Downloading legal documents")
+    legal = builder.Legal(settings.WEBSITE_PATH)
+    legal.download()
 else:
     print('Rendering www.thunderbird.net ' + langmsg)
     # Prepare data and build main website.
