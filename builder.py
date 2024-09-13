@@ -2,6 +2,9 @@ import datetime
 import errno
 
 import jinja2.exceptions
+import markdown
+import markupsafe
+import requests
 
 import helper
 import logging
@@ -91,6 +94,29 @@ def delete_contents(dirpath):
                 shutil.rmtree(filepath)
             except OSError:
                 os.remove(filepath)
+
+
+class Legal:
+    """
+    Legal building class
+    This will download the Thunderbird desktop privacy policy and place it in the includes directory.
+    Parameters:
+        `template_path` (str): Path to search for templates in.
+    """
+    def __init__(self, template_path: str):
+        self.template_path = template_path
+
+    def download(self):
+        directory = os.path.join(self.template_path, 'includes', 'privacy')
+        os.makedirs(directory, exist_ok=True)
+
+        contents = requests.get(settings.THUNDERBIRD_DESKTOP_PRIVACY_POLICY_URL).text
+        html = markupsafe.Markup(markdown.markdown(contents, extensions=['markdown.extensions.attr_list']))
+
+        html = f'{{# THIS PAGE IS AUTOMATICALLY GENERATED, DO NOT EDIT THIS DOCUMENT! #}}\n{html}'
+
+        with open(os.path.join(directory, 'privacy-desktop.html'), 'w') as fh:
+            fh.write(html)
 
 
 class Site(object):
