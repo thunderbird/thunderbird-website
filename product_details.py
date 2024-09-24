@@ -90,21 +90,23 @@ class ThunderbirdDetails():
     version_map = {
         'daily': ('LATEST_THUNDERBIRD_NIGHTLY_VERSION',),
         'beta': ('LATEST_THUNDERBIRD_DEVEL_VERSION',),
-        'release': ('THUNDERBIRD_ESR_NEXT', 'THUNDERBIRD_ESR'),
+        'esr': ('THUNDERBIRD_ESR_NEXT', 'THUNDERBIRD_ESR'),
+        'release': ('LATEST_THUNDERBIRD_VERSION',),
         # Win7/8.1 only support up to 115
         'release_win7_8': ('THUNDERBIRD_ESR',)
     }
 
     channel_labels = OrderedDict({
+        'esr': 'Extended Support Release',
         'release': 'Release',
         'beta': 'Beta',
         'daily': 'Daily'
     })
 
-    def latest_version(self, channel='release'):
+    def latest_version(self, channel=settings.DEFAULT_RELEASE_VERSION):
         """Returns the latest release version of Thunderbird by default, or other `channel`."""
         # Force release by default
-        version_names = self.version_map.get(channel or 'release')
+        version_names = self.version_map.get(channel or settings.DEFAULT_RELEASE_VERSION)
 
         version = self.current_versions.get(version_names[0])
         # ESR_NEXT can be an empty string, so we have to fallback to ESR
@@ -113,7 +115,7 @@ class ThunderbirdDetails():
 
         return version
 
-    def latest_builds(self, locale, channel='release'):
+    def latest_builds(self, locale, channel=settings.DEFAULT_RELEASE_VERSION):
         """Returns builds for the latest version of Thunderbird based on `channel`."""
         version = self.latest_version(channel)
 
@@ -194,7 +196,7 @@ class ThunderbirdDetails():
                              ('lang', _locale),
                          ])])
 
-    def platforms(self, channel='release'):
+    def platforms(self, channel=settings.DEFAULT_RELEASE_VERSION):
         return self.platform_labels.items()
 
     def list_releases(self):
