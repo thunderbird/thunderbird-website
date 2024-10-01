@@ -14,6 +14,7 @@ if (typeof Mozilla === 'undefined') {
   const DownloadInfo = {};
 
   const isDownloadPage = document.getElementsByClassName('page-download').length > 0;
+  let pageContainer = document.getElementById('select-download');
   let localeSelect = document.getElementById('download-language-select');
   let channelSelect = document.getElementById('download-release-select');
   let osSelect = document.getElementById('download-os-select');
@@ -32,6 +33,17 @@ if (typeof Mozilla === 'undefined') {
     //'android': 'Android'
   };
 
+
+  /**
+   * Sets the page container's data attributes so it can be used for conditional css/other means
+   * @param elementName {string}
+   * @param elementValue {string}
+   */
+  DownloadInfo.SetDataAttributes = function(elementName, elementValue) {
+    // Capitalize the name
+    const name = elementName.charAt(0).toUpperCase() + elementName.slice(1);
+    pageContainer.dataset[`desktop${name}`] = elementValue;
+  }
 
   /**
    * Hooks up onChange event handlers, and sets the installer dropdown options / download link
@@ -66,9 +78,11 @@ if (typeof Mozilla === 'undefined') {
     });
     [localeSelect, channelSelect, osSelect, installerSelect].forEach(function(element) {
       element.addEventListener('change', function(event) {
+        DownloadInfo.SetDataAttributes(event.currentTarget.name, event.currentTarget.value);
         DownloadInfo.SetDownloadLink();
       });
     });
+
 
     // Set some defaults
     DownloadInfo.SetDefaults();
@@ -92,6 +106,11 @@ if (typeof Mozilla === 'undefined') {
     // Channel Selection calls OS Selection
     DownloadInfo.OnOSSelection(defaultOS);
     DownloadInfo.SetDownloadLink();
+
+    // Set the data attribute defaults
+    [localeSelect, channelSelect, osSelect, installerSelect].forEach(function(element) {
+      DownloadInfo.SetDataAttributes(element.name, element.value);
+    });
   }
 
   /**
@@ -127,6 +146,8 @@ if (typeof Mozilla === 'undefined') {
 
     if (firstInstaller) {
       installerSelect.value = firstInstaller;
+      // Also have to update the data attributes
+      DownloadInfo.SetDataAttributes(installerSelect.name, installerSelect.value);
     }
 
     // Hack: We need to hide beta and daily for Windows 7/8.1 builds, and force the release channel.
@@ -136,6 +157,7 @@ if (typeof Mozilla === 'undefined') {
       document.querySelector('#download-release-select [value="release"]').classList.add('hidden');
       // Force esr build
       channelSelect.value = 'esr';
+      DownloadInfo.SetDataAttributes(channelSelect.name, channelSelect.value);
     } else {
       document.querySelector('#download-release-select [value="beta"]').classList.remove('hidden');
       document.querySelector('#download-release-select [value="daily"]').classList.remove('hidden');

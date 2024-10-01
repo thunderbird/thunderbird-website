@@ -47,7 +47,7 @@
           <label class="pretend-to-be-h6" for="download-release-select" role="group">
             <strong>{{ _('Release Channel') }}</strong>
           </label>
-          <select id="download-release-select" name="download" dir="ltr" class="form-select">
+          <select id="download-release-select" name="channel" dir="ltr" class="form-select">
             {% for channel, channel_name in get_channels().items() %}
             {% set option_name = 'Thunderbird %(channel_name)s'|format(channel_name=channel_name) %}
             <option value="{{ channel }}">{{ _(option_name) }}</option>
@@ -58,7 +58,7 @@
           <label class="pretend-to-be-h6" for="download-os-select" role="group">
             <strong>{{ _('Operating System') }}</strong>
           </label>
-          <select id="download-os-select" name="lang" dir="ltr" class="form-select">
+          <select id="download-os-select" name="os" dir="ltr" class="form-select">
             {% for os, platforms in get_platforms().items() %}
             <option data-is-mobile="{{ is_os_mobile(os) }}" value="{{ os }}">{{ os }}</option>
             {% endfor %}
@@ -74,7 +74,7 @@
               <label class="pretend-to-be-h6" for="download-advanced-platform-select" role="group">
                 <strong>{{ _('Installer Type') }}</strong>
               </label>
-              <select id="download-advanced-platform-select" name="lang" dir="ltr" class="form-select">
+              <select id="download-advanced-platform-select" name="installer" dir="ltr" class="form-select">
                 {% for os, platforms in get_platforms().items() %}
                 {% for platform_tuple in platforms %}
                 {% set platform = platform_tuple[0] %}
