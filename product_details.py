@@ -93,7 +93,8 @@ class ThunderbirdDetails():
         'esr': ('THUNDERBIRD_ESR_NEXT', 'THUNDERBIRD_ESR'),
         'release': ('LATEST_THUNDERBIRD_VERSION',),
         # Win7/8.1 only support up to 115
-        'release_win7_8': ('THUNDERBIRD_ESR',)
+        # INFO: This is hacked directly in latest_version() now!
+        'release_win7_8': ('',)
     }
 
     channel_labels = OrderedDict({
@@ -105,6 +106,13 @@ class ThunderbirdDetails():
 
     def latest_version(self, channel=settings.DEFAULT_RELEASE_VERSION):
         """Returns the latest release version of Thunderbird by default, or other `channel`."""
+        # Hack for Win7/8
+        if channel == 'release_win7_8':
+            # Grab the last 115.* version from minor releases
+            # This assumes the json is in order of release date!!
+            compat_version = list(filter(lambda k: '115.' in k, self.minor_releases.keys()))[-1]
+            return compat_version
+
         # Force release by default
         version_names = self.version_map.get(channel or settings.DEFAULT_RELEASE_VERSION)
 
