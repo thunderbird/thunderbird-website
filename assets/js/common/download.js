@@ -217,7 +217,7 @@ if (typeof Mozilla === 'undefined') {
 
     const version = window._product.channels[channel]?.version;
     const downloadVersion = window._product.channels[channel]?.useVersionInDownloadLinks === true ? version : 'latest';
-    const channelVersion = channel === window._product.defaultChannel ? downloadVersion : `${channel}-${downloadVersion}`;
+    const channelVersion = ['esr', 'release'].indexOf(channel) !== -1 ? downloadVersion : `${channel}-${downloadVersion}`;
     return `https://download.mozilla.org/?product=thunderbird-${channelVersion}-SSL&os=${installer}&lang=${locale}`
   }
 
