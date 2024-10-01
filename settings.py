@@ -503,3 +503,7 @@ WEBSITE_REDIRECTS = {
     ('thunderbird', '128.0esr', 'whatsnew'): 'thunderbird.128.whatsnew',
     ('thunderbird', '128.0', 'releasenotes'): 'thunderbird.128esr.releasenotes',
 }
+
+# The default release channel to use when various function defaults are used
+# This will change the channel of the main download button.
+DEFAULT_RELEASE_VERSION = 'esr'

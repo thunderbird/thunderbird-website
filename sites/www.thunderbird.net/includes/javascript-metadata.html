@@ -1,0 +1,17 @@
+{# Outputs static metadata for any javascript scripts to use. #}
+<script>
+  window._product = {
+    defaultChannel: '{{ default_channel }}',
+    defaultLatestVersion: '{{ get_latest_build(default_channel) }}',
+    channels: {
+      {% for channel, channel_name in get_channels().items() %}
+        '{{ channel }}': {
+          id: '{{ channel }}',
+          name: '{{ channel_name }}',
+          version: '{{ get_latest_build(channel) }}',
+          useVersionInDownloadLinks: {% if channel in ['release', 'esr'] %}true{% else %}false{% endif %},
+        },
+      {% endfor %}
+    }
+  }
+</script>

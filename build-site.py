@@ -57,7 +57,8 @@ elif args.downloadlegal:
 else:
     print('Rendering www.thunderbird.net ' + langmsg)
     # Prepare data and build main website.
-    version = helper.thunderbird_desktop.latest_version('release')
+    default_channel = settings.DEFAULT_RELEASE_VERSION
+    version = helper.thunderbird_desktop.latest_version(default_channel)
     beta_version = helper.thunderbird_desktop.latest_version('beta')
 
     if os.path.exists('media/caldata/autogen/calendars.json'):
@@ -79,7 +80,8 @@ else:
                'CALDATA_URL': settings.CALDATA_URL,
                'latest_thunderbird_version': version,
                'latest_thunderbird_beta_version': beta_version,
-               'blog_data': feedparser.parse(settings.BLOG_FEED_URL)
+               'blog_data': [],
+               'default_channel': default_channel
                }
 
     site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,

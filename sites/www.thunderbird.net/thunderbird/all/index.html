@@ -25,6 +25,9 @@
           <div id="daily-warning" class="warning-panel hidden">
             <p>{{ _('The Daily version is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
           </div>
+          <div id="release-warning" class="warning-panel hidden">
+            <p>{{ _('Thunderbird Release is available for testing purposes only until releases are deemed stable enough for official support. Make sure you backup important data regularly!') }}</p>
+          </div>
 
           <!-- 1. Locale -->
           <label class="pretend-to-be-h6" for="download-language-select" role="group">
@@ -46,7 +49,7 @@
           </label>
           <select id="download-release-select" name="download" dir="ltr" class="form-select">
             {% for channel, channel_name in get_channels().items() %}
-            {% set option_name = 'Thunderbird %(channel_name)s'|format(channel_name=channel_name) if channel != 'release' else 'Thunderbird' %}
+            {% set option_name = 'Thunderbird %(channel_name)s'|format(channel_name=channel_name) %}
             <option value="{{ channel }}">{{ _(option_name) }}</option>
             {% endfor %}
           </select>
@@ -135,7 +138,7 @@
                 <a class="dotted" href="{{ url('thunderbird.sysreq', latest_thunderbird_version) }}">{{ _('System Requirements') }}</a>
               </li>
               <li>
-                <a class="dotted" href="{{ thunderbird_url('releasenotes', 'release') }}">{{ _('Release Notes') }}</a>
+                <a class="dotted" href="{{ thunderbird_url('releasenotes', default_channel) }}">{{ _('Release Notes') }}</a>
               </li>
             </ul>
           </div>

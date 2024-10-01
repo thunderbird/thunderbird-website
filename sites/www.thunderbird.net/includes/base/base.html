@@ -54,6 +54,7 @@
     <script>
       window.siteLocale = "{{ LANG }}";
     </script>
+    {% include 'includes/javascript-metadata.html' %}
   </head>
 
   <body {% if self.body_id() %}id="{% block body_id %}{% endblock %}" {% endif %}class="html-{{ DIR }} {% block body_class %}{% endblock %}" {% block body_attrs %}{% endblock %}>

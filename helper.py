@@ -235,7 +235,7 @@ def platform_img(ctx, url, optional_attributes=None):
 
 
 @jinja2.pass_context
-def download_url(ctx, platform_os, version=None, channel='release', locale=None):
+def download_url(ctx, platform_os, version=None, channel=settings.DEFAULT_RELEASE_VERSION, locale=None):
     """Return a specific download url for a given version, platform, channel and optionally force a locale"""
     if locale is None:
         locale = ctx.get('LANG')
@@ -254,7 +254,7 @@ def download_url(ctx, platform_os, version=None, channel='release', locale=None)
 
 
 @jinja2.pass_context
-def has_localized_download(ctx, locale, channel='release'):
+def has_localized_download(ctx, locale, channel=settings.DEFAULT_RELEASE_VERSION):
     """Determine if a locale has a localized download link (or if it just defaults to en-US)"""
     return bool(thunderbird_desktop.latest_builds(locale, channel))
 
@@ -317,7 +317,7 @@ def get_channels(ctx, include_mobile=False):
 
 
 @jinja2.pass_context
-def download_thunderbird(ctx, channel='release', dom_id=None,
+def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=None,
                          locale=None, force_direct=False,
                          alt_copy=None, button_class=None,
                          section='header', flex_class=None,
@@ -325,7 +325,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     """ Output a "Download Thunderbird" button.
 
     :param ctx: context from calling template.
-    :param channel: name of channel: 'release', 'beta' or 'daily'. 'alpha' has been retired.
+    :param channel: name of channel: 'esr', 'release', 'beta' or 'daily'. 'alpha' has been retired.
     :param dom_id: Use this string as the id attr on the element.
     :param locale: The locale of the download. Default to locale of request.
     :param force_direct: Force the download URL to be direct.
@@ -336,7 +336,7 @@ def download_thunderbird(ctx, channel='release', dom_id=None,
     :param hide_footer_links: Whether we should hide the footer links (System Requirements, What's New, Privacy Policy) display. Default to 'False'.
     :return: The button html.
     """
-    alt_channel = '' if channel == 'release' else channel
+    alt_channel = '' if channel == settings.DEFAULT_RELEASE_VERSION else channel
     locale = ctx.get('LANG', None)
     dom_id = dom_id or 'download-button-desktop-%s' % channel
 
@@ -413,7 +413,7 @@ def thunderbird_url(page, channel=None):
         {{ thunderbird_url('system-requirements', channel) }}
     """
 
-    channel = channel or 'release'
+    channel = channel or settings.DEFAULT_RELEASE_VERSION
     version = thunderbird_desktop.latest_version(channel)
     # replace 'b1', 'b2' etc in beta version with just 'beta', since we don't generate
     # new notes for each beta iteration.
@@ -423,7 +423,7 @@ def thunderbird_url(page, channel=None):
 
     if page == 'all':
         url = '/en-US/thunderbird/{0}/{1}/'.format(channel, page)
-        if channel == 'release':
+        if channel in ['release', 'esr']:
             url = '/en-US/thunderbird/{0}/'.format(page)
 
     return url
