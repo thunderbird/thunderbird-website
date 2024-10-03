@@ -55,7 +55,7 @@
       </ul>
     </div>
   </li>
-  <li class="nav-entry no-border nav-expandable" tabindex="0">
+  <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-contribute"
       class="nav-ln"
@@ -68,6 +68,14 @@
         {{ nav_entry(svg('base/icons/menu/participate'), _('Participate'), _('We need helping hands of all kinds. Learn how you can help Thunderbird and others.'), url('thunderbird.participate')) }}
       </ul>
     </div>
+  </li>
+  <li class="nav-entry no-border no-desktop">
+    <a
+      href="{{ url('thunderbird.latest.all') }}"
+      class="nav-ln"
+    >
+      {{_('Downloads')}}
+    </a>
   </li>
   <li class="nav-entry no-border no-mobile">
     <div class="header-download">
