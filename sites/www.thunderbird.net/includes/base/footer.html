@@ -10,20 +10,17 @@
         </ul>
       </div>
       <div id="footer-nav" class="site-link-section">
-        {#
         <h4>{{ _('Products') }}</h4>
         <ul>
-          <li><a href="{{ url('thunderbird.index') }}" class="dotted">{{_('Thunderbird Desktop')}}</a></li>
-          <li><a href="{{ url('thunderbird.index') }}" class="dotted">{{_('Thunderbird Mobile')}}</a></li>
+          <li><a href="{{ url('thunderbird.products.desktop') }}" class="dotted">{{_('Thunderbird Desktop')}}</a></li>
+          <li><a href="{{ url('thunderbird.products.mobile') }}" class="dotted">{{_('Thunderbird Mobile')}}</a></li>
         </ul>
-        #}
       </div>
       <div class="site-link-section">
         <h4>{{ _('Resources') }}</h4>
         <ul>
           <li><a href="{{ url('blog') }}" class="dotted">{{_('Blog')}}</a></li>
           <li><a href="{{ url('support') }}" class="dotted">{{_('Get Help')}}</a></li>
-          {# <li><a href="{{ url('blog') }}" class="dotted">{{_('Podcasts')}}</a></li> #}
           <li><a href="{{ url('thunderbird.latest.all') }}" class="dotted">{{_('Downloads')}}</a></li>
           <li><a href="{{ url('thunderbird.releases.index') }}" class="dotted">{{_('Release Notes')}}</a></li>
           <li><a href="{{ url('thunderbird.enterprise') }}" class="dotted">{{ _('For Enterprises') }}</a></li>

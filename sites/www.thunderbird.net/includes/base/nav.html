@@ -12,7 +12,6 @@
 </li>
 {% endmacro %}
 <ul id="nav-menu" class="nav-links">
-  <!--
   <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-products"
@@ -27,7 +26,6 @@
       </ul>
     </div>
   </li>
-  -->
   <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-resources"
@@ -39,8 +37,6 @@
       <ul class="popover-panel">
         {{ nav_entry(svg('base/icons/menu/blog'), _('Blog'), _('Learn about new product releases, community events, tech tips, and more.'), url('blog')) }}
         {{ nav_entry(svg('base/icons/menu/help'), _('Get Help'), _('Find the help you need configuring and using Thunderbird.'), url('support')) }}
-        <!--{{ nav_entry(svg('base/icons/menu/podcasts'), _('Podcasts'), _('Meet interesting people and hear their Thunderbird stories.'), url('blog')) }}-->
-        {{ nav_entry(svg('base/icons/menu/downloads'), _('Downloads'), _('Find the latest version of Thunderbird.'), url('thunderbird.latest.all')) }}
       </ul>
     </div>
   </li>
@@ -75,7 +71,10 @@
   </li>
   <li class="nav-entry no-border no-mobile">
     <div class="header-download">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="header", hide_footer_links=True, button_class="btn-download btn-no-bg") }}
+      <a href="{{ url('thunderbird.latest.all') }}" class="btn btn-no-bg" aria-label="{{ _('Downloads') }}" title="{{ _('Find the latest version of Thunderbird.') }}">
+        <!--<span aria-hidden="true">{{ svg('heart') }}</span>-->
+        Downloads
+      </a>
     </div>
   </li>
   <li class="nav-entry no-border no-mobile">
