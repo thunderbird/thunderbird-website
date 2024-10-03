@@ -240,6 +240,11 @@ def download_url(ctx, platform_os, version=None, channel=settings.DEFAULT_RELEAS
     if locale is None:
         locale = ctx.get('LANG')
 
+    if channel == 'mobile':
+        return thunderbird_mobile.get_download_url(
+            channel, version, platform_os, locale
+        )
+
     if version is None:
         l_version = thunderbird_desktop.latest_builds(locale, channel)
         if l_version:
@@ -282,15 +287,12 @@ def get_platform_icon(ctx, platform):
 @jinja2.pass_context
 def get_platforms(ctx, include_mobile=False):
     """Returns a list of dict of available platforms per os. Includes mobile by default."""
-    grouped_platform_labels = thunderbird_desktop.grouped_platform_labels.copy()
+    return thunderbird_desktop.grouped_platform_labels
 
-    if not include_mobile:
-        return grouped_platform_labels
 
-    return OrderedDict({
-        **grouped_platform_labels,
-        **thunderbird_mobile.grouped_platform_labels,
-    })
+@jinja2.pass_context
+def get_mobile_platforms(ctx):
+    return thunderbird_mobile.grouped_platform_labels
 
 
 @jinja2.pass_context
@@ -300,20 +302,14 @@ def is_os_mobile(ctx, os):
 
 
 @jinja2.pass_context
-def get_channels(ctx, include_mobile=False):
+def get_channels(ctx):
     """Returns a dict of available channels. Includes mobile channels by default."""
-    channel_labels = thunderbird_desktop.channel_labels.copy()
-    if not include_mobile:
-        return channel_labels
+    return thunderbird_desktop.channel_labels
 
-    # We want Release to be followed with Android, and then the beta/daily builds.
-    channel_labels.pop('release')
 
-    return OrderedDict({
-        'release': "Release",
-        **thunderbird_mobile.channel_labels,
-        **channel_labels
-    })
+@jinja2.pass_context
+def get_mobile_channels(ctx):
+    return thunderbird_mobile.channel_labels
 
 
 @jinja2.pass_context
@@ -545,6 +541,11 @@ def get_blog_data(ctx, entry):
 def get_latest_build(ctx, channel):
     """Returns the latest build number for a given channel (e.g. 102.10.0 for release)"""
     return thunderbird_desktop.latest_version(channel)
+
+
+@jinja2.pass_context
+def get_latest_mobile_build(ctx, channel):
+    return thunderbird_mobile.latest_version(channel)
 
 
 @jinja2.pass_context

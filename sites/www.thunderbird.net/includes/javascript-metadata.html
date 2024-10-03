@@ -1,6 +1,6 @@
 {# Outputs static metadata for any javascript scripts to use. #}
 <script>
-  window._product = {
+  window._desktop_product = {
     defaultChannel: '{{ default_channel }}',
     defaultLatestVersion: '{{ get_latest_build(default_channel) }}',
     channels: {
@@ -11,6 +11,21 @@
           version: '{{ get_latest_build(channel) }}',
           useVersionInDownloadLinks: {% if channel in ['release', 'esr'] %}true{% else %}false{% endif %},
         },
+      {% endfor %}
+    }
+  }
+  window._mobile_product = {
+    defaultChannel: 'mobile',
+    platforms: {
+      {% for platform, platform_info in get_mobile_platforms().items() %}
+        {% for source, source_name in platform_info %}
+        '{{ source }}': {
+          id: '{{ source }}',
+          arch: '{{ platform|lower }}',
+          name: '{{ source_name }}',
+          url: '{{ download_url(platform_os=source, channel='mobile') }}',
+        },
+        {% endfor %}
       {% endfor %}
     }
   }
