@@ -284,6 +284,10 @@
     width: 100%;
   }
 
+  .no-desktop {
+    display: none;
+  }
+
   // Mobile nav
   @media (max-width: @lg) {
     display: none;
@@ -306,6 +310,9 @@
     border-radius: 12px;
     align-items: unset;
 
+    .no-desktop {
+      display: block;
+    }
     .no-mobile {
       display: none;
     }
