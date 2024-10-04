@@ -496,21 +496,15 @@ section {
 
   &.flip-columns {
     flex-direction: row-reverse;
-
-    // Correct the margins
-    div:first-child {
-      margin-left: 0;
-      margin-right: 5rem;
-    }
-
-    div:nth-child(2) {
-      margin-right: 0;
-      margin-left: 5rem;
+    @media (max-width: @lg) {
+      flex-direction: column-reverse;
     }
   }
 
+
   div:first-child {
-    margin-left: 5rem;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (max-width: @lg) {
       margin: 0;
@@ -518,7 +512,9 @@ section {
   }
 
   div:nth-child(2) {
-    margin-right: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+
     @media (max-width: @lg) {
       margin: 0;
     }
@@ -532,6 +528,7 @@ section {
   @media (max-width: @lg) {
     flex-direction: column-reverse;
   }
+
 }
 
 .three-columns {

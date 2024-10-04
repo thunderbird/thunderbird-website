@@ -6,6 +6,7 @@
     //var(--bg-hero) type('image/png'));
   }
 }
+
 .page-mobile {
   #masthead {
     //--bg-hero: url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.png');
@@ -14,6 +15,7 @@
     //var(--bg-hero) type('image/png'));
   }
 }
+
 .page-desktop, .page-mobile {
   #masthead,
   header {
@@ -35,6 +37,7 @@
     padding-top: var(--nav-size);
     isolation: isolate;
   }
+
   // Override logo colours
   .logo {
     --accent: var(--color-blue-20);
@@ -94,8 +97,13 @@
     picture, img {
       border-radius: 100%;
     }
+
     p {
       max-inline-size: 20rem;
     }
+  }
+
+  .testimonials {
+    max-width: initial;
   }
 }
