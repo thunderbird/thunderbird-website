@@ -35,13 +35,9 @@
 
 @media (max-width: @xxl) {
   .site-nav {
-    #nav-cat-about {
+    #nav-cat-about, #nav-cat-contribute {
       --popover-left-align: 0;
-      --popover-right-align: 1rem;
-    }
-    #nav-cat-contribute  {
-      --popover-left-align: 0;
-      --popover-right-align: 1rem;
+      --popover-right-align: 0.5rem;
     }
   }
 }
@@ -301,6 +297,16 @@
     display: none;
   }
 
+
+  /*
+   * Annoyingly buttons margin-left: -1rem
+   * So we need to add some padding back to fix positioning
+   */
+  .nav-button-fix {
+    padding-left: 1rem;
+  }
+
+
   // Mobile nav
   @media (max-width: @lg) {
     display: none;
@@ -332,7 +338,6 @@
 
     padding-left: 1rem;
     padding-right: 1rem;
-
 
     .nav-entry {
       padding: 1rem 1rem;
