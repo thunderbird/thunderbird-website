@@ -1,0 +1,214 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "desktop" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title_prefix %}{{ _('Thunderbird') }} — {% endblock %}
+{% block page_title %}{{ _('Free Your Inbox.') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded
+with great features!') }}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block extrahead %}
+  {# Preload the most common format here #}
+  <link rel="preload" as="image" href="{{ l10n_img('thunderbird/base/home/banner-high-res.avif') }}">
+{% endblock %}
+
+{% block header_content %}
+  <section>
+    <div class="container hero">
+      <div class="hero-text">
+        <h2 class="split-text tagline" aria-label="{{ _('Thunderbird Desktop.') }}">
+          {{ _('Thunderbird') }}&nbsp;<span class="txt-gradient">{{ _('Desktop') }}</span>
+        </h2>
+        <p class="sub-tag">
+          {% trans %}
+            Meet Thunderbird, the
+            <strong>email</strong> and <strong>productivity</strong> app that maximizes your freedoms.
+          {% endtrans %}
+        </p>
+      </div>
+      <div class="hero-download">
+        <div class="download-button">
+          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-hero") }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mask">
+    {{ svg('mask') }}
+  </div>
+{% endblock %}
+
+{# We have our own, thanks. #}
+{% block header_separator %}{% endblock %}
+
+{% block content %}
+  <section id="core-features">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="split-text" aria-label="{{ _('Core Features.') }}">
+          {{ _('Core') }}&nbsp;<span class="txt-gradient">{{ _('Features') }}</span>
+        </h2>
+        <h4>
+          {{ _('Your new productivity superpowers.') }}
+        </h4>
+      </div>
+
+      <div class="two-columns">
+        <div class="content-block">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Multiple Account Support') }}</h3>
+          <h4>{{ _('Manage all your emails in one place.') }}</h4>
+          <p>{{ _('All your email accounts have a home in Thunderbird. Manage accounts separately or in a unified Inbox. Search and organize with ease. Say goodbye to all those browser tabs!') }}</p>
+          <a class="strong" href="{{ url('thunderbird.index') }}">{{ _('See Compatability Chart') }}</a>
+        </div>
+      </div>
+      <div class="two-columns flip-columns">
+        <div class="content-block">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Ad Free Experience') }}</h3>
+          <h4>{{ _('Free without strings attached.') }}</h4>
+          <p>{{ _('We do not make money by reading your email. We do not clutter your inbox with ads. Enjoy a clean interface free from commercials and data mining.') }}</p>
+          <a class="strong" href="{{ url('thunderbird.privacy') }}">{{ _('Read Our Privacy Policy') }}</a>
+        </div>
+      </div>
+      <div class="two-columns">
+        <div class="content-block">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Cross Platform Support') }}</h3>
+          <h4>{{ _('Your email should work whereever you do.') }}</h4>
+          <p>{{ _('Never find yourself locked into an ecosystem. Use the operating system you like and change whenever you like while enjoying the same desktop app experience.') }}</p>
+          <a class="strong" href="{{ url('thunderbird.latest.all') }}">{{ _('See All Available Versions') }}</a>
+        </div>
+      </div>
+      {# Quote section #}
+      <div class="section-quote testimonials">
+        <div class="quote">
+          <q>
+            Meow meow meow!
+          </q>
+          <div class="attrib">
+            <div class="profile-pic" aria-hidden="true">
+              <picture>
+                <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
+                <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
+                <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
+              </picture>
+            </div>
+            <div class="name">Beatrice</div>
+            <div class="title">{{ _('Cat, Canada') }}</div>
+          </div>
+        </div>
+      </div>
+      {# ...back to features #}
+      <div class="two-columns flip-columns">
+        <div class="content-block">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Calendar, Contacts, and Tasks') }}</h3>
+          <h4>{{ _('Because email is just one part of being productive.') }}</h4>
+          <p>{{ _('Thunderbird helps your manage your appointments, contact, and tasks. Stay organized, productive, and connected in one place.') }}</p>
+        </div>
+      </div>
+      <div class="two-columns">
+        <div class="content-block">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Better Security and Privacy') }}</h3>
+          <h4>{{ _('Be safe and in charge by default.') }}</h4>
+          <p>{{ _('Thunderbird is open source. Its code has been constantly reviewed and improved over 20 years. Transparency keeps us accountable and you safe.') }}</p>
+          <a class="strong" href="{{ url('participate.desktop.repo') }}">{{ _('View the Source Code') }}</a>
+        </div>
+      </div>
+      <div class="two-columns flip-columns">
+        <div class="content-block">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Always Free and Open') }}</h3>
+          <h4>{{ _('Thunderbird is a gift from people like you.') }}</h4>
+          <p>{{ _('Thousands have contributed time and money to make Thunderbird possible. Its code is open source and freely licensed to use, modify, and share. Thunderbird isn\'t just free, it makes you free.') }}</p>
+          <a class="strong" href="{{ url('thunderbird.about.our-mission-statement') }}">{{ _('Learn Our Mission') }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'includes/components/page-separator.html' %}
+  <section id="third-party-ecosystem">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="split-text" aria-label="{{ _('Third-Party Ecosystem.') }}">
+          {{ _('Third-Party') }}&nbsp;<span class="txt-gradient">{{ _('Ecosystem') }}</span>
+        </h2>
+        <h4>
+          {{ _('What you can do with Thunderbird doesn\'t stop with us.') }}
+        </h4>
+        <a class="strong" href="{{ url('atn') }}">{{ _('Explore Thunderbird Add-Ons') }}</a>
+      </div>
+    </div>
+  </section>
+  <section class="cover-container">
+    {{ high_res_img('thunderbird/base/about/contributors.png', {'alt': _('Addons!')}, alt_formats=('avif', 'webp')) }}
+    {% include 'includes/components/page-separator-cover.html' %}
+  </section>
+  <section id="helpful-resources">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="split-text" aria-label="{{ _('Helpful Resources.') }}">
+          {{ _('Helpful') }}&nbsp;<span class="txt-gradient">{{ _('Resources') }}</span>
+        </h2>
+        <h4>
+          {{ _('Level up your Thunderbird Skills.') }}
+        </h4>
+      </div>
+      <div class="three-columns">
+        <div class="info-resource">
+          <picture>
+            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
+            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
+            <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
+          </picture>
+          <h4>Getting Started</h4>
+          <p>Meow meow meow meow, meow meow meow! meow meow-meow meow meow.</p>
+          <a class="strong" href="#">{{ _('Read the Guide') }}</a>
+        </div>
+        <div class="info-resource">
+          <picture>
+            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
+            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
+            <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
+          </picture>
+          <h4>Email Compatability</h4>
+          <p>Meow meow meow meow, meow meow meow! meow meow-meow meow meow.</p>
+          <a class="strong" href="#">{{ _('Read the Guide') }}</a>
+        </div>
+        <div class="info-resource">
+          <picture>
+            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
+            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
+            <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
+          </picture>
+          <h4>Guide to Encryption</h4>
+          <p>Meow meow meow meow, meow meow meow! meow meow-meow meow meow.</p>
+          <a class="strong" href="#">{{ _('Read the Guide') }}</a>
+        </div>
+      </div>
+    </div>
+    {% include 'includes/components/page-separator.html' %}
+    {% include 'includes/components/download-block.html' %}
+
+  </section>
+{% endblock %}
+

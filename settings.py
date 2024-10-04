@@ -158,6 +158,7 @@ ALL_PLATFORMS = ('windows', 'linux', 'mac')
 # Mappings for the helper.url function.
 # 'thunderbird.sysreq' and 'wiki.moz' have special behaviour.
 URL_MAPPINGS = {
+    'atn': 'https://addons.thunderbird.net/',
     'blog': 'https://blog.thunderbird.net/',
     'calendar': '/calendar',
     'contribute': 'https://github.com/thunderbird/thunderbird-website',
@@ -229,7 +230,7 @@ URL_MAPPINGS = {
     'thunderbird.donate.ways-to-give': '/donate#ways-to-give',
     'thunderbird.donate.ways-to-give.check': '/donate#ways-to-give-check',
     'thunderbird.donate.contact': '/donate/help',
-    'thunderbird.download': '/download',  # Redirects to home now
+    'thunderbird.download': '/download',
     'thunderbird.download-beta': '/download/beta',
     'thunderbird.download.thank-you': '/thank-you',
     'thunderbird.enterprise': 'https://wiki.mozilla.org/Thunderbird/Enterprise',
