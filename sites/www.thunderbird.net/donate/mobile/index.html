@@ -1,0 +1,28 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "support-mobile" %}
+{% extends "includes/base/base.html" %}
+
+{% block page_title %}{{ _('Support Thunderbird for Android') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+{% block extra_meta %}
+<meta name="robots" content="noindex,nofollow" />
+{% endblock %}
+
+{% block content %}
+<script>
+window.fundraiseup_livemode = false;
+</script>
+<section>
+  <div class="container">
+    <!-- Using the test mobile campaign -->
+    <a href="#XFPNLNRA" style="display: none"></a>
+  </div>
+</section>
+{% endblock %}
+{% block site_footer %}
+{% include 'includes/donation-includes.html' %}
+{% endblock site_footer %}
