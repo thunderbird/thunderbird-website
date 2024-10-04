@@ -1,0 +1,101 @@
+.page-desktop {
+  #masthead {
+    //--bg-hero: url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.png');
+    //--bg-hero-set: image-set(url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.avif') type('image/avif'),
+    //url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.webp') type('image/webp'),
+    //var(--bg-hero) type('image/png'));
+  }
+}
+.page-mobile {
+  #masthead {
+    //--bg-hero: url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.png');
+    //--bg-hero-set: image-set(url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.avif') type('image/avif'),
+    //url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.webp') type('image/webp'),
+    //var(--bg-hero) type('image/png'));
+  }
+}
+.page-desktop, .page-mobile {
+  #masthead,
+  header {
+    --bg-hero-gradient: linear-gradient(to top, var(--color-ink-90), black 80%);
+    // By default just show the gradient
+    --bg-hero: var(--bg-hero-gradient);
+    --bg-hero-set: var(--bg-hero);
+
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+    background-color: black;
+    background-image: var(--bg-hero), var(--bg-hero-gradient);
+    background-image: var(--bg-hero-set), var(--bg-hero-gradient);
+    background-size: auto 80vh, 100%;
+    background-position: bottom center, center;
+    background-repeat: no-repeat;
+    color: var(--color-gray-20);
+    padding-top: var(--nav-size);
+    isolation: isolate;
+  }
+  // Override logo colours
+  .logo {
+    --accent: var(--color-blue-20);
+  }
+
+  .logo:hover,
+  .mozilla-logo:hover {
+    color: var(--accent);
+  }
+
+  .site-nav {
+    color: var(--nav-txt);
+
+    --hamburger-background-inactive: var(--color-black);
+    --hamburger-foreground-inactive: var(--color-gray-30);
+    --hamburger-background-active: var(--color-white);
+    --hamburger-foreground-active: var(--color-black);
+  }
+
+  .content-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20.0rem;
+    height: 20.0rem;
+    border-radius: 2.0rem;
+    box-shadow: var(--shadow-2xl);
+
+    img, video {
+      width: 100%;
+      background-color: lightgrey;
+      margin: .5rem;
+      border-radius: 2.0rem;
+    }
+  }
+
+  .section-quote {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0.125rem;
+
+      background-color: #dedede;
+    }
+  }
+
+  .info-resource {
+    picture, img {
+      border-radius: 100%;
+    }
+    p {
+      max-inline-size: 20rem;
+    }
+  }
+}

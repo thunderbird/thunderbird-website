@@ -2,6 +2,7 @@
 body {
   --separator-height: 72px;
 }
+
 .header-separator {
   // Anchor it to the bottom
   position: absolute;
@@ -93,7 +94,8 @@ header {
 
 .container {
   position: relative;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 60px;
   padding-inline: 1rem;
   padding-block: clamp(1rem, 5.469vw, 4.375rem); // 4.375rem~
@@ -449,4 +451,105 @@ section {
 
 .wrap-balance {
   text-wrap: balance;
+}
+
+.split-text {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  @media (max-width: @lg) {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+
+  h2, h4 {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: var(--font-h2);
+  }
+
+  h4 {
+    font-size: var(--font-h4);
+    font-weight: 400;
+  }
+}
+
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 5rem;
+
+  &.flip-columns {
+    flex-direction: row-reverse;
+
+    // Correct the margins
+    div:first-child {
+      margin-left: 0;
+      margin-right: 5rem;
+    }
+
+    div:nth-child(2) {
+      margin-right: 0;
+      margin-left: 5rem;
+    }
+  }
+
+  div:first-child {
+    margin-left: 5rem;
+
+    @media (max-width: @lg) {
+      margin: 0;
+    }
+  }
+
+  div:nth-child(2) {
+    margin-right: 5rem;
+    @media (max-width: @lg) {
+      margin: 0;
+    }
+  }
+
+  .section-text {
+    text-align: left;
+    max-width: 500px;
+  }
+
+  @media (max-width: @lg) {
+    flex-direction: column-reverse;
+  }
+}
+
+.three-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  font-weight: 400;
+
+
+  @media (max-width: @sm) {
+    gap: 1rem;
+  }
+
+  .styled-list {
+    text-indent: -2.5rem;
+  }
 }
