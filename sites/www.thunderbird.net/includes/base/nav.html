@@ -15,7 +15,7 @@
   <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-products"
-      class="nav-ln nav-expandable"
+      class="nav-ln"
     >
       {{_('Products')}}
     </button>
@@ -36,7 +36,8 @@
     <div id="nav-cat-resources" class="popover-container">
       <ul class="popover-panel">
         {{ nav_entry(svg('base/icons/menu/blog'), _('Blog'), _('Learn about new product releases, community events, tech tips, and more.'), url('blog')) }}
-        {{ nav_entry(svg('base/icons/menu/help'), _('Get Help'), _('Find the help you need configuring and using Thunderbird.'), url('support')) }}
+        {{ nav_entry(svg('base/icons/menu/help'), _('Desktop Help'), _('Find the help you need configuring and using Thunderbird Desktop.'), url('support')) }}
+        {{ nav_entry(svg('base/icons/menu/help'), _('Mobile Help'), _('Find the help you need configuring and using Thunderbird Mobile.'), url('support')) }}
       </ul>
     </div>
   </li>
