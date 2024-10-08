@@ -37,7 +37,7 @@ def build_ical(provider: Provider, locale: str, language: str, years_to_generate
     for i in range(0, years_to_generate):
         year = current_year + i
 
-        for calendar_type in [CalendarTypes.NATIONAL, CalendarTypes.OBSERVANCE, CalendarTypes.LOCAL]:
+        for calendar_type in [CalendarTypes.NATIONAL, CalendarTypes.LOCAL]:
             try:
                 holidays = provider.build(locale, year, {'calendar_type': calendar_type.value, 'language': language})
 

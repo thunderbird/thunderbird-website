@@ -53,9 +53,8 @@ class Calendarific(Calendar):
             self.description = description
 
         self.unique_id = data.get('urlid') if helper.is_calendarific_free_tier() else data.get('uuid')
-        # If we're on a free tier, append the year to make it vaguely more unique.
-        if helper.is_calendarific_free_tier():
-            self.unique_id = f'-{iso_date.year}'
+        # Always append calendar year
+        self.unique_id = f'{self.unique_id}-{iso_date.year}'
 
         self.iso_date = iso_date
 
