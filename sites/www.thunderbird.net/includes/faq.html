@@ -2,26 +2,42 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 <section>
+  <details class="accordion" open="open">
+    <summary class="question">
+      {{ _('Contact us') }}
+    </summary>
+    <p class="answer">
+      {% trans trimmed connect=url('mozorg.connect.tb'), support=url('support') %}
+        Questions about donating? See common answers below.
+        Want to provide product feedback? Head over to <a href="{{ connect }}">Mozilla Connect</a>.
+        Need product or technical support? Visit our
+        <a href="{{ support }}">knowledgebase and community support forum</a>.
+      {% endtrans %}
+    </p>
+  </details>
+
   <details class="accordion">
     <summary class="question">
       {{ _('What are the ways I can give?') }}
     </summary>
     <div class="answer">
-      {% trans trimmed donate=url('thunderbird.donate.form'),
-      ways_to_help=url('thunderbird.participate') %}
-      <p>You can <a href="{{ donate }}">donate online</a> securely by credit card or PayPal. Google Pay, Apple Pay, and
-      bank transfers through SEPA, iDEAL and ACH are also available online.<br/>
-      <strong>Give in your local currency!</strong> On <a href="{{ donate }}">our online form</a>, use the drop down
-      menu next to the amount. You will be charged in the currency you choose to give with.<br/>
-      <strong>Additionally you can</strong> give offline in USD by mailing a check or money order made payable to "MZLA Technologies Corp". Mail to:</p>
-      <ul class="check-address">
-        <li>MZLA</li>
-        <li>PO Box 25718</li>
-        <li>Pasadena CA 91185-5718</li>
-      </ul>
-      <p>Please include your email address on the memo line of your check to help us track and attribute your gift.</p>
-      <p><strong>Give the gift of your time!</strong> If you would like to learn how to contribute to Thunderbird in other
-        ways such as coding, translating or testing, please visit our <a href="{{ ways_to_help }}">Participate</a> page.</p>
+      {% trans trimmed donate=url('thunderbird.donate.form'), ways_to_help=url('thunderbird.participate') %}
+        <p>You can
+          <a href="{{ donate }}">donate online</a> securely by credit card or PayPal. Google Pay, Apple Pay, and
+          bank transfers through SEPA, iDEAL and ACH are also available online.<br/>
+          <strong>Give in your local currency!</strong> We accept over 100! Choose yours from the drop down menu next to ‘Amount’.<br/>
+          <strong>You can give offline in USD only</strong> by mailing a check or money order made payable to "MZLA Technologies Corp". Mail to:
+        </p>
+        <ul class="check-address">
+          <li>MZLA</li>
+          <li>PO Box 25718</li>
+          <li>Pasadena CA 91185-5718</li>
+        </ul>
+        <p>Please include your email address on the memo line of your check to help us track and attribute your gift. We can only send acknowledgement receipts by email.</p>
+        <p>
+          <strong>Give the gift of your time!</strong> If you would like to learn how to contribute to Thunderbird in other
+          ways such as coding, translating or testing, please visit our
+          <a href="{{ ways_to_help }}">Participate</a> page.</p>
       {% endtrans %}
     </div>
   </details>
@@ -31,27 +47,11 @@
       {{ _('How do I cancel or change my recurring gift? Can I change my payment method or my donation frequency?') }}
     </summary>
     <p class="answer">
-      {% trans trimmed help=url('thunderbird.donate.contact') %}
-      Access your donation account settings using the 'Manage My Donation' button on your recent donation confirmation
-      email.
-      There you can change the amount, frequency, payment method and charge date. You can also cancel your recurring
-      donation plan.
-      If you run into any issues you can always <a href="{{ help }}">contact us</a>!
-      {% endtrans %}
-    </p>
-  </details>
-
-  <details class="accordion">
-    <summary class="question">
-      {{ _('Why do you need my address in order to process a gift?') }}
-    </summary>
-    <p class="answer">
-      {% trans trimmed url=url('privacy.notices.donations'), website_privacy=url('privacy') %}
-      We understand that your privacy is very important -- we agree, and that's a core value of ours at Thunderbird and Mozilla.
-
-      Your address is part of our Payment Processing, Contact and Donation Information that we outline in our <a href="{{ url }}">Privacy Policy</a>. This data is used for payment processing, transactional receipts, fraud detection and record-keeping purposes.
-
-      If you want to know more about the personal information data we receive, the third-party vendors we trust, and how long we keep your data, please refer to our <a href="{{ website_privacy }}">Websites, Communications & Cookies Privacy Notice</a>.
+      {% trans trimmed modify=url('thunderbird.donate.modify') %}
+        Access your plan details from the
+        <a href="{{ modify }}">Donor Portal</a> or from the 'Manage My Donation' button on your recent donation confirmation email.
+        You can change the amount, frequency, payment method and charge date.
+        You can also cancel your recurring plan and download your receipts.
       {% endtrans %}
     </p>
   </details>
@@ -62,19 +62,20 @@
     </summary>
     <p class="answer">
       {% trans trimmed url=url('support') %}
-      Anyone can access tech support for Thunderbird by visiting the <a href="{{ url }}">support forum</a>.
-      Thunderbird does not provide tech support or enhanced tech support in exchange for financial gifts.
+        All Thunderbird technical support is community-based and available to everyone.
+        Visit our <a href="{{ url }}">support forum</a>. We do not provide individual tech support in exchange for financial gifts.
       {% endtrans %}
     </p>
   </details>
 
   <details class="accordion">
     <summary class="question">
-      {{ _('How can I turn off the donation message on the Thunderbird start page?') }}
+      {{ _('How do I get a receipt?') }}
     </summary>
     <p class="answer">
-      {% trans trimmed url='https://support.mozilla.org/kb/how-disable-or-change-thunderbird-start-page' %}
-      To learn how to customize your start page please visit:<br/><a href="{{ url }}">{{ url }}</a>
+      {% trans trimmed url=url('thunderbird.donate.modify') %}
+        You will receive an email confirmation whenever you donate and this will include a receipt for your records.
+        You can also access your receipt history at any time from our <a href="{{ url }}">Donor Portal</a>.
       {% endtrans %}
     </p>
   </details>
@@ -85,10 +86,37 @@
     </summary>
     <p class="answer">
       {% trans trimmed %}
-      Gifts to Thunderbird are <strong>not tax-deductible as charitable gifts</strong>, but are greatly appreciated.
-      Giving to Thunderbird supports the development of our leading open source cross-platform email and calendaring
-      client, free for business and personal use. Your gift will help ensure it stays that way, and will support future
-      development.
+        Gifts to Thunderbird <strong>are not tax-deductible as charitable gifts</strong>, but are greatly appreciated!
+        Giving to Thunderbird supports the development of open source apps that are secure, private and available for users around the world.
+        Your support also ensures that our core apps remain free for everyone.
+      {% endtrans %}
+    </p>
+  </details>
+
+  <details class="accordion">
+    <summary class="question">
+      {{ _('Why do you need my address in order to process a gift?') }}
+    </summary>
+    <p class="answer">
+      {% trans trimmed url=url('privacy.notices.donations'), website_privacy=url('privacy') %}
+        We understand that your privacy is very important -- we agree, and that's a core value of ours at Thunderbird and Mozilla.
+
+        Your address is part of our Payment Processing, Contact and Donation Information that we outline in our
+        <a href="{{ url }}">Privacy Policy</a>. This data is used for payment processing, transactional receipts, fraud detection and record-keeping purposes.
+
+        If you want to know more about the personal information data we receive, the third-party vendors we trust, and how long we keep your data, please refer to our
+        <a href="{{ website_privacy }}">Websites, Communications & Cookies Privacy Notice</a>.
+      {% endtrans %}
+    </p>
+  </details>
+
+  <details class="accordion">
+    <summary class="question">
+      {{ _('How can I turn off the donation message on the Thunderbird start page?') }}
+    </summary>
+    <p class="answer">
+      {% trans trimmed url='https://support.mozilla.org/kb/how-disable-or-change-thunderbird-start-page' %}
+        To learn how to customize your start page please visit:<br/><a href="{{ url }}">{{ url }}</a>
       {% endtrans %}
     </p>
   </details>
@@ -98,11 +126,10 @@
       {{ _('How can I get a business receipt?') }}
     </summary>
     <p class="answer">
-      {% trans trimmed donate=url('thunderbird.donate.form') %}
-      When you donate via our <a href="{{ donate }}">online form</a>, simply check the box 'Donate as an Organization'
-      and
-      include your company name. The receipt you receive to the email address used to make your contribution will
-      include your business information.
+      {% trans trimmed donate=url('thunderbird.donate.form'), modify=url('thunderbird.donate.modify') %}
+        When you donate via our <a href="{{ donate }}">online form</a>, simply check the box 'Donate as an Organization' and include your company name.
+        Your transaction receipt will include your company name.
+        If you need a copy of your receipt, download from our <a href="{{ modify }}">Donor Portal</a>.
       {% endtrans %}
     </p>
   </details>
@@ -113,11 +140,11 @@
     </summary>
     <p class="answer">
       {% trans trimmed privacy=url('privacy') %}
-      Yes, we use industry-standard SSL technology to keep your information secure. We partner with Stripe, the
-      industry's established payment processor trusted by some of the world's largest companies. Your sensitive
-      financial information never touches our servers. We send all data directly to Stripe's PCI-compliant servers
-      through SSL. We understand that your privacy is very important. For complete information please refer to the <a
-      href="{{ privacy }}">Mozilla Privacy Policy</a>.
+        Yes, we use industry-standard SSL technology to keep your information secure. We partner with Stripe, the
+        industry's established payment processor trusted by some of the world's largest companies. Your sensitive
+        financial information never touches our servers. We send all data directly to Stripe's PCI-compliant servers
+        through SSL. We understand that your privacy is very important. For complete information please refer to the <a
+        href="{{ privacy }}">Mozilla Privacy Policy</a>.
       {% endtrans %}
     </p>
   </details>
@@ -128,42 +155,42 @@
     </summary>
     <p class="answer">
       {% trans trimmed help=url('thunderbird.donate.contact') %}
-        Your donation may be eligible for a refund. You must contact us within 15 days after the date of the donation.
-        If you believe this donation was made without your authorization, please contact us immediately. Donations made
-        via ACH or SEPA direct debit are ineligible for refunds. Due to the nature of these transactions our policy
-        prioritizes minimizing refund fraud. We sincerely appreciate your understanding. If you have any further
-        questions, <a href="{{ help }}">please contact us</a>.
+        Your donation may be eligible for a refund. You must contact us within 15 days of payment date.
+        If you believe this payment was made without your authorization, please contact us immediately.
+        Donations made via ACH or SEPA direct debit are ineligible for refunds.
+        Due to the nature of these transactions our policy prioritizes minimizing refund fraud.
+        We appreciate your understanding. If you need assistance, <a href="{{ help }}">please contact us</a>.
       {% endtrans %}
     </p>
   </details>
 
   <details class="accordion">
     <summary class="question">
-      {{ _('Are there additional fees on my donation?') }}
+      {{ _('Are there additional fees added to my donation?') }}
     </summary>
     <p class="answer">
       {% trans trimmed %}
-      We do not collect any additional fees or taxes. When you donate in your local currency you are not charged a
-      conversion fee by your credit card. Optionally, you can choose to cover our transaction costs on your donation.
-      This is completely voluntary and you may opt in or out using the checkbox on our donation form. Our organization
-      is based in the United States. We encourage donors to research any additional external taxes or fees that may be
-      applied by regulators such as your bank or tax authority.
+        We do not collect any additional fees or taxes. When you donate in your local currency you are not charged a
+        conversion fee by your credit card. You can choose to also cover the payment processing transaction costs.
+        This is completely voluntary and you may opt in or out using the checkbox on our donation form. Our organization
+        is based in the United States. We encourage donors to research any additional external taxes or fees that may be
+        applied by regulators such as your bank or tax authority.
       {% endtrans %}
     </p>
   </details>
 
   <details class="accordion">
     <summary class="question">
-      {{ _('What are your transaction costs on donations?') }}
+      {{ _('What do the transaction costs cover?') }}
     </summary>
     <p class="answer">
       {% trans trimmed %}
-      When you opt to cover our transaction costs, you're covering both our processing and donation platform costs. The
-      costs associated with our robust online donation system allows us to continue scaling sustainably as our
-      supporter-base grows. Our donation platform and payment processor partners reduce internal costs associated with
-      maintaining our own system from scratch. Our partners ensure we can accept a wide range of currencies/payment
-      methods and remain PCI compliant in all of the countries that we accept gifts from. The transaction costs donors
-      may choose to cover are based on an estimate of our overall costs. Due to many factors actual costs may fluctuate.
+        When you opt to cover our payment transaction costs, you're covering both our payment processing and donation platform fees. The
+        costs associated with our robust online donation system allows us to continue scaling sustainably as our
+        supporter-base grows. Our donation platform and payment processor partners reduce internal costs associated with
+        maintaining our own system from scratch. Our partners ensure we can accept a wide range of currencies/payment
+        methods and remain PCI compliant in all of the countries that we accept gifts from. The transaction costs you
+        may choose to cover are based on an estimate of our overall costs. Due to many factors actual costs may fluctuate.
       {% endtrans %}
     </p>
   </details>
@@ -174,7 +201,7 @@
     </summary>
     <p class="answer">
       {% trans trimmed %}
-      When making a one-time gift through SEPA direct debit, you may notice a mention of recurrent transactions. This is because our payment processor Stripe only supports recurring transactions for this type of payment. Regardless of this, we will only charge you once and we will not make any further payments on your account without your authorization. Following the mandate, you will receive an official donation receipt that will clearly reflect the one-time donation.
+        When making a one-time gift through SEPA direct debit, you may notice a mention of recurrent transactions. This is because our payment processor Stripe only supports recurring transactions for this type of payment. Regardless of this, we will only charge you once and we will not make any further payments on your account without your authorization. Following the mandate, you will receive an official donation receipt that will clearly reflect the one-time donation.
       {% endtrans %}
     </p>
   </details>
@@ -185,7 +212,7 @@
     </summary>
     <p class="answer">
       {% trans trimmed %}
-      <strong>No.</strong> We are not currently accepting cryptocurrency gifts.
+        <strong>No.</strong> We are not currently accepting cryptocurrency gifts.
       {% endtrans %}
     </p>
   </details>
@@ -196,8 +223,8 @@
     </summary>
     <p class="answer">
       {% trans trimmed %}
-      Thunderbird is the leading open source cross-platform email and calendaring client, free for business and personal
-      use. Your gift will help ensure it stays that way, and will support future development.
+        Thunderbird is the leading open source email and productivity app that is free for business and personal use.
+        Your gift helps ensure it stays that way, and supports ongoing development.
       {% endtrans %}
     </p>
   </details>
@@ -208,8 +235,7 @@
     </summary>
     <p class="answer">
       {% trans trimmed %}
-      Thunderbird is a project of MZLA Technologies Corporation, which is a wholly owned subsidiary of Mozilla
-      Foundation.
+        MZLA Technologies Corporation is a wholly owned for-profit subsidiary of the Mozilla Foundation and the home of Thunderbird.
       {% endtrans %}
     </p>
   </details>
@@ -220,20 +246,7 @@
     </summary>
     <p class="answer">
       {% trans trimmed %}
-      Currently, the majority of Thunderbird’s revenue comes from generous gifts from users and friends of Thunderbird.
-      Companies and individuals support the development of the product now and in the future.
-      {% endtrans %}
-    </p>
-  </details>
-
-  <details class="accordion" open="open">
-    <summary class="question">
-      {{ _('Contact us') }}
-    </summary>
-    <p class="answer">
-      {% trans trimmed help=url('thunderbird.donate.contact'), support=url('support') %}
-      If you have a question about giving to Thunderbird, please contact us via <a href="{{ help }}">this form</a>. If you
-      need technical support, please head over to <a href="{{ support }}">Thunderbird Support</a> for assistance.
+        Currently, nearly 100% of Thunderbird’s operating revenue comes from the generous gifts of Thunderbird users.
       {% endtrans %}
     </p>
   </details>

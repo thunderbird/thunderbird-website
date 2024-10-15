@@ -5,60 +5,76 @@
 {% set active_page = "donations" %}
 {% extends "includes/base/page.html" %}
 
-{% block page_title %}{{ _('Donations') }}{% endblock %}
+{% block page_title %}{{ _('Donate') }}{% endblock %}
 {% block category %}{{ _('Contribute') }}{% endblock %}
 
 {% block content %}
-<section id="become-a-supporter">
-  <div class="container two-columns">
-    <div class="section-text tight info-column">
-      <h2>{{ _('Become a <span class="txt-gradient">Supporter</span>') }}</h2>
-      <h4>{{ _('Help us make Thunderbird better.') }}</h4>
-      <p>{{ _('MZLA Corporation is the for-profit organization sustaining the free software mission of Thunderbird. Our work is to provide open source apps that are secure, private and available for users around the world. When you donate you help us:') }}</p>
-      <ul class="styled-list">
-        <li>{{ _('Develop new apps, integrations and features') }}</li>
-        <li>{{ _('Improve the interface, speed, and stability') }}</li>
-        <li>{{ _('Promote Thunderbird and software freedom') }}</li>
-        <li>{{ _('Serve millions of free app downloads each year') }}</li>
-      </ul>
-      <ul class="card-list">
-        <li>{{ svg('base/icons/donate/payment-credit') }}</li>
-        <li>{{ svg('base/icons/donate/payment-paypal') }}</li>
-        <li>{{ svg('base/icons/donate/payment-google') }}</li>
-        <li>{{ svg('base/icons/donate/payment-apple') }}</li>
-        <li>{{ svg('base/icons/donate/payment-bank') }}</li>
-        <li>{{ svg('base/icons/donate/payment-more') }}</li>
-      </ul>
+  <section id="become-a-supporter">
+    <div class="container two-columns">
+      <div class="section-text tight info-column">
+        <h2>{{ _('Become a <span class="txt-gradient">Supporter</span>') }}</h2>
+        <h4>{{ _('Help us make Thunderbird better.') }}</h4>
+        <p>
+          {% trans %}
+            MZLA Technologies Corporation is the for-profit organization sustaining the free software mission of Thunderbird.
+            Our work is to provide open source apps that are secure, private and available for users around the world.
+            Your support helps us:
+          {% endtrans %}
+        </p>
+        <ul class="styled-list">
+          <li>{{ _('Develop new apps, integrations and features') }}</li>
+          <li>{{ _('Improve the interface, speed, and stability') }}</li>
+          <li>{{ _('Promote Thunderbird and software freedom') }}</li>
+          <li>{{ _('Serve millions of free app downloads each year') }}</li>
+        </ul>
+        <ul class="card-list">
+          <li>{{ svg('base/icons/donate/payment-credit') }}</li>
+          <li>{{ svg('base/icons/donate/payment-paypal') }}</li>
+          <li>{{ svg('base/icons/donate/payment-google') }}</li>
+          <li>{{ svg('base/icons/donate/payment-apple') }}</li>
+          <li>{{ svg('base/icons/donate/payment-bank') }}</li>
+          <li>{{ svg('base/icons/donate/payment-more') }}</li>
+        </ul>
+      </div>
+      <div class="section-text donation-column">
+        <a href="#XVFNMBAK" style="display: none"></a>
+        <p>
+          {% trans trimmed %}
+            Not tax deductible as a charitable donation
+          {% endtrans %}
+        </p>
+      </div>
     </div>
-    <div class="section-text donation-column">
-      <a href="#XVFNMBAK" style="display: none"></a>
-      <p>{% trans trimmed url=url('thunderbird.donate.modify') %}<a class="dotted" href="{{ url }}">Modify</a> an existing monthly donation.{% endtrans %}</p>
+  </section>
+  {% include 'includes/components/page-separator.html' %}
+  <section id="faq">
+    <div class="container">
+      <div class="section-text wide faq">
+        <h2>{{ _('Frequently Asked Questions') }}</h2>
+        {% include 'includes/faq.html' %}
+      </div>
     </div>
-  </div>
-</section>
-{% include 'includes/components/page-separator.html' %}
-<section id="faq">
-  <div class="container">
-    <div class="section-text wide faq">
-      <h2>{{ _('Frequently Asked Questions') }}</h2>
-      {% include 'includes/faq.html' %}
+  </section>
+  {% include 'includes/components/page-separator.html' %}
+  <section id="become-a-corporate-supporter">
+    <div class="container">
+      <div class="section-text">
+        <h2>{{ _('Become a <span class="txt-gradient">Corporate Supporter</span>') }}</h2>
+        <h4>{{ _('Secure an open future for yourself and the world.') }}</h4>
+        <p>
+          {% trans %}
+            Organizations deploying Thunderbird at scale or who share our passion for expanding digital freedoms can make a difference by becoming a one-time or recurring corporate supporter.
+            Small to medium size contributions can be made with the form above. For contributions greater than $5000 USD please contact our business team.
+            Thank you in advance for your generous support!
+          {% endtrans %}
+        </p>
+      </div>
+      <div class="section-text">
+        <a class="strong" href="mailto:partnerships@thunderbird.net">{{ _('Contact the Business Team') }}</a>
+      </div>
+      <div class="image">
+        {{ high_res_img('thunderbird/base/donate/rocket.png', {'alt': _('A rocket with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
+      </div>
     </div>
-  </div>
-</section>
-{% include 'includes/components/page-separator.html' %}
-<section id="become-a-corporate-supporter">
-  <div class="container">
-    <div class="section-text">
-      <h2>{{ _('Become a <span class="txt-gradient">Corporate Supporter</span>') }}</h2>
-      <h4>{{ _('Secure an open future for yourself and the world.') }}</h4>
-      <p>{{ _('Organizations deploying Thunderbird at scale or who share our passion for expanding digital freedoms can make a difference by becoming a one-time or recurring corporate supporter. Small to medium size contributions can be made with the form above. For donations greater than $5000 USD please contact our business team. Thank you in advance for your generous support!') }}</p>
-    </div>
-    <div class="section-text">
-      <a class="strong" href="mailto:partnerships@thunderbird.net">{{ _('Contact the Business Team') }}</a>
-    </div>
-    <div class="image">
-      {{ high_res_img('thunderbird/base/donate/rocket.png', {'alt': _('A rocket with the Thunderbird logo.')}, alt_formats=('avif', 'webp')) }}
-    </div>
-  </div>
-</section>
+  </section>
 {% endblock %}
