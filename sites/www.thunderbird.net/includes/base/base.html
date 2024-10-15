@@ -12,7 +12,7 @@
 
     {% block shared_meta %}
     <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} — Thunderbird{% endblock %}{% endfilter %}</title>
-    <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{% endblock %}{% endfilter %}">
+    <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}{% endfilter %}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ _('Thunderbird') }}">
     <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
