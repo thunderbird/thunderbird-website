@@ -7,9 +7,9 @@
       {{ _('Contact us') }}
     </summary>
     <p class="answer">
-      {% trans trimmed connect=url('mozorg.connect.tb'), support=url('support'), help=url('thunderbird.donate.form') %}
-        <strong>Questions about donating?</strong> See common answers below. If you still need help donating, please contact us via this <a href="{{ help }}">form</a>.
-        <strong>Want to provide product feedback?</strong> Head over to <a href="{{ connect }}">Mozilla Connect</a>.
+      {% trans trimmed connect=url('mozorg.connect.tb'), support=url('support'), help=url('thunderbird.donate.contact') %}
+        <strong>Questions about donating?</strong> See common answers below. If you still need help donating, please contact us via this <a href="{{ help }}">form</a>.<br/>
+        <strong>Want to provide product feedback?</strong> Head over to <a href="{{ connect }}">Mozilla Connect</a>.<br/>
         <strong>Need product or technical support?</strong> Visit our
         <a href="{{ support }}">knowledgebase and community support forum</a>.
       {% endtrans %}
