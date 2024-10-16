@@ -7,10 +7,10 @@
       {{ _('Contact us') }}
     </summary>
     <p class="answer">
-      {% trans trimmed connect=url('mozorg.connect.tb'), support=url('support') %}
-        Questions about donating? See common answers below.
-        Want to provide product feedback? Head over to <a href="{{ connect }}">Mozilla Connect</a>.
-        Need product or technical support? Visit our
+      {% trans trimmed connect=url('mozorg.connect.tb'), support=url('support'), help=url('thunderbird.donate.form') %}
+        <strong>Questions about donating?</strong> See common answers below. If you still need help donating, please contact us via this <a href="{{ help }}">form</a>.
+        <strong>Want to provide product feedback?</strong> Head over to <a href="{{ connect }}">Mozilla Connect</a>.
+        <strong>Need product or technical support?</strong> Visit our
         <a href="{{ support }}">knowledgebase and community support forum</a>.
       {% endtrans %}
     </p>
@@ -24,7 +24,7 @@
       {% trans trimmed donate=url('thunderbird.donate.form'), ways_to_help=url('thunderbird.participate') %}
         <p>You can
           <a href="{{ donate }}">donate online</a> securely by credit card or PayPal, Google Pay, Apple Pay, and
-          bank transfers through SEPA, iDEAL and ACH are also available online.<br/>
+          by bank transfers through SEPA, iDEAL and ACH.<br/>
           <strong>Give in your local currency!</strong> We accept over 100! Choose yours from the drop down menu next to ‘Amount’.<br/>
           <strong>You can give offline in USD only</strong> by mailing a check or money order made payable to "MZLA Technologies Corp". Mail to:
         </p>
@@ -86,7 +86,7 @@
     </summary>
     <p class="answer">
       {% trans trimmed %}
-        Gifts to Thunderbird <strong>are not tax-deductible as charitable gifts</strong>, but are greatly appreciated!
+        Gifts to Thunderbird <strong>are not tax-deductible as charitable gifts</strong>, but are greatly appreciated!<br/>
         Giving to Thunderbird supports the development of open source apps that are secure, private and available for users around the world.
         Your support also ensures that our core apps remain free for everyone.
       {% endtrans %}
@@ -127,7 +127,7 @@
     </summary>
     <p class="answer">
       {% trans trimmed donate=url('thunderbird.donate.form'), modify=url('thunderbird.donate.modify') %}
-        When you donate via our <a href="{{ donate }}">online form</a>, simply check the box 'Donate as an Organization' and include your company name.
+        When you donate via our <a href="{{ donate }}">online form</a>, simply check the box <strong>'Donate as an Organization'</strong> and include your company name.
         Your transaction receipt will include your company name.
         If you need a copy of your receipt, download from our <a href="{{ modify }}">Donor Portal</a>.
       {% endtrans %}
@@ -155,9 +155,9 @@
     </summary>
     <p class="answer">
       {% trans trimmed help=url('thunderbird.donate.contact') %}
-        Your donation may be eligible for a refund. You must contact us within 15 days of payment date.
+        Your donation may be eligible for a refund. You must <strong>contact us within 15 days of payment date.</strong>
         If you believe this payment was made without your authorization, please contact us immediately.
-        Donations made via ACH or SEPA direct debit are ineligible for refunds.
+        <strong>Donations made via ACH or SEPA direct debit are ineligible for refunds.</strong>
         Due to the nature of these transactions our policy prioritizes minimizing refund fraud.
         We appreciate your understanding. If you need assistance, <a href="{{ help }}">please contact us</a>.
       {% endtrans %}
