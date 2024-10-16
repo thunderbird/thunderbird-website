@@ -1,0 +1,30 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{#
+ # This is a sample page you can copy and paste to get started on an appeal or whatsnew page.
+ # It inherits the base template automatically which includes the slim appeal footer.
+ # You can add styles by creating a new less file and importing it to update-styles.less.
+ #}
+{% set active_page = "your-page-name-goes-here" %}
+{% extends "includes/base/base.html" %}
+
+{% block page_title %}{{ _('Thunderbird') }}{% endblock %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <div class="section-text">
+      <h1>{{ _('Basic Localized Title') }}</h1>
+      <p>
+        {{ _('Basic paragraph text') }}
+      </p>
+      <p>
+        {% trans trimmed %}
+          Basic paragraph text using the translation block tag
+        {% endtrans %}
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

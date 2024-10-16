@@ -467,6 +467,11 @@ class Site(object):
             self.render()
         self.build_assets()
 
+    def build_updates(self):
+        """Build the updates page for all `languages`."""
+        # Right now it's the same as startpage.
+        self.build_startpage()
+
     def build_website(self, assets=True, notes=True):
         """
         Build the website for all `languages.`
@@ -508,6 +513,8 @@ class UpdateHandler(FileSystemEventHandler):
         """Build the startpage or the website, ignoring assets or notes based on the `event`."""
         if self.builder.searchpath == settings.START_PATH:
             self.builder.build_startpage()
+        elif self.builder.searchpath == settings.UPDATES_PATH:
+            self.builder.build_updates()
         else:
             # Reduce build time by ignoring release notes when unnecessary.
             if 'includes' in event.src_path:
