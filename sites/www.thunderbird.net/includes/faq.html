@@ -49,7 +49,7 @@
     <p class="answer">
       {% trans trimmed modify=url('thunderbird.donate.modify') %}
         Access your plan details from the
-        <a href="{{ modify }}">Donor Portal</a> or from the 'Manage My Donation' button on your recent donation confirmation email.
+        <strong><a href="{{ modify }}">Donor Portal</a></strong> or from the 'Manage My Donation' button on your recent donation confirmation email.
         You can change the amount, frequency, payment method and charge date.
         You can also cancel your recurring plan and download your receipts.
       {% endtrans %}
@@ -62,7 +62,7 @@
     </summary>
     <p class="answer">
       {% trans trimmed url=url('support') %}
-        All Thunderbird technical support is community-based and available to everyone.
+        All Thunderbird <strong>technical support is community-based</strong> and available to everyone.
         Visit our <a href="{{ url }}">support forum</a>. We do not provide individual tech support in exchange for financial gifts.
       {% endtrans %}
     </p>
@@ -75,7 +75,7 @@
     <p class="answer">
       {% trans trimmed url=url('thunderbird.donate.modify') %}
         You will receive an email confirmation whenever you donate and this will include a receipt for your records.
-        You can also access your receipt history at any time from our <a href="{{ url }}">Donor Portal</a>.
+        You can also access your receipt history at any time from our <strong><a href="{{ url }}">Donor Portal</a></strong>.
       {% endtrans %}
     </p>
   </details>
@@ -129,7 +129,7 @@
       {% trans trimmed donate=url('thunderbird.donate.form'), modify=url('thunderbird.donate.modify') %}
         When you donate via our <a href="{{ donate }}">online form</a>, simply check the box <strong>'Donate as an Organization'</strong> and include your company name.
         Your transaction receipt will include your company name.
-        If you need a copy of your receipt, download from our <a href="{{ modify }}">Donor Portal</a>.
+        If you need a copy of your receipt, download from our <strong><a href="{{ modify }}">Donor Portal</a></strong>.
       {% endtrans %}
     </p>
   </details>
