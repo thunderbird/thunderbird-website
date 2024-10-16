@@ -53,6 +53,7 @@ elif args.updates:
 
     context = {
         'current_year': date.today().year,
+        'matomo_site_id': settings.MATOMO_SITE_IDS.get('utn'),
     }
 
     site = builder.Site(languages, settings.UPDATES_PATH, settings.UPDATES_RENDERPATH, settings.UPDATES_CSS, js_bundles=settings.UPDATES_JS, data=context, debug=args.debug, dev_mode=args.devmode)

@@ -49,9 +49,7 @@
     {% block extrahead %}
       {# Extra header stuff (scripts, styles, metadata, etc) seen by all browsers. Use the 'page_css' block for CSS you want to hide from IE8 and lower. #}
     {% endblock %}
-    <script>
-      window.siteLocale = "{{ LANG }}";
-    </script>
+    {% include 'includes/javascript-metadata.html' %}
   </head>
 
   <body {% if self.body_id() %}id="{% block body_id %}{% endblock %}" {% endif %}class="html-{{ DIR }} {% block body_class %}{% endblock %}" {% block body_attrs %}{% endblock %}>
@@ -77,10 +75,9 @@
 
     {% block additional_site_js %}{% endblock %}
     {% block tracker_js %}
-      <script type="text/javascript" src="{{ static('js/matomo-config.js') }}" charset="utf-8"></script>
-      <script type="text/javascript" src="{{ static('js/matomo.js') }}" async defer></script>
+      <script type="text/javascript" src="{{ static('js/matomo-config-utn.js') }}" charset="utf-8"></script>
       <noscript>
-        <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p>
+        <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite={{ matomo_site_id }}&rec=1" style="border:0;" alt="" /></p>
       </noscript>
     {% endblock %}
 

@@ -470,6 +470,7 @@ class Site(object):
     def build_updates(self):
         """Build the updates page for all `languages`."""
         # Right now it's the same as startpage.
+        self._env.globals.update(self.data)
         self.build_startpage()
 
     def build_website(self, assets=True, notes=True):
