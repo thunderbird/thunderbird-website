@@ -16,6 +16,8 @@ from calgen.providers.CalendarificProvider import CalendarificProvider
 parser = argparse.ArgumentParser()
 parser.add_argument('--enus', help='Only build the en-US language.', action='store_true')
 parser.add_argument('--debug', help='Log output with more detailed build information.', action='store_true')
+parser.add_argument('--updates', help='Build the updates directory for updates.thunderbird.net.',
+                    action='store_true')
 parser.add_argument('--startpage', help='Build the start page instead of the main thunderbird.net website.',
                     action='store_true')
 parser.add_argument('--buildcalendars', help='Builds the ics calendar files, instead of the websites.',
@@ -41,6 +43,21 @@ if args.startpage:
     print('Rendering start page ' + langmsg)
     site = builder.Site(languages, settings.START_PATH, settings.START_RENDERPATH, settings.START_CSS, debug=args.debug, dev_mode=args.devmode)
     site.build_startpage()
+elif args.updates:
+    print(f'Rendering updates {langmsg}')
+
+    # Prepare data and build main website.
+    default_channel = settings.DEFAULT_RELEASE_VERSION
+    version = helper.thunderbird_desktop.latest_version(default_channel)
+    beta_version = helper.thunderbird_desktop.latest_version('beta')
+
+    context = {
+        'current_year': date.today().year,
+        'matomo_site_id': settings.MATOMO_SITE_IDS.get('utn'),
+    }
+
+    site = builder.Site(languages, settings.UPDATES_PATH, settings.UPDATES_RENDERPATH, settings.UPDATES_CSS, js_bundles=settings.UPDATES_JS, data=context, debug=args.debug, dev_mode=args.devmode)
+    site.build_updates()
 elif args.buildcalendars:
     print("Building calendar files")
 

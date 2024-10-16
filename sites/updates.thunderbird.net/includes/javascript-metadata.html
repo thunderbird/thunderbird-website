@@ -1,0 +1,9 @@
+{# Outputs static metadata for any javascript scripts to use. #}
+<script>
+  // Legacy
+  window.siteLocale = "{{ LANG }}";
+  // New & namespaced!
+  window._utn = {
+    matomoSiteId: {{ matomo_site_id }},
+  };
+</script>

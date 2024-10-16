@@ -127,11 +127,15 @@ WEBSITE_PATH = 'sites/www.thunderbird.net/'
 # path to the start page templates
 START_PATH = 'sites/start.thunderbird.net/'
 
+UPDATES_PATH = 'sites/updates.thunderbird.net/'
+
 # path for the finished website artifacts.
 WEBSITE_RENDERPATH = 'dist/www.thunderbird.net'
 
 # path for the finished start page artifacts.
 START_RENDERPATH = 'dist/start.thunderbird.net'
+
+UPDATES_RENDERPATH = 'dist/updates.thunderbird.net'
 
 LOCALE_PATH = 'libs/locale'
 
@@ -301,6 +305,17 @@ START_CSS = {
 }
 
 START_JS = {
+    'common-bundle': [
+        # Load bearing order..Donation must come before AB testing.
+        'js/common/donations.js', 'js/common/ab-testing.js'
+    ]
+}
+
+UPDATES_CSS = {
+    'updates-style': ['less/updates-style.less'],
+}
+
+UPDATES_JS = {
     'common-bundle': [
         # Load bearing order..Donation must come before AB testing.
         'js/common/donations.js', 'js/common/ab-testing.js'
@@ -507,3 +522,8 @@ WEBSITE_REDIRECTS = {
 # The default release channel to use when various function defaults are used
 # This will change the channel of the main download button.
 DEFAULT_RELEASE_VERSION = 'esr'
+
+MATOMO_SITE_IDS = {
+    'website': 1,
+    'utn': 3,
+}

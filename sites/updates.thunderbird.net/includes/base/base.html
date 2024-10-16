@@ -1,0 +1,86 @@
+{% set site_desc = _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') %}
+<!doctype html>
+{# Hint: This is the base template for all pages. You probably want to extend off of page.html! #}
+{# Note the "windows" class, without javascript platform-specific assets default to windows #}
+<html class="windows x86 no-js page-{{ active_page|default('not-set') }}" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+  <head>
+    <meta charset="utf-8">{# Note: Must be within first 512 bytes of page #}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block extra_meta %}{% endblock %}
+
+    {% block shared_meta %}
+    <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} — Thunderbird{% endblock %}{% endfilter %}</title>
+    <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{{ site_desc }}{% endblock %}{% endfilter %}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ _('Thunderbird') }}">
+    <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
+    <meta property="og:image" content="{{ static('img/thunderbird/thunderbird-256.png') }}">
+    <meta property="og:title" content="{% filter striptags|e %}{% block page_og_title %}{{ self.page_title_full() }}{% endblock %}{% endfilter %}">
+    <meta property="og:description" content="{% filter striptags|e %}{% block page_og_desc %}{{ self.page_desc() }}{% endblock %}{% endfilter %}">
+    <meta property="fb:page_id" content="{% block facebook_id %}348169218537151{% endblock %}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{% block twitter_id %}mozthunderbird{% endblock %}">
+    <meta name="twitter:domain" content="thunderbird.net">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{% block page_ios_icon %}{{ static('img/thunderbird/ios-icon-180.png') }}{% endblock %}">
+    <link rel="icon" type="image/png" sizes="196x196" href="{% block page_favicon_large %}{{ static('img/thunderbird/favicon-196.png') }}{% endblock %}">
+    <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/thunderbird/favicon.ico') }}{% endblock %}">
+
+    {% endblock shared_meta %}
+    <link href="{{ static('css/normalize.css') }}" rel="stylesheet" type="text/css" />
+    {% block base_css %}
+    <link href="{{ static('css/updates-style.css') }}" rel="stylesheet" type="text/css" />
+    {% endblock %}
+    {% block site_js %}
+      {#- site-bundle should block html rendering so we can prevent no-js/js element flashing. -#}
+      <script type="text/javascript" src="{{ static('js/common-bundle.js') }}" charset="utf-8"></script>
+    {% endblock %}
+
+    {{ l10n_css() }}
+
+    <!--[if !lte IE 8]><!-->
+    {# Global styles, hidden from IE8 and lower #}
+    {% block site_css %}{% endblock %}
+
+    {# Page-specific styles, hidden from IE8 and lower #}
+    {% block page_css %}{% endblock %}
+    <!--<![endif]-->
+
+    {% block extrahead %}
+      {# Extra header stuff (scripts, styles, metadata, etc) seen by all browsers. Use the 'page_css' block for CSS you want to hide from IE8 and lower. #}
+    {% endblock %}
+    {% include 'includes/javascript-metadata.html' %}
+  </head>
+
+  <body {% if self.body_id() %}id="{% block body_id %}{% endblock %}" {% endif %}class="html-{{ DIR }} {% block body_class %}{% endblock %}" {% block body_attrs %}{% endblock %}>
+    {# for headers not to be confined by #wrapper (like fx family nav) #}
+    {% block site_header_unwrapped %}{% endblock %}
+
+    {% block site_nav %}{% endblock %}
+
+    {% block site_header %}
+    {% endblock %}
+
+    <main>
+      {% block pre_content %}{% endblock %}
+      <div id="main-content">
+      {% block content %}{% endblock %}
+      </div>
+      {% block post_content %}{% endblock %}
+    </main>
+
+    {% block site_footer %}
+        {% include 'includes/base/footer.html' %}
+    {% endblock %}
+
+    {% block additional_site_js %}{% endblock %}
+    {% block tracker_js %}
+      <script type="text/javascript" src="{{ static('js/matomo-config-utn.js') }}" charset="utf-8"></script>
+      <noscript>
+        <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite={{ matomo_site_id }}&rec=1" style="border:0;" alt="" /></p>
+      </noscript>
+    {% endblock %}
+
+    {% block js %}{% endblock %}
+  </body>
+</html>
