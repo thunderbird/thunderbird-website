@@ -22,7 +22,7 @@
         <h1 class="tagline">{{_('<span class="txt-gradient">Free</span> Your Inbox')}}</h1>
         <p class="sub-tag">
           {% trans %}
-            Meet Thunderbird, the <strong>email</strong> and <strong>productivity</strong> app that maximizes your freedoms.
+            Meet Thunderbird, the <strong>email and productivity</strong> app that maximizes your freedoms.
           {% endtrans %}
         </p>
       </div>
@@ -320,29 +320,38 @@
           </div>
         </div>
       </div>
-
-      <div class="cta">
-        <!-- <a href="{{ url('thunderbird.features') }}" class="cta-ln">{{_('Explore More Features')}}</a> -->
-      </div>
     </div>
     <div class="mask" aria-hidden="true">
       {{ svg('mask') }}
     </div>
   </section>
 
-  <section id="free-your-inbox">
+  <section id="freedom-to-go-anywhere">
     <div class="container">
-      <div class="section-text cta-section">
-        <h2 class="cta-heading">{{_('<span class="txt-gradient">Free</span> Your Inbox')}}</h2>
-        <h4 class="cta-sub-heading">{{_('Are you ready to love email again?')}}</h4>
-      </div>
-      <div class="cta">
-        <div class="download-button">
-          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-bottom",  button_class="btn-download btn-white-bg") }}
+      <div class="section-text">
+        <h2 class="section-heading">{{_('<span class="txt-gradient">Freedom</span> to Go Anywhere')}}</h2>
+        <h4>{{_('Introducing Thunderbird Mobile')}}</h4>
+        <p>
+          {% trans -%}
+            The freedom and joy of Thunderbird are now available to you anywhere you go.
+            With Thunderbird Mobile your most important messages are sent and received by an open-source,
+            secure app that respects your privacy
+          {%- endtrans %}
+        </p>
+        <div class="cta">
+          <a href="#" class="strong">{{_('Read the announcement')}}</a>
         </div>
       </div>
     </div>
+    <div class="mobile-render" aria-hidden="true">
+      {{ high_res_img('/media/img/thunderbird/base/home/exploding-phone.png', {'alt': _('A rendering of a mobile phone.')}, alt_formats=('avif', 'webp')) }}
+    </div>
+    <div class="mask" aria-hidden="true">
+      {{ svg('mask') }}
+    </div>
   </section>
+
+  {% include 'includes/components/download-block.html' %}
 
   {% with page_desc = self.page_desc() %}
     {% include "includes/product-metadata.html" %}

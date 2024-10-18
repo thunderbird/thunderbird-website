@@ -12,11 +12,10 @@
 </li>
 {% endmacro %}
 <ul id="nav-menu" class="nav-links">
-  <!--
   <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-products"
-      class="nav-ln nav-expandable"
+      class="nav-ln"
     >
       {{_('Products')}}
     </button>
@@ -27,7 +26,6 @@
       </ul>
     </div>
   </li>
-  -->
   <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-resources"
@@ -38,9 +36,8 @@
     <div id="nav-cat-resources" class="popover-container">
       <ul class="popover-panel">
         {{ nav_entry(svg('base/icons/menu/blog'), _('Blog'), _('Learn about new product releases, community events, tech tips, and more.'), url('blog')) }}
-        {{ nav_entry(svg('base/icons/menu/help'), _('Get Help'), _('Find the help you need configuring and using Thunderbird.'), url('support')) }}
-        <!--{{ nav_entry(svg('base/icons/menu/podcasts'), _('Podcasts'), _('Meet interesting people and hear their Thunderbird stories.'), url('blog')) }}-->
-        {{ nav_entry(svg('base/icons/menu/downloads'), _('Downloads'), _('Find the latest version of Thunderbird.'), url('thunderbird.latest.all')) }}
+        {{ nav_entry(svg('base/icons/menu/desktop-help'), _('Desktop Help'), _('Find the help you need configuring and using Thunderbird Desktop.'), url('support')) }}
+        {{ nav_entry(svg('base/icons/menu/mobile-help'), _('Mobile Help'), _('Find the help you need configuring and using Thunderbird Mobile.'), url('support')) }}
       </ul>
     </div>
   </li>
@@ -59,7 +56,7 @@
       </ul>
     </div>
   </li>
-  <li class="nav-entry no-border nav-expandable" tabindex="0">
+  <li class="nav-entry nav-expandable" tabindex="0">
     <button
       aria-controls="nav-cat-contribute"
       class="nav-ln"
@@ -73,12 +70,22 @@
       </ul>
     </div>
   </li>
-  <li class="nav-entry no-border no-mobile">
+  <li class="nav-entry no-border no-desktop">
+    <a
+      href="{{ url('thunderbird.latest.all') }}"
+      class="nav-ln"
+    >
+      {{_('Downloads')}}
+    </a>
+  </li>
+  <li class="nav-entry no-border no-mobile nav-button-fix">
     <div class="header-download">
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="header", hide_footer_links=True, button_class="btn-download btn-no-bg") }}
+      <a href="{{ url('thunderbird.latest.all') }}" class="btn btn-no-bg" aria-label="{{ _('Downloads') }}" title="{{ _('Find the latest version of Thunderbird.') }}">
+        Downloads
+      </a>
     </div>
   </li>
-  <li class="nav-entry no-border no-mobile">
+  <li class="nav-entry no-border no-mobile nav-button-fix">
     <div class="header-donate">
       <a href="{{ donate_url('header') }}" class="btn btn-no-bg" aria-label="{{ _('Donate') }}" title="{{ _('Donate') }}">
         <span aria-hidden="true">{{ svg('heart') }}</span>
