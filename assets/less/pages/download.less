@@ -54,6 +54,7 @@
     flex-direction: row;
     text-align: left;
     justify-content: center;
+    align-items: initial;
     gap: 4rem;
 
     .column {
@@ -93,15 +94,27 @@
         max-width: 100%;
       }
     }
+
+    div:first-child {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    div:nth-child(2) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
   }
 
   .section-title {
     display: flex;
-    align-items: center;
+    align-items: initial;
 
     h1 {
       margin-top: 0;
     }
+
     h2 {
       // Make these h2s small
       font-size: 2rem;
@@ -293,9 +306,11 @@
     border: 1px solid var(--text-warning);
     border-radius: 6px;
     padding: 0.5em 1em;
+
     p {
       margin: 0;
     }
+
     a {
       color: var(--warning-links);
     }
