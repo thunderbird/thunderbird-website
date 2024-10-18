@@ -214,6 +214,7 @@ URL_MAPPINGS = {
     'privacy.notices.donations': 'https://www.mozilla.org/privacy/websites/#donations',
     'privacy.notices.thunderbird': '/privacy',
     'support': 'https://support.mozilla.org/products/thunderbird/',
+    'support.question': 'https://support.mozilla.org/questions/new/thunderbird',
     'thunderbird.about': '/about',
     'thunderbird.about.our-mission-statement': '/about/mission-statement',
     'thunderbird.bugzilla.new-bug': 'https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird',
