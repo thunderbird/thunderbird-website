@@ -5,6 +5,7 @@
 {% set active_page = "download" %}
 {% extends "includes/base/page.html" %}
 {% from "includes/_enonly/product-all-macros.html" import build_table with context %}
+{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
 
 {% block page_title %}{{ _('Download') }}{% endblock %}
 {% block category %}{{ _('Resources') }}{% endblock %}
@@ -141,30 +142,7 @@
           </div>
           <p>{{ _('These are officially maintained and distributed by Thunderbird Mobile.') }}</p>
         </div>
-        <div class="download-button download-button-page">
-          <a
-            id="download-gplay-btn"
-            class="btn btn-download btn-white-bg btn-slim"
-            href="{{ download_url(platform_os='gplay', channel='mobile') }}"
-            data-donate-redirect="download-{{ channel or 'esr' }}"
-            data-donate-content="post_download"
-            data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}"
-          >
-            <span class="download-icon" aria-hidden="true">{{ svg('download') }}</span>
-            {{ _('Google Play') }}
-          </a>
-          <a
-            id="download-fdroid-btn"
-            class="btn btn-download btn-white-bg btn-slim"
-            href="{{ download_url(platform_os='fdroid', channel='mobile') }}"
-            data-donate-redirect="download-{{ channel or 'esr' }}"
-            data-donate-content="post_download"
-            data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}"
-          >
-            <span class="download-icon" aria-hidden="true">{{ svg('download') }}</span>
-            {{ _('F-Droid') }}
-          </a>
-        </div>
+        {{ download_mobile_btns() }}
         <div class="platform-release">
             <div>
               <h4>{{ _('Other Downloads') }}</h4>

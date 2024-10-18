@@ -2,8 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
-{% set active_page = "desktop" %}
+{% set active_page = "mobile" %}
 {% extends "includes/base/page.html" %}
+{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
 
 {% block page_title %}{{ _('Thunderbird Mobile') }}{% endblock %}
 
@@ -29,9 +30,7 @@
         </p>
       </div>
       <div class="hero-download">
-        <div class="download-button">
-          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-hero") }}
-        </div>
+        {{ download_mobile_btns('btn-gradient', 'download-button-products', True) }}
       </div>
     </div>
   </section>

@@ -31,18 +31,25 @@
     background-position: bottom center, center;
     background-repeat: no-repeat;
     color: var(--color-gray-20);
-    padding-top: var(--nav-size);
-    padding-bottom: 10.5rem;
     isolation: isolate;
+    padding-top: var(--nav-size);
+
+    // More we take from the bottom, the more we need to pull back up
+    padding-bottom: 10.5rem;
+
+    @media (max-width: @md) {
+      margin-top: 0;
+    }
+
 
     // Adjust the hero text for the display background
     .hero {
       // Product pages are a lil' smaller
       --font-tagline-clamp: clamp(var(--font-tagline-min), var(--font-tagline-ideal), 4rem);
-      //--font-hero: 1.3rem;
+
       position: relative;
-      top: 14rem;
-      margin-bottom: 10rem;
+      top: 12rem;
+      margin-bottom: 5rem;
     }
     @media (max-width: @md) {
       .hero {
@@ -50,6 +57,13 @@
         margin-bottom: 5rem;
       }
     }
+  }
+
+  .container {
+    gap: 2rem;
+  }
+  .all-downloads-link {
+    margin-bottom: 3rem;
   }
 
   .hero-download {
