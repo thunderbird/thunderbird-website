@@ -320,10 +320,6 @@
           </div>
         </div>
       </div>
-
-      <div class="cta">
-        <!-- <a href="{{ url('thunderbird.features') }}" class="cta-ln">{{_('Explore More Features')}}</a> -->
-      </div>
     </div>
     <div class="mask" aria-hidden="true">
       {{ svg('mask') }}
@@ -348,11 +344,7 @@
       </div>
     </div>
     <div class="mobile-render" aria-hidden="true">
-      <picture>
-        <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
-        <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
-        <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{_('A rendering of a mobile phone')}}">
-      </picture>
+      {{ high_res_img('/media/img/thunderbird/base/home/exploding-phone.png', {'alt': _('A rendering of a mobile phone.')}, alt_formats=('avif', 'webp')) }}
     </div>
     <div class="mask" aria-hidden="true">
       {{ svg('mask') }}
