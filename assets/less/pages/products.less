@@ -1,18 +1,18 @@
 .page-desktop {
   #masthead {
-    //--bg-hero: url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.png');
-    //--bg-hero-set: image-set(url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.avif') type('image/avif'),
-    //url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.webp') type('image/webp'),
-    //var(--bg-hero) type('image/png'));
+    --bg-hero: url('/media/img/thunderbird/base/desktop/banner-bg-high-res.png');
+    --bg-hero-set: image-set(url('/media/img/thunderbird/base/desktop/banner-bg-high-res.avif') type('image/avif'),
+    url('/media/img/thunderbird/base/desktop/banner-bg-high-res.webp') type('image/webp'),
+    var(--bg-hero) type('image/png'));
   }
 }
 
 .page-mobile {
   #masthead {
-    //--bg-hero: url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.png');
-    //--bg-hero-set: image-set(url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.avif') type('image/avif'),
-    //url('/media/img/l10n/en-US/thunderbird/base/home/banner-high-res.webp') type('image/webp'),
-    //var(--bg-hero) type('image/png'));
+    --bg-hero: url('/media/img/thunderbird/base/mobile/banner-bg-high-res.png');
+    --bg-hero-set: image-set(url('/media/img/thunderbird/base/mobile/banner-bg-high-res.avif') type('image/avif'),
+    url('/media/img/thunderbird/base/mobile/banner-bg-high-res.webp') type('image/webp'),
+    var(--bg-hero) type('image/png'));
   }
 }
 
@@ -20,22 +20,40 @@
   #masthead,
   header {
     --bg-hero-gradient: linear-gradient(to top, var(--color-ink-90), black 80%);
-    // By default just show the gradient
-    --bg-hero: var(--bg-hero-gradient);
-    --bg-hero-set: var(--bg-hero);
 
     display: grid;
     place-items: center;
-    min-height: 80vh;
+    min-height: 50vh;
     background-color: black;
     background-image: var(--bg-hero), var(--bg-hero-gradient);
     background-image: var(--bg-hero-set), var(--bg-hero-gradient);
-    background-size: auto 80vh, 100%;
+    background-size: auto 70vh, 100%;
     background-position: bottom center, center;
     background-repeat: no-repeat;
     color: var(--color-gray-20);
     padding-top: var(--nav-size);
+    padding-bottom: 10.5rem;
     isolation: isolate;
+
+    // Adjust the hero text for the display background
+    .hero {
+      // Product pages are a lil' smaller
+      --font-tagline-clamp: clamp(var(--font-tagline-min), var(--font-tagline-ideal), 4rem);
+      //--font-hero: 1.3rem;
+      position: relative;
+      top: 14rem;
+      margin-bottom: 10rem;
+    }
+    @media (max-width: @md) {
+      .hero {
+        top: 5rem;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  .hero-download {
+    margin-top: 0;
   }
 
   // Override logo colours
