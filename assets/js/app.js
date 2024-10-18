@@ -51,3 +51,35 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+
+// Handle auto play videos
+document.addEventListener('DOMContentLoaded', function() {
+  const autoplayVideos = document.querySelectorAll('video[autoplay]');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  console.log(reduceMotion);
+  for (const item of autoplayVideos) {
+    // Disable autoplay and pause playback if they would like reduced motion
+    if (reduceMotion) {
+      item.autoplay = false;
+      item.pause();
+    }
+
+    const togglePlayback = (evt) => {
+      const target = evt.target;
+      const isPaused = target.paused;
+      if (isPaused) {
+        target.play();
+      } else {
+        target.pause();
+      }
+    }
+
+    // Allow toggling playback with a click
+    item.addEventListener('click', togglePlayback);
+    item.addEventListener('keyup', (evt) => {
+      if (evt.key === 'Enter') {
+        togglePlayback(evt);
+      }
+    })
+  }
+});

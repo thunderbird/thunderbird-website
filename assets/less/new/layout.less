@@ -103,6 +103,11 @@ header {
   max-width: 1280px;
   overflow: hidden;
 
+  // For the product pages
+  &.container-tight {
+    max-width: 1040px;
+  }
+
   &.no-gap {
     gap: 0;
   }
@@ -549,4 +554,9 @@ section {
   .styled-list {
     text-indent: -2.5rem;
   }
+}
+
+// We can toggle playback on autoplay videos
+video[autoplay] {
+  cursor: pointer;
 }
