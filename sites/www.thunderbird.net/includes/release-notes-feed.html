@@ -67,5 +67,5 @@
     </ul>
   {% endif %}
 {% endif %}
-<p>{{ _('As always, you’re encouraged to <a href="%(feedback)s">tell us what you think</a>, or <a href="%(bugzilla)s">file a bug in Bugzilla</a>')|format(feedback='https://support.mozilla.org/questions/new/thunderbird', bugzilla='https://bugzilla.mozilla.org/') }}</p>
+<p>{{ _('As always, you’re encouraged to <a href="%(feedback)s">tell us what you think</a>, or <a href="%(bugzilla)s">file a bug in Bugzilla</a>')|format(feedback=url('mozorg.connect.tb'), bugzilla=url('thunderbird.bugzilla.new-bug')) }}</p>
 <style> li p { display: inline; } </style>
