@@ -57,7 +57,9 @@
 
       <div class="two-columns">
         <div class="content-block">
-          <video autoplay loop src="{{ static('video/thunderbird/products/features_services_001.mp4') }}">
+          <video autoplay loop disablepictureinpicture>
+            <source type="video/webm" src="{{ static('video/thunderbird/features/services-high-res.webm') }}"/>
+            <source type="video/mp4" src="{{ static('video/thunderbird/features/services-high-res.mp4') }}"/>
             <p>{{ _('A video of Thunderbird with various email service icons rotating around it.') }}</p>
           </video>
         </div>
@@ -70,7 +72,7 @@
       </div>
       <div class="two-columns flip-columns">
         <div class="content-block">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+          {{ high_res_img('thunderbird/base/features/adfree.png', {'alt': _('A crossed out circle against a pink background.')}, alt_formats=('avif', 'webp')) }}
         </div>
         <div class="section-text">
           <h3>{{ _('Ad Free Experience') }}</h3>
@@ -81,7 +83,9 @@
       </div>
       <div class="two-columns">
         <div class="content-block">
-          <video autoplay loop src="{{ static('video/thunderbird/products/features_platforms_001.mp4') }}">
+          <video autoplay loop disablepictureinpicture>
+            <source type="video/webm" src="{{ static('video/thunderbird/features/platforms-high-res.webm') }}"/>
+            <source type="video/mp4" src="{{ static('video/thunderbird/features/platforms-high-res.mp4') }}"/>
             <p>{{ _('A video of a heart with various operating system logos around it.') }}</p>
           </video>
         </div>
@@ -114,7 +118,7 @@
       {# ...back to features #}
       <div class="two-columns flip-columns">
         <div class="content-block">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+          {{ high_res_img('thunderbird/base/features/calendar.png', {'alt': _('A cropped screenshot of the Thunderbird interface.')}, alt_formats=('avif', 'webp')) }}
         </div>
         <div class="section-text">
           <h3>{{ _('Calendar, Contacts, and Tasks') }}</h3>
@@ -124,7 +128,9 @@
       </div>
       <div class="two-columns">
         <div class="content-block">
-          <video autoplay loop src="{{ static('video/thunderbird/products/features_secure_001.mp4') }}">
+          <video autoplay loop disablepictureinpicture>
+            <source type="video/webm" src="{{ static('video/thunderbird/features/secure-high-res.webm') }}"/>
+            <source type="video/mp4" src="{{ static('video/thunderbird/features/secure-high-res.mp4') }}"/>
             <p>{{ _('A video of a shield with the Thunderbird logo in the center of it.') }}</p>
           </video>
         </div>
@@ -137,7 +143,7 @@
       </div>
       <div class="two-columns flip-columns">
         <div class="content-block">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+          {{ svg('logo') }}
         </div>
         <div class="section-text">
           <h3>{{ _('Always Free and Open') }}</h3>
@@ -163,7 +169,7 @@
     </div>
   </section>
   <section class="cover-container">
-    {{ high_res_img('thunderbird/base/about/contributors.png', {'alt': _('Addons!')}, alt_formats=('avif', 'webp')) }}
+    {{ high_res_img('thunderbird/base/desktop/addons-background.png', {'alt': _('Addons!')}, alt_formats=('avif', 'webp')) }}
     {% include 'includes/components/page-separator-cover.html' %}
   </section>
   <section id="helpful-resources">

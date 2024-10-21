@@ -51,6 +51,7 @@
       top: 12rem;
       margin-bottom: 5rem;
     }
+
     @media (max-width: @md) {
       .hero {
         top: 5rem;
@@ -62,6 +63,14 @@
   .container {
     gap: 2rem;
   }
+
+  .cover-container {
+
+    .page-separator-cover {
+      color: var(--bg);
+    }
+  }
+
   .all-downloads-link {
     margin-bottom: 3rem;
   }
@@ -99,10 +108,17 @@
     border-radius: 1.0rem;
     box-shadow: var(--shadow-2xl);
 
-    img, video {
+    img, video, picture {
       width: 100%;
+      height: 100%;
       background-color: lightgrey;
       border-radius: 1.0rem;
+    }
+
+    // Temp until missing assets come in
+    svg {
+      border-radius: 1.0rem;
+      background: linear-gradient(180deg, #e0b3ff 0%, #a880c0 100%);
     }
   }
 
