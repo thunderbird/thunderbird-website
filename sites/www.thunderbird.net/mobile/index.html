@@ -56,7 +56,7 @@
 
       <div class="two-columns">
         <div class="content-block">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+          {{ high_res_img('thunderbird/base/features/adfree.png', {'alt': _('A crossed out circle against a pink background.')}, alt_formats=('avif', 'webp')) }}
         </div>
         <div class="section-text">
           <h3>{{ _('No Ads or Spyware') }}</h3>
@@ -67,7 +67,7 @@
       </div>
       <div class="two-columns flip-columns">
         <div class="content-block">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+          {{ high_res_img('thunderbird/base/features/navbar.png', {'alt': _('A cropped screenshot of the Thunderbird for Android\'s interface.')}, alt_formats=('avif', 'webp')) }}
         </div>
         <div class="section-text">
           <h3>{{ _('All-in-One Email App') }}</h3>
@@ -77,7 +77,9 @@
       </div>
       <div class="two-columns">
         <div class="content-block">
-          <video autoplay loop src="{{ static('video/thunderbird/products/features_services_001.mp4') }}">
+          <video autoplay loop disablepictureinpicture>
+            <source type="video/webm" src="{{ static('video/thunderbird/features/services-high-res.webm') }}"/>
+            <source type="video/mp4" src="{{ static('video/thunderbird/features/services-high-res.mp4') }}"/>
             <p>{{ _('A video of Thunderbird with various email service icons rotating around it.') }}</p>
           </video>
         </div>
@@ -109,7 +111,9 @@
       {# ...back to features #}
       <div class="two-columns flip-columns">
         <div class="content-block">
-          <video autoplay loop src="{{ static('video/thunderbird/products/features_encryption_001.mp4') }}">
+          <video autoplay loop disablepictureinpicture>
+            <source type="video/webm" src="{{ static('video/thunderbird/features/encryption-high-res.webm') }}"/>
+            <source type="video/mp4" src="{{ static('video/thunderbird/features/encryption-high-res.mp4') }}"/>
             <p>{{ _('A video of an envelope with password masking asterisks in front of it.') }}</p>
           </video>
         </div>
@@ -121,7 +125,11 @@
       </div>
       <div class="two-columns">
         <div class="content-block">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+          <video autoplay loop disablepictureinpicture>
+            <source type="video/webm" src="{{ static('video/thunderbird/features/lightdark-high-res.webm') }}"/>
+            <source type="video/mp4" src="{{ static('video/thunderbird/features/lightdark-high-res.mp4') }}"/>
+            <p>{{ _('A video of the Thunderbird for Android\'s interface transitioning from light mode to dark mode and back again.') }}</p>
+          </video>
         </div>
         <div class="section-text">
           <h3>{{ _('Light and Dark Interface') }}</h3>
@@ -131,7 +139,7 @@
       </div>
       <div class="two-columns flip-columns">
         <div class="content-block">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""/>
+          {{ svg('logo') }}
         </div>
         <div class="section-text">
           <h3>{{ _('Always Free and Open') }}</h3>
@@ -142,7 +150,10 @@
       </div>
     </div>
   </section>
-  {% include 'includes/components/page-separator.html' %}
+    <section class="cover-container">
+    {{ high_res_img('thunderbird/base/mobile/setup-background.png', {'alt': _('Two QR codes are shown, one on a mobile device and another in the distance on a desktop.')}, alt_formats=('avif', 'webp')) }}
+    {% include 'includes/components/page-separator-cover.html' %}
+  </section>
   <section id="helpful-resources">
     <div class="container">
       <div class="section-title">
@@ -155,31 +166,16 @@
       </div>
       <div class="three-columns">
         <div class="info-resource">
-          <picture>
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
-            <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
-          </picture>
           <h4>{{ _('Getting Started') }}</h4>
           <p>{{ _('Almost anyone can participate in making Thunderbird better and more accessible to others. Come and learn what opportunities are available. Find ways to contribute to the project:') }}</p>
           <a class="strong" href="{{ url('thunderbird.participate') }}">{{ _('How to Participate') }}</a>
         </div>
         <div class="info-resource">
-          <picture>
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
-            <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
-          </picture>
           <h4>{{ _('Share Ideas') }}</h4>
           <p>{{ _('When developers, designers, and users work together amazing things happen. Come share your ideas for how Thunderbird could be better.') }}</p>
           <a class="strong" href="{{ url('mozorg.connect.tb') }}">{{ _('Mozilla Connect') }}</a>
         </div>
         <div class="info-resource">
-          <picture>
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
-            <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
-          </picture>
           <h4>{{ _('Find Support') }}</h4>
           <p>{{ _('Learn how to use Thunderbird and ask your questions. Thunderbird contributors from around the world are working to make your experience great.') }}</p>
           <a class="strong" href="{{ url('support') }}">{{ _('Support Site') }}</a>

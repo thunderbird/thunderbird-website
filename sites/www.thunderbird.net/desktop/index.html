@@ -169,7 +169,7 @@
     </div>
   </section>
   <section class="cover-container">
-    {{ high_res_img('thunderbird/base/desktop/addons-background.png', {'alt': _('Addons!')}, alt_formats=('avif', 'webp')) }}
+    {{ high_res_img('thunderbird/base/desktop/addons-background.png', {'alt': _('A grid of various add-on icons.')}, alt_formats=('avif', 'webp')) }}
     {% include 'includes/components/page-separator-cover.html' %}
   </section>
   <section id="helpful-resources">
@@ -184,31 +184,16 @@
       </div>
       <div class="three-columns">
         <div class="info-resource">
-          <picture>
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
-            <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
-          </picture>
           <h4>{{ _('Getting Started') }}</h4>
           <p>{{ _('Almost anyone can participate in making Thunderbird better and more accessible to others. Come and learn what opportunities are available. Find ways to contribute to the project:') }}</p>
           <a class="strong" href="{{ url('thunderbird.participate') }}">{{ _('How to Participate') }}</a>
         </div>
         <div class="info-resource">
-          <picture>
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
-            <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
-          </picture>
           <h4>{{ _('Share Ideas') }}</h4>
           <p>{{ _('When developers, designers, and users work together amazing things happen. Come share your ideas for how Thunderbird could be better.') }}</p>
           <a class="strong" href="{{ url('mozorg.connect.tb') }}">{{ _('Mozilla Connect') }}</a>
         </div>
         <div class="info-resource">
-          <picture>
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
-            <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
-            <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
-          </picture>
           <h4>{{ _('Find Support') }}</h4>
           <p>{{ _('Learn how to use Thunderbird and ask your questions. Thunderbird contributors from around the world are working to make your experience great.') }}</p>
           <a class="strong" href="{{ url('support') }}">{{ _('Support Site') }}</a>
