@@ -580,6 +580,20 @@ section {
   }
 }
 
+.cover-container {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    margin-bottom: -0.25rem;
+    @media (max-width: @md) {
+      overflow: hidden;
+      max-width: 200%;
+      translate: -25%;
+    }
+  }
+}
+
 // We can toggle playback on autoplay videos
 video[autoplay] {
   cursor: pointer;
