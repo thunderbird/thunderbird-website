@@ -187,6 +187,44 @@ def high_res_img(ctx, url, optional_attributes=None, scale='1.5x', alt_formats=(
 
 
 @jinja2.pass_context
+def video(ctx, file_path, alt_text=None, alt_formats=(), poster_path=None, auto_play=False, loop=False, controls=False, disable_pip=True):
+    file_name, ext = splitext(file_path)
+    ext = ext.replace('.', '')
+
+    attributes = []
+    if auto_play:
+        attributes.append('autoplay="true"')
+        attributes.append('muted="true"')
+    if loop:
+        attributes.append('loop="true"')
+    if controls:
+        attributes.append('controls="true"')
+    if disable_pip:
+        attributes.append('disablepictureinpicture="true"')
+        attributes.append('playsinline="true"')
+    if poster_path:
+        attributes.append(f'poster="{static(poster_path)}"')
+
+    # If we've specified some alternate formats we need to use the <picture> tag instead
+    tags = [f'<video {' '.join(attributes)}>']
+
+    for format in [ext, *alt_formats]:
+        path = f"{file_name}.{format}"
+
+        # If you need to muck with mimetypes, do it here
+        tags.append(
+            f'<source src="{static(path)}" type="video/{format}"/>'
+        )
+
+    if alt_text:
+        tags.append(f'<p>{alt_text}</p>')
+
+    tags.append('</video>')
+
+    return markupsafe.Markup("\n".join(tags))
+
+
+@jinja2.pass_context
 def svg(ctx, file_name):
     """Returns an inlined svg element, optionally (and by default) wraps a span around it to allow screen readers to ignore it."""
     file = path.join(settings.MEDIA_URL.strip('/'), 'svg/' + file_name + '.svg')

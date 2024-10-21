@@ -57,11 +57,15 @@
 
       <div class="two-columns">
         <div class="content-block">
-          <video autoplay loop disablepictureinpicture>
-            <source type="video/webm" src="{{ static('video/thunderbird/features/services-high-res.webm') }}"/>
-            <source type="video/mp4" src="{{ static('video/thunderbird/features/services-high-res.mp4') }}"/>
-            <p>{{ _('A video of Thunderbird with various email service icons rotating around it.') }}</p>
-          </video>
+          {{
+            video('video/thunderbird/features/services-high-res.mp4',
+            poster_path='img/thunderbird/base/features/services.avif',
+            alt_text=_('A video of Thunderbird with various email service icons rotating around it.'),
+            alt_formats=('webm',),
+            loop=True,
+            auto_play=True,
+            disable_pip=True)
+          }}
         </div>
         <div class="section-text">
           <h3>{{ _('Multiple Account Support') }}</h3>
@@ -83,11 +87,15 @@
       </div>
       <div class="two-columns">
         <div class="content-block">
-          <video autoplay loop disablepictureinpicture>
-            <source type="video/webm" src="{{ static('video/thunderbird/features/platforms-high-res.webm') }}"/>
-            <source type="video/mp4" src="{{ static('video/thunderbird/features/platforms-high-res.mp4') }}"/>
-            <p>{{ _('A video of a heart with various operating system logos around it.') }}</p>
-          </video>
+          {{
+            video('video/thunderbird/features/platforms-high-res.mp4',
+            poster_path='img/thunderbird/base/features/platforms.avif',
+            alt_text=_('A video of a heart with various operating system logos around it.'),
+            alt_formats=('webm',),
+            loop=True,
+            auto_play=True,
+            disable_pip=True)
+          }}
         </div>
         <div class="section-text">
           <h3>{{ _('Cross Platform Support') }}</h3>
@@ -128,11 +136,15 @@
       </div>
       <div class="two-columns">
         <div class="content-block">
-          <video autoplay loop disablepictureinpicture>
-            <source type="video/webm" src="{{ static('video/thunderbird/features/secure-high-res.webm') }}"/>
-            <source type="video/mp4" src="{{ static('video/thunderbird/features/secure-high-res.mp4') }}"/>
-            <p>{{ _('A video of a shield with the Thunderbird logo in the center of it.') }}</p>
-          </video>
+          {{
+            video('video/thunderbird/features/secure-high-res.mp4',
+            poster_path='img/thunderbird/base/features/secure.avif',
+            alt_text=_('A video of a shield with the Thunderbird logo in the center of it.'),
+            alt_formats=('webm',),
+            loop=True,
+            auto_play=True,
+            disable_pip=True)
+          }}
         </div>
         <div class="section-text">
           <h3>{{ _('Better Security and Privacy') }}</h3>
