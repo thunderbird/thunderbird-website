@@ -188,6 +188,7 @@ def high_res_img(ctx, url, optional_attributes=None, scale='1.5x', alt_formats=(
 
 @jinja2.pass_context
 def video(ctx, file_path, alt_text=None, alt_formats=(), poster_path=None, auto_play=False, loop=False, controls=False, disable_pip=True):
+    """Add a video element to the page with some additional file formats."""
     file_name, ext = splitext(file_path)
     ext = ext.replace('.', '')
 

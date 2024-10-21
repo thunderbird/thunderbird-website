@@ -49,41 +49,79 @@
         </div>
       {% endcall %}
       {% call accordion(svg('base/icons/participate/test'), _('Test')) %}
-        <div>
-          <p>{{ _('With so many unique hardware environments and workflows, community members who test pre-release builds of Thunderbird play a vital role in the quality of the software. Plus, you help catch bugs before they can reach the general public!') }}</p>
-          <ul class="styled-list">
-            <li>{{ _('Learn about testing <a href="%(url)s">Beta</a>')|format(url=url('participate.test.beta')) }}</li>
-            <li>{{ _('Report <a href="%(url)s">bugs</a>')|format(url=url('participate.test.bugs')) }}</li>
-          </ul>
+        <p>{{ _('With so many unique hardware environments and workflows, community members who test pre-release builds of Thunderbird play a vital role in the quality of the software. Plus, you help catch bugs before they can reach the general public!') }}</p>
+        <div class="two-columns">
+          <div>
+            <h4>{{ _('Desktop:') }}</h4>
+            <ul class="styled-list">
+              <li>{{ _('Learn about testing <a href="%(url)s">Beta</a>')|format(url=url('participate.test.desktop.beta')) }}</li>
+              <li>{{ _('Report <a href="%(url)s">bugs</a>')|format(url=url('participate.test.desktop.bugs')) }}</li>
+            </ul>
+          </div>
+          <div>
+            <h4>{{ _('Mobile:') }}</h4>
+            <ul class="styled-list">
+              <li>{{ _('Learn about testing <a href="%(url)s">Beta</a>')|format(url=url('participate.test.android.beta')) }}</li>
+              <li>{{ _('Report <a href="%(url)s">bugs</a>')|format(url=url('participate.test.android.bugs')) }}</li>
+            </ul>
+          </div>
         </div>
       {% endcall %}
       {% call accordion(svg('base/icons/participate/translate'), _('Translate')) %}
-        <div>
-          <p>{{ _('The entire world deserves free and open source software, and Thunderbird is currently translated in more than 50 languages! Use your multilingual talents to help make Thunderbird more widely available than ever.') }}</p>
-          <ul class="styled-list">
-            <li>{{ _('Explore the <a href="%(url)s">docs</a>')|format(url=url('participate.translate.docs')) }}</li>
-            <li>{{ _('Join us on <a href="%(url)s">Pontoon</a>')|format(url=url('participate.translate.pontoon')) }}</li>
-          </ul>
+        <p>{{ _('The entire world deserves free and open source software, and Thunderbird is currently translated in more than 50 languages! Use your multilingual talents to help make Thunderbird more widely available than ever.') }}</p>
+        <div class="two-columns">
+          <div>
+            <h4>{{ _('Desktop:') }}</h4>
+            <ul class="styled-list">
+              <li>{{ _('Explore the <a href="%(url)s">docs</a>')|format(url=url('participate.translate.desktop.docs')) }}</li>
+              <li>{{ _('Join us on <a href="%(url)s">Pontoon</a>')|format(url=url('participate.translate.desktop.pontoon')) }}</li>
+            </ul>
+          </div>
+          <div>
+            <h4>{{ _('Mobile:') }}</h4>
+            <ul class="styled-list">
+              <li>{{ _('Explore the <a href="%(url)s">docs</a>')|format(url=url('participate.translate.android.docs')) }}</li>
+              <li>{{ _('Join us on <a href="%(url)s">Weblate</a>')|format(url=url('participate.translate.android.weblate')) }}</li>
+            </ul>
+          </div>
         </div>
       {% endcall %}
       {% call accordion(svg('base/icons/participate/support'), _('Support')) %}
-        <div>
           <p>{{ _('Are you an experienced Thunderbird user who loves lending a helping hand? Put your knowledge to great use by joining our Support Crew and helping users around the world with their Thunderbird questions.') }}</p>
           <p>{{ _('You can join our Thunderbird Community Support Matrix room to get and give user support.') }}</p>
-          <ul class="styled-list">
-            <li>{{ _('Say hello in <a href="%(url)s">Matrix</a>')|format(url=url('participate.support.matrix')) }}</li>
-          </ul>
-        </div>
+          <div class="two-columns">
+            <div>
+              <h4>{{ _('Desktop:') }}</h4>
+              <ul class="styled-list">
+                <li>{{ _('Say hello in <a href="%(url)s">Matrix</a>')|format(url=url('participate.support.desktop.matrix')) }}</li>
+              </ul>
+            </div>
+            <div>
+              <h4>{{ _('Mobile:') }}</h4>
+              <ul class="styled-list">
+                <li>{{ _('Say hello in <a href="%(url)s">Matrix</a>')|format(url=url('participate.support.android.matrix')) }}</li>
+              </ul>
+            </div>
+          </div>
       {% endcall %}
       {% call accordion(svg('base/icons/participate/document'), _('Document')) %}
-        <div>
           <p>{{ _('Help ensure the answers are written down before the question is even asked! From documenting features or APIs to frequently asked user support questions, put your knowledge and writing skills to use for the benefit of the entire Thunderbird community.') }}</p>
-          <ul class="styled-list">
-            <li>{{ _('User Support <a href="%(url)s">documentation</a>')|format(url=url('participate.document.user')) }}</li>
-            <li>{{ _('Developer <a href="%(url)s">documentation</a>')|format(url=url('participate.document.dev')) }}</li>
-            <li>{{ _('Code <a href="%(url)s">documentation</a>')|format(url=url('participate.document.code')) }}</li>
-          </ul>
-        </div>
+          <div class="two-columns">
+            <div>
+              <h4>{{ _('Desktop:') }}</h4>
+              <ul class="styled-list">
+                <li>{{ _('User Support <a href="%(url)s">documentation</a>')|format(url=url('participate.document.desktop.user')) }}</li>
+                <li>{{ _('Developer <a href="%(url)s">documentation</a>')|format(url=url('participate.document.desktop.dev')) }}</li>
+                <li>{{ _('Code <a href="%(url)s">documentation</a>')|format(url=url('participate.document.desktop.code')) }}</li>
+              </ul>
+            </div>
+            <div>
+              <h4>{{ _('Mobile:') }}</h4>
+              <ul class="styled-list">
+                <li>{{ _('User Support <a href="%(url)s">documentation</a>')|format(url=url('participate.document.android.user')) }}</li>
+              </ul>
+            </div>
+          </div>
       {% endcall %}
       {% call accordion(svg('base/icons/participate/promote'), _('Promote')) %}
         <div>
@@ -95,6 +133,9 @@
             <li><a href="{{ url('participate.promote.youtube') }}">{{ _('YouTube') }}</a></li>
             <li><a href="{{ url('participate.promote.tilvids') }}">{{ _('TILVids') }}</a></li>
             <li><a href="{{ url('participate.promote.linkedin') }}">{{ _('LinkedIn') }}</a></li>
+            <li>
+              <a href="{{ url('participate.promote.android.review') }}">{{ _('Leave a review on the Google Play') }}</a>
+            </li>
           </ul>
         </div>
       {% endcall %}
