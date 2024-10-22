@@ -1,3 +1,5 @@
+{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
+{% macro download_block(show_mobile_download=False) -%}
 <section id="free-your-inbox">
   <div class="container">
     <div class="section-text cta-section">
@@ -5,9 +7,14 @@
       <h4 class="cta-sub-heading">{{ _('Are you ready to love email again?') }}</h4>
     </div>
     <div class="cta">
+      {% if show_mobile_download %}
+      {{ download_mobile_btns('btn-white-bg', 'download-button-page', True) }}
+      {% else %}
       <div class="download-button">
         {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-bottom",  button_class="btn-download btn-white-bg") }}
       </div>
+      {% endif %}
     </div>
   </div>
 </section>
+{% endmacro %}

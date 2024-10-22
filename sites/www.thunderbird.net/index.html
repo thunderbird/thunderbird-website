@@ -4,6 +4,7 @@
 
 {% set active_page = "index" %}
 {% extends "includes/base/page.html" %}
+{% from 'includes/macros/download-block.html' import download_block %}
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
 {% block page_title %}{{ _('Free Your Inbox.') }}{% endblock %}
@@ -356,7 +357,7 @@
     </div>
   </section>
 
-  {% include 'includes/components/download-block.html' %}
+  {{ download_block(False) }}
 
   {% with page_desc = self.page_desc() %}
     {% include "includes/product-metadata.html" %}

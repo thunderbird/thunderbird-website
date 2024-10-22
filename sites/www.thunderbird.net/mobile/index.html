@@ -4,7 +4,8 @@
 
 {% set active_page = "mobile" %}
 {% extends "includes/base/page.html" %}
-{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
+{% from 'includes/macros/download-mobile.html' import download_mobile_btns %}
+{% from 'includes/macros/download-block.html' import download_block %}
 
 {% block page_title %}{{ _('Thunderbird Mobile') }}{% endblock %}
 
@@ -207,7 +208,7 @@
       </div>
     </div>
     {% include 'includes/components/page-separator.html' %}
-    {% include 'includes/components/download-block.html' %}
+    {{ download_block(True) }}
 
   </section>
 {% endblock %}

@@ -4,6 +4,7 @@
 
 {% set active_page = "desktop" %}
 {% extends "includes/base/page.html" %}
+{% from 'includes/macros/download-block.html' import download_block %}
 
 {% block page_title %}{{ _('Thunderbird Desktop') }}{% endblock %}
 
@@ -213,7 +214,7 @@
       </div>
     </div>
     {% include 'includes/components/page-separator.html' %}
-    {% include 'includes/components/download-block.html' %}
+    {{ download_block(False) }}
 
   </section>
 {% endblock %}
