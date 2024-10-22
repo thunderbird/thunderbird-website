@@ -389,7 +389,9 @@ def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=N
                          alt_copy=None, button_class=None,
                          section='header', flex_class=None,
                          hide_footer_links=False):
-    """ Output a "Download Thunderbird" button.
+    """
+    Note: This is deprecated use the 'includes/macros/download-smart.html' macro instead!
+    Output a "Download Thunderbird" button.
 
     :param ctx: context from calling template.
     :param channel: name of channel: 'esr', 'release', 'beta' or 'daily'. 'alpha' has been retired.
@@ -403,6 +405,7 @@ def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=N
     :param hide_footer_links: Whether we should hide the footer links (System Requirements, What's New, Privacy Policy) display. Default to 'False'.
     :return: The button html.
     """
+    print("[Warning] Deprecated function 'download_thunderbird' in use!")
     alt_channel = '' if channel == settings.DEFAULT_RELEASE_VERSION else channel
     locale = ctx.get('LANG', None)
     dom_id = dom_id or 'download-button-desktop-%s' % channel
