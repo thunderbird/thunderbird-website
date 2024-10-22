@@ -5,6 +5,7 @@
 {% set active_page = "index" %}
 {% extends "includes/base/page.html" %}
 {% from 'includes/macros/download-block.html' import download_block %}
+{% from 'includes/macros/download-smart.html' import download_smart %}
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
 {% block page_title %}{{ _('Free Your Inbox.') }}{% endblock %}
@@ -28,9 +29,7 @@
         </p>
       </div>
       <div class="hero-download">
-        <div class="download-button">
-          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-hero") }}
-        </div>
+        {{ download_smart('btn-gradient', 'download-button-products') }}
       </div>
     </div>
   </section>
@@ -344,6 +343,7 @@
             secure app that respects your privacy
           {%- endtrans %}
         </p>
+      </div>
       {#
         <div class="cta">
           <a href="{{ url('thunderbird.android.announcement') }}" class="strong">{{_('Read the announcement')}}</a>
@@ -358,9 +358,7 @@
       {{ svg('mask') }}
     </div>
   </section>
-
-  {{ download_block(False) }}
-
+  {{ download_block() }}
   {% with page_desc = self.page_desc() %}
     {% include "includes/product-metadata.html" %}
   {% endwith %}

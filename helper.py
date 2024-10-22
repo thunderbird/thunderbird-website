@@ -352,6 +352,38 @@ def get_mobile_channels(ctx):
 
 
 @jinja2.pass_context
+def get_latest_desktop_builds(ctx, channel=settings.DEFAULT_RELEASE_VERSION):
+    """ Output the version and latest builds of Thunderbird Desktop
+    :param ctx: context from calling template.
+    :param channel: name of channel: 'esr', 'release', 'beta' or 'daily'. 'alpha' has been retired.
+    :return: The button html.
+    """
+    locale = ctx.get('LANG', None)
+    l_version = thunderbird_desktop.latest_builds(locale, channel)
+    if l_version:
+        version, platforms = l_version
+    else:
+        locale = 'en-US'
+        version, platforms = thunderbird_desktop.latest_builds('en-US', channel)
+
+    # Gather data about the build for each platform
+    builds = []
+
+    for plat_os, plat_os_pretty in thunderbird_desktop.platform_labels.items():
+        # And generate all the info
+        download_link = thunderbird_desktop.get_download_url(
+            channel, version, plat_os, locale,
+        )
+
+        builds.append({'os': plat_os,
+                       'os_pretty': plat_os_pretty,
+                       'download_link': download_link,
+                       'download_link_direct': download_link})
+
+    return version, builds
+
+
+@jinja2.pass_context
 def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=None,
                          locale=None, force_direct=False,
                          alt_copy=None, button_class=None,
@@ -375,40 +407,7 @@ def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=N
     locale = ctx.get('LANG', None)
     dom_id = dom_id or 'download-button-desktop-%s' % channel
 
-    l_version = thunderbird_desktop.latest_builds(locale, channel)
-    if l_version:
-        version, platforms = l_version
-    else:
-        locale = 'en-US'
-        version, platforms = thunderbird_desktop.latest_builds('en-US', channel)
-
-    # Gather data about the build for each platform
-    builds = []
-
-    for plat_os, plat_os_pretty in thunderbird_desktop.platform_labels.items():
-        # And generate all the info
-        download_link = thunderbird_desktop.get_download_url(
-            channel, version, plat_os, locale,
-            force_direct=force_direct,
-        )
-
-        # If download_link_direct is False the data-direct-link attr
-        # will not be output, and the JS won't attempt the IE popup.
-        if force_direct:
-            # no need to run get_download_url again with the same args
-            download_link_direct = False
-        else:
-            download_link_direct = thunderbird_desktop.get_download_url(
-                channel, version, plat_os, locale,
-                force_direct=True,
-            )
-            if download_link_direct == download_link:
-                download_link_direct = False
-
-        builds.append({'os': plat_os,
-                       'os_pretty': plat_os_pretty,
-                       'download_link': download_link,
-                       'download_link_direct': download_link_direct})
+    version, builds = get_latest_desktop_builds(ctx, channel)
 
     # Get the native name for current locale
     langs = thunderbird_desktop.languages

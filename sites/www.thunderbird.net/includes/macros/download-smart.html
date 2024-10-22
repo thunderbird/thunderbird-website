@@ -1,0 +1,24 @@
+{% from 'includes/macros/download-desktop.html' import download_desktop_btns with context %}
+{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
+{% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = 'esr') -%}
+{# Note: force_platform = 'all' | 'android' | 'desktop' #}
+<h4 class="no-js-label">{{ _('Download Thunderbird') }} — {{ LANG|safe }}</h4>
+{% include 'includes/download-and-options.html' %}
+  {% if force_platform == 'all' %}
+    <div data-download-platform="android">
+      {{ download_mobile_btns(btn_class, container_class, False) }}
+    </div>
+    <div data-download-platform="desktop">
+      {{ download_desktop_btns(desktop_channel, btn_class, container_class, False) }}
+    </div>
+  {% elif force_platform == 'android' %}
+    <div>
+      {{ download_mobile_btns(btn_class, container_class, False) }}
+    </div>
+  {% elif force_platform == 'desktop' %}
+    <div>
+      {{ download_desktop_btns(desktop_channel, btn_class, container_class, False) }}
+    </div>
+  {% endif %}
+<small>{{_('Free forever.')}} <a class="dotted" href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
+{% endmacro %}

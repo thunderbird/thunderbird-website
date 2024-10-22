@@ -4,7 +4,7 @@
 
 {% set active_page = "mobile" %}
 {% extends "includes/base/page.html" %}
-{% from 'includes/macros/download-mobile.html' import download_mobile_btns %}
+{% from 'includes/macros/download-smart.html' import download_smart %}
 {% from 'includes/macros/download-block.html' import download_block %}
 
 {% block page_title %}{{ _('Thunderbird Mobile') }}{% endblock %}
@@ -30,7 +30,7 @@
         </p>
       </div>
       <div class="hero-download">
-        {{ download_mobile_btns('btn-gradient', 'download-button-products', True) }}
+        {{ download_smart('btn-gradient', 'download-button-products', 'android') }}
       </div>
     </div>
   </section>
@@ -208,8 +208,7 @@
       </div>
     </div>
     {% include 'includes/components/page-separator.html' %}
-    {{ download_block(True) }}
-
+    {{ download_block('android') }}
   </section>
 {% endblock %}
 

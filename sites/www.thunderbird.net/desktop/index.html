@@ -4,6 +4,7 @@
 
 {% set active_page = "desktop" %}
 {% extends "includes/base/page.html" %}
+{% from 'includes/macros/download-smart.html' import download_smart %}
 {% from 'includes/macros/download-block.html' import download_block %}
 
 {% block page_title %}{{ _('Thunderbird Desktop') }}{% endblock %}
@@ -30,9 +31,7 @@
         </p>
       </div>
       <div class="hero-download">
-        <div class="download-button">
-          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-hero") }}
-        </div>
+        {{ download_smart('btn-gradient', 'download-button-products', 'desktop') }}
       </div>
     </div>
   </section>
@@ -214,8 +213,7 @@
       </div>
     </div>
     {% include 'includes/components/page-separator.html' %}
-    {{ download_block(False) }}
-
+    {{ download_block('desktop') }}
   </section>
 {% endblock %}
 

@@ -232,7 +232,7 @@ button:hover::after {
 }
 
 .all-downloads-link {
-  margin-bottom: 3.75rem; //60px;
+  margin-bottom: 2rem; //32px;
 }
 
 
@@ -365,7 +365,12 @@ button:hover::after {
   --txt: var(--color-white);
 }
 
-.download-button-page, .download-button-products {
+.desktop-columns {
+  flex-direction: column;
+}
+
+.download-button-page,
+.download-button-products {
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -378,5 +383,106 @@ button:hover::after {
 @media (max-width: @lg) {
   .download-button-page, .download-button-products {
     flex-direction: column;
+  }
+}
+
+
+// Desktop - The operating system short-code (e.g. osx, linux, win10up, etc...)
+[data-download-os] {
+  display: none;
+}
+// desktop or android
+// This is only used when showing all platforms
+[data-download-platform] {
+  display: none;
+}
+
+.no-js-label {
+  display: none;
+}
+.js-label {
+  display: inline-block;
+}
+
+// For non-javascript users show everything
+// - Also for android users
+.no-js, .android {
+  .no-js-label {
+    display: inline-block;
+  }
+  .js-label {
+    display: none;
+  }
+  [data-download-os] {
+    display: block !important;
+  }
+}
+
+// This is only for no-js!
+.no-js {
+  [data-download-platform] {
+    display: block !important;
+  }
+}
+
+// Selectively show the correct download button
+.js {
+  // macOS
+  &.osx {
+    [data-download-os="osx"] {
+      display: block !important;
+    }
+  }
+  // Windows
+  &.win7-8 {
+    &.x64 [data-download-os="win8-64"] {
+      display: block !important;
+    }
+    &.x86.x64 [data-download-os="win8"] {
+      display: none !important;
+    }
+
+    &.x86 [data-download-os="win8"] {
+      display: block !important;
+    }
+  }
+  &.win10up {
+    &.x64 [data-download-os="win64"] {
+      display: block !important;
+    }
+    &.x86.x64 [data-download-os="win"] {
+      display: none !important;
+    }
+
+    &.x86 [data-download-os="win"] {
+      display: block !important;
+    }
+  }
+  &.linux {
+    &.x64 [data-download-os="linux64"] {
+      display: block !important;
+    }
+    &.x86.x64 [data-download-os="linux"] {
+      display: none !important;
+    }
+
+    &.x86 [data-download-os="linux"] {
+      display: block !important;
+    }
+  }
+
+  // Platform hiding/un-hiding
+  &.win7-8,
+  &.win10up,
+  &.osx,
+  &.linux {
+    [data-download-platform="desktop"] {
+      display: block !important;
+    }
+  }
+  &.android {
+    [data-download-platform="android"] {
+      display: block !important;
+    }
   }
 }
