@@ -1,5 +1,16 @@
-{% from 'includes/macros/download-desktop.html' import download_desktop_btns with context %}
-{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
+{# This is the reusable smart download button.
+If javascript is not enabled it will show everything
+otherwise it will selectively show based on platform and os.
+
+Macros:
+  download_smart
+    :btn_class - Class for the download button (anchor tag fyi!)
+    :container_class - Class for the container wrapping the download button
+    :force_platform = 'all'|'desktop'|'android'
+    :desktop_channel = 'esr'|'release'|'beta'|'daily' - Force the download button to show a specific channel
+#}
+{% from 'includes/macros/download-desktop.html' import download_desktop_btns %}
+{% from 'includes/macros/download-mobile.html' import download_mobile_btns %}
 {% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = 'esr') -%}
 {# Note: force_platform = 'all' | 'android' | 'desktop' #}
 <h4 class="no-js-label">{{ _('Download Thunderbird') }} — {{ LANG|safe }}</h4>

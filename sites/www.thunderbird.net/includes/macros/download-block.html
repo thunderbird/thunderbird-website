@@ -1,3 +1,9 @@
+{# This is the pre-footer download section.
+
+Macros:
+  download_block
+    :force_platform = 'all'|'desktop'|'android'
+#}
 {% from 'includes/macros/download-smart.html' import download_smart with context %}
 {% macro download_block(force_platform='all') -%}
 <section id="free-your-inbox">
