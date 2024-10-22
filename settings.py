@@ -224,6 +224,7 @@ URL_MAPPINGS = {
     'support': 'https://support.mozilla.org/products/thunderbird/',
     'thunderbird.about': '/about',
     'thunderbird.about.our-mission-statement': '/about/mission-statement',
+    'thunderbird.android.announcement': 'https://blog.thunderbird.net/2024/09/help-us-test-the-thunderbird-for-android-beta/',
     'thunderbird.bugzilla.new-bug': 'https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird',
     'thunderbird.calendar.holiday': '/calendar/holidays',
     'thunderbird.careers': '/careers',

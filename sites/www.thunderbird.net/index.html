@@ -344,10 +344,12 @@
             secure app that respects your privacy
           {%- endtrans %}
         </p>
+      {#
         <div class="cta">
-          <a href="#" class="strong">{{_('Read the announcement')}}</a>
+          <a href="{{ url('thunderbird.android.announcement') }}" class="strong">{{_('Read the announcement')}}</a>
         </div>
       </div>
+      #}
     </div>
     <div class="mobile-render" aria-hidden="true">
       {{ high_res_img('/media/img/thunderbird/base/home/exploding-phone.png', {'alt': _('A rendering of a mobile phone.')}, alt_formats=('avif', 'webp')) }}
