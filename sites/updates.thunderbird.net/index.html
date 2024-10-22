@@ -7,6 +7,16 @@
 {# Basic index page to help guide lost travelers to our real website. #}
 {% block page_title %}{{ _('Hello!') }}{% endblock %}
 
+{% block site_header %}
+<nav class="site-nav">
+  <div class="logo">
+  <a href="https://www.thunderbird.net">
+    {{ svg('logo-wordmark') }}
+  </a>
+  </div>
+</nav>
+{% endblock %}
+
 {% block content %}
 <section>
   <div class="container">

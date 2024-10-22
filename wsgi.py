@@ -72,7 +72,12 @@ def application(environ, start_response):
 
     req = Request(environ)
 
-    if 'thunderbird' in req.path and not any(s in req.path for s in settings.ALWAYS_LOCALIZE):
+    # Are we updates.thunderbird.net?
+    is_utn = any(['updates.' in req.host_url, 'updates-stage.' in req.host_url])
+
+    if (not is_utn
+        and 'thunderbird' in req.path
+        and not any(s in req.path for s in settings.ALWAYS_LOCALIZE)):
         # Release notes, system requirements, and 'all' builds pages are only available in English.
         language_code = 'en-US'
     else:
