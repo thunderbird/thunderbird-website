@@ -1,0 +1,24 @@
+<div class="all-downloads-link">
+  <a href="{{ url('thunderbird.latest.all') }}" class="small-link dotted">
+    <div class="os-list" aria-label="{{ _('Available on Windows, Linux, Mac, and Android.') }}">
+      <span class="icon" aria-hidden="true">
+        {{ svg('download-icon-windows') }}
+      </span>
+      {% if section != 'homepage-hero' %}
+        <span class="icon" aria-hidden="true">
+        {{ svg('download-icon-linux') }}
+        </span>
+      {% else %}
+        <span class="icon icon-tux-alt" aria-hidden="true">
+        {{ svg('download-icon-linux') }}
+        </span>
+      {% endif %}
+      <span class="icon icon-apple" aria-hidden="true">
+        {{ svg('download-icon-apple') }}
+      </span>
+      <span class="icon icon-android" aria-hidden="true">
+        {{ svg('base/icons/download/android') }}
+      </span>
+    </div>
+    {{ _('Download and languages options') }}</a>
+</div>

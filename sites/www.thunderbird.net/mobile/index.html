@@ -1,0 +1,216 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "mobile" %}
+{% extends "includes/base/page.html" %}
+{% from 'includes/macros/download-smart.html' import download_smart %}
+{% from 'includes/macros/download-block.html' import download_block %}
+
+{% block page_title %}{{ _('Thunderbird Mobile') }}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block extrahead %}
+  {# Preload the most common format here #}
+  <link rel="preload" as="image" href="{{ static('/media/img/thunderbird/base/mobile/banner-bg-high-res.avif') }}">
+{% endblock %}
+{% block header_content %}
+  <section>
+    <div class="container hero">
+      <div class="hero-text">
+        <h2 class="split-text tagline" aria-label="{{ _('Thunderbird Mobile.') }}">
+          {{ _('Thunderbird') }}&nbsp;<span class="txt-gradient">{{ _('Mobile') }}</span>
+        </h2>
+        <p class="sub-tag">
+          {% trans %}
+            Meet the leading open-source email app for Android.
+            Enjoy complete freedom anywhere you take your smartphone.
+          {% endtrans %}
+        </p>
+      </div>
+      <div class="hero-download">
+        {{ download_smart('btn-gradient', 'download-button-products', 'android', hide_download_options=True) }}
+      </div>
+    </div>
+  </section>
+  <div class="mask">
+    {{ svg('mask') }}
+  </div>
+{% endblock %}
+
+{# We have our own, thanks. #}
+{% block header_separator %}{% endblock %}
+
+{% block content %}
+  <section id="core-features">
+    <div class="container container-tight">
+      <div class="section-text">
+        <h2 class="split-text" aria-label="{{ _('Core Features.') }}">
+          {{ _('Core') }}&nbsp;<span class="txt-gradient">{{ _('Features') }}</span>
+        </h2>
+        <h4>
+          {{ _('Your new productivity superpowers.') }}
+        </h4>
+      </div>
+
+      <div class="two-columns">
+        <div class="content-block">
+          {{ high_res_img('thunderbird/base/features/adfree.png', {'alt': _('A crossed out circle against a pink background.')}, alt_formats=('avif', 'webp')) }}
+        </div>
+        <div class="section-text">
+          <h3>{{ _('No Ads or Spyware') }}</h3>
+          <h4>{{ _('It’s actually free!') }}</h4>
+          <p>{{ _('Instead of making money with ads or data, Thunderbird is developed with donations of time and money from people just like you. Manage your email without giving up more of your privacy.') }}</p>
+          <a class="strong" href="{{ url('thunderbird.privacy') }}">{{ _('Read Our Privacy Policy') }}</a>
+        </div>
+      </div>
+      <div class="two-columns flip-columns">
+        <div class="content-block">
+          {{ high_res_img('thunderbird/base/features/mobile-inbox.png', {'alt': _('A cropped screenshot of the Thunderbird for Android\'s interface.')}, alt_formats=('avif', 'webp')) }}
+        </div>
+        <div class="section-text">
+          <h3>{{ _('All-in-One Email App') }}</h3>
+          <h4>{{ _('Reduce app clutter.') }}</h4>
+          <p>{{ _('Consolidate all your email apps into one powerful app that respects your privacy and freedom. View messages separately or in one unified inbox.') }}</p>
+        </div>
+      </div>
+      <div class="two-columns">
+        <div class="content-block">
+          {{
+            video('video/thunderbird/features/services-high-res.webm',
+            poster_path='img/thunderbird/base/features/services.avif',
+            alt_text=_('A video of Thunderbird with various email service icons rotating around it.'),
+            alt_formats=('mp4',),
+            loop=True,
+            auto_play=True,
+            disable_pip=True)
+          }}
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Multiple Account Support ') }}</h3>
+          <h4>{{ _('Don’t miss a message.') }}</h4>
+          <p>{{ _('Sync with email accounts for home, school, and work. Almost anywhere you receive messages, we will have you covered.') }}</p>
+        </div>
+      </div>
+      {# Quote section - Let's hide this for now. #}
+      {#
+      <div class="section-quote testimonials">
+        <div class="quote">
+          <q>
+            Meow meow meow!
+          </q>
+          <div class="attrib">
+            <div class="profile-pic" aria-hidden="true">
+              <picture>
+                <source srcset="/media/img/thunderbird/base/placeholder/placeholder.avif" type="image/avif">
+                <source srcset="/media/img/thunderbird/base/placeholder/placeholder.webp" type="image/webp">
+                <img src="/media/img/thunderbird/base/placeholder/placeholder.png" alt="{{ _('Beatrice the cat') }}">
+              </picture>
+            </div>
+            <div class="name">Beatrice</div>
+            <div class="title">{{ _('Cat, Canada') }}</div>
+          </div>
+        </div>
+      </div>
+      #}
+      {# ...back to features #}
+      <div class="two-columns flip-columns">
+        <div class="content-block">
+          {{
+            video('video/thunderbird/features/encryption-high-res.webm',
+            poster_path='img/thunderbird/base/features/encryption.avif',
+            alt_text=_('A video of an envelope with password masking asterisks in front of it.'),
+            alt_formats=('mp4',),
+            loop=True,
+            auto_play=True,
+            disable_pip=True)
+          }}
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Advanced Email Encryption') }}</h3>
+          <h4>{{ _('Send and receive secure messages on any account.') }}</h4>
+          <p>{{ _('Advanced users who want the highest level of privacy can send and receive encrypted emails using the OpenPGP standard when paired with the free and open source OpenKeychain app. Even your email provider won’t have access to your messages.') }}</p>
+        </div>
+      </div>
+      <div class="two-columns">
+        <div class="content-block">
+          {{
+            video('video/thunderbird/features/lightdark-high-res.webm',
+            poster_path='img/thunderbird/base/features/lightdark.avif',
+            alt_text=_('A video of the Thunderbird for Android\'s interface transitioning from light mode to dark mode and back again.'),
+            alt_formats=('mp4',),
+            loop=True,
+            auto_play=True,
+            disable_pip=True)
+          }}
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Light and Dark Interface') }}</h3>
+          <h4>{{ _('Match your preference or environment.') }}</h4>
+          <p>{{ _('Read your email any time of day and in the way you love with native dark and light mode support. Many small interface features will make you fall in love with Thunderbird Mobile.') }}</p>
+        </div>
+      </div>
+      <div class="two-columns flip-columns">
+        <div class="content-block">
+          {{ high_res_img('thunderbird/base/features/gift.png', {'alt': _('The Thunderbird logo in an opened gift box.')}, alt_formats=('avif', 'webp')) }}
+        </div>
+        <div class="section-text">
+          <h3>{{ _('Always Free and Open') }}</h3>
+          <h4>{{ _('Thunderbird is a gift from people like you.') }}</h4>
+          <p>{{ _('Thousands have contributed time and money to make Thunderbird possible. Its code is open source and freely licensed to use, modify, and share. Thunderbird isn\'t just free, it makes you free.') }}</p>
+          <a class="strong" href="{{ url('thunderbird.about.our-mission-statement') }}">{{ _('Learn Our Mission') }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'includes/components/page-separator.html' %}
+  <section id="instant-setup">
+    <div class="container">
+      <div class="section-text">
+        <h2 class="split-text" aria-label="{{ _('Instant Setup.') }}">
+          {{ _('Instant') }}&nbsp;<span class="txt-gradient">{{ _('Setup') }}</span>
+        </h2>
+        <h4>
+          {{ _('Thunderbird Desktop users can migrate their settings quickly. Just scan the desktop app QR code from the mobile app.') }}
+        </h4>
+      </div>
+    </div>
+  </section>
+  <section class="cover-container">
+    {{ high_res_img('thunderbird/base/mobile/setup-background.png', {'alt': _('Two QR codes are shown, one on a mobile device and another in the distance on a desktop.')}, alt_formats=('avif', 'webp')) }}
+    {% include 'includes/components/page-separator-cover.html' %}
+  </section>
+  <section id="helpful-resources">
+    <div class="container">
+      <div class="section-text">
+        <h2 class="split-text" aria-label="{{ _('Helpful Resources.') }}">
+          {{ _('Helpful') }}&nbsp;<span class="txt-gradient">{{ _('Resources') }}</span>
+        </h2>
+        <h4>
+          {{ _('Level up your Thunderbird Skills.') }}
+        </h4>
+      </div>
+      <div class="three-columns">
+        <div class="info-resource">
+          <h4>{{ _('Getting Started') }}</h4>
+          <p>{{ _('Almost anyone can participate in making Thunderbird better and more accessible to others. Come and learn what opportunities are available. Find ways to contribute to the project:') }}</p>
+          <a class="strong" href="{{ url('thunderbird.participate') }}">{{ _('How to Participate') }}</a>
+        </div>
+        <div class="info-resource">
+          <h4>{{ _('Share Ideas') }}</h4>
+          <p>{{ _('When developers, designers, and users work together amazing things happen. Come share your ideas for how Thunderbird could be better.') }}</p>
+          <a class="strong" href="{{ url('mozorg.connect.tb') }}">{{ _('Mozilla Connect') }}</a>
+        </div>
+        <div class="info-resource">
+          <h4>{{ _('Find Support') }}</h4>
+          <p>{{ _('Learn how to use Thunderbird and ask your questions. Thunderbird contributors from around the world are working to make your experience great.') }}</p>
+          <a class="strong" href="{{ url('support') }}">{{ _('Support Site') }}</a>
+        </div>
+      </div>
+    </div>
+    {% include 'includes/components/page-separator.html' %}
+    {{ download_block('android') }}
+  </section>
+{% endblock %}
+

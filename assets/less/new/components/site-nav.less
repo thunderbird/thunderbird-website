@@ -5,8 +5,14 @@
   --hamburger-foreground-inactive: var(--color-black);
   --hamburger-background-active: var(--color-white);
   --hamburger-foreground-active: var(--color-black);
-  
+
+  /*
+   * left-align is used to translate the fixed element right a bit. (hence negative)
+   * right-align is used to enforce a maximum screen right value so the popover doesn't get cut off.
+   * I tried to make this smarter, but in the end I used a @xxl media query to manually enforce this.
+   */
   --popover-left-align: -2rem;
+  --popover-right-align: auto;
 
   box-sizing: border-box;
   position: fixed;
@@ -28,8 +34,18 @@
 }
 
 @media (max-width: @xxl) {
-  .site-nav #nav-cat-contribute {
-    --popover-left-align: -6rem;
+  .site-nav {
+    #nav-cat-about, #nav-cat-contribute {
+      --popover-left-align: 0;
+      --popover-right-align: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: @lg) {
+  .site-nav {
+    --popover-left-align: 0;
+    --popover-right-align: 0.5rem;
   }
 }
 
@@ -152,7 +168,7 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 2rem;
   list-style: none;
 
   // Pt1. Provide a larger hover area
@@ -165,16 +181,19 @@
     cursor: pointer;
     padding-top: 18px;
 
-
     // Pop-over menu
     .popover-container {
       display: none;
-      position: absolute;
-      margin-left: var(--popover-left-align);
-      min-width: 470px;
+      position: fixed;
+      right: var(--popover-right-align);
+      translate: var(--popover-left-align);
+      width: 100%;
+      max-width: 30rem;
 
       // Actual physical panel
       .popover-panel {
+        position: relative;
+        top: 0.25rem; // Push down just a liiiittle bit.
         background-color: var(--bg);
         color: var(--txt);
         border-radius: var(--border-radius-lg);
@@ -284,6 +303,20 @@
     width: 100%;
   }
 
+  .no-desktop {
+    display: none;
+  }
+
+
+  /*
+   * Annoyingly buttons margin-left: -1rem
+   * So we need to add some padding back to fix positioning
+   */
+  .nav-button-fix {
+    padding-left: 1rem;
+  }
+
+
   // Mobile nav
   @media (max-width: @lg) {
     display: none;
@@ -306,13 +339,15 @@
     border-radius: 12px;
     align-items: unset;
 
+    .no-desktop {
+      display: block;
+    }
     .no-mobile {
       display: none;
     }
 
     padding-left: 1rem;
     padding-right: 1rem;
-
 
     .nav-entry {
       padding: 1rem 1rem;
@@ -366,6 +401,9 @@
     .nav-entry.no-border {
       border: none;
     }
+  }
+  @media (max-width: @sm) {
+    width: 80%;
   }
 }
 

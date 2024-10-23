@@ -451,7 +451,7 @@ class Site(object):
 
                 raise ex
             except jinja2.exceptions.TemplateError as ex:
-                logger.error(f">> Jinja Template Error: \"{ex.message}\".")
+                logger.error(f">> Jinja Template Error: \"{ex.message}\" in template: \"{template}\".")
 
                 if self.dev_mode:
                     continue

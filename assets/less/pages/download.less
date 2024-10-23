@@ -35,18 +35,6 @@
     }
   }
 
-
-  // TODO: Fix this in place
-  .download-button-page {
-    margin-top: 5rem;
-    color: var(--txt);
-    text-align: center;
-
-    a::after {
-      background: var(--color-white);
-    }
-  }
-
   .channel-name {
     &.beta,
     &.daily {
@@ -66,6 +54,7 @@
     flex-direction: row;
     text-align: left;
     justify-content: center;
+    align-items: initial;
     gap: 4rem;
 
     .column {
@@ -91,7 +80,7 @@
     }
 
     @media (max-width: @lg) {
-      flex-direction: column;
+      flex-direction: column-reverse;
 
       .column {
         max-width: 100%;
@@ -105,28 +94,51 @@
         max-width: 100%;
       }
     }
+
+    div:first-child {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    div:nth-child(2) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
   }
 
   .section-title {
     display: flex;
-    align-items: center;
+    align-items: initial;
 
     h1 {
       margin-top: 0;
     }
+
+    h2 {
+      // Make these h2s small
+      font-size: 2rem;
+    }
   }
 
-  .beta-badge {
+  .split-text {
+    justify-content: flex-start;
+  }
+
+
+  .new-badge {
     display: inline-block;
     margin-left: 1rem;
     text-align: center;
     border-radius: 0.2rem;
     font-weight: 600;
-    background-color: var(--color-blue-70);
+    background-color: #5265f1; //var(--color-blue-70);
     color: var(--color-white);
     font-size: var(--font-regular);
     line-height: var(--font-2xl);
     width: 4rem;
+    height: 1.33rem;
+    text-transform: uppercase;
   }
 
   .platform-release {
@@ -135,6 +147,11 @@
     flex-direction: row;
     gap: 1rem;
     margin-bottom: 1rem;
+
+    h4 {
+      font-weight: 600;
+      margin: 0;
+    }
 
     strong {
       font-weight: 600;
@@ -293,11 +310,18 @@
     border: 1px solid var(--text-warning);
     border-radius: 6px;
     padding: 0.5em 1em;
+
     p {
       margin: 0;
     }
+
     a {
       color: var(--warning-links);
     }
+  }
+
+  .download-spacing {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 }

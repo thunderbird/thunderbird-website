@@ -1,0 +1,34 @@
+{# Internal macro, use download-block or download-smart instead! #}
+{% macro download_desktop_btns(channel = 'esr', btn_class_name = 'btn-white-bg', container_class_name = 'download-button-desktop', show_donate_footer = False) -%}
+  <div>
+    <div class="download-button {{ container_class_name }}">
+      {% for plat in get_latest_desktop_builds()[1] %}
+        {# This element swaps between display: none and display: block.
+           Only desktop download buttons need this!
+        #}
+        <div data-download-os="{{ plat.os }}">
+          {# This element gets a display: flex from btn-slim #}
+          <a id="download-{{ plat.os }}-btn"
+            class="btn btn-download btn-slim {{ btn_class_name }} matomo-track-download"
+            href="{{ plat.download_link }}"
+            data-donate-redirect="download-{{ channel }}"
+            data-donate-content="post_download"
+            data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel) }}"
+          >
+            <span class="download-icon" aria-hidden="true">{{ svg('base/icons/download/generic-download-currentcolor') }}</span>
+            <span class="no-js-label">
+              {{ plat.os_arch_pretty or plat.os_pretty }}
+            </span>
+            <span class="js-label">
+              {{ 'Download' }}
+            </span>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+    {% if show_donate_footer %}
+      <small>{{ _('Free forever.') }}
+        <a class="dotted" href="{{ donate_url('header') }}">{{ _('Donate') }}</a> {{ _('to make it better.') }}</small>
+    {% endif %}
+  </div>
+{%- endmacro %}

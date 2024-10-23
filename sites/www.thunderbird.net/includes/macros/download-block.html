@@ -1,0 +1,20 @@
+{# This is the pre-footer download section.
+
+Macros:
+  download_block
+    :param force_platform: = 'all'|'desktop'|'android'
+#}
+{% from 'includes/macros/download-smart.html' import download_smart %}
+{% macro download_block(force_platform='all') -%}
+<section id="free-your-inbox">
+  <div class="container">
+    <div class="section-text cta-section">
+      <h2 class="cta-heading">{{ _('<span class="txt-gradient">Free</span> Your Inbox') }}</h2>
+      <h4 class="cta-sub-heading">{{ _('Are you ready to love email again?') }}</h4>
+    </div>
+    <div class="cta">
+      {{ download_smart('btn-white-bg', 'download-button-page', force_platform) }}
+    </div>
+  </div>
+</section>
+{% endmacro %}

@@ -42,8 +42,12 @@
     max-inline-size: 50.5rem;
 
     .sub-tag {
-      max-inline-size: 38rem;
+      font-weight: 300;
+      max-inline-size: 30rem;
       margin: auto;
+      strong {
+        font-weight: 500;
+      }
     }
   }
 
@@ -123,43 +127,17 @@
     filter: drop-shadow(0 0 50px var(--color-orange-30));
   }
 
+  #freedom-to-go-anywhere {
+    position: relative;
 
-  #free-your-inbox {
-    padding-top: 10px;
-
-    .cta-sub-heading {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.25rem;
-      font-weight: 500;
-      line-height: 1.5;
-    }
-
-    .cta-heading {
-      font-size: var(--font-cta);
-      font-weight: 900;
-      line-height: 1.3;
-      margin: 0;
-    }
-
-    .cta-section {
+    .mobile-render {
       display: flex;
-      flex-direction: column-reverse;
-    }
-
-    .cta {
-      --btn-bg: color-mix(in srgb, var(--bg) 90%, transparent);
-      display: grid;
-      place-items: center;
-      gap: 9px;
-    }
-
-    .mask {
-      --bg: black;
-      filter: none;
-    }
-
-    .section-text {
-      max-inline-size: 60%;
+      align-items: center;
+      justify-content: center;
+      min-height: 39.0625rem;
+      // Shift-up so we're not affected by the mask
+      position: relative;
+      bottom: 4.6875rem;
     }
   }
 

@@ -21,7 +21,7 @@ if (typeof Mozilla === 'undefined') {
   let installerSelect = document.getElementById('download-advanced-platform-select');
   let downloadButton = document.getElementById('download-btn');
   let defaultOS = 'Windows';
-  let defaultReleaseChannel = window._product.defaultChannel ?? 'esr';
+  let defaultReleaseChannel = window._desktop_product.defaultChannel ?? 'esr';
 
   // Platform map
   const platformMap = {
@@ -30,7 +30,6 @@ if (typeof Mozilla === 'undefined') {
     'linux64': 'Linux',
     'linux': 'Linux',
     'osx': 'macOS',
-    //'android': 'Android'
   };
 
 
@@ -199,27 +198,14 @@ if (typeof Mozilla === 'undefined') {
    * Generate the download link from the given parameters
    * @param locale {string} - Locale code (e.g. 'fr' or 'en-CA')
    * @param channel {string} - Channel code for the build (e.g. 'release' or 'beta')
-   * @param os {string} - OS for the build. Only used for android.
+   * @param os {string} - OS for the build.
    * @param installer {string} - Platform code for the build (e.g. 'win64' or 'linux64')
    * @returns {string} - Formulated download link or redirect link depending on the platform vs options
    */
   DownloadInfo.DownloadLink = function(locale, channel, os, installer) {
-    if (os === 'Android') {
-      switch(installer) {
-        case 'gplay':
-          return 'https://play.google.com/store/apps/details?id=com.fsck.k9';
-        case 'fdroid':
-          return 'https://f-droid.org/packages/com.fsck.k9/';
-        case 'apk':
-          return 'https://github.com/thunderbird/thunderbird-android/releases';
-        default:
-          return 'https://play.google.com/store/apps/details?id=com.fsck.k9';
-      }
-    }
-
     // This is still provided at the release channel even though it's an esr
     if (installer === 'win8-64') {
-      channel = window._product.defaultChannel;
+      channel = window._desktop_product.defaultChannel;
     }
 
     // Download links are sleepier than they appear.
@@ -229,7 +215,7 @@ if (typeof Mozilla === 'undefined') {
     }
 
     // For release channel just pull from the hidden no-js section.
-    if (channel === window._product.defaultChannel) {
+    if (channel === window._desktop_product.defaultChannel) {
       const link = document.querySelector(`[data-download-locale="${locale}"][data-download-version="${installer}"]`)?.href;
       // Ensure it's actually a download.mozilla.org link!
       if (link && link.indexOf('https://download.mozilla.org/') === 0) {
@@ -237,8 +223,8 @@ if (typeof Mozilla === 'undefined') {
       }
     }
 
-    const version = window._product.channels[channel]?.version;
-    const downloadVersion = window._product.channels[channel]?.useVersionInDownloadLinks === true ? version : 'latest';
+    const version = window._desktop_product.channels[channel]?.version;
+    const downloadVersion = window._desktop_product.channels[channel]?.useVersionInDownloadLinks === true ? version : 'latest';
     const channelVersion = ['esr', 'release'].indexOf(channel) !== -1 ? downloadVersion : `${channel}-${downloadVersion}`;
     return `https://download.mozilla.org/?product=thunderbird-${channelVersion}-SSL&os=${installer}&lang=${locale}`
   }

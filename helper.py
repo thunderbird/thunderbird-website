@@ -187,6 +187,59 @@ def high_res_img(ctx, url, optional_attributes=None, scale='1.5x', alt_formats=(
 
 
 @jinja2.pass_context
+def video(ctx, file_path, alt_text=None, alt_formats=(), mime_types=None, poster_path=None, auto_play=False, loop=False, controls=False, disable_pip=True):
+    """Add a video element to the page with some additional file formats.
+    :param file_path: relative path to the main video file.
+    :param alt_text: The text if all video sources are unsupported.
+    :param alt_formats: A tuple of alternate video extensions.
+    :param mime_types: A tuple of mime types for the videos (these can include codecs.) These should match up with the [main ext + *alt_formats]. If None then the extension is just bolted onto 'video/'
+    :param poster_path: A static image to display while the video loads.
+    :param auto_play: Adds autoplay and muted attribute to the video element.
+    :param loop: Adds the loop attribute to the video element.
+    :param controls: Adds the controls attribute to the video element.
+    :param disable_pip: Adds the disablepictureinpicture and playsinline attribute to the video element.
+    """
+    file_name, ext = splitext(file_path)
+    ext = ext.replace('.', '')
+
+    attributes = []
+    if auto_play:
+        attributes.append('autoplay="true"')
+        attributes.append('muted="true"')
+    if loop:
+        attributes.append('loop="true"')
+    if controls:
+        attributes.append('controls="true"')
+    if disable_pip:
+        attributes.append('disablepictureinpicture="true"')
+        attributes.append('playsinline="true"')
+    if poster_path:
+        attributes.append(f'poster="{static(poster_path)}"')
+
+    # If we've specified some alternate formats we need to use the <picture> tag instead
+    tags = [f'<video {' '.join(attributes)}>']
+
+    for index, format in enumerate([ext, *alt_formats]):
+        path = f"{file_name}.{format}"
+
+        if mime_types:
+            mime_type = mime_types[index]
+        else:
+            mime_type = f'video/{format}'
+
+        tags.append(
+            f'<source src="{static(path)}" type="{mime_type}"/>'
+        )
+
+    if alt_text:
+        tags.append(f'<p>{alt_text}</p>')
+
+    tags.append('</video>')
+
+    return markupsafe.Markup("\n".join(tags))
+
+
+@jinja2.pass_context
 def svg(ctx, file_name):
     """Returns an inlined svg element, optionally (and by default) wraps a span around it to allow screen readers to ignore it."""
     file = path.join(settings.MEDIA_URL.strip('/'), 'svg/' + file_name + '.svg')
@@ -240,6 +293,11 @@ def download_url(ctx, platform_os, version=None, channel=settings.DEFAULT_RELEAS
     if locale is None:
         locale = ctx.get('LANG')
 
+    if channel == 'mobile':
+        return thunderbird_mobile.get_download_url(
+            channel, version, platform_os, locale
+        )
+
     if version is None:
         l_version = thunderbird_desktop.latest_builds(locale, channel)
         if l_version:
@@ -282,15 +340,12 @@ def get_platform_icon(ctx, platform):
 @jinja2.pass_context
 def get_platforms(ctx, include_mobile=False):
     """Returns a list of dict of available platforms per os. Includes mobile by default."""
-    grouped_platform_labels = thunderbird_desktop.grouped_platform_labels.copy()
+    return thunderbird_desktop.grouped_platform_labels
 
-    if not include_mobile:
-        return grouped_platform_labels
 
-    return OrderedDict({
-        **grouped_platform_labels,
-        **thunderbird_mobile.grouped_platform_labels,
-    })
+@jinja2.pass_context
+def get_mobile_platforms(ctx):
+    return thunderbird_mobile.grouped_platform_labels
 
 
 @jinja2.pass_context
@@ -300,46 +355,24 @@ def is_os_mobile(ctx, os):
 
 
 @jinja2.pass_context
-def get_channels(ctx, include_mobile=False):
+def get_channels(ctx):
     """Returns a dict of available channels. Includes mobile channels by default."""
-    channel_labels = thunderbird_desktop.channel_labels.copy()
-    if not include_mobile:
-        return channel_labels
-
-    # We want Release to be followed with Android, and then the beta/daily builds.
-    channel_labels.pop('release')
-
-    return OrderedDict({
-        'release': "Release",
-        **thunderbird_mobile.channel_labels,
-        **channel_labels
-    })
+    return thunderbird_desktop.channel_labels
 
 
 @jinja2.pass_context
-def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=None,
-                         locale=None, force_direct=False,
-                         alt_copy=None, button_class=None,
-                         section='header', flex_class=None,
-                         hide_footer_links=False):
-    """ Output a "Download Thunderbird" button.
+def get_mobile_channels(ctx):
+    return thunderbird_mobile.channel_labels
 
+
+@jinja2.pass_context
+def get_latest_desktop_builds(ctx, channel=settings.DEFAULT_RELEASE_VERSION):
+    """ Output the version and latest builds of Thunderbird Desktop
     :param ctx: context from calling template.
     :param channel: name of channel: 'esr', 'release', 'beta' or 'daily'. 'alpha' has been retired.
-    :param dom_id: Use this string as the id attr on the element.
-    :param locale: The locale of the download. Default to locale of request.
-    :param force_direct: Force the download URL to be direct.
-    :param alt_copy: Specifies alternate copy to use for download buttons.
-    :param button_class: Class of the button element. Default to `none`, and dynamically picks the class based on the channel.
-    :param section: Where the button is rendered in the page. Default to 'header'.
-    :param flex_class: Adjust the flexbox positioning class
-    :param hide_footer_links: Whether we should hide the footer links (System Requirements, What's New, Privacy Policy) display. Default to 'False'.
     :return: The button html.
     """
-    alt_channel = '' if channel == settings.DEFAULT_RELEASE_VERSION else channel
     locale = ctx.get('LANG', None)
-    dom_id = dom_id or 'download-button-desktop-%s' % channel
-
     l_version = thunderbird_desktop.latest_builds(locale, channel)
     if l_version:
         version, platforms = l_version
@@ -354,26 +387,44 @@ def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=N
         # And generate all the info
         download_link = thunderbird_desktop.get_download_url(
             channel, version, plat_os, locale,
-            force_direct=force_direct,
         )
-
-        # If download_link_direct is False the data-direct-link attr
-        # will not be output, and the JS won't attempt the IE popup.
-        if force_direct:
-            # no need to run get_download_url again with the same args
-            download_link_direct = False
-        else:
-            download_link_direct = thunderbird_desktop.get_download_url(
-                channel, version, plat_os, locale,
-                force_direct=True,
-            )
-            if download_link_direct == download_link:
-                download_link_direct = False
 
         builds.append({'os': plat_os,
                        'os_pretty': plat_os_pretty,
                        'download_link': download_link,
-                       'download_link_direct': download_link_direct})
+                       'download_link_direct': download_link})
+
+    return version, builds
+
+
+@jinja2.pass_context
+def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=None,
+                         locale=None, force_direct=False,
+                         alt_copy=None, button_class=None,
+                         section='header', flex_class=None,
+                         hide_footer_links=False):
+    """
+    Note: This is deprecated use the 'includes/macros/download-smart.html' macro instead!
+    Output a "Download Thunderbird" button.
+
+    :param ctx: context from calling template.
+    :param channel: name of channel: 'esr', 'release', 'beta' or 'daily'. 'alpha' has been retired.
+    :param dom_id: Use this string as the id attr on the element.
+    :param locale: The locale of the download. Default to locale of request.
+    :param force_direct: Force the download URL to be direct.
+    :param alt_copy: Specifies alternate copy to use for download buttons.
+    :param button_class: Class of the button element. Default to `none`, and dynamically picks the class based on the channel.
+    :param section: Where the button is rendered in the page. Default to 'header'.
+    :param flex_class: Adjust the flexbox positioning class
+    :param hide_footer_links: Whether we should hide the footer links (System Requirements, What's New, Privacy Policy) display. Default to 'False'.
+    :return: The button html.
+    """
+    print("[Warning] Deprecated function 'download_thunderbird' in use!")
+    alt_channel = '' if channel == settings.DEFAULT_RELEASE_VERSION else channel
+    locale = ctx.get('LANG', None)
+    dom_id = dom_id or 'download-button-desktop-%s' % channel
+
+    version, builds = get_latest_desktop_builds(ctx, channel)
 
     # Get the native name for current locale
     langs = thunderbird_desktop.languages
@@ -486,6 +537,16 @@ def get_locale(lang):
 
 
 @jinja2.pass_context
+def get_locale_name(ctx, locale=None):
+    locale = locale or ctx.get('LANG')
+    if not locale:
+        return None
+
+    langs = thunderbird_desktop.languages
+    return langs[locale]['native'] if locale in langs else locale
+
+
+@jinja2.pass_context
 def get_fru_language(ctx):
     """
     Returns the current language if supported by FRU.
@@ -545,6 +606,11 @@ def get_blog_data(ctx, entry):
 def get_latest_build(ctx, channel):
     """Returns the latest build number for a given channel (e.g. 102.10.0 for release)"""
     return thunderbird_desktop.latest_version(channel)
+
+
+@jinja2.pass_context
+def get_latest_mobile_build(ctx, channel):
+    return thunderbird_mobile.latest_version(channel)
 
 
 @jinja2.pass_context

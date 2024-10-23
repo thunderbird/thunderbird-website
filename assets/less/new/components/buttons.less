@@ -29,16 +29,8 @@
   padding: 0;
 }
 
-// Just some temp styling
-.header-download {
+.header-donate, .header-download {
   font-weight: 500;
-
-  .download-link.btn-download:after {
-    background: transparent;
-  }
-}
-
-.header-donate {
   margin-top: -0.05rem;
   margin-left: -1rem;
 
@@ -87,7 +79,7 @@ button {
   border-radius: 50%;
   filter: blur(32px);
   opacity: .25;
-  inset: -.25em -5em;
+  inset: -.25em -2.5em;
   z-index: -2;
 }
 
@@ -240,7 +232,7 @@ button:hover::after {
 }
 
 .all-downloads-link {
-  margin-bottom: 3.75rem; //60px;
+  margin-bottom: 2rem; //32px;
 }
 
 
@@ -270,11 +262,26 @@ button:hover::after {
 }
 
 .btn-white-bg::after {
-  background: var(--color-white);
+  opacity: 1 !important;
+  background: var(--color-white) !important;
 }
 
 .btn-black-bg::after {
-  background: var(--color-black);
+  opacity: 1 !important;
+  background: var(--color-black) !important;
+}
+
+.btn-gradient::after {
+  content: '';
+  position: absolute;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, var(--color-blue-60) 30%, var(--color-purple-60) 70%);
+  background-size: 400%;
+  background-position: center;
+  opacity: 0.9;
+  inset: 0;
+  z-index: -1;
+  transition: all .3s;
 }
 
 .btn-black-bg:hover,
@@ -327,5 +334,161 @@ button:hover::after {
   }
   .btn-newsletter-icon {
     display: block;
+  }
+}
+
+// Slimmer for the download page
+.btn-slim {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  font-size: var(--font-md)  !important;
+  min-width: 8.0rem;
+  padding: 0.5rem 1rem;
+}
+
+.download-icon {
+  position: relative;
+  top: 0.1rem;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+// Container for the newer donation buttons
+
+.download-buttons-container {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+// TODO: need to clean the old ones
+.download-button-products {
+  --txt: var(--color-white);
+}
+
+.no-js {
+  .download-button-products {
+    flex-direction: column;
+  }
+}
+
+.download-button-page,
+.download-button-products {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--txt);
+  text-align: center;
+}
+
+@media (max-width: @lg) {
+  .download-button-page, .download-button-products {
+    flex-direction: column;
+  }
+}
+
+
+// Desktop - The operating system short-code (e.g. osx, linux, win10up, etc...)
+[data-download-os] {
+  display: none;
+}
+// desktop or android
+// This is only used when showing all platforms
+[data-download-platform] {
+  display: none;
+}
+
+.no-js-label, .no-js-title {
+  display: none;
+}
+.js-label {
+  display: inline-block;
+}
+
+// For non-javascript users show everything
+// - Also for android users
+.no-js, .android {
+  .no-js-label {
+    display: inline-block;
+  }
+  .js-label {
+    display: none;
+  }
+  [data-download-os] {
+    display: block !important;
+  }
+}
+
+// This is only for no-js!
+.no-js {
+  .no-js-title {
+    display: inline-block;
+  }
+  [data-download-platform] {
+    display: block !important;
+  }
+}
+
+// Selectively show the correct download button
+.js {
+  // macOS
+  &.osx {
+    [data-download-os="osx"] {
+      display: block !important;
+    }
+  }
+  // Windows
+  &.win7-8 {
+    &.x64 [data-download-os="win8-64"] {
+      display: block !important;
+    }
+    &.x86.x64 [data-download-os="win8"] {
+      display: none !important;
+    }
+
+    &.x86 [data-download-os="win8"] {
+      display: block !important;
+    }
+  }
+  &.win10up {
+    &.x64 [data-download-os="win64"] {
+      display: block !important;
+    }
+    &.x86.x64 [data-download-os="win"] {
+      display: none !important;
+    }
+
+    &.x86 [data-download-os="win"] {
+      display: block !important;
+    }
+  }
+  &.linux {
+    &.x64 [data-download-os="linux64"] {
+      display: block !important;
+    }
+    &.x86.x64 [data-download-os="linux"] {
+      display: none !important;
+    }
+
+    &.x86 [data-download-os="linux"] {
+      display: block !important;
+    }
+  }
+
+  // Platform hiding/un-hiding
+  &.win7-8,
+  &.win10up,
+  &.osx,
+  &.linux {
+    [data-download-platform="desktop"] {
+      display: block !important;
+    }
+  }
+  &.android {
+    [data-download-platform="android"] {
+      display: block !important;
+    }
   }
 }

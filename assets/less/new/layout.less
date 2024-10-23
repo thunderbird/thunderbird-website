@@ -2,6 +2,7 @@
 body {
   --separator-height: 72px;
 }
+
 .header-separator {
   // Anchor it to the bottom
   position: absolute;
@@ -34,6 +35,11 @@ body {
   width: 100%;
   line-height: 0;
   color: var(--bg);
+
+  :first-child {
+    position: absolute;
+    top: 0;
+  }
 }
 
 .page-separator {
@@ -93,13 +99,19 @@ header {
 
 .container {
   position: relative;
-  display: grid;
-  gap: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   padding-inline: 1rem;
   padding-block: clamp(1rem, 5.469vw, 4.375rem); // 4.375rem~
   margin-inline: auto;
   max-width: 1280px;
   overflow: hidden;
+
+  // For the product pages
+  &.container-tight {
+    max-width: 1040px;
+  }
 
   &.no-gap {
     gap: 0;
@@ -260,19 +272,17 @@ h1, h2 {
 }
 
 .icon {
-  display: inline-block;
   height: 32px;
   width: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-apple {
   position: relative;
   top: -2px;
-}
-
-.icon-android {
-  position: relative;
-  top: -4px;
 }
 
 .icon .icon-linux-fg {
@@ -290,12 +300,6 @@ h1, h2 {
 svg {
   max-height: 100%;
   max-width: 100%;
-}
-
-
-/* Hide the header download button if the browser does not support javascript */
-.no-js .header-download {
-  display: none !important;
 }
 
 .nav-ln,
@@ -355,10 +359,29 @@ section {
 }
 
 .tagline {
+  justify-content: center;
   font-size: 6rem;
   line-height: 1;
   font-weight: bold;
   margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+.hero-text {
+  font-size: var(--font-hero);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+
+  .sub-tag {
+    font-weight: 300;
+    max-inline-size: 40rem;
+    margin: auto;
+
+    strong {
+      font-weight: 500;
+    }
+  }
 }
 
 .txt-gradient {
@@ -390,6 +413,7 @@ section {
   display: grid;
   place-items: center;
   gap: 12px;
+  margin-top: 1rem;
 }
 
 .mask {
@@ -443,6 +467,19 @@ section {
   border-radius: 4px;
 }
 
+.devices-container {
+  position: relative;
+  display: flex;
+
+  .TfA-overlay {
+    width: 20%;
+    position: absolute;
+    top: 13%;
+    right: 3%;
+    filter: drop-shadow(0 1px 6px var(--color-gray-40));
+  }
+}
+
 .fill-current {
   display: none;
 }
@@ -454,4 +491,122 @@ section {
 
 .wrap-balance {
   text-wrap: balance;
+}
+
+.split-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media (max-width: @lg) {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+
+  h2, h4 {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: var(--font-h2);
+  }
+
+  h4 {
+    font-size: var(--font-h4);
+    font-weight: 400;
+  }
+}
+
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 5rem;
+
+  &.flip-columns {
+    flex-direction: row-reverse;
+    @media (max-width: @lg) {
+      flex-direction: column-reverse;
+    }
+  }
+
+
+  div:first-child {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: @lg) {
+      margin: 0;
+    }
+  }
+
+  div:nth-child(2) {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: @lg) {
+      margin: 0;
+    }
+  }
+
+  .section-text {
+    text-align: left;
+    max-width: 500px;
+  }
+
+  @media (max-width: @lg) {
+    flex-direction: column-reverse;
+  }
+
+}
+
+.three-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  font-weight: 400;
+
+
+  @media (max-width: @sm) {
+    gap: 1rem;
+  }
+
+  .styled-list {
+    text-indent: -2.5rem;
+  }
+}
+
+.cover-container {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    margin-bottom: -0.25rem;
+    @media (max-width: @md) {
+      overflow: hidden;
+      max-width: 200%;
+      translate: -25%;
+    }
+  }
+}
+
+// We can toggle playback on autoplay videos
+video[autoplay] {
+  cursor: pointer;
 }

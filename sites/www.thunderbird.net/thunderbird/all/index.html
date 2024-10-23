@@ -5,6 +5,7 @@
 {% set active_page = "download" %}
 {% extends "includes/base/page.html" %}
 {% from "includes/_enonly/product-all-macros.html" import build_table with context %}
+{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
 
 {% block page_title %}{{ _('Download') }}{% endblock %}
 {% block category %}{{ _('Resources') }}{% endblock %}
@@ -16,7 +17,9 @@
       <div class="column">
         <div class="section-text">
           <div class="section-title">
-            <h2>{{ _('Get <span class="txt-gradient">Thunderbird</span>') }}</h2>
+            <h2 class="split-text" aria-label="{{ _('Thunderbird Desktop.') }}">
+              {{ _('Thunderbird') }}&nbsp;<span class="txt-gradient">{{ _('Desktop') }}</span>
+            </h2>
           </div>
           <p>{{ _('These are officially maintained and distributed by Thunderbird. Download the latest Release version unless you wish to test the Beta version and report bugs.') }}</p>
         </div>
@@ -84,86 +87,105 @@
               </select>
             </div>
           </details>
-
-          <div class="download-button download-button-page">
+        <div class="download-button download-button-page download-spacing">
             <a
               id="download-btn"
-              class="btn btn-download download-link btn-white-bg"
+              class="btn btn-download btn-white-bg btn-slim"
               href="{{ download_url(platform_os=win64) }}"
               data-donate-redirect="download-{{ channel or 'esr' }}"
               data-donate-content="post_download"
               data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}"
             >
-              {#
-              <span id="download-icon" class="platform-icon" aria-hidden="true">
-                {{ svg(get_platform_icon(platform='win64')) }}
-              </span>
-              #}
+              <span class="download-icon" aria-hidden="true">{{ svg('base/icons/download/generic-download-currentcolor') }}</span>
               {{ _('Download') }}
             </a>
+          </div>
+          <div class="platform-release">
+            <div>
+              <h4>{{ _('Other Downloads') }}</h4>
+              <ul>
+                <li>
+                  <a class="small-link dotted" href="{{ url('download.desktop.msstore') }}">{{ _('Microsoft Apps Store') }}</a>
+                </li>
+                <li>
+                  <a class="small-link dotted" href="{{ url('download.desktop.flathub') }}">{{ _('Flathub') }}</a>
+                </li>
+                <li>
+                  <a class="small-link dotted" href="{{ url('download.desktop.snap') }}">{{ _('Snap Store') }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="platform-release" data-for-app="desktop">
+            <div>
+              <h4>{{ _('More Information') }}</h4>
+              <ul>
+                <li>
+                  <a class="small-link dotted" href="{{ url('thunderbird.sysreq', latest_thunderbird_version) }}">{{ _('System Requirements') }}</a>
+                </li>
+                <li>
+                  <a class="small-link dotted" href="{{ thunderbird_url('releasenotes', default_channel) }}">{{ _('Release Notes') }}</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="column">
-        <div class="section-text release-information">
+        <div class="section-text">
           <div class="section-title">
-            <h2>{{ _('Release Information') }}</h2>
+            <h2 class="split-text" aria-label="{{ _('Thunderbird Mobile.') }}">
+              {{ _('Thunderbird') }}&nbsp;<span class="txt-gradient">{{ _('Mobile') }}</span>
+              <span class="new-badge">{{ _('New') }}</span>
+            </h2>
           </div>
+          <p>{{ _('These are officially maintained and distributed by Thunderbird Mobile.') }}</p>
+        </div>
+        <div class="download-spacing">
+        {{ download_mobile_btns() }}
         </div>
         <div class="platform-release">
-          <div>
-            <h4>{{ _('Other Downloads') }}</h4>
-            <ul>
-              <li>
-                <a class="dotted" href="{{ url('download.desktop.msstore') }}">{{ _('Microsoft Apps Store') }}</a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a class="dotted" href="{{ url('download.desktop.flathub') }}">{{ _('Flathub') }}</a>
-              </li>
-              <li>
-                <a class="dotted" href="{{ url('download.desktop.snap') }}">{{ _('Snap Store') }}</a>
-              </li>
-            </ul>
+            <div>
+              <h4>{{ _('Other Downloads') }}</h4>
+              <ul>
+                <li>
+                  <a class="small-link dotted" href="{{ download_url(platform_os='apk', channel='mobile') }}">{{ _('Binary (.apk)') }}</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="platform-release" data-for-app="desktop">
+        <div class="platform-release" data-for-app="android">
           <div>
             <h4>{{ _('More Information') }}</h4>
             <ul>
               <li>
-                <a class="dotted" href="{{ url('thunderbird.sysreq', latest_thunderbird_version) }}">{{ _('System Requirements') }}</a>
+                <a class="small-link dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#minimum-android-version-compatibility">{{ _('System Requirements') }}</a>
               </li>
               <li>
-                <a class="dotted" href="{{ thunderbird_url('releasenotes', default_channel) }}">{{ _('Release Notes') }}</a>
+                <a class="small-link dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#change-logs">{{ _('Release Notes') }}</a>
               </li>
             </ul>
           </div>
         </div>
-        <!--
-        <div class="platform-release" data-for-app="android">
-          <div>
-            <h4>{{ _('More Information For Mobile') }}</h4>
-            <ul>
-              <li>
-                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#minimum-android-version-compatibility">{{ _('System Requirements') }}</a>
-              </li>
-              <li>
-                <a class="dotted" href="https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#change-logs">{{ _('Release Notes') }}</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        -->
       </div>
     </div>
 
-    {# No javascript / source of truth for download links #}
+    {# No javascript / source of truth for esr download links #}
     <div id="all-downloads" data-thunderbird-version="{{ latest_thunderbird_version }}">
       <div class="section-text">
-        <h1>{{ _('Get <span class="txt-gradient">Thunderbird</span>') }}</h1>
+        <h2 class="split-text" aria-label="{{ _('Thunderbird Mobile.') }}" style="justify-content: center">
+          {{ _('Thunderbird') }}&nbsp;<span class="txt-gradient">{{ _('Mobile') }}</span>
+        </h2>
+        <p>{{ _('These are officially maintained and distributed by Thunderbird Mobile.') }}</p>
+        <div class="download-spacing">
+        {{ download_mobile_btns() }}
+        </div>
+      </div>
+      <div class="section-text">
+        <h2 class="split-text" aria-label="{{ _('Thunderbird Desktop.') }}" style="justify-content: center">
+          {{ _('Thunderbird') }}&nbsp;<span class="txt-gradient">{{ _('Desktop') }}</span>
+        </h2>
         <p>{{ _('These are officially maintained and distributed by Thunderbird.') }}</p>
         <p>{{ _('Jump to the language you wish to download by using the legend below.') }}</p>
       </div>

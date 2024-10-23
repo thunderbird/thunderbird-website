@@ -4,6 +4,7 @@
 
 {% set active_page = "download" %}
 {% extends "includes/base/page.html" %}
+{% from 'includes/macros/download-smart.html' import download_smart %}
 
 {% block page_title %}{{ _('Download') }}{% endblock %}
 {% block category %}{{ _('Resources') }}{% endblock %}
@@ -13,7 +14,7 @@
   <div class="container">
     <div class="section-text">
       <h1>{{ _('Download <span class="txt-gradient">Thunderbird</span>') }}</h1>
-      {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-bottom") }}
+      {{ download_smart('btn-gradient', 'download-button-products') }}
     </div>
   </div>
 </section>

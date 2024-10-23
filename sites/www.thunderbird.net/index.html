@@ -4,6 +4,8 @@
 
 {% set active_page = "index" %}
 {% extends "includes/base/page.html" %}
+{% from 'includes/macros/download-block.html' import download_block %}
+{% from 'includes/macros/download-smart.html' import download_smart %}
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
 {% block page_title %}{{ _('Free Your Inbox.') }}{% endblock %}
@@ -22,14 +24,12 @@
         <h1 class="tagline">{{_('<span class="txt-gradient">Free</span> Your Inbox')}}</h1>
         <p class="sub-tag">
           {% trans %}
-            Meet Thunderbird, the <strong>email</strong> and <strong>productivity</strong> app that maximizes your freedoms.
+            Meet Thunderbird, the <strong>email and productivity</strong> app that maximizes your freedoms.
           {% endtrans %}
         </p>
       </div>
       <div class="hero-download">
-        <div class="download-button">
-          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-hero") }}
-        </div>
+        {{ download_smart('btn-gradient', 'download-button-products') }}
       </div>
     </div>
   </section>
@@ -90,6 +90,7 @@
           {% endtrans %}
         </p>
       </div>
+      <div class="devices-container">
       <div class="graphic" aria-hidden="true">
         <picture>
           <source srcset="/media/img/thunderbird/new/screens/laptop-bg.avif" type="image/avif">
@@ -108,6 +109,10 @@
             <img src="/media/img/thunderbird/new/screens/calendar-screen.png" alt="">
           </picture>
         </div>
+      </div>
+      <div class="TfA-overlay">
+        {{ high_res_img('thunderbird/base/home/flat-phone.png', {'alt': _('A phone displaying Thunderbird for Android\'s interface.')}, alt_formats=('avif', 'webp')) }}
+      </div>
       </div>
       <div class="cta">
         <!-- <a href="#" class="cta-ln">{{_('See Compatibility')}}</a> -->
@@ -320,30 +325,40 @@
           </div>
         </div>
       </div>
-
-      <div class="cta">
-        <!-- <a href="{{ url('thunderbird.features') }}" class="cta-ln">{{_('Explore More Features')}}</a> -->
-      </div>
     </div>
     <div class="mask" aria-hidden="true">
       {{ svg('mask') }}
     </div>
   </section>
 
-  <section id="free-your-inbox">
+  <section id="freedom-to-go-anywhere">
     <div class="container">
-      <div class="section-text cta-section">
-        <h2 class="cta-heading">{{_('<span class="txt-gradient">Free</span> Your Inbox')}}</h2>
-        <h4 class="cta-sub-heading">{{_('Are you ready to love email again?')}}</h4>
+      <div class="section-text">
+        <h2 class="section-heading">{{_('<span class="txt-gradient">Freedom</span> to Go Anywhere')}}</h2>
+        <h4>{{_('Introducing Thunderbird Mobile')}}</h4>
+        <p>
+          {% trans -%}
+            The freedom and joy of Thunderbird are now available to you anywhere you go.
+            With Thunderbird Mobile your most important messages are sent and received by an open-source,
+            secure app that respects your privacy
+          {%- endtrans %}
+        </p>
       </div>
-      <div class="cta">
-        <div class="download-button">
-          {{ download_thunderbird(force_direct=true, alt_copy=_('Download'), section="homepage-bottom",  button_class="btn-download btn-white-bg") }}
+      {#
+        <div class="cta">
+          <a href="{{ url('thunderbird.android.announcement') }}" class="strong">{{_('Read the announcement')}}</a>
         </div>
       </div>
+      #}
+    </div>
+    <div class="mobile-render" aria-hidden="true">
+      {{ high_res_img('/media/img/thunderbird/base/home/exploding-phone.png', {'alt': _('A rendering of a mobile phone.')}, alt_formats=('avif', 'webp')) }}
+    </div>
+    <div class="mask" aria-hidden="true">
+      {{ svg('mask') }}
     </div>
   </section>
-
+  {{ download_block() }}
   {% with page_desc = self.page_desc() %}
     {% include "includes/product-metadata.html" %}
   {% endwith %}
