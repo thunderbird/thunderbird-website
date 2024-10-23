@@ -87,7 +87,7 @@
               </select>
             </div>
           </details>
-        <div class="download-button download-button-page">
+        <div class="download-button download-button-page download-spacing">
             <a
               id="download-btn"
               class="btn btn-download btn-white-bg btn-slim"
@@ -96,7 +96,7 @@
               data-donate-content="post_download"
               data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel=channel or 'esr') }}"
             >
-              <span class="download-icon" aria-hidden="true">{{ svg('download') }}</span>
+              <span class="download-icon" aria-hidden="true">{{ svg('base/icons/download/generic-download-currentcolor') }}</span>
               {{ _('Download') }}
             </a>
           </div>
@@ -142,7 +142,9 @@
           </div>
           <p>{{ _('These are officially maintained and distributed by Thunderbird Mobile.') }}</p>
         </div>
+        <div class="download-spacing">
         {{ download_mobile_btns() }}
+        </div>
         <div class="platform-release">
             <div>
               <h4>{{ _('Other Downloads') }}</h4>
