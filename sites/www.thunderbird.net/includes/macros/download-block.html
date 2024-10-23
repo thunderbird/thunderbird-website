@@ -2,7 +2,7 @@
 
 Macros:
   download_block
-    :force_platform = 'all'|'desktop'|'android'
+    :param force_platform: = 'all'|'desktop'|'android'
 #}
 {% from 'includes/macros/download-smart.html' import download_smart %}
 {% macro download_block(force_platform='all') -%}

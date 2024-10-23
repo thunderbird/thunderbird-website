@@ -4,17 +4,21 @@ otherwise it will selectively show based on platform and os.
 
 Macros:
   download_smart
-    :btn_class - Class for the download button (anchor tag fyi!)
-    :container_class - Class for the container wrapping the download button
-    :force_platform = 'all'|'desktop'|'android'
-    :desktop_channel = 'esr'|'release'|'beta'|'daily' - Force the download button to show a specific channel
+    :param btn_class: - Class for the download button (anchor tag fyi!)
+    :param container_class: - Class for the container wrapping the download button
+    :param force_platform: = 'all'|'desktop'|'android'
+    :param desktop_channel: = 'esr'|'release'|'beta'|'daily' - Force the download button to show a specific channel
+    :param hide_download_options: - Hide the download options link above the buttons
+    :param hide_donate_footer: - Hide the donate footer below the buttons
 #}
 {% from 'includes/macros/download-desktop.html' import download_desktop_btns %}
 {% from 'includes/macros/download-mobile.html' import download_mobile_btns %}
-{% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = 'esr') -%}
+{% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = 'esr', hide_download_options = False, hide_donate_footer = False) -%}
 {# Note: force_platform = 'all' | 'android' | 'desktop' #}
 <h4 class="no-js-title">{{ _('Download Thunderbird') }} — {{ get_locale_name(LANG)|safe }}</h4>
+{% if not hide_download_options %}
 {% include 'includes/download-and-options.html' %}
+{% endif %}
   {% if force_platform == 'all' %}
     <div data-download-platform="android">
       {{ download_mobile_btns(btn_class, container_class, False) }}
@@ -31,5 +35,7 @@ Macros:
       {{ download_desktop_btns(desktop_channel, btn_class, container_class, False) }}
     </div>
   {% endif %}
+{% if not hide_donate_footer %}
 <small>{{_('Free forever.')}} <a class="dotted" href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
+{% endif %}
 {% endmacro %}
