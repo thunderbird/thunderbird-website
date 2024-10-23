@@ -187,8 +187,18 @@ def high_res_img(ctx, url, optional_attributes=None, scale='1.5x', alt_formats=(
 
 
 @jinja2.pass_context
-def video(ctx, file_path, alt_text=None, alt_formats=(), poster_path=None, auto_play=False, loop=False, controls=False, disable_pip=True):
-    """Add a video element to the page with some additional file formats."""
+def video(ctx, file_path, alt_text=None, alt_formats=(), mime_types=None, poster_path=None, auto_play=False, loop=False, controls=False, disable_pip=True):
+    """Add a video element to the page with some additional file formats.
+    :param file_path: relative path to the main video file.
+    :param alt_text: The text if all video sources are unsupported.
+    :param alt_formats: A tuple of alternate video extensions.
+    :param mime_types: A tuple of mime types for the videos (these can include codecs.) These should match up with the [main ext + *alt_formats]. If None then the extension is just bolted onto 'video/'
+    :param poster_path: A static image to display while the video loads.
+    :param auto_play: Adds autoplay and muted attribute to the video element.
+    :param loop: Adds the loop attribute to the video element.
+    :param controls: Adds the controls attribute to the video element.
+    :param disable_pip: Adds the disablepictureinpicture and playsinline attribute to the video element.
+    """
     file_name, ext = splitext(file_path)
     ext = ext.replace('.', '')
 
@@ -209,12 +219,16 @@ def video(ctx, file_path, alt_text=None, alt_formats=(), poster_path=None, auto_
     # If we've specified some alternate formats we need to use the <picture> tag instead
     tags = [f'<video {' '.join(attributes)}>']
 
-    for format in [ext, *alt_formats]:
+    for index, format in enumerate([ext, *alt_formats]):
         path = f"{file_name}.{format}"
 
-        # If you need to muck with mimetypes, do it here
+        if mime_types:
+            mime_type = mime_types[index]
+        else:
+            mime_type = f'video/{format}'
+
         tags.append(
-            f'<source src="{static(path)}" type="video/{format}"/>'
+            f'<source src="{static(path)}" type="{mime_type}"/>'
         )
 
     if alt_text:
