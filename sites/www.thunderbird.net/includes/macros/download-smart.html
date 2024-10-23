@@ -15,7 +15,6 @@ Macros:
 {% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
 {% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = 'esr', hide_download_options = False, hide_donate_footer = False) -%}
 {# Note: force_platform = 'all' | 'android' | 'desktop' #}
-<h4 class="no-js-title">{{ _('Download Thunderbird') }} — {{ get_locale_name(LANG)|safe }}</h4>
 {% if not hide_download_options %}
 {% include 'includes/download-and-options.html' %}
 {% endif %}
@@ -25,6 +24,11 @@ Macros:
     </div>
     <div data-download-platform="desktop">
       {{ download_desktop_btns(desktop_channel, btn_class, container_class, False) }}
+    </div>
+    <div class="download-button" data-download-platform="other">
+      <a href="{{ url('thunderbird.latest.all') }}" class="btn btn-download btn-slim {{ btn_class }}">
+        Downloads
+      </a>
     </div>
   {% elif force_platform == 'android' %}
     <div>

@@ -176,7 +176,7 @@
                 h.className += ' sha-1';
             }
         } else {
-            h.className = h.className.replace('windows', platform);
+            h.className = h.className.replace('other', platform);
         }
 
         // Add class to reflect the microprocessor architecture info
