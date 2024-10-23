@@ -422,7 +422,13 @@ button:hover::after {
 }
 
 // This is only for no-js, and unrecognized devices
-.no-js, .other {
+.no-js,
+.other,
+.ios,
+.chromsos,
+.oldwin,
+.oldmac,
+.fxos {
   [data-download-platform="other"] {
     display: block !important;
   }
