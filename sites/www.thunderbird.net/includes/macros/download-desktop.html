@@ -1,7 +1,7 @@
 {# Internal macro, use download-block or download-smart instead! #}
 {% macro download_desktop_btns(channel = 'esr', btn_class_name = 'btn-white-bg', container_class_name = 'download-button-desktop', show_donate_footer = False) -%}
   <div>
-    <div class="download-button {{ container_class_name }} desktop-columns">
+    <div class="download-button {{ container_class_name }}">
       {% for plat in get_latest_desktop_builds()[1] %}
         {# This element swaps between display: none and display: block.
            Only desktop download buttons need this!

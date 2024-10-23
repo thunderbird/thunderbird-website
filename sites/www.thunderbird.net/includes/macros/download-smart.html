@@ -13,7 +13,7 @@ Macros:
 {% from 'includes/macros/download-mobile.html' import download_mobile_btns %}
 {% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = 'esr') -%}
 {# Note: force_platform = 'all' | 'android' | 'desktop' #}
-<h4 class="no-js-label">{{ _('Download Thunderbird') }} — {{ LANG|safe }}</h4>
+<h4 class="no-js-title">{{ _('Download Thunderbird') }} — {{ get_locale_name(LANG)|safe }}</h4>
 {% include 'includes/download-and-options.html' %}
   {% if force_platform == 'all' %}
     <div data-download-platform="android">

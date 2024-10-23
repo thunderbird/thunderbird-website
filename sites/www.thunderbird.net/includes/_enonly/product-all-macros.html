@@ -84,7 +84,7 @@
 {% macro build_button(build, platform, tooltip, text) %}
   {% if build.platforms[platform] %}
     <a href="{{ build.platforms[platform].download_url }}" title="{{ tooltip }}"
-      class="btn btn-download-inline btn-download download-link btn-white-bg"
+      class="btn btn-download-inline btn-download btn-slim btn-white-bg matomo-track-download"
       data-download-version="{{ platform }}"
       data-download-language="{{ build.name_en|lower}}"
       data-download-locale="{{ build.locale }}"
@@ -100,7 +100,7 @@
 {% macro build_link(build, platform, tooltip, text) %}
   {% if build.platforms[platform] %}
     <a href="{{ build.platforms[platform].download_url }}" title="{{ tooltip }}"
-      class="btn-download-link btn btn-download download-link btn-white-bg"
+      class="btn-download-link btn btn-download btn-slim btn-white-bg matomo-track-download"
       data-download-version="{{ platform }}"
       data-download-language="{{ build.name_en|lower}}"
       data-download-locale="{{ build.locale }}"

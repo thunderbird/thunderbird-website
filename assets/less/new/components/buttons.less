@@ -367,8 +367,10 @@ button:hover::after {
   --txt: var(--color-white);
 }
 
-.desktop-columns {
-  flex-direction: column;
+.no-js {
+  .download-button-products {
+    flex-direction: column;
+  }
 }
 
 .download-button-page,
@@ -399,7 +401,7 @@ button:hover::after {
   display: none;
 }
 
-.no-js-label {
+.no-js-label, .no-js-title {
   display: none;
 }
 .js-label {
@@ -422,6 +424,9 @@ button:hover::after {
 
 // This is only for no-js!
 .no-js {
+  .no-js-title {
+    display: inline-block;
+  }
   [data-download-platform] {
     display: block !important;
   }

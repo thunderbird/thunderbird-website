@@ -537,6 +537,16 @@ def get_locale(lang):
 
 
 @jinja2.pass_context
+def get_locale_name(ctx, locale=None):
+    locale = locale or ctx.get('LANG')
+    if not locale:
+        return None
+
+    langs = thunderbird_desktop.languages
+    return langs[locale]['native'] if locale in langs else locale
+
+
+@jinja2.pass_context
 def get_fru_language(ctx):
     """
     Returns the current language if supported by FRU.
