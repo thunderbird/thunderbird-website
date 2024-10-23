@@ -4,8 +4,8 @@
 
 {% set active_page = "desktop" %}
 {% extends "includes/base/page.html" %}
-{% from 'includes/macros/download-smart.html' import download_smart %}
-{% from 'includes/macros/download-block.html' import download_block %}
+{% from 'includes/macros/download-smart.html' import download_smart with context %}
+{% from 'includes/macros/download-block.html' import download_block with context %}
 
 {% block page_title %}{{ _('Thunderbird Desktop') }}{% endblock %}
 
@@ -24,7 +24,7 @@
           {{ _('Thunderbird') }}&nbsp;<span class="txt-gradient">{{ _('Desktop') }}</span>
         </h1>
         <p class="sub-tag">
-          {% trans %}
+          {% trans trimmed %}
             Powerful Email, Calendar, and Contacts for Windows, Linux, and macOS.
             Free software designed to make you free.
           {% endtrans %}

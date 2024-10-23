@@ -4,8 +4,8 @@
 
 {% set active_page = "mobile" %}
 {% extends "includes/base/page.html" %}
-{% from 'includes/macros/download-smart.html' import download_smart %}
-{% from 'includes/macros/download-block.html' import download_block %}
+{% from 'includes/macros/download-smart.html' import download_smart with context %}
+{% from 'includes/macros/download-block.html' import download_block with context %}
 
 {% block page_title %}{{ _('Thunderbird Mobile') }}{% endblock %}
 
@@ -23,7 +23,7 @@
           {{ _('Thunderbird') }}&nbsp;<span class="txt-gradient">{{ _('Mobile') }}</span>
         </h2>
         <p class="sub-tag">
-          {% trans %}
+          {% trans trimmed %}
             Meet the leading open-source email app for Android.
             Enjoy complete freedom anywhere you take your smartphone.
           {% endtrans %}

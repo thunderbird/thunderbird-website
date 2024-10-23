@@ -11,8 +11,8 @@ Macros:
     :param hide_download_options: - Hide the download options link above the buttons
     :param hide_donate_footer: - Hide the donate footer below the buttons
 #}
-{% from 'includes/macros/download-desktop.html' import download_desktop_btns %}
-{% from 'includes/macros/download-mobile.html' import download_mobile_btns %}
+{% from 'includes/macros/download-desktop.html' import download_desktop_btns with context %}
+{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
 {% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = 'esr', hide_download_options = False, hide_donate_footer = False) -%}
 {# Note: force_platform = 'all' | 'android' | 'desktop' #}
 <h4 class="no-js-title">{{ _('Download Thunderbird') }} — {{ get_locale_name(LANG)|safe }}</h4>

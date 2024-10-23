@@ -4,8 +4,8 @@
 
 {% set active_page = "index" %}
 {% extends "includes/base/page.html" %}
-{% from 'includes/macros/download-block.html' import download_block %}
-{% from 'includes/macros/download-smart.html' import download_smart %}
+{% from 'includes/macros/download-block.html' import download_block with context %}
+{% from 'includes/macros/download-smart.html' import download_smart with context %}
 
 {% block page_title_prefix %}{{_('Thunderbird')}} — {% endblock %}
 {% block page_title %}{{ _('Free Your Inbox.') }}{% endblock %}
@@ -337,7 +337,7 @@
         <h2 class="section-heading">{{_('<span class="txt-gradient">Freedom</span> to Go Anywhere')}}</h2>
         <h4>{{_('Introducing Thunderbird Mobile')}}</h4>
         <p>
-          {% trans -%}
+          {% trans trimmed -%}
             The freedom and joy of Thunderbird are now available to you anywhere you go.
             With Thunderbird Mobile your most important messages are sent and received by an open-source,
             secure app that respects your privacy
