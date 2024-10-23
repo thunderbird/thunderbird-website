@@ -1,0 +1,75 @@
+@import '../updates-style.less';
+
+.page-appeal-nov24 {
+  --bg: #FEFFFF;
+
+  body {
+    background-image: url('/media/svg/appeal/nov24/background-image.svg');
+  }
+
+  h1, h1 span {
+    --txt: #FEFFFF;
+    color: var(--txt);
+    line-height: 1;
+    margin: 0;
+    text-shadow: 0 4px 8px #1A202C;
+
+  }
+
+  h1 {
+    font-size: 5.75rem;
+    font-weight: 600;
+  }
+  h1 > span {
+    display: block;
+    font-size: 2.0rem;
+    font-weight: 500;
+  }
+
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #twenty-years {
+    padding-top: 3.75rem;
+  }
+
+  .header-graphic {
+    width: 33.5rem;
+  }
+
+  .copy-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 1.0rem;
+    line-height: 1.21rem;
+    width: 41.125rem;
+    background-color: var(--bg);
+    border-radius: 0.625rem;
+    margin-bottom: 0;
+
+    p {
+      max-inline-size: 90%;
+    }
+    b {
+      font-weight: 700;
+    }
+  }
+
+  #timeline {
+    .container {
+      justify-content: center;
+    }
+  }
+  .timeline-line {
+    content: ' ';
+    width: 0.375rem;
+    height: 76.875rem;
+    background-color: var(--bg);
+  }
+}

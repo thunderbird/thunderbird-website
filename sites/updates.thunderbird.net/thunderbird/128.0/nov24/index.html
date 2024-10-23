@@ -1,0 +1,43 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{#
+ # This is a sample page you can copy and paste to get started on an appeal or whatsnew page.
+ # It inherits the base template automatically which includes the slim appeal footer.
+ # You can add styles by creating a new less file and importing it to update-styles.less.
+ #}
+{% set active_page = "appeal-nov24" %}
+{% extends "includes/base/base.html" %}
+{% block base_css %}
+<link href="{{ static('css/appeal-nov24-style.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block page_title %}{{ _('20 Years of Thunderbird!') }}{% endblock %}
+
+{% block content %}
+<section id="twenty-years">
+  <div class="container">
+    <div class="section-text">
+      <h1>{{ _('Thunderbird') }} <span role="complementary">{{ _('Turns 20, Thanks to You!') }}</span></h1>
+      <div class="header-graphic">
+        {{ high_res_img('thunderbird/appeal/nov24/header-graphic.png', {'alt': _('The text 20 Years with a the Thunderbird logo in place of the zero.')}, alt_formats=('avif', 'webp')) }}
+      </div>
+    </div>
+  </div>
+</section>
+<section id="appeal">
+  <div class="container">
+    <div class="copy-section section-text">
+      <p>{{ _('On December 7, 2004, Thunderbird 1.0 was released.') }}</p>
+      <p>{{ _('Thunderbird is free. Free to use. Free of ads. Free of data tracking.') }}</p>
+      <p>{{ _('We rely solely on the generosity of our supporters and less than <b>3% of Thunderbird users keep us going.</b>') }}</p>
+      <p><b>{{ _('Please help us continue for another 20 years.') }}</b></p>
+    </div>
+  </div>
+</section>
+<section id="timeline">
+<div class="container">
+  <div class="timeline-line"></div>
+
+</div>
+</section>
+{% endblock %}
