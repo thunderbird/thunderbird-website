@@ -217,7 +217,7 @@ def video(ctx, file_path, alt_text=None, alt_formats=(), mime_types=None, poster
         attributes.append(f'poster="{static(poster_path)}"')
 
     # If we've specified some alternate formats we need to use the <picture> tag instead
-    tags = [f'<video {' '.join(attributes)}>']
+    tags = [f'<video {" ".join(attributes)}>']
 
     for index, format in enumerate([ext, *alt_formats]):
         path = f"{file_name}.{format}"
