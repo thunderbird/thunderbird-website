@@ -187,7 +187,7 @@
       position: fixed;
       right: var(--popover-right-align);
       translate: var(--popover-left-align);
-      width: 470px;
+      width: 100%;
 
       // Actual physical panel
       .popover-panel {
@@ -400,6 +400,9 @@
     .nav-entry.no-border {
       border: none;
     }
+  }
+  @media (max-width: @sm) {
+    width: 80%;
   }
 }
 
