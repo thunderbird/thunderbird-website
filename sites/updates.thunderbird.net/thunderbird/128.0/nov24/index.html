@@ -35,64 +35,80 @@
     </div>
   </section>
   <section id="timeline">
-    <div class="container" style="height: 100vh;">
+    <div class="container">
       <div class="timeline-connector">
         {{ svg('appeal/nov24/timeline-connector') }}
       </div>
       <div class="timeline-line"></div>
-      <div class="feature">
-        <div class="timeline-blip">
-          <h3>2004</h3>
-          <div class="blip-and-line">
-            <div class="line"></div>
-            <div class="blip"></div>
+      <div class="features">
+        <div class="feature">
+          <div class="timeline-blip">
+            <h3>2004</h3>
+            <div class="blip-and-line">
+              <div class="line"></div>
+              <div class="blip"></div>
+            </div>
+          </div>
+          <div class="screenshot">
+            {{ high_res_img('thunderbird/appeal/nov24/screen-2004.png', {'alt': ''}, alt_formats=()) }}
           </div>
         </div>
-        <div class="screenshot">
-          {{ high_res_img('thunderbird/appeal/nov24/screen-2004.png', {'alt': ''}, alt_formats=()) }}
-        </div>
-      </div>
-      <div class="feature reverse">
-        <div class="timeline-blip">
-          <h3>2009</h3>
-          <div class="blip-and-line">
-            <div class="line"></div>
-            <div class="blip"></div>
+        <div class="feature reverse">
+          <div class="timeline-blip">
+            <h3>2009</h3>
+            <div class="blip-and-line">
+              <div class="line"></div>
+              <div class="blip"></div>
+            </div>
+          </div>
+          <div class="screenshot">
+            {{ high_res_img('thunderbird/appeal/nov24/screen-2009.png', {'alt': ''}, alt_formats=()) }}
           </div>
         </div>
-        <div class="screenshot">
-        {{ high_res_img('thunderbird/appeal/nov24/screen-2009.png', {'alt': ''}, alt_formats=()) }}
+        <div class="feature">
+          <div class="timeline-blip">
+            <h3>2018</h3>
+            <div class="blip-and-line">
+              <div class="line"></div>
+              <div class="blip"></div>
+            </div>
+          </div>
+          <div class="screenshot">
+            {{ high_res_img('thunderbird/appeal/nov24/screen-2018.png', {'alt': ''}, alt_formats=()) }}
+          </div>
+        </div>
+        <div class="feature reverse">
+          <div class="timeline-blip">
+            <h3>2024</h3>
+            <div class="blip-and-line">
+              <div class="line"></div>
+              <div class="blip"></div>
+            </div>
+          </div>
+          <div class="screenshot">
+            {{ high_res_img('thunderbird/appeal/nov24/screen-2024.png', {'alt': ''}, alt_formats=()) }}
+          </div>
         </div>
       </div>
-      {#
-      <div class="feature">
-        <div class="timeline-blip">
-          <h3>2009</h3>
-          <div class="blip"></div>
+      <div class="footer-graphic">
+        {{ high_res_img('thunderbird/appeal/nov24/logo-20-years.png', {'alt': _('The text 20 Years with a the Thunderbird logo in place of the zero.')}, alt_formats=('avif', 'webp')) }}
+      </div>
+      <div class="heart-container">
+        <div class="left-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
-        <div class="screenshot">
-        {{ high_res_img('thunderbird/appeal/nov24/screen-2009.png', {'alt': ''}, alt_formats=()) }}
+        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+        <div class="right-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
       </div>
-      <div class="feature">
-        <div class="timeline-blip">
-          <h3>2018</h3>
-          <div class="blip"></div>
-        </div>
-        <div class="screenshot">
-        {{ high_res_img('thunderbird/appeal/nov24/screen-2018.png', {'alt': ''}, alt_formats=()) }}
-        </div>
-      </div>
-      <div class="feature">
-        <div class="timeline-blip">
-          <h3>2024</h3>
-          <div class="blip"></div>
-        </div>
-        <div class="screenshot">
-        {{ high_res_img('thunderbird/appeal/nov24/screen-2024.png', {'alt': ''}, alt_formats=()) }}
-        </div>
-      </div>
-       #}
+      <p class="closing-text">
+        {{ _('The Thunderbird Team') }}
+      </p>
     </div>
   </section>
 {% endblock %}

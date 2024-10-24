@@ -30,6 +30,7 @@
   .container {
     padding-top: 0;
     padding-bottom: 0;
+    overflow: visible;
   }
 
   #twenty-years {
@@ -40,9 +41,15 @@
     width: 33.5rem;
   }
 
+  .footer-graphic {
+    z-index: 2;
+    margin-top: 2rem;
+  }
+
   .copy-section {
     box-sizing: border-box;
     text-align: left;
+    box-shadow: 0px 4px 24px 0px #1A202C;
 
     font-family: 'Inter', sans-serif;
     font-size: 1.0rem;
@@ -74,6 +81,7 @@
     position: relative;
     width: 4.0rem;
     height: 1.0rem;
+    top: -0.25px;
 
     svg {
       position: absolute;
@@ -86,89 +94,176 @@
   .timeline-line {
     position: absolute;
     content: ' ';
-    z-index: -1;
     width: 0.375rem;
-    height: 100rem;
+    height: 76.875rem;
     background-color: var(--bg);
   }
 
-  .feature {
-    position: relative;
+  .features {
+    --feature-margin: 5rem;
+
     display: flex;
-    flex-direction: row;
-    gap: 3.125rem;
-    width: 42rem;
-    left: 11.5rem;
+    flex-direction: column;
+    // Gotta account for the negative margins
+    margin-top: calc(3.125rem + var(--feature-margin));
 
-    // Flip some attributes
-    &.reverse {
-      flex-direction: row-reverse;
-      right: 11.5rem;
-      left: auto;
-      .timeline-blip .blip-and-line .line {
-        right: 0.25rem;
-        left: auto;
-      }
-    }
-
-    .timeline-blip {
+    .feature {
+      position: relative;
       display: flex;
-      flex-direction: inherit;
-      align-items: center;
-      gap: 0.75rem;
+      flex-direction: row;
+      gap: 3.125rem;
+      width: 42rem;
+      left: 11.375rem;
 
+      // We want negative margins here
+      margin-top: calc(-1 * var(--feature-margin));
 
-      h3 {
-        --txt: #FEFFFF;
-        color: var(--txt);
-        font-family: 'Metropolis', sans-serif;
-        font-weight: 900;
-        font-size: 2.0rem;
-        line-height: 2.0rem;
-        margin: 0;
-        display: block;
-        text-shadow: 0 4px 4px #00000040;
+      // Flip some attributes
+      &.reverse {
+        flex-direction: row-reverse;
+        right: 11.375rem;
+        left: auto;
+
+        .timeline-blip .blip-and-line .line {
+          right: 0.25rem;
+          left: auto;
+        }
       }
 
-      .blip-and-line {
-        position: relative;
+      .timeline-blip {
         display: flex;
         flex-direction: inherit;
-        justify-content: center;
         align-items: center;
+        gap: 0.75rem;
+        width: 10.5rem;
 
-        --shadow: 0 2px 10px 0 #00000040;
-
-        .blip {
-          position: relative;
+        h3 {
+          --txt: #FEFFFF;
+          color: var(--txt);
+          font-family: 'Metropolis', sans-serif;
+          font-weight: 900;
+          font-size: 2.0rem;
+          line-height: 2.0rem;
+          margin: 0;
           display: block;
-          background-color: #1373D9;
-          border: 0.375rem solid var(--bg);
-          border-radius: 100%;
-          width: 1rem;
-          height: 1rem;
-          box-shadow: var(--shadow);
+          text-shadow: 0 4px 4px #00000040;
+          min-width: 5.75rem;
         }
 
-        .line {
+        .blip-and-line {
           position: relative;
-          display: block;
-          height: 0.25rem;
-          width: 2.25rem;
-          background-color: var(--bg);
-          border-radius: 0.625rem;
-          z-index: -1;
-          left: 0.25rem;
-          box-shadow: var(--shadow);
+          display: flex;
+          flex-direction: inherit;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+
+          --shadow: 0 2px 10px 0 #00000040;
+
+          .blip {
+            position: relative;
+            display: block;
+            background-color: #1373D9;
+            border: 0.375rem solid var(--bg);
+            border-radius: 100%;
+            width: 1rem;
+            height: 1rem;
+            box-shadow: var(--shadow);
+          }
+
+          .line {
+            position: relative;
+            display: block;
+            height: 0.25rem;
+            width: 2.25rem;
+            background-color: var(--bg);
+            border-radius: 0.625rem;
+            z-index: -1;
+            left: 0.25rem;
+            box-shadow: var(--shadow);
+          }
         }
       }
-    }
 
-    .screenshot > img {
-      width: 20.0rem;
-      height: 20.0rem;
-      border: 4px solid var(--primary-container, #1373D9);
-      border-radius: 0.5625rem;
+      .screenshot > img {
+        box-sizing: border-box;
+        width: 20.0rem;
+        height: 20.0rem;
+        border: 4px solid var(--primary-container, #1373D9);
+        border-radius: 0.5625rem;
+      }
     }
+  }
+
+  .closing-text {
+    font-family: Metropolis, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: #F0F8FF;
+    margin: 1rem 0 !important;
+  }
+
+
+  .heart-container {
+    color: var(--color-red-50);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 32px;
+    align-items: start;
+    margin-top: 2em;
+    width: 100%;
+    max-width: 41.125rem;;
+  }
+
+  .heart-svg {
+    position: relative;
+    top: -4px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .heart-container {
+      color: var(--color-red-30);
+    }
+  }
+
+  .line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid var(--color-blue-60);
+  }
+
+  .left-lines,
+  .right-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-self: stretch;
+  }
+
+  .left-lines {
+    align-items: end;
+  }
+
+  .left-lines > .line:nth-child(2) {
+    width: 50%;
+    margin-right: 3px;
+    border-top: 1px solid var(--color-blue-50);
+  }
+
+  .left-lines > .line:nth-child(1) {
+    width: 30%;
+    border-top: 1px solid var(--color-blue-40);
+  }
+
+  .right-lines > .line:nth-child(2) {
+    width: 50%;
+    margin-left: 3px;
+    border-top: 1px solid var(--color-blue-50);
+  }
+
+  .right-lines > .line:nth-child(1) {
+    width: 30%;
+    border-top: 1px solid var(--color-blue-40);
   }
 }
