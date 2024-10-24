@@ -78,7 +78,6 @@
     box-sizing: border-box;
     text-align: left;
     box-shadow: 0px 4px 24px 0px #1A202C;
-    margin: auto;
 
     font-family: 'Inter', sans-serif;
     font-size: 1.0rem;
@@ -87,6 +86,7 @@
     width: 100%;
     background-color: var(--bg);
     border-radius: 0.625rem;
+    margin-top: 4rem;
     margin-bottom: 0;
     padding: 2.0rem 2.5rem;
 
@@ -543,5 +543,49 @@
     width: 30%;
     border-top: 1px solid var(--color-blue-40);
   }
+
+  .donate-banner {
+    border-radius: 0.75rem;
+    --background-left: linear-gradient(180deg, #DC2626 20.11%, #761414 100%);
+    --background-right: linear-gradient(180deg, #FFFFFF 0.41%, #FFE8E6 100.41%);
+    box-shadow: 0px 0px 10px 0px #0000001A;
+    border: 1px solid var(--critical-pressed, #7F1D1D);
+    color: #7F1D1D;
+
+    margin-bottom: 2rem;
+
+    /*
+    @media (max-width: @md) {
+      &::after {
+        top: -306px;
+        left: -208px;
+        transform: rotate(70deg);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      #decoration {
+        transform: rotate(-20deg);
+      }
+    }
+     */
+    @media (max-width: @md) {
+      height: 6.25rem;
+
+      #donate-banner-right {
+        position: relative;
+        top: -2.5rem;
+      }
+    }
+  }
+
+  #donate-banner-left, #hover-hearts {
+    color: white;
+  }
+
+  #donate-banner-right {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
 
 }

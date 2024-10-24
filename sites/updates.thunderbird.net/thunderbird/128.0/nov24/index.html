@@ -8,6 +8,7 @@
  #}
 {% set active_page = "appeal-nov24" %}
 {% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
 {% block base_css %}
   <link href="{{ static('css/appeal-nov24-style.css') }}" rel="stylesheet" type="text/css"/>
 {% endblock %}
@@ -27,6 +28,7 @@
   <section id="appeal">
     <div class="container">
       <div class="copy-section section-text">
+        {{ donate_button(form_id='20years', campaign='nov24_appeal') }}
         <p>{{ _('On December 7, 2004, Thunderbird 1.0 was released.') }}</p>
         <p>{{ _('Thunderbird is free. Free to use. Free of ads. Free of data tracking.') }}</p>
         <p>{{ _('We rely solely on the generosity of our supporters and less than <b>3% of Thunderbird users keep us going.</b>') }}</p>

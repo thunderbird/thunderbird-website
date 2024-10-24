@@ -1,0 +1,27 @@
+{% macro donate_button(form_id='support', content='cta', source='thunderbird-client', campaign='appeal') %}
+<a href="{{ donate_url(content=content, campaign=campaign, source=source, form_id=form_id) }}" class="donate-banner" data-donate-btn>
+  <div id="donate-banner-left">
+    {{ _('Click here to <b>Donate!</b>') }}
+  </div>
+  <div id="decoration">
+    <div id="pill-1" class="pill"></div>
+    <div id="pill-2" class="pill"></div>
+    <div id="pill-3" class="pill"></div>
+    <div id="pill-4" class="pill"></div>
+    <div id="pill-5" class="pill"></div>
+    <div id="pill-6" class="pill"></div>
+    <div id="pill-7" class="pill"></div>
+    <div id="pill-8" class="pill"></div>
+    <div id="pill-9" class="pill"></div>
+    <div id="pill-10" class="pill"></div>
+  </div>
+  <div id="donate-banner-right" class="text-right accent-text self-end">
+    {{ _('Help keep <b>Thunderbird Alive!</b>') }}
+  </div>
+  <div id="hover-hearts">
+    <div id="hover-heart-1">{{ svg('donate-heart') }}</div>
+    <div id="hover-heart-2">{{ svg('donate-heart') }}</div>
+    <div id="hover-heart-3">{{ svg('donate-heart') }}</div>
+  </div>
+</a>
+{% endmacro %}

@@ -18,21 +18,32 @@
 @import "./new/components/announcement.less";
 @import "./new/components/footer.less";
 @import "./new/components/appeal-footer.less";
-
+@import "./new/components/donate-cta.less";
 
 // Ensure the footer is contained at the bottom and by default the page extends to at least a full page.
 html, body {
   min-height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
 }
+
 main {
   height: auto;
 }
+
 #footer {
   position: relative;
   margin-top: auto;
   margin-bottom: 0;
+
+  min-height: 8rem;
+  display: flex;
+
+  .mzla {
+    justify-content: center;
+    align-content: center;
+  }
 }
