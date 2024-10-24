@@ -4,8 +4,17 @@
 .page-appeal-nov24 {
   --bg: #FEFFFF;
 
+  // Prefer webp over the jpeg
+  --bg-img: url('/media/img/thunderbird/appeal/nov24/background-image-high-res.webp');
+  --bg-img-set: image-set(var(--bg-img) type('image/webp'),
+  url('/media/img/thunderbird/appeal/nov24/background-image-high-res.jpeg') type('image/jpeg'));
+
   body {
-    background-image: url('/media/svg/appeal/nov24/background-image.svg');
+    background-image: var(--bg-img);
+    background-image: var(--bg-img-set);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
   }
 
   h1, h1 span {
