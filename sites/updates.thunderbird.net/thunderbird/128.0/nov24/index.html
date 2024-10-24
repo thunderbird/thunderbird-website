@@ -35,7 +35,7 @@
     </div>
   </section>
   <section id="timeline">
-    <div class="container">
+    <div class="container" style="height: 100vh;">
       <div class="timeline-connector">
         {{ svg('appeal/nov24/timeline-connector') }}
       </div>
@@ -43,20 +43,35 @@
       <div class="feature">
         <div class="timeline-blip">
           <h3>2004</h3>
-          <div class="blip"></div>
+          <div class="blip-and-line">
+            <div class="line"></div>
+            <div class="blip"></div>
+          </div>
         </div>
-
         <div class="screenshot">
-        {{ high_res_img('thunderbird/appeal/nov24/screen-2004.png', {'alt': _('A screenshot of Thunderbird in 2004.')}, alt_formats=()) }}
+          {{ high_res_img('thunderbird/appeal/nov24/screen-2004.png', {'alt': ''}, alt_formats=()) }}
         </div>
       </div>
+      <div class="feature reverse">
+        <div class="timeline-blip">
+          <h3>2009</h3>
+          <div class="blip-and-line">
+            <div class="line"></div>
+            <div class="blip"></div>
+          </div>
+        </div>
+        <div class="screenshot">
+        {{ high_res_img('thunderbird/appeal/nov24/screen-2009.png', {'alt': ''}, alt_formats=()) }}
+        </div>
+      </div>
+      {#
       <div class="feature">
         <div class="timeline-blip">
           <h3>2009</h3>
           <div class="blip"></div>
         </div>
         <div class="screenshot">
-        {{ high_res_img('thunderbird/appeal/nov24/screen-2009.png', {'alt': _('A screenshot of Thunderbird in 2009.')}, alt_formats=()) }}
+        {{ high_res_img('thunderbird/appeal/nov24/screen-2009.png', {'alt': ''}, alt_formats=()) }}
         </div>
       </div>
       <div class="feature">
@@ -65,7 +80,7 @@
           <div class="blip"></div>
         </div>
         <div class="screenshot">
-        {{ high_res_img('thunderbird/appeal/nov24/screen-2018.png', {'alt': _('A screenshot of Thunderbird in 2018.')}, alt_formats=()) }}
+        {{ high_res_img('thunderbird/appeal/nov24/screen-2018.png', {'alt': ''}, alt_formats=()) }}
         </div>
       </div>
       <div class="feature">
@@ -74,9 +89,10 @@
           <div class="blip"></div>
         </div>
         <div class="screenshot">
-        {{ high_res_img('thunderbird/appeal/nov24/screen-2024.png', {'alt': _('A screenshot of Thunderbird in 2024.')}, alt_formats=()) }}
+        {{ high_res_img('thunderbird/appeal/nov24/screen-2024.png', {'alt': ''}, alt_formats=()) }}
         </div>
       </div>
+       #}
     </div>
   </section>
 {% endblock %}

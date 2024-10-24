@@ -41,15 +41,14 @@
   }
 
   .copy-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
+    text-align: left;
 
     font-family: 'Inter', sans-serif;
     font-size: 1.0rem;
     line-height: 1.21rem;
-    width: 41.125rem;
+    max-width: 41.125rem;
+    width: 100%;
     background-color: var(--bg);
     border-radius: 0.625rem;
     margin-bottom: 0;
@@ -94,13 +93,30 @@
   }
 
   .feature {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    flex-direction: row;
+    gap: 3.125rem;
+    width: 42rem;
+    left: 11.5rem;
+
+    // Flip some attributes
+    &.reverse {
+      flex-direction: row-reverse;
+      right: 11.5rem;
+      left: auto;
+      .timeline-blip .blip-and-line .line {
+        right: 0.25rem;
+        left: auto;
+      }
+    }
 
     .timeline-blip {
       display: flex;
-      justify-content: center;
+      flex-direction: inherit;
+      align-items: center;
+      gap: 0.75rem;
+
 
       h3 {
         --txt: #FEFFFF;
@@ -111,17 +127,40 @@
         line-height: 2.0rem;
         margin: 0;
         display: block;
+        text-shadow: 0 4px 4px #00000040;
       }
 
-      .blip {
+      .blip-and-line {
         position: relative;
-        display: block;
-        content: ' ';
-        background-color: #1373D9;
-        border: 0.375rem solid var(--bg);
-        border-radius: 100%;
-        width: 1rem;
-        height: 1rem;
+        display: flex;
+        flex-direction: inherit;
+        justify-content: center;
+        align-items: center;
+
+        --shadow: 0 2px 10px 0 #00000040;
+
+        .blip {
+          position: relative;
+          display: block;
+          background-color: #1373D9;
+          border: 0.375rem solid var(--bg);
+          border-radius: 100%;
+          width: 1rem;
+          height: 1rem;
+          box-shadow: var(--shadow);
+        }
+
+        .line {
+          position: relative;
+          display: block;
+          height: 0.25rem;
+          width: 2.25rem;
+          background-color: var(--bg);
+          border-radius: 0.625rem;
+          z-index: -1;
+          left: 0.25rem;
+          box-shadow: var(--shadow);
+        }
       }
     }
 
