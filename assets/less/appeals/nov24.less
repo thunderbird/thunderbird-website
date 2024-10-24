@@ -1,5 +1,6 @@
 @import '../updates-style.less';
 
+// Scope to just the appeal page
 .page-appeal-nov24 {
   --bg: #FEFFFF;
 
@@ -13,24 +14,35 @@
     line-height: 1;
     margin: 0;
     text-shadow: 0 4px 8px #1A202C;
-
   }
 
   h1 {
     font-size: 5.75rem;
     font-weight: 600;
+
+    @media (max-width: @md) {
+      font-size: 3rem;
+    }
   }
 
   h1 > span {
     display: block;
     font-size: 2.0rem;
     font-weight: 500;
+
+    @media (max-width: @md) {
+      font-size: 1rem;
+    }
   }
 
   .container {
     padding-top: 0;
     padding-bottom: 0;
     overflow: visible;
+
+    @media (max-width: @md) {
+      padding: 0;
+    }
   }
 
   #twenty-years {
@@ -38,23 +50,31 @@
   }
 
   .header-graphic {
-    width: 33.5rem;
+    max-width: 33.5rem;
+    margin: auto;
   }
 
   .footer-graphic {
     z-index: 2;
     margin-top: 2rem;
+    right: 0.6rem;
+    position: relative;
+
+    @media (max-width: @md) {
+      margin-top: 7.5rem;
+    }
   }
 
   .copy-section {
     box-sizing: border-box;
     text-align: left;
     box-shadow: 0px 4px 24px 0px #1A202C;
+    margin: auto;
 
     font-family: 'Inter', sans-serif;
     font-size: 1.0rem;
     line-height: 1.21rem;
-    max-width: 41.125rem;
+    max-width: 41.125rem !important;
     width: 100%;
     background-color: var(--bg);
     border-radius: 0.625rem;
@@ -67,6 +87,19 @@
 
     b {
       font-weight: 700;
+    }
+
+    // Override the section-text mobile settings
+    @media (max-width: @md) {
+      max-width: 18rem;
+      padding: 1.5rem 1.5rem !important;
+    }
+  }
+
+  .section-text {
+    @media (max-width: @md) {
+      padding: 0.5rem;
+      max-inline-size: 100%;
     }
   }
 
@@ -97,6 +130,10 @@
     width: 0.375rem;
     height: 76.875rem;
     background-color: var(--bg);
+
+    @media (max-width: @md) {
+      height: calc(76.875rem * 2.2);
+    }
   }
 
   .features {
@@ -193,11 +230,51 @@
         border-radius: 0.5625rem;
       }
     }
+
+    @media (max-width: @md) {
+      margin-top: 3.75rem;
+      gap: 10rem;
+
+      .feature {
+        --feature-margin: 0;
+        flex-direction: column-reverse;
+        width: 18rem;
+        gap: 10rem;
+        left: 0;
+
+        .timeline-blip {
+          flex-direction: row;
+          left: auto;
+          right: 0.625rem;
+          position: relative;
+        }
+
+        .screenshot > img {
+          width: 18rem;
+          height: 18rem;
+        }
+
+        &.reverse {
+          flex-direction: column-reverse;
+          right: 0;
+
+          .timeline-blip {
+            flex-direction: row-reverse;
+            left: 8.1rem;
+            position: relative;
+          }
+        }
+
+      }
+    }
   }
 
+  // Copy and paste (with minor tweaks) from previous appeal
+  // TODO: Centralize this!
   .closing-text {
     font-family: Metropolis, sans-serif;
     font-size: 1rem;
+    font-weight: 500;
     text-align: center;
     color: #F0F8FF;
     margin: 1rem 0 !important;
@@ -230,7 +307,7 @@
     display: block;
     height: 1px;
     width: 100%;
-    border-top: 1px solid var(--color-blue-60);
+    border-top: 1px solid var(--color-blue-40);
   }
 
   .left-lines,
@@ -248,7 +325,7 @@
   .left-lines > .line:nth-child(2) {
     width: 50%;
     margin-right: 3px;
-    border-top: 1px solid var(--color-blue-50);
+    border-top: 1px solid var(--color-blue-40);
   }
 
   .left-lines > .line:nth-child(1) {
@@ -259,7 +336,7 @@
   .right-lines > .line:nth-child(2) {
     width: 50%;
     margin-left: 3px;
-    border-top: 1px solid var(--color-blue-50);
+    border-top: 1px solid var(--color-blue-40);
   }
 
   .right-lines > .line:nth-child(1) {
