@@ -2,9 +2,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 {#
- # This is the appeal page that will be loaded into Thunderbird directly.
- # Instead of the donation form it links to $url/donate which forces Thunderbird to open the page
- # in the user's preferred browser. This is hopefully less annoying for the end-user.
+ # This is an exact replicate of nov24/index.html but without the base_url set in donate_button.
+ # This actually pulls up the form!
  #}
 {% set active_page = "appeal-nov24" %}
 {% extends "includes/base/base.html" %}
@@ -29,7 +28,7 @@
   <section id="appeal">
     <div class="container">
       <div class="copy-section section-text">
-        {{ donate_button(form_id='20years', campaign='nov24_appeal', base_url=url('updates.appeal.nov24.donate')) }}
+        {{ donate_button(form_id='20years', campaign='nov24_appeal') }}
         <p>{{ _('On December 7, 2004, Thunderbird 1.0 was released.') }}</p>
         <p>{{ _('Thunderbird is free. Free to use. Free of ads. Free of data tracking.') }}</p>
         <p>{{ _('We rely solely on the generosity of our supporters and less than <b>3% of Thunderbird users keep us going.</b>') }}</p>

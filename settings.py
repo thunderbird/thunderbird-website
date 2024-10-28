@@ -268,6 +268,7 @@ URL_MAPPINGS = {
     'thunderbird.115.whatsnew': '/thunderbird/115.0/whatsnew',
     'thunderbird.128.whatsnew': '/thunderbird/128.0/whatsnew',
     'thunderbird.128esr.releasenotes': '/thunderbird/128.0esr/releasenotes',
+    'updates.appeal.nov24.donate': '/thunderbird/128.0/nov24/donate/'
 }
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'

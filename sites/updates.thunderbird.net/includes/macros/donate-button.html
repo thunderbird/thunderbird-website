@@ -1,5 +1,5 @@
-{% macro donate_button(form_id='support', content='cta', source='thunderbird-client', campaign='appeal') %}
-<a href="{{ donate_url(content=content, campaign=campaign, source=source, form_id=form_id) }}" class="donate-banner" data-donate-btn>
+{% macro donate_button(form_id='support', content='cta', source='thunderbird-client', campaign='appeal', base_url=None) %}
+<a href="{{ donate_url(content=content, campaign=campaign, source=source, form_id=form_id, base_url=base_url) }}" class="donate-banner" {% if base_url != None %}target="_blank"{% endif %} data-donate-btn>
   <div id="donate-banner-left">
     {{ _('Click here to <b>Donate!</b>') }}
   </div>
