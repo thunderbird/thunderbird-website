@@ -3,6 +3,13 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 
+/**
+ * This script contains various other scripts that should be organized in the future...
+ */
+
+/**
+ * Handle nav expandables / hamburgers
+ */
 document.addEventListener('DOMContentLoaded', function() {
   const hamburgerBtn = document.getElementById('mobile-hamburger-button');
   const navExpandables = document.getElementsByClassName("nav-expandable");
@@ -52,7 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// Handle auto play videos
+/**
+ * Handle autoplaying videos, including detecting if the user is requesting reduced motion (in which case we don't autoplay.)
+ */
 document.addEventListener('DOMContentLoaded', function() {
   const autoplayVideos = document.querySelectorAll('video[autoplay]');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -81,5 +90,32 @@ document.addEventListener('DOMContentLoaded', function() {
         togglePlayback(evt);
       }
     })
+  }
+});
+
+/**
+ * Handle download redirects
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  const downloadButtons = document.querySelectorAll('[data-donate-link]');
+
+  for (const downloadButton of downloadButtons) {
+    downloadButton.addEventListener('click', (evt) => {
+      const element = evt.currentTarget;
+      const donate_url = element.getAttribute('data-donate-link') || null;
+
+      if (!donate_url) {
+        return;
+      }
+
+      // TODO: Unsure if this check is still needed.
+      // MSIE and Edge cancel the download prompt on redirect, so just leave them out.
+      if (!(/msie\s|trident\/|edge\//i.test(navigator.userAgent))) {
+          setTimeout(function() {
+              window.location.href = donate_url;
+          }, 5000);
+      }
+
+    });
   }
 });

@@ -10,8 +10,9 @@ $(document).ready(function() {
     var client = Mozilla.Client;
     var utils = Mozilla.Utils;
 
-    utils.initDownloadLinks();
-    utils.initMobileDownloadLinks();
+    // These are intentionally commented out, and will be removed in the future.
+    //utils.initDownloadLinks();
+    //utils.initMobileDownloadLinks();
     utils.externalLinks();
     utils.initLangSwitcher();
 
