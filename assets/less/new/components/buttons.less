@@ -15,6 +15,7 @@
 .btn {
   cursor: pointer;
 }
+
 .btn:disabled {
   cursor: not-allowed;
   filter: grayscale(50%);
@@ -57,7 +58,7 @@
 button {
   font-size: var(--font-md);
   background: var(--btn-bg, transparent);
-  border-radius: 0.375rem ;//6px;
+  border-radius: 0.375rem; //6px;
   border: .125em solid currentColor;
   color: currentColor;
   padding: .5em 3em;
@@ -173,7 +174,7 @@ button:hover::after {
 .oldwin .download-button .unsupported-download,
 .oldmac .download-button .unsupported-download {
   display: block;
-  max-width: 15.625rem ;//250px;
+  max-width: 15.625rem; //250px;
 }
 
 .windows.arm .download-button .fx-privacy-link,
@@ -222,7 +223,7 @@ button:hover::after {
 }
 
 .download-button ul li {
-  margin-block: 1.25rem ;//20px;
+  margin-block: 1.25rem; //20px;
 }
 
 .download-dumb {
@@ -332,6 +333,7 @@ button:hover::after {
   .btn-newsletter-text {
     display: none;
   }
+
   .btn-newsletter-icon {
     display: block;
   }
@@ -342,7 +344,7 @@ button:hover::after {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-  font-size: var(--font-md)  !important;
+  font-size: var(--font-md) !important;
   min-width: 8.0rem;
   padding: 0.5rem 1rem;
 }
@@ -394,6 +396,7 @@ button:hover::after {
 [data-download-os] {
   display: none;
 }
+
 // desktop or android
 // This is only used when showing all platforms
 [data-download-platform] {
@@ -403,21 +406,33 @@ button:hover::after {
 .no-js-label, .no-js-title {
   display: none;
 }
+
 .js-label {
   display: inline-block;
 }
 
 // For non-javascript users show everything
 // - Also for android users
-.no-js, .android {
+.no-js {
   .no-js-label {
     display: inline-block;
   }
+
   .js-label {
     display: none;
   }
+
   [data-download-os] {
     display: block !important;
+  }
+}
+
+// HACK: For desktop page...
+.page-desktop {
+  &.android {
+    [data-download-platform="other"] {
+      display: block !important;
+    }
   }
 }
 
@@ -425,7 +440,7 @@ button:hover::after {
 .no-js,
 .other,
 .ios,
-.chromsos,
+.chromeos,
 .oldwin,
 .oldmac,
 .fxos {
@@ -442,11 +457,13 @@ button:hover::after {
       display: block !important;
     }
   }
+
   // Windows
   &.win7-8 {
     &.x64 [data-download-os="win8-64"] {
       display: block !important;
     }
+
     &.x86.x64 [data-download-os="win8"] {
       display: none !important;
     }
@@ -455,10 +472,12 @@ button:hover::after {
       display: block !important;
     }
   }
+
   &.win10up {
     &.x64 [data-download-os="win64"] {
       display: block !important;
     }
+
     &.x86.x64 [data-download-os="win"] {
       display: none !important;
     }
@@ -467,10 +486,12 @@ button:hover::after {
       display: block !important;
     }
   }
+
   &.linux {
     &.x64 [data-download-os="linux64"] {
       display: block !important;
     }
+
     &.x86.x64 [data-download-os="linux"] {
       display: none !important;
     }
@@ -489,6 +510,7 @@ button:hover::after {
       display: block !important;
     }
   }
+
   &.android {
     [data-download-platform="android"] {
       display: block !important;

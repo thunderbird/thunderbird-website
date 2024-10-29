@@ -35,8 +35,13 @@ Macros:
       {{ download_mobile_btns(btn_class, container_class, False) }}
     </div>
   {% elif force_platform == 'desktop' %}
-    <div>
+    <div data-download-platform="desktop">
       {{ download_desktop_btns(desktop_channel, btn_class, container_class, False) }}
+    </div>
+    <div class="download-button" data-download-platform="other">
+      <a href="{{ url('thunderbird.latest.all') }}" class="btn btn-download btn-slim {{ btn_class }}">
+        Downloads
+      </a>
     </div>
   {% endif %}
 {% if not hide_donate_footer %}
