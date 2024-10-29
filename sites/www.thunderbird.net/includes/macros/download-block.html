@@ -5,7 +5,7 @@ Macros:
     :param force_platform: = 'all'|'desktop'|'android'
 #}
 {% from 'includes/macros/download-smart.html' import download_smart with context %}
-{% macro download_block(force_platform='all') -%}
+{% macro download_block(force_platform='all', form_id=settings.FRU_FORM_IDS['support']) -%}
 <section id="free-your-inbox">
   <div class="container">
     <div class="section-text cta-section">
@@ -13,7 +13,7 @@ Macros:
       <h4 class="cta-sub-heading">{{ _('Are you ready to love email again?') }}</h4>
     </div>
     <div class="cta">
-      {{ download_smart('btn-white-bg', 'download-button-page', force_platform) }}
+      {{ download_smart('btn-white-bg', 'download-button-page', force_platform, form_id=form_id) }}
     </div>
   </div>
 </section>

@@ -481,7 +481,7 @@ def thunderbird_url(page, channel=None):
 
 
 @jinja2.pass_context
-def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign='donation_2023', show_donation_modal=True, download=None, download_channel=None, form_id='support', base_url=None):
+def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign='donation_2023', show_donation_modal=True, download=None, download_channel=None, form_id=settings.FRU_FORM_IDS['support'], base_url=None):
     """Forms a donation url with the given parameters. If you pass in None for any of the fields they will be excluded from the url
     :param ctx: Jinja context
     :param content: UTM Content tag

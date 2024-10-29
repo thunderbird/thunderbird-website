@@ -542,3 +542,12 @@ MATOMO_SITE_IDS = {
     'website': 1,
     'utn': 3,
 }
+
+FRU_FORM_IDS = {
+    # General
+    'support': 'support',
+    'tfa': 'tfa',
+
+    # Appeals
+    '20years': '20years',
+}

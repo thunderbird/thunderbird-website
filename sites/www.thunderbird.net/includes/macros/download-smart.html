@@ -13,7 +13,7 @@ Macros:
 #}
 {% from 'includes/macros/download-desktop.html' import download_desktop_btns with context %}
 {% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
-{% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = 'esr', hide_download_options = False, hide_donate_footer = False) -%}
+{% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = 'esr', hide_download_options = False, hide_donate_footer = False, form_id=settings.FRU_FORM_IDS['support']) -%}
 {# Note: force_platform = 'all' | 'android' | 'desktop' #}
 {% if not hide_download_options %}
 {% include 'includes/download-and-options.html' %}
@@ -40,6 +40,6 @@ Macros:
     </div>
   {% endif %}
 {% if not hide_donate_footer %}
-<small>{{_('Free forever.')}} <a class="dotted" href="{{ donate_url('header') }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
+<small>{{_('Free forever.')}} <a class="dotted" href="{{ donate_url('header', form_id=form_id) }}">{{_('Donate')}}</a> {{_('to make it better.')}}</small>
 {% endif %}
 {% endmacro %}

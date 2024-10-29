@@ -3,6 +3,8 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
 {% set active_page = "mobile" %}
+{% set donate_form_id = settings.FRU_FORM_IDS['tfa'] %}
+{% set override_nav_donate_form_id = donate_form_id %}
 {% extends "includes/base/page.html" %}
 {% from 'includes/macros/download-smart.html' import download_smart with context %}
 {% from 'includes/macros/download-block.html' import download_block with context %}
@@ -30,7 +32,7 @@
         </p>
       </div>
       <div class="hero-download">
-        {{ download_smart('btn-gradient', 'download-button-products', 'android', hide_download_options=True) }}
+        {{ download_smart('btn-gradient', 'download-button-products', 'android', hide_download_options=True, form_id=donate_form_id) }}
       </div>
     </div>
   </section>
@@ -210,7 +212,7 @@
       </div>
     </div>
     {% include 'includes/components/page-separator.html' %}
-    {{ download_block('android') }}
+    {{ download_block('android', form_id=donate_form_id) }}
   </section>
 {% endblock %}
 
