@@ -36,6 +36,8 @@
     font-size: 1rem;
     font-weight: 500;
 
+    padding: 0.5em ~"clamp(1.25rem, -3.75rem + 40vw, 3rem)";
+
     .heart-svg {
       display: flex;
       justify-content: center;
@@ -580,7 +582,7 @@
 
 
   .heart-container {
-    color: var(--color-red-50);
+    color: var(--color-red-30);
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     gap: 32px;
@@ -588,17 +590,12 @@
     margin-top: 2em;
     width: 100%;
     max-width: 41.125rem;
+    justify-content: center;
   }
 
   .heart-svg {
     position: relative;
     top: -4px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .heart-container {
-      color: var(--color-red-30);
-    }
   }
 
   .line {
@@ -614,6 +611,8 @@
     flex-direction: column;
     gap: 6px;
     justify-self: stretch;
+    // If smol, hide!
+    overflow: hidden;
   }
 
   .left-lines {
