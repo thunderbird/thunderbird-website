@@ -85,11 +85,8 @@
 {% block additional_site_js %}{% endblock %}
 {% block tracker_js %}
   <script type="text/javascript" src="{{ static('js/matomo-config-utn.js') }}" charset="utf-8"></script>
-  <script type="text/javascript" src="{{ static('js/matomo.js') }}" async defer></script>
-  <noscript>
-    <p><img src="//thunderbird.innocraft.cloud/piwik.php?idsite={{ matomo_site_id }}&rec=1" style="border:0;" alt=""/>
-    </p>
-  </noscript>
+  <script type="text/javascript" src="{{ static('js/matomo-utn.js') }}" async defer></script>
+  <noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="//thunderbird.innocraft.cloud/matomo.php?idsite={{ matomo_site_id }}&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 {% endblock %}
 
 {% block js %}{% endblock %}
