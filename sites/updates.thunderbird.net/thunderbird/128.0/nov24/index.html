@@ -9,9 +9,9 @@
 {% set active_page = "appeal-nov24" %}
 
 {# For donation url generation #}
-{% set fru_form_id = '20years' %}
-{% set utm_campaign = 'nov24_appeal' %}
-{% set donation_base_url = url('updates.appeal.nov24.donate') %}
+{% set fru_form_id = fru_form_id|default('20years') %}
+{% set utm_campaign = utm_campaign|default('nov24_appeal') %}
+{% set donation_base_url = donation_base_url|default(url('updates.appeal.nov24.donate')) %}
 
 {% extends "includes/base/base.html" %}
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
@@ -165,7 +165,10 @@
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <a id="donate-footer" class="btn btn-no-bg" aria-label="{{ _('Donate') }}" title="{{ _('Donate') }}"
+        <a id="donate-footer"
+           class="btn btn-no-bg"
+           aria-label="{{ _('Donate') }}"
+           {% if donation_base_url != None %}target="_blank"{% endif %}
            href="{{ donate_url(content='bottom-cta', campaign=utm_campaign, form_id=fru_form_id, base_url=donation_base_url) }}">
           <span aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</span>
           {{ _('Donate') }}
