@@ -27,6 +27,24 @@
     overflow: hidden;
   }
 
+  #donate-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    .heart-svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: .01rem;
+    }
+  }
+
   .section-text {
     max-inline-size: 90%;
   }
@@ -561,10 +579,10 @@
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     gap: 32px;
-    align-items: start;
+    align-items: center;
     margin-top: 2em;
     width: 100%;
-    max-width: 41.125rem;;
+    max-width: 41.125rem;
   }
 
   .heart-svg {

@@ -7,12 +7,19 @@
  # in the user's preferred browser. This is hopefully less annoying for the end-user.
  #}
 {% set active_page = "appeal-nov24" %}
+
+{# For donation url generation #}
+{% set fru_form_id = '20years' %}
+{% set utm_campaign = 'nov24_appeal' %}
+{% set donation_base_url = url('updates.appeal.nov24.donate') %}
+
 {% extends "includes/base/base.html" %}
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
 {% block base_css %}
   <link href="{{ static('css/appeal-nov24-style.css') }}" rel="stylesheet" type="text/css"/>
 {% endblock %}
 {% block page_title %}{{ _('20 Years of Thunderbird!') }}{% endblock %}
+
 
 {% block content %}
   <section id="twenty-years">
@@ -29,7 +36,7 @@
   <section id="appeal">
     <div class="container">
       <div class="copy-section section-text">
-        {{ donate_button(form_id='20years', campaign='nov24_appeal', base_url=url('updates.appeal.nov24.donate')) }}
+        {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, base_url=donation_base_url) }}
         <p>{{ _('On December 7, 2004, Thunderbird 1.0 was released.') }}</p>
         <p>{{ _('Thunderbird is free. Free to use. Free of ads. Free of data tracking.') }}</p>
         <p>{{ _('We rely solely on the generosity of our supporters and less than <b>3% of Thunderbird users keep us going.</b>') }}</p>
@@ -158,7 +165,11 @@
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+        <a id="donate-footer" class="btn btn-no-bg" aria-label="{{ _('Donate') }}" title="{{ _('Donate') }}"
+           href="{{ donate_url(content='bottom-cta', campaign=utm_campaign, form_id=fru_form_id, base_url=donation_base_url) }}">
+          <span aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</span>
+          {{ _('Donate') }}
+        </a>
         <div class="right-lines">
           <div class="line"></div>
           <div class="line"></div>
