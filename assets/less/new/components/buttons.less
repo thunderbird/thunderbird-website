@@ -349,6 +349,13 @@ button:hover::after {
   padding: 0.5rem 1rem;
 }
 
+.btn-no-bg-dark {
+  --btn-background-color: rgba(0, 0, 0, 0.8);
+  &:hover {
+      color: currentColor;
+  }
+}
+
 .download-icon {
   position: relative;
   top: 0.1rem;
