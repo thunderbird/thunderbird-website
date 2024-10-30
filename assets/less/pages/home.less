@@ -45,6 +45,7 @@
       font-weight: 300;
       max-inline-size: 30rem;
       margin: auto;
+
       strong {
         font-weight: 500;
       }
@@ -138,6 +139,14 @@
       // Shift-up so we're not affected by the mask
       position: relative;
       bottom: 4.6875rem;
+
+      img {
+        @media (max-width: @md) {
+          overflow: hidden;
+          max-width: 200%;
+          translate: -25%;
+        }
+      }
     }
   }
 
