@@ -1,5 +1,6 @@
 {# Outputs static metadata for any javascript scripts to use. #}
 <script>
+  window._site_id = 'tbn';
   window._desktop_product = {
     defaultChannel: '{{ default_channel }}',
     defaultLatestVersion: '{{ get_latest_build(default_channel) }}',

@@ -34,6 +34,11 @@
     <link rel="shortcut icon" href="{% block page_favicon %}{{ static('img/thunderbird/favicon.ico') }}{% endblock %}">
 
   {% endblock shared_meta %}
+
+  {# These need to be above common-bundle! #}
+  {% include 'includes/donation-includes.html' %}
+  {% include 'includes/javascript-metadata.html' %}
+
   <link href="{{ static('css/normalize.css') }}" rel="stylesheet" type="text/css"/>
   {% block base_css %}
     <link href="{{ static('css/updates-style.css') }}" rel="stylesheet" type="text/css"/>
@@ -56,8 +61,6 @@
   {% block extrahead %}
     {# Extra header stuff (scripts, styles, metadata, etc) seen by all browsers. Use the 'page_css' block for CSS you want to hide from IE8 and lower. #}
   {% endblock %}
-  {% include 'includes/donation-includes.html' %}
-  {% include 'includes/javascript-metadata.html' %}
 </head>
 
 <body {% if self.body_id() %}id="{% block body_id %}{% endblock %}" {% endif %}class="html-{{ DIR }}
@@ -86,7 +89,9 @@
 {% block tracker_js %}
   <script type="text/javascript" src="{{ static('js/matomo-config-utn.js') }}" charset="utf-8"></script>
   <script type="text/javascript" src="{{ static('js/matomo-utn.js') }}" async defer></script>
-  <noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="//thunderbird.innocraft.cloud/matomo.php?idsite={{ matomo_site_id }}&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  <noscript><p>
+    <img referrerpolicy="no-referrer-when-downgrade" src="//thunderbird.innocraft.cloud/matomo.php?idsite={{ matomo_site_id }}&amp;rec=1" style="border:0;" alt=""/>
+  </p></noscript>
 {% endblock %}
 
 {% block js %}{% endblock %}

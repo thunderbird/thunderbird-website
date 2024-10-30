@@ -31,11 +31,37 @@ if (typeof Mozilla === 'undefined') {
     Donation.OriginalHref = '';
 
     /**
+     * List of available goal ids aligned with their actions
+     * You don't want to use this directly, ActiveGoals gets set by window._site_id.
+     * @type {object}
+     */
+    Donation.Goals = {
+        'tbn': {
+            'clicked': 1,
+            'finished': 7
+        },
+        'utn': {
+            'clicked': 1,
+            'finished': 3,
+        }
+    }
+
+    /**
+     * The active goals to use, defaults to thunderbird.net
+     * @type {{finished: number, clicked: number}}
+     */
+    Donation.ActiveGoals = Donation.Goals['tbn'];
+
+    /**
      * Setups our FRU javascript events
      */
     Donation.Init = function() {
         if (!window.FundraiseUp) {
             return;
+        }
+
+        if (window._site_id) {
+            Donation.ActiveGoals = Donation.Goals[window._site_id]
         }
 
         const searchParams = new URLSearchParams(window.location.search);
@@ -56,7 +82,7 @@ if (typeof Mozilla === 'undefined') {
 
             element.addEventListener('click', function() {
                 window._paq = window._paq || [];
-                window._paq.push(['trackGoal', 1]);
+                window._paq.push(['trackGoal', Donation.ActiveGoals.clicked]);
             });
         });
 
@@ -121,7 +147,7 @@ if (typeof Mozilla === 'undefined') {
 
             // TrackEvent: Category, Action, Name
             window._paq.push(['trackEvent', 'Donation', 'Completed']);
-            window._paq.push(['trackGoal', 7]); // Donation Completed Goal
+            window._paq.push(['trackGoal', Donation.ActiveGoals.finished]); // Donation Completed Goal
 
             if (details.supporter) {
                 const hasSubscribedToNewsletter = details.supporter.mailingListSubscribed || false;
