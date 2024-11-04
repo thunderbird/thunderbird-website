@@ -293,7 +293,7 @@ def download_url(ctx, platform_os, version=None, channel=settings.DEFAULT_RELEAS
     if locale is None:
         locale = ctx.get('LANG')
 
-    if channel == 'mobile':
+    if channel == 'mobile' or channel == 'mobile-beta':
         return thunderbird_mobile.get_download_url(
             channel, version, platform_os, locale
         )

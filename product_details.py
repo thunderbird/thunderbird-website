@@ -343,12 +343,19 @@ class ThunderbirdMobileDetails():
 
     channel_labels = OrderedDict({
         'mobile': 'Mobile',
+        'mobile-beta': 'Mobile (Beta)'
     })
 
     def get_download_url(self, channel, version, platform, locale, force_direct=True):
         """Retrieve the download url for a given channel, version, platform and locale."""
 
-        # Nice and simple
+        # FIXME: We'll have to fix this once we have product detalis
+        if channel == 'mobile-beta':
+            if platform == 'gplay':
+                return settings.URL_MAPPINGS.get('download.android.gplay-beta')
+            elif platform == 'fdroid':
+                return settings.URL_MAPPINGS.get('download.android.fdroid-beta')
+
         if platform == 'gplay':
             return settings.URL_MAPPINGS.get('download.android.gplay')
         elif platform == 'fdroid':

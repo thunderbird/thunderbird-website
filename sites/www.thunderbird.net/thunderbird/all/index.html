@@ -150,7 +150,34 @@
               <h4>{{ _('Other Downloads') }}</h4>
               <ul>
                 <li>
-                  <a class="small-link dotted" href="{{ download_url(platform_os='apk', channel='mobile') }}">{{ _('Binary (.apk)') }}</a>
+                  <a class="small-link dotted"
+                    href="{{ download_url(platform_os='apk', channel='mobile') }}"
+                    data-donate-redirect="download-mobile"
+                    data-donate-content="post_download"
+                    data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel='mobile', form_id=settings.FRU_FORM_IDS['tfa']) }}"
+                  >
+                    {{ _('Binary (.apk)') }}
+                  </a>
+                </li>
+                <li>
+                  <a class="small-link dotted"
+                     href="{{ download_url(platform_os='gplay', channel='mobile-beta') }}"
+                     data-donate-redirect="download-mobile"
+                     data-donate-content="post_download"
+                     data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel='mobile-beta', form_id=settings.FRU_FORM_IDS['tfa']) }}"
+                  >
+                    {{ _('Google Play (Beta)') }}
+                  </a>
+                </li>
+                <li>
+                  <a class="small-link dotted"
+                     href="{{ download_url(platform_os='fdroid', channel='mobile-beta') }}"
+                     data-donate-redirect="download-mobile"
+                     data-donate-content="post_download"
+                     data-donate-link="{{ redirect_donate_url(content='post_download', download=True, download_channel='mobile-beta', form_id=settings.FRU_FORM_IDS['tfa']) }}"
+                  >
+                    {{ _('F-Droid (Beta)') }}
+                  </a>
                 </li>
               </ul>
             </div>
