@@ -173,7 +173,7 @@ class ThunderbirdDetails():
         product_url = 'thunderbird-%s-SSL'
 
         if channel == 'daily':
-            _version = 'nightly-latest'
+            _version = 'nightly-latest-l10n'
 
         if platform == 'msi':
             _platform = 'win64'

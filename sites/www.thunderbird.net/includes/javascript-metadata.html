@@ -5,16 +5,29 @@
     defaultChannel: '{{ default_channel }}',
     defaultLatestVersion: '{{ get_latest_build(default_channel) }}',
     channels: {
-      {% for channel, channel_name in get_channels().items() %}
+      {%- for channel, channel_name in get_channels().items() -%}
         '{{ channel }}': {
           id: '{{ channel }}',
           name: '{{ channel_name }}',
           version: '{{ get_latest_build(channel) }}',
           useVersionInDownloadLinks: {% if channel in ['release', 'esr'] %}true{% else %}false{% endif %},
+          platforms: {
+            {%- for platform, platform_info in get_platforms().items() -%}
+              {%- for source, source_name in platform_info -%}
+              '{{ source }}': {
+                id: '{{ source }}',
+                arch: '{{ platform|lower }}',
+                name: '{{ source_name }}',
+                url: '{{ download_url(platform_os=source, channel=channel, locale='en-US') }}',
+              },
+              {%- endfor -%}
+            {%- endfor -%}
+          }
         },
-      {% endfor %}
-    }
+      {%- endfor -%}
+    },
   }
+  {# TODO: Re-work this to be more like the above layout! #}
   window._mobile_product = {
     defaultChannel: 'mobile',
     platforms: {

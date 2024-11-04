@@ -203,30 +203,18 @@ if (typeof Mozilla === 'undefined') {
    * @returns {string} - Formulated download link or redirect link depending on the platform vs options
    */
   DownloadInfo.DownloadLink = function(locale, channel, os, installer) {
-    // This is still provided at the release channel even though it's an esr
-    if (installer === 'win8-64') {
-      channel = window._desktop_product.defaultChannel;
+    let downloadLink = window._desktop_product.channels[channel]?.platforms[installer]?.url;
+    if (!downloadLink) {
+      console.warn(`[DownloadInfo.DownloadLink] Could not generate downloadLink for: locale=${locale}, channel=${channel}, os=${os}, installer=${installer}`);
+      return '#';
     }
 
-    // Download links are sleepier than they appear.
-    // download.mozilla.org uses the term nightly, while we use daily.
-    if (channel === 'daily') {
-      channel = 'nightly';
+    // Only options that pass "has_localized_download" are allowed to be selected which makes this safe!
+    if (locale !== 'en-US') {
+      downloadLink = downloadLink.replace('en-US', locale);
     }
 
-    // For release channel just pull from the hidden no-js section.
-    if (channel === window._desktop_product.defaultChannel) {
-      const link = document.querySelector(`[data-download-locale="${locale}"][data-download-version="${installer}"]`)?.href;
-      // Ensure it's actually a download.mozilla.org link!
-      if (link && link.indexOf('https://download.mozilla.org/') === 0) {
-        return link;
-      }
-    }
-
-    const version = window._desktop_product.channels[channel]?.version;
-    const downloadVersion = window._desktop_product.channels[channel]?.useVersionInDownloadLinks === true ? version : 'latest';
-    const channelVersion = ['esr', 'release'].indexOf(channel) !== -1 ? downloadVersion : `${channel}-${downloadVersion}`;
-    return `https://download.mozilla.org/?product=thunderbird-${channelVersion}-SSL&os=${installer}&lang=${locale}`
+    return downloadLink;
   }
 
   window.Mozilla.DownloadInfo = DownloadInfo;
