@@ -37,20 +37,25 @@
 #footer .mzla {
   display: grid;
   place-items: center;
-  gap: 15px;
+  gap: 0.9375rem;
   text-align: center;
   max-inline-size: 75ch;
 }
 
 #footer .mozilla-logo {
   --accent: white;
-  max-width: 200px;
+  width: 7.6875rem;
+  max-width: 100%;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 #footer .site-links,
 #footer .legal-links {
   display: flex;
-  gap: 30px;
+  gap: 1.875rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -60,9 +65,9 @@
 }
 
 
-@media (max-width: 512px) {
+@media (max-width: 32.0rem) {
   #footer.container {
     padding-inline: 0.25rem;
-    padding-block: 32px;
+    padding-block: 2.0rem;
   }
 }
