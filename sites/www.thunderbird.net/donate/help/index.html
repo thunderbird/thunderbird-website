@@ -12,15 +12,27 @@
 # This form is modified through an external tool and lovingly placed into thunderbird-website. -#}
 
 {% block extra_meta %}
-    {% include 'includes/donor-contact/fa-meta.html' %}
+  {% include 'includes/donor-contact/fa-meta.html' %}
 {% endblock %}
 {% block extrahead %}
-    {% include 'includes/donor-contact/fa-head.html' %}
+  {% include 'includes/donor-contact/fa-head.html' %}
 {% endblock %}
 
 {% block content %}
   <section id="donate">
     <div class="container">
+      {% if show_donor_help_slow_warning %}
+        <div id="warning" class="warning-panel">
+          <p>
+            {% trans trimmed %}
+              <b>Our Team is experiencing a backlog in donor inquiries. Please expect a delay in our response time to your inquiry.</b>
+            {% endtrans %}
+            {% trans trimmed %}
+              We appreciate your understanding and thank you in advance for your support!
+            {% endtrans %}
+          </p>
+        </div>
+      {% endif %}
       <div class="section-text">
         <p class="intro">
           {% trans trimmed faq=url('thunderbird.donate.faq') %}

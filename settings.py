@@ -553,3 +553,6 @@ FRU_FORM_IDS = {
     # Appeals
     '20years': '20years',
 }
+
+# Flip to True to display a "Response times may be slower than usual" warning on the donor help form.
+DONOR_HELP_SLOW_WARNING = True
