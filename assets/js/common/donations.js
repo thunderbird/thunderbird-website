@@ -7,7 +7,7 @@ if (typeof Mozilla === 'undefined') {
     'use strict';
 
     var Donation = {};
-    Donation.NEWSLETTER_URL = `/${window.siteLocale}/newsletter`;
+    Donation.NEWSLETTER_URL = `https://www.thunderbird.net/${window.siteLocale}/newsletter`;
     /**
      * Is the download form visible?
      * @type {boolean}
