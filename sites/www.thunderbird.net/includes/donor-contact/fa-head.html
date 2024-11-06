@@ -14,87 +14,103 @@
 <style>
     #tfa_95,
     *[id^="tfa_95["] {
-      width: 625px;
+      width: 625px !important;
     }
 
     #tfa_95-D,
     *[id^="tfa_95["][class~="field-container-D"] {
-      width: auto;
+      width: auto !important;
     }
 
     #tfa_95-L,
     label[id^="tfa_95["] {
-      width: 189px;
+      width: 189px !important;
+      min-width: 0px;
+    }
+
+    #tfa_211,
+    *[id^="tfa_211["] {
+      width: 480px !important;
+    }
+
+    #tfa_211-D,
+    *[id^="tfa_211["][class~="field-container-D"] {
+      width: auto !important;
+    }
+
+    #tfa_211-L,
+    label[id^="tfa_211["] {
+      width: 134px !important;
       min-width: 0px;
     }
 
     #tfa_163,
     *[id^="tfa_163["] {
-      width: 625px;
+      width: 625px !important;
     }
 
     #tfa_163-D,
     *[id^="tfa_163["][class~="field-container-D"] {
-      width: auto;
+      width: auto !important;
     }
 
     #tfa_163-L,
     label[id^="tfa_163["] {
-      width: 351px;
+      width: 351px !important;
       min-width: 0px;
     }
 
     #tfa_201-L,
     label[id^="tfa_201["] {
-      width: 419px;
+      width: 419px !important;
       min-width: 0px;
     }
 
     #tfa_1,
     *[id^="tfa_1["] {
-      width: 305px;
+      width: 305px !important;
     }
 
     #tfa_1-D,
     *[id^="tfa_1["][class~="field-container-D"] {
-      width: auto;
+      width: auto !important;
     }
 
     #tfa_1-L,
     label[id^="tfa_1["] {
-      width: 189px;
+      width: 189px !important;
       min-width: 0px;
     }
 
     #tfa_10,
     *[id^="tfa_10["] {
-      width: 305px;
+      width: 305px !important;
     }
 
     #tfa_10-D,
     *[id^="tfa_10["][class~="field-container-D"] {
-      width: auto;
+      width: auto !important;
     }
 
     #tfa_10-L,
     label[id^="tfa_10["] {
-      width: 189px;
+      width: 189px !important;
       min-width: 0px;
     }
 
     #tfa_72,
     *[id^="tfa_72["] {
-      width: 350px;
+      width: 350px !important;
     }
 
     #tfa_72-D,
     *[id^="tfa_72["][class~="field-container-D"] {
-      width: auto;
+      width: auto !important;
     }
 
     #tfa_72-L,
     label[id^="tfa_72["] {
-      width: 189px;
+      width: 189px !important;
       min-width: 0px;
     }
 
@@ -105,151 +121,15 @@
 
     #tfa_163-D,
     *[id^="tfa_163["][class~="field-container-D"] {
-      height: auto;
+      height: auto !important;
     }
 
     #tfa_163-L,
     label[id^="tfa_163["],
     *[id^="tfa_163["][id$="-L"] {
-      height: auto;
+      height: auto !important;
     }
   </style>
-<script type="text/javascript">
-  // initialize our variables
-  var captchaReady = 0;
-  var wFORMSReady = 0;
-  var isConditionalSubmitEnabled = false;
-
-  // when wForms is loaded call this
-  var wformsReadyCallback = function() {
-    // using this var to denote if wForms is loaded
-    wFORMSReady = 1;
-    isConditionalSubmitEnabled = document.getElementById('submit_button').hasAttribute('data-condition');
-    // call our recaptcha function which is dependent on both
-    // wForms and an async call to google
-    // note the meat of this function wont fire until both
-    // wFORMSReady = 1 and captchaReady = 1
-    onloadCallback();
-  }
-  var gCaptchaReadyCallback = function() {
-    // using this var to denote if captcha is loaded
-    captchaReady = 1;
-    isConditionalSubmitEnabled = document.getElementById('submit_button').hasAttribute('data-condition');
-    // call our recaptcha function which is dependent on both
-    // wForms and an async call to google
-    // note the meat of this function wont fire until both
-    // wFORMSReady = 1 and captchaReady = 1
-    onloadCallback();
-  };
-
-  // add event listener to fire when wForms is fully loaded
-  document.addEventListener("wFORMSLoaded", wformsReadyCallback);
-
-  var enableSubmitButton = function() {
-    var submitButton = document.getElementById('submit_button');
-    var explanation = document.getElementById('disabled-explanation');
-    var isConditionalSubmitConditionMet = wFORMS.behaviors.condition.isConditionalSubmitConditionMet;
-    if (
-        submitButton != null &&
-        (isConditionalSubmitEnabled && isConditionalSubmitConditionMet) ||
-        !isConditionalSubmitEnabled
-    ) {
-      submitButton.removeAttribute('disabled');
-      if (explanation != null) {
-        explanation.style.display = 'none';
-      }
-    }
-  };
-  var disableSubmitButton = function() {
-    var submitButton = document.getElementById('submit_button');
-    var explanation = document.getElementById('disabled-explanation');
-    if (submitButton != null) {
-      submitButton.disabled = true;
-      if (explanation != null) {
-        explanation.style.display = 'block';
-      }
-    }
-  };
-
-  // call this on both captcha async complete and wforms fully
-  // initialized since we can't be sure which will complete first
-  // and we need both done for this to function just check that they are
-  // done to fire the functionality
-  var onloadCallback = function() {
-    // if our captcha is ready (async call completed)
-    // and wFORMS is completely loaded then we are ready to add
-    // the captcha to the page
-    if (captchaReady && wFORMSReady) {
-      grecaptcha.enterprise.render('g-recaptcha-render-div', {
-        'sitekey': '6LfMg_EaAAAAAMhDNLMlgqDChzmtYHlx1yU2y7GI',
-        'theme': 'light',
-        'size': 'normal',
-        'callback': 'enableSubmitButton',
-        'expired-callback': 'disableSubmitButton'
-      })
-      var oldRecaptchaCheck = parseInt('1');
-      if (oldRecaptchaCheck === -1) {
-        var standardCaptcha = document.getElementById("tfa_captcha_text");
-        standardCaptcha = standardCaptcha.parentNode.parentNode.parentNode;
-        standardCaptcha.parentNode.removeChild(standardCaptcha);
-      }
-
-      if (!wFORMS.instances['paging']) {
-        document.getElementById("g-recaptcha-render-div").parentNode.parentNode.parentNode.style.display = "block";
-        //document.getElementById("g-recaptcha-render-div").parentNode.parentNode.parentNode.removeAttribute("hidden");
-      }
-      document.getElementById("g-recaptcha-render-div").getAttributeNode('id').value = 'tfa_captcha_text';
-
-      var captchaError = '';
-      if (captchaError == '1') {
-        var errMsgText = 'The CAPTCHA was not completed successfully.';
-        var errMsgDiv = document.createElement('div');
-        errMsgDiv.id = "tfa_captcha_text-E";
-        errMsgDiv.className = "err errMsg";
-        errMsgDiv.innerText = errMsgText;
-        var loc = document.querySelector('.g-captcha-error');
-        loc.insertBefore(errMsgDiv, loc.childNodes[0]);
-
-        /* See wFORMS.behaviors.paging.applyTo for origin of this code */
-        if (wFORMS.instances['paging']) {
-          var b = wFORMS.instances['paging'][0];
-          var pp = base2.DOM.Element.querySelector(document, wFORMS.behaviors.paging.CAPTCHA_ERROR);
-          if (pp) {
-            var lastPage = 1;
-            for (var i = 1; i < 100; i++) {
-              if (b.behavior.isLastPageIndex(i)) {
-                lastPage = i;
-                break;
-              }
-            }
-            b.jumpTo(lastPage);
-          }
-        }
-      }
-    }
-  }
-</script>
-<script src='https://www.google.com/recaptcha/enterprise.js?onload=gCaptchaReadyCallback&render=explicit&hl=en_US' async
-        defer></script>
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function() {
-    var warning = document.getElementById("javascript-warning");
-    if (warning != null) {
-      warning.parentNode.removeChild(warning);
-    }
-    var oldRecaptchaCheck = parseInt('1');
-    if (oldRecaptchaCheck !== -1) {
-      var explanation = document.getElementById('disabled-explanation');
-      var submitButton = document.getElementById('submit_button');
-      if (submitButton != null) {
-        submitButton.disabled = true;
-        if (explanation != null) {
-          explanation.style.display = 'block';
-        }
-      }
-    }
-  });
-</script>
 <script type="text/javascript">
   document.addEventListener("FA__DOMContentLoaded", function() {
     const FORM_TIME_START = Math.floor((new Date).getTime() / 1000);
@@ -285,17 +165,21 @@
     }
   });
 </script>
-
-<link
-  href="https://mozillafoundation.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=75513df1680ccc55e2c889a1b1dff356256982a6"
-  rel="stylesheet" type="text/css"/>
-
-<link
-  href="https://mozillafoundation.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=75513df1680ccc55e2c889a1b1dff356256982a6"
-  rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css"/>
-<script type="text/javascript"
-        src="https://mozillafoundation.tfaforms.net/wForms/3.11/js/wforms.js?v=75513df1680ccc55e2c889a1b1dff356256982a6"></script>
+<link href="https://mozillafoundation.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=7e0d7c68797132abc85b3b6c57cdba52a4d73afd" rel="stylesheet" type="text/css"/>
+<link href="https://mozillafoundation.tfaforms.net/uploads/themes/theme-25.css" rel="stylesheet" type="text/css"/>
+<link href="https://mozillafoundation.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=7e0d7c68797132abc85b3b6c57cdba52a4d73afd" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css"/>
+<script type="text/javascript" src="https://mozillafoundation.tfaforms.net/wForms/3.11/js/wforms.js?v=7e0d7c68797132abc85b3b6c57cdba52a4d73afd"></script>
 <script type="text/javascript">
   wFORMS.behaviors.prefill.skip = false;
 </script>
+
 <script type="text/javascript" src="{{ get_form_assembly_localization_url() }}"></script>
+
+<script
+  id="open-telemetry-script"
+  type="text/javascript"
+  src="https://mozillafoundation.tfaforms.net/dist/open-telemetry/open-telemetry.e3e59835d0ec08f714f1.js"
+  data-customer-id="170610"
+  data-exporter-url="https://us-east-1-otel.formassembly.com/v1/traces"
+  data-exporter-console="0"
+></script>

@@ -623,7 +623,7 @@ def get_form_assembly_localization_url(ctx):
     locale = ctx.get('LANG', settings.LANGUAGE_CODE)
     fa_locale = settings.FA_LANGUAGES.get(locale, 'en_US')
 
-    return "https://mozillafoundation.tfaforms.net/wForms/3.11/js/localization-{locale}.js?v=75513df1680ccc55e2c889a1b1dff356256982a6".format(locale=fa_locale)
+    return "https://mozillafoundation.tfaforms.net/wForms/3.11/js/localization-{locale}.js?v=7e0d7c68797132abc85b3b6c57cdba52a4d73afd".format(locale=fa_locale)
 
 
 @jinja2.pass_context

@@ -2,31 +2,6 @@
   <script>
     // From Mel A at Thunderbird. 06.09.2023. Edited by Mia to change adding en- locales to map and defaulting to 'Other'. Approved by Mel.
     window.addEventListener('DOMContentLoaded', function() {
-
-      /**
-       * Conditionally hides the captcha if the submit button is also hidden
-       * This is currently impossible to do within FormAssembly :^(
-       */
-      function hideCaptcha() {
-        // Grab our submit button (this guy gets conditionally hidden)
-        const submitButton = document.getElementById('submit_button');
-        // Grab their parent (this element holds both our submit button and the google captcha)
-        const actions = submitButton.parentElement;
-
-        // We only care about class changes
-        const config = {attributes: true, attributeFilter: ['class']};
-
-        const callback = (mutationList) => {
-          for (const mutation of mutationList) {
-            // Set our actions parent div (holds both submit and google captcha) to the hidden state of our submit button
-            actions.hidden = mutation.target.classList.contains('offstate') || false;
-          }
-        };
-
-        const observer = new MutationObserver(callback);
-        observer.observe(submitButton, config);
-      }
-
       /**
        * Sets a hidden locale field based on our url path parameter
        * This expects a locale code to be the first path parameter btw
@@ -78,7 +53,6 @@
       }
 
       // Call our functions :^)
-      hideCaptcha();
       setLocale();
     });
 
@@ -86,203 +60,266 @@
   <div class="wFormHeader"></div>
   <div>
     <div class="wForm" id="11-WRPR" dir="ltr">
-      <form method="post" action="https://mozillafoundation.tfaforms.net/api_v2/workflow/processor" class=" labelsLeftAligned" id="11" role="form" enctype="multipart/form-data">
+      <form method="post" action="https://mozillafoundation.tfaforms.net/api_v2/workflow/processor" class=" labelsLeftAligned" id="89" role="form" enctype="multipart/form-data">
         <div class="oneField field-container-D  labelsAbove  " id="tfa_95-D">
-          <label id="tfa_95-L" class="label preField reqMark" for="tfa_95">
-            {{ _('I need') }}
-          </label>
-          <br>
+          <label id="tfa_95-L" class="label preField reqMark" for="tfa_95">{% trans trimmed %}I need{% endtrans %}</label><br>
           <div class="inputWrapper">
-            <select aria-required="true" id="tfa_95" name="tfa_95" title="{{ _('I need') }}" class="required form-select">
-            <option value="">
-              {{ _('Please select...') }}
-            </option>
-            <option value="tfa_186" id="tfa_186" data-conditionals="#tfa_163,#tfa_201,#submit_button,#tfa_184" class="">
-              {{ _('Help with the donation form') }}
-            </option>
-            <option value="tfa_187" id="tfa_187" data-conditionals="#tfa_163,#submit_button,#tfa_210,#tfa_184" class="">
-              {{ _('To change or cancel my monthly recurring donation') }}
-            </option>
-            <option value="tfa_188" id="tfa_188" data-conditionals="#tfa_163,#submit_button,#tfa_184" class="">
-              {{ _('To update my email address or contact info') }}
-            </option>
-            <option value="tfa_189" id="tfa_189" data-conditionals="#tfa_199,#tfa_163,#submit_button,#tfa_184" class="">
-              {{ _('Help donating by bank transfer (SEPA/IBAN)') }}
-            </option>
-            <option value="tfa_190" id="tfa_190" data-conditionals="#tfa_163,#submit_button,#tfa_184" class="">
-              {{ _('Help donating with another currency or payment method') }}
-            </option>
-            <option value="tfa_191" id="tfa_191" data-conditionals="#tfa_163,#submit_button,#tfa_184" class="">
-              {{ _('A copy of my donation receipt') }}
-            </option>
-            <option value="tfa_192" id="tfa_192" data-conditionals="#tfa_163,#submit_button,#tfa_184" class="">
-              {{ _('A year-end donation summary') }}
-            </option>
-            <option value="tfa_193" id="tfa_193" data-conditionals="#tfa_163,#submit_button,#tfa_184" class="">
-              {{ _('My donation refunded') }}
-            </option>
-            <option value="tfa_194" id="tfa_194" data-conditionals="#tfa_163,#tfa_201,#submit_button,#tfa_184" class="">
-              {{ _('Help with an unauthorized or fraudulent donation') }}
-            </option>
-            <option value="tfa_197" id="tfa_197" data-conditionals="#tfa_203" class="">
-              {{ _('Technical support for Thunderbird') }}
-            </option>
-            <option value="tfa_198" id="tfa_198" data-conditionals="#tfa_204" class="">
-              {{ _('To request a feature for Thunderbird') }}
-            </option>
-            <option value="tfa_195" id="tfa_195" data-conditionals="#tfa_163,#submit_button,#tfa_184" class="">
-              {{ _('To submit feedback') }}
-            </option>
-            <option value="tfa_196" id="tfa_196" data-conditionals="#tfa_163,#tfa_201,#submit_button,#tfa_184" class="">
-              {{ _('Help with something else') }}
-            </option>
-          </select></div>
+            <select aria-required="true" id="tfa_95" name="tfa_95" title="I need" class="required">
+              <option value="">{% trans trimmed %}Please select...{% endtrans %}</option>
+              <option value="tfa_186" id="tfa_186" data-conditionals="#tfa_201,#tfa_163,#tfa_211,#tfa_184,#submit_button,#tfa_217" class="">{% trans trimmed %}Help with the donation form{% endtrans %}</option>
+              <option value="tfa_193" id="tfa_193" data-conditionals="#tfa_163,#tfa_184,#submit_button" class="">{% trans trimmed %}My donation refunded{% endtrans %}</option>
+              <option value="tfa_194" id="tfa_194" data-conditionals="#tfa_201,#tfa_163,#tfa_184,#submit_button" class="">{% trans trimmed %}Help with an unauthorized or fraudulent donation{% endtrans %}</option>
+              <option value="tfa_188" id="tfa_188" data-conditionals="#tfa_215" class="">{% trans trimmed %}To update my donation email address{% endtrans %}</option>
+              <option value="tfa_187" id="tfa_187" data-conditionals="#tfa_210" class="">{% trans trimmed %}To change or cancel my monthly recurring donation{% endtrans %}</option>
+              <option value="tfa_189" id="tfa_189" data-conditionals="#tfa_199" class="">{% trans trimmed %}Help donating by bank transfer (SEPA/IBAN){% endtrans %}</option>
+              <option value="tfa_190" id="tfa_190" data-conditionals="#tfa_216" class="">{% trans trimmed %}Help donating with another currency or payment method{% endtrans %}</option>
+              <option value="tfa_191" id="tfa_191" data-conditionals="#tfa_210" class="">{% trans trimmed %}A copy of my donation receipt{% endtrans %}</option>
+              <option value="tfa_197" id="tfa_197" data-conditionals="#tfa_203" class="">{% trans trimmed %}Technical support for Thunderbird{% endtrans %}</option>
+              <option value="tfa_198" id="tfa_198" data-conditionals="#tfa_204" class="">{% trans trimmed %}To request a feature for Thunderbird{% endtrans %}</option>
+              <option value="tfa_196" id="tfa_196" data-conditionals="#tfa_163,#tfa_211,#tfa_184,#submit_button,#tfa_217" class="">{% trans trimmed %}Help with something else{% endtrans %}</option>
+            </select></div>
         </div>
         <div id="tfa_199" class="section group" data-condition="`#tfa_189`">
           <div class="htmlSection" id="tfa_200">
             <div class="htmlContent" id="tfa_200-HTML">
-              <span style="font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial',serif;font-style:normal;text-decoration-skip-ink:none;">
-                {{ _('We truly appreciate your generous support and are happy to now offer an easier way for you to give through online bank transfer. We can accept donations via direct debit in Euros through Single European Payment Area (SEPA) transfer.') }}
+              <span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;">
+                {% trans trimmed %}
+                We truly appreciate your generous support and are happy to offer an easy way for you to give through <b>online bank transfer</b>.
+                We accept donations via direct debit in Euros <b>through Single European Payment Area (SEPA) transfer</b>.
+                To keep our administrative costs to a minimum, we are unfortunately <b>not able to accept offline SEPA bank transfers using IBAN</b>.
+                {% endtrans %}
+                <br><br>
+                <a target="_blank" href="{{ url('thunderbird.donate.form') }}">{% trans trimmed %}Please visit our secure <b>Online Donation Form</b> to make your donation{% endtrans %}</a>.
+                <br>
               </span>
-              <br/>
-              <br/>
-              <div>
-                <b><u><a href="{{ url('thunderbird.donate.form') }}" target="_blank">{{ _('Visit our secure online donation page to make your donation') }}</a></u></b>
-              </div>
-              <br/>
-              <i>{{ _('Still have questions? Contact us by submitting a case.') }}</i></div>
+            </div>
           </div>
         </div>
-        <div id="tfa_210" class="section group" data-condition="`#tfa_187`">
+        <div id="tfa_210" class="section group" data-condition="`#tfa_187` OR `#tfa_191`">
           <div class="htmlSection" id="tfa_209">
-            <div class="htmlContent" id="tfa_209-HTML"><span style="font-size:13px;color:#000000;font-weight:normal;text-decoration:none;font-family:'Arial',serif;font-style:normal;text-decoration-skip-ink:none;">
-              {{ _('Access your donation account settings using the \'<b>Manage My Donation</b>\' button on your recent donation confirmation email. There you can change the amount, frequency, payment method and charge date. You can also cancel your recurring donation plan.') }}
-              </span><br/><br/>
-              <i>{{ _('Still have questions? Contact us by submitting a case.') }}</i></div>
+            <div class="htmlContent" id="tfa_209-HTML">
+              <span style="font-size: 13px; color: rgb(0, 0, 0); font-family: &quot;Arial&quot;; font-style: normal; text-decoration-skip-ink: none;">
+                {% trans trimmed url=url('thunderbird.donate.modify') %}
+                <b>Visit our </b>
+                <a target="_blank" href="{{ url }}"><b>Donor Portal</b></a> for <b>on-demand access to your receipts and to modify or cancel a recurring plan</b> including changing the amount, frequency, payment method and charge date.
+                {% endtrans %}
+                <br><br>
+                <i>{% trans trimmed %}Please note: we are unable to provide customized or summary receipts.{% endtrans %}</i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div id="tfa_217" class="section group" data-condition="`#tfa_196` OR `#tfa_186`">
+          <div class="htmlSection" id="tfa_218">
+            <div class="htmlContent" id="tfa_218-HTML">
+              <span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;">
+                {% trans trimmed url=url('thunderbird.donate.faq') %}
+                Please be sure to check our <a target="_blank" href="{{ url }}"><b>Donation FAQ</b></a> page first as your question may be answered there.
+                {% endtrans %}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="oneField field-container-D    " id="tfa_211-D">
+          <label id="tfa_211-L" class="label preField reqMark" for="tfa_211"><span style="font-size: 13px; color: rgb(0, 0, 0); font-family: &quot;Arial&quot;; font-style: normal; text-decoration-skip-ink: none;">{% trans trimmed %}Issue Summary{% endtrans %}</span></label>
+          <div class="inputWrapper">
+            <input aria-required="true" type="text" id="tfa_211" name="tfa_211" value="" data-condition="`#tfa_196` OR `#tfa_186`" title="{% trans trimmed %}Issue Summary{% endtrans %}" class="required">
           </div>
         </div>
         <div class="oneField field-container-D  labelsAbove  " id="tfa_163-D">
-          <label id="tfa_163-L" class="label preField " for="tfa_163">{{ _('Any other details that might help') }}</label><br>
+          <label id="tfa_163-L" class="label preField " for="tfa_163"><span style="font-size: 13px; color: rgb(0, 0, 0); font-family: &quot;Arial&quot;; font-style: normal; text-decoration-skip-ink: none;">
+            {% trans trimmed %}Please provide more details as needed{% endtrans %}
+          </span></label><br>
           <div class="inputWrapper">
-            <textarea id="tfa_163" name="tfa_163" data-condition="`#tfa_186` OR `#tfa_187` OR `#tfa_188` OR `#tfa_189` OR `#tfa_190` OR `#tfa_191` OR `#tfa_192` OR `#tfa_193` OR `#tfa_194` OR `#tfa_195` OR `#tfa_196`" title="{{ _('Any other details that might help') }}" class=""></textarea>
+            <textarea id="tfa_163" name="tfa_163" data-condition="`#tfa_186` OR `#tfa_193` OR `#tfa_194` OR `#tfa_196`" title="{% trans trimmed %}Please provide more details as needed{% endtrans %}" class=""></textarea>
           </div>
         </div>
         <div class="oneField field-container-D  labelsAbove hintsBelow " id="tfa_201-D">
-          <label id="tfa_201-L" class="label preField " for="tfa_201">
-            {{ _('Add a screenshot to help us with your request (optional)') }}
-          </label>
-          <br/>
+          <label id="tfa_201-L" class="label preField " for="tfa_201"><span style="font-size: 13px; color: rgb(0, 0, 0); font-family: &quot;Arial&quot;; font-style: normal; text-decoration-skip-ink: none;">
+            {% trans trimmed %}
+            Add a screenshot to help us with your request (optional)
+            {% endtrans %}
+          </span>
+          </label><br>
           <div class="inputWrapper">
-            <input type="file" id="tfa_201" name="tfa_201" size="" data-condition="`#tfa_186` OR `#tfa_194` OR `#tfa_196`" title="{{ _('Add a screenshot to help us with your request (optional)') }}" class="">
-            <span class="field-hint-inactive" id="tfa_201-H">
-              <span id="tfa_201-HH" class="hint">{{ _('JPG, PNG and BMP files only') }}</span>
-            </span>
+            <input type="file" id="tfa_201" name="tfa_201" size="" data-condition="`#tfa_186` OR `#tfa_194`" title="{% trans trimmed %}Add a screenshot to help us with your request (optional){% endtrans %}" class=""><span class="field-hint-inactive" id="tfa_201-H"><span id="tfa_201-HH" class="hint">{% trans trimmed %}JPG, PNG and BMP files only{% endtrans %}</span></span>
           </div>
         </div>
-        <div id="tfa_184" class="section group" data-condition="`#tfa_186` OR `#tfa_187` OR `#tfa_188` OR `#tfa_189` OR `#tfa_190` OR `#tfa_191` OR `#tfa_192` OR `#tfa_193` OR `#tfa_194` OR `#tfa_196` OR `#tfa_195`">
+        <div id="tfa_184" class="section group" data-condition="`#tfa_186` OR `#tfa_193` OR `#tfa_194` OR `#tfa_196`">
           <div id="tfa_185" class="section inline group">
             <div class="oneField field-container-D  labelsAbove  " id="tfa_1-D">
-              <label id="tfa_1-L" class="label preField reqMark" for="tfa_1">{{ _('Name') }}</label><br>
+              <label id="tfa_1-L" class="label preField reqMark" for="tfa_1"><span style="font-size: 13px; color: rgb(0, 0, 0); font-family: &quot;Arial&quot;; font-style: normal; text-decoration-skip-ink: none;">
+                {% trans trimmed %}
+                Name
+                {% endtrans %}
+              </span></label><br>
               <div class="inputWrapper">
-                <input aria-required="true" type="text" id="tfa_1" name="tfa_1" value="" title="{{ _('Name') }}" class="required">
+                <input aria-required="true" type="text" id="tfa_1" name="tfa_1" value="" title="{% trans trimmed %}Name{% endtrans %}" class="required">
               </div>
             </div>
             <div class="oneField field-container-D  labelsAbove  " id="tfa_10-D">
-              <label id="tfa_10-L" class="label preField reqMark" for="tfa_10">{{ _('Email') }}</label><br>
+              <label id="tfa_10-L" class="label preField reqMark" for="tfa_10"><span style="font-size: 13px; color: rgb(0, 0, 0); font-family: &quot;Arial&quot;; font-style: normal; text-decoration-skip-ink: none;">
+                {% trans trimmed %}
+                Email
+                {% endtrans %}
+              </span></label><br>
               <div class="inputWrapper">
-                <input aria-required="true" type="text" id="tfa_10" name="tfa_10" value="" title="{{ _('Email') }}" class="validate-email required">
+                <input aria-required="true" type="text" id="tfa_10" name="tfa_10" value="" title="{% trans trimmed %}Email{% endtrans %}" class="validate-email required">
               </div>
             </div>
           </div>
           <div class="htmlSection" id="tfa_182">
             <div class="htmlContent" id="tfa_182-HTML">
-              {{ _('Thunderbird will only use your submitted information for purposes of communicating with you about your request. See our <a href="%(url)s">privacy policy</a> for further information.')|format(url=url('privacy')) }}
+              {% trans trimmed url=url('privacy') %}
+              Thunderbird will only use your submitted information for purposes of communicating with you about your request. See our
+              <a href="{{ url }}" target="_blank">privacy policy</a> for further information.
+              {% endtrans %}
             </div>
           </div>
         </div>
         <div id="tfa_203" class="section group" data-condition="`#tfa_197`">
           <div class="htmlSection" id="tfa_206">
             <div class="htmlContent" id="tfa_206-HTML">
-              {{ _('We are unable to offer help with Thunderbird technical issues through the Donor Help form.') }}
-              <br>
               <div>
-                {{ _('Our <a href="%(url)s" target="_blank">knowledge base</a> and active user community can help!')|format(url=url('mozorg.connect.tb')) }}
-              </div>
-              <br/>
-              <div>
-                <b>
-                  <a href="{{ _(url('support')) }}" target="_blank">{{ _('Visit our technical support site to get more help') }}</a>
-                </b>
+                <div><span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;">
+                  {% trans trimmed url=url('support') %}
+                  Our Donor Support Team is unable to respond to any technical support questions. We do not provide technical support in exchange for financial gifts. To ensure that you get the help that you need, please
+                  <a target="_blank" href="{{ url }}">visit our technical support page</a>.
+                  {% endtrans %}
+                  <br><br>
+                  {% trans trimmed url=url('support') %}
+                  Thunderbird <b>technical support is community-based </b>and available to everyone. Our technical support page <b>includes knowledge base articles and a community of volunteers ready to help</b>!<br><br><a target="_blank" href="{{ url }}"><b>Visit our technical support site to get more help</b></a>.
+                  {% endtrans %}
+                </span>
+                  <style type="text/css">td {
+                    border: 1px solid #cccccc;
+                  }
+
+                  br {
+                    mso-data-placement: same-cell;
+                  }</style>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div id="tfa_204" class="section group" data-condition="`#tfa_198`">
           <div class="htmlSection" id="tfa_207">
-            <div class="htmlContent" id="tfa_207-HTML"><span>
-              {{ _('<a href="%(url)s" target="_blank">Mozilla Connect</a> is a collaborative space for ideas, feedback, and discussions that will help shape future Thunderbird product releases.')|format(url=url('mozorg.connect')) }}
-              {{ _('<a href="%(url)s" target="_blank">Submit your idea</a> and be sure to tag Thunderbird so others can find and vote on your suggestion.')|format(url=url('mozorg.connect.tb')) }}
-            </span>
-              <br/>
-              <div>
-                {{ _('For product technical support, please visit our <a href="%(url)s" target="_blank">support page</a>.')|format(url=url('support')) }}
+            <div class="htmlContent" id="tfa_207-HTML"><span></span>
+              <div><span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;">
+              {% trans trimmed url=url('mozorg.connect') %}
+                Our Donor Support Team is unable to respond to your Thunderbird product feedback and feature requests. But, we want to hear from you!
+                Please visit<b> <a target="_blank" href="{{ url }}">Mozilla Connect</a></b>.
+              {% endtrans %}
+                <br><br>
+              {% trans trimmed url=url('mozorg.connect'), url2=url('mozorg.connect.tb'), url3=url('support') %}
+                <a target="_blank" href="{{ url }}"><b>Mozilla Connect</b></a> is a collaborative space for ideas, feedback, and discussions that will help shape future Thunderbird product releases.
+                <a target="_blank" href="{{ url2 }}"><b>Submit your ideas</b></a> and be sure to tag Thunderbird so others can find and vote on your suggestions.<br><br>
+                For Thunderbird technical support, please visit our <a target="_blank" href="{{ url3 }}"><b>support page</b></a>
+              {% endtrans %}
+              </span>
               </div>
-              <br/>
               <div>
-                <b>
-                  {{ _('<a href="%(url)s" target="_blank">Visit Mozilla Connect to submit your idea for Thunderbird</a>')|format(url=url('mozorg.connect.tb')) }}
-                </b>
-                <br/>
+                <span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;"><br></span>
+              </div>
+              <div>
+                <span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;">
+                  <a target="_blank" href="{{ url('mozorg.connect.tb') }}">
+                    <b>{% trans trimmed %}Visit Mozilla Connect to submit your ideas for Thunderbird.{% endtrans %}</b></a></span>
+                <style type="text/css">td {
+                  border: 1px solid #cccccc;
+                }
+
+                br {
+                  mso-data-placement: same-cell;
+                }</style>
               </div>
             </div>
           </div>
         </div>
         <div class="oneField field-container-D  labelsLeftAligned   wf-acl-hidden" id="tfa_72-D">
-          <label id="tfa_72-L" class="label preField " for="tfa_72">{{ _('Language') }}</label>
-          <div class="inputWrapper">
-            <select id="tfa_72" name="tfa_72" title="{{ _('Language') }}" class="">
-              <option value="">{{ _('Please select...') }}</option>
-              <option value="tfa_73" id="tfa_73" class="">{{ _('Chinese Simplified') }}</option>
-              <option value="tfa_74" id="tfa_74" class="">{{ _('Czech') }}</option>
-              <option value="tfa_75" id="tfa_75" class="">{{ _('Danish') }}</option>
-              <option value="tfa_76" id="tfa_76" class="">{{ _('Dutch') }}</option>
-              <option value="tfa_77" id="tfa_77" class="">{{ _('English') }}</option>
-              <option value="tfa_78" id="tfa_78" class="">{{ _('French') }}</option>
-              <option value="tfa_79" id="tfa_79" class="">{{ _('German') }}</option>
-              <option value="tfa_80" id="tfa_80" class="">{{ _('Italian') }}</option>
-              <option value="tfa_81" id="tfa_81" class="">{{ _('Japanese') }}</option>
-              <option value="tfa_82" id="tfa_82" class="">{{ _('Other') }}</option>
-              <option value="tfa_83" id="tfa_83" class="">{{ _('Polish') }}</option>
-              <option value="tfa_84" id="tfa_84" class="">{{ _('Portuguese') }}</option>
-              <option value="tfa_85" id="tfa_85" class="">{{ _('Russian') }}</option>
-              <option value="tfa_86" id="tfa_86" class="">{{ _('Spanish') }}</option>
-            </select>
-          </div>
+          <label id="tfa_72-L" class="label preField " for="tfa_72">Language</label>
+          <div class="inputWrapper"><select id="tfa_72" name="tfa_72" title="Language" class="">
+            <option value="">{% trans trimmed %}Please select...{% endtrans %}</option>
+            <option value="tfa_73" id="tfa_73" class="">{% trans trimmed %}Chinese Simplified{% endtrans %}</option>
+            <option value="tfa_74" id="tfa_74" class="">{% trans trimmed %}Czech{% endtrans %}</option>
+            <option value="tfa_75" id="tfa_75" class="">{% trans trimmed %}Danish{% endtrans %}</option>
+            <option value="tfa_76" id="tfa_76" class="">{% trans trimmed %}Dutch{% endtrans %}</option>
+            <option value="tfa_77" id="tfa_77" class="">{% trans trimmed %}English{% endtrans %}</option>
+            <option value="tfa_78" id="tfa_78" class="">{% trans trimmed %}French{% endtrans %}</option>
+            <option value="tfa_79" id="tfa_79" class="">{% trans trimmed %}German{% endtrans %}</option>
+            <option value="tfa_80" id="tfa_80" class="">{% trans trimmed %}Italian{% endtrans %}</option>
+            <option value="tfa_81" id="tfa_81" class="">{% trans trimmed %}Japanese{% endtrans %}</option>
+            <option value="tfa_82" id="tfa_82" class="">{% trans trimmed %}Other{% endtrans %}</option>
+            <option value="tfa_83" id="tfa_83" class="">{% trans trimmed %}Polish{% endtrans %}</option>
+            <option value="tfa_84" id="tfa_84" class="">{% trans trimmed %}Portuguese{% endtrans %}</option>
+            <option value="tfa_85" id="tfa_85" class="">{% trans trimmed %}Russian{% endtrans %}</option>
+            <option value="tfa_86" id="tfa_86" class="">{% trans trimmed %}Spanish{% endtrans %}</option>
+          </select></div>
         </div>
-        <div class="actions" id="11-A" data-contentid="submit_button">
-          <div id="google-captcha" style="display: none">
-            <br>
-            <div class="captcha">
-              <div class="oneField">
-                <div class="g-recaptcha" id="g-recaptcha-render-div"></div>
-                <div class="g-captcha-error"></div>
-                <br>
-              </div>
-              <div class="captchaHelp">{{ _('reCAPTCHA helps prevent automated form spam.') }}<br>
-              </div>
-              <div id="disabled-explanation" class="captchaHelp" style="display: none">
-                {{ _('The submit button will be disabled until you complete the CAPTCHA.') }}
-              </div>
+        <div id="tfa_215" class="section group" data-condition="`#tfa_188`">
+          <div class="htmlSection" id="tfa_214">
+            <div class="htmlContent" id="tfa_214-HTML">
+              <style type="text/css">td {
+                border: 1px solid #cccccc;
+              }
+
+              br {
+                mso-data-placement: same-cell;
+              }</style>
+              <span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;">
+                {% trans trimmed url=url('thunderbird.donate.modify') %}
+                To update the email that you are using to make and manage your donations, please <b>visit our <a target="_blank" href="{{ url }}">Donor Portal</a></b>.
+                {% endtrans %}
+                <br><br>
+                {% trans trimmed %}
+                To sign in to your donor portal, please use the email that you used to make your donation.
+                {% endtrans %}
+              </span>
             </div>
           </div>
-          <input type="submit" data-label="Submit" class="btn btn-white-bg" id="submit_button" value="{{ _('Submit') }}" data-condition="`#tfa_186` OR `#tfa_187` OR `#tfa_188` OR `#tfa_189` OR `#tfa_190` OR `#tfa_191` OR `#tfa_191` OR `#tfa_192` OR `#tfa_192` OR `#tfa_193` OR `#tfa_194` OR `#tfa_195` OR `#tfa_196`" data-conditional-mode="hidden">
+        </div>
+        <div id="tfa_216" class="section group" data-condition="`#tfa_190`">
+          <div class="htmlSection" id="tfa_213">
+            <div class="htmlContent" id="tfa_213-HTML">
+              <span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;">
+                {% trans trimmed url=url('thunderbird.donate.form') %}
+                We currently <b>accept over 100 currencies through our <a target="_blank" href="{{ url }}">donation form</a>!</b>
+                {% endtrans %}
+              </span>
+              <span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;">
+                {% trans trimmed %}
+                If you do not see your preferred currency listed, we unfortunately cannot accept that currency at this time.
+                {% endtrans %}
+                <br><br>
+                {% trans trimmed %}
+                We <b>also accept a number of payment methods</b> which, depending upon your location, include by Credit Card, PayPal, SEPA Direct Debit, iDEAL, Google Pay, Apple Pay, and ACH.
+                If you do not see your preferred payment method listed, we unfortunately do not accept that method at this time.
+                {% endtrans %}
+                <br><br>
+                {% trans trimmed %}
+                We do not accept donations in crypto.
+                {% endtrans %}
+                <br><br>
+                {% trans trimmed url=url('thunderbird.donate.faq')  %}
+                If you are in the US (or using a US bank account), you can donate via check. Detailed instructions are available on our <a target="_blank" href="{{ url }}"><b>Donation FAQ</b></a> page.
+                {% endtrans %}
+              </span>
+              <style type="text/css">td {
+                border: 1px solid #cccccc;
+              }
+
+              br {
+                mso-data-placement: same-cell;
+              }</style>
+            </div>
+          </div>
+        </div>
+        <div class="actions" id="89-A" data-contentid="submit_button">
+          <input type="submit" data-label="Submit" class="primaryAction" id="submit_button" value="Submit" data-condition="`#tfa_186` OR `#tfa_193` OR `#tfa_194` OR `#tfa_196`" data-conditional-mode="hidden">
         </div>
         <div style="clear:both"></div>
-        <input type="hidden" value="11" name="tfa_dbFormId" id="tfa_dbFormId">
-        <input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="69375506ef70f34cfe24c2df010f0438" name="tfa_dbControl" id="tfa_dbControl">
-        <input type="hidden" value="" name="tfa_dbWorkflowSessionUuid" id="tfa_dbWorkflowSessionUuid">
-        <input type="hidden" value="27" name="tfa_dbVersionId" id="tfa_dbVersionId">
-        <input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+        <input type="hidden" value="89" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="eed9988885b5ff8bb916a8049de0ca72" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="" name="tfa_dbWorkflowSessionUuid" id="tfa_dbWorkflowSessionUuid"><input type="hidden" value="68" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
       </form>
     </div>
     <div class="wFormFooter"><p class="supportInfo"><br></p></div>
