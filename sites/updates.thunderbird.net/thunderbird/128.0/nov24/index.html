@@ -172,7 +172,7 @@
            class="btn btn-no-bg"
            aria-label="{{ _('Donate') }}"
            {% if donation_base_url != None %}target="_blank"{% endif %}
-           href="{{ donate_url(content='bottom_cta', campaign=utm_campaign, form_id=fru_form_id, base_url=donation_base_url) }}">
+           href="{{ donate_url(content='bottom_cta', campaign=utm_campaign, form_id=fru_form_id, base_url=donation_base_url, source='thunderbird-client') }}">
           <span aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</span>
           {{ _('Donate') }}
         </a>
