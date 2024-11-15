@@ -17,9 +17,11 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinx_rtd_light_dark',
     'myst_parser',
 ]
+# removing sphinx_rtd_light_dark extension because:
+# sphinx.errors.ThemeError: An error happened in rendering the page archived.
+# Reason: UndefinedError("'style' is undefined")
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
@@ -31,7 +33,8 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_light_dark'
+#html_theme = 'sphinx_rtd_light_dark'
+html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
