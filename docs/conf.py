@@ -3,8 +3,8 @@
 # -- Project information
 
 project = 'Thunderbird Websites'
-copyright = '2024, Mozilla'
-author = 'Mozilla'
+copyright = '2024, MZLA Technologies Corporation'
+author = 'MZLA Technologies Corporation'
 
 release = '0.1'
 version = '0.1.0'
