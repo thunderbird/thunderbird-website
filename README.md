@@ -4,7 +4,7 @@ This repo contains the Thunderbird in-client Start page, the [www.thunderbird.ne
 * The `prod` branch is used to update https://start.thunderbird.net, https://www.thunderbird.net, and https://updates.thunderbird.net.
 * The `master` branch is used to update https://start-stage.thunderbird.net, https://www-stage.thunderbird.net, and https://updates-stage.thunderbird.net.
 
-Additional information can be found in our [readthedocs documentation](https://thunderbird-website.readthedocs.io/en/latest/).
+Additional information can be found in our [readthedocs documentation](https://docs.thunderbird.net/en/latest/).
 
 # Build Instructions
 
