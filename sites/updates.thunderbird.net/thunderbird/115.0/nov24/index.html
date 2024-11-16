@@ -1,0 +1,190 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{#
+ # This is the appeal page that will be loaded into Thunderbird directly.
+ # Instead of the donation form it links to $url/donate which forces Thunderbird to open the page
+ # in the user's preferred browser. This is hopefully less annoying for the end-user.
+ #}
+{% set active_page = "appeal-nov24" %}
+
+{# For donation url generation #}
+{% set fru_form_id = fru_form_id|default('20years') %}
+{% set utm_campaign = utm_campaign|default('nov24_appeal_115') %}
+{% set donation_base_url = donation_base_url|default(url('updates.appeal.nov24.donate')) %}
+
+{% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
+{% block base_css %}
+  <link href="{{ static('css/appeal-nov24-style.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block page_title %}{{ _('20 Years of Thunderbird!') }}{% endblock %}
+
+{% macro svg_img(file_name, alt_text='') %}
+<img src="{{ static('svg/{file_name}.svg'.format(file_name=file_name)) }}" alt="{{ alt_text }}"/>
+{% endmacro %}
+
+{% block content %}
+  <section id="twenty-years">
+    <div class="container">
+      <div class="section-text">
+        <h1>{{ _('Thunderbird <span role="complementary">Turns 20, Thanks to You!</span>') }}</h1>
+        <div id="header-graphic" aria-label="{{ _('The text 20 Years with a the Thunderbird logo in place of the zero.') }}">
+          {{ high_res_img('thunderbird/appeal/nov24/new-header-graphic.png', {'alt': _('20')}, alt_formats=()) }}
+          <span id="years">{{ _('Years') }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="appeal">
+    <div class="container">
+      <div class="copy-section section-text">
+        {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, base_url=donation_base_url) }}
+        <p>{{ _('On December 7, 2004, Thunderbird 1.0 was released.') }}</p>
+        <p>{{ _('Thunderbird is free. Free to use. Free of ads. Free of data tracking.') }}</p>
+        <p>{{ _('We rely solely on the generosity of our supporters and less than <b>3% of Thunderbird users keep us going.</b>') }}</p>
+        <p><b>{{ _('Please help us continue for another 20 years.') }}</b></p>
+      </div>
+    </div>
+  </section>
+  <section id="timeline">
+    <div class="container">
+      <div class="timeline-connector">
+        {{ svg_img('appeal/nov24/timeline-connector') }}
+      </div>
+      <div class="timeline-line"></div>
+      <div class="features">
+        <div class="feature year-2004">
+          <div class="timeline-blip">
+            <h3>2004</h3>
+            <div class="blip-and-line">
+              <div class="line"></div>
+              <div class="blip"></div>
+            </div>
+          </div>
+          <div class="screenshot">
+            {{ high_res_img('thunderbird/appeal/nov24/screen-2004.png', {'alt': ''}, alt_formats=()) }}
+            <div class="screenshot-logo">
+              {{ high_res_img('thunderbird/appeal/nov24/logo-2004.png', {'alt': ''}, alt_formats=('webp', 'avif')) }}
+            </div>
+          </div>
+          <div class="stickers">
+            <div class="sticker-im">
+              {{ svg_img('appeal/nov24/instant-messenger') }}
+            </div>
+            <div class="sticker-dial-up">
+              {{ svg_img('appeal/nov24/dial-up') }}
+            </div>
+            <div class="sticker-flip-phone">
+              {{ svg_img('appeal/nov24/flip-phone') }}
+            </div>
+            <div class="sticker-envelope">
+              {{ svg_img('appeal/nov24/envelope') }}
+            </div>
+          </div>
+        </div>
+        <div class="feature reverse year-2009">
+          <div class="timeline-blip">
+            <h3>2009</h3>
+            <div class="blip-and-line">
+              <div class="line"></div>
+              <div class="blip"></div>
+            </div>
+          </div>
+          <div class="screenshot">
+            {{ high_res_img('thunderbird/appeal/nov24/screen-2009.png', {'alt': ''}, alt_formats=()) }}
+            <div class="screenshot-logo">
+              {{ high_res_img('thunderbird/appeal/nov24/logo-2009.png', {'alt': ''}, alt_formats=('webp', 'avif')) }}
+            </div>
+          </div>
+          <div class="stickers">
+            <div class="sticker-media-player">
+              {{ svg_img('appeal/nov24/media-player') }}
+            </div>
+            <div class="sticker-envelope-2">
+              {{ svg_img('appeal/nov24/envelope-2') }}
+            </div>
+            <div class="sticker-chat">
+              {{ svg_img('appeal/nov24/chat') }}
+            </div>
+          </div>
+        </div>
+        <div class="feature year-2018">
+          <div class="timeline-blip">
+            <h3>2018</h3>
+            <div class="blip-and-line">
+              <div class="line"></div>
+              <div class="blip"></div>
+            </div>
+          </div>
+          <div class="screenshot">
+            {{ high_res_img('thunderbird/appeal/nov24/screen-2018.png', {'alt': ''}, alt_formats=()) }}
+            <div class="screenshot-logo">
+              {{ high_res_img('thunderbird/appeal/nov24/logo-2018.png', {'alt': ''}, alt_formats=('webp', 'avif')) }}
+            </div>
+          </div>
+          <div class="stickers">
+            <div class="sticker-early-smart-phone">
+              {{ svg_img('appeal/nov24/early-smart-phone') }}
+            </div>
+            <div class="sticker-mail">
+              {{ svg_img('appeal/nov24/mail') }}
+            </div>
+            <div class="sticker-video-chat">
+              {{ svg_img('appeal/nov24/video-chat') }}
+            </div>
+          </div>
+        </div>
+        <div class="feature reverse year-2024">
+          <div class="timeline-blip">
+            <h3>2024</h3>
+            <div class="blip-and-line">
+              <div class="line"></div>
+              <div class="blip"></div>
+            </div>
+          </div>
+          <div class="screenshot">
+            {{ high_res_img('thunderbird/appeal/nov24/screen-2024.png', {'alt': ''}, alt_formats=()) }}
+            <div class="screenshot-logo">
+              {{ high_res_img('thunderbird/appeal/nov24/logo-2024.png', {'alt': ''}, alt_formats=('webp', 'avif')) }}
+            </div>
+          </div>
+          <div class="stickers">
+            <div class="sticker-envelope-3">
+              {{ svg_img('appeal/nov24/envelope-3') }}
+            </div>
+            <div class="sticker-modern-smart-phone">
+              {{ svg_img('appeal/nov24/modern-smart-phone') }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-graphic">
+        {{ high_res_img('thunderbird/appeal/nov24/logo-20-years.png', {'alt': _('The text 20 Years with a the Thunderbird logo in place of the zero.')}, alt_formats=('avif', 'webp')) }}
+      </div>
+      <div class="heart-container">
+        <div class="left-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <a id="donate-footer"
+           class="btn btn-no-bg"
+           aria-label="{{ _('Donate') }}"
+           {% if donation_base_url != None %}target="_blank"{% endif %}
+           href="{{ donate_url(content='bottom_cta', campaign=utm_campaign, form_id=fru_form_id, base_url=donation_base_url, source='thunderbird-client') }}">
+          <span aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</span>
+          {{ _('Donate') }}
+        </a>
+        <div class="right-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <p class="closing-text">
+        {{ _('The Thunderbird Team') }}
+      </p>
+    </div>
+  </section>
+{% endblock %}

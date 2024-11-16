@@ -1,0 +1,16 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{#
+ # This is an exact replicate of nov24/index.html but without the base_url set in donate_button.
+ # This actually pulls up the form!
+ #}
+{% set active_page = "appeal-nov24" %}
+
+{# For donation url generation #}
+{% set fru_form_id = '20years' %}
+{% set utm_campaign = 'nov24_appeal_115' %}
+{% set donation_base_url = None %}
+
+{# Just include previous page instead of duplicating it all #}
+{% extends "thunderbird/128.0/nov24/index.html" %}
