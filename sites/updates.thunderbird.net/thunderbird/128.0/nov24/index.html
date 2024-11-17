@@ -11,7 +11,8 @@
 {# For donation url generation #}
 {% set fru_form_id = fru_form_id|default('20years') %}
 {% set utm_campaign = utm_campaign|default('nov24_appeal') %}
-{% set donation_base_url = donation_base_url|default(url('updates.appeal.nov24.donate')) %}
+{% set utm_source = utm_source|default('thunderbird-client') %}
+{% set donation_base_url = donation_base_url|default(url('updates.128.appeal.nov24.donate')) %}
 
 {% extends "includes/base/base.html" %}
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
@@ -39,7 +40,7 @@
   <section id="appeal">
     <div class="container">
       <div class="copy-section section-text">
-        {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, base_url=donation_base_url) }}
+        {{ donate_button(form_id=fru_form_id, source=utm_source, campaign=utm_campaign, base_url=donation_base_url) }}
         <p>{{ _('On December 7, 2004, Thunderbird 1.0 was released.') }}</p>
         <p>{{ _('Thunderbird is free. Free to use. Free of ads. Free of data tracking.') }}</p>
         <p>{{ _('We rely solely on the generosity of our supporters and less than <b>3% of Thunderbird users keep us going.</b>') }}</p>
