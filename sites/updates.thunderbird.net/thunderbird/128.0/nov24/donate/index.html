@@ -10,6 +10,7 @@
 {# For donation url generation #}
 {% set fru_form_id = '20years' %}
 {% set utm_campaign = 'nov24_appeal' %}
+{% set utm_source = utm_source|default('thunderbird-client') %}
 {% set donation_base_url = None %}
 
 {# Just include previous page instead of duplicating it all #}
