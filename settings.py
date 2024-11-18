@@ -330,7 +330,8 @@ START_JS = {
 
 UPDATES_CSS = {
     'updates-style': ['less/updates-style.less'],
-    'appeal-nov24-style': ['less/appeals/nov24.less']
+    'appeal-nov24-style': ['less/appeals/nov24.less'],
+    'appeal-dec24-style': ['less/appeals/dec24.less'],
 }
 
 UPDATES_JS = {

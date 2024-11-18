@@ -1,0 +1,72 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{#
+# This is the appeal page that will be loaded into Thunderbird directly.
+# Instead of the donation form it links to $url/donate which forces Thunderbird to open the page
+# in the user's preferred browser. This is hopefully less annoying for the end-user.
+#}
+
+{% set active_page = "appeal-dec24" %}
+
+{# For donation url generation #}
+{% set fru_form_id = fru_form_id|default('eoy2024') %}
+{% set utm_campaign = utm_campaign|default('dec24_appeal') %}
+{% set donation_base_url = donation_base_url|default(url('updates.appeal.dec24.donate')) %}
+
+{% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
+
+{% block base_css %}
+  <link href="/media/css/appeal-128.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block page_title %}{{ _('Help Keep Thunderbird Alive!') }}{% endblock %}
+{% block site_header_unwrapped %}
+  <div class="overlay"></div>
+  <div class="nebula-bg"></div>
+{% endblock %}
+{% block site_header %}
+  <div id="appeal-header">
+    <header>
+      <h1 id="appeal-heading" aria-label="{{ _('Help Keep Thunderbird Alive!') }}">
+        {{ _('Help Keep <span>Thunderbird Alive</span>') }}
+      </h1>
+    </header>
+    <aside id="illustration" aria-hidden="true">
+      <div id="roc">{{ svg('appeal/appeal-128/space-roc') }}</div>
+    </aside>
+  </div>
+{% endblock %}
+{% block content %}
+  <section id="appeal-body" class="letter-container font-xl">
+    {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, base_url=donation_base_url) }}
+
+    <p>{{ _('All of the work we do is funded by less than 3% of our users.')}}</p>
+    <p>
+      {{ _('We never show advertisements or sell your data. We don’t have corporate funding. We are fully funded by financial contributions from our users.')}}
+    </p>
+    <p>
+      {{ _('Thunderbird’s mission is to give you the best privacy-respecting, customizable email experience possible. Free for everyone to install and enjoy! Maintaining expensive servers, fixing bugs, developing new features, and hiring talented engineers are crucial for this mission.')}}
+    </p>
+    <p>
+      {{ _('If you get value from using Thunderbird, please help support it. We can’t do this without you.')}}
+    </p>
+    <div class="heart-container">
+      <div class="left-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+      <div class="right-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+  </section>
+{% endblock %}
+{% block site_footer %}
+  {% include 'includes/donation-includes.html' %}
+{% endblock site_footer %}
