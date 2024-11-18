@@ -1,0 +1,96 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. -#} {# # This is the appeal page
+that will be loaded into Thunderbird directly. # Instead of the donation form it
+links to $url/donate which forces Thunderbird to open the page # in the user's
+preferred browser. This is hopefully less annoying for the end-user. #} {% set
+active_page = "appeal-dec24" %} {# For donation url generation #} {% set
+fru_form_id = fru_form_id|default('20years') %} {% set utm_campaign =
+utm_campaign|default('dec24_appeal') %} {% set donation_base_url =
+donation_base_url|default(url('updates.appeal.dec24.donate')) %} {% set
+active_page = "128-appeal" %} {% extends "includes/base/base.html" %} {% block
+base_css %}<link
+  href="/media/css/appeal-128.css"
+  rel="stylesheet"
+  type="text/css"
+/>{% endblock %} {% block page_title %}{{ _('Thank you for choosing
+Thunderbird!') }}{% endblock %} {% block site_header_unwrapped %}
+<div class="overlay"></div>
+<div class="nebula-bg"></div>
+{% endblock %} {% block site_header %}
+<div id="appeal-header">
+  <header>
+    <h1 id="appeal-heading" aria-label="{{ _('HELP KEEP THUNDERBIRD ALIVE') }}">
+      {{ _('HELP KEEP <span>THUNDERBIRD ALIVE</span>') }}
+    </h1>
+    <p>
+      {{ _('Thunderbird is proud to be funded by our community, not by selling
+      personal data or showing ads in your inbox.')}}
+    </p>
+  </header>
+  <aside id="illustration" aria-hidden="true">
+    <div id="roc">{{ svg('appeal/appeal-128/space-roc') }}</div>
+  </aside>
+</div>
+{% endblock %} {% block content %}
+<section id="appeal-body" class="letter-container font-xl">
+  <a
+    href="{{ donate_url(content='cta', campaign='128_appeal', source='thunderbird-client') }}"
+    class="donate-banner"
+    data-donate-btn
+  >
+    <div id="donate-banner-left">{{ _('Click here to <b>Donate!</b>') }}</div>
+    <div id="decoration">
+      <div id="pill-1" class="pill"></div>
+      <div id="pill-2" class="pill"></div>
+      <div id="pill-3" class="pill"></div>
+      <div id="pill-4" class="pill"></div>
+      <div id="pill-5" class="pill"></div>
+      <div id="pill-6" class="pill"></div>
+      <div id="pill-7" class="pill"></div>
+      <div id="pill-8" class="pill"></div>
+      <div id="pill-9" class="pill"></div>
+      <div id="pill-10" class="pill"></div>
+    </div>
+    <div id="donate-banner-right" class="text-right accent-text self-end">
+      {{ _('Help keep <b>Thunderbird Alive!</b>') }}
+    </div>
+    <div id="hover-hearts">
+      <div id="hover-heart-1">{{ svg('donate-heart') }}</div>
+      <div id="hover-heart-2">{{ svg('donate-heart') }}</div>
+      <div id="hover-heart-3">{{ svg('donate-heart') }}</div>
+    </div>
+  </a>
+  <p>{{ _('All of the work we do is funded by less than 3% of our users.')}}</p>
+  <p>
+    {{ _('We never show advertisements or sell your data. We don’t have
+    corporate funding. We are fully funded by financial contributions from our
+    users.')}}
+  </p>
+  <p>
+    {{ _('Thunderbird’s mission is to give you the best privacy-respecting,
+    customizable email experience possible. Free for everyone to install and
+    enjoy! Maintaining expensive servers, fixing bugs, developing new features,
+    and hiring talented engineers are crucial for this mission.')}}
+  </p>
+  <p>
+    {{ _('If you get value from using Thunderbird, please help support it. We
+    can’t do this without you.')}}
+  </p>
+  <div class="heart-container">
+    <div class="left-lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+    <div class="right-lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+</section>
+{% endblock %} {% block site_footer%} {% include
+'includes/donation-includes.html' %} {% endblock site_footer %}
