@@ -18,13 +18,16 @@
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
 
 {% block base_css %}
-  <link href="/media/css/appeal-128.css" rel="stylesheet" type="text/css"/>
+  <link href="{{ static('css/appeal-dec24-style.css') }}" rel="stylesheet" type="text/css"/>
+
 {% endblock %}
 {% block page_title %}{{ _('Help Keep Thunderbird Alive!') }}{% endblock %}
+
 {% block site_header_unwrapped %}
-  <div class="overlay"></div>
-  <div class="nebula-bg"></div>
+<div class="overlay"></div>
+<div id="bg-img"></div>
 {% endblock %}
+
 {% block site_header %}
   <div id="appeal-header">
     <header>
@@ -33,7 +36,9 @@
       </h1>
     </header>
     <aside id="illustration" aria-hidden="true">
-      <div id="roc">{{ svg('appeal/appeal-128/space-roc') }}</div>
+      <div id="roc">
+        {{ high_res_img('thunderbird/appeal/dec24/forest-roc.png', {'alt': _('')}, alt_formats=()) }}
+      </div>
     </aside>
   </div>
 {% endblock %}
