@@ -82,16 +82,26 @@
         <div id="tfa_199" class="section group" data-condition="`#tfa_189`">
           <div class="htmlSection" id="tfa_200">
             <div class="htmlContent" id="tfa_200-HTML">
-              <span data-sheets-root="1" style="font-size:10pt;font-family:Arial;font-style:normal;">
-                {% trans trimmed %}
-                We truly appreciate your generous support and are happy to offer an easy way for you to give through <b>online bank transfer</b>.
-                We accept donations via direct debit in Euros <b>through Single European Payment Area (SEPA) transfer</b>.
-                To keep our administrative costs to a minimum, we are unfortunately <b>not able to accept offline SEPA bank transfers using IBAN</b>.
-                {% endtrans %}
-                <br><br>
-                <a target="_blank" href="{{ url('thunderbird.donate.form') }}">{% trans trimmed %}Please visit our secure <b>Online Donation Form</b> to make your donation{% endtrans %}</a>.
-                <br>
-              </span>
+              <div data-sheets-root="1">
+                <p><b>{{ _('Please note that due to the limited contact information we receive, we are unable to issue donation receipts or acknowledgements.') }}</b></p>
+                <ul class="unstyled-list">
+                  <li><b>{{ _('Account currency:') }}</b> Euro (EUR)</li>
+                  <li><b>{{ _('Name of payee:') }}</b> FCB-SVB MZLA Technologies Corporation</li>
+                  <li><b>{{ _('IBAN:') }}</b> DE05 5123 0500 0500 2158 09</li>
+                  <li><b>{{ _('Purpose:') }}</b> Thunderbird</li>
+                </ul>
+                <ul class="unstyled-list">
+                  <li><b>{{ _('Beneficiary\'s bank:') }}</b> Standard Chartered Bank</li>
+                  <li><b>{{ _('Location:') }}</b> Frankfurt, Germany</li>
+                  <li><b>{{ _('BIC:') }}</b> SCBLDEFX</li>
+                </ul>
+                <p>{{ _('If your bank requires our office address:') }}</p>
+                <ul class="unstyled-list address-list">
+                  <li>149 New Montgomery St, 4th Floor</li>
+                  <li>San Francisco, CA 94105</li>
+                  <li>USA</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
