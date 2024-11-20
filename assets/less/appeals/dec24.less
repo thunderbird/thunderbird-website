@@ -61,7 +61,7 @@
     --bg-img: url('/media/img/thunderbird/appeal/dec24/background-image-high-res.png');
     --bg-img-set: image-set(var(--bg-img) type('image/png'),
     url('/media/img/thunderbird/appeal/dec24/background-image-high-res.webp') type('image/webp'));
-    --bg-size: 1091px 1008px;
+    --bg-size: 68.188rem 63rem;
     --bg-position: center top;
 
     position: absolute;
@@ -69,7 +69,7 @@
     display: flex;
     width: 100%;
     height: 100%;
-    max-height: 500px;
+    max-height: 31.25rem;
     justify-content: center;
     z-index: -1;
 
@@ -83,32 +83,30 @@
   #appeal-header {
 
     position: relative;
-    /* left: 50px; */
 
     display: flex;
     flex-direction: column-reverse;
-    gap: 30px;
-    margin: 0 auto 52px;
-    padding: 0 24px 24px;
+    gap: 1.875rem;
+    margin: 0 auto 3.25rem;
+    padding: 0 1.5rem 1.5rem;
 
     width: 100%;
-    max-width: 900px;
+    max-width: 56.25rem;
     align-items: center;
     font-size: 1.25rem;
 
     @media (min-width: @ss) {
-      gap: 60px;
+      gap: 3.75;
     }
 
     @media (min-width: @sm) {
-      gap: 60px;
       padding: 0;
     }
 
     @media (min-width: @md) {
-      padding: 0 24px 24px;
+      padding: 0 1.5rem 1.5rem;
       flex-direction: row;
-      gap: 9px;
+      gap: 0.563rem;
       align-items: flex-end;
     }
 
@@ -166,17 +164,17 @@
     }
     #illustration > #roc {
       position: absolute;
-      top: -100px;
+      top: -6.25rem;
 
       @media (min-width: @ss) {
-        top: -120px;
+        top: -7.5rem;
       }
       @media (min-width: @sm) {
-        top: -180px;
+        top: -11.25rem;
       }
       @media (min-width: @md) {
-        top: -250px;
-        left: -69px;
+        top: -15.625rem;
+        left: -4.313rem;
 
       }
     }
@@ -206,13 +204,13 @@
   }
 
   .letter-container {
-    padding: 60px 60px 10px;
+    padding: 3.75rem 3.75rem .625rem;
     background: var(--color-appeal-main-bg);
-    border: 1px solid var(--color-appeal-bg-border);
+    border: 0.063rem solid var(--color-appeal-bg-border);
     border-radius: 0.75rem;
     box-shadow: var(--shadow);
     position: relative;
-    margin-bottom: 121px;
+    margin-bottom: 7.563rem;
 
 
     p {
@@ -229,10 +227,10 @@
     content: '';
     position: absolute;
     background: var(--bg-appeal-glow);
-    inset: -4px;
-    margin: 8px 38px;
+    inset: -.25rem;
+    margin: .5rem 2.375rem;
     border-radius: 0.75rem;
-    filter: blur(100px);
+    filter: blur(6.25rem);
     opacity: 0.8;
     z-index: -1;
   }
