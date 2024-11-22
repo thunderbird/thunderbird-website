@@ -11,10 +11,21 @@
 {% block content %}
 <section>
   <div class="container">
-    <div class="section-text">
-    {# This is downloaded from build-site.py but should be checked into the repo. #}
-    {% include 'includes/privacy/privacy-desktop.html' %}
-    </div>
-  </div>
+    <div class="two-columns">
+      <div class="column sidebar">
+        <div class="section-text">
+          <ul>
+            <li><b>{{ _('Thunderbird Privacy Policy') }}</b></li>
+            <li><a href="https://www.mozilla.org/privacy/websites/">{{ _('Website Privacy Policy') }}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="column">
+        <div class="section-text">
+          {# This is downloaded from build-site.py but should be checked into the repo. #}
+          {% include 'includes/privacy/privacy-desktop.html' %}
+        </div>
+      </div>
+    </div>  </div>
 </section>
 {% endblock %}
