@@ -23,11 +23,6 @@
 {% endblock %}
 {% block page_title %}{{ _('Help Keep Thunderbird Alive!') }}{% endblock %}
 
-{% block site_header_unwrapped %}
-<div class="overlay"></div>
-<div id="bg-img"></div>
-{% endblock %}
-
 {% block site_header %}
   <div id="appeal-header">
     <header>
@@ -43,9 +38,10 @@
   </div>
 {% endblock %}
 {% block content %}
-  <section id="appeal-body" class="letter-container font-xl">
+  <section id="donate-button-container">
     {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, base_url=donation_base_url) }}
-
+  </section>
+  <section id="appeal-body" class="letter-container font-xl">
     <p>{{ _('All of the work we do is funded by less than 3% of our users.')}}</p>
     <p>
       {{ _('We never show advertisements or sell your data. We don’t have corporate funding. We are fully funded by financial contributions from our users.')}}

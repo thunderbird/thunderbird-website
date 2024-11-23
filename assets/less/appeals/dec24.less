@@ -5,14 +5,21 @@
 *--------------------------*/
 @xxs: 25rem; // 400px
 @xs: 30rem; // 480px
-@ss: 33rem; // 528px ("sorta small")
 @sm: 40rem; // 640px
 @md: 48rem; // 768px
 @lg: 64rem; // 1024px
 @xl: 80rem; // 1280px
 @xxl: 90rem; // 1440px
 
+/* fake, in-between media queries */
+@xms: 26.25rem; // 420px;
+@ss: 33rem; // 528px ("sorta small")
+@mxl: 73.75rem; // 1180px
+
 :root {
+  --bg-img: url('/media/img/thunderbird/appeal/dec24/background-image-high-res.png');
+  --bg-img-set: image-set(var(--bg-img) type('image/png'),
+  url('/media/img/thunderbird/appeal/dec24/background-image-high-res.webp') type('image/webp'));
 
   --bg-appeal-glow: linear-gradient(130deg, rgba(255, 242, 0, 0.25) 50%, #26BAF5 100%);
 
@@ -25,168 +32,161 @@
   --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 
   --font-content: Open Sans, system-ui, sans-serif;
+  --min-small-screen: 23.438rem;
 
 }
 
 // Scope to just the appeal page
 .page-appeal-dec24 {
+  background-color: black;
+
 
   body {
-    font-family: var(--font-content);
-    background: linear-gradient(180deg, rgba(115, 139, 132, 0) 0%, #425B55 29.5%);
-    padding: 10rem 0 0 0;
+    --bg-color: linear-gradient(to bottom, rgba(20, 64, 92, 0) 12%, #0f345e 22%);
+
+    --bg-position: center 9rem, calc(100%) top;
+    --bg-position-mxl: center 7.5rem, calc(100%) top;
+    --bg-position-xl: center 8.5rem, calc(100%) top;
+    --bg-position-lg: center 3.5rem, calc(100%) top;
+    --bg-position-md: center -3.5rem, calc(100%) top;
+    --bg-position-sm: center 3.5rem, calc(100% + 2.3rem) top;
+    --bg-position-ss: center -1.5rem, calc(100% + 2.3rem) top;
+    --bg-position-xs: center 3.75rem, calc(100% + 2.3rem) top;
+    --bg-position-xms: center 0.75rem, calc(100% + 2.3rem) top;
+    --bg-position-mobile: center -1.75rem, calc(100% + 2.3rem) top;
+
+    --bg-size: auto, contain;
+    --bg-size-medium: auto, 150%;
+    --bg-size-mobile: auto, 255%;
+
+    background: var(--bg-color);
+    background-image: var(--bg-color), var(--bg-img);
+    background-image: var(--bg-color), var(--bg-img-set);
+    background-repeat: no-repeat;
+    background-position: var(--bg-position-mobile);
+    background-size: var(--bg-size-mobile);
     margin: 0;
+    min-width: 23.438rem;
     min-height: 100vh;
     max-width: 100%;
+    font-family: var(--font-content);
     line-height: 1.6;
-  }
 
-  .overlay {
-    position: absolute;
-    pointer-events: none;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.2;
-    background: var(--overlay-bg);
+    @media (min-width: @xms) {
+      background-position: var(--bg-position-xms);
+    }
+    @media (min-width: @xs) {
+      background-position: var(--bg-position-xs);
 
-    // Figma creates *special* gradients
-    transform: rotateZ(180deg) scaleX(-1);
-  }
+    }
+    @media (min-width: @ss) {
+      background-size: var(--bg-size-medium);
+      background-position: var(--bg-position-ss);
+    }
+    @media (min-width: @sm) {
+      background-position: var(--bg-position-sm);
+    }
+    @media (min-width: @md) {
+      background-size: var(--bg-size);
+      background-position: var(--bg-position-md);
+    }
+    @media (min-width: @lg) {
+      margin: 0 auto;
+      max-width: 80rem;
+      background-position: var(--bg-position-lg);
+    }
 
-  #bg-img {
-    // Prefer webp over the png
-    --bg-img: url('/media/img/thunderbird/appeal/dec24/background-image-high-res.png');
-    --bg-img-set: image-set(var(--bg-img) type('image/png'),
-    url('/media/img/thunderbird/appeal/dec24/background-image-high-res.webp') type('image/webp'));
-    --bg-size: 68.188rem 63rem;
-    --bg-position: center top;
+    @media (min-width: @xl) {
+      background-position: var(--bg-position-xl);
+    }
+    @media (min-width: @mxl) {
+      background-position: var(--bg-position-mxl);
+    }
+    @media (min-width: @xxl) {
+      background-position: var(--bg-position);
 
-    position: absolute;
-    top: 0;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    max-height: 31.25rem;
-    justify-content: center;
-    z-index: -1;
+    }
 
-    background-image: var(--bg-img);
-    background-image: var(--bg-img-set);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   #appeal-header {
-
-    position: relative;
-
     display: flex;
     flex-direction: column-reverse;
-    gap: 1.875rem;
-    margin: 0 auto 3.25rem;
-    padding: 0 1.5rem 1.5rem;
+    padding-bottom: 7rem;
+    margin: 0 auto;
 
-    width: 100%;
-    max-width: 56.25rem;
-    align-items: center;
-    font-size: 1.25rem;
-
-    @media (min-width: @ss) {
-      gap: 3.75;
-    }
-
-    @media (min-width: @sm) {
+    header {
       padding: 0;
-    }
-
-    @media (min-width: @md) {
-      padding: 0 1.5rem 1.5rem;
-      flex-direction: row;
-      gap: 0.563rem;
-      align-items: flex-end;
-    }
-
-
-    & header {
-
-      /* Disable inherited styles */
       background: none;
-      padding-top: 0;
-      padding-bottom: 0;
-      position: relative;
+    }
 
-      // todo: find a better way to set height?
-      height: 10rem;
-
-      @media (min-width: @md) {
-        height: 15rem;
+    @media (min-width: @lg) {
+      flex-direction: row;
+      height: 32.25rem;
+      header {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
       }
     }
 
-
-    #appeal-heading {
-      --txt: #FEFFFF;
-      width: 100%;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-
-      text-transform: uppercase;
-      font-size: 2.0rem;
-      font-weight: 600;
-      color: var(--txt);
-
-      & > span {
-        display: block;
-        font-size: 3.5rem;
-        font-weight: 600;
-        line-height: 3.5rem;
-
-
-
-      }
-    }
-
-    #illustration {
-      width: 90%;
-      height: 10rem;
-      position: relative;
-      @media (min-width: @md) {
-        width: 80%;
-      }
-    }
-    #illustration > #roc {
-      position: absolute;
-      top: -6.25rem;
-
-      @media (min-width: @ss) {
-        top: -7.5rem;
-      }
-      @media (min-width: @sm) {
-        top: -11.25rem;
-      }
-      @media (min-width: @md) {
-        top: -15.625rem;
-        left: -4.313rem;
-
-      }
-    }
-
   }
 
-  main {
+  #appeal-heading {
+    --txt: #f7cf78;
+    margin: 0.5rem 0;
+    padding: 2.2rem 2rem 1.8rem 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @xxs) {
+      padding: 2.2rem 2rem 1.8rem 2rem;
+    }
+    @media (min-width: @md) {
+      font-size: 2rem;
+    }
+    @media (min-width: @lg) {
+      padding: 2.25rem 2rem 1rem 2rem;
+    }
+
+    text-transform: uppercase;
     font-family: var(--font-content);
-    padding: 1em;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--txt);
+
+    & > span {
+      margin-top: -.2rem;
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 2.5rem;
+      @media (min-width: @md) {
+        font-size: 4.375rem;
+        line-height: 4.375rem;
+      }
+    }
+  }
+
+  #illustration {
+    width: 100%;
+    text-align: center;
+    #roc {
+      @media (min-width: @lg) {
+        padding-top: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  #donate-button-container {
+    max-width: 22.188rem;
     margin: 0 auto;
-    max-width: 60.26125rem;
-    position: relative;
+
+    @media (min-width: @md) {
+      max-width: 29.375rem;
+    }
   }
 
   #appeal-body {
@@ -201,54 +201,81 @@
     font-size: 1.3125rem;
     font-weight: 400;
     line-height: 1.5;
+
+    margin-top: -6rem;
+    padding-top: 6rem;
+
+    @media (min-width: @md) {
+      font-size: 1.375rem;
+      line-height: 2rem;
+      padding-top: 7rem;
+    }
+
   }
 
   .letter-container {
-    padding: 3.75rem 3.75rem .625rem;
     background: var(--color-appeal-main-bg);
-    border: 0.063rem solid var(--color-appeal-bg-border);
-    border-radius: 0.75rem;
-    box-shadow: var(--shadow);
+    padding-bottom: .75rem;
+    margin-bottom: 6rem;
     position: relative;
-    margin-bottom: 7.563rem;
 
+    padding-left: 1.063rem;
+    padding-right: 1.063rem;
+
+    @media (min-width: @lg) {
+      border: 0.063rem solid var(--color-appeal-bg-border);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow);
+      max-width: 60rem;
+      margin: 0 auto 6rem;
+      padding-left: 4.5rem;
+      padding-right: 4.5rem;
+    }
 
     p {
       width: 100%;
-      margin: 0 0 1.96875rem; // 1.5 font-size
+      font-size: 1.125rem;
+      margin: 0 0 1.5rem;
+      @media (min-width: @md) {
+        font-size: 1.5rem;
+        margin: 0 0 2rem;
+      }
     }
 
-    p:nth-child(2) {
-      margin-top: 3rem;
+
+
+    /* Declaring this style here, as it has more precedence. */
+    .closing-text {
+      font-size: 1rem;
     }
+
   }
 
-  .letter-container:before {
+  /* .letter-container:before {
     content: '';
     position: absolute;
+
     background: var(--bg-appeal-glow);
     inset: -.25rem;
     margin: .5rem 2.375rem;
     border-radius: 0.75rem;
-    filter: blur(6.25rem);
+    filter: blur(1.25rem);
     opacity: 0.8;
-    z-index: -1;
-  }
-
-  .closing-text {
-    color: var(--color-footer-txt);
-  }
+    z-index: 0;
+  } */
 
 
 
   // Copy and paste (with minor tweaks) from previous appeal
   // TODO: Centralize this!
   .closing-text {
+    /* these styles have lower precedence than .letter-container p */
     font-family: Metropolis, sans-serif;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 500;
     text-align: center;
     margin: 1rem 0 !important;
+    color: #1373d9;
   }
 
 
@@ -258,7 +285,7 @@
     grid-template-columns: 1fr auto 1fr;
     gap: 2.0rem;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 1.75rem;
     width: 100%;
     max-width: 41.125rem;
     justify-content: center;
@@ -342,7 +369,7 @@
     }
 
     #donate-banner-left {
-      padding: 0.6875rem 0.75rem;
+      padding: 0.5rem 1.5rem;
       text-shadow: 0 2px 0 #af1e1e,
         0 -2px 0 #af1e1e,
       2px 0 0 #af1e1e,
@@ -351,6 +378,8 @@
         -2px -2px 0 #af1e1e,
         2px -2px 0 #af1e1e,
       -2px 2px 0 #af1e1e;
+
+      text-align: left;
     }
 
     #donate-banner-right {
@@ -364,6 +393,12 @@
         -2px -2px 0 #ffecea,
         2px -2px 0 #ffecea,
       -2px 2px 0 #ffecea;
+      display: none;
+
+      @media (min-width: @md) {
+        display: block;
+        align-self: flex-end;
+      }
     }
 
 
@@ -389,13 +424,6 @@
         }
       }
     }
-
-    @media (max-width: @xxs) {
-      // Deepen the font-colour to help with contrast issues
-      #donate-banner-right {
-        display: none;
-      }
-    }
   }
 
   #donate-banner-left, #hover-hearts {
@@ -406,6 +434,5 @@
     justify-content: flex-end;
     text-align: right;
   }
-
 
 }
