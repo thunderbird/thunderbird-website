@@ -194,8 +194,12 @@
   }
 
   #appeal-body {
-
     box-sizing: border-box;
+
+    @media (min-width: @lg) {
+      margin-top: -5.7rem;
+    }
+
     &:before,
     &:after {
       content: '';
