@@ -147,10 +147,11 @@
       padding: 2.2rem 2rem 1.8rem 2rem;
     }
     @media (min-width: @md) {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
     @media (min-width: @lg) {
-      padding: 2.25rem 2rem 1rem 2rem;
+      padding: 2.25rem 2rem 1rem 3.0rem;
+      margin: -1.8rem 0;
     }
 
     text-transform: uppercase;
@@ -158,6 +159,7 @@
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--txt);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 
     & > span {
       margin-top: -.2rem;
@@ -193,8 +195,12 @@
   }
 
   #appeal-body {
-
     box-sizing: border-box;
+
+    @media (min-width: @lg) {
+      margin-top: -5.7rem;
+    }
+
     &:before,
     &:after {
       content: '';
