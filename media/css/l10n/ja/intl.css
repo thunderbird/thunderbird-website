@@ -109,6 +109,9 @@
 }
 
 /* Donation appeal button */
+.donate-banner #donate-banner-left {
+    padding: 0.6875rem 0.75rem;
+}
 .donate-banner #donate-banner-left > b {
     font-size: 1.65rem;
 }
