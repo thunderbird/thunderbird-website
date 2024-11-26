@@ -12,7 +12,7 @@
 {# For donation url generation #}
 {% set fru_form_id = fru_form_id|default('eoy2024') %}
 {% set utm_campaign = utm_campaign|default('dec24_appeal') %}
-{% set donation_base_url = donation_base_url|default(url('updates.appeal.dec24.donate')) %}
+{% set donation_base_url = donation_base_url|default(url('updates.128.appeal.dec24.donate')) %}
 
 {% extends "includes/base/base.html" %}
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
@@ -24,6 +24,7 @@
 {% block page_title %}{{ _('Help Keep Thunderbird Alive!') }}{% endblock %}
 
 {% block site_header %}
+  <div id="header-gradient"></div>
   <div id="appeal-header">
     <header>
       <h1 id="appeal-heading" aria-label="{{ _('Help Keep Thunderbird Alive!') }}">
