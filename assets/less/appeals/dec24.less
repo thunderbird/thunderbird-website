@@ -18,8 +18,11 @@
 
 :root {
   --bg-img: url('/media/img/thunderbird/appeal/dec24/background-image-high-res.png');
-  --bg-img-set: image-set(var(--bg-img) type('image/png'),
-  url('/media/img/thunderbird/appeal/dec24/background-image-high-res.webp') type('image/webp'));
+  --bg-img-set: image-set(
+      url('/media/img/thunderbird/appeal/dec24/background-image-high-res.avif') type('image/avif'),
+      url('/media/img/thunderbird/appeal/dec24/background-image-high-res.webp') type('image/webp'),
+      var(--bg-img) type('image/png')
+    );
 
   --bg-appeal-glow: linear-gradient(130deg, rgba(255, 242, 0, 0.25) 50%, #26BAF5 100%);
 
