@@ -45,81 +45,36 @@
 
 
   body {
-    margin: 0;
+    max-width: 80rem;
+    margin: auto;
     min-width: 23.438rem;
     min-height: 100vh;
-    max-width: 100%;
     font-family: var(--font-content);
     line-height: 1.6;
+    background-color: #0f345e;
+  }
 
-    --bg-color: linear-gradient(to bottom, rgba(20, 64, 92, 0) 12%, #0f345e 22%);
-
-    --bg-position: center 8rem, calc(100%) top;
-    --bg-position-mxl: center 6.5rem, calc(100%) top;
-    --bg-position-xl: center 8.5rem, calc(100%) top;
-    --bg-position-lg: center 2.5rem, calc(100%) top;
-    --bg-position-md: center -3.5rem, calc(100%) top;
-    --bg-position-sm: center 3.5rem, calc(100% + 2.3rem) top;
-    --bg-position-ss: center -1.5rem, calc(100% + 2.3rem) top;
-    --bg-position-xs: center 3.75rem, calc(100% + 2.3rem) top;
-    --bg-position-xms: center 0.75rem, calc(100% + 2.3rem) top;
-    --bg-position-mobile: center -1.75rem, calc(100% + 2.3rem) top;
-
-    --bg-size: auto, contain;
-    --bg-size-medium: auto, 150%;
-    --bg-size-mobile: auto, 255%;
-
+  #header-gradient {
+    --bg-color: linear-gradient(to bottom, rgba(20, 64, 92, 0) 35%, #0f345e 75%);
     background: var(--bg-color);
-    background-image: var(--bg-color), var(--bg-img);
-    background-image: var(--bg-color), var(--bg-img-set);
-
-    background-repeat: no-repeat;
-    background-position: var(--bg-position-mobile);
-    background-size: var(--bg-size-mobile);
-
-
-    @media (min-width: @xms) {
-      background-position: var(--bg-position-xms);
-    }
-    @media (min-width: @xs) {
-      background-position: var(--bg-position-xs);
-
-    }
-    @media (min-width: @ss) {
-      background-size: var(--bg-size-medium);
-      background-position: var(--bg-position-ss);
-    }
-    @media (min-width: @sm) {
-      background-position: var(--bg-position-sm);
-    }
-    @media (min-width: @md) {
-      background-size: var(--bg-size);
-      background-position: var(--bg-position-md);
-    }
-    @media (min-width: @lg) {
-      margin: 0 auto;
-      max-width: 80rem;
-      background-position: var(--bg-position-lg);
-    }
-
-    @media (min-width: @xl) {
-      background-position: var(--bg-position-xl);
-    }
-    @media (min-width: @mxl) {
-      background-position: var(--bg-position-mxl);
-    }
-    @media (min-width: @xxl) {
-      background-position: var(--bg-position);
-
-    }
-
+    position: absolute;
+    width: 100%;
+    height: 40rem;
+    overflow: clip;
+    pointer-events: none;
   }
 
   #appeal-header {
     display: flex;
     flex-direction: column-reverse;
     padding-bottom: 7rem;
-    margin: 0 auto;
+
+    background-image: var(--bg-img);
+    background-image: var(--bg-img-set);
+    background-position: calc(100%) top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 
     header {
       padding: 0;
@@ -127,6 +82,8 @@
     }
 
     @media (min-width: @lg) {
+      background-size: contain;
+
       flex-direction: row;
       height: 32.25rem;
       header {
@@ -153,7 +110,7 @@
       font-size: 2.25rem;
     }
     @media (min-width: @lg) {
-      padding: 2.25rem 2rem 1rem 3.0rem;
+      padding: 2.25rem 2rem 2rem 3rem;
       margin: -1.8rem 0;
     }
 
@@ -230,7 +187,6 @@
   }
 
   .letter-container {
-    position: absolute;
     z-index: 1;
     width: 100%;
     display: flex;
@@ -245,20 +201,16 @@
     line-height: 1.5;
 
     margin-top: -6rem;
-    padding-top: 6rem;
-
     @media (min-width: @md) {
       font-size: 1.375rem;
       line-height: 2rem;
       padding-top: 7rem;
     }
     background: var(--color-appeal-main-bg);
-    padding-bottom: .75rem;
     margin-bottom: 6rem;
     position: relative;
 
-    padding-left: 1.063rem;
-    padding-right: 1.063rem;
+    padding: 6rem 1.063rem .75rem;
 
     @media (min-width: @lg) {
       border: 0.063rem solid var(--color-appeal-bg-border);
