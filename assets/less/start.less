@@ -159,6 +159,15 @@
   --list-dot-outer: var(--teal-10);
 }
 
+[data-channel="release"] {
+  --text-gradient: linear-gradient(-270deg, var(--teal-50), var(--blue-50));
+  --bg-warning: color-mix(in srgb, var(--teal-50) 5%, transparent);
+  --text-warning: var(--teal-90);
+  --warning-links: var(--blue-80);
+  --list-dot-inner: var(--teal-90);
+  --list-dot-outer: var(--teal-10);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: var(--grey-05);
@@ -183,6 +192,15 @@
   }
 
   [data-channel="beta"] {
+    --text-gradient: linear-gradient(-270deg, var(--teal-40), var(--blue-40));
+    --bg-warning: color-mix(in srgb, var(--teal-50) 5%, transparent);
+    --text-warning: var(--teal-10);
+    --warning-links: var(--blue-30);
+    --list-dot-inner: var(--teal-30);
+    --list-dot-outer: var(--teal-90);
+  }
+
+  [data-channel="release"] {
     --text-gradient: linear-gradient(-270deg, var(--teal-40), var(--blue-40));
     --bg-warning: color-mix(in srgb, var(--teal-50) 5%, transparent);
     --text-warning: var(--teal-10);
