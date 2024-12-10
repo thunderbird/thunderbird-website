@@ -5,7 +5,6 @@ The [Thunderbird Privacy Policy](https://www.thunderbird.net/en-US/privacy/) is 
 
 Here is the workflow for updating it.
 
-
 ## Pull the latest and create a new branch
 
 ```bash
