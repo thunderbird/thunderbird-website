@@ -257,13 +257,55 @@ Finally, call the macro where you'd like to display it:
 
 After restarting the build tool and refreshing your browser, you should see the donation button on the page.
 
-### L10N
+### Localization
+
+All text in the Jinja template should be translated into the user's local language.
+
+#### Specifying translatable strings
+
+There are two ways to specify that a string should be translated.
+You can wrap the string in one of the following:
+
+- The `_()` function is used for shorter pieces of text.
+- A `{% trans %}` block wraps longer strings.
+
+Use `_()` for simple strings:
+
+ ```jinja
+ <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+ ```
+
+HTML tags are allowed inside a translatable string:
+
+```jinja
+<h1>
+    {{ _('Help Keep <span>Thunderbird Alive</span>') }}
+</h1>
+```
+When possible, avoid putting HTML tags inside a translatable string. One of our volunteer translators may accidentally change the tags, causing an error when building the site.
+
+`aria-label` (and `alt` text) should be translated:
+
+```jinja
+<h1 id="appeal-heading" aria-label="{{ _('Help Keep Thunderbird Alive!') }}">
+  {{ _('Help Keep <span>Thunderbird Alive</span>') }}
+</h1>
+```
+
+The December 2024 appeal does not use `{% trans %}` blocks, but here is an example from the main `index.html`:
+
+```jinja
+{% trans %}
+  Meet Thunderbird, the <strong>email and productivity</strong> app that maximizes your freedoms.
+{% endtrans %}
+```
+
+#### Extracting strings for translation
 
 Follow the instructions located in [l10n_tools/readme.md](../l10n_tools/readme.md) to compile and extract strings.
-
-#### TODO: Specifying translatable strings
 
 ### TODO: Accessibility
 
 - aria-label
-- screen readers
+- aria-hidden
+- alt text
