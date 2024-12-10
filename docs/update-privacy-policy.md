@@ -7,7 +7,7 @@ To update it, you will:
 1. Create a new branch.
 2. Run the build tool with the `--downloadlegal` option.
 3. Commit the changes.
-3. Create a Pull Request.
+4. Create a Pull Request.
 
 
 Here is an example workflow.
