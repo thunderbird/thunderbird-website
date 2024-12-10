@@ -33,14 +33,17 @@ With the dependencies installed, run the following:
 python build-site.py  --downloadlegal
 ```
 
+This automatically downloads the Privacy Policy and generates the corresponding HTML file.
+
 ## Commit and push
+
+You do not have to include the date of the update, but you can find it at the top of the generated file (`sites/www.thunderbird.net/includes/privacy/privacy-desktop.html`).
 
 ```bash
 git commit -am 'updated legal docs to 2024-12-09'
-git push -u origin/chore/update-legal
+git push -u origin chore/update-legal
 ```
 
-You do not have to include the date of the update, but you can find it at the top of `sites/www.thunderbird.net/includes/privacy/privacy-desktop.html`
 
 ## Create a Pull Request
 
