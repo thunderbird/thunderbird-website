@@ -65,6 +65,11 @@ SVGs and raster images (e.g, `.png`, `.jpg`) go in different directories:
 
 (If this were a "what's new" page, those paths would have been something like `/media/svg/whatsnew/dec24` and `/media/img/thunderbird/whatsnew/dec24`.)
 
+To generalize, we created the following directory paths:
+- `/sites/updates.thunderbird.net/thunderbird/<release>/<appeal-date>/`
+- `/media/svg/<page-type>/<appeal-date>`
+- `/media/img/thunderbird/<page-type>/<appeal-date>`
+
 In addition to following these conventions, some files (such as `.less` styles) require configuration. We'll take a look at each file type in the remainder of this section.
 
 #### Templates
@@ -83,13 +88,19 @@ Lastly, an appeal may be attached to a specific project. For example, the donati
 
 A copy-and-pastable template is included in [sites/updates.thunderbird.net/includes/_templates/basic-page.html](../sites/updates.thunderbird.net/includes/_template/basic-page.html).
 
-Simply copy and paste that template to its new home. Once resettled, change the `active_page` Jinja variable to match your page name in kebab-case, this will namespace your page for styling by giving you the class `page-<active_page>`. Additionally, the `page_title` and `page_desc` variable controls the rendered HTML page title and page description respectively.
+Simply copy and paste that template to its new home. Once resettled, change the `active_page` Jinja variable at the top of the template to match your page name in kebab-case. For the December 2024 appeal, we specified the following:
+
+```jinja
+{% set active_page = "appeal-dec24" %}
+```
+
+This will namespace your page for styling by giving you the class `page-<active_page>`. Additionally, the `page_title` and `page_desc` variables controls the rendered HTML page title and page description respectively.
 
 ##### The `includes` folder
 
 The `includes` folder is used for jinja includes, extends, and macros.
 
-The `donation_button` macro is one that we'll look at more closely later on.
+The `donation_button` macro is one that we'll look at more closely in a later section.
 
 #### LESS files
 
@@ -97,9 +108,9 @@ Working with `.less` files involves two steps:
 - Creating the `.less` file in the appropriate directory
 - Telling the build tool about the new `.less` file.
 
-Just like with templates and images, we follow an organization pattern. The December 2024 appeal `.less` file path is `/assets/less/appeals/dec24.less`
+Just like with templates and images, we follow a pattern. The December 2024 appeal `.less` file path is `/assets/less/appeals/dec24.less`
 
-Once you've created this file, add an entry to the `UPDATES_CSS` dict in the `settings.py` file.
+Once you've created this file, add an entry for it to the `UPDATES_CSS` dict in the `settings.py` file. This configures the build tool to compile your new `.less` file.
 
 There should be several entries in `UPDATES_CSS`. Follow the established naming convention when adding a key; the value is the path to the new less file you've just created.
 
@@ -117,9 +128,11 @@ Follow the following naming convention:
 - 1x: `forest-roc.png`
 - 2x: `forest-roc-high-res.png`
 
-Note: The 2x naming convention deviates from the industry standard "@2x".
+Note: The high resolution naming convention deviates from the industry standard "@2x".
 
 Save both to the appropriate directory. For the December 2024 appeal, that's `/media/img/thunderbird/appeal/dec24`.
+
+The December 2024 appeal did not use any SVGs. However, they would have been placed in this directory: `/media/svg/appeal/dec24`.
 
 
 #### Creating compressed image assets
@@ -130,10 +143,12 @@ You've already installed the dependencies. Now all you need to do is run the com
 
 ```bash
 cd ../
-python tools/compress_assets.py -or media/img/thunderbird/appeal/mycoolappeal/
+python tools/compress_assets.py -r -o media/img/thunderbird/appeal/mycoolappeal/
 ```
 
 This will search recursively (`-r`) and overwrite (`-o`) previously compressed files.
+
+This step is only necessary for raster images. Run the tool any time you add or update `.png` and `.jpg` files.
 
 ## Working in with Jinja templates
 
@@ -146,12 +161,15 @@ For example, the entry for the December 2024 appeal is:
 'appeal-dec24-style': ['less/appeals/dec24.less'],
 ```
 
-The path of the compiled `.css` file will be `css/appeal-dec24-style.css`
+This tells the build tool to compile the styles to `css/appeal-dec24-style.css`.
 
-Declare a `base_css` block in your template.
+To use the compiled CSS file:
+- Declare a `base_css` block in your template.
+- Create a `<link>` tag.
+- In the `href`, call the `static()` helper, passing it the path to your compiled `.css` file.
 
-In the `href`, call the `static()` helper, passing it the path to your compiled `.css` file:
 
+Here's the result:
 
 ```jinja
 {% block base_css %}
@@ -161,7 +179,7 @@ In the `href`, call the `static()` helper, passing it the path to your compiled 
 
 ### Using the `high_res_img()` helper
 
-The `high_res_img()` helper renders a `<picture>` element that displays the image at the best resolution for the device.
+The `high_res_img()` helper renders a `<picture>` element that displays the image at the best resolution for the user's device.
 
 Pass it the path to the *low resolution* version of your image. The helper function will automatically include the `-high-res` variant of your image in a `srcset` attribute.
 
@@ -169,11 +187,19 @@ Pass it the path to the *low resolution* version of your image. The helper funct
 {{ high_res_img('thunderbird/appeal/dec24/forest-roc.png', {'alt': _('')}) }}
 ```
 
+To reiterate, we have two versions of this image:
+- 1x: `forest-roc.png`
+- 2x: `forest-roc-high-res.png`
+
+But we pass the 1x version to `high_res_img()`.
+
 #### Specifying alternate image formats
 
 In an earlier step, you produced compressed/optimized versions of your image assets.
 
-You should allow the browser to use one of these alternate formats when possible. Specify these in the `alt_formats` list:
+You should allow the browser to use one of these alternate formats when possible.
+
+Update the call to `high_res_img()`, passing the compressed file extensions in the `alt_formats` list:
 
 ```jinja
 {{ high_res_img('thunderbird/appeal/dec24/forest-roc.png', {'alt': _('')}, alt_formats=('webp', 'avif')) }}
@@ -221,7 +247,7 @@ Here is the entry for the December 2024 appeal:
 
 #### Call the macro
 
-Finally call the macro where you'd like to display it:
+Finally, call the macro where you'd like to display it:
 
 ```jinja
 <section id="donate-button-container">
@@ -229,13 +255,15 @@ Finally call the macro where you'd like to display it:
 </section>
 ```
 
-After the restarting the build tool and refreshing your browser, you should see the donation button on the page.
+After restarting the build tool and refreshing your browser, you should see the donation button on the page.
 
 ### L10N
 
 Follow the instructions located in [l10n_tools/readme.md](../l10n_tools/readme.md) to compile and extract strings.
 
-### Notes on Accessibility
+#### TODO: Specifying translatable strings
+
+### TODO: Accessibility
 
 - aria-label
 - screen readers
