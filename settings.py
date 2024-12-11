@@ -272,6 +272,7 @@ URL_MAPPINGS = {
     'thunderbird.128esr.releasenotes': '/thunderbird/128.0esr/releasenotes',
     'updates.115.appeal.nov24.donate': '/thunderbird/115.0/nov24/donate/',
     'updates.128.appeal.nov24.donate': '/thunderbird/128.0/nov24/donate/',
+    'updates.115.appeal.dec24.donate': '/thunderbird/115.0/dec24/donate/',
     'updates.128.appeal.dec24.donate': '/thunderbird/128.0/dec24/donate/',
 }
 
