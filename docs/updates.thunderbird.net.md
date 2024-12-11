@@ -304,8 +304,41 @@ The December 2024 appeal does not use `{% trans %}` blocks, but here is an examp
 
 Follow the instructions located in [l10n_tools/readme.md](../l10n_tools/readme.md) to compile and extract strings.
 
-### TODO: Accessibility
+### Accessibility
 
-- aria-label
-- aria-hidden
-- alt text
+Provide a label using the `aria-label` for interactive elements that assistive software may not understand (such as a close button).
+
+This is an example from the November 2024 appeal page:
+
+```jinja
+<a id="donate-footer"
+   class="btn btn-no-bg"
+   aria-label="{{ _('Donate') }}"
+   href="{{ donate_url(content='bottom_cta', campaign=utm_campaign, form_id=fru_form_id, base_url=donation_base_url, source=utm_source) }}">
+  <span aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</span>
+  {{ _('Donate') }}
+</a>
+```
+
+
+Use `aria-hidden="true"` for purely decorative content that should be ignored by assistive software:
+
+```jinja
+<aside id="illustration" aria-hidden="true">
+  <div id="roc">
+    {{ high_res_img('thunderbird/appeal/dec24/forest-roc.png', {'alt': _('')}, alt_formats=('webp', 'avif')) }}
+  </div>
+</aside>
+```
+
+Add `alt` text to images, except when the information is redundant or the image is purely decorative.
+
+#### Using a Screen Reader
+
+It's helpful to test the page using a screen reader.
+
+On macOS, use the built-in `VoiceOver` screen reader.
+
+For Linux, the [Orca](https://wiki.mozilla.org/Screen_Reader_-_Orca) screen reader is recommended by the Mozilla Wiki.
+
+In particular, you may find that a screen reader does not pause adequately between sentences. Add a period (`.`) to remedy this.
