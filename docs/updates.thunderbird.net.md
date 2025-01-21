@@ -295,7 +295,7 @@ When possible, avoid putting HTML tags inside a translatable string. One of our 
 The December 2024 appeal does not use `{% trans %}` blocks, but here is an example from the main `index.html`:
 
 ```jinja
-{% trans %}
+{% trans trimmed %}
   Meet Thunderbird, the <strong>email and productivity</strong> app that maximizes your freedoms.
 {% endtrans %}
 ```
