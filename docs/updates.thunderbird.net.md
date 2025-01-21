@@ -63,10 +63,13 @@ SVGs and raster images (e.g, `.png`, `.jpg`) go in different directories:
 
 (If this were a "what's new" page, those paths would have been something like `/media/svg/whatsnew/dec24` and `/media/img/thunderbird/whatsnew/dec24`.)
 
-To generalize, we created the following directory paths:
-- `/sites/updates.thunderbird.net/thunderbird/<release>/<appeal-date>/`
-- `/media/svg/<page-type>/<appeal-date>`
-- `/media/img/thunderbird/<page-type>/<appeal-date>`
+To generalize, we created the following directory paths for our files:
+
+| Type | Location |
+|------|----------|
+| Jinja template | `/sites/updates.thunderbird.net/thunderbird/<release>/<appeal-date>/` |
+| SVGs | `/media/svg/<page-type>/<appeal-date>` |
+| Images | `/media/img/thunderbird/<page-type>/<appeal-date>` |
 
 In addition to following these conventions, some files (such as `.less` styles) require configuration. We'll take a look at each file type in the remainder of this section.
 
