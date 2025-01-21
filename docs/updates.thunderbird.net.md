@@ -33,8 +33,6 @@ Updating website when templates, CSS, or JS are modified. Press Ctrl-C to end.
 HTTP Server running on: http://localhost:8000
 ```
 
-The last line of the output shows you the address where you can view the site locally.
-
 The default address is `http://localhost:8000`, though you can specify a different port with the `--port` option.
 
 
