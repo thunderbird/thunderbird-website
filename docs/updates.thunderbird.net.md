@@ -322,7 +322,7 @@ This is an example from the November 2024 appeal page:
 ```
 
 
-Use `aria-hidden="true"` for purely decorative content that should be ignored by assistive software:
+Use `aria-hidden="true"` and an empty `alt` for purely decorative content (i.e., images) that should be ignored by assistive software:
 
 ```jinja
 <aside id="illustration" aria-hidden="true">
@@ -332,7 +332,8 @@ Use `aria-hidden="true"` for purely decorative content that should be ignored by
 </aside>
 ```
 
-Add `alt` text to images, except when the information is redundant or the image is purely decorative.
+Make all other images accessible by adding appropriate `alt` text.
+
 
 #### Using a Screen Reader
 
