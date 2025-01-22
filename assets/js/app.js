@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   const autoplayVideos = document.querySelectorAll('video[autoplay]');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  console.log(reduceMotion);
   for (const item of autoplayVideos) {
     // Disable autoplay and pause playback if they would like reduced motion
     if (reduceMotion) {
