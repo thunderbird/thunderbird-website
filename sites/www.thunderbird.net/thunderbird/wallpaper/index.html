@@ -1,0 +1,22 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "thunderbird-wallpaper" %}
+{% extends "includes/base/page.html" %}
+
+{% block page_title %}{{ _('Wallpaper') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird Desktop Wallpaper') }}{% endblock %}
+
+{% block site_nav %}{% endblock %}
+{% block site_header %}{% endblock %}
+
+{% block content %}
+<section>
+  <div class="container">
+    <img src="/media/img/thunderbird/wallpapers/Thunderbird_Desktop_Wallpaper_012025.jpg" alt="{{_('Thunderbird Desktop Wallpaer')}}">
+  </div>
+</section>
+{% endblock %}
+
+{% block post_content %}{% endblock %}
