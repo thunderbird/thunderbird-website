@@ -139,10 +139,19 @@
 {% block js %}
 <script>
   const navbar = document.querySelector(".site-nav");
-  window.addEventListener("scroll", () => {
-    (window.scrollY > 30) ?
-      navbar.classList.add("scrolled-nav") :
-      navbar.classList.remove("scrolled-nav")
-  });
+  if (navbar) {
+    const navbarClass = 'scrolled-nav';
+    let navbarState = navbar.classList.contains(navbarClass);
+
+    window.addEventListener("scroll", () => {
+      if (!navbarState && window.scrollY > 30) {
+        navbar.classList.add(navbarClass);
+        navbarState = true;
+      } else if (navbarState && window.scrollY <= 30) {
+        navbar.classList.remove(navbarClass)
+        navbarState = false;
+      }
+    });
+  }
 </script>
 {% endblock %}
