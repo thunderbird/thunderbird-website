@@ -118,3 +118,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+/**
+ * For participates accordions. If we detect a valid id in the fragment, we grab the next sibling element
+ * which is the accordion/summary tag and open it. Only happens on page load.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const fragment = window.location.hash.substring(1);
+  const element = document.getElementById(fragment);
+  if (!element) {
+    return;
+  }
+  const accordionElement = element.nextElementSibling;
+  if (!accordionElement) {
+    return;
+  }
+  accordionElement.setAttribute('open', 'open');
+});

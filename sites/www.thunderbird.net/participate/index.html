@@ -210,6 +210,8 @@
 :param title: The title of the accordion
 :caller: The text body, shows up when you click on the title or accordion.
 #}
+  {# This is here to account for the navbar height #}
+  <div aria-hidden="true" class="anchor-link" id="{{ title|lower|replace(' ', '-') }}"></div>
   <details class="accordion">
     <summary class="question">
       <span>{{ icon }}</span>
