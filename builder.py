@@ -11,6 +11,7 @@ import logging
 import multiprocessing
 import ntpath
 import os
+import pathlib
 import shutil
 import settings
 import sys
@@ -279,17 +280,22 @@ class Site(object):
             if n["release"]["release_date"]:
                 n["release"]["release_date"] = parse(str(n["release"]["release_date"]))
             self._env.globals.update(**n)
+
+            # Render release notes page
             target = os.path.join(self.outpath, 'thunderbird', str(k), 'releasenotes')
             mkdir(target)
             logger.info("Rendering {0}/index.html...".format(target))
+            self._env.globals['canonical_path'] = '/' + str(pathlib.Path(*pathlib.Path(target).parts[3:]))
             note_template.stream().dump(os.path.join(target, 'index.html'))
 
+            # Render system requirements page
             target = os.path.join(self.outpath, 'thunderbird', str(k), 'system-requirements')
             mkdir(target)
             sysreq_template = self._env.get_template('includes/_enonly/system_requirements.html')
+            self._env.globals['canonical_path'] = '/' + str(pathlib.Path(*pathlib.Path(target).parts[3:]))
             logger.info("Rendering {0}/index.html...".format(target))
             sysreq_template.stream().dump(os.path.join(target, 'index.html'))
-
+            
             # 115 swapped to esr midway through. So add an 115 alias for 115esr builds
             if is_115_esr:
                 for path in ['releasenotes', 'system-requirements']:
@@ -302,6 +308,8 @@ class Site(object):
             if not is_beta or (is_beta and settings.SHOW_BETA_NOTES_IN_RSS_FEED):
                 feed_items.append((k, n))
 
+        # Remove this so other rendering functions don't accidentally reuse it.
+        del self._env.globals['canonical_path']
         # Build htaccess files for sysreq and release notes redirects.
         sysreq_path = os.path.join(self.renderpath, 'system-requirements')
         notes_path = os.path.join(self.renderpath, 'notes')
@@ -439,6 +447,13 @@ class Site(object):
             if not os.path.exists(filedir):
                 os.makedirs(filedir)
 
+            canonical_path = ''
+            # Figure out the page path and store it in Jinja globals.
+            if '404' not in template:
+                dir_part = os.path.dirname(template)
+                canonical_path = f'/{dir_part}' if dir_part else '/'
+            self._env.globals['canonical_path'] = canonical_path
+
             try:
                 t = self._env.get_template(template)
                 t.stream().dump(filepath)
@@ -457,6 +472,8 @@ class Site(object):
                     continue
 
                 raise ex
+            # Remove this to prevent other template renders from accidentally using the last value.
+            del self._env.globals['canonical_path']
 
     def build_startpage(self):
         """Build the start page for all `languages`."""
