@@ -105,6 +105,10 @@
          href="{{ url('thunderbird.social.mastodon') }}" data-link-type="footer" data-link-name="Mastodon (Thunderbird)" rel="me">
         {{ svg('social-icon-mastodon') }}
       </a>
+      <a class="icon" title="{{ _('Follow %(bluesky)s on Bluesky')|format(bluesky='@thunderbird.net') }}"
+         href="{{ url('thunderbird.social.bluesky') }}" data-link-type="footer" data-link-name="Bluesky (Thunderbird)" rel="me">
+        {{ svg('social-icon-bluesky') }}
+      </a>
       <a class="icon" href="{{ url('thunderbird.social.facebook') }}" title="{{ _('Follow %(facebook)s on Facebook')|format(facebook='Thunderbird') }}"
          data-link-type="footer" data-link-name="Facebook (Thunderbird)">
         {{ svg('social-icon-facebook') }}
