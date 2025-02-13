@@ -1,6 +1,6 @@
 {# THIS PAGE IS AUTOMATICALLY GENERATED, DO NOT EDIT THIS DOCUMENT! #}
 <h1>Thunderbird Privacy Notice</h1>
-<p datetime="2024-12-09">Last updated December 9, 2024</p>
+<p datetime="2025-02-12">Last updated February 12, 2025</p>
 <p>The Thunderbird Desktop, Thunderbird for Android, and K-9 Mail applications (together, “Thunderbird”) allow users to privately integrate and manage their online communications. K-9 Mail is a variant of Thunderbird for Android. All references to “Thunderbird” or “Thunderbird for Android” apply equally to K-9 Mail.</p>
 <p>This Privacy Notice explains what data Thunderbird collects and shares, and why. We also adhere to the <a href="https://www.mozilla.org/privacy/">Mozilla Privacy Policy</a> for how we receive, handle, and share information.</p>
 <p>This privacy notice is for the most recent general release version of Thunderbird distributed by MZLA Technologies Corporation (a subsidiary of Mozilla Foundation). If you obtain Thunderbird elsewhere, or are running an older version, your copy of Thunderbird may contain different privacy characteristics.</p>
@@ -43,9 +43,20 @@
 <p><strong>Technical data for updates</strong>: Thunderbird periodically connects to our server to install updates to add-ons. Your installed add-ons, application version, language, and device operating system are used to apply the correct updates. When Thunderbird sends technical data to us, your IP address is temporarily collected as part of our server logs.</p>
 <h2>Use of OAuth Information</h2>
 <p>OAuth is a secure authorization protocol that allows third-party applications to access resources without sharing login credentials. Thunderbird uses OAuth to connect with certain email or calendar providers that mandate or prefer its use, such as Google, Yahoo and Microsoft.</p>
-<p>When using OAuth to authorize access to your email or calendars, all data is strictly exchanged over an encrypted connection between the email client application and the OAuth service. Mozilla does not collect, access, retain, or store any sensitive information exchanged during this process.</p>
-<p>On your device, login credentials are not retained; instead, they are exchanged for OAuth tokens. These tokens, along with your email and calendar data, are stored within the application sandbox (on Android) or confined within your user profile (on Desktop).</p>
-<p>Your email and calendar data (including data associated with your Apple Calendar, Microsoft 365, or Google Calendars) reside solely on your device for the duration required to operate Thunderbird. When you remove an account, all associated content and tokens will be deleted from your device. On Desktop, the tokens may be retained for a longer period of time in case you have multiple accounts, but can be removed separately in the password manager.</p>
+<p>OAuth authentication and user data synchronization occur directly between Thunderbird and the respective service provider over an encrypted connection, without involving any Mozilla-operated services. Mozilla does not collect, access, retain, or store any sensitive information exchanged during this process.</p>
+<p>Data protection on your device:</p>
+<ul>
+<li>Login credentials are not stored on your device; instead, they are exchanged for OAuth tokens. These tokens, along with your email and calendar data, are secured within the application sandbox (on Android) or confined within your user profile (on Desktop). Additional security measures such as operating system level full disk encryption increase the security of your data.</li>
+<li>Email and calendar data reside solely on your device for the duration required to operate Thunderbird. This includes sensitive user data associated with your Apple Calendar, Microsoft 365 or Google Calendar.</li>
+<li>Thunderbird does not share OAuth tokens, email contents, calendar events, contact lists, or account details with third parties, except as necessary to provide the services requested by the user (e.g., sending an email or scheduling a calendar event).</li>
+</ul>
+<p>Retention and deletion:</p>
+<ul>
+<li>OAuth tokens are stored only as long as necessary to maintain the authorized connection.</li>
+<li>When you remove an account, all associated sensitive user data and OAuth tokens are immediately deleted from your device.</li>
+<li>On Thunderbird Desktop, the OAuth tokens are retained until manually deleted in the password manager.</li>
+<li>If you revoke Thunderbird’s access to your account via your OAuth provider’s account settings (e.g., Google security settings), Thunderbird will be unable to refresh the connection. Locally stored data will remain on your device until you remove the account from Thunderbird.</li>
+</ul>
 <h2>Thunderbird May Disclose Information To:</h2>
 <p><strong>Mozilla Affiliates</strong>: Thunderbird is a project of MZLA Technologies Corporation, a subsidiary of Mozilla Foundation and an affiliate of Mozilla Corporation, and as such, shares some of the same infrastructure. This means that, from time to time, your data (e.g., crash reports, and technical and interaction data) may be disclosed to Mozilla Corporation and Mozilla Foundation. If so, it will be maintained in accordance with the commitments we make in this Privacy Notice.</p>
 <p><strong>DNS servers, Standard Autoconfiguration URIs, and Mozilla's Configuration Database</strong>: To simplify the email set-up process, Thunderbird tries to determine the correct settings for your account by contacting Mozilla’s configuration database as well as external servers. These include DNS servers and standard autoconfiguration URIs. During this process, your email domain may be sent to Mozilla's configuration database, and your email address may be disclosed to your network administrators.</p>
