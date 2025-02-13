@@ -21,7 +21,7 @@
 {% block content %}
   <section id="donate">
     <div class="container">
-      {% if show_donor_help_slow_warning %}
+      {% if settings.DONOR_HELP_SLOW_WARNING %}
         <div id="warning" class="warning-panel">
           <p>
             <b>
