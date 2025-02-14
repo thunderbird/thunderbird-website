@@ -666,11 +666,6 @@ def split_keep_delimiter(ctx, string: str, split: str):
     return [f"{line}," for line in string.split(split)[:-1]] + lines[-1:]
 
 
-@jinja2.pass_context
-def show_donor_help_slow_warning(ctx):
-    return settings.DONOR_HELP_SLOW_WARNING or False
-
-
 def f(s, *args, **kwargs):
     return s.format(*args, **kwargs)
 
