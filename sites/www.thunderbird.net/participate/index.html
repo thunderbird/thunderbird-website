@@ -127,15 +127,13 @@
         <div>
           <p>{{ _('Advocacy is one of the easiest ways to contribute to Thunderbird! Boosting our posts on Mastodon, showcasing the software to a friend, upvoting a helpful answer on Reddit; anything that adds visibility is a huge help. Here’s where to find us on various social platforms, and how to get involved.') }}</p>
           <ul class="styled-list">
-            <li><a href="{{ url('participate.promote.reddit') }}">{{ _('Reddit') }}</a></li>
-            <li><a href="{{ url('participate.promote.mastodon') }}">{{ _('Mastodon') }}</a></li>
-            <li><a href="{{ url('participate.promote.twitter') }}">{{ _('X (Formerly Twitter)') }}</a></li>
-            <li><a href="{{ url('participate.promote.youtube') }}">{{ _('YouTube') }}</a></li>
+            <li><a href="{{ url('thunderbird.social.reddit') }}">{{ _('Reddit') }}</a></li>
+            <li><a href="{{ url('thunderbird.social.mastodon') }}">{{ _('Mastodon') }}</a></li>
+            <li><a href="{{ url('thunderbird.social.bluesky') }}">{{ _('Bluesky') }}</a></li>
+            <li><a href="{{ url('thunderbird.social.youtube') }}">{{ _('YouTube') }}</a></li>
             <li><a href="{{ url('participate.promote.tilvids') }}">{{ _('TILVids') }}</a></li>
-            <li><a href="{{ url('participate.promote.linkedin') }}">{{ _('LinkedIn') }}</a></li>
-            <li>
-              <a href="{{ url('participate.promote.android.review') }}">{{ _('Leave a review on the Google Play') }}</a>
-            </li>
+            <li><a href="{{ url('thunderbird.social.linkedin') }}">{{ _('LinkedIn') }}</a></li>
+            <li><a href="{{ url('participate.promote.android.review') }}">{{ _('Leave a review on the Google Play') }}</a></li>
           </ul>
         </div>
       {% endcall %}
