@@ -543,7 +543,7 @@ WEBSITE_REDIRECTS = {
 
 # The default release channel to use when various function defaults are used
 # This will change the channel of the main download button.
-DEFAULT_RELEASE_VERSION = 'esr'
+DEFAULT_RELEASE_VERSION = 'release'
 
 MATOMO_SITE_IDS = {
     'website': 1,

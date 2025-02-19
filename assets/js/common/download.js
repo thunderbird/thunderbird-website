@@ -172,17 +172,35 @@ if (typeof Mozilla === 'undefined') {
    */
   DownloadInfo.ToggleWarning = function(channel) {
     const dailyWarning = document.getElementById('daily-warning');
-    const releaseWarning = document.getElementById('release-warning');
+    const betaWarning = document.getElementById('beta-warning');
+    const esrNotice = document.getElementById('esr-notice');
+    const releaseNotice = document.getElementById('release-notice');
 
-    if (channel === 'daily') {
-      dailyWarning.classList.remove('hidden');
-    } else {
-      dailyWarning.classList.add('hidden');
+    dailyWarning.classList.add('hidden');
+    betaWarning.classList.add('hidden');
+    esrNotice.classList.add('hidden');
+    releaseNotice.classList.add('hidden');
+
+    let element = null;
+    switch (channel) {
+      case 'daily':
+        element = dailyWarning;
+        break;
+      case 'beta':
+        element = betaWarning;
+        break;
+      case 'esr':
+        element = esrNotice;
+        break;
+      case 'release':
+        element = releaseNotice;
+        break;
+      default:
+        break;
     }
-    if (channel === 'release') {
-      releaseWarning.classList.remove('hidden');
-    } else {
-      releaseWarning.classList.add('hidden');
+
+    if (element) {
+      element.classList.remove('hidden');
     }
   }
 
