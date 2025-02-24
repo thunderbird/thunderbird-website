@@ -24,11 +24,19 @@
           <p>{{ _('These are officially maintained and distributed by Thunderbird. Download the latest Release version unless you wish to test the Beta version and report bugs.') }}</p>
         </div>
         <div class="section-text">
-          <div id="daily-warning" class="warning-panel hidden">
-            <p>{{ _('The Daily version is an unstable testing and development platform, make sure you back up important data regularly!') }}</p>
-          </div>
-          <div id="release-warning" class="warning-panel hidden">
-            <p>{{ _('Thunderbird Release is available for testing purposes only until releases are deemed stable enough for official support. Make sure you backup important data regularly!') }}</p>
+          <div class="alerts" role="alert">
+            <p id="daily-warning" class="notice-panel warning hidden">
+              {{ _('The Daily channel is where development and testing begin, and new features are developed. This is expected to be the least stable channel. Make sure you back up important data regularly.') }}
+            </p>
+            <p id="beta-warning" class="notice-panel warning hidden">
+              {{ _('The Beta channel is where stabilization occurs. This is expected to be more stable that Daily, but not as stable as the Release or Extended Support Release channels. Make sure you back up important data regularly.') }}
+            </p>
+            <p id="esr-notice" class="notice-panel info hidden">
+              {{ _('The official annual extended support release. This release is intended for users who want all available new features on an annual basis and stability/security fixes on a monthly basis.') }}
+            </p>
+            <p id="release-notice" class="notice-panel info hidden">
+              {{ _('The official monthly release. This release is intended for users who want all available new features and bug fixes on a monthly basis.') }}
+            </p>
           </div>
 
           <!-- 1. Locale -->
@@ -51,7 +59,11 @@
           </label>
           <select id="download-release-select" name="channel" dir="ltr" class="form-select">
             {% for channel, channel_name in get_channels().items() %}
-            {% set option_name = 'Thunderbird %(channel_name)s'|format(channel_name=channel_name) %}
+              {% if settings.DEFAULT_RELEASE_VERSION == channel %}
+                {% set option_name = 'Thunderbird %(channel_name)s (Recommended)'|format(channel_name=channel_name) %}
+              {% else %}
+                {% set option_name = 'Thunderbird %(channel_name)s'|format(channel_name=channel_name) %}
+              {% endif %}
             <option value="{{ channel }}">{{ _(option_name) }}</option>
             {% endfor %}
           </select>
