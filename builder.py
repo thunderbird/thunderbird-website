@@ -58,7 +58,7 @@ def mkdir(path):
             raise
 
 
-def write_site_htaccess(renderpath: str, lang: str, redirects: dict):
+def write_site_htaccess(renderpath: str, lang: str, redirects: dict, redirect_request=False):
     """Writes .htaccess files from a given redirects dictionary for the given language."""
     for path, url_key in redirects.items():
         # Normalize non-tuples
@@ -66,7 +66,7 @@ def write_site_htaccess(renderpath: str, lang: str, redirects: dict):
             path = (path,)
         path = os.path.join(renderpath, lang, *path)
         redirect_path = helper.url({'LANG': lang}, url_key)
-        write_htaccess(path, redirect_path)
+        write_htaccess(path, redirect_path, redirect_request)
 
 
 def write_htaccess_custom(path, rules: str):
@@ -76,9 +76,12 @@ def write_htaccess_custom(path, rules: str):
         f.write(rules)
 
 
-def write_htaccess(path, url):
+def write_htaccess(path, url, redirect_request=False):
     """Write an .htaccess to `path` that rewrites everything to `url`."""
-    write_htaccess_custom(path, 'RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
+    tags = ''
+    if redirect_request:
+        tags = ' [R]'
+    write_htaccess_custom(path, 'RewriteEngine On\nRewriteRule .* {url}{tags}\n'.format(url=url, tags=tags))
 
 
 def write_404_htaccess(path, lang):
@@ -492,7 +495,7 @@ class Site(object):
             logger.info("Building pages for {lang}...".format(lang=lang))
             self._switch_lang(lang)
             self.render()
-            write_site_htaccess(self.renderpath, self.lang, settings.UPDATES_REDIRECTS)
+            write_site_htaccess(self.renderpath, self.lang, settings.UPDATES_REDIRECTS, redirect_request=True)
         self.build_assets()
 
     def build_website(self, assets=True, notes=True):
