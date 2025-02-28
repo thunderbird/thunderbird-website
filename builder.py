@@ -78,7 +78,7 @@ def write_htaccess_custom(path, rules: str):
 
 def write_htaccess(path, url):
     """Write an .htaccess to `path` that rewrites everything to `url`."""
-    write_htaccess_custom(path, 'RewriteEngine On\nRewriteRule .* {url}\n'.format(url=url))
+    write_htaccess_custom(path, 'RewriteEngine On\nRewriteRule (.*) {url}\n'.format(url=url))
 
 
 def write_404_htaccess(path, lang):
@@ -484,11 +484,20 @@ class Site(object):
             self.render()
         self.build_assets()
 
+    def build_utn(self):
+        """Build the start page for all `languages`."""
+        delete_contents(self.renderpath)
+        for lang in self.languages:
+            logger.info("Building pages for {lang}...".format(lang=lang))
+            self._switch_lang(lang)
+            self.render()
+            write_site_htaccess(self.renderpath, self.lang, settings.UPDATES_REDIRECTS)
+        self.build_assets()
+
     def build_updates(self):
         """Build the updates page for all `languages`."""
-        # Right now it's the same as startpage.
         self._env.globals.update(self.data)
-        self.build_startpage()
+        self.build_utn()
 
     def build_website(self, assets=True, notes=True):
         """

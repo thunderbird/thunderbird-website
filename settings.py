@@ -535,6 +535,11 @@ WEBSITE_REDIRECTS = {
     ('thunderbird', '128.0', 'releasenotes'): 'thunderbird.128esr.releasenotes',
 }
 
+# Similar to website redirects but for UTN
+UPDATES_REDIRECTS = {
+    ('thunderbird', 'appeal'): 'updates.128.appeal.dec24.donate'
+}
+
 # The default release channel to use when various function defaults are used
 # This will change the channel of the main download button.
 DEFAULT_RELEASE_VERSION = 'release'
