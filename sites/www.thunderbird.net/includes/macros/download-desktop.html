@@ -1,5 +1,5 @@
 {# Internal macro, use download-block or download-smart instead! #}
-{% macro download_desktop_btns(channel = 'esr', btn_class_name = 'btn-white-bg', container_class_name = 'download-button-desktop', show_donate_footer = False) -%}
+{% macro download_desktop_btns(channel = settings.DEFAULT_RELEASE_VERSION, btn_class_name = 'btn-white-bg', container_class_name = 'download-button-desktop', show_donate_footer = False) -%}
   <div>
     <div class="download-button {{ container_class_name }}">
       {% for plat in get_latest_desktop_builds()[1] %}
