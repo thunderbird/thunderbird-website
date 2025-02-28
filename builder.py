@@ -486,9 +486,14 @@ class Site(object):
 
     def build_updates(self):
         """Build the updates page for all `languages`."""
-        # Right now it's the same as startpage.
         self._env.globals.update(self.data)
-        self.build_startpage()
+        delete_contents(self.renderpath)
+        for lang in self.languages:
+            logger.info("Building pages for {lang}...".format(lang=lang))
+            self._switch_lang(lang)
+            self.render()
+            write_site_htaccess(self.renderpath, self.lang, settings.UPDATES_REDIRECTS)
+        self.build_assets()
 
     def build_website(self, assets=True, notes=True):
         """

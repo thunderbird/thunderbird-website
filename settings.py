@@ -269,6 +269,7 @@ URL_MAPPINGS = {
     'updates.128.appeal.nov24.donate': '/thunderbird/128.0/nov24/donate/',
     'updates.115.appeal.dec24.donate': '/thunderbird/115.0/dec24/donate/',
     'updates.128.appeal.dec24.donate': '/thunderbird/128.0/dec24/donate/',
+    'updates.128.appeal.apr25.donate': '/thunderbird/128.0/apr25/donate/',
 }
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
@@ -533,6 +534,11 @@ WEBSITE_REDIRECTS = {
     'features': 'thunderbird.index',
     ('thunderbird', '128.0esr', 'whatsnew'): 'thunderbird.128.whatsnew',
     ('thunderbird', '128.0', 'releasenotes'): 'thunderbird.128esr.releasenotes',
+}
+
+# Similar to website redirects but for UTN
+UPDATES_REDIRECTS = {
+    ('thunderbird', 'appeal'): 'updates.128.appeal.apr25.donate'
 }
 
 # The default release channel to use when various function defaults are used
