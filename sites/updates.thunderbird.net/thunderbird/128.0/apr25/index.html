@@ -7,13 +7,13 @@
 # in the user's preferred browser. This is hopefully less annoying for the end-user.
 #}
 
-{% set active_page = "appeal-mar25" %}
+{% set active_page = "appeal-apr25" %}
 
 {# For donation url generation #}
-{% set fru_form_id = fru_form_id|default('eoy2024') %}
-{% set utm_campaign = utm_campaign|default('mar25_appeal') %}
+{% set fru_form_id = fru_form_id|default('apr24') %}
+{% set utm_campaign = utm_campaign|default('apr24_appeal') %}
 {% set utm_source = utm_source|default('thunderbird-client') %}
-{% set donation_base_url = donation_base_url|default(url('updates.128.appeal.mar25.donate')) %}
+{% set donation_base_url = donation_base_url|default(url('updates.128.appeal.apr25.donate')) %}
 
 {% extends "includes/base/base.html" %}
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
