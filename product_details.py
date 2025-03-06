@@ -260,8 +260,8 @@ class ThunderbirdDetails():
             # We only count 128.0 and up as esr (and specific 115.0 versions)
             is_esr = (category == 'esr' and version_int[0] >= 128) or needs_esr_fixup(version_int)
 
-            # Skip any post-115 non-esr builds (monthly) for now!
-            if not is_esr and version_int[0] > 115:
+            # Skip non-esr builds between 115 and 136 since monthly releases were in beta
+            if not is_esr and 115 < version_int[0] < 136:
                 continue
 
             if is_esr:
