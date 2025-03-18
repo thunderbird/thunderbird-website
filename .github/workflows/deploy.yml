@@ -1,0 +1,112 @@
+name: Re-usable Deploy
+
+on:
+  workflow_call:
+    inputs:
+      AWS_REGION:
+        required: true
+        type: string
+      CONTAINER:
+        required: true
+        type: string
+      CACHE_FILE_ID:
+        required: true
+        type: string
+      DOCKER_FILE:
+        required: true
+        type: string
+      PR_ID_KEY:
+        required: true
+        type: string
+      PR_ID_VALUE:
+        required: true
+        type: string
+      ECS_CLUSTER:
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    name: Deploy Site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get Cached Task Definition ARN
+        id: cache-task-arn-get
+        uses: actions/cache/restore@v3
+        with:
+          fail-on-cache-miss: true
+          path: ./${{ inputs.CONTAINER }}-task-def-arn-${{ inputs.CACHE_FILE_ID }}.json
+          key: ${{ inputs.CONTAINER }}-task-def-arn
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ inputs.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Install Unique Names Generator
+        run: npm i unique-names-generator
+
+      - uses: actions/github-script@v6
+        name: Clean up existing Tasks
+        with:
+          script: |
+            const script = require('${{github.workspace}}/.github/scripts/delete-tasks.js')
+            const options = {
+              github: github,
+              context: context,
+              exec: exec,
+              partial_value: true,
+              require: require,
+              pr_id_key: "${{ inputs.PR_ID_KEY }}",
+              pr_id_value: "${{ inputs.PR_ID_VALUE }}",
+              ecs_cluster: "${{ inputs.ECS_CLUSTER }}",
+              aws_load_balancer_arn: '${{ secrets.AWS_LOAD_BALANCER_ARN }}',
+              aws_listener_arn: '${{ secrets.AWS_LISTENER_ARN }}',
+            }
+            await script(options)
+
+      - uses: actions/github-script@v6
+        name: Deploy Task
+        env:
+          AWS_SECURITY_GROUPS: ${{ secrets.AWS_SECURITY_GROUPS }}
+          AWS_SUBNETS: ${{ secrets.AWS_SUBNETS }}
+          AWS_VPC_ID: ${{ secrets.AWS_VPC_ID }}
+        with:
+          script: |
+            const script = require('${{github.workspace}}/.github/scripts/run-task-and-set-url.js')
+            const options = {
+              core: core,
+              github: github,
+              exec: exec,
+              require: require,
+              task_def_arn_file: "./${{ inputs.CONTAINER }}-task-def-arn-${{ inputs.CACHE_FILE_ID }}.json",
+              cache_file_path: "./${{ inputs.CONTAINER }}-url-${{ inputs.CACHE_FILE_ID }}.json",
+              pr_id_key: "${{ inputs.PR_ID_KEY }}",
+              pr_id_value: "${{ inputs.PR_ID_VALUE }}",
+              ecs_cluster: "${{ inputs.ECS_CLUSTER }}",
+              aws_security_groups: '${{ secrets.AWS_SECURITY_GROUPS }}', /* The value uses double quotes, so we need to single quote this */
+              aws_subnets: '${{ secrets.AWS_SUBNETS }}', /* The value uses double quotes, so we need to single quote this */
+              aws_vpc_id: '${{ secrets.AWS_VPC_ID }}',
+              aws_avail_region: '${{ secrets.AWS_AVAIL_REGION }}',
+              aws_listener_arn: '${{ secrets.AWS_LISTENER_ARN }}',
+              preview_is_secure: '${{ secrets.PREVIEW_IS_SECURE }}',
+              preview_host_url: '${{ secrets.PREVIEW_HOST_URL }}',
+            }
+            await script(options)
+
+      - name: Cache URL
+        id: cache-url
+        uses: actions/cache/save@v3
+        with:
+          path: ./${{ inputs.CONTAINER }}-url-${{ inputs.CACHE_FILE_ID }}.json
+          key: ${{ inputs.CONTAINER }}-url
