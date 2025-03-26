@@ -96,3 +96,33 @@
     filter: drop-shadow(0 4px 4px var(--color-gray-10));
   }
 }
+
+@keyframes sunset-gradient {
+	0% {
+		background-position: 0 0;
+	}
+	40% {
+		background-position: 0 40%;
+	}
+    50% {
+		background-position: 0 100%;
+	}
+    60% {
+		background-position: 0 40%;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+@keyframes sunset-gradient-linear {
+	0% {
+		background-position: 0 0;
+	}
+    50% {
+		background-position: 0 100%;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
