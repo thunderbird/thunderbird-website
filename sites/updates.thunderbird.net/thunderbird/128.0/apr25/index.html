@@ -22,14 +22,14 @@
   <link href="{{ static('css/appeal-dec24-style.css') }}" rel="stylesheet" type="text/css"/>
 
 {% endblock %}
-{% block page_title %}{{ _('Help Keep Thunderbird Alive!') }}{% endblock %}
+{% block page_title %}{{ _('Only 3% of users support Thunderbird') }}{% endblock %}
 
 {% block site_header %}
   <div id="header-gradient"></div>
   <div id="appeal-header">
     <header>
-      <h1 id="appeal-heading" aria-label="{{ _('Help Keep Thunderbird Alive!') }}">
-        {{ _('Help Keep <span>Thunderbird Alive</span>') }}
+      <h1 id="appeal-heading" aria-label="{{ _('Only 3% of users support Thunderbird.') }}">
+        {{ _('Only 3% of users <span>Support Thunderbird</span>') }}
       </h1>
     </header>
     <aside id="illustration" aria-hidden="true">
@@ -45,15 +45,15 @@
   </section>
   <section id="appeal-body">
     <div class="letter-container font-xl">
-    <p>{{ _('All of the work we do is funded by less than 3% of our users.')}}</p>
     <p>
-      {{ _('We never show advertisements or sell your data. We don’t have corporate funding. We are fully funded by financial contributions from our users.')}}
+      {% trans trimmed %}
+        In 2024, we soared to new heights, improving our technical infrastructure, boosting Thunderbird’s speed and responsiveness, and launching on Android. But we’re just getting started, with exciting plans for 2025.
+      {% endtrans %}
     </p>
     <p>
-      {{ _('Thunderbird’s mission is to give you the best privacy-respecting, customizable email experience possible. Free for everyone to install and enjoy! Maintaining expensive servers, fixing bugs, developing new features, and hiring talented engineers are crucial for this mission.')}}
-    </p>
-    <p>
-      {{ _('If you get value from using Thunderbird, please help support it. We can’t do this without you.')}}
+      {% trans trimmed %}
+        Will you help support the most powerful version of Thunderbird yet?
+      {% endtrans %}
     </p>
     <div class="heart-container">
       <div class="left-lines">
