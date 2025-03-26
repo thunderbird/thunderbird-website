@@ -11,8 +11,8 @@
 {% set use_new_mozilla_logo = True %}
 
 {# For donation url generation #}
-{% set fru_form_id = fru_form_id|default('apr24') %}
-{% set utm_campaign = utm_campaign|default('apr24_appeal') %}
+{% set fru_form_id = fru_form_id|default('apr25') %}
+{% set utm_campaign = utm_campaign|default('apr25_appeal') %}
 {% set utm_source = utm_source|default('thunderbird-client') %}
 {% set donation_base_url = donation_base_url|default(url('updates.128.appeal.apr25.donate')) %}
 
@@ -25,7 +25,6 @@
 {% block page_title %}{{ _('Only 3% of users support Thunderbird') }}{% endblock %}
 
 {% block site_header %}
-  <div id="header-gradient"></div>
   <div id="appeal-header">
     <header>
       <h1 id="appeal-heading" aria-label="{{ _('Only 3% of users support Thunderbird.') }}">
