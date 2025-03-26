@@ -19,12 +19,15 @@
 :root {
   --bg-img: linear-gradient(180deg, #54B9E5 0%, #FBF8E7 31.5%, #FBF8E7 43%, #FFF0A3 66%, #FFC068 100%);
 
+  // Hand-tweaked based on direction and vibes, Spaced out #54b9e5 from #fbf8e7 because of some nasty colour blending.
+  --bg-animation-gradient: linear-gradient(180deg, #ffc068 0%, #fff0a3 20%, #fbf8e7 25%, #54b9e5 40%, #54b9e5 60%, #fbf8e7 70%, #fff0a3 75%, #ffc068 80%);
+
   --bg-appeal-glow: linear-gradient(130deg, rgba(255, 242, 0, 0.25) 50%, #26BAF5 100%);
 
   --color-appeal-main-bg: var(--color-white);
   --color-footer-txt: #105BBC;
   --color-appeal-heading-txt: #F34576;
-  --color-appeal-txt: #18181B;
+  --color-appeal-txt: #1a202c;
   --color-appeal-bg-border: #1373D9;
 
   --txt: var(--color-appeal-txt);
@@ -43,13 +46,14 @@
     min-height: 100vh;
     font-family: var(--font-content);
     line-height: 1.6;
-    background: var(--bg-img);
-    animation: sunset-gradient-linear 300s ease infinite;
-    background-size: 400% 400%;
+    background: var(--bg-animation-gradient);
+    animation: sunset-gradient-linear 20s ease-in-out infinite alternate;
+    background-size: 100% 300%;
 
     // No moving gradients for folks who don't want it.
     @media (prefers-reduced-motion: reduce) {
       animation: none;
+      background: var(--bg-img);
       background-size: 100% 100%;
     }
   }
@@ -59,8 +63,7 @@
     flex-direction: column-reverse;
     padding-bottom: 7rem;
     max-width: 80rem;
-    margin: auto;
-    margin-bottom: 2rem;
+    margin: auto auto 2rem;
 
     header {
       padding: 0;
@@ -73,7 +76,7 @@
 
     @media (min-width: @lg) {
       flex-direction: row;
-      height: 32.25rem;
+      height: 22.25rem;
       header {
         display: flex;
         flex-direction: column;
@@ -106,7 +109,7 @@
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--txt);
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0.125rem 0 rgba(23, 95, 182, 0.3);
 
     & > span {
       margin-top: -.2rem;
@@ -114,6 +117,7 @@
       font-size: 2.5rem;
       font-weight: 700;
       line-height: 2.5rem;
+      text-shadow: 0 0.125rem 0 #b62749;
       @media (min-width: @md) {
         font-size: 4.375rem;
         line-height: 4.375rem;
@@ -124,6 +128,7 @@
   #illustration {
     width: 100%;
     text-align: center;
+
     #roc {
       @media (min-width: @lg) {
         padding-top: 1rem;
@@ -212,20 +217,20 @@
       font-size: 1.125rem;
       margin: 0 0 1.5rem;
       @media (min-width: @md) {
-        font-size: 1.5rem;
+        font-size: 1.375rem;
+        line-height: 150%;
         margin: 0 0 2rem;
       }
     }
 
 
-
     /* Declaring this style here, as it has more precedence. */
+
     .closing-text {
       font-size: 1rem;
     }
 
   }
-
 
 
   // Copy and paste (with minor tweaks) from previous appeal
