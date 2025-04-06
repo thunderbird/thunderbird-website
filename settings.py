@@ -269,6 +269,7 @@ URL_MAPPINGS = {
     'updates.128.appeal.nov24.donate': '/thunderbird/128.0/nov24/donate/',
     'updates.115.appeal.dec24.donate': '/thunderbird/115.0/dec24/donate/',
     'updates.128.appeal.dec24.donate': '/thunderbird/128.0/dec24/donate/',
+    'updates.128.appeal.apr25': '/thunderbird/128.0/apr25/',
     'updates.128.appeal.apr25.donate': '/thunderbird/128.0/apr25/donate/',
 }
 
@@ -539,7 +540,7 @@ WEBSITE_REDIRECTS = {
 
 # Similar to website redirects but for UTN
 UPDATES_REDIRECTS = {
-    ('thunderbird', 'appeal'): 'updates.128.appeal.apr25.donate'
+    ('thunderbird', 'appeal'): 'updates.128.appeal.apr25'
 }
 
 # The default release channel to use when various function defaults are used
