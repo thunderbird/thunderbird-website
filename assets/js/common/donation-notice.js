@@ -7,7 +7,7 @@
  */
 // The widget id on the donate page, should be the same as the 'href' value (minus the hash.)
 const FRU_FORM_WIDGET = 'XVFNMBAK';
-const FRU_TIMEOUT_IN_MS = 10_000;
+const FRU_TIMEOUT_IN_MS = 7_500;
 
 let donationCountdownHandle = null;
 let donationCheckoutSuccess = false;
