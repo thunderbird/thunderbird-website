@@ -93,6 +93,10 @@
   </p></noscript>
 {% endblock %}
 
+{% if settings.SHOW_DONATION_BLOCKED_NOTICE %}
+{% include 'includes/donation-blocked-notice.html' %}
+{% endif %}
+
 {% block js %}{% endblock %}
 </body>
 </html>

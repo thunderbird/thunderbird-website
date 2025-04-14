@@ -87,7 +87,7 @@
   </li>
   <li class="nav-entry no-border no-mobile nav-button-fix">
     <div class="header-donate">
-      <a href="{{ donate_url('header', form_id=override_nav_donate_form_id|default(settings.FRU_FORM_IDS['support'])) }}" class="btn btn-no-bg" aria-label="{{ _('Donate') }}" title="{{ _('Donate') }}">
+      <a data-donate-btn href="{{ donate_url('header', form_id=override_nav_donate_form_id|default(settings.FRU_FORM_IDS['support'])) }}" class="btn btn-no-bg" aria-label="{{ _('Donate') }}" title="{{ _('Donate') }}">
         <span aria-hidden="true">{{ svg('heart') }}</span>
       </a>
     </div>

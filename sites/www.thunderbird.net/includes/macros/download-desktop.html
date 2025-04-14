@@ -28,7 +28,7 @@
     </div>
     {% if show_donate_footer %}
       <small>{{ _('Free forever.') }}
-        <a class="dotted" href="{{ donate_url('header') }}">{{ _('Donate') }}</a> {{ _('to make it better.') }}</small>
+        <a data-donate-btn class="dotted" href="{{ donate_url('header') }}">{{ _('Donate') }}</a> {{ _('to make it better.') }}</small>
     {% endif %}
   </div>
 {%- endmacro %}
