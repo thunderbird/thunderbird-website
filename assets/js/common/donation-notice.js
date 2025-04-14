@@ -39,12 +39,10 @@ const startDonationNoticeCountdown = () => {
   if (donationCountdownHandle !== null) {
     return;
   }
-  console.log("Starting countdown");
   donationCountdownHandle = window.setTimeout(() => showDonationNotice(), FRU_TIMEOUT_IN_MS);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("Hooking up notice");
   // Don't set anything up if notice doesn't exist
   const notice = document.getElementById('donation-blocked-notice');
   if (!notice) {
