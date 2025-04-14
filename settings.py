@@ -308,7 +308,7 @@ WEBSITE_JS = {
         'js/common/class-list-polyfill.js', 'js/common/mozilla-global-nav.js',
         'js/common/base-page-init.js', 'js/common/core-datalayer.js', 'js/common/core-datalayer-init.js',
         'js/common/autodownload.js', 'js/common/donations.js', 'js/common/ab-testing.js', 'js/common/beta-appeal.js',
-        'js/common/download.js',
+        'js/common/download.js', 'js/common/donation-notice.js'
     ],
     'site-bundle': [
         'js/base/site.js', 'js/base/dnt-helper.js', 'js/base/mozilla-cookie-helper.js',
@@ -337,7 +337,7 @@ UPDATES_CSS = {
 UPDATES_JS = {
     'common-bundle': [
         # Load bearing order..Donation must come before AB testing.
-        'js/common/donations.js', 'js/common/ab-testing.js'
+        'js/common/donations.js', 'js/common/ab-testing.js', 'js/common/donation-notice.js'
     ]
 }
 

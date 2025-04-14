@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!(/msie\s|trident\/|edge\//i.test(navigator.userAgent))) {
         setTimeout(function() {
           window.location.href = donate_url;
-        }, 7500);
+        }, 5000);
       }
 
     });
@@ -139,77 +139,4 @@ document.addEventListener('DOMContentLoaded', () => {
   accordionElement.setAttribute('open', 'open');
 });
 
-/**
- * Donation Blocker Detector
- */
-let donationCountdownHandle = null;
-let donationCheckoutSuccess = false;
-
-/**
- * Display the dialog element #donation-blocked-notice only if the element exists, and a FRU element hasn't been detected.
- */
-const showDonationNotice = () => {
-  const notice = document.getElementById('donation-blocked-notice');
-  const donatePageEmbeddedWidget = document.getElementById('XVFNMBAK');
-  const isFRULoaded = donationCheckoutSuccess || donatePageEmbeddedWidget;
-
-  // Clear our state variables now
-  donationCountdownHandle = null;
-  donationCheckoutSuccess = false;
-
-  // Exit early if the notice doesn't exist, or FRU is loaded.
-  if (!notice || isFRULoaded) {
-    return;
-  }
-
-  notice.showModal();
-};
-
-/**
- * Simply checks if there isn't a countdown in progress before starting a new one.
- */
-const startDonationNoticeCountdown = () => {
-  if (donationCountdownHandle !== null) {
-    return;
-  }
-
-  donationCountdownHandle = window.setTimeout(() => showDonationNotice(), 1000);
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Don't set anything up if notice doesn't exist
-  const notice = document.getElementById('donation-blocked-notice');
-  if (!notice) {
-    return;
-  }
-
-  // Hook up notice's close button
-  const noticeCloseButton = document.querySelector('#donation-blocked-notice .close-btn');
-  if (noticeCloseButton) {
-    noticeCloseButton.addEventListener('click', () => {
-      notice.close()
-    });
-  }
-
-  // Conditions for the countdown
-  const donationButtons = document.querySelectorAll('[data-donate-btn]');
-  for (const donationButton of donationButtons) {
-    donationButton.addEventListener('click', () => {
-      startDonationNoticeCountdown();
-    });
-  }
-
-  if (window.location.search.includes('form=') || window.location.pathname.includes('donate')) {
-    startDonationNoticeCountdown();
-  }
-
-  // Finally setup a event handler for FRU checkoutOpen
-  window.FundraiseUp.on('checkoutOpen', function() {
-    donationCheckoutSuccess = true;
-    // If we opened after the countdown fires then close the notice.
-    if (notice.open) {
-      notice.close();
-    }
-  });
-});
 
