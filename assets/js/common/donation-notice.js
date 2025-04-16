@@ -60,6 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Conditions for the countdown
   const donationButtons = document.querySelectorAll('[data-donate-btn]');
   for (const donationButton of donationButtons) {
+    // Any donation button that redirects should be skipped as that's not where the modal will show up.
+    if ('dontShowDonationNotice' in donationButton.dataset) {
+      continue;
+    }
     donationButton.addEventListener('click', () => {
       startDonationNoticeCountdown();
     });
