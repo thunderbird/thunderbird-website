@@ -11,6 +11,9 @@
 {% set fru_form_id = 'apr25' %}
 {% set utm_campaign = 'apr25_appeal' %}
 {% set donation_base_url = None %}
+{# We want to show the redirect notice here as this is where the modal will actually open up. #}
+{% set disable_donation_notice_banner = False %}
+
 
 {# Just include previous page instead of duplicating it all #}
 {% extends "thunderbird/128.0/apr25/index.html" %}
