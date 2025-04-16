@@ -65,17 +65,21 @@ if (typeof Mozilla === 'undefined') {
         }
 
         const searchParams = new URLSearchParams(window.location.search);
-        const utmSourceNewsletter = 'newsletter';
-        const utmSource = searchParams.get('utm_source');
 
         // If a user clicks on a donate button, track the donate link click goal
         const donateButtons = document.querySelectorAll('[data-donate-btn]');
         donateButtons.forEach(function(element) {
             // Correct the utmSource
-            if (utmSource === utmSourceNewsletter) {
+            for (const [key, value] of searchParams.entries()) {
+                if (!key.startsWith('utm_')) {
+                    continue;
+                }
+
                 const href = new URL(element.href);
+
                 // Adjust the utm source to newsletter
-                href.searchParams.set('utm_source', utmSourceNewsletter);
+                href.searchParams.set(key, value);
+
                 // Set the new href
                 element.href = href.toString();
             }
@@ -209,5 +213,5 @@ if (typeof Mozilla === 'undefined') {
     }
 
     window.Mozilla.Donation = Donation;
-    Donation.Init();
+    window.addEventListener('load', () => Donation.Init());
 })();
