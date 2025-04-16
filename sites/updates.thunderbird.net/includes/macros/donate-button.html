@@ -1,5 +1,5 @@
-{% macro donate_button(form_id=settings.FRU_FORM_IDS['support'], content='cta', source='thunderbird-client', campaign='appeal', base_url=None, disable_notice=False) %}
-<a href="{{ donate_url(content=content, campaign=campaign, source=source, form_id=form_id, base_url=base_url) }}" class="donate-banner" {% if base_url != None %}target="_blank"{% endif %} data-donate-btn {% if disable_notice %}data-dont-show-donation-notice{% endif %}>
+{% macro donate_button(form_id=settings.FRU_FORM_IDS['support'], content='cta', source='thunderbird-client', campaign='appeal', base_url=None, disable_donation_blocked_notice=False) %}
+<a href="{{ donate_url(content=content, campaign=campaign, source=source, form_id=form_id, base_url=base_url) }}" class="donate-banner" {% if base_url != None %}target="_blank"{% endif %} data-donate-btn {% if disable_donation_blocked_notice %}data-dont-show-donation-blocked-notice{% endif %}>
   <div id="donate-banner-left">
     {{ _('Click here to <b>Donate!</b>') }}
   </div>
