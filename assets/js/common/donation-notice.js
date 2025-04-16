@@ -61,7 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const donationButtons = document.querySelectorAll('[data-donate-btn]');
   for (const donationButton of donationButtons) {
     // Any donation button that redirects should be skipped as that's not where the modal will show up.
-    if ('dontShowDonationNotice' in donationButton.dataset) {
+    // Ref: [data-dont-show-donation-blocked-notice]
+    if ('dontShowDonationBlockedNotice' in donationButton.dataset) {
       continue;
     }
     donationButton.addEventListener('click', () => {

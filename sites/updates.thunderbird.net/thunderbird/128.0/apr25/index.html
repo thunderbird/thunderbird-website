@@ -16,7 +16,7 @@
 {% set utm_source = utm_source|default('thunderbird-client') %}
 {% set donation_base_url = donation_base_url|default(url('updates.128.appeal.apr25.donate')) %}
 {# Disable the donation banner on this redirect page, we set this to false in the actual donation page. #}
-{% set disable_donation_notice_banner = disable_donation_notice_banner|default(True) %}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
 
 {% extends "includes/base/base.html" %}
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
@@ -42,7 +42,7 @@
 {% endblock %}
 {% block content %}
   <section id="donate-button-container">
-    {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, base_url=donation_base_url, disable_notice=disable_donation_notice_banner) }}
+    {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
   </section>
   <section id="appeal-body">
     <div class="letter-container font-xl">
