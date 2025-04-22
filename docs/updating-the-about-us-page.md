@@ -46,3 +46,13 @@ Add the new staff member using the `job_block` macro:
 ```
 
 This macro produces the appropriate markup, including the `<picture>` element.
+
+#### Specifying optional attributes
+
+You can also pass optional attributes to `high_res_img`:
+
+```jinja
+ {{ job_block(_('Staff Software Engineer, Desktop'), 'Ben Campbell', high_res_img('thunderbird/staff/ben_campbell.png', scale='2x', optional_attributes={'class': 'pixel'})) }}
+```
+
+This particular `class` ensures the image scales using nearest neighbour scaling instead of bilinear.
