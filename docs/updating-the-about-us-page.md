@@ -33,6 +33,10 @@ cd tools
 python ./crop_staff_list.py
 ```
 
+This adds the optimized versions of the image to the `media/img/thunderbird/staff/` directory.
+
+Make note of the name of the non high-res version of the `.png`. You will need it when you add the staff member to the markup.
+
 ### Markup
 
 Edit the file `sites/www.thunderbird.net/about/index.html`
