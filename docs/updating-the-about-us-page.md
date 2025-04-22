@@ -11,26 +11,27 @@ To add a new staff member, you only need to:
 
 ### Headshots
 
-When exporting a staff member's headshot from a photo editing tool, make sure to create two versions: one at 1x resolution and another at 2x resolution.
+You can automatically generate cropped and compressed headshot images using the `tools/crop_staff_list.py` script.
 
-Follow these naming convention:
-
-- 1x: `roc.png`
-- 2x: `roc-high-res.png`
-
-Note: The high resolution naming convention deviates from the industry standard "@2x".
-
-Save both to `media/img/thunderbird/staff/`.
-
-#### Generating compressed images
-
-From the root of the `thunderbird-website` repo, create compressed versions of the images with the following command:
+To use it, make sure you've installed the image manipulation dependencies:
 
 ```bash
-python tools/compress_assets.py -r -o media/img/thunderbird/staff/
+pip install -r requirements-image.txt
 ```
 
-This will search recursively (`-r`) and overwrite (`-o`) previously compressed files.
+Add each new staff member's photo to `media/img/thunderbird/staff/uncropped/`. (This directory is gitignored.)
+
+Follow this file naming convention: `<whatever> - <First Name> <Last Name>.whatever-extension`
+(e.g. 97147377 - Melissa Autumn.jpg)
+
+As necessary, specify origin points for cropping by addding `[Left|Center|Right,Top|Center|Bottom]` to the file name. (e.g. `97147377 - Melissa Autumn[Left,Bottom].jpg`.)
+
+Then:
+
+```bash
+cd tools
+python ./crop_staff_list.py
+```
 
 ### Markup
 
