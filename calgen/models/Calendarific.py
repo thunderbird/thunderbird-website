@@ -35,7 +35,7 @@ class Calendarific(Calendar):
         regions = data.get('states')
         locations = data.get('locations')
 
-        location_slugs = locations.lower().replace(', ', '-')
+        location_slugs = locations.lower().replace(' ', '-').replace(',', '')
 
         if locations and locations.lower() != 'all' and regions and len(regions) > 0:
             self.name = self.handle_regional_labelling(data.get('name'),
