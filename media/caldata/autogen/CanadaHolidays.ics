@@ -3,1961 +3,1890 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:New Year's Day
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20241008T090601Z
-UID:be63c3297c2f8f5ca3c014a794a5c1e5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - New Year's Day is the first day of a new y
- ear according to the Gregorian calendar used in Canada and many other coun
- tries.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Good Friday
-DTSTART;VALUE=DATE:20240329
-DTEND;VALUE=DATE:20240330
-DTSTAMP:20241008T090601Z
-UID:c257c788346c4b203ef5c03a8c20c518-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - On Good Friday\, Christians commemorate th
- e crucifixion of Jesus Christ and it is a statutory holiday in many parts 
- of Canada.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (NT\, NU\, QC)
-DTSTART;VALUE=DATE:20240401
-DTEND;VALUE=DATE:20240402
-DTSTAMP:20241008T090601Z
-UID:d9760b8173b3ea5c8c48b9b1a87e67df-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
- ay and a holiday for many Canadians.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Victoria Day (All except NS\, PE\, QC)
-DTSTART;VALUE=DATE:20240520
-DTEND;VALUE=DATE:20240521
-DTSTAMP:20241008T090601Z
-UID:d0252fb6b0272dba508cb21bda408aaf-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Victoria Day is celebrated in honor of the
-  birthdays of both Queen Victoria and the current monarch of Canada.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Canada Day
-DTSTART;VALUE=DATE:20240701
-DTEND;VALUE=DATE:20240702
-DTSTAMP:20241008T090601Z
-UID:a5371b57012e81e208a9d9a5512fb773-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Canada Day is a federal holiday on July 1 
- to mark the anniversary of the date that Canada became a self-governing co
- untry.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Labour Day
-DTSTART;VALUE=DATE:20240902
-DTEND;VALUE=DATE:20240903
-DTSTAMP:20241008T090601Z
-UID:04adc984b42bdb0510e5423d9d1bac0c-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Labour Day in Canada is a holiday to campa
- ign for workers' rights. It celebrates the achievements of these rights.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:National Day for Truth and Reconciliation
-DTSTART;VALUE=DATE:20240930
-DTEND;VALUE=DATE:20241001
-DTSTAMP:20241008T090601Z
-UID:96cf38c3b6ef7f7882ba6adcfe162218-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Federal Employees Holiday - National Day for Truth and Reconci
- liation is a federal employees holiday in Canada
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Thanksgiving Day (All except NB\, NS\, PE)
-DTSTART;VALUE=DATE:20241014
-DTEND;VALUE=DATE:20241015
-DTSTAMP:20241008T090601Z
-UID:c5828fe27f4b7668a9cd4f5a2f423328-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Thanksgiving Day is a holiday to give than
- ks for the blessings in one's life\, particularly the harvest. It is a day
-  off work for many Canadians.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Remembrance Day (All except MB\, NS\, ON\, QC)
-DTSTART;VALUE=DATE:20241111
-DTEND;VALUE=DATE:20241112
-DTSTAMP:20241008T090601Z
-UID:7b535d10438a9db737b8917209025d38-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Remembrance Day commemorates civilians and
-  military personnel who lost their lives in armed conflicts.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Day
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090601Z
-UID:e9433ce9730393ac1292592a71223476-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Christians celebrate the birth of Jesus Ch
- rist on Christmas Day in Canada.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Boxing Day (NL\, NT\, NU\, ON)
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241008T090601Z
-UID:a1118f7e552dfed35e3dd9711028e615-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - The day after Christmas Day is known as Bo
- xing Day and is a holiday in many parts of Canada.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Day After New Year’s Day (Quebec)
-DTSTART;VALUE=DATE:20240102
-DTEND;VALUE=DATE:20240103
-DTSTAMP:20241008T090601Z
-UID:da094ddf04f52406bbeb523db8861189-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - The day after New Year’s Day is an annual ho
- liday for many citizens in Quebec\, Canada\, on January 2.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Louis Riel Day (Manitoba)
-DTSTART;VALUE=DATE:20240219
-DTEND;VALUE=DATE:20240220
-DTSTAMP:20241008T090601Z
-UID:d053f0443caa66be8ff4ce6dac6dc989-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Louis Riel Day celebrates the achieveme
- nts and life of Louis Riel\, a Canadian politician who was a leader of the
-  Métis people.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nova Scotia Heritage Day (Nova Scotia)
-DTSTART;VALUE=DATE:20240219
-DTEND;VALUE=DATE:20240220
-DTSTAMP:20241008T090601Z
-UID:c59ab684146adaad2c255be2e590ec07-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Nova Scotia Heritage Day is a day off f
- or Canadians in Nova Scotia. It aims to recognize cultural or historical c
- ontributions to the province.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Islander Day (Prince Edward Island)
-DTSTART;VALUE=DATE:20240219
-DTEND;VALUE=DATE:20240220
-DTSTAMP:20241008T090601Z
-UID:cb8a509b4c86bd48d3715caf14460e76-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Islander Day is a day off for many peop
- le in the province of Prince Edward Island in Canada.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Family Day (AB\, ON\, SK\, NB)
-DTSTART;VALUE=DATE:20240219
-DTEND;VALUE=DATE:20240220
-DTSTAMP:20241008T090601Z
-UID:7645a10eddcaa0d7849cd71e13a8bbb4-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Family Day is a public holiday in the C
- anadian provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\,
-  and New Brunswick.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Family Day (British Columbia)
-DTSTART;VALUE=DATE:20240219
-DTEND;VALUE=DATE:20240220
-DTSTAMP:20241008T090601Z
-UID:7645a10eddcaa0d7849cd71e13a8bbb4-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Family Day is a public holiday in the C
- anadian provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\,
-  and New Brunswick.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Yukon Heritage Day (Yukon)
-DTSTART;VALUE=DATE:20240223
-DTEND;VALUE=DATE:20240224
-DTSTAMP:20241008T090601Z
-UID:a337450dfe4eb11c3a390698e740269c-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local de facto holiday - National Heritage Day\, also known as
-  Heritage Day\, is usually celebrated in the Yukon in Canada on the last F
- riday of February.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St. Patrick's Day (Newfoundland and Labrador)
-DTSTART;VALUE=DATE:20240318
-DTEND;VALUE=DATE:20240319
-DTSTAMP:20241008T090601Z
-UID:e6887445e82f994356343ff2f5dce408-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - St Patrick's Day commemorates the life and wor
- k of St Patrick\, a Christian missionary who lived in the fourth and fifth
-  centuries.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Nova Scotia)
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090601Z
-UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Designated Retail Closing Day - Easter Sunday is the most impo
- rtant day in the Christian church calendar in Canada. It celebrates the re
- surrection of Jesus Christ after his crucifixion\, according to Christian 
- belief.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Newfoundland and Labrador)
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090601Z
-UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Shops Closing Day - Easter Sunday is the most important day in
-  the Christian church calendar in Canada. It celebrates the resurrection o
- f Jesus Christ after his crucifixion\, according to Christian belief.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (New Brunswick)
-DTSTART;VALUE=DATE:20240401
-DTEND;VALUE=DATE:20240402
-DTSTAMP:20241008T090601Z
-UID:d9760b8173b3ea5c8c48b9b1a87e67df-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
- ay and a holiday for many Canadians.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (New Brunswick)
-DTSTART;VALUE=DATE:20240401
-DTEND;VALUE=DATE:20240402
-DTSTAMP:20241008T090601Z
-UID:d9760b8173b3ea5c8c48b9b1a87e67df-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
- ay and a holiday for many Canadians.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St. George's Day (Newfoundland and Labrador)
-DTSTART;VALUE=DATE:20240422
-DTEND;VALUE=DATE:20240423
-DTSTAMP:20241008T090601Z
-UID:51f229e235897cd1962786b629414698-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - St George’s Day is a holiday in the Canadian
-  province of Newfoundland and Labrador.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:National Patriots' Day (Quebec)
-DTSTART;VALUE=DATE:20240520
-DTEND;VALUE=DATE:20240521
-DTSTAMP:20241008T090601Z
-UID:6276dd06939da6bd55c7c6eebd1a9f3e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - National Patriots’ Day is an annual holiday 
- in Québec\, Canada\, on the Monday before May 25.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:National Indigenous Peoples Day (NT\, YT)
-DTSTART;VALUE=DATE:20240621
-DTEND;VALUE=DATE:20240622
-DTSTAMP:20241008T090601Z
-UID:f57e30ec5401d7cc83969d1c23cbbce5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - National Indigenous Peoples Day celebrates Can
- ada’s Indigenous culture and the achievements made by the country’s in
- digenous peoples.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:June Holiday (Newfoundland and Labrador)
-DTSTART;VALUE=DATE:20240624
-DTEND;VALUE=DATE:20240625
-DTSTAMP:20241008T090601Z
-UID:590d8d7b477abcce37742e4e6a6203db-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Newfoundland and Labrador’s June holiday com
- memorates John Cabot’s arrival at the province on June 24\, 1497.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St. Jean Baptiste Day (Quebec)
-DTSTART;VALUE=DATE:20240624
-DTEND;VALUE=DATE:20240625
-DTSTAMP:20241008T090601Z
-UID:d0ff12b2383c8fdd26663931bf9276ef-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Saint Jean Baptiste Day (Fête nationale du Qu
- ébec\, Quebec National Holiday\, la Saint-Jean\, St. John the Baptist Day
- ) is the national holiday of the Canadian province of Quebec.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Memorial Day (Newfoundland and Labrador)
-DTSTART;VALUE=DATE:20240701
-DTEND;VALUE=DATE:20240702
-DTSTAMP:20241008T090601Z
-UID:09c91bd487033f07c142d4cc874c1bb1-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Memorial Day is observed in Newfoundland and L
- abrador\, Canada\, on July 1 each year.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Nunavut Day (Nunavut)
-DTSTART;VALUE=DATE:20240709
-DTEND;VALUE=DATE:20240710
-DTSTAMP:20241008T090601Z
-UID:0f8b8baf15d1651a4eac788e4788a74e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Nunavut Day is an annual holiday in Canada's N
- unavut Territory.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Orangemen's Day (Newfoundland and Labrador)
-DTSTART;VALUE=DATE:20240715
-DTEND;VALUE=DATE:20240716
-DTSTAMP:20241008T090601Z
-UID:5d1862e46b6e53d79c9a5b43f834f9f5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Orangemen's Day is a provincial holiday in New
- foundland and Labrador in Canada. It commemorates the Battle of the Boyne\
- , which took place in 1690 outside Drogheda\, now in the Republic of Irela
- nd.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Civic/Provincial Day (Ontario)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090601Z
-UID:ef3e61a8e5c91b330d096e2b7963b878-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local observance - Many Canadian provinces and territories hav
- e a civic holiday to celebrate some aspect of their culture or history on 
- the first Monday of August.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Civic/Provincial Day (NT\, NU)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090601Z
-UID:ef3e61a8e5c91b330d096e2b7963b878-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Many Canadian provinces and territories ha
- ve a civic holiday to celebrate some aspect of their culture or history on
-  the first Monday of August.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Saskatchewan Day (Saskatchewan)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090601Z
-UID:d19a6ab8ad76217d38d5f247a8377a88-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Saskatchewan Day is a common local holi
- day in Canada
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Terry Fox Day (Manitoba)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090601Z
-UID:2ca01ecf4957e4505f546cd3384098e0-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local observance - Terry Fox Day is a local observance in Cana
- da
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New Brunswick Day (New Brunswick)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090601Z
-UID:8f78473714117fd8d026ac2ba908698d-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Prescribed Day of Rest - New Brunswick Day is an opportunity f
- or Canadians from the province of New Brunswick to celebrate their history
-  and culture. It is celebrated on the first Monday of August.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:British Columbia Day (British Columbia)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090601Z
-UID:562bd82bcf9327dec49813a6d028ae90-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - British Columbia Day is a statutory hol
- iday in the Canadian province of British Columbia.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Natal Day (Nova Scotia)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090601Z
-UID:d68d0d5d4405ba897fc5e365d0f61ffe-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Natal Day is a civic holiday to celebra
- te the “birthday” of the Nova Scotia province. It is held on the first
-  Monday of August.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:The Royal St John's Regatta (Regatta Day) (Newfoundland and Labrad
- or)
-DTSTART;VALUE=DATE:20240807
-DTEND;VALUE=DATE:20240808
-DTSTAMP:20241008T090601Z
-UID:799ca140bc3729f933919f5583e012d8-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Regatta Day is on the first Wednesday of Augus
- t and it is a local holiday in the Canadian province Newfoundland and  Lab
- rador.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Gold Cup Parade (Prince Edward Island)
-DTSTART;VALUE=DATE:20240816
-DTEND;VALUE=DATE:20240817
-DTSTAMP:20241008T090601Z
-UID:eb221f662cbb9c8e8101606cd0cb830b-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - The Gold Cup Parade is Atlantic Canada’s lar
- gest parade and the largest parade east of Montreal. It is held annually i
- n Charlottetown\, Prince Edward Island\, Canada on the third Friday of Aug
- ust.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Discovery Day (Yukon)
-DTSTART;VALUE=DATE:20240819
-DTEND;VALUE=DATE:20240820
-DTSTAMP:20241008T090601Z
-UID:a80bc0f820a44b4dfd902d15e9adbad1-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - Discovery Day is a public holiday in the Canad
- ian territory of Yukon on the third Monday of August. It commemorates the 
- anniversary of the discovery of gold in Bonanza Creek in the 19th century.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:National Day for Truth and Reconciliation (NT\, YT\, NU\, PE\, BC)
-DTSTART;VALUE=DATE:20240930
-DTEND;VALUE=DATE:20241001
-DTSTAMP:20241008T090601Z
-UID:96cf38c3b6ef7f7882ba6adcfe162218-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - National Day for Truth and Reconciliation 
- is a statutory holiday in Canada
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Thanksgiving Day (Nova Scotia)
-DTSTART;VALUE=DATE:20241014
-DTEND;VALUE=DATE:20241015
-DTSTAMP:20241008T090601Z
-UID:c5828fe27f4b7668a9cd4f5a2f423328-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Designated Retail Closing Day - Thanksgiving Day is a holiday 
- to give thanks for the blessings in one's life\, particularly the harvest.
-  It is a day off work for many Canadians.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Thanksgiving Day (New Brunswick)
-DTSTART;VALUE=DATE:20241014
-DTEND;VALUE=DATE:20241015
-DTSTAMP:20241008T090601Z
-UID:c5828fe27f4b7668a9cd4f5a2f423328-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Thanksgiving Day is a holiday to give than
- ks for the blessings in one's life\, particularly the harvest. It is a day
-  off work for many Canadians.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Healthcare Aide Day (BC\, MB)
-DTSTART;VALUE=DATE:20241018
-DTEND;VALUE=DATE:20241019
-DTSTAMP:20241008T090601Z
-UID:ce9920a2799866d5b34d2882068cca5d-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local observance - Healthcare Aide Day is a local observance i
- n Canada
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Eve (New Brunswick)
-DTSTART;VALUE=DATE:20241224
-DTEND;VALUE=DATE:20241225
-DTSTAMP:20241008T090601Z
-UID:43a9022013108adbc50ccc852d636a45-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Half Day - Christmas Eve in Canada is the day before
-  Christmas Day and always falls on December 24 according to the Gregorian 
- calendar.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Boxing Day (Nova Scotia)
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241008T090601Z
-UID:a1118f7e552dfed35e3dd9711028e615-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Designated Retail Closing Day - The day after Christmas Day is
-  known as Boxing Day and is a holiday in many parts of Canada.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Boxing Day (New Brunswick)
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241008T090601Z
-UID:a1118f7e552dfed35e3dd9711028e615-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Provincial Public Sector Holiday - The day after Christmas Day
-  is known as Boxing Day and is a holiday in many parts of Canada.
-LAST-MODIFIED:20241008T090601Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New Year's Day
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20241008T090602Z
-UID:be63c3297c2f8f5ca3c014a794a5c1e5-2025
+DTSTAMP:20250430T134657Z
+UID:be63c3297c2f8f5ca3c014a794a5c1e5-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - New Year's Day is the first day of a new y
  ear according to the Gregorian calendar used in Canada and many other coun
  tries.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20241008T090602Z
-UID:c257c788346c4b203ef5c03a8c20c518-2025
+DTSTAMP:20250430T134657Z
+UID:c257c788346c4b203ef5c03a8c20c518-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - On Good Friday\, Christians commemorate th
  e crucifixion of Jesus Christ and it is a statutory holiday in many parts 
  of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Monday (NT\, NU\, QC)
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090602Z
-UID:d9760b8173b3ea5c8c48b9b1a87e67df-2025
+DTSTAMP:20250430T134657Z
+UID:d9760b8173b3ea5c8c48b9b1a87e67df-2025-nt-nu-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
  ay and a holiday for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Victoria Day (All except NS\, PE\, QC)
 DTSTART;VALUE=DATE:20250519
 DTEND;VALUE=DATE:20250520
-DTSTAMP:20241008T090602Z
-UID:d0252fb6b0272dba508cb21bda408aaf-2025
+DTSTAMP:20250430T134657Z
+UID:d0252fb6b0272dba508cb21bda408aaf-2025-all except ns-pe-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Victoria Day is celebrated in honor of the
   birthdays of both Queen Victoria and the current monarch of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Canada Day
 DTSTART;VALUE=DATE:20250701
 DTEND;VALUE=DATE:20250702
-DTSTAMP:20241008T090602Z
-UID:a5371b57012e81e208a9d9a5512fb773-2025
+DTSTAMP:20250430T134657Z
+UID:a5371b57012e81e208a9d9a5512fb773-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Canada Day is a federal holiday on July 1 
  to mark the anniversary of the date that Canada became a self-governing co
  untry.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day
 DTSTART;VALUE=DATE:20250901
 DTEND;VALUE=DATE:20250902
-DTSTAMP:20241008T090602Z
-UID:04adc984b42bdb0510e5423d9d1bac0c-2025
+DTSTAMP:20250430T134657Z
+UID:04adc984b42bdb0510e5423d9d1bac0c-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Labour Day in Canada is a holiday to campa
  ign for workers' rights. It celebrates the achievements of these rights.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:National Day for Truth and Reconciliation
 DTSTART;VALUE=DATE:20250930
 DTEND;VALUE=DATE:20251001
-DTSTAMP:20241008T090602Z
-UID:96cf38c3b6ef7f7882ba6adcfe162218-2025
+DTSTAMP:20250430T134657Z
+UID:96cf38c3b6ef7f7882ba6adcfe162218-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Federal Employees Holiday - National Day for Truth and Reconci
  liation is a federal employees holiday in Canada
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Thanksgiving Day (All except NB\, NS\, PE)
+SUMMARY:Thanksgiving Day (All except NS\, PE)
 DTSTART;VALUE=DATE:20251013
 DTEND;VALUE=DATE:20251014
-DTSTAMP:20241008T090602Z
-UID:c5828fe27f4b7668a9cd4f5a2f423328-2025
+DTSTAMP:20250430T134657Z
+UID:c5828fe27f4b7668a9cd4f5a2f423328-2025-all except ns-pe
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Thanksgiving Day is a holiday to give than
  ks for the blessings in one's life\, particularly the harvest. It is a day
   off work for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Remembrance Day (All except MB\, NS\, ON\, QC)
 DTSTART;VALUE=DATE:20251111
 DTEND;VALUE=DATE:20251112
-DTSTAMP:20241008T090602Z
-UID:7b535d10438a9db737b8917209025d38-2025
+DTSTAMP:20250430T134657Z
+UID:7b535d10438a9db737b8917209025d38-2025-all except mb-ns-on-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Remembrance Day commemorates civilians and
   military personnel who lost their lives in armed conflicts.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090602Z
-UID:e9433ce9730393ac1292592a71223476-2025
+DTSTAMP:20250430T134657Z
+UID:e9433ce9730393ac1292592a71223476-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Christians celebrate the birth of Jesus Ch
  rist on Christmas Day in Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day (NL\, NT\, NU\, ON)
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20241008T090602Z
-UID:a1118f7e552dfed35e3dd9711028e615-2025
+DTSTAMP:20250430T134657Z
+UID:a1118f7e552dfed35e3dd9711028e615-2025-nl-nt-nu-on
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - The day after Christmas Day is known as Bo
  xing Day and is a holiday in many parts of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Day After New Year’s Day (Quebec)
-DTSTART;VALUE=DATE:20250102
-DTEND;VALUE=DATE:20250103
-DTSTAMP:20241008T090602Z
-UID:da094ddf04f52406bbeb523db8861189-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - The day after New Year’s Day is an annual ho
- liday for many citizens in Quebec\, Canada\, on January 2.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Louis Riel Day (Manitoba)
 DTSTART;VALUE=DATE:20250217
 DTEND;VALUE=DATE:20250218
-DTSTAMP:20241008T090602Z
-UID:d053f0443caa66be8ff4ce6dac6dc989-2025
+DTSTAMP:20250430T134657Z
+UID:d053f0443caa66be8ff4ce6dac6dc989-2025-mb
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Louis Riel Day celebrates the achieveme
- nts and life of Louis Riel\, a Canadian politician who was a leader of the
-  Métis people.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Louis Riel Day celebrates the achievements and
+  life of Louis Riel\, a Canadian politician who was a leader of the Métis
+  people.
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nova Scotia Heritage Day (Nova Scotia)
 DTSTART;VALUE=DATE:20250217
 DTEND;VALUE=DATE:20250218
-DTSTAMP:20241008T090602Z
-UID:c59ab684146adaad2c255be2e590ec07-2025
+DTSTAMP:20250430T134657Z
+UID:c59ab684146adaad2c255be2e590ec07-2025-ns
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Nova Scotia Heritage Day is a day off f
- or Canadians in Nova Scotia. It aims to recognize cultural or historical c
- ontributions to the province.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Nova Scotia Heritage Day is a day off for Cana
+ dians in Nova Scotia. It aims to recognize cultural or historical contribu
+ tions to the province.
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Islander Day (Prince Edward Island)
 DTSTART;VALUE=DATE:20250217
 DTEND;VALUE=DATE:20250218
-DTSTAMP:20241008T090602Z
-UID:cb8a509b4c86bd48d3715caf14460e76-2025
+DTSTAMP:20250430T134657Z
+UID:cb8a509b4c86bd48d3715caf14460e76-2025-pe
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Islander Day is a day off for many peop
- le in the province of Prince Edward Island in Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Islander Day is a day off for many people in t
+ he province of Prince Edward Island in Canada.
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Family Day (AB\, ON\, SK\, NB)
 DTSTART;VALUE=DATE:20250217
 DTEND;VALUE=DATE:20250218
-DTSTAMP:20241008T090602Z
-UID:7645a10eddcaa0d7849cd71e13a8bbb4-2025
+DTSTAMP:20250430T134657Z
+UID:7645a10eddcaa0d7849cd71e13a8bbb4-2025-ab-on-sk-nb
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Family Day is a public holiday in the C
- anadian provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\,
-  and New Brunswick.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Family Day is a public holiday in the Canadian
+  provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\, and Ne
+ w Brunswick.
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Family Day (British Columbia)
 DTSTART;VALUE=DATE:20250217
 DTEND;VALUE=DATE:20250218
-DTSTAMP:20241008T090602Z
-UID:7645a10eddcaa0d7849cd71e13a8bbb4-2025
+DTSTAMP:20250430T134657Z
+UID:7645a10eddcaa0d7849cd71e13a8bbb4-2025-bc
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Family Day is a public holiday in the C
- anadian provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\,
-  and New Brunswick.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Family Day is a public holiday in the Canadian
+  provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\, and Ne
+ w Brunswick.
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Yukon Heritage Day (Yukon)
 DTSTART;VALUE=DATE:20250221
 DTEND;VALUE=DATE:20250222
-DTSTAMP:20241008T090602Z
-UID:a337450dfe4eb11c3a390698e740269c-2025
+DTSTAMP:20250430T134657Z
+UID:a337450dfe4eb11c3a390698e740269c-2025-yt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local de facto holiday - National Heritage Day\, also known as
   Heritage Day\, is usually celebrated in the Yukon in Canada on the last F
  riday of February.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Patrick's Day (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20250317
 DTEND;VALUE=DATE:20250318
-DTSTAMP:20241008T090602Z
-UID:e6887445e82f994356343ff2f5dce408-2025
+DTSTAMP:20250430T134657Z
+UID:e6887445e82f994356343ff2f5dce408-2025-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - St Patrick's Day commemorates the life and wor
  k of St Patrick\, a Christian missionary who lived in the fourth and fifth
   centuries.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090602Z
-UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2025
+DTSTAMP:20250430T134657Z
+UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2025-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Shops Closing Day - Easter Sunday is the most important day in
   the Christian church calendar in Canada. It celebrates the resurrection o
  f Jesus Christ after his crucifixion\, according to Christian belief.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (Nova Scotia)
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090602Z
-UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2025
+DTSTAMP:20250430T134657Z
+UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2025-ns
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Designated Retail Closing Day - Easter Sunday is the most impo
  rtant day in the Christian church calendar in Canada. It celebrates the re
  surrection of Jesus Christ after his crucifixion\, according to Christian 
  belief.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Monday (New Brunswick)
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090602Z
-UID:d9760b8173b3ea5c8c48b9b1a87e67df-2025
+DTSTAMP:20250430T134657Z
+UID:d9760b8173b3ea5c8c48b9b1a87e67df-2025-nb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
  ay and a holiday for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (New Brunswick)
-DTSTART;VALUE=DATE:20250421
-DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090602Z
-UID:d9760b8173b3ea5c8c48b9b1a87e67df-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
- ay and a holiday for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. George's Day (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090602Z
-UID:51f229e235897cd1962786b629414698-2025
+DTSTAMP:20250430T134657Z
+UID:51f229e235897cd1962786b629414698-2025-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - St George’s Day is a holiday in the Canadian
   province of Newfoundland and Labrador.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:National Patriots' Day (Quebec)
 DTSTART;VALUE=DATE:20250519
 DTEND;VALUE=DATE:20250520
-DTSTAMP:20241008T090602Z
-UID:6276dd06939da6bd55c7c6eebd1a9f3e-2025
+DTSTAMP:20250430T134657Z
+UID:6276dd06939da6bd55c7c6eebd1a9f3e-2025-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - National Patriots’ Day is an annual holiday 
  in Québec\, Canada\, on the Monday before May 25.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:National Indigenous Peoples Day (NT\, YT)
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-DTSTAMP:20241008T090602Z
-UID:f57e30ec5401d7cc83969d1c23cbbce5-2025
+DTSTAMP:20250430T134657Z
+UID:f57e30ec5401d7cc83969d1c23cbbce5-2025-nt-yt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - National Indigenous Peoples Day celebrates Can
  ada’s Indigenous culture and the achievements made by the country’s in
  digenous peoples.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:June Holiday (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20250623
 DTEND;VALUE=DATE:20250624
-DTSTAMP:20241008T090602Z
-UID:590d8d7b477abcce37742e4e6a6203db-2025
+DTSTAMP:20250430T134657Z
+UID:590d8d7b477abcce37742e4e6a6203db-2025-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Newfoundland and Labrador’s June holiday com
  memorates John Cabot’s arrival at the province on June 24\, 1497.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Jean Baptiste Day (Quebec)
 DTSTART;VALUE=DATE:20250624
 DTEND;VALUE=DATE:20250625
-DTSTAMP:20241008T090602Z
-UID:d0ff12b2383c8fdd26663931bf9276ef-2025
+DTSTAMP:20250430T134657Z
+UID:d0ff12b2383c8fdd26663931bf9276ef-2025-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Saint Jean Baptiste Day (Fête nationale du Qu
  ébec\, Quebec National Holiday\, la Saint-Jean\, St. John the Baptist Day
  ) is the national holiday of the Canadian province of Quebec.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Memorial Day (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20250701
 DTEND;VALUE=DATE:20250702
-DTSTAMP:20241008T090602Z
-UID:09c91bd487033f07c142d4cc874c1bb1-2025
+DTSTAMP:20250430T134657Z
+UID:09c91bd487033f07c142d4cc874c1bb1-2025-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Memorial Day is observed in Newfoundland and L
  abrador\, Canada\, on July 1 each year.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nunavut Day (Nunavut)
 DTSTART;VALUE=DATE:20250709
 DTEND;VALUE=DATE:20250710
-DTSTAMP:20241008T090602Z
-UID:0f8b8baf15d1651a4eac788e4788a74e-2025
+DTSTAMP:20250430T134657Z
+UID:0f8b8baf15d1651a4eac788e4788a74e-2025-nu
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Nunavut Day is an annual holiday in Canada's N
  unavut Territory.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Orangemen's Day (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20250714
 DTEND;VALUE=DATE:20250715
-DTSTAMP:20241008T090602Z
-UID:5d1862e46b6e53d79c9a5b43f834f9f5-2025
+DTSTAMP:20250430T134657Z
+UID:5d1862e46b6e53d79c9a5b43f834f9f5-2025-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Orangemen's Day is a provincial holiday in New
  foundland and Labrador in Canada. It commemorates the Battle of the Boyne\
  , which took place in 1690 outside Drogheda\, now in the Republic of Irela
  nd.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Civic/Provincial Day (NT\, NU)
-DTSTART;VALUE=DATE:20250804
-DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090602Z
-UID:ef3e61a8e5c91b330d096e2b7963b878-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Many Canadian provinces and territories ha
- ve a civic holiday to celebrate some aspect of their culture or history on
-  the first Monday of August.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Civic/Provincial Day (Ontario)
 DTSTART;VALUE=DATE:20250804
 DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090602Z
-UID:ef3e61a8e5c91b330d096e2b7963b878-2025
+DTSTAMP:20250430T134657Z
+UID:ef3e61a8e5c91b330d096e2b7963b878-2025-on
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local observance - Many Canadian provinces and territories hav
  e a civic holiday to celebrate some aspect of their culture or history on 
  the first Monday of August.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Civic/Provincial Day (NT\, NU)
+DTSTART;VALUE=DATE:20250804
+DTEND;VALUE=DATE:20250805
+DTSTAMP:20250430T134657Z
+UID:ef3e61a8e5c91b330d096e2b7963b878-2025-nt-nu
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Many Canadian provinces and territories ha
+ ve a civic holiday to celebrate some aspect of their culture or history on
+  the first Monday of August.
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Saskatchewan Day (Saskatchewan)
 DTSTART;VALUE=DATE:20250804
 DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090602Z
-UID:d19a6ab8ad76217d38d5f247a8377a88-2025
+DTSTAMP:20250430T134657Z
+UID:d19a6ab8ad76217d38d5f247a8377a88-2025-sk
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Saskatchewan Day is a common local holi
- day in Canada
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Saskatchewan Day is a local holiday in Canada
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Terry Fox Day (Manitoba)
 DTSTART;VALUE=DATE:20250804
 DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090602Z
-UID:2ca01ecf4957e4505f546cd3384098e0-2025
+DTSTAMP:20250430T134657Z
+UID:2ca01ecf4957e4505f546cd3384098e0-2025-mb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local observance - Terry Fox Day is a local observance in Cana
  da
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Brunswick Day (New Brunswick)
 DTSTART;VALUE=DATE:20250804
 DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090602Z
-UID:8f78473714117fd8d026ac2ba908698d-2025
+DTSTAMP:20250430T134657Z
+UID:8f78473714117fd8d026ac2ba908698d-2025-nb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Prescribed Day of Rest - New Brunswick Day is an opportunity f
  or Canadians from the province of New Brunswick to celebrate their history
   and culture. It is celebrated on the first Monday of August.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:British Columbia Day (British Columbia)
 DTSTART;VALUE=DATE:20250804
 DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090602Z
-UID:562bd82bcf9327dec49813a6d028ae90-2025
+DTSTAMP:20250430T134657Z
+UID:562bd82bcf9327dec49813a6d028ae90-2025-bc
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - British Columbia Day is a statutory hol
- iday in the Canadian province of British Columbia.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - British Columbia Day is a statutory holiday in
+  the Canadian province of British Columbia.
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Natal Day (Nova Scotia)
 DTSTART;VALUE=DATE:20250804
 DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090602Z
-UID:d68d0d5d4405ba897fc5e365d0f61ffe-2025
+DTSTAMP:20250430T134657Z
+UID:d68d0d5d4405ba897fc5e365d0f61ffe-2025-ns
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Natal Day is a civic holiday to celebra
- te the “birthday” of the Nova Scotia province. It is held on the first
-  Monday of August.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Natal Day is a civic holiday to celebrate the 
+ “birthday” of the Nova Scotia province. It is held on the first Monday
+  of August.
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:The Royal St John's Regatta (Regatta Day) (Newfoundland and Labrad
  or)
 DTSTART;VALUE=DATE:20250806
 DTEND;VALUE=DATE:20250807
-DTSTAMP:20241008T090602Z
-UID:799ca140bc3729f933919f5583e012d8-2025
+DTSTAMP:20250430T134657Z
+UID:799ca140bc3729f933919f5583e012d8-2025-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Regatta Day is on the first Wednesday of Augus
  t and it is a local holiday in the Canadian province Newfoundland and  Lab
  rador.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Gold Cup Parade (Prince Edward Island)
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20241008T090602Z
-UID:eb221f662cbb9c8e8101606cd0cb830b-2025
+DTSTAMP:20250430T134657Z
+UID:eb221f662cbb9c8e8101606cd0cb830b-2025-pe
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - The Gold Cup Parade is Atlantic Canada’s lar
  gest parade and the largest parade east of Montreal. It is held annually i
  n Charlottetown\, Prince Edward Island\, Canada on the third Friday of Aug
  ust.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Discovery Day (Yukon)
 DTSTART;VALUE=DATE:20250818
 DTEND;VALUE=DATE:20250819
-DTSTAMP:20241008T090602Z
-UID:a80bc0f820a44b4dfd902d15e9adbad1-2025
+DTSTAMP:20250430T134657Z
+UID:a80bc0f820a44b4dfd902d15e9adbad1-2025-yt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Discovery Day is a public holiday in the Canad
  ian territory of Yukon on the third Monday of August. It commemorates the 
  anniversary of the discovery of gold in Bonanza Creek in the 19th century.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:National Day for Truth and Reconciliation (NT\, YT\, NU\, PE\, BC)
 DTSTART;VALUE=DATE:20250930
 DTEND;VALUE=DATE:20251001
-DTSTAMP:20241008T090602Z
-UID:96cf38c3b6ef7f7882ba6adcfe162218-2025
+DTSTAMP:20250430T134657Z
+UID:96cf38c3b6ef7f7882ba6adcfe162218-2025-nt-yt-nu-pe-bc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - National Day for Truth and Reconciliation 
  is a statutory holiday in Canada
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Thanksgiving Day (Nova Scotia)
 DTSTART;VALUE=DATE:20251013
 DTEND;VALUE=DATE:20251014
-DTSTAMP:20241008T090602Z
-UID:c5828fe27f4b7668a9cd4f5a2f423328-2025
+DTSTAMP:20250430T134657Z
+UID:c5828fe27f4b7668a9cd4f5a2f423328-2025-ns
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Designated Retail Closing Day - Thanksgiving Day is a holiday 
  to give thanks for the blessings in one's life\, particularly the harvest.
   It is a day off work for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Thanksgiving Day (New Brunswick)
-DTSTART;VALUE=DATE:20251013
-DTEND;VALUE=DATE:20251014
-DTSTAMP:20241008T090602Z
-UID:c5828fe27f4b7668a9cd4f5a2f423328-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Thanksgiving Day is a holiday to give than
- ks for the blessings in one's life\, particularly the harvest. It is a day
-  off work for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Healthcare Aide Day (BC\, MB)
 DTSTART;VALUE=DATE:20251018
 DTEND;VALUE=DATE:20251019
-DTSTAMP:20241008T090602Z
-UID:ce9920a2799866d5b34d2882068cca5d-2025
+DTSTAMP:20250430T134657Z
+UID:ce9920a2799866d5b34d2882068cca5d-2025-bc-mb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local observance - Healthcare Aide Day is a local observance i
  n Canada
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Remembrance Day (Nova Scotia)
+DTSTART;VALUE=DATE:20251111
+DTEND;VALUE=DATE:20251112
+DTSTAMP:20250430T134657Z
+UID:7b535d10438a9db737b8917209025d38-2025-ns
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Designated Retail Closing Day - Remembrance Day commemorates c
+ ivilians and military personnel who lost their lives in armed conflicts.
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Eve (New Brunswick)
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20241008T090602Z
-UID:43a9022013108adbc50ccc852d636a45-2025
+DTSTAMP:20250430T134657Z
+UID:43a9022013108adbc50ccc852d636a45-2025-nb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Half Day - Christmas Eve in Canada is the day before
   Christmas Day and always falls on December 24 according to the Gregorian 
  calendar.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day (Nova Scotia)
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20241008T090602Z
-UID:a1118f7e552dfed35e3dd9711028e615-2025
+DTSTAMP:20250430T134657Z
+UID:a1118f7e552dfed35e3dd9711028e615-2025-ns
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Designated Retail Closing Day - The day after Christmas Day is
   known as Boxing Day and is a holiday in many parts of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day (New Brunswick)
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20241008T090602Z
-UID:a1118f7e552dfed35e3dd9711028e615-2025
+DTSTAMP:20250430T134657Z
+UID:a1118f7e552dfed35e3dd9711028e615-2025-nb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Provincial Public Sector Holiday - The day after Christmas Day
   is known as Boxing Day and is a holiday in many parts of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Day
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20241008T090602Z
-UID:be63c3297c2f8f5ca3c014a794a5c1e5-2026
+DTSTAMP:20250430T134657Z
+UID:be63c3297c2f8f5ca3c014a794a5c1e5-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - New Year's Day is the first day of a new y
  ear according to the Gregorian calendar used in Canada and many other coun
  tries.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday
 DTSTART;VALUE=DATE:20260403
 DTEND;VALUE=DATE:20260404
-DTSTAMP:20241008T090602Z
-UID:c257c788346c4b203ef5c03a8c20c518-2026
+DTSTAMP:20250430T134657Z
+UID:c257c788346c4b203ef5c03a8c20c518-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - On Good Friday\, Christians commemorate th
  e crucifixion of Jesus Christ and it is a statutory holiday in many parts 
  of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Monday (NT\, NU\, QC)
 DTSTART;VALUE=DATE:20260406
 DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090602Z
-UID:d9760b8173b3ea5c8c48b9b1a87e67df-2026
+DTSTAMP:20250430T134657Z
+UID:d9760b8173b3ea5c8c48b9b1a87e67df-2026-nt-nu-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
  ay and a holiday for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Victoria Day (All except NS\, PE\, QC)
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20260519
-DTSTAMP:20241008T090602Z
-UID:d0252fb6b0272dba508cb21bda408aaf-2026
+DTSTAMP:20250430T134657Z
+UID:d0252fb6b0272dba508cb21bda408aaf-2026-all except ns-pe-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Victoria Day is celebrated in honor of the
   birthdays of both Queen Victoria and the current monarch of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Canada Day
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260702
-DTSTAMP:20241008T090602Z
-UID:a5371b57012e81e208a9d9a5512fb773-2026
+DTSTAMP:20250430T134657Z
+UID:a5371b57012e81e208a9d9a5512fb773-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Canada Day is a federal holiday on July 1 
  to mark the anniversary of the date that Canada became a self-governing co
  untry.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day
 DTSTART;VALUE=DATE:20260907
 DTEND;VALUE=DATE:20260908
-DTSTAMP:20241008T090602Z
-UID:04adc984b42bdb0510e5423d9d1bac0c-2026
+DTSTAMP:20250430T134657Z
+UID:04adc984b42bdb0510e5423d9d1bac0c-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Labour Day in Canada is a holiday to campa
  ign for workers' rights. It celebrates the achievements of these rights.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:National Day for Truth and Reconciliation
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
-DTSTAMP:20241008T090602Z
-UID:96cf38c3b6ef7f7882ba6adcfe162218-2026
+DTSTAMP:20250430T134657Z
+UID:96cf38c3b6ef7f7882ba6adcfe162218-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Federal Employees Holiday - National Day for Truth and Reconci
  liation is a federal employees holiday in Canada
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Thanksgiving Day (All except NB\, NS\, PE)
+SUMMARY:Thanksgiving Day (All except NS\, PE)
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
-DTSTAMP:20241008T090602Z
-UID:c5828fe27f4b7668a9cd4f5a2f423328-2026
+DTSTAMP:20250430T134657Z
+UID:c5828fe27f4b7668a9cd4f5a2f423328-2026-all except ns-pe
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Thanksgiving Day is a holiday to give than
  ks for the blessings in one's life\, particularly the harvest. It is a day
   off work for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Remembrance Day (All except MB\, NS\, ON\, QC)
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
-DTSTAMP:20241008T090602Z
-UID:7b535d10438a9db737b8917209025d38-2026
+DTSTAMP:20250430T134657Z
+UID:7b535d10438a9db737b8917209025d38-2026-all except mb-ns-on-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Remembrance Day commemorates civilians and
   military personnel who lost their lives in armed conflicts.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090602Z
-UID:e9433ce9730393ac1292592a71223476-2026
+DTSTAMP:20250430T134657Z
+UID:e9433ce9730393ac1292592a71223476-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Christians celebrate the birth of Jesus Ch
  rist on Christmas Day in Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day (NL\, NT\, NU\, ON)
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
-DTSTAMP:20241008T090602Z
-UID:a1118f7e552dfed35e3dd9711028e615-2026
+DTSTAMP:20250430T134657Z
+UID:a1118f7e552dfed35e3dd9711028e615-2026-nl-nt-nu-on
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - The day after Christmas Day is known as Bo
  xing Day and is a holiday in many parts of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Day After New Year’s Day (Quebec)
-DTSTART;VALUE=DATE:20260102
-DTEND;VALUE=DATE:20260103
-DTSTAMP:20241008T090602Z
-UID:da094ddf04f52406bbeb523db8861189-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday - The day after New Year’s Day is an annual ho
- liday for many citizens in Quebec\, Canada\, on January 2.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134657Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Louis Riel Day (Manitoba)
 DTSTART;VALUE=DATE:20260216
 DTEND;VALUE=DATE:20260217
-DTSTAMP:20241008T090602Z
-UID:d053f0443caa66be8ff4ce6dac6dc989-2026
+DTSTAMP:20250430T134658Z
+UID:d053f0443caa66be8ff4ce6dac6dc989-2026-mb
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Louis Riel Day celebrates the achieveme
- nts and life of Louis Riel\, a Canadian politician who was a leader of the
-  Métis people.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Louis Riel Day celebrates the achievements and
+  life of Louis Riel\, a Canadian politician who was a leader of the Métis
+  people.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nova Scotia Heritage Day (Nova Scotia)
 DTSTART;VALUE=DATE:20260216
 DTEND;VALUE=DATE:20260217
-DTSTAMP:20241008T090602Z
-UID:c59ab684146adaad2c255be2e590ec07-2026
+DTSTAMP:20250430T134658Z
+UID:c59ab684146adaad2c255be2e590ec07-2026-ns
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Nova Scotia Heritage Day is a day off f
- or Canadians in Nova Scotia. It aims to recognize cultural or historical c
- ontributions to the province.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Nova Scotia Heritage Day is a day off for Cana
+ dians in Nova Scotia. It aims to recognize cultural or historical contribu
+ tions to the province.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Islander Day (Prince Edward Island)
 DTSTART;VALUE=DATE:20260216
 DTEND;VALUE=DATE:20260217
-DTSTAMP:20241008T090602Z
-UID:cb8a509b4c86bd48d3715caf14460e76-2026
+DTSTAMP:20250430T134658Z
+UID:cb8a509b4c86bd48d3715caf14460e76-2026-pe
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Islander Day is a day off for many peop
- le in the province of Prince Edward Island in Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Family Day (British Columbia)
-DTSTART;VALUE=DATE:20260216
-DTEND;VALUE=DATE:20260217
-DTSTAMP:20241008T090602Z
-UID:7645a10eddcaa0d7849cd71e13a8bbb4-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday - Family Day is a public holiday in the C
- anadian provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\,
-  and New Brunswick.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Islander Day is a day off for many people in t
+ he province of Prince Edward Island in Canada.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Family Day (AB\, ON\, SK\, NB)
 DTSTART;VALUE=DATE:20260216
 DTEND;VALUE=DATE:20260217
-DTSTAMP:20241008T090602Z
-UID:7645a10eddcaa0d7849cd71e13a8bbb4-2026
+DTSTAMP:20250430T134658Z
+UID:7645a10eddcaa0d7849cd71e13a8bbb4-2026-ab-on-sk-nb
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Family Day is a public holiday in the C
- anadian provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\,
-  and New Brunswick.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Family Day is a public holiday in the Canadian
+  provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\, and Ne
+ w Brunswick.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Family Day (British Columbia)
+DTSTART;VALUE=DATE:20260216
+DTEND;VALUE=DATE:20260217
+DTSTAMP:20250430T134658Z
+UID:7645a10eddcaa0d7849cd71e13a8bbb4-2026-bc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Family Day is a public holiday in the Canadian
+  provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\, and Ne
+ w Brunswick.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Yukon Heritage Day (Yukon)
 DTSTART;VALUE=DATE:20260220
 DTEND;VALUE=DATE:20260221
-DTSTAMP:20241008T090602Z
-UID:a337450dfe4eb11c3a390698e740269c-2026
+DTSTAMP:20250430T134658Z
+UID:a337450dfe4eb11c3a390698e740269c-2026-yt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local de facto holiday - National Heritage Day\, also known as
   Heritage Day\, is usually celebrated in the Yukon in Canada on the last F
  riday of February.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Patrick's Day (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20260316
 DTEND;VALUE=DATE:20260317
-DTSTAMP:20241008T090602Z
-UID:e6887445e82f994356343ff2f5dce408-2026
+DTSTAMP:20250430T134658Z
+UID:e6887445e82f994356343ff2f5dce408-2026-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - St Patrick's Day commemorates the life and wor
  k of St Patrick\, a Christian missionary who lived in the fourth and fifth
   centuries.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (Nova Scotia)
 DTSTART;VALUE=DATE:20260405
 DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090602Z
-UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2026
+DTSTAMP:20250430T134658Z
+UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2026-ns
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Designated Retail Closing Day - Easter Sunday is the most impo
  rtant day in the Christian church calendar in Canada. It celebrates the re
  surrection of Jesus Christ after his crucifixion\, according to Christian 
  belief.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20260405
 DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090602Z
-UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2026
+DTSTAMP:20250430T134658Z
+UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2026-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Shops Closing Day - Easter Sunday is the most important day in
   the Christian church calendar in Canada. It celebrates the resurrection o
  f Jesus Christ after his crucifixion\, according to Christian belief.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Monday (New Brunswick)
 DTSTART;VALUE=DATE:20260406
 DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090602Z
-UID:d9760b8173b3ea5c8c48b9b1a87e67df-2026
+DTSTAMP:20250430T134658Z
+UID:d9760b8173b3ea5c8c48b9b1a87e67df-2026-nb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
  ay and a holiday for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (New Brunswick)
-DTSTART;VALUE=DATE:20260406
-DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090602Z
-UID:d9760b8173b3ea5c8c48b9b1a87e67df-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
- ay and a holiday for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. George's Day (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20260420
 DTEND;VALUE=DATE:20260421
-DTSTAMP:20241008T090602Z
-UID:51f229e235897cd1962786b629414698-2026
+DTSTAMP:20250430T134658Z
+UID:51f229e235897cd1962786b629414698-2026-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - St George’s Day is a holiday in the Canadian
   province of Newfoundland and Labrador.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:National Patriots' Day (Quebec)
 DTSTART;VALUE=DATE:20260518
 DTEND;VALUE=DATE:20260519
-DTSTAMP:20241008T090602Z
-UID:6276dd06939da6bd55c7c6eebd1a9f3e-2026
+DTSTAMP:20250430T134658Z
+UID:6276dd06939da6bd55c7c6eebd1a9f3e-2026-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - National Patriots’ Day is an annual holiday 
  in Québec\, Canada\, on the Monday before May 25.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:National Indigenous Peoples Day (NT\, YT)
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
-DTSTAMP:20241008T090602Z
-UID:f57e30ec5401d7cc83969d1c23cbbce5-2026
+DTSTAMP:20250430T134658Z
+UID:f57e30ec5401d7cc83969d1c23cbbce5-2026-nt-yt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - National Indigenous Peoples Day celebrates Can
  ada’s Indigenous culture and the achievements made by the country’s in
  digenous peoples.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:June Holiday (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20260622
 DTEND;VALUE=DATE:20260623
-DTSTAMP:20241008T090602Z
-UID:590d8d7b477abcce37742e4e6a6203db-2026
+DTSTAMP:20250430T134658Z
+UID:590d8d7b477abcce37742e4e6a6203db-2026-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Newfoundland and Labrador’s June holiday com
  memorates John Cabot’s arrival at the province on June 24\, 1497.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. Jean Baptiste Day (Quebec)
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260625
-DTSTAMP:20241008T090602Z
-UID:d0ff12b2383c8fdd26663931bf9276ef-2026
+DTSTAMP:20250430T134658Z
+UID:d0ff12b2383c8fdd26663931bf9276ef-2026-qc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Saint Jean Baptiste Day (Fête nationale du Qu
  ébec\, Quebec National Holiday\, la Saint-Jean\, St. John the Baptist Day
  ) is the national holiday of the Canadian province of Quebec.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Memorial Day (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260702
-DTSTAMP:20241008T090602Z
-UID:09c91bd487033f07c142d4cc874c1bb1-2026
+DTSTAMP:20250430T134658Z
+UID:09c91bd487033f07c142d4cc874c1bb1-2026-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Memorial Day is observed in Newfoundland and L
  abrador\, Canada\, on July 1 each year.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Nunavut Day (Nunavut)
 DTSTART;VALUE=DATE:20260709
 DTEND;VALUE=DATE:20260710
-DTSTAMP:20241008T090602Z
-UID:0f8b8baf15d1651a4eac788e4788a74e-2026
+DTSTAMP:20250430T134658Z
+UID:0f8b8baf15d1651a4eac788e4788a74e-2026-nu
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Nunavut Day is an annual holiday in Canada's N
  unavut Territory.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Orangemen's Day (Newfoundland and Labrador)
 DTSTART;VALUE=DATE:20260713
 DTEND;VALUE=DATE:20260714
-DTSTAMP:20241008T090602Z
-UID:5d1862e46b6e53d79c9a5b43f834f9f5-2026
+DTSTAMP:20250430T134658Z
+UID:5d1862e46b6e53d79c9a5b43f834f9f5-2026-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Orangemen's Day is a provincial holiday in New
  foundland and Labrador in Canada. It commemorates the Battle of the Boyne\
  , which took place in 1690 outside Drogheda\, now in the Republic of Irela
  nd.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Civic/Provincial Day (NT\, NU)
-DTSTART;VALUE=DATE:20260803
-DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090602Z
-UID:ef3e61a8e5c91b330d096e2b7963b878-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Many Canadian provinces and territories ha
- ve a civic holiday to celebrate some aspect of their culture or history on
-  the first Monday of August.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Civic/Provincial Day (Ontario)
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090602Z
-UID:ef3e61a8e5c91b330d096e2b7963b878-2026
+DTSTAMP:20250430T134658Z
+UID:ef3e61a8e5c91b330d096e2b7963b878-2026-on
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local observance - Many Canadian provinces and territories hav
  e a civic holiday to celebrate some aspect of their culture or history on 
  the first Monday of August.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Civic/Provincial Day (NT\, NU)
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+DTSTAMP:20250430T134658Z
+UID:ef3e61a8e5c91b330d096e2b7963b878-2026-nt-nu
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Many Canadian provinces and territories ha
+ ve a civic holiday to celebrate some aspect of their culture or history on
+  the first Monday of August.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Saskatchewan Day (Saskatchewan)
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090602Z
-UID:d19a6ab8ad76217d38d5f247a8377a88-2026
+DTSTAMP:20250430T134658Z
+UID:d19a6ab8ad76217d38d5f247a8377a88-2026-sk
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Saskatchewan Day is a common local holi
- day in Canada
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Saskatchewan Day is a local holiday in Canada
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Terry Fox Day (Manitoba)
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090602Z
-UID:2ca01ecf4957e4505f546cd3384098e0-2026
+DTSTAMP:20250430T134658Z
+UID:2ca01ecf4957e4505f546cd3384098e0-2026-mb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local observance - Terry Fox Day is a local observance in Cana
  da
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Brunswick Day (New Brunswick)
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090602Z
-UID:8f78473714117fd8d026ac2ba908698d-2026
+DTSTAMP:20250430T134658Z
+UID:8f78473714117fd8d026ac2ba908698d-2026-nb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Prescribed Day of Rest - New Brunswick Day is an opportunity f
  or Canadians from the province of New Brunswick to celebrate their history
   and culture. It is celebrated on the first Monday of August.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:British Columbia Day (British Columbia)
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090602Z
-UID:562bd82bcf9327dec49813a6d028ae90-2026
+DTSTAMP:20250430T134658Z
+UID:562bd82bcf9327dec49813a6d028ae90-2026-bc
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - British Columbia Day is a statutory hol
- iday in the Canadian province of British Columbia.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - British Columbia Day is a statutory holiday in
+  the Canadian province of British Columbia.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Natal Day (Nova Scotia)
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090602Z
-UID:d68d0d5d4405ba897fc5e365d0f61ffe-2026
+DTSTAMP:20250430T134658Z
+UID:d68d0d5d4405ba897fc5e365d0f61ffe-2026-ns
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday - Natal Day is a civic holiday to celebra
- te the “birthday” of the Nova Scotia province. It is held on the first
-  Monday of August.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+DESCRIPTION:Local holiday - Natal Day is a civic holiday to celebrate the 
+ “birthday” of the Nova Scotia province. It is held on the first Monday
+  of August.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:The Royal St John's Regatta (Regatta Day) (Newfoundland and Labrad
  or)
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260806
-DTSTAMP:20241008T090602Z
-UID:799ca140bc3729f933919f5583e012d8-2026
+DTSTAMP:20250430T134658Z
+UID:799ca140bc3729f933919f5583e012d8-2026-nl
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Regatta Day is on the first Wednesday of Augus
  t and it is a local holiday in the Canadian province Newfoundland and  Lab
  rador.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Discovery Day (Yukon)
 DTSTART;VALUE=DATE:20260817
 DTEND;VALUE=DATE:20260818
-DTSTAMP:20241008T090602Z
-UID:a80bc0f820a44b4dfd902d15e9adbad1-2026
+DTSTAMP:20250430T134658Z
+UID:a80bc0f820a44b4dfd902d15e9adbad1-2026-yt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - Discovery Day is a public holiday in the Canad
  ian territory of Yukon on the third Monday of August. It commemorates the 
  anniversary of the discovery of gold in Bonanza Creek in the 19th century.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Gold Cup Parade (Prince Edward Island)
 DTSTART;VALUE=DATE:20260821
 DTEND;VALUE=DATE:20260822
-DTSTAMP:20241008T090602Z
-UID:eb221f662cbb9c8e8101606cd0cb830b-2026
+DTSTAMP:20250430T134658Z
+UID:eb221f662cbb9c8e8101606cd0cb830b-2026-pe
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday - The Gold Cup Parade is Atlantic Canada’s lar
  gest parade and the largest parade east of Montreal. It is held annually i
  n Charlottetown\, Prince Edward Island\, Canada on the third Friday of Aug
  ust.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:National Day for Truth and Reconciliation (NT\, YT\, NU\, PE\, BC)
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
-DTSTAMP:20241008T090602Z
-UID:96cf38c3b6ef7f7882ba6adcfe162218-2026
+DTSTAMP:20250430T134658Z
+UID:96cf38c3b6ef7f7882ba6adcfe162218-2026-nt-yt-nu-pe-bc
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Statutory Holiday - National Day for Truth and Reconciliation 
  is a statutory holiday in Canada
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Thanksgiving Day (Nova Scotia)
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
-DTSTAMP:20241008T090602Z
-UID:c5828fe27f4b7668a9cd4f5a2f423328-2026
+DTSTAMP:20250430T134658Z
+UID:c5828fe27f4b7668a9cd4f5a2f423328-2026-ns
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Designated Retail Closing Day - Thanksgiving Day is a holiday 
  to give thanks for the blessings in one's life\, particularly the harvest.
   It is a day off work for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Thanksgiving Day (New Brunswick)
-DTSTART;VALUE=DATE:20261012
-DTEND;VALUE=DATE:20261013
-DTSTAMP:20241008T090602Z
-UID:c5828fe27f4b7668a9cd4f5a2f423328-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Statutory Holiday - Thanksgiving Day is a holiday to give than
- ks for the blessings in one's life\, particularly the harvest. It is a day
-  off work for many Canadians.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Healthcare Aide Day (BC\, MB)
 DTSTART;VALUE=DATE:20261018
 DTEND;VALUE=DATE:20261019
-DTSTAMP:20241008T090602Z
-UID:ce9920a2799866d5b34d2882068cca5d-2026
+DTSTAMP:20250430T134658Z
+UID:ce9920a2799866d5b34d2882068cca5d-2026-bc-mb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local observance - Healthcare Aide Day is a local observance i
  n Canada
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Remembrance Day (Nova Scotia)
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+DTSTAMP:20250430T134658Z
+UID:7b535d10438a9db737b8917209025d38-2026-ns
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Designated Retail Closing Day - Remembrance Day commemorates c
+ ivilians and military personnel who lost their lives in armed conflicts.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Eve (New Brunswick)
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
-DTSTAMP:20241008T090602Z
-UID:43a9022013108adbc50ccc852d636a45-2026
+DTSTAMP:20250430T134658Z
+UID:43a9022013108adbc50ccc852d636a45-2026-nb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Provincial Public Sector Holiday - Christmas Eve in Canada is 
  the day before Christmas Day and always falls on December 24 according to 
  the Gregorian calendar.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day (Nova Scotia)
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
-DTSTAMP:20241008T090602Z
-UID:a1118f7e552dfed35e3dd9711028e615-2026
+DTSTAMP:20250430T134658Z
+UID:a1118f7e552dfed35e3dd9711028e615-2026-ns
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Designated Retail Closing Day - The day after Christmas Day is
   known as Boxing Day and is a holiday in many parts of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day (New Brunswick)
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
-DTSTAMP:20241008T090602Z
-UID:a1118f7e552dfed35e3dd9711028e615-2026
+DTSTAMP:20250430T134658Z
+UID:a1118f7e552dfed35e3dd9711028e615-2026-nb
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Provincial Public Sector Holiday - The day after Christmas Day
   is known as Boxing Day and is a holiday in many parts of Canada.
-LAST-MODIFIED:20241008T090602Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's Day
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20250430T134658Z
+UID:be63c3297c2f8f5ca3c014a794a5c1e5-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - New Year's Day is the first day of a new y
+ ear according to the Gregorian calendar used in Canada and many other coun
+ tries.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Good Friday
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+DTSTAMP:20250430T134658Z
+UID:c257c788346c4b203ef5c03a8c20c518-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - On Good Friday\, Christians commemorate th
+ e crucifixion of Jesus Christ and it is a statutory holiday in many parts 
+ of Canada.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (NT\, NU\, QC)
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+DTSTAMP:20250430T134658Z
+UID:d9760b8173b3ea5c8c48b9b1a87e67df-2027-nt-nu-qc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
+ ay and a holiday for many Canadians.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Victoria Day (All except NS\, PE\, QC)
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270525
+DTSTAMP:20250430T134658Z
+UID:d0252fb6b0272dba508cb21bda408aaf-2027-all except ns-pe-qc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Victoria Day is celebrated in honor of the
+  birthdays of both Queen Victoria and the current monarch of Canada.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Canada Day
+DTSTART;VALUE=DATE:20270701
+DTEND;VALUE=DATE:20270702
+DTSTAMP:20250430T134658Z
+UID:a5371b57012e81e208a9d9a5512fb773-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Canada Day is a federal holiday on July 1 
+ to mark the anniversary of the date that Canada became a self-governing co
+ untry.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Labour Day
+DTSTART;VALUE=DATE:20270906
+DTEND;VALUE=DATE:20270907
+DTSTAMP:20250430T134658Z
+UID:04adc984b42bdb0510e5423d9d1bac0c-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Labour Day in Canada is a holiday to campa
+ ign for workers' rights. It celebrates the achievements of these rights.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:National Day for Truth and Reconciliation
+DTSTART;VALUE=DATE:20270930
+DTEND;VALUE=DATE:20271001
+DTSTAMP:20250430T134658Z
+UID:96cf38c3b6ef7f7882ba6adcfe162218-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Federal Employees Holiday - National Day for Truth and Reconci
+ liation is a federal employees holiday in Canada
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Thanksgiving Day (All except NS\, PE)
+DTSTART;VALUE=DATE:20271011
+DTEND;VALUE=DATE:20271012
+DTSTAMP:20250430T134658Z
+UID:c5828fe27f4b7668a9cd4f5a2f423328-2027-all except ns-pe
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Thanksgiving Day is a holiday to give than
+ ks for the blessings in one's life\, particularly the harvest. It is a day
+  off work for many Canadians.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Remembrance Day (All except MB\, NS\, ON\, QC)
+DTSTART;VALUE=DATE:20271111
+DTEND;VALUE=DATE:20271112
+DTSTAMP:20250430T134658Z
+UID:7b535d10438a9db737b8917209025d38-2027-all except mb-ns-on-qc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Remembrance Day commemorates civilians and
+  military personnel who lost their lives in armed conflicts.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Day
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T134658Z
+UID:e9433ce9730393ac1292592a71223476-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Christians celebrate the birth of Jesus Ch
+ rist on Christmas Day in Canada.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Boxing Day (NL\, NT\, NU\, ON)
+DTSTART;VALUE=DATE:20271226
+DTEND;VALUE=DATE:20271227
+DTSTAMP:20250430T134658Z
+UID:a1118f7e552dfed35e3dd9711028e615-2027-nl-nt-nu-on
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - The day after Christmas Day is known as Bo
+ xing Day and is a holiday in many parts of Canada.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Louis Riel Day (Manitoba)
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+DTSTAMP:20250430T134658Z
+UID:d053f0443caa66be8ff4ce6dac6dc989-2027-mb
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Louis Riel Day celebrates the achievements and
+  life of Louis Riel\, a Canadian politician who was a leader of the Métis
+  people.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nova Scotia Heritage Day (Nova Scotia)
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+DTSTAMP:20250430T134658Z
+UID:c59ab684146adaad2c255be2e590ec07-2027-ns
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Nova Scotia Heritage Day is a day off for Cana
+ dians in Nova Scotia. It aims to recognize cultural or historical contribu
+ tions to the province.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Islander Day (Prince Edward Island)
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+DTSTAMP:20250430T134658Z
+UID:cb8a509b4c86bd48d3715caf14460e76-2027-pe
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Islander Day is a day off for many people in t
+ he province of Prince Edward Island in Canada.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Family Day (AB\, ON\, SK\, NB)
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+DTSTAMP:20250430T134658Z
+UID:7645a10eddcaa0d7849cd71e13a8bbb4-2027-ab-on-sk-nb
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Family Day is a public holiday in the Canadian
+  provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\, and Ne
+ w Brunswick.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Family Day (British Columbia)
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+DTSTAMP:20250430T134658Z
+UID:7645a10eddcaa0d7849cd71e13a8bbb4-2027-bc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Family Day is a public holiday in the Canadian
+  provinces of Alberta\, Ontario\, Saskatchewan\, British Columbia\, and Ne
+ w Brunswick.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Yukon Heritage Day (Yukon)
+DTSTART;VALUE=DATE:20270226
+DTEND;VALUE=DATE:20270227
+DTSTAMP:20250430T134658Z
+UID:a337450dfe4eb11c3a390698e740269c-2027-yt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local de facto holiday - National Heritage Day\, also known as
+  Heritage Day\, is usually celebrated in the Yukon in Canada on the last F
+ riday of February.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St. Patrick's Day (Newfoundland and Labrador)
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+DTSTAMP:20250430T134658Z
+UID:e6887445e82f994356343ff2f5dce408-2027-nl
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - St Patrick's Day commemorates the life and wor
+ k of St Patrick\, a Christian missionary who lived in the fourth and fifth
+  centuries.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Newfoundland and Labrador)
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T134658Z
+UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2027-nl
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Shops Closing Day - Easter Sunday is the most important day in
+  the Christian church calendar in Canada. It celebrates the resurrection o
+ f Jesus Christ after his crucifixion\, according to Christian belief.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Nova Scotia)
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T134658Z
+UID:fa9840a0b194ec74b1b9bf1a2c014fb1-2027-ns
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Designated Retail Closing Day - Easter Sunday is the most impo
+ rtant day in the Christian church calendar in Canada. It celebrates the re
+ surrection of Jesus Christ after his crucifixion\, according to Christian 
+ belief.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (New Brunswick)
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+DTSTAMP:20250430T134658Z
+UID:d9760b8173b3ea5c8c48b9b1a87e67df-2027-nb
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Easter Monday is the day after Easter Sund
+ ay and a holiday for many Canadians.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St. George's Day (Newfoundland and Labrador)
+DTSTART;VALUE=DATE:20270426
+DTEND;VALUE=DATE:20270427
+DTSTAMP:20250430T134658Z
+UID:51f229e235897cd1962786b629414698-2027-nl
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - St George’s Day is a holiday in the Canadian
+  province of Newfoundland and Labrador.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:National Patriots' Day (Quebec)
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270525
+DTSTAMP:20250430T134658Z
+UID:6276dd06939da6bd55c7c6eebd1a9f3e-2027-qc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - National Patriots’ Day is an annual holiday 
+ in Québec\, Canada\, on the Monday before May 25.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:National Indigenous Peoples Day (NT\, YT)
+DTSTART;VALUE=DATE:20270621
+DTEND;VALUE=DATE:20270622
+DTSTAMP:20250430T134658Z
+UID:f57e30ec5401d7cc83969d1c23cbbce5-2027-nt-yt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - National Indigenous Peoples Day celebrates Can
+ ada’s Indigenous culture and the achievements made by the country’s in
+ digenous peoples.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:June Holiday (Newfoundland and Labrador)
+DTSTART;VALUE=DATE:20270621
+DTEND;VALUE=DATE:20270622
+DTSTAMP:20250430T134658Z
+UID:590d8d7b477abcce37742e4e6a6203db-2027-nl
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Newfoundland and Labrador’s June holiday com
+ memorates John Cabot’s arrival at the province on June 24\, 1497.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St. Jean Baptiste Day (Quebec)
+DTSTART;VALUE=DATE:20270624
+DTEND;VALUE=DATE:20270625
+DTSTAMP:20250430T134658Z
+UID:d0ff12b2383c8fdd26663931bf9276ef-2027-qc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Saint Jean Baptiste Day (Fête nationale du Qu
+ ébec\, Quebec National Holiday\, la Saint-Jean\, St. John the Baptist Day
+ ) is the national holiday of the Canadian province of Quebec.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Memorial Day (Newfoundland and Labrador)
+DTSTART;VALUE=DATE:20270701
+DTEND;VALUE=DATE:20270702
+DTSTAMP:20250430T134658Z
+UID:09c91bd487033f07c142d4cc874c1bb1-2027-nl
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Memorial Day is observed in Newfoundland and L
+ abrador\, Canada\, on July 1 each year.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Nunavut Day (Nunavut)
+DTSTART;VALUE=DATE:20270709
+DTEND;VALUE=DATE:20270710
+DTSTAMP:20250430T134658Z
+UID:0f8b8baf15d1651a4eac788e4788a74e-2027-nu
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Nunavut Day is an annual holiday in Canada's N
+ unavut Territory.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Orangemen's Day (Newfoundland and Labrador)
+DTSTART;VALUE=DATE:20270712
+DTEND;VALUE=DATE:20270713
+DTSTAMP:20250430T134658Z
+UID:5d1862e46b6e53d79c9a5b43f834f9f5-2027-nl
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Orangemen's Day is a provincial holiday in New
+ foundland and Labrador in Canada. It commemorates the Battle of the Boyne\
+ , which took place in 1690 outside Drogheda\, now in the Republic of Irela
+ nd.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Civic/Provincial Day (Ontario)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T134658Z
+UID:ef3e61a8e5c91b330d096e2b7963b878-2027-on
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local observance - Many Canadian provinces and territories hav
+ e a civic holiday to celebrate some aspect of their culture or history on 
+ the first Monday of August.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Civic/Provincial Day (NT\, NU)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T134658Z
+UID:ef3e61a8e5c91b330d096e2b7963b878-2027-nt-nu
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - Many Canadian provinces and territories ha
+ ve a civic holiday to celebrate some aspect of their culture or history on
+  the first Monday of August.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Saskatchewan Day (Saskatchewan)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T134658Z
+UID:d19a6ab8ad76217d38d5f247a8377a88-2027-sk
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Saskatchewan Day is a local holiday in Canada
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Terry Fox Day (Manitoba)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T134658Z
+UID:2ca01ecf4957e4505f546cd3384098e0-2027-mb
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local observance - Terry Fox Day is a local observance in Cana
+ da
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Brunswick Day (New Brunswick)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T134658Z
+UID:8f78473714117fd8d026ac2ba908698d-2027-nb
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Prescribed Day of Rest - New Brunswick Day is an opportunity f
+ or Canadians from the province of New Brunswick to celebrate their history
+  and culture. It is celebrated on the first Monday of August.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:British Columbia Day (British Columbia)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T134658Z
+UID:562bd82bcf9327dec49813a6d028ae90-2027-bc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - British Columbia Day is a statutory holiday in
+  the Canadian province of British Columbia.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Natal Day (Nova Scotia)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T134658Z
+UID:d68d0d5d4405ba897fc5e365d0f61ffe-2027-ns
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Natal Day is a civic holiday to celebrate the 
+ “birthday” of the Nova Scotia province. It is held on the first Monday
+  of August.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Royal St John's Regatta (Regatta Day) (Newfoundland and Labrad
+ or)
+DTSTART;VALUE=DATE:20270804
+DTEND;VALUE=DATE:20270805
+DTSTAMP:20250430T134658Z
+UID:799ca140bc3729f933919f5583e012d8-2027-nl
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Regatta Day is on the first Wednesday of Augus
+ t and it is a local holiday in the Canadian province Newfoundland and  Lab
+ rador.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Discovery Day (Yukon)
+DTSTART;VALUE=DATE:20270816
+DTEND;VALUE=DATE:20270817
+DTSTAMP:20250430T134658Z
+UID:a80bc0f820a44b4dfd902d15e9adbad1-2027-yt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - Discovery Day is a public holiday in the Canad
+ ian territory of Yukon on the third Monday of August. It commemorates the 
+ anniversary of the discovery of gold in Bonanza Creek in the 19th century.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gold Cup Parade (Prince Edward Island)
+DTSTART;VALUE=DATE:20270820
+DTEND;VALUE=DATE:20270821
+DTSTAMP:20250430T134658Z
+UID:eb221f662cbb9c8e8101606cd0cb830b-2027-pe
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday - The Gold Cup Parade is Atlantic Canada’s lar
+ gest parade and the largest parade east of Montreal. It is held annually i
+ n Charlottetown\, Prince Edward Island\, Canada on the third Friday of Aug
+ ust.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:National Day for Truth and Reconciliation (NT\, YT\, NU\, PE\, BC)
+DTSTART;VALUE=DATE:20270930
+DTEND;VALUE=DATE:20271001
+DTSTAMP:20250430T134658Z
+UID:96cf38c3b6ef7f7882ba6adcfe162218-2027-nt-yt-nu-pe-bc
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - National Day for Truth and Reconciliation 
+ is a statutory holiday in Canada
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Thanksgiving Day (Nova Scotia)
+DTSTART;VALUE=DATE:20271011
+DTEND;VALUE=DATE:20271012
+DTSTAMP:20250430T134658Z
+UID:c5828fe27f4b7668a9cd4f5a2f423328-2027-ns
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Designated Retail Closing Day - Thanksgiving Day is a holiday 
+ to give thanks for the blessings in one's life\, particularly the harvest.
+  It is a day off work for many Canadians.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Healthcare Aide Day (BC\, MB)
+DTSTART;VALUE=DATE:20271018
+DTEND;VALUE=DATE:20271019
+DTSTAMP:20250430T134658Z
+UID:ce9920a2799866d5b34d2882068cca5d-2027-bc-mb
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local observance - Healthcare Aide Day is a local observance i
+ n Canada
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Remembrance Day (Nova Scotia)
+DTSTART;VALUE=DATE:20271111
+DTEND;VALUE=DATE:20271112
+DTSTAMP:20250430T134658Z
+UID:7b535d10438a9db737b8917209025d38-2027-ns
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Designated Retail Closing Day - Remembrance Day commemorates c
+ ivilians and military personnel who lost their lives in armed conflicts.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Eve (New Brunswick)
+DTSTART;VALUE=DATE:20271224
+DTEND;VALUE=DATE:20271225
+DTSTAMP:20250430T134658Z
+UID:43a9022013108adbc50ccc852d636a45-2027-nb
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Provincial Public Sector Holiday - Christmas Eve in Canada is 
+ the day before Christmas Day and always falls on December 24 according to 
+ the Gregorian calendar.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Boxing Day (Nova Scotia)
+DTSTART;VALUE=DATE:20271226
+DTEND;VALUE=DATE:20271227
+DTSTAMP:20250430T134658Z
+UID:a1118f7e552dfed35e3dd9711028e615-2027-ns
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Designated Retail Closing Day - The day after Christmas Day is
+  known as Boxing Day and is a holiday in many parts of Canada.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Boxing Day (New Brunswick)
+DTSTART;VALUE=DATE:20271226
+DTEND;VALUE=DATE:20271227
+DTSTAMP:20250430T134658Z
+UID:a1118f7e552dfed35e3dd9711028e615-2027-nb
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Provincial Public Sector Holiday - The day after Christmas Day
+  is known as Boxing Day and is a holiday in many parts of Canada.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Day off for Boxing Day (Ontario)
+DTSTART;VALUE=DATE:20271228
+DTEND;VALUE=DATE:20271229
+DTSTAMP:20250430T134658Z
+UID:a1118f7e552dfed35e3dd9711028e615-2027-on
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Statutory Holiday - The day after Christmas Day is known as Bo
+ xing Day and is a holiday in many parts of Canada.
+LAST-MODIFIED:20250430T134658Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

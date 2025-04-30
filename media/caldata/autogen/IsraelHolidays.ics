@@ -2,463 +2,369 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:Municipal Election Day
-DTSTART;VALUE=DATE:20240227
-DTEND;VALUE=DATE:20240228
-DTSTAMP:20241008T090647Z
-UID:d69a09920fad09053b3dc68eef923147-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Municipal Election Day is a national holida
- y in Israel
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Passover (Day 1)
-DTSTART;VALUE=DATE:20240423
-DTEND;VALUE=DATE:20240424
-DTSTAMP:20241008T090647Z
-UID:1e1e939508eb48ceed7fdb2cdb008a7f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Hebrew - During Passover\, the Jewish people remember the libe
- ration of the Israelites from slavery\, their exodus from Egypt\, and that
-  their first-born children were spared during the 10th plague\, as told in
-  the Haggadah.
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Passover (Day 7)
-DTSTART;VALUE=DATE:20240429
-DTEND;VALUE=DATE:20240430
-DTSTAMP:20241008T090647Z
-UID:786e7449291c1b315d27b488070ec039-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Hebrew - The last day of Passover marks the end of the Passove
- r period\, which lasts for seven or eight days.
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Yom HaAtzmaut
-DTSTART;VALUE=DATE:20240514
-DTEND;VALUE=DATE:20240515
-DTSTAMP:20241008T090647Z
-UID:3bdf4d1e18454b74cbbf1ee964e5a22e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Hebrew - Israel's Independence Day\, also known as Yom Ha'atzm
- aut\, marks the anniversary of the Declaration of Independence of Israel.
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Shavuot
-DTSTART;VALUE=DATE:20240612
-DTEND;VALUE=DATE:20240613
-DTSTAMP:20241008T090647Z
-UID:464b0eb6ffb8fbe589b0c0316b4730c6-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Hebrew - Shavuot\, sometimes known as the Festival of the Week
- s\, is a Jewish holiday to mark the end of the Counting of the Omer and th
- e anniversary of the day when Jewish people received the Torah.
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Rosh Hashana
-DTSTART;VALUE=DATE:20241003
-DTEND;VALUE=DATE:20241004
-DTSTAMP:20241008T090647Z
-UID:d6c5c66854d48ddbbbd4526844d8d1c4-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Hebrew - Rosh Hashana\, commonly known as the Jewish New Year\
- , is the first day of Tishrei\, the seventh month in the Hebrew calendar.
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Rosh Hashana (Day 2)
-DTSTART;VALUE=DATE:20241004
-DTEND;VALUE=DATE:20241005
-DTSTAMP:20241008T090647Z
-UID:f08bdabd9bb99eba1f770124cb40bc03-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Hebrew - Rosh Hashana (Day 2) is a national holiday and Jewish
-  holiday in Israel
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Yom Kippur
-DTSTART;VALUE=DATE:20241012
-DTEND;VALUE=DATE:20241013
-DTSTAMP:20241008T090647Z
-UID:b257cbc5586934a3f7a4d9179dad7a04-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Hebrew - Yom Kippur (Day of Atonement) is an important Jewish 
- holiday that centers on the themes of atonement and repentance.
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Sukkot (Day 1)
-DTSTART;VALUE=DATE:20241017
-DTEND;VALUE=DATE:20241018
-DTSTAMP:20241008T090647Z
-UID:9f337662e9b0e1a05bc233e3d8ab94fb-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Hebrew - The first day of Sukkot marks the start of the Sukkot
-  festival\, celebrated among Jewish communities worldwide.
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Shemini Atzeret / Simchat Torah
-DTSTART;VALUE=DATE:20241024
-DTEND;VALUE=DATE:20241025
-DTSTAMP:20241008T090647Z
-UID:53d18c766ee193bb5b5375edb8c45d69-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Hebrew - Shemini Atzeret (or Shmini Atzeret) is a Jewish holid
- ay dedicated to the love of God\, while Simchat Torah (Simchas Torah or Si
- mhat Torah) and celebrates the completion of the annual reading of the Tor
- ah.
-LAST-MODIFIED:20241008T090647Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Purim (Tel Aviv)
-DTSTART;VALUE=DATE:20240324
-DTEND;VALUE=DATE:20240325
-DTSTAMP:20241008T090648Z
-UID:9e2fa37988ac9aa3cdf9cc254471fbcd-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Holiday - Purim is a Jewish holiday to celebrate the del
- iverance of the Jewish people from a plot to kill all of them during the P
- ersian empire\, as told in the scroll of Esther.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Shushan Purim (Jerusalem)
-DTSTART;VALUE=DATE:20240325
-DTEND;VALUE=DATE:20240326
-DTSTAMP:20241008T090648Z
-UID:094fd888cdc0f0d2a1f5240cc2681540-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Holiday - Shushan Purim (Jerusalem) is a local holiday i
- n Israel
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Passover (Day 1)
 DTSTART;VALUE=DATE:20250413
 DTEND;VALUE=DATE:20250414
-DTSTAMP:20241008T090648Z
-UID:1e1e939508eb48ceed7fdb2cdb008a7f-2025
+DTSTAMP:20250430T134755Z
+UID:1e1e939508eb48ceed7fdb2cdb008a7f-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - During Passover\, the Jewish people remember the libe
  ration of the Israelites from slavery\, their exodus from Egypt\, and that
   their first-born children were spared during the 10th plague\, as told in
   the Haggadah.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134755Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Passover (Day 7)
 DTSTART;VALUE=DATE:20250419
 DTEND;VALUE=DATE:20250420
-DTSTAMP:20241008T090648Z
-UID:786e7449291c1b315d27b488070ec039-2025
+DTSTAMP:20250430T134755Z
+UID:786e7449291c1b315d27b488070ec039-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - The last day of Passover marks the end of the Passove
  r period\, which lasts for seven or eight days.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134755Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Yom HaAtzmaut
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20241008T090648Z
-UID:3bdf4d1e18454b74cbbf1ee964e5a22e-2025
+DTSTAMP:20250430T134755Z
+UID:3bdf4d1e18454b74cbbf1ee964e5a22e-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Israel's Independence Day\, also known as Yom Ha'atzm
  aut\, marks the anniversary of the Declaration of Independence of Israel.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134755Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Shavuot
 DTSTART;VALUE=DATE:20250602
 DTEND;VALUE=DATE:20250603
-DTSTAMP:20241008T090648Z
-UID:464b0eb6ffb8fbe589b0c0316b4730c6-2025
+DTSTAMP:20250430T134755Z
+UID:464b0eb6ffb8fbe589b0c0316b4730c6-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Shavuot\, sometimes known as the Festival of the Week
  s\, is a Jewish holiday to mark the end of the Counting of the Omer and th
  e anniversary of the day when Jewish people received the Torah.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134755Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Rosh Hashana
 DTSTART;VALUE=DATE:20250923
 DTEND;VALUE=DATE:20250924
-DTSTAMP:20241008T090648Z
-UID:d6c5c66854d48ddbbbd4526844d8d1c4-2025
+DTSTAMP:20250430T134755Z
+UID:d6c5c66854d48ddbbbd4526844d8d1c4-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Rosh Hashana\, commonly known as the Jewish New Year\
  , is the first day of Tishrei\, the seventh month in the Hebrew calendar.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134755Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Rosh Hashana (Day 2)
 DTSTART;VALUE=DATE:20250924
 DTEND;VALUE=DATE:20250925
-DTSTAMP:20241008T090648Z
-UID:f08bdabd9bb99eba1f770124cb40bc03-2025
+DTSTAMP:20250430T134755Z
+UID:f08bdabd9bb99eba1f770124cb40bc03-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Rosh Hashana (Day 2) is a national holiday and Jewish
   holiday in Israel
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134755Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Yom Kippur
 DTSTART;VALUE=DATE:20251002
 DTEND;VALUE=DATE:20251003
-DTSTAMP:20241008T090648Z
-UID:b257cbc5586934a3f7a4d9179dad7a04-2025
+DTSTAMP:20250430T134755Z
+UID:b257cbc5586934a3f7a4d9179dad7a04-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Yom Kippur (Day of Atonement) is an important Jewish 
  holiday that centers on the themes of atonement and repentance.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134755Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sukkot (Day 1)
 DTSTART;VALUE=DATE:20251007
 DTEND;VALUE=DATE:20251008
-DTSTAMP:20241008T090648Z
-UID:9f337662e9b0e1a05bc233e3d8ab94fb-2025
+DTSTAMP:20250430T134755Z
+UID:9f337662e9b0e1a05bc233e3d8ab94fb-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - The first day of Sukkot marks the start of the Sukkot
   festival\, celebrated among Jewish communities worldwide.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134755Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Shemini Atzeret / Simchat Torah
 DTSTART;VALUE=DATE:20251014
 DTEND;VALUE=DATE:20251015
-DTSTAMP:20241008T090648Z
-UID:53d18c766ee193bb5b5375edb8c45d69-2025
+DTSTAMP:20250430T134755Z
+UID:53d18c766ee193bb5b5375edb8c45d69-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Shemini Atzeret (or Shmini Atzeret) is a Jewish holid
  ay dedicated to the love of God\, while Simchat Torah (Simchas Torah or Si
  mhat Torah) and celebrates the completion of the annual reading of the Tor
  ah.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Purim (Tel Aviv)
-DTSTART;VALUE=DATE:20250314
-DTEND;VALUE=DATE:20250315
-DTSTAMP:20241008T090648Z
-UID:9e2fa37988ac9aa3cdf9cc254471fbcd-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Holiday - Purim is a Jewish holiday to celebrate the del
- iverance of the Jewish people from a plot to kill all of them during the P
- ersian empire\, as told in the scroll of Esther.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Shushan Purim (Jerusalem)
-DTSTART;VALUE=DATE:20250316
-DTEND;VALUE=DATE:20250317
-DTSTAMP:20241008T090648Z
-UID:094fd888cdc0f0d2a1f5240cc2681540-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Holiday - Shushan Purim (Jerusalem) is a local holiday i
- n Israel
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134755Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Passover (Day 1)
 DTSTART;VALUE=DATE:20260402
 DTEND;VALUE=DATE:20260403
-DTSTAMP:20241008T090648Z
-UID:1e1e939508eb48ceed7fdb2cdb008a7f-2026
+DTSTAMP:20250430T134756Z
+UID:1e1e939508eb48ceed7fdb2cdb008a7f-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - During Passover\, the Jewish people remember the libe
  ration of the Israelites from slavery\, their exodus from Egypt\, and that
   their first-born children were spared during the 10th plague\, as told in
   the Haggadah.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Passover (Day 7)
 DTSTART;VALUE=DATE:20260408
 DTEND;VALUE=DATE:20260409
-DTSTAMP:20241008T090648Z
-UID:786e7449291c1b315d27b488070ec039-2026
+DTSTAMP:20250430T134756Z
+UID:786e7449291c1b315d27b488070ec039-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - The last day of Passover marks the end of the Passove
  r period\, which lasts for seven or eight days.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Yom HaAtzmaut
 DTSTART;VALUE=DATE:20260422
 DTEND;VALUE=DATE:20260423
-DTSTAMP:20241008T090648Z
-UID:3bdf4d1e18454b74cbbf1ee964e5a22e-2026
+DTSTAMP:20250430T134756Z
+UID:3bdf4d1e18454b74cbbf1ee964e5a22e-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Israel's Independence Day\, also known as Yom Ha'atzm
  aut\, marks the anniversary of the Declaration of Independence of Israel.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Shavuot
 DTSTART;VALUE=DATE:20260522
 DTEND;VALUE=DATE:20260523
-DTSTAMP:20241008T090648Z
-UID:464b0eb6ffb8fbe589b0c0316b4730c6-2026
+DTSTAMP:20250430T134756Z
+UID:464b0eb6ffb8fbe589b0c0316b4730c6-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Shavuot\, sometimes known as the Festival of the Week
  s\, is a Jewish holiday to mark the end of the Counting of the Omer and th
  e anniversary of the day when Jewish people received the Torah.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Rosh Hashana
 DTSTART;VALUE=DATE:20260912
 DTEND;VALUE=DATE:20260913
-DTSTAMP:20241008T090648Z
-UID:d6c5c66854d48ddbbbd4526844d8d1c4-2026
+DTSTAMP:20250430T134756Z
+UID:d6c5c66854d48ddbbbd4526844d8d1c4-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Rosh Hashana\, commonly known as the Jewish New Year\
  , is the first day of Tishrei\, the seventh month in the Hebrew calendar.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Rosh Hashana (Day 2)
 DTSTART;VALUE=DATE:20260913
 DTEND;VALUE=DATE:20260914
-DTSTAMP:20241008T090648Z
-UID:f08bdabd9bb99eba1f770124cb40bc03-2026
+DTSTAMP:20250430T134756Z
+UID:f08bdabd9bb99eba1f770124cb40bc03-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Rosh Hashana (Day 2) is a national holiday and Jewish
   holiday in Israel
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Yom Kippur
 DTSTART;VALUE=DATE:20260921
 DTEND;VALUE=DATE:20260922
-DTSTAMP:20241008T090648Z
-UID:b257cbc5586934a3f7a4d9179dad7a04-2026
+DTSTAMP:20250430T134756Z
+UID:b257cbc5586934a3f7a4d9179dad7a04-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Yom Kippur (Day of Atonement) is an important Jewish 
  holiday that centers on the themes of atonement and repentance.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sukkot (Day 1)
 DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20260927
-DTSTAMP:20241008T090648Z
-UID:9f337662e9b0e1a05bc233e3d8ab94fb-2026
+DTSTAMP:20250430T134756Z
+UID:9f337662e9b0e1a05bc233e3d8ab94fb-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - The first day of Sukkot marks the start of the Sukkot
   festival\, celebrated among Jewish communities worldwide.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Shemini Atzeret / Simchat Torah
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
-DTSTAMP:20241008T090648Z
-UID:53d18c766ee193bb5b5375edb8c45d69-2026
+DTSTAMP:20250430T134756Z
+UID:53d18c766ee193bb5b5375edb8c45d69-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Hebrew - Shemini Atzeret (or Shmini Atzeret) is a Jewish holid
  ay dedicated to the love of God\, while Simchat Torah (Simchas Torah or Si
  mhat Torah) and celebrates the completion of the annual reading of the Tor
  ah.
-LAST-MODIFIED:20241008T090648Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Purim (Tel Aviv)
-DTSTART;VALUE=DATE:20260303
-DTEND;VALUE=DATE:20260304
-DTSTAMP:20241008T090649Z
-UID:9e2fa37988ac9aa3cdf9cc254471fbcd-2026
+SUMMARY:Passover (Day 1)
+DTSTART;VALUE=DATE:20270422
+DTEND;VALUE=DATE:20270423
+DTSTAMP:20250430T134756Z
+UID:1e1e939508eb48ceed7fdb2cdb008a7f-2027-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local Holiday - Purim is a Jewish holiday to celebrate the del
- iverance of the Jewish people from a plot to kill all of them during the P
- ersian empire\, as told in the scroll of Esther.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
+DESCRIPTION:Hebrew - During Passover\, the Jewish people remember the libe
+ ration of the Israelites from slavery\, their exodus from Egypt\, and that
+  their first-born children were spared during the 10th plague\, as told in
+  the Haggadah.
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Shushan Purim (Jerusalem)
-DTSTART;VALUE=DATE:20260304
-DTEND;VALUE=DATE:20260305
-DTSTAMP:20241008T090649Z
-UID:094fd888cdc0f0d2a1f5240cc2681540-2026
+SUMMARY:Passover (Day 7)
+DTSTART;VALUE=DATE:20270428
+DTEND;VALUE=DATE:20270429
+DTSTAMP:20250430T134756Z
+UID:786e7449291c1b315d27b488070ec039-2027-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Local Holiday - Shushan Purim (Jerusalem) is a local holiday i
- n Israel
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
+DESCRIPTION:Hebrew - The last day of Passover marks the end of the Passove
+ r period\, which lasts for seven or eight days.
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Yom HaAtzmaut
+DTSTART;VALUE=DATE:20270512
+DTEND;VALUE=DATE:20270513
+DTSTAMP:20250430T134756Z
+UID:3bdf4d1e18454b74cbbf1ee964e5a22e-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Hebrew - Israel's Independence Day\, also known as Yom Ha'atzm
+ aut\, marks the anniversary of the Declaration of Independence of Israel.
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Shavuot
+DTSTART;VALUE=DATE:20270611
+DTEND;VALUE=DATE:20270612
+DTSTAMP:20250430T134756Z
+UID:464b0eb6ffb8fbe589b0c0316b4730c6-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Hebrew - Shavuot\, sometimes known as the Festival of the Week
+ s\, is a Jewish holiday to mark the end of the Counting of the Omer and th
+ e anniversary of the day when Jewish people received the Torah.
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Rosh Hashana
+DTSTART;VALUE=DATE:20271002
+DTEND;VALUE=DATE:20271003
+DTSTAMP:20250430T134756Z
+UID:d6c5c66854d48ddbbbd4526844d8d1c4-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Hebrew - Rosh Hashana\, commonly known as the Jewish New Year\
+ , is the first day of Tishrei\, the seventh month in the Hebrew calendar.
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Rosh Hashana (Day 2)
+DTSTART;VALUE=DATE:20271003
+DTEND;VALUE=DATE:20271004
+DTSTAMP:20250430T134756Z
+UID:f08bdabd9bb99eba1f770124cb40bc03-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Hebrew - Rosh Hashana (Day 2) is a national holiday and Jewish
+  holiday in Israel
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Yom Kippur
+DTSTART;VALUE=DATE:20271011
+DTEND;VALUE=DATE:20271012
+DTSTAMP:20250430T134756Z
+UID:b257cbc5586934a3f7a4d9179dad7a04-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Hebrew - Yom Kippur (Day of Atonement) is an important Jewish 
+ holiday that centers on the themes of atonement and repentance.
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sukkot (Day 1)
+DTSTART;VALUE=DATE:20271016
+DTEND;VALUE=DATE:20271017
+DTSTAMP:20250430T134756Z
+UID:9f337662e9b0e1a05bc233e3d8ab94fb-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Hebrew - The first day of Sukkot marks the start of the Sukkot
+  festival\, celebrated among Jewish communities worldwide.
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Shemini Atzeret / Simchat Torah
+DTSTART;VALUE=DATE:20271023
+DTEND;VALUE=DATE:20271024
+DTSTAMP:20250430T134756Z
+UID:53d18c766ee193bb5b5375edb8c45d69-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Hebrew - Shemini Atzeret (or Shmini Atzeret) is a Jewish holid
+ ay dedicated to the love of God\, while Simchat Torah (Simchas Torah or Si
+ mhat Torah) and celebrates the completion of the annual reading of the Tor
+ ah.
+LAST-MODIFIED:20250430T134756Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

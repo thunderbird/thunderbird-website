@@ -3,479 +3,465 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:Día de Año Nuevo 
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20241008T090708Z
-UID:1285b0842805322f18887ff5197b8c60-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El día de Año Nuevo\, el 1 de enero\, es
-  el primer día del año.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Constitución 
-DTSTART;VALUE=DATE:20240205
-DTEND;VALUE=DATE:20240206
-DTSTAMP:20241008T090708Z
-UID:e7e833623692cbf472bef1e7d81c83ba-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día de la Constitución de México se 
- celebra el primer lunes de febrero para conmemorar la Constitución de 191
- 7.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
-DTSTART;VALUE=DATE:20240318
-DTEND;VALUE=DATE:20240319
-DTSTAMP:20241008T090708Z
-UID:e7a9eac455c65bb178a38b6e52ab5b83-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día de Benito Juárez (Natalicio de Be
- nito Juárez) es un feriado nacional en México para honrar el cumpleaños
-  de uno de los mejores presidentes del país.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Trabajo/Primero de Mayo 
-DTSTART;VALUE=DATE:20240501
-DTEND;VALUE=DATE:20240502
-DTSTAMP:20241008T090708Z
-UID:27788f9dd2565504c0c9649a31dd9098-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día del Trabajo en México se celebra 
- como un día libre del trabajo y la escuela el primer día de mayo.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de las elecciones generales 
-DTSTART;VALUE=DATE:20240602
-DTEND;VALUE=DATE:20240603
-DTSTAMP:20241008T090708Z
-UID:53800cdb35dd7b696f28218a965cd9cb-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Las elecciones generales de México se lle
- van a cabo en todo el país el primer domingo de julio de cada seis años.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Independencia 
-DTSTART;VALUE=DATE:20240916
-DTEND;VALUE=DATE:20240917
-DTSTAMP:20241008T090708Z
-UID:08039237e44e1a07fd8266431a5fbfe0-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día de la Independencia de México es 
- un día festivo nacional para celebrar la libertad del país del dominio e
- spañol.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la inauguración 
-DTSTART;VALUE=DATE:20241001
-DTEND;VALUE=DATE:20241002
-DTSTAMP:20241008T090708Z
-UID:30b732fe0e79ae90573765bf91cac6ba-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El día de la toma de posesión presidenci
- al de México es un feriado nacional\, en el que se inaugura un nuevo pres
- idente en diciembre cada 6 años.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Día de la Revolución 
-DTSTART;VALUE=DATE:20241118
-DTEND;VALUE=DATE:20241119
-DTSTAMP:20241008T090708Z
-UID:1bb4d0ea0c9379e774eec193d4729b03-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Día de la Revolución se celebra el terce
- r lunes de noviembre para conmemorar el inicio de la revolución mexicana 
- para derrocar a la dictadura de Porfirio Díaz en 1910.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Navidad 
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090708Z
-UID:b9a17400af185af82dc7551e1d3f6b80-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
- xico para celebrar el nacimiento de Jesucristo.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo 
-DTSTART;VALUE=DATE:20240328
-DTEND;VALUE=DATE:20240329
-DTSTAMP:20241008T090708Z
-UID:cf9e945fccccb327bce596bb7d68f960-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday -  Los mexicanos celebran el Jueves Santo como pa
- rte de la Semana Santa\, que conmemora los últimos momentos de la vida de
-  Jesús\, su muerte y resurrección.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Viernes Santo 
-DTSTART;VALUE=DATE:20240329
-DTEND;VALUE=DATE:20240330
-DTSTAMP:20241008T090708Z
-UID:a6d78e4d058a7d948f2d4d9f762d723b-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday -  Los mexicanos observan el Viernes Santo como e
- l día en que Jesús murió en la cruz hace unos 2000 años.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Batalla de Puebla (Cinco de Mayo) 
-DTSTART;VALUE=DATE:20240505
-DTEND;VALUE=DATE:20240506
-DTSTAMP:20241008T090708Z
-UID:fd081446262206aa0f684f7a4351ea30-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado escolar
-  y gubernamental anual dedicado a la victoria del ejército mexicano en la
-  Batalla de Puebla.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Virgen de Guadalupe 
-DTSTART;VALUE=DATE:20241212
-DTEND;VALUE=DATE:20241213
-DTSTAMP:20241008T090708Z
-UID:7412581c2c41d96f4bd866a92ad0bc7a-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday -  Uno de los días más celebrados del calendari
- o mexicano es el Día de Nuestra Señora Guadalupe\, que conmemora la cree
- ncia de que la madre de Jesús apareció en México en 1531.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Año Nuevo 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20241008T090708Z
-UID:1285b0842805322f18887ff5197b8c60-2025
+DTSTAMP:20250430T134820Z
+UID:1285b0842805322f18887ff5197b8c60-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El día de Año Nuevo\, el 1 de enero\, es
   el primer día del año.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Constitución 
 DTSTART;VALUE=DATE:20250203
 DTEND;VALUE=DATE:20250204
-DTSTAMP:20241008T090708Z
-UID:e7e833623692cbf472bef1e7d81c83ba-2025
+DTSTAMP:20250430T134820Z
+UID:e7e833623692cbf472bef1e7d81c83ba-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Constitución de México se 
  celebra el primer lunes de febrero para conmemorar la Constitución de 191
  7.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
 DTSTART;VALUE=DATE:20250317
 DTEND;VALUE=DATE:20250318
-DTSTAMP:20241008T090708Z
-UID:e7a9eac455c65bb178a38b6e52ab5b83-2025
+DTSTAMP:20250430T134820Z
+UID:e7a9eac455c65bb178a38b6e52ab5b83-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de Benito Juárez (Natalicio de Be
  nito Juárez) es un feriado nacional en México para honrar el cumpleaños
   de uno de los mejores presidentes del país.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día del Trabajo/Primero de Mayo 
-DTSTART;VALUE=DATE:20250501
-DTEND;VALUE=DATE:20250502
-DTSTAMP:20241008T090708Z
-UID:27788f9dd2565504c0c9649a31dd9098-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día del Trabajo en México se celebra 
- como un día libre del trabajo y la escuela el primer día de mayo.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Independencia 
-DTSTART;VALUE=DATE:20250916
-DTEND;VALUE=DATE:20250917
-DTSTAMP:20241008T090708Z
-UID:08039237e44e1a07fd8266431a5fbfe0-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día de la Independencia de México es 
- un día festivo nacional para celebrar la libertad del país del dominio e
- spañol.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:El Día de la Revolución 
-DTSTART;VALUE=DATE:20251117
-DTEND;VALUE=DATE:20251118
-DTSTAMP:20241008T090708Z
-UID:1bb4d0ea0c9379e774eec193d4729b03-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Día de la Revolución se celebra el terce
- r lunes de noviembre para conmemorar el inicio de la revolución mexicana 
- para derrocar a la dictadura de Porfirio Díaz en 1910.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Navidad 
-DTSTART;VALUE=DATE:20251225
-DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090708Z
-UID:b9a17400af185af82dc7551e1d3f6b80-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
- xico para celebrar el nacimiento de Jesucristo.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jueves Santo 
 DTSTART;VALUE=DATE:20250417
 DTEND;VALUE=DATE:20250418
-DTSTAMP:20241008T090708Z
-UID:cf9e945fccccb327bce596bb7d68f960-2025
+DTSTAMP:20250430T134820Z
+UID:cf9e945fccccb327bce596bb7d68f960-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank holiday -  Los mexicanos celebran el Jueves Santo como pa
  rte de la Semana Santa\, que conmemora los últimos momentos de la vida de
   Jesús\, su muerte y resurrección.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Viernes Santo 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20241008T090708Z
-UID:a6d78e4d058a7d948f2d4d9f762d723b-2025
+DTSTAMP:20250430T134820Z
+UID:a6d78e4d058a7d948f2d4d9f762d723b-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank holiday -  Los mexicanos observan el Viernes Santo como e
  l día en que Jesús murió en la cruz hace unos 2000 años.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Batalla de Puebla (Cinco de Mayo) 
-DTSTART;VALUE=DATE:20250505
-DTEND;VALUE=DATE:20250506
-DTSTAMP:20241008T090708Z
-UID:fd081446262206aa0f684f7a4351ea30-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado escolar
-  y gubernamental anual dedicado a la victoria del ejército mexicano en la
-  Batalla de Puebla.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Virgen de Guadalupe 
-DTSTART;VALUE=DATE:20251212
-DTEND;VALUE=DATE:20251213
-DTSTAMP:20241008T090708Z
-UID:7412581c2c41d96f4bd866a92ad0bc7a-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday -  Uno de los días más celebrados del calendari
- o mexicano es el Día de Nuestra Señora Guadalupe\, que conmemora la cree
- ncia de que la madre de Jesús apareció en México en 1531.
-LAST-MODIFIED:20241008T090708Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Año Nuevo 
-DTSTART;VALUE=DATE:20260101
-DTEND;VALUE=DATE:20260102
-DTSTAMP:20241008T090709Z
-UID:1285b0842805322f18887ff5197b8c60-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El día de Año Nuevo\, el 1 de enero\, es
-  el primer día del año.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de la Constitución 
-DTSTART;VALUE=DATE:20260202
-DTEND;VALUE=DATE:20260203
-DTSTAMP:20241008T090709Z
-UID:e7e833623692cbf472bef1e7d81c83ba-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día de la Constitución de México se 
- celebra el primer lunes de febrero para conmemorar la Constitución de 191
- 7.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
-DTSTART;VALUE=DATE:20260316
-DTEND;VALUE=DATE:20260317
-DTSTAMP:20241008T090709Z
-UID:e7a9eac455c65bb178a38b6e52ab5b83-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  El Día de Benito Juárez (Natalicio de Be
- nito Juárez) es un feriado nacional en México para honrar el cumpleaños
-  de uno de los mejores presidentes del país.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día del Trabajo/Primero de Mayo 
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260502
-DTSTAMP:20241008T090709Z
-UID:27788f9dd2565504c0c9649a31dd9098-2026
+DTSTART;VALUE=DATE:20250501
+DTEND;VALUE=DATE:20250502
+DTSTAMP:20250430T134820Z
+UID:27788f9dd2565504c0c9649a31dd9098-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día del Trabajo en México se celebra 
  como un día libre del trabajo y la escuela el primer día de mayo.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de las elecciones judiciales 
+DTSTART;VALUE=DATE:20250601
+DTEND;VALUE=DATE:20250602
+DTSTAMP:20250430T134820Z
+UID:43106b7f16a89c8854af2394dd0a19f7-2025-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día de las elecciones judiciales es un
+  feriado nacional en México
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Independencia 
-DTSTART;VALUE=DATE:20260916
-DTEND;VALUE=DATE:20260917
-DTSTAMP:20241008T090709Z
-UID:08039237e44e1a07fd8266431a5fbfe0-2026
+DTSTART;VALUE=DATE:20250916
+DTEND;VALUE=DATE:20250917
+DTSTAMP:20250430T134820Z
+UID:08039237e44e1a07fd8266431a5fbfe0-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  El Día de la Independencia de México es 
  un día festivo nacional para celebrar la libertad del país del dominio e
  spañol.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:El Día de la Revolución 
-DTSTART;VALUE=DATE:20261116
-DTEND;VALUE=DATE:20261117
-DTSTAMP:20241008T090709Z
-UID:1bb4d0ea0c9379e774eec193d4729b03-2026
+DTSTART;VALUE=DATE:20251117
+DTEND;VALUE=DATE:20251118
+DTSTAMP:20250430T134820Z
+UID:1bb4d0ea0c9379e774eec193d4729b03-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Día de la Revolución se celebra el terce
  r lunes de noviembre para conmemorar el inicio de la revolución mexicana 
  para derrocar a la dictadura de Porfirio Díaz en 1910.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Día de Navidad 
-DTSTART;VALUE=DATE:20261225
-DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090709Z
-UID:b9a17400af185af82dc7551e1d3f6b80-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
- xico para celebrar el nacimiento de Jesucristo.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jueves Santo 
-DTSTART;VALUE=DATE:20260402
-DTEND;VALUE=DATE:20260403
-DTSTAMP:20241008T090709Z
-UID:cf9e945fccccb327bce596bb7d68f960-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday -  Los mexicanos celebran el Jueves Santo como pa
- rte de la Semana Santa\, que conmemora los últimos momentos de la vida de
-  Jesús\, su muerte y resurrección.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Viernes Santo 
-DTSTART;VALUE=DATE:20260403
-DTEND;VALUE=DATE:20260404
-DTSTAMP:20241008T090709Z
-UID:a6d78e4d058a7d948f2d4d9f762d723b-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank holiday -  Los mexicanos observan el Viernes Santo como e
- l día en que Jesús murió en la cruz hace unos 2000 años.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Batalla de Puebla (Cinco de Mayo) 
-DTSTART;VALUE=DATE:20260505
-DTEND;VALUE=DATE:20260506
-DTSTAMP:20241008T090709Z
-UID:fd081446262206aa0f684f7a4351ea30-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado escolar
-  y gubernamental anual dedicado a la victoria del ejército mexicano en la
-  Batalla de Puebla.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Día de la Virgen de Guadalupe 
-DTSTART;VALUE=DATE:20261212
-DTEND;VALUE=DATE:20261213
-DTSTAMP:20241008T090709Z
-UID:7412581c2c41d96f4bd866a92ad0bc7a-2026
+DTSTART;VALUE=DATE:20251212
+DTEND;VALUE=DATE:20251213
+DTSTAMP:20250430T134820Z
+UID:7412581c2c41d96f4bd866a92ad0bc7a-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank holiday -  Uno de los días más celebrados del calendari
  o mexicano es el Día de Nuestra Señora Guadalupe\, que conmemora la cree
  ncia de que la madre de Jesús apareció en México en 1531.
-LAST-MODIFIED:20241008T090709Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Navidad 
+DTSTART;VALUE=DATE:20251225
+DTEND;VALUE=DATE:20251226
+DTSTAMP:20250430T134820Z
+UID:b9a17400af185af82dc7551e1d3f6b80-2025-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
+ xico para celebrar el nacimiento de Jesucristo.
+LAST-MODIFIED:20250430T134820Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Batalla de Puebla (Cinco de Mayo) 
+DTSTART;VALUE=DATE:20250505
+DTEND;VALUE=DATE:20250506
+DTSTAMP:20250430T134821Z
+UID:fd081446262206aa0f684f7a4351ea30-2025-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado escolar
+  y gubernamental anual dedicado a la victoria del ejército mexicano en la
+  Batalla de Puebla.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Año Nuevo 
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+DTSTAMP:20250430T134821Z
+UID:1285b0842805322f18887ff5197b8c60-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día de Año Nuevo\, el 1 de enero\, es
+  el primer día del año.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Constitución 
+DTSTART;VALUE=DATE:20260202
+DTEND;VALUE=DATE:20260203
+DTSTAMP:20250430T134821Z
+UID:e7e833623692cbf472bef1e7d81c83ba-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Constitución de México se 
+ celebra el primer lunes de febrero para conmemorar la Constitución de 191
+ 7.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
+DTSTART;VALUE=DATE:20260316
+DTEND;VALUE=DATE:20260317
+DTSTAMP:20250430T134821Z
+UID:e7a9eac455c65bb178a38b6e52ab5b83-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de Benito Juárez (Natalicio de Be
+ nito Juárez) es un feriado nacional en México para honrar el cumpleaños
+  de uno de los mejores presidentes del país.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jueves Santo 
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+DTSTAMP:20250430T134821Z
+UID:cf9e945fccccb327bce596bb7d68f960-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Los mexicanos celebran el Jueves Santo como pa
+ rte de la Semana Santa\, que conmemora los últimos momentos de la vida de
+  Jesús\, su muerte y resurrección.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Viernes Santo 
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+DTSTAMP:20250430T134821Z
+UID:a6d78e4d058a7d948f2d4d9f762d723b-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Los mexicanos observan el Viernes Santo como e
+ l día en que Jesús murió en la cruz hace unos 2000 años.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Trabajo/Primero de Mayo 
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+DTSTAMP:20250430T134821Z
+UID:27788f9dd2565504c0c9649a31dd9098-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día del Trabajo en México se celebra 
+ como un día libre del trabajo y la escuela el primer día de mayo.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Independencia 
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+DTSTAMP:20250430T134821Z
+UID:08039237e44e1a07fd8266431a5fbfe0-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Independencia de México es 
+ un día festivo nacional para celebrar la libertad del país del dominio e
+ spañol.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:El Día de la Revolución 
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+DTSTAMP:20250430T134821Z
+UID:1bb4d0ea0c9379e774eec193d4729b03-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Día de la Revolución se celebra el terce
+ r lunes de noviembre para conmemorar el inicio de la revolución mexicana 
+ para derrocar a la dictadura de Porfirio Díaz en 1910.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Virgen de Guadalupe 
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+DTSTAMP:20250430T134821Z
+UID:7412581c2c41d96f4bd866a92ad0bc7a-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Uno de los días más celebrados del calendari
+ o mexicano es el Día de Nuestra Señora Guadalupe\, que conmemora la cree
+ ncia de que la madre de Jesús apareció en México en 1531.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Navidad 
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+DTSTAMP:20250430T134821Z
+UID:b9a17400af185af82dc7551e1d3f6b80-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
+ xico para celebrar el nacimiento de Jesucristo.
+LAST-MODIFIED:20250430T134821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Batalla de Puebla (Cinco de Mayo) 
+DTSTART;VALUE=DATE:20260505
+DTEND;VALUE=DATE:20260506
+DTSTAMP:20250430T134822Z
+UID:fd081446262206aa0f684f7a4351ea30-2026-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado escolar
+  y gubernamental anual dedicado a la victoria del ejército mexicano en la
+  Batalla de Puebla.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Año Nuevo 
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20250430T134822Z
+UID:1285b0842805322f18887ff5197b8c60-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El día de Año Nuevo\, el 1 de enero\, es
+  el primer día del año.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Constitución 
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+DTSTAMP:20250430T134822Z
+UID:e7e833623692cbf472bef1e7d81c83ba-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Constitución de México se 
+ celebra el primer lunes de febrero para conmemorar la Constitución de 191
+ 7.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Monumento conmemorativo del cumpleaños de Benito Juárez 
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+DTSTAMP:20250430T134822Z
+UID:e7a9eac455c65bb178a38b6e52ab5b83-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de Benito Juárez (Natalicio de Be
+ nito Juárez) es un feriado nacional en México para honrar el cumpleaños
+  de uno de los mejores presidentes del país.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jueves Santo 
+DTSTART;VALUE=DATE:20270325
+DTEND;VALUE=DATE:20270326
+DTSTAMP:20250430T134822Z
+UID:cf9e945fccccb327bce596bb7d68f960-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Los mexicanos celebran el Jueves Santo como pa
+ rte de la Semana Santa\, que conmemora los últimos momentos de la vida de
+  Jesús\, su muerte y resurrección.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Viernes Santo 
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+DTSTAMP:20250430T134822Z
+UID:a6d78e4d058a7d948f2d4d9f762d723b-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Los mexicanos observan el Viernes Santo como e
+ l día en que Jesús murió en la cruz hace unos 2000 años.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día del Trabajo/Primero de Mayo 
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+DTSTAMP:20250430T134822Z
+UID:27788f9dd2565504c0c9649a31dd9098-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día del Trabajo en México se celebra 
+ como un día libre del trabajo y la escuela el primer día de mayo.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Independencia 
+DTSTART;VALUE=DATE:20270916
+DTEND;VALUE=DATE:20270917
+DTSTAMP:20250430T134822Z
+UID:08039237e44e1a07fd8266431a5fbfe0-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  El Día de la Independencia de México es 
+ un día festivo nacional para celebrar la libertad del país del dominio e
+ spañol.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:El Día de la Revolución 
+DTSTART;VALUE=DATE:20271115
+DTEND;VALUE=DATE:20271116
+DTSTAMP:20250430T134822Z
+UID:1bb4d0ea0c9379e774eec193d4729b03-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Día de la Revolución se celebra el terce
+ r lunes de noviembre para conmemorar el inicio de la revolución mexicana 
+ para derrocar a la dictadura de Porfirio Díaz en 1910.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de la Virgen de Guadalupe 
+DTSTART;VALUE=DATE:20271212
+DTEND;VALUE=DATE:20271213
+DTSTAMP:20250430T134822Z
+UID:7412581c2c41d96f4bd866a92ad0bc7a-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank holiday -  Uno de los días más celebrados del calendari
+ o mexicano es el Día de Nuestra Señora Guadalupe\, que conmemora la cree
+ ncia de que la madre de Jesús apareció en México en 1531.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Día de Navidad 
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T134822Z
+UID:b9a17400af185af82dc7551e1d3f6b80-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Christian -  El día de Navidad es un día festivo en todo Mé
+ xico para celebrar el nacimiento de Jesucristo.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Batalla de Puebla (Cinco de Mayo) 
+DTSTART;VALUE=DATE:20270505
+DTEND;VALUE=DATE:20270506
+DTSTAMP:20250430T134822Z
+UID:fd081446262206aa0f684f7a4351ea30-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common local holiday -  El Cinco de Mayo es un feriado escolar
+  y gubernamental anual dedicado a la victoria del ejército mexicano en la
+  Batalla de Puebla.
+LAST-MODIFIED:20250430T134822Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

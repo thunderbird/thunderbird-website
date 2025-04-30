@@ -3,2342 +3,2373 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:New Year's Day
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20241008T090549Z
-UID:fa0bd6bc4644b21d7ff40a6fc2b19c3c-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - New Year's Day is the first day of the year
-  in the Gregorian calendar used in Australia and many other countries.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Australia Day
-DTSTART;VALUE=DATE:20240126
-DTEND;VALUE=DATE:20240127
-DTSTAMP:20241008T090549Z
-UID:9cd2b9ff5eff222c386683dc3b3ccdda-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - Australia Day is the Australian national da
- y. It is celebrated on January 26 each year.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Good Friday
-DTSTART;VALUE=DATE:20240329
-DTEND;VALUE=DATE:20240330
-DTSTAMP:20241008T090549Z
-UID:948fd0717b1044e96a432b3479dd5422-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - Good Friday is two days before Easter Sunda
- y and is a national holiday in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday
-DTSTART;VALUE=DATE:20240401
-DTEND;VALUE=DATE:20240402
-DTSTAMP:20241008T090549Z
-UID:477e4d3fc00f793da10f51a48f1983c3-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - Easter Monday is the day after Easter Sunda
- y and is a nationwide holiday in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ANZAC Day
-DTSTART;VALUE=DATE:20240425
-DTEND;VALUE=DATE:20240426
-DTSTAMP:20241008T090549Z
-UID:04ab2f8213add64df58c0b1f1a117ec5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - ANZAC Day is the anniversary of the landing
-  of troops from Australia and New Zealand on the Gallipoli Peninsula in Tu
- rkey during in World War I.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Day
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090549Z
-UID:407d540f5b4d56d3f7d03d9864aefa85-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - Christians celebrate the birth of Jesus on 
- Christmas Day\, which is in the middle of summer in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Boxing Day
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241008T090549Z
-UID:bc2e9866a511b2f4eb383bb462f1ee9a-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National Holiday - December 26 is the Boxing Day holiday celeb
- rated in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lunar New Year (Christmas Island)
-DTSTART;VALUE=DATE:20240210
-DTEND;VALUE=DATE:20240211
-DTSTAMP:20241008T090549Z
-UID:68ee8c449c5631d8e5fcfa181e79d3b4-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Lunar New Year marks the first day of the New 
- Year in the Chinese calendar.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lunar New Year Holiday (Day 2) (Christmas Island)
-DTSTART;VALUE=DATE:20240211
-DTEND;VALUE=DATE:20240212
-DTSTAMP:20241008T090549Z
-UID:9905520afb730dacb205bd2160fd2305-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Lunar New Year Holiday (Day 2) is a state holi
- day in Australia
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Royal Hobart Regatta (Tasmania)
-DTSTART;VALUE=DATE:20240212
-DTEND;VALUE=DATE:20240213
-DTSTAMP:20241008T090549Z
-UID:acc4238c0086b57ef168ef5cc699b071-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - The Royal Hobart Regatta is an annual public h
- oliday in southern Tasmania\, Australia\, on the second Monday in February
- .
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Day off for Lunar New Year (Christmas Island)
-DTSTART;VALUE=DATE:20240212
-DTEND;VALUE=DATE:20240213
-DTSTAMP:20241008T090549Z
-UID:68ee8c449c5631d8e5fcfa181e79d3b4-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Lunar New Year marks the first day of the New 
- Year in the Chinese calendar.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Labour Day (Western Australia)
-DTSTART;VALUE=DATE:20240304
-DTEND;VALUE=DATE:20240305
-DTSTAMP:20241008T090549Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Labour Day (Victoria)
-DTSTART;VALUE=DATE:20240311
-DTEND;VALUE=DATE:20240312
-DTSTAMP:20241008T090549Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Eight Hours Day (Tasmania)
-DTSTART;VALUE=DATE:20240311
-DTEND;VALUE=DATE:20240312
-DTSTAMP:20241008T090549Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Adelaide Cup (South Australia)
-DTSTART;VALUE=DATE:20240311
-DTEND;VALUE=DATE:20240312
-DTSTAMP:20241008T090549Z
-UID:a2c48cfc225a56284f117bc8648c5f7c-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Adelaide Cup is a state holiday and a horse ra
- cing event in South Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Canberra Day (Australian Capital Territory)
-DTSTART;VALUE=DATE:20240311
-DTEND;VALUE=DATE:20240312
-DTSTAMP:20241008T090549Z
-UID:b883071eec8ca30aa4d0abcb2833075f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Canberra Day is a public holiday that celebrat
- es Canberra’s official founding in the Australian Capital Territory.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Labour Day (Christmas Island)
-DTSTART;VALUE=DATE:20240316
-DTEND;VALUE=DATE:20240317
-DTSTAMP:20241008T090549Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Good Friday (Victoria)
-DTSTART;VALUE=DATE:20240329
-DTEND;VALUE=DATE:20240330
-DTSTAMP:20241008T090549Z
-UID:948fd0717b1044e96a432b3479dd5422-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Restricted Trading Day - Good Friday is a global Christian obs
- ervance two days before Easter Sunday.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Holy Saturday (ACT\, NSW\, NT\, Qld\, SA\, Vic\, Heard and McDonal
- d Islands)
-DTSTART;VALUE=DATE:20240330
-DTEND;VALUE=DATE:20240331
-DTSTAMP:20241008T090549Z
-UID:e17c4a506f6e433da5f0a01f26b34f1d-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Holy Saturday is the day before Easter Sunday 
- and is a public holiday in some states and the two territories in Australi
- a.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (New South Wales)
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090549Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Northern Territory)
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090549Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Australian Capital Territory)
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090549Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Victoria)
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090549Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (South Australia)
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090549Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Queensland)
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090549Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Western Australia)
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090549Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Tuesday (Tasmania)
-DTSTART;VALUE=DATE:20240402
-DTEND;VALUE=DATE:20240403
-DTSTAMP:20241008T090549Z
-UID:cc0400d9ac29cd0480258683d548e0f0-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Public Sector Holiday - Easter Tuesday is a public holid
- ay in the Australian state of Tasmania.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Hari Raya Puasa (Cocos and Keeling Islands\, Christmas Island)
-DTSTART;VALUE=DATE:20240410
-DTEND;VALUE=DATE:20240411
-DTSTAMP:20241008T090549Z
-UID:1e9e95e48f139c0d2d55d7d9805f5a30-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Eid al-Fitr is a holiday to mark the end of th
- e Islamic month of Ramadan\, during which Muslims fast during the hours of
-  daylight.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ANZAC Day Observed (Victoria)
-DTSTART;VALUE=DATE:20240425
-DTEND;VALUE=DATE:20240426
-DTSTAMP:20241008T090549Z
-UID:04ab2f8213add64df58c0b1f1a117ec5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Half Day Restricted Trading Day - ANZAC Day is the anniversary
-  of the landing of troops from Australia and New Zealand on the Gallipoli 
- Peninsula in Turkey during in World War I.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Self Determination Day (Cocos and Keeling Islands)
-DTSTART;VALUE=DATE:20240429
-DTEND;VALUE=DATE:20240430
-DTSTAMP:20241008T090549Z
-UID:228e2867a8441ce4b7fcd3906f64785e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Self Determination Day is a state holiday in A
- ustralia
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:May Day (Northern Territory)
-DTSTART;VALUE=DATE:20240506
-DTEND;VALUE=DATE:20240507
-DTSTAMP:20241008T090549Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Labour Day (Queensland)
-DTSTART;VALUE=DATE:20240506
-DTEND;VALUE=DATE:20240507
-DTSTAMP:20241008T090549Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Reconciliation Day (Australian Capital Territory)
-DTSTART;VALUE=DATE:20240527
-DTEND;VALUE=DATE:20240528
-DTSTAMP:20241008T090549Z
-UID:a244a0c1c98808571ecbb58a4916ae7d-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Reconciliation Day is a state holiday in the A
- ustralian Capital Territory.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Western Australia Day (Western Australia)
-DTSTART;VALUE=DATE:20240603
-DTEND;VALUE=DATE:20240604
-DTSTAMP:20241008T090549Z
-UID:df1b3287157bd9008219760b402f4030-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Foundation Day is a public holiday in the stat
- e of Western Australia to commemorate the founding of the first British co
- lony in the state.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:King's Birthday (Cocos and Keeling Islands)
-DTSTART;VALUE=DATE:20240606
-DTEND;VALUE=DATE:20240607
-DTSTAMP:20241008T090549Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Queensland Day
-DTSTART;VALUE=DATE:20240606
-DTEND;VALUE=DATE:20240607
-DTSTAMP:20241008T090549Z
-UID:b23972b91841cd5c4157abed26a7eb3e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local observance - Queenslanders commemorate their state’s b
- irthday on Queensland Day in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:King's Birthday (ACT\, NSW\, NT\, SA\, Tas\, Vic\, Heard and McDon
- ald Islands)
-DTSTART;VALUE=DATE:20240610
-DTEND;VALUE=DATE:20240611
-DTSTAMP:20241008T090549Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Hari Raya Haji (Cocos and Keeling Islands\, Christmas Island)
-DTSTART;VALUE=DATE:20240617
-DTEND;VALUE=DATE:20240618
-DTSTAMP:20241008T090549Z
-UID:d808fed3dd95ca67b9e720de882b972b-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Eid al-Adha (Id ul-Adha) is an Islamic festiva
- l falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to co
- mmemorate the willingness of Ibrahim (Abraham) to sacrifice his son.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New South Wales Bank Holiday (New South Wales)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090549Z
-UID:eb0a5b919a039702673d7e75d48417d1-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Bank Holiday - The New South Wales Bank Holiday falls on
-  the first Monday of August.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Northern Territory Picnic Day (Northern Territory)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090549Z
-UID:8f80cc08160fbbfa5431790f763ea304-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Picnic Day is a public holiday annually held i
- n Australia’s Northern Territory on the first Monday of August.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Royal National Agricultural Show Day Queensland (Queensland)
-DTSTART;VALUE=DATE:20240814
-DTEND;VALUE=DATE:20240815
-DTSTAMP:20241008T090549Z
-UID:c334751fc32506f4877b9590ae9da2bd-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - The Royal National Agricultural (RNA) Show Day
-  is usually held in Brisbane\, the capital city of the state of Queensland
- \, Australia\, on the second or third Wednesday in August.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Hari Maulad Nabi (Cocos and Keeling Islands)
-DTSTART;VALUE=DATE:20240916
-DTEND;VALUE=DATE:20240917
-DTSTAMP:20241008T090549Z
-UID:11ef558c2b499d4a6d7ecf7358a3aebe-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Mawlid\, or Milad\, marks the birth of the Isl
- amic prophet Muhammed\, or Mohamed\, in the year 570 of the Gregorian cale
- ndar.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:King's Birthday (Western Australia)
-DTSTART;VALUE=DATE:20240923
-DTEND;VALUE=DATE:20240924
-DTSTAMP:20241008T090549Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Friday before the AFL Grand Final (Victoria)
-DTSTART;VALUE=DATE:20240927
-DTEND;VALUE=DATE:20240928
-DTSTAMP:20241008T090549Z
-UID:d7df929b505daf51b00df5e1685a6ec1-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Friday before the AFL Grand Final is a state h
- oliday in Australia
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Territory Day (Christmas Island)
-DTSTART;VALUE=DATE:20241007
-DTEND;VALUE=DATE:20241008
-DTSTAMP:20241008T090549Z
-UID:6254a4f1f51a542a5dd5077f402d77a6-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Territory Day is a state holiday in Australia
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:King's Birthday (Queensland)
-DTSTART;VALUE=DATE:20241007
-DTEND;VALUE=DATE:20241008
-DTSTAMP:20241008T090549Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Labour Day (NSW\, ACT)
-DTSTART;VALUE=DATE:20241007
-DTEND;VALUE=DATE:20241008
-DTSTAMP:20241008T090549Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Labour Day (South Australia)
-DTSTART;VALUE=DATE:20241007
-DTEND;VALUE=DATE:20241008
-DTSTAMP:20241008T090549Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Royal Hobart Show (Tasmania)
-DTSTART;VALUE=DATE:20241024
-DTEND;VALUE=DATE:20241025
-DTSTAMP:20241008T090549Z
-UID:3cdbfce13d0e2458dc8893625a84321b-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Royal Hobart Show is a state holiday in Austra
- lia
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Recreation Day (Tasmania)
-DTSTART;VALUE=DATE:20241104
-DTEND;VALUE=DATE:20241105
-DTSTAMP:20241008T090549Z
-UID:e36047416af9f8879ec1974769c98914-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Recreation Day is annually celebrated in north
- ern Tasmania\, in Australia\, on the first Monday of November.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Melbourne Cup Day (Victoria)
-DTSTART;VALUE=DATE:20241105
-DTEND;VALUE=DATE:20241106
-DTSTAMP:20241008T090549Z
-UID:91c85f1301f9fd21648797aaf73a5d40-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Melbourne Cup Day is Australia’s most celebr
- ated horse racing event. It is an annual public holiday in the state of Vi
- ctoria and is observed nationwide on the first Tuesday of November.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Eve (South Australia)
-DTSTART;VALUE=DATE:20241224
-DTEND;VALUE=DATE:20241225
-DTSTAMP:20241008T090549Z
-UID:e1c67be7ee8d0a93deed856267b6e6de-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
- brated on December 24\, which is the day before Christmas Day.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Eve (Queensland)
-DTSTART;VALUE=DATE:20241224
-DTEND;VALUE=DATE:20241225
-DTSTAMP:20241008T090549Z
-UID:e1c67be7ee8d0a93deed856267b6e6de-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
- brated on December 24\, which is the day before Christmas Day.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Eve (Northern Territory)
-DTSTART;VALUE=DATE:20241224
-DTEND;VALUE=DATE:20241225
-DTSTAMP:20241008T090549Z
-UID:e1c67be7ee8d0a93deed856267b6e6de-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
- brated on December 24\, which is the day before Christmas Day.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Day (Victoria)
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090549Z
-UID:407d540f5b4d56d3f7d03d9864aefa85-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Restricted Trading Day - Christians celebrate the birth of Jes
- us on Christmas Day\, which is in the middle of summer in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Proclamation Day (South Australia)
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241008T090549Z
-UID:a7c6a92c67040030229f6b2168b6beb4-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Proclamation Day is a state holiday in Austral
- ia
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New Year's Eve (South Australia)
-DTSTART;VALUE=DATE:20241231
-DTEND;VALUE=DATE:20250101
-DTSTAMP:20241008T090549Z
-UID:10695549a60f3012fa5623ae456ae261-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Part Day Holiday - Many Australians celebrate New Year’s Eve
-  on December 31 each year\, which coincides with the date before New Year
- ’s Day in the Gregorian calendar.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New Year's Eve (Northern Territory)
-DTSTART;VALUE=DATE:20241231
-DTEND;VALUE=DATE:20250101
-DTSTAMP:20241008T090549Z
-UID:10695549a60f3012fa5623ae456ae261-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Part Day Holiday - Many Australians celebrate New Year’s Eve
-  on December 31 each year\, which coincides with the date before New Year
- ’s Day in the Gregorian calendar.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New Year's Day
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20241008T090549Z
-UID:fa0bd6bc4644b21d7ff40a6fc2b19c3c-2025
+DTSTAMP:20250430T134643Z
+UID:fa0bd6bc4644b21d7ff40a6fc2b19c3c-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - New Year's Day is the first day of the year
   in the Gregorian calendar used in Australia and many other countries.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134643Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Australia Day
 DTSTART;VALUE=DATE:20250126
 DTEND;VALUE=DATE:20250127
-DTSTAMP:20241008T090549Z
-UID:9cd2b9ff5eff222c386683dc3b3ccdda-2025
+DTSTAMP:20250430T134643Z
+UID:9cd2b9ff5eff222c386683dc3b3ccdda-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - Australia Day is the Australian national da
  y. It is celebrated on January 26 each year.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134643Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20241008T090549Z
-UID:948fd0717b1044e96a432b3479dd5422-2025
+DTSTAMP:20250430T134643Z
+UID:948fd0717b1044e96a432b3479dd5422-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - Good Friday is two days before Easter Sunda
  y and is a national holiday in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134643Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Easter Monday
+SUMMARY:Easter Monday (All except Christmas Island)
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090549Z
-UID:477e4d3fc00f793da10f51a48f1983c3-2025
+DTSTAMP:20250430T134643Z
+UID:477e4d3fc00f793da10f51a48f1983c3-2025-all except christmas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - Easter Monday is the day after Easter Sunda
  y and is a nationwide holiday in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134643Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:ANZAC Day
 DTSTART;VALUE=DATE:20250425
 DTEND;VALUE=DATE:20250426
-DTSTAMP:20241008T090549Z
-UID:04ab2f8213add64df58c0b1f1a117ec5-2025
+DTSTAMP:20250430T134643Z
+UID:04ab2f8213add64df58c0b1f1a117ec5-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - ANZAC Day is the anniversary of the landing
   of troops from Australia and New Zealand on the Gallipoli Peninsula in Tu
  rkey during in World War I.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134643Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090549Z
-UID:407d540f5b4d56d3f7d03d9864aefa85-2025
+DTSTAMP:20250430T134643Z
+UID:407d540f5b4d56d3f7d03d9864aefa85-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - Christians celebrate the birth of Jesus on 
  Christmas Day\, which is in the middle of summer in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134643Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20241008T090549Z
-UID:bc2e9866a511b2f4eb383bb462f1ee9a-2025
+DTSTAMP:20250430T134643Z
+UID:bc2e9866a511b2f4eb383bb462f1ee9a-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - December 26 is the Boxing Day holiday celeb
  rated in Australia.
-LAST-MODIFIED:20241008T090549Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134643Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Australia Day Observed (All except Christmas Island\, Heard and Mc
  Donald Islands)
 DTSTART;VALUE=DATE:20250127
 DTEND;VALUE=DATE:20250128
-DTSTAMP:20241008T090550Z
-UID:9cd2b9ff5eff222c386683dc3b3ccdda-2025
+DTSTAMP:20250430T134644Z
+UID:9cd2b9ff5eff222c386683dc3b3ccdda-2025-all except christmas island-hear
+ d and mcdonald islands
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Australia Day is the Australian national day. 
- It is celebrated on January 26 each year.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Australia Day is the Australian nationa
+ l day. It is celebrated on January 26 each year.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lunar New Year (Christmas Island)
 DTSTART;VALUE=DATE:20250129
 DTEND;VALUE=DATE:20250130
-DTSTAMP:20241008T090550Z
-UID:68ee8c449c5631d8e5fcfa181e79d3b4-2025
+DTSTAMP:20250430T134644Z
+UID:68ee8c449c5631d8e5fcfa181e79d3b4-2025-christmas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Lunar New Year marks the first day of the New 
  Year in the Chinese calendar.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lunar New Year Holiday (Day 2) (Christmas Island)
 DTSTART;VALUE=DATE:20250130
 DTEND;VALUE=DATE:20250131
-DTSTAMP:20241008T090550Z
-UID:9905520afb730dacb205bd2160fd2305-2025
+DTSTAMP:20250430T134644Z
+UID:9905520afb730dacb205bd2160fd2305-2025-christmas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Lunar New Year Holiday (Day 2) is a state holi
  day in Australia
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Royal Hobart Regatta (Tasmania)
 DTSTART;VALUE=DATE:20250210
 DTEND;VALUE=DATE:20250211
-DTSTAMP:20241008T090550Z
-UID:acc4238c0086b57ef168ef5cc699b071-2025
+DTSTAMP:20250430T134644Z
+UID:acc4238c0086b57ef168ef5cc699b071-2025-tas (southern)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - The Royal Hobart Regatta is an annual public h
  oliday in southern Tasmania\, Australia\, on the second Monday in February
  .
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (Western Australia)
 DTSTART;VALUE=DATE:20250303
 DTEND;VALUE=DATE:20250304
-DTSTAMP:20241008T090550Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025-wa
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (Victoria)
 DTSTART;VALUE=DATE:20250310
 DTEND;VALUE=DATE:20250311
-DTSTAMP:20241008T090550Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025-vic
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Eight Hours Day (Tasmania)
 DTSTART;VALUE=DATE:20250310
 DTEND;VALUE=DATE:20250311
-DTSTAMP:20241008T090550Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025-tas
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Adelaide Cup (South Australia)
 DTSTART;VALUE=DATE:20250310
 DTEND;VALUE=DATE:20250311
-DTSTAMP:20241008T090550Z
-UID:a2c48cfc225a56284f117bc8648c5f7c-2025
+DTSTAMP:20250430T134644Z
+UID:a2c48cfc225a56284f117bc8648c5f7c-2025-sa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Adelaide Cup is a state holiday and a horse ra
  cing event in South Australia.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Canberra Day (Australian Capital Territory)
 DTSTART;VALUE=DATE:20250310
 DTEND;VALUE=DATE:20250311
-DTSTAMP:20241008T090550Z
-UID:b883071eec8ca30aa4d0abcb2833075f-2025
+DTSTAMP:20250430T134644Z
+UID:b883071eec8ca30aa4d0abcb2833075f-2025-act
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Canberra Day is a public holiday that celebrat
  es Canberra’s official founding in the Australian Capital Territory.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hari Raya Puasa (Cocos and Keeling Islands\, Christmas Island)
 DTSTART;VALUE=DATE:20250331
 DTEND;VALUE=DATE:20250401
-DTSTAMP:20241008T090550Z
-UID:1e9e95e48f139c0d2d55d7d9805f5a30-2025
+DTSTAMP:20250430T134644Z
+UID:1e9e95e48f139c0d2d55d7d9805f5a30-2025-cocos and keeling islands-christ
+ mas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Eid al-Fitr is a holiday to mark the end of th
  e Islamic month of Ramadan\, during which Muslims fast during the hours of
   daylight.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Self Determination Day (Cocos and Keeling Islands)
 DTSTART;VALUE=DATE:20250406
 DTEND;VALUE=DATE:20250407
-DTSTAMP:20241008T090550Z
-UID:228e2867a8441ce4b7fcd3906f64785e-2025
+DTSTAMP:20250430T134644Z
+UID:228e2867a8441ce4b7fcd3906f64785e-2025-cocos and keeling islands
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Self Determination Day is a state holiday in A
  ustralia
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Day off for Self Determination Day (Cocos and Keeling Islands)
-DTSTART;VALUE=DATE:20250407
-DTEND;VALUE=DATE:20250408
-DTSTAMP:20241008T090550Z
-UID:228e2867a8441ce4b7fcd3906f64785e-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Self Determination Day is a state holiday in A
- ustralia
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday (Victoria)
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20241008T090550Z
-UID:948fd0717b1044e96a432b3479dd5422-2025
+DTSTAMP:20250430T134644Z
+UID:948fd0717b1044e96a432b3479dd5422-2025-vic
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Restricted Trading Day - Good Friday is a global Christian obs
- ervance two days before Easter Sunday.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Restricted Trading Day - Good Friday is two days before Easter
+  Sunday and is a national holiday in Australia.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Holy Saturday (ACT\, NSW\, NT\, Qld\, SA\, Vic\, Heard and McDonal
  d Islands)
 DTSTART;VALUE=DATE:20250419
 DTEND;VALUE=DATE:20250420
-DTSTAMP:20241008T090550Z
-UID:e17c4a506f6e433da5f0a01f26b34f1d-2025
+DTSTAMP:20250430T134644Z
+UID:e17c4a506f6e433da5f0a01f26b34f1d-2025-act-nsw-nt-qld-sa-vic-heard and 
+ mcdonald islands
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Holy Saturday is the day before Easter Sunday 
- and is a public holiday in some states and the two territories in Australi
- a.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Western Australia)
-DTSTART;VALUE=DATE:20250420
-DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090550Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Northern Territory)
-DTSTART;VALUE=DATE:20250420
-DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090550Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Holy Saturday is the day before Easter 
+ Sunday and is a public holiday in some states and the two territories in A
+ ustralia.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (Queensland)
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090550Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2025
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2025-qld
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (New South Wales)
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090550Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2025
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2025-nsw
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Australian Capital Territory)
-DTSTART;VALUE=DATE:20250420
-DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090550Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (South Australia)
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090550Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2025
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2025-sa
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Australian Capital Territory)
+DTSTART;VALUE=DATE:20250420
+DTEND;VALUE=DATE:20250421
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2025-act
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Western Australia)
+DTSTART;VALUE=DATE:20250420
+DTEND;VALUE=DATE:20250421
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2025-wa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Northern Territory)
+DTSTART;VALUE=DATE:20250420
+DTEND;VALUE=DATE:20250421
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2025-nt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (Victoria)
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090550Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2025
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2025-vic
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (Christmas Island)
+DTSTART;VALUE=DATE:20250421
+DTEND;VALUE=DATE:20250422
+DTSTAMP:20250430T134644Z
+UID:477e4d3fc00f793da10f51a48f1983c3-2025-christmas island
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local observance - Easter Monday is the day after Easter Sunda
+ y and is a nationwide holiday in Australia.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Tuesday (Tasmania)
 DTSTART;VALUE=DATE:20250422
 DTEND;VALUE=DATE:20250423
-DTSTAMP:20241008T090550Z
-UID:cc0400d9ac29cd0480258683d548e0f0-2025
+DTSTAMP:20250430T134644Z
+UID:cc0400d9ac29cd0480258683d548e0f0-2025-tas
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Public Sector Holiday - Easter Tuesday is a public holid
  ay in the Australian state of Tasmania.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:ANZAC Day Observed (Victoria)
 DTSTART;VALUE=DATE:20250425
 DTEND;VALUE=DATE:20250426
-DTSTAMP:20241008T090550Z
-UID:04ab2f8213add64df58c0b1f1a117ec5-2025
+DTSTAMP:20250430T134644Z
+UID:04ab2f8213add64df58c0b1f1a117ec5-2025-vic
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Half Day Restricted Trading Day - ANZAC Day is the anniversary
   of the landing of troops from Australia and New Zealand on the Gallipoli 
  Peninsula in Turkey during in World War I.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:May Day (Northern Territory)
 DTSTART;VALUE=DATE:20250505
 DTEND;VALUE=DATE:20250506
-DTSTAMP:20241008T090550Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025-nt
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (Queensland)
 DTSTART;VALUE=DATE:20250505
 DTEND;VALUE=DATE:20250506
-DTSTAMP:20241008T090550Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025-qld
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Western Australia Day (Western Australia)
 DTSTART;VALUE=DATE:20250602
 DTEND;VALUE=DATE:20250603
-DTSTAMP:20241008T090550Z
-UID:df1b3287157bd9008219760b402f4030-2025
+DTSTAMP:20250430T134644Z
+UID:df1b3287157bd9008219760b402f4030-2025-wa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Foundation Day is a public holiday in the stat
  e of Western Australia to commemorate the founding of the first British co
  lony in the state.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Reconciliation Day (Australian Capital Territory)
 DTSTART;VALUE=DATE:20250602
 DTEND;VALUE=DATE:20250603
-DTSTAMP:20241008T090550Z
-UID:a244a0c1c98808571ecbb58a4916ae7d-2025
+DTSTAMP:20250430T134644Z
+UID:a244a0c1c98808571ecbb58a4916ae7d-2025-act
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Reconciliation Day is a state holiday in the A
  ustralian Capital Territory.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:King's Birthday (Cocos and Keeling Islands)
+SUMMARY:Day off for Hari Raya Haji (Cocos and Keeling Islands\, Christmas 
+ Island)
 DTSTART;VALUE=DATE:20250606
 DTEND;VALUE=DATE:20250607
-DTSTAMP:20241008T090550Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2025
+DTSTAMP:20250430T134644Z
+UID:d808fed3dd95ca67b9e720de882b972b-2025-cocos and keeling islands-christ
+ mas island
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:State Holiday - Eid al-Adha (Id ul-Adha) is an Islamic festiva
+ l falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to co
+ mmemorate the willingness of Ibrahim (Abraham) to sacrifice his son.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Queensland Day
 DTSTART;VALUE=DATE:20250606
 DTEND;VALUE=DATE:20250607
-DTSTAMP:20241008T090550Z
-UID:b23972b91841cd5c4157abed26a7eb3e-2025
+DTSTAMP:20250430T134644Z
+UID:b23972b91841cd5c4157abed26a7eb3e-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local observance - Queenslanders commemorate their state’s b
  irthday on Queensland Day in Australia.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Hari Raya Haji (Cocos and Keeling Islands\, Christmas Island)
-DTSTART;VALUE=DATE:20250607
-DTEND;VALUE=DATE:20250608
-DTSTAMP:20241008T090550Z
-UID:d808fed3dd95ca67b9e720de882b972b-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Eid al-Adha (Id ul-Adha) is an Islamic festiva
- l falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to co
- mmemorate the willingness of Ibrahim (Abraham) to sacrifice his son.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Day off for Hari Raya Haji (Cocos and Keeling Islands\, Christmas 
- Island)
-DTSTART;VALUE=DATE:20250609
-DTEND;VALUE=DATE:20250610
-DTSTAMP:20241008T090550Z
-UID:d808fed3dd95ca67b9e720de882b972b-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - Eid al-Adha (Id ul-Adha) is an Islamic festiva
- l falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to co
- mmemorate the willingness of Ibrahim (Abraham) to sacrifice his son.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:King's Birthday (ACT\, NSW\, NT\, SA\, Tas\, Vic\, Heard and McDon
  ald Islands)
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20241008T090550Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2025
+DTSTAMP:20250430T134644Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2025-act-nsw-nt-sa-tas-vic-heard and 
+ mcdonald islands
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:King's Birthday (Cocos and Keeling Islands)
+DTSTART;VALUE=DATE:20250609
+DTEND;VALUE=DATE:20250610
+DTSTAMP:20250430T134644Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2025-cocos and keeling islands
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New South Wales Bank Holiday (New South Wales)
 DTSTART;VALUE=DATE:20250804
 DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090550Z
-UID:eb0a5b919a039702673d7e75d48417d1-2025
+DTSTAMP:20250430T134644Z
+UID:eb0a5b919a039702673d7e75d48417d1-2025-nsw
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Bank Holiday - The New South Wales Bank Holiday falls on
   the first Monday of August.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Northern Territory Picnic Day (Northern Territory)
 DTSTART;VALUE=DATE:20250804
 DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090550Z
-UID:8f80cc08160fbbfa5431790f763ea304-2025
+DTSTAMP:20250430T134644Z
+UID:8f80cc08160fbbfa5431790f763ea304-2025-nt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Picnic Day is a public holiday annually held i
  n Australia’s Northern Territory on the first Monday of August.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Royal National Agricultural Show Day Queensland (Queensland)
 DTSTART;VALUE=DATE:20250813
 DTEND;VALUE=DATE:20250814
-DTSTAMP:20241008T090550Z
-UID:c334751fc32506f4877b9590ae9da2bd-2025
+DTSTAMP:20250430T134644Z
+UID:c334751fc32506f4877b9590ae9da2bd-2025-qld (partly)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - The Royal National Agricultural (RNA) Show Day
   is usually held in Brisbane\, the capital city of the state of Queensland
  \, Australia\, on the second or third Wednesday in August.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hari Maulad Nabi (Cocos and Keeling Islands)
 DTSTART;VALUE=DATE:20250905
 DTEND;VALUE=DATE:20250906
-DTSTAMP:20241008T090550Z
-UID:11ef558c2b499d4a6d7ecf7358a3aebe-2025
+DTSTAMP:20250430T134644Z
+UID:11ef558c2b499d4a6d7ecf7358a3aebe-2025-cocos and keeling islands
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Mawlid\, or Milad\, marks the birth of the Isl
  amic prophet Muhammed\, or Mohamed\, in the year 570 of the Gregorian cale
  ndar.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Friday before the AFL Grand Final (Victoria)
 DTSTART;VALUE=DATE:20250926
 DTEND;VALUE=DATE:20250927
-DTSTAMP:20241008T090550Z
-UID:d7df929b505daf51b00df5e1685a6ec1-2025
+DTSTAMP:20250430T134644Z
+UID:d7df929b505daf51b00df5e1685a6ec1-2025-vic
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Friday before the AFL Grand Final is a state h
  oliday in Australia
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:King's Birthday (Western Australia)
 DTSTART;VALUE=DATE:20250929
 DTEND;VALUE=DATE:20250930
-DTSTAMP:20241008T090550Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2025
+DTSTAMP:20250430T134644Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2025-wa
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Territory Day (Christmas Island)
 DTSTART;VALUE=DATE:20251006
 DTEND;VALUE=DATE:20251007
-DTSTAMP:20241008T090550Z
-UID:6254a4f1f51a542a5dd5077f402d77a6-2025
+DTSTAMP:20250430T134644Z
+UID:6254a4f1f51a542a5dd5077f402d77a6-2025-christmas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Territory Day is a state holiday in Australia
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:King's Birthday (Queensland)
 DTSTART;VALUE=DATE:20251006
 DTEND;VALUE=DATE:20251007
-DTSTAMP:20241008T090550Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2025
+DTSTAMP:20250430T134644Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2025-qld
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (NSW\, ACT)
 DTSTART;VALUE=DATE:20251006
 DTEND;VALUE=DATE:20251007
-DTSTAMP:20241008T090550Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025-nsw-act
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (South Australia)
 DTSTART;VALUE=DATE:20251006
 DTEND;VALUE=DATE:20251007
-DTSTAMP:20241008T090550Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2025-sa
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Royal Hobart Show (Tasmania)
 DTSTART;VALUE=DATE:20251023
 DTEND;VALUE=DATE:20251024
-DTSTAMP:20241008T090550Z
-UID:3cdbfce13d0e2458dc8893625a84321b-2025
+DTSTAMP:20250430T134644Z
+UID:3cdbfce13d0e2458dc8893625a84321b-2025-tas (southern)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Royal Hobart Show is a state holiday in Austra
  lia
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Recreation Day (Tasmania)
 DTSTART;VALUE=DATE:20251103
 DTEND;VALUE=DATE:20251104
-DTSTAMP:20241008T090550Z
-UID:e36047416af9f8879ec1974769c98914-2025
+DTSTAMP:20250430T134644Z
+UID:e36047416af9f8879ec1974769c98914-2025-tas (northern)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Recreation Day is annually celebrated in north
  ern Tasmania\, in Australia\, on the first Monday of November.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Melbourne Cup Day (Victoria)
 DTSTART;VALUE=DATE:20251104
 DTEND;VALUE=DATE:20251105
-DTSTAMP:20241008T090550Z
-UID:91c85f1301f9fd21648797aaf73a5d40-2025
+DTSTAMP:20250430T134644Z
+UID:91c85f1301f9fd21648797aaf73a5d40-2025-vic
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Melbourne Cup Day is Australia’s most celebr
  ated horse racing event. It is an annual public holiday in the state of Vi
  ctoria and is observed nationwide on the first Tuesday of November.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Eve (Northern Territory)
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20241008T090550Z
-UID:e1c67be7ee8d0a93deed856267b6e6de-2025
+DTSTAMP:20250430T134644Z
+UID:e1c67be7ee8d0a93deed856267b6e6de-2025-nt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
  brated on December 24\, which is the day before Christmas Day.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Eve (Queensland)
-DTSTART;VALUE=DATE:20251224
-DTEND;VALUE=DATE:20251225
-DTSTAMP:20241008T090550Z
-UID:e1c67be7ee8d0a93deed856267b6e6de-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
- brated on December 24\, which is the day before Christmas Day.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Eve (South Australia)
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20241008T090550Z
-UID:e1c67be7ee8d0a93deed856267b6e6de-2025
+DTSTAMP:20250430T134644Z
+UID:e1c67be7ee8d0a93deed856267b6e6de-2025-sa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
  brated on December 24\, which is the day before Christmas Day.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Eve (Queensland)
+DTSTART;VALUE=DATE:20251224
+DTEND;VALUE=DATE:20251225
+DTSTAMP:20250430T134644Z
+UID:e1c67be7ee8d0a93deed856267b6e6de-2025-qld
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
+ brated on December 24\, which is the day before Christmas Day.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day (Victoria)
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090550Z
-UID:407d540f5b4d56d3f7d03d9864aefa85-2025
+DTSTAMP:20250430T134644Z
+UID:407d540f5b4d56d3f7d03d9864aefa85-2025-vic
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Restricted Trading Day - Christians celebrate the birth of Jes
  us on Christmas Day\, which is in the middle of summer in Australia.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Proclamation Day (South Australia)
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20241008T090550Z
-UID:a7c6a92c67040030229f6b2168b6beb4-2025
+DTSTAMP:20250430T134644Z
+UID:a7c6a92c67040030229f6b2168b6beb4-2025-sa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Proclamation Day is a state holiday in Austral
  ia
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New Year's Eve (South Australia)
-DTSTART;VALUE=DATE:20251231
-DTEND;VALUE=DATE:20260101
-DTSTAMP:20241008T090550Z
-UID:10695549a60f3012fa5623ae456ae261-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Part Day Holiday - Many Australians celebrate New Year’s Eve
-  on December 31 each year\, which coincides with the date before New Year
- ’s Day in the Gregorian calendar.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Eve (Northern Territory)
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20260101
-DTSTAMP:20241008T090550Z
-UID:10695549a60f3012fa5623ae456ae261-2025
+DTSTAMP:20250430T134644Z
+UID:10695549a60f3012fa5623ae456ae261-2025-nt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Part Day Holiday - Many Australians celebrate New Year’s Eve
   on December 31 each year\, which coincides with the date before New Year
  ’s Day in the Gregorian calendar.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's Eve (South Australia)
+DTSTART;VALUE=DATE:20251231
+DTEND;VALUE=DATE:20260101
+DTSTAMP:20250430T134644Z
+UID:10695549a60f3012fa5623ae456ae261-2025-sa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Part Day Holiday - Many Australians celebrate New Year’s Eve
+  on December 31 each year\, which coincides with the date before New Year
+ ’s Day in the Gregorian calendar.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Day
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20241008T090550Z
-UID:fa0bd6bc4644b21d7ff40a6fc2b19c3c-2026
+DTSTAMP:20250430T134644Z
+UID:fa0bd6bc4644b21d7ff40a6fc2b19c3c-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - New Year's Day is the first day of the year
   in the Gregorian calendar used in Australia and many other countries.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Australia Day
 DTSTART;VALUE=DATE:20260126
 DTEND;VALUE=DATE:20260127
-DTSTAMP:20241008T090550Z
-UID:9cd2b9ff5eff222c386683dc3b3ccdda-2026
+DTSTAMP:20250430T134644Z
+UID:9cd2b9ff5eff222c386683dc3b3ccdda-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - Australia Day is the Australian national da
  y. It is celebrated on January 26 each year.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday
 DTSTART;VALUE=DATE:20260403
 DTEND;VALUE=DATE:20260404
-DTSTAMP:20241008T090550Z
-UID:948fd0717b1044e96a432b3479dd5422-2026
+DTSTAMP:20250430T134644Z
+UID:948fd0717b1044e96a432b3479dd5422-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - Good Friday is two days before Easter Sunda
  y and is a national holiday in Australia.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Easter Monday
+SUMMARY:Easter Monday (All except Christmas Island)
 DTSTART;VALUE=DATE:20260406
 DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090550Z
-UID:477e4d3fc00f793da10f51a48f1983c3-2026
+DTSTAMP:20250430T134644Z
+UID:477e4d3fc00f793da10f51a48f1983c3-2026-all except christmas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - Easter Monday is the day after Easter Sunda
  y and is a nationwide holiday in Australia.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:ANZAC Day
 DTSTART;VALUE=DATE:20260425
 DTEND;VALUE=DATE:20260426
-DTSTAMP:20241008T090550Z
-UID:04ab2f8213add64df58c0b1f1a117ec5-2026
+DTSTAMP:20250430T134644Z
+UID:04ab2f8213add64df58c0b1f1a117ec5-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - ANZAC Day is the anniversary of the landing
   of troops from Australia and New Zealand on the Gallipoli Peninsula in Tu
  rkey during in World War I.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090550Z
-UID:407d540f5b4d56d3f7d03d9864aefa85-2026
+DTSTAMP:20250430T134644Z
+UID:407d540f5b4d56d3f7d03d9864aefa85-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - Christians celebrate the birth of Jesus on 
  Christmas Day\, which is in the middle of summer in Australia.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
-DTSTAMP:20241008T090550Z
-UID:bc2e9866a511b2f4eb383bb462f1ee9a-2026
+DTSTAMP:20250430T134644Z
+UID:bc2e9866a511b2f4eb383bb462f1ee9a-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National Holiday - December 26 is the Boxing Day holiday celeb
  rated in Australia.
-LAST-MODIFIED:20241008T090550Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Royal Hobart Regatta (Tasmania)
 DTSTART;VALUE=DATE:20260209
 DTEND;VALUE=DATE:20260210
-DTSTAMP:20241008T090551Z
-UID:acc4238c0086b57ef168ef5cc699b071-2026
+DTSTAMP:20250430T134644Z
+UID:acc4238c0086b57ef168ef5cc699b071-2026-tas (southern)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - The Royal Hobart Regatta is an annual public h
  oliday in southern Tasmania\, Australia\, on the second Monday in February
  .
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lunar New Year (Christmas Island)
 DTSTART;VALUE=DATE:20260217
 DTEND;VALUE=DATE:20260218
-DTSTAMP:20241008T090551Z
-UID:68ee8c449c5631d8e5fcfa181e79d3b4-2026
+DTSTAMP:20250430T134644Z
+UID:68ee8c449c5631d8e5fcfa181e79d3b4-2026-christmas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Lunar New Year marks the first day of the New 
  Year in the Chinese calendar.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lunar New Year Holiday (Day 2) (Christmas Island)
 DTSTART;VALUE=DATE:20260218
 DTEND;VALUE=DATE:20260219
-DTSTAMP:20241008T090551Z
-UID:9905520afb730dacb205bd2160fd2305-2026
+DTSTAMP:20250430T134644Z
+UID:9905520afb730dacb205bd2160fd2305-2026-christmas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Lunar New Year Holiday (Day 2) is a state holi
  day in Australia
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (Western Australia)
 DTSTART;VALUE=DATE:20260302
 DTEND;VALUE=DATE:20260303
-DTSTAMP:20241008T090551Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026-wa
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (Victoria)
 DTSTART;VALUE=DATE:20260309
 DTEND;VALUE=DATE:20260310
-DTSTAMP:20241008T090551Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026-vic
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Eight Hours Day (Tasmania)
 DTSTART;VALUE=DATE:20260309
 DTEND;VALUE=DATE:20260310
-DTSTAMP:20241008T090551Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026-tas
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Adelaide Cup (South Australia)
 DTSTART;VALUE=DATE:20260309
 DTEND;VALUE=DATE:20260310
-DTSTAMP:20241008T090551Z
-UID:a2c48cfc225a56284f117bc8648c5f7c-2026
+DTSTAMP:20250430T134644Z
+UID:a2c48cfc225a56284f117bc8648c5f7c-2026-sa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Adelaide Cup is a state holiday and a horse ra
  cing event in South Australia.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Canberra Day (Australian Capital Territory)
 DTSTART;VALUE=DATE:20260309
 DTEND;VALUE=DATE:20260310
-DTSTAMP:20241008T090551Z
-UID:b883071eec8ca30aa4d0abcb2833075f-2026
+DTSTAMP:20250430T134644Z
+UID:b883071eec8ca30aa4d0abcb2833075f-2026-act
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Canberra Day is a public holiday that celebrat
  es Canberra’s official founding in the Australian Capital Territory.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hari Raya Puasa (Cocos and Keeling Islands\, Christmas Island)
 DTSTART;VALUE=DATE:20260320
 DTEND;VALUE=DATE:20260321
-DTSTAMP:20241008T090551Z
-UID:1e9e95e48f139c0d2d55d7d9805f5a30-2026
+DTSTAMP:20250430T134644Z
+UID:1e9e95e48f139c0d2d55d7d9805f5a30-2026-cocos and keeling islands-christ
+ mas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Eid al-Fitr is a holiday to mark the end of th
  e Islamic month of Ramadan\, during which Muslims fast during the hours of
   daylight.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday (Victoria)
 DTSTART;VALUE=DATE:20260403
 DTEND;VALUE=DATE:20260404
-DTSTAMP:20241008T090551Z
-UID:948fd0717b1044e96a432b3479dd5422-2026
+DTSTAMP:20250430T134644Z
+UID:948fd0717b1044e96a432b3479dd5422-2026-vic
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Restricted Trading Day - Good Friday is a global Christian obs
- ervance two days before Easter Sunday.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Restricted Trading Day - Good Friday is two days before Easter
+  Sunday and is a national holiday in Australia.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Holy Saturday (ACT\, NSW\, NT\, Qld\, SA\, Vic\, Heard and McDonal
  d Islands)
 DTSTART;VALUE=DATE:20260404
 DTEND;VALUE=DATE:20260405
-DTSTAMP:20241008T090551Z
-UID:e17c4a506f6e433da5f0a01f26b34f1d-2026
+DTSTAMP:20250430T134644Z
+UID:e17c4a506f6e433da5f0a01f26b34f1d-2026-act-nsw-nt-qld-sa-vic-heard and 
+ mcdonald islands
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Holy Saturday is the day before Easter Sunday 
- and is a public holiday in some states and the two territories in Australi
- a.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Australian Capital Territory)
-DTSTART;VALUE=DATE:20260405
-DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090551Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (New South Wales)
-DTSTART;VALUE=DATE:20260405
-DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090551Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Northern Territory)
-DTSTART;VALUE=DATE:20260405
-DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090551Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (Western Australia)
-DTSTART;VALUE=DATE:20260405
-DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090551Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Holy Saturday is the day before Easter 
+ Sunday and is a public holiday in some states and the two territories in A
+ ustralia.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (Queensland)
 DTSTART;VALUE=DATE:20260405
 DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090551Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2026
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2026-qld
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Sunday (South Australia)
-DTSTART;VALUE=DATE:20260405
-DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090551Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Sunday (Victoria)
 DTSTART;VALUE=DATE:20260405
 DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090551Z
-UID:f7a1b9df92d6c3967d2feec6375ffa15-2026
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2026-vic
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - On Easter Sunday\, Christians celebrate the re
- surrection of Jesus Christ after his crucifixion.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Western Australia)
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2026-wa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (South Australia)
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2026-sa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Northern Territory)
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2026-nt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Australian Capital Territory)
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2026-act
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (New South Wales)
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+DTSTAMP:20250430T134644Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2026-nsw
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Self Determination Day (Cocos and Keeling Islands)
 DTSTART;VALUE=DATE:20260406
 DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090551Z
-UID:228e2867a8441ce4b7fcd3906f64785e-2026
+DTSTAMP:20250430T134644Z
+UID:228e2867a8441ce4b7fcd3906f64785e-2026-cocos and keeling islands
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Self Determination Day is a state holiday in A
  ustralia
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (Christmas Island)
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20250430T134644Z
+UID:477e4d3fc00f793da10f51a48f1983c3-2026-christmas island
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local observance - Easter Monday is the day after Easter Sunda
+ y and is a nationwide holiday in Australia.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Tuesday (Tasmania)
 DTSTART;VALUE=DATE:20260407
 DTEND;VALUE=DATE:20260408
-DTSTAMP:20241008T090551Z
-UID:cc0400d9ac29cd0480258683d548e0f0-2026
+DTSTAMP:20250430T134644Z
+UID:cc0400d9ac29cd0480258683d548e0f0-2026-tas
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Public Sector Holiday - Easter Tuesday is a public holid
  ay in the Australian state of Tasmania.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:ANZAC Day Observed (Victoria)
 DTSTART;VALUE=DATE:20260425
 DTEND;VALUE=DATE:20260426
-DTSTAMP:20241008T090551Z
-UID:04ab2f8213add64df58c0b1f1a117ec5-2026
+DTSTAMP:20250430T134644Z
+UID:04ab2f8213add64df58c0b1f1a117ec5-2026-vic
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Half Day Restricted Trading Day - ANZAC Day is the anniversary
   of the landing of troops from Australia and New Zealand on the Gallipoli 
  Peninsula in Turkey during in World War I.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:ANZAC Day Observed (Cocos and Keeling Islands\, Christmas Island\,
   WA)
 DTSTART;VALUE=DATE:20260427
 DTEND;VALUE=DATE:20260428
-DTSTAMP:20241008T090551Z
-UID:04ab2f8213add64df58c0b1f1a117ec5-2026
+DTSTAMP:20250430T134644Z
+UID:04ab2f8213add64df58c0b1f1a117ec5-2026-cocos and keeling islands-christ
+ mas island-wa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - ANZAC Day is the anniversary of the landing of
   troops from Australia and New Zealand on the Gallipoli Peninsula in Turke
  y during in World War I.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:May Day (Northern Territory)
 DTSTART;VALUE=DATE:20260504
 DTEND;VALUE=DATE:20260505
-DTSTAMP:20241008T090551Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026-nt
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (Queensland)
 DTSTART;VALUE=DATE:20260504
 DTEND;VALUE=DATE:20260505
-DTSTAMP:20241008T090551Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026-qld
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hari Raya Haji (Cocos and Keeling Islands\, Christmas Island)
 DTSTART;VALUE=DATE:20260527
 DTEND;VALUE=DATE:20260528
-DTSTAMP:20241008T090551Z
-UID:d808fed3dd95ca67b9e720de882b972b-2026
+DTSTAMP:20250430T134644Z
+UID:d808fed3dd95ca67b9e720de882b972b-2026-cocos and keeling islands-christ
+ mas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Eid al-Adha (Id ul-Adha) is an Islamic festiva
  l falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to co
  mmemorate the willingness of Ibrahim (Abraham) to sacrifice his son.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Western Australia Day (Western Australia)
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
-DTSTAMP:20241008T090551Z
-UID:df1b3287157bd9008219760b402f4030-2026
+DTSTAMP:20250430T134644Z
+UID:df1b3287157bd9008219760b402f4030-2026-wa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Foundation Day is a public holiday in the stat
  e of Western Australia to commemorate the founding of the first British co
  lony in the state.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Reconciliation Day (Australian Capital Territory)
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
-DTSTAMP:20241008T090551Z
-UID:a244a0c1c98808571ecbb58a4916ae7d-2026
+DTSTAMP:20250430T134644Z
+UID:a244a0c1c98808571ecbb58a4916ae7d-2026-act
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Reconciliation Day is a state holiday in the A
  ustralian Capital Territory.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:King's Birthday (Cocos and Keeling Islands)
 DTSTART;VALUE=DATE:20260606
 DTEND;VALUE=DATE:20260607
-DTSTAMP:20241008T090551Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2026
+DTSTAMP:20250430T134644Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2026-cocos and keeling islands
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Queensland Day
 DTSTART;VALUE=DATE:20260606
 DTEND;VALUE=DATE:20260607
-DTSTAMP:20241008T090551Z
-UID:b23972b91841cd5c4157abed26a7eb3e-2026
+DTSTAMP:20250430T134644Z
+UID:b23972b91841cd5c4157abed26a7eb3e-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local observance - Queenslanders commemorate their state’s b
  irthday on Queensland Day in Australia.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:King's Birthday (ACT\, NSW\, NT\, SA\, Tas\, Vic\, Heard and McDon
  ald Islands)
 DTSTART;VALUE=DATE:20260608
 DTEND;VALUE=DATE:20260609
-DTSTAMP:20241008T090551Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2026
+DTSTAMP:20250430T134644Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2026-act-nsw-nt-sa-tas-vic-heard and 
+ mcdonald islands
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New South Wales Bank Holiday (New South Wales)
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090551Z
-UID:eb0a5b919a039702673d7e75d48417d1-2026
+DTSTAMP:20250430T134644Z
+UID:eb0a5b919a039702673d7e75d48417d1-2026-nsw
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Bank Holiday - The New South Wales Bank Holiday falls on
   the first Monday of August.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Northern Territory Picnic Day (Northern Territory)
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090551Z
-UID:8f80cc08160fbbfa5431790f763ea304-2026
+DTSTAMP:20250430T134644Z
+UID:8f80cc08160fbbfa5431790f763ea304-2026-nt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Picnic Day is a public holiday annually held i
  n Australia’s Northern Territory on the first Monday of August.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Royal National Agricultural Show Day Queensland (Queensland)
 DTSTART;VALUE=DATE:20260812
 DTEND;VALUE=DATE:20260813
-DTSTAMP:20241008T090551Z
-UID:c334751fc32506f4877b9590ae9da2bd-2026
+DTSTAMP:20250430T134644Z
+UID:c334751fc32506f4877b9590ae9da2bd-2026-qld (partly)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - The Royal National Agricultural (RNA) Show Day
   is usually held in Brisbane\, the capital city of the state of Queensland
  \, Australia\, on the second or third Wednesday in August.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hari Maulad Nabi (Cocos and Keeling Islands)
 DTSTART;VALUE=DATE:20260826
 DTEND;VALUE=DATE:20260827
-DTSTAMP:20241008T090551Z
-UID:11ef558c2b499d4a6d7ecf7358a3aebe-2026
+DTSTAMP:20250430T134644Z
+UID:11ef558c2b499d4a6d7ecf7358a3aebe-2026-cocos and keeling islands
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Mawlid\, or Milad\, marks the birth of the Isl
  amic prophet Muhammed\, or Mohamed\, in the year 570 of the Gregorian cale
  ndar.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Friday before the AFL Grand Final (Victoria)
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20260926
-DTSTAMP:20241008T090551Z
-UID:d7df929b505daf51b00df5e1685a6ec1-2026
+DTSTAMP:20250430T134644Z
+UID:d7df929b505daf51b00df5e1685a6ec1-2026-vic
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Friday before the AFL Grand Final is a state h
  oliday in Australia
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:King's Birthday (Western Australia)
 DTSTART;VALUE=DATE:20260928
 DTEND;VALUE=DATE:20260929
-DTSTAMP:20241008T090551Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2026
+DTSTAMP:20250430T134644Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2026-wa
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Territory Day (Christmas Island)
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
-DTSTAMP:20241008T090551Z
-UID:6254a4f1f51a542a5dd5077f402d77a6-2026
+DTSTAMP:20250430T134644Z
+UID:6254a4f1f51a542a5dd5077f402d77a6-2026-christmas island
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Territory Day is a state holiday in Australia
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:King's Birthday (Queensland)
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
-DTSTAMP:20241008T090551Z
-UID:5b79087598527ab5a868e0a5ef0937f3-2026
+DTSTAMP:20250430T134644Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2026-qld
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - The King’s birthday is an annual public holi
- day in parts of Australia celebrating the official birthday of King Charle
- s III.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (NSW\, ACT)
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
-DTSTAMP:20241008T090551Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026-nsw-act
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Labour Day (South Australia)
 DTSTART;VALUE=DATE:20261005
 DTEND;VALUE=DATE:20261006
-DTSTAMP:20241008T090551Z
-UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026
+DTSTAMP:20250430T134644Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2026-sa
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:State Holiday - Labour Day in Australia celebrates workers’ 
- role in contributing towards the nation’s economy. It is an annual publi
- c holiday but its date varies across the states and territories.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Royal Hobart Show (Tasmania)
 DTSTART;VALUE=DATE:20261022
 DTEND;VALUE=DATE:20261023
-DTSTAMP:20241008T090551Z
-UID:3cdbfce13d0e2458dc8893625a84321b-2026
+DTSTAMP:20250430T134644Z
+UID:3cdbfce13d0e2458dc8893625a84321b-2026-tas (southern)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Royal Hobart Show is a state holiday in Austra
  lia
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Recreation Day (Tasmania)
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
-DTSTAMP:20241008T090551Z
-UID:e36047416af9f8879ec1974769c98914-2026
+DTSTAMP:20250430T134644Z
+UID:e36047416af9f8879ec1974769c98914-2026-tas (northern)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Recreation Day is annually celebrated in north
  ern Tasmania\, in Australia\, on the first Monday of November.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Melbourne Cup Day (Victoria)
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
-DTSTAMP:20241008T090551Z
-UID:91c85f1301f9fd21648797aaf73a5d40-2026
+DTSTAMP:20250430T134644Z
+UID:91c85f1301f9fd21648797aaf73a5d40-2026-vic
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - Melbourne Cup Day is Australia’s most celebr
  ated horse racing event. It is an annual public holiday in the state of Vi
  ctoria and is observed nationwide on the first Tuesday of November.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Eve (South Australia)
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
-DTSTAMP:20241008T090551Z
-UID:e1c67be7ee8d0a93deed856267b6e6de-2026
+DTSTAMP:20250430T134644Z
+UID:e1c67be7ee8d0a93deed856267b6e6de-2026-sa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
  brated on December 24\, which is the day before Christmas Day.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Eve (Northern Territory)
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
-DTSTAMP:20241008T090551Z
-UID:e1c67be7ee8d0a93deed856267b6e6de-2026
+DTSTAMP:20250430T134644Z
+UID:e1c67be7ee8d0a93deed856267b6e6de-2026-nt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
  brated on December 24\, which is the day before Christmas Day.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Eve (Queensland)
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
-DTSTAMP:20241008T090551Z
-UID:e1c67be7ee8d0a93deed856267b6e6de-2026
+DTSTAMP:20250430T134644Z
+UID:e1c67be7ee8d0a93deed856267b6e6de-2026-qld
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
  brated on December 24\, which is the day before Christmas Day.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day (Victoria)
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090551Z
-UID:407d540f5b4d56d3f7d03d9864aefa85-2026
+DTSTAMP:20250430T134644Z
+UID:407d540f5b4d56d3f7d03d9864aefa85-2026-vic
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Restricted Trading Day - Christians celebrate the birth of Jes
  us on Christmas Day\, which is in the middle of summer in Australia.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Boxing Day Observed (All except SA\, Heard and McDonald Islands)
+SUMMARY:Boxing Day Observed (All except Heard and McDonald Islands)
 DTSTART;VALUE=DATE:20261228
 DTEND;VALUE=DATE:20261229
-DTSTAMP:20241008T090551Z
-UID:bc2e9866a511b2f4eb383bb462f1ee9a-2026
+DTSTAMP:20250430T134644Z
+UID:bc2e9866a511b2f4eb383bb462f1ee9a-2026-all except heard and mcdonald is
+ lands
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:State Holiday - December 26 is the Boxing Day holiday celebrat
  ed in Australia.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Eve (Northern Territory)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20241008T090551Z
-UID:10695549a60f3012fa5623ae456ae261-2026
+DTSTAMP:20250430T134644Z
+UID:10695549a60f3012fa5623ae456ae261-2026-nt
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Part Day Holiday - Many Australians celebrate New Year’s Eve
   on December 31 each year\, which coincides with the date before New Year
  ’s Day in the Gregorian calendar.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Eve (South Australia)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20241008T090551Z
-UID:10695549a60f3012fa5623ae456ae261-2026
+DTSTAMP:20250430T134644Z
+UID:10695549a60f3012fa5623ae456ae261-2026-sa
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Part Day Holiday - Many Australians celebrate New Year’s Eve
   on December 31 each year\, which coincides with the date before New Year
  ’s Day in the Gregorian calendar.
-LAST-MODIFIED:20241008T090551Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134644Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's Day
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20250430T134645Z
+UID:fa0bd6bc4644b21d7ff40a6fc2b19c3c-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday - New Year's Day is the first day of the year
+  in the Gregorian calendar used in Australia and many other countries.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Australia Day
+DTSTART;VALUE=DATE:20270126
+DTEND;VALUE=DATE:20270127
+DTSTAMP:20250430T134645Z
+UID:9cd2b9ff5eff222c386683dc3b3ccdda-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday - Australia Day is the Australian national da
+ y. It is celebrated on January 26 each year.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Good Friday
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+DTSTAMP:20250430T134645Z
+UID:948fd0717b1044e96a432b3479dd5422-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday - Good Friday is two days before Easter Sunda
+ y and is a national holiday in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (All except Christmas Island)
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+DTSTAMP:20250430T134645Z
+UID:477e4d3fc00f793da10f51a48f1983c3-2027-all except christmas island
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday - Easter Monday is the day after Easter Sunda
+ y and is a nationwide holiday in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ANZAC Day
+DTSTART;VALUE=DATE:20270425
+DTEND;VALUE=DATE:20270426
+DTSTAMP:20250430T134645Z
+UID:04ab2f8213add64df58c0b1f1a117ec5-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday - ANZAC Day is the anniversary of the landing
+  of troops from Australia and New Zealand on the Gallipoli Peninsula in Tu
+ rkey during in World War I.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Day
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T134645Z
+UID:407d540f5b4d56d3f7d03d9864aefa85-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday - Christians celebrate the birth of Jesus on 
+ Christmas Day\, which is in the middle of summer in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Boxing Day
+DTSTART;VALUE=DATE:20271226
+DTEND;VALUE=DATE:20271227
+DTSTAMP:20250430T134645Z
+UID:bc2e9866a511b2f4eb383bb462f1ee9a-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National Holiday - December 26 is the Boxing Day holiday celeb
+ rated in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lunar New Year (Christmas Island)
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+DTSTAMP:20250430T134645Z
+UID:68ee8c449c5631d8e5fcfa181e79d3b4-2027-christmas island
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Lunar New Year marks the first day of the New 
+ Year in the Chinese calendar.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lunar New Year Holiday (Day 2) (Christmas Island)
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+DTSTAMP:20250430T134645Z
+UID:9905520afb730dacb205bd2160fd2305-2027-christmas island
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Lunar New Year Holiday (Day 2) is a state holi
+ day in Australia
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Royal Hobart Regatta (Tasmania)
+DTSTART;VALUE=DATE:20270208
+DTEND;VALUE=DATE:20270209
+DTSTAMP:20250430T134645Z
+UID:acc4238c0086b57ef168ef5cc699b071-2027-tas (southern)
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - The Royal Hobart Regatta is an annual public h
+ oliday in southern Tasmania\, Australia\, on the second Monday in February
+ .
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Labour Day (Western Australia)
+DTSTART;VALUE=DATE:20270301
+DTEND;VALUE=DATE:20270302
+DTSTAMP:20250430T134645Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2027-wa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Labour Day (Victoria)
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+DTSTAMP:20250430T134645Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2027-vic
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Eight Hours Day (Tasmania)
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+DTSTAMP:20250430T134645Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2027-tas
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Adelaide Cup (South Australia)
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+DTSTAMP:20250430T134645Z
+UID:a2c48cfc225a56284f117bc8648c5f7c-2027-sa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Adelaide Cup is a state holiday and a horse ra
+ cing event in South Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Canberra Day (Australian Capital Territory)
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+DTSTAMP:20250430T134645Z
+UID:b883071eec8ca30aa4d0abcb2833075f-2027-act
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Canberra Day is a public holiday that celebrat
+ es Canberra’s official founding in the Australian Capital Territory.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hari Raya Puasa (Cocos and Keeling Islands\, Christmas Island)
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+DTSTAMP:20250430T134645Z
+UID:1e9e95e48f139c0d2d55d7d9805f5a30-2027-cocos and keeling islands-christ
+ mas island
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Eid al-Fitr is a holiday to mark the end of th
+ e Islamic month of Ramadan\, during which Muslims fast during the hours of
+  daylight.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Good Friday (Victoria)
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+DTSTAMP:20250430T134645Z
+UID:948fd0717b1044e96a432b3479dd5422-2027-vic
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Restricted Trading Day - Good Friday is two days before Easter
+  Sunday and is a national holiday in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Holy Saturday (ACT\, NSW\, NT\, Qld\, SA\, Vic\, Heard and McDonal
+ d Islands)
+DTSTART;VALUE=DATE:20270327
+DTEND;VALUE=DATE:20270328
+DTSTAMP:20250430T134645Z
+UID:e17c4a506f6e433da5f0a01f26b34f1d-2027-act-nsw-nt-qld-sa-vic-heard and 
+ mcdonald islands
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - Holy Saturday is the day before Easter 
+ Sunday and is a public holiday in some states and the two territories in A
+ ustralia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (New South Wales)
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T134645Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2027-nsw
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Northern Territory)
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T134645Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2027-nt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Victoria)
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T134645Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2027-vic
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Western Australia)
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T134645Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2027-wa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Queensland)
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T134645Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2027-qld
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (Australian Capital Territory)
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T134645Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2027-act
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Sunday (South Australia)
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T134645Z
+UID:f7a1b9df92d6c3967d2feec6375ffa15-2027-sa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - On Easter Sunday\, Christians celebrate
+  the resurrection of Jesus Christ after his crucifixion.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (Christmas Island)
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+DTSTAMP:20250430T134645Z
+UID:477e4d3fc00f793da10f51a48f1983c3-2027-christmas island
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local observance - Easter Monday is the day after Easter Sunda
+ y and is a nationwide holiday in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Tuesday (Tasmania)
+DTSTART;VALUE=DATE:20270330
+DTEND;VALUE=DATE:20270331
+DTSTAMP:20250430T134645Z
+UID:cc0400d9ac29cd0480258683d548e0f0-2027-tas
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Public Sector Holiday - Easter Tuesday is a public holid
+ ay in the Australian state of Tasmania.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Self Determination Day (Cocos and Keeling Islands)
+DTSTART;VALUE=DATE:20270406
+DTEND;VALUE=DATE:20270407
+DTSTAMP:20250430T134645Z
+UID:228e2867a8441ce4b7fcd3906f64785e-2027-cocos and keeling islands
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Self Determination Day is a state holiday in A
+ ustralia
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ANZAC Day Observed (Victoria)
+DTSTART;VALUE=DATE:20270425
+DTEND;VALUE=DATE:20270426
+DTSTAMP:20250430T134645Z
+UID:04ab2f8213add64df58c0b1f1a117ec5-2027-vic
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Half Day Restricted Trading Day - ANZAC Day is the anniversary
+  of the landing of troops from Australia and New Zealand on the Gallipoli 
+ Peninsula in Turkey during in World War I.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ANZAC Day Observed (ACT\, Cocos and Keeling Islands\, Christmas Is
+ land\, Qld\, SA\, WA)
+DTSTART;VALUE=DATE:20270426
+DTEND;VALUE=DATE:20270427
+DTSTAMP:20250430T134645Z
+UID:04ab2f8213add64df58c0b1f1a117ec5-2027-act-cocos and keeling islands-ch
+ ristmas island-qld-sa-wa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - ANZAC Day is the anniversary of the landing of
+  troops from Australia and New Zealand on the Gallipoli Peninsula in Turke
+ y during in World War I.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:May Day (Northern Territory)
+DTSTART;VALUE=DATE:20270503
+DTEND;VALUE=DATE:20270504
+DTSTAMP:20250430T134645Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2027-nt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Labour Day (Queensland)
+DTSTART;VALUE=DATE:20270503
+DTEND;VALUE=DATE:20270504
+DTSTAMP:20250430T134645Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2027-qld
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hari Raya Haji (Cocos and Keeling Islands\, Christmas Island)
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+DTSTAMP:20250430T134645Z
+UID:d808fed3dd95ca67b9e720de882b972b-2027-cocos and keeling islands-christ
+ mas island
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Eid al-Adha (Id ul-Adha) is an Islamic festiva
+ l falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to co
+ mmemorate the willingness of Ibrahim (Abraham) to sacrifice his son.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Reconciliation Day (Australian Capital Territory)
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+DTSTAMP:20250430T134645Z
+UID:a244a0c1c98808571ecbb58a4916ae7d-2027-act
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Reconciliation Day is a state holiday in the A
+ ustralian Capital Territory.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:King's Birthday (Cocos and Keeling Islands)
+DTSTART;VALUE=DATE:20270606
+DTEND;VALUE=DATE:20270607
+DTSTAMP:20250430T134645Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2027-cocos and keeling islands
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Queensland Day
+DTSTART;VALUE=DATE:20270606
+DTEND;VALUE=DATE:20270607
+DTSTAMP:20250430T134645Z
+UID:b23972b91841cd5c4157abed26a7eb3e-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local observance - Queenslanders commemorate their state’s b
+ irthday on Queensland Day in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Western Australia Day (Western Australia)
+DTSTART;VALUE=DATE:20270607
+DTEND;VALUE=DATE:20270608
+DTSTAMP:20250430T134645Z
+UID:df1b3287157bd9008219760b402f4030-2027-wa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Foundation Day is a public holiday in the stat
+ e of Western Australia to commemorate the founding of the first British co
+ lony in the state.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:King's Birthday (ACT\, NSW\, NT\, SA\, Tas\, Vic\, Heard and McDon
+ ald Islands)
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270615
+DTSTAMP:20250430T134645Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2027-act-nsw-nt-sa-tas-vic-heard and 
+ mcdonald islands
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New South Wales Bank Holiday (New South Wales)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T134645Z
+UID:eb0a5b919a039702673d7e75d48417d1-2027-nsw
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Bank Holiday - The New South Wales Bank Holiday falls on
+  the first Monday of August.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Northern Territory Picnic Day (Northern Territory)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T134645Z
+UID:8f80cc08160fbbfa5431790f763ea304-2027-nt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Picnic Day is a public holiday annually held i
+ n Australia’s Northern Territory on the first Monday of August.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Royal National Agricultural Show Day Queensland (Queensland)
+DTSTART;VALUE=DATE:20270811
+DTEND;VALUE=DATE:20270812
+DTSTAMP:20250430T134645Z
+UID:c334751fc32506f4877b9590ae9da2bd-2027-qld (partly)
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - The Royal National Agricultural (RNA) Show Day
+  is usually held in Brisbane\, the capital city of the state of Queensland
+ \, Australia\, on the second or third Wednesday in August.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hari Maulad Nabi (Cocos and Keeling Islands)
+DTSTART;VALUE=DATE:20270815
+DTEND;VALUE=DATE:20270816
+DTSTAMP:20250430T134645Z
+UID:11ef558c2b499d4a6d7ecf7358a3aebe-2027-cocos and keeling islands
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Mawlid\, or Milad\, marks the birth of the Isl
+ amic prophet Muhammed\, or Mohamed\, in the year 570 of the Gregorian cale
+ ndar.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Friday before the AFL Grand Final (Victoria)
+DTSTART;VALUE=DATE:20270924
+DTEND;VALUE=DATE:20270925
+DTSTAMP:20250430T134645Z
+UID:d7df929b505daf51b00df5e1685a6ec1-2027-vic
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Friday before the AFL Grand Final is a state h
+ oliday in Australia
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:King's Birthday (Western Australia)
+DTSTART;VALUE=DATE:20270927
+DTEND;VALUE=DATE:20270928
+DTSTAMP:20250430T134645Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2027-wa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Territory Day (Christmas Island)
+DTSTART;VALUE=DATE:20271004
+DTEND;VALUE=DATE:20271005
+DTSTAMP:20250430T134645Z
+UID:6254a4f1f51a542a5dd5077f402d77a6-2027-christmas island
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Territory Day is a state holiday in Australia
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:King's Birthday (Queensland)
+DTSTART;VALUE=DATE:20271004
+DTEND;VALUE=DATE:20271005
+DTSTAMP:20250430T134645Z
+UID:5b79087598527ab5a868e0a5ef0937f3-2027-qld
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - The King’s birthday is an annual publ
+ ic holiday in parts of Australia celebrating the official birthday of King
+  Charles III.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Labour Day (NSW\, ACT)
+DTSTART;VALUE=DATE:20271004
+DTEND;VALUE=DATE:20271005
+DTSTAMP:20250430T134645Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2027-nsw-act
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Labour Day (South Australia)
+DTSTART;VALUE=DATE:20271004
+DTEND;VALUE=DATE:20271005
+DTSTAMP:20250430T134645Z
+UID:2c5c3d6f80cb6c3a04e519061f85ffd5-2027-sa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common State holiday - Labour Day in Australia celebrates work
+ ers’ role in contributing towards the nation’s economy. It is an annua
+ l public holiday but its date varies across the states and territories.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Royal Hobart Show (Tasmania)
+DTSTART;VALUE=DATE:20271021
+DTEND;VALUE=DATE:20271022
+DTSTAMP:20250430T134645Z
+UID:3cdbfce13d0e2458dc8893625a84321b-2027-tas (southern)
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Royal Hobart Show is a state holiday in Austra
+ lia
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Recreation Day (Tasmania)
+DTSTART;VALUE=DATE:20271101
+DTEND;VALUE=DATE:20271102
+DTSTAMP:20250430T134645Z
+UID:e36047416af9f8879ec1974769c98914-2027-tas (northern)
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Recreation Day is annually celebrated in north
+ ern Tasmania\, in Australia\, on the first Monday of November.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Melbourne Cup Day (Victoria)
+DTSTART;VALUE=DATE:20271102
+DTEND;VALUE=DATE:20271103
+DTSTAMP:20250430T134645Z
+UID:91c85f1301f9fd21648797aaf73a5d40-2027-vic
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Melbourne Cup Day is Australia’s most celebr
+ ated horse racing event. It is an annual public holiday in the state of Vi
+ ctoria and is observed nationwide on the first Tuesday of November.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Eve (South Australia)
+DTSTART;VALUE=DATE:20271224
+DTEND;VALUE=DATE:20271225
+DTSTAMP:20250430T134645Z
+UID:e1c67be7ee8d0a93deed856267b6e6de-2027-sa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
+ brated on December 24\, which is the day before Christmas Day.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Eve (Northern Territory)
+DTSTART;VALUE=DATE:20271224
+DTEND;VALUE=DATE:20271225
+DTSTAMP:20250430T134645Z
+UID:e1c67be7ee8d0a93deed856267b6e6de-2027-nt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
+ brated on December 24\, which is the day before Christmas Day.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Eve (Queensland)
+DTSTART;VALUE=DATE:20271224
+DTEND;VALUE=DATE:20271225
+DTSTAMP:20250430T134645Z
+UID:e1c67be7ee8d0a93deed856267b6e6de-2027-qld
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Part Day Holiday - Christmas Eve in Australia is annually cele
+ brated on December 24\, which is the day before Christmas Day.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Day (Victoria)
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T134645Z
+UID:407d540f5b4d56d3f7d03d9864aefa85-2027-vic
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Restricted Trading Day - Christians celebrate the birth of Jes
+ us on Christmas Day\, which is in the middle of summer in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Day Observed (All except Heard and McDonald Islands)
+DTSTART;VALUE=DATE:20271227
+DTEND;VALUE=DATE:20271228
+DTSTAMP:20250430T134645Z
+UID:407d540f5b4d56d3f7d03d9864aefa85-2027-all except heard and mcdonald is
+ lands
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - Christians celebrate the birth of Jesus on Chr
+ istmas Day\, which is in the middle of summer in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Boxing Day Observed (All except SA\, Heard and McDonald Islands)
+DTSTART;VALUE=DATE:20271228
+DTEND;VALUE=DATE:20271229
+DTSTAMP:20250430T134645Z
+UID:bc2e9866a511b2f4eb383bb462f1ee9a-2027-all except sa-heard and mcdonald
+  islands
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:State Holiday - December 26 is the Boxing Day holiday celebrat
+ ed in Australia.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's Eve (South Australia)
+DTSTART;VALUE=DATE:20271231
+DTEND;VALUE=DATE:20280101
+DTSTAMP:20250430T134645Z
+UID:10695549a60f3012fa5623ae456ae261-2027-sa
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Part Day Holiday - Many Australians celebrate New Year’s Eve
+  on December 31 each year\, which coincides with the date before New Year
+ ’s Day in the Gregorian calendar.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's Eve (Northern Territory)
+DTSTART;VALUE=DATE:20271231
+DTEND;VALUE=DATE:20280101
+DTSTAMP:20250430T134645Z
+UID:10695549a60f3012fa5623ae456ae261-2027-nt
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Part Day Holiday - Many Australians celebrate New Year’s Eve
+  on December 31 each year\, which coincides with the date before New Year
+ ’s Day in the Gregorian calendar.
+LAST-MODIFIED:20250430T134645Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

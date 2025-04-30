@@ -3,692 +3,617 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:Jour de l'An 
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20241008T090552Z
-UID:19857c289e4c6392fa3218166bbeb5b0-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
- nnée\, soit le 1er janvier\, du calendrier grégorien.
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dimanche de Pâques 
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090552Z
-UID:5b46537fd6caac8dacc195c3fcb79109-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le dimanche de Pâques commémore la résu
- rrection de Jésus-Christ\, selon la croyance chrétienne.
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lundi de Pâques 
-DTSTART;VALUE=DATE:20240401
-DTEND;VALUE=DATE:20240402
-DTSTAMP:20241008T090552Z
-UID:9ab1b9107a11c71048450ed970d5b994-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
- manche de Pâques.
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fête du travail/1er mai 
-DTSTART;VALUE=DATE:20240501
-DTEND;VALUE=DATE:20240502
-DTSTAMP:20241008T090552Z
-UID:5b759022da2536c59717d4d5d70bd8b6-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  La fête du Travail\, la Journée internat
- ionale des travailleurs et le 1er mai sont des jours de congé pour les tr
- availleurs de nombreux pays du monde.
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de l'Ascension 
-DTSTART;VALUE=DATE:20240509
-DTEND;VALUE=DATE:20240510
-DTSTAMP:20241008T090552Z
-UID:ff339ef52ecacd4080cabe06aad12959-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le jour de l'Ascension est le 40e jour de 
- Pâques. C'est une fête religieuse qui commémore l'ascension de Jésus-C
- hrist au ciel.
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dimanche de Pentecôte 
-DTSTART;VALUE=DATE:20240519
-DTEND;VALUE=DATE:20240520
-DTSTAMP:20241008T090552Z
-UID:2b79ef95fa2436f21b32e3ce1338e0f8-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  De nombreux chrétiens du monde entier cé
- lèbrent chaque année la Pentecôte\, également connue sous le nom de Pe
- ntecôte ou dimanche de Pentecôte.
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Le lundi de Pentecôte 
-DTSTART;VALUE=DATE:20240520
-DTEND;VALUE=DATE:20240521
-DTSTAMP:20241008T090552Z
-UID:87a21dd049265a56b2bff526c327fb3e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le lundi de Pentecôte\, ou lundi de Pente
- côte\, est une fête chrétienne qui tombe le lendemain de la Pentecôte\
- , également connue sous le nom de dimanche de Pentecôte ou de Pentecôte
- .
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fête nationale belge 
-DTSTART;VALUE=DATE:20240721
-DTEND;VALUE=DATE:20240722
-DTSTAMP:20241008T090552Z
-UID:97b72fd02aed9cc9aaecb3a371207ad2-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  La fête nationale belge est une fête nat
- ionale en Belgique
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Assomption de Marie 
-DTSTART;VALUE=DATE:20240815
-DTEND;VALUE=DATE:20240816
-DTSTAMP:20241008T090552Z
-UID:e958a078c5696691e44c935b4054c7e5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  La fête chrétienne de l'Assomption de Ma
- rie a lieu le 15 août ou aux alentours de cette date dans la plupart des 
- pays. Quelques-uns célèbrent le jour de l'Assomption à d'autres moments
-  de l'année.
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Toussaint 
-DTSTART;VALUE=DATE:20241101
-DTEND;VALUE=DATE:20241102
-DTSTAMP:20241008T090552Z
-UID:632d277f16299e2464d39faeed425c43-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  De nombreuses églises honorent tous leurs
-  saints le jour de la Toussaint\, également connu sous le nom de Toussain
- t.
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de l'Armistice 
-DTSTART;VALUE=DATE:20241111
-DTEND;VALUE=DATE:20241112
-DTSTAMP:20241008T090552Z
-UID:1041c76a2abd3b24c9369382ca9357ef-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le jour de l'Armistice est une fête natio
- nale en Belgique
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de Noël 
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090552Z
-UID:471d877b0844ace6139f0f777deb8ea7-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le jour de Noël est l'une des plus grande
- s fêtes chrétiennes et tombe le 25 décembre du calendrier grégorien.
-LAST-MODIFIED:20241008T090552Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fête de l'iris  (Brussels)
-DTSTART;VALUE=DATE:20240508
-DTEND;VALUE=DATE:20240509
-DTSTAMP:20241008T090553Z
-UID:456817d73f6e1f22608ec3c94a9d8651-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday -  La Journée de l'iris est un jo
- ur férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Journée de la Communauté flamande  (Antwerp\, Limburg\, East Fla
- nders\, Flemish Brabant\, West Flanders)
-DTSTART;VALUE=DATE:20240711
-DTEND;VALUE=DATE:20240712
-DTSTAMP:20241008T090553Z
-UID:a32c90eec134cf456f350011832712f3-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Journée de la Région wallonne  (Namur)
-DTSTART;VALUE=DATE:20240915
-DTEND;VALUE=DATE:20240916
-DTSTAMP:20241008T090553Z
-UID:0e3075b8f235754a925bbb3967718c61-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday -  La Journée de la Région wallo
- nne est un jour férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Journée de la Communauté française  (Walloon Brabant\, Hainaut\
- , Liège\, Luxembourg\, Namur)
-DTSTART;VALUE=DATE:20240927
-DTEND;VALUE=DATE:20240928
-DTSTAMP:20241008T090553Z
-UID:93784575229b2c18a6d1e06f9f865744-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday -  La Journée de la Communauté f
- rançaise est un jour férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Journée de la Communauté germanophone  (Liège)
-DTSTART;VALUE=DATE:20241115
-DTEND;VALUE=DATE:20241116
-DTSTAMP:20241008T090553Z
-UID:223d39819c18d7f90dfccf819d640356-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Regional government holiday -  La Journée de la Communauté g
- ermanophone est un jour férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de l'An 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20241008T090553Z
-UID:19857c289e4c6392fa3218166bbeb5b0-2025
+DTSTAMP:20250430T134647Z
+UID:19857c289e4c6392fa3218166bbeb5b0-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
  nnée\, soit le 1er janvier\, du calendrier grégorien.
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dimanche de Pâques 
-DTSTART;VALUE=DATE:20250420
-DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090553Z
-UID:5b46537fd6caac8dacc195c3fcb79109-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le dimanche de Pâques commémore la résu
- rrection de Jésus-Christ\, selon la croyance chrétienne.
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lundi de Pâques 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090553Z
-UID:9ab1b9107a11c71048450ed970d5b994-2025
+DTSTAMP:20250430T134647Z
+UID:9ab1b9107a11c71048450ed970d5b994-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
  manche de Pâques.
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête du travail/1er mai 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20241008T090553Z
-UID:5b759022da2536c59717d4d5d70bd8b6-2025
+DTSTAMP:20250430T134647Z
+UID:5b759022da2536c59717d4d5d70bd8b6-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fête du Travail\, la Journée internat
  ionale des travailleurs et le 1er mai sont des jours de congé pour les tr
  availleurs de nombreux pays du monde.
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'Ascension 
 DTSTART;VALUE=DATE:20250529
 DTEND;VALUE=DATE:20250530
-DTSTAMP:20241008T090553Z
-UID:ff339ef52ecacd4080cabe06aad12959-2025
+DTSTAMP:20250430T134647Z
+UID:ff339ef52ecacd4080cabe06aad12959-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'Ascension est le 40e jour de 
  Pâques. C'est une fête religieuse qui commémore l'ascension de Jésus-C
  hrist au ciel.
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dimanche de Pentecôte 
-DTSTART;VALUE=DATE:20250608
-DTEND;VALUE=DATE:20250609
-DTSTAMP:20241008T090553Z
-UID:2b79ef95fa2436f21b32e3ce1338e0f8-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  De nombreux chrétiens du monde entier cé
- lèbrent chaque année la Pentecôte\, également connue sous le nom de Pe
- ntecôte ou dimanche de Pentecôte.
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Le lundi de Pentecôte 
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20241008T090553Z
-UID:87a21dd049265a56b2bff526c327fb3e-2025
+DTSTAMP:20250430T134647Z
+UID:87a21dd049265a56b2bff526c327fb3e-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le lundi de Pentecôte\, ou lundi de Pente
  côte\, est une fête chrétienne qui tombe le lendemain de la Pentecôte\
  , également connue sous le nom de dimanche de Pentecôte ou de Pentecôte
  .
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête nationale belge 
 DTSTART;VALUE=DATE:20250721
 DTEND;VALUE=DATE:20250722
-DTSTAMP:20241008T090553Z
-UID:97b72fd02aed9cc9aaecb3a371207ad2-2025
+DTSTAMP:20250430T134647Z
+UID:97b72fd02aed9cc9aaecb3a371207ad2-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fête nationale belge est une fête nat
  ionale en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Assomption de Marie 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20241008T090553Z
-UID:e958a078c5696691e44c935b4054c7e5-2025
+DTSTAMP:20250430T134647Z
+UID:e958a078c5696691e44c935b4054c7e5-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fête chrétienne de l'Assomption de Ma
  rie a lieu le 15 août ou aux alentours de cette date dans la plupart des 
  pays. Quelques-uns célèbrent le jour de l'Assomption à d'autres moments
   de l'année.
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Toussaint 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20241008T090553Z
-UID:632d277f16299e2464d39faeed425c43-2025
+DTSTAMP:20250430T134647Z
+UID:632d277f16299e2464d39faeed425c43-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  De nombreuses églises honorent tous leurs
   saints le jour de la Toussaint\, également connu sous le nom de Toussain
  t.
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'Armistice 
 DTSTART;VALUE=DATE:20251111
 DTEND;VALUE=DATE:20251112
-DTSTAMP:20241008T090553Z
-UID:1041c76a2abd3b24c9369382ca9357ef-2025
+DTSTAMP:20250430T134647Z
+UID:1041c76a2abd3b24c9369382ca9357ef-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'Armistice est une fête natio
  nale en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de Noël 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090553Z
-UID:471d877b0844ace6139f0f777deb8ea7-2025
+DTSTAMP:20250430T134647Z
+UID:471d877b0844ace6139f0f777deb8ea7-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de Noël est l'une des plus grande
  s fêtes chrétiennes et tombe le 25 décembre du calendrier grégorien.
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134647Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête de l'iris  (Brussels)
 DTSTART;VALUE=DATE:20250508
 DTEND;VALUE=DATE:20250509
-DTSTAMP:20241008T090553Z
-UID:456817d73f6e1f22608ec3c94a9d8651-2025
+DTSTAMP:20250430T134648Z
+UID:456817d73f6e1f22608ec3c94a9d8651-2025-brussels
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday -  La Journée de l'iris est un jo
  ur férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Journée de la Communauté flamande  (Antwerp\, Limburg\, East Fla
  nders\, Flemish Brabant\, West Flanders)
 DTSTART;VALUE=DATE:20250711
 DTEND;VALUE=DATE:20250712
-DTSTAMP:20241008T090553Z
-UID:a32c90eec134cf456f350011832712f3-2025
+DTSTAMP:20250430T134648Z
+UID:a32c90eec134cf456f350011832712f3-2025-antwerp-limburg-east flanders-fl
+ emish brabant-west flanders
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Journée de la Région wallonne  (Namur)
 DTSTART;VALUE=DATE:20250921
 DTEND;VALUE=DATE:20250922
-DTSTAMP:20241008T090553Z
-UID:0e3075b8f235754a925bbb3967718c61-2025
+DTSTAMP:20250430T134648Z
+UID:0e3075b8f235754a925bbb3967718c61-2025-namur
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday -  La Journée de la Région wallo
  nne est un jour férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Journée de la Communauté française  (Walloon Brabant\, Hainaut\
  , Liège\, Luxembourg\, Namur)
 DTSTART;VALUE=DATE:20250927
 DTEND;VALUE=DATE:20250928
-DTSTAMP:20241008T090553Z
-UID:93784575229b2c18a6d1e06f9f865744-2025
+DTSTAMP:20250430T134648Z
+UID:93784575229b2c18a6d1e06f9f865744-2025-walloon brabant-hainaut-liège-l
+ uxembourg-namur
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday -  La Journée de la Communauté f
  rançaise est un jour férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Journée de la Communauté germanophone  (Liège)
 DTSTART;VALUE=DATE:20251115
 DTEND;VALUE=DATE:20251116
-DTSTAMP:20241008T090553Z
-UID:223d39819c18d7f90dfccf819d640356-2025
+DTSTAMP:20250430T134648Z
+UID:223d39819c18d7f90dfccf819d640356-2025-liège (community)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday -  La Journée de la Communauté g
  ermanophone est un jour férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090553Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'An 
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20241008T090554Z
-UID:19857c289e4c6392fa3218166bbeb5b0-2026
+DTSTAMP:20250430T134648Z
+UID:19857c289e4c6392fa3218166bbeb5b0-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
  nnée\, soit le 1er janvier\, du calendrier grégorien.
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dimanche de Pâques 
-DTSTART;VALUE=DATE:20260405
-DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090554Z
-UID:5b46537fd6caac8dacc195c3fcb79109-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le dimanche de Pâques commémore la résu
- rrection de Jésus-Christ\, selon la croyance chrétienne.
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lundi de Pâques 
 DTSTART;VALUE=DATE:20260406
 DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090554Z
-UID:9ab1b9107a11c71048450ed970d5b994-2026
+DTSTAMP:20250430T134648Z
+UID:9ab1b9107a11c71048450ed970d5b994-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
  manche de Pâques.
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête du travail/1er mai 
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-DTSTAMP:20241008T090554Z
-UID:5b759022da2536c59717d4d5d70bd8b6-2026
+DTSTAMP:20250430T134648Z
+UID:5b759022da2536c59717d4d5d70bd8b6-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fête du Travail\, la Journée internat
  ionale des travailleurs et le 1er mai sont des jours de congé pour les tr
  availleurs de nombreux pays du monde.
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'Ascension 
 DTSTART;VALUE=DATE:20260514
 DTEND;VALUE=DATE:20260515
-DTSTAMP:20241008T090554Z
-UID:ff339ef52ecacd4080cabe06aad12959-2026
+DTSTAMP:20250430T134648Z
+UID:ff339ef52ecacd4080cabe06aad12959-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'Ascension est le 40e jour de 
  Pâques. C'est une fête religieuse qui commémore l'ascension de Jésus-C
  hrist au ciel.
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dimanche de Pentecôte 
-DTSTART;VALUE=DATE:20260524
-DTEND;VALUE=DATE:20260525
-DTSTAMP:20241008T090554Z
-UID:2b79ef95fa2436f21b32e3ce1338e0f8-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  De nombreux chrétiens du monde entier cé
- lèbrent chaque année la Pentecôte\, également connue sous le nom de Pe
- ntecôte ou dimanche de Pentecôte.
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Le lundi de Pentecôte 
 DTSTART;VALUE=DATE:20260525
 DTEND;VALUE=DATE:20260526
-DTSTAMP:20241008T090554Z
-UID:87a21dd049265a56b2bff526c327fb3e-2026
+DTSTAMP:20250430T134648Z
+UID:87a21dd049265a56b2bff526c327fb3e-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le lundi de Pentecôte\, ou lundi de Pente
  côte\, est une fête chrétienne qui tombe le lendemain de la Pentecôte\
  , également connue sous le nom de dimanche de Pentecôte ou de Pentecôte
  .
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête nationale belge 
 DTSTART;VALUE=DATE:20260721
 DTEND;VALUE=DATE:20260722
-DTSTAMP:20241008T090554Z
-UID:97b72fd02aed9cc9aaecb3a371207ad2-2026
+DTSTAMP:20250430T134648Z
+UID:97b72fd02aed9cc9aaecb3a371207ad2-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fête nationale belge est une fête nat
  ionale en Belgique
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Assomption de Marie 
 DTSTART;VALUE=DATE:20260815
 DTEND;VALUE=DATE:20260816
-DTSTAMP:20241008T090554Z
-UID:e958a078c5696691e44c935b4054c7e5-2026
+DTSTAMP:20250430T134648Z
+UID:e958a078c5696691e44c935b4054c7e5-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fête chrétienne de l'Assomption de Ma
  rie a lieu le 15 août ou aux alentours de cette date dans la plupart des 
  pays. Quelques-uns célèbrent le jour de l'Assomption à d'autres moments
   de l'année.
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Toussaint 
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20241008T090554Z
-UID:632d277f16299e2464d39faeed425c43-2026
+DTSTAMP:20250430T134648Z
+UID:632d277f16299e2464d39faeed425c43-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  De nombreuses églises honorent tous leurs
   saints le jour de la Toussaint\, également connu sous le nom de Toussain
  t.
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'Armistice 
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
-DTSTAMP:20241008T090554Z
-UID:1041c76a2abd3b24c9369382ca9357ef-2026
+DTSTAMP:20250430T134648Z
+UID:1041c76a2abd3b24c9369382ca9357ef-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'Armistice est une fête natio
  nale en Belgique
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de Noël 
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090554Z
-UID:471d877b0844ace6139f0f777deb8ea7-2026
+DTSTAMP:20250430T134648Z
+UID:471d877b0844ace6139f0f777deb8ea7-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de Noël est l'une des plus grande
  s fêtes chrétiennes et tombe le 25 décembre du calendrier grégorien.
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134648Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête de l'iris  (Brussels)
 DTSTART;VALUE=DATE:20260508
 DTEND;VALUE=DATE:20260509
-DTSTAMP:20241008T090554Z
-UID:456817d73f6e1f22608ec3c94a9d8651-2026
+DTSTAMP:20250430T134649Z
+UID:456817d73f6e1f22608ec3c94a9d8651-2026-brussels
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday -  La Journée de l'iris est un jo
  ur férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Journée de la Communauté flamande  (Antwerp\, Limburg\, East Fla
  nders\, Flemish Brabant\, West Flanders)
 DTSTART;VALUE=DATE:20260711
 DTEND;VALUE=DATE:20260712
-DTSTAMP:20241008T090554Z
-UID:a32c90eec134cf456f350011832712f3-2026
+DTSTAMP:20250430T134649Z
+UID:a32c90eec134cf456f350011832712f3-2026-antwerp-limburg-east flanders-fl
+ emish brabant-west flanders
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Journée de la Région wallonne  (Namur)
 DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
-DTSTAMP:20241008T090554Z
-UID:0e3075b8f235754a925bbb3967718c61-2026
+DTSTAMP:20250430T134649Z
+UID:0e3075b8f235754a925bbb3967718c61-2026-namur
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday -  La Journée de la Région wallo
  nne est un jour férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Journée de la Communauté française  (Walloon Brabant\, Hainaut\
  , Liège\, Luxembourg\, Namur)
 DTSTART;VALUE=DATE:20260927
 DTEND;VALUE=DATE:20260928
-DTSTAMP:20241008T090554Z
-UID:93784575229b2c18a6d1e06f9f865744-2026
+DTSTAMP:20250430T134649Z
+UID:93784575229b2c18a6d1e06f9f865744-2026-walloon brabant-hainaut-liège-l
+ uxembourg-namur
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday -  La Journée de la Communauté f
  rançaise est un jour férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Journée de la Communauté germanophone  (Liège)
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
-DTSTAMP:20241008T090554Z
-UID:223d39819c18d7f90dfccf819d640356-2026
+DTSTAMP:20250430T134649Z
+UID:223d39819c18d7f90dfccf819d640356-2026-liège (community)
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Regional government holiday -  La Journée de la Communauté g
  ermanophone est un jour férié du gouvernement régional en Belgique
-LAST-MODIFIED:20241008T090554Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de l'An 
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20250430T134649Z
+UID:19857c289e4c6392fa3218166bbeb5b0-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
+ nnée\, soit le 1er janvier\, du calendrier grégorien.
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lundi de Pâques 
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+DTSTAMP:20250430T134649Z
+UID:9ab1b9107a11c71048450ed970d5b994-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
+ manche de Pâques.
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fête du travail/1er mai 
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+DTSTAMP:20250430T134649Z
+UID:5b759022da2536c59717d4d5d70bd8b6-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La fête du Travail\, la Journée internat
+ ionale des travailleurs et le 1er mai sont des jours de congé pour les tr
+ availleurs de nombreux pays du monde.
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de l'Ascension 
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270507
+DTSTAMP:20250430T134649Z
+UID:ff339ef52ecacd4080cabe06aad12959-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de l'Ascension est le 40e jour de 
+ Pâques. C'est une fête religieuse qui commémore l'ascension de Jésus-C
+ hrist au ciel.
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Le lundi de Pentecôte 
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+DTSTAMP:20250430T134649Z
+UID:87a21dd049265a56b2bff526c327fb3e-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le lundi de Pentecôte\, ou lundi de Pente
+ côte\, est une fête chrétienne qui tombe le lendemain de la Pentecôte\
+ , également connue sous le nom de dimanche de Pentecôte ou de Pentecôte
+ .
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fête nationale belge 
+DTSTART;VALUE=DATE:20270721
+DTEND;VALUE=DATE:20270722
+DTSTAMP:20250430T134649Z
+UID:97b72fd02aed9cc9aaecb3a371207ad2-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La fête nationale belge est une fête nat
+ ionale en Belgique
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Assomption de Marie 
+DTSTART;VALUE=DATE:20270815
+DTEND;VALUE=DATE:20270816
+DTSTAMP:20250430T134649Z
+UID:e958a078c5696691e44c935b4054c7e5-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La fête chrétienne de l'Assomption de Ma
+ rie a lieu le 15 août ou aux alentours de cette date dans la plupart des 
+ pays. Quelques-uns célèbrent le jour de l'Assomption à d'autres moments
+  de l'année.
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Toussaint 
+DTSTART;VALUE=DATE:20271101
+DTEND;VALUE=DATE:20271102
+DTSTAMP:20250430T134649Z
+UID:632d277f16299e2464d39faeed425c43-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  De nombreuses églises honorent tous leurs
+  saints le jour de la Toussaint\, également connu sous le nom de Toussain
+ t.
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de l'Armistice 
+DTSTART;VALUE=DATE:20271111
+DTEND;VALUE=DATE:20271112
+DTSTAMP:20250430T134649Z
+UID:1041c76a2abd3b24c9369382ca9357ef-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de l'Armistice est une fête natio
+ nale en Belgique
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de Noël 
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T134649Z
+UID:471d877b0844ace6139f0f777deb8ea7-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de Noël est l'une des plus grande
+ s fêtes chrétiennes et tombe le 25 décembre du calendrier grégorien.
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fête de l'iris  (Brussels)
+DTSTART;VALUE=DATE:20270508
+DTEND;VALUE=DATE:20270509
+DTSTAMP:20250430T134649Z
+UID:456817d73f6e1f22608ec3c94a9d8651-2027-brussels
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional government holiday -  La Journée de l'iris est un jo
+ ur férié du gouvernement régional en Belgique
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Journée de la Communauté flamande  (Antwerp\, Limburg\, East Fla
+ nders\, Flemish Brabant\, West Flanders)
+DTSTART;VALUE=DATE:20270711
+DTEND;VALUE=DATE:20270712
+DTSTAMP:20250430T134649Z
+UID:a32c90eec134cf456f350011832712f3-2027-antwerp-limburg-east flanders-fl
+ emish brabant-west flanders
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional government holiday
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Journée de la Région wallonne  (Namur)
+DTSTART;VALUE=DATE:20270919
+DTEND;VALUE=DATE:20270920
+DTSTAMP:20250430T134649Z
+UID:0e3075b8f235754a925bbb3967718c61-2027-namur
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional government holiday -  La Journée de la Région wallo
+ nne est un jour férié du gouvernement régional en Belgique
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Journée de la Communauté française  (Walloon Brabant\, Hainaut\
+ , Liège\, Luxembourg\, Namur)
+DTSTART;VALUE=DATE:20270927
+DTEND;VALUE=DATE:20270928
+DTSTAMP:20250430T134649Z
+UID:93784575229b2c18a6d1e06f9f865744-2027-walloon brabant-hainaut-liège-l
+ uxembourg-namur
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional government holiday -  La Journée de la Communauté f
+ rançaise est un jour férié du gouvernement régional en Belgique
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Journée de la Communauté germanophone  (Liège)
+DTSTART;VALUE=DATE:20271115
+DTEND;VALUE=DATE:20271116
+DTSTAMP:20250430T134649Z
+UID:223d39819c18d7f90dfccf819d640356-2027-liège (community)
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Regional government holiday -  La Journée de la Communauté g
+ ermanophone est un jour férié du gouvernement régional en Belgique
+LAST-MODIFIED:20250430T134649Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

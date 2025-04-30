@@ -3,530 +3,530 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:Jour de l'An 
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20241008T090627Z
-UID:7baabe1bdeff9e281ddb767cf09ee4d5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
- nnée en France.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lundi de Pâques 
-DTSTART;VALUE=DATE:20240401
-DTEND;VALUE=DATE:20240402
-DTSTAMP:20241008T090627Z
-UID:97950cd5a2a10380e3f1509d0c207a76-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
- manche de Pâques.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fête du travail/1er mai 
-DTSTART;VALUE=DATE:20240501
-DTEND;VALUE=DATE:20240502
-DTSTAMP:20241008T090627Z
-UID:2f5dd8b730849436a0c994a3c58d5afc-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Les Français offrent des fleurs à leurs 
- proches et peuvent célébrer ou faire campagne pour les droits des travai
- lleurs le 1er mai\, également connu sous le nom de fête du Travail.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de la Victoire de la Seconde Guerre mondiale 
-DTSTART;VALUE=DATE:20240508
-DTEND;VALUE=DATE:20240509
-DTSTAMP:20241008T090627Z
-UID:5b0edb394db534fe670c9b73b6a47b82-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le Jour de la Victoire de la Seconde Guerr
- e mondiale marque l'anniversaire de la fin officielle de la Seconde Guerre
-  mondiale et est un jour férié en France.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de l'Ascension 
-DTSTART;VALUE=DATE:20240509
-DTEND;VALUE=DATE:20240510
-DTSTAMP:20241008T090627Z
-UID:c4189934186de8cbdee286e25765eacd-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le jour de l'Ascension marque le jour où 
- Jésus est monté au ciel\, selon la croyance chrétienne.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lundi de Pentecôte 
-DTSTART;VALUE=DATE:20240520
-DTEND;VALUE=DATE:20240521
-DTSTAMP:20241008T090627Z
-UID:2bb90404bdf78ae55dd87c22449950dd-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le lundi de Pentecôte est le lendemain du
-  dimanche de Pentecôte. C'est un jour férié en France.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:14 juillet 
-DTSTART;VALUE=DATE:20240714
-DTEND;VALUE=DATE:20240715
-DTSTAMP:20241008T090627Z
-UID:2dd9204a80cb40af26dfcb37858800b8-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le 14 juillet est l'occasion d'honorer la 
- République française. C'est un jour férié en France.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Assomption de Marie 
-DTSTART;VALUE=DATE:20240815
-DTEND;VALUE=DATE:20240816
-DTSTAMP:20241008T090627Z
-UID:22538b18230c0467e3d5f418a208bea0-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  La fête de l'Assomption de Marie est l'oc
- casion pour les catholiques d'honorer la croyance selon laquelle Dieu a as
- sumé la Vierge Marie au paradis.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Toussaint 
-DTSTART;VALUE=DATE:20241101
-DTEND;VALUE=DATE:20241102
-DTSTAMP:20241008T090627Z
-UID:b884f10419e973cb034091e3daabf320-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  La Toussaint célèbre tous les saints chr
- étiens\, en particulier ceux qui n'ont pas de jours de fête particuliers
- . C'est un jour férié en France.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de l'Armistice 
-DTSTART;VALUE=DATE:20241111
-DTEND;VALUE=DATE:20241112
-DTSTAMP:20241008T090627Z
-UID:12d8317592cba86bda84532e1898a3e1-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le jour de l'Armistice marque l'anniversai
- re de la fin de la Première Guerre mondiale. C'est un jour férié en Fra
- nce.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de Noël 
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090627Z
-UID:8ece11f1a9bfec8bfade8c5b90e6226a-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Le jour de Noël est l'occasion pour les c
- hrétiens de célébrer la naissance de Jésus-Christ. C'est un jour féri
- é en France.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Vendredi saint  (Moselle\, Bas-Rhin\, Haut-Rhin)
-DTSTART;VALUE=DATE:20240329
-DTEND;VALUE=DATE:20240330
-DTSTAMP:20241008T090627Z
-UID:3f26d6e47343e3c571334a2fd2035f60-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday -  Le Vendredi saint est l'occasion pour les chr
- étiens de France de commémorer la crucifixion de Jésus-Christ.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fête de la Saint-Étienne  (Moselle\, Bas-Rhin\, Haut-Rhin)
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241008T090627Z
-UID:09ee983f5419b50d4e0e49bd75fe1c8d-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday -  La Saint-Étienne est l'occasion pour les chr
- étiens d'honorer la vie de Saint-Étienne et est un jour férié dans la 
- région française d'Alsace-Moselle.
-LAST-MODIFIED:20241008T090627Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jour de l'An 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20241008T090628Z
-UID:7baabe1bdeff9e281ddb767cf09ee4d5-2025
+DTSTAMP:20250430T134728Z
+UID:7baabe1bdeff9e281ddb767cf09ee4d5-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
  nnée en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lundi de Pâques 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090628Z
-UID:97950cd5a2a10380e3f1509d0c207a76-2025
+DTSTAMP:20250430T134728Z
+UID:97950cd5a2a10380e3f1509d0c207a76-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
  manche de Pâques.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête du travail/1er mai 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20241008T090628Z
-UID:2f5dd8b730849436a0c994a3c58d5afc-2025
+DTSTAMP:20250430T134728Z
+UID:2f5dd8b730849436a0c994a3c58d5afc-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Les Français offrent des fleurs à leurs 
  proches et peuvent célébrer ou faire campagne pour les droits des travai
  lleurs le 1er mai\, également connu sous le nom de fête du Travail.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de la Victoire de la Seconde Guerre mondiale 
 DTSTART;VALUE=DATE:20250508
 DTEND;VALUE=DATE:20250509
-DTSTAMP:20241008T090628Z
-UID:5b0edb394db534fe670c9b73b6a47b82-2025
+DTSTAMP:20250430T134728Z
+UID:5b0edb394db534fe670c9b73b6a47b82-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le Jour de la Victoire de la Seconde Guerr
  e mondiale marque l'anniversaire de la fin officielle de la Seconde Guerre
   mondiale et est un jour férié en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'Ascension 
 DTSTART;VALUE=DATE:20250529
 DTEND;VALUE=DATE:20250530
-DTSTAMP:20241008T090628Z
-UID:c4189934186de8cbdee286e25765eacd-2025
+DTSTAMP:20250430T134728Z
+UID:c4189934186de8cbdee286e25765eacd-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'Ascension marque le jour où 
  Jésus est monté au ciel\, selon la croyance chrétienne.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lundi de Pentecôte 
 DTSTART;VALUE=DATE:20250609
 DTEND;VALUE=DATE:20250610
-DTSTAMP:20241008T090628Z
-UID:2bb90404bdf78ae55dd87c22449950dd-2025
+DTSTAMP:20250430T134728Z
+UID:2bb90404bdf78ae55dd87c22449950dd-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le lundi de Pentecôte est le lendemain du
   dimanche de Pentecôte. C'est un jour férié en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:14 juillet 
 DTSTART;VALUE=DATE:20250714
 DTEND;VALUE=DATE:20250715
-DTSTAMP:20241008T090628Z
-UID:2dd9204a80cb40af26dfcb37858800b8-2025
+DTSTAMP:20250430T134728Z
+UID:2dd9204a80cb40af26dfcb37858800b8-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le 14 juillet est l'occasion d'honorer la 
  République française. C'est un jour férié en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Assomption de Marie 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20241008T090628Z
-UID:22538b18230c0467e3d5f418a208bea0-2025
+DTSTAMP:20250430T134728Z
+UID:22538b18230c0467e3d5f418a208bea0-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fête de l'Assomption de Marie est l'oc
  casion pour les catholiques d'honorer la croyance selon laquelle Dieu a as
  sumé la Vierge Marie au paradis.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Toussaint 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20241008T090628Z
-UID:b884f10419e973cb034091e3daabf320-2025
+DTSTAMP:20250430T134728Z
+UID:b884f10419e973cb034091e3daabf320-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La Toussaint célèbre tous les saints chr
  étiens\, en particulier ceux qui n'ont pas de jours de fête particuliers
  . C'est un jour férié en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'Armistice 
 DTSTART;VALUE=DATE:20251111
 DTEND;VALUE=DATE:20251112
-DTSTAMP:20241008T090628Z
-UID:12d8317592cba86bda84532e1898a3e1-2025
+DTSTAMP:20250430T134728Z
+UID:12d8317592cba86bda84532e1898a3e1-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'Armistice marque l'anniversai
  re de la fin de la Première Guerre mondiale. C'est un jour férié en Fra
  nce.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de Noël 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090628Z
-UID:8ece11f1a9bfec8bfade8c5b90e6226a-2025
+DTSTAMP:20250430T134728Z
+UID:8ece11f1a9bfec8bfade8c5b90e6226a-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de Noël est l'occasion pour les c
  hrétiens de célébrer la naissance de Jésus-Christ. C'est un jour féri
  é en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Vendredi saint  (Moselle\, Bas-Rhin\, Haut-Rhin)
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20241008T090628Z
-UID:3f26d6e47343e3c571334a2fd2035f60-2025
+DTSTAMP:20250430T134728Z
+UID:3f26d6e47343e3c571334a2fd2035f60-2025-moselle-bas-rhin-haut-rhin
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  Le Vendredi saint est l'occasion pour les chr
  étiens de France de commémorer la crucifixion de Jésus-Christ.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête de la Saint-Étienne  (Moselle\, Bas-Rhin\, Haut-Rhin)
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20241008T090628Z
-UID:09ee983f5419b50d4e0e49bd75fe1c8d-2025
+DTSTAMP:20250430T134728Z
+UID:09ee983f5419b50d4e0e49bd75fe1c8d-2025-moselle-bas-rhin-haut-rhin
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  La Saint-Étienne est l'occasion pour les chr
  étiens d'honorer la vie de Saint-Étienne et est un jour férié dans la 
  région française d'Alsace-Moselle.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'An 
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20241008T090628Z
-UID:7baabe1bdeff9e281ddb767cf09ee4d5-2026
+DTSTAMP:20250430T134728Z
+UID:7baabe1bdeff9e281ddb767cf09ee4d5-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
  nnée en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lundi de Pâques 
 DTSTART;VALUE=DATE:20260406
 DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090628Z
-UID:97950cd5a2a10380e3f1509d0c207a76-2026
+DTSTAMP:20250430T134728Z
+UID:97950cd5a2a10380e3f1509d0c207a76-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
  manche de Pâques.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête du travail/1er mai 
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-DTSTAMP:20241008T090628Z
-UID:2f5dd8b730849436a0c994a3c58d5afc-2026
+DTSTAMP:20250430T134728Z
+UID:2f5dd8b730849436a0c994a3c58d5afc-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Les Français offrent des fleurs à leurs 
  proches et peuvent célébrer ou faire campagne pour les droits des travai
  lleurs le 1er mai\, également connu sous le nom de fête du Travail.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de la Victoire de la Seconde Guerre mondiale 
 DTSTART;VALUE=DATE:20260508
 DTEND;VALUE=DATE:20260509
-DTSTAMP:20241008T090628Z
-UID:5b0edb394db534fe670c9b73b6a47b82-2026
+DTSTAMP:20250430T134728Z
+UID:5b0edb394db534fe670c9b73b6a47b82-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le Jour de la Victoire de la Seconde Guerr
  e mondiale marque l'anniversaire de la fin officielle de la Seconde Guerre
   mondiale et est un jour férié en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'Ascension 
 DTSTART;VALUE=DATE:20260514
 DTEND;VALUE=DATE:20260515
-DTSTAMP:20241008T090628Z
-UID:c4189934186de8cbdee286e25765eacd-2026
+DTSTAMP:20250430T134728Z
+UID:c4189934186de8cbdee286e25765eacd-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'Ascension marque le jour où 
  Jésus est monté au ciel\, selon la croyance chrétienne.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lundi de Pentecôte 
 DTSTART;VALUE=DATE:20260525
 DTEND;VALUE=DATE:20260526
-DTSTAMP:20241008T090628Z
-UID:2bb90404bdf78ae55dd87c22449950dd-2026
+DTSTAMP:20250430T134728Z
+UID:2bb90404bdf78ae55dd87c22449950dd-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le lundi de Pentecôte est le lendemain du
   dimanche de Pentecôte. C'est un jour férié en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:14 juillet 
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
-DTSTAMP:20241008T090628Z
-UID:2dd9204a80cb40af26dfcb37858800b8-2026
+DTSTAMP:20250430T134728Z
+UID:2dd9204a80cb40af26dfcb37858800b8-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le 14 juillet est l'occasion d'honorer la 
  République française. C'est un jour férié en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Assomption de Marie 
 DTSTART;VALUE=DATE:20260815
 DTEND;VALUE=DATE:20260816
-DTSTAMP:20241008T090628Z
-UID:22538b18230c0467e3d5f418a208bea0-2026
+DTSTAMP:20250430T134728Z
+UID:22538b18230c0467e3d5f418a208bea0-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La fête de l'Assomption de Marie est l'oc
  casion pour les catholiques d'honorer la croyance selon laquelle Dieu a as
  sumé la Vierge Marie au paradis.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Toussaint 
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20241008T090628Z
-UID:b884f10419e973cb034091e3daabf320-2026
+DTSTAMP:20250430T134728Z
+UID:b884f10419e973cb034091e3daabf320-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La Toussaint célèbre tous les saints chr
  étiens\, en particulier ceux qui n'ont pas de jours de fête particuliers
  . C'est un jour férié en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de l'Armistice 
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
-DTSTAMP:20241008T090628Z
-UID:12d8317592cba86bda84532e1898a3e1-2026
+DTSTAMP:20250430T134728Z
+UID:12d8317592cba86bda84532e1898a3e1-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de l'Armistice marque l'anniversai
  re de la fin de la Première Guerre mondiale. C'est un jour férié en Fra
  nce.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Jour de Noël 
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090628Z
-UID:8ece11f1a9bfec8bfade8c5b90e6226a-2026
+DTSTAMP:20250430T134728Z
+UID:8ece11f1a9bfec8bfade8c5b90e6226a-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Le jour de Noël est l'occasion pour les c
  hrétiens de célébrer la naissance de Jésus-Christ. C'est un jour féri
  é en France.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134728Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Vendredi saint  (Moselle\, Bas-Rhin\, Haut-Rhin)
 DTSTART;VALUE=DATE:20260403
 DTEND;VALUE=DATE:20260404
-DTSTAMP:20241008T090628Z
-UID:3f26d6e47343e3c571334a2fd2035f60-2026
+DTSTAMP:20250430T134729Z
+UID:3f26d6e47343e3c571334a2fd2035f60-2026-moselle-bas-rhin-haut-rhin
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  Le Vendredi saint est l'occasion pour les chr
  étiens de France de commémorer la crucifixion de Jésus-Christ.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fête de la Saint-Étienne  (Moselle\, Bas-Rhin\, Haut-Rhin)
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
-DTSTAMP:20241008T090628Z
-UID:09ee983f5419b50d4e0e49bd75fe1c8d-2026
+DTSTAMP:20250430T134729Z
+UID:09ee983f5419b50d4e0e49bd75fe1c8d-2026-moselle-bas-rhin-haut-rhin
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  La Saint-Étienne est l'occasion pour les chr
  étiens d'honorer la vie de Saint-Étienne et est un jour férié dans la 
  région française d'Alsace-Moselle.
-LAST-MODIFIED:20241008T090628Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de l'An 
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20250430T134729Z
+UID:7baabe1bdeff9e281ddb767cf09ee4d5-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de l'An est le premier jour de l'a
+ nnée en France.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lundi de Pâques 
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+DTSTAMP:20250430T134729Z
+UID:97950cd5a2a10380e3f1509d0c207a76-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le lundi de Pâques est le lendemain du di
+ manche de Pâques.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fête du travail/1er mai 
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+DTSTAMP:20250430T134729Z
+UID:2f5dd8b730849436a0c994a3c58d5afc-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Les Français offrent des fleurs à leurs 
+ proches et peuvent célébrer ou faire campagne pour les droits des travai
+ lleurs le 1er mai\, également connu sous le nom de fête du Travail.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de l'Ascension 
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270507
+DTSTAMP:20250430T134729Z
+UID:c4189934186de8cbdee286e25765eacd-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de l'Ascension marque le jour où 
+ Jésus est monté au ciel\, selon la croyance chrétienne.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de la Victoire de la Seconde Guerre mondiale 
+DTSTART;VALUE=DATE:20270508
+DTEND;VALUE=DATE:20270509
+DTSTAMP:20250430T134729Z
+UID:5b0edb394db534fe670c9b73b6a47b82-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le Jour de la Victoire de la Seconde Guerr
+ e mondiale marque l'anniversaire de la fin officielle de la Seconde Guerre
+  mondiale et est un jour férié en France.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lundi de Pentecôte 
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+DTSTAMP:20250430T134729Z
+UID:2bb90404bdf78ae55dd87c22449950dd-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le lundi de Pentecôte est le lendemain du
+  dimanche de Pentecôte. C'est un jour férié en France.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:14 juillet 
+DTSTART;VALUE=DATE:20270714
+DTEND;VALUE=DATE:20270715
+DTSTAMP:20250430T134729Z
+UID:2dd9204a80cb40af26dfcb37858800b8-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le 14 juillet est l'occasion d'honorer la 
+ République française. C'est un jour férié en France.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Assomption de Marie 
+DTSTART;VALUE=DATE:20270815
+DTEND;VALUE=DATE:20270816
+DTSTAMP:20250430T134729Z
+UID:22538b18230c0467e3d5f418a208bea0-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La fête de l'Assomption de Marie est l'oc
+ casion pour les catholiques d'honorer la croyance selon laquelle Dieu a as
+ sumé la Vierge Marie au paradis.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Toussaint 
+DTSTART;VALUE=DATE:20271101
+DTEND;VALUE=DATE:20271102
+DTSTAMP:20250430T134729Z
+UID:b884f10419e973cb034091e3daabf320-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La Toussaint célèbre tous les saints chr
+ étiens\, en particulier ceux qui n'ont pas de jours de fête particuliers
+ . C'est un jour férié en France.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de l'Armistice 
+DTSTART;VALUE=DATE:20271111
+DTEND;VALUE=DATE:20271112
+DTSTAMP:20250430T134729Z
+UID:12d8317592cba86bda84532e1898a3e1-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de l'Armistice marque l'anniversai
+ re de la fin de la Première Guerre mondiale. C'est un jour férié en Fra
+ nce.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Jour de Noël 
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T134729Z
+UID:8ece11f1a9bfec8bfade8c5b90e6226a-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Le jour de Noël est l'occasion pour les c
+ hrétiens de célébrer la naissance de Jésus-Christ. C'est un jour féri
+ é en France.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vendredi saint  (Moselle\, Bas-Rhin\, Haut-Rhin)
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+DTSTAMP:20250430T134729Z
+UID:3f26d6e47343e3c571334a2fd2035f60-2027-moselle-bas-rhin-haut-rhin
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  Le Vendredi saint est l'occasion pour les chr
+ étiens de France de commémorer la crucifixion de Jésus-Christ.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Fête de la Saint-Étienne  (Moselle\, Bas-Rhin\, Haut-Rhin)
+DTSTART;VALUE=DATE:20271226
+DTEND;VALUE=DATE:20271227
+DTSTAMP:20250430T134729Z
+UID:09ee983f5419b50d4e0e49bd75fe1c8d-2027-moselle-bas-rhin-haut-rhin
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  La Saint-Étienne est l'occasion pour les chr
+ étiens d'honorer la vie de Saint-Étienne et est un jour férié dans la 
+ région française d'Alsace-Moselle.
+LAST-MODIFIED:20250430T134729Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR
