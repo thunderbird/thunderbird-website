@@ -10,5 +10,7 @@ Contents
 
    archived.md
    updates.thunderbird.net.md
+   holiday-calendars.md
    less-styling.md
    update-privacy-policy.md
+   updating-the-about-us-page.md

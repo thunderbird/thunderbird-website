@@ -35,6 +35,8 @@ class Calendarific(Calendar):
         regions = data.get('states')
         locations = data.get('locations')
 
+        location_slugs = locations.lower().replace(', ', '-')
+
         if locations and locations.lower() != 'all' and regions and len(regions) > 0:
             self.name = self.handle_regional_labelling(data.get('name'),
                                                        all_locations=locations,
@@ -55,6 +57,8 @@ class Calendarific(Calendar):
         self.unique_id = data.get('urlid') if helper.is_calendarific_free_tier() else data.get('uuid')
         # Always append calendar year
         self.unique_id = f'{self.unique_id}-{iso_date.year}'
+        if location_slugs:
+            self.unique_id = f'{self.unique_id}-{location_slugs}'
 
         self.iso_date = iso_date
 
