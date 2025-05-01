@@ -6,7 +6,7 @@ found [here](https://www.thunderbird.net/en-CA/calendar/holidays/).
 Previously we use to source these from the community, this was a time-consuming process so we moved to sourcing them
 from a paid service: Calendarific.
 
-This has the unfortunate effect of removing the communities ability to correct / localize specific holidays or
+This has the unfortunate effect of removing the community's ability to correct / localize specific holidays or
 countries. In the future we hope to move to an open-source repo for calendar generation this is currently tracked
 in [#753](https://github.com/thunderbird/thunderbird-website/issues/753).
 
@@ -35,7 +35,7 @@ If you are an MZLA employee you can find the api key within the infra vault in 1
 ## Development
 
 The calendar generation script was designed to be modular so that we could slot in a different calendar provider if
-needed. This has never been done, and the code may need some tweaks in-order to add a new provider.
+needed. This has never been done, and the code may need some tweaks in order to add a new provider.
 
 You'll find the `calgen` folder in the root of this repo. It contains three folders: `mixins`, `models`, and
 `providers`.
@@ -49,7 +49,7 @@ Providers are essentially the api call to the service or library to retrieve inf
 which should return a model instance.
 
 Additionally, we have the actual ics generation script itself: `build_calendar.py`. This script is called from
-`build-site.py` which passes in a provider and dict of locales. build calendar then uses those parameters to pull from
+`build-site.py` which passes in a provider and dict of locales. `build_calendar.py` then uses those parameters to pull from
 the provider (which formats and returns the models) and saves the ics files. It also updates the calendars.json file
 meant to be used as a reference for each valid calendar file.
 
