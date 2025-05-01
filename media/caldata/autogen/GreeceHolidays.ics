@@ -3,266 +3,74 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:Η Πρωτοχρονιά 
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20241008T090630Z
-UID:31880adf1dfa95734c98ee45fecacdc1-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:De facto holiday -  Πρωτοχρονιά είναι η πρ
- ώτη ημέρα του έτους\, ή η 1η Ιανουαρίου\, σ
- το Γρηγοριανό ημερολόγιο.
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Τα Θεοφάνεια 
-DTSTART;VALUE=DATE:20240106
-DTEND;VALUE=DATE:20240107
-DTSTAMP:20241008T090630Z
-UID:42152519cbd3e480e9d2607202e63dfa-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:De facto holiday -  Τα Θεοφάνεια είναι μια 
- χριστιανική γιορτή που γιορτάζεται παγκ
- οσμίως στις 6 Ιανουαρίου κάθε έτους. Εορτ
- άζει δύο γεγονότα που καταγράφονται στη 
- Βίβλο: την επίσκεψη των τριών σοφών στο μ
- ωρό Ιησού και το βάπτισμα του Ιησού.
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η Καθαρή Δευτέρα 
-DTSTART;VALUE=DATE:20240318
-DTEND;VALUE=DATE:20240319
-DTSTAMP:20241008T090630Z
-UID:079a1e641cbeb62a48b3eb29fd71f3b1-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:De facto holiday -  Η Καθαρή Δευτέρα είναι 
- ντε φάκτο αργία στην Ελλάδα
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η Ημέρα της Ελληνικής Ανεξαρτησίας 
- είναι εθνική εορτή στην Ελλάδα
-DTSTART;VALUE=DATE:20240325
-DTEND;VALUE=DATE:20240326
-DTSTAMP:20241008T090630Z
-UID:891ca0832085e48459d09ea2a17d337f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Greek Independence Day is a national holida
- y in Greece
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ο Ευαγγελισμός της Θεοτόκου 
-DTSTART;VALUE=DATE:20240325
-DTEND;VALUE=DATE:20240326
-DTSTAMP:20241008T090630Z
-UID:ad0a000ae159e53b62950a52d88b2576-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Ο Ευαγγελισμός της Θεο
- τόκου είναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Εκατομμύρια Ορθόδοξοι Χριστιανοί σ
- ε όλο τον κόσμο γιορτάζουν κάθε χρόνο τη 
- Μεγάλη Παρασκευή για να τιμήσουν τα γεγο
- νότα που οδήγησαν στη σταύρωση του Ιησού
-  Χριστού.
-DTSTART;VALUE=DATE:20240503
-DTEND;VALUE=DATE:20240504
-DTSTAMP:20241008T090630Z
-UID:4eff96358b73d5d2fd69fcebb45c1ecc-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:De facto holiday - Millions of Orthodox Christians around the 
- world annually observe Good Friday to commemorate the events leading up to
-  Jesus Christ's crucifixion.
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η Ορθόδοξη Δευτέρα του Πάσχα 
-DTSTART;VALUE=DATE:20240506
-DTEND;VALUE=DATE:20240507
-DTSTAMP:20241008T090630Z
-UID:32ccde9ad0a7d4396da8031c5a904b8b-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Ορθόδοξη Δευτέρα του Π
- άσχα είναι η επομένη της Ορθόδοξης Κυρια
- κής
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Εργατική Ημέρα/Πρωτομαγιά 
-DTSTART;VALUE=DATE:20240507
-DTEND;VALUE=DATE:20240508
-DTSTAMP:20241008T090630Z
-UID:e0ef5e02ae41402f3e2e06d4b7660da7-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Ημέρα Εργασίας\, Διεθνή
- ς Ημέρα Εργαζομένων και Πρωτομαγιά\, είν
- αι μια αργία για τους εργαζόμενους σε πο
- λλές χώρες σε όλο τον κόσμο.
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η Δευτέρα του Αγίου Πνεύματος της Ορ
- θόδοξης Δευτέρας του Αγίου Πνεύματος εί
- ναι ντε φάκτο αργία στην Ελλάδα
-DTSTART;VALUE=DATE:20240624
-DTEND;VALUE=DATE:20240625
-DTSTAMP:20241008T090630Z
-UID:bb1479599f7e36507e89c7797862cb68-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:De facto holiday - Orthodox Holy Spirit Monday is a de facto h
- oliday in Greece
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η Κοίμηση της Θεοτόκου 
-DTSTART;VALUE=DATE:20240815
-DTEND;VALUE=DATE:20240816
-DTSTAMP:20241008T090630Z
-UID:d98ede4b3004f962a21660ae7cc74b71-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
- ης Κοίμησης της Θεοτόκου είναι στις 15 Αυ
- γούστου ή γύρω στις περισσότερες χώρες. 
- Μερικοί γιορτάζουν την Ημέρα της Κοίμησ
- ης της Θεοτόκου σε άλλες εποχές του χρόν
- ου.
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η ημέρα της Όχης 
-DTSTART;VALUE=DATE:20241028
-DTEND;VALUE=DATE:20241029
-DTSTAMP:20241008T090630Z
-UID:fe323b4de32860ab6f8754d69fefc4cc-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:De facto holiday -  Η ημέρα της Όχης είναι 
- μια de facto γιορτή στην Ελλάδα
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η ημέρα των Χριστουγέννων είναι μια 
- από τις μεγαλύτερες χριστιανικές γιορτέ
- ς και πέφτει στις 25 Δεκεμβρίου στο Γρηγο
- ριανό ημερολόγιο.
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090630Z
-UID:6b3a68e85ea8d78ceba326c6f7eaf779-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η Σύναξη της Θεοτόκου 
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241008T090630Z
-UID:0343cfd36d1caecba156a1be796944df-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Συνάξις της Θεοτόκου ε
- ίναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20241008T090630Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η Πρωτοχρονιά 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20241008T090631Z
-UID:31880adf1dfa95734c98ee45fecacdc1-2025
+DTSTAMP:20250430T135819Z
+UID:31880adf1dfa95734c98ee45fecacdc1-2025-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday -  Πρωτοχρονιά είναι η πρ
+DESCRIPTION:National holiday -  Πρωτοχρονιά είναι η πρ
  ώτη ημέρα του έτους\, ή η 1η Ιανουαρίου\, σ
  το Γρηγοριανό ημερολόγιο.
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Τα Θεοφάνεια 
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
-DTSTAMP:20241008T090631Z
-UID:42152519cbd3e480e9d2607202e63dfa-2025
+DTSTAMP:20250430T135819Z
+UID:42152519cbd3e480e9d2607202e63dfa-2025-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday -  Τα Θεοφάνεια είναι μια 
+DESCRIPTION:National holiday -  Τα Θεοφάνεια είναι μια 
  χριστιανική γιορτή που γιορτάζεται παγκ
  οσμίως στις 6 Ιανουαρίου κάθε έτους. Εορτ
  άζει δύο γεγονότα που καταγράφονται στη 
  Βίβλο: την επίσκεψη των τριών σοφών στο μ
  ωρό Ιησού και το βάπτισμα του Ιησού.
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Καθαρή Δευτέρα 
 DTSTART;VALUE=DATE:20250303
 DTEND;VALUE=DATE:20250304
-DTSTAMP:20241008T090631Z
-UID:079a1e641cbeb62a48b3eb29fd71f3b1-2025
+DTSTAMP:20250430T135819Z
+UID:079a1e641cbeb62a48b3eb29fd71f3b1-2025-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday -  Η Καθαρή Δευτέρα είναι 
- ντε φάκτο αργία στην Ελλάδα
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+DESCRIPTION:Government Holiday -  Η Καθαρή Δευτέρα είνα
+ ι κυβερνητική αργία στην Ελλάδα
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ημέρα της Ελληνικής Ανεξαρτησίας 
  είναι εθνική εορτή στην Ελλάδα
 DTSTART;VALUE=DATE:20250325
 DTEND;VALUE=DATE:20250326
-DTSTAMP:20241008T090631Z
-UID:891ca0832085e48459d09ea2a17d337f-2025
+DTSTAMP:20250430T135819Z
+UID:891ca0832085e48459d09ea2a17d337f-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Greek Independence Day is a national holida
  y in Greece
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ο Ευαγγελισμός της Θεοτόκου 
 DTSTART;VALUE=DATE:20250325
 DTEND;VALUE=DATE:20250326
-DTSTAMP:20241008T090631Z
-UID:ad0a000ae159e53b62950a52d88b2576-2025
+DTSTAMP:20250430T135819Z
+UID:ad0a000ae159e53b62950a52d88b2576-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ο Ευαγγελισμός της Θεο
  τόκου είναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Εκατομμύρια Ορθόδοξοι Χριστιανοί σ
@@ -272,66 +80,51 @@ SUMMARY:Εκατομμύρια Ορθόδοξοι Χριστιανοί σ
   Χριστού.
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20241008T090631Z
-UID:4eff96358b73d5d2fd69fcebb45c1ecc-2025
+DTSTAMP:20250430T135819Z
+UID:4eff96358b73d5d2fd69fcebb45c1ecc-2025-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday - Millions of Orthodox Christians around the 
- world annually observe Good Friday to commemorate the events leading up to
-  Jesus Christ's crucifixion.
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+DESCRIPTION:Government Holiday - Millions of Orthodox Christians around th
+ e world annually observe Good Friday to commemorate the events leading up 
+ to Jesus Christ's crucifixion.
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ορθόδοξη Δευτέρα του Πάσχα 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090631Z
-UID:32ccde9ad0a7d4396da8031c5a904b8b-2025
+DTSTAMP:20250430T135819Z
+UID:32ccde9ad0a7d4396da8031c5a904b8b-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ορθόδοξη Δευτέρα του Π
  άσχα είναι η επομένη της Ορθόδοξης Κυρια
  κής
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Εργατική Ημέρα/Πρωτομαγιά 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20241008T090631Z
-UID:e0ef5e02ae41402f3e2e06d4b7660da7-2025
+DTSTAMP:20250430T135819Z
+UID:e0ef5e02ae41402f3e2e06d4b7660da7-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ημέρα Εργασίας\, Διεθνή
  ς Ημέρα Εργαζομένων και Πρωτομαγιά\, είν
  αι μια αργία για τους εργαζόμενους σε πο
  λλές χώρες σε όλο τον κόσμο.
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η Δευτέρα του Αγίου Πνεύματος της Ορ
- θόδοξης Δευτέρας του Αγίου Πνεύματος εί
- ναι ντε φάκτο αργία στην Ελλάδα
-DTSTART;VALUE=DATE:20250609
-DTEND;VALUE=DATE:20250610
-DTSTAMP:20241008T090631Z
-UID:bb1479599f7e36507e89c7797862cb68-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:De facto holiday - Orthodox Holy Spirit Monday is a de facto h
- oliday in Greece
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Κοίμηση της Θεοτόκου 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20241008T090631Z
-UID:d98ede4b3004f962a21660ae7cc74b71-2025
+DTSTAMP:20250430T135819Z
+UID:d98ede4b3004f962a21660ae7cc74b71-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
@@ -340,21 +133,21 @@ DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
  Μερικοί γιορτάζουν την Ημέρα της Κοίμησ
  ης της Θεοτόκου σε άλλες εποχές του χρόν
  ου.
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ημέρα της Όχης 
 DTSTART;VALUE=DATE:20251028
 DTEND;VALUE=DATE:20251029
-DTSTAMP:20241008T090631Z
-UID:fe323b4de32860ab6f8754d69fefc4cc-2025
+DTSTAMP:20250430T135819Z
+UID:fe323b4de32860ab6f8754d69fefc4cc-2025-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday -  Η ημέρα της Όχης είναι 
- μια de facto γιορτή στην Ελλάδα
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+DESCRIPTION:National holiday -  Η ημέρα της Όχης είναι 
+ εθνική εορτή στην Ελλάδα
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ημέρα των Χριστουγέννων είναι μια 
@@ -363,98 +156,97 @@ SUMMARY:Η ημέρα των Χριστουγέννων είναι μια
  ριανό ημερολόγιο.
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090631Z
-UID:6b3a68e85ea8d78ceba326c6f7eaf779-2025
+DTSTAMP:20250430T135819Z
+UID:6b3a68e85ea8d78ceba326c6f7eaf779-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
  an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Σύναξη της Θεοτόκου 
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20241008T090631Z
-UID:0343cfd36d1caecba156a1be796944df-2025
+DTSTAMP:20250430T135819Z
+UID:0343cfd36d1caecba156a1be796944df-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Συνάξις της Θεοτόκου ε
  ίναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20241008T090631Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135819Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Πρωτοχρονιά 
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20241008T090632Z
-UID:31880adf1dfa95734c98ee45fecacdc1-2026
+DTSTAMP:20250430T135820Z
+UID:31880adf1dfa95734c98ee45fecacdc1-2026-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday -  Πρωτοχρονιά είναι η πρ
+DESCRIPTION:National holiday -  Πρωτοχρονιά είναι η πρ
  ώτη ημέρα του έτους\, ή η 1η Ιανουαρίου\, σ
  το Γρηγοριανό ημερολόγιο.
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Τα Θεοφάνεια 
 DTSTART;VALUE=DATE:20260106
 DTEND;VALUE=DATE:20260107
-DTSTAMP:20241008T090632Z
-UID:42152519cbd3e480e9d2607202e63dfa-2026
+DTSTAMP:20250430T135820Z
+UID:42152519cbd3e480e9d2607202e63dfa-2026-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday -  Τα Θεοφάνεια είναι μια 
+DESCRIPTION:National holiday -  Τα Θεοφάνεια είναι μια 
  χριστιανική γιορτή που γιορτάζεται παγκ
  οσμίως στις 6 Ιανουαρίου κάθε έτους. Εορτ
  άζει δύο γεγονότα που καταγράφονται στη 
  Βίβλο: την επίσκεψη των τριών σοφών στο μ
  ωρό Ιησού και το βάπτισμα του Ιησού.
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Καθαρή Δευτέρα 
 DTSTART;VALUE=DATE:20260223
 DTEND;VALUE=DATE:20260224
-DTSTAMP:20241008T090632Z
-UID:079a1e641cbeb62a48b3eb29fd71f3b1-2026
+DTSTAMP:20250430T135820Z
+UID:079a1e641cbeb62a48b3eb29fd71f3b1-2026-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday -  Η Καθαρή Δευτέρα είναι 
- ντε φάκτο αργία στην Ελλάδα
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+DESCRIPTION:Government Holiday -  Η Καθαρή Δευτέρα είνα
+ ι κυβερνητική αργία στην Ελλάδα
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ημέρα της Ελληνικής Ανεξαρτησίας 
  είναι εθνική εορτή στην Ελλάδα
 DTSTART;VALUE=DATE:20260325
 DTEND;VALUE=DATE:20260326
-DTSTAMP:20241008T090632Z
-UID:891ca0832085e48459d09ea2a17d337f-2026
+DTSTAMP:20250430T135820Z
+UID:891ca0832085e48459d09ea2a17d337f-2026-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Greek Independence Day is a national holida
- y in Greece
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+DESCRIPTION:National holiday
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ο Ευαγγελισμός της Θεοτόκου 
 DTSTART;VALUE=DATE:20260325
 DTEND;VALUE=DATE:20260326
-DTSTAMP:20241008T090632Z
-UID:ad0a000ae159e53b62950a52d88b2576-2026
+DTSTAMP:20250430T135820Z
+UID:ad0a000ae159e53b62950a52d88b2576-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ο Ευαγγελισμός της Θεο
  τόκου είναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Εκατομμύρια Ορθόδοξοι Χριστιανοί σ
@@ -464,66 +256,49 @@ SUMMARY:Εκατομμύρια Ορθόδοξοι Χριστιανοί σ
   Χριστού.
 DTSTART;VALUE=DATE:20260410
 DTEND;VALUE=DATE:20260411
-DTSTAMP:20241008T090632Z
-UID:4eff96358b73d5d2fd69fcebb45c1ecc-2026
+DTSTAMP:20250430T135820Z
+UID:4eff96358b73d5d2fd69fcebb45c1ecc-2026-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday - Millions of Orthodox Christians around the 
- world annually observe Good Friday to commemorate the events leading up to
-  Jesus Christ's crucifixion.
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+DESCRIPTION:Government Holiday
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Ορθόδοξη Δευτέρα του Πάσχα 
 DTSTART;VALUE=DATE:20260413
 DTEND;VALUE=DATE:20260414
-DTSTAMP:20241008T090632Z
-UID:32ccde9ad0a7d4396da8031c5a904b8b-2026
+DTSTAMP:20250430T135820Z
+UID:32ccde9ad0a7d4396da8031c5a904b8b-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ορθόδοξη Δευτέρα του Π
  άσχα είναι η επομένη της Ορθόδοξης Κυρια
  κής
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Εργατική Ημέρα/Πρωτομαγιά 
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-DTSTAMP:20241008T090632Z
-UID:e0ef5e02ae41402f3e2e06d4b7660da7-2026
+DTSTAMP:20250430T135820Z
+UID:e0ef5e02ae41402f3e2e06d4b7660da7-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Ημέρα Εργασίας\, Διεθνή
  ς Ημέρα Εργαζομένων και Πρωτομαγιά\, είν
  αι μια αργία για τους εργαζόμενους σε πο
  λλές χώρες σε όλο τον κόσμο.
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Η Δευτέρα του Αγίου Πνεύματος της Ορ
- θόδοξης Δευτέρας του Αγίου Πνεύματος εί
- ναι ντε φάκτο αργία στην Ελλάδα
-DTSTART;VALUE=DATE:20260601
-DTEND;VALUE=DATE:20260602
-DTSTAMP:20241008T090632Z
-UID:bb1479599f7e36507e89c7797862cb68-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:De facto holiday - Orthodox Holy Spirit Monday is a de facto h
- oliday in Greece
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Κοίμηση της Θεοτόκου 
 DTSTART;VALUE=DATE:20260815
 DTEND;VALUE=DATE:20260816
-DTSTAMP:20241008T090632Z
-UID:d98ede4b3004f962a21660ae7cc74b71-2026
+DTSTAMP:20250430T135820Z
+UID:d98ede4b3004f962a21660ae7cc74b71-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
@@ -532,21 +307,21 @@ DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
  Μερικοί γιορτάζουν την Ημέρα της Κοίμησ
  ης της Θεοτόκου σε άλλες εποχές του χρόν
  ου.
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ημέρα της Όχης 
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DTSTAMP:20241008T090632Z
-UID:fe323b4de32860ab6f8754d69fefc4cc-2026
+DTSTAMP:20250430T135820Z
+UID:fe323b4de32860ab6f8754d69fefc4cc-2026-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:De facto holiday -  Η ημέρα της Όχης είναι 
- μια de facto γιορτή στην Ελλάδα
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+DESCRIPTION:National holiday -  Η ημέρα της Όχης είναι 
+ εθνική εορτή στην Ελλάδα
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η ημέρα των Χριστουγέννων είναι μια 
@@ -555,26 +330,198 @@ SUMMARY:Η ημέρα των Χριστουγέννων είναι μια
  ριανό ημερολόγιο.
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090632Z
-UID:6b3a68e85ea8d78ceba326c6f7eaf779-2026
+DTSTAMP:20250430T135820Z
+UID:6b3a68e85ea8d78ceba326c6f7eaf779-2026-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Christmas Day is one of the biggest Christi
- an celebrations and falls on December 25 in the Gregorian calendar.
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+DESCRIPTION:National holiday
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Η Σύναξη της Θεοτόκου 
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
-DTSTAMP:20241008T090632Z
-UID:0343cfd36d1caecba156a1be796944df-2026
+DTSTAMP:20250430T135820Z
+UID:0343cfd36d1caecba156a1be796944df-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Συνάξις της Θεοτόκου ε
  ίναι εθνική εορτή στην Ελλάδα
-LAST-MODIFIED:20241008T090632Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135820Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Η Πρωτοχρονιά 
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20250430T135821Z
+UID:31880adf1dfa95734c98ee45fecacdc1-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Πρωτοχρονιά είναι η πρ
+ ώτη ημέρα του έτους\, ή η 1η Ιανουαρίου\, σ
+ το Γρηγοριανό ημερολόγιο.
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Τα Θεοφάνεια 
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+DTSTAMP:20250430T135821Z
+UID:42152519cbd3e480e9d2607202e63dfa-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Τα Θεοφάνεια είναι μια 
+ χριστιανική γιορτή που γιορτάζεται παγκ
+ οσμίως στις 6 Ιανουαρίου κάθε έτους. Εορτ
+ άζει δύο γεγονότα που καταγράφονται στη 
+ Βίβλο: την επίσκεψη των τριών σοφών στο μ
+ ωρό Ιησού και το βάπτισμα του Ιησού.
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Η Καθαρή Δευτέρα 
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+DTSTAMP:20250430T135821Z
+UID:079a1e641cbeb62a48b3eb29fd71f3b1-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Government Holiday -  Η Καθαρή Δευτέρα είνα
+ ι κυβερνητική αργία στην Ελλάδα
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Η Ημέρα της Ελληνικής Ανεξαρτησίας 
+ είναι εθνική εορτή στην Ελλάδα
+DTSTART;VALUE=DATE:20270325
+DTEND;VALUE=DATE:20270326
+DTSTAMP:20250430T135821Z
+UID:891ca0832085e48459d09ea2a17d337f-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ο Ευαγγελισμός της Θεοτόκου 
+DTSTART;VALUE=DATE:20270325
+DTEND;VALUE=DATE:20270326
+DTSTAMP:20250430T135821Z
+UID:ad0a000ae159e53b62950a52d88b2576-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ο Ευαγγελισμός της Θεο
+ τόκου είναι εθνική εορτή στην Ελλάδα
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Εκατομμύρια Ορθόδοξοι Χριστιανοί σ
+ ε όλο τον κόσμο γιορτάζουν κάθε χρόνο τη 
+ Μεγάλη Παρασκευή για να τιμήσουν τα γεγο
+ νότα που οδήγησαν στη σταύρωση του Ιησού
+  Χριστού.
+DTSTART;VALUE=DATE:20270430
+DTEND;VALUE=DATE:20270501
+DTSTAMP:20250430T135821Z
+UID:4eff96358b73d5d2fd69fcebb45c1ecc-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Government Holiday
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Εργατική Ημέρα/Πρωτομαγιά 
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+DTSTAMP:20250430T135821Z
+UID:e0ef5e02ae41402f3e2e06d4b7660da7-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ημέρα Εργασίας\, Διεθνή
+ ς Ημέρα Εργαζομένων και Πρωτομαγιά\, είν
+ αι μια αργία για τους εργαζόμενους σε πο
+ λλές χώρες σε όλο τον κόσμο.
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Η Ορθόδοξη Δευτέρα του Πάσχα 
+DTSTART;VALUE=DATE:20270503
+DTEND;VALUE=DATE:20270504
+DTSTAMP:20250430T135821Z
+UID:32ccde9ad0a7d4396da8031c5a904b8b-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Ορθόδοξη Δευτέρα του Π
+ άσχα είναι η επομένη της Ορθόδοξης Κυρια
+ κής
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Η Κοίμηση της Θεοτόκου 
+DTSTART;VALUE=DATE:20270815
+DTEND;VALUE=DATE:20270816
+DTSTAMP:20250430T135821Z
+UID:d98ede4b3004f962a21660ae7cc74b71-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Η χριστιανική γιορτή τ
+ ης Κοίμησης της Θεοτόκου είναι στις 15 Αυ
+ γούστου ή γύρω στις περισσότερες χώρες. 
+ Μερικοί γιορτάζουν την Ημέρα της Κοίμησ
+ ης της Θεοτόκου σε άλλες εποχές του χρόν
+ ου.
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Η ημέρα της Όχης 
+DTSTART;VALUE=DATE:20271028
+DTEND;VALUE=DATE:20271029
+DTSTAMP:20250430T135821Z
+UID:fe323b4de32860ab6f8754d69fefc4cc-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Η ημέρα της Όχης είναι 
+ εθνική εορτή στην Ελλάδα
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Η ημέρα των Χριστουγέννων είναι μια 
+ από τις μεγαλύτερες χριστιανικές γιορτέ
+ ς και πέφτει στις 25 Δεκεμβρίου στο Γρηγο
+ ριανό ημερολόγιο.
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T135821Z
+UID:6b3a68e85ea8d78ceba326c6f7eaf779-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Η Σύναξη της Θεοτόκου 
+DTSTART;VALUE=DATE:20271226
+DTEND;VALUE=DATE:20271227
+DTSTAMP:20250430T135821Z
+UID:0343cfd36d1caecba156a1be796944df-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Συνάξις της Θεοτόκου ε
+ ίναι εθνική εορτή στην Ελλάδα
+LAST-MODIFIED:20250430T135821Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

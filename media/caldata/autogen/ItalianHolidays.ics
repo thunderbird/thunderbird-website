@@ -3,285 +3,55 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:Capodanno 
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20241008T090649Z
-UID:345d68e89d25bc3b1d52aa6532799966-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Il capodanno viene celebrato in Italia il 
- 1° gennaio di ogni anno.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Epifania 
-DTSTART;VALUE=DATE:20240106
-DTEND;VALUE=DATE:20240107
-DTSTAMP:20241008T090649Z
-UID:de06d0c1a0acfbaab5b339ed6103ca4e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  L'Epifania è una festa nazionale in Itali
- a celebrata ogni anno il 6 gennaio.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La domenica di Pasqua 
-DTSTART;VALUE=DATE:20240331
-DTEND;VALUE=DATE:20240401
-DTSTAMP:20241008T090649Z
-UID:cfa4e89a819c2166b4af29df65bc9412-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Il giorno di Pasqua è un giorno festivo c
- he viene celebrato ampiamente in tutta Italia ogni anno.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Lunedì di Pasqua 
-DTSTART;VALUE=DATE:20240401
-DTEND;VALUE=DATE:20240402
-DTSTAMP:20241008T090649Z
-UID:2bb3f7563b9c1441ef21a1ab0af4d214-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Il lunedì di Pasqua è un giorno festivo 
- in Italia che viene celebrato ogni anno il giorno dopo Pasqua.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Celebrata il 25 aprile di ogni anno\, la Festa della Liberazione i
- n Italia commemora quando le truppe alleate liberarono il paese dall'occup
- azione nazista durante la seconda guerra mondiale.
-DTSTART;VALUE=DATE:20240425
-DTEND;VALUE=DATE:20240426
-DTSTAMP:20241008T090649Z
-UID:d6a08d65b407cf4d081e18a52bf5090f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday - Celebrated on April 25 each year\, Italy’
- s Liberation Day commemorates when the Allied troops liberated the country
-  from the Nazi occupation during World War II.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Festa del lavoro/Festa del maggio 
-DTSTART;VALUE=DATE:20240501
-DTEND;VALUE=DATE:20240502
-DTSTAMP:20241008T090649Z
-UID:8fcc82dc0ebc957ed122b4b470407574-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  La festa del lavoro è una festa nazionale
-  che si celebra ogni anno in Italia il 1 maggio.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Festa della Repubblica 
-DTSTART;VALUE=DATE:20240602
-DTEND;VALUE=DATE:20240603
-DTSTAMP:20241008T090649Z
-UID:51546b677401836fa1e3a7bbd8fc079f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  La Festa della Repubblica italiana è un g
- iorno festivo annuale il 2 giugno per commemorare la data in cui gli itali
- ani hanno votato per porre fine alla monarchia e diventare una repubblica.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Assunzione di Maria 
-DTSTART;VALUE=DATE:20240815
-DTEND;VALUE=DATE:20240816
-DTSTAMP:20241008T090649Z
-UID:5598746981a0b1c68cdef236008fb3ca-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Il giorno dell'Assunzione\, noto anche com
- e festa dell'Assunzione\, è un giorno festivo annuale in Italia il 15 ago
- sto.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ognissanti 
-DTSTART;VALUE=DATE:20241101
-DTEND;VALUE=DATE:20241102
-DTSTAMP:20241008T090649Z
-UID:6da505099748ce7896ca740caccea31f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  In Italia Ognissanti è una festa nazional
- e celebrata il 1 novembre per commemorare i santi cattolici.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Festa dell'Immacolata Concezione 
-DTSTART;VALUE=DATE:20241208
-DTEND;VALUE=DATE:20241209
-DTSTAMP:20241008T090649Z
-UID:667137d77766928227c6eb1929fe072b-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Il giorno dell'Immacolata Concezione è un
- a festa nazionale in Italia l'8 dicembre che celebra la convinzione che la
-  madre di Gesù\, Maria\, sia «libera dal peccato».
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Il giorno di Natale 
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090649Z
-UID:80d98aff0ff492f662bf49c7ef851230-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Il giorno di Natale è un giorno festivo i
- n Italia il 25 dicembre per celebrare la nascita di Gesù Cristo.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Santo Stefano 
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241008T090649Z
-UID:d5c0d6fc235d88f1fd0ed8bcf09132e8-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Il giorno di Santo Stefano è un giorno fe
- stivo in Italia il 26 dicembre.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La festa di San Marco (Venezia) 
-DTSTART;VALUE=DATE:20240425
-DTEND;VALUE=DATE:20240426
-DTSTAMP:20241008T090649Z
-UID:f6ae969c35f1bddf2552d9f40d341b40-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday -  La città italiana di Venezia ha il suo giorn
- o festivo locale\, il giorno di San Marco (Festa di San Marco) il 25 april
- e di ogni anno.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La Festa di San Giovanni (Firenze\, Genova\, Torino) 
-DTSTART;VALUE=DATE:20240624
-DTEND;VALUE=DATE:20240625
-DTSTAMP:20241008T090649Z
-UID:235d1b810e2b3791afbfa421a0430d63-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday -  Firenze\, Torino e Genova\, in Italia\, celeb
- rano la propria festa locale\, la Festa di San Giovanni (Festa di San Giov
- anni) il 24 giugno di ogni anno.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La Festa di San Pietro e San Paolo (Roma) 
-DTSTART;VALUE=DATE:20240629
-DTEND;VALUE=DATE:20240630
-DTSTAMP:20241008T090649Z
-UID:551cf7355c52dc4d3c1710608480c5d5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday -  Roma\, in Italia\, celebra la propria festa l
- ocale\, la festa dei Santi Pietro e Paolo il 29 giugno di ogni anno.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La Festa di San Gennaro (Napoli) 
-DTSTART;VALUE=DATE:20240919
-DTEND;VALUE=DATE:20240920
-DTSTAMP:20241008T090649Z
-UID:3aa3faab82fc9734a0764a05bc8c3c9d-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday -  Napoli\, in Italia\, celebra la propria festa
-  locale\, la festa di San Gennaro il 19 settembre di ogni anno.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:La festa di Sant'Ambrogio (Milano) 
-DTSTART;VALUE=DATE:20241207
-DTEND;VALUE=DATE:20241208
-DTSTAMP:20241008T090649Z
-UID:5b7732e5cbf6fb3c40322405f9d2956f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local holiday -  La festa di Sant'Ambrogio è un giorno libero
-  per la maggior parte delle persone a Milano\, una delle città più grand
- i d'Italia\, il 7 dicembre di ogni anno.
-LAST-MODIFIED:20241008T090649Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Capodanno 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20241008T090650Z
-UID:345d68e89d25bc3b1d52aa6532799966-2025
+DTSTAMP:20250430T135847Z
+UID:345d68e89d25bc3b1d52aa6532799966-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il capodanno viene celebrato in Italia il 
  1° gennaio di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Epifania 
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
-DTSTAMP:20241008T090650Z
-UID:de06d0c1a0acfbaab5b339ed6103ca4e-2025
+DTSTAMP:20250430T135847Z
+UID:de06d0c1a0acfbaab5b339ed6103ca4e-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  L'Epifania è una festa nazionale in Itali
  a celebrata ogni anno il 6 gennaio.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La domenica di Pasqua 
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-DTSTAMP:20241008T090650Z
-UID:cfa4e89a819c2166b4af29df65bc9412-2025
+DTSTAMP:20250430T135847Z
+UID:cfa4e89a819c2166b4af29df65bc9412-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno di Pasqua è un giorno festivo c
  he viene celebrato ampiamente in tutta Italia ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lunedì di Pasqua 
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090650Z
-UID:2bb3f7563b9c1441ef21a1ab0af4d214-2025
+DTSTAMP:20250430T135847Z
+UID:2bb3f7563b9c1441ef21a1ab0af4d214-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il lunedì di Pasqua è un giorno festivo 
  in Italia che viene celebrato ogni anno il giorno dopo Pasqua.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Celebrata il 25 aprile di ogni anno\, la Festa della Liberazione i
@@ -289,229 +59,227 @@ SUMMARY:Celebrata il 25 aprile di ogni anno\, la Festa della Liberazione i
  azione nazista durante la seconda guerra mondiale.
 DTSTART;VALUE=DATE:20250425
 DTEND;VALUE=DATE:20250426
-DTSTAMP:20241008T090650Z
-UID:d6a08d65b407cf4d081e18a52bf5090f-2025
+DTSTAMP:20250430T135847Z
+UID:d6a08d65b407cf4d081e18a52bf5090f-2025-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Celebrated on April 25 each year\, Italy’
- s Liberation Day commemorates when the Allied troops liberated the country
-  from the Nazi occupation during World War II.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+DESCRIPTION:National holiday
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Festa del lavoro/Festa del maggio 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20241008T090650Z
-UID:8fcc82dc0ebc957ed122b4b470407574-2025
+DTSTAMP:20250430T135847Z
+UID:8fcc82dc0ebc957ed122b4b470407574-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La festa del lavoro è una festa nazionale
   che si celebra ogni anno in Italia il 1 maggio.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Festa della Repubblica 
 DTSTART;VALUE=DATE:20250602
 DTEND;VALUE=DATE:20250603
-DTSTAMP:20241008T090650Z
-UID:51546b677401836fa1e3a7bbd8fc079f-2025
+DTSTAMP:20250430T135847Z
+UID:51546b677401836fa1e3a7bbd8fc079f-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La Festa della Repubblica italiana è un g
  iorno festivo annuale il 2 giugno per commemorare la data in cui gli itali
  ani hanno votato per porre fine alla monarchia e diventare una repubblica.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Assunzione di Maria 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20241008T090650Z
-UID:5598746981a0b1c68cdef236008fb3ca-2025
+DTSTAMP:20250430T135847Z
+UID:5598746981a0b1c68cdef236008fb3ca-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno dell'Assunzione\, noto anche com
  e festa dell'Assunzione\, è un giorno festivo annuale in Italia il 15 ago
  sto.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ognissanti 
 DTSTART;VALUE=DATE:20251101
 DTEND;VALUE=DATE:20251102
-DTSTAMP:20241008T090650Z
-UID:6da505099748ce7896ca740caccea31f-2025
+DTSTAMP:20250430T135847Z
+UID:6da505099748ce7896ca740caccea31f-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  In Italia Ognissanti è una festa nazional
  e celebrata il 1 novembre per commemorare i santi cattolici.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Festa dell'Immacolata Concezione 
 DTSTART;VALUE=DATE:20251208
 DTEND;VALUE=DATE:20251209
-DTSTAMP:20241008T090650Z
-UID:667137d77766928227c6eb1929fe072b-2025
+DTSTAMP:20250430T135847Z
+UID:667137d77766928227c6eb1929fe072b-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno dell'Immacolata Concezione è un
  a festa nazionale in Italia l'8 dicembre che celebra la convinzione che la
   madre di Gesù\, Maria\, sia «libera dal peccato».
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Il giorno di Natale 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090650Z
-UID:80d98aff0ff492f662bf49c7ef851230-2025
+DTSTAMP:20250430T135847Z
+UID:80d98aff0ff492f662bf49c7ef851230-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno di Natale è un giorno festivo i
  n Italia il 25 dicembre per celebrare la nascita di Gesù Cristo.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Santo Stefano 
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20241008T090650Z
-UID:d5c0d6fc235d88f1fd0ed8bcf09132e8-2025
+DTSTAMP:20250430T135847Z
+UID:d5c0d6fc235d88f1fd0ed8bcf09132e8-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno di Santo Stefano è un giorno fe
  stivo in Italia il 26 dicembre.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La festa di San Marco (Venezia) 
 DTSTART;VALUE=DATE:20250425
 DTEND;VALUE=DATE:20250426
-DTSTAMP:20241008T090650Z
-UID:f6ae969c35f1bddf2552d9f40d341b40-2025
+DTSTAMP:20250430T135847Z
+UID:f6ae969c35f1bddf2552d9f40d341b40-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  La città italiana di Venezia ha il suo giorn
  o festivo locale\, il giorno di San Marco (Festa di San Marco) il 25 april
  e di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La Festa di San Giovanni (Firenze\, Genova\, Torino) 
 DTSTART;VALUE=DATE:20250624
 DTEND;VALUE=DATE:20250625
-DTSTAMP:20241008T090650Z
-UID:235d1b810e2b3791afbfa421a0430d63-2025
+DTSTAMP:20250430T135847Z
+UID:235d1b810e2b3791afbfa421a0430d63-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  Firenze\, Torino e Genova\, in Italia\, celeb
  rano la propria festa locale\, la Festa di San Giovanni (Festa di San Giov
  anni) il 24 giugno di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La Festa di San Pietro e San Paolo (Roma) 
 DTSTART;VALUE=DATE:20250629
 DTEND;VALUE=DATE:20250630
-DTSTAMP:20241008T090650Z
-UID:551cf7355c52dc4d3c1710608480c5d5-2025
+DTSTAMP:20250430T135847Z
+UID:551cf7355c52dc4d3c1710608480c5d5-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  Roma\, in Italia\, celebra la propria festa l
  ocale\, la festa dei Santi Pietro e Paolo il 29 giugno di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La Festa di San Gennaro (Napoli) 
 DTSTART;VALUE=DATE:20250919
 DTEND;VALUE=DATE:20250920
-DTSTAMP:20241008T090650Z
-UID:3aa3faab82fc9734a0764a05bc8c3c9d-2025
+DTSTAMP:20250430T135847Z
+UID:3aa3faab82fc9734a0764a05bc8c3c9d-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  Napoli\, in Italia\, celebra la propria festa
   locale\, la festa di San Gennaro il 19 settembre di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La festa di Sant'Ambrogio (Milano) 
 DTSTART;VALUE=DATE:20251207
 DTEND;VALUE=DATE:20251208
-DTSTAMP:20241008T090650Z
-UID:5b7732e5cbf6fb3c40322405f9d2956f-2025
+DTSTAMP:20250430T135847Z
+UID:5b7732e5cbf6fb3c40322405f9d2956f-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  La festa di Sant'Ambrogio è un giorno libero
   per la maggior parte delle persone a Milano\, una delle città più grand
  i d'Italia\, il 7 dicembre di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Capodanno 
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20241008T090650Z
-UID:345d68e89d25bc3b1d52aa6532799966-2026
+DTSTAMP:20250430T135847Z
+UID:345d68e89d25bc3b1d52aa6532799966-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il capodanno viene celebrato in Italia il 
  1° gennaio di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Epifania 
 DTSTART;VALUE=DATE:20260106
 DTEND;VALUE=DATE:20260107
-DTSTAMP:20241008T090650Z
-UID:de06d0c1a0acfbaab5b339ed6103ca4e-2026
+DTSTAMP:20250430T135847Z
+UID:de06d0c1a0acfbaab5b339ed6103ca4e-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  L'Epifania è una festa nazionale in Itali
  a celebrata ogni anno il 6 gennaio.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La domenica di Pasqua 
 DTSTART;VALUE=DATE:20260405
 DTEND;VALUE=DATE:20260406
-DTSTAMP:20241008T090650Z
-UID:cfa4e89a819c2166b4af29df65bc9412-2026
+DTSTAMP:20250430T135847Z
+UID:cfa4e89a819c2166b4af29df65bc9412-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno di Pasqua è un giorno festivo c
  he viene celebrato ampiamente in tutta Italia ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lunedì di Pasqua 
 DTSTART;VALUE=DATE:20260406
 DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090650Z
-UID:2bb3f7563b9c1441ef21a1ab0af4d214-2026
+DTSTAMP:20250430T135847Z
+UID:2bb3f7563b9c1441ef21a1ab0af4d214-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il lunedì di Pasqua è un giorno festivo 
  in Italia che viene celebrato ogni anno il giorno dopo Pasqua.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Celebrata il 25 aprile di ogni anno\, la Festa della Liberazione i
@@ -519,176 +287,402 @@ SUMMARY:Celebrata il 25 aprile di ogni anno\, la Festa della Liberazione i
  azione nazista durante la seconda guerra mondiale.
 DTSTART;VALUE=DATE:20260425
 DTEND;VALUE=DATE:20260426
-DTSTAMP:20241008T090650Z
-UID:d6a08d65b407cf4d081e18a52bf5090f-2026
+DTSTAMP:20250430T135847Z
+UID:d6a08d65b407cf4d081e18a52bf5090f-2026-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday - Celebrated on April 25 each year\, Italy’
- s Liberation Day commemorates when the Allied troops liberated the country
-  from the Nazi occupation during World War II.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+DESCRIPTION:National holiday
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Festa del lavoro/Festa del maggio 
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-DTSTAMP:20241008T090650Z
-UID:8fcc82dc0ebc957ed122b4b470407574-2026
+DTSTAMP:20250430T135847Z
+UID:8fcc82dc0ebc957ed122b4b470407574-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La festa del lavoro è una festa nazionale
   che si celebra ogni anno in Italia il 1 maggio.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Festa della Repubblica 
 DTSTART;VALUE=DATE:20260602
 DTEND;VALUE=DATE:20260603
-DTSTAMP:20241008T090650Z
-UID:51546b677401836fa1e3a7bbd8fc079f-2026
+DTSTAMP:20250430T135847Z
+UID:51546b677401836fa1e3a7bbd8fc079f-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  La Festa della Repubblica italiana è un g
  iorno festivo annuale il 2 giugno per commemorare la data in cui gli itali
  ani hanno votato per porre fine alla monarchia e diventare una repubblica.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Assunzione di Maria 
 DTSTART;VALUE=DATE:20260815
 DTEND;VALUE=DATE:20260816
-DTSTAMP:20241008T090650Z
-UID:5598746981a0b1c68cdef236008fb3ca-2026
+DTSTAMP:20250430T135847Z
+UID:5598746981a0b1c68cdef236008fb3ca-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno dell'Assunzione\, noto anche com
  e festa dell'Assunzione\, è un giorno festivo annuale in Italia il 15 ago
  sto.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ognissanti 
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20241008T090650Z
-UID:6da505099748ce7896ca740caccea31f-2026
+DTSTAMP:20250430T135847Z
+UID:6da505099748ce7896ca740caccea31f-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  In Italia Ognissanti è una festa nazional
  e celebrata il 1 novembre per commemorare i santi cattolici.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Festa dell'Immacolata Concezione 
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
-DTSTAMP:20241008T090650Z
-UID:667137d77766928227c6eb1929fe072b-2026
+DTSTAMP:20250430T135847Z
+UID:667137d77766928227c6eb1929fe072b-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno dell'Immacolata Concezione è un
  a festa nazionale in Italia l'8 dicembre che celebra la convinzione che la
   madre di Gesù\, Maria\, sia «libera dal peccato».
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Il giorno di Natale 
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090650Z
-UID:80d98aff0ff492f662bf49c7ef851230-2026
+DTSTAMP:20250430T135847Z
+UID:80d98aff0ff492f662bf49c7ef851230-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno di Natale è un giorno festivo i
  n Italia il 25 dicembre per celebrare la nascita di Gesù Cristo.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Santo Stefano 
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
-DTSTAMP:20241008T090650Z
-UID:d5c0d6fc235d88f1fd0ed8bcf09132e8-2026
+DTSTAMP:20250430T135847Z
+UID:d5c0d6fc235d88f1fd0ed8bcf09132e8-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Il giorno di Santo Stefano è un giorno fe
  stivo in Italia il 26 dicembre.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La festa di San Marco (Venezia) 
 DTSTART;VALUE=DATE:20260425
 DTEND;VALUE=DATE:20260426
-DTSTAMP:20241008T090650Z
-UID:f6ae969c35f1bddf2552d9f40d341b40-2026
+DTSTAMP:20250430T135847Z
+UID:f6ae969c35f1bddf2552d9f40d341b40-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  La città italiana di Venezia ha il suo giorn
  o festivo locale\, il giorno di San Marco (Festa di San Marco) il 25 april
  e di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La Festa di San Giovanni (Firenze\, Genova\, Torino) 
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260625
-DTSTAMP:20241008T090650Z
-UID:235d1b810e2b3791afbfa421a0430d63-2026
+DTSTAMP:20250430T135847Z
+UID:235d1b810e2b3791afbfa421a0430d63-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  Firenze\, Torino e Genova\, in Italia\, celeb
  rano la propria festa locale\, la Festa di San Giovanni (Festa di San Giov
  anni) il 24 giugno di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La Festa di San Pietro e San Paolo (Roma) 
 DTSTART;VALUE=DATE:20260629
 DTEND;VALUE=DATE:20260630
-DTSTAMP:20241008T090650Z
-UID:551cf7355c52dc4d3c1710608480c5d5-2026
+DTSTAMP:20250430T135847Z
+UID:551cf7355c52dc4d3c1710608480c5d5-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  Roma\, in Italia\, celebra la propria festa l
  ocale\, la festa dei Santi Pietro e Paolo il 29 giugno di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La Festa di San Gennaro (Napoli) 
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20260920
-DTSTAMP:20241008T090650Z
-UID:3aa3faab82fc9734a0764a05bc8c3c9d-2026
+DTSTAMP:20250430T135847Z
+UID:3aa3faab82fc9734a0764a05bc8c3c9d-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  Napoli\, in Italia\, celebra la propria festa
   locale\, la festa di San Gennaro il 19 settembre di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:La festa di Sant'Ambrogio (Milano) 
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
-DTSTAMP:20241008T090650Z
-UID:5b7732e5cbf6fb3c40322405f9d2956f-2026
+DTSTAMP:20250430T135847Z
+UID:5b7732e5cbf6fb3c40322405f9d2956f-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local holiday -  La festa di Sant'Ambrogio è un giorno libero
   per la maggior parte delle persone a Milano\, una delle città più grand
  i d'Italia\, il 7 dicembre di ogni anno.
-LAST-MODIFIED:20241008T090650Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135847Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Capodanno 
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20250430T135848Z
+UID:345d68e89d25bc3b1d52aa6532799966-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Il capodanno viene celebrato in Italia il 
+ 1° gennaio di ogni anno.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Epifania 
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+DTSTAMP:20250430T135848Z
+UID:de06d0c1a0acfbaab5b339ed6103ca4e-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  L'Epifania è una festa nazionale in Itali
+ a celebrata ogni anno il 6 gennaio.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:La domenica di Pasqua 
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+DTSTAMP:20250430T135848Z
+UID:cfa4e89a819c2166b4af29df65bc9412-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Il giorno di Pasqua è un giorno festivo c
+ he viene celebrato ampiamente in tutta Italia ogni anno.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lunedì di Pasqua 
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+DTSTAMP:20250430T135848Z
+UID:2bb3f7563b9c1441ef21a1ab0af4d214-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Il lunedì di Pasqua è un giorno festivo 
+ in Italia che viene celebrato ogni anno il giorno dopo Pasqua.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Celebrata il 25 aprile di ogni anno\, la Festa della Liberazione i
+ n Italia commemora quando le truppe alleate liberarono il paese dall'occup
+ azione nazista durante la seconda guerra mondiale.
+DTSTART;VALUE=DATE:20270425
+DTEND;VALUE=DATE:20270426
+DTSTAMP:20250430T135848Z
+UID:d6a08d65b407cf4d081e18a52bf5090f-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festa del lavoro/Festa del maggio 
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+DTSTAMP:20250430T135848Z
+UID:8fcc82dc0ebc957ed122b4b470407574-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La festa del lavoro è una festa nazionale
+  che si celebra ogni anno in Italia il 1 maggio.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festa della Repubblica 
+DTSTART;VALUE=DATE:20270602
+DTEND;VALUE=DATE:20270603
+DTSTAMP:20250430T135848Z
+UID:51546b677401836fa1e3a7bbd8fc079f-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  La Festa della Repubblica italiana è un g
+ iorno festivo annuale il 2 giugno per commemorare la data in cui gli itali
+ ani hanno votato per porre fine alla monarchia e diventare una repubblica.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Assunzione di Maria 
+DTSTART;VALUE=DATE:20270815
+DTEND;VALUE=DATE:20270816
+DTSTAMP:20250430T135848Z
+UID:5598746981a0b1c68cdef236008fb3ca-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Il giorno dell'Assunzione\, noto anche com
+ e festa dell'Assunzione\, è un giorno festivo annuale in Italia il 15 ago
+ sto.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ognissanti 
+DTSTART;VALUE=DATE:20271101
+DTEND;VALUE=DATE:20271102
+DTSTAMP:20250430T135848Z
+UID:6da505099748ce7896ca740caccea31f-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  In Italia Ognissanti è una festa nazional
+ e celebrata il 1 novembre per commemorare i santi cattolici.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Festa dell'Immacolata Concezione 
+DTSTART;VALUE=DATE:20271208
+DTEND;VALUE=DATE:20271209
+DTSTAMP:20250430T135848Z
+UID:667137d77766928227c6eb1929fe072b-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Il giorno dell'Immacolata Concezione è un
+ a festa nazionale in Italia l'8 dicembre che celebra la convinzione che la
+  madre di Gesù\, Maria\, sia «libera dal peccato».
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Il giorno di Natale 
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T135848Z
+UID:80d98aff0ff492f662bf49c7ef851230-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Il giorno di Natale è un giorno festivo i
+ n Italia il 25 dicembre per celebrare la nascita di Gesù Cristo.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Santo Stefano 
+DTSTART;VALUE=DATE:20271226
+DTEND;VALUE=DATE:20271227
+DTSTAMP:20250430T135848Z
+UID:d5c0d6fc235d88f1fd0ed8bcf09132e8-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Il giorno di Santo Stefano è un giorno fe
+ stivo in Italia il 26 dicembre.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:La festa di San Marco (Venezia) 
+DTSTART;VALUE=DATE:20270425
+DTEND;VALUE=DATE:20270426
+DTSTAMP:20250430T135848Z
+UID:f6ae969c35f1bddf2552d9f40d341b40-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  La città italiana di Venezia ha il suo giorn
+ o festivo locale\, il giorno di San Marco (Festa di San Marco) il 25 april
+ e di ogni anno.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:La Festa di San Giovanni (Firenze\, Genova\, Torino) 
+DTSTART;VALUE=DATE:20270624
+DTEND;VALUE=DATE:20270625
+DTSTAMP:20250430T135848Z
+UID:235d1b810e2b3791afbfa421a0430d63-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  Firenze\, Torino e Genova\, in Italia\, celeb
+ rano la propria festa locale\, la Festa di San Giovanni (Festa di San Giov
+ anni) il 24 giugno di ogni anno.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:La Festa di San Pietro e San Paolo (Roma) 
+DTSTART;VALUE=DATE:20270629
+DTEND;VALUE=DATE:20270630
+DTSTAMP:20250430T135848Z
+UID:551cf7355c52dc4d3c1710608480c5d5-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  Roma\, in Italia\, celebra la propria festa l
+ ocale\, la festa dei Santi Pietro e Paolo il 29 giugno di ogni anno.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:La Festa di San Gennaro (Napoli) 
+DTSTART;VALUE=DATE:20270919
+DTEND;VALUE=DATE:20270920
+DTSTAMP:20250430T135848Z
+UID:3aa3faab82fc9734a0764a05bc8c3c9d-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  Napoli\, in Italia\, celebra la propria festa
+  locale\, la festa di San Gennaro il 19 settembre di ogni anno.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:La festa di Sant'Ambrogio (Milano) 
+DTSTART;VALUE=DATE:20271207
+DTEND;VALUE=DATE:20271208
+DTSTAMP:20250430T135848Z
+UID:5b7732e5cbf6fb3c40322405f9d2956f-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local holiday -  La festa di Sant'Ambrogio è un giorno libero
+  per la maggior parte delle persone a Milano\, una delle città più grand
+ i d'Italia\, il 7 dicembre di ogni anno.
+LAST-MODIFIED:20250430T135848Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

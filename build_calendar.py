@@ -4,6 +4,7 @@ import sys
 from datetime import datetime, UTC
 import os
 import time
+
 import icalendar
 import requests
 
@@ -37,14 +38,28 @@ def build_ical(provider: Provider, locale: str, language: str, years_to_generate
     for i in range(0, years_to_generate):
         year = current_year + i
 
+        unique_holidays = {}
         for calendar_type in [CalendarTypes.NATIONAL, CalendarTypes.LOCAL]:
             try:
                 holidays = provider.build(locale, year, {'calendar_type': calendar_type.value, 'language': language})
 
+                # Sometimes we can have dupes due to varying calendar types containing the same holiday
                 for holiday in holidays:
-                    ical.add_component(holiday.to_ics())
+                    if holiday.unique_id not in unique_holidays:
+                        unique_holidays[holiday.unique_id] = holiday
+                        ical.add_component(holiday.to_ics())
+
             except requests.HTTPError as err:
-                response = err.response.json()
+                print(f"Err: Locale: {locale} / Calendar Type: {calendar_type}")
+                if err.response.status_code == 500:
+                    print('Err: 500 Internal Server Error encountered, skipping.')
+                    continue
+
+                try:
+                    response = err.response.json()
+                except requests.exceptions.JSONDecodeError as json_err:
+                    print(f'Err: Could not decode json, using response.text. {json_err}')
+                    response = {'meta': {'error_detail': err.response.text}}
 
                 # Generic error message
                 error_response = "{}: {}. ".format(err.response.status_code, err.response.reason)

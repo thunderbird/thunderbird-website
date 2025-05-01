@@ -3,772 +3,734 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:New Year's Day
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20241008T090753Z
-UID:af684b69a661e8bf0c20186731d2e0b9-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank Holiday - New Year's Day marks the start of a new year in
-  the Gregorian calendar\, the official calendar used in the United Kingdom
- .
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Good Friday
-DTSTART;VALUE=DATE:20240329
-DTEND;VALUE=DATE:20240330
-DTSTAMP:20241008T090753Z
-UID:36bcdf434a45ce3fdd6613505619fda7-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank Holiday - Good Friday is just before Easter Sunday and is
-  a public holiday in the United Kingdom.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Early May Bank Holiday
-DTSTART;VALUE=DATE:20240506
-DTEND;VALUE=DATE:20240507
-DTSTAMP:20241008T090753Z
-UID:b247412360858454427eb56f36d05348-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank Holiday - May Day\, or the Early May Bank holiday\, is on
-  the first Monday of May each year.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Spring Bank Holiday
-DTSTART;VALUE=DATE:20240527
-DTEND;VALUE=DATE:20240528
-DTSTAMP:20241008T090753Z
-UID:bf122cb1925d4f3ef9b05b7d81fd1b9a-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank Holiday - The spring bank holiday in the United Kingdom i
- s on the last Monday of May each year.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas Day
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090753Z
-UID:d02b17bdd4639e4639a1a1705abaa6df-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank Holiday - Christmas Day is a holiday that traditionally c
- elebrates Jesus Christ's birth. It is on December 25 in the United Kingdom
- .
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Boxing Day
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241008T090753Z
-UID:10c054e2ea846f7f18016e5e193cdc10-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Bank Holiday - Boxing Day is a holiday in the United Kingdom t
- hat falls on December 26 each year.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:2nd January (Scotland)
-DTSTART;VALUE=DATE:20240102
-DTEND;VALUE=DATE:20240103
-DTSTAMP:20241008T090753Z
-UID:a5f464f00624c64fc11df1bcb48bab2b-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Bank Holiday - January 2 is an annual bank holiday and t
- he last day of the Hogmanay (New Year) celebrations in Scotland.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Burns Night (Scotland)
-DTSTART;VALUE=DATE:20240125
-DTEND;VALUE=DATE:20240126
-DTSTAMP:20241008T090753Z
-UID:e8789a23095f06c4022c05ac0a810e80-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Observance - Burns Night celebrates the life and work of
-  Robert Burns and Scottish culture in general. It is on or around January 
- 25 each year.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St. David's Day (Wales)
-DTSTART;VALUE=DATE:20240301
-DTEND;VALUE=DATE:20240302
-DTSTAMP:20241008T090753Z
-UID:eefc233f3e26df4b8cc007ed58c9741f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Observance - People in Wales and Welsh communities aroun
- d the world celebrate the life of their patron saint\, St David\, and the 
- culture of their country on St David’s Day.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St Patrick's Day (Northern Ireland)
-DTSTART;VALUE=DATE:20240317
-DTEND;VALUE=DATE:20240318
-DTSTAMP:20241008T090753Z
-UID:9cc7bdf19696e3a1ed93baeb6d705ef2-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Bank Holiday - St Patrick's Day remembers the life and d
- eeds of St Patrick\, one of Ireland's patron saints. It also celebrates Ir
- ish culture.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Day off for St Patrick's Day (Northern Ireland)
-DTSTART;VALUE=DATE:20240318
-DTEND;VALUE=DATE:20240319
-DTSTAMP:20241008T090753Z
-UID:9cc7bdf19696e3a1ed93baeb6d705ef2-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Bank Holiday - St Patrick's Day remembers the life and d
- eeds of St Patrick\, one of Ireland's patron saints. It also celebrates Ir
- ish culture.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (ENG\, WAL\, NIR)
-DTSTART;VALUE=DATE:20240401
-DTEND;VALUE=DATE:20240402
-DTSTAMP:20241008T090753Z
-UID:a50e865306ed5d55d91815694abc4c62-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common Local Holiday - Easter Monday is the day after Easter S
- unday. It is a bank holiday in England\, Wales and Northern Ireland but no
- t in Scotland.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (Scotland)
-DTSTART;VALUE=DATE:20240401
-DTEND;VALUE=DATE:20240402
-DTSTAMP:20241008T090753Z
-UID:a50e865306ed5d55d91815694abc4c62-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Observance - Easter Monday is the day after Easter Sunda
- y. It is a bank holiday in England\, Wales and Northern Ireland but not in
-  Scotland.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St. George's Day
-DTSTART;VALUE=DATE:20240423
-DTEND;VALUE=DATE:20240424
-DTSTAMP:20241008T090753Z
-UID:bc23004c2c1ac75dec6b7f25e3accb95-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Observance - St George's Day in England is a celebration
-  of Saint George\, a Christian martyr and soldier in the Roman army.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Battle of the Boyne (Northern Ireland)
-DTSTART;VALUE=DATE:20240712
-DTEND;VALUE=DATE:20240713
-DTSTAMP:20241008T090753Z
-UID:12de0c4c6ecd11f6ba8f266f8b10ea23-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Bank Holiday - Orangemen's Day is a bank holiday in Nort
- hern Ireland to commemorate the Battle of the Boyne.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Summer Bank Holiday (Scotland)
-DTSTART;VALUE=DATE:20240805
-DTEND;VALUE=DATE:20240806
-DTSTAMP:20241008T090753Z
-UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common Local Holiday - The summer bank holiday is on the first
-  Monday of August in Scotland and the last Monday of August in England\, W
- ales and Northern Ireland.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Summer Bank Holiday (ENG\, WAL\, NIR)
-DTSTART;VALUE=DATE:20240826
-DTEND;VALUE=DATE:20240827
-DTSTAMP:20241008T090753Z
-UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common Local Holiday - The summer bank holiday is on the first
-  Monday of August in Scotland and the last Monday of August in England\, W
- ales and Northern Ireland.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St Andrew's Day (Scotland)
-DTSTART;VALUE=DATE:20241130
-DTEND;VALUE=DATE:20241201
-DTSTAMP:20241008T090753Z
-UID:f604b553164dbd995e6f8439d4a53990-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Bank Holiday - St Andrew is the patron saint of Scotland
-  and St Andrew's Day is a bank holiday in Scotland.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St Andrew's Day observed (Scotland)
-DTSTART;VALUE=DATE:20241202
-DTEND;VALUE=DATE:20241203
-DTSTAMP:20241008T090753Z
-UID:f604b553164dbd995e6f8439d4a53990-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Bank Holiday - St Andrew is the patron saint of Scotland
-  and St Andrew's Day is a bank holiday in Scotland.
-LAST-MODIFIED:20241008T090753Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:New Year's Day
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20241008T090754Z
-UID:af684b69a661e8bf0c20186731d2e0b9-2025
+DTSTAMP:20250430T140009Z
+UID:af684b69a661e8bf0c20186731d2e0b9-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - New Year's Day marks the start of a new year in
   the Gregorian calendar\, the official calendar used in the United Kingdom
  .
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20241008T090754Z
-UID:36bcdf434a45ce3fdd6613505619fda7-2025
+DTSTAMP:20250430T140009Z
+UID:36bcdf434a45ce3fdd6613505619fda7-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - Good Friday is just before Easter Sunday and is
   a public holiday in the United Kingdom.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Early May Bank Holiday
 DTSTART;VALUE=DATE:20250505
 DTEND;VALUE=DATE:20250506
-DTSTAMP:20241008T090754Z
-UID:b247412360858454427eb56f36d05348-2025
+DTSTAMP:20250430T140009Z
+UID:b247412360858454427eb56f36d05348-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - May Day\, or the Early May Bank holiday\, is on
   the first Monday of May each year.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Spring Bank Holiday
 DTSTART;VALUE=DATE:20250526
 DTEND;VALUE=DATE:20250527
-DTSTAMP:20241008T090754Z
-UID:bf122cb1925d4f3ef9b05b7d81fd1b9a-2025
+DTSTAMP:20250430T140009Z
+UID:bf122cb1925d4f3ef9b05b7d81fd1b9a-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - The spring bank holiday in the United Kingdom i
  s on the last Monday of May each year.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090754Z
-UID:d02b17bdd4639e4639a1a1705abaa6df-2025
+DTSTAMP:20250430T140009Z
+UID:d02b17bdd4639e4639a1a1705abaa6df-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - Christmas Day is a holiday that traditionally c
  elebrates Jesus Christ's birth. It is on December 25 in the United Kingdom
  .
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day
 DTSTART;VALUE=DATE:20251226
 DTEND;VALUE=DATE:20251227
-DTSTAMP:20241008T090754Z
-UID:10c054e2ea846f7f18016e5e193cdc10-2025
+DTSTAMP:20250430T140009Z
+UID:10c054e2ea846f7f18016e5e193cdc10-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - Boxing Day is a holiday in the United Kingdom t
  hat falls on December 26 each year.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:2nd January (Scotland)
 DTSTART;VALUE=DATE:20250102
 DTEND;VALUE=DATE:20250103
-DTSTAMP:20241008T090754Z
-UID:a5f464f00624c64fc11df1bcb48bab2b-2025
+DTSTAMP:20250430T140009Z
+UID:a5f464f00624c64fc11df1bcb48bab2b-2025-sct
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Bank Holiday - January 2 is an annual bank holiday and t
  he last day of the Hogmanay (New Year) celebrations in Scotland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Burns Night (Scotland)
 DTSTART;VALUE=DATE:20250125
 DTEND;VALUE=DATE:20250126
-DTSTAMP:20241008T090754Z
-UID:e8789a23095f06c4022c05ac0a810e80-2025
+DTSTAMP:20250430T140009Z
+UID:e8789a23095f06c4022c05ac0a810e80-2025-sct
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Observance - Burns Night celebrates the life and work of
   Robert Burns and Scottish culture in general. It is on or around January 
  25 each year.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. David's Day (Wales)
 DTSTART;VALUE=DATE:20250301
 DTEND;VALUE=DATE:20250302
-DTSTAMP:20241008T090754Z
-UID:eefc233f3e26df4b8cc007ed58c9741f-2025
+DTSTAMP:20250430T140009Z
+UID:eefc233f3e26df4b8cc007ed58c9741f-2025-wal
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Observance - People in Wales and Welsh communities aroun
  d the world celebrate the life of their patron saint\, St David\, and the 
  culture of their country on St David’s Day.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St Patrick's Day (Northern Ireland)
 DTSTART;VALUE=DATE:20250317
 DTEND;VALUE=DATE:20250318
-DTSTAMP:20241008T090754Z
-UID:9cc7bdf19696e3a1ed93baeb6d705ef2-2025
+DTSTAMP:20250430T140009Z
+UID:9cc7bdf19696e3a1ed93baeb6d705ef2-2025-nir
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Bank Holiday - St Patrick's Day remembers the life and d
  eeds of St Patrick\, one of Ireland's patron saints. It also celebrates Ir
  ish culture.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (ENG\, WAL\, NIR)
-DTSTART;VALUE=DATE:20250421
-DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090754Z
-UID:a50e865306ed5d55d91815694abc4c62-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common Local Holiday - Easter Monday is the day after Easter S
- unday. It is a bank holiday in England\, Wales and Northern Ireland but no
- t in Scotland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Monday (Scotland)
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-DTSTAMP:20241008T090754Z
-UID:a50e865306ed5d55d91815694abc4c62-2025
+DTSTAMP:20250430T140009Z
+UID:a50e865306ed5d55d91815694abc4c62-2025-sct
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Observance - Easter Monday is the day after Easter Sunda
  y. It is a bank holiday in England\, Wales and Northern Ireland but not in
   Scotland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (ENG\, WAL\, NIR)
+DTSTART;VALUE=DATE:20250421
+DTEND;VALUE=DATE:20250422
+DTSTAMP:20250430T140009Z
+UID:a50e865306ed5d55d91815694abc4c62-2025-eng-wal-nir
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common Local Holiday - Easter Monday is the day after Easter S
+ unday. It is a bank holiday in England\, Wales and Northern Ireland but no
+ t in Scotland.
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. George's Day
 DTSTART;VALUE=DATE:20250423
 DTEND;VALUE=DATE:20250424
-DTSTAMP:20241008T090754Z
-UID:bc23004c2c1ac75dec6b7f25e3accb95-2025
+DTSTAMP:20250430T140009Z
+UID:bc23004c2c1ac75dec6b7f25e3accb95-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Observance - St George's Day in England is a celebration
   of Saint George\, a Christian martyr and soldier in the Roman army.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Battle of the Boyne (Northern Ireland)
 DTSTART;VALUE=DATE:20250712
 DTEND;VALUE=DATE:20250713
-DTSTAMP:20241008T090754Z
-UID:12de0c4c6ecd11f6ba8f266f8b10ea23-2025
+DTSTAMP:20250430T140009Z
+UID:12de0c4c6ecd11f6ba8f266f8b10ea23-2025-nir
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Bank Holiday - Orangemen's Day is a bank holiday in Nort
  hern Ireland to commemorate the Battle of the Boyne.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Battle of the Boyne observed (Northern Ireland)
-DTSTART;VALUE=DATE:20250714
-DTEND;VALUE=DATE:20250715
-DTSTAMP:20241008T090754Z
-UID:12de0c4c6ecd11f6ba8f266f8b10ea23-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Bank Holiday - Orangemen's Day is a bank holiday in Nort
- hern Ireland to commemorate the Battle of the Boyne.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Summer Bank Holiday (Scotland)
 DTSTART;VALUE=DATE:20250804
 DTEND;VALUE=DATE:20250805
-DTSTAMP:20241008T090754Z
-UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2025
+DTSTAMP:20250430T140009Z
+UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2025-sct
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common Local Holiday - The summer bank holiday is on the first
-  Monday of August in Scotland and the last Monday of August in England\, W
- ales and Northern Ireland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+DESCRIPTION:Local Bank Holiday - The summer bank holiday is on the first M
+ onday of August in Scotland and the last Monday of August in England\, Wal
+ es and Northern Ireland.
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Summer Bank Holiday (ENG\, WAL\, NIR)
 DTSTART;VALUE=DATE:20250825
 DTEND;VALUE=DATE:20250826
-DTSTAMP:20241008T090754Z
-UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2025
+DTSTAMP:20250430T140009Z
+UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2025-eng-wal-nir
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common Local Holiday - The summer bank holiday is on the first
   Monday of August in Scotland and the last Monday of August in England\, W
  ales and Northern Ireland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St Andrew's Day (Scotland)
 DTSTART;VALUE=DATE:20251130
 DTEND;VALUE=DATE:20251201
-DTSTAMP:20241008T090754Z
-UID:f604b553164dbd995e6f8439d4a53990-2025
+DTSTAMP:20250430T140009Z
+UID:f604b553164dbd995e6f8439d4a53990-2025-sct
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Bank Holiday - St Andrew is the patron saint of Scotland
   and St Andrew's Day is a bank holiday in Scotland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:St Andrew's Day observed (Scotland)
-DTSTART;VALUE=DATE:20251201
-DTEND;VALUE=DATE:20251202
-DTSTAMP:20241008T090754Z
-UID:f604b553164dbd995e6f8439d4a53990-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Bank Holiday - St Andrew is the patron saint of Scotland
-  and St Andrew's Day is a bank holiday in Scotland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:New Year's Day
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20241008T090754Z
-UID:af684b69a661e8bf0c20186731d2e0b9-2026
+DTSTAMP:20250430T140009Z
+UID:af684b69a661e8bf0c20186731d2e0b9-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - New Year's Day marks the start of a new year in
   the Gregorian calendar\, the official calendar used in the United Kingdom
  .
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Good Friday
 DTSTART;VALUE=DATE:20260403
 DTEND;VALUE=DATE:20260404
-DTSTAMP:20241008T090754Z
-UID:36bcdf434a45ce3fdd6613505619fda7-2026
+DTSTAMP:20250430T140009Z
+UID:36bcdf434a45ce3fdd6613505619fda7-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - Good Friday is just before Easter Sunday and is
   a public holiday in the United Kingdom.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Early May Bank Holiday
 DTSTART;VALUE=DATE:20260504
 DTEND;VALUE=DATE:20260505
-DTSTAMP:20241008T090754Z
-UID:b247412360858454427eb56f36d05348-2026
+DTSTAMP:20250430T140009Z
+UID:b247412360858454427eb56f36d05348-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - May Day\, or the Early May Bank holiday\, is on
   the first Monday of May each year.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Spring Bank Holiday
 DTSTART;VALUE=DATE:20260525
 DTEND;VALUE=DATE:20260526
-DTSTAMP:20241008T090754Z
-UID:bf122cb1925d4f3ef9b05b7d81fd1b9a-2026
+DTSTAMP:20250430T140009Z
+UID:bf122cb1925d4f3ef9b05b7d81fd1b9a-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - The spring bank holiday in the United Kingdom i
  s on the last Monday of May each year.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas Day
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090754Z
-UID:d02b17bdd4639e4639a1a1705abaa6df-2026
+DTSTAMP:20250430T140009Z
+UID:d02b17bdd4639e4639a1a1705abaa6df-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - Christmas Day is a holiday that traditionally c
  elebrates Jesus Christ's birth. It is on December 25 in the United Kingdom
  .
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Boxing Day
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
-DTSTAMP:20241008T090754Z
-UID:10c054e2ea846f7f18016e5e193cdc10-2026
+DTSTAMP:20250430T140009Z
+UID:10c054e2ea846f7f18016e5e193cdc10-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - Boxing Day is a holiday in the United Kingdom t
  hat falls on December 26 each year.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Substitute Bank Holiday for Boxing Day
 DTSTART;VALUE=DATE:20261228
 DTEND;VALUE=DATE:20261229
-DTSTAMP:20241008T090754Z
-UID:3cf4352de81bbcf1636d8ac5c1edf2b5-2026
+DTSTAMP:20250430T140009Z
+UID:3cf4352de81bbcf1636d8ac5c1edf2b5-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Bank Holiday - December 28 is a bank holiday in the United Kin
  gdom only in some years\, depending on which day Christmas Day or Boxing D
  ay occur.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:2nd January (Scotland)
 DTSTART;VALUE=DATE:20260102
 DTEND;VALUE=DATE:20260103
-DTSTAMP:20241008T090754Z
-UID:a5f464f00624c64fc11df1bcb48bab2b-2026
+DTSTAMP:20250430T140009Z
+UID:a5f464f00624c64fc11df1bcb48bab2b-2026-sct
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Bank Holiday - January 2 is an annual bank holiday and t
  he last day of the Hogmanay (New Year) celebrations in Scotland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Burns Night (Scotland)
 DTSTART;VALUE=DATE:20260125
 DTEND;VALUE=DATE:20260126
-DTSTAMP:20241008T090754Z
-UID:e8789a23095f06c4022c05ac0a810e80-2026
+DTSTAMP:20250430T140009Z
+UID:e8789a23095f06c4022c05ac0a810e80-2026-sct
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Observance - Burns Night celebrates the life and work of
   Robert Burns and Scottish culture in general. It is on or around January 
  25 each year.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. David's Day (Wales)
 DTSTART;VALUE=DATE:20260301
 DTEND;VALUE=DATE:20260302
-DTSTAMP:20241008T090754Z
-UID:eefc233f3e26df4b8cc007ed58c9741f-2026
+DTSTAMP:20250430T140009Z
+UID:eefc233f3e26df4b8cc007ed58c9741f-2026-wal
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Observance - People in Wales and Welsh communities aroun
  d the world celebrate the life of their patron saint\, St David\, and the 
  culture of their country on St David’s Day.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St Patrick's Day (Northern Ireland)
 DTSTART;VALUE=DATE:20260317
 DTEND;VALUE=DATE:20260318
-DTSTAMP:20241008T090754Z
-UID:9cc7bdf19696e3a1ed93baeb6d705ef2-2026
+DTSTAMP:20250430T140009Z
+UID:9cc7bdf19696e3a1ed93baeb6d705ef2-2026-nir
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Bank Holiday - St Patrick's Day remembers the life and d
  eeds of St Patrick\, one of Ireland's patron saints. It also celebrates Ir
  ish culture.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Easter Monday (ENG\, WAL\, NIR)
-DTSTART;VALUE=DATE:20260406
-DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090754Z
-UID:a50e865306ed5d55d91815694abc4c62-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common Local Holiday - Easter Monday is the day after Easter S
- unday. It is a bank holiday in England\, Wales and Northern Ireland but no
- t in Scotland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Easter Monday (Scotland)
 DTSTART;VALUE=DATE:20260406
 DTEND;VALUE=DATE:20260407
-DTSTAMP:20241008T090754Z
-UID:a50e865306ed5d55d91815694abc4c62-2026
+DTSTAMP:20250430T140009Z
+UID:a50e865306ed5d55d91815694abc4c62-2026-sct
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Observance - Easter Monday is the day after Easter Sunda
  y. It is a bank holiday in England\, Wales and Northern Ireland but not in
   Scotland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (ENG\, WAL\, NIR)
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+DTSTAMP:20250430T140009Z
+UID:a50e865306ed5d55d91815694abc4c62-2026-eng-wal-nir
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common Local Holiday - Easter Monday is the day after Easter S
+ unday. It is a bank holiday in England\, Wales and Northern Ireland but no
+ t in Scotland.
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St. George's Day
 DTSTART;VALUE=DATE:20260423
 DTEND;VALUE=DATE:20260424
-DTSTAMP:20241008T090754Z
-UID:bc23004c2c1ac75dec6b7f25e3accb95-2026
+DTSTAMP:20250430T140009Z
+UID:bc23004c2c1ac75dec6b7f25e3accb95-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Observance - St George's Day in England is a celebration
   of Saint George\, a Christian martyr and soldier in the Roman army.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Battle of the Boyne (Northern Ireland)
 DTSTART;VALUE=DATE:20260712
 DTEND;VALUE=DATE:20260713
-DTSTAMP:20241008T090754Z
-UID:12de0c4c6ecd11f6ba8f266f8b10ea23-2026
+DTSTAMP:20250430T140009Z
+UID:12de0c4c6ecd11f6ba8f266f8b10ea23-2026-nir
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Bank Holiday - Orangemen's Day is a bank holiday in Nort
  hern Ireland to commemorate the Battle of the Boyne.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Battle of the Boyne observed (Northern Ireland)
-DTSTART;VALUE=DATE:20260713
-DTEND;VALUE=DATE:20260714
-DTSTAMP:20241008T090754Z
-UID:12de0c4c6ecd11f6ba8f266f8b10ea23-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Local Bank Holiday - Orangemen's Day is a bank holiday in Nort
- hern Ireland to commemorate the Battle of the Boyne.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Summer Bank Holiday (Scotland)
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
-DTSTAMP:20241008T090754Z
-UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2026
+DTSTAMP:20250430T140009Z
+UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2026-sct
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common Local Holiday - The summer bank holiday is on the first
-  Monday of August in Scotland and the last Monday of August in England\, W
- ales and Northern Ireland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+DESCRIPTION:Local Bank Holiday - The summer bank holiday is on the first M
+ onday of August in Scotland and the last Monday of August in England\, Wal
+ es and Northern Ireland.
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Summer Bank Holiday (ENG\, WAL\, NIR)
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
-DTSTAMP:20241008T090754Z
-UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2026
+DTSTAMP:20250430T140009Z
+UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2026-eng-wal-nir
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Common Local Holiday - The summer bank holiday is on the first
   Monday of August in Scotland and the last Monday of August in England\, W
  ales and Northern Ireland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:St Andrew's Day (Scotland)
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
-DTSTAMP:20241008T090754Z
-UID:f604b553164dbd995e6f8439d4a53990-2026
+DTSTAMP:20250430T140009Z
+UID:f604b553164dbd995e6f8439d4a53990-2026-sct
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Local Bank Holiday - St Andrew is the patron saint of Scotland
   and St Andrew's Day is a bank holiday in Scotland.
-LAST-MODIFIED:20241008T090754Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T140009Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's Day
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20250430T140010Z
+UID:af684b69a661e8bf0c20186731d2e0b9-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank Holiday - New Year's Day marks the start of a new year in
+  the Gregorian calendar\, the official calendar used in the United Kingdom
+ .
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Good Friday
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+DTSTAMP:20250430T140010Z
+UID:36bcdf434a45ce3fdd6613505619fda7-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank Holiday - Good Friday is just before Easter Sunday and is
+  a public holiday in the United Kingdom.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Early May Bank Holiday
+DTSTART;VALUE=DATE:20270503
+DTEND;VALUE=DATE:20270504
+DTSTAMP:20250430T140010Z
+UID:b247412360858454427eb56f36d05348-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank Holiday - May Day\, or the Early May Bank holiday\, is on
+  the first Monday of May each year.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Spring Bank Holiday
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+DTSTAMP:20250430T140010Z
+UID:bf122cb1925d4f3ef9b05b7d81fd1b9a-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank Holiday - The spring bank holiday in the United Kingdom i
+ s on the last Monday of May each year.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas Day
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T140010Z
+UID:d02b17bdd4639e4639a1a1705abaa6df-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank Holiday - Christmas Day is a holiday that traditionally c
+ elebrates Jesus Christ's birth. It is on December 25 in the United Kingdom
+ .
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Boxing Day
+DTSTART;VALUE=DATE:20271226
+DTEND;VALUE=DATE:20271227
+DTSTAMP:20250430T140010Z
+UID:10c054e2ea846f7f18016e5e193cdc10-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank Holiday - Boxing Day is a holiday in the United Kingdom t
+ hat falls on December 26 each year.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Substitute Bank Holiday for Christmas Day
+DTSTART;VALUE=DATE:20271227
+DTEND;VALUE=DATE:20271228
+DTSTAMP:20250430T140010Z
+UID:89aed73d315c451ef7a67c18c03ee44b-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank Holiday - December 27 is a bank holiday in the United Kin
+ gdom only in some years\, depending on which day Christmas Day or Boxing D
+ ay occur.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Substitute Bank Holiday for Boxing Day
+DTSTART;VALUE=DATE:20271228
+DTEND;VALUE=DATE:20271229
+DTSTAMP:20250430T140010Z
+UID:3cf4352de81bbcf1636d8ac5c1edf2b5-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Bank Holiday - December 28 is a bank holiday in the United Kin
+ gdom only in some years\, depending on which day Christmas Day or Boxing D
+ ay occur.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:2nd January (substitute day) (Scotland)
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+DTSTAMP:20250430T140010Z
+UID:a5f464f00624c64fc11df1bcb48bab2b-2027-sct
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local Bank Holiday - January 2 is an annual bank holiday and t
+ he last day of the Hogmanay (New Year) celebrations in Scotland.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Burns Night (Scotland)
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270126
+DTSTAMP:20250430T140010Z
+UID:e8789a23095f06c4022c05ac0a810e80-2027-sct
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local Observance - Burns Night celebrates the life and work of
+  Robert Burns and Scottish culture in general. It is on or around January 
+ 25 each year.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St. David's Day (Wales)
+DTSTART;VALUE=DATE:20270301
+DTEND;VALUE=DATE:20270302
+DTSTAMP:20250430T140010Z
+UID:eefc233f3e26df4b8cc007ed58c9741f-2027-wal
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local Observance - People in Wales and Welsh communities aroun
+ d the world celebrate the life of their patron saint\, St David\, and the 
+ culture of their country on St David’s Day.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St Patrick's Day (Northern Ireland)
+DTSTART;VALUE=DATE:20270317
+DTEND;VALUE=DATE:20270318
+DTSTAMP:20250430T140010Z
+UID:9cc7bdf19696e3a1ed93baeb6d705ef2-2027-nir
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local Bank Holiday - St Patrick's Day remembers the life and d
+ eeds of St Patrick\, one of Ireland's patron saints. It also celebrates Ir
+ ish culture.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (ENG\, WAL\, NIR)
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+DTSTAMP:20250430T140010Z
+UID:a50e865306ed5d55d91815694abc4c62-2027-eng-wal-nir
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common Local Holiday - Easter Monday is the day after Easter S
+ unday. It is a bank holiday in England\, Wales and Northern Ireland but no
+ t in Scotland.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Easter Monday (Scotland)
+DTSTART;VALUE=DATE:20270329
+DTEND;VALUE=DATE:20270330
+DTSTAMP:20250430T140010Z
+UID:a50e865306ed5d55d91815694abc4c62-2027-sct
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local Observance - Easter Monday is the day after Easter Sunda
+ y. It is a bank holiday in England\, Wales and Northern Ireland but not in
+  Scotland.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St. George's Day
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270424
+DTSTAMP:20250430T140010Z
+UID:bc23004c2c1ac75dec6b7f25e3accb95-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local Observance - St George's Day in England is a celebration
+  of Saint George\, a Christian martyr and soldier in the Roman army.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Battle of the Boyne (Northern Ireland)
+DTSTART;VALUE=DATE:20270712
+DTEND;VALUE=DATE:20270713
+DTSTAMP:20250430T140010Z
+UID:12de0c4c6ecd11f6ba8f266f8b10ea23-2027-nir
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local Bank Holiday - Orangemen's Day is a bank holiday in Nort
+ hern Ireland to commemorate the Battle of the Boyne.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Summer Bank Holiday (Scotland)
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+DTSTAMP:20250430T140010Z
+UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2027-sct
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local Bank Holiday - The summer bank holiday is on the first M
+ onday of August in Scotland and the last Monday of August in England\, Wal
+ es and Northern Ireland.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Summer Bank Holiday (ENG\, WAL\, NIR)
+DTSTART;VALUE=DATE:20270830
+DTEND;VALUE=DATE:20270831
+DTSTAMP:20250430T140010Z
+UID:a81a41ce3c3b9147c0dae4fb99b4f2f9-2027-eng-wal-nir
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Common Local Holiday - The summer bank holiday is on the first
+  Monday of August in Scotland and the last Monday of August in England\, W
+ ales and Northern Ireland.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:St Andrew's Day (Scotland)
+DTSTART;VALUE=DATE:20271130
+DTEND;VALUE=DATE:20271201
+DTSTAMP:20250430T140010Z
+UID:f604b553164dbd995e6f8439d4a53990-2027-sct
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Local Bank Holiday - St Andrew is the patron saint of Scotland
+  and St Andrew's Day is a bank holiday in Scotland.
+LAST-MODIFIED:20250430T140010Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

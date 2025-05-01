@@ -2,347 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
-SUMMARY:लोहड़ी 
-DTSTART;VALUE=DATE:20240113
-DTEND;VALUE=DATE:20240114
-DTSTAMP:20241008T090640Z
-UID:4cb35911876e3206de6b83bc6e02cbfc-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Restricted Holiday -  लोहड़ी भारत मे
- ं प्रतिबंधित अवकाश है
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:गणतंत्र दिवस 
-DTSTART;VALUE=DATE:20240126
-DTEND;VALUE=DATE:20240127
-DTSTAMP:20241008T090640Z
-UID:e175d1c12efa9e5bb39fefc30c32e6ba-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  भारत का गणतंत्र 
- दिवस भारतीय संविधान को अपना
- ने की वर्षगांठ का प्रतीक है।
-  यह 26 जनवरी को भारत में वार्ष
- िक राजपत्रित अवकाश है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:होली 
-DTSTART;VALUE=DATE:20240325
-DTEND;VALUE=DATE:20240326
-DTSTAMP:20241008T090640Z
-UID:30e51d276ecdbeed1eb0c65e15231faf-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  होली हिंदुओं\, स
- िखों और अन्य लोगों द्वारा मन
- ाए जाने वाले रंगों का वसंत त
- ्योहार है। यह बुराई पर अच्छा
- ई की जीत और वसंत के आने वाले म
- ौसम का जश्न मनाता है। यह त्य
- ौहार सोलह दिनों तक चल सकता ह
- ै।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dolyatra 
-DTSTART;VALUE=DATE:20240325
-DTEND;VALUE=DATE:20240326
-DTSTAMP:20241008T090640Z
-UID:7f480417a9d9c776caa9545064908f62-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Restricted Holiday -  डोलयात्रा भारत
-  में प्रतिबंधित अवकाश है
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:गुड फ्राइडे 
-DTSTART;VALUE=DATE:20240329
-DTEND;VALUE=DATE:20240330
-DTSTAMP:20241008T090640Z
-UID:cb518b7113b547f55e64e144bc23f7b5-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  कई ईसाई गुड फ्रा
- इडे के दिन यीशु मसीह के क्रू
- स पर चढ़ने और उनकी मृत्यु की 
- याद दिलाते हैं। यह भारत में 
- राजपत्रित अवकाश है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:रमज़ान ईद/ईद-उल-फ़ितर 
-DTSTART;VALUE=DATE:20240411
-DTEND;VALUE=DATE:20240412
-DTSTAMP:20241008T090640Z
-UID:e071b91407301c28d3274038d69081b0-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  ईद अल-फ़ितर रमज़
- ान के इस्लामी महीने के अंत क
- ो चिह्नित करने के लिए एक छुट
- ्टी है\, जिसके दौरान मुसलमान 
- दिन के उजाले के दौरान उपवास 
- करते हैं।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:अम्बेडकर जयंती 
-DTSTART;VALUE=DATE:20240414
-DTEND;VALUE=DATE:20240415
-DTSTAMP:20241008T090640Z
-UID:f432f60908d678d2bcacb0cf444c0f07-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Central Government Holiday -  अम्बेडकर जय
- ंती भारत में केंद्र सरकार की
-  छुट्टी है
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:राम नवमी 
-DTSTART;VALUE=DATE:20240417
-DTEND;VALUE=DATE:20240418
-DTSTAMP:20241008T090640Z
-UID:59e9e72402c88578fbca3c31b6b77bd0-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  राम नवमी एक हिंद
- ू त्योहार है जो अयोध्या के र
- ाजा दशरथ के पहले पुत्र राम क
- े जन्म का जश्न मनाता है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:महावीर जयंती 
-DTSTART;VALUE=DATE:20240421
-DTEND;VALUE=DATE:20240422
-DTSTAMP:20241008T090640Z
-UID:d6768263f1adb401ef4c034daa5d5316-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  महावीर जयंती भा
- रत में राजपत्रित अवकाश है
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:बुद्ध पूर्णिमा/वेसाक 
-DTSTART;VALUE=DATE:20240523
-DTEND;VALUE=DATE:20240524
-DTSTAMP:20241008T090640Z
-UID:a78e360a1f75bb8e938311d475d55caa-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  वेसाक\, जिसे बुद
- ्ध पूर्णिमा भी कहा जाता है\, ग
- ौतम बुद्ध के जन्म\, ज्ञान और म
- ृत्यु का जश्न मनाता है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:बकरीद/ईद उल-अधा 
-DTSTART;VALUE=DATE:20240617
-DTEND;VALUE=DATE:20240618
-DTSTAMP:20241008T090640Z
-UID:595f3b7cbf00bece92c75ee8be4903c6-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  भारत के 200 मिलियन
-  से अधिक मुसलमानों के लिए\, बल
- िदान का त्योहार\, बकरीद\, वर्ष
-  के सबसे पवित्र दिनों में से 
- एक है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:मुहर्रम/आशूरा 
-DTSTART;VALUE=DATE:20240717
-DTEND;VALUE=DATE:20240718
-DTSTAMP:20241008T090640Z
-UID:f3615e2594629271805a6e8dbc8707ba-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  मुहर्रम\, या इस्
- लामी नव वर्ष\, भारत में एक सार
- ्वजनिक अवकाश है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:स्वतंत्रता दिवस 
-DTSTART;VALUE=DATE:20240815
-DTEND;VALUE=DATE:20240816
-DTSTAMP:20241008T090640Z
-UID:9343ff4d8cac26472edbd5c6f6f81e35-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  भारत का स्वतंत्
- रता दिवस 15 अगस्त को भारत के स
- ्वतंत्र राष्ट्र बनने के दिन 
- को मनाने के लिए एक वार्षिक र
- ाजपत्रित अवकाश है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:जन्माष्टमी 
-DTSTART;VALUE=DATE:20240826
-DTEND;VALUE=DATE:20240827
-DTSTAMP:20241008T090640Z
-UID:0ab77789038fd459e94b2b65c6260c77-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  कृष्ण जन्माष्ट
- मी एक हिंदू त्योहार है जो भग
- वान विष्णु के आठवें अवतार कृ
- ष्ण के जन्म का जश्न मनाता है
- । यह हिंदू महीने भाद्रवा (भा
- द्रपद) के आठवें दिन मनाया जा
- ता है\, जो आमतौर पर अगस्त या स
- ितंबर में होता है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:मिलाद अन-नबी/ईद-ए-मिलाद 
-DTSTART;VALUE=DATE:20240916
-DTEND;VALUE=DATE:20240917
-DTSTAMP:20241008T090640Z
-UID:3ad619ef7d85b2ea5852d04984e14dbf-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  मिलाद अन-नबी भार
- त में एक राजपत्रित अवकाश है 
- और पैगंबर मुहम्मद के जन्मदि
- न को चिह्नित करता है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:महात्मा गांधी जयंती 
-DTSTART;VALUE=DATE:20241002
-DTEND;VALUE=DATE:20241003
-DTSTAMP:20241008T090640Z
-UID:ac974f40d31ad4a2ec514f6c534306f4-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  महात्मा गांधी क
- ा जन्मदिन 2 अक्टूबर को भारत म
- ें एक वार्षिक राजपत्रित अवक
- ाश है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:दशहरा 
-DTSTART;VALUE=DATE:20241012
-DTEND;VALUE=DATE:20241013
-DTSTAMP:20241008T090640Z
-UID:7360e2403e088bb8824eb05623aa0f1d-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  दशहरा\, जिसे विज
- या दशमी के नाम से भी जाना जात
- ा है\, एक भारतीय त्योहार है जो
-  बुरी शक्तियों पर अच्छी ताकत
- ों का जश्न मनाता है। यह 10 दिन
- ों तक चलता है और पूरे भारत मे
- ं विभिन्न परंपराओं में मनाय
- ा जाता है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:दीवाली/दीपावली 
-DTSTART;VALUE=DATE:20241031
-DTEND;VALUE=DATE:20241101
-DTSTAMP:20241008T090640Z
-UID:c8074227c8f2e751ff3c985e517d7920-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  दिवाली भौतिक और 
- आध्यात्मिक प्रकाश का त्योह
- ार है जो हर साल अक्टूबर या नव
- ंबर में मनाया जाता है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:गुरु नानक जयंती 
-DTSTART;VALUE=DATE:20241115
-DTEND;VALUE=DATE:20241116
-DTSTAMP:20241008T090640Z
-UID:52aad1cf9786e72dc6b0554cdcb6076e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  गुरु नानक जयंती 
- भारत में राजपत्रित अवकाश है
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Christmas 
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241008T090640Z
-UID:4a28ab1fbe51009ea625b9104cad19c3-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  कई ईसाई हर साल 25 
- दिसंबर को क्रिसमस डे मनाते ह
- ैं\, जो भारत में एक राजपत्रित 
- अवकाश है।
-LAST-MODIFIED:20241008T090640Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:रमज़ान ईद/ईद-उल-फ़ितर 
-DTSTART;VALUE=DATE:20240410
-DTEND;VALUE=DATE:20240411
-DTSTAMP:20241008T090641Z
-UID:e071b91407301c28d3274038d69081b0-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday -  ईद-उल-फ़ितर का 
- एक दिन\, जो रमज़ान के अंत का प
- ्रतीक है\, भारत में राजपत्रि
- त अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:लोहड़ी 
-DTSTART;VALUE=DATE:20250113
-DTEND;VALUE=DATE:20250114
-DTSTAMP:20241008T090641Z
-UID:4cb35911876e3206de6b83bc6e02cbfc-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Restricted Holiday -  लोहड़ी भारत मे
- ं प्रतिबंधित अवकाश है
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:गणतंत्र दिवस 
 DTSTART;VALUE=DATE:20250126
 DTEND;VALUE=DATE:20250127
-DTSTAMP:20241008T090641Z
-UID:e175d1c12efa9e5bb39fefc30c32e6ba-2025
+DTSTAMP:20250430T135831Z
+UID:e175d1c12efa9e5bb39fefc30c32e6ba-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  भारत का गणतंत्र 
@@ -350,15 +14,15 @@ DESCRIPTION:Gazetted Holiday -  भारत का गणतंत्र
  ने की वर्षगांठ का प्रतीक है।
   यह 26 जनवरी को भारत में वार्ष
  िक राजपत्रित अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:महा शिवरात्रि/शिवरात्रि 
 DTSTART;VALUE=DATE:20250226
 DTEND;VALUE=DATE:20250227
-DTSTAMP:20241008T090641Z
-UID:0ca0842b97ef23788874adb0ee0c0729-2025
+DTSTAMP:20250430T135831Z
+UID:0ca0842b97ef23788874adb0ee0c0729-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  महा शिवरात्रि व
@@ -366,15 +30,15 @@ DESCRIPTION:Gazetted Holiday -  महा शिवरात्रि व
  मर्पित एक वार्षिक उत्सव है। 
  भक्तों के लिए\, चिंतन और ध्या
  न का दिन है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:होली 
 DTSTART;VALUE=DATE:20250314
 DTEND;VALUE=DATE:20250315
-DTSTAMP:20241008T090641Z
-UID:30e51d276ecdbeed1eb0c65e15231faf-2025
+DTSTAMP:20250430T135831Z
+UID:30e51d276ecdbeed1eb0c65e15231faf-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  होली हिंदुओं\, स
@@ -385,73 +49,43 @@ DESCRIPTION:Gazetted Holiday -  होली हिंदुओं\, स
  ौसम का जश्न मनाता है। यह त्य
  ौहार सोलह दिनों तक चल सकता ह
  ै।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dolyatra 
-DTSTART;VALUE=DATE:20250314
-DTEND;VALUE=DATE:20250315
-DTSTAMP:20241008T090641Z
-UID:7f480417a9d9c776caa9545064908f62-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Restricted Holiday -  डोलयात्रा भारत
-  में प्रतिबंधित अवकाश है
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:रमज़ान ईद/ईद-उल-फ़ितर 
+SUMMARY:रमज़ान ईद 
 DTSTART;VALUE=DATE:20250331
 DTEND;VALUE=DATE:20250401
-DTSTAMP:20241008T090641Z
-UID:e071b91407301c28d3274038d69081b0-2025
+DTSTAMP:20250430T135831Z
+UID:e071b91407301c28d3274038d69081b0-2025-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Gazetted Holiday -  ईद अल-फ़ितर रमज़
- ान के इस्लामी महीने के अंत क
- ो चिह्नित करने के लिए एक छुट
- ्टी है\, जिसके दौरान मुसलमान 
- दिन के उजाले के दौरान उपवास 
- करते हैं।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:राम नवमी 
-DTSTART;VALUE=DATE:20250406
-DTEND;VALUE=DATE:20250407
-DTSTAMP:20241008T090641Z
-UID:59e9e72402c88578fbca3c31b6b77bd0-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Gazetted Holiday -  राम नवमी एक हिंद
- ू त्योहार है जो अयोध्या के र
- ाजा दशरथ के पहले पुत्र राम क
- े जन्म का जश्न मनाता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+DESCRIPTION:Gazetted Holiday -  ईद-उल-फ़ितर का ए
+ क दिन\, जो रमज़ान के अंत का प्
+ रतीक है\, भारत में राजपत्रित 
+ अवकाश है।
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:महावीर जयंती 
 DTSTART;VALUE=DATE:20250410
 DTEND;VALUE=DATE:20250411
-DTSTAMP:20241008T090641Z
-UID:d6768263f1adb401ef4c034daa5d5316-2025
+DTSTAMP:20250430T135831Z
+UID:d6768263f1adb401ef4c034daa5d5316-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  महावीर जयंती भा
  रत में राजपत्रित अवकाश है
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:गुड फ्राइडे 
 DTSTART;VALUE=DATE:20250418
 DTEND;VALUE=DATE:20250419
-DTSTAMP:20241008T090641Z
-UID:cb518b7113b547f55e64e144bc23f7b5-2025
+DTSTAMP:20250430T135831Z
+UID:cb518b7113b547f55e64e144bc23f7b5-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  कई ईसाई गुड फ्रा
@@ -459,60 +93,60 @@ DESCRIPTION:Gazetted Holiday -  कई ईसाई गुड फ्रा
  स पर चढ़ने और उनकी मृत्यु की 
  याद दिलाते हैं। यह भारत में 
  राजपत्रित अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:बुद्ध पूर्णिमा/वेसाक 
 DTSTART;VALUE=DATE:20250512
 DTEND;VALUE=DATE:20250513
-DTSTAMP:20241008T090641Z
-UID:a78e360a1f75bb8e938311d475d55caa-2025
+DTSTAMP:20250430T135831Z
+UID:a78e360a1f75bb8e938311d475d55caa-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  वेसाक\, जिसे बुद
  ्ध पूर्णिमा भी कहा जाता है\, ग
  ौतम बुद्ध के जन्म\, ज्ञान और म
  ृत्यु का जश्न मनाता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:बकरीद/ईद उल-अधा 
+SUMMARY:बकरीद 
 DTSTART;VALUE=DATE:20250607
 DTEND;VALUE=DATE:20250608
-DTSTAMP:20241008T090641Z
-UID:595f3b7cbf00bece92c75ee8be4903c6-2025
+DTSTAMP:20250430T135831Z
+UID:595f3b7cbf00bece92c75ee8be4903c6-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  भारत के 200 मिलियन
-  से अधिक मुसलमानों के लिए\, बल
- िदान का त्योहार\, बकरीद\, वर्ष
+  से अधिक मुसलमानों के लिए\, बक
+ रीद\, बलिदान का त्योहार\, वर्ष
   के सबसे पवित्र दिनों में से 
  एक है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:मुहर्रम/आशूरा 
 DTSTART;VALUE=DATE:20250706
 DTEND;VALUE=DATE:20250707
-DTSTAMP:20241008T090641Z
-UID:f3615e2594629271805a6e8dbc8707ba-2025
+DTSTAMP:20250430T135831Z
+UID:f3615e2594629271805a6e8dbc8707ba-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  मुहर्रम\, या इस्
  लामी नव वर्ष\, भारत में एक सार
  ्वजनिक अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:स्वतंत्रता दिवस 
 DTSTART;VALUE=DATE:20250815
 DTEND;VALUE=DATE:20250816
-DTSTAMP:20241008T090641Z
-UID:9343ff4d8cac26472edbd5c6f6f81e35-2025
+DTSTAMP:20250430T135831Z
+UID:9343ff4d8cac26472edbd5c6f6f81e35-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  भारत का स्वतंत्
@@ -520,15 +154,15 @@ DESCRIPTION:Gazetted Holiday -  भारत का स्वतंत्
  ्वतंत्र राष्ट्र बनने के दिन 
  को मनाने के लिए एक वार्षिक र
  ाजपत्रित अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:जन्माष्टमी 
 DTSTART;VALUE=DATE:20250816
 DTEND;VALUE=DATE:20250817
-DTSTAMP:20241008T090641Z
-UID:0ab77789038fd459e94b2b65c6260c77-2025
+DTSTAMP:20250430T135831Z
+UID:0ab77789038fd459e94b2b65c6260c77-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  कृष्ण जन्माष्ट
@@ -539,45 +173,45 @@ DESCRIPTION:Gazetted Holiday -  कृष्ण जन्माष्ट
  द्रपद) के आठवें दिन मनाया जा
  ता है\, जो आमतौर पर अगस्त या स
  ितंबर में होता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:मिलाद अन-नबी/ईद-ए-मिलाद 
 DTSTART;VALUE=DATE:20250905
 DTEND;VALUE=DATE:20250906
-DTSTAMP:20241008T090641Z
-UID:3ad619ef7d85b2ea5852d04984e14dbf-2025
+DTSTAMP:20250430T135831Z
+UID:3ad619ef7d85b2ea5852d04984e14dbf-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  मिलाद अन-नबी भार
  त में एक राजपत्रित अवकाश है 
  और पैगंबर मुहम्मद के जन्मदि
  न को चिह्नित करता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:महात्मा गांधी जयंती 
 DTSTART;VALUE=DATE:20251002
 DTEND;VALUE=DATE:20251003
-DTSTAMP:20241008T090641Z
-UID:ac974f40d31ad4a2ec514f6c534306f4-2025
+DTSTAMP:20250430T135831Z
+UID:ac974f40d31ad4a2ec514f6c534306f4-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  महात्मा गांधी क
  ा जन्मदिन 2 अक्टूबर को भारत म
  ें एक वार्षिक राजपत्रित अवक
  ाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:दशहरा 
 DTSTART;VALUE=DATE:20251002
 DTEND;VALUE=DATE:20251003
-DTSTAMP:20241008T090641Z
-UID:7360e2403e088bb8824eb05623aa0f1d-2025
+DTSTAMP:20250430T135831Z
+UID:7360e2403e088bb8824eb05623aa0f1d-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  दशहरा\, जिसे विज
@@ -588,73 +222,58 @@ DESCRIPTION:Gazetted Holiday -  दशहरा\, जिसे विज
  ों तक चलता है और पूरे भारत मे
  ं विभिन्न परंपराओं में मनाय
  ा जाता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:दीवाली/दीपावली 
 DTSTART;VALUE=DATE:20251020
 DTEND;VALUE=DATE:20251021
-DTSTAMP:20241008T090641Z
-UID:c8074227c8f2e751ff3c985e517d7920-2025
+DTSTAMP:20250430T135831Z
+UID:c8074227c8f2e751ff3c985e517d7920-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  दिवाली भौतिक और 
  आध्यात्मिक प्रकाश का त्योह
  ार है जो हर साल अक्टूबर या नव
  ंबर में मनाया जाता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:गुरु नानक जयंती 
 DTSTART;VALUE=DATE:20251105
 DTEND;VALUE=DATE:20251106
-DTSTAMP:20241008T090641Z
-UID:52aad1cf9786e72dc6b0554cdcb6076e-2025
+DTSTAMP:20250430T135831Z
+UID:52aad1cf9786e72dc6b0554cdcb6076e-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  गुरु नानक जयंती 
  भारत में राजपत्रित अवकाश है
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas 
 DTSTART;VALUE=DATE:20251225
 DTEND;VALUE=DATE:20251226
-DTSTAMP:20241008T090641Z
-UID:4a28ab1fbe51009ea625b9104cad19c3-2025
+DTSTAMP:20250430T135831Z
+UID:4a28ab1fbe51009ea625b9104cad19c3-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  कई ईसाई हर साल 25 
  दिसंबर को क्रिसमस डे मनाते ह
  ैं\, जो भारत में एक राजपत्रित 
  अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:रमज़ान ईद/ईद-उल-फ़ितर 
-DTSTART;VALUE=DATE:20250331
-DTEND;VALUE=DATE:20250401
-DTSTAMP:20241008T090641Z
-UID:e071b91407301c28d3274038d69081b0-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Common local holiday -  ईद-उल-फ़ितर का 
- एक दिन\, जो रमज़ान के अंत का प
- ्रतीक है\, भारत में राजपत्रि
- त अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135831Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:गणतंत्र दिवस 
 DTSTART;VALUE=DATE:20260126
 DTEND;VALUE=DATE:20260127
-DTSTAMP:20241008T090641Z
-UID:e175d1c12efa9e5bb39fefc30c32e6ba-2026
+DTSTAMP:20250430T135833Z
+UID:e175d1c12efa9e5bb39fefc30c32e6ba-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  भारत का गणतंत्र 
@@ -662,15 +281,15 @@ DESCRIPTION:Gazetted Holiday -  भारत का गणतंत्र
  ने की वर्षगांठ का प्रतीक है।
   यह 26 जनवरी को भारत में वार्ष
  िक राजपत्रित अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:महा शिवरात्रि/शिवरात्रि 
 DTSTART;VALUE=DATE:20260215
 DTEND;VALUE=DATE:20260216
-DTSTAMP:20241008T090641Z
-UID:0ca0842b97ef23788874adb0ee0c0729-2026
+DTSTAMP:20250430T135833Z
+UID:0ca0842b97ef23788874adb0ee0c0729-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  महा शिवरात्रि व
@@ -678,15 +297,15 @@ DESCRIPTION:Gazetted Holiday -  महा शिवरात्रि व
  मर्पित एक वार्षिक उत्सव है। 
  भक्तों के लिए\, चिंतन और ध्या
  न का दिन है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:होली 
 DTSTART;VALUE=DATE:20260304
 DTEND;VALUE=DATE:20260305
-DTSTAMP:20241008T090641Z
-UID:30e51d276ecdbeed1eb0c65e15231faf-2026
+DTSTAMP:20250430T135833Z
+UID:30e51d276ecdbeed1eb0c65e15231faf-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  होली हिंदुओं\, स
@@ -697,47 +316,45 @@ DESCRIPTION:Gazetted Holiday -  होली हिंदुओं\, स
  ौसम का जश्न मनाता है। यह त्य
  ौहार सोलह दिनों तक चल सकता ह
  ै।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:रमज़ान ईद/ईद-उल-फ़ितर 
+SUMMARY:रमज़ान ईद 
 DTSTART;VALUE=DATE:20260321
 DTEND;VALUE=DATE:20260322
-DTSTAMP:20241008T090641Z
-UID:e071b91407301c28d3274038d69081b0-2026
+DTSTAMP:20250430T135833Z
+UID:e071b91407301c28d3274038d69081b0-2026-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Gazetted Holiday -  ईद अल-फ़ितर रमज़
- ान के इस्लामी महीने के अंत क
- ो चिह्नित करने के लिए एक छुट
- ्टी है\, जिसके दौरान मुसलमान 
- दिन के उजाले के दौरान उपवास 
- करते हैं।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+DESCRIPTION:Gazetted Holiday -  ईद-उल-फ़ितर का ए
+ क दिन\, जो रमज़ान के अंत का प्
+ रतीक है\, भारत में राजपत्रित 
+ अवकाश है।
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:राम नवमी 
 DTSTART;VALUE=DATE:20260326
 DTEND;VALUE=DATE:20260327
-DTSTAMP:20241008T090641Z
-UID:59e9e72402c88578fbca3c31b6b77bd0-2026
+DTSTAMP:20250430T135833Z
+UID:59e9e72402c88578fbca3c31b6b77bd0-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  राम नवमी एक हिंद
  ू त्योहार है जो अयोध्या के र
  ाजा दशरथ के पहले पुत्र राम क
  े जन्म का जश्न मनाता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:गुड फ्राइडे 
 DTSTART;VALUE=DATE:20260403
 DTEND;VALUE=DATE:20260404
-DTSTAMP:20241008T090641Z
-UID:cb518b7113b547f55e64e144bc23f7b5-2026
+DTSTAMP:20250430T135833Z
+UID:cb518b7113b547f55e64e144bc23f7b5-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  कई ईसाई गुड फ्रा
@@ -745,45 +362,45 @@ DESCRIPTION:Gazetted Holiday -  कई ईसाई गुड फ्रा
  स पर चढ़ने और उनकी मृत्यु की 
  याद दिलाते हैं। यह भारत में 
  राजपत्रित अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:बकरीद/ईद उल-अधा 
+SUMMARY:बकरीद 
 DTSTART;VALUE=DATE:20260528
 DTEND;VALUE=DATE:20260529
-DTSTAMP:20241008T090641Z
-UID:595f3b7cbf00bece92c75ee8be4903c6-2026
+DTSTAMP:20250430T135833Z
+UID:595f3b7cbf00bece92c75ee8be4903c6-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  भारत के 200 मिलियन
-  से अधिक मुसलमानों के लिए\, बल
- िदान का त्योहार\, बकरीद\, वर्ष
+  से अधिक मुसलमानों के लिए\, बक
+ रीद\, बलिदान का त्योहार\, वर्ष
   के सबसे पवित्र दिनों में से 
  एक है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:मुहर्रम/आशूरा 
 DTSTART;VALUE=DATE:20260626
 DTEND;VALUE=DATE:20260627
-DTSTAMP:20241008T090641Z
-UID:f3615e2594629271805a6e8dbc8707ba-2026
+DTSTAMP:20250430T135833Z
+UID:f3615e2594629271805a6e8dbc8707ba-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  मुहर्रम\, या इस्
  लामी नव वर्ष\, भारत में एक सार
  ्वजनिक अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:स्वतंत्रता दिवस 
 DTSTART;VALUE=DATE:20260815
 DTEND;VALUE=DATE:20260816
-DTSTAMP:20241008T090641Z
-UID:9343ff4d8cac26472edbd5c6f6f81e35-2026
+DTSTAMP:20250430T135833Z
+UID:9343ff4d8cac26472edbd5c6f6f81e35-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  भारत का स्वतंत्
@@ -791,15 +408,15 @@ DESCRIPTION:Gazetted Holiday -  भारत का स्वतंत्
  ्वतंत्र राष्ट्र बनने के दिन 
  को मनाने के लिए एक वार्षिक र
  ाजपत्रित अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:जन्माष्टमी 
 DTSTART;VALUE=DATE:20260904
 DTEND;VALUE=DATE:20260905
-DTSTAMP:20241008T090641Z
-UID:0ab77789038fd459e94b2b65c6260c77-2026
+DTSTAMP:20250430T135833Z
+UID:0ab77789038fd459e94b2b65c6260c77-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  कृष्ण जन्माष्ट
@@ -810,30 +427,30 @@ DESCRIPTION:Gazetted Holiday -  कृष्ण जन्माष्ट
  द्रपद) के आठवें दिन मनाया जा
  ता है\, जो आमतौर पर अगस्त या स
  ितंबर में होता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:महात्मा गांधी जयंती 
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
-DTSTAMP:20241008T090641Z
-UID:ac974f40d31ad4a2ec514f6c534306f4-2026
+DTSTAMP:20250430T135833Z
+UID:ac974f40d31ad4a2ec514f6c534306f4-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  महात्मा गांधी क
  ा जन्मदिन 2 अक्टूबर को भारत म
  ें एक वार्षिक राजपत्रित अवक
  ाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:दशहरा 
 DTSTART;VALUE=DATE:20261020
 DTEND;VALUE=DATE:20261021
-DTSTAMP:20241008T090641Z
-UID:7360e2403e088bb8824eb05623aa0f1d-2026
+DTSTAMP:20250430T135833Z
+UID:7360e2403e088bb8824eb05623aa0f1d-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  दशहरा\, जिसे विज
@@ -844,52 +461,263 @@ DESCRIPTION:Gazetted Holiday -  दशहरा\, जिसे विज
  ों तक चलता है और पूरे भारत मे
  ं विभिन्न परंपराओं में मनाय
  ा जाता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:दीवाली/दीपावली 
 DTSTART;VALUE=DATE:20261108
 DTEND;VALUE=DATE:20261109
-DTSTAMP:20241008T090641Z
-UID:c8074227c8f2e751ff3c985e517d7920-2026
+DTSTAMP:20250430T135833Z
+UID:c8074227c8f2e751ff3c985e517d7920-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  दिवाली भौतिक और 
  आध्यात्मिक प्रकाश का त्योह
  ार है जो हर साल अक्टूबर या नव
  ंबर में मनाया जाता है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Christmas 
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
-DTSTAMP:20241008T090641Z
-UID:4a28ab1fbe51009ea625b9104cad19c3-2026
+DTSTAMP:20250430T135833Z
+UID:4a28ab1fbe51009ea625b9104cad19c3-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Gazetted Holiday -  कई ईसाई हर साल 25 
  दिसंबर को क्रिसमस डे मनाते ह
  ैं\, जो भारत में एक राजपत्रित 
  अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135833Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:रमज़ान ईद/ईद-उल-फ़ितर 
-DTSTART;VALUE=DATE:20260321
-DTEND;VALUE=DATE:20260322
-DTSTAMP:20241008T090641Z
-UID:e071b91407301c28d3274038d69081b0-2026
+SUMMARY:गणतंत्र दिवस 
+DTSTART;VALUE=DATE:20270126
+DTEND;VALUE=DATE:20270127
+DTSTAMP:20250430T135834Z
+UID:e175d1c12efa9e5bb39fefc30c32e6ba-2027-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:Common local holiday -  ईद-उल-फ़ितर का 
- एक दिन\, जो रमज़ान के अंत का प
- ्रतीक है\, भारत में राजपत्रि
- त अवकाश है।
-LAST-MODIFIED:20241008T090641Z
-TRANSP:transparent
+DESCRIPTION:Gazetted Holiday -  भारत का गणतंत्र 
+ दिवस भारतीय संविधान को अपना
+ ने की वर्षगांठ का प्रतीक है।
+  यह 26 जनवरी को भारत में वार्ष
+ िक राजपत्रित अवकाश है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:महा शिवरात्रि/शिवरात्रि 
+DTSTART;VALUE=DATE:20270306
+DTEND;VALUE=DATE:20270307
+DTSTAMP:20250430T135834Z
+UID:0ca0842b97ef23788874adb0ee0c0729-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  महा शिवरात्रि व
+ िनाश के हिंदू देवता शिव को स
+ मर्पित एक वार्षिक उत्सव है। 
+ भक्तों के लिए\, चिंतन और ध्या
+ न का दिन है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:रमज़ान ईद 
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+DTSTAMP:20250430T135834Z
+UID:e071b91407301c28d3274038d69081b0-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  ईद-उल-फ़ितर का ए
+ क दिन\, जो रमज़ान के अंत का प्
+ रतीक है\, भारत में राजपत्रित 
+ अवकाश है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:होली 
+DTSTART;VALUE=DATE:20270322
+DTEND;VALUE=DATE:20270323
+DTSTAMP:20250430T135834Z
+UID:30e51d276ecdbeed1eb0c65e15231faf-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  होली हिंदुओं\, स
+ िखों और अन्य लोगों द्वारा मन
+ ाए जाने वाले रंगों का वसंत त
+ ्योहार है। यह बुराई पर अच्छा
+ ई की जीत और वसंत के आने वाले म
+ ौसम का जश्न मनाता है। यह त्य
+ ौहार सोलह दिनों तक चल सकता ह
+ ै।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:गुड फ्राइडे 
+DTSTART;VALUE=DATE:20270326
+DTEND;VALUE=DATE:20270327
+DTSTAMP:20250430T135834Z
+UID:cb518b7113b547f55e64e144bc23f7b5-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  कई ईसाई गुड फ्रा
+ इडे के दिन यीशु मसीह के क्रू
+ स पर चढ़ने और उनकी मृत्यु की 
+ याद दिलाते हैं। यह भारत में 
+ राजपत्रित अवकाश है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:राम नवमी 
+DTSTART;VALUE=DATE:20270415
+DTEND;VALUE=DATE:20270416
+DTSTAMP:20250430T135834Z
+UID:59e9e72402c88578fbca3c31b6b77bd0-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  राम नवमी एक हिंद
+ ू त्योहार है जो अयोध्या के र
+ ाजा दशरथ के पहले पुत्र राम क
+ े जन्म का जश्न मनाता है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:बकरीद 
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+DTSTAMP:20250430T135834Z
+UID:595f3b7cbf00bece92c75ee8be4903c6-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  भारत के 200 मिलियन
+  से अधिक मुसलमानों के लिए\, बक
+ रीद\, बलिदान का त्योहार\, वर्ष
+  के सबसे पवित्र दिनों में से 
+ एक है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:मुहर्रम/आशूरा 
+DTSTART;VALUE=DATE:20270616
+DTEND;VALUE=DATE:20270617
+DTSTAMP:20250430T135834Z
+UID:f3615e2594629271805a6e8dbc8707ba-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  मुहर्रम\, या इस्
+ लामी नव वर्ष\, भारत में एक सार
+ ्वजनिक अवकाश है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:स्वतंत्रता दिवस 
+DTSTART;VALUE=DATE:20270815
+DTEND;VALUE=DATE:20270816
+DTSTAMP:20250430T135834Z
+UID:9343ff4d8cac26472edbd5c6f6f81e35-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  भारत का स्वतंत्
+ रता दिवस 15 अगस्त को भारत के स
+ ्वतंत्र राष्ट्र बनने के दिन 
+ को मनाने के लिए एक वार्षिक र
+ ाजपत्रित अवकाश है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:जन्माष्टमी 
+DTSTART;VALUE=DATE:20270825
+DTEND;VALUE=DATE:20270826
+DTSTAMP:20250430T135834Z
+UID:0ab77789038fd459e94b2b65c6260c77-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  कृष्ण जन्माष्ट
+ मी एक हिंदू त्योहार है जो भग
+ वान विष्णु के आठवें अवतार कृ
+ ष्ण के जन्म का जश्न मनाता है
+ । यह हिंदू महीने भाद्रवा (भा
+ द्रपद) के आठवें दिन मनाया जा
+ ता है\, जो आमतौर पर अगस्त या स
+ ितंबर में होता है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:महात्मा गांधी जयंती 
+DTSTART;VALUE=DATE:20271002
+DTEND;VALUE=DATE:20271003
+DTSTAMP:20250430T135834Z
+UID:ac974f40d31ad4a2ec514f6c534306f4-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  महात्मा गांधी क
+ ा जन्मदिन 2 अक्टूबर को भारत म
+ ें एक वार्षिक राजपत्रित अवक
+ ाश है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:दशहरा 
+DTSTART;VALUE=DATE:20271009
+DTEND;VALUE=DATE:20271010
+DTSTAMP:20250430T135834Z
+UID:7360e2403e088bb8824eb05623aa0f1d-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  दशहरा\, जिसे विज
+ या दशमी के नाम से भी जाना जात
+ ा है\, एक भारतीय त्योहार है जो
+  बुरी शक्तियों पर अच्छी ताकत
+ ों का जश्न मनाता है। यह 10 दिन
+ ों तक चलता है और पूरे भारत मे
+ ं विभिन्न परंपराओं में मनाय
+ ा जाता है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:दीवाली/दीपावली 
+DTSTART;VALUE=DATE:20271029
+DTEND;VALUE=DATE:20271030
+DTSTAMP:20250430T135834Z
+UID:c8074227c8f2e751ff3c985e517d7920-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  दिवाली भौतिक और 
+ आध्यात्मिक प्रकाश का त्योह
+ ार है जो हर साल अक्टूबर या नव
+ ंबर में मनाया जाता है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Christmas 
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+DTSTAMP:20250430T135834Z
+UID:4a28ab1fbe51009ea625b9104cad19c3-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Gazetted Holiday -  कई ईसाई हर साल 25 
+ दिसंबर को क्रिसमस डे मनाते ह
+ ैं\, जो भारत में एक राजपत्रित 
+ अवकाश है।
+LAST-MODIFIED:20250430T135834Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

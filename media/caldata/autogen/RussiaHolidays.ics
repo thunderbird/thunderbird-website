@@ -3,471 +3,164 @@ VERSION:2.0
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 BEGIN:VEVENT
 SUMMARY:Новый год 
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20241008T090729Z
-UID:c393a387ce2268455fd9540f5f7dfeac-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Россияне отмечают Новы
- й год по григорианскому календарю 1 янва
- ря.
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Новогодний праздник 
-DTSTART;VALUE=DATE:20240102
-DTEND;VALUE=DATE:20240103
-DTSTAMP:20241008T090729Z
-UID:9c9c3bbadf2b66879050ed46b6f08230-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Новогодние каникулы — 
- национальный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Новогодний праздник 
-DTSTART;VALUE=DATE:20240103
-DTEND;VALUE=DATE:20240104
-DTSTAMP:20241008T090729Z
-UID:7c7d1970b08dc50271c8d4c3da10967f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Новогодние каникулы — 
- национальный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Новогодний праздник 
-DTSTART;VALUE=DATE:20240104
-DTEND;VALUE=DATE:20240105
-DTSTAMP:20241008T090729Z
-UID:ebc444de4d9723122dba5baf7166fcb7-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Новогодние каникулы — 
- национальный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Новогодний праздник 
-DTSTART;VALUE=DATE:20240105
-DTEND;VALUE=DATE:20240106
-DTSTAMP:20241008T090729Z
-UID:fbdced879c91ef29cd576f4a13a2c8b8-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Новогодние каникулы — 
- национальный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Новогодний праздник 
-DTSTART;VALUE=DATE:20240106
-DTEND;VALUE=DATE:20240107
-DTSTAMP:20241008T090729Z
-UID:f323e23c56a61240f7cbb2c4a4dc808e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Новогодние каникулы — 
- национальный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Православное Рождество 
-DTSTART;VALUE=DATE:20240107
-DTEND;VALUE=DATE:20240108
-DTSTAMP:20241008T090729Z
-UID:3afc07de34f92981851838804cb5c6a2-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:Orthodox -  Многие россияне отмечают Р
- ождество 7 января по григорианскому кале
- ндарю\, что соответствует 25 декабря по юл
- ианскому календарю.
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Новогодний праздник 
-DTSTART;VALUE=DATE:20240108
-DTEND;VALUE=DATE:20240109
-DTSTAMP:20241008T090729Z
-UID:9f2c6108c0a345eb8c61c1b0bf4df157-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Новогодние каникулы — 
- национальный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День защитника Отечества 
-DTSTART;VALUE=DATE:20240223
-DTEND;VALUE=DATE:20240224
-DTSTAMP:20241008T090729Z
-UID:c3cdb82b5703db1532ddd6cda8c08708-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Многие россияне отмеча
- ют День защитника Отечества 23 февраля\, к
- огда чествуют военнослужащих и ветерано
- в.
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Международный женский день 
-DTSTART;VALUE=DATE:20240308
-DTEND;VALUE=DATE:20240309
-DTSTAMP:20241008T090729Z
-UID:886b9be89edaa7d48991e352185e434b-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Многие россияне отдают
-  должное роли женщин в российском общест
- ве\, отмечая Международный женский день 8
-  марта.
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Праздник весны и труда 
-DTSTART;VALUE=DATE:20240428
-DTEND;VALUE=DATE:20240429
-DTSTAMP:20241008T090729Z
-UID:0e4fbd367dc614d75ad0453e1e0c1763-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Праздник весны и труда 
- — государственный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Праздник весны и труда 
-DTSTART;VALUE=DATE:20240429
-DTEND;VALUE=DATE:20240430
-DTSTAMP:20241008T090729Z
-UID:a970a91883cd225fd7a58c351a335d6e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Праздник весны и труда 
- — государственный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Праздник весны и труда 
-DTSTART;VALUE=DATE:20240430
-DTEND;VALUE=DATE:20240501
-DTSTAMP:20241008T090729Z
-UID:60b1d17ece4144f0b01151ad101450cb-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Праздник весны и труда 
- — государственный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День весны и труда 
-DTSTART;VALUE=DATE:20240501
-DTEND;VALUE=DATE:20240502
-DTSTAMP:20241008T090729Z
-UID:85116cee6a1c0c9b71a5a5491c7ae97d-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Для многих россиян Ден
- ь весны и труда\, который приходится на 1 
- мая\, — семейный праздник и время отдыха.
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День Победы 
-DTSTART;VALUE=DATE:20240509
-DTEND;VALUE=DATE:20240510
-DTSTAMP:20241008T090729Z
-UID:e6c29d31cb3f2d6255073d727e073935-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Один из крупнейших рос
- сийских праздников\, День Победы\, знамен
- ует капитуляцию Германии Советскому Сою
- зу в 1945 году\, положив конец одной из самы
- х кровопролитных войн в истории России.
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Праздник Дня Победы 
-DTSTART;VALUE=DATE:20240510
-DTEND;VALUE=DATE:20240511
-DTSTAMP:20241008T090729Z
-UID:4434b2b2fb38b4721719c77d5523e521-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Указ 2012 года изменил ко
- личество дней и даты праздников Победы.
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День России 
-DTSTART;VALUE=DATE:20240612
-DTEND;VALUE=DATE:20240613
-DTSTAMP:20241008T090729Z
-UID:74d1b7b3076726af1d551c65e07a88ae-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  День России\, ежегодно 
- отмечаемый 12 июня\, знаменует собой нача
- ло демократических реформ в России и явл
- яется одним из новейших праздников в Рос
- сийской Федерации.
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Праздник Дня народного единства 
-DTSTART;VALUE=DATE:20241103
-DTEND;VALUE=DATE:20241104
-DTSTAMP:20241008T090729Z
-UID:b1cf810b8acc5e4ebeeefc3c9f32370f-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Праздник народного еди
- нства — государственный праздник в Росс
- ии
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:День народного единства 
-DTSTART;VALUE=DATE:20241104
-DTEND;VALUE=DATE:20241105
-DTSTAMP:20241008T090729Z
-UID:09bebb331dc4c858877684372ba38e41-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  День народного единств
- а\, который отмечается 4 ноября\, — один и
- з самых новых и противоречивых праздник
- ов в России.
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Новогодний праздник 
-DTSTART;VALUE=DATE:20241230
-DTEND;VALUE=DATE:20241231
-DTSTAMP:20241008T090729Z
-UID:801a7a5771e206a54adeffe62e7b60dd-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Новогодние каникулы — 
- национальный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Новогодний праздник 
-DTSTART;VALUE=DATE:20241231
-DTEND;VALUE=DATE:20250101
-DTSTAMP:20241008T090729Z
-UID:b460eaf8cf6af2edcbcc66a5e529f07e-2024
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Новогодние каникулы — 
- национальный праздник в России
-LAST-MODIFIED:20241008T090729Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Новый год 
 DTSTART;VALUE=DATE:20250101
 DTEND;VALUE=DATE:20250102
-DTSTAMP:20241008T090730Z
-UID:c393a387ce2268455fd9540f5f7dfeac-2025
+DTSTAMP:20250430T135939Z
+UID:c393a387ce2268455fd9540f5f7dfeac-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Россияне отмечают Новы
  й год по григорианскому календарю 1 янва
  ря.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новогодний праздник 
 DTSTART;VALUE=DATE:20250102
 DTEND;VALUE=DATE:20250103
-DTSTAMP:20241008T090730Z
-UID:9c9c3bbadf2b66879050ed46b6f08230-2025
+DTSTAMP:20250430T135939Z
+UID:9c9c3bbadf2b66879050ed46b6f08230-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Новогодние каникулы — 
  национальный праздник в России
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новогодний праздник 
 DTSTART;VALUE=DATE:20250103
 DTEND;VALUE=DATE:20250104
-DTSTAMP:20241008T090730Z
-UID:7c7d1970b08dc50271c8d4c3da10967f-2025
+DTSTAMP:20250430T135939Z
+UID:7c7d1970b08dc50271c8d4c3da10967f-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Новогодние каникулы — 
  национальный праздник в России
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новогодний праздник 
 DTSTART;VALUE=DATE:20250106
 DTEND;VALUE=DATE:20250107
-DTSTAMP:20241008T090730Z
-UID:f323e23c56a61240f7cbb2c4a4dc808e-2025
+DTSTAMP:20250430T135939Z
+UID:f323e23c56a61240f7cbb2c4a4dc808e-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Новогодние каникулы — 
  национальный праздник в России
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Православное Рождество 
 DTSTART;VALUE=DATE:20250107
 DTEND;VALUE=DATE:20250108
-DTSTAMP:20241008T090730Z
-UID:3afc07de34f92981851838804cb5c6a2-2025
+DTSTAMP:20250430T135939Z
+UID:3afc07de34f92981851838804cb5c6a2-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Orthodox -  Многие россияне отмечают Р
  ождество 7 января по григорианскому кале
  ндарю\, что соответствует 25 декабря по юл
  ианскому календарю.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новогодний праздник 
 DTSTART;VALUE=DATE:20250108
 DTEND;VALUE=DATE:20250109
-DTSTAMP:20241008T090730Z
-UID:9f2c6108c0a345eb8c61c1b0bf4df157-2025
+DTSTAMP:20250430T135939Z
+UID:9f2c6108c0a345eb8c61c1b0bf4df157-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Новогодние каникулы — 
  национальный праздник в России
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День защитника Отечества 
 DTSTART;VALUE=DATE:20250223
 DTEND;VALUE=DATE:20250224
-DTSTAMP:20241008T090730Z
-UID:c3cdb82b5703db1532ddd6cda8c08708-2025
+DTSTAMP:20250430T135939Z
+UID:c3cdb82b5703db1532ddd6cda8c08708-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Многие россияне отмеча
  ют День защитника Отечества 23 февраля\, к
  огда чествуют военнослужащих и ветерано
  в.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Выходной день ко Дню защитника Отеч
- ества 
-DTSTART;VALUE=DATE:20250224
-DTEND;VALUE=DATE:20250225
-DTSTAMP:20241008T090730Z
-UID:c3cdb82b5703db1532ddd6cda8c08708-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Многие россияне отмеча
- ют День защитника Отечества 23 февраля\, к
- огда чествуют военнослужащих и ветерано
- в.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Международный женский день 
 DTSTART;VALUE=DATE:20250308
 DTEND;VALUE=DATE:20250309
-DTSTAMP:20241008T090730Z
-UID:886b9be89edaa7d48991e352185e434b-2025
+DTSTAMP:20250430T135939Z
+UID:886b9be89edaa7d48991e352185e434b-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Многие россияне отдают
   должное роли женщин в российском общест
  ве\, отмечая Международный женский день 8
   марта.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Выходной день в Международный женск
- ий день 
-DTSTART;VALUE=DATE:20250310
-DTEND;VALUE=DATE:20250311
-DTSTAMP:20241008T090730Z
-UID:886b9be89edaa7d48991e352185e434b-2025
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Многие россияне отдают
-  должное роли женщин в российском общест
- ве\, отмечая Международный женский день 8
-  марта.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День весны и труда 
 DTSTART;VALUE=DATE:20250501
 DTEND;VALUE=DATE:20250502
-DTSTAMP:20241008T090730Z
-UID:85116cee6a1c0c9b71a5a5491c7ae97d-2025
+DTSTAMP:20250430T135939Z
+UID:85116cee6a1c0c9b71a5a5491c7ae97d-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Для многих россиян Ден
  ь весны и труда\, который приходится на 1 
  мая\, — семейный праздник и время отдыха.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Праздник весны и труда 
+SUMMARY:Заменитель праздника на новогодний 
+ праздник 
 DTSTART;VALUE=DATE:20250502
 DTEND;VALUE=DATE:20250503
-DTSTAMP:20241008T090730Z
-UID:af86f35a4f3a59f188fe029ef4d391af-2025
+DTSTAMP:20250430T135939Z
+UID:b9e9388ee021604e2790b9cce2127742-2025-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  Указ 2012 года изменил ко
- личество дней и даты праздников весны и 
- труда.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+DESCRIPTION:Substitute Holiday -  Заменитель праздника 
+ на Новый год является выходным днем в Ро
+ ссии
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Праздник\, замещающий День защитник
+ а Отечества 
+DTSTART;VALUE=DATE:20250508
+DTEND;VALUE=DATE:20250509
+DTSTAMP:20250430T135939Z
+UID:2f03537c12fa2cc0346e10fe6d0b48dc-2025-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Substitute Holiday -  Заменить праздник Дня
+  защитника Отечества в России
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Победы 
 DTSTART;VALUE=DATE:20250509
 DTEND;VALUE=DATE:20250510
-DTSTAMP:20241008T090730Z
-UID:e6c29d31cb3f2d6255073d727e073935-2025
+DTSTAMP:20250430T135939Z
+UID:e6c29d31cb3f2d6255073d727e073935-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Один из крупнейших рос
@@ -475,15 +168,15 @@ DESCRIPTION:National holiday -  Один из крупнейших рос
  ует капитуляцию Германии Советскому Сою
  зу в 1945 году\, положив конец одной из самы
  х кровопролитных войн в истории России.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День России 
 DTSTART;VALUE=DATE:20250612
 DTEND;VALUE=DATE:20250613
-DTSTAMP:20241008T090730Z
-UID:74d1b7b3076726af1d551c65e07a88ae-2025
+DTSTAMP:20250430T135939Z
+UID:74d1b7b3076726af1d551c65e07a88ae-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  День России\, ежегодно 
@@ -491,184 +184,199 @@ DESCRIPTION:National holiday -  День России\, ежегодно
  ло демократических реформ в России и явл
  яется одним из новейших праздников в Рос
  сийской Федерации.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Выходные в День России 
+SUMMARY:Праздник\, заменяющий Международный
+  женский день 
 DTSTART;VALUE=DATE:20250613
 DTEND;VALUE=DATE:20250614
-DTSTAMP:20241008T090730Z
-UID:c260b7baf7fe783711d55afcce718d60-2025
+DTSTAMP:20250430T135939Z
+UID:5a5d7a5d6cfe35056aba5b3723c92970-2025-all
 CATEGORIES:Holidays
 CLASS:public
-DESCRIPTION:National holiday -  Выходные в День России 
- — национальный праздник в России
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+DESCRIPTION:Substitute Holiday -  Заменитель Междунаро
+ дного женского дня является выходным дн
+ ем в России
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Праздник Дня народного единства 
+DTSTART;VALUE=DATE:20251103
+DTEND;VALUE=DATE:20251104
+DTSTAMP:20250430T135939Z
+UID:b1cf810b8acc5e4ebeeefc3c9f32370f-2025-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Праздник народного еди
+ нства — государственный праздник в Росс
+ ии
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День народного единства 
 DTSTART;VALUE=DATE:20251104
 DTEND;VALUE=DATE:20251105
-DTSTAMP:20241008T090730Z
-UID:09bebb331dc4c858877684372ba38e41-2025
+DTSTAMP:20250430T135939Z
+UID:09bebb331dc4c858877684372ba38e41-2025-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  День народного единств
  а\, который отмечается 4 ноября\, — один и
  з самых новых и противоречивых праздник
  ов в России.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Заменитель праздника на новогодний 
+ праздник 
+DTSTART;VALUE=DATE:20251231
+DTEND;VALUE=DATE:20260101
+DTSTAMP:20250430T135939Z
+UID:a5579186791ed2219fa4c1119dca9775-2025-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Substitute Holiday -  Заменитель праздника 
+ на Новый год является выходным днем в Ро
+ ссии
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новый год 
 DTSTART;VALUE=DATE:20260101
 DTEND;VALUE=DATE:20260102
-DTSTAMP:20241008T090730Z
-UID:c393a387ce2268455fd9540f5f7dfeac-2026
+DTSTAMP:20250430T135939Z
+UID:c393a387ce2268455fd9540f5f7dfeac-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Россияне отмечают Новы
  й год по григорианскому календарю 1 янва
  ря.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новогодний праздник 
 DTSTART;VALUE=DATE:20260102
 DTEND;VALUE=DATE:20260103
-DTSTAMP:20241008T090730Z
-UID:9c9c3bbadf2b66879050ed46b6f08230-2026
+DTSTAMP:20250430T135939Z
+UID:9c9c3bbadf2b66879050ed46b6f08230-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Новогодние каникулы — 
  национальный праздник в России
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новогодний праздник 
 DTSTART;VALUE=DATE:20260105
 DTEND;VALUE=DATE:20260106
-DTSTAMP:20241008T090730Z
-UID:fbdced879c91ef29cd576f4a13a2c8b8-2026
+DTSTAMP:20250430T135939Z
+UID:fbdced879c91ef29cd576f4a13a2c8b8-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Новогодние каникулы — 
  национальный праздник в России
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новогодний праздник 
 DTSTART;VALUE=DATE:20260106
 DTEND;VALUE=DATE:20260107
-DTSTAMP:20241008T090730Z
-UID:f323e23c56a61240f7cbb2c4a4dc808e-2026
+DTSTAMP:20250430T135939Z
+UID:f323e23c56a61240f7cbb2c4a4dc808e-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Новогодние каникулы — 
  национальный праздник в России
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Православное Рождество 
 DTSTART;VALUE=DATE:20260107
 DTEND;VALUE=DATE:20260108
-DTSTAMP:20241008T090730Z
-UID:3afc07de34f92981851838804cb5c6a2-2026
+DTSTAMP:20250430T135939Z
+UID:3afc07de34f92981851838804cb5c6a2-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:Orthodox -  Многие россияне отмечают Р
  ождество 7 января по григорианскому кале
  ндарю\, что соответствует 25 декабря по юл
  ианскому календарю.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Новогодний праздник 
 DTSTART;VALUE=DATE:20260108
 DTEND;VALUE=DATE:20260109
-DTSTAMP:20241008T090730Z
-UID:9f2c6108c0a345eb8c61c1b0bf4df157-2026
+DTSTAMP:20250430T135939Z
+UID:9f2c6108c0a345eb8c61c1b0bf4df157-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Новогодние каникулы — 
  национальный праздник в России
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День защитника Отечества 
 DTSTART;VALUE=DATE:20260223
 DTEND;VALUE=DATE:20260224
-DTSTAMP:20241008T090730Z
-UID:c3cdb82b5703db1532ddd6cda8c08708-2026
+DTSTAMP:20250430T135939Z
+UID:c3cdb82b5703db1532ddd6cda8c08708-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Многие россияне отмеча
  ют День защитника Отечества 23 февраля\, к
  огда чествуют военнослужащих и ветерано
  в.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Международный женский день 
 DTSTART;VALUE=DATE:20260308
 DTEND;VALUE=DATE:20260309
-DTSTAMP:20241008T090730Z
-UID:886b9be89edaa7d48991e352185e434b-2026
+DTSTAMP:20250430T135939Z
+UID:886b9be89edaa7d48991e352185e434b-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Многие россияне отдают
   должное роли женщин в российском общест
  ве\, отмечая Международный женский день 8
   марта.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Выходной день в Международный женск
- ий день 
-DTSTART;VALUE=DATE:20260309
-DTEND;VALUE=DATE:20260310
-DTSTAMP:20241008T090730Z
-UID:886b9be89edaa7d48991e352185e434b-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Многие россияне отдают
-  должное роли женщин в российском общест
- ве\, отмечая Международный женский день 8
-  марта.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День весны и труда 
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-DTSTAMP:20241008T090730Z
-UID:85116cee6a1c0c9b71a5a5491c7ae97d-2026
+DTSTAMP:20250430T135939Z
+UID:85116cee6a1c0c9b71a5a5491c7ae97d-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Для многих россиян Ден
  ь весны и труда\, который приходится на 1 
  мая\, — семейный праздник и время отдыха.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День Победы 
 DTSTART;VALUE=DATE:20260509
 DTEND;VALUE=DATE:20260510
-DTSTAMP:20241008T090730Z
-UID:e6c29d31cb3f2d6255073d727e073935-2026
+DTSTAMP:20250430T135939Z
+UID:e6c29d31cb3f2d6255073d727e073935-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  Один из крупнейших рос
@@ -676,32 +384,15 @@ DESCRIPTION:National holiday -  Один из крупнейших рос
  ует капитуляцию Германии Советскому Сою
  зу в 1945 году\, положив конец одной из самы
  х кровопролитных войн в истории России.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Выходной день ко Дню Победы 
-DTSTART;VALUE=DATE:20260511
-DTEND;VALUE=DATE:20260512
-DTSTAMP:20241008T090730Z
-UID:e6c29d31cb3f2d6255073d727e073935-2026
-CATEGORIES:Holidays
-CLASS:public
-DESCRIPTION:National holiday -  Один из крупнейших рос
- сийских праздников\, День Победы\, посвящ
- ен капитуляции Германии Советскому Союз
- у в 1945 году\, положившей конец одной из са
- мых кровопролитных войн в истории Росси
- и.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День России 
 DTSTART;VALUE=DATE:20260612
 DTEND;VALUE=DATE:20260613
-DTSTAMP:20241008T090730Z
-UID:74d1b7b3076726af1d551c65e07a88ae-2026
+DTSTAMP:20250430T135939Z
+UID:74d1b7b3076726af1d551c65e07a88ae-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  День России\, ежегодно 
@@ -709,22 +400,194 @@ DESCRIPTION:National holiday -  День России\, ежегодно
  ло демократических реформ в России и явл
  яется одним из новейших праздников в Рос
  сийской Федерации.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:День народного единства 
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20241008T090730Z
-UID:09bebb331dc4c858877684372ba38e41-2026
+DTSTAMP:20250430T135939Z
+UID:09bebb331dc4c858877684372ba38e41-2026-all
 CATEGORIES:Holidays
 CLASS:public
 DESCRIPTION:National holiday -  День народного единств
  а\, который отмечается 4 ноября\, — один и
  з самых новых и противоречивых праздник
  ов в России.
-LAST-MODIFIED:20241008T090730Z
-TRANSP:transparent
+LAST-MODIFIED:20250430T135939Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Новый год 
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20250430T135940Z
+UID:c393a387ce2268455fd9540f5f7dfeac-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Россияне отмечают Новы
+ й год по григорианскому календарю 1 янва
+ ря.
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Новогодний праздник 
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+DTSTAMP:20250430T135940Z
+UID:ebc444de4d9723122dba5baf7166fcb7-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Новогодние каникулы — 
+ национальный праздник в России
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Новогодний праздник 
+DTSTART;VALUE=DATE:20270105
+DTEND;VALUE=DATE:20270106
+DTSTAMP:20250430T135940Z
+UID:fbdced879c91ef29cd576f4a13a2c8b8-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Новогодние каникулы — 
+ национальный праздник в России
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Новогодний праздник 
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+DTSTAMP:20250430T135940Z
+UID:f323e23c56a61240f7cbb2c4a4dc808e-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Новогодние каникулы — 
+ национальный праздник в России
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Православное Рождество 
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+DTSTAMP:20250430T135940Z
+UID:3afc07de34f92981851838804cb5c6a2-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:Orthodox -  Многие россияне отмечают Р
+ ождество 7 января по григорианскому кале
+ ндарю\, что соответствует 25 декабря по юл
+ ианскому календарю.
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Новогодний праздник 
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+DTSTAMP:20250430T135940Z
+UID:9f2c6108c0a345eb8c61c1b0bf4df157-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Новогодние каникулы — 
+ национальный праздник в России
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:День защитника Отечества 
+DTSTART;VALUE=DATE:20270223
+DTEND;VALUE=DATE:20270224
+DTSTAMP:20250430T135940Z
+UID:c3cdb82b5703db1532ddd6cda8c08708-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Многие россияне отмеча
+ ют День защитника Отечества 23 февраля\, к
+ огда чествуют военнослужащих и ветерано
+ в.
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Международный женский день 
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270309
+DTSTAMP:20250430T135940Z
+UID:886b9be89edaa7d48991e352185e434b-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Многие россияне отдают
+  должное роли женщин в российском общест
+ ве\, отмечая Международный женский день 8
+  марта.
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:День весны и труда 
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+DTSTAMP:20250430T135940Z
+UID:85116cee6a1c0c9b71a5a5491c7ae97d-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Для многих россиян Ден
+ ь весны и труда\, который приходится на 1 
+ мая\, — семейный праздник и время отдыха.
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:День Победы 
+DTSTART;VALUE=DATE:20270509
+DTEND;VALUE=DATE:20270510
+DTSTAMP:20250430T135940Z
+UID:e6c29d31cb3f2d6255073d727e073935-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  Один из крупнейших рос
+ сийских праздников\, День Победы\, знамен
+ ует капитуляцию Германии Советскому Сою
+ зу в 1945 году\, положив конец одной из самы
+ х кровопролитных войн в истории России.
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:День России 
+DTSTART;VALUE=DATE:20270612
+DTEND;VALUE=DATE:20270613
+DTSTAMP:20250430T135940Z
+UID:74d1b7b3076726af1d551c65e07a88ae-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  День России\, ежегодно 
+ отмечаемый 12 июня\, знаменует собой нача
+ ло демократических реформ в России и явл
+ яется одним из новейших праздников в Рос
+ сийской Федерации.
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:День народного единства 
+DTSTART;VALUE=DATE:20271104
+DTEND;VALUE=DATE:20271105
+DTSTAMP:20250430T135940Z
+UID:09bebb331dc4c858877684372ba38e41-2027-all
+CATEGORIES:Holidays
+CLASS:public
+DESCRIPTION:National holiday -  День народного единств
+ а\, который отмечается 4 ноября\, — один и
+ з самых новых и противоречивых праздник
+ ов в России.
+LAST-MODIFIED:20250430T135940Z
+TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

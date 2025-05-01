@@ -53,7 +53,7 @@ class Calendar(object):
             'description': self.description,
             'dtstamp': datetime.now(),
             'class': 'public',
-            'transp': 'opaque' if self.calendar_type == CalendarTypes.NATIONAL else 'transparent',
+            'transp': 'OPAQUE' if self.calendar_type == CalendarTypes.NATIONAL else 'TRANSPARENT',
             'categories': ['Holidays'],
             'rrule': self.rrule
         }
