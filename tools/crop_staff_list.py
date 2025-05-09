@@ -25,7 +25,7 @@ import enum
 import os
 import re
 
-from PIL import Image
+from PIL import Image, ImageOps
 
 scale_to_px = 128
 
@@ -86,6 +86,7 @@ def handle_crop():
                 continue
             print(f"{root}/{file}")
             with Image.open(f"{root}/{file}") as im:
+                im = ImageOps.exif_transpose(im)
                 width = im.width
                 height = im.height
 
