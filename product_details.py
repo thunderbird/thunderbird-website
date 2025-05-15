@@ -212,8 +212,8 @@ class ThunderbirdDetails():
 
         Quirks:
         - 38.0.1 starts with a point release and is added twice, once as a major and second as a stability release.
-        - 115 releases are patched up to be ESR builds.
-        - non-esr builds post 115 are ignored.
+        - 115 releases are patched up to be ESR builds, non-esr builds post 115 are ignored.
+        - 128.0esr has changed from esr to major, but list of majors has no 128 entry.
         """
         releases = {}
 
@@ -229,10 +229,12 @@ class ThunderbirdDetails():
             return False
 
         def needs_esr_fixup(version_ints: list[int]):
-            """115.10.2 up until 128.0esr are mislabelled and should be esr builds"""
+            """115.10.2 to 128.0esr are mislabelled and should be esr builds"""
+            if version_ints[0] == 128:
+                return True
+
             if version_ints[0] != 115:
                 return False
-
             # If >=115.11
             if version_ints[1] >= 11:
                 return True
