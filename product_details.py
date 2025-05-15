@@ -229,7 +229,7 @@ class ThunderbirdDetails():
             return False
 
         def needs_esr_fixup(version_ints: list[int]):
-            """115.10.2 up until 128.0esr are mislabelled and should be esr builds"""
+            """115.10.2 to 128.0esr are mislabelled and should be esr builds"""
             if version_ints[0] == 128:
                 return True
 
