@@ -32,15 +32,10 @@
     background-repeat: no-repeat;
     color: var(--color-gray-20);
     isolation: isolate;
-    padding-top: 0;
+    padding-top: var(--nav-height);
 
     // More we take from the bottom, the more we need to pull back up
     padding-bottom: 10.5rem;
-
-    @media (max-width: @md) {
-      padding-top: var(--nav-height);
-    }
-
 
     // Adjust the hero text for the display background
     .hero {
@@ -48,15 +43,8 @@
       --font-tagline-clamp: clamp(var(--font-tagline-min), var(--font-tagline-ideal), 4rem);
 
       position: relative;
-      top: 12rem;
+      top: 5rem;
       margin-bottom: 5rem;
-    }
-
-    @media (max-width: @md) {
-      .hero {
-        top: 5rem;
-        margin-bottom: 5rem;
-      }
     }
   }
 
