@@ -95,17 +95,12 @@
 
   <details class="accordion">
     <summary class="question">
-      {{ _('Why do you need my address in order to process a gift?') }}
+      {{ _('Data Collection and Privacy') }}
     </summary>
     <p class="answer">
-      {% trans trimmed url=url('privacy.notices.donations'), website_privacy=url('privacy') %}
-        We understand that your privacy is very important -- we agree, and that's a core value of ours at Thunderbird and Mozilla.
-
-        Your address is part of our Payment Processing, Contact and Donation Information that we outline in our
-        <a href="{{ url }}">Privacy Policy</a>. This data is used for payment processing, transactional receipts, fraud detection and record-keeping purposes.
-
-        If you want to know more about the personal information data we receive, the third-party vendors we trust, and how long we keep your data, please refer to our
-        <a href="{{ website_privacy }}">Websites, Communications & Cookies Privacy Notice</a>.
+      {% trans trimmed privacy=url('privacy') %}
+        To learn more about the personal information we receive as part of the donation process, the third-party vendors we trust, and how long we keep your data, please review our
+        <a href="{{ privacy }}">Websites, Communications & Cookies Privacy Notice</a>.
       {% endtrans %}
     </p>
   </details>
