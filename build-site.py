@@ -12,6 +12,7 @@ import settings
 from datetime import date
 
 from calgen.providers.CalendarificProvider import CalendarificProvider
+from calgen.providers.VacanzaHolidaysProvider import VacanzaHolidaysProvider
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--enus', help='Only build the en-US language.', action='store_true')
@@ -66,7 +67,8 @@ elif args.buildcalendars:
     except KeyError:
         sys.exit("No `CALENDARIFIC_API_KEY` defined.")
 
-    build_calendar.build_calendars(CalendarificProvider({'api_key': api_key}), calendar_locales)
+    # build_calendar.build_calendars(CalendarificProvider({'api_key': api_key}), calendar_locales)
+    build_calendar.build_calendars(VacanzaHolidaysProvider({}), calendar_locales)
 elif args.downloadlegal:
     print("Downloading legal documents")
     legal = builder.Legal(settings.WEBSITE_PATH)
