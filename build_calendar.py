@@ -107,8 +107,8 @@ def build_calendars(provider: Provider, locales: dict):
         for country_name, language_code in country_info_list:
 
             # Wait 1 second due to free api restrictions
-            if is_free_tier:
-                time.sleep(1)
+            # if is_free_tier:
+            #     time.sleep(1)
 
             ical = build_ical(provider, locale, language_code, years_to_generate)
 
