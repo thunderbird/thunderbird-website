@@ -111,6 +111,34 @@
     {{ high_res_img('thunderbird/base/about/contributors.png', {'alt': _('Our Contributors')}, alt_formats=('avif', 'webp')) }}
     {% include 'includes/components/page-separator-cover.html' %}
   </section>
+  <section id="governed-by-contributors">
+    <div class="container">
+      <div class="section-text">
+        <h2 aria-label="{{ _('Governed by Contributors') }}">{{ _('Governed by <span class="txt-gradient">Contributors</span>') }}</h2>
+        <p>
+          {% trans trimmed %}
+            The Thunderbird Project is guided by the Thunderbird Council,
+            an elected body functioning much like a board of directors for an open-source project. Established in 2014,
+            this council is elected by contributors and acts as their voice in determining Thunderbird's strategic
+            direction and goals. The Council oversees funds, approves budgets, and shapes the product roadmap,
+            ensuring Thunderbird remains true to its core values.
+          {% endtrans %}
+        </p>
+      </div>
+      <div>
+        <div class="job-grid">
+          {# Re-using the job_block macro here #}
+          {{ job_block(_('Council Chair'), 'Philipp Kewisch', high_res_img('thunderbird/staff/philipp_kewisch.png', scale='2x', alt_formats=('webp',)), True) }}
+          {{ job_block(_('Council Secretary'), 'Patrick Cloke', high_res_img('thunderbird/staff/patrick_cloke.png', scale='2x', alt_formats=('webp',)), True) }}
+          {{ job_block(_('Council Member'), 'Magnus Melin', high_res_img('thunderbird/staff/magnus_melin.png', scale='2x', alt_formats=('webp',)), True) }}
+          {{ job_block(_('Council Member'), 'Michele Zelco', high_res_img('thunderbird/staff/michele_zelco.png', scale='2x', alt_formats=('webp',)), True) }}
+          {{ job_block(_('Council Member'), 'Tim Maks van den Broek', high_res_img('thunderbird/staff/tim_macks_van_den_broek.png', scale='2x', alt_formats=('webp',)), True) }}
+          {{ job_block(_('Council Member'), 'Teal Dulcet', high_res_img('thunderbird/staff/teal_dulcet.png', scale='2x', alt_formats=('webp',)), True) }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'includes/components/page-separator.html' %}
   <section id="supported-by-mozilla">
     <div class="container">
       <div class="section-text">
@@ -184,11 +212,11 @@
   </section>
 {% endblock %}
 
-{% macro job_block(title, name, img) %}
+{% macro job_block(title, name, img, is_council=False) %}
   {% set slug = name.replace(' ', '-')|lower %}
   {% set name = name.replace(' ', '\n') %}
   {% set title_lines = split_keep_delimiter(title, ',') %}
-  <div class="person" id="staff-{{ slug }}">
+  <div class="person" id="{%- if is_council -%}council-{{ slug }}{%- else -%}staff-{{ slug }}{%- endif -%}">
     {{ img }}
     <h5>{{ name }}</h5>
     <div class="job-title">
