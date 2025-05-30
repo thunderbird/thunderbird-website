@@ -11,7 +11,6 @@ import settings
 
 from datetime import date
 
-from calgen.providers.CalendarificProvider import CalendarificProvider
 from calgen.providers.VacanzaHolidaysProvider import VacanzaHolidaysProvider
 
 parser = argparse.ArgumentParser()
@@ -62,12 +61,6 @@ elif args.updates:
 elif args.buildcalendars:
     print("Building calendar files")
 
-    try:
-        api_key = os.environ['CALENDARIFIC_API_KEY']
-    except KeyError:
-        sys.exit("No `CALENDARIFIC_API_KEY` defined.")
-
-    # build_calendar.build_calendars(CalendarificProvider({'api_key': api_key}), calendar_locales)
     build_calendar.build_calendars(VacanzaHolidaysProvider({}), calendar_locales)
 elif args.downloadlegal:
     print("Downloading legal documents")
