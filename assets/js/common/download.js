@@ -228,7 +228,10 @@ if (typeof Mozilla === 'undefined') {
     }
 
     // Only options that pass "has_localized_download" are allowed to be selected which makes this safe!
-    if (locale !== 'en-US') {
+    // Note: The Japanese mac version is an exception here.
+    if (locale === 'ja' && installer === 'osx') {
+      downloadLink = downloadLink.replace('en-US', 'ja-JP-mac');
+    } else if (locale !== 'en-US') {
       downloadLink = downloadLink.replace('en-US', locale);
     }
 
