@@ -3,12 +3,9 @@
 We host a variety of holiday calendars for free which can be
 found [here](https://www.thunderbird.net/calendar/holidays/).
 
-Previously we use to source these from the community, this was a time-consuming process so we moved to sourcing them
-from a paid service: Calendarific.
-
-This has the unfortunate effect of removing the community's ability to correct / localize specific holidays or
-countries. In the future we hope to move to an open-source repo for calendar generation this is currently tracked
-in [#753](https://github.com/thunderbird/thunderbird-website/issues/753).
+We currently use the Python library [holidays](https://github.com/vacanza/holidays), which provides a best effort 
+collection of public holidays worldwide. Using this library gives us the ability to correct any mistakes and/or
+missing holidays. Feel free to contribute to the holidays library if you find any mistakes in the calendars.
 
 ## Calendars.json
 
