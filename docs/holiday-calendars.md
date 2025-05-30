@@ -21,6 +21,8 @@ Once a quarter the calendars need to be regenerated to ensure accuracy. You can 
 python build-site.py --buildcalendar 
 ```
 
+Please ensure that you are using the latest release of the hollidays library.
+
 ## Development
 
 The calendar generation script was designed to be modular so that we could slot in a different calendar provider if
