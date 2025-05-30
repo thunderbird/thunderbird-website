@@ -1,7 +1,7 @@
 # Holiday Calendars
 
 We host a variety of holiday calendars for free which can be
-found [here](https://www.thunderbird.net/en-CA/calendar/holidays/).
+found [here](https://www.thunderbird.net/calendar/holidays/).
 
 Previously we use to source these from the community, this was a time-consuming process so we moved to sourcing them
 from a paid service: Calendarific.
@@ -23,14 +23,6 @@ Once a quarter the calendars need to be regenerated to ensure accuracy. You can 
 ```shell
 python build-site.py --buildcalendar 
 ```
-
-You'll want to ensure you have the following env vars set:
-
-```shell
-PYTHONUNBUFFERED=1 ;CALENDARIFIC_API_KEY=<your key>;CALENDARIFIC_IS_FREE_TIER=false
-```
-
-If you are an MZLA employee you can find the api key within the infra vault in 1password.
 
 ## Development
 
