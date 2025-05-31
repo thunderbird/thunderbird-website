@@ -652,14 +652,6 @@ def get_domain_from_link(ctx, link):
     return urlparse(link).hostname
 
 
-def is_calendarific_free_tier():
-    """Returns if we're expecting to use the Calendarific free tier"""
-    try:
-        return os.environ['CALENDARIFIC_IS_FREE_TIER'].lower() == 'true'
-    except KeyError:
-        return True
-
-
 @jinja2.pass_context
 def split_keep_delimiter(ctx, string: str, split: str):
     lines = string.split(split)
