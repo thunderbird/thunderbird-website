@@ -1,0 +1,129 @@
+.page-monthly {
+  font-family: 'Inter var', 'Inter', sans-serif;
+  --font-heading: 'Inter var', 'Inter', sans-serif;
+  --font-content: 'Inter var', 'Inter', sans-serif;
+  .container.hero {
+    align-items: center;
+    margin-bottom: 0; // minimal space before table
+    padding-bottom: 0;
+    padding-top: clamp(0.25rem, 1.3675vw, 1.0938rem);
+  }
+
+  .release-table-wrapper {
+    background: #fff;
+    border: 1px solid var(--color-gray-20);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem auto 1rem;
+    padding: 2rem 1rem;
+    border-radius: 4px;
+    max-width: 100%;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: var(--font-h4);
+    }
+  }
+
+  .release-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: var(--font-base);
+    font-family: 'Inter var', 'Inter', sans-serif;
+
+    th,
+    td {
+      padding: 0.5rem 1.5rem;
+      border-bottom: 1px solid var(--color-gray-20);
+      text-align: left;
+    }
+
+    th {
+      font-size: var(--font-md);
+      font-weight: 600;
+    }
+
+    .channel {
+      font-size: var(--font-md);
+      font-weight: 600;
+    }
+  }
+
+  .logo {
+    height: 120px;
+    width: auto;
+    margin: 0 auto 1rem;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .sub-tag {
+      font-size: var(--font-h4);
+      margin: 0;
+
+      &.smaller {
+        font-size: var(--font-md);
+      }
+    }
+
+    .tagline {
+      margin: 0.5rem 0 1rem;
+      font-size: 3.25rem; // slightly larger heading for "Thunderbird Release"
+    }
+  }
+
+  .stars {
+    font-size: 1rem;
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'Inter var', 'Inter', sans-serif;
+
+    .star-full {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--color-blue-60);
+      text-shadow: 0 0 1px var(--color-gray-40);
+    }
+
+    .star-empty {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--color-gray-40);
+    }
+  }
+
+  .release-stars .star-full {
+    color: var(--color-yellow-40);
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+  }
+
+  .release-stars .star-empty {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-gray-40);
+  }
+
+  .hero-download small {
+    display: none;
+  }
+
+  .icon-android {
+    display: none;
+  }
+}
+
+body.page-128-monthly {
+  background: url('/media/img/thunderbird/backgrounds/nebula.png') no-repeat center top;
+  background-size: cover;
+}
+
+.nebula-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('/media/img/thunderbird/backgrounds/nebula.png') no-repeat center top;
+  background-size: cover;
+}

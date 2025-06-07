@@ -404,7 +404,7 @@ def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=N
                          section='header', flex_class=None,
                          hide_footer_links=False):
     """
-    Note: This is deprecated use the 'includes/macros/download-smart.html' macro instead!
+    Note: This is deprecated; use the 'includes/download/macros/download-smart.html' macro instead!
     Output a "Download Thunderbird" button.
 
     :param ctx: context from calling template.
@@ -448,7 +448,7 @@ def download_thunderbird(ctx, channel=settings.DEFAULT_RELEASE_VERSION, dom_id=N
     translator = translate.gettext_object(locale)
     env.install_gettext_translations(translator)
     env.globals.update(**ctx)
-    template = env.get_template('includes/download-button.html')
+    template = env.get_template('includes/download/download-button.html')
 
     html = template.render(data)
     return markupsafe.Markup(html)

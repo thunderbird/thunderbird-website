@@ -4,7 +4,7 @@
 
 {% set active_page = "download" %}
 {% extends "includes/base/page.html" %}
-{% from 'includes/macros/download-smart.html' import download_smart with context %}
+{% from 'includes/download/macros/download-smart.html' import download_smart with context %}
 
 {% block page_title %}{{ _('Download') }}{% endblock %}
 {% block category %}{{ _('Resources') }}{% endblock %}

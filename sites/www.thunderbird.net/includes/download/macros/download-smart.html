@@ -11,12 +11,12 @@ Macros:
     :param hide_download_options: - Hide the download options link above the buttons
     :param hide_donate_footer: - Hide the donate footer below the buttons
 #}
-{% from 'includes/macros/download-desktop.html' import download_desktop_btns with context %}
-{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
+{% from 'includes/download/macros/download-desktop.html' import download_desktop_btns with context %}
+{% from 'includes/download/macros/download-mobile.html' import download_mobile_btns with context %}
 {% macro download_smart(btn_class = 'btn-gradient', container_class = 'download-button-products', force_platform='all', desktop_channel = settings.DEFAULT_RELEASE_VERSION, hide_download_options = False, hide_donate_footer = False, form_id=settings.FRU_FORM_IDS['support']) -%}
 {# Note: force_platform = 'all' | 'android' | 'desktop' #}
 {% if not hide_download_options %}
-{% include 'includes/download-and-options.html' %}
+{% include 'includes/download/download-and-options.html' %}
 {% endif %}
   {% if force_platform == 'all' %}
     <div data-download-platform="android">
