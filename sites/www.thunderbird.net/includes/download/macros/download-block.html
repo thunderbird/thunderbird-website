@@ -4,7 +4,7 @@ Macros:
   download_block
     :param force_platform: = 'all'|'desktop'|'android'
 #}
-{% from 'includes/macros/download-smart.html' import download_smart with context %}
+{% from 'includes/download/macros/download-smart.html' import download_smart with context %}
 {% macro download_block(force_platform='all', form_id=settings.FRU_FORM_IDS['support']) -%}
 <section id="free-your-inbox">
   <div class="container">

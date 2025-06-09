@@ -5,7 +5,7 @@
 {% set active_page = "download" %}
 {% extends "includes/base/page.html" %}
 {% from "includes/_enonly/product-all-macros.html" import build_table with context %}
-{% from 'includes/macros/download-mobile.html' import download_mobile_btns with context %}
+{% from 'includes/download/macros/download-mobile.html' import download_mobile_btns with context %}
 
 {% block page_title %}{{ _('Download') }}{% endblock %}
 {% block category %}{{ _('Resources') }}{% endblock %}
