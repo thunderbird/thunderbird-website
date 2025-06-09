@@ -535,6 +535,7 @@ VERSIONS_TO_FILTER = []
 WEBSITE_REDIRECTS = {
     'download': 'thunderbird.latest.all',
     ('download', 'beta'): 'thunderbird.latest.beta',
+    ('thunderbird', 'beta', 'all'): 'thunderbird.latest.beta',
     'get-involved': 'thunderbird.participate',
     'contribute': 'thunderbird.participate',
     'features': 'thunderbird.index',
