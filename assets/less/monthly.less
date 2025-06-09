@@ -1,0 +1,157 @@
+.page-monthly {
+  font-family: 'Inter var', 'Inter', sans-serif;
+  --font-heading: 'Inter var', 'Inter', sans-serif;
+  --font-content: 'Inter var', 'Inter', sans-serif;
+  .container.hero {
+    align-items: center;
+    margin-bottom: 0; // minimal space before table
+    padding-bottom: 3.5rem;
+    padding-top: clamp(0.25rem, 1.3675vw, 1.0938rem);
+  }
+  .container.release {
+    padding-block-start: 0
+  }
+  strong {
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .release-table-wrapper {
+    background: #fff;
+    border: 1px solid var(--color-gray-20);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem auto 1rem;
+    padding: 2rem 1rem;
+    border-radius: 4px;
+    max-width: 100%;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: var(--font-h4);
+    }
+  }
+
+  .release-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: var(--font-base);
+    font-family: 'Inter var', 'Inter', sans-serif;
+
+    th,
+    td {
+      padding: 0.5rem 1.5rem;
+      border-bottom: 1px solid var(--color-gray-20);
+      text-align: left;
+    }
+
+    th {
+      font-size: var(--font-md);
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .channel {
+      font-size: var(--font-md);
+      font-weight: 400;
+    }
+  }
+
+  .logo {
+    height: 120px;
+    width: auto;
+    margin: 0 auto 1rem;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .sub-tag {
+      font-size: var(--font-h4);
+      margin: 0;
+
+      &.smaller {
+        font-size: var(--font-md);
+      }
+    }
+
+    .tagline {
+      margin: 0.5rem 0 1rem;
+      font-size: 3.25rem; // slightly larger heading for "Thunderbird Release"
+    }
+  }
+
+  .stars {
+    font-size: 1rem;
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'Inter var', 'Inter', sans-serif;
+
+    .star-full {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--color-blue-60);
+      text-shadow: 0 0 1px var(--color-gray-40);
+    }
+
+    .star-empty {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--color-gray-40);
+    }
+  }
+
+  .release-stars .star-full {
+    color: var(--color-yellow-40);
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+  }
+
+  .release-stars .star-empty {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-gray-40);
+  }
+
+  .hero-download small {
+    display: none;
+  }
+
+  .icon-android {
+    display: none;
+  }
+}
+
+body {
+  background:
+    linear-gradient(to top right,
+    rgba(18, 133, 252, 0.14) 0%,
+    rgba(18, 133, 252, 0) 33%,
+    rgba(18, 133, 252, 0) 67%,
+    rgba(18, 133, 252, 0.14) 100%
+    ),
+    linear-gradient(to right,
+    rgba(34, 13, 252, 0.05) 0%,
+    rgba(34, 13, 252, 0) 30%,
+    rgba(34, 13, 252, 0.05) 100%
+    );
+}
+
+/*-------------------------
+* Media Queries
+*--------------------------*/
+@xxs: 25rem; // 400px
+@xs: 30rem; // 480px
+@sm: 40rem; // 640px
+@md: 48rem; // 768px
+@lg: 64rem; // 1024px
+@xl: 80rem; // 1280px
+@xxl: 90rem; // 1440px
+
+@media (max-width: @md) {
+    .release-table th:nth-child(4),
+    .release-table td:nth-child(4) {
+      display: none;
+    }
+  }
