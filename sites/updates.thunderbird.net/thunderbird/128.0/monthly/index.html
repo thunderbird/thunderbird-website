@@ -1,0 +1,110 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "128-monthly" %}
+{% extends "includes/base/base.html" %}
+{% from 'includes/download/macros/download-smart.html' import download_smart with context %}
+
+{% block base_css %}
+  <link href="{{ static('css/base-style.css') }}" rel="stylesheet" type="text/css" />
+  <link href="{{ static('css/monthly-style.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block page_title %}{{ _('Get New Features Every Month with <span class="txt-gradient">Thunderbird Release</span>') }}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+
+
+{% block site_header %}
+<section class="page-monthly">
+  <div class="container hero">
+    <div class="hero-text">
+      <span class="logo" aria-hidden="true">{{ svg('logo') }}</span>
+      <h2 class="sub-tag">{{ _('Get New Features <strong>Every Month</strong> with') }}</h2>
+      <h1 class="split-text tagline" aria-label="{{ _('Thunderbird Release.') }}">
+        {{ _('Thunderbird <span class="txt-gradient">Release</span>') }}
+      </h1>
+      <p class="sub-tag smaller">
+        {% trans trimmed %}
+        Don't wait a year for improvements, updates, and fixes. Enjoy the right balance
+        of speed and stability for most users by switching to Thunderbird Release.
+        {% endtrans %}
+      </p>
+    </div>
+    <div class="hero-download">
+      {{ download_smart('btn-white-bg', 'download-button-page') }}
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="page-monthly">
+  <div class="container release">
+    <div class="release-table-wrapper">
+      <h2>{{ _('Which release channel is best for you?') }}</h2>
+      <table class="release-table">
+      <thead>
+        <tr>
+          <th>{{ _('Channel') }}</th>
+          <th>{{ _('Stability') }}</th>
+          <th>{{ _('New Features') }}</th>
+          <th>{{ _('Best For') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="channel">{{ _('ESR') }}</td>
+          <td class="stars" aria-label="{{ _('%(rating)s out of 5')|format(rating='5') }}">
+            <span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span>
+          </td>
+          <td class="stars" aria-label="{{ _('%(rating)s out of 5')|format(rating='1') }}">
+            <span class="star-full">★</span><span class="star-empty">★</span><span class="star-empty">★</span><span class="star-empty">★</span><span class="star-empty">★</span>
+          </td>
+          <td>{{ _('For those who value long-term stability and are willing to wait up to a year for new features.') }}</td>
+        </tr>
+        <tr>
+          <td class="channel"><strong>{{ _('Release') }}</strong></td>
+          <td class="stars release-stars" aria-label="{{ _('%(rating)s out of 5')|format(rating='4') }}">
+            <span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-empty">★</span>
+          </td>
+          <td class="stars release-stars" aria-label="{{ _('%(rating)s out of 5')|format(rating='3') }}">
+            <span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-empty">★</span><span class="star-empty">★</span>
+          </td>
+          <td>
+            {{ _('For those looking for great stability and want new features monthly.') }}
+            <strong>{{ _('Most users.') }}</strong>
+          </td>
+        </tr>
+        <tr>
+          <td class="channel">{{ _('Beta') }}</td>
+          <td class="stars" aria-label="{{ _('%(rating)s out of 5')|format(rating='3') }}">
+            <span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-empty">★</span><span class="star-empty">★</span>
+          </td>
+          <td class="stars" aria-label="{{ _('%(rating)s out of 5')|format(rating='4') }}">
+            <span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-empty">★</span>
+          </td>
+          <td>{{ _('For those willing to test releases a few weeks early and report any issues they discover.') }}</td>
+        </tr>
+        <tr>
+          <td class="channel">{{ _('Daily') }}</td>
+          <td class="stars" aria-label="{{ _('%(rating)s out of 5')|format(rating='1') }}">
+            <span class="star-full">★</span><span class="star-empty">★</span><span class="star-empty">★</span><span class="star-empty">★</span><span class="star-empty">★</span>
+          </td>
+          <td class="stars" aria-label="{{ _('%(rating)s out of 5')|format(rating='5') }}">
+            <span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span><span class="star-full">★</span>
+          </td>
+          <td>{{ _('For those actively developing and testing Thunderbird. Not recommended for most.') }}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>
+      {% trans trimmed support_url='https://support.mozilla.org/kb/installing-thunderbird' %}
+      Not yet available on Microsoft Store, Snap, and Flatpak.<br>
+      Visit our <a href="{{ support_url }}">Support Page</a> for more details about making the change.
+      {% endtrans %}
+    </p>
+  </div>
+</section>
+{% endblock %}
