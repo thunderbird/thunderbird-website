@@ -1,8 +1,8 @@
 {% set site_desc = _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') %}
 <!doctype html>
 {# Hint: This is the base template for all pages. You probably want to extend off of page.html! #}
-{# Note the "windows" class, without javascript platform-specific assets default to windows #}
-<html class="windows x86 no-js page-{{ active_page|default('not-set') }}" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+{# Note the "other" class, without javascript platform-specific assets default to showing the downloads page link #}
+<html class="other x86 no-js page-{{ active_page|default('not-set') }}" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
 <head>
   <meta charset="utf-8">
   {# Note: Must be within first 512 bytes of page #}
