@@ -58,14 +58,14 @@ def mkdir(path):
             raise
 
 
-def write_site_htaccess(renderpath: str, lang: str, redirects: dict, redirect_request=False):
+def write_site_htaccess(renderpath: str, lang: str, site: str, redirects: dict, redirect_request=False):
     """Writes .htaccess files from a given redirects dictionary for the given language."""
     for path, url_key in redirects.items():
         # Normalize non-tuples
         if type(path) is not tuple:
             path = (path,)
         path = os.path.join(renderpath, lang, *path)
-        redirect_path = helper.url({'LANG': lang}, url_key)
+        redirect_path = helper.url({'LANG': lang, 'SITE': site}, url_key)
         write_htaccess(path, redirect_path, redirect_request)
 
 
@@ -154,6 +154,8 @@ class Site(object):
         self._setup_env()
         self._env.globals.update(settings=settings, **helper.contextfunctions)
         self.dev_mode = dev_mode
+        self.site = None
+        self._set_site_env()
         if debug:
             logger.setLevel(logging.INFO)
 
@@ -161,6 +163,16 @@ class Site(object):
     def outpath(self):
         """Return path for rendering that includes the current `lang`."""
         return os.path.join(self.renderpath, self.lang)
+
+    def _set_site_env(self):
+        if self.searchpath == settings.WEBSITE_PATH:
+            self.site = settings.SiteCodes.WEBSITE.value
+        elif self.searchpath == settings.UPDATES_PATH:
+            self.site = settings.SiteCodes.UPDATES.value
+        elif self.searchpath == settings.START_PATH:
+            self.site = settings.SiteCodes.START.value
+        self._env.globals.update(SITE=self.site)
+        print('Site is ', self.site)
 
     def _text_dir(self):
         """Return whether text direction is left-to-right or right-to-left for current `lang`."""
@@ -352,7 +364,7 @@ class Site(object):
 
         self._env.globals.update(feedback=releasenotes.settings["feedback"], bugzilla=releasenotes.settings["bugzilla"])
 
-        fake_context = {'LANG': 'en-US'}
+        fake_context = {'LANG': 'en-US', 'SITE': self.site}
         feed_context = {
             'feed_url': os.path.join(settings.CANONICAL_URL, 'thunderbird', 'releases', 'atom.xml'),
             'feed_icon': f'{settings.CANONICAL_URL}{settings.MEDIA_URL}/img/thunderbird/favicon-196.png',
@@ -495,7 +507,7 @@ class Site(object):
             logger.info("Building pages for {lang}...".format(lang=lang))
             self._switch_lang(lang)
             self.render()
-            write_site_htaccess(self.renderpath, self.lang, settings.UPDATES_REDIRECTS, redirect_request=True)
+            write_site_htaccess(self.renderpath, self.lang, self.site, settings.UPDATES_REDIRECTS, redirect_request=True)
         self.build_assets()
 
     def build_website(self, assets=True, notes=True):
@@ -512,7 +524,7 @@ class Site(object):
             self.render()
             write_404_htaccess(self.outpath, self.lang)
 
-            write_site_htaccess(self.renderpath, self.lang, settings.WEBSITE_REDIRECTS)
+            write_site_htaccess(self.renderpath, self.lang, self.site, settings.WEBSITE_REDIRECTS)
 
             if lang == 'en-US':
                 # 404 page for root accesses outside lang dirs.

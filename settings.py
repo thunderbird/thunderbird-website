@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import enum
 
 # Languages we build the site in.
 PROD_LANGUAGES = (
@@ -50,22 +51,22 @@ FRU_LANGUAGES = {
 # List of supported FormAssembly locales, scoped to the dropdown on the donor contact form
 # TB Locale -> FA Locale
 FA_LANGUAGES = {
-        'zh-CN': 'zh_CN',
-        'cs': 'cs',
-        'da': 'da',
-        'nl': 'nl',
-        'en-US': 'en_US',
-        'de': 'de',
-        'fr': 'fr',
-        'it': 'it',
-        'ja': 'ja',
-        'pl': 'pl',
-        'pt-BR': 'pt_BR',
-        'ru': 'ru',
-        'es-MX': 'es',
-        'es-AR': 'es',
-        'es-ES': 'es',
-        'es-CL': 'es',
+    'zh-CN': 'zh_CN',
+    'cs': 'cs',
+    'da': 'da',
+    'nl': 'nl',
+    'en-US': 'en_US',
+    'de': 'de',
+    'fr': 'fr',
+    'it': 'it',
+    'ja': 'ja',
+    'pl': 'pl',
+    'pt-BR': 'pt_BR',
+    'ru': 'ru',
+    'es-MX': 'es',
+    'es-AR': 'es',
+    'es-ES': 'es',
+    'es-CL': 'es',
 }
 
 # Map short locale names to long, preferred locale names. This
@@ -80,9 +81,9 @@ CANONICAL_LOCALES = {
     'no': 'nb-NO',
     'pt': 'pt-BR',
     'sv': 'sv-SE',
-    'zh-hant': 'zh-TW',     # Bug 1263193
+    'zh-hant': 'zh-TW',  # Bug 1263193
     'zh-hant-tw': 'zh-TW',  # Bug 1263193
-    'zh-hk': 'zh-TW',       # Bug 1338072
+    'zh-hk': 'zh-TW',  # Bug 1338072
     'zh-hant-hk': 'zh-TW',  # Bug 1338072
 }
 
@@ -157,6 +158,8 @@ ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
 # Mappings for the helper.url function.
 # 'thunderbird.sysreq' and 'wiki.moz' have special behaviour.
+# Keys prefixed with 'thunderbird.' will have the settings.CANONICAL_URL prepended to them if you're building
+# outside of website.
 URL_MAPPINGS = {
     'atn': 'https://addons.thunderbird.net/',
     'blog': 'https://blog.thunderbird.net/',
@@ -407,7 +410,7 @@ LOCALE_CURRENCIES = {
     'ta': 'inr',
     'te': 'inr',
     'zh-TW': 'twd'
- }
+}
 
 CALENDARIFIC_API_URL = "https://calendarific.com/api/v2/holidays"
 
@@ -432,7 +435,8 @@ CALENDAR_LOCALES = {
     'CZ': ('Czech', 'cs'),
     'DK': ('Denmark', 'da'),
     'DO': ('Dominican Republic', 'es'),
-    'NL': [('Netherlands (Dutch)', 'nl'), ('Netherlands (English)', 'en'), ('Netherlands (German)', 'de'), ('Netherlands (French)', 'fr')],
+    'NL': [('Netherlands (Dutch)', 'nl'), ('Netherlands (English)', 'en'), ('Netherlands (German)', 'de'),
+           ('Netherlands (French)', 'fr')],
     'EE': ('Estonia', 'et'),
     'FI': [('Finland (Finnish)', 'fi'), ('Finland (Swedish)', 'sv')],
     'FR': ('France', 'fr'),
@@ -578,3 +582,10 @@ SITE_ANNOUNCEMENT = True
 # Shows a dialog element with information on how to donate if their browser or browser addons have blocked FRU
 # In reality this can trigger for slow internet users, but we don't have a perfect way to detect this.
 SHOW_DONATION_BLOCKED_NOTICE = True
+
+
+class SiteCodes(enum.StrEnum):
+    """A list of valid site codes. Their values are accessible through builder.site or in a jinja context via SITE."""
+    WEBSITE = 'website'
+    START = 'start'
+    UPDATES = 'updates'
