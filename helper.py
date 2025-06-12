@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 import inspect
 import os
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 from collections import OrderedDict
 
 import jinja2
@@ -52,8 +52,11 @@ def static(filepath):
 
 @jinja2.pass_context
 def url(ctx, key, *args):
+    """Return a formed url based off a key form the settings.URL_MAPPINGS variable.
+    Requires LANG and SITE to be set in the context"""
     target_url = settings.URL_MAPPINGS.get(key, '')
     lang = ctx['LANG']
+    site = ctx['SITE']
 
     if 'http' in target_url:
         return target_url
@@ -63,6 +66,8 @@ def url(ctx, key, *args):
         return "{0}{1}".format(settings.WIKI_URL, args[0])
     if key in settings.ENUS_ONLY:
         lang = 'en-US'
+    if key.startswith('thunderbird.') and site != settings.SiteCodes.WEBSITE.value:
+        return urljoin(settings.CANONICAL_URL, "/{0}{1}".format(lang, target_url))
 
     return "/{0}{1}".format(lang, target_url)
 
