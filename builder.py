@@ -172,7 +172,7 @@ class Site(object):
         elif self.searchpath == settings.START_PATH:
             self.site = settings.SiteCodes.START.value
         else:
-            self.site = settings.SiteCodes.UNKNOWN
+            self.site = settings.SiteCodes.UNKNOWN.value
         self._env.globals.update(SITE=self.site)
 
     def _text_dir(self):
