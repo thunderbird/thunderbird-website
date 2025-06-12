@@ -171,8 +171,9 @@ class Site(object):
             self.site = settings.SiteCodes.UPDATES.value
         elif self.searchpath == settings.START_PATH:
             self.site = settings.SiteCodes.START.value
+        else:
+            self.site = settings.SiteCodes.UNKNOWN
         self._env.globals.update(SITE=self.site)
-        print('Site is ', self.site)
 
     def _text_dir(self):
         """Return whether text direction is left-to-right or right-to-left for current `lang`."""
