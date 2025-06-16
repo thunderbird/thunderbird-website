@@ -27,7 +27,7 @@ Macros:
     </div>
     <div class="download-button" data-download-platform="other">
       <a href="{{ url('thunderbird.latest.all') }}" class="btn btn-download btn-slim {{ btn_class }}">
-        Downloads
+        {{ _('Downloads') }}
       </a>
     </div>
   {% elif force_platform == 'android' %}
@@ -40,7 +40,7 @@ Macros:
     </div>
     <div class="download-button" data-download-platform="other">
       <a href="{{ url('thunderbird.latest.all') }}" class="btn btn-download btn-slim {{ btn_class }}">
-        Downloads
+        {{ _('Downloads') }}
       </a>
     </div>
   {% endif %}
