@@ -166,13 +166,13 @@ class Site(object):
 
     def _set_site_env(self):
         if self.searchpath == settings.WEBSITE_PATH:
-            self.site = settings.SiteCodes.WEBSITE.value
+            self.site = settings.SITE_CODES['WEBSITE']
         elif self.searchpath == settings.UPDATES_PATH:
-            self.site = settings.SiteCodes.UPDATES.value
+            self.site = settings.SITE_CODES['UPDATES']
         elif self.searchpath == settings.START_PATH:
-            self.site = settings.SiteCodes.START.value
+            self.site = settings.SITE_CODES['START']
         else:
-            self.site = settings.SiteCodes.UNKNOWN.value
+            self.site = settings.SITE_CODES['UNKNOWN']
         self._env.globals.update(SITE=self.site)
 
     def _text_dir(self):

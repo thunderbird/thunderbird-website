@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import enum
 
 # Languages we build the site in.
 PROD_LANGUAGES = (
@@ -583,10 +582,10 @@ SITE_ANNOUNCEMENT = True
 # In reality this can trigger for slow internet users, but we don't have a perfect way to detect this.
 SHOW_DONATION_BLOCKED_NOTICE = True
 
-
-class SiteCodes(enum.StrEnum):
-    """A list of valid site codes. Their values are accessible through builder.site or in a jinja context via SITE."""
-    UNKNOWN = 'unknown'
-    WEBSITE = 'website'
-    START = 'start'
-    UPDATES = 'updates'
+# A list of valid site codes. Their values are accessible through builder.site or in a jinja context via SITE.
+SITE_CODES = {
+    'UNKNOWN': 'unknown',
+    'WEBSITE': 'website',
+    'START': 'start',
+    'UPDATES': 'updates',
+}

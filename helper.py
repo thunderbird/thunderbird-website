@@ -66,7 +66,7 @@ def url(ctx, key, *args):
         return "{0}{1}".format(settings.WIKI_URL, args[0])
     if key in settings.ENUS_ONLY:
         lang = 'en-US'
-    if key.startswith('thunderbird.') and site != settings.SiteCodes.WEBSITE.value:
+    if key.startswith('thunderbird.') and site != settings.SITE_CODES['WEBSITE']:
         return urljoin(settings.CANONICAL_URL, "/{0}{1}".format(lang, target_url))
 
     return "/{0}{1}".format(lang, target_url)
