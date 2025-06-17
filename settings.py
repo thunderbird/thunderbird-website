@@ -104,6 +104,7 @@ ALWAYS_LOCALIZE = [
 ]
 
 CANONICAL_URL = 'https://www.thunderbird.net'
+CANONICAL_UPDATES_URL = 'https://updates.thunderbird.net'
 
 # url for the server that serves Thunderbird downloads.
 BOUNCER_URL = 'https://download.mozilla.org/'
@@ -275,6 +276,7 @@ URL_MAPPINGS = {
     'updates.128.appeal.dec24.donate': '/thunderbird/128.0/dec24/donate/',
     'updates.128.appeal.apr25': '/thunderbird/128.0/apr25/',
     'updates.128.appeal.apr25.donate': '/thunderbird/128.0/apr25/donate/',
+    'updates.140.whatsnew': '/thunderbird/140.0/whatsnew/'
 }
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
@@ -338,6 +340,7 @@ UPDATES_CSS = {
     "appeal-dec24-style": ["less/appeals/dec24.less"],
     "appeal-apr25-style": ["less/appeals/apr25.less"],
     "monthly-style": ["less/monthly.less"],
+    'whatsnew-140': ['less/whatsnew-140.less'],
 }
 
 UPDATES_JS = {
@@ -546,6 +549,8 @@ WEBSITE_REDIRECTS = {
     'features': 'thunderbird.index',
     ('thunderbird', '128.0esr', 'whatsnew'): 'thunderbird.128.whatsnew',
     ('thunderbird', '128.0', 'releasenotes'): 'thunderbird.128esr.releasenotes',
+    ('thunderbird', '140.0esr', 'whatsnew'): 'updates.140.whatsnew',
+    ('thunderbird', '140.0', 'whatsnew'): 'updates.140.whatsnew',
 }
 
 # Similar to website redirects but for UTN

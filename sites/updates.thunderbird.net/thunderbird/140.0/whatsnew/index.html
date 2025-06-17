@@ -1,0 +1,245 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "whatsnew-140" %}
+{% set page_title_text = _('Thunderbird Eclipse') %}
+{% extends "includes/base/base.html" %}
+
+{% block page_title %}{{ page_title_text }}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+{% block extra_meta %}
+  <meta name="robots" content="noindex,nofollow"/>
+{% endblock %}
+
+{% block base_css %}
+  <link href="{{ static('css/whatsnew-140.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% macro svg_img(file_name, alt_text='', class_name='') %}
+  <img src="{{ static('svg/{file_name}.svg'.format(file_name=file_name)) }}" alt="{{ alt_text }}" class="{{ class_name }}"/>
+{% endmacro %}
+
+{% block content %}
+  <div class="main-content">
+    <div class="overlay"></div>
+    <div class="eclipse"></div>
+    <header id="eclipse" class="header">
+      <div class="row">
+        {{ svg_img('appeal/whatsnew-140/logo', alt_text=_('Thunderbird Eclipse 140'), class_name='header-logo') }}
+        {{ svg_img('appeal/whatsnew-140/star-group', class_name='header-star-group') }}
+      </div>
+      <p class="row">
+        {% trans trimmed %}
+          Our latest release transforms your email experience with adaptive dark messaging and improved visual controls. Enhanced features keep everyday email tasks light and effortless, while the streamlined new Account Hub ensures adding new accounts is a snap.
+        {% endtrans %}
+      </p>
+    </header>
+    <section id="features" class="features">
+      {# Features Left #}
+      <section class="column">
+        <article class="card">
+          <header>
+            <aside>{{ svg_img('appeal/whatsnew-140/icons/moon', class_name='icon') }}</aside>
+            <h1>
+              {% trans trimmed %}
+                Dark Message Mode
+              {% endtrans %}
+            </h1>
+          </header>
+          <div class="row">
+            {{ svg_img('appeal/whatsnew-140/pictographs/msg-mode') }}
+            <p>
+              {% trans trimmed %}
+                Thunderbird’s Dark Mode now automatically adapts your messages when enabled, with a quick optional toggle to adjust your message view as needed.
+              {% endtrans %}
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <header>
+            <aside>{{ svg_img('appeal/whatsnew-140/icons/bell', class_name='icon') }}</aside>
+            <h1>
+              {% trans trimmed %}
+                Native OS Notifications
+              {% endtrans %}
+            </h1>
+          </header>
+          <div class="row">
+            {{ svg_img('appeal/whatsnew-140/pictographs/notification') }}
+            <p>
+              {% trans trimmed %}
+                Leverage the speed and ease of your Operating System’s built-in notifications, whether you’re on Windows, Linux, or Mac. Quickly delete, archive, or use customizable actions directly from your notifications and get more done with your day.
+              {% endtrans %}
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <header>
+            <aside>{{ svg_img('appeal/whatsnew-140/icons/folder', class_name='icon') }}</aside>
+            <h1>
+              {% trans trimmed %}
+                Manual Folder Sorting
+              {% endtrans %}
+            </h1>
+          </header>
+          <div class="row">
+            {{ svg_img('appeal/whatsnew-140/pictographs/folder-sort') }}
+            <p>
+              {% trans trimmed %}
+                Don’t like the order for your custom folders? Just click and drag to arrange them exactly how you want.
+              {% endtrans %}
+            </p>
+          </div>
+        </article>
+
+      </section>
+      {# Features Right #}
+      <section class="column">
+        <article class="card">
+          <header>
+            <aside>{{ svg_img('appeal/whatsnew-140/icons/palette-brush', class_name='icon') }}</aside>
+            <h1>
+              {% trans trimmed %}
+                Appearance Settings
+              {% endtrans %}
+            </h1>
+          </header>
+          <div class="row">
+            {{ svg_img('appeal/whatsnew-140/pictographs/appearance') }}
+            <p>
+              {% trans trimmed %}
+                Make Thunderbird yours across all your folders and accounts with a single click. Change your message list layout between Cards and Table view, adjust your Cards View, and set your default sorting order and threading options with ease.
+              {% endtrans %}
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <header>
+            <aside>{{ svg_img('appeal/whatsnew-140/icons/contact', class_name='icon') }}</aside>
+            <h1>
+              {% trans trimmed %}
+                Account Hub
+              {% endtrans %}
+            </h1>
+          </header>
+          <div class="row">
+            {{ svg_img('appeal/whatsnew-140/pictographs/account-hub-v02') }}
+            <p>
+              {% trans trimmed %}
+                Adding a new account to Thunderbird is now easier than ever. Connect all of your emails, address books and calendars in a few easy steps.
+              {% endtrans %}
+            </p>
+          </div>
+        </article>
+      </section>
+    </section>
+    <article id="and-a-lot-more" class="additional-features">
+      <header class="additional-features-header">
+        <h1>
+          {% trans trimmed %}
+            and a lot more...
+          {% endtrans %}
+        </h1>
+      </header>
+      <div class="bullet-points">
+        <section>
+          <header>
+            <aside>{{ svg_img('appeal/whatsnew-140/icons/pip', class_name='icon') }}</aside>
+            <h1>
+              {% trans trimmed %}
+                Experimental Exchange Email support
+              {% endtrans %}
+            </h1>
+          </header>
+          <ul>
+            <li>
+              {% trans trimmed %}
+                Natively set up a Microsoft Exchange account in Thunderbird by enabling a preference.
+              {% endtrans %}
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <header>
+            <aside>{{ svg_img('appeal/whatsnew-140/icons/pip', class_name='icon') }}</aside>
+            <h1>
+              {% trans trimmed %}
+                Export for Mobile
+              {% endtrans %}
+            </h1>
+          </header>
+          <ul>
+            <li>
+              {% trans trimmed %}
+                Generate a QR code to quickly transfer your account settings and credentials to your Thunderbird for Android app.
+              {% endtrans %}
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <header>
+            <aside>{{ svg_img('appeal/whatsnew-140/icons/pip', class_name='icon') }}</aside>
+            <h1>
+              {% trans trimmed %}
+                Horizontal scroll for Table View
+              {% endtrans %}
+            </h1>
+          </header>
+          <ul>
+            <li>
+              {% trans trimmed %}
+                Lots of tabular data? Let the message list scroll horizontally, like a spreadsheet or file manager.
+              {% endtrans %}
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <header>
+            <aside>{{ svg_img('appeal/whatsnew-140/icons/pip', class_name='icon') }}</aside>
+            <h1>
+              {% trans trimmed %}
+                Bug Fixes and Improvements
+              {% endtrans %}
+            </h1>
+          </header>
+          <ul>
+            <li>
+              {% trans trimmed %}
+                Thousands of bug fixes and performance improvements to bring you the smooth, reliable Thunderbird experience you expect.
+              {% endtrans %}
+            </li>
+          </ul>
+        </section>
+      </div>
+    </article>
+    <article id="upgrade" class="call-to-action">
+      <header>
+        <h1>
+          {% trans trimmed %}
+          Upgrade to the new Thunderbird Release
+          {% endtrans %}
+        </h1>
+      </header>
+      <p>
+        {% trans trimmed %}
+        Don’t wait a year for the next release — enjoy monthly updates with the same dependable stability.
+        {% endtrans %}
+      </p>
+      <a href="#" class="cta-button">
+        {% trans trimmed %}
+        Explore Monthly Releases
+        {% endtrans %}
+        {{ svg_img('appeal/whatsnew-140/icons/arrow-right') }}
+      </a>
+    </article>
+  </div>
+{% endblock %}
+
+

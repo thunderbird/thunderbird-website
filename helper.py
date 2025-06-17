@@ -66,8 +66,14 @@ def url(ctx, key, *args):
         return "{0}{1}".format(settings.WIKI_URL, args[0])
     if key in settings.ENUS_ONLY:
         lang = 'en-US'
+
+    # Transform relative to absolute urls if we're referencing a different site
+    # i.e. 'thunderbird.' links on updates.thunderbird.net will go from relative to absolute because they don't live on
+    # updates.thunderbird.net and vice versa.
     if key.startswith('thunderbird.') and site != settings.SITE_CODES['WEBSITE']:
         return urljoin(settings.CANONICAL_URL, "/{0}{1}".format(lang, target_url))
+    if key.startswith('updates.') and site != settings.SITE_CODES['UPDATES']:
+        return urljoin(settings.CANONICAL_UPDATES_URL, "/{0}{1}".format(lang, target_url))
 
     return "/{0}{1}".format(lang, target_url)
 
