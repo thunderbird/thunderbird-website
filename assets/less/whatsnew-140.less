@@ -1,0 +1,372 @@
+@import "./new-style.less";
+@import "./new/variables.less";
+
+// Components
+@import "./new/components/accordion.less";
+@import "./new/components/buttons.less";
+@import "./new/components/forms.less";
+@import "./new/components/site-nav.less";
+@import "./new/components/testimonial.less";
+@import "./new/components/pre-footer.less";
+@import "./new/components/announcement.less";
+@import "./new/components/footer.less";
+@import "./new/components/appeal-footer.less";
+@import "./new/components/donate-cta.less";
+@import "./new/components/dialog.less";
+
+// Ensure the footer is contained at the bottom and by default the page extends to at least a full page.
+html, body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  height: auto;
+}
+
+#footer {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 0;
+  min-height: 10rem;
+  display: flex;
+  justify-content: center;
+
+  .mzla {
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+:root {
+  --text-color: #FEFFFF;
+  --card-text-color: #fff;
+  --heading-color: #EDF9FF;
+  --cta-color: #E4F6FF;
+  --button-text-color: #1A202C;
+
+  --extension-background: #000;
+  --appeal-background: var(--neutral-lower, #18181B);
+  --font-content: 'Inter', sans-serif;
+  --canvas-width: 80.0rem;
+  --canvas-height: 144.0rem;
+
+  --eclipse-image: url('/media/svg/appeal/whatsnew-140/eclipse.svg');
+  --cta-shadow-image: url('/media/svg/appeal/whatsnew-140/shadow.svg');
+
+  // The original svg has a lot of filter effects which make it unusable as-is.
+  // Default to jpeg (ew) and convert to webp, and then to avif for platforms that don't support webp but do avif.
+  //--appeal-background-image: url('/media/svg/appeal/whatsnew-140/dark-gradient.svg');
+  --appeal-background-image: url('/media/img/thunderbird/appeal/whatsnew-140/dark-gradient.jpg');
+  --appeal-background-image-set: image-set(url('/media/img/thunderbird/appeal/whatsnew-140/dark-gradient.webp') type('image/webp'),
+  url('/media/img/thunderbird/appeal/whatsnew-140/dark-gradient.avif') type('image/avif'),
+  var(--appeal-background-image) type('image/jpeg'));
+}
+
+.page-whatsnew-140 {
+
+  html {
+    background-color: var(--extension-background);
+  }
+
+  body {
+    margin: auto;
+    max-width: var(--canvas-width);
+    background: var(--extension-background);
+    color: var(--text-color);
+    font-family: var(--font-content);
+  }
+
+  .main-content {
+    --main-content-gap: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    gap: 0;
+    background-color: var(--appeal-background);
+    min-height: var(--canvas-height);
+
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 6.25rem 1rem 9.25rem;
+      z-index: 1;
+      gap: 2.625rem;
+
+      width: 100%;
+      box-sizing: border-box;
+
+
+      .row {
+        display: flex;
+        width: 100%;
+        align-content: flex-start;
+        justify-content: space-between;
+        flex-shrink: 0;
+
+        .header-logo {
+          padding-top: 3.0rem;
+          width: 34.0rem;
+        }
+
+        .header-star-group {
+          max-height: 6.75rem;
+        }
+      }
+
+      p.row {
+        padding-left: 5.9375rem;
+        padding-right: 9.0rem;
+        max-width: 50.0rem;
+
+        text-align: center;
+        text-shadow: 0 0.0625rem 0.625rem rgba(0, 98, 235, 0.70);
+
+        /* web/body/large */
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+      }
+    }
+
+    .features {
+      .column {
+        max-width: 31.375rem;
+        gap: 2.25rem;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+
+      width: 100%;
+      display: flex;
+      flex-shrink: 0;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      gap: 2.4375rem;
+      z-index: 1;
+
+
+    }
+
+    .card {
+      header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+
+        // Eat into the card's padding by 1rem to expand title room
+        margin-left: -1.0rem;
+        margin-right: -1.0rem;
+
+        min-height: 4.3125rem;
+
+        h1 {
+          width: 100%;
+          margin: 0 0 0 -1.3125rem;
+          color: var(--heading-color);
+          text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15), 0 0 1.54375rem rgba(88, 201, 255, 0.39);
+
+          /* web/title/large */
+          font-size: 2.25rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .icon {
+          width: 4.3125rem;
+          opacity: 0.2;
+        }
+      }
+
+      .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.0rem;
+
+        img {
+          max-width: fit-content;
+        }
+
+        p {
+          margin: 0;
+          color: var(--card-text-color);
+          font-feature-settings: 'liga' off, 'clig' off;
+
+          /* web/body/default */
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 125%;
+        }
+      }
+
+      padding: 0.75rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-self: stretch;
+      z-index: 1;
+
+      max-width: 31.375rem;
+
+      border-radius: 0.9375rem 0.1875rem;
+      background: linear-gradient(137deg, #19333F 0.05%, #1E2531 32.83%) padding-box,
+      linear-gradient(-247deg, rgba(0, 238, 255, 1) 0%, rgba(0, 102, 255, 0) 25%, rgba(0, 102, 255, 0) 75%, rgba(0, 238, 255, 1) 100%) border-box;
+      border: 0.0625rem solid transparent;
+    }
+
+    .additional-features {
+      z-index: 1;
+
+      .additional-features-header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+      }
+
+      .bullet-points {
+        padding: 0 7.1875rem;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template: "a c" 1fr
+                       "b d" 1fr;
+
+        header {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        section {
+          h1 {
+            /* web/title/medium */
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+          }
+
+          li {
+            color: var(--card-text-color);
+            font-feature-settings: 'liga' off, 'clig' off;
+
+            /* web/body/default */
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+          }
+        }
+      }
+    }
+
+    .call-to-action {
+      z-index: 2;
+      width: 100%;
+      background-image: var(--cta-shadow-image);
+      background-repeat: no-repeat;
+      min-height: 300px;
+      padding-top: 3.4375rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        color: var(--cta-color);
+        text-align: center;
+        text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15), 0 0 1.54375rem rgba(88, 201, 255, 0.39);
+
+        /* web/title/large */
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+      }
+
+      p {
+        margin: 1.375rem 0 0;
+        color: var(--card-text-color);
+        text-align: center;
+        text-shadow: 0 0 0.9375rem #000;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 116.667%;
+        max-width: 60%;
+      }
+    }
+
+    .cta-button {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1.125rem 2rem;
+
+      // Text
+      color: var(--button-text-color);
+      text-shadow: 0.03125rem 0.03125rem 0 rgba(255, 255, 255, 0.10);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.03rem;
+      text-transform: uppercase;
+      text-underline: none;
+
+      &:hover {
+        text-underline: none;
+      }
+
+      // Button
+      background: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%) padding-box,
+      linear-gradient(247deg, rgba(43, 140, 220, 1) 0%, rgba(0, 102, 255, 0) 10%, rgba(0, 102, 255, 0) 90%, rgba(43, 140, 220, 1) 100%) border-box;
+      border: 0.0625rem solid transparent;
+      border-radius: 1rem;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: var(--appeal-background-image-set);
+      z-index: 0;
+    }
+
+    .eclipse {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: var(--eclipse-image);
+      background-repeat: no-repeat;
+      background-size: 80rem;
+      z-index: 0;
+    }
+  }
+
+}
