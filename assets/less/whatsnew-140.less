@@ -13,6 +13,7 @@
 @import "./new/components/appeal-footer.less";
 @import "./new/components/donate-cta.less";
 @import "./new/components/dialog.less";
+@import "./new/components/starfield.less";
 
 // Ensure the footer is contained at the bottom and by default the page extends to at least a full page.
 html, body {
@@ -32,12 +33,14 @@ main {
   position: relative;
   margin-top: auto;
   margin-bottom: 0;
+  padding-bottom: 2rem;
   min-height: 10rem;
   display: flex;
   justify-content: center;
 
+
   .mzla {
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
   }
 }
@@ -49,21 +52,19 @@ main {
   --cta-color: #E4F6FF;
   --button-text-color: #1A202C;
 
-  --extension-background: #000;
-  --appeal-background: var(--neutral-lower, #18181B);
+  --extension-background: #18181B;
+  --appeal-background: #18181B;
   --font-content: 'Inter', sans-serif;
-  --canvas-width: 80.0rem;
+  --canvas-width: 221.0rem;
   --canvas-height: 144.0rem;
+  --content-max-width: 80rem;
 
   --eclipse-image: url('/media/svg/appeal/whatsnew-140/eclipse.svg');
   --cta-shadow-image: url('/media/svg/appeal/whatsnew-140/shadow.svg');
 
-  // The original svg has a lot of filter effects which make it unusable as-is.
-  // Default to jpeg (ew) and convert to webp, and then to avif for platforms that don't support webp but do avif.
-  //--appeal-background-image: url('/media/svg/appeal/whatsnew-140/dark-gradient.svg');
+  // Only use avif and jpg as the webp conversion ended up pretty ugly.
   --appeal-background-image: url('/media/img/thunderbird/appeal/whatsnew-140/dark-gradient.jpg');
-  --appeal-background-image-set: image-set(url('/media/img/thunderbird/appeal/whatsnew-140/dark-gradient.webp') type('image/webp'),
-  url('/media/img/thunderbird/appeal/whatsnew-140/dark-gradient.avif') type('image/avif'),
+  --appeal-background-image-set: image-set(url('/media/img/thunderbird/appeal/whatsnew-140/dark-gradient.avif') type('image/avif'),
   var(--appeal-background-image) type('image/jpeg'));
 }
 
@@ -77,18 +78,20 @@ main {
     margin: auto;
     max-width: var(--canvas-width);
     background: var(--extension-background);
+    background-position: top center;
+    background-repeat: repeat-x;
     color: var(--text-color);
     font-family: var(--font-content);
   }
 
   .main-content {
-    --main-content-gap: 6.25rem;
     display: flex;
     flex-direction: column;
     position: relative;
 
     gap: 0;
     background-color: var(--appeal-background);
+
     min-height: var(--canvas-height);
 
 
@@ -96,12 +99,14 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      align-self: center;
       padding: 3rem 6.25rem 1rem 9.25rem;
       z-index: 1;
       gap: 2.625rem;
 
       width: 100%;
       box-sizing: border-box;
+      max-width: var(--content-max-width);
 
 
       .row {
@@ -233,6 +238,9 @@ main {
 
     .additional-features {
       z-index: 1;
+      max-width: var(--content-max-width);
+      align-self: center;
+      padding-bottom: 6.25rem;
 
       .additional-features-header {
         width: 100%;
@@ -464,6 +472,7 @@ main {
 
         p {
           font-size: 1.25rem;
+          max-width: 90%;
         }
       }
 

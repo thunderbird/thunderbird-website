@@ -1,0 +1,34 @@
+@plugin "plugins/random.js";
+
+.particle-star {
+  position: fixed;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+
+each(range(1, 30, 1), {
+  @kf-name: ~"particle-animation-@{value}";
+
+  @keyframes @kf-name {
+    100% {
+      @x: random(90);
+      @y: random(90);
+      @z: random(100);
+      transform: translate3d(calc(@x * 1vw), calc(@y * 1vh), calc(@z * 1px));
+    }
+  }
+
+
+  .particle-star:nth-child(@{value}) {
+    animation: @kf-name 60s infinite;
+    @randSize: random(5);
+    @size: calc(~"@{randSize}px" + 5px);
+    opacity: calc(random(100)/100);
+    height: @size;
+    width: @size;
+    animation-delay: calc(-@value * .2s);
+    transform: translate3d(calc(random(90) * 1vw), calc(random(90) * 1vh), calc(random(100) * 1px));
+    background: hsl(45, 100%, 50%);
+  }
+});

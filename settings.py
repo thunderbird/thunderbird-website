@@ -276,6 +276,7 @@ URL_MAPPINGS = {
     'updates.128.appeal.dec24.donate': '/thunderbird/128.0/dec24/donate/',
     'updates.128.appeal.apr25': '/thunderbird/128.0/apr25/',
     'updates.128.appeal.apr25.donate': '/thunderbird/128.0/apr25/donate/',
+    'updates.128.monthly': '/thunderbird/128.0/monthly/',
     'updates.140.whatsnew': '/thunderbird/140.0/whatsnew/'
 }
 

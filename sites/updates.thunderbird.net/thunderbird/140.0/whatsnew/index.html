@@ -4,6 +4,7 @@
 
 {% set active_page = "whatsnew-140" %}
 {% set page_title_text = _('Thunderbird Eclipse') %}
+{% set use_new_mozilla_logo = True %}
 {% extends "includes/base/base.html" %}
 
 {% block page_title %}{{ page_title_text }}{% endblock %}
@@ -24,6 +25,13 @@
   <div class="main-content">
     <div class="overlay"></div>
     <div class="eclipse"></div>
+    {# Uncomment to add starfield (see assets/less/new/components/starfield.less for less styling)
+    <div id="starfield-container">
+      {% for _ in range(0, 29) %}
+      <div class="particle-star"></div>
+      {% endfor %}
+    </div>
+    #}
     <header id="eclipse" class="header">
       <div class="row">
         {{ svg_img('appeal/whatsnew-140/logo', alt_text=_('Thunderbird Eclipse 140'), class_name='header-logo') }}
@@ -232,7 +240,7 @@
         Don’t wait a year for the next release — enjoy monthly updates with the same dependable stability.
         {% endtrans %}
       </p>
-      <a href="#" class="cta-button">
+      <a href="{{ url('updates.128.monthly') }}?utm_campaign=jun25_onepage&utm_medium=web&utm_source=thunderbird.net&utm_content=cta_explore-release" class="cta-button">
         {% trans trimmed %}
         Explore Monthly Releases
         {% endtrans %}
