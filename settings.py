@@ -559,7 +559,7 @@ WEBSITE_REDIRECTS = {
 
 # Similar to website redirects but for UTN
 UPDATES_REDIRECTS = {
-    ('thunderbird', 'appeal'): 'updates.140.appeal.jun25'
+    ('thunderbird', 'appeal'): 'updates.128.appeal.apr25'
 }
 
 # The default release channel to use when various function defaults are used
