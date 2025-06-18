@@ -19,11 +19,14 @@
 
 :root {
   --bg-img: url('/media/img/thunderbird/appeal/jun25/header-high-res.png');
-  --bg-img-set: image-set(
-      url('/media/img/thunderbird/appeal/jun25/header-high-res.avif') type('image/avif'),
-      url('/media/img/thunderbird/appeal/jun25/header-high-res.webp') type('image/webp'),
-      var(--bg-img) type('image/png')
-    );
+  --bg-img-set: image-set(url('/media/img/thunderbird/appeal/jun25/header-high-res.avif') type('image/avif'),
+  url('/media/img/thunderbird/appeal/jun25/header-high-res.webp') type('image/webp'),
+  var(--bg-img) type('image/png'));
+
+  --bg-img-sm: url('/media/img/thunderbird/appeal/jun25/header-sm-high-res.png');
+  --bg-img-sm-set: image-set(url('/media/img/thunderbird/appeal/jun25/header-sm-high-res.avif') type('image/avif'),
+  url('/media/img/thunderbird/appeal/jun25/header-sm-high-res.webp') type('image/webp'),
+  var(--bg-img-sm) type('image/png'));
 
   --bg-appeal-glow: linear-gradient(130deg, rgba(255, 242, 0, 0.25) 50%, #26BAF5 100%);
 
@@ -74,11 +77,11 @@
     max-width: 80rem;
     width: 100%;
 
-    background-image: var(--bg-img);
-    background-image: var(--bg-img-set);
+    background-image: var(--bg-img-sm);
+    background-image: var(--bg-img-sm-set);
     background-position: top center;
     background-position-y: -1rem;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 
 
@@ -87,51 +90,58 @@
       background: none;
     }
 
-    @media (min-width: @xl) {
-      background-size: contain;
-    }
-
     @media (min-width: @lg) {
-
+      background-image: var(--bg-img);
+      background-image: var(--bg-img-set);
     }
 
   }
 
   #appeal-heading {
-    --txt: #f7cf78;
     margin: 0.5rem 0;
-    padding: 2.2rem 2rem 1.8rem 2rem;
+    padding: 1rem;
     text-align: left;
     display: flex;
     flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
 
     color: #DCEEFB;
     font-family: Metropolis sans-serif;
-    font-size: 3.375rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: 110%;
     text-shadow: 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.3);
 
+    @media (min-width: @lg) {
+      font-size: 3.375rem;
+      padding: 2.2rem 2rem 1.8rem 2rem;
+    }
+
     & > span {
-      background: linear-gradient(-180deg, #FFF6BF 0%, #CB8761 100%);
+      background: linear-gradient(180deg, #FFF6BF 30%, #CB8761 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 4.5rem;
+      font-size: 2.25rem;
       font-weight: 700;
+      line-height: 110%;
+      text-shadow: none;
+      @media (min-width: @lg) {
+        font-size: 4.5rem;
+      }
     }
   }
 
   #illustration {
     width: 100%;
-    text-align: center;
+    text-align: right;
+
     #roc {
-      @media (min-width: @lg) {
-        padding-top: 1rem;
-        padding-left: 1rem;
-      }
+      margin-right: 5rem;
+      margin-top: 1rem;
+
     }
   }
 
@@ -223,12 +233,12 @@
     }
 
     /* Declaring this style here, as it has more precedence. */
+
     .closing-text {
       font-size: 1rem;
     }
 
   }
-
 
 
   // Copy and paste (with minor tweaks) from previous appeal
@@ -334,6 +344,9 @@
       height: 26.25rem;
       width: 26.25rem;
       transform: rotate(45deg);
+    }
+    &:hover::after {
+      transform: scale(3);
     }
 
     #decoration {
