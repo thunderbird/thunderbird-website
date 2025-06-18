@@ -1,0 +1,76 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{#
+# This is the appeal page that will be loaded into Thunderbird directly.
+# Instead of the donation form it links to $url/donate which forces Thunderbird to open the page
+# in the user's preferred browser. This is hopefully less annoying for the end-user.
+#}
+
+{% set active_page = "appeal-jun25" %}
+
+{# For donation url generation #}
+{% set fru_form_id = fru_form_id|default('jun25') %}
+{% set utm_campaign = utm_campaign|default('jun25_appeal') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.jun25.donate')) %}
+{% set use_new_mozilla_logo = True %}
+
+{% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
+
+{% block base_css %}
+  <link href="{{ static('css/appeal-jun25-style.css') }}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+{% block page_title %}{{ _('Thank you for making Thunderbird possible!') }}{% endblock %}
+
+{% block site_header %}
+  <div id="header-gradient"></div>
+  <div id="appeal-header">
+    <header>
+      <h1 id="appeal-heading" aria-label="{{ _('Thank you for making Thunderbird possible!') }}">
+        {{ _('<span>Thank YOU</span> for making Thunderbird possible!') }}
+      </h1>
+    </header>
+    <aside id="illustration" aria-hidden="true">
+      <div id="roc">
+        {{ high_res_img('thunderbird/appeal/jun25/forest-roc.png', {'alt': _('')}, alt_formats=('webp', 'avif')) }}
+      </div>
+    </aside>
+  </div>
+{% endblock %}
+{% block content %}
+  <section id="donate-button-container">
+    {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, base_url=donation_base_url) }}
+  </section>
+  <section id="appeal-body">
+    <div class="letter-container">
+      <p>
+        {% trans trimmed %}
+          The latest Thunderbird release exists because of you. Your donations directly funded every line of code, every bug fix, and every new feature you're experiencing today. You didn't just download and use Thunderbird,
+          <strong>you helped build it.</strong>
+        {% endtrans %}
+      </p>
+      <p>
+        {% trans trimmed %}
+          Because supporters like you believed in truly private and ad-free email, we immediately turned your contributions into real improvements.
+          <strong>Will you support the next chapter?</strong>
+        {% endtrans %}
+      </p>
+      <div class="heart-container">
+        <div class="left-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+        <div class="right-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+    </div>
+  </section>
+{% endblock %}

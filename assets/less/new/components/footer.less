@@ -29,15 +29,26 @@ footer {
   font-size: 1rem;
 }
 
-.mzla {
-  display: grid;
-  place-items: center;
-  gap: 15px;
-  text-align: center;
-  max-inline-size: 75ch;
-}
+
 
 .mozilla-logo {
   --accent: white;
   max-width: 200px;
+}
+
+#footer {
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+  min-height: 10rem;
+  display: flex;
+  justify-content: center;
+
+
+  .mzla {
+    justify-content: flex-start;
+    align-content: center;
+  }
 }
