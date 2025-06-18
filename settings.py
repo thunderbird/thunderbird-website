@@ -277,7 +277,9 @@ URL_MAPPINGS = {
     'updates.128.appeal.apr25': '/thunderbird/128.0/apr25/',
     'updates.128.appeal.apr25.donate': '/thunderbird/128.0/apr25/donate/',
     'updates.128.monthly': '/thunderbird/128.0/monthly/',
-    'updates.140.whatsnew': '/thunderbird/140.0/whatsnew/'
+    'updates.140.whatsnew': '/thunderbird/140.0/whatsnew/',
+    'updates.140.appeal.jun25': '/thunderbird/140.0/jun25',
+    'updates.140.appeal.jun25.donate': '/thunderbird/140.0/jun25/donate/',
 }
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
@@ -342,6 +344,7 @@ UPDATES_CSS = {
     "appeal-apr25-style": ["less/appeals/apr25.less"],
     "monthly-style": ["less/monthly.less"],
     'whatsnew-140': ['less/whatsnew-140.less'],
+    "appeal-jun25-style": ["less/appeals/jun25.less"],
 }
 
 UPDATES_JS = {
@@ -556,7 +559,7 @@ WEBSITE_REDIRECTS = {
 
 # Similar to website redirects but for UTN
 UPDATES_REDIRECTS = {
-    ('thunderbird', 'appeal'): 'updates.128.appeal.apr25'
+    ('thunderbird', 'appeal'): 'updates.140.appeal.jun25'
 }
 
 # The default release channel to use when various function defaults are used
