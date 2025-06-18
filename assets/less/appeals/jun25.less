@@ -1,4 +1,5 @@
 @import '../updates-style.less';
+@import '../new/fonts-extra.less';
 
 /*-------------------------
 * Media Queries
@@ -43,7 +44,6 @@
 .page-appeal-jun25 {
   background-color: black;
 
-
   body {
     margin: auto;
     min-width: 23.438rem;
@@ -72,6 +72,7 @@
     flex-direction: column-reverse;
     padding-bottom: 7rem;
     max-width: 80rem;
+    width: 100%;
 
     background-image: var(--bg-img);
     background-image: var(--bg-img-set);
@@ -91,13 +92,7 @@
     }
 
     @media (min-width: @lg) {
-      flex-direction: row;
-      height: 32.25rem;
-      header {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
+
     }
 
   }
@@ -109,35 +104,23 @@
     text-align: left;
     display: flex;
     flex-direction: column;
+    width: 100%;
 
-    @media (min-width: @xxs) {
-      padding: 2.2rem 2rem 1.8rem 2rem;
-    }
-    @media (min-width: @md) {
-      font-size: 2.25rem;
-    }
-    @media (min-width: @lg) {
-      padding: 2.25rem 2rem 2rem 3rem;
-      margin: -1.8rem 0;
-    }
-
-    text-transform: uppercase;
-    font-family: var(--font-content);
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--txt);
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    color: #DCEEFB;
+    font-family: Metropolis sans-serif;
+    font-size: 3.375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    text-shadow: 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.3);
 
     & > span {
-      margin-top: -.2rem;
-      display: block;
-      font-size: 2.5rem;
+      background: linear-gradient(-180deg, #FFF6BF 0%, #CB8761 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 4.5rem;
       font-weight: 700;
-      line-height: 2.5rem;
-      @media (min-width: @md) {
-        font-size: 4.375rem;
-        line-height: 4.375rem;
-      }
     }
   }
 
@@ -231,16 +214,13 @@
     }
 
     p {
+      color: var(--text-icon-base, #1A202C);
       width: 100%;
-      font-size: 1.125rem;
+      line-height: 150%;
+      font-weight: 400;
+      font-size: 1.375rem;
       margin: 0 0 1.5rem;
-      @media (min-width: @md) {
-        font-size: 1.5rem;
-        margin: 0 0 2rem;
-      }
     }
-
-
 
     /* Declaring this style here, as it has more precedence. */
     .closing-text {
@@ -336,56 +316,54 @@
   // Donation button overrides
   .donate-banner {
     border-radius: 0.75rem;
-    --background-left: linear-gradient(180deg, #DC2626 20.11%, #761414 100%);
+    //--background-left: linear-gradient(360deg, #D22424 0.41%, #7F1616 100.41%);
+    --background-left: linear-gradient(135deg, #D22424 50.41%, #7F1616 70.41%);
     --background-right: linear-gradient(180deg, #FFFFFF 0.41%, #FFE8E6 100.41%);
     box-shadow: 0 0 0.625rem 0 #0000001A;
     border: 0.0625rem solid var(--critical-pressed, #7F1D1D);
-    color: #7F1D1D;
+    color: #7F1616;
     font-family: 'Metropolis', sans-serif;
     margin: -7.125rem auto 2rem;
     max-width: 28.875rem;
     min-height: 7.6875rem;
+    font-size: 1.5rem;
 
     &::after {
       top: -13.125rem;
-      left: -13.75rem;
+      left: -6rem;
       height: 26.25rem;
       width: 26.25rem;
+      transform: rotate(45deg);
+    }
+
+    #decoration {
+      left: 7.2rem;
+      transform: rotate(-45deg);
     }
 
     #donate-banner-left {
-      padding: 0.5rem 1.5rem;
-      text-shadow: 0 2px 0 #af1e1e,
-        0 -2px 0 #af1e1e,
-      2px 0 0 #af1e1e,
-      -2px 0 0 #af1e1e,
-      2px 2px 0 #af1e1e,
-        -2px -2px 0 #af1e1e,
-        2px -2px 0 #af1e1e,
-      -2px 2px 0 #af1e1e;
-
+      padding: 1.0rem 1.5rem;
       text-align: left;
-    }
 
-    #donate-banner-right {
-      padding: 1.0625rem 0.75rem;
-      padding-inline-start: 0.1875rem;
-      text-shadow: 0 2px 0 #ffecea,
-        0 -2px 0 #ffecea,
-      2px 0 0 #ffecea,
-      -2px 0 0 #ffecea,
-      2px 2px 0 #ffecea,
-        -2px -2px 0 #ffecea,
-        2px -2px 0 #ffecea,
-      -2px 2px 0 #ffecea;
-      display: none;
+      color: var(--surface-base, #FEFFFF);
+      text-shadow: 0 0.101125rem 0.2021875rem rgba(0, 0, 0, 0.25);
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130.023%; /* 31.205px */
+      letter-spacing: 0.0075rem;
 
-      @media (min-width: @md) {
-        display: block;
-        align-self: flex-end;
+      b {
+        font-size: 2.625rem;
+        font-weight: 600;
+        line-height: 130.023%; /* 54.61px */
+        letter-spacing: 0.013125rem;
       }
     }
 
+    #donate-banner-right {
+      display: none !important;
+    }
 
     @media (max-width: @md) {
       height: 6.25rem;
@@ -393,20 +371,6 @@
       #hover-hearts {
         color: #FFE8E6;
         opacity: 0.5;
-      }
-
-      #donate-banner-right {
-        position: absolute;
-        right: 0;
-        bottom: -.5rem;
-        font-size: ~"clamp(0.9rem, 0.6429rem + 1.7857vw, 1.25rem)";
-        // Up the weight by 100
-        font-weight: 400;
-
-        b {
-          font-weight: 500;
-          font-size: ~"clamp(1.25rem, 1.0714rem + 0.8929vw, 1.5rem)";
-        }
       }
     }
   }
