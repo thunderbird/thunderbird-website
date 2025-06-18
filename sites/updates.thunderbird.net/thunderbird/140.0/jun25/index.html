@@ -14,6 +14,8 @@
 {% set utm_campaign = utm_campaign|default('jun25_appeal') %}
 {% set donation_base_url = donation_base_url|default(url('updates.140.appeal.jun25.donate')) %}
 {% set use_new_mozilla_logo = True %}
+{# Disable the donation banner on this redirect page, we set this to false in the actual donation page. #}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
 
 {% extends "includes/base/base.html" %}
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
