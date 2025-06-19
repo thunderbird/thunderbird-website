@@ -99,7 +99,6 @@
 
   #appeal-heading {
     margin: 0.5rem 0;
-    padding: 1rem;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -108,14 +107,17 @@
 
     color: #DCEEFB;
     font-family: Metropolis sans-serif;
-    font-size: 1.5rem;
+    font-size: ~"clamp(1.5rem, 0.7231rem + 3.3149vw, 3.375rem)";
+
+    // Scale the padding-top up until we hit @lg
+    padding: ~"clamp(0rem, -5.4892rem + 23.4206vw, 9.5rem)" 1rem 1rem;
+
     font-style: normal;
     font-weight: 600;
     line-height: 110%;
     text-shadow: 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.3);
 
     @media (min-width: @lg) {
-      font-size: 3.375rem;
       padding: 2.2rem 2rem 1.8rem 2rem;
     }
 
@@ -124,24 +126,27 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 2.25rem;
+      font-size: ~"clamp(2.25rem, 1.3177rem + 3.9779vw, 4.5rem)";
       font-weight: 700;
       line-height: 110%;
       text-shadow: none;
-      @media (min-width: @lg) {
-        font-size: 4.5rem;
-      }
     }
   }
 
   #illustration {
     width: 100%;
     text-align: right;
+    display: flex;
+    justify-content: flex-start;
 
     #roc {
       margin-right: 5rem;
       margin-top: 1rem;
+      flex-shrink: 1;
+    }
 
+    @media (min-width: @lg) {
+      justify-content: flex-end;
     }
   }
 
@@ -340,18 +345,26 @@
 
     &::after {
       top: -13.125rem;
-      left: -6rem;
+      left: -10rem;
       height: 26.25rem;
       width: 26.25rem;
       transform: rotate(45deg);
+
+      @media (min-width: @md) {
+        left: -6rem;
+      }
     }
+
     &:hover::after {
       transform: scale(3);
     }
 
     #decoration {
-      left: 7.2rem;
+      left: 3.2rem;
       transform: rotate(-45deg);
+      @media (min-width: @md) {
+        left: 7.2rem;
+      }
     }
 
     #donate-banner-left {
