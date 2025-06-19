@@ -1,16 +1,10 @@
 {% set use_new_mozilla_logo = use_new_mozilla_logo|default(False) %}
 <footer id="footer">
-  <div class="container" >
+  <section class="footer-inner">
     <div class="mzla">
-    {% if use_new_mozilla_logo %}
       <a href="https://mozilla.org" class="mozilla-logo">
         {{ svg('mozilla-lockup') }}
       </a>
-      {% else %}
-      <a href="https://mozilla.org" class="mozilla-logo">
-        {{ svg('Mozilla_Logo') }}
-      </a>
-      {% endif %}
     </div>
     <div class="legal-links">
       <a href="{{ url('privacy') }}" data-link-type="footer"
@@ -26,5 +20,5 @@
       <a href="{{ url('guidelines') }}" data-link-type="footer"
          data-link-name="guidelines">{{ _('Participation Guidelines') }}</a>
     </div>
-  </div>
+  </section>
 </footer>

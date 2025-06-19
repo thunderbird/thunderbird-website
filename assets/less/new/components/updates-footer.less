@@ -1,0 +1,46 @@
+#footer {
+  width: 100%;
+  background-color: black;
+  color: var(--color-gray-20);
+  font-family: "Inter", "sans-serif";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  a:visited {
+    color: var(--color-gray-20);
+  }
+
+  .mozilla-logo {
+    --accent: white;
+  }
+
+  .mzla, .mozilla-logo {
+    max-height: 12.625rem;
+  }
+
+  .mzla, .legal-links, .footer-inner {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .legal-links {
+    gap: 1.875rem;
+    flex-wrap: wrap;
+  }
+
+  // We contain an inner element so we can clamp the width to 1280px/80rem centered.
+  .footer-inner {
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10.625rem 2rem;
+    @media (max-width: @lg) {
+      padding: 0 1rem 2rem;
+    }
+  }
+}

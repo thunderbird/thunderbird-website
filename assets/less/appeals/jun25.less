@@ -4,14 +4,6 @@
 /*-------------------------
 * Media Queries
 *--------------------------*/
-@xxs: 25rem; // 400px
-@xs: 30rem; // 480px
-@sm: 40rem; // 640px
-@md: 48rem; // 768px
-@lg: 64rem; // 1024px
-@xl: 80rem; // 1280px
-@xxl: 90rem; // 1440px
-
 /* fake, in-between media queries */
 @xms: 26.25rem; // 420px;
 @ss: 33rem; // 528px ("sorta small")
@@ -28,7 +20,7 @@
   url('/media/img/thunderbird/appeal/jun25/header-sm-high-res.webp') type('image/webp'),
   var(--bg-img-sm) type('image/png'));
 
-  --bg-appeal-glow: linear-gradient(130deg, rgba(255, 242, 0, 0.25) 50%, #26BAF5 100%);
+  --bg-appeal-glow: linear-gradient(130deg, rgba(13, 44, 91, 0.00) 0%, #26BAF5 77.4%);
 
   --color-appeal-main-bg: var(--color-white);
   --color-footer-txt: #105BBC;
@@ -39,6 +31,7 @@
   --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 
   --font-content: Open Sans, system-ui, sans-serif;
+  --alt-font-content: 'Metropolis', sans-serif;
   --min-small-screen: 23.438rem;
 
 }
@@ -106,7 +99,7 @@
     box-sizing: border-box;
 
     color: #DCEEFB;
-    font-family: Metropolis sans-serif;
+    font-family: var(--alt-font-content);
     font-size: ~"clamp(1.5rem, 0.7231rem + 3.3149vw, 3.375rem)";
 
     // Scale the padding-top up until we hit @lg
@@ -174,7 +167,7 @@
       left: 0;
       right: 0;
       background: var(--bg-appeal-glow);
-      margin: -1rem 2.375rem;
+      margin: 0 -10.375rem;
       /* border-radius: 0.75rem; */
       filter: blur(2.75rem);
       opacity: 0.8;
@@ -245,14 +238,10 @@
 
   }
 
-
-  // Copy and paste (with minor tweaks) from previous appeal
-  // TODO: Centralize this!
-  .closing-text {
-    /* these styles have lower precedence than .letter-container p */
-    font-family: Metropolis, sans-serif;
-    /* font-size: 1rem; */
-    font-weight: 500;
+  .letter-container .closing-text {
+    font-family: var(--font-content);
+    font-weight: 400;
+    line-height: 150%;
     text-align: center;
     margin: 1rem 0 !important;
     color: #1373d9;
@@ -337,7 +326,7 @@
     box-shadow: 0 0 0.625rem 0 #0000001A;
     border: 0.0625rem solid var(--critical-pressed, #7F1D1D);
     color: #7F1616;
-    font-family: 'Metropolis', sans-serif;
+    font-family: var(--alt-font-content);
     margin: -7.125rem auto 2rem;
     max-width: 28.875rem;
     min-height: 7.6875rem;
