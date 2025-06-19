@@ -37,12 +37,16 @@
         {{ svg_img('appeal/whatsnew-140/logo', alt_text=_('Thunderbird Eclipse 140'), class_name='header-logo') }}
         {{ svg_img('appeal/whatsnew-140/star-group', class_name='header-star-group') }}
       </div>
+    </header>
+    {# Firefox's reader view will ignore anything with the class name of 'header'...
+       so split it out and use introduction. #}
+    <section id="introduction" class="introduction">
       <p class="row">
         {% trans trimmed %}
           Our latest release transforms your email experience with adaptive dark messaging and improved visual controls. Enhanced features keep everyday email tasks light and effortless, while the streamlined new Account Hub ensures adding new accounts is a snap.
         {% endtrans %}
       </p>
-    </header>
+    </section>
     <section id="features" class="features">
       {# Features Left #}
       <section class="column">
@@ -231,18 +235,18 @@
       <header>
         <h1>
           {% trans trimmed %}
-          Upgrade to the new Thunderbird Release
+            Upgrade to the new Thunderbird Release
           {% endtrans %}
         </h1>
       </header>
       <p>
         {% trans trimmed %}
-        Don’t wait a year for the next release — enjoy monthly updates with the same dependable stability.
+          Don’t wait a year for the next release — enjoy monthly updates with the same dependable stability.
         {% endtrans %}
       </p>
       <a href="{{ url('updates.128.monthly') }}?utm_campaign=jun25_onepage&utm_medium=web&utm_source=thunderbird.net&utm_content=cta_explore-release" class="cta-button">
         {% trans trimmed %}
-        Explore Monthly Releases
+          Explore Monthly Releases
         {% endtrans %}
         {{ svg_img('appeal/whatsnew-140/icons/arrow-right') }}
       </a>
