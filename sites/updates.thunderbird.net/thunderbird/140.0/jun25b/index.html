@@ -1,0 +1,31 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{#
+# This is the appeal page that will be loaded into Thunderbird directly.
+# Instead of the donation form it links to $url/donate which forces Thunderbird to open the page
+# in the user's preferred browser. This is hopefully less annoying for the end-user.
+#}
+
+{% set active_page = "appeal-jun25" %}
+
+{# For donation url generation #}
+{% set fru_form_id = fru_form_id|default('jun25') %}
+{% set utm_campaign = utm_campaign|default('jun25_appeal') %}
+{% set utm_content = utm_content|default('cta_b') %}
+{% set utm_source = utm_source|default('new_tab') %}
+{% set utm_medium = utm_source|default('desktop') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.jun25b.donate')) %}
+{% set use_new_mozilla_logo = True %}
+{# Disable the donation banner on this redirect page, we set this to false in the actual donation page. #}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
+
+{# Just include previous page instead of duplicating it all #}
+{% extends "thunderbird/140.0/jun25a/index.html" %}
+
+{% block page_title %}{{ _('Thank you for keeping Thunderbird alive!') }}{% endblock %}
+{% block appeal_headline %}
+  <h1 id="appeal-heading" aria-label="{{ _('Thank you for keeping Thunderbird alive!') }}">
+    {{ _('<span>Thank YOU</span> for keeping Thunderbird alive!') }}
+  </h1>
+{% endblock %}
