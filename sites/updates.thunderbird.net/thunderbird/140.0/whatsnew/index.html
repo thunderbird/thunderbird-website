@@ -34,7 +34,8 @@
     #}
     <header id="eclipse" class="header">
       <div class="row">
-        <div class="header-logo" aria-label={{ _('Thunderbird Eclipse 140') }}>
+        {# Yeah this alt text solution is not ideal... #}
+        <div class="header-logo" aria-label="{{ _('Thunderbird 140 - Eclipse') }}" role="heading" aria-level="1">
           {{ svg('appeal/whatsnew-140/logo') }}
         </div>
         {{ svg_img('appeal/whatsnew-140/star-group', class_name='header-star-group') }}
