@@ -527,13 +527,9 @@ def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign
 
 
 @jinja2.pass_context
-def redirect_donate_url(ctx, location='thunderbird.download.thank-you', make_full_url=False, **kwargs):
+def redirect_donate_url(ctx, location='thunderbird.download.thank-you', **kwargs):
     """Helper function to piece together the full donation url. Defaults to the settings for our Download button."""
-    base_url = ''
-    if make_full_url:
-        base_url = settings.CANONICAL_URL
-
-    return "{url}{path}{query}".format(url=base_url, path=url(ctx, location), query=donate_url(ctx, **kwargs))
+    return "{path}{query}".format(path=url(ctx, location), query=donate_url(ctx, **kwargs))
 
 
 def safe_markdown(text):
