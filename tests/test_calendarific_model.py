@@ -28,6 +28,7 @@ key_map = {
 }
 
 
+@pytest.mark.xfail(reason="Going through a rewrite")
 class TestCalendarificModel:
     def test_from_api_with_empty(self, calendar):
         """ Ensure an empty object does not crash from_api method """

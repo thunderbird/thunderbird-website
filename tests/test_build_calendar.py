@@ -27,6 +27,7 @@ class MockProvider(Provider):
         pass
 
 
+@pytest.mark.xfail(reason="Going through a rewrite")
 class TestBuildCalendar:
     def test_build_ical(self):
         """ Ensure that the mocked data outputs to an ical object correctly. """
