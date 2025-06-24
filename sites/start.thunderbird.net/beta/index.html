@@ -17,7 +17,7 @@
 </a>
   <header>
     <div id="logo" class="logo-img">{{ svg('logo-beta') }}</div>
-    <h1>{ _('Sharing <span class="gradient-text">Freedom</span>') }}</span></h1>
+    <h1>{{ _('Sharing <span class="gradient-text">Freedom</span>') }}</h1>
     <p class="tagline">{{ _('Thunderbird is a gift from thousands of people like you. By using our Beta release and reporting issues, you contribute to that gift of productivity, privacy, and freedom to the world. Thank you!') }}</p>
     <div class="btn-set">
       <a class="btn" href="https://www.thunderbird.net/participate/">{{ svg('information') }} {{ _('Read Docs') }}</a>
@@ -34,13 +34,13 @@
     </div>
     <div class="feature-box">
       <h3>{{ _('Be Prepared') }}</h3>
-        <ul>
-          <li>Regularly backup your beta profile to prevent data loss.</li>
-          <li>Anticipate frequent updates and ensure proper installation into a beta-specific directory.</li>
-          <li>If using mail filters, run them in only one profile.</li>
-          <li>Be aware that some add-ons may not be compatible with beta.</li>
-          <li>Avoid using POP accounts with beta. If necessary, configure to leave messages on the server indefinitely.</li>
-        </ul>
+      <ul>
+        <li>{{ _('Regularly backup your beta profile to prevent data loss.') }}</li>
+        <li>{{ _('Anticipate frequent updates and ensure proper installation into a beta-specific directory.') }}</li>
+        <li>{{ _('If using mail filters, run them in only one profile.') }}</li>
+        <li>{{ _('Be aware that some add-ons may not be compatible with beta.') }}</li>
+        <li>{{ _('Avoid using POP accounts with beta. If necessary, configure to leave messages on the server indefinitely.') }}</li>
+      </ul>
     </div>
   </section>
 
