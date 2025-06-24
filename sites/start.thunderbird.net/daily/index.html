@@ -5,104 +5,50 @@
 {% extends "_base-resp.html" %}
 
 {% block channel %}daily{% endblock %}
-{% block title %}{{ _('Welcome to <div class="tb-text">Thunderbird <small class="accent-text">Daily</small></div>') }}{% endblock %}
+{% block title %}{{ _('Sharing Freedom – Thunderbird') }}{% endblock %}
 
 {% block main %}
-      <header>
-        <div class="header-top">
-          <div class="title">
-            <div class="logo-img"></div>
-            <h1 class="title-text">{{ self.title() }}</h1>
-          </div>
-
-          <div class="donate">
-            {{ _('Support us!') }}
-            {{ '<a href="%(donate)s" class="donate-btn" data-donate-btn data-donate-redirect="donate" data-donate-content="paragraph_text" data-donate-source="start_page_tb_daily">'|format(donate=redirect_donate_url(content='paragraph_text', source='start_page_tb_daily', location='thunderbird.donate', show_donation_modal=False)) }}
-              {{ svg('donate-btn-heart') }}
-              {{ _('Donate') }}
-            </a>
-          </div>
-        </div>
-        <div class="warning-panel">
-          <div>
-            <p class="warning">
-              {{ svg('beta-warning') }}
-              <strong class="uppercase">{{ _('Warning!') }}</strong>
-              {{ _('Daily can be unstable, and there is potential to lose data.') }}
-            </p>
-            <ul>
-                <li>
-                  {{ _('Stay informed about any new features, or breaking changes.') }}
-                  <a href="https://discuss.thunderbird.net/groups/daily" class="warning">
-                    {{ _('Daily Forum') }}
-                    {{ svg('external-link') }}
-                  </a>
-                </li>
-              </ul>
-          </div>
-        </div>
-        <p class="main-thanks">{{ _('You are using the daily version of Thunderbird, which means you get to experience the absolute newest Thunderbird - fresh out of the build system! But with great power comes great responsibility, we hope you’ll take the time to report bugs and provide feedback on your experience using the daily version and help make the next Thunderbird release as awesome as possible.') }}</p>
-      </header>
-
-      <div class="main-content">
-
-        <div class="content-sections">
-          <section id="support">
-            <h2 class="section-heading support">
-              {{ svg('support') }}
-              {{ _('Get Support') }}
-            </h2>
-            <p>{{ _('The Daily release of Thunderbird can be unstable. If you need help setting up an account or learning to do something else in Thunderbird - you can check out our support page.') }}</p>
-            <a href="https://support.mozilla.org/questions/new/thunderbird" class="support">
-              {{ _('Support Page') }}
-              {{ svg('external-link') }}
-            </a>
-          </section>
-
-          <section id="crash">
-            <h2 class="section-heading crash">
-              {{ svg('info') }}
-              {{ _('Crashed?') }}
-            </h2>
-            <p>{{ _('If Crash Reporter appeared (when Thunderbird crashes), please provide more details to help developers') }}</p>
-            <ul>
-              <li>{{ _('In Thunderbird do Help > More Troubleshooting Information, scroll to "Crash Reports", click a recent report link to open the crash report page.') }}</li>
-              <li>{{ _('Click the Bugzilla tab, then click on an existing bug report under "Related Bugs" and add a comment to the bug, or click "Thunderbird" to submit a new bug report.') }}</li>
-            </ul>
-            <a href="https://support.mozilla.org/kb/mozilla-crash-reporter-tb" class="crash">
-              {{ _('Crash Reporter') }}
-              {{ svg('external-link') }}
-            </a>
-          </section>
-        </div>
-
-        <div class="content-sections">
-          <section id="bug">
-            <h2 class="section-heading bug">
-              {{ svg('bug') }}
-              {{ _('Report') }}
-            </h2>
-            <p>{{ _('Think you’ve found a new problem or rough edge? Create a bug report so we can make sure it gets solved, resulting in a better Thunderbird experience for all.') }}</p>
-            <a href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird" class="bug">
-              {{ _('Report a Bug') }}
-              {{ svg('external-link') }}
-            </a>
-          </section>
-
-          <section id="get-involved">
-            <h2 class="section-heading get-involved">
-              {{ svg('handshake') }}
-              {{ _('Contribute') }}
-            </h2>
-            <p>{{ _('Curious about helping?  You don’t need to be an expert to help other users or offer suggestions about improving the experience! Join us in this open source project where anyone can participate in the Thunderbird community (You don’t need to be an expert, and you don’t need to know how to code).') }}</p>
-            <a href="https://www.thunderbird.net/participate/" class="get-involved">
-              {{ _('Get Involved') }}
-              {{ svg('external-link') }}
-            </a>
-          </section>
-
-        </div>
-
-      </div>
+<div id="start-page">
+{% block channel_link %}
+  <a id="release-channel" href="#">{{ _('Daily Channel') }}</a>
 {% endblock %}
+<a id="donate-top" href="#">
+  {{ svg('report') }} {{ _('Report Issues') }}
+</a>
+  <header>
+    <div id="logo" class="logo-img">{{ svg('logo-daily') }}</div>
+    <h1>{{ _('Sharing <span class="gradient-text">Freedom</span>') }}</h1>
+    <p class="tagline">{{ _('Thunderbird is a gift from thousands of people like you. By using our Daily release and reporting issues, you contribute to that gift of productivity, privacy, and freedom to the world. Thank you!') }}</p>
+    <div class="btn-set">
+      <a class="btn" href="https://www.thunderbird.net/participate/">{{ svg('information') }} {{ _('Read Docs') }}</a>
+      <a class="btn" href="#">{{ svg('report') }} {{ _('Report Issues') }}</a>
+      <a class="btn" href="https://support.mozilla.org/questions/new/thunderbird">{{ svg('chat') }} {{ _('Discuss') }}</a>
+    </div>
+  </header>
 
+  <section class="features">
+    <div class="feature-box">
+      <h3>{{ _('Know the Risks First') }}</h3>
+      <p class="subhead">{{ _('Thunderbird Daily is for development.') }}</p>
+      <p>{{ _('Thunderbird Daily is not intended for general use. As a precaution, assume it will be unstable and result in data loss. We recommend you <a href="%(forum_url)s">join the Daily forum</a> to keep up to date with any news.') | format(forum_url='#') }}
+      </p>
+    </div>
+    <div class="feature-box">
+      <h3>{{ _('Take Precautions') }}</h3>
+      <ul>
+        <li>Prioritize frequent, thorough backups of your daily profile.</li>
+        <li>Expect very frequent, disruptive updates and install strictly to a daily-specific directory.</li>
+        <li>Limit mail filters to a single daily profile, or preferably, avoid them.</li>
+        <li>Assume most add-ons won't work.</li>
+        <li>Avoid using POP accounts with daily. If necessary, configure to leave messages on the server indefinitely.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    {% block footer_content %}
+      {{ _('Looking for something a bit more stable? Try <a href="%(beta_url)s"><strong>Thunderbird Beta</strong></a>.') | format(beta_url='#') }}
+    {% endblock %}
+  </footer>
+</div>
+{% endblock %}

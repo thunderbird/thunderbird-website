@@ -5,103 +5,44 @@
 {% extends "_base-resp.html" %}
 
 {% block channel %}release{% endblock %}
-{% block title %}{{ _('Welcome to <div class="tb-text">Thunderbird</div>') }}{% endblock %}
+{% block title %}{{ _('Welcome to Freedom – Thunderbird') }}{% endblock %}
 
 {% block main %}
+<div id="start-page">
+{% block channel_link %}
+  <a id="release-channel" href="#">{{ _('ESR Channel') }}</a>
+{% endblock %}
+<a id="donate-top" href="{{ redirect_donate_url(content='paragraph_text', source='start_page_tb_release', location='thunderbird.donate', show_donation_modal=False) }}">
+  {{ svg('donate-btn-heart') }} {{ _('Donate') }}
+</a>
   <header>
-    <div class="header-top">
-      <div class="title">
-        <div class="logo-img"></div>
-        <h1 class="title-text">{{ self.title() }}</h1>
-      </div>
-
-      <div class="donate">
-        {{ _('Support us!') }}
-        {{ '<a href="%(donate)s" class="donate-btn" data-donate-btn data-donate-redirect="donate" data-donate-content="paragraph_text" data-donate-source="start_page_tb_release">'|format(donate=redirect_donate_url(content='paragraph_text', source='start_page_tb_release', location='thunderbird.donate', show_donation_modal=False)) }}
-        {{ svg('donate-btn-heart') }}
-        {{ _('Donate') }}
-        </a>
-      </div>
+    <div id="logo" class="logo-img">{{ svg('logo') }}</div>
+    <h1>{ _('Welcome to <span class="gradient-text">Freedom</span>') }}</span></h1>
+    <p class="tagline">{{ _('Thunderbird is a gift from thousands of people like you. We hope you\'ll enjoy the productivity, privacy, and freedom they make possible and we invite you to become part of that gift to others.') }}</p>
+    <div class="btn-set">
+      <a class="btn" href="https://www.thunderbird.net/participate/">{{ svg('base/icons/menu/participate') }} {{ _('Participate') }}</a>
+      <a class="btn" href="{{ redirect_donate_url(content='paragraph_text', source='start_page_tb_release', location='thunderbird.donate', show_donation_modal=False) }}">{{ svg('donate-heart') }} {{ _('Donate') }}</a>
+      <a class="btn" href="https://support.mozilla.org/questions/new/thunderbird">{{ svg('handshake') }} {{ _('Get Help') }}</a>
     </div>
   </header>
 
-  <div class="main-content">
-    <div class="content-sections">
-      <section id="donate">
-        <h2 class="section-heading donate">
-          {{ svg('donate-heart') }}
-          {{ _('Support Us') }}
-        </h2>
-        <p>{{ _('Thank you for supporting Thunderbird, which is funded by users like you! Producing Thunderbird requires software engineers, designers, system administrators and server infrastructure. So if you like Thunderbird, the best way to ensure Thunderbird remains available is to make a donation.') }}</p>
-        {{ '<a href="%(donate)s" class="donate" data-donate-btn data-donate-redirect="donate" data-donate-content="paragraph_text" data-donate-source="start_page_tb_release">'|format(donate=redirect_donate_url(content='paragraph_text', source='start_page_tb_release', location='thunderbird.donate', show_donation_modal=False)) }}
-        {{ _('Donate') }}
-        {{ svg('external-link') }}
-        </a>
-      </section>
-
-      <section id="get-involved">
-        <h2 class="section-heading get-involved">
-          {{ svg('handshake') }}
-          {{ _('Help') }}
-        </h2>
-        <p>{{ _('Curious about helping? You don’t need to be an expert or know how to code to help other users or offer suggestions about improving the experience! Join us in this open source project where anyone can participate in the Thunderbird community.') }}</p>
-        <a href="https://www.thunderbird.net/participate/" class="get-involved">
-          {{ _('Get Involved') }}
-          {{ svg('external-link') }}
-        </a>
-        <p>{{ _('Share ideas and feedback.') }}</p>
-        <a href="https://connect.mozilla.org/" class="get-involved">
-          {{ _('Mozilla Connect') }}
-          {{ svg('external-link') }}
-        </a>
-        <p>{{ _('Help make Thunderbird better.') }}</p>
-        <a href="https://www.thunderbird.net/thunderbird/all/?release=beta" class="get-involved">
-          {{ _('Get the Beta') }}
-          {{ svg('external-link') }}
-        </a>
-      </section>
+  <section class="features">
+    <div class="feature-box">
+      <h3>{{ _('Free and Open Source') }}</h3>
+      <p class="subhead">{{ _('Thunderbird is now yours forever.') }}</p>
+      <p>{{ _('Thunderbird is developed openly and distributed freely. Our software license protects your right to use, modify, and share Thunderbird. Our mission is to protect your privacy and freedom.') }}</p>
     </div>
-
-    <div class="content-sections">
-      <section id="support">
-        <h2 class="section-heading support">
-          {{ svg('support') }}
-          {{ _('Questions? Problems?') }}
-        </h2>
-        <p>{{ _('Post your general Thunderbird usage questions or problems on the support page, where many knowledgeable users can help you.') }}</p>
-        <a href="https://support.mozilla.org/questions/new/thunderbird" class="support">
-          {{ _('Support Page') }}
-          {{ svg('external-link') }}
-        </a>
-      </section>
-
-      <section id="bug">
-        <h2 class="section-heading bug">
-          {{ svg('bug') }}
-          {{ _('Report') }}
-        </h2>
-        <p>{{ _('Think you’ve found a new problem or rough edge? Create a bug report so we can make sure it gets solved, resulting in a better Thunderbird experience for all.') }}</p>
-        <a href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird" class="bug">
-          {{ _('Report a Bug') }}
-          {{ svg('external-link') }}
-        </a>
-      </section>
-
-      <section id="crash">
-        <h2 class="section-heading crash">
-          {{ svg('info') }}
-          {{ _('Crashed?') }}
-        </h2>
-        <p>{{ _('If Crash Reporter appears when Thunderbird crashes, please provide as many details as possible to help developers.') }}</p>
-        <ul>
-          <li>{{ _('In Thunderbird do Help > More Troubleshooting Information, scroll to "Crash Reports", click a recent report link to open the crash report page.') }}</li>
-          <li>{{ _('Click the Bugzilla tab, then click on an existing bug report under "Related Bugs" and add a comment to the bug, or click "Thunderbird" to submit a new bug report.') }}</li>
-        </ul>
-        <a href="https://support.mozilla.org/en-US/kb/mozilla-crash-reporter-tb" class="crash">
-          {{ _('Crash Reporter') }}
-          {{ svg('external-link') }}
-        </a>
-      </section>
+    <div class="feature-box">
+      <h3>{{ _('Powered by Community') }}</h3>
+      <p class="subhead">{{ _('You can become part of our story.') }}</p>
+      <p>{{ _('Anyone can contribute to Thunderbird. By donating, translating, answering questions, suggesting features, reporting bugs, and more, you make Thunderbird better for yourself and the world.') }}</p>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    {% block footer_content %}
+      {{ _('Want new features sooner? Learn about <a href="%(release_url)s"><strong>Thunderbird Release</strong></a>.') | format(release_url='#') }}
+    {% endblock %}
+  </footer>
+</div>
 {% endblock %}
