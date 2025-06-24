@@ -237,6 +237,7 @@ URL_MAPPINGS = {
     'thunderbird.contribute': '/contribute',
     'thunderbird.donate': '/donate',
     'thunderbird.donate.form': '/donate?form=support',
+    'thunderbird.donate.form.desktop': '/donate?form=desktop',
     'thunderbird.donate.faq': '/donate#faq',
     'thunderbird.donate.modify': 'https://supporter.thunderbird.net/',
     'thunderbird.donate.ways-to-give': '/donate#ways-to-give',

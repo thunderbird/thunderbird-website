@@ -4,6 +4,11 @@
 
 {% extends "_base-resp.html" %}
 
+{% set fru_form_id = fru_form_id|default('desktop') %}
+{% set utm_campaign = utm_campaign|default('main') %}
+{% set utm_medium = utm_medium|default('desktop') %}
+{% set utm_source = utm_source|default('start_page_tb_beta') %}
+
 {% block channel %}beta{% endblock %}
 {% block title %}{{ _('Sharing Freedom – Thunderbird') }}{% endblock %}
 
@@ -20,7 +25,7 @@
     <h1>{{ _('Sharing <span class="gradient-text">Freedom</span>') }}</h1>
     <p class="tagline">{{ _('Thunderbird is a gift from thousands of people like you. By using our Beta release and reporting issues, you contribute to that gift of productivity, privacy, and freedom to the world. Thank you!') }}</p>
     <div class="btn-set">
-      <a class="btn" href="https://www.thunderbird.net/participate/">{{ svg('information') }} {{ _('Read Docs') }}</a>
+      <a class="btn" href="https://www.thunderbird.net/participate/">{{ svg('base/icons/menu/documentation') }} {{ _('Read Docs') }}</a>
       <a class="btn" href="#">{{ svg('report') }} {{ _('Report Issues') }}</a>
       <a class="btn" href="https://support.mozilla.org/questions/new/thunderbird">{{ svg('chat') }} {{ _('Discuss') }}</a>
     </div>
@@ -30,7 +35,8 @@
     <div class="feature-box">
       <h3>{{ _('Know the Risks First') }}</h3>
       <p class="subhead">{{ _('Thunderbird Beta is for testing.') }}</p>
-      <p>{{ _('Thunderbird Beta is not intended for general use. It can be unstable and in rare cases result in data loss. We strongly recommend you read the knowledge base article before proceeding.') }}</p>
+      <p>{{ _('Thunderbird Beta is not intended for general use. It can be unstable and in rare cases result in data loss. We strongly recommend you read <a href="%(kb_url)s">the knowledge base article</a> before proceeding.') | format(kb_url='https://support.mozilla.org/kb/thunderbird-beta') }}</p>
+
     </div>
     <div class="feature-box">
       <h3>{{ _('Be Prepared') }}</h3>
@@ -46,9 +52,8 @@
 
   <footer>
     {% block footer_content %}
-      {{ _('<a href="%(donate_url)s"><strong>Donate</strong></a> to help fund the work to fix issues.') | format(donate_url='#') }}
+      {{ _('<a href="%(donate_url)s"><strong>Donate</strong></a> to help fund the work to fix issues.') | format(donate_url=redirect_donate_url(form_id=fru_form_id, campaign=utm_campaign, medium=utm_medium, source=utm_source, content='link', location='thunderbird.donate.form.desktop', show_donation_modal=False)) }}
     {% endblock %}
   </footer>
 </div>
->>>>>>> Stashed changes
 {% endblock %}

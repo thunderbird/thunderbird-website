@@ -1,9 +1,12 @@
 {% extends "release/index.html" %}
 
+{% set utm_source = utm_source|default('start_page_tb_release') %}
+{% block channel %}release{% endblock %}
+
 {% block channel_link %}
   <a id="release-channel" href="#">{{ _('Release Channel') }}</a>
 {% endblock %}
 
 {% block footer_content %}
-  {{ _('Have you tried <a href="%(mobile_url)s">Thunderbird Mobile</a> for Android?') | format(mobile_url='#') }}
+  {{ _('Have you tried <a href="%(mobile_url)s">Thunderbird Mobile</a> for Android?') | format(mobile_url='https://www.thunderbird.net/mobile/?utm_campaign=main&utm_medium=desktop&utm_source=start_page_tb_release&utm_content=link') }}
 {% endblock %}

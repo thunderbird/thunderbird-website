@@ -4,7 +4,13 @@
 
 {% extends "_base-resp.html" %}
 
-{% block channel %}release{% endblock %}
+{% set fru_form_id = fru_form_id|default('desktop') %}
+{% set utm_campaign = utm_campaign|default('main') %}
+{% set utm_medium = utm_medium|default('desktop') %}
+{% set utm_source = utm_source|default('start_page_tb_esr') %}
+{% set utm_content = utm_medium|default('cta') %}
+
+{% block channel %}esr{% endblock %}
 {% block title %}{{ _('Welcome to Freedom – Thunderbird') }}{% endblock %}
 
 {% block main %}
@@ -12,7 +18,7 @@
 {% block channel_link %}
   <a id="release-channel" href="#">{{ _('ESR Channel') }}</a>
 {% endblock %}
-<a id="donate-top" href="{{ redirect_donate_url(content='paragraph_text', source='start_page_tb_release', location='thunderbird.donate', show_donation_modal=False) }}">
+<a id="donate-top" href="{{ redirect_donate_url(form_id=fru_form_id, campaign=utm_campaign, medium=utm_medium, source=utm_source, content='cta-top', location='thunderbird.donate.form.desktop', show_donation_modal=False) }}">
   {{ svg('donate-btn-heart') }} {{ _('Donate') }}
 </a>
   <header>
@@ -21,7 +27,7 @@
     <p class="tagline">{{ _('Thunderbird is a gift from thousands of people like you. We hope you\'ll enjoy the productivity, privacy, and freedom they make possible and we invite you to become part of that gift to others.') }}</p>
     <div class="btn-set">
       <a class="btn" href="https://www.thunderbird.net/participate/">{{ svg('base/icons/menu/participate') }} {{ _('Participate') }}</a>
-      <a class="btn" href="{{ redirect_donate_url(content='paragraph_text', source='start_page_tb_release', location='thunderbird.donate', show_donation_modal=False) }}">{{ svg('donate-heart') }} {{ _('Donate') }}</a>
+      <a class="btn" href="{{ redirect_donate_url(form_id=fru_form_id, campaign=utm_campaign, medium=utm_medium, source=utm_source, content='cta-middle', location='thunderbird.donate.form.desktop', show_donation_modal=False) }}">{{ svg('donate-heart') }} {{ _('Donate') }}</a>
       <a class="btn" href="https://support.mozilla.org/questions/new/thunderbird">{{ svg('handshake') }} {{ _('Get Help') }}</a>
     </div>
   </header>
@@ -41,7 +47,7 @@
 
   <footer>
     {% block footer_content %}
-      {{ _('Want new features sooner? Learn about <a href="%(release_url)s"><strong>Thunderbird Release</strong></a>.') | format(release_url='#') }}
+      {{ _('Want new features sooner? Learn about <a href="%(release_url)s"><strong>Thunderbird Release</strong></a>.') | format(release_url='https://updates.thunderbird.net/thunderbird/128.0/monthly?utm_campaign=main&utm_medium=desktop&utm_source=start_page_tb_esr&utm_content=link') }}
     {% endblock %}
   </footer>
 </div>

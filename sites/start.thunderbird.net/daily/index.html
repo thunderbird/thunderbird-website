@@ -20,7 +20,7 @@
     <h1>{{ _('Sharing <span class="gradient-text">Freedom</span>') }}</h1>
     <p class="tagline">{{ _('Thunderbird is a gift from thousands of people like you. By using our Daily release and reporting issues, you contribute to that gift of productivity, privacy, and freedom to the world. Thank you!') }}</p>
     <div class="btn-set">
-      <a class="btn" href="https://www.thunderbird.net/participate/">{{ svg('information') }} {{ _('Read Docs') }}</a>
+      <a class="btn" href="https://www.thunderbird.net/participate/">{{ svg('base/icons/menu/documentation') }} {{ _('Read Docs') }}</a>
       <a class="btn" href="#">{{ svg('report') }} {{ _('Report Issues') }}</a>
       <a class="btn" href="https://support.mozilla.org/questions/new/thunderbird">{{ svg('chat') }} {{ _('Discuss') }}</a>
     </div>
@@ -30,7 +30,7 @@
     <div class="feature-box">
       <h3>{{ _('Know the Risks First') }}</h3>
       <p class="subhead">{{ _('Thunderbird Daily is for development.') }}</p>
-      <p>{{ _('Thunderbird Daily is not intended for general use. As a precaution, assume it will be unstable and result in data loss. We recommend you <a href="%(forum_url)s">join the Daily forum</a> to keep up to date with any news.') | format(forum_url='#') }}
+      <p>{{ _('Thunderbird Daily is not intended for general use. As a precaution, assume it will be unstable and result in data loss. We recommend you <a href="%(forum_url)s">join the Daily forum</a> to keep up to date with any news.') | format(forum_url='https://thunderbird.topicbox.com/groups/daily') }}
       </p>
     </div>
     <div class="feature-box">
@@ -47,7 +47,7 @@
 
   <footer>
     {% block footer_content %}
-      {{ _('Looking for something a bit more stable? Try <a href="%(beta_url)s"><strong>Thunderbird Beta</strong></a>.') | format(beta_url='#') }}
+      {{ _('Looking for something a bit more stable? Try <a href="%(beta_url)s"><strong>Thunderbird Beta</strong></a>.') | format(beta_url=url('thunderbird.download-beta')) }}
     {% endblock %}
   </footer>
 </div>
