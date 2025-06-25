@@ -149,6 +149,7 @@
     rgba(32, 12, 252, 0.05) 100%
     );
   --text-gradient: linear-gradient(90deg, var(--magenta-50) 0%, var(--purple-50) 50%, var(--purple-90) 100%);
+  --button-bg: radial-gradient(ellipse at center, rgba(154, 42, 252, 0.25) 0%, transparent 70%);
 
 }
 
@@ -166,6 +167,7 @@
     rgba(12, 244, 252, 0.05) 100%
     );
   --text-gradient: linear-gradient(90deg, var(--teal-50) 0%, var(--blue-50) 100%);
+  --button-bg: radial-gradient(ellipse at center, rgba(42, 143, 252, 0.25) 0%, transparent 70%);
 }
 
 [data-channel="release"], [data-channel="esr"] {
@@ -182,6 +184,7 @@
     rgba(32, 12, 252, 0.05) 100%
     );
   --text-gradient: linear-gradient(90deg, var(--blue-60) 0%, var(--purple-60) 100%);
+  --button-bg: radial-gradient(ellipse at center, rgba(58, 42, 252, 0.25) 0%, transparent 70%);
 }
 
  @media (prefers-color-scheme: dark) {
@@ -338,7 +341,7 @@ h3 {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at center, rgba(58, 42, 252, 0.25) 0%, transparent 70%);
+      background: var(--button-bg);
       pointer-events: none;
       z-index: 0;
     }
