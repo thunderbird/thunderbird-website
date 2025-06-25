@@ -203,6 +203,8 @@ URL_MAPPINGS = {
     'participate.website.matrix': 'https://matrix.to/#/#tb-infrastructure:mozilla.org',
     'participate.design.topicbox': 'https://thunderbird.topicbox.com/groups/ux',
     'participate.design.matrix': 'https://matrix.to/#/#tb-design:mozilla.org',
+    'participate.discuss.desktop.beta': 'https://thunderbird.topicbox.com/groups/beta',
+    'participate.discuss.desktop.daily': 'https://thunderbird.topicbox.com/groups/daily',
     'participate.test.desktop.beta': 'https://support.mozilla.org/kb/thunderbird-beta',
     'participate.test.desktop.bugs': 'https://bugzilla.mozilla.org/describecomponents.cgi?product=Thunderbird',
     'participate.test.android.beta': 'https://blog.thunderbird.net/2024/09/help-us-test-the-thunderbird-for-android-beta/',

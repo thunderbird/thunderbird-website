@@ -17,17 +17,17 @@
 {% block channel_link %}
   <a id="release-channel" href="#">{{ _('Beta Channel') }}</a>
 {% endblock %}
-<a id="donate-top" href="#">
-  {{ svg('report') }} {{ _('Report Issues') }}
+<a id="donate-top" href="{{ url('thunderbird.bugzilla.new-bug') }}">
+  {{ svg('start/bell-ring') }} {{ _('Report Issues') }}
 </a>
   <header>
     <div id="logo" class="logo-img">{{ svg('logo-beta') }}</div>
     <h1>{{ _('Sharing <span class="gradient-text">Freedom</span>') }}</h1>
     <p class="tagline">{{ _('Thunderbird is a gift from thousands of people like you. By using our Beta release and reporting issues, you contribute to that gift of productivity, privacy, and freedom to the world. Thank you!') }}</p>
     <div class="btn-set">
-      <a class="btn" href="https://www.thunderbird.net/participate/">{{ svg('base/icons/menu/documentation') }} {{ _('Read Docs') }}</a>
-      <a class="btn" href="#">{{ svg('report') }} {{ _('Report Issues') }}</a>
-      <a class="btn" href="https://support.mozilla.org/questions/new/thunderbird">{{ svg('chat') }} {{ _('Discuss') }}</a>
+      <a class="btn" href="{{ url('participate.test.desktop.beta') }}">{{ svg('start/docs') }} {{ _('Read Docs') }}</a>
+      <a class="btn" href="{{ url('thunderbird.bugzilla.new-bug') }}">{{ svg('start/bell-ring') }} {{ _('Report Issues') }}</a>
+      <a class="btn" href="{{ url('participate.discuss.desktop.beta') }}">{{ svg('chat') }} {{ _('Discuss') }}</a>
     </div>
   </header>
 
@@ -35,7 +35,7 @@
     <div class="feature-box">
       <h3>{{ _('Know the Risks First') }}</h3>
       <p class="subhead">{{ _('Thunderbird Beta is for testing.') }}</p>
-      <p>{{ _('Thunderbird Beta is not intended for general use. It can be unstable and in rare cases result in data loss. We strongly recommend you read <a href="%(kb_url)s">the knowledge base article</a> before proceeding.') | format(kb_url='https://support.mozilla.org/kb/thunderbird-beta') }}</p>
+      <p>{{ _('Thunderbird Beta is not intended for general use. It can be unstable and in rare cases result in data loss. We strongly recommend you read <a href="%(kb_url)s">the knowledge base article</a> before proceeding.') | format(kb_url=url('participate.test.desktop.beta')) }}</p>
 
     </div>
     <div class="feature-box">
