@@ -19,7 +19,7 @@ pip install -r requirements-image.txt
 When you finish installing the dependencies, start the UTN dev server with:
 
 ```bash
-python build-site.py --watch --updates --debug --devmode --enus
+python build-site.py --watch --updates --debug --enus
 ```
 
 This command builds the site for a single locale (English US) and rebuilds the site when you make changes to the site files.
