@@ -330,9 +330,11 @@ class Site(object):
         sysreq_path = os.path.join(self.renderpath, 'system-requirements')
         notes_path = os.path.join(self.renderpath, 'notes')
         beta_notes_path = os.path.join(self.renderpath, 'notes', 'beta')
+        esr_notes_path = os.path.join(self.renderpath, 'notes', 'esr')
         write_htaccess(sysreq_path, settings.CANONICAL_URL + helper.thunderbird_url('system-requirements'))
         write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes'))
         write_htaccess(beta_notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes', channel="beta"))
+        write_htaccess(esr_notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes', channel="esr"))
 
         # Bi-directional redirect between early 115 non-esr and later esr release notes.
         thunderbird_root = os.path.join(self.outpath, 'thunderbird')
