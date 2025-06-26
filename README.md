@@ -117,5 +117,4 @@ There are several pytests located in `./tests`. To run the full test-suite, simp
 
 # Calendar Generation
 
-Calendar generation can be manually built by appending the option`--buildcalendar`. This queries our current calendar provider (Calendarific) and generates a `.ics` file per each locale specified in settings.py. For testing, you can limit this to just US by using the option `--enus`. 
-This option requires setting the `CALENDARIFIC_API_KEY=` environment variable. If you're using a paid plan you can also set `CALENDARIFIC_IS_FREE_TIER=false` to remove the sleep time between calls.
+Calendar generation can be manually built by appending the option`--buildcalendar`. Which utilises the python library [holidays](https://github.com/vacanza/holidays) and generates a `.ics` file per each locale specified in settings.py. 

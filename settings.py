@@ -423,8 +423,6 @@ LOCALE_CURRENCIES = {
     'zh-TW': 'twd'
 }
 
-CALENDARIFIC_API_URL = "https://calendarific.com/api/v2/holidays"
-
 # Country Code : Calendar Name
 CALENDAR_LOCALES = {
     'AL': ('Albania', 'sq'),

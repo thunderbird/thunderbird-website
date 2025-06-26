@@ -47,8 +47,8 @@ class Calendar(object):
         data = {
             'uid': self.unique_id,
             'last-modified': datetime.now(),
-            'dtstart': self.iso_date.date(),
-            'dtend': self.iso_date.date() + timedelta(days=1),
+            'dtstart': self.iso_date,
+            'dtend': self.iso_date + timedelta(days=1),
             'summary': self.name,
             'description': self.description,
             'dtstamp': datetime.now(),
