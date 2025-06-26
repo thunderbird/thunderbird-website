@@ -334,6 +334,17 @@ class Site(object):
         write_htaccess(notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes'))
         write_htaccess(beta_notes_path, settings.CANONICAL_URL + helper.thunderbird_url('releasenotes', channel="beta"))
 
+        # Bi-directional redirect between early 115 non-esr and later esr release notes.
+        thunderbird_root = os.path.join(self.outpath, 'thunderbird')
+        redirect_rules = (
+            'RewriteEngine On\n'
+            'RewriteCond %{REQUEST_FILENAME} !-d\n'
+            'RewriteRule ^(115\.[^/]+)esr/(.*)$ /thunderbird/$1/$2 [R,L]\n'
+            'RewriteCond %{REQUEST_FILENAME} !-d\n'
+            'RewriteRule ^(115\.[^/]+)/(.*)$ /thunderbird/$1esr/$2 [R,L]\n'
+        )
+        write_htaccess_custom(thunderbird_root, redirect_rules)
+
         self.build_notes_feed(feed_items)
 
     def build_notes_feed(self, feed_items):
