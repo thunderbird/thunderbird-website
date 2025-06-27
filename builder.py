@@ -311,7 +311,7 @@ class Site(object):
             self._env.globals['canonical_path'] = '/' + str(pathlib.Path(*pathlib.Path(target).parts[3:]))
             logger.info("Rendering {0}/index.html...".format(target))
             sysreq_template.stream().dump(os.path.join(target, 'index.html'))
-            
+
             # 115 swapped to esr midway through. So add an 115 alias for 115esr builds
             if is_115_esr:
                 for path in ['releasenotes', 'system-requirements']:
@@ -578,6 +578,8 @@ class UpdateHandler(FileSystemEventHandler):
         """Only update once per second, since multiple FileModified events can fire when a file is modified."""
         delta = timestamp - self.updatetime
         if delta.seconds > 0:
+            # Starting immediately after this fires can sometimes cause blank output.
+            time.sleep(1)
             timemsg = timestamp.strftime("%H:%M:%S")
             print("{0}: Starting update...".format(timemsg))
             if settings.ASSETS in event.src_path:
