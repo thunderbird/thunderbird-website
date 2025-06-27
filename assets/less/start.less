@@ -212,6 +212,13 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+      transform: none !important;
+      transition: none !important;
+    }
+}
+
 html {
   font-family: var(--font-content);
   font-size: 1rem;
@@ -314,8 +321,7 @@ h3 {
   h1 {
     font-size: clamp(2.25rem, 5vw, 4rem);
     font-weight: 800;
-    line-height: 0.5;
-    margin: 1rem 0;
+    line-height: 1;
   }
   .gradient-text {
     background: var(--text-gradient);
@@ -417,12 +423,6 @@ h3 {
 @media (max-width: 800px) {
   #start-page .features {
     padding: 3rem 2rem;
-  }
-}
-@media (max-width: 500px) {
-  #start-page #release-channel {
-    position: static;
-    margin-bottom: 0.5rem;
   }
 }
 @media (max-width: 268px) {
