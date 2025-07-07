@@ -331,7 +331,7 @@ WEBSITE_JS = {
 }
 
 START_CSS = {
-    'start-style': ['less/start.less'],
+    'start-style2025': ['less/start.less'],
 }
 
 START_JS = {

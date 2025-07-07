@@ -9,12 +9,14 @@
 
 {% block main %}
 <div id="start-page">
-{% block channel_link %}
-  <a id="release-channel" href="#">{{ _('Daily Channel') }}</a>
-{% endblock %}
-<a id="donate-top" href="{{ url('thunderbird.bugzilla.new-bug') }}">
-  {{ svg('start/bell-ring') }} {{ _('Report Issues') }}
-</a>
+  <div class="top-links">
+    {% block channel_link %}
+      <a id="release-channel" href="#">{{ _('Daily Channel') }}</a>
+    {% endblock %}
+    <a id="donate-top" href="{{ url('thunderbird.bugzilla.new-bug') }}">
+      {{ svg('start/bell-ring') }} {{ _('Report Issues') }}
+    </a>
+  </div>
   <header>
     <div id="logo" class="logo-img">{{ svg('logo-daily') }}</div>
     <h1>{{ _('Sharing <span class="gradient-text">Freedom</span>') }}</h1>
