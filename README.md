@@ -8,6 +8,24 @@ Additional information can be found in our [readthedocs documentation](https://d
 
 # Build Instructions
 
+## Virtual Environment
+
+Before you can install anything else you must ensure you have a python [virtual environment](https://docs.python.org/3/library/venv.html) setup for this project.
+
+If you do not see a `venv` or `.venv` folder within thunderbird-website run the following commands which will create a 
+virtual environment named `.venv`. These folders are local only and are never stored within git. 
+
+The second line will activate the virtual environment within your current shell instance. This allows you to simply 
+use `pip` or `python` without worrying about path issues.
+
+```shell
+# Install virtual environment
+python -m venv .venv
+
+# Activate the virtual environment for bash
+source .venv/bin/activate
+```
+
 ## Dependencies
 On Ubuntu, you would need to use apt-get instead of yum, and similarly for different package managers.
 
