@@ -5,7 +5,6 @@ import argparse
 import os
 
 from PIL import Image
-import pillow_avif  # Don't touch, needed for avif plugin
 
 parser = argparse.ArgumentParser()
 parser.add_argument('directory', help='Root directory to search')
