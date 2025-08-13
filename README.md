@@ -44,6 +44,11 @@ git clone https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale
 l10n_tools/compile.sh
 ```
 
+## Maintenance
+
+You can use the `./pull-libs.sh` to keep the library repositories up-to-date. For the locale library you'll need to 
+manually rerun the compile.sh script anytime you pull.
+
 ## Run Build
 
 A basic build is `python build-site.py`.
