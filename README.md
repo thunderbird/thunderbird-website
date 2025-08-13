@@ -40,6 +40,7 @@ sudo npm install -g less
 If you need the localizations to display pages translated from English into other languages:
 
 ```
+sudo yum install gettext
 git clone https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale
 l10n_tools/compile.sh
 ```
