@@ -1,14 +1,11 @@
 # Holiday Calendars
 
 We host a variety of holiday calendars for free which can be
-found [here](https://www.thunderbird.net/en-CA/calendar/holidays/).
+found [here](https://www.thunderbird.net/calendar/holidays/).
 
-Previously we use to source these from the community, this was a time-consuming process so we moved to sourcing them
-from a paid service: Calendarific.
-
-This has the unfortunate effect of removing the community's ability to correct / localize specific holidays or
-countries. In the future we hope to move to an open-source repo for calendar generation this is currently tracked
-in [#753](https://github.com/thunderbird/thunderbird-website/issues/753).
+We currently use the Python library [holidays](https://github.com/vacanza/holidays), which provides a best effort 
+collection of public holidays worldwide. Using this library gives us the ability to correct any mistakes and/or
+missing holidays. Feel free to contribute to the holidays library if you find any mistakes in the calendars.
 
 ## Calendars.json
 
@@ -24,13 +21,7 @@ Once a quarter the calendars need to be regenerated to ensure accuracy. You can 
 python build-site.py --buildcalendar 
 ```
 
-You'll want to ensure you have the following env vars set:
-
-```shell
-PYTHONUNBUFFERED=1 ;CALENDARIFIC_API_KEY=<your key>;CALENDARIFIC_IS_FREE_TIER=false
-```
-
-If you are an MZLA employee you can find the api key within the infra vault in 1password.
+Please ensure that you are using the latest release of the hollidays library.
 
 ## Development
 
