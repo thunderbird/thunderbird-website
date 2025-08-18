@@ -136,7 +136,15 @@ def download_legal():
 def build_tbpro():
     """Build the tb.pro site."""
     print("Building tb.pro site")
-    # TODO: implement this
+    # TODO: Decide whether the tb.pro site actually needs anything in the `context` dict.
+    context = {
+        'testing': '123'
+    }
+    site = builder.Site(languages, settings.TBPRO_PATH, settings.TBPRO_RENDERPATH,
+                       settings.TBPRO_CSS, js_bundles=settings.TBPRO_JS,
+                       data=context, debug=args.debug, dev_mode=args.watch)
+    site.build_tbpro()
+    return site
 
 def build_main_website():
     """Build the main www.thunderbird.net website."""
@@ -161,7 +169,11 @@ build_handlers = {
 site = None
 for arg, handler in build_handlers.items():
     if getattr(args, arg):
-        handler()
+        # If a handler returns a value, it will be a `site` instance.
+        val = handler()
+        if val:
+            # Set this so the watcher can start, if requested.
+            site = val
         break
 else:
     # Default to building the main website.
