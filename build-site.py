@@ -67,6 +67,7 @@ def build_startpage():
     site = builder.Site(languages, settings.START_PATH, settings.START_RENDERPATH,
                        settings.START_CSS, debug=args.debug, dev_mode=args.watch)
     site.build_startpage()
+    return site
 
 def build_updates():
     """Build the updates.thunderbird.net site."""
@@ -85,6 +86,7 @@ def build_updates():
                        settings.UPDATES_CSS, js_bundles=settings.UPDATES_JS,
                        data=context, debug=args.debug, dev_mode=args.watch)
     site.build_updates()
+    return site
 
 def build_calendars():
     """Build the calendar files."""
