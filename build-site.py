@@ -18,7 +18,7 @@ from datetime import date
 
 import build_calendar
 import builder
-import feedparser
+
 import helper
 import settings
 
