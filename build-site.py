@@ -61,47 +61,6 @@ def get_language_settings(enus_only=False):
 
 langmsg, languages, calendar_locales = get_language_settings(args.enus)
 
-def prepare_website_context():
-    """Prepare the context dictionary for the main website build."""
-    default_channel = settings.DEFAULT_RELEASE_VERSION
-    version = helper.thunderbird_desktop.latest_version(default_channel)
-    beta_version = helper.thunderbird_desktop.latest_version('beta')
-
-    if os.path.exists('media/caldata/autogen/calendars.json'):
-        caldata = helper.load_calendar_json('media/caldata/autogen/calendars.json')
-    else:
-        caldata = helper.load_calendar_json('media/caldata/calendars.json')
-
-    return {
-        'current_year': date.today().year,
-        'platform': 'desktop',
-        'query': '',
-        'platforms': helper.thunderbird_desktop.platforms('release'),
-        'full_builds_version': version.split('.', 1)[0],
-        'full_builds': helper.thunderbird_desktop.get_filtered_full_builds('release', version),
-        'full_builds_beta': helper.thunderbird_desktop.get_filtered_full_builds('beta', beta_version),
-        'channel_label': 'Thunderbird',
-        'releases': helper.thunderbird_desktop.list_releases(),
-        'calendars': caldata['calendars'],
-        'letters': caldata['letters'],
-        'CALDATA_URL': settings.CALDATA_URL,
-        'latest_thunderbird_version': version,
-        'latest_thunderbird_beta_version': beta_version,
-        'blog_data': [],
-        'default_channel': default_channel
-    }
-
-def prepare_updates_context():
-    """Prepare the context dictionary for the updates site build."""
-    default_channel = settings.DEFAULT_RELEASE_VERSION
-    version = helper.thunderbird_desktop.latest_version(default_channel)
-    beta_version = helper.thunderbird_desktop.latest_version('beta')
-
-    return {
-        'current_year': date.today().year,
-        'matomo_site_id': settings.MATOMO_SITE_IDS.get('utn'),
-    }
-
 def build_startpage():
     """Build the Thunderbird start page."""
     print(f'Rendering start page {langmsg}')
@@ -112,7 +71,16 @@ def build_startpage():
 def build_updates():
     """Build the updates.thunderbird.net site."""
     print(f'Rendering updates {langmsg}')
-    context = prepare_updates_context()
+
+    default_channel = settings.DEFAULT_RELEASE_VERSION
+    version = helper.thunderbird_desktop.latest_version(default_channel)
+    beta_version = helper.thunderbird_desktop.latest_version('beta')
+
+    context = {
+        'current_year': date.today().year,
+        'matomo_site_id': settings.MATOMO_SITE_IDS.get('utn'),
+    }
+
     site = builder.Site(languages, settings.UPDATES_PATH, settings.UPDATES_RENDERPATH,
                        settings.UPDATES_CSS, js_bundles=settings.UPDATES_JS,
                        data=context, debug=args.debug, dev_mode=args.watch)
@@ -149,7 +117,34 @@ def build_tbpro():
 def build_main_website():
     """Build the main www.thunderbird.net website."""
     print(f'Rendering www.thunderbird.net {langmsg}')
-    context = prepare_website_context()
+    default_channel = settings.DEFAULT_RELEASE_VERSION
+    version = helper.thunderbird_desktop.latest_version(default_channel)
+    beta_version = helper.thunderbird_desktop.latest_version('beta')
+
+    if os.path.exists('media/caldata/autogen/calendars.json'):
+        caldata = helper.load_calendar_json('media/caldata/autogen/calendars.json')
+    else:
+        caldata = helper.load_calendar_json('media/caldata/calendars.json')
+
+    context = {
+        'current_year': date.today().year,
+        'platform': 'desktop',
+        'query': '',
+        'platforms': helper.thunderbird_desktop.platforms('release'),
+        'full_builds_version': version.split('.', 1)[0],
+        'full_builds': helper.thunderbird_desktop.get_filtered_full_builds('release', version),
+        'full_builds_beta': helper.thunderbird_desktop.get_filtered_full_builds('beta', beta_version),
+        'channel_label': 'Thunderbird',
+        'releases': helper.thunderbird_desktop.list_releases(),
+        'calendars': caldata['calendars'],
+        'letters': caldata['letters'],
+        'CALDATA_URL': settings.CALDATA_URL,
+        'latest_thunderbird_version': version,
+        'latest_thunderbird_beta_version': beta_version,
+        'blog_data': [],
+        'default_channel': default_channel
+    }
+
     site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,
                        settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS,
                        data=context, debug=args.debug, dev_mode=args.watch)
