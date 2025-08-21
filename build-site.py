@@ -151,27 +151,19 @@ def build_main_website():
     site.build_website()
     return site
 
-# Map command line args to the corresponding handler functions.
-build_handlers = {
-    'startpage': build_startpage,
-    'updates': build_updates,
-    'buildcalendars': build_calendars,
-    'downloadlegal': download_legal,
-    'tbpro': build_tbpro,
-}
-
-# Run builders based on command line args.
 site = None
-for arg, handler in build_handlers.items():
-    if getattr(args, arg):
-        # If a handler returns a value, it will be a `site` instance.
-        val = handler()
-        if val:
-            # Set this so the watcher can start, if requested.
-            site = val
-        break
+
+if args.startpage:
+    build_startpage()
+elif args.updates:
+    build_updates()
+elif args.buildcalendars:
+    build_calendars()
+elif args.downloadlegal:
+    download_legal()
+elif args.tbpro:
+    site = build_tbpro()
 else:
-    # Default to building the main website.
     site = build_main_website()
 
 # Set up file watcher if requested.
