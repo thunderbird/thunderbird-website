@@ -154,15 +154,15 @@ def build_main_website():
 site = None
 
 if args.startpage:
-    build_startpage()
+    site = build_startpage()
 elif args.updates:
-    build_updates()
+    site = build_updates()
+elif args.tbpro:
+    site = build_tbpro()
 elif args.buildcalendars:
     build_calendars()
 elif args.downloadlegal:
     download_legal()
-elif args.tbpro:
-    site = build_tbpro()
 else:
     site = build_main_website()
 
