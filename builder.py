@@ -524,6 +524,18 @@ class Site(object):
             write_site_htaccess(self.renderpath, self.lang, self.site, settings.UPDATES_REDIRECTS, redirect_request=True)
         self.build_assets()
 
+    def build_tbpro(self):
+        """Build the tbpro pages for all `languages`."""
+        delete_contents(self.renderpath)
+        self._env.globals.update(self.data)
+
+        for lang in self.languages:
+            logger.info("Building pages for {lang}...".format(lang=lang))
+            self._switch_lang(lang)
+            self.render()
+        self.build_assets()
+
+
     def build_website(self, assets=True, notes=True):
         """
         Build the website for all `languages.`

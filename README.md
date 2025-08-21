@@ -59,6 +59,8 @@ There are additional arguments:
 
 * `--startpage`
     * This builds the [start page](https://start.thunderbird.net/) into the `site` directory.
+* `--tbpro`
+    * This builds the tbpro site into the `tb.pro` directory.
 * `--enus`
     * This restricts builds to only the 'en-US' locale, for faster testing.
 * `--debug`

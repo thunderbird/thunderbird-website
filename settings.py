@@ -130,6 +130,8 @@ START_PATH = 'sites/start.thunderbird.net/'
 
 UPDATES_PATH = 'sites/updates.thunderbird.net/'
 
+TBPRO_PATH = 'sites/tb.pro/'
+
 # path for the finished website artifacts.
 WEBSITE_RENDERPATH = 'dist/www.thunderbird.net'
 
@@ -137,6 +139,8 @@ WEBSITE_RENDERPATH = 'dist/www.thunderbird.net'
 START_RENDERPATH = 'dist/start.thunderbird.net'
 
 UPDATES_RENDERPATH = 'dist/updates.thunderbird.net'
+
+TBPRO_RENDERPATH = 'dist/tb.pro'
 
 LOCALE_PATH = 'libs/locale'
 
@@ -360,6 +364,14 @@ UPDATES_JS = {
         'js/common/donations.js', 'js/common/ab-testing.js', 'js/common/donation-notice.js'
     ]
 }
+
+
+TBPRO_CSS = {
+}
+
+TBPRO_JS = {
+}
+
 
 CURRENCIES = {
     # Second value is the default.
