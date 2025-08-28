@@ -1,1 +1,83 @@
-<h1> testing {{testing}}</h1>
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "includes/base/page.html" %}
+
+
+
+
+{% block masthead %}
+<div class="hero-text">
+  <h1>Elevate Thunderbird, <span class="txt-gradient">Do More</span></h1>
+  <p>Add powerful cloud capabilities to Thunderbird and fund development of the always free and open source apps you love by subscribing to Pro.</p>
+</div>
+<a href="#" class="cta-button">
+  Subscribe Now
+  {{ svg_img('tbpro/icons/arrow-right') }}
+</a>
+<div class="hero-image"></div>
+{% endblock %}
+
+
+
+{% block features %}
+<div class="feature-card feature-card-1">
+  <div class="card-header">
+    <span class="app-icon"></span>
+    <div class="app-header">
+      <span class="app-name">Thundermail</span>
+      <span class="app-tagline">Email Confidently</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <p>Send/receive emails with a privacy protecting host based in Germany and the latest mail standards like JMAP. Choose a Thundermail domain or bring your own. Look no further to power the open source email app you love.</p>
+  </div>
+  <div class="card-image">
+  </div>
+</div>
+<div class="feature-card feature-card-2">
+  <span class="app-icon"></span>
+  <h3>Appointment</h3>
+  <h4>Schedule Easily</h4>
+  <p>Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Appointment is powered by open standards and compatible with Google Calendar. You can now schedule like a pro.</p>
+</div>
+<div class="feature-card feature-card-3">
+  <span class="app-icon"></span>
+  <h3>Send</h3>
+  <h4>Attach Securely</h4>
+  <p>Share large files with end-to-end encryption and fewer limits. Send provides a natural file attachment experience in Thunderbird Desktop and is compatible with any recipient’s inbox. Know your attachments will arrive safe and secure.</p>
+</div>
+{% endblock %}
+
+
+
+{% block reasons %}
+<header>Made for You</header>
+<div class="reason">
+  <span class="reason-number">01</span>
+  <div class="reason-content">
+    <header>Open Source</header>
+    <p>The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting.</p>
+  </div>
+</div>
+<div class="reason">
+  <span class="reason-number">02</span>
+  <div class="reason-content">
+    <header>User Focused</header>
+    <p>Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.</p>
+  </div>
+</div>
+<div class="reason">
+  <span class="reason-number">03</span>
+  <div class="reason-content">
+    <header>Freedom Driven</header>
+    <p>Money isn't our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.</p>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+{% block details %}{% endblock %}
