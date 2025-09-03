@@ -284,11 +284,15 @@ section#features {
 section#reasons {
     background: #fff;
     padding-inline: @gutter;
-    padding-top: @space-36;
+    padding-block: @space-36 @space-24;
     color: #4c4d58; //var(--color-text-secondary);
 
+    display: grid;
+    row-gap: @space-24;
+    counter-reset: reason;
+
     & > header {
-        margin-bottom: @space-24;
+        margin: 0;
         color: var(--color-primary-default);
         text-align: center;
         font-size: 2rem;
@@ -297,35 +301,87 @@ section#reasons {
         font-style: normal;
         line-height: 1.2;
         letter-spacing: -0.32px;
-        text-align: center;
     }
 
     .reason {
-        display: flex;
-        gap: 16px;
+        counter-increment: reason;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: @space-18;
+        align-items: start;
+        position: relative;
 
-        .reason-number {
-            flex: 0 0 auto;
-            align-self: flex-start;
-            justify-self: flex-start;
+        &::before {
+            content: counter(reason, decimal-leading-zero);
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+            margin-inline-end: @space-18;
+            line-height: 1;
+            grid-column: 1;
+            border: 1px solid red;
         }
         .reason-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+            grid-column: 2;
+            row-gap: @space-9;
 
-            header {
-                font-size: 24px;
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 1.1;
-            }
-            p {
-                flex-grow: 1;
-                font-size: 14px;
-            }
+        }
+        .reason-title {
+            border: 1px solid red;
+            font-size: 1.5rem;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.1;
+            margin: 0;
+        }
+        p {
+            font-size: 0.875rem;
         }
     }
+}
+
+section#faq {
+    margin-bottom: @space-72; // debug only
+    header {
+        margin-bottom: @space-24;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .faq-item {
+        // --icon-closed: url('faq-open.svg');
+        // --icon-open: url('faq-closed.svg');
+
+        padding-block: @gutter;
+        border-bottom: 1px solid rgba(88, 201, 255, 0.2);
+
+        .faq-question {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: @space-18;
+
+            &::after {
+                content: "+";
+                flex-shrink: 0;
+                display: grid;
+                place-items: center;
+
+                inline-size: 2rem;
+                block-size: 1rem;
+
+                // mask: var(--icon-closed) center / contain no-repeat;
+                // background: currentColor;
+                transition: transform .1s;
+            }
+        }
+
+        // After getting real assets, swap out the image instead of rotating.
+        &[open] .faq-question::after { transform: rotate(270deg); }
+
+
+    }
+
 }
