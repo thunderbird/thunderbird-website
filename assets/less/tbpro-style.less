@@ -183,34 +183,39 @@ header#masthead {
     }
 
     .cta-button {
-      margin-top: 3rem;
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      padding: 1.125rem 2rem;
+        margin-top: @space-12;
+        margin-bottom: @space-18;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem @space-24;
 
-      // Text
-      color: var(--button-text-color);
-      text-shadow: 0.03125rem 0.03125rem 0 rgba(255, 255, 255, 0.10);
-      font-size: 1rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      letter-spacing: 0.03rem;
-      text-transform: uppercase;
-      text-decoration: none;
-
-      width: 50%;
-
-      &:hover {
+        // Text
+        color: var(--button-text-color);
+        text-shadow: 0.03125rem 0.03125rem 0 rgba(255, 255, 255, 0.10);
+        font-size: .8rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.03rem;
+        text-transform: uppercase;
         text-decoration: none;
-      }
 
-      // Button
-      background: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%) padding-box,
-      linear-gradient(247deg, rgba(43, 140, 220, 1) 0%, rgba(0, 102, 255, 0) 10%, rgba(0, 102, 255, 0) 90%, rgba(43, 140, 220, 1) 100%) border-box;
-      border: 0.0625rem solid transparent;
-      border-radius: 1rem;
+
+
+        & img {
+            margin-left: @space-3;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        // Button
+        background: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%) padding-box,
+                    linear-gradient(247deg, rgba(43, 140, 220, 1) 0%, rgba(0, 102, 255, 0) 10%, rgba(0, 102, 255, 0) 90%, rgba(43, 140, 220, 1) 100%) border-box;
+        border: 0.0625rem solid transparent;
+        border-radius: 1rem;
     }
 }
 
