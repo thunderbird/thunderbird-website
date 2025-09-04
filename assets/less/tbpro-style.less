@@ -217,27 +217,37 @@ header#masthead {
 section#features {
     .feature-card {
         border-radius: 1.5rem;
-        backdrop-filter: blur(24px);
+        // backdrop-filter: blur(24px);
         box-shadow: inset 0 0 74px 0 rgba(0, 0, 0, 0.05);
         border: solid 1px rgba(255, 255, 255, 0.05);
 
         color: var(--color-text-base);
+
+        display: flex;
+        flex-direction: column;
+
         &+.feature-card {
             margin-top: @gutter;
         }
 
         .card-header {
             display: flex;
+            gap: @gutter;
+
+            // debug
             border: 1px solid red;
             .app-icon {
                 flex: 0 0 auto;
-                align-self: flex-start;
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 1 / 1;
 
                 // debug
-                height: 36px;
-                width: 36px;
-                background-color: red;
+                height: 48px;
+                width: 48px;
+                // background-color: red;
+                border: 1px solid red;
             }
             .app-header {
                 flex: 1;
@@ -270,14 +280,18 @@ section#features {
         }
 
     }
-    .feature-card-1 {
-        background-image: linear-gradient(339deg, #0f1623 87%, #06090e 79%, #06090e 14%, #1373d9 0%);
-    }
-    .feature-card-2 {
-        background-image: linear-gradient(338deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
-    }
+
+    // still figuring out the gradients used.
+    // .feature-card-1 {
+    //     background-image: linear-gradient(339deg, #0f1623 87%, #06090e 79%, #06090e 14%, #1373d9 0%);
+    // }
+    // .feature-card-2 {
+    //     background-image: linear-gradient(338deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
+    // }
     .feature-card-3 {
-        background-image: linear-gradient(336deg, #0f1623 83%, #06090e 76%, #06090e 14%, #fec18a 1%);
+        // background-image: linear-gradient(336deg, #0f1623 83%, #06090e 76%, #06090e 14%, #fec18a 1%);
+        // backdrop-filter: blur(24px);
+        // background-image: linear-gradient(337deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
     }
 }
 
@@ -316,9 +330,8 @@ section#reasons {
             font-variant-numeric: tabular-nums;
             font-weight: 600;
             margin-inline-end: @space-18;
-            line-height: 1;
+            line-height: 1.5rem;
             grid-column: 1;
-            border: 1px solid red;
         }
         .reason-content {
             grid-column: 2;
@@ -326,7 +339,6 @@ section#reasons {
 
         }
         .reason-title {
-            border: 1px solid red;
             font-size: 1.5rem;
             font-weight: normal;
             font-stretch: normal;
