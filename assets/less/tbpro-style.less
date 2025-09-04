@@ -215,79 +215,89 @@ header#masthead {
 }
 
 section#features {
+    padding-bottom: @space-72;
+
     .feature-card {
         border-radius: 1.5rem;
         // backdrop-filter: blur(24px);
         box-shadow: inset 0 0 74px 0 rgba(0, 0, 0, 0.05);
-        border: solid 1px rgba(255, 255, 255, 0.05);
+        padding: @space-24;
+
+        // This is the real value from zeplin
+        // border: solid 1px rgba(255, 255, 255, 0.05);
+        // debug value
+        border: solid 1px rgba(255, 255, 255);
 
         color: var(--color-text-base);
 
         display: flex;
         flex-direction: column;
+        gap: @space-18;
 
+        // Space above a feature card, if there's a previous one.
         &+.feature-card {
             margin-top: @gutter;
         }
 
-        .card-header {
-            display: flex;
-            gap: @gutter;
-
-            // debug
-            border: 1px solid red;
-            .app-icon {
-                flex: 0 0 auto;
+        .card-info {
+            .card-header {
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                aspect-ratio: 1 / 1;
+                gap: @gutter;
 
                 // debug
-                height: 48px;
-                width: 48px;
-                // background-color: red;
                 border: 1px solid red;
+                .app-icon {
+                    flex: 0 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    aspect-ratio: 1 / 1;
+
+                    // debug
+                    height: 48px;
+                    width: 48px;
+                    // background-color: red;
+                    border: 1px solid red;
+                }
+                .app-header {
+                    flex: 1;
+                    display: flex;
+                    gap: 4px;
+                    flex-direction: column;
+
+                    & > * {
+                        display: block;
+                        margin: 0;
+                    }
+
+                    .app-name {
+                        color: var(--color-text-highlight);
+                        text-transform: uppercase;
+                        font-size: .75rem;
+                    }
+                    .app-tagline {
+                        font-size: 1.5rem;
+                    }
+                }
             }
-            .app-header {
-                flex: 1;
-                display: flex;
-                gap: 4px;
-                flex-direction: column;
-
-                & > * {
-                    display: block;
-                    margin: 0;
-                }
-
-                .app-name {
-                    color: var(--color-text-highlight);
-                    text-transform: uppercase;
-                    font-size: .75rem;
-                }
-                .app-tagline {
-                    font-size: 1.5rem;
-                }
+            .card-body {
             }
         }
-
-        .card-body {
-
-        }
-
         .card-image {
+            min-height: 100px;
+            outline: 1px solid blue;
 
         }
 
     }
 
     // still figuring out the gradients used.
-    // .feature-card-1 {
+    .feature-card-1 {
     //     background-image: linear-gradient(339deg, #0f1623 87%, #06090e 79%, #06090e 14%, #1373d9 0%);
-    // }
-    // .feature-card-2 {
+    }
+    .feature-card-2 {
     //     background-image: linear-gradient(338deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
-    // }
+    }
     .feature-card-3 {
         // background-image: linear-gradient(336deg, #0f1623 83%, #06090e 76%, #06090e 14%, #fec18a 1%);
         // backdrop-filter: blur(24px);
@@ -353,9 +363,10 @@ section#reasons {
 }
 
 section#faq {
+    padding-top: @space-36;
     margin-bottom: @space-72; // debug only
     header {
-        margin-bottom: @space-24;
+        margin-bottom: @space-9;
         font-size: 2rem;
         line-height: 1.2;
     }
@@ -384,15 +395,21 @@ section#faq {
                 inline-size: 2rem;
                 block-size: 1rem;
 
+                // transition: transform .1s;
+
                 // mask: var(--icon-closed) center / contain no-repeat;
                 // background: currentColor;
-                transition: transform .1s;
+
             }
+            border: 1px solid white;
+
+        }
+        &[open] .faq-question {
+            border: 1px solid red;
         }
 
         // After getting real assets, swap out the image instead of rotating.
-        &[open] .faq-question::after { transform: rotate(270deg); }
-
+        // &[open] .faq-question::after { transform: rotate(270deg); }
 
     }
 
