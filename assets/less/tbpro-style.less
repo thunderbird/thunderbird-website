@@ -25,6 +25,7 @@ body {
 @xs-min: 23.4375rem;   // 375px
 @xs-max: 37.4375rem;   // 599px
 @md-min: 37.5rem;      // 600px
+@md:     56.25rem;     // 900px;
 @md-max: 79.9375rem;   // 1279px
 @lg-min: 80rem;        // 1280px
 
@@ -139,30 +140,54 @@ body {
 
 footer#tb-footer {
     background-image: linear-gradient(134deg, #1b2128 37%, #171b24 56%);
-    padding-bottom: @space-24;
+    padding-inline: @gutter;
+    padding-block: @space-36;
+    display: grid;
+
+    @media (min-width: @md) {
+        padding-inline: @space-144;
+    }
+
     a {
         // Disabling for now, as the designs do not differentiate dark/light mode.
         // But the colours.less file defines dark/light.
         // color: var(--color-on-primary);
         color: white;
+        text-decoration: none;
         &:visited {
             color: white;
         }
     }
 
 
-    .site-nav {
+    #site-nav {
         display: grid;
         grid-template: 1fr auto / auto;
+        padding-bottom: @space-24;
+        gap: @gutter;
 
         .site-nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: @space-24;
 
+            a {
+                text-transform: uppercase;
+            }
+        }
+
+        @media (min-width: @md) {
+            display: flex;
+            justify-content: space-between;
         }
     }
 
     #moz-nav {
         display: grid;
         gap: @gutter;
+        padding-top: @space-24;
+        padding-bottom: @space-9;
+
 
         .moz-nav-links {
             margin-top: @space-6;
@@ -173,14 +198,29 @@ footer#tb-footer {
             gap: @space-9;
         }
 
-        @media (min-width: @md-min) {
+        @media (min-width: @md-max) {
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            column-gap: @space-96;
+
+            #moz-link-home {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+            }
+
             .moz-nav-links {
-                grid-template: auto / repeat(6, auto);
-                grid-auto-flow: row;
-                gap: @space-18;
+                grid-column: 2;
+                grid-row: 1;
+
+                display: flex;
+                gap: @space-36;
+            }
+
+            #tb-legal {
+                grid-column: 2;
+                grid-row: 2;
             }
         }
-
     }
 }
 
