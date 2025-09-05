@@ -133,7 +133,61 @@ body {
 
 
 
-// ---- move this to its own file?
+// ------------------------------------------------------------
+// Footer
+// ------------------------------------------------------------
+
+footer#tb-footer {
+    background-image: linear-gradient(134deg, #1b2128 37%, #171b24 56%);
+    padding-bottom: @space-24;
+    a {
+        // Disabling for now, as the designs do not differentiate dark/light mode.
+        // But the colours.less file defines dark/light.
+        // color: var(--color-on-primary);
+        color: white;
+        &:visited {
+            color: white;
+        }
+    }
+
+
+    .site-nav {
+        display: grid;
+        grid-template: 1fr auto / auto;
+
+        .site-nav-links {
+
+        }
+    }
+
+    #moz-nav {
+        display: grid;
+        gap: @gutter;
+
+        .moz-nav-links {
+            margin-top: @space-6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, auto);
+            grid-auto-flow: column;
+            gap: @space-9;
+        }
+
+        @media (min-width: @md-min) {
+            .moz-nav-links {
+                grid-template: auto / repeat(6, auto);
+                grid-auto-flow: row;
+                gap: @space-18;
+            }
+        }
+
+    }
+}
+
+// ------------------------------------------------------------
+// main landing page - move this to its own file?
+// ------------------------------------------------------------
+
 
 #main-content {
     background-color: #18181b;
@@ -369,7 +423,7 @@ section#reasons {
 
 section#faq {
     padding-top: @space-36;
-    margin-bottom: @space-72; // debug only
+
     header {
         margin-bottom: @space-9;
         font-size: 2rem;
