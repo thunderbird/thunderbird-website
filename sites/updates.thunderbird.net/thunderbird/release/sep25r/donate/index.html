@@ -1,0 +1,16 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{#
+# This is an exact replicate of sep25r/index.html but without the base_url set in donate_button.
+# This actually pulls up the form!
+#}
+
+{# For donation url generation #}
+{% set fru_form_id = 'sep25r' %}
+{% set utm_campaign = 'sep25r_appeal' %}
+{% set donation_base_url = None %}
+{# We want to show the redirect notice here as this is where the modal will actually open up. #}
+{% set disable_donation_blocked_notice = False %}
+
+{% extends "thunderbird/release/sep25r/index.html" %}
