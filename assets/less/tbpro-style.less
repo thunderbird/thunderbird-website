@@ -233,7 +233,16 @@ footer#tb-footer {
     background-color: #18181b;
     // this should probably be a gradient, since it covers #masthead and #features.
     // It might continue as if the white background isn't there
-    padding-inline: @gutter;
+
+    &>* {
+        padding-inline: @gutter;
+    }
+
+    @media (min-width: @md) {
+        &>* {
+            padding-inline: calc(@space-144 - @gutter);
+        }
+    }
 }
 
 header#masthead {
@@ -406,7 +415,7 @@ section#features {
 
 section#reasons {
     background: #fff;
-    padding-inline: @gutter;
+
     padding-block: @space-36 @space-24;
     color: #4c4d58; //var(--color-text-secondary);
 
@@ -427,6 +436,7 @@ section#reasons {
     }
 
     .reason {
+    padding-inline: @gutter;
         counter-increment: reason;
         display: grid;
         grid-template-columns: auto 1fr;
