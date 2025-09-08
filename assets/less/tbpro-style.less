@@ -236,13 +236,11 @@ footer#tb-footer {
 
     &>* {
         padding-inline: @gutter;
-    }
-
-    @media (min-width: @md) {
-        &>* {
+        @media (min-width: @md) {
             padding-inline: calc(@space-144 - @gutter);
         }
     }
+
 }
 
 header#masthead {
@@ -252,18 +250,14 @@ header#masthead {
     --color-right-blue: rgba(180, 231, 255, 0.9);
     --color-mid-left-purple: rgba(221, 180, 254, 0.7);
 
-
-
     .hero-image {
-        width: 361px;
-        height: 351px;
-        margin-left: @gutter;
-        // background-image: var(--hero-img);
-        background-image: url('/media/img/thunderbird/tbpro/orb-graphic-hi-res.png');
+        margin: 0 auto;
+        width: 100%;
+        background-image: var(--hero-img);
         background-position: top center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
-
+        aspect-ratio: 1.4/1;
     }
     .hero-text {
         font-family: var(--font-titles);
