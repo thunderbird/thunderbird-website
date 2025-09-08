@@ -13,6 +13,7 @@
 :root {
     --font-content: 'Inter', sans-serif;
     --font-titles: 'Metropolis', sans-serif;
+    --text-icon-base: #EEEEF0;
 }
 
 body {
@@ -36,6 +37,7 @@ body {
 @space-6: 0.375rem;
 @space-9: 0.5625rem;
 @space-12: 0.75rem;
+@space-16: @gutter;
 @space-18: 1.125rem;
 @space-24: 1.5rem;
 @space-36: 2rem;
@@ -139,7 +141,8 @@ body {
 // ------------------------------------------------------------
 
 footer#tb-footer {
-    background-image: linear-gradient(134deg, #1b2128 37%, #171b24 56%);
+    // background-image: linear-gradient(134deg, #1b2128 37%, #171b24 56%);
+    background-image: linear-gradient(168deg, #1b2128 1%, #171b24 45%);
     padding-inline: @gutter;
     padding-block: @space-36;
     display: grid;
@@ -230,7 +233,7 @@ footer#tb-footer {
 
 
 #main-content {
-    background-color: #18181b;
+    // background-color: #18181b;
     // this should probably be a gradient, since it covers #masthead and #features.
     // It might continue as if the white background isn't there
 
@@ -240,8 +243,98 @@ footer#tb-footer {
             padding-inline: calc(@space-144 - @gutter);
         }
     }
-
 }
+
+.top-gradient {
+
+    // background-color: #003549; // matches dark mode color var: --color-on-primary
+
+    background-image: linear-gradient(355deg, #1A202C 123%, #262d3b -202%);
+}
+
+.lower-gradient {
+    background-image: linear-gradient(355deg, #1A202C 123%, #262d3b -202%);
+}
+
+
+#site-header {
+    // background-color: #111;
+    // padding-inline: @gutter;
+    margin-block: @gutter @space-36;
+
+    #site-header-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border-radius: @gutter;
+        box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.1);
+        border-style: solid;
+        border-width: 1px;
+        border-image-source: linear-gradient(to bottom, #feffff, #58c9ff);
+
+
+        padding-block: @space-6;
+        padding-inline: @space-18 @gutter;
+
+
+        // placeholder background color
+        background-color: rgba(86, 106, 146, 1.0);
+        // This gradient does not make sense.
+        // It's basically a light gray, which looks nothing like the design.
+        // background-image: linear-gradient(to top, var(--text-icon-base) 100%, rgba(86, 106, 146, 0.5) -175%), linear-gradient(to bottom, #feffff, #58c9ff);
+
+        // background-origin: border-box;
+        // background-clip: content-box, border-box;
+
+
+        .hamburger-btn {
+            cursor: pointer;
+
+            height: 2rem;
+            width: 2rem;
+
+            padding: 0;
+            margin: 0;
+
+            background-color: rgba(86, 106, 146, 1.0);
+            border: 0;
+
+            &::after {
+                // background: var(--hamburger-background-inactive) none;
+                background: #00f none;
+            }
+
+            @media (max-width: @md-max) {
+                display: block;
+            }
+        }
+
+        .hamburger-icon {
+            content: '';
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+
+            span {
+                margin: auto;
+                width: 50%;
+                height: 100%;
+                // border-bottom: 2px solid var(--hamburger-foreground-inactive);
+                border-bottom: 2px solid #fff;
+
+                min-height: 1px;
+                transition: all 0.3s ease-in;
+            }
+        }
+
+        #nav-menu {
+            display: none;
+        }
+
+    }
+}
+
 
 header#masthead {
     --hero-img: url('/media/img/thunderbird/tbpro/orb-graphic-hi-res.png');
@@ -258,14 +351,22 @@ header#masthead {
         background-size: cover;
         background-repeat: no-repeat;
         aspect-ratio: 1.4/1;
+        margin-inline: @space-24 @space-18;
+
     }
     .hero-text {
         font-family: var(--font-titles);
+        // padding-top: @space-36;
 
         h1 {
             text-shadow: 0 4px 2px rgba(0, 0, 0, 0.05);
             white-space: pre;
             font-weight: lighter;
+            margin: 0;
+        }
+
+        p {
+            margin-block: @space-6;
         }
 
         .txt-gradient {

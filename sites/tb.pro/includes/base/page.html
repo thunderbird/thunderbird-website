@@ -6,29 +6,68 @@
 
 
 {% block content %}
+  <div class="top-gradient">
+    <header id="site-header">
+      <div id="site-header-nav">
+        <a id="nav-link-home" href="#">
+          {{ svg('tbpro/logo-tbpro') }}
+        </a>
+        <button
+          id="mobile-hamburger-button"
+          class="hamburger-btn"
+          aria-expanded="false"
+          aria-controls="nav-menu"
 
-<header id="masthead">
-  {% block masthead %} {% endblock %}
-</header>
+          data-expanded="false"
+          type="button"
+          >
+          <span class="hamburger-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
 
-<section id="features">
-  {% block features %}{% endblock %}
-</section>
+        <ul id="nav-menu">
+          <li>
+            <a href="#">Thundermail</a>
+          </li>
+          <li>
+            <a href="#">Appointment</a>
+          </li>
+          <li>
+            <a href="#">Send</a>
+          </li>
+          <li>
+            <button>Join Waitlist</button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <header id="masthead">
+      {% block masthead %} {% endblock %}
+    </header>
 
-<section id="reasons">
-  {% block reasons %}{% endblock %}
-</section>
+    <section id="features">
+      {% block features %}{% endblock %}
+    </section>
+  </div>
 
-<section id="quotes">
-  <!-- implementation tbd -->
-</section>
+  <section id="reasons">
+    {% block reasons %}{% endblock %}
+  </section>
 
-<section id="details">
-  {% block details %}{% endblock %}
-</section>
+  <section id="quotes">
+    <!-- implementation tbd -->
+  </section>
 
-<section id="faq">
-  {% block faq %}{% endblock %}
-</section>
+  <div class="lower-gradient">
+    <section id="details">
+      {% block details %}{% endblock %}
+    </section>
 
+    <section id="faq">
+      {% block faq %}{% endblock %}
+    </section>
+  </div>
 {% endblock %}

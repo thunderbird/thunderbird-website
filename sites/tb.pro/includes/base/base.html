@@ -52,19 +52,9 @@
 
   </head>
   <body>
+    {% block blamity %}{% endblock %}
     <main>
 
-      <header class="site-header">
-        <div class="site-nav">
-          <a id="nav-link-home" href="#">logo text</a>
-
-          <a href="#">Thundermail</a>
-          <a href="#">Appointment</a>
-          <a href="#">Send</a>
-
-          <button>Subscribe Now</button>
-        </div>
-      </header>
 
       <div id="main-content">
       {% block content %}{% endblock %}
