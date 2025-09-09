@@ -155,12 +155,15 @@ footer#tb-footer {
         // Disabling for now, as the designs do not differentiate dark/light mode.
         // But the colours.less file defines dark/light.
         // color: var(--color-on-primary);
-        color: white;
+
+        color: var(--text-icon-base);
         text-decoration: none;
         &:visited {
-            color: white;
-        }
+
+            color: var(--text-icon-base);        }
     }
+
+
 
 
     #site-nav {
@@ -281,7 +284,7 @@ footer#tb-footer {
         border-radius: @space-24;
         background:
             linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
-            linear-gradient(to bottom, #f00, #00f) border-box;
+            linear-gradient(to bottom, #feffff, #58c9ff) border-box;
 
 
         // This gradient given by zeplin does not look like the design.
@@ -324,17 +327,28 @@ footer#tb-footer {
         }
 
         #mobile-hamburger-button[aria-expanded="true"] ~ #nav-menu {
-            display: block;
+            grid-template-rows: 1fr;
+
         }
         #nav-menu {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.1s ease-out;
+
             background: var(--nav-bg-color);
-            display: none;
+
             position: absolute;
-            top: @space-24;
+            top: @space-36;
             right: @space-18;
 
-            list-style: none;
-            padding: 0;
+            border-radius: 0 0 @space-9 @space-9;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+            }
 
             li {
                 display: block;
@@ -342,16 +356,27 @@ footer#tb-footer {
                 margin-block: @gutter;
 
                 a {
-                    color: white;
+                    color: var(--text-icon-base);
                     text-decoration: none;
                     &:visited {
-                        color: white;
+                        color: var(--text-icon-base);
                     }
+                }
 
+                button {
+                    cursor: pointer;
+                    padding: @space-6 @space-9;
+                    margin: 0;
+                    color: var(--text-icon-base);
+
+                    border: 1px solid transparent;
+                    border-radius: @space-9;
+                    background:
+                        linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
+                        linear-gradient(133deg, #58c9ff 19%, #6a6b94) border-box;
 
                 }
             }
-
         }
 
 
