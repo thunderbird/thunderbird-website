@@ -260,33 +260,33 @@ footer#tb-footer {
 #site-header {
     // background-color: #111;
     // padding-inline: @gutter;
+    padding-top: @gutter;
     margin-block: @gutter @space-36;
 
     #site-header-nav {
+        --nav-bg-color: rgba(86, 106, 146, 1.0);
+
+
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
 
-        border-radius: @gutter;
-        box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.1);
-        border-style: solid;
-        border-width: 1px;
-        border-image-source: linear-gradient(to bottom, #feffff, #58c9ff);
-
+        box-shadow: 0 @space-9 @space-24 0 rgba(0, 0, 0, 0.1);
 
         padding-block: @space-6;
         padding-inline: @space-18 @gutter;
 
+        border: 1px solid transparent;
+        border-radius: @space-24;
+        background:
+            linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
+            linear-gradient(to bottom, #f00, #00f) border-box;
 
-        // placeholder background color
-        background-color: rgba(86, 106, 146, 1.0);
-        // This gradient does not make sense.
-        // It's basically a light gray, which looks nothing like the design.
+
+        // This gradient given by zeplin does not look like the design.
+        // The design looks like a solid color.
         // background-image: linear-gradient(to top, var(--text-icon-base) 100%, rgba(86, 106, 146, 0.5) -175%), linear-gradient(to bottom, #feffff, #58c9ff);
-
-        // background-origin: border-box;
-        // background-clip: content-box, border-box;
-
 
         .hamburger-btn {
             cursor: pointer;
@@ -297,13 +297,8 @@ footer#tb-footer {
             padding: 0;
             margin: 0;
 
-            background-color: rgba(86, 106, 146, 1.0);
+            background-color: var(--nav-bg-color);
             border: 0;
-
-            &::after {
-                // background: var(--hamburger-background-inactive) none;
-                background: #00f none;
-            }
 
             @media (max-width: @md-max) {
                 display: block;
@@ -324,13 +319,41 @@ footer#tb-footer {
                 border-bottom: 2px solid #fff;
 
                 min-height: 1px;
-                transition: all 0.3s ease-in;
+                // transition: all 0.3s ease-in;
             }
         }
 
-        #nav-menu {
-            display: none;
+        #mobile-hamburger-button[aria-expanded="true"] ~ #nav-menu {
+            display: block;
         }
+        #nav-menu {
+            background: var(--nav-bg-color);
+            display: none;
+            position: absolute;
+            top: @space-24;
+            right: @space-18;
+
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: block;
+                padding-inline: @gutter;
+                margin-block: @gutter;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    &:visited {
+                        color: white;
+                    }
+
+
+                }
+            }
+
+        }
+
 
     }
 }

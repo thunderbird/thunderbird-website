@@ -4,6 +4,17 @@
   <img src="{{ static('svg/{file_name}.svg'.format(file_name=file_name)) }}" alt="{{ alt_text }}" class="{{ class_name }}"/>
 {% endmacro %}
 
+{% block js %}
+  <script>
+    const hamburgerBtn = document.querySelector('#mobile-hamburger-button');
+    hamburgerBtn.addEventListener('click', () => {
+        const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+        hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+    });
+  </script>
+{% endblock %}
+
+
 
 {% block content %}
   <div class="top-gradient">
@@ -27,7 +38,6 @@
             <span></span>
           </span>
         </button>
-
         <ul id="nav-menu">
           <li>
             <a href="#">Thundermail</a>
