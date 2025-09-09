@@ -14,6 +14,7 @@
     --font-content: 'Inter', sans-serif;
     --font-titles: 'Metropolis', sans-serif;
     --text-icon-base: #EEEEF0;
+    --nav-bg-color: rgba(86, 106, 146, 1.0);
 }
 
 body {
@@ -132,6 +133,23 @@ body {
     .generate-prefixed-spans(lg, @lg-cols, @lg-cols);
     .generate-prefixed-offsets(lg, (@lg-cols - 1), @lg-cols); // lg-offset-1..11
   }
+}
+
+// Reusables
+button.link-button {
+    cursor: pointer;
+    padding: @space-6 @space-9;
+    margin: 0;
+    color: var(--text-icon-base);
+
+    border: 1px solid transparent;
+    border-radius: @space-6;
+    background:
+        linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
+        linear-gradient(133deg, #58c9ff 19%, #6a6b94) border-box;
+
+    text-transform: uppercase;
+    font-size: .75rem;
 }
 
 
@@ -267,7 +285,6 @@ footer#tb-footer {
     margin-block: @gutter @space-36;
 
     #site-header-nav {
-        --nav-bg-color: rgba(86, 106, 146, 1.0);
 
 
         display: flex;
@@ -338,7 +355,7 @@ footer#tb-footer {
             background: var(--nav-bg-color);
 
             position: absolute;
-            top: @space-36;
+            top: @space-48;
             right: @space-18;
 
             border-radius: 0 0 @space-9 @space-9;
@@ -363,19 +380,6 @@ footer#tb-footer {
                     }
                 }
 
-                button {
-                    cursor: pointer;
-                    padding: @space-6 @space-9;
-                    margin: 0;
-                    color: var(--text-icon-base);
-
-                    border: 1px solid transparent;
-                    border-radius: @space-9;
-                    background:
-                        linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
-                        linear-gradient(133deg, #58c9ff 19%, #6a6b94) border-box;
-
-                }
             }
         }
 
@@ -664,5 +668,81 @@ section#faq {
         // &[open] .faq-question::after { transform: rotate(270deg); }
 
     }
+
+}
+
+section#details {
+    // outline: 1px solid red;
+
+    padding-inline: @gutter;
+    padding-block: @space-36;
+
+    button.link-button {
+        // background: #131c28;
+    }
+    border-bottom: 1px solid rgba(88, 201, 255, 0.2);
+
+    header {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .subscription-info {
+        border-radius: @space-12;
+        border: solid 1px rgba(88, 201, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0.2);
+        margin-block: @space-36;
+        padding-inline: @space-36;
+        outline: 1px solid blue;
+
+        display: grid;
+        grid-template-rows: 1fr auto;
+        place-items: center;
+
+
+        ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+
+            li + li {
+                border-top: solid 1px rgba(88, 201, 255, 0.2);
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+
+        .subscription-callout {
+            border-radius: @space-12;
+            background-image: linear-gradient(150deg, #131c28 30%, #0b1017);
+
+            text-align: center;
+            padding: @space-36;
+            margin-block: @gutter;
+            margin-inline: @space-36;
+            width: 100%;
+
+            outline: 1px solid red;
+
+            h3 {
+                color: transparent;
+                background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe 62%);
+                background-clip: text;
+            }
+
+            h4 {
+                font-size: .75rem;
+                b {
+                    font-size: 2rem;
+                    font-weight: normal;
+                }
+            }
+
+        }
+    }
+
 
 }
