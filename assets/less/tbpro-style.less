@@ -618,10 +618,24 @@ section#reasons {
 section#faq {
     padding-block: @space-36 @space-72;
 
+    @media (min-width: @md-max) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .faq-item-list {
+            grid-column: 2 / -1;
+        }
+    }
+
+
     header {
         margin-bottom: @space-9;
-        font-size: 2rem;
+        font-size: 2.5rem;
         line-height: 1.2;
+
+        @media (min-width: @md-max) {
+            padding-right: @space-144;
+        }
     }
 
     .faq-item {
@@ -647,7 +661,7 @@ section#faq {
 
                 inline-size: 2rem;
                 block-size: 1rem;
-
+                outline: 1px solid red;
                 // transition: transform .1s;
 
                 // mask: var(--icon-closed) center / contain no-repeat;
