@@ -1,0 +1,837 @@
+// Base
+@import "tbpro/fonts.less";
+@import "tbpro/colours.less";
+
+// ------------------------------------------------------------
+// border-box, everywhere
+// ------------------------------------------------------------
+*, *::before, *::after { box-sizing: border-box; }
+
+
+// Where should fonts go?
+
+:root {
+    --font-content: 'Inter', sans-serif;
+    --font-titles: 'Metropolis', sans-serif;
+    --text-icon-base: #EEEEF0;
+    --nav-bg-color: rgba(86, 106, 146, 1.0);
+}
+
+body {
+    font-family: var(--font-content);
+    color: var(--color-text-base);
+}
+
+
+// Breakpoints (assumes 16px root)
+@xs-min: 23.4375rem;   // 375px
+@xs-max: 37.4375rem;   // 599px
+@md-min: 37.5rem;      // 600px
+@md:     56.25rem;     // 900px;
+@md-max: 79.9375rem;   // 1279px
+@lg-min: 80rem;        // 1280px
+
+// Global spacing
+@gutter: 16px;
+
+@space-3: 0.1875rem;
+@space-6: 0.375rem;
+@space-9: 0.5625rem;
+@space-12: 0.75rem;
+@space-16: @gutter;
+@space-18: 1.125rem;
+@space-24: 1.5rem;
+@space-36: 2rem;
+@space-48: 2.75rem;
+@space-72: 4rem;
+@space-96: 6rem;
+@space-128: 8rem;
+@space-144: 9rem;
+@space-192: 12rem;
+@space-max: 18rem;
+
+
+
+// Reusables
+button.link-button {
+    cursor: pointer;
+    padding: @space-6 @space-9;
+    margin: 0;
+    color: var(--text-icon-base);
+
+    border: 1px solid transparent;
+    border-radius: @space-6;
+    background:
+        linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
+        linear-gradient(133deg, #58c9ff 19%, #6a6b94) border-box;
+
+    text-transform: uppercase;
+    font-size: .75rem;
+}
+
+
+
+// ------------------------------------------------------------
+// Footer
+// ------------------------------------------------------------
+
+footer#tb-footer {
+    // background-image: linear-gradient(134deg, #1b2128 37%, #171b24 56%);
+    background-image: linear-gradient(168deg, #1b2128 1%, #171b24 45%);
+    padding-inline: @gutter;
+    padding-block: @space-36;
+    display: grid;
+
+    @media (min-width: @md) {
+        padding-inline: @space-144;
+    }
+
+    a {
+        // Disabling for now, as the designs do not differentiate dark/light mode.
+        // But the colours.less file defines dark/light.
+        // color: var(--color-on-primary);
+
+        color: var(--text-icon-base);
+        text-decoration: none;
+        &:visited {
+            color: var(--text-icon-base);
+        }
+    }
+
+    #nav-link-home, #nav-link-home svg { width: 208px;  height: 36px; }
+    #moz-link-home svg { width: 150px; height: 36px;}
+
+    #site-nav {
+        display: grid;
+        grid-template: 1fr auto / auto;
+        padding-bottom: @space-24;
+        align-items: start;
+        gap: @gutter;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .site-nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: @space-24;
+
+            a {
+                text-transform: uppercase;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (min-width: @md) {
+            grid-template: 1fr / 1fr auto;
+            align-items: center;
+
+        }
+    }
+
+    #moz-nav {
+        display: grid;
+        gap: @gutter;
+        padding-top: @space-24;
+        padding-bottom: @space-9;
+
+
+        .moz-nav-links {
+            margin-top: @space-6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, auto);
+            grid-auto-flow: column;
+            gap: @space-9;
+
+            a {
+                font-size: .75rem;
+            }
+        }
+
+        @media (min-width: @md-max) {
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            column-gap: @space-96;
+
+            #moz-link-home {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+            }
+
+            .moz-nav-links {
+                grid-column: 2;
+                grid-row: 1;
+
+                display: flex;
+                gap: @space-36;
+            }
+
+            #tb-legal {
+                grid-column: 2;
+                grid-row: 2;
+            }
+        }
+    }
+
+    #tb-legal {
+        font-size: .75rem;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+// ------------------------------------------------------------
+// main landing page - move this to its own file?
+// ------------------------------------------------------------
+
+
+#main-content {
+    // background-color: #18181b;
+    // this should probably be a gradient, since it covers #masthead and #features.
+    // It might continue as if the white background isn't there
+
+    &>* {
+        padding-inline: @gutter;
+        @media (min-width: @md) {
+            padding-inline: calc(@space-144 - @gutter);
+        }
+    }
+}
+
+.top-gradient {
+    // background-color: #003549; // matches dark mode color var: --color-on-primary
+    background-image: linear-gradient(355deg, #1A202C 123%, #262d3b -202%);
+}
+
+.lower-gradient {
+    background-image: linear-gradient(355deg, #1A202C 123%, #262d3b -202%);
+}
+
+#site-header {
+    padding-top: @gutter;
+    margin-block: @gutter @space-36;
+
+    #site-header-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        box-shadow: 0 @space-9 @space-24 0 rgba(0, 0, 0, 0.1);
+
+        padding-block: @space-6;
+        padding-inline: @space-18 @gutter;
+
+        border: 1px solid transparent;
+        border-radius: @space-24;
+        background:
+            linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
+            linear-gradient(to bottom, #feffff, #58c9ff) border-box;
+
+
+        // This gradient given by zeplin does not look like the design.
+        // The design looks like a solid color.
+        // background-image: linear-gradient(to top, var(--text-icon-base) 100%, rgba(86, 106, 146, 0.5) -175%), linear-gradient(to bottom, #feffff, #58c9ff);
+
+        @media (min-width: @md-max) {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: auto auto auto;
+
+            #nav-link-home {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                z-index: 9;
+            }
+        }
+
+
+        #nav-menu {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.1s ease-out;
+
+            background: var(--nav-bg-color);
+
+            position: absolute;
+            top: @space-48;
+            right: @space-18;
+
+            border-radius: 0 0 @space-9 @space-9;
+
+            @media (min-width: @md-max) {
+                display: grid;
+
+                // Force overlap so that we can center the nav links
+                grid-template-columns: subgrid;
+                grid-template-rows: subgrid;
+                grid-column: 1 / -1;
+                grid-row-start: 1;
+
+
+                position: relative;
+                top: unset;
+                right: unset;
+
+                .nav-item-join-button {
+                    align-self: flex-end;
+                }
+            }
+
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                li:first-child {
+                    // This is a dummy element that will occupy a grid column.
+                    // It should be hidden for narrow viewports.
+                    display: none;
+                }
+
+                @media (min-width: @md-max) {
+                    // Use subgrid so that we can overlap with the parent grid row.
+                    display: grid;
+                    grid-template-rows: subgrid;
+
+                    // Take up the entire width.
+                    grid-column: 1 / -1;
+
+                    // Use auto for the middle three columns so that they
+                    // are only as wide as their content.
+                    // They'll be moved to the center because the leftmost and rightmost
+                    // columns are
+                    grid-template-columns: 1fr auto auto auto 1fr;
+
+                    li:first-child {
+                        // On wider viewports, display the dummy element so that
+                        // it takes up a grid column.
+                        display: block;
+                    }
+
+                    li:last-child {
+                        justify-self: end;  // Pushes last item to the right
+                    }
+
+                }
+            }
+
+            li {
+                display: block;
+                padding-inline: @gutter;
+                margin-block: @gutter;
+
+                a {
+                    color: var(--text-icon-base);
+                    text-decoration: none;
+                    &:visited {
+                        color: var(--text-icon-base);
+                    }
+                }
+
+            }
+        }
+
+        .hamburger-btn {
+            cursor: pointer;
+
+            height: 2rem;
+            width: 2rem;
+
+            padding: 0;
+            margin: 0;
+
+            background-color: var(--nav-bg-color);
+            border: 0;
+
+            @media (min-width: @md-max) {
+                display: none;
+            }
+        }
+
+        .hamburger-icon {
+            content: '';
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+
+            span {
+                margin: auto;
+                width: 50%;
+                height: 100%;
+                // border-bottom: 2px solid var(--hamburger-foreground-inactive);
+                border-bottom: 2px solid #fff;
+
+                min-height: 1px;
+            }
+        }
+
+        #mobile-hamburger-button[aria-expanded="true"] ~ #nav-menu {
+            grid-template-rows: 1fr;
+
+        }
+
+    }
+}
+
+
+header#masthead {
+    --hero-img: url('/media/img/thunderbird/tbpro/orb-graphic-hi-res.png');
+    --button-text-color: #1A202C;
+    --color-left-blue: #b4e7ff;
+    --color-right-blue: rgba(180, 231, 255, 0.9);
+    --color-mid-left-purple: rgba(221, 180, 254, 0.7);
+
+    @media (min-width: @md) {
+        display: grid;
+        grid-template-rows: auto auto auto auto 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-top: @space-72;
+    }
+
+    .hero-image {
+        margin: 0 auto;
+        max-width: 100vw;
+        background-image: var(--hero-img);
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        aspect-ratio: 1.4/1;
+        margin-right: @space-24;
+
+        @media (min-width: @md) {
+            grid-column: 3 / -1;
+            grid-row: 2 / -1;
+
+            max-width: unset;
+            margin: 0;
+            margin-top: @space-36;
+        }
+    }
+
+    h1 {
+        text-shadow: 0 4px 2px rgba(0, 0, 0, 0.05);
+        white-space: pre;
+        font-weight: lighter;
+        margin: 0;
+        font-family: var(--font-titles);
+
+        @media (min-width: @md) {
+            grid-row: 1 / span 2;
+            grid-column: 1 / -1;
+            font-size: 4.5rem;
+        }
+
+    }
+
+    p {
+        font-family: var(--font-titles);
+        margin-block: @space-6;
+        @media (min-width: @md) {
+            grid-row: 3;
+            grid-column: 1 / span 2;
+        }
+    }
+
+    .txt-gradient {
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(to right,
+                                          var(--color-left-blue),
+                                          var(--color-mid-left-purple));
+        display: block;
+    }
+
+
+    .cta-button {
+        margin-top: @space-12;
+        margin-bottom: @space-18;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem @space-24;
+
+        // Button text
+        color: var(--button-text-color);
+        text-shadow: 0.03125rem 0.03125rem 0 rgba(255, 255, 255, 0.10);
+        font-size: .8rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.03rem;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        @media (min-width: @md) {
+            grid-column: 1;
+            grid-row: 4;
+            max-width: 180px;
+        }
+
+        // Button style
+        background: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%) padding-box,
+                    linear-gradient(247deg, rgba(43, 140, 220, 1) 0%, rgba(0, 102, 255, 0) 10%, rgba(0, 102, 255, 0) 90%, rgba(43, 140, 220, 1) 100%) border-box;
+        border: 0.0625rem solid transparent;
+        border-radius: 1rem;
+
+        & img {
+            margin-left: @space-3;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+section#features {
+    padding-bottom: @space-72;
+
+    @media (min-width: @md-max) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: @space-12;
+
+        .feature-card:first-child {
+            grid-row: 1 / -1;
+            height: 100%;
+        }
+    }
+
+    .feature-card {
+        border-radius: 1.5rem;
+        // backdrop-filter: blur(24px);
+        box-shadow: inset 0 0 74px 0 rgba(0, 0, 0, 0.05);
+        padding: @space-24;
+
+        // This is the real value from zeplin
+        // border: solid 1px rgba(255, 255, 255, 0.05);
+        // debug value
+        border: solid 1px green;
+
+        color: var(--color-text-base);
+
+        display: flex;
+        flex-direction: column;
+        gap: @space-18;
+
+
+        // For mobile layout, space above a feature card, if there's a previous one.
+        &+.feature-card {
+            margin-top: @gutter;
+            @media (min-width: @md-max) {
+                margin-top: 0;
+            }
+        }
+
+        .card-info {
+            .card-header {
+                display: flex;
+                gap: @gutter;
+
+                .app-icon {
+                    flex: 0 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    aspect-ratio: 1 / 1;
+
+                    // debug
+                    height: 48px;
+                    width: 48px;
+                    // background-color: red;
+                    border: 1px solid red;
+                }
+                .app-header {
+                    flex: 1;
+                    display: flex;
+                    gap: 4px;
+                    flex-direction: column;
+
+                    & > * {
+                        display: block;
+                        margin: 0;
+                    }
+
+                    .app-name {
+                        color: var(--color-text-highlight);
+                        text-transform: uppercase;
+                        font-size: .75rem;
+                    }
+                    .app-tagline {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .card-body {
+            }
+        }
+        .card-image {
+            min-height: 100px;
+            outline: 1px solid blue;
+        }
+
+    }
+
+    @media (min-width: @md-max) {
+        // First card retains stacked layout.
+        .feature-card:not(:first-child) {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    // still figuring out the gradients used.
+    .feature-card-1 {
+    //     background-image: linear-gradient(339deg, #0f1623 87%, #06090e 79%, #06090e 14%, #1373d9 0%);
+    }
+    .feature-card-2 {
+    //     background-image: linear-gradient(338deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
+    }
+    .feature-card-3 {
+        // background-image: linear-gradient(336deg, #0f1623 83%, #06090e 76%, #06090e 14%, #fec18a 1%);
+        // backdrop-filter: blur(24px);
+        // background-image: linear-gradient(337deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
+    }
+}
+
+section#reasons {
+    background: #fff;
+
+    padding-block: @space-36 @space-24;
+    color: #4c4d58; //var(--color-text-secondary);
+
+    display: grid;
+    row-gap: @space-24;
+    counter-reset: reason;
+
+    & > header {
+        margin: 0;
+        color: var(--color-primary-default);
+        text-align: center;
+        font-size: 2rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: -0.32px;
+    }
+
+    .reason {
+        counter-increment: reason;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: @space-18;
+        align-items: start;
+        position: relative;
+
+        &::before {
+            content: counter(reason, decimal-leading-zero);
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+            margin-inline-end: @space-18;
+            line-height: 1.5rem;
+            grid-column: 1;
+        }
+        .reason-content {
+            grid-column: 2;
+            row-gap: @space-9;
+
+        }
+        .reason-title {
+            font-size: 1.5rem;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.1;
+            margin: 0;
+        }
+        p {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+section#faq {
+    padding-block: @space-36 @space-72;
+
+    @media (min-width: @md-max) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .faq-item-list {
+            grid-column: 2 / -1;
+        }
+    }
+
+
+    header {
+        margin-bottom: @space-9;
+        font-size: 2.5rem;
+        line-height: 1.2;
+
+        @media (min-width: @md-max) {
+            padding-right: @space-144;
+        }
+    }
+
+    .faq-item {
+        // --icon-closed: url('faq-open.svg');
+        // --icon-open: url('faq-closed.svg');
+
+        padding-block: @gutter;
+        border-bottom: 1px solid rgba(88, 201, 255, 0.2);
+
+        .faq-question {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: @space-18;
+
+            &::after {
+                content: "+";
+                flex-shrink: 0;
+                display: grid;
+                place-items: center;
+
+                inline-size: 2rem;
+                block-size: 1rem;
+                outline: 1px solid red;
+                // mask: var(--icon-closed) center / contain no-repeat;
+
+            }
+        }
+        // After getting real assets, swap out the image instead of rotating.
+        // &[open] .faq-question::after { transform: rotate(270deg); }
+
+        &[open] summary ~ * {
+            animation: sweep 0.5s ease-in-out;
+        }
+    }
+}
+
+@keyframes sweep {
+    0% { opacity: 0; }
+    100% { opacity: 1}
+}
+
+
+section#details {
+    padding-inline: @gutter;
+    padding-block: @space-36;
+
+    @media (min-width: @md-max) {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        padding-inline: 0;
+    }
+
+    button.link-button {
+        // background: #131c28;
+    }
+    border-bottom: 1px solid rgba(88, 201, 255, 0.2);
+
+    header {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .subscription-header {
+        @media (min-width: @md-max) {
+            padding-right: @space-96;
+            grid-column: 1 / 3;
+        }
+    }
+
+    .subscription-info {
+        border-radius: @space-12;
+        border: solid 1px rgba(88, 201, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0.2);
+        margin-block: @space-36;
+        padding-inline: @space-36;
+        outline: 1px solid blue;
+
+        display: grid;
+        grid-template-rows: 1fr auto;
+        place-items: center;
+
+        @media (min-width: @md-max) {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: auto;
+            gap: @space-36;
+            padding-inline: @space-24;
+            grid-column: 3 / -1;
+
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-block: 0 @space-24;
+            width: 100%;
+
+            @media (min-width: @md-max) {
+                grid-column: 4 / -1;
+            }
+
+            li + li {
+                border-top: solid 1px rgba(88, 201, 255, 0.2);
+            }
+
+            p {
+                text-align: center;
+                @media (min-width: @md-max) {
+                    text-align: left
+                }
+            }
+        }
+
+
+        .subscription-callout {
+            border-radius: @space-12;
+            background-image: linear-gradient(150deg, #131c28 30%, #0b1017);
+
+            text-align: center;
+            padding: @space-36;
+            margin-block: @gutter;
+            margin-inline: @space-36;
+            width: 100%;
+
+            outline: 1px solid red;
+
+            @media (min-width: @md-max) {
+                grid-column: 1 / 4;
+                // display: grid;
+                // grid-template-rows: repeat(4, auto);
+            }
+
+            h3 {
+                color: transparent;
+                background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe 62%);
+                background-clip: text;
+
+            }
+
+            h4 {
+                font-size: .75rem;
+                b {
+                    font-size: 2rem;
+                    font-weight: normal;
+                }
+            }
+
+        }
+    }
+
+
+}

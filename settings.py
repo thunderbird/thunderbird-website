@@ -369,6 +369,7 @@ UPDATES_JS = {
 
 
 TBPRO_CSS = {
+    'tbpro-style': ['less/tbpro-style.less'],
 }
 
 TBPRO_JS = {

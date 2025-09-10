@@ -1,0 +1,86 @@
+{% extends "includes/base/base.html" %}
+
+{% macro svg_img(file_name, alt_text='', class_name='') %}
+  <img src="{{ static('svg/{file_name}.svg'.format(file_name=file_name)) }}" alt="{{ alt_text }}" class="{{ class_name }}"/>
+{% endmacro %}
+
+{% block js %}
+  <script>
+    const hamburgerBtn = document.querySelector('#mobile-hamburger-button');
+    hamburgerBtn.addEventListener('click', () => {
+        const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+        hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+    });
+  </script>
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="top-gradient">
+    <header id="site-header">
+      <div id="site-header-nav">
+        <a id="nav-link-home" href="#">
+          {{ svg('tbpro/logo-tbpro') }}
+        </a>
+        <button
+          id="mobile-hamburger-button"
+          class="hamburger-btn"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+
+          data-expanded="false"
+          type="button"
+          >
+          <span class="hamburger-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <div id="nav-menu">
+          <ul>
+            <li></li>
+            <li>
+              <a href="#">Thundermail</a>
+            </li>
+            <li>
+              <a href="#">Appointment</a>
+            </li>
+            <li>
+              <a href="#">Send</a>
+            </li>
+            <li class="nav-item-join-button">
+              <button class="link-button">Join Waitlist</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <header id="masthead">
+      {% block masthead %} {% endblock %}
+    </header>
+
+    <section id="features">
+      {% block features %}{% endblock %}
+    </section>
+  </div>
+
+  <section id="reasons">
+    {% block reasons %}{% endblock %}
+  </section>
+
+  <section id="quotes">
+    <!-- implementation tbd -->
+  </section>
+
+  <div class="lower-gradient">
+    <section id="details">
+      {% block details %}{% endblock %}
+    </section>
+
+    <section id="faq">
+      {% block faq %}{% endblock %}
+    </section>
+  </div>
+{% endblock %}
