@@ -392,9 +392,12 @@ header#masthead {
     --color-right-blue: rgba(180, 231, 255, 0.9);
     --color-mid-left-purple: rgba(221, 180, 254, 0.7);
 
-    // @media (min-width: @md) {
-    //     display: grid;
-    // }
+    @media (min-width: @md) {
+        display: grid;
+        grid-template-rows: auto auto auto auto 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-top: @space-72;
+    }
 
     .hero-image {
         margin: 0 auto;
@@ -406,32 +409,50 @@ header#masthead {
         aspect-ratio: 1.4/1;
         margin-right: @space-24;
 
-    }
-    .hero-text {
-        font-family: var(--font-titles);
-        // padding-top: @space-36;
+        @media (min-width: @md) {
+            grid-column: 3 / -1;
+            grid-row: 2 / -1;
 
-        h1 {
-            text-shadow: 0 4px 2px rgba(0, 0, 0, 0.05);
-            white-space: pre;
-            font-weight: lighter;
+            max-width: unset;
             margin: 0;
-        }
-
-        p {
-            margin-block: @space-6;
-        }
-
-        .txt-gradient {
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            background-image: linear-gradient(to right,
-                                              var(--color-left-blue),
-                                              var(--color-mid-left-purple));
-            display: block;
+            margin-top: @space-36;
         }
     }
+
+    h1 {
+        text-shadow: 0 4px 2px rgba(0, 0, 0, 0.05);
+        white-space: pre;
+        font-weight: lighter;
+        margin: 0;
+        font-family: var(--font-titles);
+
+        @media (min-width: @md) {
+            grid-row: 1 / span 2;
+            grid-column: 1 / -1;
+            font-size: 4.5rem;
+        }
+
+    }
+
+    p {
+        font-family: var(--font-titles);
+        margin-block: @space-6;
+        @media (min-width: @md) {
+            grid-row: 3;
+            grid-column: 1 / span 2;
+        }
+    }
+
+    .txt-gradient {
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(to right,
+                                          var(--color-left-blue),
+                                          var(--color-mid-left-purple));
+        display: block;
+    }
+
 
     .cta-button {
         margin-top: @space-12;
@@ -452,7 +473,11 @@ header#masthead {
         text-transform: uppercase;
         text-decoration: none;
 
-
+        @media (min-width: @md) {
+            grid-column: 1;
+            grid-row: 4;
+            max-width: 180px;
+        }
 
         & img {
             margin-left: @space-3;
