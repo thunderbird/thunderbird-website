@@ -222,7 +222,7 @@ footer#tb-footer {
         // The design looks like a solid color.
         // background-image: linear-gradient(to top, var(--text-icon-base) 100%, rgba(86, 106, 146, 0.5) -175%), linear-gradient(to bottom, #feffff, #58c9ff);
 
-        @media (min-width: @md) {
+        @media (min-width: @md-max) {
             display: grid;
             grid-template-rows: 1fr;
             grid-template-columns: auto auto auto;
@@ -248,7 +248,7 @@ footer#tb-footer {
 
             border-radius: 0 0 @space-9 @space-9;
 
-            @media (min-width: @md) {
+            @media (min-width: @md-max) {
                 display: grid;
                 // Force overlap so that we can center the nav links
                 grid-template-columns: subgrid;
@@ -273,18 +273,28 @@ footer#tb-footer {
                 margin: 0;
                 overflow: hidden;
                 li:first-child {
+                    // This is a dummy element that will occupy a grid column.
+                    // It should be hidden for narrow viewports.
                     display: none;
                 }
 
-                @media (min-width: @md) {
-                    outline: 5px solid red;
+                @media (min-width: @md-max) {
+                    // Use subgrid so that we can overlap with the parent grid row.
                     display: grid;
-                    // grid-template-columns: subgrid;
                     grid-template-rows: subgrid;
+
+                    // Take up the entire width.
                     grid-column: 1 / -1;
+
+                    // Use auto for the middle three columns so that they
+                    // are only as wide as their content.
+                    // They'll be moved to the center because the leftmost and rightmost
+                    // columns are
                     grid-template-columns: 1fr auto auto auto 1fr;
 
                     li:first-child {
+                        // On wider viewports, display the dummy element so that
+                        // it takes up a grid column.
                         display: block;
                     }
 
@@ -324,7 +334,7 @@ footer#tb-footer {
             background-color: var(--nav-bg-color);
             border: 0;
 
-            @media (min-width: @md) {
+            @media (min-width: @md-max) {
                 display: none;
             }
         }
