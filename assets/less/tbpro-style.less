@@ -94,18 +94,21 @@ footer#tb-footer {
         color: var(--text-icon-base);
         text-decoration: none;
         &:visited {
-
-            color: var(--text-icon-base);        }
+            color: var(--text-icon-base);
+        }
     }
 
-
-
+    #nav-link-home, #nav-link-home svg { width: 208px;  height: 36px; }
+    #moz-link-home svg { width: 150px; height: 36px;}
 
     #site-nav {
         display: grid;
         grid-template: 1fr auto / auto;
         padding-bottom: @space-24;
+        align-items: start;
         gap: @gutter;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
         .site-nav-links {
             display: flex;
@@ -114,12 +117,16 @@ footer#tb-footer {
 
             a {
                 text-transform: uppercase;
+                font-size: 0.75rem;
             }
         }
 
         @media (min-width: @md) {
-            display: flex;
-            justify-content: space-between;
+            // display: flex;
+            // justify-content: space-between;
+            grid-template: 1fr / 1fr auto;
+            align-items: center;
+
         }
     }
 
@@ -137,6 +144,10 @@ footer#tb-footer {
             grid-template-rows: repeat(3, auto);
             grid-auto-flow: column;
             gap: @space-9;
+
+            a {
+                font-size: .75rem;
+            }
         }
 
         @media (min-width: @md-max) {
@@ -161,6 +172,13 @@ footer#tb-footer {
                 grid-column: 2;
                 grid-row: 2;
             }
+        }
+    }
+
+    #tb-legal {
+        font-size: .75rem;
+        a {
+            text-decoration: underline;
         }
     }
 }
@@ -662,10 +680,7 @@ section#faq {
                 inline-size: 2rem;
                 block-size: 1rem;
                 outline: 1px solid red;
-                // transition: transform .1s;
-
                 // mask: var(--icon-closed) center / contain no-repeat;
-                // background: currentColor;
 
             }
         }
