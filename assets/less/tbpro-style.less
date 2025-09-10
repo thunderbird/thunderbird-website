@@ -122,8 +122,6 @@ footer#tb-footer {
         }
 
         @media (min-width: @md) {
-            // display: flex;
-            // justify-content: space-between;
             grid-template: 1fr / 1fr auto;
             align-items: center;
 
@@ -202,9 +200,7 @@ footer#tb-footer {
 }
 
 .top-gradient {
-
     // background-color: #003549; // matches dark mode color var: --color-on-primary
-
     background-image: linear-gradient(355deg, #1A202C 123%, #262d3b -202%);
 }
 
@@ -212,10 +208,7 @@ footer#tb-footer {
     background-image: linear-gradient(355deg, #1A202C 123%, #262d3b -202%);
 }
 
-
 #site-header {
-    // background-color: #111;
-    // padding-inline: @gutter;
     padding-top: @gutter;
     margin-block: @gutter @space-36;
 
@@ -269,6 +262,7 @@ footer#tb-footer {
 
             @media (min-width: @md-max) {
                 display: grid;
+
                 // Force overlap so that we can center the nav links
                 grid-template-columns: subgrid;
                 grid-template-rows: subgrid;
@@ -317,7 +311,6 @@ footer#tb-footer {
                         display: block;
                     }
 
-                    // width: 100%;
                     li:last-child {
                         justify-self: end;  // Pushes last item to the right
                     }
@@ -372,7 +365,6 @@ footer#tb-footer {
                 border-bottom: 2px solid #fff;
 
                 min-height: 1px;
-                // transition: all 0.3s ease-in;
             }
         }
 
@@ -457,12 +449,13 @@ header#masthead {
     .cta-button {
         margin-top: @space-12;
         margin-bottom: @space-18;
+
         display: inline-flex;
         justify-content: center;
         align-items: center;
         padding: 1rem @space-24;
 
-        // Text
+        // Button text
         color: var(--button-text-color);
         text-shadow: 0.03125rem 0.03125rem 0 rgba(255, 255, 255, 0.10);
         font-size: .8rem;
@@ -479,6 +472,12 @@ header#masthead {
             max-width: 180px;
         }
 
+        // Button style
+        background: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%) padding-box,
+                    linear-gradient(247deg, rgba(43, 140, 220, 1) 0%, rgba(0, 102, 255, 0) 10%, rgba(0, 102, 255, 0) 90%, rgba(43, 140, 220, 1) 100%) border-box;
+        border: 0.0625rem solid transparent;
+        border-radius: 1rem;
+
         & img {
             margin-left: @space-3;
         }
@@ -486,12 +485,6 @@ header#masthead {
         &:hover {
             text-decoration: none;
         }
-
-        // Button
-        background: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%) padding-box,
-                    linear-gradient(247deg, rgba(43, 140, 220, 1) 0%, rgba(0, 102, 255, 0) 10%, rgba(0, 102, 255, 0) 90%, rgba(43, 140, 220, 1) 100%) border-box;
-        border: 0.0625rem solid transparent;
-        border-radius: 1rem;
     }
 }
 
@@ -528,13 +521,12 @@ section#features {
         gap: @space-18;
 
 
-        // Space above a feature card, if there's a previous one.
+        // For mobile layout, space above a feature card, if there's a previous one.
         &+.feature-card {
             margin-top: @gutter;
             @media (min-width: @md-max) {
                 margin-top: 0;
             }
-
         }
 
         .card-info {
@@ -582,9 +574,17 @@ section#features {
         .card-image {
             min-height: 100px;
             outline: 1px solid blue;
-
         }
 
+    }
+
+    @media (min-width: @md-max) {
+        // First card retains stacked layout.
+        .feature-card:not(:first-child) {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     // still figuring out the gradients used.
