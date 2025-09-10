@@ -654,19 +654,21 @@ section#faq {
                 // background: currentColor;
 
             }
-            border: 1px solid white;
-
         }
-        &[open] .faq-question {
-            border: 1px solid red;
-        }
-
         // After getting real assets, swap out the image instead of rotating.
         // &[open] .faq-question::after { transform: rotate(270deg); }
 
+        &[open] summary ~ * {
+            animation: sweep 0.5s ease-in-out;
+        }
     }
-
 }
+
+@keyframes sweep {
+    0% { opacity: 0; }
+    100% { opacity: 1}
+}
+
 
 section#details {
     // outline: 1px solid red;
