@@ -22,18 +22,19 @@
   <section id="donate">
     <div class="container">
       {% if settings.DONOR_HELP_SLOW_WARNING %}
-        <div id="warning" class="warning-panel">
-          <p>
-            <b>
-              {% trans trimmed %}
-                Our Team is experiencing a backlog in donor inquiries. Please expect a delay in our response time to your inquiry.
-              {% endtrans %}
-            </b>
+      <div class="alerts" role="alert">
+        <p id="daily-warning" class="notice-panel warning">
+          <b>
             {% trans trimmed %}
-              We appreciate your understanding and thank you in advance for your support!
+            Our Team is experiencing a backlog in donor inquiries. Please expect a delay in our response time to your
+            inquiry.
             {% endtrans %}
-          </p>
-        </div>
+          </b>
+          {% trans trimmed %}
+          We appreciate your understanding and thank you in advance for your support!
+          {% endtrans %}
+        </p>
+      </div>
       {% endif %}
       <div class="section-text">
         <p class="intro">
