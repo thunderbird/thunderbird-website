@@ -1,8 +1,8 @@
 # thunderbird-website
 
 This repo contains the Thunderbird in-client Start page, the [www.thunderbird.net](https://www.thunderbird.net/) website, and the updates / donation appeals website.
-* The `prod` branch is used to update https://start.thunderbird.net, https://www.thunderbird.net, and https://updates.thunderbird.net.
-* The `master` branch is used to update https://start-stage.thunderbird.net, https://www-stage.thunderbird.net, and https://updates-stage.thunderbird.net.
+* The `prod` branch is used to update https://start.thunderbird.net, https://www.thunderbird.net, https://updates.thunderbird.net, and https://tb.pro.
+* The `master` branch is used to update https://start-stage.thunderbird.net, https://www-stage.thunderbird.net, https://updates-stage.thunderbird.net, and https://stage.tb.pro.
 
 Additional information can be found in our [readthedocs documentation](https://docs.thunderbird.net/en/latest/).
 
