@@ -1,0 +1,376 @@
+// Base
+@import "fonts.less";
+@import "colours.less";
+
+// ------------------------------------------------------------
+// border-box, everywhere
+// ------------------------------------------------------------
+*, *::before, *::after { box-sizing: border-box; }
+
+
+:root {
+    --font-content: 'Inter', sans-serif;
+    --font-titles: 'Metropolis', sans-serif;
+    --text-icon-base: #EEEEF0;
+    --nav-bg-color: rgba(86, 106, 146, 1.0);
+}
+
+body {
+    font-family: var(--font-content);
+    color: var(--color-text-base);
+}
+
+
+// Breakpoints (assumes 16px root)
+@xs-min: 23.4375rem;   // 375px
+@xs-max: 37.4375rem;   // 599px
+@md-min: 37.5rem;      // 600px
+@md:     56.25rem;     // 900px;
+@md-max: 79.9375rem;   // 1279px
+@lg-min: 80rem;        // 1280px
+
+// Global spacing
+@gutter: 16px;
+
+@space-3: 0.1875rem;
+@space-6: 0.375rem;
+@space-9: 0.5625rem;
+@space-12: 0.75rem;
+@space-16: @gutter;
+@space-18: 1.125rem;
+@space-24: 1.5rem;
+@space-36: 2rem;
+@space-48: 2.75rem;
+@space-72: 4rem;
+@space-96: 6rem;
+@space-128: 8rem;
+@space-144: 9rem;
+@space-192: 12rem;
+@space-max: 18rem;
+
+// Reusables
+button.link-button {
+    cursor: pointer;
+    padding: @space-6 @space-9;
+    margin: 0;
+    color: var(--text-icon-base);
+
+    border: 1px solid transparent;
+    border-radius: @space-6;
+    background:
+        linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
+        linear-gradient(133deg, #58c9ff 19%, #6a6b94) border-box;
+
+    text-transform: uppercase;
+    font-size: .75rem;
+}
+
+
+
+// ------------------------------------------------------------
+// Footer
+// ------------------------------------------------------------
+footer#tb-footer {
+    // background-image: linear-gradient(134deg, #1b2128 37%, #171b24 56%);
+    background-image: linear-gradient(168deg, #1b2128 1%, #171b24 45%);
+    padding-inline: @gutter;
+    padding-block: @space-36;
+    display: grid;
+
+    @media (min-width: @md) {
+        padding-inline: @space-144;
+    }
+
+    a {
+        // Disabling for now, as the designs do not differentiate dark/light mode.
+        // But the colours.less file defines dark/light.
+        // color: var(--color-on-primary);
+
+        color: var(--text-icon-base);
+        text-decoration: none;
+        &:visited {
+            color: var(--text-icon-base);
+        }
+    }
+
+    #nav-link-home, #nav-link-home svg { width: 208px;  height: 36px; }
+    #moz-link-home svg { width: 150px; height: 36px;}
+
+    #site-nav {
+        display: grid;
+        grid-template: 1fr auto / auto;
+        padding-bottom: @space-24;
+        align-items: start;
+        gap: @gutter;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .site-nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: @space-24;
+
+            a {
+                text-transform: uppercase;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (min-width: @md) {
+            grid-template: 1fr / 1fr auto;
+            align-items: center;
+
+        }
+    }
+
+    #moz-nav {
+        display: grid;
+        gap: @gutter;
+        padding-top: @space-24;
+        padding-bottom: @space-9;
+
+
+        .moz-nav-links {
+            margin-top: @space-6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, auto);
+            grid-auto-flow: column;
+            gap: @space-9;
+
+            a {
+                font-size: .75rem;
+            }
+        }
+
+        @media (min-width: @md-max) {
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            column-gap: @space-96;
+
+            #moz-link-home {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+            }
+
+            .moz-nav-links {
+                grid-column: 2;
+                grid-row: 1;
+
+                display: flex;
+                gap: @space-36;
+            }
+
+            #tb-legal {
+                grid-column: 2;
+                grid-row: 2;
+            }
+        }
+    }
+
+    #tb-legal {
+        font-size: .75rem;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+// ------------------------------------------------------------
+// Header (nav bar)
+// ------------------------------------------------------------
+#site-header {
+    padding-top: @gutter;
+    margin-block: @gutter @space-36;
+
+    #site-header-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        box-shadow: 0 @space-9 @space-24 0 rgba(0, 0, 0, 0.1);
+
+        padding-block: @space-6;
+        padding-inline: @space-18 @gutter;
+
+        border: 1px solid transparent;
+        border-radius: @space-24;
+        background:
+            linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
+            linear-gradient(to bottom, #feffff, #58c9ff) border-box;
+
+
+        // This gradient given by zeplin does not look like the design.
+        // The design looks like a solid color.
+        // background-image: linear-gradient(to top, var(--text-icon-base) 100%, rgba(86, 106, 146, 0.5) -175%), linear-gradient(to bottom, #feffff, #58c9ff);
+
+        @media (min-width: @md-max) {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: auto auto auto;
+
+            #nav-link-home {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                z-index: 9;
+            }
+        }
+
+
+        #nav-menu {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.1s ease-out;
+
+            background: var(--nav-bg-color);
+
+            position: absolute;
+            top: @space-48;
+            right: @space-18;
+
+            border-radius: 0 0 @space-9 @space-9;
+
+            @media (min-width: @md-max) {
+                display: grid;
+
+                // Force overlap so that we can center the nav links
+                grid-template-columns: subgrid;
+                grid-template-rows: subgrid;
+                grid-column: 1 / -1;
+                grid-row-start: 1;
+
+
+                position: relative;
+                top: unset;
+                right: unset;
+
+                .nav-item-join-button {
+                    align-self: flex-end;
+                }
+            }
+
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                li:first-child {
+                    // This is a dummy element that will occupy a grid column.
+                    // It should be hidden for narrow viewports.
+                    display: none;
+                }
+
+                @media (min-width: @md-max) {
+                    // Use subgrid so that we can overlap with the parent grid row.
+                    display: grid;
+                    grid-template-rows: subgrid;
+
+                    // Take up the entire width.
+                    grid-column: 1 / -1;
+
+                    // Use auto for the middle three columns so that they
+                    // are only as wide as their content.
+                    // They'll be moved to the center because the leftmost and rightmost
+                    // columns are
+                    grid-template-columns: 1fr auto auto auto 1fr;
+
+                    li:first-child {
+                        // On wider viewports, display the dummy element so that
+                        // it takes up a grid column.
+                        display: block;
+                    }
+
+                    li:last-child {
+                        justify-self: end;  // Pushes last item to the right
+                    }
+
+                }
+            }
+
+            li {
+                display: block;
+                padding-inline: @gutter;
+                margin-block: @gutter;
+
+                a {
+                    color: var(--text-icon-base);
+                    text-decoration: none;
+                    &:visited {
+                        color: var(--text-icon-base);
+                    }
+                }
+
+            }
+        }
+
+        .hamburger-btn {
+            cursor: pointer;
+
+            height: 2rem;
+            width: 2rem;
+
+            padding: 0;
+            margin: 0;
+
+            background-color: var(--nav-bg-color);
+            border: 0;
+
+            @media (min-width: @md-max) {
+                display: none;
+            }
+        }
+
+        .hamburger-icon {
+            content: '';
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+
+            span {
+                margin: auto;
+                width: 50%;
+                height: 100%;
+                // border-bottom: 2px solid var(--hamburger-foreground-inactive);
+                border-bottom: 2px solid #fff;
+
+                min-height: 1px;
+            }
+        }
+
+        #mobile-hamburger-button[aria-expanded="true"] ~ #nav-menu {
+            grid-template-rows: 1fr;
+
+        }
+
+    }
+}
+
+
+// ------------------------------------------------------------
+//
+// ------------------------------------------------------------
+#main-content {
+    // background-color: #18181b;
+    // this should probably be a gradient, since it covers #masthead and #features.
+    // It might continue as if the white background isn't there
+
+    &>* {
+        padding-inline: @gutter;
+        @media (min-width: @md) {
+            padding-inline: calc(@space-144 - @gutter);
+        }
+    }
+}
+
+.top-gradient {
+    // background-color: #003549; // matches dark mode color var: --color-on-primary
+    background-image: linear-gradient(355deg, #1A202C 123%, #262d3b -202%);
+}
+
+.lower-gradient {
+    background-image: linear-gradient(355deg, #1A202C 123%, #262d3b -202%);
+}
