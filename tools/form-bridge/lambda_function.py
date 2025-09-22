@@ -141,6 +141,11 @@ def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         form_data = dict(urllib.parse.parse_qsl(body, keep_blank_values=True))
         logger.debug(f"Parsed form data: {list(form_data.keys())}")
 
+        # Don't bother proceeding if we don't even have an email address
+        email = form_data.get('tfa_10', '').strip()
+        if not email:
+            return {'statusCode': 400, 'body': json.dumps({'error': 'Email address is required'})}
+
         # Map and send to Zendesk
         ticket_data = map_form_to_zendesk(form_data)
         success, zendesk_response = send_to_zendesk(ticket_data)

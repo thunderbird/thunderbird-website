@@ -188,8 +188,6 @@ def test_missing_fields():
     assert result['ticket']['requester']['name'] == 'John Doe'
     assert result['ticket']['requester']['email'] == ''
 
-
-
 def test_lambda_handler_with_empty_fields():
     """Handler should map empty fields to defaults and succeed"""
     with patch('lambda_function.send_to_zendesk') as mock_send:
@@ -200,7 +198,7 @@ def test_lambda_handler_with_empty_fields():
             "&tfa_211="       # empty subject
             "&tfa_163="       # empty comment
             "&tfa_1=%20%20"   # whitespace-only name
-            "&tfa_10="        # empty email
+            "&tfa_10=user@example.com"  # non-empty email
         )
 
         event = {
@@ -217,7 +215,21 @@ def test_lambda_handler_with_empty_fields():
         assert call_args['ticket']['subject'] == 'Technical support for Thunderbird - No subject provided'
         assert call_args['ticket']['comment']['body'] == 'No comment provided'
         assert call_args['ticket']['requester']['name'] == 'No name provided'
-        assert call_args['ticket']['requester']['email'] == ''
+        assert call_args['ticket']['requester']['email'] == 'user@example.com'
+
+def test_whitespace_only_subject():
+    """Test subject with only whitespace defaults properly"""
+    form_data = {
+        'tfa_211': '   ',  # Whitespace-only subject
+        'tfa_163': 'Description',
+        'tfa_1': 'User',
+        'tfa_10': 'user@example.com'
+    }
+
+    result = map_form_to_zendesk(form_data)
+
+    # Should use default subject
+    assert result['ticket']['subject'] == 'No subject provided'
 
 def test_lambda_handler_malformed_base64():
     """Invalid base64 body should return 400 with appropriate error"""
@@ -231,6 +243,31 @@ def test_lambda_handler_malformed_base64():
     assert result['statusCode'] == 400
     response_body = json.loads(result['body'])
     assert response_body['error'] == 'Invalid base64 encoding'
+
+def _test_invalid_email_helper(body: str):
+    """Helper function to test invalid email scenarios"""
+    event = {
+        "body": body,
+        "isBase64Encoded": False,
+        "httpMethod": "POST"
+    }
+
+    result = lambda_handler(event, None)
+    assert result['statusCode'] == 400
+    response_body = json.loads(result['body'])
+    assert response_body['error'] == 'Email address is required'
+
+def test_lambda_handler_missing_email():
+    """Missing email field should return 400 error"""
+    _test_invalid_email_helper("tfa_211=Test+Subject&tfa_163=Test+Comment&tfa_1=Test+User")
+
+def test_lambda_handler_empty_email():
+    """Empty email field should return 400 error"""
+    _test_invalid_email_helper("tfa_211=Test+Subject&tfa_163=Test+Comment&tfa_1=Test+User&tfa_10=")
+
+def test_lambda_handler_whitespace_email():
+    """Whitespace-only email field should return 400 error"""
+    _test_invalid_email_helper("tfa_211=Test+Subject&tfa_163=Test+Comment&tfa_1=Test+User&tfa_10=%20%20%20")
 
 def test_lambda_handler_no_body():
     """Request with no body should return 400 error"""
@@ -289,17 +326,3 @@ def test_special_characters_in_form_data():
     assert result['ticket']['comment']['body'] == '<script>alert("XSS")</script> & HTML entities'
     assert result['ticket']['requester']['name'] == 'José María Núñez'
     assert result['ticket']['requester']['email'] == 'test+user@example.com'
-
-def test_whitespace_only_subject():
-    """Test subject with only whitespace defaults properly"""
-    form_data = {
-        'tfa_211': '   ',  # Whitespace-only subject
-        'tfa_163': 'Description',
-        'tfa_1': 'User',
-        'tfa_10': 'user@example.com'
-    }
-
-    result = map_form_to_zendesk(form_data)
-
-    # Should use default subject
-    assert result['ticket']['subject'] == 'No subject provided'
