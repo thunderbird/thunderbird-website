@@ -1,0 +1,8 @@
+name: donor-form-bridge
+runtime: python
+description: AWS Lambda function to bridge form submissions to Zendesk
+
+config:
+  aws:region:
+    description: AWS region
+    value: us-east-2

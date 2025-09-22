@@ -1,0 +1,5 @@
+config:
+  aws:defaultTags:
+    tags:
+      environment: "stage"
+      project: "donor-form-bridge"
