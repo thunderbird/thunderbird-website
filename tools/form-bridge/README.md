@@ -36,6 +36,8 @@ pulumi stack select stage  # or prod
 pulumi up
 ```
 
+After deployment to stage, you can run a quick curl test as described below as a final check that is everything is working. This should create a test ticket in Zendesk and return the API response.
+
 ## Testing
 
 Run unit tests:
@@ -43,9 +45,14 @@ Run unit tests:
 pytest lambda_test.py
 ```
 
-Test the deployed Lambda:
+Test the deployed Lambda, lambda-url is returned by the Pulumi script after deployment:
 ```bash
-curl -X POST "LAMBDA_URL" \
+curl -X POST "https://lambda-url" \
   -H "Content-Type: application/x-www-form-urlencoded" \
-  -d "tfa_95=tfa_197&tfa_211=Test&tfa_163=Test%20message&tfa_1=Name&tfa_10=email%40example.com"
+  -d "tfa_95=tfa_197" \
+  -d "tfa_211=TEST - Form submission integration test" \
+  -d "tfa_163=This is a test of the donor form bridge Lambda function. Please ignore this ticket." \
+  -d "tfa_1=Yourname" \
+  -d "tfa_10=youremail@thunderbird.net" \
+  | jq .
 ```

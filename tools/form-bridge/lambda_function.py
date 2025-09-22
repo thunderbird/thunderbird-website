@@ -18,11 +18,19 @@ secrets_client = boto3.client('secretsmanager', region_name='us-east-2')
 # Constants
 BRAND_ID = 43075490201747
 ZENDESK_URL = "https://donors.zendesk.com/api/v2/tickets.json"
-DEFAULT_NAME = 'No name provided'
-DEFAULT_COMMENT = 'No comment provided'
-DEFAULT_SUBJECT = 'No subject provided'
 
-# Field mappings as specified
+
+# Name and subject are required by the form so those should never be used.
+# They are included to make the bridge more robust in case the form changes.
+# There's no default email because there would be no way to contact the submitter.
+DEFAULT_NAME = 'No name provided' # tfa_1
+DEFAULT_COMMENT = 'No comment provided' # tfa_163
+DEFAULT_SUBJECT = 'No subject provided' # tfa_211
+
+
+# These map form fields to Zendesk fields.
+# tfa_211, tfa_1, and tfa_10 are required by the form.
+# tfa_163 is optional but Zendesk requires it.
 FIELD_MAPPINGS = {
     'tfa_211': 'subject',
     'tfa_163': 'comment_body',
@@ -55,7 +63,7 @@ def map_form_to_zendesk(form_data: Dict[str, str]) -> Dict[str, Any]:
     }
 
     # Build subject with optional dropdown prefix
-    user_subject = mapped_data.get('subject', DEFAULT_SUBJECT)
+    user_subject = mapped_data.get('subject', '').strip() or DEFAULT_SUBJECT
     dropdown_text = DROPDOWN_OPTIONS.get(form_data.get('tfa_95', ''), '')
     final_subject = f"{dropdown_text} - {user_subject}" if dropdown_text else user_subject
 
@@ -64,10 +72,10 @@ def map_form_to_zendesk(form_data: Dict[str, str]) -> Dict[str, Any]:
         "ticket": {
             "subject": final_subject,
             "comment": {
-                "body": mapped_data.get('comment_body', DEFAULT_COMMENT)
+                "body": (mapped_data.get('comment_body', '').strip() or DEFAULT_COMMENT)
             },
             "requester": {
-                "name": mapped_data.get('name', DEFAULT_NAME),
+                "name": (mapped_data.get('name', '').strip() or DEFAULT_NAME),
                 "email": mapped_data.get('email', '')
             },
             "brand_id": BRAND_ID
