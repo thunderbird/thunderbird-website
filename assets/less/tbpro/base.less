@@ -1,6 +1,7 @@
 // Base
 @import "fonts.less";
 @import "colours.less";
+@import "buttons.less";
 
 // ------------------------------------------------------------
 // border-box, everywhere
@@ -48,21 +49,9 @@ body {
 @space-max: 18rem;
 
 // Reusables
-button.link-button {
-    cursor: pointer;
-    padding: @space-6 @space-9;
-    margin: 0;
-    color: var(--text-icon-base);
 
-    border: 1px solid transparent;
-    border-radius: @space-6;
-    background:
-        linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
-        linear-gradient(133deg, #58c9ff 19%, #6a6b94) border-box;
 
-    text-transform: uppercase;
-    font-size: .75rem;
-}
+
 
 
 // Constrain the common containers to the largest breakpoint.
@@ -210,14 +199,26 @@ footer#tb-footer {
 
         border: 1px solid transparent;
         border-radius: @space-24;
+
+        // *********************************************************************
+        // This is where you've left off before you went to the gym
+
+
         background:
             linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
             linear-gradient(to bottom, #feffff, #58c9ff) border-box;
 
 
+
+
         // This gradient given by zeplin does not look like the design.
         // The design looks like a solid color.
         // background-image: linear-gradient(to top, var(--text-icon-base) 100%, rgba(86, 106, 146, 0.5) -175%), linear-gradient(to bottom, #feffff, #58c9ff);
+
+
+
+        // *********************************************************************
+
 
         @media (min-width: @lg) {
             display: grid;
