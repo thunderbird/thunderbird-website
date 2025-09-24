@@ -1,5 +1,17 @@
 @import "tbpro/base.less";
 
+// Constrain all main blocks to the largest breakpoint.
+#masthead,
+#features,
+#reasons,
+#quotes,
+#details,
+#faq {
+        max-width: @lg;
+        margin-inline: auto;
+
+}
+
 header#masthead {
     --hero-img: url('/media/img/thunderbird/tbpro/orb-graphic-hi-res.png');
     --button-text-color: #1A202C;
@@ -114,7 +126,7 @@ header#masthead {
 section#features {
     padding-bottom: @space-72;
 
-    @media (min-width: @md-max) {
+    @media (min-width: @lg) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -135,7 +147,7 @@ section#features {
         // This is the real value from zeplin
         // border: solid 1px rgba(255, 255, 255, 0.05);
         // debug value
-        border: solid 1px green;
+
 
         color: var(--color-text-base);
 
@@ -147,7 +159,7 @@ section#features {
         // For mobile layout, space above a feature card, if there's a previous one.
         &+.feature-card {
             margin-top: @gutter;
-            @media (min-width: @md-max) {
+            @media (min-width: @lg) {
                 margin-top: 0;
             }
         }
@@ -201,7 +213,7 @@ section#features {
 
     }
 
-    @media (min-width: @md-max) {
+    @media (min-width: @lg) {
         // First card retains stacked layout.
         .feature-card:not(:first-child) {
             display: grid;
@@ -213,14 +225,20 @@ section#features {
     // still figuring out the gradients used.
     .feature-card-1 {
         //     background-image: linear-gradient(339deg, #0f1623 87%, #06090e 79%, #06090e 14%, #1373d9 0%);
+        background-image: linear-gradient(337deg, #0f1623 85%, #06090e, #1373d9);
+        backdrop-filter: blur(24px);
     }
     .feature-card-2 {
         //     background-image: linear-gradient(338deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
+        background-image: linear-gradient(337deg, #0f1623 85%, #06090e, #008080);
+        backdrop-filter: blur(24px);
     }
     .feature-card-3 {
         // background-image: linear-gradient(336deg, #0f1623 83%, #06090e 76%, #06090e 14%, #fec18a 1%);
-        // backdrop-filter: blur(24px);
+
         // background-image: linear-gradient(337deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
+        background-image: linear-gradient(337deg, #0f1623 85%, #06090e, #fec18a);
+        backdrop-filter: blur(24px);
     }
 }
 
@@ -284,7 +302,7 @@ section#reasons {
 section#faq {
     padding-block: @space-36 @space-72;
 
-    @media (min-width: @md-max) {
+    @media (min-width: @lg) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
 
@@ -299,7 +317,7 @@ section#faq {
         font-size: 2.5rem;
         line-height: 1.2;
 
-        @media (min-width: @md-max) {
+        @media (min-width: @lg) {
             padding-right: @space-144;
         }
     }
@@ -350,7 +368,7 @@ section#details {
     padding-inline: @gutter;
     padding-block: @space-36;
 
-    @media (min-width: @md-max) {
+    @media (min-width: @lg) {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         align-items: center;
@@ -368,7 +386,7 @@ section#details {
     }
 
     .subscription-header {
-        @media (min-width: @md-max) {
+        @media (min-width: @lg) {
             padding-right: @space-96;
             grid-column: 1 / 3;
         }
@@ -380,13 +398,12 @@ section#details {
         background-color: rgba(0, 0, 0, 0.2);
         margin-block: @space-36;
         padding-inline: @space-36;
-        outline: 1px solid blue;
 
         display: grid;
         grid-template-rows: 1fr auto;
         place-items: center;
 
-        @media (min-width: @md-max) {
+        @media (min-width: @lg) {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: auto;
@@ -402,7 +419,7 @@ section#details {
             margin-block: 0 @space-24;
             width: 100%;
 
-            @media (min-width: @md-max) {
+            @media (min-width: @lg) {
                 grid-column: 4 / -1;
             }
 
@@ -412,7 +429,7 @@ section#details {
 
             p {
                 text-align: center;
-                @media (min-width: @md-max) {
+                @media (min-width: @lg) {
                     text-align: left
                 }
             }
@@ -429,9 +446,7 @@ section#details {
             margin-inline: @space-36;
             width: 100%;
 
-            outline: 1px solid red;
-
-            @media (min-width: @md-max) {
+            @media (min-width: @lg) {
                 grid-column: 1 / 4;
                 // display: grid;
                 // grid-template-rows: repeat(4, auto);
