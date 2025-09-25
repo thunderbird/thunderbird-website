@@ -1,0 +1,85 @@
+name: Re-usable Build
+
+on:
+  workflow_call:
+    inputs:
+      AWS_REGION:
+        required: true
+        type: string
+      ECR_REPOSITORY:
+        required: true
+        type: string
+      ECS_TASK_DEFINITION:
+        required: true
+        type: string
+      ECS_CLUSTER:
+        required: true
+        type: string
+      CONTAINER:
+        required: true
+        type: string
+      CACHE_FILE_ID:
+        required: true
+        type: string
+      DOCKER_FILE:
+        required: true
+        type: string
+
+jobs:
+  build:
+    name: Build Site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ inputs.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push to Amazon ECR
+        id: build
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ inputs.CONTAINER }}-website-${{ github.sha }}
+        run: |
+          # Build a docker container and
+          # push it to ECR so that it can
+          # be deployed to ECS.
+          docker build -t $ECR_REGISTRY/${{ inputs.ECR_REPOSITORY }}:$IMAGE_TAG . -f ${{ inputs.DOCKER_FILE }}
+          docker push $ECR_REGISTRY/${{ inputs.ECR_REPOSITORY }}:$IMAGE_TAG
+          echo "image=$ECR_REGISTRY/${{ inputs.ECR_REPOSITORY }}:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+      - name: Fill in the new image ID in the Amazon ECS task definition
+        id: task-def
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: ${{ inputs.ECS_TASK_DEFINITION }}
+          container-name: ${{ inputs.CONTAINER }}
+          image: ${{ steps.build.outputs.image }}
+
+      - name: Deploy Amazon ECS task definition
+        id: task-def-deploy
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: ${{ steps.task-def.outputs.task-definition }}
+          cluster: ${{ inputs.ECS_CLUSTER }}
+          wait-for-service-stability: true
+
+      - name: Write Task Definition ARN to File
+        run: echo '"${{ steps.task-def-deploy.outputs.task-definition-arn }}"' >> ./${{ inputs.CONTAINER }}-task-def-arn-${{ inputs.CACHE_FILE_ID }}.json
+
+      - name: Cache Task Definition ARN
+        id: cache-task-arn
+        uses: actions/cache/save@v3
+        with:
+          path: ./${{ inputs.CONTAINER }}-task-def-arn-${{ inputs.CACHE_FILE_ID }}.json
+          key: ${{ inputs.CONTAINER }}-task-def-arn
