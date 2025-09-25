@@ -26,8 +26,7 @@ body {
 @xs-max: 37.4375rem;   // 599px
 @md-min: 37.5rem;      // 600px
 @md:     56.25rem;     // 900px;
-@md-max: 79.9375rem;   // 1279px
-@lg-min: 80rem;        // 1280px
+@lg:     80rem;        // 1280px
 
 // Global spacing
 @gutter: 16px;
@@ -66,11 +65,22 @@ button.link-button {
 }
 
 
+// Constrain the common containers to the largest breakpoint.
+#site-header,
+#site-nav,
+#moz-nav {
+    max-width: @lg;
+    margin-inline: auto;
+}
+
+
+
 
 // ------------------------------------------------------------
 // Footer
 // ------------------------------------------------------------
 footer#tb-footer {
+
     // background-image: linear-gradient(134deg, #1b2128 37%, #171b24 56%);
     background-image: linear-gradient(168deg, #1b2128 1%, #171b24 45%);
     padding-inline: @gutter;
@@ -102,6 +112,8 @@ footer#tb-footer {
         padding-bottom: @space-24;
         align-items: start;
         gap: @gutter;
+
+        width: 100%;
 
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -143,7 +155,7 @@ footer#tb-footer {
             }
         }
 
-        @media (min-width: @md-max) {
+        @media (min-width: @lg) {
             grid-template-columns: auto 1fr;
             align-items: start;
             column-gap: @space-96;
@@ -207,7 +219,7 @@ footer#tb-footer {
         // The design looks like a solid color.
         // background-image: linear-gradient(to top, var(--text-icon-base) 100%, rgba(86, 106, 146, 0.5) -175%), linear-gradient(to bottom, #feffff, #58c9ff);
 
-        @media (min-width: @md-max) {
+        @media (min-width: @lg) {
             display: grid;
             grid-template-rows: 1fr;
             grid-template-columns: auto auto auto;
@@ -233,7 +245,7 @@ footer#tb-footer {
 
             border-radius: 0 0 @space-9 @space-9;
 
-            @media (min-width: @md-max) {
+            @media (min-width: @lg) {
                 display: grid;
 
                 // Force overlap so that we can center the nav links
@@ -264,7 +276,7 @@ footer#tb-footer {
                     display: none;
                 }
 
-                @media (min-width: @md-max) {
+                @media (min-width: @lg) {
                     // Use subgrid so that we can overlap with the parent grid row.
                     display: grid;
                     grid-template-rows: subgrid;
@@ -319,7 +331,7 @@ footer#tb-footer {
             background-color: var(--nav-bg-color);
             border: 0;
 
-            @media (min-width: @md-max) {
+            @media (min-width: @lg) {
                 display: none;
             }
         }
