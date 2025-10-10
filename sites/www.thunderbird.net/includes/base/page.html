@@ -91,9 +91,9 @@
       <!-- Begin Mailchimp Signup Form -->
       <form action="https://thunderbird.us12.list-manage.com/subscribe?u=f8051cc8637cf3ff79661f382&amp;id=56428f2efc"
             class="newsletter-form" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
-        <input id="mce-EMAIL" name="EMAIL" type="email" placeholder="{{ _('Your Email') }}" required="">
-        <button type="submit" id="mc-embedded-subscribe" class="btn btn-no-bg btn-newsletter btn-newsletter-text">{{_('Subscribe')}}</button>
-        <button type="submit" id="mc-embedded-subscribe" class="btn btn-no-bg btn-newsletter btn-newsletter-icon">➜</button>
+        <input id="mce-EMAIL" name="EMAIL" type="email" placeholder="{{ _('Your Email') }}" aria-label="{{ _('Your Email') }}" required="">
+        <button type="submit" id="mc-embedded-subscribe" class="btn btn-no-bg btn-newsletter btn-newsletter-text" aria-label="{{_('Subscribe')}}">{{_('Subscribe')}}</button>
+        <button type="submit" id="mc-embedded-subscribe" class="btn btn-no-bg btn-newsletter btn-newsletter-icon" aria-label="➜">➜</button>
         <!-- Prevent Bot signups -->
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f8051cc8637cf3ff79661f382_9badb0cec2" tabindex="-1" value="">
         </div>
