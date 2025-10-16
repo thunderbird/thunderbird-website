@@ -1,5 +1,12 @@
 @import "tbpro/base.less";
 
+// Actual colors used
+//
+:root {
+    --header-color: #1373d9;
+}
+
+
 // Constrain all main blocks to the largest breakpoint.
 .primary-block {
     max-width: @lg;
@@ -248,14 +255,21 @@ section#reasons {
 
     & > header {
         margin: 0;
-        color: var(--color-primary-default);
+        color: var(--header-color);
         text-align: center;
         font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: -0.32px;
         font-weight: normal;
         font-stretch: normal;
         font-style: normal;
-        line-height: 1.2;
-        letter-spacing: -0.32px;
+
+
+
+        @media (min-width: @md) {
+            font-size: 3rem;
+            letter-spacing: -0.48px;
+        }
     }
 
     .reason {
@@ -491,12 +505,17 @@ section#testimonials {
     header {
         // brand/headlines/H1-lg
         font-family: var(--font-titles);
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 1.2;
-        letter-spacing: -0.48px;
-        color: #1373d9;
+        letter-spacing: -0.32px;
+        color: var(--header-color);
         text-align: center;
         margin-bottom: 1.25rem;
+
+        @media (min-width: @md) {
+            font-size: 3rem;
+            letter-spacing: -0.48px;
+        }
     }
 
     .testimonials-slider {
@@ -554,7 +573,7 @@ section#testimonials {
                     font-style: normal;
                     line-height: 1;
                     text-align: left;
-                    color: #1373d9;
+                    color: var(--header-color);
                     width: 23px;
                     height: 36px;
                     font-size: 36px;
