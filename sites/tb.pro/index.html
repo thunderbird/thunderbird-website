@@ -96,6 +96,29 @@
 {% endblock %}
 
 
+{% from 'includes/macros/carousel.html' import carousel_item, carousel_footer %}
+{% block testimonials %}
+<header>What people are saying</header>
+<div class="testimonials-slider">
+  <div class="testimonials-track">
+
+    {{ carousel_item('Even in beta, this new appointment service is easy to use and worth a look if your small business could benefit from online scheduling.', 'Fred Krueger', 'Contributing Writer, Website') }}
+
+    {{ carousel_item('Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.', 'Jay Voorhees', 'Contributing Writer, Website') }}
+
+    {{ carousel_item('Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla.', 'Roy Burns', 'Contributing Writer, Website') }}
+
+    {{ carousel_item('Nullam rutrum. Nam vestibulum accumsan nisl. Donec hendrerit tempor tellus.', 'Pamela Voorhees', 'Contributing Writer, Website') }}
+
+    {{ carousel_item('Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.', 'Lil Jay Voorhees', 'Contributing Writer, Website') }}
+
+  </div>
+</div>
+
+{{ carousel_footer() }}
+
+{% endblock %}
+
 {% block details %}
 <div class="subscription-header">
   <header>
