@@ -463,6 +463,210 @@ section#details {
 
         }
     }
+}
+
+.testimonials-background {
+    background-image: radial-gradient(circle at -66% -86%, rgba(174, 85, 247, 0), #f4f2f6 51%), linear-gradient(to bottom, #f7f7f7, #eeeef0);
+
+    @media (min-width: @md) {
+        // overrides the padding for elements matching #main-content > *
+        padding-inline: 0 !important;
+    }
+}
+
+section#testimonials {
+    // TODO: determine if we should scale this based on viewport size.
+    --avatar-size-small: 36px;
+    --avatar-size-large: 40px;
+    --dot-radius: 0.25rem;
+    --active-dot-size: 2rem;
+    --inactive-dot-size: 0.5rem;
+    --dot-transition-duration: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-block: @space-96;
+
+    header {
+        // brand/headlines/H1-lg
+        font-family: var(--font-titles);
+        font-size: 3rem;
+        line-height: 1.2;
+        letter-spacing: -0.48px;
+        color: #1373d9;
+        text-align: center;
+        margin-bottom: 1.25rem;
+    }
+
+    .testimonials-slider {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: @space-24;
+
+            @media (min-width: @md) {
+                gap: @space-48;
+            }
+        }
+
+        .testimonial {
+            display: flex;
+            flex-direction: row;
+            gap: @space-12;
+
+            padding: @space-24 @space-16;
+            min-width: 308px;
+            min-height: 223px;
+
+            @media (min-width: @md) {
+                gap: 1.75rem;
+                padding: 2.5rem 3.4375rem;
+                min-width: 792px;
+                min-height: 298px;
+            }
+
+            background-image: linear-gradient(156deg, white, #f0f8ff 84%);
+            box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 1.5rem;
+
+            cursor: pointer;
+            opacity: 0.4;
+            transition: opacity 0.5s ease-in-out;
+
+            &.active {
+                opacity: 1.0;
+            }
+
+            .quote-mark {
+                &::before {
+                    content: "\201C";
+                    flex-grow: 0;
+                    font-family: Metropolis;
+                    font-weight: 900;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1;
+                    text-align: left;
+                    color: #1373d9;
+                    width: 23px;
+                    height: 36px;
+                    font-size: 36px;
+                    letter-spacing: -0.36px;
+
+                    @media (min-width: @md) {
+                        width: 30px;
+                        height: 48px;
+                        font-size: 3rem;
+                        letter-spacing: -0.48px;
+                    }
+                }
+            }
+
+            .testimonial-text {
+                color: #4c4d58;
+                margin: 0;
+
+                min-height: 100px;
+                font-size: 0.9375rem;
+                line-height: 1.32;
+
+                @media (min-width: @md) {
+                    min-height: 158px;
+                    font-size: 1.75rem;
+                    line-height: 1.36;
+                    letter-spacing: -0.28px;
+
+                }
+            }
+
+            .testimonial-attribution {
+                display: grid;
+
+                grid-template-columns: var(--avatar-size-small) 1fr;
+                grid-template-rows: auto auto;
+
+                padding-top: @gutter;
+                // TODO: check zeplin for spacing
+                gap: 0 0.6875rem;
+                align-items: center;
+
+                @media (min-width: @md) {
+                    grid-template-columns: var(--avatar-size-large) 1fr;
+                }
 
 
+                .testimonial-avatar {
+                    width: var(--avatar-size-small);
+                    height: var(--avatar-size-small);
+                    border-radius: 50%;
+                    background: #ccc;
+                    grid-row: 1 / 3;
+
+                    @media (min-width: @md) {
+                        width: var(--avatar-size-large);
+                        height: var(--avatar-size-large);
+                    }
+                }
+
+                .testimonial-name {
+                    margin: 0;
+                    font-size: 0.9375rem;
+                    font-weight: 600;
+                    line-height: 1.32;
+                    align-self: end;
+                    color: #1a202c;
+
+                    @media (min-width: @md) {
+                        font-size: 1.1875rem;
+                        line-height: 1.46;
+                    }
+                }
+
+                span {
+                    font-size: 0.8125rem;
+                    color: #666;
+                    align-self: start;
+                    @media (min-width: @md) {
+                        font-size: 0.9375rem;
+                        line-height: 1.32;
+                    }
+                }
+            }
+        }
+    }
+
+    .testimonials-progress {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+
+        .progress-dot {
+            width: var(--inactive-dot-size);
+            height: var(--inactive-dot-size);
+            border-radius: var(--dot-radius);
+            background: #ccc;
+            border: none;
+            cursor: pointer;
+            transition: all var(--dot-transition-duration) ease;
+            padding: 0;
+
+            &:hover {
+                background: #999;
+            }
+
+            &.active {
+                width: var(--active-dot-size);
+                background: linear-gradient(90deg, var(--color-primary-default), #667eea);
+                background-image: linear-gradient(to left, #58c9ff, #6b21a8);
+            }
+        }
+    }
 }
