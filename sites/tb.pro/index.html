@@ -105,36 +105,8 @@
     Get Thundermail, Appointment, and Send in one simple subscription. You'll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.
   </p>
 </div>
-<div class="subscription-info">
-  <div class="subscription-callout">
-    <h3>Standard</h3>
-    <p>Our initial offering, ideal for most users</p>
-    <h4><b>$00</b> Annually</h4>
-    <button class="link-button">Subscribe Now</button>
-  </div>
-  <ul>
-    <li>
-      <p>
-        <b>00 GB</b> of Mail Storage
-      </p>
-    </li>
-    <li>
-      <p>
-        <b>000 GB</b> of Send Storage
-      </p>
-    </li>
-    <li>
-      <p>
-        <b>0</b> Domains
-      </p>
-    </li>
-    <li>
-      <p>
-        <b>00</b> Email Addresses
-      </p>
-    </li>
-  </ul>
-</div>
+{% from 'includes/macros/subscription-plan.html' import subscription_plan %}
+{{ subscription_plan('Standard', 'Our initial offering, ideal for most users', '00', '00', '000', '0', '00') }}
 {% endblock %}
 
 
