@@ -96,171 +96,26 @@
 {% endblock %}
 
 
+{% from 'includes/macros/carousel.html' import carousel_item, carousel_footer %}
 {% block testimonials %}
 <header>What people are saying</header>
 <div class="testimonials-slider">
   <div class="testimonials-track">
-    <div class="testimonial">
-      <span class="quote-mark"></span>
-      <div class="testimonial-content">
-        <p class="testimonial-text">
-          Even in beta, this new appointment service is easy to use and worth a look if your small business could benefit from online scheduling.
-          <!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. -->
-        </p>
-        <div class="testimonial-attribution">
-          <img class="testimonial-avatar">
-          <h4 class="testimonial-name">Fred Kreuger</h4>
-          <span>Contributing Writer, Website
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial">
-      <span class="quote-mark"></span>
-      <div class="testimonial-content">
-        <p class="testimonial-text">
-          Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.
-        </p>
-        <div class="testimonial-attribution">
-          <img class="testimonial-avatar">
-          <h4 class="testimonial-name">Jay Voorhees</h4>
-          <span>Contributing Writer, Website</span>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial">
-      <span class="quote-mark"></span>
-      <div class="testimonial-content">
-        <p class="testimonial-text">
-          Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla.
-        </p>
-        <div class="testimonial-attribution">
-          <img class="testimonial-avatar">
-          <h4 class="testimonial-name">Roy Burns</h4>
-          <span>Contributing Writer, Website</span>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial">
-      <span class="quote-mark"></span>
-      <div class="testimonial-content">
-        <p class="testimonial-text">
-          Nullam rutrum. Nam vestibulum accumsan nisl. Donec hendrerit tempor tellus.
-        </p>
-        <div class="testimonial-attribution">
-          <img class="testimonial-avatar">
-          <h4 class="testimonial-name">Pamela Voorhees</h4>
-          <span>Contributing Writer, Website</span>
-        </div>
-      </div>
-    </div>
+
+    {{ carousel_item('Even in beta, this new appointment service is easy to use and worth a look if your small business could benefit from online scheduling.', 'Fred Krueger', 'Contributing Writer, Website') }}
+
+    {{ carousel_item('Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.', 'Jay Voorhees', 'Contributing Writer, Website') }}
+
+    {{ carousel_item('Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla.', 'Roy Burns', 'Contributing Writer, Website') }}
+
+    {{ carousel_item('Nullam rutrum. Nam vestibulum accumsan nisl. Donec hendrerit tempor tellus.', 'Pamela Voorhees', 'Contributing Writer, Website') }}
+
+    {{ carousel_item('Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.', 'Lil Jay Voorhees', 'Contributing Writer, Website') }}
+
   </div>
 </div>
-<div class="testimonials-progress">
-  <span>dots go here</span>
-</div>
 
-<script>
-  (function () {
-    const SLIDE_INTERVAL_MS = 8000;
-    const track = document.querySelector('.testimonials-track');
-    const testimonials = document.querySelectorAll('.testimonial');
-    const progressContainer = document.querySelector('.testimonials-progress');
-
-    let currentIndex = 0;
-
-    // Sets slider state based on the value of currentIndex.
-    function updateSlider() {
-      const testimonial = testimonials[currentIndex];
-      const sliderWidth = document.querySelector('.testimonials-slider').offsetWidth;
-      const testimonialWidth = testimonial.offsetWidth;
-
-      const gap = parseInt(getComputedStyle(track).gap) || 0;
-
-      const centerOffset = (sliderWidth - testimonialWidth) / 2;
-      const testimonialOffset = currentIndex * (testimonialWidth + gap);
-      const offset = centerOffset - testimonialOffset;
-
-      track.style.transform = `translateX(${offset}px)`;
-
-      // Enable .active class only for current testimonial.
-      testimonials.forEach((testimonial, index) => {
-        testimonial.classList.toggle('active', index === currentIndex);
-      });
-
-      // Update dots
-      const dots = document.querySelectorAll('.progress-dot');
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentIndex);
-      });
-    }
-
-    function nextTestimonial() {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      updateSlider();
-    }
-
-    function prevTestimonial() {
-      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-      updateSlider();
-    }
-
-    // Allow the user to click a testimonial to make it active.
-    // Resets the timeout until the next auto-advance.
-    let timeout;
-
-    // Initialize click handler on each testimonial.
-    testimonials.forEach((testimonial, index) => {
-      testimonial.addEventListener('click', () => {
-        currentIndex = index;
-        updateSlider();
-
-        clearTimeout(timeout);
-        startAutoAdvance();
-      })
-    });
-
-
-    function createDots() {
-      progressContainer.innerHTML = '';
-      testimonials.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.classList.add('progress-dot');
-        dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
-
-        if (index === 0) {
-          dot.classList.add('active');
-        }
-
-        dot.addEventListener('click', () => {
-          currentIndex = index;
-          updateSlider();
-
-          clearTimeout(timeout);
-          startAutoAdvance();
-        });
-        progressContainer.appendChild(dot);
-      });
-    }
-
-    function startAutoAdvance() {
-      timeout = setTimeout(() => {
-        nextTestimonial();
-        startAutoAdvance(); // Recursively continue advancing
-      }, SLIDE_INTERVAL_MS);
-    }
-
-    // Initialize
-    updateSlider();
-    createDots();
-    startAutoAdvance();
-    console.log('hey you man');
-
-    // Recalculate on resize
-    window.addEventListener('resize', updateSlider);
-  })()
-
-</script>
+{{ carousel_footer() }}
 
 {% endblock %}
 

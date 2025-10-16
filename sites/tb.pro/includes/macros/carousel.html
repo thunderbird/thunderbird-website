@@ -1,0 +1,120 @@
+{% macro carousel_item(content, name, role, avatar_img_src='' ) -%}
+<div class="testimonial">
+  <span class="quote-mark"></span>
+  <div class="testimonial-content">
+    <p class="testimonial-text">
+      {{ content }}
+    </p>
+    <div class="testimonial-attribution">
+      <img class="attribution-avatar" src="{{ avatar_img_src }}" alt="{{ name }}">
+      <h4 class="attribution-name">{{ name }}</h4>
+      <span class="attribution-role">{{ role }}</span>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro carousel_footer() -%}
+<div class="testimonials-progress"></div>
+<script>
+  (function () {
+    const SLIDE_INTERVAL_MS = 8000;
+    const track = document.querySelector('.testimonials-track');
+    const testimonials = document.querySelectorAll('.testimonial');
+    const progressContainer = document.querySelector('.testimonials-progress');
+
+    let currentIndex = 0;
+
+    // Sets slider state based on the value of currentIndex.
+    function updateSlider() {
+      const testimonial = testimonials[currentIndex];
+      const sliderWidth = document.querySelector('.testimonials-slider').offsetWidth;
+      const testimonialWidth = testimonial.offsetWidth;
+
+      const gap = parseInt(getComputedStyle(track).gap) || 0;
+
+      const centerOffset = (sliderWidth - testimonialWidth) / 2;
+      const testimonialOffset = currentIndex * (testimonialWidth + gap);
+      const offset = centerOffset - testimonialOffset;
+
+      track.style.transform = `translateX(${offset}px)`;
+
+      // Enable .active class only for current testimonial.
+      testimonials.forEach((testimonial, index) => {
+        testimonial.classList.toggle('active', index === currentIndex);
+      });
+
+      // Update dots
+      const dots = document.querySelectorAll('.progress-dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    function nextTestimonial() {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      updateSlider();
+    }
+
+    function prevTestimonial() {
+      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+      updateSlider();
+    }
+
+    // Allow the user to click a testimonial to make it active.
+    // Resets the timeout until the next auto-advance.
+    let timeout;
+
+    // Initialize click handler on each testimonial.
+    testimonials.forEach((testimonial, index) => {
+      testimonial.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+
+        clearTimeout(timeout);
+        startAutoAdvance();
+      })
+    });
+
+
+    function createDots() {
+      progressContainer.innerHTML = '';
+      testimonials.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.classList.add('progress-dot');
+        dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+
+        if (index === 0) {
+          dot.classList.add('active');
+        }
+
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          updateSlider();
+
+          clearTimeout(timeout);
+          startAutoAdvance();
+        });
+        progressContainer.appendChild(dot);
+      });
+    }
+
+    function startAutoAdvance() {
+      timeout = setTimeout(() => {
+        nextTestimonial();
+        startAutoAdvance(); // Recursively continue advancing
+      }, SLIDE_INTERVAL_MS);
+    }
+
+    // Initialize
+    updateSlider();
+    createDots();
+    startAutoAdvance();
+    console.log('hey you man');
+
+    // Recalculate on resize
+    window.addEventListener('resize', updateSlider);
+  })()
+
+</script>
+{% endmacro %}
