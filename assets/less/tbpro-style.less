@@ -74,11 +74,10 @@ header#masthead {
     .txt-gradient {
         color: transparent;
         -webkit-background-clip: text;
+        background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe 62%);
         background-clip: text;
-        background-image: linear-gradient(to right,
-                                          var(--color-left-blue),
-                                          var(--color-mid-left-purple));
         display: block;
+        width: fit-content;
     }
 
 
@@ -462,9 +461,12 @@ section#details {
 
             h3 {
                 color: transparent;
-                background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe 62%);
+                -webkit-background-clip: text;
+                background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe);
                 background-clip: text;
-
+                width: fit-content;
+                display: inline-block;
+                outline: 1px solid red;
             }
 
             h4 {
