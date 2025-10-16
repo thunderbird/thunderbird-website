@@ -330,9 +330,6 @@ section#faq {
     }
 
     .faq-item {
-        // --icon-closed: url('faq-open.svg');
-        // --icon-open: url('faq-closed.svg');
-
         padding-block: @gutter;
         border-bottom: 1px solid rgba(88, 201, 255, 0.2);
 
@@ -347,18 +344,24 @@ section#faq {
             &::after {
                 content: "+";
                 flex-shrink: 0;
-                display: grid;
-                place-items: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 0.25rem;
+                margin: 0;
+                font-size: 1.5rem;
+                inline-size: 1.5rem;
+                block-size: 1.5rem;
 
-                inline-size: 2rem;
-                block-size: 1rem;
-                outline: 1px solid red;
-                // mask: var(--icon-closed) center / contain no-repeat;
-
+                color: #58c9ff;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 50%;
+                transition: transform 0.3s ease-in-out;
+                transform-origin: center;
             }
         }
-        // After getting real assets, swap out the image instead of rotating.
-        // &[open] .faq-question::after { transform: rotate(270deg); }
+
+        &[open] .faq-question::after { transform: rotate(90deg); }
 
         &[open] summary ~ * {
             animation: sweep 0.5s ease-in-out;
