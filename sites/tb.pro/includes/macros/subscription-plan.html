@@ -1,30 +1,30 @@
-{% macro subscription_plan(plan_name, plan_description, annual_price, mail_storage, send_storage, num_domains, num_email_addresses) -%}
+{% macro subscription_plan(plan_name, plan_description, plan_price, plan_period, mail_storage, send_storage, num_domains, num_email_addresses) -%}
 <div class="subscription-info">
   <div class="subscription-callout">
     <h3>{{ plan_name }}</h3>
     <p>{{ plan_description }}</p>
-    <h4><b>${{ annual_price }}</b> Annually</h4>
+    <h4><b>${{ plan_price }}</b> {{ plan_period }}</h4>
     <button class="link-button">Subscribe Now</button>
   </div>
   <ul>
     <li>
       <p>
-        <b>{{ mail_storage }} GB</b> of Mail Storage
+        <span class="info-number">{{ mail_storage }} GB</span> <span class="info-desc">of Mail Storage</span>
       </p>
     </li>
     <li>
       <p>
-        <b>{{ send_storage }} GB</b> of Send Storage
+        <span class="info-number">{{ send_storage }} GB</span> <span class="info-desc">of Send Storage</span>
       </p>
     </li>
     <li>
       <p>
-        <b>{{ num_domains }}</b> Domains
+        <span class="info-number">{{ num_domains }}</span> <span class="info-desc">Domains</span>
       </p>
     </li>
     <li>
       <p>
-        <b>{{ num_email_addresses }}</b> Email Addresses
+        <span class="info-number">{{ num_email_addresses }}</span> <span class="info-desc">Email Addresses</span>
       </p>
     </li>
   </ul>
