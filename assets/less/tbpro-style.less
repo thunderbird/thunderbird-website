@@ -51,22 +51,23 @@ header#masthead {
     h1 {
         text-shadow: 0 4px 2px rgba(0, 0, 0, 0.05);
         white-space: pre;
-        font-weight: lighter;
         margin: 0;
-        font-family: var(--font-titles);
 
+        .brand-display-xs();
         @media (min-width: @md) {
+            .brand-display-lg();
+
             grid-row: 1 / span 2;
             grid-column: 1 / -1;
-            font-size: 4.5rem;
         }
 
     }
 
     p {
-        font-family: var(--font-titles);
         margin-block: @space-6;
+        .web-body-default();
         @media (min-width: @md) {
+            .web-body-large();
             grid-row: 3;
             grid-column: 1 / span 2;
         }
@@ -197,24 +198,27 @@ section#features {
                     .app-name {
                         color: var(--color-text-highlight);
                         text-transform: uppercase;
-                        font-size: .75rem;
+
+                        .brand-eyebrow-xs();
+                        @media (min-width: @lg) {
+                            .brand-eyebrow-lrg();
+                        }
                     }
                     .app-tagline {
-                        font-family: Metropolis;
-                        font-size: 1.25rem;
+                        .brand-headline-h3-sm();
+                        @media (min-width: @lg) {
+                            .brand-headline-h3-lrg();
+                        }
                     }
                 }
             }
             .card-body {
-                // TODO: Confirm this - I think the default is Inter?
-                // font-family: 'Inter', sans-serif;
-                font-size: 0.875rem;
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 1.23;
-                letter-spacing: normal;
                 text-align: left;
+                .web-body-small();
+                line-height: 1.23; // Specified in Zeplin
+                @media (min-width: @md) {
+                    .web-body-default();
+                }
             }
         }
 
@@ -303,7 +307,7 @@ section#reasons {
     background: #fff;
 
     padding-block: @space-36 @space-24;
-    color: #4c4d58; //var(--color-text-secondary);
+
 
     display: grid;
     row-gap: @space-24;
@@ -313,18 +317,11 @@ section#reasons {
         margin: 0;
         color: var(--header-color);
         text-align: center;
-        font-size: 2rem;
-        line-height: 1.2;
-        letter-spacing: -0.32px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
 
-
+        .brand-headline-h1-sm();
 
         @media (min-width: @md) {
-            font-size: 3rem;
-            letter-spacing: -0.48px;
+            .brand-headline-h1-lg();
         }
     }
 
@@ -337,12 +334,18 @@ section#reasons {
         position: relative;
 
         &::before {
+            padding-top: 0.1875rem;
             content: counter(reason, decimal-leading-zero);
             font-variant-numeric: tabular-nums;
-            font-weight: 600;
             margin-inline-end: @space-18;
-            line-height: 1.5rem;
             grid-column: 1;
+            color: #737584;
+            .brand-headline-h3-semibold-small();
+
+            @media (min-width: @lg) {
+                .brand-list-indicator-lg();
+                padding-top: 0.3rem;
+            }
         }
         .reason-content {
             grid-column: 2;
@@ -350,15 +353,20 @@ section#reasons {
 
         }
         .reason-title {
-            font-size: 1.5rem;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.1;
+            .brand-headline-h2-xs();
+            color: #4c4d58;
             margin: 0;
+
+            @media (min-width: @lg) {
+                .brand-headline-h2-lg();
+            }
         }
         p {
-            font-size: 0.875rem;
+            .web-body-small();
+            color: #4c4d58;
+            @media (min-width: @md) {
+                .web-body-default();
+            }
         }
     }
 }
@@ -378,11 +386,11 @@ section#faq {
 
     header {
         margin-bottom: @space-9;
-        font-size: 2.5rem;
-        line-height: 1.2;
+        .headings-h1-sm();
 
         @media (min-width: @lg) {
             padding-right: @space-144;
+            .brand-headline-h1-lg();
         }
     }
 
@@ -397,6 +405,11 @@ section#faq {
             align-items: start;
             justify-content: space-between;
             gap: @space-18;
+
+            .text-medium();
+            @media (min-width: @lg) {
+                .text-large();
+            }
 
             &::after {
                 content: "+";
@@ -416,6 +429,14 @@ section#faq {
                 transition: all 0.3s ease-in-out;
                 transform-origin: center;
             }
+        }
+
+        .faq-answer {
+            .web-body-medium();
+            @media (min-width: @lg) {
+                .web-body-default();
+            }
+
         }
 
         &[open] .faq-question::after {
@@ -449,15 +470,25 @@ section#details {
     }
     border-bottom: 1px solid rgba(88, 201, 255, 0.2);
 
-    header {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
     .subscription-header {
         @media (min-width: @lg) {
             padding-right: @space-96;
             grid-column: 1 / 3;
+        }
+
+
+        header {
+            .headings-h1-sm();
+            @media (min-width: @lg) {
+                .brand-headline-h1-lg();
+            }
+        }
+
+        p {
+            .text-medium();
+            @media (min-width: @lg) {
+                .web-body-default();
+            }
         }
     }
 
@@ -499,9 +530,52 @@ section#details {
             p {
                 text-align: center;
                 @media (min-width: @lg) {
-                    text-align: left
+                    text-align: left;
+                }
+
+                .info-number {
+                    .mixin-font-styles(
+                        @family-inter,
+                        600,
+                        0.9375rem,
+                        1.32
+                    );
+                    @media (min-width: @lg) {
+                        .mixin-font-styles(
+                            @family-inter,
+                            bold,
+                            1.25rem,
+                            1.4
+                        );
+                    }
+                }
+                .info-desc {
+                    .mixin-font-styles(
+                        @family-inter,
+                        600,
+                        1.1875rem,
+                        1.46
+                    );
+                    @media (min-width: @lg) {
+                        .mixin-font-styles(
+                            @family-inter,
+                            normal,
+                            1.25rem,
+                            1.4
+                        );
+                    }
                 }
             }
+
+            @media (min-width: @lg) {
+                p {
+
+                    b {
+
+                    }
+                }
+            }
+
         }
 
 
@@ -528,13 +602,34 @@ section#details {
                 background-clip: text;
                 width: fit-content;
                 display: inline-block;
+                .headings-h3-small();
+                @media (min-width: @md) {
+                    .brand-headline-h3-lrg();
+                }
             }
 
             h4 {
-                font-size: .75rem;
+                .mixin-font-styles(
+                    @family-inter,
+                    500,
+                    0.75rem
+                );
+
                 b {
                     font-size: 2rem;
                     font-weight: normal;
+                    .mixin-font-styles(
+                        @family-metropolis,
+                        normal,
+                        2rem
+                    );
+                }
+            }
+
+            p {
+                .text-medium();
+                @media (min-width: @md) {
+                    .web-body-default();
                 }
             }
 
@@ -566,19 +661,15 @@ section#testimonials {
     padding-block: @space-96;
 
     header {
-        // brand/headlines/H1-lg
-        font-family: var(--font-titles);
-        font-size: 2rem;
-        line-height: 1.2;
-        letter-spacing: -0.32px;
+        .brand-headline-h1-sm();
+
+        @media (min-width: @md) {
+            .brand-headline-h1-lg();
+        }
+
         color: var(--header-color);
         text-align: center;
         margin-bottom: 1.25rem;
-
-        @media (min-width: @md) {
-            font-size: 3rem;
-            letter-spacing: -0.48px;
-        }
     }
 
     .testimonials-slider {
@@ -656,15 +747,11 @@ section#testimonials {
                 margin: 0;
 
                 min-height: 100px;
-                font-size: 0.9375rem;
-                line-height: 1.32;
 
+                .web-body-medium();
                 @media (min-width: @md) {
                     min-height: 158px;
-                    font-size: 1.75rem;
-                    line-height: 1.36;
-                    letter-spacing: -0.28px;
-
+                    .web-body-x-lg();
                 }
             }
 
@@ -699,25 +786,21 @@ section#testimonials {
 
                 .attribution-name {
                     margin: 0;
-                    font-size: 0.9375rem;
-                    font-weight: 600;
-                    line-height: 1.32;
                     align-self: end;
                     color: #1a202c;
 
+                    .text-medium-semibold();
                     @media (min-width: @md) {
-                        font-size: 1.1875rem;
-                        line-height: 1.46;
+                        .text-large-semibold();
                     }
                 }
 
                 .attribution-role {
-                    font-size: 0.8125rem;
-                    color: #666;
+                    color: #4c4d58;
                     align-self: start;
+                    .text-small();
                     @media (min-width: @md) {
-                        font-size: 0.9375rem;
-                        line-height: 1.32;
+                        .text-medium();
                     }
                 }
             }

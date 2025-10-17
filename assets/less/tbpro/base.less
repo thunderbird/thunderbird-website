@@ -211,8 +211,12 @@ footer#tb-footer {
 // Header (nav bar)
 // ------------------------------------------------------------
 #site-header {
-    padding-top: @gutter;
+    padding-top: @space-16;
     margin-block: @gutter @space-36;
+
+    @media (min-width: @lg) {
+        padding-top: @space-24;
+    }
 
     #site-header-nav {
         display: flex;
@@ -223,9 +227,9 @@ footer#tb-footer {
         box-shadow: 0 @space-9 @space-24 0 rgba(0, 0, 0, 0.1);
 
         padding-block: @space-6;
-        padding-inline: @space-18 @gutter;
+        padding-inline: @space-18 0.875rem;
 
-        min-height: 3rem;
+        height: 3rem;
         border: 1px solid transparent;
         border-radius: 1rem;
         background:
@@ -238,6 +242,8 @@ footer#tb-footer {
             linear-gradient(to bottom, #313845, #1c2633) border-box;
 
         @media (min-width: @lg) {
+            height: 4rem;
+
             display: grid;
             grid-template-rows: 1fr;
             grid-template-columns: auto auto auto;
@@ -337,6 +343,13 @@ footer#tb-footer {
                 a {
                     color: var(--text-icon-base);
                     text-decoration: none;
+
+                    text-transform: uppercase;
+                    font-family: 'Metropolis', sans-serif;
+                    font-weight: 600;
+                    font-size: 0.8125rem;
+                    letter-spacing: 0.05em; /* This is the 5% tracking */
+
                     &:visited {
                         color: var(--text-icon-base);
                     }
