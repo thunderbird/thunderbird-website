@@ -259,8 +259,11 @@ section#features {
 
         .card-image {
             .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-hero-high-res');
+            @media (min-width: @md) {
+                height: 100%;
+                width: 100%;
+            }
             @media (min-width: @lg) {
-                outline: 1px dashed red;
                 .mixin-background-image('/media/img/thunderbird/tbpro/xl-thundermail-hero-high-res');
             }
         }
