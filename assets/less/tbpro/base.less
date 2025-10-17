@@ -64,6 +64,24 @@ button.link-button {
 }
 
 
+// mixins
+.mixin-background-image(@base-path) {
+    // Fallback for older browsers.
+    background-image: url('@{base-path}.png');
+
+    // For browsers that support modern formats.
+    background-image: -webkit-image-set(
+        url('@{base-path}.avif') type('image/avif'),
+        url('@{base-path}.webp') type('image/webp'),
+        url('@{base-path}.png')
+    );
+    background-image: image-set(
+        url('@{base-path}.avif') type('image/avif'),
+        url('@{base-path}.webp') type('image/webp'),
+        url('@{base-path}.png')
+    );
+}
+
 // Constrain the common containers to the largest breakpoint.
 #site-header,
 #site-nav,
@@ -207,16 +225,17 @@ footer#tb-footer {
         padding-block: @space-6;
         padding-inline: @space-18 @gutter;
 
+        min-height: 3rem;
         border: 1px solid transparent;
-        border-radius: @space-24;
+        border-radius: 1rem;
         background:
-            linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
-            linear-gradient(to bottom, #feffff, #58c9ff) border-box;
-
-
-        // This gradient given by zeplin does not look like the design.
-        // The design looks like a solid color.
-        // background-image: linear-gradient(to top, var(--text-icon-base) 100%, rgba(86, 106, 146, 0.5) -175%), linear-gradient(to bottom, #feffff, #58c9ff);
+            linear-gradient(to bottom,
+                            #262d3c 0%,
+                            #232a37 25%,
+                            #202633 50%,
+                            #1c222e 75%,
+                            #181d26 100%) padding-box,
+            linear-gradient(to bottom, #313845, #1c2633) border-box;
 
         @media (min-width: @lg) {
             display: grid;
@@ -236,7 +255,14 @@ footer#tb-footer {
             grid-template-rows: 0fr;
             transition: grid-template-rows 0.1s ease-out;
 
-            background: var(--nav-bg-color);
+            // These are the same colors as #site-header-nav,
+            // but with the direction reversed.
+            background: linear-gradient(to top,
+                            #262d3c 0%,
+                            #232a37 25%,
+                            #202633 50%,
+                            #1c222e 75%,
+                            #181d26 100%);
 
             position: absolute;
             top: @space-48;
@@ -245,6 +271,7 @@ footer#tb-footer {
             border-radius: 0 0 @space-9 @space-9;
 
             @media (min-width: @lg) {
+                background: unset;
                 display: grid;
 
                 // Force overlap so that we can center the nav links
@@ -327,7 +354,7 @@ footer#tb-footer {
             padding: 0;
             margin: 0;
 
-            background-color: var(--nav-bg-color);
+            background-color: transparent;
             border: 0;
 
             @media (min-width: @lg) {
@@ -377,9 +404,16 @@ footer#tb-footer {
     }
 }
 
+
 .top-gradient {
-    // background-color: #003549; // matches dark mode color var: --color-on-primary
-    background-image: linear-gradient(355deg, #1A202C 123%, #262d3b -202%);
+    background-color: #18181b;
+    .mixin-background-image('/media/img/thunderbird/tbpro/top-gradient-background');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (min-width: @lg) {
+        background-size: unset;
+    }
 }
 
 .lower-gradient {

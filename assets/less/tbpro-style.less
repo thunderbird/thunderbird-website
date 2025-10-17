@@ -14,7 +14,6 @@
 }
 
 header#masthead {
-    --hero-img: url('/media/img/thunderbird/tbpro/orb-graphic-high-res.png');
     --button-text-color: #1A202C;
     --color-left-blue: #b4e7ff;
     --color-right-blue: rgba(180, 231, 255, 0.9);
@@ -30,7 +29,7 @@ header#masthead {
     .hero-image {
         margin: 0 auto;
         max-width: 100vw;
-        background-image: var(--hero-img);
+        .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic');
         background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -44,6 +43,8 @@ header#masthead {
             max-width: unset;
             margin: 0;
             margin-top: @space-36;
+
+            .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic-high-res');
         }
     }
 
@@ -257,11 +258,10 @@ section#features {
         padding: 32px 17.4px 16.1px 19px;
 
         .card-image {
-            background-image: url('/media/img/thunderbird/tbpro/xs-thundermail-hero-high-res.png');
+            .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-hero-high-res');
             @media (min-width: @lg) {
                 outline: 1px dashed red;
-
-                background-image: url('/media/img/thunderbird/tbpro/xl-thundermail-hero-high-res.png');
+                .mixin-background-image('/media/img/thunderbird/tbpro/xl-thundermail-hero-high-res');
             }
         }
     }
@@ -272,10 +272,10 @@ section#features {
         padding: 32px 1px 4px 32px;
 
         .card-image {
-            background-image: url('/media/img/thunderbird/tbpro/xs-appointment-hero-high-res.png');
+            .mixin-background-image('/media/img/thunderbird/tbpro/xs-appointment-hero-high-res');
             @media (min-width: @lg) {
                 aspect-ratio: unset;
-                background-image: url('/media/img/thunderbird/tbpro/xl-appointment-hero-high-res.png');
+                .mixin-background-image('/media/img/thunderbird/tbpro/xl-appointment-hero-high-res');
             }
         }
 
@@ -287,10 +287,10 @@ section#features {
         padding: 32px 1px 16px 32px;
 
         .card-image {
-            background-image: url('/media/img/thunderbird/tbpro/xs-send-hero-high-res.png');
+            .mixin-background-image('/media/img/thunderbird/tbpro/xs-send-hero-high-res');
             @media (min-width: @lg) {
                 aspect-ratio: unset;
-                background-image: url('/media/img/thunderbird/tbpro/xl-send-hero-high-res.png');
+                .mixin-background-image('/media/img/thunderbird/tbpro/xl-send-hero-high-res')
             }
         }
     }
