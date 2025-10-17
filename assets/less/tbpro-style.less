@@ -205,17 +205,34 @@ section#features {
                     .app-name {
                         color: var(--color-text-highlight);
                         text-transform: uppercase;
-                        font-size: .75rem;
+                        font-size: 0.75rem;
+                        font-family: Metropolis;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: 0.36px;
+                        @media (min-width: @lg) {
+                            font-size: 0.875rem;
+                            letter-spacing: 0.03rem; // instead of 0.42px in zeplin
+                        }
                     }
                     .app-tagline {
                         font-family: Metropolis;
                         font-size: 1.25rem;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.2;
+                        letter-spacing: normal;
+                        @media (min-width: @lg) {
+                            font-size: 1.5rem;
+                        }
                     }
                 }
             }
             .card-body {
-                // TODO: Confirm this - I think the default is Inter?
-                // font-family: 'Inter', sans-serif;
+                font-family: 'Inter', sans-serif;
                 font-size: 0.875rem;
                 font-weight: normal;
                 font-stretch: normal;
@@ -223,6 +240,11 @@ section#features {
                 line-height: 1.23;
                 letter-spacing: normal;
                 text-align: left;
+                @media (min-width: @lg) {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.32;
+                }
             }
         }
 
