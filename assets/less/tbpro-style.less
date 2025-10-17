@@ -14,7 +14,7 @@
 }
 
 header#masthead {
-    --hero-img: url('/media/img/thunderbird/tbpro/orb-graphic-hi-res.png');
+    --hero-img: url('/media/img/thunderbird/tbpro/orb-graphic-high-res.png');
     --button-text-color: #1A202C;
     --color-left-blue: #b4e7ff;
     --color-right-blue: rgba(180, 231, 255, 0.9);
@@ -74,11 +74,10 @@ header#masthead {
     .txt-gradient {
         color: transparent;
         -webkit-background-clip: text;
+        background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe 62%);
         background-clip: text;
-        background-image: linear-gradient(to right,
-                                          var(--color-left-blue),
-                                          var(--color-mid-left-purple));
         display: block;
+        width: fit-content;
     }
 
 
@@ -140,22 +139,23 @@ section#features {
     }
 
     .feature-card {
-        border-radius: 1.5rem;
-        // backdrop-filter: blur(24px);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+
         box-shadow: inset 0 0 74px 0 rgba(0, 0, 0, 0.05);
-        padding: @space-24;
+        border: solid 1px rgba(255, 255, 255, 0.05);
+        border-radius: 1.5rem;
 
-        // This is the real value from zeplin
-        // border: solid 1px rgba(255, 255, 255, 0.05);
-        // debug value
-
+        min-width: 0;
 
         color: var(--color-text-base);
 
         display: flex;
         flex-direction: column;
-        gap: @space-18;
 
+        @media (min-width: @lg) {
+            gap: 0.875rem;
+        }
 
         // For mobile layout, space above a feature card, if there's a previous one.
         &+.feature-card {
@@ -168,7 +168,7 @@ section#features {
         .card-info {
             .card-header {
                 display: flex;
-                gap: @gutter;
+                gap: 0.9375rem;
 
                 .app-icon {
                     flex: 0 0 auto;
@@ -180,8 +180,7 @@ section#features {
                     // debug
                     height: 48px;
                     width: 48px;
-                    // background-color: red;
-                    border: 1px solid red;
+
                 }
                 .app-header {
                     flex: 1;
@@ -200,16 +199,34 @@ section#features {
                         font-size: .75rem;
                     }
                     .app-tagline {
-                        font-size: 1.5rem;
+                        font-family: Metropolis;
+                        font-size: 1.25rem;
                     }
                 }
             }
             .card-body {
+                // TODO: Confirm this - I think the default is Inter?
+                // font-family: 'Inter', sans-serif;
+                font-size: 0.875rem;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.23;
+                letter-spacing: normal;
+                text-align: left;
             }
         }
+
         .card-image {
-            min-height: 100px;
-            outline: 1px solid blue;
+            background-size: 100% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: auto;
+            aspect-ratio: 16/9;
+
+            @media (min-width: @lg) {
+                aspect-ratio: 21/9;
+            }
         }
 
     }
@@ -223,23 +240,59 @@ section#features {
         }
     }
 
-    // still figuring out the gradients used.
+    .mixin-card-gradient(@accent-color, @darken-by: 30%, @accent-position: 100%) {
+        background-image: linear-gradient(349deg,
+                                          #0f1623 0%,
+                                          #0a0f19 40%,
+                                          #06090e 85%,
+                                          darken(@accent-color, @darken-by) @accent-position);
+        background-clip: padding-box;
+    }
+
     .feature-card-1 {
-        //     background-image: linear-gradient(339deg, #0f1623 87%, #06090e 79%, #06090e 14%, #1373d9 0%);
-        background-image: linear-gradient(337deg, #0f1623 85%, #06090e, #1373d9);
-        backdrop-filter: blur(24px);
+        .mixin-card-gradient(#1373d9, 23%);
+        justify-content: space-between;
+
+        // Copied from zeplin:
+        padding: 32px 17.4px 16.1px 19px;
+
+        .card-image {
+            background-image: url('/media/img/thunderbird/tbpro/xs-thundermail-hero-high-res.png');
+            @media (min-width: @lg) {
+                outline: 1px dashed red;
+
+                background-image: url('/media/img/thunderbird/tbpro/xl-thundermail-hero-high-res.png');
+            }
+        }
     }
     .feature-card-2 {
-        //     background-image: linear-gradient(338deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
-        background-image: linear-gradient(337deg, #0f1623 85%, #06090e, #008080);
-        backdrop-filter: blur(24px);
+        .mixin-card-gradient(#008080, 13%);
+
+        // Copied from zeplin:
+        padding: 32px 1px 4px 32px;
+
+        .card-image {
+            background-image: url('/media/img/thunderbird/tbpro/xs-appointment-hero-high-res.png');
+            @media (min-width: @lg) {
+                aspect-ratio: unset;
+                background-image: url('/media/img/thunderbird/tbpro/xl-appointment-hero-high-res.png');
+            }
+        }
+
     }
     .feature-card-3 {
-        // background-image: linear-gradient(336deg, #0f1623 83%, #06090e 76%, #06090e 14%, #fec18a 1%);
+        .mixin-card-gradient(desaturate(#fec18a, 10%), 10%, 120%);
 
-        // background-image: linear-gradient(337deg, #0f1623 85%, #06090e 77%, #06090e 14%, #008080 0%);
-        background-image: linear-gradient(337deg, #0f1623 85%, #06090e, #fec18a);
-        backdrop-filter: blur(24px);
+        // Copied from zeplin:
+        padding: 32px 1px 16px 32px;
+
+        .card-image {
+            background-image: url('/media/img/thunderbird/tbpro/xs-send-hero-high-res.png');
+            @media (min-width: @lg) {
+                aspect-ratio: unset;
+                background-image: url('/media/img/thunderbird/tbpro/xl-send-hero-high-res.png');
+            }
+        }
     }
 }
 
@@ -331,9 +384,6 @@ section#faq {
     }
 
     .faq-item {
-        // --icon-closed: url('faq-open.svg');
-        // --icon-open: url('faq-closed.svg');
-
         padding-block: @gutter;
         border-bottom: 1px solid rgba(88, 201, 255, 0.2);
 
@@ -348,18 +398,26 @@ section#faq {
             &::after {
                 content: "+";
                 flex-shrink: 0;
-                display: grid;
-                place-items: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-block: 0 0.3125rem;
+                margin: 0;
+                font-size: 1.5rem;
+                inline-size: 1.5rem;
+                block-size: 1.5rem;
 
-                inline-size: 2rem;
-                block-size: 1rem;
-                outline: 1px solid red;
-                // mask: var(--icon-closed) center / contain no-repeat;
-
+                color: #58c9ff;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 50%;
+                transition: all 0.3s ease-in-out;
+                transform-origin: center;
             }
         }
-        // After getting real assets, swap out the image instead of rotating.
-        // &[open] .faq-question::after { transform: rotate(270deg); }
+
+        &[open] .faq-question::after {
+            transform: rotate(90deg);
+        }
 
         &[open] summary ~ * {
             animation: sweep 0.5s ease-in-out;
@@ -462,9 +520,11 @@ section#details {
 
             h3 {
                 color: transparent;
-                background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe 62%);
+                -webkit-background-clip: text;
+                background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe);
                 background-clip: text;
-
+                width: fit-content;
+                display: inline-block;
             }
 
             h4 {

@@ -8,8 +8,8 @@
 
 
 {% block masthead %}
-  <h1>Elevate Thunderbird, <span class="txt-gradient">Do More</span></h1>
-  <p>Add powerful cloud capabilities to Thunderbird and fund development of the always free and open source apps you love by subscribing to Pro.</p>
+<h1>Elevate Thunderbird, <div class="txt-gradient">Do More</div></h1>
+<p>Add powerful cloud capabilities to Thunderbird and fund development of the always free and open source apps you love by subscribing to Pro.</p>
 
 <a href="#" class="cta-button">
   Join Waitlist
@@ -24,23 +24,26 @@
 <div class="feature-card feature-card-1">
   <div class="card-info">
     <div class="card-header">
-      <span class="app-icon"></span>
+      <span class="app-icon">
+        {{ svg_img('tbpro/icons/icon-thundermail') }}
+      </span>
       <div class="app-header">
         <span class="app-name">Thundermail</span>
         <span class="app-tagline">Email Confidently</span>
       </div>
     </div>
     <div class="card-body">
-      <p>Email hosting from Thunderbird is here. Send/receive emails with a privacy protecting provider based in Germany and the latest mail standards like JMAP. Choose a Thundermail domain or bring your own. Look no further to power the open source email app you love.</p>
+      <p>Send/receive emails with a privacy protecting host based in Germany and the latest mail standards like JMAP. Choose a Thundermail domain or bring your own. Look no further to power the open source email app you love.</p>
     </div>
   </div>
-  <div class="card-image">
-  </div>
+  <div class="card-image" role="img" aria-label="Thunderbird desktop client showing two contact cards."></div>
 </div>
 <div class="feature-card feature-card-2">
   <div class="card-info">
     <div class="card-header">
-      <span class="app-icon"></span>
+      <span class="app-icon">
+        {{ svg_img('tbpro/icons/icon-appointment') }}
+      </span>
       <div class="app-header">
         <span class="app-name">Appointment</span>
         <span class="app-tagline">Schedule Easily</span>
@@ -51,12 +54,15 @@
     </div>
   </div>
   <div class="card-image">
+
   </div>
 </div>
 <div class="feature-card feature-card-3">
   <div class="card-info">
     <div class="card-header">
-      <span class="app-icon"></span>
+      <span class="app-icon">
+        {{ svg_img('tbpro/icons/icon-send') }}
+      </span>
       <div class="app-header">
         <span class="app-name">Send</span>
         <span class="app-tagline">Attach Securely</span>
@@ -67,6 +73,7 @@
     </div>
   </div>
   <div class="card-image">
+
   </div>
 </div>
 {% endblock %}
