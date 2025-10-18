@@ -22,55 +22,57 @@
 // ================================================================================
 // Concrete classes for each kind of button
 //
-.button-primary-filled-label:extend(.button-default) {
-    .primary-filled-mixin();
-    .primary-filled-focus-mixin();
+.button-primary-filled-label:extend(.abstract-button-default) {
+    .mixin-primary-filled();
+    .mixin-primary-filled-focus();
 }
 
-.button-primary-outline-label:extend(.button-default) {
-    .primary-outline-mixin();
+.button-primary-outline-label:extend(.abstract-button-default) {
+    .mixin-primary-outline();
 }
 
-.button-primary-small-filled-label:extend(.button-small) {
-    .primary-filled-mixin();
+.button-primary-small-filled-label:extend(.abstract-button-small) {
+    .mixin-primary-filled();
 }
 
-.button-primary-small-outline-label:extend(.button-small) {
-    .primary-outline-mixin();
+.button-primary-small-outline-label:extend(.abstract-button-small) {
+    .mixin-primary-outline();
 }
 
-.button-brand-filled-label-icon:extend(.button-brand-default) {
-    .brand-filled-icon-mixin();
-    .brand-filled-icon-focus-mixin();
+.button-brand-filled-label-icon:extend(.abstract-button-brand-default) {
+    .mixin-brand-filled-icon();
+    .mixin-brand-filled-icon-focus();
 }
 
-.button-brand-outline-label:extend(.button-brand-default) {
-    .brand-outline-mixin();
-    .brand-outline-focus-mixin();
+.button-brand-outline-label:extend(.abstract-button-brand-default) {
+    .mixin-brand-outline();
+    .mixin-brand-outline-focus();
 }
 
-.button-brand-small-outline-label:extend(.button-brand-small) {
-    .brand-outline-mixin();
-    .brand-outline-focus-mixin();
+.button-brand-small-outline-label:extend(.abstract-button-brand-small) {
+    .mixin-brand-outline();
+    .mixin-brand-outline-focus();
 }
 
-.button-destructive-filled-label:extend(.button-default) {
-    .destructive-filled-mixin();
+.button-destructive-filled-label:extend(.abstract-button-default) {
+    .mixin-destructive-filled();
 }
 
-.button-destructive-outline-label:extend(.button-default) {
-    .destructive-outline-mixin();
+.button-destructive-outline-label:extend(.abstract-button-default) {
+    .mixin-destructive-outline();
 }
 
-.button-destructive-small-filled-label:extend(.button-small) {
-    .destructive-filled-mixin();
+.button-destructive-small-filled-label:extend(.abstract-button-small) {
+    .mixin-destructive-filled();
 }
 
 
 // ================================================================================
-// "Parent classes" for concrete buttons
+// "Parent classes" for concrete buttons.
+// - Use with :extend.
+// - Do not use directly with class="" in markup.
 //
-.button-default {
+.abstract-button-default {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -90,12 +92,12 @@
     font-size: var(--font-size);
 }
 
-.button-small:extend(.button-default) {
+.abstract-button-small:extend(.abstract-button-default) {
     height: var(--height-small);
     padding: 0.375rem 0.75rem;
 }
 
-.button-brand-default:extend(.button-default) {
+.abstract-button-brand-default:extend(.abstract-button-default) {
     padding: 1rem 1.5rem;
 
     font-size:  0.8125rem;
@@ -112,7 +114,7 @@
     text-transform: uppercase;
 }
 
-.button-brand-small:extend(.button-brand-default, .button-small) {
+.abstract-button-brand-small:extend(.abstract-button-brand-default, .abstract-button-small) {
     font-size:  0.6875rem;
     padding: 0.875rem 1rem;
 }
@@ -121,7 +123,7 @@
 // ================================================================================
 // Button variant mixins
 //
-.primary-filled-mixin() {
+.mixin-primary-filled() {
     @color1: var(--accents-blue, #37ADF9) -15.91%;
     @color2: var(--primary-default, #1373D9) 20.02%;
     @color3: var(--primary-hover, #175FB6) 100%;
@@ -151,7 +153,7 @@
     }
 }
 
-.primary-filled-focus-mixin() {
+.mixin-primary-filled-focus() {
     // Using :focus-visible so that it's only for keyboard focus.
     // Regular :focus overrides the :active psuedo-class.
     &:focus-visible {
@@ -165,7 +167,7 @@
     }
 }
 
-.primary-outline-mixin() {
+.mixin-primary-outline() {
     .outline(linear-gradient(-13deg, #58C9FF, #175FB6));
 
     &:hover {
@@ -182,7 +184,7 @@
     }
 }
 
-.brand-filled-icon-mixin() {
+.mixin-brand-filled-icon() {
     @border-color: linear-gradient(-13deg, #A0E1FF, #2B8CDC);
     @background-color: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%);
     .outline(@border-color, @background-color);
@@ -203,7 +205,7 @@
     }
 }
 
-.brand-filled-icon-focus-mixin() {
+.mixin-brand-filled-icon-focus() {
     // Using :focus-visible so that it's only for keyboard focus.
     // Regular :focus overrides the :active psuedo-class.
     &:focus-visible {
@@ -217,7 +219,7 @@
     }
 }
 
-.brand-outline-mixin() {
+.mixin-brand-outline() {
     @border-color: linear-gradient(-13deg, #A0E1FF, #2B8CDC);
     .outline(@border-color);
     color: #1A202C;
@@ -237,7 +239,7 @@
     }
 }
 
-.brand-outline-focus-mixin() {
+.mixin-brand-outline-focus() {
     &:focus-visible {
         @background-color: var(--surface-base);
         .spaced-double-outline(
@@ -254,7 +256,7 @@
     }
 }
 
-.destructive-filled-mixin() {
+.mixin-destructive-filled() {
     .filled(var(--critical-default));
 
     &:hover {
@@ -272,7 +274,7 @@
     }
 }
 
-.destructive-outline-mixin() {
+.mixin-destructive-outline() {
     .outline(var(--critical-default));
     color: var(--critical-default);
 
