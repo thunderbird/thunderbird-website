@@ -305,10 +305,7 @@ section#features {
 
 section#reasons {
     background: #fff;
-
     padding-block: @space-36 @space-24;
-
-
     display: grid;
     row-gap: @space-24;
     counter-reset: reason;
@@ -317,7 +314,6 @@ section#reasons {
         margin: 0;
         color: var(--header-color);
         text-align: center;
-
         .brand-headline-h1-sm();
 
         @media (min-width: @md) {
@@ -369,14 +365,14 @@ section#reasons {
             height: 1px;
             background: #d9d9de;
 
-            // Use a different means for desktop.
             @media (min-width: @lg) {
-                display: none;
+                bottom: calc(@space-36 / -2); // Center in parent's row-gap
             }
         }
 
         @media (min-width: @lg) {
-            display: contents; // Makes children participate in parent grid
+            grid-column: 1 / -1; // Span all parent columns
+            grid-template-columns: subgrid; // Inherit parent's three columns
         }
 
         // This is our counter.
@@ -398,12 +394,15 @@ section#reasons {
                 counter-increment: reason;
             }
         }
+
         .reason-content {
             grid-column: 2;
             row-gap: @space-9;
 
             @media (min-width: @lg) {
-                display: contents; // Makes title and p direct grid items
+                grid-column: 2 /4; // Span columns 2 and 3
+                display: grid;
+                grid-template-columns: subgrid;
             }
 
             .reason-title {
@@ -413,7 +412,7 @@ section#reasons {
 
                 @media (min-width: @lg) {
                     .brand-headline-h2-lg();
-                    grid-column: 2;
+                    grid-column: 1; // First col of .reason-content's subgrid
                 }
             }
 
@@ -426,11 +425,10 @@ section#reasons {
                 }
 
                 @media (min-width: @lg) {
-                    grid-column: 3;
+                    grid-column: 2; // Second col of .reason-content's subgrid
                     margin: 0;
                 }
             }
-
         }
 
     }
