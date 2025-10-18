@@ -6,87 +6,87 @@
     --header-color: #1373d9;
 }
 
+// Animations
+@keyframes sweep {
+    0% { opacity: 0; }
+    100% { opacity: 1}
+}
+
 
 // Constrain all main blocks to the largest breakpoint.
 .primary-block {
-    max-width: @lg;
     margin-inline: auto;
+    max-width: @lg;
 }
 
 header#masthead {
     --button-text-color: #1A202C;
     --color-left-blue: #b4e7ff;
-    --color-right-blue: rgba(180, 231, 255, 0.9);
     --color-mid-left-purple: rgba(221, 180, 254, 0.7);
+    --color-right-blue: rgba(180, 231, 255, 0.9);
 
     @media (min-width: @md) {
         display: grid;
-        grid-template-rows: auto auto auto auto 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto 1fr;
         margin-top: @space-72;
     }
 
     .hero-image {
+        .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic');
+        aspect-ratio: 1.4/1;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: @space-24;
         margin: 0 auto;
         max-width: 100vw;
-        .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic');
-        background-position: top center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        aspect-ratio: 1.4/1;
-        margin-right: @space-24;
 
         @media (min-width: @md) {
+            .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic-high-res');
             grid-column: 3 / -1;
             grid-row: 2 / -1;
-
-            max-width: unset;
-            margin: 0;
             margin-top: @space-36;
-
-            .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic-high-res');
+            margin: 0;
+            max-width: unset;
         }
     }
 
     h1 {
+        .brand-display-xs();
+        margin: 0;
         text-shadow: 0 4px 2px rgba(0, 0, 0, 0.05);
         white-space: pre;
-        margin: 0;
-
-        .brand-display-xs();
         @media (min-width: @md) {
             .brand-display-lg();
-
-            grid-row: 1 / span 2;
             grid-column: 1 / -1;
+            grid-row: 1 / span 2;
         }
 
     }
 
     p {
-        margin-block: @space-6;
         .web-body-default();
+        margin-block: @space-6;
         @media (min-width: @md) {
             .web-body-large();
-            grid-row: 3;
             grid-column: 1 / span 2;
+            grid-row: 3;
         }
     }
 
     .txt-gradient {
-        color: transparent;
         -webkit-background-clip: text;
-        background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe 62%);
-        background-clip: text;
+        background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe 62%) text;
+        color: transparent;
         display: block;
         width: fit-content;
     }
 
 
     .cta-button {
-
-        margin-top: @space-12;
         margin-bottom: @space-18;
+        margin-top: @space-12;
 
         @media (min-width: @md) {
             grid-column: 1;
@@ -109,9 +109,9 @@ section#features {
 
     @media (min-width: @lg) {
         display: grid;
+        gap: @space-12;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: @space-12;
 
         .feature-card:first-child {
             grid-row: 1 / -1;
@@ -120,19 +120,15 @@ section#features {
     }
 
     .feature-card {
-        backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
-
-        box-shadow: inset 0 0 74px 0 rgba(0, 0, 0, 0.05);
-        border: solid 1px rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(24px);
         border-radius: 1.5rem;
-
-        min-width: 0;
-
+        border: solid 1px rgba(255, 255, 255, 0.05);
+        box-shadow: inset 0 0 74px 0 rgba(0, 0, 0, 0.05);
         color: #eeeef0; // var(--color-text-base);
-
         display: flex;
         flex-direction: column;
+        min-width: 0;
 
         @media (min-width: @lg) {
             gap: 0.875rem;
@@ -141,6 +137,7 @@ section#features {
         // For mobile layout, space above a feature card, if there's a previous one.
         &+.feature-card {
             margin-top: @gutter;
+
             @media (min-width: @lg) {
                 margin-top: 0;
             }
@@ -152,22 +149,21 @@ section#features {
                 gap: 0.9375rem;
 
                 .app-icon {
-                    flex: 0 0 auto;
-                    display: flex;
                     align-items: center;
-                    justify-content: center;
                     aspect-ratio: 1 / 1;
+                    display: flex;
+                    flex: 0 0 auto;
+                    justify-content: center;
 
-                    // debug
                     height: 48px;
                     width: 48px;
 
                 }
                 .app-header {
-                    flex: 1;
                     display: flex;
-                    gap: 4px;
                     flex-direction: column;
+                    flex: 1;
+                    gap: 4px;
 
                     & > * {
                         display: block;
@@ -175,10 +171,10 @@ section#features {
                     }
 
                     .app-name {
+                        .brand-eyebrow-xs();
                         color: #58c9ff; // var(--color-text-highlight);
                         text-transform: uppercase;
 
-                        .brand-eyebrow-xs();
                         @media (min-width: @lg) {
                             .brand-eyebrow-lrg();
                         }
@@ -192,9 +188,9 @@ section#features {
                 }
             }
             .card-body {
-                text-align: left;
                 .web-body-small();
                 line-height: 1.23; // Specified in Zeplin
+                text-align: left;
                 @media (min-width: @md) {
                     .web-body-default();
                 }
@@ -202,11 +198,11 @@ section#features {
         }
 
         .card-image {
-            background-size: 100% auto;
+            aspect-ratio: 16/9;
             background-position: center center;
             background-repeat: no-repeat;
+            background-size: 100% auto;
             height: auto;
-            aspect-ratio: 16/9;
 
             @media (min-width: @lg) {
                 aspect-ratio: 21/9;
@@ -219,18 +215,18 @@ section#features {
         // First card retains stacked layout.
         .feature-card:not(:first-child) {
             display: grid;
-            grid-template-rows: 1fr;
             grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
         }
     }
 
     .mixin-card-gradient(@accent-color, @darken-by: 30%, @accent-position: 100%) {
+        background-clip: padding-box;
         background-image: linear-gradient(349deg,
                                           #0f1623 0%,
                                           #0a0f19 40%,
                                           #06090e 85%,
                                           darken(@accent-color, @darken-by) @accent-position);
-        background-clip: padding-box;
     }
 
     .feature-card-1 {
@@ -284,16 +280,16 @@ section#features {
 
 section#reasons {
     background: #fff;
-    padding-block: @space-36 @space-24;
-    display: grid;
-    row-gap: @space-24;
     counter-reset: reason;
+    display: grid;
+    padding-block: @space-36 @space-24;
+    row-gap: @space-24;
 
     & > header {
-        margin: 0;
-        color: var(--header-color);
-        text-align: center;
         .brand-headline-h1-sm();
+        color: var(--header-color);
+        margin: 0;
+        text-align: center;
 
         @media (min-width: @md) {
             .brand-headline-h1-lg();
@@ -305,9 +301,9 @@ section#reasons {
     }
 
     @media (min-width: @lg) {
+        column-gap: @space-18;
         // For desktop, create parent grid for counter, reason, and explanation.
         grid-template-columns: auto auto 58%;
-        column-gap: @space-18;
         row-gap: @space-36;
     }
 
@@ -323,10 +319,10 @@ section#reasons {
     .reason {
         --gap-size: @space-18;
 
+        align-items: start;
+        column-gap: @space-18;
         display: grid;
         grid-template-columns: auto 1fr;
-        column-gap: @space-18;
-        align-items: start;
         position: relative;
 
         // counter-increment on this element for mobile only.
@@ -336,13 +332,13 @@ section#reasons {
 
         // Horizontal border between rows
         &:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: calc(var(--gap-size) / -2);
-            height: 1px;
             background: #d9d9de;
+            bottom: calc(var(--gap-size) / -2);
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            right: 0;
 
             @media (min-width: @lg) {
                 bottom: calc(@space-36 / -2); // Center in parent's row-gap
@@ -356,21 +352,22 @@ section#reasons {
 
         // This is our counter.
         &::before {
-            padding-top: 0.1875rem;
+            .brand-headline-h3-semibold-small();
+            color: #737584;
             content: counter(reason, decimal-leading-zero);
             font-variant-numeric: tabular-nums;
-            margin-inline-end: var(--gap-size);
             grid-column: 1;
-            color: #737584;
-            .brand-headline-h3-semibold-small();
+            margin-inline-end: var(--gap-size);
+            padding-top: 0.1875rem;
 
             @media (min-width: @lg) {
                 .brand-list-indicator-lg();
-                padding-top: 0.3rem;
 
                 // Handle the increment for desktop, b/c the children
                 // are now participating in parent grid.
                 counter-increment: reason;
+
+                padding-top: 0.3rem;
             }
         }
 
@@ -379,8 +376,8 @@ section#reasons {
             row-gap: @space-9;
 
             @media (min-width: @lg) {
-                grid-column: 2 /4; // Span columns 2 and 3
                 display: grid;
+                grid-column: 2 /4; // Span columns 2 and 3
                 grid-template-columns: subgrid;
             }
 
@@ -427,49 +424,48 @@ section#faq {
 
 
     header {
-        margin-bottom: @space-9;
         .headings-h1-sm();
+        margin-bottom: @space-9;
 
         @media (min-width: @lg) {
-            padding-right: @space-144;
             .brand-headline-h1-lg();
+            padding-right: @space-144;
         }
     }
 
     .faq-item {
-        padding-block: @gutter;
         border-bottom: 1px solid rgba(88, 201, 255, 0.2);
+        padding-block: @gutter;
 
         .faq-question {
-            list-style: none;
+            .text-medium();
+            align-items: start;
             cursor: pointer;
             display: flex;
-            align-items: start;
-            justify-content: space-between;
             gap: @space-18;
+            justify-content: space-between;
+            list-style: none;
 
-            .text-medium();
             @media (min-width: @lg) {
                 .text-large();
             }
 
             &::after {
-                content: "+";
-                flex-shrink: 0;
-                display: flex;
-                justify-content: center;
                 align-items: center;
-                padding-block: 0 0.3125rem;
-                margin: 0;
+                background-color: rgba(0, 0, 0, 0.2);
+                block-size: 1.5rem;
+                border-radius: 50%;
+                color: #58c9ff;
+                content: "+";
+                display: flex;
+                flex-shrink: 0;
                 font-size: 1.5rem;
                 inline-size: 1.5rem;
-                block-size: 1.5rem;
-
-                color: #58c9ff;
-                background-color: rgba(0, 0, 0, 0.2);
-                border-radius: 50%;
-                transition: all 0.3s ease-in-out;
+                justify-content: center;
+                margin: 0;
+                padding-block: 0 0.3125rem;
                 transform-origin: center;
+                transition: all 0.3s ease-in-out;
             }
         }
 
@@ -491,33 +487,23 @@ section#faq {
     }
 }
 
-@keyframes sweep {
-    0% { opacity: 0; }
-    100% { opacity: 1}
-}
-
 section#details {
-    padding-inline: @gutter;
+    border-bottom: 1px solid rgba(88, 201, 255, 0.2);
     padding-block: @space-36;
+    padding-inline: @gutter;
 
     @media (min-width: @lg) {
+        align-items: center;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        align-items: center;
         padding-inline: 0;
     }
-
-    button.link-button {
-        // background: #131c28;
-    }
-    border-bottom: 1px solid rgba(88, 201, 255, 0.2);
 
     .subscription-header {
         @media (min-width: @lg) {
             padding-right: @space-96;
             grid-column: 1 / 3;
         }
-
 
         header {
             .headings-h1-sm();
@@ -535,30 +521,28 @@ section#details {
     }
 
     .subscription-info {
+        background-color: rgba(0, 0, 0, 0.2);
         border-radius: @space-12;
         border: solid 1px rgba(88, 201, 255, 0.2);
-        background-color: rgba(0, 0, 0, 0.2);
-        margin-block: @space-36;
-        padding-inline: @space-36;
-
         display: grid;
         grid-template-rows: 1fr auto;
+        margin-block: @space-36;
+        padding-inline: @space-36;
         place-items: center;
 
         @media (min-width: @lg) {
             display: grid;
+            gap: @space-36;
+            grid-column: 3 / -1;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: auto;
-            gap: @space-36;
             padding-inline: @space-24;
-            grid-column: 3 / -1;
-
         }
 
         ul {
             list-style: none;
-            padding: 0;
             margin-block: 0 @space-24;
+            padding: 0;
             width: 100%;
 
             @media (min-width: @lg) {
@@ -622,29 +606,25 @@ section#details {
 
 
         .subscription-callout {
-            border-radius: @space-12;
             background-image: linear-gradient(150deg, #131c28 30%, #0b1017);
-
-            text-align: center;
-            padding: @space-36;
+            border-radius: @space-12;
             margin-block: @gutter;
             margin-inline: @space-36;
+            padding: @space-36;
+            text-align: center;
             width: 100%;
 
             @media (min-width: @lg) {
                 grid-column: 1 / 4;
-                // display: grid;
-                // grid-template-rows: repeat(4, auto);
             }
 
             h3 {
-                color: transparent;
                 -webkit-background-clip: text;
-                background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe);
-                background-clip: text;
-                width: fit-content;
-                display: inline-block;
                 .headings-h3-small();
+                background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe) text;
+                color: transparent;
+                display: inline-block;
+                width: fit-content;
                 @media (min-width: @md) {
                     .brand-headline-h3-lrg();
                 }
@@ -704,14 +684,14 @@ section#testimonials {
 
     header {
         .brand-headline-h1-sm();
+        color: var(--header-color);
+        margin-bottom: 1.25rem;
+        text-align: center;
 
         @media (min-width: @md) {
             .brand-headline-h1-lg();
         }
 
-        color: var(--header-color);
-        text-align: center;
-        margin-bottom: 1.25rem;
     }
 
     .testimonials-slider {
@@ -723,8 +703,8 @@ section#testimonials {
 
         .testimonials-track {
             display: flex;
-            transition: transform 0.5s ease-in-out;
             gap: @space-24;
+            transition: transform 0.5s ease-in-out;
 
             @media (min-width: @md) {
                 gap: @space-48;
@@ -732,28 +712,25 @@ section#testimonials {
         }
 
         .testimonial {
+            background-image: linear-gradient(156deg, white, #f0f8ff 84%);
+            border-radius: 1.5rem;
+            box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.1);
+            cursor: pointer;
             display: flex;
             flex-direction: row;
             gap: @space-12;
-
-            padding: @space-24 @space-16;
-            min-width: 308px;
             min-height: 223px;
+            min-width: 308px;
+            opacity: 0.4;
+            padding: @space-24 @space-16;
+            transition: opacity 0.5s ease-in-out;
 
             @media (min-width: @md) {
                 gap: 1.75rem;
-                padding: 2.5rem 3.4375rem;
-                min-width: 792px;
                 min-height: 298px;
+                min-width: 792px;
+                padding: 2.5rem 3.4375rem;
             }
-
-            background-image: linear-gradient(156deg, white, #f0f8ff 84%);
-            box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.1);
-            border-radius: 1.5rem;
-
-            cursor: pointer;
-            opacity: 0.4;
-            transition: opacity 0.5s ease-in-out;
 
             &.active {
                 opacity: 1.0;
@@ -761,52 +738,47 @@ section#testimonials {
 
             .quote-mark {
                 &::before {
+                    color: var(--header-color);
                     content: "\201C";
                     flex-grow: 0;
                     font-family: Metropolis;
-                    font-weight: 900;
+                    font-size: 36px;
                     font-stretch: normal;
                     font-style: normal;
+                    font-weight: 900;
+                    height: 36px;
+                    letter-spacing: -0.36px;
                     line-height: 1;
                     text-align: left;
-                    color: var(--header-color);
                     width: 23px;
-                    height: 36px;
-                    font-size: 36px;
-                    letter-spacing: -0.36px;
 
                     @media (min-width: @md) {
-                        width: 30px;
-                        height: 48px;
                         font-size: 3rem;
+                        height: 48px;
                         letter-spacing: -0.48px;
+                        width: 30px;
                     }
                 }
             }
 
             .testimonial-text {
+                .web-body-medium();
                 color: #4c4d58;
                 margin: 0;
-
                 min-height: 100px;
-
-                .web-body-medium();
                 @media (min-width: @md) {
-                    min-height: 158px;
                     .web-body-x-lg();
+                    min-height: 158px;
                 }
             }
 
             .testimonial-attribution {
+                align-items: center;
                 display: grid;
-
+                gap: 0 0.6875rem;
                 grid-template-columns: var(--avatar-size-small) 1fr;
                 grid-template-rows: auto auto;
-
                 padding-top: @gutter;
-                // TODO: check zeplin for spacing
-                gap: 0 0.6875rem;
-                align-items: center;
 
                 @media (min-width: @md) {
                     grid-template-columns: var(--avatar-size-large) 1fr;
@@ -814,33 +786,33 @@ section#testimonials {
 
 
                 .attribution-avatar {
-                    width: var(--avatar-size-small);
-                    height: var(--avatar-size-small);
-                    border-radius: 50%;
                     background: #ccc;
+                    border-radius: 50%;
                     grid-row: 1 / 3;
+                    height: var(--avatar-size-small);
+                    width: var(--avatar-size-small);
 
                     @media (min-width: @md) {
-                        width: var(--avatar-size-large);
                         height: var(--avatar-size-large);
+                        width: var(--avatar-size-large);
                     }
                 }
 
                 .attribution-name {
-                    margin: 0;
-                    align-self: end;
-                    color: #1a202c;
 
                     .text-medium-semibold();
+                    align-self: end;
+                    color: #1a202c;
+                    margin: 0;
                     @media (min-width: @md) {
                         .text-large-semibold();
                     }
                 }
 
                 .attribution-role {
-                    color: #4c4d58;
-                    align-self: start;
                     .text-small();
+                    align-self: start;
+                    color: #4c4d58;
                     @media (min-width: @md) {
                         .text-medium();
                     }
@@ -850,28 +822,28 @@ section#testimonials {
     }
 
     .testimonials-progress {
+        align-items: center;
         display: flex;
         gap: 0.5rem;
         justify-content: center;
-        align-items: center;
 
         .progress-dot {
-            width: var(--inactive-dot-size);
-            height: var(--inactive-dot-size);
-            border-radius: var(--dot-radius);
             background: #ccc;
+            border-radius: var(--dot-radius);
             border: none;
             cursor: pointer;
-            transition: all var(--dot-transition-duration) ease;
+            height: var(--inactive-dot-size);
             padding: 0;
+            transition: all var(--dot-transition-duration) ease;
+            width: var(--inactive-dot-size);
 
             &:hover {
                 background: #999;
             }
 
             &.active {
-                width: var(--active-dot-size);
                 background-image: linear-gradient(to left, #58c9ff, #6b21a8);
+                width: var(--active-dot-size);
             }
         }
     }
