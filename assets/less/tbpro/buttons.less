@@ -1,0 +1,433 @@
+:root {
+    --height: 2.75rem; // 44px
+    --height-small: 2.25rem; // 36px
+    --radius: 0.5rem; // 8px
+    --border-width: 1px;
+    --button-text-color: #1A202C;
+    --font-color: var(--text-icon-base);
+    --font-size: 0.875rem;
+    --critical-default: #991B1B;
+    --critical-hover: #7F1D1D;
+    --critical-pressed: #450A0A;
+    --primary-hover: #175FB6;
+    --primary-pressed: #19518F;
+    --surface-border: #E4E4E7;
+    --surface-base: #FEFFFF;
+    --surface-lower: #F7F7F7;
+    --surface-deep: #E4E4E7;
+    --text-icon-muted: #737584;
+
+}
+
+// ================================================================================
+// Concrete classes for each kind of button
+//
+.button-primary-filled-label:extend(.button-default) {
+    .primary-filled-mixin();
+    .primary-filled-focus-mixin();
+}
+
+.button-primary-outline-label:extend(.button-default) {
+    .primary-outline-mixin();
+}
+
+.button-primary-small-filled-label:extend(.button-small) {
+    .primary-filled-mixin();
+}
+
+.button-primary-small-outline-label:extend(.button-small) {
+    .primary-outline-mixin();
+}
+
+.button-brand-filled-label-icon:extend(.button-brand-default) {
+    .brand-filled-icon-mixin();
+    .brand-filled-icon-focus-mixin();
+}
+
+.button-brand-outline-label:extend(.button-brand-default) {
+    .brand-outline-mixin();
+    .brand-outline-focus-mixin();
+}
+
+.button-brand-small-outline-label:extend(.button-brand-small) {
+    .brand-outline-mixin();
+    .brand-outline-focus-mixin();
+}
+
+.button-destructive-filled-label:extend(.button-default) {
+    .destructive-filled-mixin();
+}
+
+.button-destructive-outline-label:extend(.button-default) {
+    .destructive-outline-mixin();
+}
+
+.button-destructive-small-filled-label:extend(.button-small) {
+    .destructive-filled-mixin();
+}
+
+
+// ================================================================================
+// "Parent classes" for concrete buttons
+//
+.button-default {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+
+    height: var(--height);
+
+    margin: 0;
+    padding: 1.125rem 1rem;
+
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+
+    // TODO: font styles - family, height
+    font-size: var(--font-size);
+}
+
+.button-small:extend(.button-default) {
+    height: var(--height-small);
+    padding: 0.375rem 0.75rem;
+}
+
+.button-brand-default:extend(.button-default) {
+    padding: 1rem 1.5rem;
+
+    font-size:  0.8125rem;
+    color: var(--text-icon-base, #1A202C);
+    text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
+
+    /* web/label/xsmall */
+    font-family: Inter;
+
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.33px;
+    text-transform: uppercase;
+}
+
+.button-brand-small:extend(.button-brand-default, .button-small) {
+    font-size:  0.6875rem;
+    padding: 0.875rem 1rem;
+}
+
+
+// ================================================================================
+// Button variant mixins
+//
+.primary-filled-mixin() {
+    @color1: var(--accents-blue, #37ADF9) -15.91%;
+    @color2: var(--primary-default, #1373D9) 20.02%;
+    @color3: var(--primary-hover, #175FB6) 100%;
+    @fill-color: linear-gradient(180deg, @color1, @color2, @color3);
+    .filled(@fill-color);
+
+    &:hover {
+        background: var(--primary-hover);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+    }
+
+    &:active {
+        background: var(--primary-pressed);
+        // background: red;
+    }
+
+    &:disabled {
+        background: var(--surface-deep);
+        color: var(--text-icon-muted);
+
+        font-family: Inter;
+
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+}
+
+.primary-filled-focus-mixin() {
+    // Using :focus-visible so that it's only for keyboard focus.
+    // Regular :focus overrides the :active psuedo-class.
+    &:focus-visible {
+        @outer-border-color: var(--primary-default, #1373D9);
+        @background-color: var(--primary-hover, #175FB6);
+        .double-outline(
+            @outer-border-color,
+            white,
+            @background-color
+        );
+    }
+}
+
+.primary-outline-mixin() {
+    .outline(linear-gradient(-13deg, #58C9FF, #175FB6));
+
+    &:hover {
+        // Using named param for 3rd arg, since we're skipping the second one.
+        .outline(var(--primary-hover), @border-width: 0.125rem);
+    }
+
+    &:active {
+        .outline(var(--primary-pressed), rgba(88, 201, 255, 0.10), 0.125rem);
+    }
+
+    &:disabled {
+        .outline(var(--surface-border));
+    }
+}
+
+.brand-filled-icon-mixin() {
+    @border-color: linear-gradient(-13deg, #A0E1FF, #2B8CDC);
+    @background-color: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%);
+    .outline(@border-color, @background-color);
+    color: var(--button-text-color);
+
+    &:hover {
+        @border-color: #A0E1FF;
+        @background-color: var(--primary-hover);
+        .outline(@border-color, @background-color);
+        color: var(--surface-base);
+    }
+
+    &:active {
+        @border-color: #A0E1FF;
+        @background-color: var(--primary-pressed);
+        .outline(@border-color, @background-color);
+        color: var(--surface-base);
+    }
+}
+
+.brand-filled-icon-focus-mixin() {
+    // Using :focus-visible so that it's only for keyboard focus.
+    // Regular :focus overrides the :active psuedo-class.
+    &:focus-visible {
+        @outer-border-color: var(--primary-default, #1373D9);
+        @background-color: var(--primary-hover);
+        .double-outline(
+            @outer-border-color,
+            white,
+            @background-color
+        );
+    }
+}
+
+.brand-outline-mixin() {
+    @border-color: linear-gradient(-13deg, #A0E1FF, #2B8CDC);
+    .outline(@border-color);
+    color: #1A202C;
+    text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
+
+    &:hover {
+        .outline(@border-color, var(--surface-base));
+        color: #1A202C;
+        text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
+    }
+
+    &:active {
+        // .outline(@border-color, var(--surface-lower));
+        // .outline(@border-color, red);
+        color: #1A202C;
+        text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
+    }
+}
+
+.brand-outline-focus-mixin() {
+    &:focus-visible {
+        @background-color: var(--surface-base);
+        .spaced-double-outline(
+            #1373D9,
+            @border-color, // inner border
+            @background-color,
+            2px,     // outer border width
+            2px,     // inner border width
+            2px      // gap between borders
+        );
+
+        color: #1A202C;
+        text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
+    }
+}
+
+.destructive-filled-mixin() {
+    .filled(var(--critical-default));
+
+    &:hover {
+        .filled(var(--critical-hover));
+    }
+
+    &:active {
+        .filled(var(--critical-pressed));
+    }
+
+    &:disabled {
+        .filled(var(--surface-deep));
+        color: var(--text-icon-muted);
+        text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
+    }
+}
+
+.destructive-outline-mixin() {
+    .outline(var(--critical-default));
+    color: var(--critical-default);
+
+    &:hover {
+        .outline(var(--critical-hover));
+        color: var(--critical-hover);
+    }
+
+    &:active {
+        .outline(var(--critical-pressed));
+        color: var(--critical-pressed);
+    }
+
+    &:disabled {
+        .outline(var(--surface-border));
+        color: var(--text-icon-muted);
+        text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
+    }
+}
+
+
+// ================================================================================
+// Mixin classes for filled and outline buttons.
+//
+.filled(@background-color, @font-color: var(--font-color)) {
+    background: @background-color;
+    color: @font-color;
+}
+
+.outline(@border-color, @background-color: transparent, @border-width: var(--border-width)) {
+    position: relative;
+
+    border: 0;
+    background: @background-color;
+    color: inherit;
+
+    // Gradient ring only
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+
+        /* the gradient or color that will become the border ring */
+        background: @border-color;
+
+        /* ring thickness is controlled by padding on the pseudo-element */
+        box-sizing: border-box;
+        padding: @border-width;
+
+        /* punch out the center on the pseudo-element only */
+        -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;     /* Chrome/Safari/Edge */
+        mask-composite: exclude; /* Firefox */
+
+        pointer-events: none; /* clicks go to the button */
+    }
+}
+
+.double-outline(@outer-border-color, @inner-border-color, @background-color: transparent, @outer-width: 2px, @inner-width: 2px) {
+    outline: none;
+
+    position: relative;
+    border: 0;
+    background: @background-color;
+    color: inherit;
+
+    // Outer border ring
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 0.625rem;
+        background: @outer-border-color;
+        box-sizing: border-box;
+        padding: @outer-width;
+
+        -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    // Inner border ring
+    &::after {
+        content: "";
+        position: absolute;
+        inset: @outer-width; /* Start where outer border ends */
+        border-radius: inherit;
+        background: @inner-border-color;
+        box-sizing: border-box;
+        padding: @inner-width;
+
+        -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+
+        pointer-events: none;
+        z-index: 2;
+    }
+}
+
+.spaced-double-outline(@outer-border-color, @inner-border-color, @background-color: transparent, @outer-width: 2px, @inner-width: 2px, @gap: 2px) {
+    outline: none;
+
+    position: relative;
+    border: 0;
+    background: @background-color;
+    color: inherit;
+
+    // Outer border ring
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: @outer-border-color;
+        box-sizing: border-box;
+        padding: @outer-width;
+
+        -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    // Inner border ring (with gap)
+    &::after {
+        content: "";
+        position: absolute;
+        inset: (@outer-width + @gap); /* Gap = outer border + space + inner border position */
+        border-radius: inherit;
+        background: @inner-border-color;
+        box-sizing: border-box;
+        padding: @inner-width;
+
+        -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+
+        pointer-events: none;
+        z-index: 2;
+    }
+}
