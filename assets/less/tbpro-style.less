@@ -305,10 +305,7 @@ section#features {
 
 section#reasons {
     background: #fff;
-
     padding-block: @space-36 @space-24;
-
-
     display: grid;
     row-gap: @space-24;
     counter-reset: reason;
@@ -317,27 +314,73 @@ section#reasons {
         margin: 0;
         color: var(--header-color);
         text-align: center;
-
         .brand-headline-h1-sm();
 
         @media (min-width: @md) {
             .brand-headline-h1-lg();
         }
+
+        @media (min-width: @lg) {
+            grid-column: 1 / -1; // span all columns
+        }
+    }
+
+    @media (min-width: @lg) {
+        // For desktop, create parent grid for counter, reason, and explanation.
+        grid-template-columns: auto auto 58%;
+        column-gap: @space-18;
+        row-gap: @space-36;
+    }
+
+    // Get rid of the additional padding for very wide viewports.
+    // The value 1536px was found via trial and error, though it's probably the
+    // max width + the calculated padding.
+    @media (min-width: 1536px) {
+        // overrides the padding for elements matching #main-content > *
+        padding-inline: unset !important;
+        // Opt into default value via `unset` instead of setting to `0`.
     }
 
     .reason {
-        counter-increment: reason;
+        --gap-size: @space-18;
+
         display: grid;
         grid-template-columns: auto 1fr;
         column-gap: @space-18;
         align-items: start;
         position: relative;
 
+        // counter-increment on this element for mobile only.
+        @media (max-width: @lg - 1px) {
+            counter-increment: reason;
+        }
+
+        // Horizontal border between rows
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: calc(var(--gap-size) / -2);
+            height: 1px;
+            background: #d9d9de;
+
+            @media (min-width: @lg) {
+                bottom: calc(@space-36 / -2); // Center in parent's row-gap
+            }
+        }
+
+        @media (min-width: @lg) {
+            grid-column: 1 / -1; // Span all parent columns
+            grid-template-columns: subgrid; // Inherit parent's three columns
+        }
+
+        // This is our counter.
         &::before {
             padding-top: 0.1875rem;
             content: counter(reason, decimal-leading-zero);
             font-variant-numeric: tabular-nums;
-            margin-inline-end: @space-18;
+            margin-inline-end: var(--gap-size);
             grid-column: 1;
             color: #737584;
             .brand-headline-h3-semibold-small();
@@ -345,29 +388,49 @@ section#reasons {
             @media (min-width: @lg) {
                 .brand-list-indicator-lg();
                 padding-top: 0.3rem;
+
+                // Handle the increment for desktop, b/c the children
+                // are now participating in parent grid.
+                counter-increment: reason;
             }
         }
+
         .reason-content {
             grid-column: 2;
             row-gap: @space-9;
 
-        }
-        .reason-title {
-            .brand-headline-h2-xs();
-            color: #4c4d58;
-            margin: 0;
-
             @media (min-width: @lg) {
-                .brand-headline-h2-lg();
+                grid-column: 2 /4; // Span columns 2 and 3
+                display: grid;
+                grid-template-columns: subgrid;
+            }
+
+            .reason-title {
+                .brand-headline-h2-xs();
+                color: #4c4d58;
+                margin: 0;
+
+                @media (min-width: @lg) {
+                    .brand-headline-h2-lg();
+                    grid-column: 1; // First col of .reason-content's subgrid
+                }
+            }
+
+            p {
+                .web-body-small();
+                color: #4c4d58;
+
+                @media (min-width: @md) {
+                    .web-body-default();
+                }
+
+                @media (min-width: @lg) {
+                    grid-column: 2; // Second col of .reason-content's subgrid
+                    margin: 0;
+                }
             }
         }
-        p {
-            .web-body-small();
-            color: #4c4d58;
-            @media (min-width: @md) {
-                .web-body-default();
-            }
-        }
+
     }
 }
 
