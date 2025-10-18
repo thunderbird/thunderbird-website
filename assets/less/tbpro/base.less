@@ -1,6 +1,7 @@
 // Base
 @import "fonts.less";
 @import "colours.less";
+@import "buttons.less";
 
 // ------------------------------------------------------------
 // border-box, everywhere
@@ -226,7 +227,6 @@ footer#tb-footer {
 
         box-shadow: 0 @space-9 @space-24 0 rgba(0, 0, 0, 0.1);
 
-        padding-block: @space-6;
         padding-inline: @space-18 0.875rem;
 
         height: 3rem;
@@ -336,7 +336,8 @@ footer#tb-footer {
             }
 
             li {
-                display: block;
+                display: flex;
+
                 padding-inline: @gutter;
                 margin-block: @gutter;
 
@@ -352,6 +353,10 @@ footer#tb-footer {
 
                     &:visited {
                         color: var(--text-icon-base);
+                    }
+
+                    @media (min-width: @lg) {
+                        align-self: center;
                     }
                 }
 
