@@ -21,7 +21,8 @@
 
 // ================================================================================
 // Concrete classes for each kind of button
-//
+// Uses mixins for button-specific styling to correctly apply pseudo-elements
+// and element states.
 .button-primary-filled-label:extend(.abstract-button-default) {
     .mixin-primary-filled();
 }
