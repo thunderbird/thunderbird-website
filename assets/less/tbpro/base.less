@@ -1,4 +1,5 @@
 // Base
+@import "variables.less";
 @import "fonts.less";
 @import "colours.less";
 @import "buttons.less";
@@ -13,12 +14,11 @@
     --font-content: 'Inter', sans-serif;
     --font-titles: 'Metropolis', sans-serif;
     --text-icon-base: #EEEEF0;
-    --nav-bg-color: rgba(86, 106, 146, 1.0);
 }
 
 body {
-    font-family: var(--font-content);
     color: var(--color-text-base);
+    font-family: var(--font-content);
 }
 
 
@@ -47,24 +47,6 @@ body {
 @space-192: 12rem;
 @space-max: 18rem;
 
-// Reusables
-button.link-button {
-    cursor: pointer;
-    padding: @space-6 @space-9;
-    margin: 0;
-    color: var(--text-icon-base);
-
-    border: 1px solid transparent;
-    border-radius: @space-6;
-    background:
-        linear-gradient(var(--nav-bg-color), var(--nav-bg-color)) padding-box,
-        linear-gradient(133deg, #58c9ff 19%, #6a6b94) border-box;
-
-    text-transform: uppercase;
-    font-size: .75rem;
-}
-
-
 // mixins
 .mixin-background-image(@base-path) {
     // Fallback for older browsers.
@@ -87,8 +69,8 @@ button.link-button {
 #site-header,
 #site-nav,
 #moz-nav {
-    max-width: @lg;
     margin-inline: auto;
+    max-width: @lg;
 }
 
 
@@ -98,12 +80,10 @@ button.link-button {
 // Footer
 // ------------------------------------------------------------
 footer#tb-footer {
-
-    // background-image: linear-gradient(134deg, #1b2128 37%, #171b24 56%);
     background-image: linear-gradient(168deg, #1b2128 1%, #171b24 45%);
-    padding-inline: @gutter;
-    padding-block: @space-36;
     display: grid;
+    padding-block: @space-36;
+    padding-inline: @gutter;
 
     @media (min-width: @md) {
         padding-inline: @space-144;
@@ -125,15 +105,13 @@ footer#tb-footer {
     #moz-link-home svg { width: 150px; height: 36px;}
 
     #site-nav {
+        align-items: start;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         display: grid;
+        gap: @gutter;
         grid-template: 1fr auto / auto;
         padding-bottom: @space-24;
-        align-items: start;
-        gap: @gutter;
-
         width: 100%;
-
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
         .site-nav-links {
             display: flex;
@@ -141,32 +119,30 @@ footer#tb-footer {
             gap: @space-24;
 
             a {
-                text-transform: uppercase;
                 font-size: 0.75rem;
+                text-transform: uppercase;
             }
         }
 
         @media (min-width: @md) {
-            grid-template: 1fr / 1fr auto;
             align-items: center;
-
+            grid-template: 1fr / 1fr auto;
         }
     }
 
     #moz-nav {
         display: grid;
         gap: @gutter;
-        padding-top: @space-24;
         padding-bottom: @space-9;
-
+        padding-top: @space-24;
 
         .moz-nav-links {
-            margin-top: @space-6;
             display: grid;
+            gap: @space-9;
+            grid-auto-flow: column;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(3, auto);
-            grid-auto-flow: column;
-            gap: @space-9;
+            margin-top: @space-6;
 
             a {
                 font-size: .75rem;
@@ -212,26 +188,15 @@ footer#tb-footer {
 // Header (nav bar)
 // ------------------------------------------------------------
 #site-header {
-    padding-top: @space-16;
     margin-block: @gutter @space-36;
+    padding-top: @space-16;
 
     @media (min-width: @lg) {
         padding-top: @space-24;
     }
 
     #site-header-nav {
-        display: flex;
         align-items: center;
-        justify-content: space-between;
-        position: relative;
-
-        box-shadow: 0 @space-9 @space-24 0 rgba(0, 0, 0, 0.1);
-
-        padding-inline: @space-18 0.875rem;
-
-        height: 3rem;
-        border: 1px solid transparent;
-        border-radius: 1rem;
         background:
             linear-gradient(to bottom,
                             #262d3c 0%,
@@ -240,13 +205,20 @@ footer#tb-footer {
                             #1c222e 75%,
                             #181d26 100%) padding-box,
             linear-gradient(to bottom, #313845, #1c2633) border-box;
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        box-shadow: 0 @space-9 @space-24 0 rgba(0, 0, 0, 0.1);
+        display: flex;
+        height: 3rem;
+        justify-content: space-between;
+        padding-inline: @space-18 0.875rem;
+        position: relative;
 
         @media (min-width: @lg) {
-            height: 4rem;
-
             display: grid;
-            grid-template-rows: 1fr;
+            height: 4rem;
             grid-template-columns: auto auto auto;
+            grid-template-rows: 1fr;
 
             #nav-link-home {
                 grid-column-start: 1;
@@ -257,10 +229,6 @@ footer#tb-footer {
 
 
         #nav-menu {
-            display: grid;
-            grid-template-rows: 0fr;
-            transition: grid-template-rows 0.1s ease-out;
-
             // These are the same colors as #site-header-nav,
             // but with the direction reversed.
             background: linear-gradient(to top,
@@ -270,11 +238,14 @@ footer#tb-footer {
                             #1c222e 75%,
                             #181d26 100%);
 
-            position: absolute;
-            top: @space-48;
-            right: @space-18;
-
             border-radius: 0 0 @space-9 @space-9;
+            display: grid;
+            grid-template-rows: 0fr;
+
+            position: absolute;
+            right: @space-18;
+            top: @space-48;
+            transition: grid-template-rows 0.1s ease-out;
 
             @media (min-width: @lg) {
                 background: unset;
@@ -288,8 +259,8 @@ footer#tb-footer {
 
 
                 position: relative;
-                top: unset;
                 right: unset;
+                top: unset;
 
                 .nav-item-join-button {
                     align-self: flex-end;
@@ -299,9 +270,9 @@ footer#tb-footer {
 
             ul {
                 list-style: none;
-                padding: 0;
                 margin: 0;
                 overflow: hidden;
+                padding: 0;
                 li:first-child {
                     // This is a dummy element that will occupy a grid column.
                     // It should be hidden for narrow viewports.
@@ -311,15 +282,16 @@ footer#tb-footer {
                 @media (min-width: @lg) {
                     // Use subgrid so that we can overlap with the parent grid row.
                     display: grid;
-                    grid-template-rows: subgrid;
 
                     // Take up the entire width.
                     grid-column: 1 / -1;
 
+                    grid-template-rows: subgrid;
+
                     // Use auto for the middle three columns so that they
                     // are only as wide as their content.
                     // They'll be moved to the center because the leftmost and rightmost
-                    // columns are
+                    // columns are empty.
                     grid-template-columns: 1fr auto auto auto 1fr;
 
                     li:first-child {
@@ -337,19 +309,14 @@ footer#tb-footer {
 
             li {
                 display: flex;
-
-                padding-inline: @gutter;
                 margin-block: @gutter;
+                padding-inline: @gutter;
 
                 a {
+                    .nav-item-desktop();
                     color: var(--text-icon-base);
                     text-decoration: none;
-
                     text-transform: uppercase;
-                    font-family: 'Metropolis', sans-serif;
-                    font-weight: 600;
-                    font-size: 0.8125rem;
-                    letter-spacing: 0.05em; /* This is the 5% tracking */
 
                     &:visited {
                         color: var(--text-icon-base);
@@ -360,21 +327,23 @@ footer#tb-footer {
                     }
                 }
 
+                button {
+                    color: var(--text-icon-base);
+                    &:hover {
+                        color: var(--colour-ti-base);
+                    }
+                }
             }
         }
 
         .hamburger-btn {
-            cursor: pointer;
-
-            height: 2rem;
-            width: 2rem;
-
-            padding: 0;
-            margin: 0;
-
             background-color: transparent;
             border: 0;
-
+            cursor: pointer;
+            height: 2rem;
+            margin: 0;
+            padding: 0;
+            width: 2rem;
             @media (min-width: @lg) {
                 display: none;
             }
@@ -387,13 +356,11 @@ footer#tb-footer {
             gap: 0.2rem;
 
             span {
-                margin: auto;
-                width: 50%;
-                height: 100%;
-                // border-bottom: 2px solid var(--hamburger-foreground-inactive);
                 border-bottom: 2px solid #fff;
-
+                height: 100%;
+                margin: auto;
                 min-height: 1px;
+                width: 50%;
             }
         }
 
@@ -424,8 +391,8 @@ footer#tb-footer {
 
 
 .top-gradient {
-    background-color: #18181b;
     .mixin-background-image('/media/img/thunderbird/tbpro/top-gradient-background');
+    background-color: #18181b;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
