@@ -40,7 +40,7 @@
 
 .button-brand-filled-label-icon:extend(.abstract-button-brand-default) {
     .mixin-brand-filled-icon();
-    .mixin-brand-filled-icon-focus();
+    // .mixin-brand-filled-icon-focus();
 }
 
 .button-brand-outline-label:extend(.abstract-button-brand-default) {
@@ -129,19 +129,17 @@
 }
 
 .abstract-button-brand-default:extend(.abstract-button-default) {
+    .mixin-font-styles(
+        @family-inter,
+        600,
+        0.8125rem,
+        normal,
+        0.33px
+    );
+
+    color: var(--colour-ti-base);
     padding: 1rem 1.5rem;
-
-    font-size:  0.8125rem;
-    color: var(--text-icon-base, #1A202C);
     text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
-
-    /* web/label/xsmall */
-    font-family: Inter;
-
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 0.33px;
     text-transform: uppercase;
 }
 
@@ -209,24 +207,37 @@
 }
 
 .mixin-brand-filled-icon() {
-    @border-color: linear-gradient(-13deg, #A0E1FF, #2B8CDC);
+
+    @border-color: linear-gradient(116.63deg, #A0E1FF -13.89%, #2B8CDC 37.7%);
     @background-color: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%);
-    .outline(@border-color, @background-color);
-    color: var(--button-text-color);
+    .outline(@border-color, @background-color, @border-width: 1px);
 
-    &:hover {
-        @border-color: #A0E1FF;
-        @background-color: var(--primary-hover);
-        .outline(@border-color, @background-color);
-        color: var(--surface-base);
+    &:hover:enabled {
+      background: linear-gradient(var(--colour-primary-hover), var(--colour-primary-hover));
+      color: var(--colour-neutral-base);
     }
 
-    &:active {
-        @border-color: #A0E1FF;
-        @background-color: var(--primary-pressed);
-        .outline(@border-color, @background-color);
-        color: var(--surface-base);
+    &:active:enabled {
+      background: linear-gradient(var(--colour-primary-pressed), var(--colour-primary-pressed));
+      color: var(--colour-neutral-base);
     }
+
+    &:focus-visible {
+        background: linear-gradient(var(--colour-primary-hover), var(--colour-primary-hover));
+        color: var(--colour-neutral-base);
+        outline: 0.125rem solid var(--colour-primary-default);
+        outline-offset: 0.125rem;
+    }
+
+    &:disabled {
+        @background-color: var(--colour-neutral-border);
+        @noop-color: #fff;
+        .outline(@noop-color, @background-color, @border-width: 0);
+
+        color: var(--colour-ti-muted);
+        cursor: not-allowed;
+    }
+
 }
 
 .mixin-brand-filled-icon-focus() {
