@@ -40,17 +40,14 @@
 
 .button-brand-filled-label-icon:extend(.abstract-button-brand-default) {
     .mixin-brand-filled-icon();
-    // .mixin-brand-filled-icon-focus();
 }
 
 .button-brand-outline-label:extend(.abstract-button-brand-default) {
     .mixin-brand-outline();
-    .mixin-brand-outline-focus();
 }
 
 .button-brand-small-outline-label:extend(.abstract-button-brand-small) {
     .mixin-brand-outline();
-    .mixin-brand-outline-focus();
 }
 
 .button-destructive-filled-label:extend(.abstract-button-default) {
@@ -241,38 +238,52 @@
 
 }
 
-.mixin-brand-filled-icon-focus() {
-    // Using :focus-visible so that it's only for keyboard focus.
-    // Regular :focus overrides the :active psuedo-class.
-    &:focus-visible {
-        @outer-border-color: var(--primary-default, #1373D9);
-        @background-color: var(--primary-hover);
-        .double-outline(
-            @outer-border-color,
-            white,
-            @background-color
-        );
-    }
-}
+// .mixin-brand-filled-icon-focus() {
+//     // Using :focus-visible so that it's only for keyboard focus.
+//     // Regular :focus overrides the :active psuedo-class.
+//     &:focus-visible {
+//         @outer-border-color: var(--primary-default, #1373D9);
+//         @background-color: var(--primary-hover);
+//         .double-outline(
+//             @outer-border-color,
+//             white,
+//             @background-color
+//         );
+//     }
+// }
 
 .mixin-brand-outline() {
-    @border-color: linear-gradient(-13deg, #A0E1FF, #2B8CDC);
+
+    @border-color: linear-gradient(98.98deg, #58C9FF 19.15%, #6E6F9B 75.77%);
     .outline(@border-color);
     color: #1A202C;
     text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
 
     &:hover {
-        .outline(@border-color, var(--surface-base));
-        color: #1A202C;
-        text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
+        .outline(@border-color, #f2f2f2);
+        color: var(--colour-ti-base-light);
     }
 
     &:active {
-        // .outline(@border-color, var(--surface-lower));
-        // .outline(@border-color, red);
-        color: #1A202C;
-        text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
+        .outline(@border-color, #e3e3e3);
+        color: var(--colour-ti-base-light);
     }
+
+    &:focus {
+        @outer-border: var(--colour-primary-default);
+        @inner-border: linear-gradient(98.98deg, #58C9FF 19.15%, #6E6F9B 75.77%);
+        // @background: var(--surface-base, #FEFFFF);
+
+        .spaced-double-outline(@outer-border, @inner-border, @gap: 2.5px);
+        color: var(--colour-ti-base);
+    }
+
+    &:disabled {
+        .outline(var(--colour-neutral-border));
+        color: #737584;
+        cursor: not-allowed;
+    }
+
 }
 
 .mixin-brand-outline-focus() {
