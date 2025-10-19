@@ -1,145 +1,288 @@
-:root {
-    // actions, copied from TFAndroidDark
-    --color-on-primary: #003549;
-    --color-on-secondary: #003352;
+// https://github.com/thunderbird/services-ui/blob/main/src/assets/styles/colours.css
+html {
+  /*
+   * Bolt Colours
+   * Reference: https://bolt.thunderbird.net/8b179dbfd/p/61e4c7-color
+   */
+  --colour-user-red: #E53935;
+  --colour-user-orange: #FF8C00;
+  --colour-user-yellow: #F4C430;
+  --colour-user-graphite: #B0B0B0;
+  --colour-user-green: #34C759;
+  --colour-user-blue: #0A84FF;
+  --colour-user-purple: #7753CC;
+  --colour-user-pink: #E91E63;
 
-    // Surface
-    --color-surface-base: #1a202c;
-    --color-surface-raised: #262d3b;
-    --color-surface-lower: #18181b;
-    --color-surface-subtle: #262d3b;
-    --color-surface-deep: #3d4d67;
-    --color-surface-border: #3d4d67;
-    --color-surface-border-intense: #5e7799;
+  /*
+   * Reference:  https://www.figma.com/design/3pWlMatoNdA2BT3BPVziFL/
+   */
 
-    // Primary
-    --color-primary-soft: #262c40;
-    --color-primary-default: #58c9ff;
-    --color-primary-hover: #32aeff;
-    --color-primary-pressed: #1b90f5;
+  /*
+   * Generic Colours
+   * Prefer the named colours over these!
+   */
+  --colour-neutral-900: #26272a;
 
-    // Secondary
-    --color-secondary-soft: #3a0764;
-    --color-secondary-default: #f5e8ff;
-    --color-secondary-hover: #ecd5ff;
-    --color-secondary-pressed: #ddb4fe;
+  /*
+   * Neutral
+   * Applied frequently for backgrounds, surfaces, dividers, and outlines.
+   */
+  --colour-neutral-base: #feffff;
+  --colour-neutral-lower: #f7f7f7;
+  --colour-neutral-raised: var(--colour-neutral-base);
+  --colour-neutral-subtle: var(--colour-neutral-lower);
+  --colour-neutral-border: #e4e4e7;
+  --colour-neutral-border-intense: #777580;
 
-    // Success
-    --color-success-soft: #082b16;
-    --color-success-default: #defae7;
-    --color-success-hover: #c0f2cf;
-    --color-success-pressed: #81d4b5;
+  /*
+   * Primary
+   * Applied frequently to surfaces highlight actions & information.
+   */
+  --colour-primary-soft: #f0f8ff;
+  --colour-primary-default: #1373d9;
+  --colour-primary-default-light: #1373d9; /* No override */
+  --colour-primary-default-dark: #58c9ff; /* No override */
+  --colour-primary-hover: #175fb6;
+  --colour-primary-hover-light: #175fb6; /* No override */
+  --colour-primary-pressed: #19518f;
 
-    // Warning
-    --color-warning-soft: #423606;
-    --color-warning-default: #fef2c3;
-    --color-warning-hover: #fee78a;
-    --color-warning-pressed: #fdd847;
+  /*
+   * Secondary
+   * Applied sparingly to highlight information.
+   */
+  --colour-secondary-soft: #faf5ff;
+  --colour-secondary-default: #6b21a8;
+  --colour-secondary-hover: #571c87;
+  --colour-secondary-pressed: #3a0764;
 
-    // Critical
-    --color-critical-soft: #7f1d1d;
-    --color-critical-default: #fca5a5;
-    --color-critical-hover: #f87171;
-    --color-critical-pressed: #ef4444;
+  /*
+   * Success
+   * Applied sparingly to show positive feedback/status.
+   */
+  --colour-success-soft: #f4f9f4;
+  --colour-success-default: #1d783b;
+  --colour-success-hover: #1c5f32;
+  --colour-success-pressed: #194e2c;
 
-    // Text + Icon
-    --color-text-base: #eeeef0;
-    --color-text-secondary: #e4e4e7;
-    --color-text-muted: #7f94ac;
-    --color-text-highlight: #58c9ff;
-    --color-text-warning: #fee78a;
-    --color-text-critical: #ef4444;
-    --color-text-sucess: #55d37e;
+  /*
+   * Warning
+   * Applied sparingly to show warning feedback/status.
+   * Notifications/messaging
+   */
+  --colour-warning-soft: #fefae8;
+  --colour-warning-default: #facc15;
+  --colour-warning-hover: #eabd08;
+  --colour-warning-pressed: #caa204;
 
-    --color-icon-base: #eeeef0;
-    --color-icon-secondary: #e4e4e7;
-    --color-icon-muted: #7f94ac;
-    --color-icon-highlight: #58c9ff;
-    --color-icon-warning: #fee78a;
-    --color-icon-critical: #ef4444;
-    --color-icon-sucess: #55d37e;
+  /*
+   * Danger
+   * Applied sparingly to show negative feedback/status or dangerous actions.
+   * Errors
+   */
+  --colour-danger-soft: #fef2f2;
+  --colour-danger-default: #991b1b;
+  --colour-danger-hover: #7f1d1d;
+  --colour-danger-pressed: #450a0a;
 
+  /*
+   * Text+Icon
+   * Applied frequently for text and icons.
+   */
+  --colour-ti-base: #1a202c;
+  --colour-ti-base-light: #1a202c; /* No override */
+  --colour-ti-base-dark: #eeeef0; /* No override */
+  --colour-ti-secondary: #4c4d58;
+  --colour-ti-muted: #737584;
+  --colour-ti-highlight: #1373d9;
+  --colour-ti-warning: #713f12;
+  --colour-ti-critical: #dc2626;
+  --colour-ti-success: #1d783b;
 
-    // Accent
-    --color-teal: #a3ece3;
-    --color-blue: #58c9ff;
-    --color-purple: #8022ce;
-    --color-orange: #fec18a;
-    --color-pink: #fbd3f6;
-    --color-ink: #c3cade;
+  /*
+   * Accent Colours
+   * Used for accents, gradients, highlights.
+   * *Do not use with text
+   */
+  --colour-accent-teal: #25a6a0;
+  --colour-accent-blue: #37ADF9;
+  --colour-accent-purple: #ae55f7;
+  --colour-accent-orange: #ea7308;
+  --colour-accent-pink: #e247c4;
+  --colour-accent-gray: #6e6f9b;
+
+  /*
+   * Brand Colours
+   * Appointment
+   */
+  --colour-apmt-soft: #f3f9fc;
+  --colour-apmt-primary: #008080;
+  --colour-apmt-primary-hover: #066769;
+  --colour-apmt-primary-pressed: #0a5757;
+  --colour-apmt-secondary: #81d4b5;
+  --colour-apmt-accent-1: #a3ece3;
+  --colour-apmt-accent-2: #03afd7;
+
+  /*
+   * Brand Colours
+   * Send
+   */
+  --colour-send-soft: #fef7ec;
+  --colour-send-primary: #f09d38;
+  --colour-send-primary-hover: #f09d38;
+  --colour-send-primary-pressed: #f09d38;
+  --colour-send-primary-secondary: #aa6000;
+  --colour-send-primary-accent-1: #1f8ddb;
+  --colour-send-primary-accent-2: #1f8ddb;
+
+  &.dark {
+    /*
+     * Neutral
+     * Applied frequently for backgrounds, surfaces, dividers, and outlines.
+     */
+    --colour-neutral-base: #1a202c;
+    --colour-neutral-lower: #18181b;
+    --colour-neutral-raised: #262d3b;
+    --colour-neutral-subtle: var(--colour-neutral-raised);
+    --colour-neutral-border: #303a4a;
+    --colour-neutral-border-intense: #3d4d67;
+
+    /*
+     * Primary
+     * Applied frequently to surfaces highlight actions & information.
+     */
+    --colour-primary-soft: #262c40;
+    --colour-primary-default: #58c9ff;
+    --colour-primary-hover: #32aeff;
+    --colour-primary-pressed: #1b90f5;
+    /*--primary-text: #1A202C; // No matching light-mode variable! */
+
+    /*
+     * Secondary
+     * Applied sparingly to highlight information.
+     */
+    --colour-secondary-soft: #3a0764;
+    --colour-secondary-default: #f5e8ff;
+    --colour-secondary-hover: #ecd5ff;
+    --colour-secondary-pressed: #ddb4fe;
+
+    /*
+     * Success
+     * Applied sparingly to show positive feedback/status.
+     */
+    --colour-success-soft: #082b16;
+    --colour-success-default: #defae7;
+    --colour-success-hover: #c0f2cf;
+    --colour-success-pressed: #8ee7aa;
+
+    /*
+     * Warning
+     * Applied sparingly to show warning feedback/status.
+     * Notifications/messaging
+     */
+    --colour-warning-soft: #423606;
+    --colour-warning-default: #fef2c3;
+    --colour-warning-hover: #fee78a;
+    --colour-warning-pressed: #fdd847;
+
+    /*
+     * Danger
+     * Applied sparingly to show negative feedback/status or dangerous actions.
+     * Errors
+     */
+    --colour-danger-soft: #7f1d1d;
+    --colour-danger-default: #fee2e2;
+    --colour-danger-hover: #fecaca;
+    --colour-danger-pressed: #fca5a5;
+
+    /*
+     * Text+Icon
+     * Applied frequently for text and icons.
+     */
+    --colour-ti-base: #eeeef0;
+    --colour-ti-secondary: #d9d9de;
+    --colour-ti-muted: #7f94ac;
+    --colour-ti-highlight: #58c9ff;
+    --colour-ti-warning: #fee78a;
+    --colour-ti-critical: #ef4444;
+    --colour-ti-success: #55d37e;
+
+    /*
+     * Accent Colours
+     * Used for accents, gradients, highlights.
+     * *Do not use with text
+     */
+    --colour-accent-teal: #a3ece3;
+    --colour-accent-blue: #58c9ff;
+    --colour-accent-purple: #8022ce;
+    --colour-accent-orange: #fec18a;
+    --colour-accent-pink: #fbd3f6;
+    --colour-accent-gray: #c3cade;
+
+    /*
+     * Brand Colours
+     * Appointment
+     */
+    --colour-apmt-soft: #152f3c;
+    --colour-apmt-primary: #a3ece3;
+    --colour-apmt-primary-hover: #6ddbd1;
+    --colour-apmt-primary-pressed: #3ec3ba;
+    --colour-apmt-secondary: #25a6a0;
+    --colour-apmt-accent-1: #a3ece3;
+    --colour-apmt-accent-2: #58c9ff;
+
+    /*
+     * Brand Colours
+     * Send
+     */
+    --colour-send-soft: #411107;
+    --colour-send-primary: #f09d38;
+    --colour-send-primary-hover: #f09d38;
+    --colour-send-primary-pressed: #f09d38;
+    --colour-send-primary-secondary: #aa6000;
+    --colour-send-primary-accent-1: #1f8ddb;
+    --colour-send-primary-accent-2: #1f8ddb;
+  }
+
+  /*
+  * Brand Colours
+  * Thunderbird
+  * The fallback if no service is set.
+  */
+  --colour-service-soft: var(--colour-primary-soft);
+  --colour-service-primary: var(--colour-primary-default);
+  --colour-service-primary-hover: var(--colour-primary-hover);
+  --colour-service-primary-pressed: var(--colour-primary-pressed);
+  --colour-service-secondary: var(--colour-secondary-default);
+  --colour-service-accent-1: var(--colour-accent-purple);
+  --colour-service-accent-2: var(--colour-accent-teal);
+
+  &[data-tbpro-service='apmt'] {
+    --colour-service-soft: var(--colour-apmt-soft);
+    --colour-service-primary: var(--colour-apmt-primary);
+    --colour-service-primary-hover: var(--colour-apmt-primary-hover);
+    --colour-service-primary-pressed: var(--colour-apmt-primary-pressed);
+    --colour-service-secondary: var(--colour-apmt-secondary);
+    --colour-service-accent-1: var(--colour-apmt-accent-1);
+    --colour-service-accent-2: var(--colour-apmt-accent-2);
+  }
+  &[data-tbpro-service='send'] {
+    --colour-service-soft: var(--colour-primary-soft);
+    --colour-service-primary: var(--colour-primary-default);
+    --colour-service-primary-hover: var(--colour-primary-hover);
+    --colour-service-primary-pressed: var(--colour-primary-pressed);
+    --colour-service-secondary: var(--colour-neutral-subtle);
+    --colour-service-accent-1: var(--colour-send-primary-accent-1);
+    --colour-service-accent-2: var(--colour-send-primary-accent-2);
+  }
+  /*
+  &[data-tbpro-service='send'] {
+    --colour-service-soft: var(--colour-send-soft);
+    --colour-service-primary: var(--colour-send-primary);
+    --colour-service-primary-hover: var(--colour-send-primary-hover);
+    --colour-service-primary-pressed: var(--colour-send-primary-pressed);
+    --colour-service-secondary: var(--colour-send-primary-secondary);
+    --colour-service-accent-1: var(--colour-send-primary-accent-1);
+    --colour-service-accent-2: var(--colour-send-primary-accent-2);
+  }
+  */
 }
-
-// Disabling light mode values
-// :root {
-//     // actions, copied from TFAndroidLight
-//     --color-on-primary: #ffffff;
-//     --color-on-secondary: #ffffff;
-
-//     // Surface
-//     --color-surface-base: #feffff;
-//     --color-surface-raised: #feffff;
-//     --color-surface-lower: #f7f7f7;
-//     --color-surface-subtle: #f7f7f7;
-//     --color-surface-deep: #d9d9de;
-//     --color-surface-border: #d9d9de;
-//     --color-surface-border-intense: #91939f;
-
-//     // Primary
-//     --color-primary-soft: #f0f8ff;
-//     --color-primary-default: #1373d9;
-//     --color-primary-hover: #175fb6;
-//     --color-primary-pressed: #19518f;
-
-//     // Secondary
-//     --color-secondary-soft: #faf5ff;
-//     --color-secondary-default: #6b21a8;
-//     --color-secondary-hover: #571c87;
-//     --color-secondary-pressed: #3a0764;
-
-//     // Success
-//     --color-success-soft: #f4f9f4;
-//     --color-success-default: #1d783b;
-//     --color-success-hover: #1c5f32;
-//     --color-success-pressed: #194e2c;
-
-//     // Warning
-//     --color-warning-soft: #fefae8;
-//     --color-warning-default: #facc15;
-//     --color-warning-hover: #eabd08;
-//     --color-warning-pressed: #caa204;
-
-//     // Critical
-//     --color-critical-soft: #fef2f2;
-//     --color-critical-default: #991b1b;
-//     --color-critical-hover: #7f1d1d;
-//     --color-critical-pressed: #450a0a;
-
-//     // Text + Icon
-//     --color-text-base: #1a202c;
-//     --color-text-secondary: #4c4d58;
-//     --color-text-muted: #737584;
-//     --color-text-highlight: #1373d9;
-//     --color-text-warning: #713f12;
-//     --color-text-critical: #dc2626;
-//     --color-text-sucess: #1d783b;
-
-//     --color-icon-base: #1a202c;
-//     --color-icon-secondary: #4c4d58;
-//     --color-icon-muted: #737584;
-//     --color-icon-highlight: #1373d9;
-//     --color-icon-warning: #713f12;
-//     --color-icon-critical: #dc2626;
-//     --color-icon-sucess: #1d783b;
-
-//     // Accent
-//     --color-teal: #25a6a0;
-//     --color-blue: #58c9ff;
-//     --color-purple: #ae55f7;
-//     --color-orange: #ea7308;
-//     --color-pink: #e247c4;
-//     --color-ink: #6e6f9b;
-// }
-
-
-// @media (prefers-color-scheme: dark) {
-// }
