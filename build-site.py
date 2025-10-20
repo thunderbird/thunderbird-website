@@ -112,7 +112,8 @@ def build_tbpro():
     }
     site = builder.Site(languages, settings.TBPRO_PATH, settings.TBPRO_RENDERPATH,
                        settings.TBPRO_CSS, js_bundles=settings.TBPRO_JS,
-                       data=context, debug=args.debug, dev_mode=args.watch)
+                       data=context, debug=args.debug, dev_mode=args.watch,
+                       common_searchpath=settings.COMMON_SEARCHPATH)
     site.build_tbpro()
     return site
 
@@ -149,7 +150,8 @@ def build_main_website():
 
     site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,
                        settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS,
-                       data=context, debug=args.debug, dev_mode=args.watch)
+                       data=context, debug=args.debug, dev_mode=args.watch,
+                       common_searchpath=settings.COMMON_SEARCHPATH)
     site.build_website()
     return site
 

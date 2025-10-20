@@ -121,6 +121,9 @@ MEDIA_URL = '/media'
 # location of the Thunderbird favicon
 FAVICON_PATH = '/media/img/thunderbird/favicon.ico'
 
+# path to common templates and includes
+COMMON_SEARCHPATH = 'sites/common/'
+
 # path to the website templates
 # templates with paths starting with "_" or "includes" are excluded by builder.py
 WEBSITE_PATH = 'sites/www.thunderbird.net/'

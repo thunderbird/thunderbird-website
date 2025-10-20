@@ -1,0 +1,25 @@
+<div id="calamity-bar">
+  <div class="calamity-bar-tabs">
+    <a href="https://www.thunderbird.net">Thunderbird</a>
+    <a href="https://stage.tb.pro" class="active">Thunderbird Pro</a>
+  </div>
+</div>
+
+<script>
+  // Disable link to site that you're currently on.
+  document.querySelectorAll('#calamity-bar a').forEach(link => {
+    const linkHost = new URL(link.href).hostname;
+    const currentHost = window.location.hostname;
+
+    if (linkHost === currentHost) {
+      link.classList.add('active');
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+      });
+      link.style.cursor = 'default';
+    } else {
+      // Remove active class from other links
+      link.classList.remove('active');
+    }
+  });
+</script>

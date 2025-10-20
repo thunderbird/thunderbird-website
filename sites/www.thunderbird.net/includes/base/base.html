@@ -63,9 +63,10 @@
     {% block site_header_unwrapped %}{% endblock %}
 
     {% block site_nav %}{% endblock %}
-
     {% block site_header %}
     {% endblock %}
+
+
 
     <main>
       {% block pre_content %}{% endblock %}
@@ -76,7 +77,7 @@
     </main>
 
     {% block site_footer %}
-        {% include 'includes/base/footer.html' %}
+      {% include 'includes/base/shared-footer.html' %}
     {% endblock %}
 
     {% block additional_site_js %}{% endblock %}

@@ -1,8 +1,13 @@
 // Base
 @import "variables.less";
 @import "fonts.less";
+@import "../common/space.less";
+
 @import "colours.less";
 @import "buttons.less";
+
+@import "../common/calamity-bar.less";
+@import "../common/shared-footer.less";
 
 // ------------------------------------------------------------
 // border-box, everywhere
@@ -27,25 +32,6 @@ body {
 @sm:     37.5rem;      // 600px
 @md:     56.25rem;     // 900px;
 @lg:     80rem;        // 1280px
-
-// Global spacing
-@gutter: 16px;
-
-@space-3: 0.1875rem;
-@space-6: 0.375rem;
-@space-9: 0.5625rem;
-@space-12: 0.75rem;
-@space-16: @gutter;
-@space-18: 1.125rem;
-@space-24: 1.5rem;
-@space-36: 2rem;
-@space-48: 2.75rem;
-@space-72: 4rem;
-@space-96: 6rem;
-@space-128: 8rem;
-@space-144: 9rem;
-@space-192: 12rem;
-@space-max: 18rem;
 
 // mixins
 .mixin-background-image(@base-path) {
@@ -73,122 +59,11 @@ body {
     max-width: @lg;
 }
 
-
-
-
-// ------------------------------------------------------------
-// Footer
-// ------------------------------------------------------------
-footer#tb-footer {
-    background-image: linear-gradient(168deg, #1b2128 1%, #171b24 45%);
-    display: grid;
-    padding-block: @space-36;
-    padding-inline: @gutter;
-
-    @media (min-width: @md) {
-        padding-inline: @space-144;
-    }
-
-    a {
-        // Disabling for now, as the designs do not differentiate dark/light mode.
-        // But the colours.less file defines dark/light.
-        // color: var(--color-on-primary);
-
-        color: var(--text-icon-base);
-        text-decoration: none;
-        &:visited {
-            color: var(--text-icon-base);
-        }
-    }
-
-    #nav-link-home, #nav-link-home svg { width: 208px;  height: 36px; }
-    #moz-link-home svg { width: 150px; height: 36px;}
-
-    #site-nav {
-        align-items: start;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        display: grid;
-        gap: @gutter;
-        grid-template: 1fr auto / auto;
-        padding-bottom: @space-24;
-        width: 100%;
-
-        .site-nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: @space-24;
-
-            a {
-                font-size: 0.75rem;
-                text-transform: uppercase;
-            }
-        }
-
-        @media (min-width: @md) {
-            align-items: center;
-            grid-template: 1fr / 1fr auto;
-        }
-    }
-
-    #moz-nav {
-        display: grid;
-        gap: @gutter;
-        padding-bottom: @space-9;
-        padding-top: @space-24;
-
-        .moz-nav-links {
-            display: grid;
-            gap: @space-9;
-            grid-auto-flow: column;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(3, auto);
-            margin-top: @space-6;
-
-            a {
-                font-size: .75rem;
-            }
-        }
-
-        @media (min-width: @lg) {
-            grid-template-columns: auto 1fr;
-            align-items: start;
-            column-gap: @space-96;
-
-            #moz-link-home {
-                grid-column: 1;
-                grid-row: 1 / span 2;
-            }
-
-            .moz-nav-links {
-                grid-column: 2;
-                grid-row: 1;
-
-                display: flex;
-                gap: @space-36;
-            }
-
-            #tb-legal {
-                grid-column: 2;
-                grid-row: 2;
-            }
-        }
-    }
-
-    #tb-legal {
-        font-size: .75rem;
-        a {
-            text-decoration: underline;
-        }
-    }
-}
-
-
-
 // ------------------------------------------------------------
 // Header (nav bar)
 // ------------------------------------------------------------
 #site-header {
-    margin-block: @gutter @space-36;
+    margin-block: 0 @space-36;
     padding-top: @space-16;
 
     @media (min-width: @lg) {

@@ -1,0 +1,44 @@
+@bg-bar: #1a202c;
+@bg-active: #111;
+@color-nav: rgba(255, 255, 255, 0.6);
+@color-active: #58c9ff;
+
+#calamity-bar {
+    background-color: @bg-bar;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    width: 100%;
+
+    @media (min-width: @md) {
+        padding-inline: calc(@space-144 - @gutter);
+    }
+}
+
+.calamity-bar-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    height: 100%;
+    margin-left: 1rem;
+    max-width: @lg;
+    width: 100%;
+
+    @media (min-width: @md) {
+        margin-left: 0;
+    }
+
+    a {
+        align-items: center;
+        color: @color-nav;
+        display: flex;
+        padding-block: auto;
+        padding-inline: 20px;
+        text-decoration: none;
+    }
+
+    a.active {
+        background-color: @bg-active;
+        color: @color-active;
+    }
+}
