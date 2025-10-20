@@ -139,11 +139,12 @@ class Site(object):
     Attributes:
         `lang`: Current language to build the site in, an element of `languages`.
     """
-    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False, dev_mode=False):
+    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False, dev_mode=False, common_searchpath=''):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
         self.searchpath = searchpath
+        self.common_searchpath = common_searchpath
         self.renderpath = renderpath
         self.staticpath = os.path.join(searchpath, staticdir)
         self.cssout = renderpath + '/media/css'
@@ -192,7 +193,10 @@ class Site(object):
 
     def _setup_env(self):
         """Setup the Jinja2 environment, loader, extensions, and filters."""
-        load = FileSystemLoader(self.searchpath)
+        paths = [self.searchpath]
+        if self.common_searchpath:
+            paths.append(self.common_searchpath)
+        load = FileSystemLoader(paths)
         self._env = Environment(loader=load, extensions=extensions)
         self._env.filters["markdown"] = helper.safe_markdown
         self._env.filters["f"] = helper.f
