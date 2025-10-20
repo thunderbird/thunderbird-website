@@ -1,6 +1,8 @@
 // Base
 @import "variables.less";
 @import "fonts.less";
+@import "../common/space.less";
+
 @import "colours.less";
 @import "buttons.less";
 
@@ -30,25 +32,6 @@ body {
 @sm:     37.5rem;      // 600px
 @md:     56.25rem;     // 900px;
 @lg:     80rem;        // 1280px
-
-// Global spacing
-@gutter: 16px;
-
-@space-3: 0.1875rem;
-@space-6: 0.375rem;
-@space-9: 0.5625rem;
-@space-12: 0.75rem;
-@space-16: @gutter;
-@space-18: 1.125rem;
-@space-24: 1.5rem;
-@space-36: 2rem;
-@space-48: 2.75rem;
-@space-72: 4rem;
-@space-96: 6rem;
-@space-128: 8rem;
-@space-144: 9rem;
-@space-192: 12rem;
-@space-max: 18rem;
 
 // mixins
 .mixin-background-image(@base-path) {
