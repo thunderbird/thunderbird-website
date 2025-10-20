@@ -1,0 +1,35 @@
+@bg-bar: #1a202c;
+@bg-active: #111;
+@color-nav: rgba(255, 255, 255, 0.6);
+@color-active: #58c9ff;
+
+
+#calamity-bar {
+    background-color: @bg-bar;
+    height: 2rem;
+}
+
+.calamity-bar-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    height: 100%;
+
+    @media (min-width: @lg) {
+        padding-left: 118px;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        padding-block: auto;
+        padding-inline: 20px;
+        color: @color-nav;
+        text-decoration: none;
+    }
+
+    a.active {
+        background-color: @bg-active;
+        color: @color-active;
+    }
+}

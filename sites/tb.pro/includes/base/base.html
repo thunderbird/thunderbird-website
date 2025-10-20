@@ -52,19 +52,15 @@
 
   </head>
   <body>
-    {% block blamity %}{% endblock %}
+    {% include 'includes/base/calamity-bar.html' %}
     <main>
-
-
       <div id="main-content">
       {% block content %}{% endblock %}
       </div>
 
     </main>
 
-    {% block site_footer %}
-        {% include 'includes/base/footer.html' %}
-    {% endblock %}
+    {% include 'includes/base/shared-footer.html' %}
 
     {% block additional_site_js %}{% endblock %}
 
