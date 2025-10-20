@@ -15,21 +15,30 @@
     </div>
   </div>
   <div id="moz-nav">
-    <a id="moz-link-home" href="#">
+    <a id="moz-link-home" href="{{ url('mozorg.home') }}">
       {{ svg('mozilla-lockup-white-rgb') }}
     </a>
     <div class="moz-nav-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Cookies</a>
-      <a href="#">Legal</a>
-      <a href="#">Send DMCA Notice</a>
-      <a href="#">Report Fraud</a>
-      <a href="#">Participation Guidelines</a>
+      <a href="{{ url('privacy') }}">{{_('Privacy Policy')}}</a>
+      <a href="{{ url('privacy.notices.websites') }}">{{_('Cookies')}}</a>
+      <a href="{{ url('legal.index') }}">{{_('Legal')}}</a>
+      <a href="{{ url('legal.infringement') }}">{{_('Send DMCA Notice')}}</a>
+      <a href="{{ url('legal.fraud-report') }}">{{_('Report Fraud')}}</a>
+      <a href="{{ url('guidelines') }}">{{_('Participation Guidelines')}}</a>
     </div>
     <div id="tb-legal">
-      <p>Thunderbird is part of MZLA Technologies Corporation, a wholly owned subsidiary of Mozilla Foundation. Portions of this content are &copy;1998–2025 by individual contributors. Content available under a Creative Commons license.</p>
       <p>
-        <a href="#">Contribute to this site</a>
+        {%- trans url=url('foundation.licensing.website-content'),mzla=url('mzla.blog-post') -%}
+        Thunderbird is part of
+        <a href="{{ mzla }}" class="inline-link">MZLA Technologies Corporation</a>,
+        a wholly owned subsidiary of Mozilla Foundation.
+        Portions of this content are ©1998–{{ current_year }} by individual
+        contributors. Content available under
+        a <a href="{{ url }}" class="inline-link">Creative Commons license</a>.
+        {%- endtrans -%}
+      </p>
+      <p>
+        <a href="{{ url('contribute') }}">{{_('Contribute to this site')}}</a>
       </p>
     </div>
   </div>
