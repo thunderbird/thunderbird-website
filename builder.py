@@ -663,6 +663,10 @@ def setup_observer(builder_instance, port):
     handler = UpdateHandler(builder_instance)
     observer = Observer()
     observer.schedule(handler, path=builder_instance.searchpath, recursive=True)
+
+    if builder_instance.common_searchpath:
+        observer.schedule(handler, path=builder_instance.common_searchpath, recursive=True)
+
     observer.schedule(handler, path=settings.ASSETS, recursive=True)
     observer.schedule(handler, path=settings.MEDIA_URL.strip('/'), recursive=True)
     observer.daemon = True
