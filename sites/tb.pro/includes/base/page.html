@@ -18,7 +18,7 @@
   <div class="top-gradient">
     <header id="site-header">
       <div id="site-header-nav">
-        <a id="nav-link-home" href="#">
+        <a id="nav-link-home" href="{{ url('tbpro.home') }}">
           {{ svg('tbpro/logo-tbpro') }}
         </a>
         <button
@@ -40,13 +40,13 @@
           <ul>
             <li></li>
             <li>
-              <a href="#">Thundermail</a>
+              <a href="{{ url('tbpro.thundermail') }}">Thundermail</a>
             </li>
             <li>
-              <a href="#">Appointment</a>
+              <a href="{{ url('tbpro.appointment') }}">Appointment</a>
             </li>
             <li>
-              <a href="#">Send</a>
+              <a href="{{ url('tbpro.send') }}">Send</a>
             </li>
             <li class="nav-item-join-button">
               <button class="button-brand-small-outline-label">Join Waitlist</button>
