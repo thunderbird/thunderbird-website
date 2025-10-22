@@ -29,15 +29,20 @@
     }
 
     a {
+        .mixin-font-styles(
+            @family-metropolis,
+            500,
+            0.8125rem,
+        );
         align-items: center;
         color: @color-nav;
         display: flex;
-        padding-block: auto;
         padding-inline: 20px;
         text-decoration: none;
     }
 
-    a.active {
+    a.active,
+    a:hover {
         background-color: @bg-active;
         color: @color-active;
     }
