@@ -246,12 +246,12 @@
 .mixin-brand-outline() {
 
     @border-color: linear-gradient(98.98deg, #58C9FF 19.15%, #6E6F9B 75.77%);
-    .outline(@border-color);
+    .outline(@border-color, @border-width: 0.0625rem);
     color: #1A202C;
     text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
 
     &:hover {
-        .outline(@border-color, #f2f2f2);
+        .outline(@border-color, #f2f2f2 url('/media/img/thunderbird/common/noise.png') repeat);
         color: var(--colour-ti-base-light);
     }
 
