@@ -34,7 +34,7 @@ header#masthead {
     }
 
     .hero-image {
-        .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic');
+
         aspect-ratio: 1.4/1;
         background-position: top center;
         background-repeat: no-repeat;
@@ -50,6 +50,13 @@ header#masthead {
             margin-top: @space-36;
             margin: 0;
             max-width: unset;
+        }
+    }
+
+    .hero-image.tbpro {
+        .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic');
+        @media (min-width: @md) {
+            .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic-high-res');
         }
     }
 
@@ -194,6 +201,7 @@ section#features {
                 text-align: left;
                 @media (min-width: @md) {
                     .web-body-default();
+                    min-width: 311px;
                 }
             }
         }
@@ -238,13 +246,13 @@ section#features {
         padding: 32px 17.4px 16.1px 19px;
 
         .card-image {
-            .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-hero-high-res');
+            .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-card-high-res');
             @media (min-width: @md) {
                 height: 100%;
                 width: 100%;
             }
             @media (min-width: @lg) {
-                .mixin-background-image('/media/img/thunderbird/tbpro/xl-thundermail-hero-high-res');
+                .mixin-background-image('/media/img/thunderbird/tbpro/xl-thundermail-card-high-res');
             }
         }
     }
@@ -255,10 +263,10 @@ section#features {
         padding: 32px 1px 4px 32px;
 
         .card-image {
-            .mixin-background-image('/media/img/thunderbird/tbpro/xs-appointment-hero-high-res');
+            .mixin-background-image('/media/img/thunderbird/tbpro/xs-appointment-card-high-res');
             @media (min-width: @lg) {
                 aspect-ratio: unset;
-                .mixin-background-image('/media/img/thunderbird/tbpro/xl-appointment-hero-high-res');
+                .mixin-background-image('/media/img/thunderbird/tbpro/xl-appointment-card-high-res');
             }
         }
 
@@ -270,10 +278,10 @@ section#features {
         padding: 32px 1px 16px 32px;
 
         .card-image {
-            .mixin-background-image('/media/img/thunderbird/tbpro/xs-send-hero-high-res');
+            .mixin-background-image('/media/img/thunderbird/tbpro/xs-send-card-high-res');
             @media (min-width: @lg) {
                 aspect-ratio: unset;
-                .mixin-background-image('/media/img/thunderbird/tbpro/xl-send-hero-high-res')
+                .mixin-background-image('/media/img/thunderbird/tbpro/xl-send-card-high-res')
             }
         }
     }
