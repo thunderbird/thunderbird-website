@@ -1,0 +1,17 @@
+// mixins
+.mixin-background-image(@base-path) {
+    // Fallback for older browsers.
+    background-image: url('@{base-path}.png');
+
+    // For browsers that support modern formats.
+    background-image: -webkit-image-set(
+        url('@{base-path}.avif') type('image/avif'),
+        url('@{base-path}.webp') type('image/webp'),
+        url('@{base-path}.png')
+    );
+    background-image: image-set(
+        url('@{base-path}.avif') type('image/avif'),
+        url('@{base-path}.webp') type('image/webp'),
+        url('@{base-path}.png')
+    );
+}

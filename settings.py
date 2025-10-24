@@ -377,6 +377,9 @@ UPDATES_JS = {
 
 TBPRO_CSS = {
     'tbpro-style': ['less/tbpro-style.less'],
+    'thundermail': ['less/tbpro/product/thundermail.less'],
+    'appointment': ['less/tbpro/product/appointment.less'],
+    'send': ['less/tbpro/product/send.less'],
 }
 
 TBPRO_JS = {

@@ -34,7 +34,7 @@ header#masthead {
     }
 
     .hero-image {
-
+        .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic');
         aspect-ratio: 1.4/1;
         background-position: top center;
         background-repeat: no-repeat;
@@ -50,13 +50,6 @@ header#masthead {
             margin-top: @space-36;
             margin: 0;
             max-width: unset;
-        }
-    }
-
-    .hero-image.tbpro {
-        .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic');
-        @media (min-width: @md) {
-            .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic-high-res');
         }
     }
 
@@ -100,14 +93,6 @@ header#masthead {
             grid-column: 1;
             grid-row: 4;
             max-width: 180px;
-        }
-
-        & img {
-            margin-left: @space-3;
-        }
-
-        &:hover {
-            text-decoration: none;
         }
     }
 }
@@ -285,6 +270,59 @@ section#features {
             }
         }
     }
+}
+
+// 8px/0.5rem between header and p
+// 24px/1.5rem between p and first card
+// 16px/1rem between cards
+// 36px/2.25rem from last overview card and Made for You header
+section#overview {
+    background: #fff;
+    header {
+        .brand-headline-h1-sm();
+        color: var(--header-color);
+        margin: 0;
+        text-align: center;
+
+        @media (min-width: @md) {
+            .brand-headline-h1-lg();
+        }
+
+        @media (min-width: @lg) {
+            grid-column: 1 / -1; // span all columns
+        }
+    }
+
+    p {
+        .mixin-font-styles(
+            @family-inter,
+            normal,
+            0.9375rem,
+            1.32
+        );
+        color: #4c4d58;
+    }
+
+    .overview-card {
+        border-radius: 1.5rem;
+        padding-block: 1.5rem;
+
+        &+.overview-card {
+            margin-top: 1rem;
+        }
+
+        header {
+            .headings-h3-small();
+            padding-inline: 1.25rem;
+            text-align: left;
+        }
+
+        p {
+            padding-inline: 1.25rem;
+            text-align: left;
+        }
+    }
+
 }
 
 section#reasons {

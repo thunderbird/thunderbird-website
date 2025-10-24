@@ -29,6 +29,10 @@
     <link href="{{ static('css/tbpro-style.css') }}" rel="stylesheet" type="text/css" />
     {% endblock %}
 
+    {% block extra_css %}
+      {# For page-specific CSS. #}
+    {% endblock %}
+
     {% block site_js %}
       {#- site-bundle should block html rendering so we can prevent no-js/js element flashing. -#}
     {% endblock %}

@@ -19,6 +19,14 @@
 
 }
 
+// If a button needs to act as a link, wrap it in a form.bolt-button-wrapper
+// and give the form an action attribute.
+// The following style makes the form element invisible to the layout.
+form.bolt-button-wrapper {
+    display: contents;
+}
+
+
 // ================================================================================
 // Concrete classes for each kind of button
 // Uses mixins for button-specific styling to correctly apply pseudo-elements
