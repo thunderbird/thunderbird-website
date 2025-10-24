@@ -1,0 +1,200 @@
+@import "../breakpoints.less";
+@import "../images.less";
+@import "../../common/space.less";
+
+header#masthead {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+
+    &>* {
+        text-align: center;
+    }
+
+    .product-logo {
+        aspect-ratio: 16/9;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80px;
+
+        .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-logo-high-res');
+        @media (min-width: @md) {
+            .mixin-background-image('/media/img/thunderbird/tbpro/xl-thundermail-logo-high-res');
+        }
+    }
+
+    .hero-image {
+        aspect-ratio: 1.9/1;
+
+        width: 100%;
+        .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-card-high-res');
+        @media (min-width: @md) {
+            .mixin-background-image('/media/img/thunderbird/tbpro/xl-thundermail-card-high-res');
+        }
+    }
+}
+
+section#overview {
+    padding-top: 2.25rem;
+    .overview-card-container {
+        .overview-card {
+            background-color: #1a202c;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            header, p {
+                color: #fff;
+            }
+            .overview-image {
+                width: 100%;
+            }
+        }
+
+        .overview-card-1 {
+            background-image: url('/media/svg/tbpro/thundermail-bento-main.svg');
+            overflow: hidden;
+
+            @media (min-width: @lg) {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 6fr 1fr 2fr 1fr;
+                gap: 0.5rem;
+
+                header {
+                    align-self: end;
+                    grid-row: 3;
+                    padding-inline: 2rem;
+                }
+
+                p {
+                    grid-row: 4;
+                    max-width: 368px;
+                    padding-inline: 2rem;
+                }
+            }
+
+
+            .overview-image {
+                .mixin-background-image('/media/img/thunderbird/tbpro/xs-bento-standards-high-res');
+                aspect-ratio: 2.6/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+
+                margin-bottom: 1.5rem;
+                margin-top: 1rem;
+                @media (min-width: @lg) {
+                    .mixin-background-image('/media/img/thunderbird/tbpro/xl-bento-standards-high-res');
+                    aspect-ratio: 2.3/1;
+                    grid-row: 2;
+                }
+            }
+        }
+
+        .overview-card-2 {
+            background-image: url('/media/svg/tbpro/thundermail-bento-right-top.svg');
+
+            @media (min-width: @lg) {
+                display: grid;
+                gap: 0.5rem;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 3fr 4fr;
+                padding-inline: 0.75rem;
+
+                header {
+                    align-self: end;
+                    grid-column: 1;
+                    grid-row: 1;
+                    padding: 0;
+                    padding-left: 2rem;
+                }
+                p {
+                    min-width: 331px;
+                    grid-column: 1;
+                    grid-row: 2;
+                    padding: 0;
+                    padding-bottom: 2rem;
+                    padding-left: 2rem;
+                }
+            }
+
+            .overview-image {
+                .mixin-background-image('/media/img/thunderbird/tbpro/xs-bento-hosted-high-res');
+                aspect-ratio: 1.2/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                margin: 0 auto;
+                margin-top: 1.5rem;
+                max-width: 180px;
+
+                @media (min-width: @lg) {
+                    grid-column: 2;
+                    grid-row: 1 / -1;
+                    height: 100%;
+                    justify-self: start;
+                    margin-left: 18px;
+                    margin-top: 0;
+                    max-width: 160px;
+                }
+            }
+        }
+        .overview-card-3 {
+            background-image: url('/media/svg/tbpro/thundermail-bento-right-bottom.svg');
+            padding-bottom: 0;
+            overflow: hidden;
+
+            @media (min-width: @lg) {
+                display: grid;
+                gap: 0.5rem;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 3fr 4fr;
+                padding-inline: 0.75rem 0;
+                header {
+                    align-self: end;
+                    grid-column: 1;
+                    grid-row: 1;
+                    padding: 0;
+                    padding-left: 2rem;
+                }
+                p {
+                    min-width: 331px;
+                    grid-column: 1;
+                    grid-row: 2;
+                    padding: 0;
+                    padding-left: 2rem;
+                }
+            }
+
+            .overview-image {
+                .mixin-background-image('/media/img/thunderbird/tbpro/xs-bento-domain-high-res');
+                aspect-ratio: 1.2/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom right;
+
+                height: 180px;
+                margin-top: 1.125rem;
+                margin-right: -2.5rem;
+                width: 100%;
+
+                @media (min-width: @md) {
+                    .mixin-background-image('/media/img/thunderbird/tbpro/xl-bento-domain-high-res');
+                    aspect-ratio: .9/1;
+                }
+
+                @media (min-width: @lg) {
+                    margin-top: 0;
+                    grid-column: 2;
+                    grid-row: 1 / -1;
+                    height: 100%;
+                }
+
+            }
+        }
+    }
+}

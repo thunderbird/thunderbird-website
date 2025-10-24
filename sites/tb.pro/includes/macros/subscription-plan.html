@@ -1,10 +1,10 @@
-{% macro subscription_plan(plan_name, plan_description, plan_price, plan_period, mail_storage, send_storage, num_domains, num_email_addresses) -%}
+{% macro subscription_plan(plan_name, plan_description, plan_price, plan_period, cta_label, mail_storage, send_storage, num_domains, num_email_addresses) -%}
 <div class="subscription-info">
   <div class="subscription-callout">
     <h3>{{ plan_name }}</h3>
     <p>{{ plan_description }}</p>
     <h4><b>${{ plan_price }}</b> {{ plan_period }}</h4>
-    <button class="button-brand-small-outline-label">Subscribe Now</button>
+    <button class="button-brand-outline-label">{{ cta_label }}</button>
   </div>
   <ul>
     <li>
