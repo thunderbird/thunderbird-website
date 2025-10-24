@@ -13,6 +13,27 @@ header#masthead {
         text-align: center;
     }
 
+    p {
+        max-width: 400px;
+    }
+
+    @media (min-width: @md) {
+
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            max-width: 750px;
+        }
+
+    }
+
+    @media (min-width: @lg) {
+        h1 {
+            font-size: 4.5rem;
+        }
+    }
+
     .product-logo {
         aspect-ratio: 16/9;
         background-position: top center;
