@@ -81,14 +81,14 @@ Thundermail offers you email hosting with the same values as Thunderbird. Enjoy 
 {% block details %}
 <div class="subscription-header">
   <header>
-    Subscribe Now
+    Subscribe to Pro
   </header>
   <p>
     Get Thundermail, Appointment, and Send in one simple subscription. You'll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan('Early Bird', 'Our initial offering, ideal for most users', '00', 'per month, paid annually', '00', '000', '0', '00') }}
+{{ subscription_plan('Early Bird Plan', 'Our initial offering, ideal for most users', '00', 'per month, paid annually', 'Subscribe Now', '00', '000', '0', '00') }}
 {% endblock %}
 
 

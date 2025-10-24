@@ -52,7 +52,8 @@ form.bolt-button-wrapper {
 }
 
 .button-brand-outline-label:extend(.abstract-button-brand-default) {
-    .mixin-brand-outline();
+    @border-width: 0.0625rem;
+    .mixin-brand-outline(@border-width);
 }
 
 .button-brand-small-outline-label:extend(.abstract-button-brand-small) {
