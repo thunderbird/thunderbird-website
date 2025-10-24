@@ -303,12 +303,29 @@ section#overview {
         color: #4c4d58;
     }
 
+    .overview-card-container {
+        @media (min-width: @lg) {
+            display: grid;
+            gap: @space-12;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            .overview-card:first-child {
+                grid-row: 1 / -1;
+                height: 100%;
+            }
+        }
+    }
+
     .overview-card {
         border-radius: 1.5rem;
         padding-block: 1.5rem;
 
         &+.overview-card {
             margin-top: 1rem;
+            @media (min-width: @lg) {
+                margin-top: 0;
+            }
         }
 
         header {
