@@ -41,6 +41,11 @@ section#overview {
     padding-top: 2.25rem;
     .overview-card-container {
         .overview-card {
+            background-color: #1a202c;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
             header, p {
                 color: #fff;
             }
@@ -50,7 +55,8 @@ section#overview {
         }
 
         .overview-card-1 {
-            background-color: #1a202c;
+            background-image: url('/media/svg/tbpro/thundermail-bento-main.svg');
+            overflow: hidden;
 
             @media (min-width: @lg) {
                 display: grid;
@@ -90,7 +96,7 @@ section#overview {
         }
 
         .overview-card-2 {
-            background-color: #1a202c;
+            background-image: url('/media/svg/tbpro/thundermail-bento-right-top.svg');
 
             @media (min-width: @lg) {
                 display: grid;
@@ -138,7 +144,7 @@ section#overview {
             }
         }
         .overview-card-3 {
-            background-color: #1a202c;
+            background-image: url('/media/svg/tbpro/thundermail-bento-right-bottom.svg');
             padding-bottom: 0;
             overflow: hidden;
 
@@ -147,8 +153,7 @@ section#overview {
                 gap: 0.5rem;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 3fr 4fr;
-                padding-inline: 0.75rem;
-
+                padding-inline: 0.75rem 0;
                 header {
                     align-self: end;
                     grid-column: 1;
@@ -174,6 +179,7 @@ section#overview {
 
                 height: 180px;
                 margin-top: 1.125rem;
+                margin-right: -2.5rem;
                 width: 100%;
 
                 @media (min-width: @md) {
