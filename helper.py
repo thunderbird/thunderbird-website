@@ -184,8 +184,8 @@ def high_res_img(ctx, url, optional_attributes=None, scale='1.5x', alt_formats=(
             alt_high_res_url = f"{url_high_res.rsplit('.', maxsplit=1)[0]}.{alt_format}"
 
             tags.append(
-                '<source src="{url}" srcset="{url_high_res} {scale}"/>'.format(
-                    url=alt_url, url_high_res=alt_high_res_url, scale=scale
+                '<source src="{url}" srcset="{url_high_res} {scale}" type="image/{type}">'.format(
+                    url=alt_url, url_high_res=alt_high_res_url, scale=scale, type=alt_format
                 )
             )
 
