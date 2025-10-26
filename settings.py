@@ -616,7 +616,7 @@ DONOR_HELP_SLOW_WARNING = True
 
 # Turning this value to True will enable a thunderbird.net site-wide announcement banner
 # Make sure to edit it in includes/announcement.html !
-SITE_ANNOUNCEMENT = True
+SITE_ANNOUNCEMENT = False
 
 # Shows a dialog element with information on how to donate if their browser or browser addons have blocked FRU
 # In reality this can trigger for slow internet users, but we don't have a perfect way to detect this.
