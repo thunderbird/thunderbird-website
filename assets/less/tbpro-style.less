@@ -229,6 +229,10 @@ section#features {
 
         // Copied from zeplin:
         padding: 32px 17.4px 16.1px 19px;
+        p {
+            // Make right padding same as left, but only for paragraph.
+            padding-right: 14.6px;
+        }
 
         .card-image {
             .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-card-high-res');
@@ -245,7 +249,11 @@ section#features {
         .mixin-card-gradient(#008080, 13%);
 
         // Copied from zeplin:
-        padding: 32px 1px 4px 32px;
+        padding: 2rem 1px 0.25rem 2rem;
+        p {
+            // Tweaked to avoid orphan for small screens.
+            padding-right: 2.5rem;
+        }
 
         .card-image {
             .mixin-background-image('/media/img/thunderbird/tbpro/xs-appointment-card-high-res');
@@ -259,8 +267,8 @@ section#features {
     .feature-card-3 {
         .mixin-card-gradient(desaturate(#fec18a, 10%), 10%, 120%);
 
-        // Copied from zeplin:
-        padding: 32px 1px 16px 32px;
+        padding: 2rem;
+        padding-bottom: 1rem;
 
         .card-image {
             .mixin-background-image('/media/img/thunderbird/tbpro/xs-send-card-high-res');
