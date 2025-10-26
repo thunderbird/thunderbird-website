@@ -20,18 +20,28 @@
   (function () {
     const SLIDE_INTERVAL_MS = 8000;
 
-    let touchStartX = 0;
-    let touchStartY = 0;
-    let touchEndX = 0;
-    let touchEndY = 0;
-    const swipeThreshold = 50; // Minimum distance for a swipe
+    let currentIndex = 0;
 
     const track = document.querySelector('.testimonials-track');
     const testimonials = document.querySelectorAll('.testimonial');
     const progressContainer = document.querySelector('.testimonials-progress');
     const slider = document.querySelector('.testimonials-slider');
 
-    let currentIndex = 0;
+    // Touch/swipe handling
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchCurrentX = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    let isDragging = false;
+    let initialTransform = 0;
+    let touchStartTime = 0;
+    let lastTouchTime = 0;
+    let lastTouchX = 0;
+    const swipeThreshold = 50; // Minimum distance for a swipe
+    const velocityThreshold = 0.5; // Minimum velocity (pixels/ms) for a quick swipe
+    const rubberBandResistance = 3; // Higher = more resistance at edges
+
 
     // Sets slider state based on the value of currentIndex.
     function updateSlider() {
@@ -58,16 +68,6 @@
         dot.classList.toggle('active', index === currentIndex);
       });
     }
-
-    // function nextTestimonial() {
-    //   currentIndex = (currentIndex + 1) % testimonials.length;
-    //   updateSlider();
-    // }
-
-    // function prevTestimonial() {
-    //   currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    //   updateSlider();
-    // }
 
     function nextTestimonial() {
       if (currentIndex < testimonials.length - 1) {
@@ -104,17 +104,64 @@
       });
     }
 
+    function calculateVelocity() {
+      const timeDiff = Date.now() - lastTouchTime;
+      const distDiff = touchEndX - lastTouchX;
+
+      if (timeDiff === 0) return 0;
+      return distDiff / timeDiff; // pixels per millisecond
+    }
+
+    function applyRubberBand(dragDistance) {
+      const testimonial = testimonials[currentIndex];
+      const testimonialWidth = testimonial.offsetWidth;
+      const gap = parseInt(getComputedStyle(track).gap) || 0;
+
+      // Check if we're at boundaries
+      const atStart = currentIndex === 0 && dragDistance > 0;
+      const atEnd = currentIndex === testimonials.length - 1 && dragDistance < 0;
+
+      if (atStart || atEnd) {
+        // Apply rubber band effect - the further you drag, the more resistance
+        return dragDistance / rubberBandResistance;
+      }
+
+      return dragDistance;
+    }
+
     function handleSwipe() {
       const swipeDistance = touchEndX - touchStartX;
+      const velocity = calculateVelocity();
 
-      if (Math.abs(swipeDistance) > swipeThreshold) {
-        if (swipeDistance > 0) {
+      // Determine if we should change slides based on swipe distance OR velocity
+      const shouldChangeSlide = Math.abs(swipeDistance) > swipeThreshold || Math.abs(velocity) > velocityThreshold;
+
+      if (shouldChangeSlide) {
+        // Calculate dynamic transition duration based on velocity
+        // Faster swipes = shorter duration
+        let duration = 0.5; // default
+        if (Math.abs(velocity) > velocityThreshold) {
+          // Map velocity to duration: faster velocity = shorter duration
+          // Clamp between 0.2s (very fast) and 0.5s (slow)
+          duration = Math.max(0.2, Math.min(0.5, 0.5 / Math.abs(velocity)));
+        }
+
+        track.style.transition = `transform ${duration}s ease-out`;
+
+        if (swipeDistance > 0 && currentIndex > 0) {
           // Swiped right - go to previous
           prevTestimonial();
-        } else {
+        } else if (swipeDistance < 0 && currentIndex < testimonials.length - 1) {
           // Swiped left - go to next
           nextTestimonial();
+        } else {
+          // At boundary - snap back with bounce effect
+          updateSlider();
         }
+      } else {
+        // Did not meet threshold - snap back with normal speed
+        track.style.transition = 'transform 0.3s ease-out';
+        updateSlider();
       }
     }
 
@@ -139,13 +186,28 @@
       })
     });
 
+
     slider.addEventListener('touchstart', (e) => {
       touchStartX = e.changedTouches[0].screenX;
       touchStartY = e.changedTouches[0].screenY;
+      lastTouchX = touchStartX;
+      touchStartTime = Date.now();
+      lastTouchTime = touchStartTime;
+      isDragging = true;
+
+      // Store the current transform value
+      const currentTransform = track.style.transform;
+      const match = currentTransform.match(/translateX\(([^)]+)px\)/);
+      initialTransform = match ? parseFloat(match[1]) : 0;
+
+      // Temporarily disable transition for smooth dragging
+      track.style.transition = 'none';
     }, { passive: true });
 
     slider.addEventListener('touchmove', (e) => {
-      const touchCurrentX = e.changedTouches[0].screenX;
+      if (!isDragging) return;
+
+      touchCurrentX = e.changedTouches[0].screenX;
       const touchCurrentY = e.changedTouches[0].screenY;
 
       const deltaX = Math.abs(touchCurrentX - touchStartX);
@@ -154,12 +216,27 @@
       // If swipe is more horizontal than vertical, prevent page scroll
       if (deltaX > deltaY) {
         e.preventDefault();
+
+        // Update velocity tracking
+        lastTouchTime = Date.now();
+        lastTouchX = touchCurrentX;
+
+        // Calculate drag distance with rubber band effect
+        const rawDragDistance = touchCurrentX - touchStartX;
+        const dragDistance = applyRubberBand(rawDragDistance);
+
+        track.style.transform = `translateX(${initialTransform + dragDistance}px)`;
       }
-    }); // Note: NOT passive, so we can call preventDefault
+    });
 
     slider.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+
       touchEndX = e.changedTouches[0].screenX;
       touchEndY = e.changedTouches[0].screenY;
+      isDragging = false;
+
+      // Transition is now set in handleSwipe() based on velocity
       handleSwipe();
     }, { passive: true });
 
