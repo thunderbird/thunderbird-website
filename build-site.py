@@ -108,7 +108,7 @@ def build_tbpro():
     print("Building tb.pro site")
     # TODO: Decide whether the tb.pro site actually needs anything in the `context` dict.
     context = {
-        'testing': '123'
+        'current_year': date.today().year,
     }
     site = builder.Site(languages, settings.TBPRO_PATH, settings.TBPRO_RENDERPATH,
                        settings.TBPRO_CSS, js_bundles=settings.TBPRO_JS,
