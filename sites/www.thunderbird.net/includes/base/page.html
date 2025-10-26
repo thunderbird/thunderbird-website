@@ -4,11 +4,11 @@
 
 {% extends "includes/base/base.html" %}
 
-{% if settings.SITE_ANNOUNCEMENT %}
+{% include 'includes/base/calamity-bar.html' %}
+
 {% block site_header_unwrapped %}
 {% include 'includes/announcement.html' %}
 {% endblock %}
-{% endif %}
 
 {% block site_nav %}
 <nav class="site-nav">
