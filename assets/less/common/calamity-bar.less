@@ -2,14 +2,22 @@
 @bg-active: #111;
 @color-nav: rgba(255, 255, 255, 0.6);
 @color-active: #58c9ff;
-
+@calamity-bar-height: 32px; // 2rem
 #calamity-bar {
     background-color: @bg-bar;
     display: flex;
-    height: 2rem;
+    height: @calamity-bar-height;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 9;
     width: 100%;
+}
 
+body.tbpro #calamity-bar {
+    position: unset;
+    top: unset;
+    z-index: unset;
     @media (min-width: @md) {
         padding-inline: calc(@space-144 - @gutter);
     }
@@ -21,12 +29,8 @@
     gap: 0;
     height: 100%;
     margin-left: 1rem;
-    max-width: @lg;
+    max-width: calc(1280px + 4.75rem);
     width: 100%;
-
-    @media (min-width: @md) {
-        margin-left: 0;
-    }
 
     a {
         .mixin-font-styles(
@@ -46,4 +50,20 @@
         background-color: @bg-active;
         color: @color-active;
     }
+}
+
+
+
+body.tbpro .calamity-bar-tabs {
+    max-width: @lg;
+
+    @media (min-width: @md) {
+        margin-left: 0;
+    }
+
+}
+
+
+#calamity-bar ~ .site-nav {
+    top: @calamity-bar-height;
 }
