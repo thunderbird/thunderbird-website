@@ -19,9 +19,17 @@
 <script>
   (function () {
     const SLIDE_INTERVAL_MS = 8000;
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    const swipeThreshold = 50; // Minimum distance for a swipe
+
     const track = document.querySelector('.testimonials-track');
     const testimonials = document.querySelectorAll('.testimonial');
     const progressContainer = document.querySelector('.testimonials-progress');
+    const slider = document.querySelector('.testimonials-slider');
 
     let currentIndex = 0;
 
@@ -51,31 +59,29 @@
       });
     }
 
+    // function nextTestimonial() {
+    //   currentIndex = (currentIndex + 1) % testimonials.length;
+    //   updateSlider();
+    // }
+
+    // function prevTestimonial() {
+    //   currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    //   updateSlider();
+    // }
+
     function nextTestimonial() {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      updateSlider();
+      if (currentIndex < testimonials.length - 1) {
+        currentIndex++;
+        updateSlider();
+      }
     }
 
     function prevTestimonial() {
-      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-      updateSlider();
-    }
-
-    // Allow the user to click a testimonial to make it active.
-    // Resets the timeout until the next auto-advance.
-    let timeout;
-
-    // Initialize click handler on each testimonial.
-    testimonials.forEach((testimonial, index) => {
-      testimonial.addEventListener('click', () => {
-        currentIndex = index;
+      if (currentIndex > 0) {
+        currentIndex--;
         updateSlider();
-
-        clearTimeout(timeout);
-        startAutoAdvance();
-      })
-    });
-
+      }
+    }
 
     function createDots() {
       progressContainer.innerHTML = '';
@@ -91,12 +97,25 @@
         dot.addEventListener('click', () => {
           currentIndex = index;
           updateSlider();
-
-          clearTimeout(timeout);
-          startAutoAdvance();
+          // clearTimeout(timeout);
+          // startAutoAdvance();
         });
         progressContainer.appendChild(dot);
       });
+    }
+
+    function handleSwipe() {
+      const swipeDistance = touchEndX - touchStartX;
+
+      if (Math.abs(swipeDistance) > swipeThreshold) {
+        if (swipeDistance > 0) {
+          // Swiped right - go to previous
+          prevTestimonial();
+        } else {
+          // Swiped left - go to next
+          nextTestimonial();
+        }
+      }
     }
 
     function startAutoAdvance() {
@@ -106,11 +125,49 @@
       }, SLIDE_INTERVAL_MS);
     }
 
+    // Add click and swipe handlers.
+    let timeout; // For auto-advance, not currently used.
+
+    // Initialize click handler on each testimonial.
+    testimonials.forEach((testimonial, index) => {
+      testimonial.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+
+        // clearTimeout(timeout);
+        // startAutoAdvance();
+      })
+    });
+
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    slider.addEventListener('touchmove', (e) => {
+      const touchCurrentX = e.changedTouches[0].screenX;
+      const touchCurrentY = e.changedTouches[0].screenY;
+
+      const deltaX = Math.abs(touchCurrentX - touchStartX);
+      const deltaY = Math.abs(touchCurrentY - touchStartY);
+
+      // If swipe is more horizontal than vertical, prevent page scroll
+      if (deltaX > deltaY) {
+        e.preventDefault();
+      }
+    }); // Note: NOT passive, so we can call preventDefault
+
+    slider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    }, { passive: true });
+
+
     // Initialize
     updateSlider();
     createDots();
-    startAutoAdvance();
-    console.log('hey you man');
+    // startAutoAdvance();
 
     // Recalculate on resize
     window.addEventListener('resize', updateSlider);
