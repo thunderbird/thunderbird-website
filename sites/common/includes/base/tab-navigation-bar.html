@@ -1,5 +1,5 @@
-<div id="calamity-bar">
-  <div class="calamity-bar-tabs">
+<div id="tab-navigation-bar">
+  <div class="tab-navigation-links">
     <a href="https://stage.thunderbird.net">Thunderbird</a>
     <a href="https://stage.tb.pro" class="active">Thunderbird Pro</a>
   </div>
@@ -7,7 +7,7 @@
 
 <script>
   // Disable link to site that you're currently on.
-  document.querySelectorAll('#calamity-bar a').forEach(link => {
+  document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
     const linkHost = new URL(link.href).hostname;
     const currentHost = window.location.hostname;
 
