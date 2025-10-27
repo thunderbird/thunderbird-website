@@ -269,12 +269,15 @@ section#features {
 
         padding: 2rem;
         padding-bottom: 1rem;
+        @media (min-width: @lg) {
+            padding-right: 0;
+        }
 
         .card-image {
             .mixin-background-image('/media/img/thunderbird/tbpro/xs-send-card-high-res');
             @media (min-width: @lg) {
+                .mixin-background-image('/media/img/thunderbird/tbpro/xl-send-card-high-res');
                 aspect-ratio: unset;
-                .mixin-background-image('/media/img/thunderbird/tbpro/xl-send-card-high-res')
             }
         }
     }
