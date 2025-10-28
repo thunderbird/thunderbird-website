@@ -46,9 +46,9 @@ header#masthead {
         background-size: cover;
         height: 80px;
 
-        .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-logo-high-res');
+        .mixin-background-image('/media/img/tbpro/xs-thundermail-logo-high-res');
         @media (min-width: @md) {
-            .mixin-background-image('/media/img/thunderbird/tbpro/xl-thundermail-logo-high-res');
+            .mixin-background-image('/media/img/tbpro/xl-thundermail-logo-high-res');
         }
     }
 
@@ -56,32 +56,24 @@ header#masthead {
         aspect-ratio: 1.9/1;
 
         width: 100%;
-        .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-card-high-res');
+        .mixin-background-image('/media/img/tbpro/xs-appointment-hero-high-res');
         @media (min-width: @md) {
-            .mixin-background-image('/media/img/thunderbird/tbpro/xl-thundermail-card-high-res');
+            .mixin-background-image('/media/img/tbpro/xl-appointment-hero-high-res');
         }
     }
 }
 
 section#overview {
-    padding-top: 2.25rem;
     .overview-card-container {
         .overview-card {
             background-color: #1a202c;
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
-
-            header, p {
-                color: #fff;
-            }
-            .overview-image {
-                width: 100%;
-            }
         }
 
         .overview-card-1 {
-            background-image: url('/media/img/thunderbird/tbpro/thundermail-bento-main.png');
+            background-image: url('/media/img/tbpro/thundermail-bento-main.png');
             overflow: hidden;
 
             @media (min-width: @lg) {
@@ -98,14 +90,14 @@ section#overview {
 
                 p {
                     grid-row: 4;
-                    max-width: 368px;
+                    // max-width: 368px;
                     padding-inline: 2rem;
                 }
             }
 
 
             .overview-image {
-                .mixin-background-image('/media/img/thunderbird/tbpro/xs-bento-standards-high-res');
+                .mixin-background-image('/media/img/tbpro/xs-bento-standards-high-res');
                 aspect-ratio: 2.6/1;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -114,7 +106,7 @@ section#overview {
                 margin-bottom: 1.5rem;
                 margin-top: 1rem;
                 @media (min-width: @lg) {
-                    .mixin-background-image('/media/img/thunderbird/tbpro/xl-bento-standards-high-res');
+                    .mixin-background-image('/media/img/tbpro/xl-bento-standards-high-res');
                     aspect-ratio: 2.3/1;
                     grid-row: 2;
                 }
@@ -122,7 +114,7 @@ section#overview {
         }
 
         .overview-card-2 {
-            background-image: url('/media/img/thunderbird/tbpro/thundermail-bento-right-top.png');
+            background-image: url('/media/img/tbpro/thundermail-bento-right-top.png');
 
             @media (min-width: @lg) {
                 display: grid;
@@ -139,9 +131,9 @@ section#overview {
                     padding-left: 2rem;
                 }
                 p {
-                    min-width: 331px;
                     grid-column: 1;
                     grid-row: 2;
+                    // min-width: 331px;
                     padding: 0;
                     padding-bottom: 2rem;
                     padding-left: 2rem;
@@ -149,7 +141,7 @@ section#overview {
             }
 
             .overview-image {
-                .mixin-background-image('/media/img/thunderbird/tbpro/xs-bento-hosted-high-res');
+                .mixin-background-image('/media/img/tbpro/xs-bento-hosted-high-res');
                 aspect-ratio: 1.2/1;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -170,7 +162,7 @@ section#overview {
             }
         }
         .overview-card-3 {
-            background-image: url('/media/img/thunderbird/tbpro/thundermail-bento-right-bottom.png');
+            background-image: url('/media/img/tbpro/thundermail-bento-right-bottom.png');
             padding-bottom: 0;
             overflow: hidden;
 
@@ -188,36 +180,30 @@ section#overview {
                     padding-left: 2rem;
                 }
                 p {
-                    min-width: 331px;
                     grid-column: 1;
                     grid-row: 2;
+                    // min-width: 268px;
                     padding: 0;
                     padding-left: 2rem;
                 }
             }
 
             .overview-image {
-                .mixin-background-image('/media/img/thunderbird/tbpro/xs-bento-domain-high-res');
-                aspect-ratio: 1.2/1;
+                background-image: url('/media/svg/tbpro/zoom-logo.svg');
+                aspect-ratio: 4.32/1;
                 background-size: contain;
                 background-repeat: no-repeat;
-                background-position: bottom right;
+                background-position: center center;
 
-                height: 180px;
-                margin-top: 1.125rem;
-                margin-right: -2.5rem;
+                height: 50px;
+                margin-top: 5.125rem;
+                margin-bottom: 5.125rem;
                 width: 100%;
 
-                @media (min-width: @md) {
-                    .mixin-background-image('/media/img/thunderbird/tbpro/xl-bento-domain-high-res');
-                    aspect-ratio: .9/1;
-                }
-
                 @media (min-width: @lg) {
-                    margin-top: 0;
                     grid-column: 2;
                     grid-row: 1 / -1;
-                    height: 100%;
+                    margin: auto;
                 }
 
             }

@@ -15,8 +15,8 @@
 {% endblock %}
 
 {% block content %}
-  <div class="top-gradient">
-    <header id="site-header">
+  <div class="top-gradient top-level">
+    <header id="site-header" class="primary-block">
       <div id="site-header-nav">
         <a id="nav-link-home" href="{{ url('tbpro.home') }}">
           {{ svg('tbpro/logo-tbpro') }}
@@ -67,14 +67,16 @@
     {# Individual product overviews. #}
   {% endblock %}
 
-  <section id="reasons" class="primary-block">
-    {% block reasons %}{% endblock %}
-  </section>
+  <div class="top-level">
+    <section id="reasons" class="primary-block">
+      {% block reasons %}{% endblock %}
+    </section>
+  </div>
 
   {% block testimonials %}
   {% endblock %}
 
-  <div class="lower-gradient">
+  <div class="lower-gradient top-level">
     <section id="details" class="primary-block">
       {% block details %}{% endblock %}
     </section>

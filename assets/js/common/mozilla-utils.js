@@ -33,8 +33,15 @@ if (typeof Mozilla === 'undefined') {
     // Add target="_blank" to all external links so they open in a new tab by default.
     Utils.externalLinks = function() {
         for (var c = document.getElementsByTagName("a"), a = 0; a < c.length; a++) {
-            var b = c[a];
-            b.getAttribute("href") && b.hostname !== location.hostname && b.hostname !== bouncerURL && (b.target = "_blank")
+          var b = c[a];
+          var shouldOpenNewTab = b.getAttribute("href") &&  // open new tab if: link has an href
+            b.hostname !== location.hostname &&             // that goes to a different host
+            b.hostname !== bouncerURL &&                    // and it's not the bouncerURL
+            !b.hostname.endsWith('.tb.pro') &&              // and it's not a .tb.pro site
+            b.hostname !== 'tb.pro';                        // nor tb.pro itself.
+          if (shouldOpenNewTab) {
+            b.target = "_blank";
+          }
         }
     };
 

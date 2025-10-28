@@ -1,4 +1,4 @@
-@import "tbpro/base.less";
+@import "base.less";
 
 // Actual colors used
 //
@@ -11,13 +11,6 @@
 @keyframes sweep {
     0% { opacity: 0; }
     100% { opacity: 1}
-}
-
-
-// Constrain all main blocks to the largest breakpoint.
-.primary-block {
-    margin-inline: auto;
-    max-width: @lg;
 }
 
 header#masthead {
@@ -34,7 +27,7 @@ header#masthead {
     }
 
     .hero-image {
-        .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic');
+        .mixin-background-image('/media/img/tbpro/orb-graphic');
         aspect-ratio: 1.4/1;
         background-position: top center;
         background-repeat: no-repeat;
@@ -44,7 +37,7 @@ header#masthead {
         max-width: 100vw;
 
         @media (min-width: @md) {
-            .mixin-background-image('/media/img/thunderbird/tbpro/orb-graphic-high-res');
+            .mixin-background-image('/media/img/tbpro/orb-graphic-high-res');
             grid-column: 3 / -1;
             grid-row: 2 / -1;
             margin-top: @space-36;
@@ -109,6 +102,13 @@ section#features {
         .feature-card:first-child {
             grid-row: 1 / -1;
             height: 100%;
+        }
+
+        // First card retains stacked layout.
+        .feature-card:not(:first-child) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
         }
     }
 
@@ -205,15 +205,6 @@ section#features {
 
     }
 
-    @media (min-width: @lg) {
-        // First card retains stacked layout.
-        .feature-card:not(:first-child) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
-        }
-    }
-
     .mixin-card-gradient(@accent-color, @darken-by: 30%, @accent-position: 100%) {
         background-clip: padding-box;
         background-image: linear-gradient(349deg,
@@ -235,13 +226,13 @@ section#features {
         }
 
         .card-image {
-            .mixin-background-image('/media/img/thunderbird/tbpro/xs-thundermail-card-high-res');
+            .mixin-background-image('/media/img/tbpro/xs-thundermail-card-high-res');
             @media (min-width: @md) {
                 height: 100%;
                 width: 100%;
             }
             @media (min-width: @lg) {
-                .mixin-background-image('/media/img/thunderbird/tbpro/xl-thundermail-card-high-res');
+                .mixin-background-image('/media/img/tbpro/xl-thundermail-card-high-res');
             }
         }
     }
@@ -256,10 +247,10 @@ section#features {
         }
 
         .card-image {
-            .mixin-background-image('/media/img/thunderbird/tbpro/xs-appointment-card-high-res');
+            .mixin-background-image('/media/img/tbpro/xs-appointment-card-high-res');
             @media (min-width: @lg) {
                 aspect-ratio: unset;
-                .mixin-background-image('/media/img/thunderbird/tbpro/xl-appointment-card-high-res');
+                .mixin-background-image('/media/img/tbpro/xl-appointment-card-high-res');
             }
         }
 
@@ -269,12 +260,15 @@ section#features {
 
         padding: 2rem;
         padding-bottom: 1rem;
+        @media (min-width: @lg) {
+            padding-right: 0;
+        }
 
         .card-image {
-            .mixin-background-image('/media/img/thunderbird/tbpro/xs-send-card-high-res');
+            .mixin-background-image('/media/img/tbpro/xs-send-card-high-res');
             @media (min-width: @lg) {
+                .mixin-background-image('/media/img/tbpro/xl-send-card-high-res');
                 aspect-ratio: unset;
-                .mixin-background-image('/media/img/thunderbird/tbpro/xl-send-card-high-res')
             }
         }
     }
@@ -286,6 +280,8 @@ section#features {
 // 36px/2.25rem from last overview card and Made for You header
 section#overview {
     background: #fff;
+    padding-top: 2.25rem;
+
     header {
         .brand-headline-h1-sm();
         color: var(--header-color);
@@ -329,10 +325,10 @@ section#overview {
 
         .overview-card {
             border-radius: 1.5rem;
+            min-width: 0;
             padding-block: 1.5rem;
 
             @media (min-width: @lg) {
-                min-width: 594px;
                 padding-block: 0;
             }
 
@@ -345,6 +341,7 @@ section#overview {
 
             header {
                 .headings-h3-small();
+                color: #fff;
                 padding-inline: 1.25rem;
                 text-align: left;
 
@@ -354,10 +351,16 @@ section#overview {
             }
 
             p {
+                color: #fff;
                 margin: 0;
                 padding-inline: 1.25rem;
                 text-align: left;
             }
+
+            .overview-image {
+                width: 100%;
+            }
+
         }
     }
 
@@ -392,15 +395,6 @@ section#reasons {
         // For desktop, create parent grid for counter, reason, and explanation.
         grid-template-columns: auto auto 58%;
         row-gap: @space-36;
-    }
-
-    // Get rid of the additional padding for very wide viewports.
-    // The value 1536px was found via trial and error, though it's probably the
-    // max width + the calculated padding.
-    @media (min-width: 1536px) {
-        // overrides the padding for elements matching #main-content > *
-        padding-inline: unset !important;
-        // Opt into default value via `unset` instead of setting to `0`.
     }
 
     .reason {
@@ -515,7 +509,7 @@ section#faq {
         margin-bottom: @space-9;
 
         @media (min-width: @lg) {
-            .brand-headline-h1-lg();
+            .brand-headline-h2-lg();
             padding-right: @space-144;
         }
     }
@@ -595,7 +589,7 @@ section#details {
         header {
             .headings-h1-sm();
             @media (min-width: @lg) {
-                .brand-headline-h1-lg();
+                .brand-headline-h2-lg();
             }
         }
 
@@ -941,5 +935,20 @@ section#testimonials {
                 width: var(--active-dot-size);
             }
         }
+    }
+}
+
+
+
+.debug {
+    outline: 1px solid blue;
+    @media (min-width: @md) {
+        outline: 1px solid green;
+    }
+
+    @media (min-width: @lg) {
+        outline: 1px solid red;
+        // overrides the padding for elements matching #main-content > *
+        // padding-inline: unset !important;
     }
 }
