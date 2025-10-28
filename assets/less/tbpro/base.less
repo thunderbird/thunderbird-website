@@ -29,10 +29,18 @@ body {
     font-family: var(--font-content);
 }
 
-// Constrain the common containers to the largest breakpoint.
-#site-header,
-#site-nav,
-#moz-nav {
+// ------------------------------------------------------------
+// Set whitespace and widths for overall layout.
+// ------------------------------------------------------------
+.top-level {
+    padding-inline: @gutter;
+    @media (min-width: @md) {
+        padding-inline: calc(@space-144 - @gutter);
+    }
+}
+
+// Constrains to the largest breakpoint.
+.primary-block {
     margin-inline: auto;
     max-width: @lg;
 }
@@ -225,22 +233,6 @@ body {
     }
 }
 
-
-// ------------------------------------------------------------
-//
-// ------------------------------------------------------------
-#main-content {
-    // background-color: #18181b;
-    // this should probably be a gradient, since it covers #masthead and #features.
-    // It might continue as if the white background isn't there
-
-    &>* {
-        padding-inline: @gutter;
-        @media (min-width: @md) {
-            padding-inline: calc(@space-144 - @gutter);
-        }
-    }
-}
 
 
 .top-gradient {

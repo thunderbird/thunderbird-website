@@ -25,35 +25,37 @@
 
 
 {% block overview %}
-<section id="overview">
-  <header>Meet Send</header>
-  <p>
-    Share large files with end-to-end encryption and fewer limits. Send provides a natural file attachment experience in Thunderbird Desktop and is compatible with any recipient’s inbox. Know your attachments will arrive safe and secure.
-  </p>
-  <div class="overview-card-container">
-    <div class="overview-card overview-card-1">
-      <div class="overview-image"></div>
-      <header>End-to-End Encrypted</header>
-      <p>
-        Your files are protected from the moment they leave your device until they reach their destination. With encryption both in transit and at rest,  plus optional password protection, sensitive documents stay private, so even we can't see what you're sharing.
-      </p>
+<div class="top-level">
+  <section id="overview" class="primary-block">
+    <header>Meet Send</header>
+    <p>
+      Share large files with end-to-end encryption and fewer limits. Send provides a natural file attachment experience in Thunderbird Desktop and is compatible with any recipient’s inbox. Know your attachments will arrive safe and secure.
+    </p>
+    <div class="overview-card-container">
+      <div class="overview-card overview-card-1">
+        <div class="overview-image"></div>
+        <header>End-to-End Encrypted</header>
+        <p>
+          Your files are protected from the moment they leave your device until they reach their destination. With encryption both in transit and at rest,  plus optional password protection, sensitive documents stay private, so even we can't see what you're sharing.
+        </p>
+      </div>
+      <div class="overview-card overview-card-2">
+        <header>Massive File Support</header>
+        <p>
+          Share files up to [size limit] without worrying about attachment restrictions. Whether it's high-resolution photos, design files, or project archives, Send handles what traditional email can't, while maintaining the familiar attachment experience in Thunderbird Desktop.
+        </p>
+        <div class="overview-image"></div>
+      </div>
+      <div class="overview-card overview-card-3">
+        <header>Desktop App Integrated</header>
+        <p>
+          Send large files directly from Thunderbird Desktop just like any other attachment. Recipients with Thunderbird see your files as natural email attachments, others can access them securely via a link.
+        </p>
+        <div class="overview-image"></div>
+      </div>
     </div>
-    <div class="overview-card overview-card-2">
-      <header>Massive File Support</header>
-      <p>
-        Share files up to [size limit] without worrying about attachment restrictions. Whether it's high-resolution photos, design files, or project archives, Send handles what traditional email can't, while maintaining the familiar attachment experience in Thunderbird Desktop.
-      </p>
-      <div class="overview-image"></div>
-    </div>
-    <div class="overview-card overview-card-3">
-      <header>Desktop App Integrated</header>
-      <p>
-        Send large files directly from Thunderbird Desktop just like any other attachment. Recipients with Thunderbird see your files as natural email attachments, others can access them securely via a link.
-      </p>
-      <div class="overview-image"></div>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
 {% endblock %}
 
 

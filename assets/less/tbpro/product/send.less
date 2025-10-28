@@ -64,20 +64,12 @@ header#masthead {
 }
 
 section#overview {
-    padding-top: 2.25rem;
     .overview-card-container {
         .overview-card {
             background-color: #1a202c;
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
-
-            header, p {
-                color: #fff;
-            }
-            .overview-image {
-                width: 100%;
-            }
         }
 
         .overview-card-1 {
@@ -139,7 +131,6 @@ section#overview {
                     padding-left: 2rem;
                 }
                 p {
-                    min-width: 331px;
                     grid-column: 1;
                     grid-row: 2;
                     padding: 0;
@@ -165,7 +156,6 @@ section#overview {
                     justify-self: start;
                     margin-left: 18px;
                     margin-top: 0;
-                    max-width: 160px;
                 }
             }
         }
@@ -214,12 +204,11 @@ section#overview {
                 }
 
                 @media (min-width: @lg) {
-                    margin-top: 0;
+                    height: 100%;
                     grid-column: 2;
                     grid-row: 1 / -1;
-                    height: 100%;
+                    margin-top: 0;
                 }
-
             }
         }
     }
