@@ -44,8 +44,8 @@ jobs:
       run: |
         npm install -g less
         pip install -r requirements-dev.txt
-        git clone https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes
-        git clone -b production https://github.com/mozilla-releng/product-details.git libs/product-details
+        git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes
+        git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details
     - name: Build site (just on darwin)
       if: runner.os == 'macOS'
       run: |
