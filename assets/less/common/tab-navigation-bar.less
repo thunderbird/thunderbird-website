@@ -3,6 +3,10 @@
 @color-nav: rgba(255, 255, 255, 0.6);
 @color-active: #58c9ff;
 @tab-navigation-bar-height: 32px; // 2rem
+
+
+@tab-navigation-max-width: 80rem; // Same as @lg
+
 #tab-navigation-bar {
     background-color: @bg-bar;
     display: flex;
@@ -28,8 +32,7 @@ body.tbpro #tab-navigation-bar {
     flex-direction: row;
     gap: 0;
     height: 100%;
-    margin-left: 1rem;
-    max-width: calc(1280px + 4.75rem);
+    max-width: @tab-navigation-max-width;
     width: 100%;
 
     a {
@@ -50,17 +53,6 @@ body.tbpro #tab-navigation-bar {
         background-color: @bg-active;
         color: @color-active;
     }
-}
-
-
-
-body.tbpro .tab-navigation-links {
-    max-width: @lg;
-
-    @media (min-width: @md) {
-        margin-left: 0;
-    }
-
 }
 
 
