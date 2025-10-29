@@ -45,19 +45,17 @@ jobs:
       run: |
         npm install -g less
         pip install -r requirements-dev.txt
-        git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes
+        git clone --depth 1 -b loaderfix https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes
         git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details
-        git clone --depth 1 https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale
-        l10n_tools/compile.sh
     - name: Build site
       run: |
-        python build-site.py --debug
+        python build-site.py --debug --enus
     - name: Build startpage
       run: |
-        python build-site.py --debug --startpage
+        python build-site.py --debug --enus --startpage
     - name: Build tbpro
       run: |
-        python build-site.py --debug --tbpro
+        python build-site.py --debug --enus --tbpro
   # - name: Build calendars (disabled until new provider)
   #   run: |
   #     python build-site.py --debug --enus --buildcalendar
