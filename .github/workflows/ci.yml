@@ -47,18 +47,17 @@ jobs:
         pip install -r requirements-dev.txt
         git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes
         git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details
-    - name: Build site (just on darwin)
-      if: runner.os == 'macOS'
+        git clone --depth 1 https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale
+        l10n_tools/compile.sh
+    - name: Build site
       run: |
-        python build-site.py --debug --enus
-    - name: Build startpage (just on darwin)
-      if: runner.os == 'macOS'
+        python build-site.py --debug
+    - name: Build startpage
       run: |
-        python build-site.py --debug --enus --startpage
-    - name: Build tbpro (just on darwin)
-      if: runner.os == 'macOS'
+        python build-site.py --debug --startpage
+    - name: Build tbpro
       run: |
-        python build-site.py --debug --enus --tbpro
+        python build-site.py --debug --tbpro
   # - name: Build calendars (disabled until new provider)
   #   run: |
   #     python build-site.py --debug --enus --buildcalendar
