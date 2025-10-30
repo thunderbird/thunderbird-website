@@ -569,7 +569,6 @@ section#faq {
 }
 
 section#details {
-    border-bottom: 1px solid rgba(88, 201, 255, 0.2);
     padding-block: @space-36;
     padding-inline: @gutter;
 
@@ -746,6 +745,10 @@ section#details {
 
         }
     }
+}
+
+section#details + section#faq {
+    border-top: 1px solid rgba(88, 201, 255, 0.2);
 }
 
 .testimonials-background {
