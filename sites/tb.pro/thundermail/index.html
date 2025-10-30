@@ -89,7 +89,6 @@
 </div>
 {% endblock %}
 
-
 {% block details %}
 <div class="subscription-header">
   <header>
@@ -100,5 +99,5 @@
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan('Early Bird Plan', 'Our initial offering, ideal for most users', '00', 'per month, paid annually', 'Subscribe Now', '00', '000', '0', '00') }}
+{{ subscription_plan('Early Bird Plan', 'Our initial offering, ideal for most users', '9', 'per month,<br>paid annually', 'Join Waitlist', '30', '300', '15', '3') }}
 {% endblock %}
