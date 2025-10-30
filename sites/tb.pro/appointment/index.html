@@ -28,7 +28,9 @@
 <div class="top-level">
   <section id="overview" class="primary-block">
     <header>Meet Appointment</header>
-    <p>Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Appointment is powered by open standards and compatible with Google Calendar. You can now schedule like a pro.</p>
+    <p>
+      Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Appointment is powered by open standards and compatible with Google Calendar. You can now schedule like a pro.
+    </p>
     <div class="overview-card-container">
       <div class="overview-card overview-card-1">
         <div class="overview-image"></div>
@@ -42,12 +44,12 @@
         <p>
           Coordinate with contacts using Thunderbird, Google, Microsoft, and more. With unique CalDAV support, syncing is easy and everyone is invited.
         </p>
-        <div class="overview-image"></div>
+        <div class="overview-image debug"></div>
       </div>
       <div class="overview-card overview-card-3">
         <header>Private, Open, Practical</header>
         <p>
-          Appointment is private, open source, and integrates with third-party tools like Zoom to align with the needs of your work and personal life.
+          Appointment is private, open source, and integrates with third-party tools like Zoom to align with the needs of your work and personal life
         </p>
         <div class="overview-image"></div>
       </div>
@@ -56,31 +58,33 @@
 </div>
 {% endblock %}
 
-
-
-
 {% block reasons %}
 <header>Made for You</header>
 <div class="reason">
   <div class="reason-content">
     <h3 class="reason-title">Open Source</h3>
-    <p>The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting.</p>
+    <p>
+      The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting
+    </p>
   </div>
 </div>
 <div class="reason">
   <div class="reason-content">
     <h3 class="reason-title">User Focused</h3>
-    <p>Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.</p>
+    <p>
+      Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.
+    </p>
   </div>
 </div>
 <div class="reason">
   <div class="reason-content">
     <h3 class="reason-title">Freedom Driven</h3>
-    <p>Money isn't our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.</p>
+    <p>
+      Money isn't our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.
+    </p>
   </div>
 </div>
 {% endblock %}
-
 
 {% block details %}
 <div class="subscription-header">
@@ -92,5 +96,5 @@
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan('Early Bird Plan', 'Our initial offering, ideal for most users', '00', 'per month, paid annually', 'Subscribe Now', '00', '000', '0', '00') }}
+{{ subscription_plan('Early Bird Plan', 'Our initial offering, ideal for most users', '9', 'per month,<br>paid annually', 'Join Waitlist', '30', '300', '15', '3') }}
 {% endblock %}
