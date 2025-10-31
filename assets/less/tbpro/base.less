@@ -3,6 +3,7 @@
 @import "breakpoints.less";
 @import "images.less";
 @import "variables.less";
+@import "nav.less";
 
 @import "../common/fonts.less";
 @import "../common/space.less";
@@ -48,12 +49,14 @@ body {
 // ------------------------------------------------------------
 // Header (nav bar)
 // ------------------------------------------------------------
+
 #site-header {
     margin-block: 0 @space-36;
     padding-top: @space-16;
 
     @media (min-width: @lg) {
         padding-top: @space-24;
+        margin-top: -0.25rem;
     }
 
     #site-header-nav {
@@ -85,6 +88,11 @@ body {
                 grid-column-start: 1;
                 grid-row-start: 1;
                 z-index: 9;
+
+                svg {
+                    height: 36px;
+                    width: 208px;
+                }
             }
         }
 
@@ -122,10 +130,6 @@ body {
                 position: relative;
                 right: unset;
                 top: unset;
-
-                .nav-item-join-button {
-                    align-self: flex-end;
-                }
             }
 
 
@@ -162,7 +166,10 @@ body {
                     }
 
                     li:last-child {
+                        margin-block: @gutter;
+                        margin-left: unset;
                         justify-self: end;  // Pushes last item to the right
+
                     }
 
                 }
@@ -170,8 +177,12 @@ body {
 
             li {
                 display: flex;
-                margin-block: @gutter;
-                padding-inline: @gutter;
+                margin-block: calc(@gutter - 11.5px);
+                width: 100%;
+
+                @media (min-width: @lg) {
+                    width: unset;
+                }
 
                 a {
                     .nav-item-desktop();
@@ -179,13 +190,24 @@ body {
                     text-decoration: none;
                     text-transform: uppercase;
 
+                    border-radius: 0.5rem;
+                    margin-inline: @gutter;
+                    padding: 11.5px 1.25rem;
+                    width: 100%;
+
                     &:visited {
                         color: var(--text-icon-base);
                     }
 
                     @media (min-width: @lg) {
                         align-self: center;
+                        margin-inline: unset;
+                        width: unset;
                     }
+                }
+
+                a:hover, a:active {
+                    .mixin-active-nav-link();
                 }
 
                 button {
@@ -195,6 +217,14 @@ body {
                     }
                 }
             }
+            li.nav-item-join-button {
+                align-self: flex-end;
+                margin-left: 2rem;
+                @media (min-width: @lg) {
+                    margin-left: unset;
+                }
+            }
+
         }
 
         .hamburger-btn {
@@ -232,6 +262,8 @@ body {
 
     }
 }
+
+
 
 
 

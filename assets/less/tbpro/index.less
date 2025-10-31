@@ -569,7 +569,6 @@ section#faq {
 }
 
 section#details {
-    border-bottom: 1px solid rgba(88, 201, 255, 0.2);
     padding-block: @space-36;
     padding-inline: @gutter;
 
@@ -685,7 +684,6 @@ section#details {
 
         }
 
-
         .subscription-callout {
             background-image: linear-gradient(150deg, #131c28 30%, #0b1017);
             border-radius: @space-12;
@@ -701,7 +699,8 @@ section#details {
 
             button {
                 color: var(--text-icon-base);
-                display: inline-block;
+                display: flex;
+                margin: 0 auto;
                 &:hover {
                     color: var(--colour-ti-base);
                 }
@@ -725,6 +724,9 @@ section#details {
                     500,
                     0.75rem
                 );
+                display: inline-flex;
+                flex-direction: row;
+                gap: 0.375rem;
 
                 b {
                     font-size: 2rem;
@@ -734,6 +736,16 @@ section#details {
                         normal,
                         2rem
                     );
+
+                    sup {
+                        // em, not rem for the sup
+                        font-size: 0.6em;
+                        top: -0.55em;
+                    }
+                }
+                span {
+                    text-align: left;
+                    line-height: 1.32;
                 }
             }
 
@@ -746,6 +758,10 @@ section#details {
 
         }
     }
+}
+
+section#details + section#faq {
+    border-top: 1px solid rgba(88, 201, 255, 0.2);
 }
 
 .testimonials-background {

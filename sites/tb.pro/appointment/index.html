@@ -13,12 +13,12 @@
 {% block masthead %}
 <div class="product-logo"></div>
 
-<h1>Plan Less. Do more.</h1>
+<h1>{{ _('Plan Less. Do more.') }}</h1>
 <p>
-  Thunderbird Appointment makes it easy to find a time to meet. So you can ditch the admin and streamline your day.
+  {{ _('Thunderbird Appointment makes it easy to find a time to meet. So you can ditch the admin and streamline your day.') }}
 </p>
 
-{{ right_arrow_cta_button('Join Waitlist', '', 'cta-button') }}
+{{ right_arrow_cta_button(_('Join Waitlist'), '', 'cta-button') }}
 
 <div class="hero-image appointment"></div>
 {% endblock %}
@@ -27,27 +27,29 @@
 {% block overview %}
 <div class="top-level">
   <section id="overview" class="primary-block">
-    <header>Meet Appointment</header>
-    <p>Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Appointment is powered by open standards and compatible with Google Calendar. You can now schedule like a pro.</p>
+    <header>{{ _('Meet Appointment') }}</header>
+    <p>
+      {{ _('Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Appointment is powered by open standards and compatible with Google Calendar. You can now schedule like a pro.') }}
+    </p>
     <div class="overview-card-container">
       <div class="overview-card overview-card-1">
         <div class="overview-image"></div>
-        <header>Simply Powerful</header>
+        <header>{{ _('Simply Powerful') }}</header>
         <p>
-          An intuitive interface unlocks powerful capabilities. Select available times, send a customizable link, and track RSVPs real-time.
+          {{ _('An intuitive interface unlocks powerful capabilities. Select available times, send a customizable link, and track RSVPs real-time.') }}
         </p>
       </div>
       <div class="overview-card overview-card-2">
-        <header>Broadly Compatible</header>
+        <header>{{ _('Broadly Compatible') }}</header>
         <p>
-          Coordinate with contacts using Thunderbird, Google, Microsoft, and more. With unique CalDAV support, syncing is easy and everyone is invited.
+          {{ _('Coordinate with contacts using Thunderbird, Google, Microsoft, and more. With unique CalDAV support, syncing is easy and everyone is invited.') }}
         </p>
         <div class="overview-image"></div>
       </div>
       <div class="overview-card overview-card-3">
-        <header>Private, Open, Practical</header>
+        <header>{{ _('Private, Open, Practical') }}</header>
         <p>
-          Appointment is private, open source, and integrates with third-party tools like Zoom to align with the needs of your work and personal life.
+          {{ _('Appointment is private, open source, and integrates with third-party tools like Zoom to align with the needs of your work and personal life') }}
         </p>
         <div class="overview-image"></div>
       </div>
@@ -56,107 +58,43 @@
 </div>
 {% endblock %}
 
-
-
-
 {% block reasons %}
-<header>Made for You</header>
+<header>{{ _('Made for You') }}</header>
 <div class="reason">
   <div class="reason-content">
-    <h3 class="reason-title">Open Source</h3>
-    <p>The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting.</p>
+    <h3 class="reason-title">{{ _('Open Source') }}</h3>
+    <p>
+      {{ _('The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting') }}
+    </p>
   </div>
 </div>
 <div class="reason">
   <div class="reason-content">
-    <h3 class="reason-title">User Focused</h3>
-    <p>Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.</p>
+    <h3 class="reason-title">{{ _('User Focused') }}</h3>
+    <p>
+      {{ _('Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.') }}
+    </p>
   </div>
 </div>
 <div class="reason">
   <div class="reason-content">
-    <h3 class="reason-title">Freedom Driven</h3>
-    <p>Money isn't our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.</p>
+    <h3 class="reason-title">{{ _('Freedom Driven') }}</h3>
+    <p>
+      {{ _('Money isn\'t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
+    </p>
   </div>
 </div>
 {% endblock %}
-
 
 {% block details %}
 <div class="subscription-header">
   <header>
-    Subscribe to Pro
+    {{ _('Subscribe to Pro') }}
   </header>
   <p>
-    Get Thundermail, Appointment, and Send in one simple subscription. You'll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.
+    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You\'ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan('Early Bird Plan', 'Our initial offering, ideal for most users', '00', 'per month, paid annually', 'Subscribe Now', '00', '000', '0', '00') }}
-{% endblock %}
-
-
-{% block faq %}
-<section id="faq" class="primary-block">
-  <header>Frequently Asked Questions</header>
-  <div class="faq-item-list">
-    <details class="faq-item">
-      <summary class="faq-question">
-        <span class="faq-question__text">
-          Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus?
-        </span>
-      </summary>
-      <div class="faq-answer">
-        <p>
-          Aliquam erat volutpat.&nbsp;&nbsp;Nunc eleifend leo vitae magna.&nbsp;&nbsp;In id erat non orci commodo lobortis.&nbsp;&nbsp;Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.&nbsp;&nbsp;Sed diam.&nbsp;&nbsp;Praesent fermentum tempor tellus.&nbsp;&nbsp;Nullam tempus.&nbsp;&nbsp;Mauris ac felis vel velit tristique imperdiet.&nbsp;&nbsp;Donec at pede.&nbsp;&nbsp;Etiam vel neque nec dui dignissim bibendum.&nbsp;&nbsp;Vivamus id enim.&nbsp;&nbsp;Phasellus neque orci, porta a, aliquet quis, semper a, massa.&nbsp;&nbsp;Phasellus purus.&nbsp;&nbsp;Pellentesque tristique imperdiet tortor.&nbsp;&nbsp;Nam euismod tellus id erat.
-        </p>
-        <p>
-          Pellentesque dapibus suscipit ligula.&nbsp;&nbsp;Donec posuere augue in quam.&nbsp;&nbsp;Etiam vel tortor sodales tellus ultricies commodo.&nbsp;&nbsp;Suspendisse potenti.&nbsp;&nbsp;Aenean in sem ac leo mollis blandit.&nbsp;&nbsp;Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.&nbsp;&nbsp;Phasellus lacus.&nbsp;&nbsp;Etiam laoreet quam sed arcu.&nbsp;&nbsp;Phasellus at dui in ligula mollis ultricies.&nbsp;&nbsp;Integer placerat tristique nisl.&nbsp;&nbsp;Praesent augue.&nbsp;&nbsp;Fusce commodo.&nbsp;&nbsp;Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.&nbsp;&nbsp;Nullam libero mauris, consequat quis, varius et, dictum id, arcu.&nbsp;&nbsp;Mauris mollis tincidunt felis.&nbsp;&nbsp;Aliquam feugiat tellus ut neque.&nbsp;&nbsp;Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-question">
-        <span class="faq-question__text">Phasellus at dui in ligula mollis ultricies?</span>
-      </summary>
-      <div class="faq-answer">
-        <p>
-          Aliquam erat volutpat.&nbsp;&nbsp;Nunc eleifend leo vitae magna.&nbsp;&nbsp;In id erat non orci commodo lobortis.&nbsp;&nbsp;Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.&nbsp;&nbsp;Sed diam.&nbsp;&nbsp;Praesent fermentum tempor tellus.&nbsp;&nbsp;Nullam tempus.&nbsp;&nbsp;Mauris ac felis vel velit tristique imperdiet.&nbsp;&nbsp;Donec at pede.&nbsp;&nbsp;Etiam vel neque nec dui dignissim bibendum.&nbsp;&nbsp;Vivamus id enim.&nbsp;&nbsp;Phasellus neque orci, porta a, aliquet quis, semper a, massa.&nbsp;&nbsp;Phasellus purus.&nbsp;&nbsp;Pellentesque tristique imperdiet tortor.&nbsp;&nbsp;Nam euismod tellus id erat.
-        </p>
-        <p>
-          Pellentesque dapibus suscipit ligula.&nbsp;&nbsp;Donec posuere augue in quam.&nbsp;&nbsp;Etiam vel tortor sodales tellus ultricies commodo.&nbsp;&nbsp;Suspendisse potenti.&nbsp;&nbsp;Aenean in sem ac leo mollis blandit.&nbsp;&nbsp;Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.&nbsp;&nbsp;Phasellus lacus.&nbsp;&nbsp;Etiam laoreet quam sed arcu.&nbsp;&nbsp;Phasellus at dui in ligula mollis ultricies.&nbsp;&nbsp;Integer placerat tristique nisl.&nbsp;&nbsp;Praesent augue.&nbsp;&nbsp;Fusce commodo.&nbsp;&nbsp;Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.&nbsp;&nbsp;Nullam libero mauris, consequat quis, varius et, dictum id, arcu.&nbsp;&nbsp;Mauris mollis tincidunt felis.&nbsp;&nbsp;Aliquam feugiat tellus ut neque.&nbsp;&nbsp;Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-question">
-        <span class="faq-question__text">Praesent fermentum tempor tellus?</span>
-      </summary>
-      <div class="faq-answer">
-        <p>
-          Aliquam erat volutpat.&nbsp;&nbsp;Nunc eleifend leo vitae magna.&nbsp;&nbsp;In id erat non orci commodo lobortis.&nbsp;&nbsp;Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.&nbsp;&nbsp;Sed diam.&nbsp;&nbsp;Praesent fermentum tempor tellus.&nbsp;&nbsp;Nullam tempus.&nbsp;&nbsp;Mauris ac felis vel velit tristique imperdiet.&nbsp;&nbsp;Donec at pede.&nbsp;&nbsp;Etiam vel neque nec dui dignissim bibendum.&nbsp;&nbsp;Vivamus id enim.&nbsp;&nbsp;Phasellus neque orci, porta a, aliquet quis, semper a, massa.&nbsp;&nbsp;Phasellus purus.&nbsp;&nbsp;Pellentesque tristique imperdiet tortor.&nbsp;&nbsp;Nam euismod tellus id erat.
-        </p>
-        <p>
-          Pellentesque dapibus suscipit ligula.&nbsp;&nbsp;Donec posuere augue in quam.&nbsp;&nbsp;Etiam vel tortor sodales tellus ultricies commodo.&nbsp;&nbsp;Suspendisse potenti.&nbsp;&nbsp;Aenean in sem ac leo mollis blandit.&nbsp;&nbsp;Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.&nbsp;&nbsp;Phasellus lacus.&nbsp;&nbsp;Etiam laoreet quam sed arcu.&nbsp;&nbsp;Phasellus at dui in ligula mollis ultricies.&nbsp;&nbsp;Integer placerat tristique nisl.&nbsp;&nbsp;Praesent augue.&nbsp;&nbsp;Fusce commodo.&nbsp;&nbsp;Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.&nbsp;&nbsp;Nullam libero mauris, consequat quis, varius et, dictum id, arcu.&nbsp;&nbsp;Mauris mollis tincidunt felis.&nbsp;&nbsp;Aliquam feugiat tellus ut neque.&nbsp;&nbsp;Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-question">
-        <span class="faq-question__text">Aliquam feugiat tellus ut neque?</span>
-      </summary>
-      <div class="faq-answer">
-        <p>
-          Aliquam erat volutpat.&nbsp;&nbsp;Nunc eleifend leo vitae magna.&nbsp;&nbsp;In id erat non orci commodo lobortis.&nbsp;&nbsp;Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.&nbsp;&nbsp;Sed diam.&nbsp;&nbsp;Praesent fermentum tempor tellus.&nbsp;&nbsp;Nullam tempus.&nbsp;&nbsp;Mauris ac felis vel velit tristique imperdiet.&nbsp;&nbsp;Donec at pede.&nbsp;&nbsp;Etiam vel neque nec dui dignissim bibendum.&nbsp;&nbsp;Vivamus id enim.&nbsp;&nbsp;Phasellus neque orci, porta a, aliquet quis, semper a, massa.&nbsp;&nbsp;Phasellus purus.&nbsp;&nbsp;Pellentesque tristique imperdiet tortor.&nbsp;&nbsp;Nam euismod tellus id erat.
-        </p>
-        <p>
-          Pellentesque dapibus suscipit ligula.&nbsp;&nbsp;Donec posuere augue in quam.&nbsp;&nbsp;Etiam vel tortor sodales tellus ultricies commodo.&nbsp;&nbsp;Suspendisse potenti.&nbsp;&nbsp;Aenean in sem ac leo mollis blandit.&nbsp;&nbsp;Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.&nbsp;&nbsp;Phasellus lacus.&nbsp;&nbsp;Etiam laoreet quam sed arcu.&nbsp;&nbsp;Phasellus at dui in ligula mollis ultricies.&nbsp;&nbsp;Integer placerat tristique nisl.&nbsp;&nbsp;Praesent augue.&nbsp;&nbsp;Fusce commodo.&nbsp;&nbsp;Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.&nbsp;&nbsp;Nullam libero mauris, consequat quis, varius et, dictum id, arcu.&nbsp;&nbsp;Mauris mollis tincidunt felis.&nbsp;&nbsp;Aliquam feugiat tellus ut neque.&nbsp;&nbsp;Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
-        </p>
-      </div>
-    </details>
-  </div>
-</section>
+{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), '30', '300', '15', '3') }}
 {% endblock %}
