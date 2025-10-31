@@ -13,12 +13,12 @@
 {% block masthead %}
 <div class="product-logo"></div>
 
-<h1>Host Securely. Mail Confidently</h1>
+<h1>{{ _('Host Securely. Mail Confidently') }}</h1>
 <p>
-  Thundermail offers you email hosting with the same values as Thunderbird. Enjoy privacy, security, and freedom from client to inbox.
+  {{ _('Thundermail offers you email hosting with the same values as Thunderbird. Enjoy privacy, security, and freedom from client to inbox.') }}
 </p>
 
-{{ right_arrow_cta_button('Join Waitlist', '', 'cta-button') }}
+{{ right_arrow_cta_button(_('Join Waitlist'), '', 'cta-button') }}
 
 <div class="hero-image thundermail"></div>
 {% endblock %}
@@ -27,29 +27,29 @@
 {% block overview %}
 <div class="top-level">
   <section id="overview" class="primary-block">
-  <header>Meet Thundermail</header>
+  <header>{{ _('Meet Thundermail') }}</header>
   <p>
-    Email hosting from Thunderbird is here. Send/receive emails with a privacy protecting provider based in Germany and the latest mail standards like JMAP. Choose a Thundermail domain or bring your own. Look no further to power the open source email app you love.
+    {{ _('Email hosting from Thunderbird is here. Send/receive emails with a privacy protecting provider based in Germany and the latest mail standards like JMAP. Choose a Thundermail domain or bring your own. Look no further to power the open source email app you love.') }}
   </p>
   <div class="overview-card-container">
     <div class="overview-card overview-card-1">
       <div class="overview-image"></div>
-      <header>Based on Modern Standards</header>
+      <header>{{ _('Based on Modern Standards') }}</header>
       <p>
-        Experience faster, more efficient email with JMAP support alongside traditional IMAP and SMTP protocols. Built on Stalwart's modern, modular mail server architecture, Thundermail delivers performance and reliability without the bloat.
+        {{ _('Experience faster, more efficient email with JMAP support alongside traditional IMAP and SMTP protocols. Built on Stalwart\'s modern, modular mail server architecture, Thundermail delivers performance and reliability without the bloat.') }}
       </p>
     </div>
     <div class="overview-card overview-card-2">
-      <header>Hosted Securely in Germany</header>
+      <header>{{ _('Hosted Securely in Germany') }}</header>
       <p>
-        Your emails are protected by strict EU privacy laws and hosted on infrastructure you can trust. With servers located in Germany, Thundermail prioritizes your privacy while ensuring reliable, fast delivery worldwide.
+        {{ _('Your emails are protected by strict EU privacy laws and hosted on infrastructure you can trust. With servers located in Germany, Thundermail prioritizes your privacy while ensuring reliable, fast delivery worldwide.') }}
       </p>
       <div class="overview-image"></div>
     </div>
     <div class="overview-card overview-card-3">
-      <header>Customizable Domain</header>
+      <header>{{ _('Customizable Domain') }}</header>
       <p>
-        Choose from @thundermail.com or @tb.pro addresses, or bring your own custom domain for a professional touch. Your email, your identity, your way to have full control over how you present yourself online.
+        {{ _('Choose from @thundermail.com or @tb.pro addresses, or bring your own custom domain for a professional touch. Your email, your identity, your way to have full control over how you present yourself online.') }}
       </p>
       <div class="overview-image"></div>
     </div>
@@ -62,28 +62,28 @@
 
 
 {% block reasons %}
-<header>Made for You</header>
+<header>{{ _('Made for You') }}</header>
 <div class="reason">
   <div class="reason-content">
-    <h3 class="reason-title">Open Source</h3>
+    <h3 class="reason-title">{{ _('Open Source') }}</h3>
     <p>
-      The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting
+      {{ _('The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting') }}
     </p>
   </div>
 </div>
 <div class="reason">
   <div class="reason-content">
-    <h3 class="reason-title">User Focused</h3>
+    <h3 class="reason-title">{{ _('User Focused') }}</h3>
     <p>
-      Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.
+      {{ _('Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.') }}
     </p>
   </div>
 </div>
 <div class="reason">
   <div class="reason-content">
-    <h3 class="reason-title">Freedom Driven</h3>
+    <h3 class="reason-title">{{ _('Freedom Driven') }}</h3>
     <p>
-      Money isn't our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.
+      {{ _('Money isn\'t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
     </p>
   </div>
 </div>
@@ -92,12 +92,12 @@
 {% block details %}
 <div class="subscription-header">
   <header>
-    Subscribe to Pro
+    {{ _('Subscribe to Pro') }}
   </header>
   <p>
-    Get Thundermail, Appointment, and Send in one simple subscription. You'll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.
+    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You\'ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan('Early Bird Plan', 'Our initial offering, ideal for most users', '9', 'per month,<br>paid annually', 'Join Waitlist', '30', '300', '15', '3') }}
+{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), '30', '300', '15', '3') }}
 {% endblock %}

@@ -7,10 +7,10 @@
 
 
 {% block masthead %}
-<h1>Elevate Thunderbird, <div class="txt-gradient">Do More</div></h1>
-<p>Add powerful cloud capabilities to Thunderbird and fund development of the always free and open source apps you love by subscribing to Pro.</p>
+<h1>{{ _('Elevate Thunderbird,') }} <div class="txt-gradient">{{ _('Do More') }}</div></h1>
+<p>{{ _('Add powerful cloud capabilities to Thunderbird and fund development of the always free and open source apps you love by subscribing to Pro.') }}</p>
 
-{{ right_arrow_cta_button('Join Waitlist', '', 'cta-button') }}
+{{ right_arrow_cta_button(_('Join Waitlist'), '', 'cta-button') }}
 
 <div class="hero-image tbpro"></div>
 {% endblock %}
@@ -27,17 +27,17 @@
           {{ svg_img('tbpro/icons/icon-thundermail') }}
         </span>
         <div class="app-header">
-          <span class="app-name">Thundermail</span>
-          <span class="app-tagline">Email Confidently</span>
+          <span class="app-name">{{ _('Thundermail') }}</span>
+          <span class="app-tagline">{{ _('Email Confidently') }}</span>
         </div>
       </div>
       <div class="card-body">
         <p>
-          Send/receive emails with a privacy protecting host based in Germany and the latest mail standards like JMAP. Choose a Thundermail domain or bring your own. Look no further to power the open source email app you love.
+          {{ _('Send/receive emails with a privacy protecting host based in Germany and the latest mail standards like JMAP. Choose a Thundermail domain or bring your own. Look no further to power the open source email app you love.') }}
         </p>
       </div>
     </div>
-    <div class="card-image" role="img" aria-label="Thunderbird desktop client showing two contact cards."></div>
+    <div class="card-image" role="img" aria-label="{{ _('Thunderbird desktop client showing two contact cards.') }}"></div>
   </div>
   <div class="feature-card feature-card-2">
     <div class="card-info">
@@ -46,13 +46,13 @@
           {{ svg_img('tbpro/icons/icon-appointment') }}
         </span>
         <div class="app-header">
-          <span class="app-name">Appointment</span>
-          <span class="app-tagline">Schedule Easily</span>
+          <span class="app-name">{{ _('Appointment') }}</span>
+          <span class="app-tagline">{{ _('Schedule Easily') }}</span>
         </div>
       </div>
       <div class="card-body">
         <p>
-Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Appointment is powered by open standards and compatible with Google Calendar. You can now schedule like a pro.
+{{ _('Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Appointment is powered by open standards and compatible with Google Calendar. You can now schedule like a pro.') }}
         </p>
       </div>
     </div>
@@ -67,8 +67,8 @@ Instead of exchanging multiple messages to schedule a meeting, select your avail
           {{ svg_img('tbpro/icons/icon-send') }}
         </span>
         <div class="app-header">
-          <span class="app-name">Send</span>
-          <span class="app-tagline">Attach Securely</span>
+          <span class="app-name">{{ _('Send') }}</span>
+          <span class="app-tagline">{{ _('Attach Securely') }}</span>
         </div>
       </div>
       <div class="card-body">
@@ -87,28 +87,28 @@ Instead of exchanging multiple messages to schedule a meeting, select your avail
 
 
 {% block reasons %}
-<header>Made for You</header>
+<header>{{ _('Made for You') }}</header>
 <div class="reason">
   <div class="reason-content">
-    <h3 class="reason-title">Open Source</h3>
+    <h3 class="reason-title">{{ _('Open Source') }}</h3>
     <p>
-      The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting
+      {{ _('The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting') }}
     </p>
   </div>
 </div>
 <div class="reason">
   <div class="reason-content">
-    <h3 class="reason-title">User Focused</h3>
+    <h3 class="reason-title">{{ _('User Focused') }}</h3>
     <p>
-      Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.
+      {{ _('Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.') }}
     </p>
   </div>
 </div>
 <div class="reason">
   <div class="reason-content">
-    <h3 class="reason-title">Freedom Driven</h3>
+    <h3 class="reason-title">{{ _('Freedom Driven') }}</h3>
     <p>
-      Money isn't our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.
+      {{ _('Money isn\'t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
     </p>
   </div>
 </div>
@@ -118,12 +118,12 @@ Instead of exchanging multiple messages to schedule a meeting, select your avail
 {% block details %}
 <div class="subscription-header">
   <header>
-    Subscribe to Pro
+    {{ _('Subscribe to Pro') }}
   </header>
   <p>
-    Get Thundermail, Appointment, and Send in one simple subscription. You'll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.
+    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You\'ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan('Early Bird Plan', 'Our initial offering, ideal for most users', '9', 'per month,<br>paid annually', 'Join Waitlist', '30', '300', '15', '3') }}
+{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), '30', '300', '15', '3') }}
 {% endblock %}
