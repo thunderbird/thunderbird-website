@@ -7,8 +7,8 @@
     {% block extra_meta %}{% endblock %}
 
     {% block shared_meta %}
-    <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} — Thunderbird{% endblock %}{% endfilter %}</title>
-    <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}{% endfilter %}">
+    <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} Thunderbird Pro: Email Hosting, Scheduling & Secure Sharing {% endblock %}{% endfilter %}</title>
+    <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{{ _("Elevate your Thunderbird email experience with Thunderbird Pro's cloud based tools: secure email hosting via Thundermail, effortless meeting scheduling with Appointment, and encrypted file sharing through Send. Support free, open-source development.") }}{% endblock %}{% endfilter %}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ _('Thunderbird') }}">
     <meta property="og:locale" content="{{ LANG|replace("-", "_") }}">
