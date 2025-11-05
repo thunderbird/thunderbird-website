@@ -344,3 +344,15 @@ On macOS, use the built-in `VoiceOver` screen reader.
 For Linux, the [Orca](https://wiki.mozilla.org/Screen_Reader_-_Orca) screen reader is recommended by the Mozilla Wiki.
 
 In particular, you may find that a screen reader does not pause adequately between sentences. Add a period (`.`) to remedy this.
+
+### Updating the baked appeal redirect
+
+At certain points Thunderbird will use a baked or static appeal url located at http://updates.thunderbird.net/thunderbird/appeal. 
+This is controlled by settings.py's value: `UPDATES_REDIRECTS`. Once your appeal is ok'd to go live and is on stage you should update the value of the `('thunderbird', 'appeal')` key. 
+
+Keys are normal url keys or a tuple based on path. So a path of `updates.thunderbird.net/thunderbird/release/sep25r` 
+turns into `('thunderbird', 'release', 'sep25r')`. The values are simply dot paths with the site prepended, 
+which would turn the above url into `updates.thunderbird.release.sep25r`.
+
+Why are they different? Most likely due to easier parsing and visually indicating that they're different from the normal 
+key based paths used in the url helper.
