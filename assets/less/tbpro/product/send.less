@@ -51,19 +51,20 @@ header#masthead {
         background-size: cover;
         height: 80px;
 
-        .mixin-background-image('/media/img/tbpro/xs-thundermail-logo-high-res');
+        .mixin-background-image('/media/img/tbpro/xs-thundermail-logo');
         @media (min-width: @md) {
-            .mixin-background-image('/media/img/tbpro/xl-thundermail-logo-high-res');
+            .mixin-background-image('/media/img/tbpro/xl-thundermail-logo');
         }
     }
 
     .hero-image {
-        aspect-ratio: 1.9/1;
+        aspect-ratio: 2.5/1;
+        background-size: contain;
 
         width: 100%;
-        .mixin-background-image('/media/img/tbpro/xs-thundermail-card-high-res');
-        @media (min-width: @md) {
-            .mixin-background-image('/media/img/tbpro/xl-thundermail-card-high-res');
+        .mixin-background-image('/media/img/tbpro/xs-send-hero-graphic');
+        @media (min-width: @lg) {
+            .mixin-background-image('/media/img/tbpro/xl-send-hero-graphic');
         }
     }
 }
@@ -83,9 +84,9 @@ section#overview {
 
             @media (min-width: @lg) {
                 display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 6fr 1fr 2fr 1fr;
+                grid-template-columns: minmax(0, 1fr);
                 gap: 0.5rem;
+                padding-bottom: 1rem;
 
                 header {
                     align-self: end;
@@ -102,18 +103,22 @@ section#overview {
 
 
             .overview-image {
-                .mixin-background-image('/media/img/tbpro/xs-bento-standards-high-res');
-                aspect-ratio: 2.6/1;
+                .mixin-background-image('/media/img/tbpro/xs-send-bento-top');
+                aspect-ratio: 1.77/1;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
-
+                margin: 0 auto;
                 margin-bottom: 1.5rem;
                 margin-top: 1rem;
+                max-width: 80%;
+                min-width: 0;
                 @media (min-width: @lg) {
-                    .mixin-background-image('/media/img/tbpro/xl-bento-standards-high-res');
-                    aspect-ratio: 2.3/1;
+                    .mixin-background-image('/media/img/tbpro/xl-send-bento-left-main');
                     grid-row: 2;
+                    margin-inline: 2rem;
+                    max-width: calc(100% - 4rem);
+                    width: calc(100% - 4rem);
                 }
             }
         }
@@ -124,9 +129,10 @@ section#overview {
             @media (min-width: @lg) {
                 display: grid;
                 gap: 0.5rem;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 3fr 4fr;
-                padding-inline: 0.75rem;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 1fr 2fr;
+                overflow: hidden;
+                // padding-inline: 0.75rem;
 
                 header {
                     align-self: end;
@@ -145,22 +151,23 @@ section#overview {
             }
 
             .overview-image {
-                .mixin-background-image('/media/img/tbpro/xs-bento-hosted-high-res');
-                aspect-ratio: 1.2/1;
+                .mixin-background-image('/media/img/tbpro/xs-send-bento-middle');
+                aspect-ratio: 2.46/1;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
-                margin: 0 auto;
-                margin-top: 1.5rem;
-                max-width: 180px;
+                justify-self: center;
+                margin-top: 1.25rem;
+                max-width: 80%;
 
                 @media (min-width: @lg) {
-                    grid-column: 2;
+                    .mixin-background-image('/media/img/tbpro/xl-send-bento-right-top');
+                    align-self: center;
+                    aspect-ratio: 1.8/1;
                     grid-row: 1 / -1;
-                    height: 100%;
-                    justify-self: start;
-                    margin-left: 18px;
-                    margin-top: 0;
+                    margin-top: unset;
+                    max-width: unset;
+
                 }
             }
         }
@@ -173,7 +180,7 @@ section#overview {
                 display: grid;
                 gap: 0.5rem;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 3fr 4fr;
+                grid-template-rows: 1fr 2fr;
                 padding-inline: 0.75rem 0;
                 header {
                     align-self: end;
@@ -183,7 +190,6 @@ section#overview {
                     padding-left: 2rem;
                 }
                 p {
-                    min-width: 331px;
                     grid-column: 1;
                     grid-row: 2;
                     padding: 0;
@@ -192,27 +198,25 @@ section#overview {
             }
 
             .overview-image {
-                .mixin-background-image('/media/img/tbpro/xs-bento-domain-high-res');
-                aspect-ratio: 1.2/1;
+                .mixin-background-image('/media/img/tbpro/xs-send-bento-bottom');
+                aspect-ratio: 1.7/1;
                 background-size: contain;
                 background-repeat: no-repeat;
-                background-position: bottom right;
+                background-position: center center;
 
-                height: 180px;
-                margin-top: 1.125rem;
-                margin-right: -2.5rem;
-                width: 100%;
-
-                @media (min-width: @md) {
-                    .mixin-background-image('/media/img/tbpro/xl-bento-domain-high-res');
-                    aspect-ratio: .9/1;
-                }
+                margin: 1.125rem auto;
+                margin-bottom: 0;
+                max-width: 80%;
+                overflow: hidden;
 
                 @media (min-width: @lg) {
-                    height: 100%;
+                    .mixin-background-image('/media/img/tbpro/xl-send-bento-right-bottom');                    height: 100%;
+                    background-position: center right;
+                    margin: auto;
+                    margin-right: 0;
                     grid-column: 2;
                     grid-row: 1 / -1;
-                    margin-top: 0;
+
                 }
             }
         }

@@ -51,9 +51,9 @@ header#masthead {
         background-size: cover;
         height: 80px;
 
-        .mixin-background-image('/media/img/tbpro/xs-thundermail-logo-high-res');
+        .mixin-background-image('/media/img/tbpro/xs-thundermail-logo');
         @media (min-width: @md) {
-            .mixin-background-image('/media/img/tbpro/xl-thundermail-logo-high-res');
+            .mixin-background-image('/media/img/tbpro/xl-thundermail-logo');
         }
     }
 
@@ -61,9 +61,9 @@ header#masthead {
         aspect-ratio: 1.9/1;
 
         width: 100%;
-        .mixin-background-image('/media/img/tbpro/xs-thundermail-card-high-res');
+        .mixin-background-image('/media/img/tbpro/xs-thundermail-card');
         @media (min-width: @md) {
-            .mixin-background-image('/media/img/tbpro/xl-thundermail-card-high-res');
+            .mixin-background-image('/media/img/tbpro/xl-thundermail-card');
         }
     }
 }
@@ -84,17 +84,16 @@ section#overview {
             @media (min-width: @lg) {
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows: 1fr 6fr 1fr 2fr 1fr;
-                gap: 0.5rem;
+                grid-template-rows: 13.13% 42.63% 9.17% auto auto 10.25%;
+                gap: 0;
 
                 header {
-                    align-self: end;
-                    grid-row: 3;
+                    grid-row: 4;
                     padding-inline: 2rem;
                 }
 
                 p {
-                    grid-row: 4;
+                    grid-row: 5;
                     max-width: 368px;
                     padding-inline: 2rem;
                 }
@@ -102,16 +101,16 @@ section#overview {
 
 
             .overview-image {
-                .mixin-background-image('/media/img/tbpro/xs-bento-standards-high-res');
+                .mixin-background-image('/media/img/tbpro/xs-bento-standards');
                 aspect-ratio: 2.6/1;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
-
                 margin-bottom: 1.5rem;
                 margin-top: 1rem;
+
                 @media (min-width: @lg) {
-                    .mixin-background-image('/media/img/tbpro/xl-bento-standards-high-res');
+                    .mixin-background-image('/media/img/tbpro/xl-bento-standards');
                     aspect-ratio: 2.3/1;
                     grid-row: 2;
                 }
@@ -146,7 +145,7 @@ section#overview {
             }
 
             .overview-image {
-                .mixin-background-image('/media/img/tbpro/xs-bento-hosted-high-res');
+                .mixin-background-image('/media/img/tbpro/xs-bento-hosted');
                 aspect-ratio: 1.2/1;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -194,7 +193,7 @@ section#overview {
             }
 
             .overview-image {
-                .mixin-background-image('/media/img/tbpro/xs-bento-domain-high-res');
+                .mixin-background-image('/media/img/tbpro/xs-bento-domain');
                 aspect-ratio: 1.2/1;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -206,7 +205,7 @@ section#overview {
                 width: 100%;
 
                 @media (min-width: @md) {
-                    .mixin-background-image('/media/img/tbpro/xl-bento-domain-high-res');
+                    .mixin-background-image('/media/img/tbpro/xl-bento-domain');
                     aspect-ratio: .9/1;
                 }
 
