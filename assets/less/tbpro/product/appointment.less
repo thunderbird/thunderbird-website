@@ -45,16 +45,9 @@ header#masthead {
     }
 
     .product-logo {
-        aspect-ratio: 16/9;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        .mixin-background-svg('/media/svg/tbpro/logo-appointment-full.svg');
+        aspect-ratio: 3.4/1;
         height: 80px;
-
-        .mixin-background-image('/media/img/tbpro/xs-thundermail-logo');
-        @media (min-width: @md) {
-            .mixin-background-image('/media/img/tbpro/xl-thundermail-logo');
-        }
     }
 
     .hero-image {
@@ -197,12 +190,8 @@ section#overview {
             }
 
             .overview-image {
-                background-image: url('/media/svg/tbpro/zoom-logo.svg');
+                .mixin-background-svg('/media/svg/tbpro/zoom-logo.svg');
                 aspect-ratio: 4.32/1;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-
                 height: 50px;
                 margin-top: 5.125rem;
                 margin-bottom: 5.125rem;

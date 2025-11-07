@@ -45,16 +45,9 @@ header#masthead {
     }
 
     .product-logo {
-        aspect-ratio: 16/9;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        .mixin-background-svg('/media/svg/tbpro/logo-send-full.svg');
+        aspect-ratio: 3.2/1;
         height: 80px;
-
-        .mixin-background-image('/media/img/tbpro/xs-thundermail-logo');
-        @media (min-width: @md) {
-            .mixin-background-image('/media/img/tbpro/xl-thundermail-logo');
-        }
     }
 
     .hero-image {
