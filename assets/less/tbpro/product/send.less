@@ -58,12 +58,12 @@ header#masthead {
     }
 
     .hero-image {
-        aspect-ratio: 2.4/1;
+        aspect-ratio: 2.5/1;
         background-size: contain;
 
         width: 100%;
         .mixin-background-image('/media/img/tbpro/xs-send-hero-graphic');
-        @media (min-width: @md) {
+        @media (min-width: @lg) {
             .mixin-background-image('/media/img/tbpro/xl-send-hero-graphic');
         }
     }
@@ -162,7 +162,6 @@ section#overview {
                     grid-column: 2;
                     grid-row: 1 / -1;
                     height: 100%;
-                    outline: 1px solid red;
                     justify-self: end;
                     margin-left: 18px;
                     margin-top: 0;
@@ -204,12 +203,14 @@ section#overview {
                 background-position: center center;
 
                 margin: 1.125rem auto;
+                margin-bottom: 0;
                 max-width: 80%;
                 overflow: hidden;
 
                 @media (min-width: @lg) {
                     .mixin-background-image('/media/img/tbpro/xl-send-bento-right-bottom');                    height: 100%;
                     background-position: center right;
+                    margin-bottom: unset;
                     margin-right: 0;
                     grid-column: 2;
                     grid-row: 1 / -1;
