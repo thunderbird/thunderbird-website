@@ -84,17 +84,16 @@ section#overview {
             @media (min-width: @lg) {
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows: 1fr 6fr 1fr 2fr 1fr;
-                gap: 0.5rem;
+                grid-template-rows: 13.13% 42.63% 9.17% auto auto 10.25%;
+                gap: 0;
 
                 header {
-                    align-self: end;
-                    grid-row: 3;
+                    grid-row: 4;
                     padding-inline: 2rem;
                 }
 
                 p {
-                    grid-row: 4;
+                    grid-row: 5;
                     max-width: 368px;
                     padding-inline: 2rem;
                 }
@@ -107,9 +106,9 @@ section#overview {
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
-
                 margin-bottom: 1.5rem;
                 margin-top: 1rem;
+
                 @media (min-width: @lg) {
                     .mixin-background-image('/media/img/tbpro/xl-bento-standards');
                     aspect-ratio: 2.3/1;
