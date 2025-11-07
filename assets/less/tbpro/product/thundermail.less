@@ -45,25 +45,19 @@ header#masthead {
     }
 
     .product-logo {
-        aspect-ratio: 16/9;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        .mixin-background-svg('/media/svg/tbpro/logo-thundermail-full.svg');
+        aspect-ratio: 1.8/1;
         height: 80px;
-
-        .mixin-background-image('/media/img/tbpro/xs-thundermail-logo');
-        @media (min-width: @md) {
-            .mixin-background-image('/media/img/tbpro/xl-thundermail-logo');
-        }
     }
 
     .hero-image {
         aspect-ratio: 1.9/1;
 
         width: 100%;
-        .mixin-background-image('/media/img/tbpro/xs-thundermail-card');
-        @media (min-width: @md) {
-            .mixin-background-image('/media/img/tbpro/xl-thundermail-card');
+        .mixin-background-image('/media/img/tbpro/xs-thundermail-hero');
+        @media (min-width: @lg) {
+            .mixin-background-image('/media/img/tbpro/xl-thundermail-hero');
+            aspect-ratio: 3.57/1;
         }
     }
 }

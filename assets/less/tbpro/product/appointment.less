@@ -45,16 +45,9 @@ header#masthead {
     }
 
     .product-logo {
-        aspect-ratio: 16/9;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        .mixin-background-svg('/media/svg/tbpro/logo-appointment-full.svg');
+        aspect-ratio: 3.4/1;
         height: 80px;
-
-        .mixin-background-image('/media/img/tbpro/xs-thundermail-logo');
-        @media (min-width: @md) {
-            .mixin-background-image('/media/img/tbpro/xl-thundermail-logo');
-        }
     }
 
     .hero-image {
@@ -64,8 +57,9 @@ header#masthead {
         .mixin-background-image('/media/img/tbpro/xs-appointment-hero');
 
         @media (min-width: @lg) {
-            aspect-ratio: 3.6/1;
             .mixin-background-image('/media/img/tbpro/xl-appointment-hero');
+            aspect-ratio: 3.6/1;
+            max-width: 970px;
         }
     }
 }
@@ -80,7 +74,7 @@ section#overview {
         }
 
         .overview-card-1 {
-            background-image: url('/media/img/tbpro/thundermail-bento-main.png');
+            background-image: url('/media/img/tbpro/appointment-bento-main.png');
             overflow: hidden;
 
             @media (min-width: @lg) {
@@ -123,7 +117,7 @@ section#overview {
         }
 
         .overview-card-2 {
-            background-image: url('/media/img/tbpro/thundermail-bento-right-top.png');
+            background-image: url('/media/img/tbpro/appointment-bento-right-top.png');
 
             @media (min-width: @lg) {
                 display: grid;
@@ -170,7 +164,7 @@ section#overview {
             }
         }
         .overview-card-3 {
-            background-image: url('/media/img/tbpro/thundermail-bento-right-bottom.png');
+            background-image: url('/media/img/tbpro/appointment-bento-right-bottom.png');
             padding-bottom: 0;
             overflow: hidden;
 
@@ -197,12 +191,8 @@ section#overview {
             }
 
             .overview-image {
-                background-image: url('/media/svg/tbpro/zoom-logo.svg');
+                .mixin-background-svg('/media/svg/tbpro/zoom-logo.svg');
                 aspect-ratio: 4.32/1;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-
                 height: 50px;
                 margin-top: 5.125rem;
                 margin-bottom: 5.125rem;
