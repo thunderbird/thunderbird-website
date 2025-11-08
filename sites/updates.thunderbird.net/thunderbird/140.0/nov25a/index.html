@@ -7,7 +7,7 @@
 # in the user's preferred browser. This is hopefully less annoying for the end-user.
 #}
 
-{% set active_page = "appeal-dec24" %}
+{% set active_page = "appeal-nov25" %}
 
 {# For donation url generation #}
 {% set fru_form_id = fru_form_id|default('eoy2024') %}
@@ -22,29 +22,19 @@
   <link href="{{ static('css/appeal-nov25-style.css') }}" rel="stylesheet" type="text/css"/>
 
 {% endblock %}
-{% block page_title %}{{ _('Help Keep Thunderbird Alive!') }}{% endblock %}
+{% block page_title %}{{ _('Thank YOU! You Help Us Soar') }}{% endblock %}
 
-{% block site_header %}
-  <div id="header-gradient"></div>
-  <div id="appeal-header">
-    <header>
-      <h1 id="appeal-heading" aria-label="{{ _('Thank YOU. You Help Us Soar') }}">
-        {{ _('Thank YOU <span>You Help Us Soar</span>') }}
-      </h1>
-    </header>
-    <aside id="illustration" aria-hidden="true">
-      <div id="roc">
-        {{ high_res_img('thunderbird/appeal/dec24/forest-roc.png', {'alt': _('')}, alt_formats=('webp', 'avif')) }}
-      </div>
-    </aside>
-  </div>
-{% endblock %}
 {% block content %}
-  <section id="donate-button-container">
-    {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, base_url=donation_base_url) }}
-  </section>
   <section id="appeal-body">
-    <div class="letter-container font-xl">
+    <h1 id="appeal-heading" aria-label="{{ _('Thank YOU. You Help Us Soar') }}">
+      {{ _('Thank YOU <span>You Help Us Soar</span>') }}
+    </h1>
+
+    <div id="appeal-letter" class="letter-container font-xl">
+      <section id="donate-button-container">
+        {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, base_url=donation_base_url) }}
+      </section>
+
       <p>
         {{ _('Thunderbird’s mission is to give you a private, customizable, and robust email experience, while keeping it free and accessible for users around the world.')}}
       </p>

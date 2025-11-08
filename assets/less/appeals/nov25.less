@@ -1,417 +1,178 @@
-@import '../updates-style.less';
+// mixins for images.
+@import "../common/images.less";
 
-/*-------------------------
-* Media Queries
-*--------------------------*/
-@xxs: 25rem; // 400px
-@xs: 30rem; // 480px
-@sm: 40rem; // 640px
-@md: 48rem; // 768px
-@lg: 64rem; // 1024px
-@xl: 80rem; // 1280px
-@xxl: 90rem; // 1440px
+// Bases
+@import "../new-style.less";
+// @import "./new/animations.less";
+// @import "./new/shadows.less";
+// @import "./new/sizing.less";
+// @import "./new/layout.less";
+// @import "./new/variables.less";
 
-/* fake, in-between media queries */
-@xms: 26.25rem; // 420px;
-@ss: 33rem; // 528px ("sorta small")
-@mxl: 73.75rem; // 1180px
+// Components
+// @import "./new/components/accordion.less";
+// @import "./new/components/buttons.less";
+// @import "./new/components/forms.less";
+// @import "./new/components/site-nav.less";
+// @import "./new/components/testimonial.less";
+// @import "./new/components/pre-footer.less";
+// @import "./new/components/announcement.less";
+@import "../new/components/donate-cta.less";
+@import "../new/components/donate-cta-overrides.less";
+@import "../new/components/heart-lines.less";
+
+// @import "./new/components/dialog.less";
+// @import "../new/components/updates-footer.less";
+
+@import "../common/fonts.less";
+
 
 :root {
-  --bg-img: url('/media/img/thunderbird/appeal/dec24/background-image-high-res.png');
-  --bg-img-set: image-set(
-      url('/media/img/thunderbird/appeal/dec24/background-image-high-res.avif') type('image/avif'),
-      url('/media/img/thunderbird/appeal/dec24/background-image-high-res.webp') type('image/webp'),
-      var(--bg-img) type('image/png')
-    );
+    --color-appeal-main-bg: var(--color-white);
+    --color-footer-txt: #105BBC;
+    --color-appeal-txt: #18181B;
+    --color-appeal-bg-border: #1373D9;
 
-  --bg-appeal-glow: linear-gradient(130deg, rgba(255, 242, 0, 0.25) 50%, #26BAF5 100%);
+    --txt: var(--color-appeal-txt);
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 
-  --color-appeal-main-bg: var(--color-white);
-  --color-footer-txt: #105BBC;
-  --color-appeal-txt: #18181B;
-  --color-appeal-bg-border: #1373D9;
-
-  --txt: var(--color-appeal-txt);
-  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-
-  --font-content: Open Sans, system-ui, sans-serif;
-  --min-small-screen: 23.438rem;
+    --font-content: Open Sans, system-ui, sans-serif;
+    --min-small-screen: 23.438rem;
 
 }
 
+// Ensure the footer is contained at the bottom and by default the page extends to at least a full page.
+html, body {
+    min-height: 100%;
+}
+
+main {
+  // height: 100%;
+}
+
+
 // Scope to just the appeal page
-.page-appeal-dec24 {
-  background-color: black;
+.page-appeal-nov25 {
+    --background-illustration-height: 1048px;
+    background-color: black;
+    main {
+        .mixin-background-image('/media/img/thunderbird/appeal/nov25/2025-nov-appeal-xs-bkg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
 
+        margin: auto;
+        max-width: 100rem;
+        min-height: var(--background-illustration-height);
+        min-width: 23.438rem;
 
-  body {
-    max-width: 80rem;
-    margin: auto;
-    min-width: 23.438rem;
-    min-height: 100vh;
-    font-family: var(--font-content);
-    line-height: 1.6;
-    background-color: #0f345e;
-  }
+        @media (min-width: @md) {
+        }
 
-  #header-gradient {
-    --bg-color: linear-gradient(to bottom, rgba(20, 64, 92, 0) 35%, #0f345e 75%);
-    background: var(--bg-color);
-    position: absolute;
-    width: 100%;
-    height: 40rem;
-    overflow: clip;
-    pointer-events: none;
-  }
-
-  #appeal-header {
-    display: flex;
-    flex-direction: column-reverse;
-    padding-bottom: 7rem;
-
-    background-image: var(--bg-img);
-    background-image: var(--bg-img-set);
-    background-position: calc(100%) top;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-
-    header {
-      padding: 0;
-      background: none;
+        @media (min-width: @lg) {
+            .mixin-background-image('/media/img/thunderbird/appeal/nov25/2025-nov-appeal-xl-bkg');
+            background-position: center top;
+            min-height: var(--background-illustration-height);
+        }
     }
 
-    @media (min-width: @xl) {
-      background-size: contain;
-    }
-
-    @media (min-width: @lg) {
-      flex-direction: row;
-      height: 32.25rem;
-      header {
+    #main-content {
+        --width-left-column: 53%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-      }
-    }
 
-  }
+        @media (min-width: @lg) {
+            flex-direction: row;
 
-  #appeal-heading {
-    --txt: #f7cf78;
-    margin: 0.5rem 0;
-    padding: 2.2rem 2rem 1.8rem 2rem;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: @xxs) {
-      padding: 2.2rem 2rem 1.8rem 2rem;
-    }
-    @media (min-width: @md) {
-      font-size: 2.25rem;
-    }
-    @media (min-width: @lg) {
-      padding: 2.25rem 2rem 2rem 3rem;
-      margin: -1.8rem 0;
-    }
-
-    text-transform: uppercase;
-    font-family: var(--font-content);
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--txt);
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-
-    & > span {
-      margin-top: -.2rem;
-      display: block;
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 2.5rem;
-      @media (min-width: @md) {
-        font-size: 4.375rem;
-        line-height: 4.375rem;
-      }
-    }
-  }
-
-  #illustration {
-    width: 100%;
-    text-align: center;
-    #roc {
-      @media (min-width: @lg) {
-        padding-top: 1rem;
-        padding-left: 1rem;
-      }
-    }
-  }
-
-  #donate-button-container {
-    max-width: 22.188rem;
-    margin: 0 auto;
-
-    @media (min-width: @md) {
-      max-width: 29.375rem;
-    }
-  }
-
-  #appeal-body {
-    box-sizing: border-box;
-
-    @media (min-width: @lg) {
-      margin-top: -5.7rem;
-    }
-
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      background: var(--bg-appeal-glow);
-      margin: -1rem 2.375rem;
-      /* border-radius: 0.75rem; */
-      filter: blur(2.75rem);
-      opacity: 0.8;
-      inset: 11.75rem;
-      z-index: 0;
-      /* z-index: -1; */
-    }
-
-    &:before {
-      top: -1rem;
-    }
-
-    &:after {
-      bottom: -1rem;
-    }
-  }
-
-  .letter-container {
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    box-sizing: border-box;
-    align-items: center;
-    text-align: left;
-
-    font-size: 1.3125rem;
-    font-weight: 400;
-    line-height: 1.5;
-
-    margin-top: -6rem;
-    @media (min-width: @md) {
-      font-size: 1.375rem;
-      line-height: 2rem;
-      padding-top: 7rem;
-    }
-    background: var(--color-appeal-main-bg);
-    margin-bottom: 6rem;
-    position: relative;
-
-    padding: 6rem 1.063rem .75rem;
-
-    @media (min-width: @lg) {
-      border: 0.063rem solid var(--color-appeal-bg-border);
-      border-radius: 0.75rem;
-      box-shadow: var(--shadow);
-      max-width: 60rem;
-      margin: 0 auto 6rem;
-      padding-left: 4.5rem;
-      padding-right: 4.5rem;
-    }
-
-    p {
-      width: 100%;
-      font-size: 1.125rem;
-      margin: 0 0 1.5rem;
-      @media (min-width: @md) {
-        font-size: 1.5rem;
-        margin: 0 0 2rem;
-      }
-    }
-
-
-
-    /* Declaring this style here, as it has more precedence. */
-    .closing-text {
-      font-size: 1rem;
-    }
-
-  }
-
-
-
-  // Copy and paste (with minor tweaks) from previous appeal
-  // TODO: Centralize this!
-  .closing-text {
-    /* these styles have lower precedence than .letter-container p */
-    font-family: Metropolis, sans-serif;
-    /* font-size: 1rem; */
-    font-weight: 500;
-    text-align: center;
-    margin: 1rem 0 !important;
-    color: #1373d9;
-  }
-
-
-  .heart-container {
-    color: var(--color-red-30);
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 2.0rem;
-    align-items: center;
-    margin-top: 1.75rem;
-    width: 100%;
-    max-width: 41.125rem;
-    justify-content: center;
-  }
-
-  .heart-svg {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .line {
-    display: block;
-    height: 0.0625rem;
-    width: 100%;
-    border-top: 0.0625rem solid var(--color-blue-40);
-  }
-
-  .left-lines,
-  .right-lines {
-    display: flex;
-    flex-direction: column;
-    gap: 0.375rem;
-    justify-self: stretch;
-    // If smol, hide!
-    overflow: hidden;
-  }
-
-  .left-lines {
-    align-items: end;
-  }
-
-  .left-lines > .line:nth-child(2) {
-    width: 50%;
-    margin-right: 0.1875rem;
-    border-top: 0.0625rem solid var(--color-blue-40);
-  }
-
-  .left-lines > .line:nth-child(1) {
-    width: 30%;
-    border-top: 0.0625rem solid var(--color-blue-40);
-  }
-
-  .right-lines > .line:nth-child(2) {
-    width: 50%;
-    margin-left: 0.1875rem;
-    border-top: 0.0625rem solid var(--color-blue-40);
-  }
-
-  .right-lines > .line:nth-child(1) {
-    width: 30%;
-    border-top: 0.0625rem solid var(--color-blue-40);
-  }
-
-  #decoration {
-    left: -3.4375rem;
-    gap: 0.1875rem;
-    height: 5.625rem;
-    width: 31.25rem;
-  }
-
-  // Donation button overrides
-  .donate-banner {
-    border-radius: 0.75rem;
-    --background-left: linear-gradient(180deg, #DC2626 20.11%, #761414 100%);
-    --background-right: linear-gradient(180deg, #FFFFFF 0.41%, #FFE8E6 100.41%);
-    box-shadow: 0 0 0.625rem 0 #0000001A;
-    border: 0.0625rem solid var(--critical-pressed, #7F1D1D);
-    color: #7F1D1D;
-    font-family: 'Metropolis', sans-serif;
-    margin: -7.125rem auto 2rem;
-    max-width: 28.875rem;
-    min-height: 7.6875rem;
-
-    &::after {
-      top: -13.125rem;
-      left: -13.75rem;
-      height: 26.25rem;
-      width: 26.25rem;
-    }
-
-    #donate-banner-left {
-      padding: 0.5rem 1.5rem;
-      text-shadow: 0 2px 0 #af1e1e,
-        0 -2px 0 #af1e1e,
-      2px 0 0 #af1e1e,
-      -2px 0 0 #af1e1e,
-      2px 2px 0 #af1e1e,
-        -2px -2px 0 #af1e1e,
-        2px -2px 0 #af1e1e,
-      -2px 2px 0 #af1e1e;
-
-      text-align: left;
-    }
-
-    #donate-banner-right {
-      padding: 1.0625rem 0.75rem;
-      padding-inline-start: 0.1875rem;
-      text-shadow: 0 2px 0 #ffecea,
-        0 -2px 0 #ffecea,
-      2px 0 0 #ffecea,
-      -2px 0 0 #ffecea,
-      2px 2px 0 #ffecea,
-        -2px -2px 0 #ffecea,
-        2px -2px 0 #ffecea,
-      -2px 2px 0 #ffecea;
-      display: none;
-
-      @media (min-width: @md) {
-        display: block;
-        align-self: flex-end;
-      }
-    }
-
-
-    @media (max-width: @md) {
-      height: 6.25rem;
-
-      #hover-hearts {
-        color: #FFE8E6;
-        opacity: 0.5;
-      }
-
-      #donate-banner-right {
-        position: absolute;
-        right: 0;
-        bottom: -.5rem;
-        font-size: ~"clamp(0.9rem, 0.6429rem + 1.7857vw, 1.25rem)";
-        // Up the weight by 100
-        font-weight: 400;
-
-        b {
-          font-weight: 500;
-          font-size: ~"clamp(1.25rem, 1.0714rem + 0.8929vw, 1.5rem)";
+            // Column of white space.
+            &::before {
+                content: '';
+                flex: 0 0 var(--width-left-column);
+            }
         }
-      }
     }
-  }
 
-  #donate-banner-left, #hover-hearts {
-    color: white;
-  }
 
-  #donate-banner-right {
-    justify-content: flex-end;
-    text-align: right;
-  }
+    #appeal-body {
+        --appeal-content-width: 34rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: @lg) {
+            align-items: flex-start;
+            flex: 0 0 calc((100% - var(--width-left-column)) - 2rem);
+
+        }
+
+        // Placing inside #appeal-body for Nov25
+        #appeal-heading {
+            .mixin-font-styles(
+                @family-metropolis,
+                600,
+                3rem,
+                1.1
+            );
+            color: black;
+            margin-block: 4rem;
+            width: 100%;
+            @media (min-width: @sm) {
+                max-width: var(--appeal-content-width);
+            }
+
+            @media (min-width: @xl) {
+                font-size: 4rem;
+            }
+
+            span {
+                display: block;
+            }
+
+        }
+
+        .letter-container {
+            background: var(--color-appeal-main-bg);
+
+            @media (min-width: @sm) {
+                border: 0.063rem solid var(--color-appeal-bg-border);
+                border-radius: 0.75rem;
+                box-shadow: var(--shadow);
+                max-width: var(--appeal-content-width);
+            }
+
+            #donate-button-container {
+                max-width: 22.188rem;
+                margin: 0 auto;
+                margin-top: -4rem;
+
+                @media (min-width: @md) {
+                    max-width: 29.375rem;
+                }
+            }
+
+
+            p {
+                width: 100%;
+                font-size: 1.125rem;
+                // margin: 0 0 1.5rem;
+                @media (min-width: @md) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            /* Declaring this style here, as it has more precedence. */
+            .closing-text {
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+    #footer {
+        background: black;
+    }
+
+
 
 }
