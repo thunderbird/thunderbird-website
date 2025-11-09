@@ -110,12 +110,18 @@ main {
         #appeal-heading {
             .mixin-font-styles(
                 @family-metropolis,
-                600,
+                bold,
                 3rem,
                 1.1
             );
-            color: black;
             margin-block: 4rem;
+
+            background: linear-gradient(to bottom, #FFEEEB 0.00%, #F8E6B2 0.68%, #F2D9A7 29.25%, #F8E6B2 29.93%, #F2D9A7 30.61%, #EAC999 62.59%);
+            -webkit-background-clip: text; /* For Safari and Chrome */
+            background-clip: text;
+            color: transparent; /* Make the text color transparent */
+            filter: drop-shadow(0px 2px 3px #0000004c);
+
             width: 100%;
             @media (min-width: @sm) {
                 max-width: var(--appeal-content-width);
@@ -126,8 +132,16 @@ main {
             }
 
             span {
+                background: unset;
+                background-clip: unset;
                 display: block;
+                filter: unset;
+
+                color: #dceefb;
+                font-weight: 600;
+                text-shadow: 0px 2px 3px #0000004c;
             }
+
 
         }
 
@@ -144,7 +158,7 @@ main {
             #donate-button-container {
                 max-width: 22.188rem;
                 margin: 0 auto;
-                margin-top: -4rem;
+                margin-top: -3rem;
 
                 @media (min-width: @md) {
                     max-width: 29.375rem;
