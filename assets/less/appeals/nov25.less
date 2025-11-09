@@ -88,6 +88,7 @@ main {
             flex-direction: row;
 
             // Column of white space.
+            // #appeal-body occupies other column
             &::before {
                 content: '';
                 flex: 0 0 var(--width-left-column);
@@ -99,9 +100,9 @@ main {
     #appeal-body {
         --appeal-content-width: 34rem;
 
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
 
         @media (min-width: @lg) {
             align-items: flex-start;
@@ -117,15 +118,16 @@ main {
                 3rem,
                 1.1
             );
-            margin-block: 4rem;
+
 
             background: linear-gradient(to bottom, #FFEEEB 0.00%, #F8E6B2 0.68%, #F2D9A7 29.25%, #F8E6B2 29.93%, #F2D9A7 30.61%, #EAC999 62.59%);
             -webkit-background-clip: text; /* For Safari and Chrome */
             background-clip: text;
             color: transparent; /* Make the text color transparent */
             filter: drop-shadow(0px 2px 3px #0000004c);
-
+            margin-block: 4rem;
             width: 100%;
+
             @media (min-width: @sm) {
                 max-width: var(--appeal-content-width);
             }
@@ -152,8 +154,8 @@ main {
 
         .letter-container {
             background: var(--color-appeal-main-bg);
-            padding-inline: 2.6875rem;
             padding-bottom: 1rem;
+            padding-inline: 2.6875rem;
             @media (min-width: @sm) {
                 border: 0.063rem solid var(--color-appeal-bg-border);
                 border-radius: 0.75rem;
@@ -162,12 +164,41 @@ main {
             }
 
             #donate-button-container {
-                max-width: 22.188rem;
                 margin: 0 auto;
                 margin-top: -3rem;
+                max-width: 22.188rem;
 
                 @media (min-width: @md) {
                     max-width: 29.375rem;
+                }
+
+                .donate-banner {
+                    margin: 0 auto 2rem;
+                    #decoration {
+                        left: 125px;
+                    }
+                }
+
+                .donate-banner::after {
+                    left: -63px;
+                }
+
+                #donate-banner-left {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    line-height: 1.3;
+
+                    b {
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        letter-spacing: 2.21px;
+                    }
+                }
+
+                #donate-banner-right {
+                    @media (min-width: @md) {
+                        display: none;
+                    }
                 }
             }
 
@@ -179,7 +210,6 @@ main {
                     1.375rem,
                     1.5
                 );
-
 
                 width: 100%;
             }
