@@ -29,6 +29,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 :root {
+    --background-page-and-footer: #1a202c;
     --color-appeal-main-bg: var(--color-white);
     --color-footer-txt: #105BBC;
     --color-appeal-txt: #18181B;
@@ -57,7 +58,7 @@ main {
 // Scope to just the appeal page
 .page-appeal-nov25 {
     --background-illustration-height: 1048px;
-    background-color: black;
+    background-color: var(--background-page-and-footer);
     main {
         .mixin-background-image('/media/img/thunderbird/appeal/nov25/2025-nov-appeal-xs-bkg');
         background-repeat: no-repeat;
@@ -126,10 +127,15 @@ main {
             color: transparent; /* Make the text color transparent */
             filter: drop-shadow(0px 2px 3px #0000004c);
             margin-block: 4rem;
+            padding-left: 2rem;
             width: 100%;
 
             @media (min-width: @sm) {
                 max-width: var(--appeal-content-width);
+            }
+
+            @media (min-width: @md) {
+                padding-left: unset;
             }
 
             @media (min-width: @xl) {
@@ -144,12 +150,14 @@ main {
                 filter: unset;
 
                 color: #dceefb;
-                font-size: 3.375rem;
+                font-size: 2.5rem;
                 font-weight: 600;
                 text-shadow: 0px 2px 3px #0000004c;
+
+                @media (min-width: @xl) {
+                    font-size: 3.375rem;
+                }
             }
-
-
         }
 
         .letter-container {
@@ -223,7 +231,7 @@ main {
     }
 
     #footer {
-        background: black;
+        background: var(--background-page-and-footer);
     }
 
 
