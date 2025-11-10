@@ -60,18 +60,14 @@
     </header>
 
     {% block features %}{% endblock %}
-
   </div>
 
   {% block overview %}
     {# Individual product overviews. #}
   {% endblock %}
 
-  <div class="top-level">
-    <section id="reasons" class="primary-block">
-      {% block reasons %}{% endblock %}
-    </section>
-  </div>
+  {% block reasons %}
+  {% endblock %}
 
   {% block testimonials %}
   {% endblock %}

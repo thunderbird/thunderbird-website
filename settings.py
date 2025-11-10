@@ -381,6 +381,7 @@ TBPRO_CSS = {
     'thundermail': ['less/tbpro/product/thundermail.less'],
     'appointment': ['less/tbpro/product/appointment.less'],
     'send': ['less/tbpro/product/send.less'],
+    'waitlist': ['less/tbpro/waitlist.less'],
 }
 
 TBPRO_JS = {

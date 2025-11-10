@@ -1,0 +1,125 @@
+@import "../common/fonts.less";
+@import "breakpoints.less";
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    main {
+        flex-grow: 1;
+
+    }
+
+    .lower-gradient {
+        display: none;
+    }
+}
+
+#masthead {
+    display: none !important;
+}
+
+#site-header {
+    padding-bottom: 2rem;
+}
+
+#main-content {
+    height: 100%;
+}
+
+#waitlist-form {
+    color: #4c4d58;
+    height: 100%;
+    padding-top: 2rem;
+
+    @media (min-width: @lg) {
+        margin-inline: 1rem;
+    }
+
+    #form-header {
+        .mixin-font-styles(
+            @family-metropolis,
+            400,
+            2.25rem,
+            1.2,
+            -0.36px
+        );
+        color: #1373d9;
+    }
+
+    .form-elements {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 0.5rem;
+        max-width: 30rem;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+
+
+
+            .label {
+                .mixin-font-styles(
+                    @family-inter,
+                    600,
+                    1rem,
+                    1.25rem,
+                );
+                width: 100%;
+
+                .required {
+                    color: #dc2626;
+                    padding-inline-start: 0.25rem;
+                }
+            }
+            .tbpro-input-wrapper {
+                .mixin-font-styles(
+                    @family-inter,
+                    400,
+                    0.875rem,
+                    1.25rem
+                );
+                display: inline-flex;
+                align-items: center;
+                gap: 0.25rem;
+                border-radius: 0.5rem;
+                border: 0.0625rem solid #e4e4e7;
+                box-shadow: 2px 2px 4px #0000000d inset;
+                box-sizing: border-box;
+                width: 100%;
+
+                &:focus-within {
+                    border-color: #1373d9;
+                    box-shadow: 0 0 0 0.0625rem #1373d9;
+                }
+
+                input {
+                    background-color: #feffff;
+                    border: none;
+                    border-radius: 0.5rem;
+                    padding: 0.75rem;
+                    width: 100%;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+    }
+}
