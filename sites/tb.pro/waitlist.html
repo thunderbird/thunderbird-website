@@ -1,0 +1,65 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "includes/base/page.html" %}
+{% from 'includes/macros/right-arrow-cta-button.html' import right_arrow_cta_button %}
+
+{% block extra_css %}
+<link href="{{ static('css/waitlist.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block masthead %}
+<h1>Join the Waitlist</h1>
+{% endblock %}
+
+{% block overview %}
+<div id="waitlist-form" class="top-level">
+  <h2 id="form-header">Join the Waitlist</h2>
+  <div class="form-container">
+    <form action=""
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate"
+          target="_self"
+          novalidate=""
+          >
+
+      <div class="form-elements">
+        <label class="wrapper" for="first_name" id="first_name">
+          <span class="label">First name
+            <span class="required">*</span>
+          </span>
+          <span class="tbpro-input-wrapper">
+            <input class="tbpro-input-element" type="text" id="first_name" name="first_name" required="" autofocus="">
+          </span>
+        </label>
+        <label class="wrapper" for="last_name" id="last_name">
+          <span class="label">Last name
+            <span class="required">*</span>
+          </span>
+          <span class="tbpro-input-wrapper">
+            <input class="tbpro-input-element" type="text" id="last_name" name="last_name" required="" autofocus="">
+          </span>
+        </label>
+
+        <label class="wrapper" for="email" id="email">
+          <span class="label">Email address
+            <span class="required">*</span>
+          </span>
+          <span class="tbpro-input-wrapper">
+            <input class="tbpro-input-element" type="text" id="email" name="email" required="" autofocus="">
+          </span>
+        </label>
+
+        <div class="buttons">
+          {{ right_arrow_cta_button(_('Submit'), '', 'cta-button') }}
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+</div>
+{% endblock %}
