@@ -34,33 +34,36 @@
       <section id="donate-button-container">
         {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, base_url=donation_base_url) }}
       </section>
-
-      <p>
-        {{ _('Thunderbird’s mission is to give <b>you</b> a private, customizable, and robust email experience, while keeping it free and accessible for users around the world.')}}
-      </p>
-      <p>
-        {{ _('<b>All of our funding comes from users like you.</b> Your support drives development, safeguards our independence, and keeps Thunderbird a powerful, open-source alternative to Big Tech.')}}
-      </p>
-      <p>
-        {{ _('Your contributions make a huge difference. <b>We truly can’t do this without you.</b>')}}
-      </p>
-      <div class="heart-container">
-        <div class="left-lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+      <div id="letter-contents">
+        <p>
+          {{ _('Thunderbird’s mission is to give <b>you</b> a private, customizable, and robust email experience, while keeping it free and accessible for users around the world.')}}
+        </p>
+        <p>
+          {{ _('<b>All of our funding comes from users like you.</b> Your support drives development, safeguards our independence, and keeps Thunderbird a powerful, open-source alternative to Big Tech.')}}
+        </p>
+        <p>
+          {{ _('Your contributions make a huge difference. <b>We truly can’t do this without you.</b>')}}
+        </p>
+        <div class="heart-container">
+          <div class="left-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+          <div class="right-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </div>
-        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
-        <div class="right-lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+        <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
       </div>
-      <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
     </div>
   </section>
 {% endblock %}
 {% block site_footer %}
-  {% include 'includes/base/moz-footer.html' %}
+  <div id="footer-wrapper">
+    {% include 'includes/base/moz-footer.html' %}
+  </div>
 {% endblock %}
