@@ -1,28 +1,37 @@
-// mixins
-
-
 // Assumes you have regular and high-res versions of the image.
-.mixin-background-image(@base-path) {
+.mixin-background-image(@base-path, @use-alternates: false) {
     // Regular DPI fallback
     background-image: url('@{base-path}.png');
 
-    // Regular DPI modern formats
+    // high-res PNG, if syntax is supported.
     background-image: -webkit-image-set(
-        url('@{base-path}.avif') type('image/avif') 1x,
-        url('@{base-path}.webp') type('image/webp') 1x,
         url('@{base-path}.png') 1x,
-        url('@{base-path}-high-res.avif') type('image/avif') 2x,
-        url('@{base-path}-high-res.webp') type('image/webp') 2x,
         url('@{base-path}-high-res.png') 2x
     );
     background-image: image-set(
-        url('@{base-path}.avif') type('image/avif') 1x,
-        url('@{base-path}.webp') type('image/webp') 1x,
         url('@{base-path}.png') 1x,
-        url('@{base-path}-high-res.avif') type('image/avif') 2x,
-        url('@{base-path}-high-res.webp') type('image/webp') 2x,
         url('@{base-path}-high-res.png') 2x
     );
+
+    & when (@use-alternates = true) {
+        // Modern formats and high-res versions
+        background-image: -webkit-image-set(
+            url('@{base-path}.avif') type('image/avif') 1x,
+            url('@{base-path}.webp') type('image/webp') 1x,
+            url('@{base-path}.png') 1x,
+            url('@{base-path}-high-res.avif') type('image/avif') 2x,
+            url('@{base-path}-high-res.webp') type('image/webp') 2x,
+            url('@{base-path}-high-res.png') 2x
+        );
+        background-image: image-set(
+            url('@{base-path}.avif') type('image/avif') 1x,
+            url('@{base-path}.webp') type('image/webp') 1x,
+            url('@{base-path}.png') 1x,
+            url('@{base-path}-high-res.avif') type('image/avif') 2x,
+            url('@{base-path}-high-res.webp') type('image/webp') 2x,
+            url('@{base-path}-high-res.png') 2x
+        );
+    }
 }
 
 
