@@ -56,7 +56,7 @@ header#masthead {
 
         width: 100%;
         .mixin-background-image('/media/img/tbpro/xs-send-hero-graphic');
-        @media (min-width: @lg) {
+        @media (min-width: @md) {
             .mixin-background-image('/media/img/tbpro/xl-send-hero-graphic');
             max-width: 970px;
         }
@@ -107,8 +107,11 @@ section#overview {
                 margin-top: 1rem;
                 max-width: 80%;
                 min-width: 0;
-                @media (min-width: @lg) {
+                @media (min-width: @md) {
                     .mixin-background-image('/media/img/tbpro/xl-send-bento-left-main');
+                }
+
+                @media (min-width: @lg) {
                     grid-row: 2;
                     margin-inline: 2rem;
                     max-width: calc(100% - 4rem);
