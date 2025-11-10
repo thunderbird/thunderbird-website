@@ -30,6 +30,13 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 :root {
+    --appeal-content-width: 34.625rem;             // 554px
+    --appeal--letter-width-mobile: 23.8125rem;     // 381px
+    --background-illustration-height: 1048px;
+
+    --background-blue: #254B7C;
+    --background-yellow: #FBEA8B;
+
     --background-page-and-footer: #1a202c;
     --color-appeal-main-bg: var(--color-white);
     --color-footer-txt: #105BBC;
@@ -41,43 +48,50 @@
 
     --font-content: Open Sans, system-ui, sans-serif;
     --min-small-screen: 23.438rem;
-
-
-
 }
 
 // Ensure the footer is contained at the bottom and by default the page extends to at least a full page.
 html, body {
+    height: 100%;
     min-height: 100%;
 }
 
-main {
-  // height: 100%;
-}
-
-
 // Scope to just the appeal page
 .page-appeal-nov25 {
-    --background-illustration-height: 1048px;
-    background-color: var(--background-page-and-footer);
+
+    background: linear-gradient(to left, var(--background-yellow) 50%, var(--background-blue) 50%);
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
     main {
         .mixin-background-image('/media/img/thunderbird/appeal/nov25/2025-nov-appeal-xs-bkg');
+        background-color: var(--background-blue);
+        background-position: top center;
         background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
+        background-size: contain;
 
-        margin: auto;
-        max-width: 100rem;
-        min-height: var(--background-illustration-height);
+        flex-grow: 0;
+
+        padding-bottom: 5rem;
         min-width: 23.438rem;
 
-        @media (min-width: @md) {
-        }
 
         @media (min-width: @lg) {
             .mixin-background-image('/media/img/thunderbird/appeal/nov25/2025-nov-appeal-xl-bkg');
             background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
             min-height: var(--background-illustration-height);
+            padding-bottom: unset;
+        }
+
+        @media (min-width: @xxl) {
+            margin: auto;
+            width: 100rem;
+
         }
     }
 
@@ -85,6 +99,11 @@ main {
         --width-left-column: 53%;
         display: flex;
         flex-direction: column;
+
+
+        @media (min-width: @md) {
+
+        }
 
         @media (min-width: @lg) {
             flex-direction: row;
@@ -100,16 +119,20 @@ main {
 
 
     #appeal-body {
-        --appeal-content-width: 34rem;
-
         align-items: center;
         display: flex;
         flex-direction: column;
+        margin-top: 22rem;
+
+        @media (min-width: @md) {
+
+        }
 
         @media (min-width: @lg) {
+
             align-items: flex-start;
             flex: 0 0 calc((100% - var(--width-left-column)) - 2rem);
-
+            margin-top: unset;
         }
 
         // Placing inside #appeal-body for Nov25
@@ -128,15 +151,16 @@ main {
             color: transparent; /* Make the text color transparent */
             filter: drop-shadow(0px 2px 3px #0000004c);
             margin-block: 4rem;
-            padding-left: 2rem;
+            // padding-left: 2rem;
             width: 100%;
+            max-width: var(--appeal--letter-width-mobile);
 
             @media (min-width: @sm) {
                 max-width: var(--appeal-content-width);
             }
 
             @media (min-width: @md) {
-                padding-left: unset;
+                // padding-left: unset;
             }
 
             @media (min-width: @xl) {
@@ -163,19 +187,20 @@ main {
 
         .letter-container {
             background: var(--color-appeal-main-bg);
+            border: 0.063rem solid var(--color-appeal-bg-border);
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow);
+            max-width: var(--appeal--letter-width-mobile);
             padding-bottom: 1rem;
-            padding-inline: 2.6875rem;
+
             @media (min-width: @sm) {
-                border: 0.063rem solid var(--color-appeal-bg-border);
-                border-radius: 0.75rem;
-                box-shadow: var(--shadow);
                 max-width: var(--appeal-content-width);
             }
 
             #donate-button-container {
                 margin: 0 auto;
                 margin-top: -3rem;
-                max-width: 22.188rem;
+                // max-width: 22.188rem;
 
                 @media (min-width: @md) {
                     max-width: 29.375rem;
@@ -217,30 +242,35 @@ main {
                 }
             }
 
+            #letter-contents {
+                padding-inline: 1.25rem;
 
-            p {
-                .mixin-font-styles(
-                    @family-open-sans,
-                    normal,
-                    1.375rem,
-                    1.5
-                );
+                @media (min-width: @md) {
+                    padding-inline: 2.6875rem;
+                }
 
-                width: 100%;
-            }
+                p {
+                    .mixin-font-styles(
+                        @family-open-sans,
+                        normal,
+                        1.375rem,
+                        1.5
+                    );
 
-            /* Declaring this style here, as it has more precedence. */
-            .closing-text {
-                font-size: 1rem;
+                    width: 100%;
+                }
+
+                /* Declaring this style here, as it has more precedence. */
+                .closing-text {
+                    font-size: 1rem;
+                }
             }
         }
-
     }
 
-    #footer {
+    #footer-wrapper {
         background: var(--background-page-and-footer);
+        // outline: 8px solid red;
+        flex-grow: 1;
     }
-
-
-
 }

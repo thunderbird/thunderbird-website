@@ -28,8 +28,8 @@
   <div id="header-gradient"></div>
   <div id="appeal-header">
     <header>
-      <h1 id="appeal-heading" aria-label="{{ _('Thank YOU. You Help Us Soar') }}">
-        {{ _('Thank YOU <span>You Help Us Soar</span>') }}
+      <h1 id="appeal-heading" aria-label="{{ _('Help Keep Thunderbird Alive!') }}">
+        {{ _('Help Keep <span>Thunderbird Alive</span>') }}
       </h1>
     </header>
     <aside id="illustration" aria-hidden="true">
@@ -45,29 +45,30 @@
   </section>
   <section id="appeal-body">
     <div class="letter-container font-xl">
-      <p>
-        {{ _('Thunderbird’s mission is to give <b>you</b> a private, customizable, and robust email experience, while keeping it free and accessible for users around the world.')}}
-      </p>
-      <p>
-        {{ _('<b>All of our funding comes from users like you.</b> Your support drives development, safeguards our independence, and keeps Thunderbird a powerful, open-source alternative to Big Tech.')}}
-      </p>
-      <p>
-        {{ _('Your contributions make a huge difference. <b>We truly can’t do this without you.</b>')}}
-      </p>
-      <div class="heart-container">
-        <div class="left-lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
-        <div class="right-lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+    <p>{{ _('All of the work we do is funded by less than 3% of our users.')}}</p>
+    <p>
+      {{ _('We never show advertisements or sell your data. We don’t have corporate funding. We are fully funded by financial contributions from our users.')}}
+    </p>
+    <p>
+      {{ _('Thunderbird’s mission is to give you the best privacy-respecting, customizable email experience possible. Free for everyone to install and enjoy! Maintaining expensive servers, fixing bugs, developing new features, and hiring talented engineers are crucial for this mission.')}}
+    </p>
+    <p>
+      {{ _('If you get value from using Thunderbird, please help support it. We can’t do this without you.')}}
+    </p>
+    <div class="heart-container">
+      <div class="left-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
       </div>
-      <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+      <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+      <div class="right-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
     </div>
   </section>
 {% endblock %}
