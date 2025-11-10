@@ -1,0 +1,10 @@
+{% macro right_arrow_submit_button(button_label, target_url, additional_classes) -%}
+<button class="button-brand-filled-label-icon  {{ additional_classes }}" name="submit" type="submit">
+  {{ button_label }}
+
+  <!-- Using inline SVG so it adopts the current font color. -->
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.663 14.7506C12.9855 15.0789 13.5132 15.0837 13.8415 14.7612L18.0839 10.5945C18.2435 10.4378 18.3334 10.2236 18.3334 10C18.3334 9.77642 18.2435 9.56217 18.0839 9.4055L13.8415 5.23879C13.5132 4.9163 12.9855 4.92105 12.663 5.24941C12.3406 5.57777 12.3454 6.10539 12.6737 6.42788L15.4623 9.16667H2.50002C2.03979 9.16667 1.66669 9.53975 1.66669 10C1.66669 10.4603 2.03979 10.8333 2.50002 10.8333H15.4623L12.6737 13.5722C12.3454 13.8946 12.3406 14.4223 12.663 14.7506Z" fill="currentColor"/>
+  </svg>
+</button>
+{% endmacro %}
