@@ -84,7 +84,8 @@ def build_updates():
 
     site = builder.Site(languages, settings.UPDATES_PATH, settings.UPDATES_RENDERPATH,
                        settings.UPDATES_CSS, js_bundles=settings.UPDATES_JS,
-                       data=context, debug=args.debug, dev_mode=args.watch)
+                       data=context, debug=args.debug, dev_mode=args.watch,
+                       common_searchpath=settings.COMMON_SEARCHPATH)
     site.build_updates()
     return site
 

@@ -1,0 +1,91 @@
+// Donation button overrides
+.donate-banner {
+    border-radius: 0.75rem;
+    --background-left: linear-gradient(180deg, #DC2626 20.11%, #761414 100%);
+    --background-right: linear-gradient(180deg, #FFFFFF 0.41%, #FFE8E6 100.41%);
+    box-shadow: 0 0 0.625rem 0 #0000001A;
+    border: 0.0625rem solid var(--critical-pressed, #7F1D1D);
+    color: #7F1D1D;
+    font-family: 'Metropolis', sans-serif;
+
+    // TODO: tweak this value
+    // margin: -7.125rem auto 2rem;
+    margin: 0 auto 2rem;
+
+
+    max-width: 28.875rem;
+    min-height: 7.6875rem;
+
+    &::after {
+        top: -13.125rem;
+        left: -13.75rem;
+        height: 26.25rem;
+        width: 26.25rem;
+    }
+
+    #donate-banner-left {
+        padding: 0.5rem 1.5rem;
+        text-shadow: 0 2px 0 #af1e1e,
+                     0 -2px 0 #af1e1e,
+                     2px 0 0 #af1e1e,
+                     -2px 0 0 #af1e1e,
+                     2px 2px 0 #af1e1e,
+                     -2px -2px 0 #af1e1e,
+                     2px -2px 0 #af1e1e,
+                     -2px 2px 0 #af1e1e;
+
+        text-align: left;
+    }
+
+    #donate-banner-right {
+        padding: 1.0625rem 0.75rem;
+        padding-inline-start: 0.1875rem;
+        text-shadow: 0 2px 0 #ffecea,
+                     0 -2px 0 #ffecea,
+                     2px 0 0 #ffecea,
+                     -2px 0 0 #ffecea,
+                     2px 2px 0 #ffecea,
+                     -2px -2px 0 #ffecea,
+                     2px -2px 0 #ffecea,
+                     -2px 2px 0 #ffecea;
+        display: none;
+
+        @media (min-width: @md) {
+            display: block;
+            align-self: flex-end;
+        }
+    }
+
+
+    @media (max-width: @md) {
+        height: 6.25rem;
+
+        #hover-hearts {
+            color: #FFE8E6;
+            opacity: 0.5;
+        }
+
+        #donate-banner-right {
+            position: absolute;
+            right: 0;
+            bottom: -.5rem;
+            font-size: ~"clamp(0.9rem, 0.6429rem + 1.7857vw, 1.25rem)";
+            // Up the weight by 100
+            font-weight: 400;
+
+            b {
+                font-weight: 500;
+                font-size: ~"clamp(1.25rem, 1.0714rem + 0.8929vw, 1.5rem)";
+            }
+        }
+    }
+}
+
+#donate-banner-left, #hover-hearts {
+    color: white;
+}
+
+#donate-banner-right {
+    justify-content: flex-end;
+    text-align: right;
+}
