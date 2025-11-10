@@ -28,7 +28,6 @@ Join the waitlist to stay informed on our progress and get early access as we ex
           name="mc-embedded-subscribe-form"
           class="validate"
           target="_self"
-          novalidate=""
           >
 
       <div class="form-elements">
@@ -47,7 +46,7 @@ Join the waitlist to stay informed on our progress and get early access as we ex
           <textarea name="b_comment" tabindex="-1" placeholder="Please comment" id="b_comment"></textarea>
         </div>
 
-        <label class="wrapper" for="email" id="MERGE0">
+        <label class="wrapper" for="MERGE0">
           <span class="label">{{ _('Email address')}}
             <span class="required">*</span>
           </span>
@@ -56,21 +55,21 @@ Join the waitlist to stay informed on our progress and get early access as we ex
           </span>
         </label>
 
-        <label class="wrapper" for="first_name" id="MERGE1">
+        <label class="wrapper" for="MERGE1">
           <span class="label">{{ _('First name') }}</span>
           <span class="tbpro-input-wrapper">
-            <input class="tbpro-input-element" type="text" id="MERGE1" name="MERGE1" autofocus="">
+            <input class="tbpro-input-element" type="text" id="MERGE1" name="MERGE1">
           </span>
         </label>
-        <label class="wrapper" for="last_name" id="MERGE2">
+        <label class="wrapper" for="MERGE2">
           <span class="label">{{ _('Last name')}}</span>
           <span class="tbpro-input-wrapper">
-            <input class="tbpro-input-element" type="text" id="MERGE2" name="MERGE2" autofocus="">
+            <input class="tbpro-input-element" type="text" id="MERGE2" name="MERGE2">
           </span>
         </label>
 
         <div class="buttons">
-          {{ right_arrow_submit_button(_('Submit'), '', 'cta-button') }}
+          {{ right_arrow_submit_button(_('Submit'), 'cta-button') }}
         </div>
 
       </div>
