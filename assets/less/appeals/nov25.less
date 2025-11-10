@@ -184,12 +184,18 @@ main {
                 .donate-banner {
                     margin: 0 auto 2rem;
                     #decoration {
-                        left: 125px;
+                        left: 35px;
+                        @media (min-width: @md) {
+                            left: 125px;
+                        }
                     }
                 }
 
                 .donate-banner::after {
-                    left: -63px;
+                    left: -153px;
+                    @media (min-width: @md) {
+                        left: -63px;
+                    }
                 }
 
                 #donate-banner-left {
