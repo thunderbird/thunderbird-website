@@ -18,7 +18,7 @@
   {{ _('Thunderbird Appointment makes it easy to find a time to meet. So you can ditch the admin and streamline your day.') }}
 </p>
 
-{{ right_arrow_cta_button(_('Join Waitlist'), '', 'cta-button') }}
+{{ right_arrow_cta_button(_('Join Waitlist'), '../waitlist.html', 'cta-button') }}
 
 <div class="hero-image"></div>
 {% endblock %}
@@ -100,5 +100,5 @@
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), '30', '300', '15', '3') }}
+{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), '../waitlist.html', '30', '300', '15', '3') }}
 {% endblock %}

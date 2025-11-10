@@ -10,7 +10,7 @@
 <h1>{{ _('Elevate Thunderbird,') }} <div class="txt-gradient">{{ _('Do More') }}</div></h1>
 <p>{{ _('Add powerful cloud capabilities to Thunderbird and fund development of the always free and open source apps you love by subscribing to Pro.') }}</p>
 
-{{ right_arrow_cta_button(_('Join Waitlist'), '', 'cta-button') }}
+{{ right_arrow_cta_button(_('Join Waitlist'), 'waitlist.html', 'cta-button') }}
 
 <div class="hero-image tbpro"></div>
 {% endblock %}
@@ -129,5 +129,5 @@
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), '30', '300', '15', '3') }}
+{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), 'waitlist.html', '30', '300', '15', '3') }}
 {% endblock %}
