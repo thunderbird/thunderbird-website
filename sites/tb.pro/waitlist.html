@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
 
 {% extends "includes/base/page.html" %}
-{% from 'includes/macros/right-arrow-cta-button.html' import right_arrow_cta_button %}
+{% from 'includes/macros/right-arrow-submit-button.html' import right_arrow_submit_button %}
 
 {% block extra_css %}
 <link href="{{ static('css/waitlist.css') }}" rel="stylesheet" type="text/css" />
@@ -70,7 +70,7 @@ Join the waitlist to stay informed on our progress and get early access as we ex
         </label>
 
         <div class="buttons">
-          {{ right_arrow_cta_button(_('Submit'), '', 'cta-button') }}
+          {{ right_arrow_submit_button(_('Submit'), '', 'cta-button') }}
         </div>
 
       </div>
