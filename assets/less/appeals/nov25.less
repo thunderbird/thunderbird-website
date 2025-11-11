@@ -3,26 +3,9 @@
 
 // Bases
 @import "../new-style.less";
-// @import "./new/animations.less";
-// @import "./new/shadows.less";
-// @import "./new/sizing.less";
-// @import "./new/layout.less";
-// @import "./new/variables.less";
-
-// Components
-// @import "./new/components/accordion.less";
-// @import "./new/components/buttons.less";
-// @import "./new/components/forms.less";
-// @import "./new/components/site-nav.less";
-// @import "./new/components/testimonial.less";
-// @import "./new/components/pre-footer.less";
-// @import "./new/components/announcement.less";
 @import "../new/components/donate-cta.less";
 @import "../new/components/donate-cta-overrides.less";
 @import "../new/components/heart-lines.less";
-
-// @import "./new/components/dialog.less";
-// @import "../new/components/updates-footer.less";
 
 @import "../common/fonts.less";
 @import "../common/moz-footer.less";
@@ -41,7 +24,7 @@
     --color-appeal-main-bg: var(--color-white);
     --color-footer-txt: #105BBC;
     --color-appeal-txt: #18181B;
-    --color-appeal-bg-border: #1373D9;
+    --color-appeal-bg-border: #1373d9;
 
     --txt: var(--color-appeal-txt);
     --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -100,11 +83,6 @@ html, body {
         display: flex;
         flex-direction: column;
 
-
-        @media (min-width: @md) {
-
-        }
-
         @media (min-width: @lg) {
             flex-direction: row;
 
@@ -122,18 +100,45 @@ html, body {
         align-items: center;
         display: flex;
         flex-direction: column;
+        margin-bottom: 2rem;
         margin-top: 22rem;
-
-        @media (min-width: @md) {
-
-        }
+        position: relative;
 
         @media (min-width: @lg) {
-
             align-items: flex-start;
             flex: 0 0 calc((100% - var(--width-left-column)) - 2rem);
             margin-top: unset;
         }
+
+        // The glow
+        &::before {
+            content: '';
+            position: absolute;
+            top: 4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(var(--appeal--letter-width-mobile) + 16px);
+            height: calc(100% - 4rem); // Adjust to match letter-container height
+            background: radial-gradient(
+                ellipse at bottom right,
+                lighten(#2277A6, 40%),
+                transparent 50%
+            );
+            border-radius: 12px;
+            filter: blur(70px);
+            z-index: 1;
+            pointer-events: none;
+
+            @media (min-width: @sm) {
+                width: calc(var(--appeal-content-width) + 16px);
+            }
+
+            @media (min-width: @lg) {
+                left: 0;
+                transform: none;
+            }
+        }
+
 
         // Placing inside #appeal-body for Nov25
         #appeal-heading {
@@ -151,7 +156,6 @@ html, body {
             color: transparent; /* Make the text color transparent */
             filter: drop-shadow(0px 2px 3px #0000004c);
             margin-block: 4rem;
-            // padding-left: 2rem;
             width: 100%;
             max-width: var(--appeal--letter-width-mobile);
 
@@ -189,18 +193,28 @@ html, body {
             background: var(--color-appeal-main-bg);
             border: 0.063rem solid var(--color-appeal-bg-border);
             border-radius: 0.75rem;
-            box-shadow: var(--shadow);
+            box-shadow:
+                5px 3px 10px 0px rgba(0, 0, 0, 0.2);
+//                 12px 12px 32px rgba(255, 255, 255, 0.6),
+//                 24px 24px 64px rgba(19, 115, 217, 0.3);
+//                 // 5px 3px 10px 0px rgba(0, 0, 0, 0.2),
+//                 // 74px 64px 64px -60px rgba(19, 115, 217, 0.3));
+// //rgb(37, 75, 124)
             max-width: var(--appeal--letter-width-mobile);
             padding-bottom: 1rem;
+            z-index: 2;
 
             @media (min-width: @sm) {
                 max-width: var(--appeal-content-width);
             }
 
+            @media (min-width: @lg) {
+
+            }
+
             #donate-button-container {
                 margin: 0 auto;
                 margin-top: -3rem;
-                // max-width: 22.188rem;
 
                 @media (min-width: @md) {
                     max-width: 29.375rem;
@@ -270,7 +284,6 @@ html, body {
 
     #footer-wrapper {
         background: var(--background-page-and-footer);
-        // outline: 8px solid red;
         flex-grow: 1;
     }
 }
