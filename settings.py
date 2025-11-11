@@ -296,6 +296,8 @@ URL_MAPPINGS = {
     'updates.140.appeal.jun25b': '/thunderbird/140.0/jun25b/',
     'updates.140.appeal.jun25a.donate': '/thunderbird/140.0/jun25a/donate/',
     'updates.140.appeal.jun25b.donate': '/thunderbird/140.0/jun25b/donate/',
+    'updates.140.appeal.nov25a.donate': '/thunderbird/140.0/nov25a/donate/',
+    'updates.140.appeal.nov25b.donate': '/thunderbird/140.0/nov25b/donate/',
     'updates.release.appeal.sep25r': '/thunderbird/release/sep25r/',
     'updates.release.appeal.sep25r.donate': '/thunderbird/release/sep25r/donate/',
 }
