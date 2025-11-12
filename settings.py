@@ -239,6 +239,7 @@ URL_MAPPINGS = {
     'tbpro.thundermail': '/thundermail',
     'tbpro.appointment': '/appointment',
     'tbpro.send': '/send',
+    'tbpro.waitlist': '/waitlist',
     'thunderbird.about': '/about',
     'thunderbird.about.our-mission-statement': '/about/mission-statement',
     'thunderbird.android.announcement': 'https://blog.thunderbird.net/2024/10/thunderbird-for-android-8-0-takes-flight/',
