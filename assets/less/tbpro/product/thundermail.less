@@ -118,7 +118,7 @@ section#overview {
                 display: grid;
                 gap: 0.5rem;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 3fr 4fr;
+                grid-template-rows: 1fr 2fr;
                 padding-inline: 0.75rem;
 
                 header {
@@ -149,10 +149,10 @@ section#overview {
                 max-width: 180px;
 
                 @media (min-width: @lg) {
+                    align-self: center;
                     grid-column: 2;
                     grid-row: 1 / -1;
                     height: 100%;
-                    justify-self: start;
                     margin-left: 18px;
                     margin-top: 0;
                 }
@@ -167,7 +167,7 @@ section#overview {
                 display: grid;
                 gap: 0.5rem;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 3fr 4fr;
+                grid-template-rows: 1fr 2fr;
                 padding-inline: 0.75rem 0;
 
                 header {
@@ -204,6 +204,7 @@ section#overview {
                 }
 
                 @media (min-width: @lg) {
+                    background-position: center right;
                     margin-top: 0;
                     grid-column: 2;
                     grid-row: 1 / -1;

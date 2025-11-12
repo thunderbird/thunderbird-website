@@ -98,18 +98,6 @@ section#features {
         gap: @space-12;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-
-        .feature-card:first-child {
-            grid-row: 1 / -1;
-            height: 100%;
-        }
-
-        // First card retains stacked layout.
-        .feature-card:not(:first-child) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
-        }
     }
 
     .feature-card {
@@ -186,7 +174,6 @@ section#features {
                 text-align: left;
                 @media (min-width: @md) {
                     .web-body-default();
-                    min-width: 311px;
                 }
             }
         }
@@ -218,6 +205,11 @@ section#features {
         .mixin-card-gradient(#1373d9, 23%);
         justify-content: space-between;
 
+        @media (min-width: @lg) {
+            grid-row: 1 / -1;
+            height: 100%;
+        }
+
         // Copied from zeplin:
         padding: 32px 17.4px 16.1px 19px;
         p {
@@ -241,9 +233,21 @@ section#features {
 
         // Copied from zeplin:
         padding: 2rem 1px 0.25rem 2rem;
+
+        @media (min-width: @lg) {
+            box-sizing: border-box;
+            display: grid;
+            gap: 0;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr;
+        }
+
         p {
-            // Tweaked to avoid orphan for small screens.
-            padding-right: 2.5rem;
+            padding-right: 0.5rem;
+
+            @media (min-width: @lg) {
+                padding-right: 0.75rem;
+            }
         }
 
         .card-image {
@@ -258,9 +262,15 @@ section#features {
     .feature-card-3 {
         .mixin-card-gradient(desaturate(#fec18a, 10%), 10%, 120%);
 
+        overflow: hidden;
         padding: 2rem;
         padding-bottom: 1rem;
+
         @media (min-width: @lg) {
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr;
             padding-right: 0;
         }
 
