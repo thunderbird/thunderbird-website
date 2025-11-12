@@ -18,7 +18,7 @@
   {{ _('Thunderbird Send makes sending large files safe and easy, with end-to-end encryption that keeps them secure in any recipient\'s inbox.') }}
 </p>
 
-{{ right_arrow_cta_button(_('Join Waitlist'), '../waitlist.html', 'cta-button') }}
+{{ right_arrow_cta_button(_('Join Waitlist'), url('tbpro.waitlist'), 'cta-button') }}
 
 <div class="hero-image"></div>
 {% endblock %}
@@ -100,5 +100,5 @@
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), '../waitlist.html' ,'30', '300', '15', '3') }}
+{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), url('tbpro.waitlist'), '30', '300', '15', '3') }}
 {% endblock %}
