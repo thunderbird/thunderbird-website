@@ -6,10 +6,28 @@
 </div>
 
 <script>
-  // Disable link to site that you're currently on.
+  const currentHost = window.location.hostname;
+  const isStage = currentHost === 'www-stage.thunderbird.net' ||
+                  currentHost === 'stage.tb.pro' ||
+                  currentHost === 'localhost';
+
+  // Update href values based on environment
   document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
     const linkHost = new URL(link.href).hostname;
-    const currentHost = window.location.hostname;
+
+    // Determine which link this is and update.
+    if (linkHost.includes('thunderbird.net')) {
+      // Thunderbird link
+      link.href = isStage ? 'https://www-stage.thunderbird.net/en-US/' : 'https://www.thunderbird.net/en-US/';
+    } else if (linkHost.includes('tb.pro')) {
+      // Thunderbird Pro link
+      link.href = isStage ? 'https://stage.tb.pro/en-US/' : 'https://tb.pro/en-US/';
+    }
+  });
+
+  // Set .active class accordingly.
+  document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
+    const linkHost = new URL(link.href).hostname;
 
     if (linkHost === currentHost) {
       link.classList.add('active');
