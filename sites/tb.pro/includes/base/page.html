@@ -11,6 +11,44 @@
         const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
         hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
     });
+
+    // Adjust sign-in URL based on:
+    // - whether we're on prod vs stage
+    // - if we're on the appointment marketing page.
+    const signinBtn = document.getElementById('signin-button');
+
+    if (signinBtn) {
+      const hostname = window.location.hostname;
+      const isStage = hostname === 'stage.tb.pro' || hostname === 'localhost';
+      const pathname = window.location.pathname;
+      let loginUrl;
+
+      // Check if we're on the Appointment marketing page (with or without locale)
+      // Matches: /appointment, /en-US/appointment, /fr-FR/appointment, etc.
+      const isAppointmentPage = pathname === '/appointment' || pathname.includes('/appointment');
+
+      if (isAppointmentPage) {
+        // Appointment-specific login URLs
+        if (isStage) {
+          loginUrl = 'https://appointment-stage.tb.pro/login';
+        } else if (hostname === 'tb.pro') {
+          loginUrl = 'https://appointment.tb.pro/login';
+        }
+      } else {
+        // All other pages - regular accounts login
+        if (isStage) {
+          loginUrl = 'https://accounts-stage.tb.pro/login/';
+        } else {
+          loginUrl = 'https://accounts.tb.pro/login/';
+        }
+      }
+
+      if (loginUrl) {
+        signinBtn.action = loginUrl;
+      }
+    }
+
+
   </script>
 {% endblock %}
 
@@ -48,8 +86,8 @@
             <li>
               <a id="nav-link-send" href="{{ url('tbpro.send') }}">Send</a>
             </li>
-            <li class="nav-item-join-button">
-              <form class="bolt-button-wrapper" action="https://accounts.tb.pro/login/">
+            <li class="nav-item-cta-button">
+              <form class="bolt-button-wrapper" action="https://accounts-stage.tb.pro/login/" id="signin-button">
                 <button class="button-brand-small-outline-label">Sign in</button>
               </form>
             </li>
