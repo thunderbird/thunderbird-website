@@ -15,6 +15,8 @@
 {% set utm_campaign = utm_campaign|default('nov25_appeal') %}
 {% set utm_source = utm_source|default('in_app') %}
 {% set donation_base_url = donation_base_url|default(url('updates.140.appeal.nov25a.donate')) %}
+{# Disable the donation banner on this redirect page, we set this to false in the actual donation page. #}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
 
 {% extends "includes/base/base.html" %}
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
@@ -33,7 +35,7 @@
 
     <div id="appeal-letter" class="letter-container font-xl">
       <section id="donate-button-container">
-        {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content, base_url=donation_base_url) }}
+        {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content, base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
       </section>
       <div id="letter-contents">
         <p>
