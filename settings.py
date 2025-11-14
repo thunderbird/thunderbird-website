@@ -393,7 +393,7 @@ TBPRO_JS = {
 # Thunderbird Pro subscription plan - Single source of truth for all pages
 TBPRO_DEFAULT_PLAN = {
     'name': 'Early Bird Plan',
-    'description': 'Our initial offering, ideal for most users',
+    'description': 'Help support Thunderbird Pro\'s development',
     'price': '9',
     'period': 'per month,<br>paid annually',
     'cta_label': 'Join Waitlist',
