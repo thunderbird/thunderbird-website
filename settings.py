@@ -390,19 +390,17 @@ TBPRO_CSS = {
 TBPRO_JS = {
 }
 
-# Thunderbird Pro subscription plan data.
-TBPRO_SUBSCRIPTION_PLANS = {
-    'early_bird': {
-        'name': 'Early Bird Plan',
-        'description': 'Our initial offering, ideal for most users',
-        'price': '9',
-        'period': 'per month,<br>paid annually',
-        'cta_label': 'Join Waitlist',
-        'mail_storage': '30',  # GB
-        'send_storage': '300',  # GB
-        'num_domains': '3',
-        'num_email_addresses': '15',
-    }
+# Thunderbird Pro subscription plan - Single source of truth for all pages
+TBPRO_DEFAULT_PLAN = {
+    'name': 'Early Bird Plan',
+    'description': 'Our initial offering, ideal for most users',
+    'price': '9',
+    'period': 'per month,<br>paid annually',
+    'cta_label': 'Join Waitlist',
+    'mail_storage': '30',  # GB
+    'send_storage': '300',  # GB
+    'num_domains': '3',
+    'num_email_addresses': '15',
 }
 
 

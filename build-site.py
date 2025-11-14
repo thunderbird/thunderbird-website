@@ -110,7 +110,7 @@ def build_tbpro():
 
     context = {
         'current_year': date.today().year,
-        'subscription_plans': settings.TBPRO_SUBSCRIPTION_PLANS,
+        'default_plan': settings.TBPRO_DEFAULT_PLAN,
     }
     site = builder.Site(languages, settings.TBPRO_PATH, settings.TBPRO_RENDERPATH,
                        settings.TBPRO_CSS, js_bundles=settings.TBPRO_JS,
