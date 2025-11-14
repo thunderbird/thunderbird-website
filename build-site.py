@@ -107,9 +107,10 @@ def download_legal():
 def build_tbpro():
     """Build the tb.pro site."""
     print("Building tb.pro site")
-    # TODO: Decide whether the tb.pro site actually needs anything in the `context` dict.
+
     context = {
         'current_year': date.today().year,
+        'subscription_plans': settings.TBPRO_SUBSCRIPTION_PLANS,
     }
     site = builder.Site(languages, settings.TBPRO_PATH, settings.TBPRO_RENDERPATH,
                        settings.TBPRO_CSS, js_bundles=settings.TBPRO_JS,

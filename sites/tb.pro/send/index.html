@@ -100,5 +100,6 @@
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan(_('Early Bird Plan'), _('Our initial offering, ideal for most users'), '9', _('per month,<br>paid annually'), _('Join Waitlist'), url('tbpro.waitlist'), '30', '300', '15', '3') }}
+{% set plan = subscription_plans.early_bird %}
+{{ subscription_plan(_(plan.name), _(plan.description), plan.price, _(plan.period), _(plan.cta_label), url('tbpro.waitlist'), plan.mail_storage, plan.send_storage, plan.num_domains, plan.num_email_addresses) }}
 {% endblock %}
