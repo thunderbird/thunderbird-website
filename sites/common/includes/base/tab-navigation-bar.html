@@ -29,7 +29,7 @@
   document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
     const linkHost = new URL(link.href).hostname;
 
-    if (linkHost === currentHost) {
+    if (linkHost.replace('www.', '') === currentHost.replace('www.', '')) {
       link.classList.add('active');
       link.addEventListener('click', (e) => {
         e.preventDefault();

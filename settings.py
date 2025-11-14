@@ -390,8 +390,7 @@ TBPRO_CSS = {
 TBPRO_JS = {
 }
 
-# Thunderbird Pro subscription plans - Single source of truth
-# All tb.pro pages pull plan information from here to ensure consistency
+# Thunderbird Pro subscription plan data.
 TBPRO_SUBSCRIPTION_PLANS = {
     'early_bird': {
         'name': 'Early Bird Plan',
