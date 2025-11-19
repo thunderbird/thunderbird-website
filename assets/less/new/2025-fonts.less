@@ -1,0 +1,58 @@
+h1, h2, h3, h4, h5, h6 {
+    // New default for headings.
+    // Also repeated as needed for more specific selectors below.
+    font-weight: 400;
+}
+
+// XXL: Hero Text
+#masthead .hero-text .tagline, // main pages
+#masthead .tagline, // about and contribute pages
+#free-your-inbox .cta-heading // at bottom of home page
+{
+    font-weight: 400;
+    font-size: clamp(2.75rem, 7.5vw, 6.125rem); // 6rem is 98px
+    line-height: 1;
+}
+
+
+// L
+.section-text :where(h2)
+{
+    font-weight: 400;
+    font-size: 3.375rem; // 54px;
+}
+
+// M
+.section-text :where(h3)
+{
+    font-size: 2.25rem; // 36px
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+// Other small headings
+.section-text :where(h4)
+{
+    font-size: 1.375rem; // 22px
+    margin-top: -0.35em;
+}
+
+// This is a small headline, like the one above.
+// But this selector targets the h4 at bottom of home page.
+// Its container uses column-reverse, so we adjust a different margin.
+#free-your-inbox .cta-section :where(h4) {
+    margin: 0 0 0.75em;
+}
+
+// Misc changes from design
+#whats-next p
+{
+    font-size: 1.25rem; // 20px
+    line-height: 1.35;
+    margin-top: -0.5rem;
+}
+
+.nav-links .nav-ln {
+    font-size: 1rem;
+    font-weight: 400;
+}
