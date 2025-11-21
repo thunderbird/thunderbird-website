@@ -299,6 +299,8 @@ URL_MAPPINGS = {
     'updates.140.appeal.jun25b.donate': '/thunderbird/140.0/jun25b/donate/',
     'updates.140.appeal.nov25a.donate': '/thunderbird/140.0/nov25a/donate/',
     'updates.140.appeal.nov25b.donate': '/thunderbird/140.0/nov25b/donate/',
+    'updates.140.appeal.nov25c': '/thunderbird/140.0/nov25c/',
+    'updates.140.appeal.nov25c.donate': '/thunderbird/140.0/nov25c/donate/',
     'updates.release.appeal.sep25r': '/thunderbird/release/sep25r/',
     'updates.release.appeal.sep25r.donate': '/thunderbird/release/sep25r/donate/',
 }
@@ -607,9 +609,10 @@ WEBSITE_REDIRECTS = {
 
 # Similar to website redirects but for UTN
 UPDATES_REDIRECTS = {
-    ('thunderbird', 'appeal'): 'updates.release.appeal.sep25r',
+    ('thunderbird', 'appeal'): 'updates.140.appeal.nov25c',
     ('thunderbird', '140.0', 'jun25'): 'updates.140.appeal.jun25a',
     ('thunderbird', 'release', 'sep25'): 'updates.release.appeal.sep25r',
+    ('thunderbird', '140.0', 'nov25'): 'updates.140.appeal.nov25c',
 }
 
 # The default release channel to use when various function defaults are used
