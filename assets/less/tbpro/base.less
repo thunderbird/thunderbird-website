@@ -87,6 +87,7 @@ body {
             #nav-link-home {
                 grid-column-start: 1;
                 grid-row-start: 1;
+                margin-top: 1rem;
                 z-index: 9;
 
                 svg {
@@ -118,14 +119,10 @@ body {
 
             @media (min-width: @lg) {
                 background: unset;
-                display: grid;
-
-                // Force overlap so that we can center the nav links
-                grid-template-columns: subgrid;
-                grid-template-rows: subgrid;
+                display: contents;
+                grid-template-columns: 1fr auto auto auto 1fr;
                 grid-column: 1 / -1;
                 grid-row-start: 1;
-
 
                 position: relative;
                 right: unset;
@@ -138,6 +135,7 @@ body {
                 margin: 0;
                 overflow: hidden;
                 padding: 0;
+
                 li:first-child {
                     // This is a dummy element that will occupy a grid column.
                     // It should be hidden for narrow viewports.
@@ -145,19 +143,16 @@ body {
                 }
 
                 @media (min-width: @lg) {
-                    // Use subgrid so that we can overlap with the parent grid row.
+                    align-items: center;
                     display: grid;
-
-                    // Take up the entire width.
                     grid-column: 1 / -1;
-
-                    grid-template-rows: subgrid;
 
                     // Use auto for the middle three columns so that they
                     // are only as wide as their content.
                     // They'll be moved to the center because the leftmost and rightmost
                     // columns are empty.
                     grid-template-columns: 1fr auto auto auto 1fr;
+                    margin-top: -3rem;
 
                     li:first-child {
                         // On wider viewports, display the dummy element so that
