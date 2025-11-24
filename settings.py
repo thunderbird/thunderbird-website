@@ -372,6 +372,7 @@ UPDATES_CSS = {
     "appeal-dec24-style": ["less/appeals/dec24.less"],
     "appeal-apr25-style": ["less/appeals/apr25.less"],
     "appeal-nov25-style": ["less/appeals/nov25.less"],
+    "appeal-dec25-1-style": ["less/appeals/dec25-1.less"],
     "monthly-style": ["less/monthly.less"],
     'whatsnew-140': ['less/whatsnew-140.less'],
     "appeal-jun25-style": ["less/appeals/jun25.less"],
