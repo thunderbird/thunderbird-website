@@ -54,7 +54,25 @@ html, body {
     }
 
     main {
-        .mixin-background-image('/media/img/thunderbird/appeal/nov25/2025-nov-appeal-xs-bkg');
+
+        // Placeholder ================================================================================
+        // Regular DPI fallback
+        background-image: url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS.webp');
+
+        // high-res PNG, if syntax is supported.
+        background-image: -webkit-image-set(
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS.webp') 1x,
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS-high-res.webp') 2x
+        );
+        background-image: image-set(
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS.webp') 1x,
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS-high-res.webp') 2x
+        );
+        // Placeholder ================================================================================
+
+
+
+
         background-color: var(--background-dark-blue);
         background-position: top center;
         background-repeat: no-repeat;
@@ -67,10 +85,24 @@ html, body {
 
 
         @media (min-width: @lg) {
-            .mixin-background-image('/media/img/thunderbird/appeal/nov25/2025-nov-appeal-xl-bkg');
-            background-position: center top;
+            // Placeholder ================================================================================
+            // Regular DPI fallback
+            background-image: url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp');
+
+            // high-res PNG, if syntax is supported.
+            background-image: -webkit-image-set(
+                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp') 1x,
+                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-high-res.webp') 2x
+            );
+            background-image: image-set(
+                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp') 1x,
+                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-high-res.webp') 2x
+            );
+            // Placeholder ================================================================================
+
+            background-position: left top;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: auto 100%;
             min-height: var(--background-illustration-height);
             padding-bottom: unset;
         }
