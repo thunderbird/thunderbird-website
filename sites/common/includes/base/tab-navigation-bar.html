@@ -8,8 +8,9 @@
 <script>
   const currentHost = window.location.hostname;
   const isStage = currentHost === 'www-stage.thunderbird.net' ||
-                  currentHost === 'stage.tb.pro' ||
-                  currentHost === 'localhost';
+        currentHost === 'stage.thunderbird.net' ||
+        currentHost === 'stage.tb.pro' ||
+        currentHost === 'localhost';
 
   // Update href values based on environment
   document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
