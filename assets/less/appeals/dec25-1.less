@@ -15,7 +15,7 @@
 :root {
     --appeal-content-width: 34.625rem;             // 554px
     --appeal--letter-width-mobile: 23.8125rem;     // 381px
-    --background-illustration-height: 1048px;
+    --background-illustration-height: 1070px;
 
     --background-dark-blue: #1a202c;
     --background-yellow: #FBEA8B;
@@ -147,36 +147,7 @@ html, body {
 
             // Prevents the glow from causing horizontal scroll
             // and weird background color.
-            overflow-x: hidden;
-        }
-
-        // The glow
-        &::before {
-            content: '';
-            position: absolute;
-            top: 4rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(var(--appeal--letter-width-mobile) + 16px);
-            height: calc(100% - 4rem); // Adjust to match letter-container height
-            background: radial-gradient(
-                ellipse at bottom right,
-                lighten(#2277A6, 40%),
-                transparent 50%
-            );
-            border-radius: 12px;
-            filter: blur(70px);
-            z-index: 1;
-            pointer-events: none;
-
-            @media (min-width: @sm) {
-                width: calc(var(--appeal-content-width) + 16px);
-            }
-
-            @media (min-width: @lg) {
-                left: 0;
-                transform: none;
-            }
+            // overflow-x: hidden;
         }
 
         // Placing inside #appeal-body for Nov25 and Dec25
@@ -235,17 +206,43 @@ html, body {
         }
 
         .letter-container {
-            background: var(--color-appeal-main-bg);
+            // background color shifted to ::before pseudo-element
             border: 0.063rem solid var(--color-appeal-bg-border);
             border-radius: 0.75rem;
             box-shadow:
                 5px 3px 10px 0px rgba(0, 0, 0, 0.2);
             max-width: var(--appeal--letter-width-mobile);
             padding-bottom: 1rem;
+            position: relative;
             z-index: 2;
 
             @media (min-width: @sm) {
                 max-width: var(--appeal-content-width);
+            }
+
+            // Background that sits below the content
+            // and above the glow.
+            &::before {
+                background: var(--color-appeal-main-bg);
+                border-radius: 0.75rem;
+                content: '';
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                z-index: -1;
+            }
+
+            // Glow, offset from the .letter-container.
+            &::after {
+                background: linear-gradient(130deg, rgba(13, 44, 91, 0.00) 0%, #26BAF5 77.4%);
+                bottom: 0px;
+                content: '';
+                filter: blur(50px);
+                height: 80%;
+                position: absolute;
+                right: 10px;
+                width: 80%;
+                z-index: -2;
             }
 
             #donate-button-container {
@@ -343,8 +340,7 @@ html, body {
             flex-direction: row;
             justify-content: flex-end;
             max-width: var(--appeal--letter-width-mobile);
-            margin-top: 4rem;
-            // top: 3rem;
+            margin-top: 2rem;
             width: 100%;
 
             @media (min-width: @sm) {
@@ -352,12 +348,14 @@ html, body {
             }
 
             @media (min-width: @xxl) {
+                margin-top: 3rem;
                 max-width: calc(var(--appeal-content-width) + 2rem);
             }
 
             p {
                 .web-body-small();
                 color: var(--color-illustration-credit);
+                margin: 0;
             }
         }
     }
