@@ -6,7 +6,7 @@
 </div>
 
 <script>
-  const stageHosts = {{ settings.STAGE_HOSTS }};
+  const stageHosts = {{ settings.STAGE_HOSTS|tojson|safe }};
   const currentHost = window.location.hostname;
   const isStage = stageHosts.includes(currentHost);
 
