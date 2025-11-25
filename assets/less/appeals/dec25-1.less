@@ -45,7 +45,6 @@ html, body {
 // Scope to just the appeal page
 .page-appeal-nov25 {
 
-    // background: linear-gradient(to left, var(--background-yellow) 50%, var(--background-blue) 50%);
     background-color: var(--background-dark-blue);
 
     body {
@@ -144,10 +143,6 @@ html, body {
             align-items: flex-start;
             flex: 0 0 calc((100% - var(--width-left-column)) - 2rem);
             margin-top: unset;
-
-            // Prevents the glow from causing horizontal scroll
-            // and weird background color.
-            // overflow-x: hidden;
         }
 
         // Placing inside #appeal-body for Nov25 and Dec25
@@ -158,10 +153,6 @@ html, body {
                 2.25rem
             );
 
-            // background: linear-gradient(to bottom, #FFEEEB 0.00%, #F8E6B2 0.68%, #F2D9A7 29.25%, #F8E6B2 29.93%, #F2D9A7 30.61%, #EAC999 62.59%);
-            // -webkit-background-clip: text; /* For Safari and Chrome */
-            // background-clip: text;
-            // color: transparent; /* Make the text color transparent */
             color: var(--color-headline);
             filter: drop-shadow(0px 2px 3px #0000004c);
             margin-block: 4rem;
@@ -178,21 +169,7 @@ html, body {
                 max-width: var(--appeal-content-width);
             }
 
-            @media (min-width: @md) {
-                // padding-left: unset;
-            }
-
-            @media (min-width: @xl) {
-                // font-size: 4rem;
-            }
-
             span {
-                // Undo styles for gradient text.
-                // background: unset;
-                // background-clip: unset;
-                // display: block;
-                // filter: unset;
-
                 display: block;
                 font-size: 2.5rem;
                 font-weight: 700;
@@ -303,9 +280,6 @@ html, body {
                     b {
                         display: block;
                         font-weight: 600;
-                    }
-                    @media (min-width: @md) {
-                        // display: none;
                     }
                 }
             }
