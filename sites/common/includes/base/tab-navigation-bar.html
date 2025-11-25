@@ -6,11 +6,9 @@
 </div>
 
 <script>
+  const stageHosts = {{ settings.STAGE_HOSTS }};
   const currentHost = window.location.hostname;
-  const isStage = currentHost === 'www-stage.thunderbird.net' ||
-        currentHost === 'stage.thunderbird.net' ||
-        currentHost === 'stage.tb.pro' ||
-        currentHost === 'localhost';
+  const isStage = stageHosts.includes(currentHost);
 
   // Update href values based on environment
   document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
