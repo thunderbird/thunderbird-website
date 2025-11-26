@@ -104,11 +104,16 @@ ALWAYS_LOCALIZE = [
 ]
 
 CANONICAL_URL = 'https://www.thunderbird.net'
-CANONICAL_UPDATES_URL = 'https://updates.thunderbird.net'
-
 CANONICAL_STAGE_URL = 'https://www-stage.thunderbird.net'
-STAGE_HOSTS = [CANONICAL_STAGE_URL, 'stage.thunderbird.net', 'stage.tb.pro', 'localhost']
+CANONICAL_UPDATES_URL = 'https://updates.thunderbird.net'
+CANONICAL_TBPRO_URL = 'https://www.tb.pro'
+CANONICAL_TBPRO_STAGE_URL = 'https://stage.tb.pro'
 
+STAGE_HOSTS = [
+    CANONICAL_STAGE_URL.removeprefix('https://'),
+    CANONICAL_TBPRO_STAGE_URL.removeprefix('https://'),
+    'stage.thunderbird.net',
+    'localhost']
 
 # url for the server that serves Thunderbird downloads.
 BOUNCER_URL = 'https://download.mozilla.org/'
