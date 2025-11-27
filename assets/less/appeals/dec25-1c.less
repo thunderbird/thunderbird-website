@@ -43,7 +43,7 @@ html, body {
 // Scope to just the appeal page
 .page-appeal-nov25 {
 
-    background: linear-gradient(to left, var(--background-yellow) 50%, var(--background-blue) 50%);
+    background: var(--background-page-and-footer);
 
     body {
         display: flex;
@@ -51,7 +51,19 @@ html, body {
     }
 
     main {
-        .mixin-background-image('/media/img/thunderbird/appeal/nov25/2025-nov-appeal-xs-bkg');
+        // Regular DPI fallback
+        background-image: url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-OptC.webp');
+
+        // high-res PNG, if syntax is supported.
+        background-image: -webkit-image-set(
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-OptC.webp') 1x,
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-OptC-high-res.webp') 2x
+        );
+        background-image: image-set(
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-OptC.webp') 1x,
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-OptC-high-res.webp') 2x
+        );
+
         background-color: var(--background-blue);
         background-position: top center;
         background-repeat: no-repeat;
@@ -64,7 +76,6 @@ html, body {
 
 
         @media (min-width: @lg) {
-            .mixin-background-image('/media/img/thunderbird/appeal/nov25/2025-nov-appeal-xl-bkg');
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
