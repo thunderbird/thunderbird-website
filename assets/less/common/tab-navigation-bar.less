@@ -43,6 +43,7 @@ body.tbpro #tab-navigation-bar {
         );
         align-items: center;
         color: @color-nav;
+        cursor: pointer;
         display: flex;
         padding-inline: 20px;
         text-decoration: none;
@@ -52,6 +53,9 @@ body.tbpro #tab-navigation-bar {
     a:hover {
         background-color: @bg-active;
         color: @color-active;
+    }
+
+    a.active {
         cursor: default;
     }
 }
