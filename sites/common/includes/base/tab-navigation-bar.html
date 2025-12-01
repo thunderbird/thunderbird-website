@@ -20,11 +20,9 @@
   // Set .active class accordingly.
   document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
     const linkHost = new URL(link.href).hostname.replace('www', '');
-    const doesMatchCurrent = linkHost === currentHost;
 
-    if (doesMatchCurrent) {
+    if (linkHost === currentHost) {
       link.classList.add('active');
-      link.style.cursor = 'default';
       link.addEventListener('click', (e) => {
         e.preventDefault();
       });
