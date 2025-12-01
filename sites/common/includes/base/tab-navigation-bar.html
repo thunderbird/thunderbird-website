@@ -1,40 +1,31 @@
 <div id="tab-navigation-bar">
   <div class="tab-navigation-links">
-    <a href="https://www.thunderbird.net">Thunderbird</a>
-    <a href="https://www.tb.pro" class="active">Thunderbird Pro</a>
+    <a href="{{ settings.CANONICAL_URL }}" data-stage-url="{{ settings.CANONICAL_STAGE_URL }}">Thunderbird</a>
+    <a href="{{ settings.CANONICAL_TBPRO_URL }}" class="active" data-stage-url="{{ settings.CANONICAL_TBPRO_STAGE_URL}}">Thunderbird Pro</a>
   </div>
 </div>
 
 <script>
-  const currentHost = window.location.hostname;
-  const isStage = currentHost === 'www-stage.thunderbird.net' ||
-                  currentHost === 'stage.tb.pro' ||
-                  currentHost === 'localhost';
+  const stageHosts = {{ settings.STAGE_HOSTS|tojson|safe }};
+  const currentHost = window.location.hostname.replace('www.', '');
+  const isStage = stageHosts.includes(currentHost);
 
-  // Update href values based on environment
-  document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
-    const linkHost = new URL(link.href).hostname;
-
-    // Determine which link this is and update.
-    if (linkHost.includes('thunderbird.net')) {
-      // Thunderbird link
-      link.href = isStage ? 'https://www-stage.thunderbird.net/en-US/' : 'https://www.thunderbird.net/en-US/';
-    } else if (linkHost.includes('tb.pro')) {
-      // Thunderbird Pro link
-      link.href = isStage ? 'https://stage.tb.pro/en-US/' : 'https://tb.pro/en-US/';
-    }
-  });
+  if (isStage) {
+    // Replace with stage.* URLs
+    document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
+      link.href = link.dataset.stageUrl;
+    });
+  }
 
   // Set .active class accordingly.
   document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
-    const linkHost = new URL(link.href).hostname;
+    const linkHost = new URL(link.href).hostname.replace('www', '');
 
-    if (linkHost.replace('www.', '') === currentHost.replace('www.', '')) {
+    if (linkHost === currentHost) {
       link.classList.add('active');
       link.addEventListener('click', (e) => {
         e.preventDefault();
       });
-      link.style.cursor = 'default';
     } else {
       // Remove active class from other links
       link.classList.remove('active');
