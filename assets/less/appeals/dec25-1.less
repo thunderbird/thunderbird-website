@@ -66,7 +66,6 @@ html, body {
             url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS-high-res.webp') 2x
         );
 
-
         background-color: var(--background-dark-blue);
         background-position: top center;
         background-repeat: no-repeat;
@@ -77,8 +76,8 @@ html, body {
         padding-bottom: 5rem;
         min-width: 23.438rem;
 
-
-        @media (min-width: @lg) {
+        // Use desktop image sooner and position background image relative to viewport width.
+        @media (min-width: @sm) {
             // Regular DPI fallback
             background-image: url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp');
 
@@ -92,6 +91,10 @@ html, body {
                 url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-high-res.webp') 2x
             );
 
+            background-position: center calc(0% - 30vw);
+        }
+
+        @media (min-width: @lg) {
             background-position: left top;
             background-repeat: no-repeat;
             background-size: auto 100%;
