@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""Important note:
+Ensure all code in here is Python 2.7 compatible.
+"""
+
 # Languages we build the site in.
 PROD_LANGUAGES = (
     'ach', 'af', 'an', 'ar', 'as', 'ast', 'az', 'be', 'bg',
@@ -110,8 +114,8 @@ CANONICAL_TBPRO_URL = 'https://www.tb.pro'
 CANONICAL_TBPRO_STAGE_URL = 'https://stage.tb.pro'
 
 STAGE_HOSTS = [
-    CANONICAL_STAGE_URL.removeprefix('https://'),
-    CANONICAL_TBPRO_STAGE_URL.removeprefix('https://'),
+    CANONICAL_STAGE_URL.replace('https://', ''),
+    CANONICAL_TBPRO_STAGE_URL.replace('https://', ''),
     'stage.thunderbird.net',
     'localhost']
 
