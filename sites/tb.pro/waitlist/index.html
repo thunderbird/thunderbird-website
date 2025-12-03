@@ -14,56 +14,58 @@
 {% endblock %}
 
 {% block overview %}
-<div id="waitlist-form" class="top-level">
-  <h2 id="form-header">{{ _('Join the Waitlist') }}</h2>
-  <div id="waitlist-welcome">
-    <p>{{ _('Thunderbird Pro is currently in a closed Early Bird release and available by invitation only.
-Join the waitlist to stay informed on our progress and get early access as we expand availability.') }}</p>
-  </div>
-  <div class="form-container">
-    <form action="https://thunderbird.us12.list-manage.com/subscribe/post?u=f8051cc8637cf3ff79661f382&amp;id=a508104cf8&amp;f_id=00caaae0f0"
-          method="post"
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          class="validate"
-          target="_self"
-          >
+<div class="top-level primary-block">
+  <div id="waitlist-form">
+    <h2 id="form-header">{{ _('Join the Waitlist') }}</h2>
+    <div id="waitlist-welcome">
+      <p>{{ _('Thunderbird Pro is currently in a closed Early Bird release and available by invitation only.
+        Join the waitlist to stay informed on our progress and get early access as we expand availability.') }}</p>
+    </div>
+    <div class="form-container">
+      <form action="https://thunderbird.us12.list-manage.com/subscribe/post?u=f8051cc8637cf3ff79661f382&amp;id=a508104cf8&amp;f_id=00caaae0f0"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            class="validate"
+            target="_self"
+            >
 
-      <div class="form-elements">
-        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="hidden" name="tags" value="10526643">
-          <input type="text" name="b_f8051cc8637cf3ff79661f382_a508104cf8" tabindex="-1" value="">
+        <div class="form-elements">
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="hidden" name="tags" value="10526643">
+            <input type="text" name="b_f8051cc8637cf3ff79661f382_a508104cf8" tabindex="-1" value="">
+          </div>
+
+          <label class="wrapper" for="mce-EMAIL">
+            <span class="label">{{ _('Email address')}}
+              <span class="required">*</span>
+            </span>
+            <span class="tbpro-input-wrapper">
+              <input type="email" name="EMAIL" class="tbpro-input-element" id="mce-EMAIL" value="" autofocus="" required="">
+            </span>
+          </label>
+
+          <label class="wrapper" for="mce-FNAME">
+            <span class="label">{{ _('First name') }}</span>
+            <span class="tbpro-input-wrapper">
+              <input class="tbpro-input-element" type="text" id="mce-FNAME" name="FNAME">
+            </span>
+          </label>
+          <label class="wrapper" for="mce-LNAME">
+            <span class="label">{{ _('Last name')}}</span>
+            <span class="tbpro-input-wrapper">
+              <input class="tbpro-input-element" type="text" id="mce-LNAME" name="LNAME">
+            </span>
+          </label>
+
+          <div class="buttons">
+            {{ right_arrow_submit_button(_('Submit'), 'cta-button') }}
+          </div>
+
         </div>
 
-        <label class="wrapper" for="mce-EMAIL">
-          <span class="label">{{ _('Email address')}}
-            <span class="required">*</span>
-          </span>
-          <span class="tbpro-input-wrapper">
-            <input type="email" name="EMAIL" class="tbpro-input-element" id="mce-EMAIL" value="" autofocus="" required="">
-          </span>
-        </label>
-
-        <label class="wrapper" for="mce-FNAME">
-          <span class="label">{{ _('First name') }}</span>
-          <span class="tbpro-input-wrapper">
-            <input class="tbpro-input-element" type="text" id="mce-FNAME" name="FNAME">
-          </span>
-        </label>
-        <label class="wrapper" for="mce-LNAME">
-          <span class="label">{{ _('Last name')}}</span>
-          <span class="tbpro-input-wrapper">
-            <input class="tbpro-input-element" type="text" id="mce-LNAME" name="LNAME">
-          </span>
-        </label>
-
-        <div class="buttons">
-          {{ right_arrow_submit_button(_('Submit'), 'cta-button') }}
-        </div>
-
-      </div>
-
-    </form>
+      </form>
+    </div>
   </div>
 </div>
 {% endblock %}
