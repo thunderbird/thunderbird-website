@@ -32,10 +32,13 @@ jobs:
       - name: Start container
         run: |
           docker run -d --name tb-web-test -p 8080:80 thunderbird-web:test
-          # Wait for Apache to start
-          sleep 5
-          # Check container is running
-          docker ps | grep tb-web-test
+          # Wait for container to be healthy
+          for i in $(seq 1 30); do
+            status=$(docker inspect -f '{{.State.Health.Status}}' tb-web-test 2>/dev/null)
+            [ "$status" = "healthy" ] && break
+            [ "$status" = "unhealthy" ] && docker logs tb-web-test && exit 1
+            sleep 1
+          done
 
       - name: Run pytest inside container
         run: |

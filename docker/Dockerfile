@@ -101,6 +101,6 @@ RUN rm -f /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/autoindex.conf
 
 EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
-    CMD curl -f -H "Host: www.thunderbird.net" http://localhost/en-US/ || exit 1
+    CMD curl -sf -H "Host: www.thunderbird.net" http://localhost/ || exit 1
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
