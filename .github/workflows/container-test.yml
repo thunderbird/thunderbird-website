@@ -1,0 +1,162 @@
+name: Build and Test Container
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Clone required libraries
+        run: |
+          mkdir -p libs
+          git clone --depth 1 https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale
+          git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details
+          git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install less
+        run: npm install -g less
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest tests/
+
+      - name: Build all sites
+        run: |
+          python build-site.py
+          python build-site.py --startpage
+          python build-site.py --updates
+          python build-site.py --tbpro
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./docker/Dockerfile
+          build-args: BUILD_ENV=local
+          push: false
+          load: true
+          tags: thunderbird-web:test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Start container
+        run: |
+          docker run -d --name tb-web-test -p 8080:80 thunderbird-web:test
+          # Wait for Apache to start
+          sleep 5
+          # Check container is running
+          docker ps | grep tb-web-test
+
+      - name: Test www.thunderbird.net
+        run: |
+          response=$(curl -sI -H "Host: www.thunderbird.net" http://localhost:8080/en-US/)
+          echo "$response"
+          echo "$response" | grep -q "200 OK"
+
+      - name: Test start.thunderbird.net
+        run: |
+          response=$(curl -sI -H "Host: start.thunderbird.net" http://localhost:8080/)
+          echo "$response"
+          echo "$response" | grep -qE "(200 OK|302 Found)"
+
+      - name: Test updates.thunderbird.net
+        run: |
+          echo "Testing root index (should redirect)..."
+          response=$(curl -sI -H "Host: updates.thunderbird.net" http://localhost:8080/)
+          echo "$response"
+          echo "$response" | grep -qE "(302 Found|200 OK)"
+
+          echo "Testing update snippet page (should redirect)..."
+          response=$(curl -sI -H "Host: updates.thunderbird.net" http://localhost:8080/thunderbird/128.0/dec24/)
+          echo "$response"
+          echo "$response" | grep -qE "302 Found"
+
+          echo "Testing localized update snippet page (should be 200 OK)..."
+          response=$(curl -sI -H "Host: updates.thunderbird.net" http://localhost:8080/en-US/thunderbird/128.0/dec24/)
+          echo "$response"
+          echo "$response" | grep -q "200 OK"
+
+      - name: Test autoconfig.thunderbird.net
+        run: |
+          response=$(curl -sI -H "Host: autoconfig.thunderbird.net" http://localhost:8080/v1.1/gmail.com)
+          echo "$response"
+          echo "$response" | grep -q "200 OK"
+
+      - name: Test stats.thunderbird.net
+        run: |
+          response=$(curl -sI -H "Host: stats.thunderbird.net" http://localhost:8080/)
+          echo "$response"
+          echo "$response" | grep -q "200 OK"
+
+      - name: Test live.thunderbird.net redirects
+        run: |
+          echo "Testing release notes redirect..."
+          response=$(curl -sI -H "Host: live.thunderbird.net" "http://localhost:8080/thunderbird/releasenotes/?locale=en-US&version=128.0&channel=release")
+          echo "$response"
+          echo "$response" | grep -q "302 Found"
+          echo "$response" | grep -q "Location:.*thunderbird.net"
+
+          echo "Testing start page redirect..."
+          response=$(curl -sI -H "Host: live.thunderbird.net" "http://localhost:8080/thunderbird/start/?locale=en-US&version=130.0&channel=release")
+          echo "$response"
+          echo "$response" | grep -q "302 Found"
+
+          echo "Testing whatsnew redirect..."
+          response=$(curl -sI -H "Host: live.thunderbird.net" "http://localhost:8080/thunderbird/whatsnew/?locale=en-US&version=128.0.1&channel=release")
+          echo "$response"
+          echo "$response" | grep -q "302 Found"
+
+          echo "Testing autoconfig redirect..."
+          response=$(curl -sI -H "Host: live.thunderbird.net" "http://localhost:8080/autoconfig/gmail.com")
+          echo "$response"
+          echo "$response" | grep -q "302 Found"
+          echo "$response" | grep -q "Location:.*autoconfig.thunderbird.net"
+
+          echo "Testing addon services redirect..."
+          response=$(curl -sI -H "Host: live.thunderbird.net" "http://localhost:8080/services.addons/test")
+          echo "$response"
+          echo "$response" | grep -q "302 Found"
+
+      - name: Test tb.pro
+        run: |
+          response=$(curl -sI -H "Host: tb.pro" http://localhost:8080/)
+          echo "$response"
+          echo "$response" | grep -qE "(200 OK|302 Found)"
+
+      - name: Show container logs on failure
+        if: failure()
+        run: |
+          echo "=== Container logs ==="
+          docker logs tb-web-test
+          echo "=== Apache error log ==="
+          docker exec tb-web-test cat /var/log/httpd/error_log || true
+
+      - name: Cleanup
+        if: always()
+        run: docker rm -f tb-web-test || true
+

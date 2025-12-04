@@ -1,0 +1,29 @@
+{
+  "name": "Thunderbird Websites",
+  "build": {
+    "dockerfile": "../docker/Dockerfile",
+    "context": ".."
+  },
+  "forwardPorts": [80],
+  "portsAttributes": {
+    "80": {
+      "label": "Apache",
+      "onAutoForward": "notify"
+    }
+  },
+  "postStartCommand": "/docker-entrypoint.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "remoteUser": "root",
+  "containerEnv": {
+    "MAILFENCE_APIKEY": "${localEnv:MAILFENCE_APIKEY}"
+  }
+}
+

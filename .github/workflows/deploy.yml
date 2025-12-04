@@ -1,0 +1,116 @@
+name: Deploy to Fargate
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        type: choice
+        options:
+          - stage
+          - prod
+  # Allow testing from feature branches
+  push:
+    branches:
+      - fargate
+
+permissions:
+  id-token: write
+  contents: read
+
+# Cancel in-progress deployments when a new one starts
+concurrency:
+  group: deploy-${{ github.event.inputs.environment || 'stage' }}
+  cancel-in-progress: true
+
+env:
+  AWS_REGION: us-west-2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment || 'stage' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::768512802988:role/thunderbird-website-deploy
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to ECR
+        id: ecr-login
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Create placeholders for deployment build
+        run: |
+          mkdir -p dist/www.thunderbird.net dist/start.thunderbird.net dist/updates.thunderbird.net dist/tb.pro media
+          touch dist/www.thunderbird.net/.gitkeep dist/start.thunderbird.net/.gitkeep
+          touch dist/updates.thunderbird.net/.gitkeep dist/tb.pro/.gitkeep media/.gitkeep
+
+      - name: Build and push Docker image
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }}
+          BUILD_ENV: ${{ github.event.inputs.environment || 'stage' }}
+        run: |
+          IMAGE_URI="$ECR_REGISTRY/thunderbird-website-$BUILD_ENV:$IMAGE_TAG"
+          docker build \
+            -f docker/Dockerfile \
+            --build-arg BUILD_ENV=$BUILD_ENV \
+            -t $IMAGE_URI \
+            -t $ECR_REGISTRY/thunderbird-website-$BUILD_ENV:latest \
+            .
+          docker push $IMAGE_URI
+          docker push $ECR_REGISTRY/thunderbird-website-$BUILD_ENV:latest
+          echo "image_uri=$IMAGE_URI" >> $GITHUB_OUTPUT
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        working-directory: ./pulumi
+        run: pip install -r requirements.txt
+
+      # Authenticate with Pulumi Cloud via OIDC (no token secret needed)
+      - name: Authenticate with Pulumi Cloud
+        uses: pulumi/auth-actions@v1
+        with:
+          organization: thunderbird
+          requested-token-type: urn:pulumi:token-type:access_token:organization
+
+      - name: Refresh Pulumi state
+        uses: pulumi/actions@v6
+        with:
+          command: refresh
+          stack-name: thunderbird/thunderbird-website/${{ github.event.inputs.environment || 'stage' }}
+          work-dir: ./pulumi
+        env:
+          IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
+
+      - name: Deploy infrastructure
+        uses: pulumi/actions@v6
+        with:
+          command: up
+          stack-name: thunderbird/thunderbird-website/${{ github.event.inputs.environment || 'stage' }}
+          work-dir: ./pulumi
+        env:
+          IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
+
+      - name: Update ECS service
+        env:
+          BUILD_ENV: ${{ github.event.inputs.environment || 'stage' }}
+        run: |
+          aws ecs update-service \
+            --cluster thunderbird-website-$BUILD_ENV \
+            --service thunderbird-website-$BUILD_ENV \
+            --force-new-deployment \
+            --region $AWS_REGION
+

@@ -1,0 +1,11 @@
+config:
+  aws:region: us-west-2
+  aws:defaultTags:
+    tags:
+      environment: stage
+      project: thunderbird-website
+      ManagedBy: pulumi
+  thunderbird-website:environment: stage
+  thunderbird-website:desiredCount: 1
+  thunderbird-website:cpu: 512
+  thunderbird-website:memory: 2048
