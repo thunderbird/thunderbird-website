@@ -13,9 +13,9 @@ on:
   repository_dispatch:
     types: [stage, prod]
   # Allow testing from feature branches
-  push:
-    branches:
-      - fargate
+  # push:
+  #   branches:
+  #    - fargate
 
 permissions:
   id-token: write
