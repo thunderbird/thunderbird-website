@@ -1,0 +1,11 @@
+config:
+  aws:region: us-west-2
+  aws:defaultTags:
+    tags:
+      environment: prod
+      project: thunderbird-website
+      ManagedBy: pulumi
+  thunderbird-website:environment: prod
+  thunderbird-website:desiredCount: 2
+  thunderbird-website:cpu: 2048
+  thunderbird-website:memory: 4096

@@ -1,0 +1,34 @@
+# Docker ignore file for Thunderbird Website
+# Keep minimal exclusions since local builds need most files
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python cache and virtual environments
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+.venv/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Test cache
+.pytest_cache/
+
+# Libs (cloned during build)
+libs/
+
+# Dist output (generated during build)
+dist/
+
