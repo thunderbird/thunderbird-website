@@ -8,6 +8,7 @@ Contents
    :maxdepth: 2
    :caption: Documentation
 
+   deployment.md
    archived.md
    updates.thunderbird.net.md
    holiday-calendars.md

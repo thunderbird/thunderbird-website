@@ -12,10 +12,10 @@ Additional information can be found in our [readthedocs documentation](https://d
 
 Before you can install anything else you must ensure you have a python [virtual environment](https://docs.python.org/3/library/venv.html) setup for this project.
 
-If you do not see a `venv` or `.venv` folder within thunderbird-website run the following commands which will create a 
-virtual environment named `.venv`. These folders are local only and are never stored within git. 
+If you do not see a `venv` or `.venv` folder within thunderbird-website run the following commands which will create a
+virtual environment named `.venv`. These folders are local only and are never stored within git.
 
-The second line will activate the virtual environment within your current shell instance. This allows you to simply 
+The second line will activate the virtual environment within your current shell instance. This allows you to simply
 use `pip` or `python` without worrying about path issues.
 
 ```shell
@@ -47,7 +47,7 @@ l10n_tools/compile.sh
 
 ## Maintenance
 
-You can use the `./pull-libs.sh` to keep the library repositories up-to-date. For the locale library you'll need to 
+You can use the `./pull-libs.sh` to keep the library repositories up-to-date. For the locale library you'll need to
 manually rerun the compile.sh script anytime you pull.
 
 ## Run Build
@@ -73,7 +73,7 @@ There are additional arguments:
 * `--buildcalendar`
     * This builds the holiday calendars. Normally this will build every locale, but you can restrict the build to just US by using the `--enus` options.
 * `--downloadlegal`
-    * This downloads the latest Thunderbird privacy policy document, renders it into html from markdown and puts it in the includes folder. 
+    * This downloads the latest Thunderbird privacy policy document, renders it into html from markdown and puts it in the includes folder.
     * You only need to run this when the document updates.
 
 * thunderbird.net templates are in the `sites/www.thunderbird.net` directory, and start page in the `sites/start.thunderbird.net` dir. Assets are shared and in the `assets` dir.
@@ -96,10 +96,19 @@ Both of these update frequently enough(multiple times per week) that independent
 update will always use the most recent data available from all sources. If changes to one of the above repos don't produce any change in the built files, no actual
 update of the web server will occur.
 
-# Manual Site Updates
+# Deployment
 
-Occasionally you need to update the site manually, for example to move changes made to this repo to stage and production, or because the automation
-failed, or any reason like that. You'll need to either login to the control node as described in the https://github.com/thunderbird/thundernest-ansible documentation
+The websites are deployed to AWS Fargate. Deployments are triggered automatically as noted above. To do a manual push:
+
+**Manual deployment via GitHub UI:**
+1. Go to [Actions](https://github.com/thunderbird/thunderbird-website/actions) → "Deploy to Fargate"
+2. Click "Run workflow" and select the environment (`stage` or `prod`)
+
+See the [deployment documentation](https://docs.thunderbird.net/en/latest/deployment.html) for more details.
+
+# Manual Site Updates (Legacy)
+
+Occasionally you need to update the site manually using Ansible. You'll need to either login to the control node as described in the https://github.com/thunderbird/thundernest-ansible documentation
 or check out and setup the thundernest-ansible scripts on your local machine. That is also covered in the documentation for [thundernest-ansible](https://github.com/thunderbird/thundernest-ansible).
 
 Assuming you are logged into the control node or have thundernest-ansible set up:
@@ -143,5 +152,5 @@ There are several pytests located in `./tests`. To run the full test-suite, simp
 
 # Calendar Generation
 
-Calendar generation can be manually built by appending the option`--buildcalendar`. This queries our current calendar provider (Calendarific) and generates a `.ics` file per each locale specified in settings.py. For testing, you can limit this to just US by using the option `--enus`. 
+Calendar generation can be manually built by appending the option`--buildcalendar`. This queries our current calendar provider (Calendarific) and generates a `.ics` file per each locale specified in settings.py. For testing, you can limit this to just US by using the option `--enus`.
 This option requires setting the `CALENDARIFIC_API_KEY=` environment variable. If you're using a paid plan you can also set `CALENDARIFIC_IS_FREE_TIER=false` to remove the sleep time between calls.
