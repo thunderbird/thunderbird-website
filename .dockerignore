@@ -1,5 +1,5 @@
 # Docker ignore file for Thunderbird Website
-# Exclude files not needed in the container image
+# Keep minimal exclusions since local builds need most files
 
 # Git
 .git
@@ -23,42 +23,12 @@ ENV/
 *.swo
 *~
 
-# Documentation (not needed in runtime)
-docs/
-*.md
-!README.md
-
-# Test files
-tests/
-*.test.py
-pytest.ini
+# Test cache
 .pytest_cache/
 
-# Development files
-requirements-dev.txt
-requirements-test.txt
-setup.cfg
-
-# Build tools (we only need the dist/ output)
-build_calendar.py
-calgen/
-l10n_tools/
-tools/
-babel.cfg
-translate.py
-builder.py
-helper.py
-build-site.py
-
-# Libs (locale files are embedded in dist)
+# Libs (cloned during build)
 libs/
 
-# Assets source (compiled into dist)
-assets/
-
-# Sites source (compiled into dist)
-sites/
-
-# Product details (embedded in dist)
-product_details.py
+# Dist output (generated during build)
+dist/
 

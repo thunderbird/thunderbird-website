@@ -1,21 +1,21 @@
 # Thunderbird Website Apache Container
 #
 # Build modes:
-#   Development: docker build -t thunderbird-web .
-#                (run "python build-site.py" first)
+#   Local/Dev:   docker build -t thunderbird-web .
+#                (clones libs, installs deps, runs tests, builds all sites)
 #
 #   Production:  docker build --build-arg BUILD_ENV=prod -t thunderbird-web .
 #   Staging:     docker build --build-arg BUILD_ENV=stage -t thunderbird-web .
-#                (clones from tb-website-builds, ignores local dist/)
+#                (clones from tb-website-builds, no local build)
 
 FROM quay.io/centos/centos:stream9
 
 ARG BUILD_ENV=local
 
-# Install packages
+# Install packages (python3.11 for building, python3 for mod_wsgi runtime)
 RUN dnf install -y epel-release \
     && dnf config-manager --set-enabled crb \
-    && dnf install -y httpd mod_ssl python3 python3-pip python3-mod_wsgi python3-libs git \
+    && dnf install -y httpd mod_ssl python3 python3-pip python3-mod_wsgi python3-libs python3.11 python3.11-pip git npm \
     && dnf clean all
 
 # Create directories
@@ -54,17 +54,36 @@ RUN chmod +x /docker-entrypoint.sh
 # Static files: source depends on BUILD_ENV
 # =============================================================================
 
-# For local builds: copy from build context (dist/ folder)
-# These will be overwritten by clone for prod/stage builds
-COPY dist/www.thunderbird.net /var/www/html/start/thunderbird.net
-COPY dist/start.thunderbird.net /var/www/html/start/site
-COPY dist/updates.thunderbird.net /var/www/html/start/updates.thunderbird.net
-COPY dist/tb.pro /var/www/html/start/tb.pro
-COPY wsgi.py /var/www/html/start/wsgi.py
-COPY settings.py /var/www/html/start/settings.py
-COPY media /var/www/html/start/thunderbird.net/media
+# Copy source files (needed for local builds)
+COPY . /build/
 
-# For prod/stage: clone tb-website-builds to OVERWRITE the copied files
+# For local builds: build the websites from source using a venv
+RUN if [ "$BUILD_ENV" = "local" ]; then \
+      echo "BUILD_ENV=local - building websites from source..." \
+      && cd /build \
+      && mkdir -p libs \
+      && git clone --depth 1 https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale \
+      && git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details \
+      && git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes \
+      && npm install -g less \
+      && python3.11 -m venv /build/venv \
+      && /build/venv/bin/pip install --upgrade pip \
+      && /build/venv/bin/pip install -r requirements-dev.txt \
+      && /build/venv/bin/python build-site.py \
+      && /build/venv/bin/python build-site.py --startpage \
+      && /build/venv/bin/python build-site.py --updates \
+      && /build/venv/bin/python build-site.py --tbpro \
+      && cp -r /build/dist/www.thunderbird.net /var/www/html/start/thunderbird.net \
+      && cp -r /build/dist/start.thunderbird.net /var/www/html/start/site \
+      && cp -r /build/dist/updates.thunderbird.net /var/www/html/start/updates.thunderbird.net \
+      && cp -r /build/dist/tb.pro /var/www/html/start/tb.pro \
+      && cp /build/wsgi.py /var/www/html/start/wsgi.py \
+      && cp /build/settings.py /var/www/html/start/settings.py \
+      && cp -r /build/media /var/www/html/start/thunderbird.net/media \
+      && echo "Done building websites"; \
+    fi
+
+# For prod/stage: clone tb-website-builds (includes wsgi.py, settings.py, media)
 # Branch mapping: stage -> master, prod -> prod
 RUN if [ "$BUILD_ENV" != "local" ]; then \
       if [ "$BUILD_ENV" = "stage" ]; then BUILDS_BRANCH="master"; else BUILDS_BRANCH="prod"; fi \
@@ -76,8 +95,8 @@ RUN if [ "$BUILD_ENV" != "local" ]; then \
       && echo "Done cloning tb-website-builds"; \
     fi
 
-# Set permissions
-RUN chown -R apache:apache /var/www/html /var/www/services /var/www/autoconfig.momo /var/log/httpd/autoconfig
+# Set permissions (only log dir needs write access, web files are world-readable)
+RUN chown -R apache:apache /var/log/httpd/autoconfig
 RUN rm -f /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/autoindex.conf
 
 EXPOSE 80
