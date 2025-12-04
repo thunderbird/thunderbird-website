@@ -27,15 +27,23 @@
           <div class="alerts" role="alert">
             <p id="daily-warning" class="notice-panel warning hidden">
               {{ _('The Daily channel is where development and testing begin, and new features are developed. This is expected to be the least stable channel. Make sure you back up important data regularly.') }}
+              {{ _('May not work with all add-ons.')}}
+              <a href="{{ url('download.desktop.choosing-release-channel') }}">{{ _('Learn more.')}}</a>
             </p>
             <p id="beta-warning" class="notice-panel warning hidden">
               {{ _('The Beta channel is where stabilization occurs. This is expected to be more stable than Daily, but not as stable as the Release or Extended Support Release channels. Make sure you back up important data regularly.') }}
+              {{ _('May not work with all add-ons.')}}
+              <a href="{{ url('download.desktop.choosing-release-channel') }}">{{ _('Learn more.')}}</a>
             </p>
             <p id="esr-notice" class="notice-panel info hidden">
               {{ _('The official annual extended support release. This release is intended for users who want all available new features on an annual basis and stability/security fixes on a monthly basis.') }}
+              {{ _('May not work with all add-ons.')}}
+              <a href="{{ url('download.desktop.choosing-release-channel') }}">{{ _('Learn more.')}}</a>
             </p>
             <p id="release-notice" class="notice-panel info hidden">
               {{ _('The official monthly release. This release is intended for users who want all available new features and bug fixes on a monthly basis.') }}
+              {{ _('May not work with all add-ons.')}}
+              <a href="{{ url('download.desktop.choosing-release-channel') }}">{{ _('Learn more.')}}</a>
             </p>
           </div>
 
