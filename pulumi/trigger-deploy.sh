@@ -9,7 +9,7 @@ set -e
 
 ENVIRONMENT=${1:-stage}
 REPO="thunderbird/thunderbird-website"
-EVENT_TYPE="deploy-${ENVIRONMENT}"
+EVENT_TYPE="${ENVIRONMENT}"
 
 if [ -z "$GITHUB_TOKEN" ]; then
     echo "ERROR: GITHUB_TOKEN environment variable is required"

@@ -11,7 +11,7 @@ on:
           - stage
           - prod
   repository_dispatch:
-    types: [deploy-stage, deploy-prod]
+    types: [stage, prod]
   # Allow testing from feature branches
   push:
     branches:
@@ -32,21 +32,11 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment || (github.event.action == 'deploy-prod' && 'prod' || 'stage') }}
+    environment: ${{ github.event.inputs.environment || github.event.action || 'stage' }}
+    env:
+      DEPLOY_ENV: ${{ github.event.inputs.environment || github.event.action || 'stage' }}
 
     steps:
-      - name: Determine environment
-        id: env
-        run: |
-          if [ -n "${{ github.event.inputs.environment }}" ]; then
-            ENV="${{ github.event.inputs.environment }}"
-          elif [ "${{ github.event.action }}" = "deploy-prod" ]; then
-            ENV="prod"
-          else
-            ENV="stage"
-          fi
-          echo "environment=$ENV" >> $GITHUB_OUTPUT
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -71,7 +61,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
-          BUILD_ENV: ${{ steps.env.outputs.environment }}
+          BUILD_ENV: ${{ env.DEPLOY_ENV }}
         run: |
           IMAGE_URI="$ECR_REGISTRY/thunderbird-website-$BUILD_ENV:$IMAGE_TAG"
           docker build \
@@ -104,7 +94,7 @@ jobs:
         uses: pulumi/actions@v6
         with:
           command: refresh
-          stack-name: thunderbird/thunderbird-website/${{ steps.env.outputs.environment }}
+          stack-name: thunderbird/thunderbird-website/${{ env.DEPLOY_ENV }}
           work-dir: ./pulumi
         env:
           IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
@@ -113,14 +103,14 @@ jobs:
         uses: pulumi/actions@v6
         with:
           command: up
-          stack-name: thunderbird/thunderbird-website/${{ steps.env.outputs.environment }}
+          stack-name: thunderbird/thunderbird-website/${{ env.DEPLOY_ENV }}
           work-dir: ./pulumi
         env:
           IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
 
       - name: Update ECS service
         env:
-          BUILD_ENV: ${{ steps.env.outputs.environment }}
+          BUILD_ENV: ${{ env.DEPLOY_ENV }}
         run: |
           aws ecs update-service \
             --cluster thunderbird-website-$BUILD_ENV \
