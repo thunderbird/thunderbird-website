@@ -63,7 +63,8 @@ task_sg = aws.ec2.SecurityGroup(
 
 # Application Load Balancer
 alb = aws.lb.LoadBalancer(
-    f"alb-{environment}",
+    f"thunderbird-website-alb-{environment}",
+    name=f"thunderbird-website-{environment}",
     internal=False,
     load_balancer_type="application",
     security_groups=[alb_sg.id],

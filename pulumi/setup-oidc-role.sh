@@ -74,7 +74,7 @@ PERMISSIONS_POLICY=$(cat <<EOF
         {
             "Sid": "ECRAuth",
             "Effect": "Allow",
-            "Action": ["ecr:GetAuthorizationToken"],
+            "Action": ["ecr:GetAuthorizationToken", "ecr:DescribeRepositories"],
             "Resource": "*"
         },
         {
@@ -117,7 +117,7 @@ PERMISSIONS_POLICY=$(cat <<EOF
                 "ec2:*Vpc*", "ec2:*Subnet*", "ec2:*SecurityGroup*",
                 "ec2:*InternetGateway*", "ec2:*RouteTable*", "ec2:*NatGateway*",
                 "ec2:*Address*", "ec2:*NetworkInterface*", "ec2:*NetworkAcl*",
-                "ec2:DescribeAvailabilityZones", "ec2:CreateTags", "ec2:DeleteTags"
+                "ec2:*Route", "ec2:DescribeAvailabilityZones", "ec2:CreateTags", "ec2:DeleteTags"
             ],
             "Resource": "*"
         },
