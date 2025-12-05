@@ -63,7 +63,9 @@
       </div>
     </div>
     <div id="illustration-credit">
-      <p>{{ _('Illustration by') }} Michaela Martin</p>
+      <p>
+        {{ _('Illustrated by %(name)s')|format(name='Michaela Martin') }}
+      </p>
     </div>
   </section>
 {% endblock %}

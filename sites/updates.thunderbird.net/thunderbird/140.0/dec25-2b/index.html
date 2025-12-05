@@ -38,13 +38,16 @@
       </section>
       <div id="letter-contents">
         <p>
-          {{ _('Thunderbird is built by a small, passionate team along with a global community that believes in the <b>power of privacy, freedom and open source</b>. Your support pays for secure servers, robust infrastructure and the dedicated team of people who make it all happen.')}}
+          <b>{{ _('Thunderbird relies solely on user donations.')}}</b>
         </p>
         <p>
-          {{ _('<b>Together we can continue to prove that privacy respecting technology can compete and thrive.</b>')}}
+          {{ _('Built by a small, passionate team and a global community of volunteers, your support helps us improve design, fix bugs and build new features.')}}
         </p>
         <p>
-          {{ _('If you love using Thunderbird, please consider supporting it.')}}
+          {{ _('<b>Together, we can make Thunderbird the best email app,</b> proving that people-first tech can thrive.')}}
+        </p>
+        <p class="already-donated-thank-you">
+          {{ _('If you have already donated, <b>a sincere thank you</b>. We don’t know that because we don’t track you, so please forgive this additional reminder.')}}
         </p>
         <div class="heart-container">
           <div class="left-lines">
@@ -63,7 +66,9 @@
       </div>
     </div>
     <div id="illustration-credit">
-      <p>{{ _('Illustration by') }} Michaela Martin</p>
+      <p>
+        {{ _('Illustrated by %(name)s')|format(name='Michaela Martin') }}
+      </p>
     </div>
   </section>
 {% endblock %}
