@@ -9,9 +9,9 @@ config:
   # desiredCount and minCapacity should be the same.
   thunderbird-website:desiredCount: 8
   thunderbird-website:cpu: 1024
-  thunderbird-website:memory: 2048
+  thunderbird-website:memory: 1024
   # Auto scaling
   thunderbird-website:minCapacity: 8
   thunderbird-website:maxCapacity: 32
-  # This is deliberately low to cause scaling to start as early as possible when spikes begin.
-  thunderbird-website:cpuTarget: 50
+  # Requests per target per minute - scale when each target receives more than this
+  thunderbird-website:requestsPerTarget: 125

@@ -13,7 +13,7 @@ memory = config.get_int("memory") or 512
 # Auto scaling configuration
 min_capacity = config.get_int("minCapacity") or 1
 max_capacity = config.get_int("maxCapacity") or 8
-cpu_target = config.get_int("cpuTarget") or 70  # Scale when CPU > 70%
+requests_per_target = config.get_int("requestsPerTarget") or 100  # Scale when requests per target > this value
 
 # SSL Certificate ARN (shared across environments)
 CERTIFICATE_ARN = "arn:aws:acm:us-west-2:768512802988:certificate/2cff184f-31a3-4e9e-b478-eff82076f06f"
@@ -255,18 +255,25 @@ scaling_target = aws.appautoscaling.Target(
     service_namespace="ecs",
 )
 
-cpu_scaling_policy = aws.appautoscaling.Policy(
-    f"cpu-scaling-{environment}",
-    name=f"thunderbird-website-cpu-scaling-{environment}",
+# Build the ALB resource label for the target tracking metric
+# Format: app/<load-balancer-name>/<load-balancer-id>/targetgroup/<target-group-name>/<target-group-id>
+alb_resource_label = pulumi.Output.all(alb.arn_suffix, target_group.arn_suffix).apply(
+    lambda args: f"{args[0]}/{args[1]}"
+)
+
+request_count_scaling_policy = aws.appautoscaling.Policy(
+    f"request-count-scaling-{environment}",
+    name=f"thunderbird-website-request-scaling-{environment}",
     policy_type="TargetTrackingScaling",
     resource_id=scaling_target.resource_id,
     scalable_dimension=scaling_target.scalable_dimension,
     service_namespace=scaling_target.service_namespace,
     target_tracking_scaling_policy_configuration=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs(
         predefined_metric_specification=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs(
-            predefined_metric_type="ECSServiceAverageCPUUtilization",
+            predefined_metric_type="ALBRequestCountPerTarget",
+            resource_label=alb_resource_label,
         ),
-        target_value=float(cpu_target),
+        target_value=float(requests_per_target),
         scale_in_cooldown=300,   # Wait 5 min before scaling in
         scale_out_cooldown=60,   # Scale out quickly (1 min)
     ),
