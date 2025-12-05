@@ -298,6 +298,24 @@ html, body {
                     width: 100%;
                 }
 
+                p.already-donated-thank-you {
+                    font-size: 1.125rem;
+                    position: relative;
+                    z-index: 2;
+
+                    &::before {
+                        background-color: #f7f7f7;
+                        border-radius: 1.5rem;
+                        content: '';
+                        height: calc(100% + 1.5rem);
+                        margin-left: -1.5rem;
+                        margin-top: -0.75rem;
+                        position: absolute;
+                        width: calc(100% + 3rem);
+                        z-index: -1;
+                    }
+                }
+
                 /* Declaring this style here, as it has more precedence. */
                 .closing-text {
                     font-size: 1rem;
