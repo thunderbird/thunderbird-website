@@ -6,10 +6,12 @@ config:
       project: thunderbird-website
       ManagedBy: pulumi
   thunderbird-website:environment: prod
-  thunderbird-website:desiredCount: 2
-  thunderbird-website:cpu: 2048
-  thunderbird-website:memory: 4096
+  # desiredCount and minCapacity should be the same.
+  thunderbird-website:desiredCount: 8
+  thunderbird-website:cpu: 1024
+  thunderbird-website:memory: 2048
   # Auto scaling
-  thunderbird-website:minCapacity: 2
-  thunderbird-website:maxCapacity: 8
-  thunderbird-website:cpuTarget: 70
+  thunderbird-website:minCapacity: 8
+  thunderbird-website:maxCapacity: 32
+  # This is deliberately low to cause scaling to start as early as possible when spikes begin.
+  thunderbird-website:cpuTarget: 50
