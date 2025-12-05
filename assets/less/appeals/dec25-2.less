@@ -1,0 +1,337 @@
+// mixins for images.
+@import "../common/images.less";
+
+// Bases
+@import "../new-style.less";
+@import "../new/components/donate-cta.less";
+@import "../new/components/donate-cta-overrides.less";
+@import "../new/components/heart-lines.less";
+
+@import "../common/fonts.less";
+@import "../common/moz-footer.less";
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --appeal-content-width: 34.625rem;             // 554px
+    --appeal--letter-width-mobile: 23.8125rem;     // 381px
+    --background-illustration-height: 1070px;
+
+    --background-dark-blue: #1a202c;
+    --background-yellow: #FBEA8B;
+
+    --background-page-and-footer: #1a202c;
+    --color-appeal-main-bg: var(--color-white);
+    --color-footer-txt: #105BBC;
+    --color-appeal-txt: #18181B;
+    --color-appeal-bg-border: #1373d9;
+    --color-headline: #FFDF99;
+    --color-illustration-credit: #FEFFFF;
+
+    --txt: var(--color-appeal-txt);
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+    --font-content: Open Sans, system-ui, sans-serif;
+    --min-small-screen: 23.438rem;
+}
+
+
+// Ensure the footer is contained at the bottom and by default the page extends to at least a full page.
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+// Scope to just the appeal page
+.page-appeal-dec25 {
+
+    background-color: var(--background-dark-blue);
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        // Regular DPI fallback
+        background-image: url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS.webp');
+
+        // high-res PNG, if syntax is supported.
+        background-image: -webkit-image-set(
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS.webp') 1x,
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS-high-res.webp') 2x
+        );
+        background-image: image-set(
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS.webp') 1x,
+            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS-high-res.webp') 2x
+        );
+
+        background-color: var(--background-dark-blue);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        flex-grow: 0;
+
+        padding-bottom: 5rem;
+        min-width: 23.438rem;
+
+        // Use desktop image sooner and position background image relative to viewport width.
+        @media (min-width: @sm) {
+            // Regular DPI fallback
+            background-image: url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp');
+
+            // high-res PNG, if syntax is supported.
+            background-image: -webkit-image-set(
+                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp') 1x,
+                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-high-res.webp') 2x
+            );
+            background-image: image-set(
+                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp') 1x,
+                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-high-res.webp') 2x
+            );
+
+            background-position: center calc(0% - 30vw);
+        }
+
+        @media (min-width: @lg) {
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            min-height: var(--background-illustration-height);
+            padding-bottom: unset;
+        }
+
+        @media (min-width: @xxl) {
+            margin: auto;
+            max-width: 100rem;
+            width: 100%;
+        }
+    }
+
+    #main-content {
+        --width-left-column: 53%;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: @lg) {
+            flex-direction: row;
+
+            // Column of white space.
+            // #appeal-body occupies other column
+            &::before {
+                content: '';
+                flex: 0 0 var(--width-left-column);
+            }
+        }
+    }
+
+
+    #appeal-body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        margin-top: 22rem;
+        position: relative;
+
+        @media (min-width: @lg) {
+            align-items: flex-start;
+            flex: 0 0 calc((100% - var(--width-left-column)) - 2rem);
+            margin-top: unset;
+        }
+
+        // Placing inside #appeal-body for Nov25 and Dec25
+        #appeal-heading {
+            .mixin-font-styles(
+                @family-open-sans,
+                700,
+                2.25rem
+            );
+
+            color: var(--color-headline);
+            filter: drop-shadow(0px 2px 3px #0000004c);
+            margin-block: 4rem;
+            max-width: var(--appeal--letter-width-mobile);
+            width: 100%;
+            text-transform: uppercase;
+
+            &.with-lowercase {
+                text-transform: unset;
+            }
+
+
+            @media (min-width: @sm) {
+                max-width: var(--appeal-content-width);
+            }
+
+            span {
+                display: block;
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-shadow: 0px 2px 3px #0000004c;
+                text-transform: uppercase;
+
+                @media (min-width: @xl) {
+                    font-size: 4.5rem;
+                }
+            }
+        }
+
+        .letter-container {
+            // background color shifted to ::before pseudo-element
+            border: 0.063rem solid var(--color-appeal-bg-border);
+            border-radius: 0.75rem;
+            box-shadow:
+                5px 3px 10px 0px rgba(0, 0, 0, 0.2);
+            max-width: var(--appeal--letter-width-mobile);
+            padding-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+
+            @media (min-width: @sm) {
+                max-width: var(--appeal-content-width);
+            }
+
+            // Background that sits below the content
+            // and above the glow.
+            &::before {
+                background: var(--color-appeal-main-bg);
+                border-radius: 0.75rem;
+                content: '';
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                z-index: -1;
+            }
+
+            // Glow, offset from the .letter-container.
+            &::after {
+                background: linear-gradient(130deg, rgba(13, 44, 91, 0.00) 0%, #26BAF5 77.4%);
+                bottom: 0px;
+                content: '';
+                filter: blur(50px);
+                height: 80%;
+                position: absolute;
+                right: 10px;
+                width: 80%;
+                z-index: -2;
+            }
+
+            #donate-button-container {
+                margin: 0 auto;
+                // Quick fix for donation button being narrower than
+                // the letter container on mobile.
+                margin-left: -1px;
+                margin-right: -1px;
+
+                margin-top: -3rem;
+
+                @media (min-width: @md) {
+                    // Once wider than mobile, bring back auto margins.
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-width: 29.375rem;
+                }
+
+                .donate-banner {
+                    margin: 0 auto 2rem;
+                    #decoration {
+                        left: -85px;
+                        @media (min-width: @md) {
+                            left: 25px;
+                        }
+                    }
+                }
+
+                .donate-banner::after {
+                    left: -263px;
+                    @media (min-width: @md) {
+                        left: -163px;
+                    }
+                }
+
+                #donate-banner-left {
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    line-height: 1.3;
+
+                    b {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        letter-spacing: 2.21px;
+                    }
+
+                    @media (min-width: @md) {
+                        font-size: 1.5rem;
+                        b {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+
+                #donate-banner-right {
+                    display: block;
+                    font-weight: 400;
+                    b {
+                        display: block;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            #letter-contents {
+                padding-inline: 1.25rem;
+
+                @media (min-width: @md) {
+                    padding-inline: 2.6875rem;
+                }
+
+                p {
+                    .mixin-font-styles(
+                        @family-open-sans,
+                        normal,
+                        1.375rem,
+                        1.5
+                    );
+
+                    width: 100%;
+                }
+
+                /* Declaring this style here, as it has more precedence. */
+                .closing-text {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        #illustration-credit {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            max-width: var(--appeal--letter-width-mobile);
+            margin-top: 2rem;
+            width: 100%;
+
+            @media (min-width: @sm) {
+                max-width: var(--appeal-content-width);
+            }
+
+            @media (min-width: @xxl) {
+                margin-top: 3rem;
+                max-width: calc(var(--appeal-content-width) + 2rem);
+            }
+
+            p {
+                .web-body-small();
+                color: var(--color-illustration-credit);
+                margin: 0;
+            }
+        }
+    }
+
+    #footer-wrapper {
+        background: var(--background-page-and-footer);
+        flex-grow: 1;
+    }
+}
