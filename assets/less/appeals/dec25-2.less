@@ -15,7 +15,7 @@
 :root {
     --appeal-content-width: 34.625rem;             // 554px
     --appeal--letter-width-mobile: 23.8125rem;     // 381px
-    --background-illustration-height: 1070px;
+    --background-illustration-height: 1078px;
 
     --background-dark-blue: #1a202c;
     --background-yellow: #FBEA8B;
@@ -54,16 +54,16 @@ html, body {
 
     main {
         // Regular DPI fallback
-        background-image: url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS.webp');
+        background-image: url('/media/img/thunderbird/appeal/dec25-2/Dec15-appeal-xl-1600.webp');
 
         // high-res PNG, if syntax is supported.
         background-image: -webkit-image-set(
-            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS.webp') 1x,
-            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS-high-res.webp') 2x
+            url('/media/img/thunderbird/appeal/dec25-2/Dec15-appeal-xl-1600.webp') 1x,
+            url('/media/img/thunderbird/appeal/dec25-2/Dec15-appeal-xl-1600@2x.webp') 2x
         );
         background-image: image-set(
-            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS.webp') 1x,
-            url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XS-high-res.webp') 2x
+            url('/media/img/thunderbird/appeal/dec25-2/Dec15-appeal-xl-1600.webp') 1x,
+            url('/media/img/thunderbird/appeal/dec25-2/Dec15-appeal-xl-1600@2x.webp') 2x
         );
 
         background-color: var(--background-dark-blue);
@@ -76,21 +76,7 @@ html, body {
         padding-bottom: 5rem;
         min-width: 23.438rem;
 
-        // Use desktop image sooner and position background image relative to viewport width.
         @media (min-width: @sm) {
-            // Regular DPI fallback
-            background-image: url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp');
-
-            // high-res PNG, if syntax is supported.
-            background-image: -webkit-image-set(
-                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp') 1x,
-                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-high-res.webp') 2x
-            );
-            background-image: image-set(
-                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL.webp') 1x,
-                url('/media/img/thunderbird/appeal/dec25-1/appeal-Dec3-wallpaper-XL-high-res.webp') 2x
-            );
-
             background-position: center calc(0% - 30vw);
         }
 
