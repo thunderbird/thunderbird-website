@@ -99,6 +99,7 @@ jobs:
           refresh: true
         env:
           IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update ECS service
         env:
