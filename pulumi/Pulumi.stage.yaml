@@ -7,10 +7,10 @@ config:
       ManagedBy: pulumi
   thunderbird-website:environment: stage
    # desiredCount and minCapacity should be the same.
-  thunderbird-website:desiredCount: 1
-  thunderbird-website:cpu: 512
-  thunderbird-website:memory: 2048
+  thunderbird-website:desiredCount: 2
+  thunderbird-website:cpu: 256
+  thunderbird-website:memory: 1024
   # Auto scaling
-  thunderbird-website:minCapacity: 1
-  thunderbird-website:maxCapacity: 2
+  thunderbird-website:minCapacity: 2
+  thunderbird-website:maxCapacity: 4
   thunderbird-website:cpuTarget: 70
