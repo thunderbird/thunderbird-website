@@ -201,7 +201,7 @@ def create_container_definitions(args):
     }])
 
 region = aws.get_region()
-container_definitions = pulumi.Output.all(image_uri, log_group.name, region.name).apply(create_container_definitions)
+container_definitions = pulumi.Output.all(image_uri, log_group.name, region.region).apply(create_container_definitions)
 
 task_definition = aws.ecs.TaskDefinition(
     f"task-{environment}",

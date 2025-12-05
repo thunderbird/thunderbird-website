@@ -90,21 +90,13 @@ jobs:
           organization: thunderbird
           requested-token-type: urn:pulumi:token-type:access_token:organization
 
-      - name: Refresh Pulumi state
-        uses: pulumi/actions@v6
-        with:
-          command: refresh
-          stack-name: thunderbird/thunderbird-website/${{ env.DEPLOY_ENV }}
-          work-dir: ./pulumi
-        env:
-          IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
-
       - name: Deploy infrastructure
         uses: pulumi/actions@v6
         with:
           command: up
           stack-name: thunderbird/thunderbird-website/${{ env.DEPLOY_ENV }}
           work-dir: ./pulumi
+          refresh: true
         env:
           IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
 
