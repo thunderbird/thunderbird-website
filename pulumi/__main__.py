@@ -10,6 +10,11 @@ desired_count = config.get_int("desiredCount") or 1
 cpu = config.get_int("cpu") or 256
 memory = config.get_int("memory") or 512
 
+# Auto scaling configuration
+min_capacity = config.get_int("minCapacity") or 1
+max_capacity = config.get_int("maxCapacity") or 8
+cpu_target = config.get_int("cpuTarget") or 70  # Scale when CPU > 70%
+
 # SSL Certificate ARN (shared across environments)
 CERTIFICATE_ARN = "arn:aws:acm:us-west-2:768512802988:certificate/2cff184f-31a3-4e9e-b478-eff82076f06f"
 
@@ -238,6 +243,33 @@ service = aws.ecs.Service(
     )],
     health_check_grace_period_seconds=30,
     opts=pulumi.ResourceOptions(depends_on=[http_listener, https_listener]),
+)
+
+# Auto Scaling - scales based on CPU utilization
+scaling_target = aws.appautoscaling.Target(
+    f"scaling-target-{environment}",
+    max_capacity=max_capacity,
+    min_capacity=min_capacity,
+    resource_id=pulumi.Output.concat("service/", cluster.name, "/", service.name),
+    scalable_dimension="ecs:service:DesiredCount",
+    service_namespace="ecs",
+)
+
+cpu_scaling_policy = aws.appautoscaling.Policy(
+    f"cpu-scaling-{environment}",
+    name=f"thunderbird-website-cpu-scaling-{environment}",
+    policy_type="TargetTrackingScaling",
+    resource_id=scaling_target.resource_id,
+    scalable_dimension=scaling_target.scalable_dimension,
+    service_namespace=scaling_target.service_namespace,
+    target_tracking_scaling_policy_configuration=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs(
+        predefined_metric_specification=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs(
+            predefined_metric_type="ECSServiceAverageCPUUtilization",
+        ),
+        target_value=float(cpu_target),
+        scale_in_cooldown=300,   # Wait 5 min before scaling in
+        scale_out_cooldown=60,   # Scale out quickly (1 min)
+    ),
 )
 
 # Outputs

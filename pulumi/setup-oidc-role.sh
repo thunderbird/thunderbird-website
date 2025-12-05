@@ -154,6 +154,23 @@ PERMISSIONS_POLICY=$(cat <<EOF
             "Effect": "Allow",
             "Action": ["logs:DescribeLogGroups"],
             "Resource": "*"
+        },
+        {
+            "Sid": "AutoScaling",
+            "Effect": "Allow",
+            "Action": [
+                "application-autoscaling:RegisterScalableTarget",
+                "application-autoscaling:DeregisterScalableTarget",
+                "application-autoscaling:DescribeScalableTargets",
+                "application-autoscaling:PutScalingPolicy",
+                "application-autoscaling:DeleteScalingPolicy",
+                "application-autoscaling:DescribeScalingPolicies",
+                "application-autoscaling:DescribeScalingActivities",
+                "application-autoscaling:TagResource",
+                "application-autoscaling:UntagResource",
+                "application-autoscaling:ListTagsForResource"
+            ],
+            "Resource": "*"
         }
     ]
 }

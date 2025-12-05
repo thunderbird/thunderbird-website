@@ -9,3 +9,7 @@ config:
   thunderbird-website:desiredCount: 2
   thunderbird-website:cpu: 2048
   thunderbird-website:memory: 4096
+  # Auto scaling
+  thunderbird-website:minCapacity: 2
+  thunderbird-website:maxCapacity: 8
+  thunderbird-website:cpuTarget: 70
