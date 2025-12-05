@@ -1,0 +1,76 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{#
+# This is the appeal page that will be loaded into Thunderbird directly.
+# Instead of the donation form it links to $url/donate which forces Thunderbird to open the page
+# in the user's preferred browser. This is hopefully less annoying for the end-user.
+#}
+
+{% set active_page = "appeal-dec25" %}
+
+{# For donation url generation #}
+{% set fru_form_id = fru_form_id|default('dec25-2') %}
+{% set utm_content = utm_content|default('dec25-2c') %}
+{% set utm_campaign = utm_campaign|default('dec25_appeal-2') %}
+{% set utm_source = utm_source|default('in_app') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.dec25-2c.donate')) %}
+{# Disable the donation banner on this redirect page, we set this to false in the actual donation page. #}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
+
+{% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
+
+{% block base_css %}
+  <link href="{{ static('css/appeal-dec25-2-style.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block page_title %}{{ _('Only 3% of users support Thunderbird') }}{% endblock %}
+
+{% block content %}
+  <section id="appeal-body">
+    <h1 id="appeal-heading" class="with-lowercase" aria-label="{{ _('Only 3% of users support Thunderbird') }}">
+      {{ _('Only 3% of users <span>SUPPORT THUNDERBIRD</span>') }}
+    </h1>
+
+    <div id="appeal-letter" class="letter-container font-xl">
+      <section id="donate-button-container">
+        {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content, base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
+      </section>
+      <div id="letter-contents">
+        <p>
+          {{ _('Thunderbird is built by a small, passionate team along with a global community that believes in the <b>power of privacy, freedom and open source</b>. Your support pays for secure servers, robust infrastructure and the dedicated team of people who make it all happen.')}}
+        </p>
+        <p>
+          {{ _('<b>Together we can continue to prove that privacy respecting technology can compete and thrive.</b>')}}
+        </p>
+        <p>
+          {{ _('If you love using Thunderbird, please consider supporting it.')}}
+        </p>
+        <div class="heart-container">
+          <div class="left-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+          <div class="right-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+      </div>
+    </div>
+    <div id="illustration-credit">
+      <p>
+        {{ _('Illustrated by %(name)s')|format(name='Michaela Martin') }}
+      </p>
+    </div>
+  </section>
+{% endblock %}
+{% block site_footer %}
+  <div id="footer-wrapper">
+    {% include 'includes/base/moz-footer.html' %}
+  </div>
+{% endblock %}
