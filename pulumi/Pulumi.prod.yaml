@@ -14,4 +14,4 @@ config:
   thunderbird-website:minCapacity: 8
   thunderbird-website:maxCapacity: 32
   # Requests per target per minute - scale when each target receives more than this
-  thunderbird-website:requestsPerTarget: 125
+  thunderbird-website:requestsPerTarget: 5000
