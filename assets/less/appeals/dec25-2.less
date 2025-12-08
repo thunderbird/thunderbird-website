@@ -151,6 +151,13 @@ html, body {
                 max-width: var(--appeal-content-width);
             }
 
+            @media (min-width: @xl) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                min-height: 180px;
+            }
+
             span {
                 display: block;
                 font-size: 2.5rem;
@@ -241,7 +248,8 @@ html, body {
                     font-size: 0.8rem;
                     font-weight: 600;
                     line-height: 1.3;
-                    width: 33%
+                    width: 33%;
+
                     b {
                         font-size: 1.5rem;
                         font-weight: 600;
