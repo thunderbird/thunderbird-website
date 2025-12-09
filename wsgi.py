@@ -83,7 +83,10 @@ def application(environ, start_response):
     else:
         language_code = get_best_language(environ.get('HTTP_ACCEPT_LANGUAGE', 'en-US'))
 
-    location = "{0}/{1}{2}".format(req.host_url, language_code, req.path_qs)
+    # Check X-Forwarded-Proto header directly (set by load balancer)
+    forwarded_proto = environ.get('HTTP_X_FORWARDED_PROTO', '').lower()
+    scheme = forwarded_proto if forwarded_proto in ('http', 'https') else req.scheme
+    location = "{0}://{1}/{2}{3}".format(scheme, req.host, language_code, req.path_qs)
 
     start_response('302 Found', [
         ('Content-type', 'text/html; charset=utf-8'),
