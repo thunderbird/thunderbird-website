@@ -326,6 +326,8 @@ URL_MAPPINGS = {
     'updates.140.appeal.dec25-2b.donate': '/thunderbird/140.0/dec25-2b/donate/',
     'updates.140.appeal.dec25-2c': '/thunderbird/140.0/dec25-2c/',
     'updates.140.appeal.dec25-2c.donate': '/thunderbird/140.0/dec25-2c/donate/',
+    'updates.140.appeal.dec25-2d': '/thunderbird/140.0/dec25-2d/',
+    'updates.140.appeal.dec25-2d.donate': '/thunderbird/140.0/dec25-2d/donate/',
     'updates.release.appeal.sep25r': '/thunderbird/release/sep25r/',
     'updates.release.appeal.sep25r.donate': '/thunderbird/release/sep25r/donate/',
 }
@@ -394,6 +396,7 @@ UPDATES_CSS = {
     "appeal-dec25-1-style": ["less/appeals/dec25-1.less"],
     "appeal-dec25-1c-style": ["less/appeals/dec25-1c.less"],
     "appeal-dec25-2-style": ["less/appeals/dec25-2.less"],
+    "appeal-dec25-2d-style": ["less/appeals/dec25-2d.less"],
     "monthly-style": ["less/monthly.less"],
     'whatsnew-140': ['less/whatsnew-140.less'],
     "appeal-jun25-style": ["less/appeals/jun25.less"],
@@ -641,6 +644,8 @@ UPDATES_REDIRECTS = {
     ('thunderbird', '140.0', 'jun25'): 'updates.140.appeal.jun25a',
     ('thunderbird', 'release', 'sep25'): 'updates.release.appeal.sep25r',
     ('thunderbird', '140.0', 'nov25'): 'updates.140.appeal.nov25c',
+    ('thunderbird', '140.0', 'dec25'): 'updates.140.appeal.dec25-2c',
+
 }
 
 # The default release channel to use when various function defaults are used
