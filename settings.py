@@ -192,6 +192,7 @@ URL_MAPPINGS = {
     'download.android.binary': 'https://github.com/thunderbird/thunderbird-android/releases',
     'download.android.compatibility': 'https://github.com/thunderbird/thunderbird-android/wiki/ReleaseNotes#minimum-android-version-compatibility',
     'download.android.changelog': 'https://github.com/thunderbird/thunderbird-android/releases?q=prerelease:false',
+    'download.desktop.choosing-release-channel': 'https://support.mozilla.org/kb/choosing-thunderbird-release-channel',
     'download.desktop.flathub': 'https://flathub.org/apps/org.mozilla.Thunderbird',
     'download.desktop.msstore': 'https://apps.microsoft.com/detail/9pm5vm1s3vmq',
     'download.desktop.snap': 'https://snapcraft.io/thunderbird',
