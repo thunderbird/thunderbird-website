@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""Important note:
-Ensure all code in here is Python 2.7 compatible.
-"""
-
 # Languages we build the site in.
 PROD_LANGUAGES = (
     'ach', 'af', 'an', 'ar', 'as', 'ast', 'az', 'be', 'bg',
@@ -328,6 +324,8 @@ URL_MAPPINGS = {
     'updates.140.appeal.dec25-2c.donate': '/thunderbird/140.0/dec25-2c/donate/',
     'updates.140.appeal.dec25-2d': '/thunderbird/140.0/dec25-2d/',
     'updates.140.appeal.dec25-2d.donate': '/thunderbird/140.0/dec25-2d/donate/',
+    'updates.140.appeal.dec25-2d6c': '/thunderbird/140.0/dec25-2d6c/',
+    'updates.140.appeal.dec25-2d6c.donate': '/thunderbird/140.0/dec25-2d6c/donate/',
     'updates.release.appeal.sep25r': '/thunderbird/release/sep25r/',
     'updates.release.appeal.sep25r.donate': '/thunderbird/release/sep25r/donate/',
 }
