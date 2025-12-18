@@ -291,6 +291,7 @@ URL_MAPPINGS = {
     'thunderbird.social.linkedin': 'https://www.linkedin.com/company/thunderbird-email/',
     'thunderbird.social.mastodon': 'https://mastodon.online/@thunderbird',
     'thunderbird.social.bluesky': 'https://bsky.app/profile/thunderbird.net',
+    'thunderbird.social.reddit': 'https://www.reddit.com/r/Thunderbird/',
     'thunderbird.115.whatsnew': '/thunderbird/115.0/whatsnew',
     'thunderbird.128.whatsnew': '/thunderbird/128.0/whatsnew',
     'thunderbird.128esr.releasenotes': '/thunderbird/128.0esr/releasenotes',
