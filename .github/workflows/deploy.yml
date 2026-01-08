@@ -1,4 +1,5 @@
 name: Deploy to Fargate
+run-name: "Deploy ${{ github.event.inputs.environment || github.event.action || 'stage' }} - ${{ github.event.client_payload.message || github.sha }}"
 
 on:
   workflow_dispatch:
@@ -21,9 +22,9 @@ permissions:
   id-token: write
   contents: read
 
-# Cancel in-progress deployments when a new one starts
+# Cancel in-progress deployments when a new one starts (per environment)
 concurrency:
-  group: deploy-${{ github.event.inputs.environment || 'stage' }}
+  group: deploy-${{ github.event.inputs.environment || github.event.action || 'stage' }}
   cancel-in-progress: true
 
 env:
