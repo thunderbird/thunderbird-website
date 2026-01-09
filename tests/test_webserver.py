@@ -86,6 +86,11 @@ TEST_CASES = [
 
     # tb.pro
     ("tb.pro", "/ja-JP-mac/", 302, "/ja/"),
+    ("tb.pro", "/", 302, "/en-US/"),
+    ("tb.pro", "/appointment", 302, "/en-US/appointment"),
+    ("tb.pro", "/send", 302, "/en-US/send"),
+    ("tb.pro", "/thundermail", 302, "/en-US/thundermail"),
+    ("tb.pro", "/waitlist", 302, "/en-US/waitlist"),
 ]
 
 
@@ -125,6 +130,9 @@ LOCALE_TESTS = [
     ("www.thunderbird.net", "/", "en-US", "/en-US/"),
     ("www.thunderbird.net", "/", "fr", "/fr/"),
     ("www.thunderbird.net", "/", "ja", "/ja/"),
+    ("tb.pro", "/waitlist", "en-US", "/en-US/waitlist"),
+    ("tb.pro", "/waitlist", "fr", "/fr/waitlist"),
+    ("tb.pro", "/waitlist", "ja", "/ja/waitlist"),
 ]
 
 
