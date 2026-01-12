@@ -1,0 +1,13 @@
+{% macro svg_img(file_name, alt_text='', class_name='') %}
+<img
+  src="{{ static('svg/{file_name}.svg'.format(file_name=file_name)) }}"
+  alt="{{ alt_text }}"
+  class="{{ class_name }}"
+/>
+{% endmacro %}
+
+{# tb.pro footer includes tb.pro and mozilla footer blocks #}
+<footer id="tb-footer">
+  {% include 'includes/base/tbpro-footer-nav-block.html' %}
+  {% include 'includes/base/moz-footer-block.html' %}
+</footer>
