@@ -242,12 +242,15 @@ class Site(object):
 
     def is_css_bundle(self, path):
         """Check if a path refers to a css file that is in the current `css_bundles` or not."""
-        changed_file = ntpath.basename(path).split('.')[0]
+        changed_file = ntpath.basename(path)  # Keep the full filename with extension.
         bundle = ''
         for bundle_name, files in self.css_bundles.items():
             for file in files:
                 if changed_file in file:
                     bundle = bundle_name
+                    break
+            if bundle:
+                break
         return bundle
 
     def partial_asset_build(self, path, timemsg=''):
