@@ -667,7 +667,7 @@ FRU_FORM_IDS = {
 }
 
 # Flip to True to display a "Response times may be slower than usual" warning on the donor help form.
-DONOR_HELP_SLOW_WARNING = True
+DONOR_HELP_SLOW_WARNING = False
 
 # Turning this value to True will enable a thunderbird.net site-wide announcement banner
 # Make sure to edit it in includes/announcement.html !
