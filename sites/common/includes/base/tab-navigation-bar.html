@@ -7,7 +7,7 @@
 
 <script>
   const stageHosts = {{ settings.STAGE_HOSTS|tojson|safe }};
-  const currentHost = window.location.hostname.replace('www.', '');
+  const currentHost = window.location.hostname;
   const isStage = stageHosts.includes(currentHost);
 
   if (isStage) {
@@ -19,7 +19,7 @@
 
   // Set .active class accordingly.
   document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
-    const linkHost = new URL(link.href).hostname.replace('www', '');
+    const linkHost = new URL(link.href).hostname;
 
     if (linkHost === currentHost) {
       link.classList.add('active');
