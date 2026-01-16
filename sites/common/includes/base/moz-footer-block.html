@@ -1,0 +1,34 @@
+{# mozilla footer nav+legal block, used on both tb.pro and www.tb.net
+
+  contains:
+  - #moz-nav: Mozilla logo and legal links (Privacy, Cookies, Legal, etc.)
+  - #tb-legal: Copyright notice and contributor information
+#}
+<div id="moz-nav" class="primary-block">
+  <a id="moz-link-home" href="{{ url('mozorg.home') }}">
+    {{ svg('mozilla-lockup-white-rgb') }}
+  </a>
+  <div class="moz-nav-links">
+    <a href="{{ url('privacy') }}">{{_('Privacy Policy')}}</a>
+    <a href="{{ url('privacy.notices.websites') }}">{{_('Cookies')}}</a>
+    <a href="{{ url('legal.index') }}">{{_('Legal')}}</a>
+    <a href="{{ url('legal.infringement') }}">{{_('Send DMCA Notice')}}</a>
+    <a href="{{ url('legal.fraud-report') }}">{{_('Report Fraud')}}</a>
+    <a href="{{ url('guidelines') }}">{{_('Participation Guidelines')}}</a>
+  </div>
+  <div id="tb-legal">
+    <p>
+      {%- trans url=url('foundation.licensing.website-content'),mzla=url('mzla.blog-post') -%}
+      Thunderbird is part of
+      <a href="{{ mzla }}" class="inline-link">MZLA Technologies Corporation</a>,
+      a wholly owned subsidiary of Mozilla Foundation.
+      Portions of this content are ©1998–{{ current_year }} by individual
+      contributors. Content available under
+      a <a href="{{ url }}" class="inline-link">Creative Commons license</a>.
+      {%- endtrans -%}
+    </p>
+    <p>
+      <a href="{{ url('contribute') }}">{{_('Contribute to this site')}}</a>
+    </p>
+  </div>
+</div>

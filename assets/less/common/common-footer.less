@@ -23,9 +23,6 @@ footer#tb-footer {
         }
     }
 
-    #nav-link-home, #nav-link-home svg { width: 208px;  height: 36px; }
-    #moz-link-home svg { width: 150px; height: 36px;}
-
     #site-nav {
         align-items: start;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -51,55 +48,59 @@ footer#tb-footer {
             grid-template: 1fr / 1fr auto;
         }
     }
+}
 
-    #moz-nav {
+#nav-link-home, #nav-link-home svg { width: 208px;  height: 36px; }
+#moz-link-home svg { width: 150px; height: 36px;}
+
+
+#moz-nav {
+    display: grid;
+    gap: @gutter;
+    padding-bottom: @space-9;
+    padding-top: @space-24;
+
+    .moz-nav-links {
         display: grid;
-        gap: @gutter;
-        padding-bottom: @space-9;
-        padding-top: @space-24;
+        gap: @space-9;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        margin-top: @space-6;
 
-        .moz-nav-links {
-            display: grid;
-            gap: @space-9;
-            grid-auto-flow: column;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(3, auto);
-            margin-top: @space-6;
-
-            a {
-                font-size: .75rem;
-            }
-        }
-
-        @media (min-width: @lg) {
-            grid-template-columns: auto 1fr;
-            align-items: start;
-            column-gap: @space-96;
-
-            #moz-link-home {
-                grid-column: 1;
-                grid-row: 1 / span 2;
-            }
-
-            .moz-nav-links {
-                grid-column: 2;
-                grid-row: 1;
-
-                display: flex;
-                gap: @space-36;
-            }
-
-            #tb-legal {
-                grid-column: 2;
-                grid-row: 2;
-            }
+        a {
+            font-size: .75rem;
         }
     }
 
-    #tb-legal {
-        font-size: .75rem;
-        a {
-            text-decoration: underline;
+    @media (min-width: @lg) {
+        grid-template-columns: auto 1fr;
+        align-items: start;
+        column-gap: @space-96;
+
+        #moz-link-home {
+            grid-column: 1;
+            grid-row: 1 / span 2;
         }
+
+        .moz-nav-links {
+            grid-column: 2;
+            grid-row: 1;
+
+            display: flex;
+            gap: @space-36;
+        }
+
+        #tb-legal {
+            grid-column: 2;
+            grid-row: 2;
+        }
+    }
+}
+
+#tb-legal {
+    font-size: .75rem;
+    a {
+        text-decoration: underline;
     }
 }

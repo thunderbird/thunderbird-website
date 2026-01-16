@@ -7,9 +7,9 @@
   <label for="page-language-select" class="mr-2">
     {# Remove 'en-' conditional once all locales have translated string below. #}
     {% if LANG.startswith('en-') %}
-      {{ _('Page language') }}
+      {{ _('Page language') }}:
     {% else %}
-      {{ _('Other languages') }}
+      {{ _('Other languages') }}:
     {% endif %}
   </label>
   <aside class="relative">
