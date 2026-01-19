@@ -5,12 +5,14 @@
 {% extends "includes/base/page.html" %}
 {% from 'includes/macros/right-arrow-submit-button.html' import right_arrow_submit_button %}
 
+{% block page %}{{ _('Join the Waitlist') }}{% endblock %}
+
 {% block extra_css %}
 <link href="{{ static('css/waitlist.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block masthead %}
-<h1>Join the Waitlist</h1>
+<h1>{{ _('Join the Waitlist') }}</h1>
 {% endblock %}
 
 {% block overview %}
