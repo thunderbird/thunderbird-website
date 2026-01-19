@@ -5,6 +5,7 @@
 {% extends "includes/base/page.html" %}
 {% from 'includes/macros/right-arrow-cta-button.html' import right_arrow_cta_button %}
 
+{% block page_title_full %}{{ _('Thunderbird Pro: Email Hosting, Scheduling & Secure Sharing') }}{% endblock %}
 
 {% block masthead %}
 <h1>{{ _('Elevate Thunderbird,') }} <div class="txt-gradient">{{ _('Do More') }}</div></h1>
@@ -52,7 +53,7 @@
       </div>
       <div class="card-body">
         <p>
-{{ _('Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Powered by open standards and compatible with Google Calendar and CalDAV. You can now schedule like a pro.') }}
+          {{ _('Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Powered by open standards and compatible with Google Calendar and CalDAV. You can now schedule like a pro.') }}
         </p>
       </div>
     </div>
@@ -73,7 +74,7 @@
       </div>
       <div class="card-body">
         <p>
-          Share large files with end-to-end encryption and fewer limits. Send provides a natural file attachment experience in Thunderbird Desktop and is compatible with any recipient’s inbox. Know your attachments will arrive safe and secure.
+          {{ _('Share large files with end-to-end encryption and fewer limits. Send provides a natural file attachment experience in Thunderbird Desktop and is compatible with any recipient’s inbox. Know your attachments will arrive safe and secure.') }}
         </p>
       </div>
     </div>
@@ -110,7 +111,7 @@
       <div class="reason-content">
         <h3 class="reason-title">{{ _('Freedom Driven') }}</h3>
         <p>
-          {{ _('Money isn\'t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
+          {{ _('Money isn’t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
         </p>
       </div>
     </div>
@@ -125,7 +126,7 @@
     {{ _('Subscribe to Pro') }}
   </header>
   <p>
-    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You\'ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
+    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You’ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
