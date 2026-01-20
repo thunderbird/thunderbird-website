@@ -5,6 +5,10 @@
 {% extends "includes/base/page.html" %}
 {% from 'includes/macros/right-arrow-submit-button.html' import right_arrow_submit_button %}
 
+{% set wait_list_success_message = _('Thank you for joining the waitlist for Thunderbird Pro Early Bird. We\'ll be in touch soon!') %}
+{% set wait_list_error_message =_('An error occurred. Please try again.') %}
+
+
 {% block extra_css %}
 <link href="{{ static('css/waitlist.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
@@ -101,17 +105,17 @@ document.addEventListener('DOMContentLoaded', () => {
       success: (data) => {
         if (data.result === 'success') {
           form.classList.add('hidden');
-          messageDiv.textContent = "{{ _('Thank you for joining the waitlist for Thunderbird Pro Early Bird. We\'ll be in touch soon!') }}";
+          messageDiv.textContent = "{{ wait_list_success_message }}";
         } else {
           // Mailchimp often returns errors in data.msg
           // But ignoring that message, as we cannot translate it ahead of time.
-          messageDiv.innerHTML = "{{ _('An error occurred. Please try again.')}}";
+          messageDiv.innerHTML = "{{ wait_list_error_message }}";
         }
         messageDiv.classList.remove('hidden');
       },
       error: (err) => {
 
-        messageDiv.innerHTML = "{{ _('An error occurred. Please try again.')}}";
+        messageDiv.innerHTML = "{{ wait_list_error_message }}";
         messageDiv.classList.remove('hidden');
       }
     });
