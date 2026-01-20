@@ -88,28 +88,30 @@ document.addEventListener('DOMContentLoaded', () => {
     messageDiv.classList.add('hidden');
     messageDiv.textContent = '';
 
-    // Modify URL so we can send JSONP to MC
+    // Modify URL so we can send JSONP to MC.
     const actionUrl = form.action.replace('/post?', '/post-json?');
 
-    // Using jQuery, since fetch does not let us do JSONP
+    // Using jQuery, since fetch does not let us do JSONP.
     $.ajax({
       url: actionUrl,
       type: 'GET',
       data: $(form).serialize(),
       dataType: 'jsonp',
-      jsonp: 'c', // Mailchimp specifically requires 'c' as the callback param
+      jsonp: 'c', // Mailchimp specifically requires 'c' as the callback param.
       success: (data) => {
         if (data.result === 'success') {
           form.classList.add('hidden');
           messageDiv.textContent = "{{ _('Thank you for joining the waitlist for Thunderbird Pro Early Bird. We\'ll be in touch soon!') }}";
         } else {
           // Mailchimp often returns errors in data.msg
-          messageDiv.innerHTML = data.msg || "An error occurred. Please try again.";
+          // But ignoring that message, as we cannot translate it ahead of time.
+          messageDiv.innerHTML = "{{ _('An error occurred. Please try again.')}}";
         }
         messageDiv.classList.remove('hidden');
       },
       error: (err) => {
-        messageDiv.textContent = "A network error occurred. Please try again.";
+
+        messageDiv.innerHTML = "{{ _('An error occurred. Please try again.')}}";
         messageDiv.classList.remove('hidden');
       }
     });
