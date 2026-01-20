@@ -62,7 +62,7 @@
 
   <body {% if self.body_id() %}id="{% block body_id %}{% endblock %}" {% endif %}class="html-{{ DIR }} {% block body_class %}{% endblock %}" {% block body_attrs %}{% endblock %}>
     <div id="strings" {% block string_data %}{% endblock %}></div>
-
+    {% include 'includes/base/tab-navigation-bar.html' %}
     {# for headers not to be confined by #wrapper (like fx family nav) #}
     {% block site_header_unwrapped %}{% endblock %}
 
