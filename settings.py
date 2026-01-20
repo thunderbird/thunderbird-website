@@ -421,6 +421,10 @@ TBPRO_CSS = {
 }
 
 TBPRO_JS = {
+    'common-bundle': [
+        # For submitting wait list form as JSONP
+        'js/common/jquery-3.6.0.min.js'
+    ]
 }
 
 # Thunderbird Pro subscription plan - Single source of truth for all pages

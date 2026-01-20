@@ -70,3 +70,51 @@
   </div>
 </div>
 {% endblock %}
+
+
+{% block extra_js %}
+<script src="{{ static('js/common-bundle.js') }}"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('mc-embedded-subscribe-form');
+  const messageDiv = document.getElementById('waitlist-message');
+  const welcomeDiv = document.getElementById('waitlist-welcome');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Clear out previous messages.
+    messageDiv.classList.add('hidden');
+    messageDiv.textContent = '';
+
+    // Modify URL so we can send JSONP to MC
+    const actionUrl = form.action.replace('/post?', '/post-json?');
+
+    // Using jQuery, since fetch does not let us do JSONP
+    $.ajax({
+      url: actionUrl,
+      type: 'GET',
+      data: $(form).serialize(),
+      dataType: 'jsonp',
+      jsonp: 'c', // Mailchimp specifically requires 'c' as the callback param
+      success: (data) => {
+        if (data.result === 'success') {
+          form.classList.add('hidden');
+          messageDiv.textContent = "{{ _('Thank you for joining the waitlist for Thunderbird Pro Early Bird. We\'ll be in touch soon!') }}";
+        } else {
+          // Mailchimp often returns errors in data.msg
+          messageDiv.innerHTML = data.msg || "An error occurred. Please try again.";
+        }
+        messageDiv.classList.remove('hidden');
+      },
+      error: (err) => {
+        messageDiv.textContent = "A network error occurred. Please try again.";
+        messageDiv.classList.remove('hidden');
+      }
+    });
+  });
+});
+
+</script>
+{% endblock %}
