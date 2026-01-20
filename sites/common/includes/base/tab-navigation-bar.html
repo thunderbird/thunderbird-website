@@ -6,8 +6,9 @@
 </div>
 
 <script>
+  const PREFIX = /^www[.-]/;
   const stageHosts = {{ settings.STAGE_HOSTS|tojson|safe }};
-  const currentHost = window.location.hostname;
+  const currentHost = window.location.hostname.replace(PREFIX, '');
   const isStage = stageHosts.includes(currentHost);
 
   if (isStage) {
@@ -19,7 +20,7 @@
 
   // Set .active class accordingly.
   document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
-    const linkHost = new URL(link.href).hostname;
+    const linkHost = new URL(link.href).hostname.replace(PREFIX, '');
 
     if (linkHost === currentHost) {
       link.classList.add('active');
