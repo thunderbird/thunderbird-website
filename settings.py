@@ -421,7 +421,7 @@ TBPRO_CSS = {
 }
 
 TBPRO_JS = {
-    'common-bundle': [
+    'wait-list-bundle': [
         # For submitting wait list form as JSONP
         'js/common/jquery-3.6.0.min.js'
     ]
