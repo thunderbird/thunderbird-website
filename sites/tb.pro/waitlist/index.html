@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const messageDiv = document.getElementById('waitlist-message');
   const welcomeDiv = document.getElementById('waitlist-welcome');
 
-  form.addEventListener('submit', (event) => {
+  function handleSubmit (event) => {
     event.preventDefault();
 
     // Clear out previous messages.
@@ -115,10 +115,17 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       error: (err) => {
 
+        // On network error, fall back to regular submission.
+        form.removeEventListener('submit', handleSubmit);
+        form.action.replace('/post-json?', '/post?');
+        $(form).submit();
+
         messageDiv.innerHTML = "{{ wait_list_error_message }}";
         messageDiv.classList.remove('hidden');
       }
-    });
+    }
+
+  form.addEventListener('submit', handleSubmit);
   });
 });
 
