@@ -678,8 +678,8 @@ def setup_observer(builder_instance, port):
     observer = Observer()
     observer.schedule(handler, path=builder_instance.searchpath, recursive=True)
 
-    if builder_instance.extra_searchpath:
-        for p in builder_instance.extra_searchpath:
+    if builder_instance.extra_searchpaths:
+        for p in builder_instance.extra_searchpaths:
             observer.schedule(handler, path=p, recursive=True)
 
     observer.schedule(handler, path=settings.ASSETS, recursive=True)
