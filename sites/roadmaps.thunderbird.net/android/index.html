@@ -1,0 +1,24 @@
+{% extends "includes/base/page.html" %}
+{% block content %}
+<p>Welcome to the <strong>Thunderbird for Android</strong> roadmap!</p>
+<h1>🏗️ Active</h1>
+<ul>
+<li><strong>Rearchitecture and Core Maintenance</strong> - Modernize the source code that we inherited from K9, tackle the most glaring maintenance and stability issues, and restructure the core architecture for faster and easier development. </li>
+<li><strong>Message View Improvements</strong> - Modernize the message view to address the most glaring issues like attachment handling, message loading, zoom, remove images, and so on. Making the experience comparable to the competition. </li>
+</ul>
+<h1>📋 Planned</h1>
+<ul>
+<li><strong>Message List Improvements</strong> - Users spend most of their time on the message list, waiting for messages to load, scrolling to find messages, and quickly interacting with them through swipe actions. This effort is aimed at improving this primary view and addressing all major concerns. </li>
+<li><strong>HTML Signature</strong> - Give users a way to set HTML signatures. This is a long time requested feature that alongside Sync will strengthen the continuity between our apps and the first step towards a working ecosystem. </li>
+</ul>
+<h1>🚀 Launched</h1>
+<ul>
+<li><strong>CASA Approval</strong> - Complete the Cloud Application Security Assessment (CASA)</li>
+</ul>
+<h1>🗃️ Backlog</h1>
+<ul>
+<li><strong>JMAP Support Exploration</strong> - Planning for JMAP integration, learning what it means to add a new protocol on Android, and ensuring future proofing against proprietary protocols.</li>
+<li><strong>Exchange Support Exploration</strong> - Supporting Exchange will allow Desktop users to stay inside our ecosystem and not need to switch between applications.</li>
+<li><strong>Calendar Exploration</strong> - Emails and Calendars go hand in hand and it's time to start exploring the implementation of CalDav support and plan for a proper calendar integration on Android.</li>
+</ul>
+{% endblock %}

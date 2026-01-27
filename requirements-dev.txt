@@ -4,7 +4,7 @@
 #   pip install -r requirements-dev.txt
 #
 # to test it. When you have the requirements how you like, run:
-# 
+#
 #   pip-compile --generate-hashes -o requirements.txt requirements-dev.txt
 #
 # to generate the hashed requirements file used by the production build.
@@ -18,7 +18,7 @@ jinja2>=2.10.1,<=3.1.6
 markdown>=2.6.11
 markupsafe>=1.0
 polib>=1.1.0
-pyyaml>=5.3.1
+PyYAML>=6.0.1
 watchdog>=0.9.0
 webassets>=0.12.1
 webob>=1.7.3
@@ -27,3 +27,5 @@ pytest~=7.3.1
 python-dateutil~=2.8.2
 packaging~=23.1
 setuptools==78.1.1
+pymdown-extensions==10.20.1
+Markdown==3.9

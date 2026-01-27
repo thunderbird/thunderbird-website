@@ -108,10 +108,13 @@ CANONICAL_STAGE_URL = 'https://www-stage.thunderbird.net'
 CANONICAL_UPDATES_URL = 'https://updates.thunderbird.net'
 CANONICAL_TBPRO_URL = 'https://www.tb.pro'
 CANONICAL_TBPRO_STAGE_URL = 'https://stage.tb.pro'
+CANONICAL_ROADMAPS_URL = 'https://roadmaps.thunderbird.net'
+CANONICAL_ROADMAPS_STAGE_URL = 'https://roadmaps-stage.thunderbird.net'
 
 STAGE_HOSTS = [
     CANONICAL_STAGE_URL.replace('https://', ''),
     CANONICAL_TBPRO_STAGE_URL.replace('https://', ''),
+    CANONICAL_ROADMAPS_STAGE_URL.replace('https://', ''),
     'stage.thunderbird.net',
     'localhost']
 
@@ -144,6 +147,9 @@ UPDATES_PATH = 'sites/updates.thunderbird.net/'
 
 TBPRO_PATH = 'sites/tb.pro/'
 
+ROADMAPS_SRC = 'libs/thunderbird_roadmaps/docs/'
+ROADMAPS_PATH = 'sites/roadmaps.thunderbird.net/'
+
 # path for the finished website artifacts.
 WEBSITE_RENDERPATH = 'dist/www.thunderbird.net'
 
@@ -153,6 +159,8 @@ START_RENDERPATH = 'dist/start.thunderbird.net'
 UPDATES_RENDERPATH = 'dist/updates.thunderbird.net'
 
 TBPRO_RENDERPATH = 'dist/tb.pro'
+
+ROADMAPS_RENDERPATH = 'dist/roadmaps.thunderbird.net'
 
 LOCALE_PATH = 'libs/locale'
 
@@ -434,6 +442,14 @@ TBPRO_DEFAULT_PLAN = {
     'send_storage': '300',  # GB
     'num_domains': '3',
     'num_email_addresses': '15',
+}
+
+
+ROADMAPS_CSS = {
+    'roadmaps': ['less/roadmaps/index.less'],
+}
+
+ROADMAPS_JS = {
 }
 
 

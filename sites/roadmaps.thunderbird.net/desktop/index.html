@@ -1,0 +1,36 @@
+{% extends "includes/base/page.html" %}
+{% block content %}
+<p>Welcome to the <strong>Thunderbird Desktop</strong> client roadmap! </p>
+<h1>🏗️ Active</h1>
+<ul>
+<li><strong>First Time User Experience</strong> - Complete Account Hub for all account creations, enable it for first time users, and show a customization wizard after first account creation.</li>
+<li><strong>Calendar Dialogs UI/UX</strong> - Complete the refresh of the calendar interface and user experience. Some protocols handling changes might be needed.</li>
+<li><strong>Conversation View</strong> - Complete the work on the new conversation view UI to consume the new Panorama database.</li>
+<li><strong>Exchange (EWS, GraphAPI)</strong> - Finalize the work on the Exchange protocol in order to support all versions of Exchange and Microsoft 365, including calendar and address book support.</li>
+<li><strong>Global Database</strong> - Continue the work on the new Panorama database, allowing users to start testing the new database, and handle a consistent data migration.</li>
+<li><strong>Improve and extend existing add-ons APIs</strong> - Improve the currently available APIs, focus on giving access to new sections and core features, as well as introducing new APIs for specific sections.</li>
+<li><strong>Improve add-ons API documentation and release changelog</strong> - Keep up to date the official API documentation and ensure that monthly changelogs incorporate API changes.</li>
+</ul>
+<h1>📋 Planned</h1>
+<ul>
+<li><strong>Compose Window</strong> - Modernize the composition editor to support modern widgets and markdown. Rebuild the UI of the compose window.</li>
+<li><strong>Settings Interface Improvements</strong> - Clean up and reorganize the settings into more discoverable sections and improve its search.</li>
+<li><strong>Unified Toolbar Completion</strong> - Continue the work on the unified toolbar to apply to all sections and remove the old m-c forked customizable toolbar code.</li>
+<li><strong>Encryption and Security Improvements</strong> - Improve the support and discovery of OpenPGP and S/MIME, improve email tracking protection, and harden phishing email prevention.</li>
+</ul>
+<h1>🚀 Launched</h1>
+<ul>
+<li><strong>Exchange Email Support</strong> - Full support of email operations and account creation. [<a href="https://support.mozilla.org/en-US/kb/thunderbird-and-exchange">link</a>]</li>
+<li><strong>Native OS Notifications</strong> - Add quick actions to reply, delete, mark messages as read/unread, and manage the notifications. [<a href="https://blog.thunderbird.net/2025/08/monthly-release-141-recap/">link</a>]</li>
+<li><strong>Implement Glean Telemetry</strong> - Move away from the old telemetry implementation and add the new Glean Telemetry. [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1899602">link</a>]</li>
+<li><strong>In-App Notifications</strong> - Implement a new notification system that allows the Thunderbird team to push important, time-sensitive information directly to a user's Thunderbird desktop client. [<a href="https://support.mozilla.org/en-US/kb/notifications-thunderbird">link</a>]</li>
+</ul>
+<h1>🗃️ Backlog</h1>
+<ul>
+<li><strong>Spaces Toolbar Completion</strong> - Continue the work on the spaces toolbar to implement a better spaces distinction, easy entry point to add extensions, vertical toolbars, and more customization options.</li>
+<li><strong>Settings Refresh</strong> - Audit and reorganize the settings and account settings into a single modal window. Improve the searchability and discoverability of settings.</li>
+<li><strong>Customizable Shortcuts</strong> - Continue the work on customizable shortcuts to move away from XUL keys and allow users control of default keyboard combinations.</li>
+<li><strong>OS Integration</strong> - Improve the integration with native OS features like notifications, status bar, and system tray.</li>
+<li><strong>JMAP</strong> - Explore the implementation of the JMAP protocol.</li>
+</ul>
+{% endblock %}
