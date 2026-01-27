@@ -9,6 +9,8 @@
 <link href="{{ static('css/appointment.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
+{% block page_title %}{{ _('Thunderbird Appointment') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird Appointment makes it easy to find a time to meet. So you can ditch the admin and streamline your day.') }}{% endblock %}
 
 {% block masthead %}
 <div class="product-logo"></div>
@@ -49,7 +51,7 @@
       <div class="overview-card overview-card-3">
         <header>{{ _('Private, Open, Practical') }}</header>
         <p>
-          {{ _('Appointment is private, open source, and integrates with third-party tools like Zoom to align with the needs of your work and personal life') }}
+          {{ _('Appointment is private, open source, and integrates with third-party tools like Zoom to align with the needs of your work and personal life.') }}
         </p>
         <div class="overview-image"></div>
       </div>
@@ -82,7 +84,7 @@
       <div class="reason-content">
         <h3 class="reason-title">{{ _('Freedom Driven') }}</h3>
         <p>
-          {{ _('Money isn\'t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
+          {{ _('Money isn’t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
         </p>
       </div>
     </div>
@@ -96,7 +98,7 @@
     {{ _('Subscribe to Pro') }}
   </header>
   <p>
-    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You\'ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
+    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You’ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}

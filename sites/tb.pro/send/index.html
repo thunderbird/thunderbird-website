@@ -9,13 +9,15 @@
 <link href="{{ static('css/send.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
+{% block page_title %}{{ _('Thunderbird Send') }}{% endblock %}
+{% block page_desc %}{{ _('Thunderbird Send makes sending large files safe and easy, with end-to-end encryption that keeps them secure in any recipient’s inbox.') }}{% endblock %}
 
 {% block masthead %}
 <div class="product-logo"></div>
 
 <h1>{{ _('Secure Files. Send Securely.') }}</h1>
 <p>
-  {{ _('Thunderbird Send makes sending large files safe and easy, with end-to-end encryption that keeps them secure in any recipient\'s inbox.') }}
+  {{ _('Thunderbird Send makes sending large files safe and easy, with end-to-end encryption that keeps them secure in any recipient’s inbox.') }}
 </p>
 
 {{ right_arrow_cta_button(_('Join Waitlist'), url('tbpro.waitlist'), 'cta-button') }}
@@ -27,22 +29,22 @@
 {% block overview %}
 <div class="top-level">
   <section id="overview" class="primary-block">
-    <header>Meet Send</header>
+    <header>{{ _('Meet Send') }}</header>
     <p>
-      Share large files with end-to-end encryption and fewer limits. Send provides a natural file attachment experience in Thunderbird Desktop and is compatible with any recipient’s inbox. Know your attachments will arrive safe and secure.
+      {{ _('Share large files with end-to-end encryption and fewer limits. Send provides a natural file attachment experience in Thunderbird Desktop and is compatible with any recipient’s inbox. Know your attachments will arrive safe and secure.') }}
     </p>
     <div class="overview-card-container">
       <div class="overview-card overview-card-1">
         <div class="overview-image"></div>
-        <header>End-to-End Encrypted</header>
+        <header>{{ _('End-to-End Encrypted') }}</header>
         <p>
-          Your files are protected from the moment they leave your device until they reach their destination. With encryption both in transit and at rest,  plus optional password protection, sensitive documents stay private, so even we can't see what you're sharing.
+          {{ _('Your files are protected from the moment they leave your device until they reach their destination. With encryption both in transit and at rest, plus optional password protection, sensitive documents stay private, so even we can’t see what you’re sharing.') }}
         </p>
       </div>
       <div class="overview-card overview-card-2">
         <header>{{ _('Massive File Support') }}</header>
         <p>
-          {{ _('Share files up to 20GB without worrying about attachment restrictions. Whether it\'s high-resolution photos, design files, or project archives, Send handles what traditional email can\'t, while maintaining the familiar attachment experience in Thunderbird Desktop.') }}
+          {{ _('Share files up to 20GB without worrying about attachment restrictions. Whether it’s high-resolution photos, design files, or project archives, Send handles what traditional email can’t, while maintaining the familiar attachment experience in Thunderbird Desktop.') }}
         </p>
         <div class="overview-image"></div>
       </div>
@@ -82,7 +84,7 @@
         <div class="reason-content">
           <h3 class="reason-title">{{ _('Freedom Driven') }}</h3>
           <p>
-            {{ _('Money isn\'t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
+            {{ _('Money isn’t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
           </p>
         </div>
       </div>
@@ -96,7 +98,7 @@
     {{ _('Subscribe to Pro') }}
   </header>
   <p>
-    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You\'ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
+    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You’ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
