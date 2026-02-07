@@ -9,11 +9,13 @@
 <link href="{{ static('css/thundermail.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
+{% block page_title %}{{ _('Thundermail Email Hosting') }}{% endblock %}
+{% block page_desc %}{{ _('Thundermail offers you email hosting with the same values as Thunderbird. Enjoy privacy, security, and freedom from client to inbox.') }}{% endblock %}
 
 {% block masthead %}
 <div class="product-logo"></div>
 
-<h1>{{ _('Host Securely. Mail Confidently') }}</h1>
+<h1>{{ _('Host Securely. Mail Confidently.') }}</h1>
 <p>
   {{ _('Thundermail offers you email hosting with the same values as Thunderbird. Enjoy privacy, security, and freedom from client to inbox.') }}
 </p>
@@ -36,7 +38,7 @@
       <div class="overview-image"></div>
       <header>{{ _('Based on Modern Standards') }}</header>
       <p>
-        {{ _('Experience faster, more efficient email with JMAP support alongside traditional IMAP and SMTP protocols. Built on Stalwart\'s modern, modular mail server architecture, Thundermail delivers performance and reliability without the bloat.') }}
+        {{ _('Experience faster, more efficient email with JMAP support alongside traditional IMAP and SMTP protocols. Built on Stalwart’s modern, modular mail server architecture, Thundermail delivers performance and reliability without the bloat.') }}
       </p>
     </div>
     <div class="overview-card overview-card-2">
@@ -85,7 +87,7 @@
         <div class="reason-content">
           <h3 class="reason-title">{{ _('Freedom Driven') }}</h3>
           <p>
-            {{ _('Money isn\'t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
+            {{ _('Money isn’t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
           </p>
         </div>
       </div>
@@ -100,7 +102,7 @@
     {{ _('Subscribe to Pro') }}
   </header>
   <p>
-    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You\'ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
+    {{ _('Get Thundermail, Appointment, and Send in one simple subscription. You’ll love the confidence, ease, and security these services add to Thunderbird. Thank you for supporting freedom.') }}
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}

@@ -14,6 +14,8 @@ It also provides utilities for downloading legal documents and watching for chan
 import argparse
 import sys
 import os.path
+import os
+
 from datetime import date
 
 import build_calendar
@@ -21,6 +23,9 @@ import builder
 
 import helper
 import settings
+
+import markdown
+from pymdownx import emoji
 
 from calgen.providers.CalendarificProvider import CalendarificProvider
 
@@ -37,6 +42,7 @@ def setup_argument_parser():
                         action='store_true')
     parser.add_argument('--downloadlegal', help='Download the Thunderbird privacy policy document.', action='store_true')
     parser.add_argument('--tbpro', help='Build the tb.pro site.', action='store_true')
+    parser.add_argument('--roadmaps', help='Build the Thunderbird roadmaps site.', action='store_true')
     parser.add_argument('--watch', help='Rebuild when template and asset dirs are changed, and run a server on localhost.',
                         action='store_true')
     parser.add_argument('--port', const=8000, default=8000, type=int,
@@ -85,7 +91,7 @@ def build_updates():
     site = builder.Site(languages, settings.UPDATES_PATH, settings.UPDATES_RENDERPATH,
                        settings.UPDATES_CSS, js_bundles=settings.UPDATES_JS,
                        data=context, debug=args.debug, dev_mode=args.watch,
-                       common_searchpath=settings.COMMON_SEARCHPATH)
+                       extra_searchpaths=[settings.COMMON_SEARCHPATH])
     site.build_updates()
     return site
 
@@ -104,6 +110,49 @@ def download_legal():
     legal = builder.Legal(settings.WEBSITE_PATH)
     legal.download()
 
+def build_roadmaps():
+    """Build roadmaps.thunderbird.net"""
+    print("Building roadmaps.thunderbird.net")
+    context = {}
+
+    os.makedirs(settings.ROADMAPS_RENDERPATH, exist_ok=True)
+
+    for file in os.listdir(settings.ROADMAPS_SRC):
+        if (file.endswith("md")):
+            with open(os.path.join(settings.ROADMAPS_SRC, file), "r") as f:
+                md_content = f.read()
+                html_content = markdown.markdown(
+                    md_content,
+                    extensions=["pymdownx.emoji"],
+                    extension_configs={
+                        "pymdownx.emoji": {
+                            "emoji_generator": emoji.to_alt
+                        }
+                    }
+                )
+                clean_name = file.replace(".md", "")
+
+                # Products go in sub-dirs
+                if (clean_name == "index"):
+                    temp_template_path = os.path.join(settings.ROADMAPS_PATH, "index.html")
+                else:
+                    os.makedirs(os.path.join(settings.ROADMAPS_PATH, file.replace(".md", "")), exist_ok=True)
+                    temp_template_path = os.path.join(settings.ROADMAPS_PATH, file.replace(".md", ""), "index.html")
+
+                with open(temp_template_path, "w") as f:
+                    f.write('{% extends "includes/base/page.html" %}\n')
+                    f.write('{% block content %}\n')
+                    f.write(html_content) # The converted HTML is baked in here
+                    f.write('\n{% endblock %}')
+
+    site = builder.Site(languages, settings.ROADMAPS_PATH, settings.ROADMAPS_RENDERPATH,
+                       settings.ROADMAPS_CSS, js_bundles=settings.ROADMAPS_JS,
+                       data=context, debug=args.debug, dev_mode=args.watch,
+                       extra_searchpaths=[settings.WEBSITE_PATH, settings.COMMON_SEARCHPATH])
+    site.build_roadmaps()
+    return site
+
+
 def build_tbpro():
     """Build the tb.pro site."""
     print("Building tb.pro site")
@@ -115,7 +164,7 @@ def build_tbpro():
     site = builder.Site(languages, settings.TBPRO_PATH, settings.TBPRO_RENDERPATH,
                        settings.TBPRO_CSS, js_bundles=settings.TBPRO_JS,
                        data=context, debug=args.debug, dev_mode=args.watch,
-                       common_searchpath=settings.COMMON_SEARCHPATH)
+                       extra_searchpaths=[settings.COMMON_SEARCHPATH])
     site.build_tbpro()
     return site
 
@@ -153,7 +202,7 @@ def build_main_website():
     site = builder.Site(languages, settings.WEBSITE_PATH, settings.WEBSITE_RENDERPATH,
                        settings.WEBSITE_CSS, js_bundles=settings.WEBSITE_JS,
                        data=context, debug=args.debug, dev_mode=args.watch,
-                       common_searchpath=settings.COMMON_SEARCHPATH)
+                       extra_searchpaths=[settings.COMMON_SEARCHPATH])
     site.build_website()
     return site
 
@@ -165,6 +214,8 @@ elif args.updates:
     site = build_updates()
 elif args.tbpro:
     site = build_tbpro()
+elif args.roadmaps:
+    site = build_roadmaps()
 elif args.buildcalendars:
     build_calendars()
 elif args.downloadlegal:

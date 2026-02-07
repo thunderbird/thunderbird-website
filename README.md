@@ -33,6 +33,7 @@ On Ubuntu, you would need to use apt-get instead of yum, and similarly for diffe
 pip install -r requirements-dev.txt
 git clone https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes
 git clone -b production https://github.com/mozilla-releng/product-details.git libs/product-details
+git clone https://github.com/thunderbird/roadmaps-overview.git libs/thunderbird_roadmaps
 sudo yum install npm
 sudo npm install -g less
 ```

@@ -65,6 +65,7 @@ RUN if [ "$BUILD_ENV" = "local" ]; then \
       && git clone --depth 1 https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale \
       && git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details \
       && git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes \
+      && git clone --depth 1 https://github.com/thunderbird/roadmaps-overview.git libs/thunderbird_roadmaps \
       && npm install -g less \
       && python3.11 -m venv /build/venv \
       && /build/venv/bin/pip install --upgrade pip \

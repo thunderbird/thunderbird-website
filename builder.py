@@ -139,12 +139,12 @@ class Site(object):
     Attributes:
         `lang`: Current language to build the site in, an element of `languages`.
     """
-    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False, dev_mode=False, common_searchpath=''):
+    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False, dev_mode=False, extra_searchpaths=[]):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
         self.searchpath = searchpath
-        self.common_searchpath = common_searchpath
+        self.extra_searchpaths = extra_searchpaths
         self.renderpath = renderpath
         self.staticpath = os.path.join(searchpath, staticdir)
         self.cssout = renderpath + '/media/css'
@@ -194,8 +194,9 @@ class Site(object):
     def _setup_env(self):
         """Setup the Jinja2 environment, loader, extensions, and filters."""
         paths = [self.searchpath]
-        if self.common_searchpath:
-            paths.append(self.common_searchpath)
+        if self.extra_searchpaths:
+            paths.extend(self.extra_searchpaths)
+
         load = FileSystemLoader(paths)
         self._env = Environment(loader=load, extensions=extensions)
         self._env.filters["markdown"] = helper.safe_markdown
@@ -542,6 +543,16 @@ class Site(object):
             self.render()
         self.build_assets()
 
+    def build_roadmaps(self):
+        """Build the roadmaps.thunderbird.net pages for all `languages`."""
+        delete_contents(self.renderpath)
+        self._env.globals.update(self.data)
+
+        for lang in self.languages:
+            logger.info("Building pages for {lang}...".format(lang=lang))
+            self._switch_lang(lang)
+            self.render()
+        self.build_assets()
 
     def build_website(self, assets=True, notes=True):
         """
@@ -667,8 +678,9 @@ def setup_observer(builder_instance, port):
     observer = Observer()
     observer.schedule(handler, path=builder_instance.searchpath, recursive=True)
 
-    if builder_instance.common_searchpath:
-        observer.schedule(handler, path=builder_instance.common_searchpath, recursive=True)
+    if builder_instance.extra_searchpaths:
+        for p in builder_instance.extra_searchpaths:
+            observer.schedule(handler, path=p, recursive=True)
 
     observer.schedule(handler, path=settings.ASSETS, recursive=True)
     observer.schedule(handler, path=settings.MEDIA_URL.strip('/'), recursive=True)
