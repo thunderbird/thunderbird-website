@@ -1,0 +1,62 @@
+@import "../common/breakpoints.less";
+
+// Components shared with tb.pro
+@import "../common/space.less";
+@import "../common/fonts.less";
+@import "../common/tab-navigation-bar.less";
+@import "../common/common-footer.less";
+@import "../common/tb-footer.less";
+
+// From /assets/less/new/colours.less
+:root {
+    --color-gray-20: #e4e4e7;
+}
+
+// Additional styles needed to make the footer work
+// From /assets/less/new/layout.less
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-inline: 1rem;
+  padding-block: clamp(1rem, 5.469vw, 4.375rem); // 4.375rem~
+  margin-inline: auto;
+  max-width: 1280px;
+  overflow: hidden;
+
+  // For the product pages
+  &.container-tight {
+    max-width: 1040px;
+  }
+
+  &.no-gap {
+    gap: 0;
+  }
+
+  @media (max-width: @md) {
+    // Give them some space to breath
+    width: calc(100% - 1rem);
+    box-sizing: border-box;
+  }
+}
+
+.logo {
+  max-height: 100%;
+  min-width: 250px;
+  max-width: 250px;
+  height: 60px;
+  width: auto;
+  transition: color .2s;
+}
+
+.logo:hover,
+.mozilla-logo:hover {
+  color: var(--accent);
+  transform: none;
+}
+
+svg {
+  max-height: 100%;
+  max-width: 100%;
+}
