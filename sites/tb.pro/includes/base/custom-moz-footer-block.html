@@ -2,15 +2,12 @@
 {# This template adds tb.pro-specific links to the shared footer found in 'includes/base/moz-footer-block.html' #}
 
 {% block moz_footer_links %}
-
 <a href="{{ url('tbpro.status') }}">{{_('Status')}}</a>
 <a href="{{ url('tbpro.support') }}">{{_('Support')}}</a>
-<a href="{{ url('tbpro.terms') }}">{{_('Terms')}}</a>
 <a href="{{ url('tbpro.privacy') }}">{{_('Privacy Policy')}}</a>
-<a href="{{ url('privacy.notices.websites') }}">{{_('Cookies')}}</a>
-<a href="{{ url('legal.index') }}">{{_('Legal')}}</a>
+<a href="{{ url('tbpro.terms') }}">{{_('Legal')}}</a>
 <a href="{{ url('legal.infringement') }}">{{_('Send DMCA Notice')}}</a>
 <a href="{{ url('legal.fraud-report') }}">{{_('Report Fraud')}}</a>
 <a href="{{ url('guidelines') }}">{{_('Participation Guidelines')}}</a>
-
+<a href="{{ url('tbpro.ideas') }}">{{_('Ideas')}}</a>
 {% endblock %}
