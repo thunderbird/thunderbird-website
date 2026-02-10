@@ -431,6 +431,8 @@ TBPRO_CSS = {
     'appointment': ['less/tbpro/product/appointment.less'],
     'send': ['less/tbpro/product/send.less'],
     'waitlist': ['less/tbpro/waitlist.less'],
+    # Purely informational, like /terms and /privacy
+    'plain': ['less/tbpro/plain.less'],
 }
 
 TBPRO_JS = {
