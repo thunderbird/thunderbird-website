@@ -43,6 +43,20 @@ footer#tb-footer {
             }
         }
 
+        .additional-tbpro-links {
+            display: flex;
+            font-size: 0.75rem;
+            gap: @space-6;
+            @media (min-width: @md) {
+                grid-column: 2;
+                justify-self: end;
+            }
+            a {
+                text-decoration: underline;
+            }
+
+        }
+
         @media (min-width: @md) {
             align-items: center;
             grid-template: 1fr / 1fr auto;
