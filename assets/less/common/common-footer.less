@@ -63,9 +63,8 @@ footer#tb-footer {
     .moz-nav-links {
         display: grid;
         gap: @space-9;
-        grid-auto-flow: column;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, auto);
+
+        grid-template-columns: repeat(2, 1fr);
         margin-top: @space-6;
 
         a {
@@ -88,7 +87,7 @@ footer#tb-footer {
             grid-row: 1;
 
             display: flex;
-            gap: @space-36;
+            gap: @space-24;
         }
 
         #tb-legal {

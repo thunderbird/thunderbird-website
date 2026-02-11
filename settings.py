@@ -205,7 +205,7 @@ URL_MAPPINGS = {
     'firefox.release-calendar': 'https://wiki.mozilla.org/Release_Management/Calendar',
     'foundation.licensing.website-content': 'https://www.mozilla.org/foundation/licensing/website-content/',
     'foundation.about': 'https://foundation.mozilla.org/about/',
-    'guidelines': 'https://www.mozilla.org/en-US/about/governance/policies/participation/',
+    'guidelines': 'https://www.mozilla.org/about/governance/policies/participation/',
     'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
     'legal.index': 'https://www.mozilla.org/en-US/about/legal/terms/mozilla/',
     'legal.infringement': 'https://www.mozilla.org/en-US/about/legal/report-infringement/',
@@ -256,8 +256,13 @@ URL_MAPPINGS = {
     'tbpro.home': '/',
     'tbpro.thundermail': '/thundermail',
     'tbpro.appointment': '/appointment',
+    'tbpro.privacy': '/privacy',
     'tbpro.send': '/send',
+    'tbpro.terms': '/terms',
     'tbpro.waitlist': '/waitlist',
+    'tbpro.status': 'https://status.tb.pro/',
+    'tbpro.support': 'https://support.tb.pro/',
+    'tbpro.ideas': 'https://ideas.tb.pro',
     'thunderbird.about': '/about',
     'thunderbird.about.our-mission-statement': '/about/mission-statement',
     'thunderbird.android.announcement': 'https://blog.thunderbird.net/2024/10/thunderbird-for-android-8-0-takes-flight/',
@@ -426,6 +431,8 @@ TBPRO_CSS = {
     'appointment': ['less/tbpro/product/appointment.less'],
     'send': ['less/tbpro/product/send.less'],
     'waitlist': ['less/tbpro/waitlist.less'],
+    # Purely informational, like /terms and /privacy
+    'plain': ['less/tbpro/plain.less'],
 }
 
 TBPRO_JS = {

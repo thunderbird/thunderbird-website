@@ -1,0 +1,62 @@
+@import "../common/fonts.less";
+@import "breakpoints.less";
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    .lower-gradient {
+        display: none;
+    }
+}
+
+#masthead {
+    display: none !important;
+}
+
+#site-header {
+    padding-bottom: 2rem;
+}
+
+#main-content {
+    height: 100%;
+}
+
+#plain-page {
+    color: #4c4d58;
+    height: 100%;
+    padding-inline: 1rem;
+
+    #page-header {
+        .mixin-font-styles(
+            @family-metropolis,
+            400,
+            2.25rem,
+            1.2,
+            -0.36px
+        );
+        color: #1373d9;
+    }
+
+    li + li {
+        margin-top: 1rem;
+    }
+
+    table {
+
+        & {
+            border-top: 1px solid #1A202C;
+            border-left: 1px solid #1A202C;
+
+        }
+        td, th {
+            border-bottom: 1px solid #1A202C;
+            border-right: 1px solid #1A202C;
+            padding-inline: .5rem;
+            padding-block: .5rem;
+        }
+    }
+
+}
