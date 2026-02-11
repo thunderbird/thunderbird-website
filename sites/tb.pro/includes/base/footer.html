@@ -10,6 +10,13 @@
       <a href="{{ url('tbpro.appointment') }}">Appointment</a>
       <a href="{{ url('tbpro.send') }}">Send</a>
     </div>
+    <div class="additional-tbpro-links">
+      <a href="{{ url('tbpro.status') }}">{{_('Status')}}</a>
+      <span>|</span>
+      <a href="{{ url('tbpro.support') }}">{{_('Need help? Visit Support')}}</a>
+      <span>|</span>
+      <a href="{{ url('tbpro.ideas') }}">{{_('Ideas?')}}</a>
+    </div>
   </div>
 
   {% include 'includes/base/custom-moz-footer-block.html' %}
