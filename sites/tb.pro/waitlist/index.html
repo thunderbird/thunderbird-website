@@ -12,6 +12,23 @@
 <link href="{{ static('css/waitlist.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
+{% block additional_page_js %}
+<script>
+  (function () {
+    // Prefill the email address if they were redirected here from
+    // the thunderbird-accounts site.
+    const urlParams = new URLSearchParams(window.location.search);
+    const emailValue = urlParams.get('email');
+
+    if (emailValue) {
+      const emailField = document.querySelector('#mce-EMAIL');
+      emailField.value = emailValue;
+    }
+  }())
+</script>
+{% endblock %}
+
+
 {% block masthead %}
 <h1>{{ _('Join the Waitlist') }}</h1>
 {% endblock %}
