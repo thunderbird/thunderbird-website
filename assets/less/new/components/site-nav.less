@@ -192,6 +192,12 @@
       width: 100%;
       max-width: 30rem;
 
+      [dir="rtl"] & {
+        right: auto;
+        left: var(--popover-right-align);
+        translate: calc(-1 * var(--popover-left-align));
+      }
+
       // Actual physical panel
       .popover-panel {
         position: relative;
