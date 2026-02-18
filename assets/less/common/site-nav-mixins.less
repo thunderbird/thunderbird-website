@@ -1,0 +1,12 @@
+// from /assets/less/new/mixins.less
+@btn-no-bg-styling: {
+  &::after {
+    background-color: var(--btn-background-color);
+  }
+
+  &:hover {
+    background: linear-gradient(var(--btn-background-color), var(--btn-background-color)) padding-box,
+    linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+    color: currentColor;
+  }
+}
