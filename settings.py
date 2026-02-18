@@ -457,6 +457,7 @@ ROADMAPS_CSS = {
 }
 
 ROADMAPS_JS = {
+    'roadmaps-bundle': ['js/app.js',],
 }
 
 

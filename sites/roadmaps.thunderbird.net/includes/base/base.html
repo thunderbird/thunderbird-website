@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block extra_meta %}{% endblock %}
 
+
     {% block shared_meta %}
     <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} Thunderbird's Public Roadmaps{% endblock %}{% endfilter %}</title>
     <meta name="description" content="{% filter striptags|e %}{% block page_desc %}{{ _('Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!') }}{% endblock %}{% endfilter %}">
@@ -68,8 +69,17 @@
         {% include 'includes/base/footer.html' %}
     {% endblock %}
 
-    {% block additional_site_js %}{% endblock %}
 
+
+    <script type="text/javascript" src="{{ static('js/roadmaps-bundle.js') }}" charset="utf-8"></script>
+    <script>
+      (function (){
+        // Allow page to show hamburger menu.
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, "js");
+      })()
+
+    </script>
+    {% block additional_site_js %}{% endblock %}
     {% block js %}{% endblock %}
   </body>
 </html>
