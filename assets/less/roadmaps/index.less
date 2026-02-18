@@ -6,6 +6,9 @@
 @import '../new/components/site-nav.less';
 // ========================================================================
 
+// For the language select drop-down
+@import '../new/components/forms.less';
+
 @import "../common/breakpoints.less";
 
 // Components shared with tb.pro
@@ -16,51 +19,145 @@
 @import "../common/tb-footer.less";
 
 
+// Additional styles for the language select drop down
+.fill-current {
+  display: none;
+}
+
+
+// This is to make the body full height and roughly align with
+// what's on www.
+// Lifted from layout.less
+body {
+
+    font-size: var(--font-body);
+    line-height: 1.5;
+    font-weight: 300;
+    background: var(--bg);
+    color: var(--txt);
+    position: relative;
+    scroll-padding-top: var(--nav-height);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.site-nav {
+    // outline: 1px solid red;
+
+}
+
+// actual roadmap styles
+main {
+    margin-top: 122px; // TODO: change this to a calculation.
+    outline: 1px solid green;
+
+    height: 100%;
+    flex: 1 1 auto;
+}
+
+
+// TODO: move footer support styles to
 // Additional styles needed to make the footer work
+
+
+
+
 // From /assets/less/new/layout.less
-.container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding-inline: 1rem;
-  padding-block: clamp(1rem, 5.469vw, 4.375rem); // 4.375rem~
-  margin-inline: auto;
-  max-width: 1280px;
-  overflow: hidden;
 
-  // For the product pages
-  &.container-tight {
-    max-width: 1040px;
-  }
+.site-links {
+  font-size: var(--font-md);
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  grid-template:
+                "a c d e" 30px
+                "b c d e";
 
-  &.no-gap {
-    gap: 0;
+  .site-link-section {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding-left: 40px;
+    }
+
+    .home {
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    // Help our grid template pick the correct b...
+    &:nth-child(2) {
+      grid-area: b;
+    }
   }
 
   @media (max-width: @md) {
-    // Give them some space to breath
-    width: calc(100% - 1rem);
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .site-link-section {
+      height: auto;
+    }
   }
 }
 
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-inline: 1rem;
+    padding-block: clamp(1rem, 5.469vw, 4.375rem); // 4.375rem~
+    margin-inline: auto;
+    max-width: 1280px;
+    overflow: hidden;
+
+    // For the product pages
+    &.container-tight {
+        max-width: 1040px;
+    }
+
+    &.no-gap {
+        gap: 0;
+    }
+
+    @media (max-width: @md) {
+        // Give them some space to breath
+        width: calc(100% - 1rem);
+        box-sizing: border-box;
+    }
+}
+
 .logo {
-  max-height: 100%;
-  min-width: 250px;
-  max-width: 250px;
-  height: 60px;
-  width: auto;
-  transition: color .2s;
+    max-height: 100%;
+    min-width: 250px;
+    max-width: 250px;
+    height: 60px;
+    width: auto;
+    transition: color .2s;
 }
 
 .logo:hover,
 .mozilla-logo:hover {
-  color: var(--accent);
-  transform: none;
+    color: var(--accent);
+    transform: none;
 }
 
 svg {
-  max-height: 100%;
-  max-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
