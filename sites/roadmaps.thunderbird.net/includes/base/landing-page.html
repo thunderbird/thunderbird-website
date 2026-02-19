@@ -1,39 +1,5 @@
-{% extends "includes/base/base.html" %}
-{% macro svg_img(file_name, alt_text='', class_name='') %}
-<img src="{{ static('svg/{file_name}.svg'.format(file_name=file_name)) }}" alt="{{ alt_text }}" class="{{ class_name }}"/>
-{% endmacro %}
+{% extends "includes/base/page.html" %}
 
-{% block site_nav %}
-<nav class="site-nav">
-  <div class="nav-container">
-    <a href="{{ url('thunderbird.index') }}" class="logo" title="{{ _('Thunderbird') }}" aria-label="{{ _('Thunderbird Logo') }}">
-      {{ svg('Thunderbird_Logo') }}
-    </a>
-    <button
-      id="mobile-hamburger-button"
-      class="hamburger-btn"
-      aria-expanded="false"
-      aria-controls="nav-menu"
-      aria-label="{{ _('Open or close site navigation') }}"
-      data-expanded="false"
-      type="button"
-    >
-      <span class="hamburger-icon" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-    </button>
-    {% include 'includes/base/nav.html' %}
-  </div>
-</nav>
-<noscript>
-  <!-- Provide a nav if they don't have javascript enabled. -->
-  <div class="always-show-for-nojs-on-mobile">
-    {% include 'includes/base/nav.html' %}
-  </div>
-</noscript>
-{% endblock %}
 
 {% block content %}
 <ul>
@@ -44,7 +10,7 @@
 
     {{ _('Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.')}}
 
-    <a href="/desktop">View roadmap</a>
+    <a href="{{ url('roadmaps.desktop') }}">View roadmap</a>
   </li>
   <li class="card card-icon card-android">
     <strong>
@@ -53,7 +19,7 @@
 
     {{ _('Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.')}}
 
-    <a href="/desktop">View roadmap</a>
+    <a href="{{ url('roadmaps.android') }}">View roadmap</a>
   </li>
   <li class="card card-icon card-ios">
     <strong>
@@ -62,7 +28,7 @@
 
     {{ _('Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.')}}
 
-    <a href="/desktop">View roadmap</a>
+    <a href="{{ url('roadmaps.ios') }}">View roadmap</a>
   </li>
   <li class="card card-icon card-services">
     <strong>
@@ -71,7 +37,7 @@
 
     {{ _('Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.')}}
 
-    <a href="/desktop">View roadmap</a>
+    <a href="{{ url('roadmaps.services') }}">View roadmap</a>
   </li>
 </ul>
 {% endblock %}
