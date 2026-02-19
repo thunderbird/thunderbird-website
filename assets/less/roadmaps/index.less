@@ -23,8 +23,10 @@
 :root {
     --colour-primary-default: #58c9ff;
     --colour-text-icon-base: #eeeef0;
+    --colour-text-icon-highlight: #58c9ff;
     --colour-surface-base: #1a202c;
     --colour-surface-border: #3d4d67;
+    --colour-surface-lower: #18181b;
 }
 
 
@@ -43,7 +45,7 @@ body {
     font-size: var(--font-body);
     line-height: 1.5;
     font-weight: 300;
-    background: var(--bg);
+    background: var(--colour-surface-lower);
     color: var(--txt);
     position: relative;
     scroll-padding-top: var(--nav-height);
@@ -166,6 +168,8 @@ svg {
 
 // actual roadmap styles
 main {
+    color: var(--colour-text-icon-base);
+
     margin-top: 122px; // TODO: change this to a calculation.
     outline: 1px solid green;
 
@@ -173,12 +177,23 @@ main {
     flex: 1 1 auto;
 }
 
+#donation {
+    .web-body-small();
+    text-align: center;
+    a {
+        .web-body-xsmall();
+        color: var(--colour-text-icon-highlight);
+    }
+}
+
 #main-content {
+
     padding-block: 1.5rem;
     padding-inline: 1rem;
     // Page heading
     h1 {
         .brand-headline-h1-sm();
+
         margin: 0;
         padding: 0;
         @media (max-width: @md) {
@@ -190,6 +205,7 @@ main {
     // The paragraph immediately following
     h1 + p {
         .web-body-default();
+
         margin-top: 1rem;
         @media (max-width: @md) {
 
@@ -210,6 +226,8 @@ main {
     .card {
 
         background-color: var(--colour-surface-base);
+        border: 1px solid var(--colour-surface-border);
+        border-radius: 0.5rem;
         list-style: none;
         position: relative;
 
@@ -261,5 +279,27 @@ main {
             justify-self: center;
         }
     }
+
+    .card-android {
+        &::before {
+            content: "a";
+        }
+    }
+    .card-desktop {
+        &::before {
+            content: "d";
+        }
+    }
+    .card-ios {
+        &::before {
+            content: "i";
+        }
+    }
+    .card-services {
+        &::before {
+            content: "s";
+        }
+    }
+
 
 }
