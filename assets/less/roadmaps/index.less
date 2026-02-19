@@ -9,14 +9,24 @@
 // For the language select drop-down
 @import '../new/components/forms.less';
 
+// Shared styles
+@import "../common/fonts.less";
 @import "../common/breakpoints.less";
-
-// Components shared with tb.pro
 @import "../common/space.less";
 @import "../common/fonts.less";
 @import "../common/tab-navigation-bar.less";
 @import "../common/common-footer.less";
 @import "../common/tb-footer.less";
+
+
+// Variables
+:root {
+    --colour-primary-default: #58c9ff;
+    --colour-text-icon-base: #eeeef0;
+    --colour-surface-base: #1a202c;
+    --colour-surface-border: #3d4d67;
+}
+
 
 
 // Additional styles for the language select drop down
@@ -46,15 +56,6 @@ body {
 .site-nav {
     // outline: 1px solid red;
 
-}
-
-// actual roadmap styles
-main {
-    margin-top: 122px; // TODO: change this to a calculation.
-    outline: 1px solid green;
-
-    height: 100%;
-    flex: 1 1 auto;
 }
 
 
@@ -160,4 +161,105 @@ main {
 svg {
     max-height: 100%;
     max-width: 100%;
+}
+
+
+// actual roadmap styles
+main {
+    margin-top: 122px; // TODO: change this to a calculation.
+    outline: 1px solid green;
+
+    height: 100%;
+    flex: 1 1 auto;
+}
+
+#main-content {
+    padding-block: 1.5rem;
+    padding-inline: 1rem;
+    // Page heading
+    h1 {
+        .brand-headline-h1-sm();
+        margin: 0;
+        padding: 0;
+        @media (max-width: @md) {
+
+        }
+
+    }
+
+    // The paragraph immediately following
+    h1 + p {
+        .web-body-default();
+        margin-top: 1rem;
+        @media (max-width: @md) {
+
+        }
+    }
+
+
+    // Card styles
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    li + li {
+        margin-top: 0.5rem;
+    }
+
+    .card {
+
+        background-color: var(--colour-surface-base);
+        list-style: none;
+        position: relative;
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        column-gap: 1rem;
+        row-gap: 0.5rem;
+
+        padding-block: 0.75rem 1rem;
+        padding-inline: 0.75rem;
+
+        // The rest of the content is not wrapped in a tag.
+        .web-body-small();
+        line-height: 1.075rem;
+
+        strong {
+            .web-title-small();
+            display: block;
+        }
+
+        &, a {
+            color: var(--colour-text-icon-base);
+            text-decoration: none;
+        }
+
+        // Note: this is probably from bolt.
+        a {
+            border: 1px solid var(--colour-primary-default);
+            border-radius: 0.5rem;
+            display: inline-block;
+            justify-self: start;
+            margin-top: 0.25rem;
+            padding-block: 0.84375rem;
+            padding-inline: 1rem;
+
+        }
+    }
+
+    .card-icon {
+        grid-template-columns: 1rem 1fr;
+        &::before {
+            content: "*";
+            color: var(--colour-primary-default);
+            font-size: 24px;
+            display: block;
+            grid-column: 1;
+            grid-row: 1 / span 3;
+            align-self: start;
+            justify-self: center;
+        }
+    }
+
 }
