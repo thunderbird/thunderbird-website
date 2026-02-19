@@ -531,8 +531,8 @@ CALENDAR_LOCALES = {
     'AR': ('Argentina', 'es'),
     'AM': ('Armenia', 'hy'),
     'AU': ('Australia', 'en'),
-    'AT': ('Austrian', 'de'),
-    'BE': [('Belgian (French)', 'fr'), ('Belgian (Dutch)', 'nl')],
+    'AT': ('Austria', 'de'),
+    'BE': [('Belgium (French)', 'fr'), ('Belgium (Dutch)', 'nl')],
     'BO': ('Bolivia', 'es'),
     'BR': ('Brazil', 'pt'),
     'BG': ('Bulgaria', 'bg'),
@@ -542,7 +542,7 @@ CALENDAR_LOCALES = {
     'CO': ('Colombia', 'es'),
     'CR': ('Costa Rica', 'es'),
     'HR': ('Croatia', 'hr'),
-    'CZ': ('Czech', 'cs'),
+    'CZ': ('Czech Republic', 'cs'),
     'DK': ('Denmark', 'da'),
     'DO': ('Dominican Republic', 'es'),
     'NL': [('Netherlands (Dutch)', 'nl'), ('Netherlands (English)', 'en'), ('Netherlands (German)', 'de'),
@@ -581,7 +581,7 @@ CALENDAR_LOCALES = {
     'PK': ('Pakistan', 'ur'),
     'PE': ('Peru', 'es'),
     'PH': ('Philippines', 'en'),
-    'PL': ('Polish', 'pl'),
+    'PL': ('Poland', 'pl'),
     'PT': ('Portugal', 'pt'),
     'PR': ('Puerto Rico', 'en'),
     'RO': ('Romania', 'ro'),
@@ -593,7 +593,7 @@ CALENDAR_LOCALES = {
     'KR': ('South Korea', 'ko'),
     'ES': ('Spain', 'es'),
     'LK': ('Sri Lanka', 'en'),
-    'SE': ('Swedish', 'sv'),
+    'SE': ('Sweden', 'sv'),
     'CH': ('Switzerland', 'en'),
     'TW': ('Taiwan', 'zh'),
     'TH': ('Thailand', 'th'),
@@ -608,13 +608,13 @@ CALENDAR_LOCALES = {
 
 # Used to normalize filenames for calendar generation
 # This is the first part of the filename, 'Holidays' is bolted on in code.
-# So 'Belgian (Dutch)' will become 'BelgianHoldays.ics'
+# So 'Belgium (Dutch)' will become 'BelgiumHoldays.ics'
 # If the value is a tuple, the first part is before 'Holidays' and the second part is after.
 CALENDAR_REMAP = {
     'Algeria (French)': 'Algeria',
     'Algeria (Arabic)': ('Algeria', 'Arabic'),
-    'Belgian (Dutch)': 'Belgian',
-    'Belgian (French)': ('Belgian', 'French'),
+    'Belgium (Dutch)': 'Belgium',
+    'Belgium (French)': ('Belgium', 'French'),
     'Bulgaria': 'Bulgarian',
     'Canada (English)': 'Canada',
     'Canada (French)': ('Canada', 'French'),
