@@ -169,8 +169,12 @@ svg {
     max-width: 100%;
 }
 
-
+// ==============================================================================
 // actual roadmap styles
+// ==============================================================================
+
+@desktop-breakpoint: @md;
+
 main {
     color: var(--colour-text-icon-base);
 
@@ -187,7 +191,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     margin-bottom: 1.5rem;
     p {
         margin: 0;
@@ -210,23 +214,23 @@ main {
 
     padding-block: 1.5rem;
     padding-inline: 1rem;
+
     // Page heading
     h1 {
         .brand-headline-h1-sm();
 
         margin: 0;
         padding: 0;
-        @media (max-width: @md) {
-
+        @media (min-width: @desktop-breakpoint) {
+            .brand-headline-h1-lg();
         }
-
     }
 
     // The paragraph immediately following
     h1 + p {
         margin-top: 1rem;
-        @media (max-width: @md) {
-
+        @media (min-width: @desktop-breakpoint) {
+            .web-body-large();
         }
     }
 
@@ -249,11 +253,12 @@ main {
         margin-top: 0.5rem;
     }
 
-    // I need a version of this for the landing page
-
     li {
         // The rest of the content is not wrapped in a tag.
         .web-body-small();
+        @media (min-width: @desktop-breakpoint) {
+            .web-body-default();
+        }
         line-height: 1.075rem;
 
         background-color: var(--colour-surface-base);
@@ -274,6 +279,9 @@ main {
         strong {
             .web-title-small();
             display: block;
+            @media (min-width: @desktop-breakpoint) {
+                .web-title-medium();
+            }
         }
 
         // Note: this should be put into bolt.
@@ -293,36 +301,34 @@ main {
             padding-block: 0.84375rem;
             padding-inline: 1rem;
         }
-
-
     }
 
     .card {
         & + .card {
             margin-top: 1rem;
         }
-        .card-icon {
-            grid-template-columns: 1rem 1fr;
-            &::before {
-                content: "";
-                height: 1.5rem;
-                width: 1.5rem;
-                display: inline-block;
-                grid-column: 1;
-                grid-row: 1 / span 3;
-                align-self: start;
-                justify-self: center;
-                background-color: var(--colour-primary-default);
-
-                // These properties let us change the color
-                // of an svg loaded as external resource.
-                -webkit-mask-repeat: no-repeat;
-                mask-repeat: no-repeat;
-                mask-size: contain;
-            }
-        }
     }
 
+    .card-icon {
+        grid-template-columns: 1rem 1fr;
+        &::before {
+            content: "";
+            height: 1.5rem;
+            width: 1.5rem;
+            display: inline-block;
+            grid-column: 1;
+            grid-row: 1 / span 3;
+            align-self: start;
+            justify-self: center;
+            background-color: var(--colour-primary-default);
+
+            // These properties let us change the color
+            // of an svg loaded as external resource.
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+        }
+    }
 
     .card-android {
         &::before {
