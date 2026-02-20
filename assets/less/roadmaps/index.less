@@ -173,8 +173,10 @@ svg {
 // actual roadmap styles
 // ==============================================================================
 
-@desktop-breakpoint: @md;
 
+@tablet-breakpoint: @md;
+@desktop-breakpoint: @lg;
+@extrawide-breakpoint: @xl;
 main {
     color: var(--colour-text-icon-base);
 
@@ -211,6 +213,9 @@ main {
 
 #main-content {
     .web-body-default();
+    @media (min-width: @tablet-breakpoint) {
+        .web-body-large();
+    }
 
     padding-block: 1.5rem;
     padding-inline: 1rem;
@@ -221,7 +226,7 @@ main {
 
         margin: 0;
         padding: 0;
-        @media (min-width: @desktop-breakpoint) {
+        @media (min-width: @tablet-breakpoint) {
             .brand-headline-h1-lg();
         }
     }
@@ -229,9 +234,6 @@ main {
     // The paragraph immediately following
     h1 + p {
         margin-top: 1rem;
-        @media (min-width: @desktop-breakpoint) {
-            .web-body-large();
-        }
     }
 
     h1 + ul {
@@ -256,7 +258,7 @@ main {
     li {
         // The rest of the content is not wrapped in a tag.
         .web-body-small();
-        @media (min-width: @desktop-breakpoint) {
+        @media (min-width: @tablet-breakpoint) {
             .web-body-default();
         }
         line-height: 1.075rem;
@@ -279,7 +281,7 @@ main {
         strong {
             .web-title-small();
             display: block;
-            @media (min-width: @desktop-breakpoint) {
+            @media (min-width: @tablet-breakpoint) {
                 .web-title-medium();
             }
         }
@@ -303,9 +305,32 @@ main {
         }
     }
 
+
+    .card-container {
+        @media (min-width: @tablet-breakpoint) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            // grid-auto-rows: minmax(400px, auto);
+        }
+
+        @media (min-width: @desktop-breakpoint) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: @extrawide-breakpoint) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+
+
     .card {
         & + .card {
             margin-top: 1rem;
+            @media (min-width: @tablet-breakpoint) {
+                margin-top: 0;
+            }
+
         }
     }
 
