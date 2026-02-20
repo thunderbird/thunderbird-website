@@ -191,6 +191,7 @@ main {
 }
 
 #main-content {
+    .web-body-default();
 
     padding-block: 1.5rem;
     padding-inline: 1rem;
@@ -208,14 +209,20 @@ main {
 
     // The paragraph immediately following
     h1 + p {
-        .web-body-default();
-
         margin-top: 1rem;
         @media (max-width: @md) {
 
         }
     }
 
+    h1 + ul {
+        margin-top: 1rem;
+    }
+
+    ul + h1,
+    p + h1 {
+        margin-top: 2.25rem;
+    }
 
     // Card styles
     ul, li {
@@ -227,7 +234,12 @@ main {
         margin-top: 0.5rem;
     }
 
-    .card {
+    // I need a version of this for the landing page
+
+    li {
+        // The rest of the content is not wrapped in a tag.
+        .web-body-small();
+        line-height: 1.075rem;
 
         background-color: var(--colour-surface-base);
         border: 1px solid var(--colour-surface-border);
@@ -235,7 +247,6 @@ main {
         color: var(--colour-text-icon-base);
         list-style: none;
         position: relative;
-
 
         display: grid;
         grid-template-rows: auto 1fr auto;
@@ -245,18 +256,16 @@ main {
         padding-block: 0.75rem 1rem;
         padding-inline: 0.75rem;
 
-        // The rest of the content is not wrapped in a tag.
-        .web-body-small();
-        line-height: 1.075rem;
-
         strong {
             .web-title-small();
             display: block;
         }
 
-
-        // // Note: this is probably from bolt.
+        // Note: this should be put into bolt.
+        // Needs hover/active/etc. states.
         a {
+            .web-body-small();
+
             display: inline-block;
             justify-self: start;
             margin-top: 0.25rem;
@@ -268,30 +277,37 @@ main {
             text-decoration: none;
             padding-block: 0.84375rem;
             padding-inline: 1rem;
+        }
 
+
+    }
+
+    .card {
+        & + .card {
+            margin-top: 1rem;
+        }
+        .card-icon {
+            grid-template-columns: 1rem 1fr;
+            &::before {
+                content: "";
+                height: 1.5rem;
+                width: 1.5rem;
+                display: inline-block;
+                grid-column: 1;
+                grid-row: 1 / span 3;
+                align-self: start;
+                justify-self: center;
+                background-color: var(--colour-primary-default);
+
+                // These properties let us change the color
+                // of an svg loaded as external resource.
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                mask-size: contain;
+            }
         }
     }
 
-    .card-icon {
-        grid-template-columns: 1rem 1fr;
-        &::before {
-            content: "";
-            height: 1.5rem;
-            width: 1.5rem;
-            display: inline-block;
-            grid-column: 1;
-            grid-row: 1 / span 3;
-            align-self: start;
-            justify-self: center;
-            background-color: var(--colour-primary-default);
-
-            // These properties let us change the color
-            // of an svg loaded as external resource.
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-            mask-size: contain;
-        }
-    }
 
     .card-android {
         &::before {
