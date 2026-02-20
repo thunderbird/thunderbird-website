@@ -183,10 +183,25 @@ main {
 
 #donation {
     .web-body-small();
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    p {
+        margin: 0;
+    }
     a {
         .web-body-xsmall();
         color: var(--colour-text-icon-highlight);
+    }
+    .donation-icon  {
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-image: url("/media/svg/roadmaps/heart-24-default.svg");
+
     }
 }
 
