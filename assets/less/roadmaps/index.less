@@ -217,6 +217,9 @@ main {
         .web-body-large();
     }
 
+    margin: 0 auto;
+    max-width: @xl;
+
     padding-block: 1.5rem;
     padding-inline: 1rem;
 
@@ -381,4 +384,36 @@ main {
     }
 
 
+    .product-roadmap {
+        @media (min-width: @desktop-breakpoint) {
+            display: grid;
+            grid-template-columns: 26rem auto 1fr;
+            align-items: start;
+            row-gap: 2rem;
+            max-width: @xl;
+            padding-left: 5rem;
+
+
+            // h1:first-of-type,
+            p {
+                grid-column: 1/-1;
+                margin-bottom: 1rem;
+            }
+
+            // h1:not(:first-of-type) {
+            h1 {
+                grid-column: 1;
+                margin: 0;
+                margin-left: 5rem;
+            }
+            ul {
+                grid-column: 3;
+                margin: 0;
+            }
+
+            ul + h1 {
+                // margin-top: 2rem;
+            }
+        }
+    }
 }

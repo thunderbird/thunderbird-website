@@ -135,16 +135,18 @@ def build_roadmaps():
                 # Products go in sub-dirs
                 if (clean_name == "index"):
                     template_extends = '{% extends "includes/base/landing-page.html" %}\n'
+                    template_blockname = '{% block content %}\n'
                     temp_template_path = os.path.join(settings.ROADMAPS_PATH, "index.html")
                 else:
-                    template_extends = '{% extends "includes/base/page.html" %}\n'
+                    template_extends = '{% extends "includes/base/product-or-service.html" %}\n'
+                    template_blockname = '{% block roadmap_content %}\n'
                     os.makedirs(os.path.join(settings.ROADMAPS_PATH, file.replace(".md", "")), exist_ok=True)
                     temp_template_path = os.path.join(settings.ROADMAPS_PATH, file.replace(".md", ""), "index.html")
 
                 # Landing page has a different template from sub-pages.
                 with open(temp_template_path, "w") as f:
                     f.write(template_extends)
-                    f.write('{% block content %}\n')
+                    f.write(template_blockname)
                     f.write(html_content) # The converted HTML is baked in here
                     f.write('{{ super() }}\n')
                     f.write('\n{% endblock %}')
