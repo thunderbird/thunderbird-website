@@ -46,7 +46,13 @@
 // Lifted from layout.less
 body {
 
-    font-size: var(--font-body);
+    .mixin-font-styles(
+        @family-inter,
+        var(--font-body),
+        300,
+        1.5
+    );
+
     line-height: 1.5;
     font-weight: 300;
     background: var(--colour-surface-lower);
@@ -67,6 +73,30 @@ body {
     --hamburger-foreground-inactive: var(--color-gray-30);
     --hamburger-background-active: var(--color-white);
     --hamburger-foreground-active: var(--color-black);
+
+    // From 2025-fonts.less
+    .nav-links .nav-ln {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    // On www, seems to be set for all headers
+    h2 {
+        font-weight: 400
+    }
+
+    // On www, the .entry-text has this value, but
+    // I could not find where it was inherited from.
+    .entry-text  {
+        line-height: 27px;
+    }
+
+    // On www, the h6 modifies styles from an ancestor
+    // that I could not find, so hard-coding them here.
+    h6 {
+        font-size: 12.06px;
+        line-height: 18.09px;
+    }
 
     .header-donate, .header-download {
         font-weight: 500;
@@ -125,10 +155,38 @@ a {
 }
 
 
-// TODO: move footer support styles to
+// TODO: move footer support styles to own file
 // Additional styles needed to make the footer work
 
+// Probably global for www
+.container.footer h4 {
+    font-weight: 400;
+}
 
+// From links.less
+.container.footer a{
+    --color-link: #1E4EAE;
+    --accent: var(--color-link);
+
+    color: currentColor;
+    text-decoration: underline;
+    transition: font-size .2s,
+                text-decoration-color .2s;
+
+    &.dotted {
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: currentColor;
+        text-underline-offset: 0.25em;
+        text-decoration-thickness: .12em;
+    }
+    &.donate,
+    &:hover,
+    &:hover:visited {
+        text-decoration-color: var(--accent);
+    }
+
+}
 
 
 // From /assets/less/new/layout.less
