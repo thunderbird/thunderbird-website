@@ -53,9 +53,10 @@ jobs:
 
       - name: Create placeholders for deployment build
         run: |
-          mkdir -p dist/www.thunderbird.net dist/start.thunderbird.net dist/updates.thunderbird.net dist/tb.pro media
+          mkdir -p dist/www.thunderbird.net dist/start.thunderbird.net dist/updates.thunderbird.net dist/tb.pro dist/roadmaps.thunderbird.net media
           touch dist/www.thunderbird.net/.gitkeep dist/start.thunderbird.net/.gitkeep
           touch dist/updates.thunderbird.net/.gitkeep dist/tb.pro/.gitkeep media/.gitkeep
+          touch dist/roadmaps.thunderbird.net/.gitkeep
 
       - name: Build and push Docker image
         id: build-image
@@ -111,4 +112,3 @@ jobs:
             --service thunderbird-website-$BUILD_ENV \
             --force-new-deployment \
             --region $AWS_REGION
-
