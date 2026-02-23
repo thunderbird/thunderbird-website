@@ -1,0 +1,544 @@
+// ========================================================================
+// Only the necessary variables and mixins needed to compile site-nav.less
+@import '../common/site-nav-variables.less';
+@import '../common/site-nav-mixins.less';
+@import '../new/components/site-nav.less';
+
+// ========================================================================
+
+// For the language select drop-down
+@import '../new/components/forms.less';
+
+// Shared styles
+@import "../common/fonts.less";
+
+// Hover effects not working?
+// @import "../common/colours.less";
+// @import "../common/buttons.less";
+@import "../common/breakpoints.less";
+@import "../common/space.less";
+@import "../common/fonts.less";
+@import "../common/tab-navigation-bar.less";
+@import "../common/common-footer.less";
+@import "../common/tb-footer.less";
+
+
+// Variables
+:root {
+    --colour-primary-default: #58c9ff;
+    --colour-text-icon-base: #eeeef0;
+    --colour-text-icon-highlight: #58c9ff;
+    --colour-surface-base: #1a202c;
+    --colour-surface-border: #3d4d67;
+    --colour-surface-lower: #18181b;
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-blue-50: #2493ef;
+    --color-purple-50: #a855f7;
+    --color-gray-30: #d4d4d8;
+    --color-ink-70: #3e3c67;
+    --color-ink-80: #2a284b;
+    --color-link: #1E4EAE;
+}
+
+
+
+// Additional styles for the language select drop down
+.fill-current {
+  display: none;
+}
+
+
+// This is to make the body full height and roughly align with
+// what's on www.
+// Lifted from layout.less
+body {
+
+    .mixin-font-styles(
+        @family-inter,
+        var(--font-body),
+        300,
+        1.5
+    );
+
+    line-height: 1.5;
+    font-weight: 300;
+    background: var(--colour-surface-lower);
+    color: var(--txt);
+    position: relative;
+    scroll-padding-top: var(--nav-height);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.site-nav {
+    // From home.less
+    color: var(--nav-txt);
+
+    --hamburger-background-inactive: var(--color-black);
+    --hamburger-foreground-inactive: var(--color-gray-30);
+    --hamburger-background-active: var(--color-white);
+    --hamburger-foreground-active: var(--color-black);
+
+    // From 2025-fonts.less
+    .nav-links .nav-ln {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    // On www, seems to be set for all headers
+    h2 {
+        font-weight: 400
+    }
+
+    // On www, the .entry-text has this value, but
+    // I could not find where it was inherited from.
+    .entry-text  {
+        line-height: 27px;
+    }
+
+    // On www, the h6 modifies styles from an ancestor
+    // that I could not find, so hard-coding them here.
+    h6 {
+        font-size: 12.06px;
+        line-height: 18.09px;
+    }
+
+    .header-donate, .header-download {
+        font-weight: 500;
+        margin-top: -0.05rem;
+        margin-left: -1rem;
+
+        a.btn {
+            padding: 0.72em 1em;
+            border-width: 0.125rem; //2px;
+        }
+
+        a.btn::after {
+            background: transparent;
+        }
+
+        svg {
+            width: 1rem;
+        }
+    }
+}
+
+// Lifted from buttons.less to style the
+// Downloads and Donate buttons in header nav.
+// Also necessary for hamburger-btn, but should not
+// be nested in .site-nav so that the padding is
+// properly overridden.
+.btn-donate,
+.btn-donate-lg,
+.btn-download-inline,
+.btn-download-link,
+.download-link.btn-download,
+.btn,
+button {
+    font-size: var(--font-md);
+    background: var(--btn-bg, transparent);
+    border-radius: 0.375rem; //6px;
+    border: .125em solid currentColor;
+    color: currentColor;
+    padding: .5em 3em;
+    position: relative;
+    transition: font-size .2s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+// Hack for the fancy "dark" hover states
+.btn-no-bg{
+    --btn-background-color: rgba(0, 0, 0, 0.8);
+    @btn-no-bg-styling();
+}
+
+
+// Pulled from links.less
+a {
+  color: currentColor;
+}
+
+
+// TODO: move footer support styles to own file
+// Additional styles needed to make the footer work
+
+// Probably global for www
+.container.footer h4 {
+    font-weight: 400;
+}
+
+// From links.less
+.container.footer a{
+    --accent: var(--color-link);
+
+    color: currentColor;
+    text-decoration: underline;
+    transition: font-size .2s,
+                text-decoration-color .2s;
+
+    &.dotted {
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: currentColor;
+        text-underline-offset: 0.25em;
+        text-decoration-thickness: .12em;
+    }
+    &.donate,
+    &:hover,
+    &:hover:visited {
+        text-decoration-color: var(--accent);
+    }
+
+}
+
+
+// From /assets/less/new/layout.less
+
+.site-links {
+  font-size: var(--font-md);
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  grid-template:
+                "a c d e" 30px
+                "b c d e";
+
+  .site-link-section {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding-left: 40px;
+    }
+
+    .home {
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    // Help our grid template pick the correct b...
+    &:nth-child(2) {
+      grid-area: b;
+    }
+  }
+
+  @media (max-width: @md) {
+    display: flex;
+    flex-direction: column;
+
+    .site-link-section {
+      height: auto;
+    }
+  }
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-inline: 1rem;
+    padding-block: clamp(1rem, 5.469vw, 4.375rem); // 4.375rem~
+    margin-inline: auto;
+    max-width: 1280px;
+    overflow: hidden;
+
+    // For the product pages
+    &.container-tight {
+        max-width: 1040px;
+    }
+
+    &.no-gap {
+        gap: 0;
+    }
+
+    @media (max-width: @md) {
+        // Give them some space to breath
+        width: calc(100% - 1rem);
+        box-sizing: border-box;
+    }
+}
+
+.logo {
+    max-height: 100%;
+    min-width: 250px;
+    max-width: 250px;
+    height: 60px;
+    width: auto;
+    transition: color .2s;
+}
+
+.logo:hover,
+.mozilla-logo:hover {
+    color: var(--accent);
+    transform: none;
+}
+
+svg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+// ==============================================================================
+// actual roadmap styles
+// ==============================================================================
+
+
+@tablet-breakpoint: @md;
+@desktop-breakpoint: @lg;
+@extrawide-breakpoint: @xl;
+main {
+    color: var(--colour-text-icon-base);
+
+    margin-top: 122px; // TODO: change this to a calculation.
+
+    height: 100%;
+    flex: 1 1 auto;
+}
+
+#donation {
+    .web-body-small();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    p {
+        margin: 0;
+    }
+    a {
+        .web-body-xsmall();
+        color: var(--colour-text-icon-highlight);
+    }
+    .donation-icon  {
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-image: url("/media/svg/roadmaps/heart-24-default.svg");
+
+    }
+}
+
+#main-content {
+    .web-body-default();
+    @media (min-width: @tablet-breakpoint) {
+        .web-body-large();
+    }
+
+    margin: 0 auto;
+    max-width: @xl;
+
+    padding-block: 1.5rem;
+    padding-inline: 1rem;
+
+    // Page heading
+    h1 {
+        .brand-headline-h1-sm();
+
+        margin: 0;
+        padding: 0;
+        @media (min-width: @tablet-breakpoint) {
+            .brand-headline-h1-lg();
+        }
+    }
+
+    // The paragraph immediately following
+    h1 + p {
+        margin-top: 1rem;
+    }
+
+    h1 + ul {
+        margin-top: 1rem;
+    }
+
+    ul + h1,
+    p + h1 {
+        margin-top: 2.25rem;
+    }
+
+    // Card styles
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    li + li {
+        margin-top: 0.5rem;
+    }
+
+    li {
+        // The rest of the content is not wrapped in a tag.
+        .web-body-small();
+        @media (min-width: @tablet-breakpoint) {
+            .web-body-default();
+        }
+        line-height: 1.075rem;
+
+        background-color: var(--colour-surface-base);
+        border: 1px solid var(--colour-surface-border);
+        border-radius: 0.5rem;
+        color: var(--colour-text-icon-base);
+        list-style: none;
+        position: relative;
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        column-gap: 1rem;
+        row-gap: 0.5rem;
+
+        padding-block: 0.75rem 1rem;
+        padding-inline: 0.75rem;
+
+        strong {
+            .web-title-small();
+            display: block;
+            @media (min-width: @tablet-breakpoint) {
+                .web-title-medium();
+            }
+        }
+
+        // Note: this should be put into bolt.
+        // Needs hover/active/etc. states.
+        a {
+            .web-body-small();
+
+            display: inline-block;
+            justify-self: start;
+            margin-top: 0.25rem;
+            border: 1px solid var(--colour-primary-default);
+            border-radius: 0.5rem;
+            color: var(--colour-primary-default);
+            display: inline-block;
+            justify-self: start;
+            text-decoration: none;
+            padding-block: 0.84375rem;
+            padding-inline: 1rem;
+        }
+    }
+
+
+    .card-container {
+        @media (min-width: @tablet-breakpoint) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            // grid-auto-rows: minmax(400px, auto);
+        }
+
+        @media (min-width: @desktop-breakpoint) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: @extrawide-breakpoint) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+
+
+    .card {
+        & + .card {
+            margin-top: 1rem;
+            @media (min-width: @tablet-breakpoint) {
+                margin-top: 0;
+            }
+
+        }
+    }
+
+    .card-icon {
+        grid-template-columns: 1rem 1fr;
+        &::before {
+            content: "";
+            height: 1.5rem;
+            width: 1.5rem;
+            display: inline-block;
+            grid-column: 1;
+            grid-row: 1 / span 3;
+            align-self: start;
+            justify-self: center;
+            background-color: var(--colour-primary-default);
+
+            // These properties let us change the color
+            // of an svg loaded as external resource.
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+        }
+    }
+
+    .card-android {
+        &::before {
+            -webkit-mask-image: url("/media/svg/roadmaps/android-logo.svg");
+            mask-image: url("/media/svg/roadmaps/android-logo.svg");
+        }
+    }
+    .card-desktop {
+        &::before {
+            -webkit-mask-image: url("/media/svg/roadmaps/desktop-tower.svg");
+            mask-image: url("/media/svg/roadmaps/desktop-tower.svg");
+        }
+    }
+    .card-ios {
+        &::before {
+            -webkit-mask-image: url("/media/svg/roadmaps/apple-logo.svg");
+            mask-image: url("/media/svg/roadmaps/apple-logo.svg");
+        }
+    }
+    .card-services {
+        &::before {
+            -webkit-mask-image: url("/media/svg/roadmaps/globe.svg");
+            mask-image: url("/media/svg/roadmaps/globe.svg");
+        }
+    }
+
+
+    .product-roadmap {
+        @media (min-width: @desktop-breakpoint) {
+            display: grid;
+            grid-template-columns: 26rem auto 1fr;
+            align-items: start;
+            row-gap: 2rem;
+            max-width: @xl;
+            padding-left: 5rem;
+
+
+            // h1:first-of-type,
+            p {
+                grid-column: 1/-1;
+                margin-bottom: 1rem;
+            }
+
+            // h1:not(:first-of-type) {
+            h1 {
+                grid-column: 1;
+                margin: 0;
+                margin-left: 5rem;
+            }
+            ul {
+                grid-column: 3;
+                margin: 0;
+            }
+
+            ul + h1 {
+                // margin-top: 2rem;
+            }
+        }
+    }
+}

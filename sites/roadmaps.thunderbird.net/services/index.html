@@ -1,5 +1,5 @@
-{% extends "includes/base/page.html" %}
-{% block content %}
+{% extends "includes/base/product-or-service.html" %}
+{% block roadmap_content %}
 <p>Welcome to the <strong>Thunderbird Services</strong> roadmap!</p>
 <h1>🏗️ Active</h1>
 <ul>
@@ -70,5 +70,6 @@ Scoping should be limited to basic folder visibility and message display.<br />
 Webmail will be built with JMAP as a backend, and we need to explore how users can benefit from Webmail while still being encouraged to use end to end encryption and allowing search across folders.<br />
 <a href="https://ideas.tb.pro/p/webmail-for-thundermail">https://ideas.tb.pro/p/webmail-for-thundermail</a></li>
 <li><strong>Accessibility improvements</strong> - All of our services need functional accessibility, across platforms (web/mobile). While our engineers are looking at this from the start, we should spend some foundational time to ensure we're adhering to standards related to accessibility and creating an accessible experience for Thunderbird Pro.</li>
-</ul>
+</ul>{{ super() }}
+
 {% endblock %}

@@ -1,6 +1,6 @@
-{% extends "includes/base/page.html" %}
-{% block content %}
-<p>Welcome to the <strong>Thunderbird Desktop</strong> client roadmap! </p>
+{% extends "includes/base/product-or-service.html" %}
+{% block roadmap_content %}
+<p>Welcome to the <strong>Thunderbird Desktop</strong> client roadmap!</p>
 <h1>🏗️ Active</h1>
 <ul>
 <li><strong>First Time User Experience</strong> - Complete Account Hub for all account creations, enable it for first time users, and show a customization wizard after first account creation.</li>
@@ -20,10 +20,10 @@
 </ul>
 <h1>🚀 Launched</h1>
 <ul>
-<li><strong>Exchange Email Support</strong> - Full support of email operations and account creation. [<a href="https://support.mozilla.org/en-US/kb/thunderbird-and-exchange">link</a>]</li>
-<li><strong>Native OS Notifications</strong> - Add quick actions to reply, delete, mark messages as read/unread, and manage the notifications. [<a href="https://blog.thunderbird.net/2025/08/monthly-release-141-recap/">link</a>]</li>
-<li><strong>Implement Glean Telemetry</strong> - Move away from the old telemetry implementation and add the new Glean Telemetry. [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1899602">link</a>]</li>
-<li><strong>In-App Notifications</strong> - Implement a new notification system that allows the Thunderbird team to push important, time-sensitive information directly to a user's Thunderbird desktop client. [<a href="https://support.mozilla.org/en-US/kb/notifications-thunderbird">link</a>]</li>
+<li><strong>Exchange Email Support</strong> - Full support of email operations and account creation. <a href="https://support.mozilla.org/en-US/kb/thunderbird-and-exchange">link</a></li>
+<li><strong>Native OS Notifications</strong> - Add quick actions to reply, delete, mark messages as read/unread, and manage the notifications. <a href="https://blog.thunderbird.net/2025/08/monthly-release-141-recap/">link</a></li>
+<li><strong>Implement Glean Telemetry</strong> - Move away from the old telemetry implementation and add the new Glean Telemetry. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1899602">link</a></li>
+<li><strong>In-App Notifications</strong> - Implement a new notification system that allows the Thunderbird team to push important, time-sensitive information directly to a user's Thunderbird desktop client. <a href="https://support.mozilla.org/en-US/kb/notifications-thunderbird">link</a></li>
 </ul>
 <h1>🗃️ Backlog</h1>
 <ul>
@@ -32,5 +32,6 @@
 <li><strong>Customizable Shortcuts</strong> - Continue the work on customizable shortcuts to move away from XUL keys and allow users control of default keyboard combinations.</li>
 <li><strong>OS Integration</strong> - Improve the integration with native OS features like notifications, status bar, and system tray.</li>
 <li><strong>JMAP</strong> - Explore the implementation of the JMAP protocol.</li>
-</ul>
+</ul>{{ super() }}
+
 {% endblock %}
