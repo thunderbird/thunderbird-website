@@ -1,5 +1,16 @@
+@outline: {
+  &:focus-visible,
+  &.focused {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+  }
+}
+
+
 // from /assets/less/new/mixins.less
 @btn-no-bg-styling: {
+   outline: 1px solid red;
+
   &::after {
     background-color: var(--btn-background-color);
   }

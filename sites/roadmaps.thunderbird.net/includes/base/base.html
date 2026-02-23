@@ -83,8 +83,24 @@
       (function (){
         // Allow page to show hamburger menu.
         document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, "js");
-      })()
 
+        // From main tb website
+        const navbar = document.querySelector(".site-nav");
+        if (navbar) {
+          const navbarClass = 'scrolled-nav';
+          let navbarState = navbar.classList.contains(navbarClass);
+
+          window.addEventListener("scroll", () => {
+            if (!navbarState && window.scrollY > 30) {
+              navbar.classList.add(navbarClass);
+              navbarState = true;
+            } else if (navbarState && window.scrollY <= 30) {
+              navbar.classList.remove(navbarClass)
+              navbarState = false;
+            }
+          });
+        }
+      })()
     </script>
     {% block additional_site_js %}{% endblock %}
     {% block js %}{% endblock %}

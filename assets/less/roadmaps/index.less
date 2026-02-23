@@ -2,8 +2,8 @@
 // Only the necessary variables and mixins needed to compile site-nav.less
 @import '../common/site-nav-variables.less';
 @import '../common/site-nav-mixins.less';
-
 @import '../new/components/site-nav.less';
+
 // ========================================================================
 
 // For the language select drop-down
@@ -60,8 +60,68 @@ body {
 }
 
 .site-nav {
-    // outline: 1px solid red;
+    // From home.less
+    color: var(--nav-txt);
 
+    --hamburger-background-inactive: var(--color-black);
+    --hamburger-foreground-inactive: var(--color-gray-30);
+    --hamburger-background-active: var(--color-white);
+    --hamburger-foreground-active: var(--color-black);
+
+    .header-donate, .header-download {
+        font-weight: 500;
+        margin-top: -0.05rem;
+        margin-left: -1rem;
+
+        a.btn {
+            padding: 0.72em 1em;
+            border-width: 0.125rem; //2px;
+        }
+
+        a.btn::after {
+            background: transparent;
+        }
+
+        svg {
+            width: 1rem;
+        }
+    }
+}
+
+// Lifted from buttons.less to style the
+// Downloads and Donate buttons in header nav.
+// Also necessary for hamburger-btn, but should not
+// be nested in .site-nav so that the padding is
+// properly overridden.
+.btn-donate,
+.btn-donate-lg,
+.btn-download-inline,
+.btn-download-link,
+.download-link.btn-download,
+.btn,
+button {
+    font-size: var(--font-md);
+    background: var(--btn-bg, transparent);
+    border-radius: 0.375rem; //6px;
+    border: .125em solid currentColor;
+    color: currentColor;
+    padding: .5em 3em;
+    position: relative;
+    transition: font-size .2s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+// Hack for the fancy "dark" hover states
+.btn-no-bg{
+    --btn-background-color: rgba(0, 0, 0, 0.8);
+    @btn-no-bg-styling();
+}
+
+
+// Pulled from links.less
+a {
+  color: currentColor;
 }
 
 
@@ -181,7 +241,6 @@ main {
     color: var(--colour-text-icon-base);
 
     margin-top: 122px; // TODO: change this to a calculation.
-    outline: 1px solid green;
 
     height: 100%;
     flex: 1 1 auto;
