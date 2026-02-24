@@ -65,9 +65,11 @@ jobs:
           BUILD_ENV: ${{ env.DEPLOY_ENV }}
         run: |
           IMAGE_URI="$ECR_REGISTRY/thunderbird-website-$BUILD_ENV:$IMAGE_TAG"
+          if [ "$BUILD_ENV" = "prod" ]; then REPO_BRANCH="prod"; else REPO_BRANCH="master"; fi
           docker build \
             -f docker/Dockerfile \
             --build-arg BUILD_ENV=$BUILD_ENV \
+            --build-arg REPO_BRANCH=$REPO_BRANCH \
             -t $IMAGE_URI \
             -t $ECR_REGISTRY/thunderbird-website-$BUILD_ENV:latest \
             .

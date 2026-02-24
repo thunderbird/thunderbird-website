@@ -11,6 +11,7 @@
 FROM quay.io/centos/centos:stream9
 
 ARG BUILD_ENV=local
+ARG REPO_BRANCH=master
 
 # Install packages (python3.11 for building, python3 for mod_wsgi runtime)
 RUN dnf install -y epel-release \
@@ -28,19 +29,19 @@ RUN mkdir -p /var/www/html/start /var/www/html/live.momo /var/www/autoconfig.mom
 RUN python3 -m venv /var/www/tbservices \
     && /var/www/tbservices/bin/pip install --no-cache-dir webob dnspython lxml
 
-# Clone external repos
-RUN git clone --depth 1 --branch prod https://github.com/thunderbird/live-redirects.git /var/www/html/live.momo
+# Clone external repos (branch is passed via --build-arg REPO_BRANCH)
+RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/live-redirects.git /var/www/html/live.momo
 
-RUN git clone --recurse-submodules --branch prod https://github.com/thunderbird/broker.git /var/www/services/broker \
+RUN git clone --recurse-submodules --branch $REPO_BRANCH https://github.com/thunderbird/broker.git /var/www/services/broker \
     && cp /var/www/services/broker/settings.py.dist /var/www/services/broker/settings.py \
     && cd /var/www/services/broker/lib/pygeoip && /var/www/tbservices/bin/pip install --no-cache-dir .
 
-RUN git clone --depth 1 --branch prod https://github.com/thunderbird/http-mx.git /var/www/services/mx \
+RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/http-mx.git /var/www/services/mx \
     && /var/www/tbservices/bin/pip install --no-cache-dir -r /var/www/services/mx/requirements.txt
 
-RUN git clone --depth 1 --branch prod https://github.com/thunderbird/stats.git /var/www/html/tbstats
+RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/stats.git /var/www/html/tbstats
 
-RUN git clone --depth 1 --branch prod https://github.com/thunderbird/autoconfig.git /var/www/autoconfig.momo
+RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/autoconfig.git /var/www/autoconfig.momo
 
 # Copy config files
 COPY docker/scripts/update-autoconfig.sh /var/www/autoconfig.momo/update.sh
@@ -85,12 +86,10 @@ RUN if [ "$BUILD_ENV" = "local" ]; then \
     fi
 
 # For prod/stage: clone tb-website-builds (includes wsgi.py, settings.py, media)
-# Branch mapping: stage -> master, prod -> prod
 RUN if [ "$BUILD_ENV" != "local" ]; then \
-      if [ "$BUILD_ENV" = "stage" ]; then BUILDS_BRANCH="master"; else BUILDS_BRANCH="prod"; fi \
-      && echo "BUILD_ENV=$BUILD_ENV - cloning tb-website-builds branch $BUILDS_BRANCH..." \
+      echo "BUILD_ENV=$BUILD_ENV - cloning tb-website-builds branch $REPO_BRANCH..." \
       && rm -rf /var/www/html/start/* \
-      && git clone --depth 1 --branch ${BUILDS_BRANCH} \
+      && git clone --depth 1 --branch $REPO_BRANCH \
         https://github.com/thunderbird/tb-website-builds.git /var/www/html/start \
       && rm -rf /var/www/html/start/.git \
       && echo "Done cloning tb-website-builds"; \
