@@ -22,6 +22,10 @@ cp -R ../webroot/* $TEMP/
 source /var/www/tbservices/bin/activate
 python ../tools/convert.py -a -d $TEMP/v1.1 *
 
+# Convert.py generates a JSON file, which we want to serve on the root
+# path rather than under v1.1/.
+mv $TEMP/v1.1/generated_files.json $TEMP
+
 # Move generated files into place
 rm -rf $DEST/*
 mv $TEMP/* $DEST/
