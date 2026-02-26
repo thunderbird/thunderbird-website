@@ -1,0 +1,50 @@
+<footer id="footer">
+  <div class="container footer">
+    <a href="{{ url('thunderbird.index') }}" class="logo" aria-hidden="true">
+      {{ svg('Thunderbird_Logo') }}
+    </a>
+    <div class="site-links" role="navigation">
+      <div class="site-link-section">
+        <ul>
+          <li><a href="{{ url('thunderbird.index') }}" class="dotted home">{{_('Home')}}</a></li>
+        </ul>
+      </div>
+      <div id="footer-nav" class="site-link-section">
+        <h4>{{ _('Products') }}</h4>
+        <ul>
+          <li><a href="{{ url('thunderbird.products.desktop') }}" class="dotted">{{_('Thunderbird Desktop')}}</a></li>
+          <li><a href="{{ url('thunderbird.products.mobile') }}" class="dotted">{{_('Thunderbird Mobile')}}</a></li>
+        </ul>
+      </div>
+      <div class="site-link-section">
+        <h4>{{ _('Resources') }}</h4>
+        <ul>
+          <li><a href="{{ url('blog') }}" class="dotted">{{_('Blog')}}</a></li>
+          <li><a href="{{ url('support') }}" class="dotted">{{_('Get Help')}}</a></li>
+          <li><a href="{{ url('thunderbird.latest.all') }}" class="dotted">{{_('Downloads')}}</a></li>
+          <li><a href="{{ url('thunderbird.releases.index') }}" class="dotted">{{_('Release Notes')}}</a></li>
+          <li><a href="{{ url('thunderbird.enterprise') }}" class="dotted">{{ _('For Enterprises') }}</a></li>
+          <li><a href="{{ url('thunderbird.calendar.holiday') }}" class="dotted">{{ _('Holiday Calendars') }}</a></li>
+        </ul>
+      </div>
+      <div class="site-link-section">
+        <h4>{{ _('About') }}</h4>
+        <ul>
+          <li><a href="{{ url('thunderbird.about') }}" class="dotted">{{_('Who We Are')}}</a></li>
+          <li><a href="{{ url('thunderbird.contact') }}" class="dotted">{{_('Contact Us')}}</a></li>
+          <li><a href="{{ url('mozorg.careers.tb') }}" class="dotted">{{_('Careers')}}</a></li>
+        </ul>
+      </div>
+      <div class="site-link-section">
+        <h4>{{ _('Contribute') }}</h4>
+        <ul>
+          <li><a href="{{ url('thunderbird.donate') }}" class="dotted">{{_('Donate')}}</a></li>
+          <li><a href="{{ url('thunderbird.participate') }}" class="dotted">{{_('Participate')}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="moz-footer-border">
+      {% include 'includes/base/moz-footer-block.html' %}
+    </div>
+  </div>
+</footer>

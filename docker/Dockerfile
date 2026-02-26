@@ -75,10 +75,12 @@ RUN if [ "$BUILD_ENV" = "local" ]; then \
       && /build/venv/bin/python build-site.py --startpage \
       && /build/venv/bin/python build-site.py --updates \
       && /build/venv/bin/python build-site.py --tbpro \
+      && /build/venv/bin/python build-site.py --roadmaps \
       && cp -r /build/dist/www.thunderbird.net /var/www/html/start/thunderbird.net \
       && cp -r /build/dist/start.thunderbird.net /var/www/html/start/site \
       && cp -r /build/dist/updates.thunderbird.net /var/www/html/start/updates.thunderbird.net \
       && cp -r /build/dist/tb.pro /var/www/html/start/tb.pro \
+      && cp -r /build/dist/roadmaps.thunderbird.net /var/www/html/start/roadmaps.thunderbird.net \
       && cp /build/wsgi.py /var/www/html/start/wsgi.py \
       && cp /build/settings.py /var/www/html/start/settings.py \
       && cp -r /build/media /var/www/html/start/thunderbird.net/media \

@@ -154,7 +154,7 @@ def build_roadmaps():
     site = builder.Site(languages, settings.ROADMAPS_PATH, settings.ROADMAPS_RENDERPATH,
                        settings.ROADMAPS_CSS, js_bundles=settings.ROADMAPS_JS,
                        data=context, debug=args.debug, dev_mode=args.watch,
-                       extra_searchpaths=[settings.WEBSITE_PATH, settings.COMMON_SEARCHPATH])
+                       extra_searchpaths=[settings.COMMON_SEARCHPATH])
     site.build_roadmaps()
     return site
 
