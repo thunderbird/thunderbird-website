@@ -309,14 +309,14 @@ class Site(object):
             target = os.path.join(self.outpath, 'thunderbird', str(k), 'releasenotes')
             mkdir(target)
             logger.info("Rendering {0}/index.html...".format(target))
-            self._env.globals['canonical_path'] = '/' + str(pathlib.Path(*pathlib.Path(target).parts[3:]))
+            self._env.globals['canonical_path'] = '/' + str(pathlib.Path(*pathlib.Path(target).parts[3:])) + '/'
             note_template.stream().dump(os.path.join(target, 'index.html'))
 
             # Render system requirements page
             target = os.path.join(self.outpath, 'thunderbird', str(k), 'system-requirements')
             mkdir(target)
             sysreq_template = self._env.get_template('includes/_enonly/system_requirements.html')
-            self._env.globals['canonical_path'] = '/' + str(pathlib.Path(*pathlib.Path(target).parts[3:]))
+            self._env.globals['canonical_path'] = '/' + str(pathlib.Path(*pathlib.Path(target).parts[3:])) + '/'
             logger.info("Rendering {0}/index.html...".format(target))
             sysreq_template.stream().dump(os.path.join(target, 'index.html'))
 
@@ -488,7 +488,7 @@ class Site(object):
             # Figure out the page path and store it in Jinja globals.
             if '404' not in template:
                 dir_part = os.path.dirname(template)
-                canonical_path = f'/{dir_part}' if dir_part else '/'
+                canonical_path = f'/{dir_part}/' if dir_part else '/'
             self._env.globals['canonical_path'] = canonical_path
 
             try:
