@@ -11,16 +11,16 @@
 
 // Shared styles
 @import "../common/fonts.less";
-
-// Hover effects not working?
-// @import "../common/colours.less";
-// @import "../common/buttons.less";
 @import "../common/breakpoints.less";
 @import "../common/space.less";
 @import "../common/fonts.less";
 @import "../common/tab-navigation-bar.less";
 @import "../common/common-footer.less";
 @import "../common/tb-footer.less";
+
+
+// Per Sol's recommended tweaks 2026-03-02
+@max-width:     76rem;        // 1216px
 
 
 // Variables
@@ -55,15 +55,10 @@
 // Lifted from layout.less
 body {
 
-    .mixin-font-styles(
-        @family-inter,
-        var(--font-body),
-        300,
-        1.5
-    );
-
-    line-height: 1.5;
+    font-family: @family-inter;
     font-weight: 300;
+    line-height: 1.5;
+
     background: var(--colour-surface-lower);
     color: var(--txt);
     position: relative;
@@ -269,7 +264,7 @@ a {
     }
 
     @media (max-width: @md) {
-        // Give them some space to breath
+        // Give them some space to breathe
         width: calc(100% - 1rem);
         box-sizing: border-box;
     }
@@ -318,14 +313,23 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+
+    // Overrides from Design Team
+    line-height: 1.23;
+
+
     p {
         margin: 0;
     }
     a {
         .web-body-xsmall();
         color: var(--colour-text-icon-highlight);
+
+        // Overrides from Design Team
+        line-height: normal;
     }
     .donation-icon  {
         display: inline-block;
@@ -340,13 +344,19 @@ main {
     .web-body-default();
     @media (min-width: @tablet-breakpoint) {
         .web-body-large();
+
+        // Overrides from Design Team
+        font-weight: 400;
+        line-height: 1.75rem;
     }
 
     margin: 0 auto;
-    max-width: @xl;
+    max-width: @max-width;
 
-    padding-block: 1.5rem;
-    padding-inline: 1rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2rem;
+
+    padding-inline: 2rem;
 
     // Page heading
     h1 {
@@ -356,12 +366,20 @@ main {
         padding: 0;
         @media (min-width: @tablet-breakpoint) {
             .brand-headline-h1-lg();
+            // Overrides from Design Team
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -0.03rem;
         }
     }
 
     // The paragraph immediately following
     h1 + p {
         margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-top: 1.25rem;
+        max-width: 50.313rem; // ~800px
+
     }
 
     h1 + ul {
@@ -403,14 +421,20 @@ main {
         column-gap: 1rem;
         row-gap: 0.5rem;
 
-        padding-block: 0.75rem 1rem;
-        padding-inline: 0.75rem;
+        box-sizing: border-box;
+        padding-inline: 1rem;
+        padding-block: 1rem 1.5rem;
+        min-height: 10.563rem;
+
 
         strong {
             .web-title-small();
             display: block;
             @media (min-width: @tablet-breakpoint) {
                 .web-title-medium();
+
+                // Override per Design Team
+                line-height: normal;
             }
         }
 
@@ -437,18 +461,9 @@ main {
     .card-container {
         @media (min-width: @tablet-breakpoint) {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            // grid-auto-rows: minmax(400px, auto);
-        }
-
-        @media (min-width: @desktop-breakpoint) {
             grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
         }
-        @media (min-width: @extrawide-breakpoint) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
     }
 
 
@@ -463,7 +478,7 @@ main {
     }
 
     .card-icon {
-        grid-template-columns: 1rem 1fr;
+        grid-template-columns: 1.5rem 1fr;
         &::before {
             content: "";
             height: 1.5rem;
@@ -472,7 +487,6 @@ main {
             grid-column: 1;
             grid-row: 1 / span 3;
             align-self: start;
-            justify-self: center;
             background-color: var(--colour-primary-default);
 
             // These properties let us change the color
