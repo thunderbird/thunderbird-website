@@ -462,7 +462,7 @@ ROADMAPS_CSS = {
 }
 
 ROADMAPS_JS = {
-    'roadmaps-bundle': ['js/app.js',],
+    'roadmaps-bundle': ['js/app.js', 'js/bolt-webcomponents.js'],
 }
 
 

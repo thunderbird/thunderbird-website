@@ -25,6 +25,7 @@
     {% endblock shared_meta %}
 
     <link href="{{ static('css/normalize.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ static('css/bolt-webcomponents.css') }}" rel="stylesheet" type="text/css" />
 
     {% block base_css %}
     <link href="{{ static('css/roadmaps.css') }}" rel="stylesheet" type="text/css" />
@@ -81,6 +82,15 @@
     <script type="text/javascript" src="{{ static('js/roadmaps-bundle.js') }}" charset="utf-8"></script>
     <script>
       (function (){
+        // Handle light/dark mode preference
+        const browserPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (browserPrefersDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+
         // Allow page to show hamburger menu.
         document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, "js");
 
