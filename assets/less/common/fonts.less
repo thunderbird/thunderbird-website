@@ -132,7 +132,7 @@
 
 .brand-headline-h4() {
     .mixin-font-styles(
-        @familiy: @family-metropolis,
+        @family: @family-metropolis,
         @weight: 500,
         @size: 1rem,
         @line-height: 1.2,
@@ -266,7 +266,7 @@
 
 .web-body-medium() {
     .mixin-font-styles(
-        @famly: @family-inter,
+        @family: @family-inter,
         @weight: 400,
         @size: 0.9375rem,
         @line-height: 1.32,
@@ -431,5 +431,15 @@
         0.8125rem,
         1,
         0.05em
+    );
+}
+
+.desktop-title-medium() {
+    .mixin-font-styles(
+        @family: @family-inter,
+        @weight: 400,
+        @size: 1.25rem,
+        @line-height: 1,
+        @letter-spacing: 0
     );
 }
