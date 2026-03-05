@@ -7,3 +7,32 @@
   {% endblock %}
 </div>
 {% endblock %}
+
+
+{% block pre_footer %}
+<div id="roadmaps-site-nav">
+  <h4>Project roadmaps</h4>
+  <div>
+    <a href="{{ url('roadmaps.desktop') }}">Desktop</a>
+    <a href="{{ url('roadmaps.android') }}">Android</a>
+    <a href="{{ url('roadmaps.ios') }}">iOS</a>
+    <a href="{{ url('roadmaps.services') }}">Services</a>
+  </div>
+</div>
+<script>
+  (function () {
+    const currentUrl = window.location.pathname;
+    document.querySelectorAll('#roadmaps-site-nav a').forEach(link => {
+      const linkUrl = new URL(link.href).pathname;
+      if (currentUrl.startsWith(linkUrl)) {
+        link.classList.add('active');
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+        });
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  })();
+</script>
+{% endblock %}
