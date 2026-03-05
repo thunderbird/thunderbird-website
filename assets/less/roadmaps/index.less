@@ -31,6 +31,8 @@
     --colour-surface-base: #1a202c;
     --colour-surface-border: #3d4d67;
     --colour-surface-lower: #18181b;
+    --color-surface-raised: rgb(38, 45, 59);
+    --color-surface-deep: rgb(61, 77, 103);
 
     --color-white: #fff;
     --color-black: #000;
@@ -511,37 +513,120 @@ main {
         }
     }
 
+}
 
+
+
+#main-content.product-or-service {
+
+    // Overrides from Design Team
+    padding-inline: 2rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2rem;
+    max-width: 80rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+
+
+    h1, h1 ~ p {
+        grid-column: 1/4;
+    }
+
+    h1 ~ p {
+        margin: 0;
+        padding: 0;
+
+        margin-bottom: 2rem;
+        margin-top: 1.25rem;
+        max-width: 50.313rem;
+
+        a {
+            .web-body-small();
+            color: var(--colour-ti-highlight);
+
+            // Overrides from Design Team
+            font-size: 0.75rem;
+            line-height: 1rem;
+            text-decoration-thickness: 13%;
+            text-underline-offset: 25%;
+
+            &::after {
+                content: " \2192";
+                display: inline-block;
+                margin-left: 0.25rem;
+                letter-spacing: -2px;
+                vertical-align: middle;
+            }
+
+        }
+    }
+
+    h1 ~ p:last-of-type {
+        padding-block-end: 2.25rem;
+    }
+
+    // These are desktop styles for the feature cards
     .product-roadmap {
         @media (min-width: @desktop-breakpoint) {
             display: grid;
-            grid-template-columns: 26rem auto 1fr;
             align-items: start;
-            row-gap: 2rem;
             max-width: @xl;
-            padding-left: 5rem;
 
+            // Supplied by Design
+            grid-template-columns: 14.5rem 1fr;
+            padding-inline: 3.75rem 6.438rem;
+            margin-top: 2.25rem;
+            column-gap: 1rem;
+            row-gap: 2.25rem;
 
-            // h1:first-of-type,
-            p {
-                grid-column: 1/-1;
-                margin-bottom: 1rem;
-            }
-
-            // h1:not(:first-of-type) {
-            h1 {
+            h2 {
                 grid-column: 1;
+                font-family: metropolis;
+                font-weight: 300;
+                font-size: 2.25rem;
+                line-height: 120%;
+                letter-spacing: -0.025rem;
                 margin: 0;
-                margin-left: 5rem;
+
             }
             ul {
                 grid-column: 3;
                 margin: 0;
+                max-width: 52.313rem;
             }
 
             ul + h1 {
                 // margin-top: 2rem;
             }
+
+            li {
+                box-sizing: border-box;
+                padding-inline: 1rem;
+                padding-block: 0.688rem 0.438rem;
+                font-weight: 400;
+                background-color: var(--color-surface-raised);
+
+                &:has(.text) {
+                    padding-bottom: 1rem;
+                }
+
+                .date-badge {
+                    border-radius: 4rem;
+                    background-color: var(--color-surface-deep);
+                    width: fit-content;
+                    padding-inline: 0.75rem;
+                    padding-block-end: 0.188rem;
+                }
+                .date-badge .text{
+                    margin: auto;
+                    font-size: 0.6875rem;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
         }
     }
+
 }

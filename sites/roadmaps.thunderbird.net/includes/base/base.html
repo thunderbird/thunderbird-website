@@ -61,7 +61,9 @@
     {% include 'includes/base/tab-navigation-bar.html' %}
     {% block site_nav %}{% endblock %}
     <main>
-      <div id="main-content">
+      <div id="main-content"
+           class="{% block main_content_classes %}{% endblock %}"
+      >
       {% block content %}{% endblock %}
       </div>
 
