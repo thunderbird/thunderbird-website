@@ -25,9 +25,21 @@
     {% endblock shared_meta %}
 
     <link href="{{ static('css/normalize.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ static('css/bolt-webcomponents.css') }}" rel="stylesheet" type="text/css" />
 
     {% block base_css %}
     <link href="{{ static('css/roadmaps.css') }}" rel="stylesheet" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
     {% endblock %}
 
     {% block extra_css %}
@@ -60,15 +72,14 @@
     {% include 'includes/base/tab-navigation-bar.html' %}
     {% block site_nav %}{% endblock %}
     <main>
-      <div id="main-content">
+      <div id="main-content"
+           class="{% block main_content_classes %}{% endblock %}"
+      >
       {% block content %}{% endblock %}
       </div>
 
-      <div id="donation">
-        <p>Fund the work behind these roadmaps.</p>
-        <a href="">Donate Now</a>
-        <span class="donation-icon"></span>
-      </div>
+      {% block pre_footer %}
+      {% endblock %}
 
     </main>
 
@@ -81,6 +92,15 @@
     <script type="text/javascript" src="{{ static('js/roadmaps-bundle.js') }}" charset="utf-8"></script>
     <script>
       (function (){
+        // Handle light/dark mode preference
+        const browserPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (browserPrefersDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+
         // Allow page to show hamburger menu.
         document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, "js");
 

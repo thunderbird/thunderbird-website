@@ -10,34 +10,60 @@
 
     {{ _('Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.')}}
 
-    <a href="{{ url('roadmaps.desktop') }}">View roadmap</a>
+    <bolt-primary-button
+      variant="outline"
+      href="{{ url('roadmaps.desktop') }}">
+      View roadmap
+    </bolt-primary-button>
   </li>
   <li class="card card-icon card-android">
     <strong>
         {{ _('Android')}}
     </strong>
 
-    {{ _('Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.')}}
 
-    <a href="{{ url('roadmaps.android') }}">View roadmap</a>
+    {{ _('A transparent view of upcoming Android features and improvements. Track progress by milestone.')}}
+
+    <bolt-primary-button
+      variant="outline"
+      href="{{ url('roadmaps.android') }}">
+      View roadmap
+    </bolt-primary-button>
   </li>
   <li class="card card-icon card-ios">
     <strong>
         {{ _('iOS')}}
     </strong>
 
-    {{ _('Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.')}}
+    {{ _('Priorities for performance, accessibility, and a gesture-first mobile UX on iPhone and iPad.')}}
 
-    <a href="{{ url('roadmaps.ios') }}">View roadmap</a>
+    <bolt-primary-button
+      variant="outline"
+      href="{{ url('roadmaps.ios') }}">
+      View roadmap
+    </bolt-primary-button>
   </li>
   <li class="card card-icon card-services">
     <strong>
         {{ _('Services')}}
     </strong>
 
-    {{ _('Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.')}}
+    {{ _('')}}
 
-    <a href="{{ url('roadmaps.services') }}">View roadmap</a>
+    <bolt-primary-button
+      variant="outline"
+      href="{{ url('roadmaps.services') }}">
+      View roadmap
+    </bolt-primary-button>
   </li>
 </ul>
+{% endblock %}
+
+
+{% block pre_footer %}
+<div id="donation">
+  <p>Fund the work behind these roadmaps.</p>
+  <a href="">Donate Now</a>
+  <span class="donation-icon"></span>
+</div>
 {% endblock %}

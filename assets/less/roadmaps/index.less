@@ -11,16 +11,16 @@
 
 // Shared styles
 @import "../common/fonts.less";
-
-// Hover effects not working?
-// @import "../common/colours.less";
-// @import "../common/buttons.less";
 @import "../common/breakpoints.less";
 @import "../common/space.less";
 @import "../common/fonts.less";
 @import "../common/tab-navigation-bar.less";
 @import "../common/common-footer.less";
 @import "../common/tb-footer.less";
+
+
+// Per Sol's recommended tweaks 2026-03-02
+@max-width:     76rem;        // 1216px
 
 
 // Variables
@@ -31,6 +31,8 @@
     --colour-surface-base: #1a202c;
     --colour-surface-border: #3d4d67;
     --colour-surface-lower: #18181b;
+    --color-surface-raised: rgb(38, 45, 59);
+    --color-surface-deep: rgb(61, 77, 103);
 
     --color-white: #fff;
     --color-black: #000;
@@ -55,15 +57,10 @@
 // Lifted from layout.less
 body {
 
-    .mixin-font-styles(
-        @family-inter,
-        var(--font-body),
-        300,
-        1.5
-    );
-
-    line-height: 1.5;
+    font-family: @family-inter;
     font-weight: 300;
+    line-height: 1.5;
+
     background: var(--colour-surface-lower);
     color: var(--txt);
     position: relative;
@@ -269,7 +266,7 @@ a {
     }
 
     @media (max-width: @md) {
-        // Give them some space to breath
+        // Give them some space to breathe
         width: calc(100% - 1rem);
         box-sizing: border-box;
     }
@@ -318,14 +315,23 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+
+    // Overrides from Design Team
+    line-height: 1.23;
+
+
     p {
         margin: 0;
     }
     a {
         .web-body-xsmall();
         color: var(--colour-text-icon-highlight);
+
+        // Overrides from Design Team
+        line-height: normal;
     }
     .donation-icon  {
         display: inline-block;
@@ -336,17 +342,54 @@ main {
     }
 }
 
+#roadmaps-site-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 3.25rem;
+
+
+    h4 {
+        .desktop-title-medium();
+        margin-bottom: 1.0rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+
+        a {
+            .web-body-xsmall();
+
+            &.active {
+                text-decoration: none;
+                cursor: unset;
+            }
+        }
+    }
+}
+
+
 #main-content {
     .web-body-default();
     @media (min-width: @tablet-breakpoint) {
         .web-body-large();
+
+        // Overrides from Design Team
+        font-weight: 400;
+        line-height: 1.75rem;
     }
 
     margin: 0 auto;
-    max-width: @xl;
+    max-width: @max-width;
 
-    padding-block: 1.5rem;
-    padding-inline: 1rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2rem;
+
+    padding-inline: 2rem;
 
     // Page heading
     h1 {
@@ -356,12 +399,20 @@ main {
         padding: 0;
         @media (min-width: @tablet-breakpoint) {
             .brand-headline-h1-lg();
+            // Overrides from Design Team
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -0.03rem;
         }
     }
 
     // The paragraph immediately following
     h1 + p {
         margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-top: 1.25rem;
+        max-width: 50.313rem; // ~800px
+
     }
 
     h1 + ul {
@@ -403,33 +454,28 @@ main {
         column-gap: 1rem;
         row-gap: 0.5rem;
 
-        padding-block: 0.75rem 1rem;
-        padding-inline: 0.75rem;
+        box-sizing: border-box;
+        padding-inline: 1rem;
+        padding-block: 1rem 1.5rem;
+        min-height: 10.563rem;
+
 
         strong {
             .web-title-small();
             display: block;
             @media (min-width: @tablet-breakpoint) {
                 .web-title-medium();
+
+                // Override per Design Team
+                line-height: normal;
             }
         }
 
-        // Note: this should be put into bolt.
-        // Needs hover/active/etc. states.
-        a {
-            .web-body-small();
-
-            display: inline-block;
+        // Additional styles for the Bolt web-components
+        bolt-primary-button {
             justify-self: start;
             margin-top: 0.25rem;
-            border: 1px solid var(--colour-primary-default);
-            border-radius: 0.5rem;
-            color: var(--colour-primary-default);
-            display: inline-block;
-            justify-self: start;
-            text-decoration: none;
             padding-block: 0.84375rem;
-            padding-inline: 1rem;
         }
     }
 
@@ -437,18 +483,9 @@ main {
     .card-container {
         @media (min-width: @tablet-breakpoint) {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            // grid-auto-rows: minmax(400px, auto);
-        }
-
-        @media (min-width: @desktop-breakpoint) {
             grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
         }
-        @media (min-width: @extrawide-breakpoint) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
     }
 
 
@@ -463,7 +500,7 @@ main {
     }
 
     .card-icon {
-        grid-template-columns: 1rem 1fr;
+        grid-template-columns: 1.5rem 1fr;
         &::before {
             content: "";
             height: 1.5rem;
@@ -472,7 +509,6 @@ main {
             grid-column: 1;
             grid-row: 1 / span 3;
             align-self: start;
-            justify-self: center;
             background-color: var(--colour-primary-default);
 
             // These properties let us change the color
@@ -508,37 +544,127 @@ main {
         }
     }
 
+}
 
+
+
+#main-content.product-or-service {
+
+    // Overrides from Design Team
+    padding-inline: 2rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2rem;
+    max-width: 80rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+
+
+    h1, h1 ~ p {
+        grid-column: 1/4;
+    }
+
+    h1 ~ p {
+        margin: 0;
+        padding: 0;
+
+        margin-bottom: 2rem;
+        margin-top: 1.25rem;
+        max-width: 50.313rem;
+
+        a {
+            .web-body-small();
+            color: var(--colour-ti-highlight);
+
+            // Overrides from Design Team
+            font-size: 0.75rem;
+            line-height: 1rem;
+            text-decoration-thickness: 13%;
+            text-underline-offset: 25%;
+
+            &::after {
+                content: " \2192";
+                display: inline-block;
+                margin-left: 0.25rem;
+                letter-spacing: -2px;
+                vertical-align: middle;
+            }
+
+        }
+    }
+
+    h1 ~ p:last-of-type {
+        padding-block-end: 2.25rem;
+    }
+
+    // These are desktop styles for the feature cards
     .product-roadmap {
         @media (min-width: @desktop-breakpoint) {
             display: grid;
-            grid-template-columns: 26rem auto 1fr;
             align-items: start;
-            row-gap: 2rem;
             max-width: @xl;
-            padding-left: 5rem;
 
+            // Supplied by Design
+            grid-template-columns: 14.5rem 1fr;
+            padding-inline: 3.75rem 6.438rem;
+            margin-top: 2.25rem;
+            column-gap: 1rem;
+            row-gap: 2.25rem;
 
-            // h1:first-of-type,
-            p {
-                grid-column: 1/-1;
-                margin-bottom: 1rem;
-            }
+            // Prevents h2 from stretching to full height
+            align-items: start;
 
-            // h1:not(:first-of-type) {
-            h1 {
+            h2 {
+                position: sticky;
+                top: 100px;
+                background: var(--colour-surface-lower);
+
                 grid-column: 1;
+                font-family: metropolis;
+                font-weight: 300;
+                font-size: 2.25rem;
+                line-height: 120%;
+                letter-spacing: -0.025rem;
                 margin: 0;
-                margin-left: 5rem;
+
             }
             ul {
                 grid-column: 3;
                 margin: 0;
+                max-width: 52.313rem;
             }
 
             ul + h1 {
                 // margin-top: 2rem;
             }
+
+            li {
+                box-sizing: border-box;
+                padding-inline: 1rem;
+                padding-block: 0.688rem 0.438rem;
+                font-weight: 400;
+                background-color: var(--color-surface-raised);
+
+                &:has(.text) {
+                    padding-bottom: 1rem;
+                }
+
+                .date-badge {
+                    border-radius: 4rem;
+                    background-color: var(--color-surface-deep);
+                    width: fit-content;
+                    padding-inline: 0.75rem;
+                    padding-block-end: 0.188rem;
+                }
+                .date-badge .text{
+                    margin: auto;
+                    font-size: 0.6875rem;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
         }
     }
+
 }

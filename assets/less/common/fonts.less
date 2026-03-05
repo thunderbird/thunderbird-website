@@ -25,37 +25,38 @@
 // Brand Typography from https://bolt.thunderbird.net/8b179dbfd/p/815438-typography
 .brand-display-lg() {
     .mixin-font-styles(
-        @family-metropolis,
-        300,
-        4.5rem,
-        1.1
+        @family: @family-metropolis,
+        @weight: 200,
+        @size: 4.5rem,
+        @line-height: 1.1
     );
 }
 
 .brand-display-xs() {
     .mixin-font-styles(
-        @family-metropolis,
-        300,
-        2rem
+        @family: @family-metropolis,
+        @weight: 300,
+        @size: 2rem,
+        @letter-spacing: 0
     );
 }
 
 .brand-headline-h1-lg() {
     .mixin-font-styles(
-        @family-metropolis,
-        400,
-        3rem,
-        1.2,
-        -0.5px
+        @family: @family-metropolis,
+        @weight: 300,
+        @size: 3rem,
+        @line-height: 1.2,
+        @letter-spacing: -0.5px
     );
 }
 
 .brand-headline-h1-sm() {
     .mixin-font-styles(
-        @family-metropolis,
-        lighter,
-        2rem, // 32px
-        1.2
+        @family: @family-metropolis,
+        @weight: 300,
+        @line-height: 2rem,
+        @letter-spacing: 0
     );
 }
 
@@ -71,13 +72,24 @@
 
 .brand-headline-h2-lg() {
     .mixin-font-styles(
-        @family-metropolis,
-        300,
-        2.25rem,
-        1.2,
-        -0.4px
+        @family: @family-metropolis,
+        @weight: 300,
+        @size: 2.25rem,
+        @line-height: 1.2,
+        @letter-spacing: -0.4px
     );
 }
+
+.brand-headline-h2-sm() {
+    .mixin-font-styles(
+        @family: @family-metropolis,
+        @weight: 300,
+        @size: 1.5rem,
+        @line-height: 1.1,
+        @letter-spacing: 0
+    );
+}
+
 
 .brand-headline-h2-xs() {
     .mixin-font-styles(
@@ -90,19 +102,21 @@
 
 .brand-headline-h3-lrg() {
     .mixin-font-styles(
-        @family-metropolis,
-        500,
-        1.5rem,
-        1.2
+        @family: @family-metropolis,
+        @weight: 500,
+        @size: 1.5rem,
+        @line-height: 1.2,
+        @letter-spacing: 0
     );
 }
 
 .brand-headline-h3-sm() {
     .mixin-font-styles(
-        @family-metropolis,
-        500,
-        1.25rem,
-        1.2
+        @family: @family-metropolis,
+        @weight: 500,
+        @size: 1.25rem,
+        @line-height: 1.2,
+        @letter-spacing: 0
     );
 }
 
@@ -118,59 +132,60 @@
 
 .brand-headline-h4() {
     .mixin-font-styles(
-        @family-metropolis,
-        500,
-        1rem,
-        1.2
+        @family: @family-metropolis,
+        @weight: 500,
+        @size: 1rem,
+        @line-height: 1.2,
+        @letter-spacing: 0
     );
 }
 
 .brand-headline-h5() {
     .mixin-font-styles(
-        @family-metropolis,
-        600,
-        0.875rem,
-        1.2,
-        0.4px
+        @family: @family-metropolis,
+        @weight: 600,
+        @size: 0.875rem,
+        @line-height: 1.2,
+        @letter-spacing: 0.4px
     );
 }
 
 .brand-eyebrow-lrg() {
     .mixin-font-styles(
-        @family-metropolis,
-        500,
-        0.875rem,
-        1,
-        0.4px
+        @family: @family-metropolis,
+        @weight: 500,
+        @size: 0.875rem,
+        @line-height: 1,
+        @letter-spacing: 0.4px
     );
 }
 
 .brand-eyebrow-xs() {
     .mixin-font-styles(
-        @family-metropolis,
-        500,
-        0.75rem,
-        1,
-        0.4px
+        @family: @family-metropolis,
+        @weight: 500,
+        @size: 0.75rem,
+        @line-height: 1,
+        @letter-spacing: 0.4px
     );
 }
 
 .brand-list-indicator-lg() {
     .mixin-font-styles(
-        @family-metropolis,
-        600,
-        1.5rem,
-        1.2
+        @family: @family-metropolis,
+        @weight: 600,
+        @size: 1.5rem,
+        @line-height: 1.2
     );
 }
 
 .brand-label-navigation() {
     .mixin-font-styles(
-        @family-metropolis,
-        600,
-        0.8125rem,
-        1,
-        0.7px
+        @family: @family-metropolis,
+        @weight: 600,
+        @size: 0.8125rem,
+        @line-height: 1,
+        @letter-spacing: 0.7px
     );
 }
 
@@ -178,100 +193,156 @@
 // Web Typography from https://bolt.thunderbird.net/8b179dbfd/p/815438-typography
 .web-title-large() {
     .mixin-font-styles(
-        @family-inter,
-        700,
-        2rem
+        @family: @family-inter,
+        @weight: 700,
+        @size: 2.25rem,
+        @line-height: 1,
+        @letter-spacing: 0
     );
 }
 
 
 .web-title-default() {
     .mixin-font-styles(
-        @family-inter,
-        400,
-        1.5rem
+        @family: @family-inter,
+        @weight: 400,
+        @size: 1.5rem,
+        @line-height: 1,
+        @letter-spacing: 0
     );
 }
 
 .web-title-medium() {
     .mixin-font-styles(
-        @family-inter,
-        600,
-        1.25rem
+        @family: @family-inter,
+        @weight: 600,
+        @size: 1.25rem,
+        @line-height: 1,
+        @letter-spacing: 0
     );
 }
 
 .web-title-small() {
     .mixin-font-styles(
-        @family-inter,
-        600,
-        1rem
+        @family: @family-inter,
+        @weight: 600,
+        @size: 1rem,
+        @line-height: 1,
+        @letter-spacing: 0
     );
 }
 
 
 .web-body-x-lg() {
     .mixin-font-styles(
-        @family-inter,
-        300,
-        1.75rem,
-        1.36,
-        -0.3px
+        @family: @family-inter,
+        @weight: 300,
+        @size: 1.75rem,
+        @line-height: 1.36,
+        @letter-spacing: -0.3px
     );
 }
 
 .web-body-large() {
     .mixin-font-styles(
-        @family-inter,
-        300,
-        1.25rem,
-        28px
+        @family: @family-inter,
+        @weight: 400,
+        @size: 1.25rem,
+        @line-height: 1.75,
+        @letter-spacing: 0
     );
 }
 
 
 .web-body-default() {
     .mixin-font-styles(
-        @family-inter,
-        300,
-        1rem,
-        1.32
+        @family: @family-inter,
+        @weight: 400,
+        @size: 1rem,
+        @line-height: 1.32,
+        @letter-spacing: 0
     );
 }
 
 .web-body-medium() {
     .mixin-font-styles(
-        @family-inter,
-        400,
-        0.9375rem,
-        1.32
+        @family: @family-inter,
+        @weight: 400,
+        @size: 0.9375rem,
+        @line-height: 1.32,
+        @letter-spacing: 0
     );
 }
 
 .web-body-small() {
     .mixin-font-styles(
-        @family-inter,
-        400,
-        0.875rem
+        @family: @family-inter,
+        @weight: 400,
+        @size: 0.875rem,
+        @line-height: 1,
+        @letter-spacing: 0
     );
 }
 
 .web-body-xsmall() {
     .mixin-font-styles(
-        @family-inter,
-        400,
-        0.75rem
+        @family: @family-inter,
+        @weight: 400,
+        @size: 0.75rem,
+        @line-height: 1,
+        @letter-spacing: 0
     );
 }
 
 .web-body-micro() {
     .mixin-font-styles(
-        @family-inter,
-        400,
-        0.6875rem
+        @family: @family-inter,
+        @weight: 400,
+        @size: 0.6875rem,
+        @line-height: 1,
+        @letter-spacing: 0
     );
 }
 
+.web-label-medium() {
+    .mixin-font-styles(
+        @family: @family-inter,
+        @weight: 600,
+        @size: 1rem,
+        @line-height: 1,
+        @letter-spacing: 0.5px
+    );
+}
+
+.web-label-default() {
+    .mixin-font-styles(
+        @family: @family-inter,
+        @weight: 400,
+        @size: 0.875rem,
+        @line-height: 1,
+        @letter-spacing: 0.4px
+    );
+}
+
+.web-label-small() {
+    .mixin-font-styles(
+        @family: @family-inter,
+        @weight: 600,
+        @size: 0.8125rem,
+        @line-height: 1,
+        @letter-spacing: 0.4px
+    );
+}
+
+.web-label-xsmall() {
+    .mixin-font-styles(
+        @family: @family-inter,
+        @weight: 600,
+        @size: 0.6875rem,
+        @line-height: 1,
+        @letter-spacing: 0.3px
+    );
+}
 
 
 // These are from Zeplin, not in design system
@@ -360,5 +431,15 @@
         0.8125rem,
         1,
         0.05em
+    );
+}
+
+.desktop-title-medium() {
+    .mixin-font-styles(
+        @family: @family-inter,
+        @weight: 400,
+        @size: 1.25rem,
+        @line-height: 1,
+        @letter-spacing: 0
     );
 }
