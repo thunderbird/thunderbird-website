@@ -16,6 +16,7 @@ ARG REPO_BRANCH=master
 # Install packages (python3.11 for building, python3 for mod_wsgi runtime)
 RUN dnf install -y epel-release \
     && dnf config-manager --set-enabled crb \
+    && dnf module enable nodejs:22 -y \
     && dnf install -y httpd mod_ssl python3 python3-pip python3-mod_wsgi python3-libs python3.11 python3.11-pip git npm \
     && dnf clean all
 
@@ -47,6 +48,8 @@ RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/aut
 COPY docker/scripts/update-autoconfig.sh /var/www/autoconfig.momo/update.sh
 RUN chmod +x /var/www/autoconfig.momo/update.sh && /var/www/autoconfig.momo/update.sh
 
+COPY --from=ghcr.io/astral-sh/uv:0.8.22@sha256:ae1ba4db410fbe1d9eaf16c51add8e7608b271ebbb69bd58a56e80384fd190aa /uv /usr/local/bin/uv
+
 COPY docker/conf/ssl.conf /etc/httpd/conf.d/ssl.conf
 COPY docker/docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
@@ -58,31 +61,21 @@ RUN chmod +x /docker-entrypoint.sh
 # Copy source files (needed for local builds)
 COPY . /build/
 
-# For local builds: build the websites from source using a venv
+# For local builds: build the websites from source using uv
 RUN if [ "$BUILD_ENV" = "local" ]; then \
       echo "BUILD_ENV=local - building websites from source..." \
       && cd /build \
-      && mkdir -p libs \
-      && git clone --depth 1 https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale \
-      && git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details \
-      && git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes \
-      && git clone --depth 1 https://github.com/thunderbird/roadmaps-overview.git libs/thunderbird_roadmaps \
-      && npm install -g less@4.1.3 \
-      && python3.11 -m venv /build/venv \
-      && /build/venv/bin/pip install --upgrade pip \
-      && /build/venv/bin/pip install -r requirements-dev.txt \
-      && /build/venv/bin/python build-site.py \
-      && /build/venv/bin/python build-site.py --startpage \
-      && /build/venv/bin/python build-site.py --updates \
-      && /build/venv/bin/python build-site.py --tbpro \
-      && /build/venv/bin/python build-site.py --roadmaps \
-      && cp -r /build/dist/www.thunderbird.net /var/www/html/start/thunderbird.net \
+      && uv sync --frozen \
+      && uv run pull-libs.py --skip-sync \
+      && uv run build-site.py \
+      && uv run build-site.py --startpage \
+      && uv run build-site.py --updates \
+      && uv run build-site.py --tbpro \
+      && uv run build-site.py --roadmaps \
+      && cp -r /build/dist/www.thunderbird.net  /var/www/html/start/thunderbird.net \
       && cp -r /build/dist/start.thunderbird.net /var/www/html/start/site \
-      && cp -r /build/dist/updates.thunderbird.net /var/www/html/start/updates.thunderbird.net \
-      && cp -r /build/dist/tb.pro /var/www/html/start/tb.pro \
-      && cp -r /build/dist/roadmaps.thunderbird.net /var/www/html/start/roadmaps.thunderbird.net \
-      && cp /build/wsgi.py /var/www/html/start/wsgi.py \
-      && cp /build/settings.py /var/www/html/start/settings.py \
+      && cp -r /build/dist/updates.thunderbird.net /build/dist/tb.pro /build/dist/roadmaps.thunderbird.net /var/www/html/start/ \
+      && cp /build/wsgi.py /build/settings.py /var/www/html/start/ \
       && cp -r /build/media /var/www/html/start/thunderbird.net/media \
       && echo "Done building websites"; \
     fi

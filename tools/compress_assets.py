@@ -1,5 +1,5 @@
 """
-Make sure to install requirements-image.txt!
+Make sure to run `uv sync --group image` first!
 """
 import argparse
 import os
