@@ -357,23 +357,46 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0.75rem;
     margin-bottom: 1.5rem;
-    padding-bottom: 3.25rem;
+    padding-bottom: 2.25rem;
+
+    @media (min-width: @desktop-breakpoint) {
+        margin-top: 0.75rem;
+        padding-bottom: 3.25rem;
+    }
 
 
     h4 {
         .desktop-title-medium();
-        margin-bottom: 1.0rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+
+        @media (min-width: @desktop-breakpoint) {
+            margin-bottom: 1.0rem;
+        }
+
+
     }
 
     div {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 1.25rem;
+
+        @media (min-width: @desktop-breakpoint) {
+            flex-direction: row;
+            gap: 1.25rem;
+
+        }
+
 
         a {
             .web-body-xsmall();
+            display: block;
+            @media (min-width: @desktop-breakpoint) {
+                display: inline-block;
+            }
+
 
             &.active {
                 text-decoration: none;
@@ -586,30 +609,13 @@ main {
 #main-content.product-or-service {
 
     // Overrides from Design Team
-    padding-inline: 2rem;
-    padding-top: 2.25rem;
-    padding-bottom: 2rem;
-    max-width: 80rem;
     font-weight: 400;
     line-height: 1.75rem;
-
-
-    // h1, h1 ~ p {
-    //     grid-column: 1/4;
-    // }
-
-    // h1 ~ p {
-    //     margin: 0;
-    //     padding: 0;
-
-    //     margin-bottom: 2rem;
-    //     margin-top: 1.25rem;
-    //     max-width: 50.313rem;
-
-    // }
-
-    h1 ~ p:last-of-type {
-        padding-block-end: 2.25rem;
+    @media (min-width: @desktop-breakpoint) {
+        padding-inline: 2rem;
+        padding-top: 2.25rem;
+        padding-bottom: 2rem;
+        max-width: 80rem;
     }
 
     i.ph {
@@ -631,11 +637,24 @@ main {
     .product-roadmap {
 
         .product-roadmap-header {
-            padding-inline: 2rem;
+
+            margin-bottom: 1.5rem;
+
+            @media (min-width: @desktop-breakpoint) {
+                padding-inline: 2rem;
+                margin-bottom: 0;
+            }
 
             p {
+                .web-body-default();
                 margin: 0;
-                margin-top: 1.25rem;
+                line-height: 1.32;
+                margin-top: 1rem;
+
+                @media (min-width: @desktop-breakpoint) {
+                    margin-top: 1.25rem;
+                }
+
             }
 
             a {
@@ -655,6 +674,40 @@ main {
                     letter-spacing: -2px;
                     vertical-align: middle;
                 }
+            }
+        }
+
+        h2 {
+            .brand-headline-h2-sm();
+            margin: 0;
+            margin-bottom: 1.5rem;
+
+            @media (min-width: @desktop-breakpoint) {
+                position: sticky;
+                top: 100px;
+                background: var(--colour-surface-lower);
+
+                grid-column: 1;
+                font-family: metropolis;
+                font-weight: 300;
+                font-size: 2.25rem;
+                line-height: 120%;
+                letter-spacing: -0.025rem;
+
+                padding-left: 5.75rem;
+                margin-bottom: 0;
+            }
+        }
+
+        ul + h2 {
+            margin-top: 2.75rem;
+        }
+
+        li {
+            min-height: auto;
+
+            strong {
+                margin-bottom: .5rem;
             }
         }
 
@@ -678,21 +731,6 @@ main {
             // Prevents h2 from stretching to full height
             align-items: start;
 
-            h2 {
-                position: sticky;
-                top: 100px;
-                background: var(--colour-surface-lower);
-
-                grid-column: 1;
-                font-family: metropolis;
-                font-weight: 300;
-                font-size: 2.25rem;
-                line-height: 120%;
-                letter-spacing: -0.025rem;
-                margin: 0;
-
-                padding-left: 5.75rem;
-            }
             ul {
                 grid-column: 2;
                 margin: 0;
