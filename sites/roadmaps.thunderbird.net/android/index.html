@@ -1,8 +1,11 @@
 {% extends "includes/base/product-or-service.html" %}
 {% block roadmap_content %}
+<div class="product-roadmap-header">
 <h1>Android Roadmap</h1>
 <p>Thunderbird for Android. Follow the roadmap from active work to to future ideas. Timelines may shift as we learn and iterate.</p>
-<p>Download Thunderbird for Android - <a href="https://play.google.com/store/apps/details?id=net.thunderbird.android&amp;hl=en_US">Google Play Store</a>, <a href="https://f-droid.org/en/packages/net.thunderbird.android/">F-Droid</a></p>
+<p><a href="https://www.thunderbird.net/en-US/thunderbird/all/#select-download-mobile">Download Thunderbird for Android</a></p>
+</div>
+
 <h2><i class="ph ph-pulse"></i> Active</h2>
 <ul>
 <li><strong>Rearchitecture and Core Maintenance</strong> Modernize the source code that we inherited from K9, tackle the most glaring maintenance and stability issues, and restructure the core architecture for faster and easier development.</li>
@@ -13,7 +16,7 @@
 <li><strong>Message List Improvements</strong> Users spend most of their time on the message list, waiting for messages to load, scrolling to find messages, and quickly interacting with them through swipe actions. This effort is aimed at improving this primary view and addressing all major concerns.</li>
 <li><strong>HTML Signature</strong> Give users a way to set HTML signatures. This is a long time requested feature that alongside Sync will strengthen the continuity between our apps and the first step towards a working ecosystem.</li>
 </ul>
-<h2><i class="ph ph-rocket-launch"></i> Launched</h2>
+<h2><i class="ph ph-rocket-launch"></i> Shipped</h2>
 <ul>
 <li><strong>CASA Approval</strong> Complete the Cloud Application Security Assessment (CASA)</li>
 </ul>{{ super() }}

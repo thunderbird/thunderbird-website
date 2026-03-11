@@ -1,7 +1,10 @@
 {% extends "includes/base/product-or-service.html" %}
 {% block roadmap_content %}
-<h1>iOS Roadmap</h1>
-<p>Thunderbird for iOS. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.</p>
+<div class="product-roadmap-header">
+  <h1>iOS Roadmap</h1>
+  <p>Thunderbird for iOS. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.</p>
+</div>
+
 <h2><i class="ph ph-pulse"></i> Active</h2>
 <ul>
 <li><strong>Account Creation Flow</strong> Implement a full automated and manual setup, including autodiscovery and OAuth.</li>
@@ -13,7 +16,7 @@
 <li><strong>JMAP Support</strong> Support the JMAP protocol as one of the first extra protocols we ship with by default outside of IMAP.</li>
 <li><strong>HTML Signatures</strong> A long time requested feature that alongside Sync will strengthen the continuity between our apps and the first step towards a working ecosystem.</li>
 </ul>
-<h2><i class="ph ph-rocket-launch"></i> Launched</h2>
+<h2><i class="ph ph-rocket-launch"></i> Shipped</h2>
 <ul>
 <li><strong>Architecture</strong> Establish a robust and scalable architecture to begin the Thunderbird for iOS project and create the backend. This architecture will include strategies for code sharing across platforms, taking into account the Android and Desktop clients.</li>
 <li><strong>Autoconfiguration</strong> Add DNS MX lookup to autoconfig feature library and move SRV record lookup into autoconfig feature library and delete Autodiscover core library</li>

@@ -1,8 +1,11 @@
 {% extends "includes/base/product-or-service.html" %}
 {% block roadmap_content %}
-<h1>Desktop Roadmap</h1>
-<p>Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.</p>
-<p><a href="https://www.thunderbird.net/en-US/thunderbird/all/">Download Thunderbird for desktop</a></p>
+<div class="product-roadmap-header">
+  <h1>Desktop Roadmap</h1>
+  <p>Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.</p>
+  <p><a href="https://www.thunderbird.net/en-US/thunderbird/all/#select-download-desktop">Download Thunderbird for desktop</a></p>
+</div>
+
 <h2><i class="ph ph-pulse"></i> Active</h2>
 <ul>
 <li><strong>Exchange (EWS, GraphAPI)</strong> Finalize the work on the Exchange protocol in order to support all versions of Exchange and Microsoft 365, including calendar and address book support.</li>
@@ -16,12 +19,12 @@
 <li><strong>Settings Interface Improvements</strong> Clean up and reorganize the settings into more discoverable sections and improve its search.</li>
 <li><strong>Encryption and Security Improvements</strong> Improve the support and discovery of OpenPGP and S/MIME, improve email tracking protection, and harden phishing email prevention.</li>
 </ul>
-<h2><i class="ph ph-rocket-launch"></i> Launched</h2>
+<h2><i class="ph ph-rocket-launch"></i> Shipped</h2>
 <ul>
-<li><strong>Exchange Email Support</strong>  Full support of email operations and account creation. <div class="date-badge"> <a class="text" href="https://support.mozilla.org/en-US/kb/thunderbird-and-exchange">November 2025</a> </div></li>
-<li><strong>Native OS Notifications</strong> Add quick actions to reply, delete, mark messages as read/unread, and manage the notifications. <div class="date-badge"> <a class="text" href="https://blog.thunderbird.net/2025/08/monthly-release-141-recap/">July 2025</a> </div></li>
-<li><strong>Implement Glean Telemetry</strong> Move away from the old telemetry implementation and add the new Glean Telemetry. <div class="date-badge"> <a class="text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1899602">April 2025</a> </div></li>
-<li><strong>In-App Notifications</strong> Implement a new notification system that allows the Thunderbird team to push important, time-sensitive information directly to a user's Thunderbird desktop client. <div class="date-badge"> <a class="text" href="https://support.mozilla.org/en-US/kb/notifications-thunderbird">May 2025</a> </div></li>
+<li><strong>Exchange Email Support</strong>  Full support of email operations and account creation. <div class="date-badge">November 2025</div></li>
+<li><strong>Native OS Notifications</strong> Add quick actions to reply, delete, mark messages as read/unread, and manage the notifications. <div class="date-badge">July 2025</div></li>
+<li><strong>Implement Glean Telemetry</strong> Move away from the old telemetry implementation and add the new Glean Telemetry. <div class="date-badge">April 2025</div></li>
+<li><strong>In-App Notifications</strong> Implement a new notification system that allows the Thunderbird team to push important, time-sensitive information directly to a user's Thunderbird desktop client. <div class="date-badge">May 2025</div></li>
 </ul>{{ super() }}
 
 {% endblock %}
