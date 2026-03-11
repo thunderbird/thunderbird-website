@@ -8,8 +8,13 @@
 <script>
   const PREFIX = /^www[.-]/;
   const stageHosts = {{ settings.STAGE_HOSTS|tojson|safe }};
+  let roadmapsHosts = {{ settings.ROADMAPS_HOSTS|tojson|safe }};
+  let wwwHosts = {{ settings.WWW_HOSTS|tojson|safe }};
   const currentHost = window.location.hostname.replace(PREFIX, '');
   const isStage = stageHosts.includes(currentHost);
+
+  roadmapsHosts = roadmapsHosts.map((host) => host.replace(PREFIX, ''));
+  wwwHosts = wwwHosts.map((host) => host.replace(PREFIX, ''));
 
   if (isStage) {
     // Replace with stage.* URLs
@@ -21,8 +26,11 @@
   // Set .active class accordingly.
   document.querySelectorAll('#tab-navigation-bar a').forEach(link => {
     const linkHost = new URL(link.href).hostname.replace(PREFIX, '');
+    const isRoadmaps = roadmapsHosts.includes(currentHost) && wwwHosts.includes(linkHost);
 
-    if (linkHost === currentHost) {
+    // Highlight link for matching site.
+    // Force-highlight www link for roadmaps site.
+    if ((linkHost === currentHost) || isRoadmaps) {
       link.classList.add('active');
       link.addEventListener('click', (e) => {
         e.preventDefault();
