@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="other x86 no-js page-{{ active_page|default('not-set') }}" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+<html class="dark other x86 no-js page-{{ active_page|default('not-set') }}" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
   <head>
     <meta charset="utf-8">{# Note: Must be within first 512 bytes of page #}
 
@@ -92,15 +92,6 @@
     <script type="text/javascript" src="{{ static('js/roadmaps-bundle.js') }}" charset="utf-8"></script>
     <script>
       (function (){
-        // Handle light/dark mode preference
-        const browserPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        if (browserPrefersDark) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-
         // Allow page to show hamburger menu.
         document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, "js");
 

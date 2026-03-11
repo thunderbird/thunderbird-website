@@ -23,6 +23,12 @@
 @max-width:     76rem;        // 1216px
 
 
+// temp. do not commit
+.site-nav {
+    outline: 1px solid red;
+}
+
+
 // Variables
 :root {
     --colour-primary-default: #58c9ff;
@@ -42,6 +48,11 @@
     --color-ink-70: #3e3c67;
     --color-ink-80: #2a284b;
     --color-link: #1E4EAE;
+
+    // phosphoricon colors
+    --user-green: #34C759;
+    --user-yellow: #F4C430;
+    --dark-text-icon-highlight: #58C9FF;
 }
 
 
@@ -386,14 +397,22 @@ main {
     margin: 0 auto;
     max-width: @max-width;
 
-    padding-top: 2.25rem;
+    padding-top: 0.75rem;
     padding-bottom: 2rem;
+    padding-inline: 1rem;
 
-    padding-inline: 2rem;
+    @media (min-width: @tablet-breakpoint) {
+        padding-top: 2.25rem;
+        padding-inline: 2rem;
+    }
 
     // Page heading
     h1 {
         .brand-headline-h1-sm();
+        // Repeating these, as the values from
+        // the mixin are getting overridden somewhere.
+        font-weight: 300;
+        letter-spacing: 0;
 
         margin: 0;
         padding: 0;
@@ -408,11 +427,14 @@ main {
 
     // The paragraph immediately following
     h1 + p {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        margin-top: 1.25rem;
         max-width: 50.313rem; // ~800px
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
 
+        @media (min-width: @tablet-breakpoint) {
+            margin-top: 1.25rem;
+            margin-bottom: 2rem;
+        }
     }
 
     h1 + ul {
@@ -451,14 +473,23 @@ main {
 
         display: grid;
         grid-template-rows: auto 1fr auto;
-        column-gap: 1rem;
-        row-gap: 0.5rem;
+        column-gap: 0.75rem;
+        row-gap: 0.25rem;
 
         box-sizing: border-box;
-        padding-inline: 1rem;
-        padding-block: 1rem 1.5rem;
         min-height: 10.563rem;
 
+        padding-inline: 0.75rem;
+        padding-block: 0.75rem;
+        min-height: 175px;
+
+        @media (min-width: @tablet-breakpoint) {
+            column-gap: 1rem;
+            row-gap: 0.5rem;
+            padding-inline: 1rem;
+            padding-block: 1rem 1.5rem;
+            min-height: 250px;
+        }
 
         strong {
             .web-title-small();
@@ -475,7 +506,6 @@ main {
         bolt-primary-button {
             justify-self: start;
             margin-top: 0.25rem;
-            padding-block: 0.84375rem;
         }
     }
 
@@ -503,8 +533,13 @@ main {
         grid-template-columns: 1.5rem 1fr;
         &::before {
             content: "";
-            height: 1.5rem;
-            width: 1.5rem;
+            height: 1.25rem;
+            width: 1.25rem;
+            @media (min-width: @tablet-breakpoint) {
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+
             display: inline-block;
             grid-column: 1;
             grid-row: 1 / span 3;
@@ -559,56 +594,86 @@ main {
     line-height: 1.75rem;
 
 
-    h1, h1 ~ p {
-        grid-column: 1/4;
-    }
+    // h1, h1 ~ p {
+    //     grid-column: 1/4;
+    // }
 
-    h1 ~ p {
-        margin: 0;
-        padding: 0;
+    // h1 ~ p {
+    //     margin: 0;
+    //     padding: 0;
 
-        margin-bottom: 2rem;
-        margin-top: 1.25rem;
-        max-width: 50.313rem;
+    //     margin-bottom: 2rem;
+    //     margin-top: 1.25rem;
+    //     max-width: 50.313rem;
 
-        a {
-            .web-body-small();
-            color: var(--colour-ti-highlight);
-
-            // Overrides from Design Team
-            font-size: 0.75rem;
-            line-height: 1rem;
-            text-decoration-thickness: 13%;
-            text-underline-offset: 25%;
-
-            &::after {
-                content: " \2192";
-                display: inline-block;
-                margin-left: 0.25rem;
-                letter-spacing: -2px;
-                vertical-align: middle;
-            }
-
-        }
-    }
+    // }
 
     h1 ~ p:last-of-type {
         padding-block-end: 2.25rem;
     }
 
+    i.ph {
+        font-size: 1.5rem;
+
+        &.ph-pulse {
+            color: var(--user-green);
+        }
+        &.ph-calendar-blank {
+            color: var(--user-yellow);
+        }
+        &.ph-rocket-launch {
+            color: var(--dark-text-icon-highlight);
+        }
+
+    }
+
     // These are desktop styles for the feature cards
     .product-roadmap {
+
+        .product-roadmap-header {
+            padding-inline: 2rem;
+
+            p {
+                margin: 0;
+                margin-top: 1.25rem;
+            }
+
+            a {
+                .web-body-small();
+                color: var(--colour-ti-highlight);
+
+                // Overrides from Design Team
+                font-size: 0.75rem;
+                line-height: 1rem;
+                text-decoration-thickness: 13%;
+                text-underline-offset: 25%;
+
+                &::after {
+                    content: " \2192";
+                    display: inline-block;
+                    margin-left: 0.25rem;
+                    letter-spacing: -2px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
         @media (min-width: @desktop-breakpoint) {
             display: grid;
             align-items: start;
-            max-width: @xl;
+            // max-width: @xl;
 
             // Supplied by Design
-            grid-template-columns: 14.5rem 1fr;
-            padding-inline: 3.75rem 6.438rem;
-            margin-top: 2.25rem;
+            grid-template-columns: 20.5rem 1fr;
+            // padding-inline: 3.75rem 6.438rem;
+            // margin-top: 2.25rem;
             column-gap: 1rem;
             row-gap: 2.25rem;
+
+            .product-roadmap-header {
+                grid-column: 1 / 4;
+            }
+
 
             // Prevents h2 from stretching to full height
             align-items: start;
@@ -626,11 +691,12 @@ main {
                 letter-spacing: -0.025rem;
                 margin: 0;
 
+                padding-left: 5.75rem;
             }
             ul {
-                grid-column: 3;
+                grid-column: 2;
                 margin: 0;
-                max-width: 52.313rem;
+                max-width: 50.313rem;
             }
 
             ul + h1 {
@@ -640,9 +706,18 @@ main {
             li {
                 box-sizing: border-box;
                 padding-inline: 1rem;
-                padding-block: 0.688rem 0.438rem;
                 font-weight: 400;
                 background-color: var(--color-surface-raised);
+
+                min-height: 102px;
+                padding-block: 0.75rem 1rem;
+
+
+                @media (min-width: @tablet-breakpoint) {
+                    min-height: 102px;
+                    padding-block: 0.5rem;
+                }
+
 
                 &:has(.text) {
                     padding-bottom: 1rem;
