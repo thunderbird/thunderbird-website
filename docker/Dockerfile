@@ -67,7 +67,7 @@ RUN if [ "$BUILD_ENV" = "local" ]; then \
       && git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details \
       && git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes \
       && git clone --depth 1 https://github.com/thunderbird/roadmaps-overview.git libs/thunderbird_roadmaps \
-      && npm install -g less \
+      && npm install -g less@4.1.3 \
       && python3.11 -m venv /build/venv \
       && /build/venv/bin/pip install --upgrade pip \
       && /build/venv/bin/pip install -r requirements-dev.txt \
