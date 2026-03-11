@@ -109,16 +109,9 @@
         if (navbar) {
           const navbarClass = 'scrolled-nav';
           let navbarState = navbar.classList.contains(navbarClass);
+          navbar.classList.add(navbarClass);
 
-          window.addEventListener("scroll", () => {
-            if (!navbarState && window.scrollY > 30) {
-              navbar.classList.add(navbarClass);
-              navbarState = true;
-            } else if (navbarState && window.scrollY <= 30) {
-              navbar.classList.remove(navbarClass)
-              navbarState = false;
-            }
-          });
+
         }
       })()
     </script>

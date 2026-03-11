@@ -116,7 +116,18 @@ STAGE_HOSTS = [
     CANONICAL_TBPRO_STAGE_URL.replace('https://', ''),
     CANONICAL_ROADMAPS_STAGE_URL.replace('https://', ''),
     'stage.thunderbird.net',
-    'localhost']
+]
+
+WWW_HOSTS = [
+    CANONICAL_URL.replace('https://', ''),
+    CANONICAL_STAGE_URL.replace('https://', ''),
+    'stage.thunderbird.net',
+]
+
+ROADMAPS_HOSTS = [
+    CANONICAL_ROADMAPS_URL.replace('https://', ''),
+    CANONICAL_ROADMAPS_STAGE_URL.replace('https://', ''),
+]
 
 # url for the server that serves Thunderbird downloads.
 BOUNCER_URL = 'https://download.mozilla.org/'

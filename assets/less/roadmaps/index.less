@@ -86,6 +86,11 @@ body {
     --hamburger-background-active: var(--color-white);
     --hamburger-foreground-active: var(--color-black);
 
+    &.scrolled-nav {
+        // Override the transparent white border.
+        border-color: rgba(0, 0, 0, 0.8);
+    }
+
     // From 2025-fonts.less
     .nav-links .nav-ln {
         font-size: 1rem;
