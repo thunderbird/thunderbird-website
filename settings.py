@@ -274,6 +274,7 @@ URL_MAPPINGS = {
     'tbpro.status': 'https://status.tb.pro/',
     'tbpro.support': 'https://support.tb.pro/',
     'tbpro.ideas': 'https://ideas.tb.pro',
+    'roadmaps': 'https://roadmaps.thunderbird.net/',
     'roadmaps.home': '/',
     'roadmaps.desktop': '/desktop',
     'roadmaps.android': '/android',
