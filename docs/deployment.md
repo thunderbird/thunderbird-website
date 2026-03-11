@@ -9,9 +9,9 @@ The websites are containerized using Docker and deployed to AWS Fargate. The dep
 ### Environments
 
 - **Stage**: Deployed from `master` branch of `tb-website-builds`
-  - URLs: `www-stage.thunderbird.net`, `start-stage.thunderbird.net`, `updates-stage.thunderbird.net`, `stage.tb.pro`
+  - URLs: `www-stage.thunderbird.net`, `start-stage.thunderbird.net`, `updates-stage.thunderbird.net`, `stage.tb.pro`, `roadmaps-stage.thunderbird.net`
 - **Production**: Deployed from `prod` branch of `tb-website-builds`
-  - URLs: `www.thunderbird.net`, `start.thunderbird.net`, `updates.thunderbird.net`, `tb.pro`
+  - URLs: `www.thunderbird.net`, `start.thunderbird.net`, `updates.thunderbird.net`, `tb.pro`, `roadmaps.thunderbird.net`
 
 ## Triggering Deployments
 
@@ -137,4 +137,3 @@ To trigger deployments via repository dispatch, you need a GitHub Personal Acces
 ### OIDC
 
 The GitHub Actions workflow uses OIDC to assume an AWS role for deployment and also to access Pulumi Cloud. The AWS role is configured in `pulumi/setup-oidc-role.sh`.
-
