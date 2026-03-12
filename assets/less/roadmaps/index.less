@@ -376,15 +376,7 @@ main {
 
     div {
         display: flex;
-        flex-direction: column;
         gap: 1.25rem;
-
-        @media (min-width: @desktop-breakpoint) {
-            flex-direction: row;
-            gap: 1.25rem;
-
-        }
-
 
         a {
             .web-body-xsmall();
@@ -534,6 +526,9 @@ main {
 
         // Additional styles for the Bolt web-components
         bolt-primary-button {
+            // This changes the color of the text inside the button.
+            --colour-primary-hover: #58c9ff;
+
             justify-self: start;
             margin-top: 0.25rem;
 
@@ -715,7 +710,7 @@ main {
 
             @media (min-width: @desktop-breakpoint) {
                 position: sticky;
-                top: 100px;
+                top: 116px;
                 background: var(--colour-surface-lower);
 
                 grid-column: 1;
