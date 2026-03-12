@@ -473,6 +473,7 @@ main {
         font-weight: 300;
         @media (min-width: @tablet-breakpoint) {
             .web-body-default();
+            font-weight: 300;
         }
 
         line-height: 1.075rem;
@@ -749,10 +750,9 @@ main {
 
         li {
             box-sizing: border-box;
-            font-weight: 400;
+            font-weight: 300;
             background-color: var(--color-surface-raised);
-            padding-block: 0.5rem;
-            padding-inline: 0.75rem;
+            padding: 0.625rem;
             min-height: unset;
 
             @media (min-width: @tablet-breakpoint) {
@@ -767,7 +767,7 @@ main {
 
             strong {
                 @media (min-width: @tablet-breakpoint) {
-                    margin-bottom: 0.25rem;
+                    margin-bottom: 0;
                 }
             }
 
