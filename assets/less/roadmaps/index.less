@@ -630,6 +630,9 @@ main {
 
     i.ph {
         font-size: 1.5rem;
+        @media (min-width: @desktop-breakpoint) {
+            margin-left: 1rem;
+        }
 
         &.ph-pulse {
             color: var(--user-green);
@@ -724,6 +727,10 @@ main {
 
                 padding-left: 5.75rem;
                 margin-bottom: 0;
+
+                gap: 1rem;
+                flex-direction: row;
+                align-items: center;
             }
         }
 
