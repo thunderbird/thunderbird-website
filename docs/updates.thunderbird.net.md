@@ -11,7 +11,7 @@ Follow the basic setup instructions for thunderbird-website found in the main [R
 There are extra dependencies for [creating compressed image assets](#creating-compressed-image-assets). Install them by running:
 
 ```bash
-pip install -r requirements-image.txt
+uv sync --group image
 ```
 
 ### Run the dev server
@@ -19,7 +19,7 @@ pip install -r requirements-image.txt
 When you finish installing the dependencies, start the UTN dev server with:
 
 ```bash
-python build-site.py --watch --updates --debug --enus
+uv run build-site.py --watch --updates --debug --enus
 ```
 
 This command builds the site for a single locale (English US) and rebuilds the site when you make changes to the site files.

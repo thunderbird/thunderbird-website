@@ -1,3 +1,6 @@
 name: thunderbird-website
-runtime: python
+runtime:
+  name: python
+  options:
+    virtualenv: .venv
 description: Thunderbird Website Fargate Infrastructure

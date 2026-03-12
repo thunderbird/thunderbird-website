@@ -39,17 +39,17 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7 # v6
         with:
           role-to-assume: arn:aws:iam::768512802988:role/thunderbird-website-deploy
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Login to ECR
         id: ecr-login
-        uses: aws-actions/amazon-ecr-login@v2
+        uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076 # v2
 
       - name: Create placeholders for deployment build
         run: |
@@ -78,24 +78,22 @@ jobs:
           docker push $ECR_REGISTRY/thunderbird-website-$BUILD_ENV:latest
           echo "image_uri=$IMAGE_URI" >> $GITHUB_OUTPUT
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+      - name: Install uv
+        uses: astral-sh/setup-uv@6ee6290f1cbc4156c0bdd66691b2c144ef8df19a # v7
 
-      - name: Install dependencies
+      - name: Install Pulumi dependencies
         working-directory: ./pulumi
-        run: pip install -r requirements.txt
+        run: uv sync --frozen
 
       # Authenticate with Pulumi Cloud via OIDC (no token secret needed)
       - name: Authenticate with Pulumi Cloud
-        uses: pulumi/auth-actions@v1
+        uses: pulumi/auth-actions@1c89817aab0c66407723cdef72b05266e7376640 # v1
         with:
           organization: thunderbird
           requested-token-type: urn:pulumi:token-type:access_token:organization
 
       - name: Deploy infrastructure
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6
         with:
           command: up
           stack-name: thunderbird/thunderbird-website/${{ env.DEPLOY_ENV }}
