@@ -48,7 +48,7 @@ RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/aut
 COPY docker/scripts/update-autoconfig.sh /var/www/autoconfig.momo/update.sh
 RUN chmod +x /var/www/autoconfig.momo/update.sh && /var/www/autoconfig.momo/update.sh
 
-COPY --from=ghcr.io/astral-sh/uv:0.8.22@sha256:ae1ba4db410fbe1d9eaf16c51add8e7608b271ebbb69bd58a56e80384fd190aa /uv /usr/local/bin/uv
+COPY --from=ghcr.io/astral-sh/uv:0.10.9@sha256:10902f58a1606787602f303954cea099626a4adb02acbac4c69920fe9d278f82 /uv /usr/local/bin/uv
 
 COPY docker/conf/ssl.conf /etc/httpd/conf.d/ssl.conf
 COPY docker/docker-entrypoint.sh /docker-entrypoint.sh
