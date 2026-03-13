@@ -91,6 +91,15 @@ TEST_CASES = [
     ("tb.pro", "/send", 302, "/en-US/send"),
     ("tb.pro", "/thundermail", 302, "/en-US/thundermail"),
     ("tb.pro", "/waitlist", 302, "/en-US/waitlist"),
+
+    # support.thunderbird.net - generic url formatter redirect (issue #1135)
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", 302, "support.mozilla.org/kb/quarantined-domains"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/experiment-add-on-support", 302, "support.mozilla.org/kb/experiment-add-on-support"),
+
+    # support.thunderbird.net - custom slug overrides take precedence
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/extension-permissions", 302, "support.mozilla.org/kb/permission-request-messages-thunderbird-extensions"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/cant-remove-addon", 302, "support.mozilla.org/kb/policies-extensions-locked"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/addons-help", 302, "support.mozilla.org/kb/thunderbird-add-ons-frequently-asked-questions"),
 ]
 
 
@@ -133,6 +142,12 @@ LOCALE_TESTS = [
     ("tb.pro", "/waitlist", "en-US", "/en-US/waitlist"),
     ("tb.pro", "/waitlist", "fr", "/fr/waitlist"),
     ("tb.pro", "/waitlist", "ja", "/ja/waitlist"),
+
+    # support.thunderbird.net - redirect is locale-agnostic regardless of Accept-Language (issue #1135)
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", "en-US", "support.mozilla.org/kb/quarantined-domains"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", "de", "support.mozilla.org/kb/quarantined-domains"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", "fr", "support.mozilla.org/kb/quarantined-domains"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", "ja", "support.mozilla.org/kb/quarantined-domains"),
 ]
 
 
