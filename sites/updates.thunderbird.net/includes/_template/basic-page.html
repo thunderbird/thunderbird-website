@@ -5,26 +5,52 @@
  # This is a sample page you can copy and paste to get started on an appeal or whatsnew page.
  # It inherits the base template automatically which includes the slim appeal footer.
  # You can add styles by creating a new less file and importing it to update-styles.less.
+ #
+ # To A/B test variants of this page:
+ #   1. Add {% block appeal_headline %} and {% block appeal_body %} around the parts
+ #      that may vary between variants (see below).
+ #   2. Create variant files that {% extends %} this base template and override only
+ #      the blocks that differ. See thunderbird/140.0/jun25b/index.html for an example.
+ #   3. Add the template path to APPEAL_DONATE_PAGES in settings.py. This generates
+ #      both the URL mappings and the /donate/ subpages automatically.
  #}
 {% set active_page = "your-page-name-goes-here" %}
-{% extends "includes/base/base.html" %}
 
-{% block page_title %}{{ _('Thunderbird') }}{% endblock %}
+{# For donation url generation -- variants override utm_content and donation_base_url #}
+{% set fru_form_id = fru_form_id|default('your-form-id') %}
+{% set utm_content = utm_content|default('your-variant-id') %}
+{% set utm_campaign = utm_campaign|default('your-campaign') %}
+{% set utm_source = utm_source|default('in_app') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.your-variant.donate')) %}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
+
+{% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
+
+{% block base_css %}
+  <link href="{{ static('css/your-appeal-style.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+{% block page_title %}{{ _('Your Appeal Title') }}{% endblock %}
 
 {% block content %}
-<section>
-  <div class="container">
-    <div class="section-text">
-      <h1>{{ _('Basic Localized Title') }}</h1>
-      <p>
-        {{ _('Basic paragraph text') }}
-      </p>
-      <p>
-        {% trans trimmed %}
-          Basic paragraph text using the translation block tag
-        {% endtrans %}
-      </p>
+  <section id="appeal-body">
+    {% block appeal_headline %}
+    <h1 id="appeal-heading" aria-label="{{ _('Your Appeal Title') }}">
+      {{ _('Your Appeal <span>Title</span>') }}
+    </h1>
+    {% endblock %}
+
+    <div id="appeal-letter" class="letter-container font-xl">
+      <section id="donate-button-container">
+        {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content, base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
+      </section>
+      <div id="letter-contents">
+        {% block appeal_body %}
+        <p>
+          {{ _('Your appeal body text goes here.') }}
+        </p>
+        {% endblock %}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 {% endblock %}

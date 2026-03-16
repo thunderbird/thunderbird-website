@@ -466,6 +466,21 @@ class Site(object):
         self._write_favicon_htaccess()
         self._copy_apple_pay_domain_verification()
 
+    def _render_template(self, template_path, output_path, **kwargs):
+        """Render a Jinja template to a file. In dev mode, errors are logged and skipped;
+        in production they are re-raised after logging."""
+        try:
+            t = self._env.get_template(template_path)
+            t.stream(**kwargs).dump(output_path)
+        except jinja2.exceptions.TemplateSyntaxError as ex:
+            logger.error(f">> Jinja Syntax Error: \"{ex.message}\"\n>> In file \"{ex.filename}\" on line {ex.lineno}.")
+            if not self.dev_mode:
+                raise
+        except jinja2.exceptions.TemplateError as ex:
+            logger.error(f">> Jinja Template Error: \"{ex.message}\" in template: \"{template_path}\".")
+            if not self.dev_mode:
+                raise
+
     def render(self):
         """
         Iterate through the templates loaded into Jinja2 and build them, including any needed directories.
@@ -490,26 +505,7 @@ class Site(object):
                 dir_part = os.path.dirname(template)
                 canonical_path = f'/{dir_part}' if dir_part else '/'
             self._env.globals['canonical_path'] = canonical_path
-
-            try:
-                t = self._env.get_template(template)
-                t.stream().dump(filepath)
-            except jinja2.exceptions.TemplateSyntaxError as ex:
-                logger.error(f">> Jinja Syntax Error: \"{ex.message}\"\n>> In file \"{ex.filename}\" on line {ex.lineno}.")
-
-                # This is for dev builds, we want it to crash on production.
-                if self.dev_mode:
-                    continue
-
-                raise ex
-            except jinja2.exceptions.TemplateError as ex:
-                logger.error(f">> Jinja Template Error: \"{ex.message}\" in template: \"{template}\".")
-
-                if self.dev_mode:
-                    continue
-
-                raise ex
-            # Remove this to prevent other template renders from accidentally using the last value.
+            self._render_template(template, filepath)
             del self._env.globals['canonical_path']
 
     def build_startpage(self):
@@ -521,6 +517,26 @@ class Site(object):
             self.render()
         self.build_assets()
 
+    def render_donate_subpages(self):
+        """Auto-generate /donate/ subpages for appeal templates listed in settings.APPEAL_DONATE_PAGES.
+
+        Each donate page re-renders the appeal template with donation_base_url=None (so the
+        FundraiseUp modal opens in-page) and disable_donation_blocked_notice=False.
+        """
+        for template_path in settings.APPEAL_DONATE_PAGES:
+            donate_dir = os.path.join(self.outpath, os.path.dirname(template_path), 'donate')
+            if not os.path.exists(donate_dir):
+                os.makedirs(donate_dir)
+
+            donate_filepath = os.path.join(donate_dir, 'index.html')
+            canonical_path = '/' + os.path.dirname(template_path) + '/donate'
+
+            self._render_template(template_path, donate_filepath,
+                canonical_path=canonical_path,
+                donation_base_url=None,
+                disable_donation_blocked_notice=False,
+            )
+
     def build_updates(self):
         """Build the updates page for all `languages`."""
         self._env.globals.update(self.data)
@@ -529,6 +545,7 @@ class Site(object):
             logger.info("Building pages for {lang}...".format(lang=lang))
             self._switch_lang(lang)
             self.render()
+            self.render_donate_subpages()
             write_site_htaccess(self.renderpath, self.lang, self.site, settings.UPDATES_REDIRECTS, redirect_request=True)
         self.build_assets()
 

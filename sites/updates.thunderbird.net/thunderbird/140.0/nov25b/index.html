@@ -31,9 +31,11 @@
   <div id="header-gradient"></div>
   <div id="appeal-header">
     <header>
+      {% block appeal_headline %}
       <h1 id="appeal-heading" aria-label="{{ _('Help Keep Thunderbird Alive!') }}">
         {{ _('Help Keep <span>Thunderbird Alive</span>') }}
       </h1>
+      {% endblock %}
     </header>
     <aside id="illustration" aria-hidden="true">
       <div id="roc">
@@ -48,6 +50,7 @@
   </section>
   <section id="appeal-body">
     <div class="letter-container font-xl">
+    {% block appeal_body %}
     <p>{{ _('All of the work we do is funded by less than 3% of our users.')}}</p>
     <p>
       {{ _('We never show advertisements or sell your data. We don’t have corporate funding. We are fully funded by financial contributions from our users.')}}
@@ -58,6 +61,7 @@
     <p>
       {{ _('If you get value from using Thunderbird, please help support it. We can’t do this without you.')}}
     </p>
+    {% endblock %}
     <div class="heart-container">
       <div class="left-lines">
         <div class="line"></div>

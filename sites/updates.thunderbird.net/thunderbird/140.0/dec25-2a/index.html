@@ -28,15 +28,18 @@
 
 {% block content %}
   <section id="appeal-body">
+    {% block appeal_headline %}
     <h1 id="appeal-heading" aria-label="{{ _('Thunderbird Needs You') }}">
       {{ _('Thunderbird <span>Needs You</span>') }}
     </h1>
+    {% endblock %}
 
     <div id="appeal-letter" class="letter-container font-xl">
       <section id="donate-button-container">
         {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content, base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
       </section>
       <div id="letter-contents">
+        {% block appeal_body %}
         <p>
           <b>{{ _('Thunderbird relies solely on user donations.')}}</b>
         </p>
@@ -49,6 +52,7 @@
         <p class="already-donated-thank-you">
           {{ _('If you have already donated, <b>a sincere thank you</b>. We don’t know that because we don’t track you, so please forgive this additional reminder.')}}
         </p>
+        {% endblock %}
         <div class="heart-container">
           <div class="left-lines">
             <div class="line"></div>
