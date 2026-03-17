@@ -22,7 +22,7 @@ RUN dnf install -y epel-release \
 
 # Create directories
 RUN mkdir -p /var/www/html/start /var/www/html/live.momo /var/www/autoconfig.momo \
-    /var/www/html/autoconfig.momo /var/www/html/autoconfig-temp /var/www/services/broker \
+    /var/www/html/autoconfig.momo /var/www/html/autoconfig-temp \
     /var/www/services/mx /var/www/tbservices /var/log/httpd/autoconfig \
     /var/www/html/tbstats /var/www/html/statictest/www /etc/httpd/conf
 
@@ -32,10 +32,6 @@ RUN python3 -m venv /var/www/tbservices \
 
 # Clone external repos (branch is passed via --build-arg REPO_BRANCH)
 RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/live-redirects.git /var/www/html/live.momo
-
-RUN git clone --recurse-submodules --branch $REPO_BRANCH https://github.com/thunderbird/broker.git /var/www/services/broker \
-    && cp /var/www/services/broker/settings.py.dist /var/www/services/broker/settings.py \
-    && cd /var/www/services/broker/lib/pygeoip && /var/www/tbservices/bin/pip install --no-cache-dir .
 
 RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/http-mx.git /var/www/services/mx \
     && /var/www/tbservices/bin/pip install --no-cache-dir -r /var/www/services/mx/requirements.txt
