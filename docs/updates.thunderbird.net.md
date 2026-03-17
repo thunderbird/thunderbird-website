@@ -6,9 +6,7 @@ What's New and Donation Appeal pages are hosted on `updates.thunderbird.net`.
 
 ### Install the dependencies
 
-Follow the basic setup instructions for thunderbird-website found in the main [README.md](../README.md##Dependencies).
-
-There are extra dependencies for [creating compressed image assets](#creating-compressed-image-assets). Install them by running:
+Follow the basic setup instructions in [README.md](../README.md##Dependencies). For [compressed image assets](#creating-compressed-image-assets), also run:
 
 ```bash
 uv sync --group image
@@ -16,15 +14,11 @@ uv sync --group image
 
 ### Run the dev server
 
-When you finish installing the dependencies, start the UTN dev server with:
-
 ```bash
 uv run build-site.py --watch --updates --debug --enus
 ```
 
-This command builds the site for a single locale (English US) and rebuilds the site when you make changes to the site files.
-
-The output should look like this:
+This builds for en-US only and rebuilds when you change site files. The output should look like:
 
 ```
 Rendering updates in en-US only.
@@ -33,7 +27,7 @@ Updating website when templates, CSS, or JS are modified. Press Ctrl-C to end.
 HTTP Server running on: http://localhost:8000
 ```
 
-The default address is `http://localhost:8000`, though you can specify a different port with the `--port` option.
+The default address is `http://localhost:8000` (change with `--port`).
 
 
 ## A Donations Appeal Page
@@ -116,91 +110,47 @@ Once you've created this file, add an entry for it to the `UPDATES_CSS` dict in 
 There should be several entries in `UPDATES_CSS`. Follow the established naming convention when adding a key; the value is the path to the new less file you've just created.
 
 ```py
-'appeal-dec24-style': ['less/appeals/dec24.less'],
+'appeal-jul26-style': ['less/appeals/jul26.less'],
 ```
 
-After making changes to `settings.py`, **you must restart the dev server.**
+**Restart the dev server after editing `settings.py`.**
 
 #### Images
 
-When exporting an asset from a tool like Figma or Zeplin, make sure to export two versions: one at 1x resolution and another at 2x resolution.
+When exporting from Figma or Zeplin, export two versions: 1x and 2x resolution. Name them using the `-high-res` suffix (not the industry-standard `@2x`):
 
-Follow the following naming convention:
 - 1x: `forest-roc.png`
 - 2x: `forest-roc-high-res.png`
 
-Note: The high resolution naming convention deviates from the industry standard "@2x".
-
-Save both to the appropriate directory. For the December 2024 appeal, that's `/media/img/thunderbird/appeal/dec24`.
-
-The December 2024 appeal did not use any SVGs. However, they would have been placed in this directory: `/media/svg/appeal/dec24`.
-
+Save both to the appropriate image directory (see [Where to put files](#where-to-put-files)).
 
 #### Creating compressed image assets
 
-Unfortunately we don't compress assets automatically, you'll have to use the [tools/compress_assets.py](../tools/compress_assets.py) at least once.
-
-You've already installed the dependencies. Now all you need to do is run the command:
+Run [tools/compress_assets.py](../tools/compress_assets.py) whenever you add or update `.png`/`.jpg` raster images. This is not needed for SVGs.
 
 ```bash
-cd ../
 python tools/compress_assets.py -r -o media/img/thunderbird/appeal/mycoolappeal/
 ```
 
-This will search recursively (`-r`) and overwrite (`-o`) previously compressed files.
+The `-r` flag searches recursively and `-o` overwrites previously compressed files.
 
-This step is only necessary for raster images. Run the tool any time you add or update `.png` and `.jpg` files.
+## Working with Jinja templates
 
-## Working in with Jinja templates
+### Linking the compiled CSS
 
-### Linking the compiled `.css`
-
-The compiled `.css` filename will be based on the key you put in the `UPDATES_CSS` dict in `settings.py`.
-
-For example, the entry for the December 2024 appeal is:
-```py
-'appeal-dec24-style': ['less/appeals/dec24.less'],
-```
-
-This tells the build tool to compile the styles to `css/appeal-dec24-style.css`.
-
-To use the compiled CSS file:
-- Declare a `base_css` block in your template.
-- Create a `<link>` tag.
-- In the `href`, call the `static()` helper, passing it the path to your compiled `.css` file.
-
-
-Here's the result:
+The compiled CSS filename is based on the key you added to the `UPDATES_CSS` dict. For example, a key of `'appeal-jul26-style'` compiles to `css/appeal-jul26-style.css`. Link it in your template via the `base_css` block using the `static()` helper:
 
 ```jinja
 {% block base_css %}
-  <link href="{{ static('css/appeal-dec24-style.css') }}" rel="stylesheet" type="text/css"/>
+  <link href="{{ static('css/appeal-jul26-style.css') }}" rel="stylesheet" type="text/css"/>
 {% endblock %}
 ```
 
 ### Using the `high_res_img()` helper
 
-The `high_res_img()` helper renders a `<picture>` element that displays the image at the best resolution for the user's device.
+The `high_res_img()` helper renders a `<picture>` element with automatic `srcset` for the `-high-res` variant. Pass the path to the **1x** version -- the helper finds the 2x version automatically.
 
-Pass it the path to the *low resolution* version of your image. The helper function will automatically include the `-high-res` variant of your image in a `srcset` attribute.
-
-```jinja
-{{ high_res_img('thunderbird/appeal/dec24/forest-roc.png', {'alt': _('')}) }}
-```
-
-To reiterate, we have two versions of this image:
-- 1x: `forest-roc.png`
-- 2x: `forest-roc-high-res.png`
-
-But we pass the 1x version to `high_res_img()`.
-
-#### Specifying alternate image formats
-
-In an earlier step, you produced compressed/optimized versions of your image assets.
-
-You should allow the browser to use one of these alternate formats when possible.
-
-Update the call to `high_res_img()`, passing the compressed file extensions in the `alt_formats` list:
+Use the `alt_formats` parameter to let the browser use compressed formats (webp, avif) when available:
 
 ```jinja
 {{ high_res_img('thunderbird/appeal/dec24/forest-roc.png', {'alt': _('')}, alt_formats=('webp', 'avif')) }}
@@ -208,47 +158,23 @@ Update the call to `high_res_img()`, passing the compressed file extensions in t
 
 ### Donation Button
 
-A reusable donation button is defined in `includes/macros/donate-button.html`.
-
-There are three steps to using it:
-
-1. Import the macro
-2. Define the variables for URL generation
-3. Call the macro
-
-#### Import the macro
-
-First add the following to your template, after the `extends`:
+The reusable donation button macro is in `includes/macros/donate-button.html`. Import it after the `extends`:
 
 ```jinja
 {% from 'includes/macros/donate-button.html' import donate_button with context %}
 ```
 
-#### Define the variables for URL generation
-
-Near the top of your Jinja template, declare the following variables:
+Define the URL generation variables near the top of your template. Confirm `fru_form_id` and `utm_campaign` values with the Marketing and Communications team:
 
 ```jinja
-{% set fru_form_id = fru_form_id|default('eoy2024') %}
-{% set utm_campaign = utm_campaign|default('dec24_appeal') %}
-{% set donation_base_url = donation_base_url|default(url('updates.128.appeal.dec24.donate')) %}
+{% set fru_form_id = fru_form_id|default('jul26') %}
+{% set utm_campaign = utm_campaign|default('jul26_appeal') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.jul26a.donate')) %}
 ```
 
-Confirm the values for `fru_form_id` and `utm_campaign` with the Marketing and Communications team.
+The `donation_base_url` URL key (e.g. `updates.140.appeal.jul26a.donate`) is generated automatically from your entry in `APPEAL_DONATE_PAGES` -- you don't need to add it to `URL_MAPPINGS` manually.
 
-The `donation_base_url` variable comes from the `URL_MAPPINGS` dict in `settings.py`. You'll need to add to this dict each time you use the donate_button macro.
-
-Here is the entry for the December 2024 appeal:
-
-```py
-'updates.128.appeal.dec24.donate': '/thunderbird/128.0/dec24/donate/',
-```
-
-***Make sure to restart the build tool after editing the `settings.py` file.***
-
-#### Call the macro
-
-Finally, call the macro where you'd like to display it:
+Call the macro where you want the button:
 
 ```jinja
 <section id="donate-button-container">
@@ -256,44 +182,17 @@ Finally, call the macro where you'd like to display it:
 </section>
 ```
 
-After restarting the build tool and refreshing your browser, you should see the donation button on the page.
-
 ### Localization
 
-All text in the Jinja template should be translated into the user's local language.
+All user-facing text must be wrapped for translation using one of two methods:
 
-#### Specifying translatable strings
-
-There are two ways to specify that a string should be translated.
-You can wrap the string in one of the following:
-
-- The `_()` function is used for shorter pieces of text.
-- A `{% trans %}` block wraps longer strings.
-
-Use `_()` for simple strings:
-
- ```jinja
- <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
- ```
-
-HTML tags are allowed inside a translatable string:
+- **`_()`** for short strings:
 
 ```jinja
-<h1>
-    {{ _('Help Keep <span>Thunderbird Alive</span>') }}
-</h1>
-```
-When possible, avoid putting HTML tags inside a translatable string. One of our volunteer translators may accidentally change the tags, causing an error when building the site.
-
-`aria-label` (and `alt` text) should be translated:
-
-```jinja
-<h1 id="appeal-heading" aria-label="{{ _('Help Keep Thunderbird Alive!') }}">
-  {{ _('Help Keep <span>Thunderbird Alive</span>') }}
-</h1>
+<p class="closing-text">{{ _('The Thunderbird Team') }}</p>
 ```
 
-The December 2024 appeal does not use `{% trans %}` blocks, but here is an example from the main `index.html`:
+- **`{% trans %}`** blocks for longer text:
 
 ```jinja
 {% trans trimmed %}
@@ -301,58 +200,159 @@ The December 2024 appeal does not use `{% trans %}` blocks, but here is an examp
 {% endtrans %}
 ```
 
-#### Extracting strings for translation
+HTML tags are allowed inside translatable strings but should be minimized -- volunteer translators may accidentally break them. Always translate `aria-label` and `alt` text too:
 
-Follow the instructions located in [l10n_tools/readme.md](../l10n_tools/readme.md) to compile and extract strings.
+```jinja
+<h1 id="appeal-heading" aria-label="{{ _('Help Keep Thunderbird Alive!') }}">
+  {{ _('Help Keep <span>Thunderbird Alive</span>') }}
+</h1>
+```
+
+See [l10n_tools/readme.md](../l10n_tools/readme.md) for extracting strings for translation.
 
 ### Accessibility
 
-Provide a label using the `aria-label` for interactive elements that assistive software may not understand (such as a close button).
-
-This is an example from the November 2024 appeal page:
+Use `aria-label` on interactive elements whose purpose isn't obvious from their text (e.g. icon-only buttons):
 
 ```jinja
-<a id="donate-footer"
-   class="btn btn-no-bg"
-   aria-label="{{ _('Donate') }}"
-   href="{{ donate_url(content='bottom_cta', campaign=utm_campaign, form_id=fru_form_id, base_url=donation_base_url, source=utm_source) }}">
+<a id="donate-footer" class="btn btn-no-bg" aria-label="{{ _('Donate') }}"
+   href="{{ donate_url(...) }}">
   <span aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</span>
   {{ _('Donate') }}
 </a>
 ```
 
+Use `aria-hidden="true"` and empty `alt` on purely decorative images. Add meaningful `alt` text to all other images.
 
-Use `aria-hidden="true"` and an empty `alt` for purely decorative content (i.e., images) that should be ignored by assistive software:
-
-```jinja
-<aside id="illustration" aria-hidden="true">
-  <div id="roc">
-    {{ high_res_img('thunderbird/appeal/dec24/forest-roc.png', {'alt': _('')}, alt_formats=('webp', 'avif')) }}
-  </div>
-</aside>
-```
-
-Make all other images accessible by adding appropriate `alt` text.
-
-
-#### Using a Screen Reader
-
-It's helpful to test the page using a screen reader.
-
-On macOS, use the built-in `VoiceOver` screen reader.
-
-For Linux, the [Orca](https://wiki.mozilla.org/Screen_Reader_-_Orca) screen reader is recommended by the Mozilla Wiki.
-
-In particular, you may find that a screen reader does not pause adequately between sentences. Add a period (`.`) to remedy this.
+Test with a screen reader (macOS: VoiceOver; Linux: [Orca](https://wiki.mozilla.org/Screen_Reader_-_Orca)). If the reader doesn't pause between sentences, add a period.
 
 ### Updating the baked appeal redirect
 
-At certain points Thunderbird will use a baked or static appeal url located at http://updates.thunderbird.net/thunderbird/appeal. 
-This is controlled by settings.py's value: `UPDATES_REDIRECTS`. Once your appeal is ok'd to go live and is on stage you should update the value of the `('thunderbird', 'appeal')` key. 
+Thunderbird uses a static appeal URL at `updates.thunderbird.net/thunderbird/appeal`. This is controlled by `UPDATES_REDIRECTS` in `settings.py`. When your appeal is ready to go live, update the `('thunderbird', 'appeal')` key to point to the new appeal's URL key.
 
-Keys are normal url keys or a tuple based on path. So a path of `updates.thunderbird.net/thunderbird/release/sep25r` 
-turns into `('thunderbird', 'release', 'sep25r')`. The values are simply dot paths with the site prepended, 
-which would turn the above url into `updates.thunderbird.release.sep25r`.
+Keys are tuples based on the URL path: `updates.thunderbird.net/thunderbird/release/sep25r` becomes `('thunderbird', 'release', 'sep25r')`. Values are dot-separated URL keys: `updates.release.appeal.sep25r`.
 
-Why are they different? Most likely due to easier parsing and visually indicating that they're different from the normal 
-key based paths used in the url helper.
+## A/B Testing Appeal Variants
+
+Rather than duplicating templates for each variant, appeal templates use Jinja2 block inheritance. A variant only contains the parts that differ.
+
+### How it works
+
+The base template (typically the "a" variant) wraps variable content in named blocks (`{% block appeal_headline %}`, `{% block appeal_body %}`). Variants `{% extends %}` the base and override only those blocks. Everything else is inherited.
+
+The [starter template](../sites/updates.thunderbird.net/includes/_template/basic-page.html) already has these blocks.
+
+### Creating an A/B variant
+
+Example: campaign `jul26a` exists, you want a `jul26b` variant with a different headline.
+
+#### 1. Ensure the base template has blocks
+
+If you copied from the starter template, the blocks are already there. Otherwise, wrap the relevant sections:
+
+```jinja
+{# jul26a/index.html -- the base template #}
+{% block content %}
+  <section id="appeal-body">
+    {% block appeal_headline %}
+    <h1 id="appeal-heading" aria-label="{{ _('Original Headline') }}">
+      {{ _('Original <span>Headline</span>') }}
+    </h1>
+    {% endblock %}
+
+    <div id="appeal-letter" class="letter-container font-xl">
+      <section id="donate-button-container">
+        {{ donate_button(...) }}
+      </section>
+      <div id="letter-contents">
+        {% block appeal_body %}
+        <p>{{ _('Body text here.') }}</p>
+        {% endblock %}
+        {# The heart SVG, closing text, etc. live outside the block -- variants inherit them. #}
+        <div class="heart-container">...</div>
+        <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+```
+
+#### 2. Create the variant file
+
+`jul26b/index.html` only sets its UTM parameters and overrides the blocks that differ:
+
+```jinja
+{# jul26b/index.html -- only the headline differs #}
+{% set utm_content = utm_content|default('jul26b') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.jul26b.donate')) %}
+
+{% extends "thunderbird/140.0/jul26a/index.html" %}
+
+{% block page_title %}{{ _('Alternative Headline') }}{% endblock %}
+{% block appeal_headline %}
+    <h1 id="appeal-heading" aria-label="{{ _('Alternative Headline') }}">
+      {{ _('Alternative <span>Headline</span>') }}
+    </h1>
+{% endblock %}
+```
+
+Override `appeal_body` as well if the body copy differs. If only the UTM content changes, the file is even shorter -- just set the variables and extend the base.
+
+#### 3. Register the variant in `settings.py`
+
+Add the template path to `APPEAL_DONATE_PAGES`:
+
+```python
+APPEAL_DONATE_PAGES = [
+    ...
+    'thunderbird/140.0/jul26a/index.html',
+    'thunderbird/140.0/jul26b/index.html',  # <-- add this
+]
+```
+
+This single list drives everything: URL mappings are derived automatically (e.g. `updates.140.appeal.jul26b` and `updates.140.appeal.jul26b.donate`), and the builder auto-generates the `/donate/` subpage. You do not need to create `jul26b/donate/index.html` manually.
+
+Restart the dev server after editing `settings.py`.
+
+#### 4. Pick the winner
+
+Once testing is complete, update `UPDATES_REDIRECTS` in `settings.py` to point the canonical appeal URL at the winning variant:
+
+```python
+UPDATES_REDIRECTS = {
+    ('thunderbird', 'appeal'): 'updates.140.appeal.jul26b',
+    ...
+}
+```
+
+### Block reference
+
+| Block | Wraps | Override when... |
+|-------|-------|-----------------|
+| `page_title` | HTML `<title>` | Variant has a different headline |
+| `appeal_headline` | The `<h1>` heading | Testing different headlines |
+| `appeal_body` | Body paragraphs | Testing different copy |
+| `base_css` | CSS `<link>` | Variant uses a different stylesheet |
+| `site_header` | Header area (illustration, gradient) | Fundamentally different layout |
+
+Most A/B tests only need `page_title` and `appeal_headline`. If a variant has a completely different layout, make it a standalone template extending `includes/base/base.html` directly.
+
+### How donate subpages work
+
+Every appeal has a companion `/donate/` subpage. The appeal page (loaded inside Thunderbird) links to `/donate/`, which opens in the user's browser with the FundraiseUp modal active.
+
+For every template in `APPEAL_DONATE_PAGES`, the builder auto-generates the donate subpage by re-rendering the appeal template with:
+
+- `donation_base_url = None` -- triggers the FRU modal in-page instead of linking out
+- `disable_donation_blocked_notice = False` -- shows the blocked-donation fallback notice
+
+No manual donate files needed. A few pre-2025 legacy appeals (115.0/nov24, 115.0/dec24, 128.0/nov24, 128.0/dec24) still use hand-written donate files.
+
+### Examples
+
+| Variant | Relationship | File |
+|---------|-------------|------|
+| `dec25-2a` | Base template | `thunderbird/140.0/dec25-2a/index.html` |
+| `dec25-2b` | Extends 2a, overrides headline | `thunderbird/140.0/dec25-2b/index.html` |
+| `dec25-2c` | Extends 2a, overrides headline + body | `thunderbird/140.0/dec25-2c/index.html` |
+| `nov25c` | Extends nov25b, changes only UTM params | `thunderbird/140.0/nov25c/index.html` |
