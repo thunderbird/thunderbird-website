@@ -272,4 +272,24 @@ body {
     background: var(--background-page-and-footer);
     flex-grow: 1;
   }
+
+  // ==========================================
+  // Variant B & D: Animated radial gradient bg
+  // ==========================================
+
+  #appeal-body.variant-b,
+  #appeal-body.variant-d {
+    background: none;
+
+    #gradient-canvas {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(
+        ellipse at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        #D04971 0%,
+        #7E6498 100%
+      );
+    }
+  }
 }
