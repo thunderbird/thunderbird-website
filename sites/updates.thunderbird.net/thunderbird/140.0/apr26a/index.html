@@ -18,15 +18,25 @@
 {% block base_css %}
 <link href="{{ static('css/appeal-apr26-style.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
-{% block page_title %}{{ _('Help Build What’s Next') }}{% endblock %}
+
+{% block page_title %}{{ _('Help Build What\u2019s Next') }}{% endblock %}
 
 {% block content %}
 <section id="appeal-body">
-  {% block appeal_headline %}
-  <h1 id="appeal-heading" aria-label="{{ _('Help Build What’s Next') }}">
-    {{ _('Help Build What’s Next') }}
-  </h1>
-  {% endblock %}
+  <div id="appeal-header">
+    <header>
+      {% block appeal_headline %}
+      <h1 id="appeal-heading" aria-label="{{ _('Help Build What\u2019s Next') }}">
+        {{ _('<span>Help Build</span><span>What\u2019s Next</span>') }}
+      </h1>
+      {% endblock %}
+    </header>
+    <aside id="illustration" aria-hidden="true">
+      <div id="roc">
+        {{ high_res_img('thunderbird/appeal/apr26/forest-roc.png', {'alt': ''}, alt_formats=('webp', 'avif')) }}
+      </div>
+    </aside>
+  </div>
 
   <div id="appeal-letter" class="letter-container font-xl">
     <section id="donate-button-container">
@@ -40,10 +50,29 @@
       </p>
       <p>
         <strong>{{ _('Thunderbird is funded entirely by user support.') }}</strong>
-        {{ _('Will you help build what’s next?') }}
+        {{ _('Will you help build what\u2019s next?') }}
       </p>
       {% endblock %}
+      <div class="heart-container">
+        <div class="left-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+        <div class="right-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
     </div>
   </div>
 </section>
+{% endblock %}
+{% block site_footer %}
+  <div id="footer-wrapper">
+    {% include 'includes/base/moz-footer.html' %}
+  </div>
 {% endblock %}
