@@ -1,0 +1,49 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "appeal-apr26" %}
+
+{# For donation url generation -- variants override utm_content and donation_base_url #}
+{% set fru_form_id = fru_form_id|default('apr26-a') %}
+{% set utm_content = utm_content|default('your-variant-id') %}
+{% set utm_campaign = utm_campaign|default('your-campaign') %}
+{% set utm_source = utm_source|default('in_app') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.your-variant.donate')) %}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
+
+{% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
+
+{% block base_css %}
+<link href="{{ static('css/appeal-apr26-style.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block page_title %}{{ _('Help Build What’s Next') }}{% endblock %}
+
+{% block content %}
+<section id="appeal-body">
+  {% block appeal_headline %}
+  <h1 id="appeal-heading" aria-label="{{ _('Help Build What’s Next') }}">
+    {{ _('Help Build What’s Next') }}
+  </h1>
+  {% endblock %}
+
+  <div id="appeal-letter" class="letter-container font-xl">
+    <section id="donate-button-container">
+      {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content,
+      base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
+    </section>
+    <div id="letter-contents">
+      {% block appeal_body %}
+      <p>
+        {{ _('In 2025, we reached new heights with faster updates, native Exchange support, improvements on Android, and strides toward iOS. We also started building our own email service.') }}
+      </p>
+      <p>
+        <strong>{{ _('Thunderbird is funded entirely by user support.') }}</strong>
+        {{ _('Will you help build what’s next?') }}
+      </p>
+      {% endblock %}
+    </div>
+  </div>
+</section>
+{% endblock %}
