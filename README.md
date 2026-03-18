@@ -51,6 +51,8 @@ There are additional arguments:
     * This builds the [start page](https://start.thunderbird.net/) into the `site` directory.
 * `--tbpro`
     * This builds the tbpro site into the `tb.pro` directory.
+* `--roadmaps`
+    * This builds the roadmaps site into the `roadmaps.thunderbird.net` directory. Run `uv run pull-libs.py` to download the latest content.
 * `--enus`
     * This restricts builds to only the 'en-US' locale, for faster testing.
 * `--debug`
