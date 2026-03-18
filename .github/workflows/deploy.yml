@@ -1,7 +1,13 @@
-name: Deploy to Fargate
-run-name: "Deploy ${{ github.event.inputs.environment || github.event.action || 'stage' }} - ${{ github.event.client_payload.message || github.sha }}"
+name: Build and Deploy
+run-name: >-
+  Deploy
+  ${{ github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage' }}
+  -
+  ${{ github.event.client_payload.message || (github.event_name == 'push' && format('thunderbird-website {0} push', github.ref_name)) || 'manual deployment' }}
 
 on:
+  push:
+    branches: [master, prod]
   workflow_dispatch:
     inputs:
       environment:
@@ -13,18 +19,13 @@ on:
           - prod
   repository_dispatch:
     types: [stage, prod]
-  # Allow testing from feature branches
-  # push:
-  #   branches:
-  #    - fargate
 
 permissions:
   id-token: write
   contents: read
 
-# Cancel in-progress deployments when a new one starts (per environment)
 concurrency:
-  group: deploy-${{ github.event.inputs.environment || github.event.action || 'stage' }}
+  group: deploy-${{ github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage' }}
   cancel-in-progress: true
 
 env:
@@ -33,9 +34,9 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment || github.event.action || 'stage' }}
+    environment: ${{ github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage' }}
     env:
-      DEPLOY_ENV: ${{ github.event.inputs.environment || github.event.action || 'stage' }}
+      DEPLOY_ENV: ${{ github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage' }}
 
     steps:
       - name: Checkout
@@ -50,13 +51,6 @@ jobs:
       - name: Login to ECR
         id: ecr-login
         uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076 # v2
-
-      - name: Create placeholders for deployment build
-        run: |
-          mkdir -p dist/www.thunderbird.net dist/start.thunderbird.net dist/updates.thunderbird.net dist/tb.pro dist/roadmaps.thunderbird.net media
-          touch dist/www.thunderbird.net/.gitkeep dist/start.thunderbird.net/.gitkeep
-          touch dist/updates.thunderbird.net/.gitkeep dist/tb.pro/.gitkeep media/.gitkeep
-          touch dist/roadmaps.thunderbird.net/.gitkeep
 
       - name: Build and push Docker image
         id: build-image
@@ -77,6 +71,27 @@ jobs:
           docker push $IMAGE_URI
           docker push $ECR_REGISTRY/thunderbird-website-$BUILD_ENV:latest
           echo "image_uri=$IMAGE_URI" >> $GITHUB_OUTPUT
+
+      - name: Publish to tb-website-builds
+        env:
+          IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
+          TB_BUILDS_BRANCH: ${{ env.DEPLOY_ENV == 'prod' && 'prod' || 'master' }}
+          BUILD_MESSAGE: ${{ github.event.client_payload.message || (github.event_name == 'push' && format('thunderbird-website {0} push.', github.ref_name)) || 'manual deployment.' }}
+        run: |
+          docker create --name extract $IMAGE_URI
+          git clone --depth 1 --branch $TB_BUILDS_BRANCH \
+            https://github.com/thunderbird/tb-website-builds.git \
+            tb-website-builds
+          cd tb-website-builds
+          git remote set-url origin \
+            https://x-access-token:${{ secrets.TB_BUILDS_KEY }}@github.com/thunderbird/tb-website-builds.git
+          find . -maxdepth 1 ! -name '.git' ! -name 'README.md' ! -name '.' -exec rm -rf {} +
+          docker cp extract:/var/www/html/start/. .
+          git add -A
+          git diff --cached --quiet || \
+            git -c user.name="Thundernest Bot" -c user.email="${{ secrets.TB_BUILDS_GIT_EMAIL }}" \
+              commit -m "Website rebuild triggered by $BUILD_MESSAGE"
+          git push
 
       - name: Install uv
         uses: astral-sh/setup-uv@6ee6290f1cbc4156c0bdd66691b2c144ef8df19a # v7

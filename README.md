@@ -47,6 +47,8 @@ It builds [www.thunderbird.net](https://www.thunderbird.net/) into the `thunderb
 
 There are additional arguments:
 
+* `--all`
+    * Builds all sites (main website, start page, updates, tb.pro, roadmaps) in one invocation.
 * `--startpage`
     * This builds the [start page](https://start.thunderbird.net/) into the `site` directory.
 * `--tbpro`
@@ -75,52 +77,28 @@ You can then navigate to: http://127.0.0.1:8000 to view the website. None of the
 desired locale manually in the browser, but the site should behave normally after that.
 
 ## Automated Builds
-In general, you only need to manually build the website for testing and development purposes. Webhooks on each of the repositories trigger
-automatic rebuilds when:
+In general, you only need to manually build the website for testing and development purposes. GitHub Actions automatically
+builds and deploys when:
 
-* https://github.com/thunderbird/thunderbird-notes.git (Release Notes) are updated.
-* https://github.com/mozilla-releng/product-details.git (Product Details) are updated. Product details contains data on what versions of Thunderbird exist.
-    * Currently stage doesn't update automatically from product-details changes.
+* This repository (`thunderbird-website`) is pushed to `master` (stage) or `prod` (production).
+* https://github.com/thunderbird/thunderbird-notes.git (Release Notes) are updated (`master` triggers stage, `prod` triggers production).
+* https://github.com/thunderbird/thunderbird.net-l10n.git (Localizations) are updated (`master` triggers stage).
+* https://github.com/mozilla-releng/product-details.git (Product Details) are updated (`production` triggers production).
 
-Both of these update frequently enough(multiple times per week) that independent updates for localization are not necessary. Any triggered
-update will always use the most recent data available from all sources. If changes to one of the above repos don't produce any change in the built files, no actual
-update of the web server will occur.
+Any triggered build always uses the most recent data available from all sources. If changes don't produce any difference
+in the built files, no commit is made to https://github.com/thunderbird/tb-website-builds (which serves as a record of the
+static files that are deployed).
 
 # Deployment
 
-The websites are deployed to AWS Fargate. Deployments are triggered automatically as noted above. To do a manual push:
+The websites are built inside a Docker container and deployed to AWS Fargate. The "Build and Deploy" workflow handles
+the full pipeline: build from source, push to ECR, publish static files to `tb-website-builds`, and deploy via Pulumi + ECS.
 
 **Manual deployment via GitHub UI:**
-1. Go to [Actions](https://github.com/thunderbird/thunderbird-website/actions) → "Deploy to Fargate"
+1. Go to [Actions](https://github.com/thunderbird/thunderbird-website/actions) → "Build and Deploy"
 2. Click "Run workflow" and select the environment (`stage` or `prod`)
 
 See the [deployment documentation](https://docs.thunderbird.net/en/latest/deployment.html) for more details.
-
-# Manual Site Updates (Legacy)
-
-Occasionally you need to update the site manually using Ansible. You'll need to either login to the control node as described in the https://github.com/thunderbird/thundernest-ansible documentation
-or check out and setup the thundernest-ansible scripts on your local machine. That is also covered in the documentation for [thundernest-ansible](https://github.com/thunderbird/thundernest-ansible).
-
-Assuming you are logged into the control node or have thundernest-ansible set up:
-
-For stage:
-```
-cd thundernest-ansible
-source files/secrets.sh
-ansible-playbook plays/website-build.yml
-```
-
-For prod:
-```
-cd thundernest-ansible
-source files/secrets.sh
-ansible-playbook --extra-vars="branch=prod" plays/website-build.yml
-```
-
-The [website-build.yml](https://github.com/thunderbird/thundernest-ansible/blob/master/plays/website-build.yml) ansible script performs complete builds of the website, including both the start
-page and thunderbird.net itself.
-
-* Completed and pushed builds from automation or the [website-build.yml](https://github.com/thunderbird/thundernest-ansible/blob/master/plays/website-build.yml) script are checked into https://github.com/thunderbird/tb-website-builds -- the `master` branch represents the files currently on stage, and the `prod` branch represents the files currently on the live version of thunderbird.net.
 
 # Localization
 

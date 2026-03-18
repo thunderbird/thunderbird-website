@@ -81,6 +81,10 @@ def main() -> None:
         "--skip-sync", action="store_true",
         help="Skip uv sync (use when dependencies are already installed)",
     )
+    parser.add_argument(
+        "--notes-branch", default=None,
+        help="Branch to use for thunderbird-notes (default: repo default)",
+    )
     args = parser.parse_args()
 
     if not args.skip_sync:
@@ -88,6 +92,8 @@ def main() -> None:
 
     LIBS_DIR.mkdir(exist_ok=True)
     for repo in REPOS:
+        if args.notes_branch and repo["name"] == "thunderbird-notes":
+            repo = {**repo, "branch": args.notes_branch}
         sync_repo(repo)
 
     install_less()
