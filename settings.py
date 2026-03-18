@@ -457,6 +457,7 @@ UPDATES_CSS = {
     'whatsnew-140': ['less/whatsnew-140.less'],
     "appeal-jun25-style": ["less/appeals/jun25.less"],
     "appeal-apr26-style": ["less/appeals/apr26.less"],
+    "appeal-apr26-1e-style": ["less/appeals/apr26-1e.less"],
 }
 
 UPDATES_JS = {
