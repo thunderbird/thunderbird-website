@@ -212,6 +212,7 @@ APPEAL_DONATE_PAGES = [
     'thunderbird/140.0/apr26-1c/index.html',
     'thunderbird/140.0/apr26-1d/index.html',
     'thunderbird/140.0/apr26-1e/index.html',
+    'thunderbird/140.0/apr26-1f/index.html',
     'thunderbird/release/sep25r/index.html',
 ]
 
