@@ -65,7 +65,7 @@ body {
     align-items: center;
     padding-bottom: 7.75rem;
     background: linear-gradient(to bottom,
-      #64B0D0,
+      #64B0D0 30%,
       #F28A7D,
       #FFAB61);
     background-attachment: fixed;
@@ -77,6 +77,143 @@ body {
       text-align: center;
       max-width: var(--appeal-content-width);
       width: 100%;
+    }
+
+    #cloud div::before,
+    #cloud div::after {
+      content: "";
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('/media/img/thunderbird/appeal/apr26/cloud-texture.png');
+      background-repeat: repeat-x;
+      animation: cloud var(--duration) linear infinite forwards var(--direction);
+
+      --posX: left;
+      --duration: 40s;
+      --direction: normal; /* normal or reverse */
+      --lowHeight: 10vh;
+      --highHeight: 20vh;
+      --layerNum: 4;
+      --index: 0;
+      --opacity: 0.7;
+      --moveX: 300px;
+      animation-delay: calc(
+        (var(--duration) / var(--layerNum)) * var(--index) * -1
+      );
+      opacity: 0;
+    }
+    #cloud div::before {
+      --index: 0;
+      transform: scale3d(1, -1, 1);
+    }
+    #cloud div::after {
+      --index: 1;
+      transform: scale3d(-1, -1, 1);
+    }
+    #cloud div#cloud_layer2::before {
+      --index: 2;
+    }
+    #cloud div#cloud_layer2::after {
+      --index: 3;
+    }
+    #sun div {
+      content: "";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0vw;
+      width: 100vw;
+      height: 70vh;
+      --sunPos: 70vw 0;
+      transform-origin: var(--sunPos);
+      animation: sun 3.5s linear infinite alternate;
+
+      mask-image: radial-gradient(
+        circle at var(--sunPos),
+        transparent 10vh,
+        white 35vh
+      );
+      opacity: 0.15;
+      transform: scaleX(2);
+      z-index: 2;
+      pointer-events: none;
+    }
+    #sun #sun_layer1 {
+      background: conic-gradient(
+        from 135deg at var(--sunPos),
+        transparent 10.5%,
+        khaki 11%,
+        transparent 11.5%,
+        transparent 15%,
+        white 16%,
+        transparent 17%,
+        transparent 18%,
+        white 19%,
+        transparent 20%
+      );
+    }
+    #sun #sun_layer2 {
+      animation-delay: -1s;
+      animation-duration: 5s;
+      animation-direction: alternate-reverse;
+      background: conic-gradient(
+        from 140deg at var(--sunPos),
+        transparent 10%,
+        white 11%,
+        transparent 12%,
+        transparent 15.5%,
+        paleturquoise 16%,
+        transparent 16.5%,
+        transparent 17%,
+        lightpink 18%,
+        transparent 19%
+      );
+    }
+    #sun #sun_layer3 {
+      animation-delay: -2s;
+      animation-duration: 6.5s;
+      animation-direction: alternate-reverse;
+      background: conic-gradient(
+        from 145deg at var(--sunPos),
+        transparent 10%,
+        white 11%,
+        transparent 12%,
+        transparent 14%,
+        white 15%,
+        transparent 16%,
+        transparent 17%,
+        powderblue 18%,
+        transparent 19%
+      );
+    }
+
+    @keyframes cloud {
+      0% {
+        opacity: 0;
+        background-position: var(--posX) var(--moveX) bottom
+          calc(-1 * var(--lowHeight));
+        background-size: calc(1 * var(--lowHeight)) var(--lowHeight);
+      }
+      5% {
+        opacity: var(--opacity);
+      }
+      80% {
+        opacity: var(--opacity);
+      }
+      100% {
+        opacity: 0;
+        background-position: var(--posX) bottom;
+        background-size: calc(3 * var(--highHeight)) var(--highHeight);
+      }
+    }
+    @keyframes sun {
+      to {
+        transform: skew(-15deg);
+      }
     }
   }
 
@@ -92,6 +229,7 @@ body {
     max-width: max-content;
     padding: 2rem 2rem 4rem;
     min-height: 22rem;
+    z-index: 2; /* Above the gradient canvas */
 
     header {
       align-self: flex-end;
@@ -176,6 +314,7 @@ body {
     max-width: var(--appeal--letter-width-mobile);
     margin-inline: 1rem;
     padding-bottom: 3rem;
+    z-index: 2; /* Above the gradient canvas */
 
     @media (min-width: @sm) {
       max-width: var(--appeal-content-width);
@@ -271,6 +410,7 @@ body {
   #footer-wrapper {
     background: var(--background-page-and-footer);
     flex-grow: 1;
+    z-index: 2; /* Above the gradient canvas */
   }
 
   // ==========================================
