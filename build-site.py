@@ -42,6 +42,8 @@ def setup_argument_parser():
                         action='store_true')
     parser.add_argument('--downloadlegal', help='Download the Thunderbird privacy policy document.', action='store_true')
     parser.add_argument('--tbpro', help='Build the tb.pro site.', action='store_true')
+    parser.add_argument('--all', help='Build all sites (main website, start page, updates, tb.pro, roadmaps).',
+                        action='store_true')
     parser.add_argument('--roadmaps', help='Build the Thunderbird roadmaps site.', action='store_true')
     parser.add_argument('--watch', help='Rebuild when template and asset dirs are changed, and run a server on localhost.',
                         action='store_true')
@@ -214,7 +216,18 @@ def build_main_website():
 
 site = None
 
-if args.startpage:
+if args.all:
+    conflicting = [args.startpage, args.updates, args.tbpro, args.roadmaps,
+                   args.buildcalendars, args.downloadlegal, args.watch]
+    if any(conflicting):
+        parser.error('--all cannot be combined with individual site flags or --watch')
+
+    build_main_website()
+    build_startpage()
+    build_updates()
+    build_tbpro()
+    build_roadmaps()
+elif args.startpage:
     site = build_startpage()
 elif args.updates:
     site = build_updates()
@@ -229,6 +242,5 @@ elif args.downloadlegal:
 else:
     site = build_main_website()
 
-# Set up file watcher if requested.
 if args.watch and site:
     builder.setup_observer(site, args.port)
