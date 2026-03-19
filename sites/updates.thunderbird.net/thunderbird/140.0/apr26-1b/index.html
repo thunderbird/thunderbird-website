@@ -1,0 +1,119 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "appeal-apr26" %}
+
+{# For donation url generation -- variants override utm_content and donation_base_url #}
+{% set fru_form_id = fru_form_id|default('apr26') %}
+{% set utm_content = utm_content|default('apr26-b') %}
+{% set utm_campaign = utm_campaign|default('apr26_appeal') %}
+{% set utm_source = utm_source|default('in_app') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.apr26-1b.donate')) %}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
+
+{% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
+
+{% block base_css %}
+<link href="{{ static('css/appeal-apr26-style.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block page_title %}{{ _('Help Build What\u2019s Next') }}{% endblock %}
+
+{% block content %}
+<section id="appeal-body" class="variant-b-d">
+  <div id="gradient-canvas" aria-hidden="true"></div>
+  <div id="appeal-header">
+    <header>
+      {% block appeal_headline %}
+      <h1 id="appeal-heading" aria-label="{{ _('Help Build What\u2019s Next') }}">
+        {{ _('<span>Help Build</span><span>What\u2019s Next</span>') }}
+      </h1>
+      {% endblock %}
+    </header>
+    <aside id="illustration" aria-hidden="true">
+      <div id="roc">
+        {{ high_res_img('thunderbird/appeal/apr26/forest-roc.png', {'alt': ''}, alt_formats=('webp', 'avif')) }}
+      </div>
+    </aside>
+  </div>
+
+  <div id="appeal-letter" class="letter-container font-xl">
+    <section id="donate-button-container">
+      {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content,
+      base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
+    </section>
+    <div id="letter-contents">
+      {% block appeal_body %}
+      <p>
+        {{ _('In 2025, we reached new heights with faster updates, native Exchange support, improvements on Android, and strides toward iOS. We also started building our own email service.') }}
+      </p>
+      <p>
+        <strong>{{ _('Thunderbird is funded entirely by user support.') }}</strong>
+        {{ _('Will you help build what\u2019s next?') }}
+      </p>
+      {% endblock %}
+      <div class="heart-container">
+        <div class="left-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+        <div class="right-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block site_footer %}
+  <div id="footer-wrapper">
+    {% include 'includes/base/moz-footer.html' %}
+  </div>
+{% endblock %}
+
+{% block js %}
+<script>
+(function() {
+  var canvas = document.getElementById('gradient-canvas');
+  if (!canvas) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var currentX = 50, currentY = 50;
+  var targetX = 50, targetY = 50;
+  var rafId = null;
+
+  document.addEventListener('mousemove', function(e) {
+    targetX = 20 + (e.clientX / window.innerWidth) * 60;
+    targetY = 20 + (e.clientY / window.innerHeight) * 60;
+
+    if (!rafId) {
+      rafId = requestAnimationFrame(animate);
+    }
+  });
+
+  function animate() {
+    var dx = targetX - currentX;
+    var dy = targetY - currentY;
+
+    currentX += dx * 0.2;
+    currentY += dy * 0.2;
+
+    canvas.style.setProperty('--mouse-x', currentX + '%');
+    canvas.style.setProperty('--mouse-y', currentY + '%');
+
+    if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
+      rafId = requestAnimationFrame(animate);
+    } else {
+      rafId = null;
+    }
+  }
+})();
+</script>
+{% endblock %}

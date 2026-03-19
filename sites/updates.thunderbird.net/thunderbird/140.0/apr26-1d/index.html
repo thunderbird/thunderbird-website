@@ -1,0 +1,26 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set utm_content = utm_content|default('apr26-d') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.apr26-1d.donate')) %}
+
+{% extends "thunderbird/140.0/apr26-1b/index.html" %}
+
+{% block page_title %}{{ _('Thunderbird Works for YOU (not advertisers)') }}{% endblock %}
+
+{% block appeal_headline %}
+<h1 id="appeal-heading" aria-label="{{ _('Thunderbird Works for YOU (not advertisers)') }}">
+  {{ _('THUNDERBIRD<br> works for YOU<span>(not advertisers)</span>') }}
+</h1>
+{% endblock %}
+
+{% block appeal_body %}
+<p>
+  {{ _('In a world where other email apps show you ads, collect and sell your data and turn you into the product - Thunderbird keeps you in control') }}
+</p>
+<p>
+  <strong>{{ _('Thunderbird is funded entirely by your donations.') }}</strong>
+  {{ _('Will you help support it?') }}
+</p>
+{% endblock %}
