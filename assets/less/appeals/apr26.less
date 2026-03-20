@@ -50,6 +50,7 @@ body {
   // ==========================================
 
   .heart-container {
+    margin-block-start: 0;
     max-width: 100%;
     color: #DC2626;
   }
@@ -65,10 +66,9 @@ body {
     align-items: center;
     padding-bottom: 7.75rem;
     background: linear-gradient(to bottom,
-      #64B0D0 30%,
+      #64B0D0 45%,
       #F28A7D,
       #FFAB61);
-    background-attachment: fixed;
 
     &>#appeal-heading {
       margin-top: 8rem;
@@ -127,8 +127,8 @@ body {
       top: 0;
       left: 0vw;
       width: 100vw;
-      height: 70vh;
-      --sunPos: 70vw 0;
+      height: 100vh;
+      --sunPos: 80% 0;
       transform-origin: var(--sunPos);
       animation: sun 3.5s linear infinite alternate;
 
@@ -227,12 +227,16 @@ body {
     justify-content: space-between;
     width: 100%;
     max-width: max-content;
-    padding: 2rem 2rem 4rem;
+    padding: 2rem 2rem 4.5rem;
     min-height: 22rem;
     z-index: 2; /* Above the gradient canvas */
 
     header {
       align-self: flex-end;
+    }
+
+    @media (min-width: @lg) {
+      max-width: 1250px;
     }
   }
 
@@ -265,7 +269,7 @@ body {
       font-weight: 700;
       font-size: 2.5rem;
       line-height: 1;
-      text-shadow: 0px 2px 0px #B62749;
+      text-shadow: 0px 2px 0px var(--colour-primary-pressed, #19518F);
       text-transform: uppercase;
       margin-top: 0.25rem;
 
@@ -284,6 +288,8 @@ body {
   // ==========================================
 
   #illustration {
+    margin-inline-end: 3rem;
+
     #roc {
       max-width: 10rem;
       height: auto;
@@ -306,6 +312,92 @@ body {
   // Letter container (card)
   // ==========================================
 
+  .letter-glow-wrapper {
+    position: relative;
+    z-index: 2;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: linear-gradient(145deg, #8DB8D3, #19518F 75%);
+      bottom: -0.2rem;
+      left: 1.75rem;
+      right: 1.75rem;
+      height: 388px;
+      filter: blur(2rem)
+    }
+  }
+
+  #donate-button-container {
+    position: absolute;
+    top: 0.875rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Above the letter container */
+
+    @media (min-width: @lg) {
+      width: 29rem;
+    }
+
+    .donate-banner {
+      margin: 0;
+
+      #decoration {
+        left: -85px;
+
+        @media (min-width: @md) {
+          left: -39px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .donate-banner::after {
+      left: -263px;
+
+      @media (min-width: @md) {
+        left: -243px;
+        transform: rotate(45deg);
+      }
+    }
+
+    #donate-banner-left {
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1.3;
+      padding: 0.6875rem 1.5rem;
+
+      b {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 2.21px;
+      }
+
+      @media (min-width: @md) {
+        flex: 0 1 auto;
+        font-size: 1rem;
+
+        b {
+          font-size: 2.0rem;
+        }
+      }
+    }
+
+    #donate-banner-right {
+      color: var(--critical-pressed, #7F1D1D);
+      display: block;
+      font-weight: 400;
+      text-shadow: none;
+      padding-inline-end: 1.5rem;
+      padding-block-end: 1.0625rem;
+
+      b {
+        display: block;
+        font-weight: 600;
+      }
+    }
+  }
+
   .letter-container {
     position: relative;
     background: var(--color-appeal-main-bg);
@@ -313,86 +405,14 @@ body {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     max-width: var(--appeal--letter-width-mobile);
     margin-inline: 1rem;
-    padding-bottom: 3rem;
+    padding: 6.375rem 4.5rem 4rem;
     z-index: 2; /* Above the gradient canvas */
 
     @media (min-width: @sm) {
       max-width: var(--appeal-content-width);
     }
 
-    #donate-button-container {
-      margin: 0 auto;
-      margin-left: -1px;
-      margin-right: -1px;
-      margin-top: -3rem;
-
-      @media (min-width: @md) {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 29.375rem;
-      }
-
-      .donate-banner {
-        margin: 0 auto 2rem;
-
-        #decoration {
-          left: -85px;
-
-          @media (min-width: @md) {
-            left: -35px;
-          }
-        }
-      }
-
-      .donate-banner::after {
-        left: -263px;
-
-        @media (min-width: @md) {
-          left: -213px;
-        }
-      }
-
-      #donate-banner-left {
-        font-size: 0.8rem;
-        font-weight: 600;
-        line-height: 1.3;
-
-        b {
-          font-size: 1.5rem;
-          font-weight: 600;
-          letter-spacing: 2.21px;
-        }
-
-        @media (min-width: @md) {
-          flex: 0 1 auto;
-          font-size: 1rem;
-
-          b {
-            font-size: 2.0rem;
-          }
-        }
-      }
-
-      #donate-banner-right {
-        color: rgb(69, 10, 10);
-        display: block;
-        font-weight: 400;
-        text-shadow: none;
-
-        b {
-          display: block;
-          font-weight: 600;
-        }
-      }
-    }
-
     #letter-contents {
-      padding-inline: 1.25rem;
-
-      @media (min-width: @md) {
-        padding-inline: 4.5rem;
-      }
-
       p {
         .mixin-font-styles(@family-open-sans,
           normal,
@@ -401,9 +421,14 @@ body {
         width: 100%;
       }
 
-      .closing-text {
-        font-size: 1rem;
+      p:first-child {
+        margin: 1rem 0 2rem;
       }
+    }
+
+    #letter-contents > p.closing-text {
+      font-size: 1rem;
+      margin: 1.1875rem 0 0 0 !important; /* heart-lines.less override */
     }
   }
 

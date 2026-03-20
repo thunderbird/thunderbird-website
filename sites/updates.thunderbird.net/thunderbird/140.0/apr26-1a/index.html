@@ -48,35 +48,37 @@
     </aside>
   </div>
 
-  <div id="appeal-letter" class="letter-container font-xl">
+  <div class="letter-glow-wrapper">
     <section id="donate-button-container">
       {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content,
       base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
     </section>
-    <div id="letter-contents">
-      {% block appeal_body %}
-      <p>
-        {{ _('In 2025, we reached new heights with faster updates, native Exchange support, improvements on Android, and strides toward iOS. We also started building our own email service.') }}
-      </p>
-      <p>
-        <strong>{{ _('Thunderbird is funded entirely by user support.') }}</strong>
-        {{ _('Will you help build what\u2019s next?') }}
-      </p>
-      {% endblock %}
-      <div class="heart-container">
-        <div class="left-lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+    <div id="appeal-letter" class="letter-container">
+      <div id="letter-contents">
+        {% block appeal_body %}
+        <p>
+          {{ _('In 2025, we reached new heights with faster updates, native Exchange support, improvements on Android, and strides toward iOS. We also started building our own email service.') }}
+        </p>
+        <p>
+          <strong>{{ _('Thunderbird is funded entirely by user support.') }}</strong>
+          {{ _('Will you help build what\u2019s next?') }}
+        </p>
+        {% endblock %}
+        <div class="heart-container">
+          <div class="left-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+          <div class="right-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </div>
-        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
-        <div class="right-lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+        <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
       </div>
-      <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
     </div>
   </div>
 </section>
