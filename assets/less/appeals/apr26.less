@@ -65,6 +65,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 7.75rem;
+    overflow: clip;
     background: linear-gradient(to bottom,
       #64B0D0 45%,
       #F28A7D,
@@ -106,29 +107,43 @@ body {
       );
       opacity: 0;
     }
+
     #cloud div::before {
       --index: 0;
       transform: scale3d(1, -1, 1);
     }
+
     #cloud div::after {
       --index: 1;
       transform: scale3d(-1, -1, 1);
     }
+
     #cloud div#cloud_layer2::before {
       --index: 2;
     }
+
     #cloud div#cloud_layer2::after {
       --index: 3;
     }
+
+    #sun {
+      position: absolute;
+      top: 0;
+      left: 67%;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+    }
+
     #sun div {
       content: "";
       display: block;
-      position: fixed;
-      top: 0;
-      left: 0vw;
+      position: absolute;
+      top: -50vh;
+      left: -50vw;
       width: 100vw;
       height: 100vh;
-      --sunPos: 80% 0;
+      --sunPos: 50vw 50vh;
       transform-origin: var(--sunPos);
       animation: sun 3.5s linear infinite alternate;
 
@@ -142,6 +157,7 @@ body {
       z-index: 2;
       pointer-events: none;
     }
+
     #sun #sun_layer1 {
       background: conic-gradient(
         from 135deg at var(--sunPos),
@@ -156,6 +172,7 @@ body {
         transparent 20%
       );
     }
+
     #sun #sun_layer2 {
       animation-delay: -1s;
       animation-duration: 5s;
@@ -173,6 +190,7 @@ body {
         transparent 19%
       );
     }
+
     #sun #sun_layer3 {
       animation-delay: -2s;
       animation-duration: 6.5s;
@@ -288,6 +306,7 @@ body {
   // ==========================================
 
   #illustration {
+    position: relative;
     margin-inline-end: 3rem;
 
     #roc {
