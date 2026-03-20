@@ -608,4 +608,55 @@ body {
       margin-block-start: 0;
     }
   }
+
+  // ==========================================
+  // Reduced motion
+  // ==========================================
+
+  @media (prefers-reduced-motion: reduce) {
+    #appeal-body {
+      #cloud div::before,
+      #cloud div::after {
+        animation: none;
+        opacity: 0.3;
+        background-position: var(--posX) bottom;
+        background-size: calc(2 * var(--highHeight)) var(--highHeight);
+      }
+
+      #sun div {
+        animation: none;
+      }
+    }
+
+    // Remove donate button built-in animations
+    .pill {
+      animation: none !important;
+    }
+
+    .donate-banner {
+      animation: none !important;
+      transition-duration: 0ms !important;
+
+      &:hover {
+        transform: none !important;
+      }
+    }
+
+    .donate-banner::after,
+    #decoration,
+    #donate-banner-left,
+    #donate-banner-right {
+      animation: none !important;
+      transition-duration: 0ms !important;
+    }
+
+    // Show hearts at their end position during hover
+    #hover-heart-1,
+    #hover-heart-2,
+    #hover-heart-3 {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  }
 }
