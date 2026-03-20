@@ -26,6 +26,7 @@
 
   --txt: var(--color-appeal-txt);
   --font-content: Open Sans, system-ui, sans-serif;
+  --heading-text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 html,
@@ -261,7 +262,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 2rem 2.25rem 4.5rem;
+    padding: 2rem 2.25rem 4rem;
     min-height: 35rem;
     z-index: 2; /* Above the gradient canvas */
 
@@ -271,6 +272,7 @@ body {
 
     @media (min-width: @xs) {
       min-height: 30rem;
+      padding: 1.875rem 2.25rem 4.5rem;
     }
 
     @media (min-width: @md) {
@@ -289,7 +291,8 @@ body {
     .mixin-font-styles(@family-open-sans, 600, 1.5rem, 1);
     color: #FEFFFF;
     text-transform: uppercase;
-    text-shadow: 0px 2px 0px rgba(23, 95, 182, 0.3);
+    text-shadow: 0px 2px 0px rgba(23, 95, 182, 0.3),
+                 var(--heading-text-shadow);
     margin: 0;
 
     @media (min-width: @sm) {
@@ -306,7 +309,8 @@ body {
       font-weight: 600;
       font-size: 2.25rem;
       line-height: 1;
-      text-shadow: 0px 2px 0px #175FB64D;
+      text-shadow: 0px 2px 0px #175FB64D,
+                   var(--heading-text-shadow);
       text-transform: uppercase;
     }
 
@@ -315,9 +319,10 @@ body {
       font-weight: 700;
       font-size: 4.5rem;
       line-height: 1;
-      text-shadow: 0px 2px 0px var(--colour-primary-pressed, #19518F);
+      text-shadow: 0px 2px 0px var(--colour-primary-pressed, #19518F),
+                   var(--heading-text-shadow);
       text-transform: uppercase;
-      margin-top: 0.25rem;
+      margin-block-start: 0.25rem;
     }
   }
 
@@ -534,6 +539,63 @@ body {
         #D04971 0%,
         #7E6498 100%
       );
+    }
+  }
+
+  // ==========================================
+  // Variant B specifics
+  // ==========================================
+
+  #appeal-heading.variant-1b {
+    span:first-child {
+      text-shadow: 0px 2px 0px rgba(23, 95, 182, 0.3),
+                   var(--heading-text-shadow);
+    }
+
+    span:last-child {
+      text-shadow: 0px 2px 0px #B62749,
+                   var(--heading-text-shadow);
+    }
+  }
+    
+  // ==========================================
+  // Variant C specifics
+  // ==========================================
+
+  #appeal-heading.variant-1c {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-shadow: 0px 2px 0px var(--colour-primary-pressed, #19518F),
+                 var(--heading-text-shadow);
+    text-transform: none;
+
+    span {
+      font-size: 2.25rem;
+      font-weight: 600;
+      text-shadow: 0px 2px 0px rgba(23, 95, 182, 0.3),
+                   var(--heading-text-shadow);
+      text-transform: lowercase;
+      margin-block-start: 0;
+    }
+  }
+
+  // ==========================================
+  // Variant D specifics
+  // ==========================================
+  #appeal-heading.variant-1d {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-shadow: 0px 2px 0px #B62749,
+                 var(--heading-text-shadow);
+    text-transform: none;
+
+    span {
+      font-size: 2.25rem;
+      font-weight: 600;
+      text-shadow: 0px 2px 0px #175FB64D,
+                   var(--heading-text-shadow);
+      text-transform: lowercase;
+      margin-block-start: 0;
     }
   }
 }
