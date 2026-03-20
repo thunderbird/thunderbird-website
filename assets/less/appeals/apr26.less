@@ -334,6 +334,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3; /* Above the letter container */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 
     @media (min-width: @lg) {
       width: 29rem;
@@ -359,6 +360,10 @@ body {
         left: -243px;
         transform: rotate(45deg);
       }
+    }
+
+    .donate-banner:hover::after {
+      transform: scale(3);
     }
 
     #donate-banner-left {
