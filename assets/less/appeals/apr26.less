@@ -50,9 +50,14 @@ body {
   // ==========================================
 
   .heart-container {
-    margin-block-start: 0;
+    margin: 2rem auto 1.5625rem;
     max-width: 100%;
     color: #DC2626;
+    width: 20.25rem;
+
+    @media (min-width: @md) {
+      width: 100%;
+    }
   }
 
   // ==========================================
@@ -78,8 +83,13 @@ body {
       text-align: center;
       max-width: var(--appeal-content-width);
       width: 100%;
+      text-wrap: nowrap;
+      z-index: 3; /* Above the sun rays */
     }
 
+    // =================================================
+    // Cloud animation (anchored to the top of the page)
+    // =================================================
     #cloud div::before,
     #cloud div::after {
       content: "";
@@ -126,6 +136,9 @@ body {
       --index: 3;
     }
 
+    // =============================================
+    // Sun animation (anchored to roc illustration)
+    // =============================================
     #sun {
       position: absolute;
       top: 0;
@@ -142,7 +155,7 @@ body {
       top: -50vh;
       left: -50vw;
       width: 100vw;
-      height: 100vh;
+      height: 200vh;
       --sunPos: 50vw 50vh;
       transform-origin: var(--sunPos);
       animation: sun 3.5s linear infinite alternate;
@@ -156,6 +169,10 @@ body {
       transform: scaleX(2);
       z-index: 2;
       pointer-events: none;
+
+      @media (min-width: @md) {
+        height: 100vh;
+      }
     }
 
     #sun #sun_layer1 {
@@ -244,17 +261,27 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: max-content;
-    padding: 2rem 2rem 4.5rem;
-    min-height: 22rem;
+    padding: 2rem 2.25rem 4.5rem;
+    min-height: 35rem;
     z-index: 2; /* Above the gradient canvas */
 
     header {
       align-self: flex-end;
     }
 
+    @media (min-width: @xs) {
+      min-height: 30rem;
+    }
+
+    @media (min-width: @md) {
+      max-width: 1250px;
+      min-height: 22rem;
+      padding: 2rem 2.25rem 4.5rem;
+    }
+
     @media (min-width: @lg) {
       max-width: 1250px;
+      padding: 2rem 2rem 4.5rem;
     }
   }
 
@@ -271,6 +298,7 @@ body {
 
     @media (min-width: @md) {
       font-size: 2.25rem;
+      text-wrap: nowrap;
     }
 
     & > span:first-child {
@@ -285,19 +313,11 @@ body {
     & > span:last-child {
       display: block;
       font-weight: 700;
-      font-size: 2.5rem;
+      font-size: 4.5rem;
       line-height: 1;
       text-shadow: 0px 2px 0px var(--colour-primary-pressed, #19518F);
       text-transform: uppercase;
       margin-top: 0.25rem;
-
-      @media (min-width: @sm) {
-        font-size: 3rem;
-      }
-
-      @media (min-width: @md) {
-        font-size: 4.5rem;
-      }
     }
   }
 
@@ -307,21 +327,24 @@ body {
 
   #illustration {
     position: relative;
-    margin-inline-end: 3rem;
+
+    @media (min-width: @lg) {
+      margin-inline-end: 3rem;
+    }
 
     #roc {
-      max-width: 10rem;
       height: auto;
-
-      @media (min-width: @sm) {
-        max-width: 16rem;
-      }
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 22rem;
 
       @media (min-width: @md) {
         max-width: 22rem;
       }
 
       @media (min-width: @lg) {
+        position: static;
         max-width: 30rem;
       }
     }
@@ -354,16 +377,27 @@ body {
     transform: translate(-50%, -50%);
     z-index: 3; /* Above the letter container */
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+    width: 12.5rem;
 
-    @media (min-width: @lg) {
+    @media (min-width: @sm) {
+      width: 23.56rem;
+    }
+
+    @media (min-width: @md) {
       width: 29rem;
     }
 
     .donate-banner {
       margin: 0;
+      min-height: 6.25rem;
+      max-width: 100%;
+
+      @media (min-width: @md) {
+        min-height: 7.6875rem;
+      }
 
       #decoration {
-        left: -85px;
+        left: 45px;
 
         @media (min-width: @md) {
           left: -39px;
@@ -373,7 +407,7 @@ body {
     }
 
     .donate-banner::after {
-      left: -263px;
+      left: -136px;
 
       @media (min-width: @md) {
         left: -243px;
@@ -381,18 +415,24 @@ body {
       }
     }
 
-    .donate-banner:hover::after {
-      transform: scale(3);
+    .donate-banner:hover {
+      #donate-banner-left {
+        padding: 0.5rem 0rem;
+      }
+
+      &::after {
+        transform: scale(3);
+      }
     }
 
     #donate-banner-left {
-      font-size: 0.8rem;
+      font-size: 1.218rem;
       font-weight: 600;
       line-height: 1.3;
       padding: 0.6875rem 1.5rem;
 
       b {
-        font-size: 1.5rem;
+        font-size: 2.133rem;
         font-weight: 600;
         letter-spacing: 2.21px;
       }
@@ -409,7 +449,7 @@ body {
 
     #donate-banner-right {
       color: var(--critical-pressed, #7F1D1D);
-      display: block;
+      display: none;
       font-weight: 400;
       text-shadow: none;
       padding-inline-end: 1.5rem;
@@ -419,6 +459,10 @@ body {
         display: block;
         font-weight: 600;
       }
+
+      @media (min-width: @md) {
+        display: block;
+      }
     }
   }
 
@@ -427,13 +471,21 @@ body {
     background: var(--color-appeal-main-bg);
     border-radius: 0.75rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    max-width: var(--appeal--letter-width-mobile);
-    margin-inline: 1rem;
-    padding: 6.375rem 4.5rem 4rem;
+    max-width: calc(100% - 2.25rem);
+    margin-inline: 2.25rem;
+    padding: 4.375rem 2.25rem 1.5rem;
     z-index: 2; /* Above the gradient canvas */
 
     @media (min-width: @sm) {
       max-width: var(--appeal-content-width);
+    }
+
+    @media (min-width: @md) {
+      padding: 6.375rem 4.5rem 4rem;
+    }
+
+    @media (min-width: @lg) {
+      margin-inline: 1rem;
     }
 
     #letter-contents {
@@ -452,7 +504,11 @@ body {
 
     #letter-contents > p.closing-text {
       font-size: 1rem;
-      margin: 1.1875rem 0 0 0 !important; /* heart-lines.less override */
+      margin: 0 !important; /* heart-lines.less override */
+
+      @media (min-width: @md) {
+        margin: 1.1875rem 0 0 0 !important; /* heart-lines.less override */
+      }
     }
   }
 
