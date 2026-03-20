@@ -154,7 +154,7 @@ body {
       display: block;
       position: absolute;
       top: -50vh;
-      left: -50vw;
+      left: -60vw;
       width: 100vw;
       height: 200vh;
       --sunPos: 50vw 50vh;
@@ -171,8 +171,9 @@ body {
       z-index: 2;
       pointer-events: none;
 
-      @media (min-width: @md) {
+      @media (min-width: @lg) {
         height: 100vh;
+        left: -50vw;
       }
     }
 
@@ -263,15 +264,15 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 2rem 2.25rem 4rem;
-    min-height: 35rem;
+    min-height: 31rem;
     z-index: 2; /* Above the gradient canvas */
 
     header {
       align-self: flex-end;
+      z-index: 3; /* Above the sun rays */
     }
 
     @media (min-width: @xs) {
-      min-height: 30rem;
       padding: 1.875rem 2.25rem 4.5rem;
     }
 
@@ -563,7 +564,8 @@ body {
   // ==========================================
 
   #appeal-heading.variant-1c {
-    font-size: 4.5rem;
+    margin-block-start: 17rem;
+    font-size: 3.5rem;
     font-weight: 700;
     text-shadow: 0px 2px 0px var(--colour-primary-pressed, #19518F),
                  var(--heading-text-shadow);
@@ -575,6 +577,14 @@ body {
       text-shadow: 0px 2px 0px rgba(23, 95, 182, 0.3),
                    var(--heading-text-shadow);
       text-transform: lowercase;
+      margin-block-start: 0;
+    }
+
+    @media (min-width: @sm) {
+      font-size: 4.5rem;
+    }
+
+    @media (min-width: @md) {
       margin-block-start: 0;
     }
   }
