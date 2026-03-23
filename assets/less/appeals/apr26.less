@@ -73,9 +73,13 @@ body {
     padding-bottom: 7.75rem;
     overflow: clip;
     background: linear-gradient(to bottom,
-      #64B0D0 45%,
+      #64B0D0 0%,
+      #64B0D0 70%,
       #F28A7D,
       #FFAB61);
+    background-size: 100% 200%;
+    animation: bg-scroll linear forwards;
+    animation-timeline: scroll();
 
     &>#appeal-heading {
       margin-top: 8rem;
@@ -253,6 +257,11 @@ body {
     @keyframes sun {
       to {
         transform: skew(-15deg);
+      }
+    }
+    @keyframes bg-scroll {
+      to {
+        background-position: 0 100%;
       }
     }
   }
@@ -616,6 +625,8 @@ body {
 
   @media (prefers-reduced-motion: reduce) {
     #appeal-body {
+      animation: none;
+
       #cloud div::before,
       #cloud div::after {
         animation: none;
