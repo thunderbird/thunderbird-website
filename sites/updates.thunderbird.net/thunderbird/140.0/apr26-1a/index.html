@@ -23,6 +23,10 @@
 
 {% block content %}
 <section id="appeal-body">
+  <div id='cloud'>
+    <div id='cloud_layer1'></div>
+    <div id='cloud_layer2'></div>
+  </div>
   <div id="appeal-header">
     <header>
       {% block appeal_headline %}
@@ -35,38 +39,45 @@
       <div id="roc">
         {{ high_res_img('thunderbird/appeal/apr26/forest-roc.png', {'alt': ''}, alt_formats=('webp', 'avif')) }}
       </div>
+      <div id='sun'>
+        <div id='sun_layer1'></div>
+        <div id='sun_layer2'></div>
+        <div id='sun_layer3'></div>
+      </div>
     </aside>
   </div>
 
-  <div id="appeal-letter" class="letter-container font-xl">
+  <div class="letter-glow-wrapper">
     <section id="donate-button-container">
       {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content,
       base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
     </section>
-    <div id="letter-contents">
-      {% block appeal_body %}
-      <p>
-        {{ _('In 2025, we reached new heights with faster updates, native Exchange support, improvements on Android, and strides toward iOS. We also started building our own email service.') }}
-      </p>
-      <p>
-        <strong>{{ _('Thunderbird is funded entirely by user support.') }}</strong>
-        {{ _('Will you help build what\u2019s next?') }}
-      </p>
-      {% endblock %}
-      <div class="heart-container">
-        <div class="left-lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+    <div id="appeal-letter" class="letter-container">
+      <div id="letter-contents">
+        {% block appeal_body %}
+        <p>
+          {{ _('In 2025, we reached new heights with faster updates, native Exchange support, improvements on Android, and strides toward iOS. We also started building our own email service.') }}
+        </p>
+        <p>
+          <strong>{{ _('Thunderbird is funded entirely by user support.') }}</strong>
+          {{ _('Will you help build what\u2019s next?') }}
+        </p>
+        {% endblock %}
+        <div class="heart-container">
+          <div class="left-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+          <div class="right-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </div>
-        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
-        <div class="right-lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+        <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
       </div>
-      <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
     </div>
   </div>
 </section>

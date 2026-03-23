@@ -26,6 +26,7 @@
 
   --txt: var(--color-appeal-txt);
   --font-content: Open Sans, system-ui, sans-serif;
+  --heading-text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 html,
@@ -50,8 +51,14 @@ body {
   // ==========================================
 
   .heart-container {
+    margin: 2rem auto 1.5625rem;
     max-width: 100%;
     color: #DC2626;
+    width: 20.25rem;
+
+    @media (min-width: @md) {
+      width: 100%;
+    }
   }
 
   // ==========================================
@@ -64,11 +71,11 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 7.75rem;
+    overflow: clip;
     background: linear-gradient(to bottom,
-      #64B0D0,
+      #64B0D0 45%,
       #F28A7D,
       #FFAB61);
-    background-attachment: fixed;
 
     &>#appeal-heading {
       margin-top: 8rem;
@@ -77,6 +84,173 @@ body {
       text-align: center;
       max-width: var(--appeal-content-width);
       width: 100%;
+      text-wrap: nowrap;
+      z-index: 3; /* Above the sun rays */
+    }
+
+    // =================================================
+    // Cloud animation (anchored to the top of the page)
+    // =================================================
+    #cloud div::before,
+    #cloud div::after {
+      content: "";
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('/media/img/thunderbird/appeal/apr26/cloud-texture.png');
+      background-repeat: repeat-x;
+      animation: cloud var(--duration) linear infinite forwards var(--direction);
+
+      --posX: left;
+      --duration: 40s;
+      --direction: normal; /* normal or reverse */
+      --lowHeight: 10vh;
+      --highHeight: 20vh;
+      --layerNum: 4;
+      --index: 0;
+      --opacity: 0.7;
+      --moveX: 300px;
+      animation-delay: calc(
+        (var(--duration) / var(--layerNum)) * var(--index) * -1
+      );
+      opacity: 0;
+    }
+
+    #cloud div::before {
+      --index: 0;
+      transform: scale3d(1, -1, 1);
+    }
+
+    #cloud div::after {
+      --index: 1;
+      transform: scale3d(-1, -1, 1);
+    }
+
+    #cloud div#cloud_layer2::before {
+      --index: 2;
+    }
+
+    #cloud div#cloud_layer2::after {
+      --index: 3;
+    }
+
+    // =============================================
+    // Sun animation (anchored to roc illustration)
+    // =============================================
+    #sun {
+      position: absolute;
+      top: 0;
+      left: 67%;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+    }
+
+    #sun div {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -50vh;
+      left: -60vw;
+      width: 100vw;
+      height: 200vh;
+      --sunPos: 50vw 50vh;
+      transform-origin: var(--sunPos);
+      animation: sun 3.5s linear infinite alternate;
+
+      mask-image: radial-gradient(
+        circle at var(--sunPos),
+        transparent 10vh,
+        white 35vh
+      );
+      opacity: 0.15;
+      transform: scaleX(2);
+      z-index: 2;
+      pointer-events: none;
+
+      @media (min-width: @lg) {
+        height: 100vh;
+        left: -50vw;
+      }
+    }
+
+    #sun #sun_layer1 {
+      background: conic-gradient(
+        from 135deg at var(--sunPos),
+        transparent 10.5%,
+        khaki 11%,
+        transparent 11.5%,
+        transparent 15%,
+        white 16%,
+        transparent 17%,
+        transparent 18%,
+        white 19%,
+        transparent 20%
+      );
+    }
+
+    #sun #sun_layer2 {
+      animation-delay: -1s;
+      animation-duration: 5s;
+      animation-direction: alternate-reverse;
+      background: conic-gradient(
+        from 140deg at var(--sunPos),
+        transparent 10%,
+        white 11%,
+        transparent 12%,
+        transparent 15.5%,
+        paleturquoise 16%,
+        transparent 16.5%,
+        transparent 17%,
+        lightpink 18%,
+        transparent 19%
+      );
+    }
+
+    #sun #sun_layer3 {
+      animation-delay: -2s;
+      animation-duration: 6.5s;
+      animation-direction: alternate-reverse;
+      background: conic-gradient(
+        from 145deg at var(--sunPos),
+        transparent 10%,
+        white 11%,
+        transparent 12%,
+        transparent 14%,
+        white 15%,
+        transparent 16%,
+        transparent 17%,
+        powderblue 18%,
+        transparent 19%
+      );
+    }
+
+    @keyframes cloud {
+      0% {
+        opacity: 0;
+        background-position: var(--posX) var(--moveX) bottom
+          calc(-1 * var(--lowHeight));
+        background-size: calc(1 * var(--lowHeight)) var(--lowHeight);
+      }
+      5% {
+        opacity: var(--opacity);
+      }
+      80% {
+        opacity: var(--opacity);
+      }
+      100% {
+        opacity: 0;
+        background-position: var(--posX) bottom;
+        background-size: calc(3 * var(--highHeight)) var(--highHeight);
+      }
+    }
+    @keyframes sun {
+      to {
+        transform: skew(-15deg);
+      }
     }
   }
 
@@ -89,12 +263,28 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: max-content;
-    padding: 2rem 2rem 4rem;
-    min-height: 22rem;
+    padding: 2rem 2.25rem 4rem;
+    min-height: 31rem;
+    z-index: 2; /* Above the gradient canvas */
 
     header {
       align-self: flex-end;
+      z-index: 3; /* Above the sun rays */
+    }
+
+    @media (min-width: @xs) {
+      padding: 1.875rem 2.25rem 4.5rem;
+    }
+
+    @media (min-width: @md) {
+      max-width: 1250px;
+      min-height: 22rem;
+      padding: 2rem 2.25rem 4.5rem;
+    }
+
+    @media (min-width: @lg) {
+      max-width: 1250px;
+      padding: 2rem 2rem 4.5rem;
     }
   }
 
@@ -102,7 +292,8 @@ body {
     .mixin-font-styles(@family-open-sans, 600, 1.5rem, 1);
     color: #FEFFFF;
     text-transform: uppercase;
-    text-shadow: 0px 2px 0px rgba(23, 95, 182, 0.3);
+    text-shadow: 0px 2px 0px rgba(23, 95, 182, 0.3),
+                 var(--heading-text-shadow);
     margin: 0;
 
     @media (min-width: @sm) {
@@ -111,6 +302,7 @@ body {
 
     @media (min-width: @md) {
       font-size: 2.25rem;
+      text-wrap: nowrap;
     }
 
     & > span:first-child {
@@ -118,26 +310,20 @@ body {
       font-weight: 600;
       font-size: 2.25rem;
       line-height: 1;
-      text-shadow: 0px 2px 0px #175FB64D;
+      text-shadow: 0px 2px 0px #175FB64D,
+                   var(--heading-text-shadow);
       text-transform: uppercase;
     }
 
     & > span:last-child {
       display: block;
       font-weight: 700;
-      font-size: 2.5rem;
+      font-size: 4.5rem;
       line-height: 1;
-      text-shadow: 0px 2px 0px #B62749;
+      text-shadow: 0px 2px 0px var(--colour-primary-pressed, #19518F),
+                   var(--heading-text-shadow);
       text-transform: uppercase;
-      margin-top: 0.25rem;
-
-      @media (min-width: @sm) {
-        font-size: 3rem;
-      }
-
-      @media (min-width: @md) {
-        font-size: 4.5rem;
-      }
+      margin-block-start: 0.25rem;
     }
   }
 
@@ -146,19 +332,25 @@ body {
   // ==========================================
 
   #illustration {
-    #roc {
-      max-width: 10rem;
-      height: auto;
+    position: relative;
 
-      @media (min-width: @sm) {
-        max-width: 16rem;
-      }
+    @media (min-width: @lg) {
+      margin-inline-end: 3rem;
+    }
+
+    #roc {
+      height: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 22rem;
 
       @media (min-width: @md) {
         max-width: 22rem;
       }
 
       @media (min-width: @lg) {
+        position: static;
         max-width: 30rem;
       }
     }
@@ -168,92 +360,141 @@ body {
   // Letter container (card)
   // ==========================================
 
+  .letter-glow-wrapper {
+    position: relative;
+    z-index: 2;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: linear-gradient(145deg, #8DB8D3, #19518F 75%);
+      bottom: -0.2rem;
+      left: 1.75rem;
+      right: 1.75rem;
+      height: 388px;
+      filter: blur(2rem)
+    }
+  }
+
+  #donate-button-container {
+    position: absolute;
+    top: 0.875rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Above the letter container */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+    width: 12.5rem;
+
+    @media (min-width: @sm) {
+      width: 23.56rem;
+    }
+
+    @media (min-width: @md) {
+      width: 29rem;
+    }
+
+    .donate-banner {
+      margin: 0;
+      min-height: 6.25rem;
+      max-width: 100%;
+
+      @media (min-width: @md) {
+        min-height: 7.6875rem;
+      }
+
+      #decoration {
+        left: 45px;
+
+        @media (min-width: @md) {
+          left: -39px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .donate-banner::after {
+      left: -136px;
+
+      @media (min-width: @md) {
+        left: -243px;
+        transform: rotate(45deg);
+      }
+    }
+
+    .donate-banner:hover {
+      #donate-banner-left {
+        padding: 0.5rem 0rem;
+      }
+
+      &::after {
+        transform: scale(3);
+      }
+    }
+
+    #donate-banner-left {
+      font-size: 1.218rem;
+      font-weight: 600;
+      line-height: 1.3;
+      padding: 0.6875rem 1.5rem;
+
+      b {
+        font-size: 2.133rem;
+        font-weight: 600;
+        letter-spacing: 2.21px;
+      }
+
+      @media (min-width: @md) {
+        flex: 0 1 auto;
+        font-size: 1rem;
+
+        b {
+          font-size: 2.0rem;
+        }
+      }
+    }
+
+    #donate-banner-right {
+      color: var(--critical-pressed, #7F1D1D);
+      display: none;
+      font-weight: 400;
+      text-shadow: none;
+      padding-inline-end: 1.5rem;
+      padding-block-end: 1.0625rem;
+
+      b {
+        display: block;
+        font-weight: 600;
+      }
+
+      @media (min-width: @md) {
+        display: block;
+      }
+    }
+  }
+
   .letter-container {
     position: relative;
     background: var(--color-appeal-main-bg);
     border-radius: 0.75rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    max-width: var(--appeal--letter-width-mobile);
-    margin-inline: 1rem;
-    padding-bottom: 3rem;
+    max-width: calc(100% - 2.25rem);
+    margin-inline: 2.25rem;
+    padding: 4.375rem 2.25rem 1.5rem;
+    z-index: 2; /* Above the gradient canvas */
 
     @media (min-width: @sm) {
       max-width: var(--appeal-content-width);
     }
 
-    #donate-button-container {
-      margin: 0 auto;
-      margin-left: -1px;
-      margin-right: -1px;
-      margin-top: -3rem;
+    @media (min-width: @md) {
+      padding: 6.375rem 4.5rem 4rem;
+    }
 
-      @media (min-width: @md) {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 29.375rem;
-      }
-
-      .donate-banner {
-        margin: 0 auto 2rem;
-
-        #decoration {
-          left: -85px;
-
-          @media (min-width: @md) {
-            left: -35px;
-          }
-        }
-      }
-
-      .donate-banner::after {
-        left: -263px;
-
-        @media (min-width: @md) {
-          left: -213px;
-        }
-      }
-
-      #donate-banner-left {
-        font-size: 0.8rem;
-        font-weight: 600;
-        line-height: 1.3;
-
-        b {
-          font-size: 1.5rem;
-          font-weight: 600;
-          letter-spacing: 2.21px;
-        }
-
-        @media (min-width: @md) {
-          flex: 0 1 auto;
-          font-size: 1rem;
-
-          b {
-            font-size: 2.0rem;
-          }
-        }
-      }
-
-      #donate-banner-right {
-        color: rgb(69, 10, 10);
-        display: block;
-        font-weight: 400;
-        text-shadow: none;
-
-        b {
-          display: block;
-          font-weight: 600;
-        }
-      }
+    @media (min-width: @lg) {
+      margin-inline: 1rem;
     }
 
     #letter-contents {
-      padding-inline: 1.25rem;
-
-      @media (min-width: @md) {
-        padding-inline: 4.5rem;
-      }
-
       p {
         .mixin-font-styles(@family-open-sans,
           normal,
@@ -262,8 +503,17 @@ body {
         width: 100%;
       }
 
-      .closing-text {
-        font-size: 1rem;
+      p:first-child {
+        margin: 1rem 0 2rem;
+      }
+    }
+
+    #letter-contents > p.closing-text {
+      font-size: 1rem;
+      margin: 0 !important; /* heart-lines.less override */
+
+      @media (min-width: @md) {
+        margin: 1.1875rem 0 0 0 !important; /* heart-lines.less override */
       }
     }
   }
@@ -271,6 +521,7 @@ body {
   #footer-wrapper {
     background: var(--background-page-and-footer);
     flex-grow: 1;
+    z-index: 2; /* Above the gradient canvas */
   }
 
   // ==========================================
@@ -289,6 +540,123 @@ body {
         #D04971 0%,
         #7E6498 100%
       );
+    }
+  }
+
+  // ==========================================
+  // Variant B specifics
+  // ==========================================
+
+  #appeal-heading.variant-1b {
+    span:first-child {
+      text-shadow: 0px 2px 0px rgba(23, 95, 182, 0.3),
+                   var(--heading-text-shadow);
+    }
+
+    span:last-child {
+      text-shadow: 0px 2px 0px #B62749,
+                   var(--heading-text-shadow);
+    }
+  }
+    
+  // ==========================================
+  // Variant C specifics
+  // ==========================================
+
+  #appeal-heading.variant-1c {
+    margin-block-start: 17rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0px 2px 0px var(--colour-primary-pressed, #19518F),
+                 var(--heading-text-shadow);
+    text-transform: none;
+
+    span {
+      font-size: 2.25rem;
+      font-weight: 600;
+      text-shadow: 0px 2px 0px rgba(23, 95, 182, 0.3),
+                   var(--heading-text-shadow);
+      text-transform: lowercase;
+      margin-block-start: 0;
+    }
+
+    @media (min-width: @sm) {
+      font-size: 4.5rem;
+    }
+
+    @media (min-width: @md) {
+      margin-block-start: 0;
+    }
+  }
+
+  // ==========================================
+  // Variant D specifics
+  // ==========================================
+  #appeal-heading.variant-1d {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-shadow: 0px 2px 0px #B62749,
+                 var(--heading-text-shadow);
+    text-transform: none;
+
+    span {
+      font-size: 2.25rem;
+      font-weight: 600;
+      text-shadow: 0px 2px 0px #175FB64D,
+                   var(--heading-text-shadow);
+      text-transform: lowercase;
+      margin-block-start: 0;
+    }
+  }
+
+  // ==========================================
+  // Reduced motion
+  // ==========================================
+
+  @media (prefers-reduced-motion: reduce) {
+    #appeal-body {
+      #cloud div::before,
+      #cloud div::after {
+        animation: none;
+        opacity: 0.3;
+        background-position: var(--posX) bottom;
+        background-size: calc(2 * var(--highHeight)) var(--highHeight);
+      }
+
+      #sun div {
+        animation: none;
+      }
+    }
+
+    // Remove donate button built-in animations
+    .pill {
+      animation: none !important;
+    }
+
+    .donate-banner {
+      animation: none !important;
+      transition-duration: 0ms !important;
+
+      &:hover {
+        transform: none !important;
+      }
+    }
+
+    .donate-banner::after,
+    #decoration,
+    #donate-banner-left,
+    #donate-banner-right {
+      animation: none !important;
+      transition-duration: 0ms !important;
+    }
+
+    // Show hearts at their end position during hover
+    #hover-heart-1,
+    #hover-heart-2,
+    #hover-heart-3 {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
   }
 }
