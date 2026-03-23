@@ -381,14 +381,16 @@ body {
     transform: translate(-50%, -50%);
     z-index: 3; /* Above the letter container */
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
-    width: 12.5rem;
-
-    @media (min-width: @sm) {
-      width: 23.56rem;
-    }
+    width: 23.56rem;
 
     @media (min-width: @md) {
       width: 29rem;
+    }
+
+    &:hover {
+      #donate-banner-right {
+        -webkit-text-stroke: 0.0625rem #FFF;
+      }
     }
 
     .donate-banner {
