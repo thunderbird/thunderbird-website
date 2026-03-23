@@ -60,6 +60,85 @@
 {% endblock %}
 
 
+{% block js %}
+<script>
+  customElements.whenDefined('bolt-primary-button').then(() => {
+    requestAnimationFrame(() => {
+      const buttons = Array.from(
+        document.querySelectorAll('.card-container > .card > bolt-primary-button')
+      );
+      if (!buttons.length) return;
+
+      function getFocusTarget(btn) {
+        const sr = btn.shadowRoot;
+        return (sr && sr.querySelector('a, button')) || btn;
+      }
+
+      function buildGrid() {
+        const rows = [];
+        let lastTop = -Infinity;
+        buttons.forEach((btn, i) => {
+          const top = btn.getBoundingClientRect().top;
+          if (i === 0 || Math.abs(top - lastTop) > 10) {
+            rows.push([]);
+            lastTop = top;
+          }
+          rows[rows.length - 1].push(i);
+        });
+        return rows;
+      }
+
+      function findInGrid(rows, idx) {
+        for (let r = 0; r < rows.length; r++) {
+          const c = rows[r].indexOf(idx);
+          if (c >= 0) return { row: r, col: c };
+        }
+        return null;
+      }
+
+      function navigate(grid, { row, col }, key) {
+        const wrap = (r) => (r + grid.length) % grid.length;
+        const clamp = (r, c) => grid[r][Math.min(c, grid[r].length - 1)];
+
+        switch (key) {
+          case 'ArrowRight':
+            if (col + 1 < grid[row].length) {
+              return grid[row][col + 1];
+            }
+            return grid[wrap(row + 1)][0];
+          case 'ArrowLeft':
+            if (col > 0) {
+              return grid[row][col - 1];
+            }
+            const r = wrap(row - 1);
+            return grid[r][grid[r].length - 1];
+          case 'ArrowDown':
+            return clamp(wrap(row + 1), col);
+          case 'ArrowUp':
+            return clamp(wrap(row - 1), col);
+          default:
+            return -1;
+        }
+      }
+
+      buttons.forEach((btn, i) => {
+        getFocusTarget(btn).addEventListener('keydown', (e) => {
+          const grid = buildGrid();
+          const pos = findInGrid(grid, i);
+          if (!pos) return;
+
+          const next = navigate(grid, pos, e.key);
+          if (next >= 0) {
+            e.preventDefault();
+            getFocusTarget(buttons[next]).focus();
+          }
+        });
+      });
+    });
+  });
+</script>
+{% endblock %}
+
 {% block pre_footer %}
 <div id="donation">
   <p>Fund the work behind these roadmaps.</p>
