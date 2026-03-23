@@ -17,6 +17,7 @@
 @import "../common/tab-navigation-bar.less";
 @import "../common/common-footer.less";
 @import "../common/tb-footer.less";
+@import "../new/colours.less";
 
 
 // Per Sol's recommended tweaks 2026-03-02
@@ -90,17 +91,44 @@ body {
     --hamburger-background-active: var(--color-white);
     --hamburger-foreground-active: var(--color-black);
     background-color: rgba(0, 0, 0, 0.8);
-    padding-inline: 0;
+    padding-inline: 1rem;
 
     .nav-container {
         max-width: 76rem;
-        padding-inline: 1rem;
+
+        .logo:hover {
+            color: var(--color-blue-20);
+        }
     }
 
     // From 2025-fonts.less
     .nav-links .nav-ln {
         font-size: 1rem;
         font-weight: 400;
+    }
+
+    // From layout.less — gradient underline hover animation
+    .nav-ln {
+        text-decoration: none;
+        position: relative;
+        transition: font-size .2s;
+    }
+
+    .nav-ln::after {
+        content: '';
+        position: absolute;
+        inset-inline: 0;
+        bottom: -0.3em;
+        height: 3px;
+        background-color: var(--color-blue-60);
+        background-image: linear-gradient(to right, var(--color-blue-50), var(--color-purple-50));
+        width: 0;
+        transition: width .3s;
+    }
+
+    .nav-ln:focus::after,
+    .nav-ln:hover::after {
+        width: 100%;
     }
 
     // On www, seems to be set for all headers
@@ -165,10 +193,62 @@ button {
     white-space: nowrap;
 }
 
-// Hack for the fancy "dark" hover states
-.btn-no-bg{
+// From buttons.less — glow and hover effects
+.btn::before {
+    content: '';
+    position: absolute;
+    background: var(--color-purple-70);
+    border-radius: 50%;
+    filter: blur(32px);
+    opacity: .25;
+    inset: -.25em -2.5em;
+    z-index: -2;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    background-image: radial-gradient(circle, var(--color-link), var(--color-purple-60) 30%);
+    background-size: 400%;
+    background-position: center;
+    opacity: .5;
+    inset: 0;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.btn:hover::after {
+    opacity: .75;
+    background-size: 500%;
+}
+
+// From buttons.less — fancy gradient border hover states
+.btn-no-bg {
     --btn-background-color: rgba(0, 0, 0, 0.8);
-    @btn-no-bg-styling();
+
+    &::after {
+        background: transparent;
+    }
+
+    &:hover {
+        background: linear-gradient(var(--btn-background-color), var(--btn-background-color)) padding-box,
+        linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+        border-color: transparent;
+        transition: all 250ms;
+        color: currentColor;
+
+        &::after {
+            opacity: 0.75;
+        }
+    }
+
+    &:active {
+        background: linear-gradient(var(--btn-background-color), var(--btn-background-color)) padding-box,
+        linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+        border-color: transparent;
+        transition: all 250ms;
+    }
 }
 
 
