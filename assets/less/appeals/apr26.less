@@ -73,9 +73,13 @@ body {
     padding-bottom: 7.75rem;
     overflow: clip;
     background: linear-gradient(to bottom,
-      #64B0D0 45%,
+      #64B0D0 0%,
+      #64B0D0 70%,
       #F28A7D,
       #FFAB61);
+    background-size: 100% 200%;
+    animation: bg-scroll linear forwards;
+    animation-timeline: scroll();
 
     &>#appeal-heading {
       margin-top: 8rem;
@@ -84,7 +88,6 @@ body {
       text-align: center;
       max-width: var(--appeal-content-width);
       width: 100%;
-      text-wrap: nowrap;
       z-index: 3; /* Above the sun rays */
     }
 
@@ -143,10 +146,14 @@ body {
     #sun {
       position: absolute;
       top: 0;
-      left: 67%;
+      left: 90%;
       width: 0;
       height: 0;
       pointer-events: none;
+
+      @media (min-width: @lg) {
+        left: 67%;
+      }
     }
 
     #sun div {
@@ -252,6 +259,11 @@ body {
         transform: skew(-15deg);
       }
     }
+    @keyframes bg-scroll {
+      to {
+        background-position: 0 100%;
+      }
+    }
   }
 
   // ==========================================
@@ -261,6 +273,7 @@ body {
   #appeal-header {
     position: relative;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-between;
     width: 100%;
     padding: 2rem 2.25rem 4rem;
@@ -268,8 +281,12 @@ body {
     z-index: 2; /* Above the gradient canvas */
 
     header {
-      align-self: flex-end;
+      align-self: flex-start;
       z-index: 3; /* Above the sun rays */
+
+      @media (min-width: @md) {
+        align-self: flex-end;
+      }
     }
 
     @media (min-width: @xs) {
@@ -280,6 +297,7 @@ body {
       max-width: 1250px;
       min-height: 22rem;
       padding: 2rem 2.25rem 4.5rem;
+      flex-direction: row;
     }
 
     @media (min-width: @lg) {
@@ -302,7 +320,6 @@ body {
 
     @media (min-width: @md) {
       font-size: 2.25rem;
-      text-wrap: nowrap;
     }
 
     & > span:first-child {
@@ -333,26 +350,16 @@ body {
 
   #illustration {
     position: relative;
+    align-self: flex-end;
+    min-width: 20rem;
+    max-width: 22rem;
 
-    @media (min-width: @lg) {
-      margin-inline-end: 3rem;
+    @media (min-width: @md) {
+      max-width: 30rem;
     }
 
-    #roc {
-      height: auto;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 22rem;
-
-      @media (min-width: @md) {
-        max-width: 22rem;
-      }
-
-      @media (min-width: @lg) {
-        position: static;
-        max-width: 30rem;
-      }
+    @media (min-width: @lg) {
+      align-self: flex-start;
     }
   }
 
@@ -383,14 +390,16 @@ body {
     transform: translate(-50%, -50%);
     z-index: 3; /* Above the letter container */
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
-    width: 12.5rem;
-
-    @media (min-width: @sm) {
-      width: 23.56rem;
-    }
+    width: 23.56rem;
 
     @media (min-width: @md) {
       width: 29rem;
+    }
+
+    &:hover {
+      #donate-banner-right {
+        -webkit-text-stroke: 0.0625rem #FFF;
+      }
     }
 
     .donate-banner {
@@ -564,7 +573,6 @@ body {
   // ==========================================
 
   #appeal-heading.variant-1c {
-    margin-block-start: 17rem;
     font-size: 3.5rem;
     font-weight: 700;
     text-shadow: 0px 2px 0px var(--colour-primary-pressed, #19518F),
@@ -580,11 +588,8 @@ body {
       margin-block-start: 0;
     }
 
-    @media (min-width: @sm) {
-      font-size: 4.5rem;
-    }
-
     @media (min-width: @md) {
+      font-size: 4.5rem;
       margin-block-start: 0;
     }
   }
@@ -593,7 +598,7 @@ body {
   // Variant D specifics
   // ==========================================
   #appeal-heading.variant-1d {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     text-shadow: 0px 2px 0px #B62749,
                  var(--heading-text-shadow);
@@ -607,6 +612,11 @@ body {
       text-transform: lowercase;
       margin-block-start: 0;
     }
+
+    @media (min-width: @md) {
+      font-size: 4.5rem;
+      margin-block-start: 0;
+    }
   }
 
   // ==========================================
@@ -615,6 +625,8 @@ body {
 
   @media (prefers-reduced-motion: reduce) {
     #appeal-body {
+      animation: none;
+
       #cloud div::before,
       #cloud div::after {
         animation: none;
