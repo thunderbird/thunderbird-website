@@ -1,5 +1,4 @@
 config:
-  aws:region: us-west-2
   aws:defaultTags:
     tags:
       environment: stage

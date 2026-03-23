@@ -60,7 +60,7 @@ TRUST_POLICY=$(cat <<EOF
 EOF
 )
 
-# Permissions policy for Pulumi Fargate deployment
+# Permissions policy for Pulumi Fargate deployment + PR preview infrastructure
 PERMISSIONS_POLICY=$(cat <<EOF
 {
     "Version": "2012-10-17",
@@ -69,7 +69,10 @@ PERMISSIONS_POLICY=$(cat <<EOF
             "Sid": "ECR",
             "Effect": "Allow",
             "Action": ["ecr:*"],
-            "Resource": ["arn:aws:ecr:${REGION}:${ACCOUNT_ID}:repository/thunderbird-website-*"]
+            "Resource": [
+                "arn:aws:ecr:${REGION}:${ACCOUNT_ID}:repository/thunderbird-website-*",
+                "arn:aws:ecr:${REGION}:${ACCOUNT_ID}:repository/thunderbird-website-preview"
+            ]
         },
         {
             "Sid": "ECRAuth",
@@ -137,7 +140,10 @@ PERMISSIONS_POLICY=$(cat <<EOF
                 "iam:ListRolePolicies", "iam:ListAttachedRolePolicies",
                 "iam:TagRole", "iam:UntagRole", "iam:ListInstanceProfilesForRole"
             ],
-            "Resource": ["arn:aws:iam::${ACCOUNT_ID}:role/thunderbird-website-*"]
+            "Resource": [
+                "arn:aws:iam::${ACCOUNT_ID}:role/thunderbird-website-*",
+                "arn:aws:iam::${ACCOUNT_ID}:role/preview-*"
+            ]
         },
         {
             "Sid": "CloudWatchLogs",
@@ -147,12 +153,74 @@ PERMISSIONS_POLICY=$(cat <<EOF
                 "logs:PutRetentionPolicy", "logs:TagLogGroup", "logs:UntagLogGroup",
                 "logs:ListTagsLogGroup", "logs:ListTagsForResource", "logs:TagResource"
             ],
-            "Resource": ["arn:aws:logs:${REGION}:${ACCOUNT_ID}:log-group:/ecs/thunderbird-website-*"]
+            "Resource": [
+                "arn:aws:logs:${REGION}:${ACCOUNT_ID}:log-group:/ecs/thunderbird-website-*",
+                "arn:aws:logs:${REGION}:${ACCOUNT_ID}:log-group:/aws/lambda/preview-*"
+            ]
         },
         {
             "Sid": "CloudWatchLogsDescribe",
             "Effect": "Allow",
             "Action": ["logs:DescribeLogGroups"],
+            "Resource": "*"
+        },
+        {
+            "Sid": "Lambda",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:CreateFunction", "lambda:DeleteFunction", "lambda:GetFunction",
+                "lambda:GetFunctionConfiguration", "lambda:UpdateFunctionCode",
+                "lambda:UpdateFunctionConfiguration", "lambda:InvokeFunction",
+                "lambda:AddPermission", "lambda:RemovePermission", "lambda:GetPolicy",
+                "lambda:TagResource", "lambda:UntagResource", "lambda:ListTags",
+                "lambda:ListVersionsByFunction", "lambda:PublishVersion",
+                "lambda:CreateAlias", "lambda:DeleteAlias", "lambda:GetAlias"
+            ],
+            "Resource": ["arn:aws:lambda:${REGION}:${ACCOUNT_ID}:function:preview-*"]
+        },
+        {
+            "Sid": "APIGateway",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:GET", "apigateway:POST", "apigateway:PUT",
+                "apigateway:DELETE", "apigateway:PATCH",
+                "apigateway:TagResource", "apigateway:UntagResource"
+            ],
+            "Resource": [
+                "arn:aws:apigateway:${REGION}::/apis/*",
+                "arn:aws:apigateway:${REGION}::/domainnames/*",
+                "arn:aws:apigateway:${REGION}::/tags/*"
+            ]
+        },
+        {
+            "Sid": "Route53Preview",
+            "Effect": "Allow",
+            "Action": [
+                "route53:ChangeResourceRecordSets",
+                "route53:GetHostedZone",
+                "route53:ListResourceRecordSets",
+                "route53:ListTagsForResource"
+            ],
+            "Resource": ["arn:aws:route53:::hostedzone/Z03528753AZVULC8BFCA"]
+        },
+        {
+            "Sid": "Route53General",
+            "Effect": "Allow",
+            "Action": [
+                "route53:ListHostedZones",
+                "route53:ListHostedZonesByName",
+                "route53:GetChange"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "ACMReadOnly",
+            "Effect": "Allow",
+            "Action": [
+                "acm:DescribeCertificate",
+                "acm:ListCertificates",
+                "acm:ListTagsForCertificate"
+            ],
             "Resource": "*"
         },
         {

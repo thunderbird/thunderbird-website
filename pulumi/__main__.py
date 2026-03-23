@@ -6,6 +6,7 @@ import pulumi_awsx as awsx
 
 config = pulumi.Config()
 environment = config.require("environment")
+certificate_arn = config.require("certificateArn")
 desired_count = config.get_int("desiredCount") or 1
 cpu = config.get_int("cpu") or 256
 memory = config.get_int("memory") or 512
@@ -13,10 +14,7 @@ memory = config.get_int("memory") or 512
 # Auto scaling configuration
 min_capacity = config.get_int("minCapacity") or 1
 max_capacity = config.get_int("maxCapacity") or 8
-requests_per_target = config.get_int("requestsPerTarget") or 100  # Scale when requests per target > this value
-
-# SSL Certificate ARN (shared across environments)
-CERTIFICATE_ARN = "arn:aws:acm:us-west-2:768512802988:certificate/2cff184f-31a3-4e9e-b478-eff82076f06f"
+requests_per_target = config.get_int("requestsPerTarget") or 100
 
 # Get image URI from environment variable (set by GitHub Actions workflow)
 # This ensures Pulumi always uses the image that was just built and pushed
@@ -59,7 +57,7 @@ task_sg = aws.ec2.SecurityGroup(
     vpc_id=vpc.vpc_id,
     description="Fargate task security group",
     ingress=[
-        aws.ec2.SecurityGroupIngressArgs(protocol="tcp", from_port=80, to_port=80, security_groups=[alb_sg.id]),
+        aws.ec2.SecurityGroupIngressArgs(protocol="tcp", from_port=8080, to_port=8080, security_groups=[alb_sg.id]),
     ],
     egress=[
         aws.ec2.SecurityGroupEgressArgs(protocol="-1", from_port=0, to_port=0, cidr_blocks=["0.0.0.0/0"]),
@@ -80,7 +78,7 @@ alb = aws.lb.LoadBalancer(
 # See: https://nathanpeck.com/speeding-up-amazon-ecs-container-deployments/
 target_group = aws.lb.TargetGroup(
     f"tg-{environment}",
-    port=80,
+    port=8080,
     protocol="HTTP",
     target_type="ip",
     vpc_id=vpc.vpc_id,
@@ -122,7 +120,7 @@ https_listener = aws.lb.Listener(
     port=443,
     protocol="HTTPS",
     ssl_policy="ELBSecurityPolicy-TLS13-1-2-2021-06",
-    certificate_arn=CERTIFICATE_ARN,
+    certificate_arn=certificate_arn,
     default_actions=[aws.lb.ListenerDefaultActionArgs(
         type="forward",
         target_group_arn=target_group.arn,
@@ -184,11 +182,11 @@ def create_container_definitions(args):
         "name": "web",
         "image": image_uri,
         "essential": True,
-        "portMappings": [{"containerPort": 80, "protocol": "tcp"}],
+        "portMappings": [{"containerPort": 8080, "protocol": "tcp"}],
         # Reduce stop timeout from 30s to 5s - container gets SIGKILL faster
         "stopTimeout": 5,
         "healthCheck": {
-            "command": ["CMD-SHELL", "curl -f -H 'Host: www.thunderbird.net' http://localhost/en-US/ || exit 1"],
+            "command": ["CMD-SHELL", "curl -f -H 'Host: www.thunderbird.net' http://localhost:8080/en-US/ || exit 1"],
             "interval": 30,
             "timeout": 10,
             "retries": 3,
@@ -239,7 +237,7 @@ service = aws.ecs.Service(
     load_balancers=[aws.ecs.ServiceLoadBalancerArgs(
         target_group_arn=target_group.arn,
         container_name="web",
-        container_port=80,
+        container_port=8080,
     )],
     health_check_grace_period_seconds=30,
     opts=pulumi.ResourceOptions(depends_on=[http_listener, https_listener]),

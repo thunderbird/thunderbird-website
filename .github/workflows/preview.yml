@@ -1,0 +1,197 @@
+name: PR Preview
+run-name: "Preview ${{ github.event.pull_request.head.ref }} #${{ github.event.pull_request.number }}"
+
+on:
+  pull_request:
+    types: [labeled, synchronize, reopened, closed]
+
+env:
+  PREVIEW_DOMAIN: thunderbird.dev
+
+jobs:
+  deploy-preview:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository && (
+        (github.event.action == 'labeled' && startsWith(github.event.label.name, 'preview')) ||
+        (github.event.action != 'labeled' && github.event.action != 'closed' &&
+         contains(join(github.event.pull_request.labels.*.name, ','), 'preview'))
+      )
+    runs-on: ubuntu-latest
+    environment: preview
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
+    concurrency:
+      group: preview-pr-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Compute preview slug
+        id: slug
+        uses: ./.github/actions/preview-slug
+        with:
+          branch: ${{ github.event.pull_request.head.ref }}
+          pr-number: ${{ github.event.pull_request.number }}
+
+      - name: Detect preview site
+        id: site
+        env:
+          LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+        run: |
+          MATCHES=$(echo "$LABELS" | tr ',' '\n' | grep '^preview')
+          COUNT=$(echo "$MATCHES" | wc -l)
+          if [ "$COUNT" -gt 1 ]; then
+            echo "::error::Multiple preview labels found. Use exactly one: preview, preview:startpage, preview:updates, preview:tbpro, preview:roadmaps"
+            exit 1
+          fi
+          case "$MATCHES" in
+            preview)           SITE="www.thunderbird.net" ;;
+            preview:startpage) SITE="start.thunderbird.net" ;;
+            preview:updates)   SITE="updates.thunderbird.net" ;;
+            preview:tbpro)     SITE="tb.pro" ;;
+            preview:roadmaps)  SITE="roadmaps.thunderbird.net" ;;
+            *) echo "::error::Unknown preview label: $MATCHES"; exit 1 ;;
+          esac
+          echo "site=$SITE" >> "$GITHUB_OUTPUT"
+
+      - name: Setup AWS + Pulumi
+        uses: ./.github/actions/pulumi-setup
+        with:
+          aws-role-arn: arn:aws:iam::768512802988:role/thunderbird-website-deploy
+          pulumi-dir: ./pulumi/preview
+
+      - name: Login to ECR
+        id: ecr-login
+        uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076 # v2
+
+      - name: Build and push Docker image
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
+          SLUG: ${{ steps.slug.outputs.slug }}
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          IMAGE_URI="$ECR_REGISTRY/thunderbird-website-preview:${SLUG}-${IMAGE_TAG}"
+          docker build \
+            -f docker/Dockerfile \
+            --build-arg BUILD_ENV=stage \
+            --build-arg REPO_BRANCH=master \
+            -t "$IMAGE_URI" \
+            .
+          docker push "$IMAGE_URI"
+          echo "image_uri=$IMAGE_URI" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy preview infrastructure
+        uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6
+        with:
+          command: up
+          stack-name: thunderbird/thunderbird-website-preview/${{ steps.slug.outputs.slug }}
+          work-dir: ./pulumi/preview
+          upsert: true
+        env:
+          PREVIEW_SLUG: ${{ steps.slug.outputs.slug }}
+          IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
+          PREVIEW_SITE: ${{ steps.site.outputs.site }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment on PR
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7
+        env:
+          SLUG: ${{ steps.slug.outputs.slug }}
+          SITE: ${{ steps.site.outputs.site }}
+          DOMAIN: ${{ env.PREVIEW_DOMAIN }}
+        with:
+          script: |
+            const slug = process.env.SLUG;
+            const site = process.env.SITE;
+            const url = `https://${slug}.${process.env.DOMAIN}`;
+            const body = [
+              `### Preview deployment`,
+              `| | |`,
+              `|---|---|`,
+              `| **URL** | ${url} |`,
+              `| **Site** | ${site} |`,
+              `| **Commit** | \`${context.sha.substring(0, 7)}\` |`,
+            ].join('\n');
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find(c =>
+              c.user.type === 'Bot' && c.body.includes('### Preview deployment')
+            );
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
+
+  destroy-preview:
+    if: >-
+      github.event.action == 'closed' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      contains(join(github.event.pull_request.labels.*.name, ','), 'preview')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    concurrency:
+      group: preview-pr-${{ github.event.pull_request.number }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Compute preview slug
+        id: slug
+        uses: ./.github/actions/preview-slug
+        with:
+          branch: ${{ github.event.pull_request.head.ref }}
+          pr-number: ${{ github.event.pull_request.number }}
+
+      - name: Setup AWS + Pulumi
+        uses: ./.github/actions/pulumi-setup
+        with:
+          aws-role-arn: arn:aws:iam::768512802988:role/thunderbird-website-deploy
+          pulumi-dir: ./pulumi/preview
+
+      - name: Destroy preview infrastructure
+        uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6
+        with:
+          command: destroy
+          stack-name: thunderbird/thunderbird-website-preview/${{ steps.slug.outputs.slug }}
+          work-dir: ./pulumi/preview
+          remove: true
+        env:
+          PREVIEW_SLUG: ${{ steps.slug.outputs.slug }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete ECR images
+        env:
+          SLUG: ${{ steps.slug.outputs.slug }}
+        run: |
+          IMAGE_IDS=$(aws ecr list-images \
+            --repository-name thunderbird-website-preview \
+            --query "imageIds[?starts_with(imageTag, '${SLUG}-')]" \
+            --output json 2>/dev/null || echo "[]")
+          if [ "$IMAGE_IDS" != "[]" ]; then
+            aws ecr batch-delete-image \
+              --repository-name thunderbird-website-preview \
+              --image-ids "$IMAGE_IDS" || true
+          fi

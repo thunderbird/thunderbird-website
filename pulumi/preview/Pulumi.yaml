@@ -1,0 +1,14 @@
+name: thunderbird-website-preview
+runtime:
+  name: python
+  options:
+    virtualenv: .venv
+    toolchain: uv
+description: PR Preview Infrastructure (Lambda + API Gateway)
+config:
+  aws:region:
+    value: us-west-2
+  thunderbird-website-preview:domain:
+    default: thunderbird.dev
+  thunderbird-website-preview:certificateArn:
+    default: arn:aws:acm:us-west-2:768512802988:certificate/4889bfd2-050a-4043-9f6e-5ef92f2211a3

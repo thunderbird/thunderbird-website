@@ -25,7 +25,7 @@ RUN dnf install -y epel-release \
 # Create directories
 RUN mkdir -p /var/www/html/start /var/www/html/live.momo /var/www/autoconfig.momo \
     /var/www/html/autoconfig.momo /var/www/html/autoconfig-temp \
-    /var/www/services/mx /var/www/tbservices /var/log/httpd/autoconfig \
+    /var/www/services/mx /var/www/tbservices \
     /var/www/html/tbstats /var/www/html/statictest/www /etc/httpd/conf
 
 # Python virtual environment
@@ -46,11 +46,19 @@ RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/aut
 COPY docker/scripts/update-autoconfig.sh /var/www/autoconfig.momo/update.sh
 RUN chmod +x /var/www/autoconfig.momo/update.sh && /var/www/autoconfig.momo/update.sh
 
+COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:1.0.0-rc1 /lambda-adapter /opt/extensions/lambda-adapter
 COPY --from=ghcr.io/astral-sh/uv:0.10.9@sha256:10902f58a1606787602f303954cea099626a4adb02acbac4c69920fe9d278f82 /uv /usr/local/bin/uv
 
 COPY docker/conf/ssl.conf /etc/httpd/conf.d/ssl.conf
 COPY docker/docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
+
+# Patch httpd.conf for container use: port 8080, logs to stdout/stderr, runtime files in /tmp
+RUN sed -i 's/^Listen 80$/Listen 8080/' /etc/httpd/conf/httpd.conf \
+    && sed -i 's|ErrorLog "logs/error_log"|ErrorLog "/dev/stderr"|' /etc/httpd/conf/httpd.conf \
+    && sed -i 's|CustomLog "logs/access_log" combined|#& - access log handled by ssl.conf (vcombined format)|' /etc/httpd/conf/httpd.conf \
+    && echo 'PidFile /tmp/httpd.pid' >> /etc/httpd/conf/httpd.conf \
+    && echo 'Mutex file:/tmp default' >> /etc/httpd/conf/httpd.conf
 
 # =============================================================================
 # Build websites from source (all environments)
@@ -70,12 +78,10 @@ RUN cd /build \
 # Local: keep /build so container-test.yml can run pytest
 RUN if [ "$BUILD_ENV" != "local" ]; then rm -rf /build; fi
 
-# Set permissions (only log dir needs write access, web files are world-readable)
-RUN chown -R apache:apache /var/log/httpd/autoconfig
 RUN rm -f /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/autoindex.conf
 
-EXPOSE 80
+EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
-    CMD curl -sf -H "Host: www.thunderbird.net" http://localhost/ || exit 1
+    CMD curl -sf -H "Host: www.thunderbird.net" http://localhost:8080/ || exit 1
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
