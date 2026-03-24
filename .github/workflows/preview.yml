@@ -1,20 +1,37 @@
 name: PR Preview
-run-name: "Preview ${{ github.event.pull_request.head.ref }} #${{ github.event.pull_request.number }}"
+# closed/unlabeled → "destroy", everything else → "deploy"
+run-name: >-
+  Preview #${{ github.event.pull_request.number }}:
+  ${{ (github.event.action == 'closed' || github.event.action == 'unlabeled') && 'destroy' || 'deploy' }}
+  (${{ github.event.action }})
 
 on:
   pull_request:
-    types: [labeled, synchronize, reopened, closed]
+    types: [labeled, unlabeled, synchronize, reopened, closed]
 
 env:
   PREVIEW_DOMAIN: thunderbird.dev
 
 jobs:
+  # Deploy when:
+  #   - A preview label is added (labeled event), OR
+  #   - The PR is updated (synchronize/reopened) and already has a preview label.
+  # Ignored for: closed, unlabeled.
+  # Skipped for forks.
   deploy-preview:
     if: >-
-      github.event.pull_request.head.repo.full_name == github.repository && (
-        (github.event.action == 'labeled' && startsWith(github.event.label.name, 'preview')) ||
-        (github.event.action != 'labeled' && github.event.action != 'closed' &&
-         contains(join(github.event.pull_request.labels.*.name, ','), 'preview'))
+      github.event.pull_request.head.repo.full_name == github.repository
+      && (
+        (
+          github.event.action == 'labeled'
+          && startsWith(github.event.label.name, 'preview')
+        )
+        || (
+          github.event.action != 'labeled'
+          && github.event.action != 'closed'
+          && github.event.action != 'unlabeled'
+          && contains(join(github.event.pull_request.labels.*.name, ','), 'preview')
+        )
       )
     runs-on: ubuntu-latest
     environment: preview
@@ -142,12 +159,25 @@ jobs:
               });
             }
 
+  # Destroy when:
+  #   - The PR is closed and still has a preview label, OR
+  #   - A preview label is removed (so swapping labels cleans up the old environment).
+  # Skipped for forks.
   destroy-preview:
     if: >-
-      github.event.action == 'closed' &&
-      github.event.pull_request.head.repo.full_name == github.repository &&
-      contains(join(github.event.pull_request.labels.*.name, ','), 'preview')
+      github.event.pull_request.head.repo.full_name == github.repository
+      && (
+        (
+          github.event.action == 'closed'
+          && contains(join(github.event.pull_request.labels.*.name, ','), 'preview')
+        )
+        || (
+          github.event.action == 'unlabeled'
+          && startsWith(github.event.label.name, 'preview')
+        )
+      )
     runs-on: ubuntu-latest
+    environment: preview
     permissions:
       id-token: write
       contents: read
