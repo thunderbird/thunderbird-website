@@ -467,6 +467,11 @@ main {
     div {
         display: flex;
         gap: 1.25rem;
+        flex-direction: column;
+
+        @media (min-width: @tablet-breakpoint) {
+            flex-direction: row;
+        }
 
         a {
             .web-body-xsmall();
@@ -609,6 +614,11 @@ main {
         strong {
             font-weight: 600;
             font-size: 1rem;
+            line-height: 1;
+
+            @media (min-width: @tablet-breakpoint) {
+                font-size: 1.25rem;
+            }
         }
 
         // Additional styles for the Bolt web-components
@@ -854,11 +864,7 @@ main {
                 border-radius: 4rem;
                 background-color: var(--color-surface-deep);
                 width: fit-content;
-                padding-inline: 0.75rem;
-                padding-block: 0.35rem;
-                padding-top: 0.5rem;
-                margin-top: 0.25rem;
-                margin-bottom: 0.25rem;
+                padding: 0.5rem 0.75rem;
                 font-size: 0.6875rem;
                 font-weight: 600;
                 line-height: normal;
