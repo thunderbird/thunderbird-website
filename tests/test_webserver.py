@@ -144,3 +144,18 @@ def test_locale_detection(host: str, path: str, lang: str, expected_location: st
     location = response.headers.get("Location", "")
     assert expected_location in location, f"Expected '{expected_location}' in Location for lang={lang}, got '{location}'"
 
+
+MIME_TYPE_TESTS = [
+    ("/media/img/thunderbird/base/about/privacy.avif", "image/avif"),
+    ("/media/img/thunderbird/base/about/privacy.webp", "image/webp"),
+]
+
+
+@pytest.mark.parametrize("path,expected_type", MIME_TYPE_TESTS)
+def test_mime_types(path: str, expected_type: str):
+    """Verify Apache serves images with correct Content-Type headers."""
+    response = get(path, "www.thunderbird.net")
+    assert response.status_code == 200, f"GET {path} returned {response.status_code}"
+    content_type = response.headers.get("Content-Type", "")
+    assert content_type.startswith(expected_type), f"Expected '{expected_type}' for {path}, got '{content_type}'"
+
