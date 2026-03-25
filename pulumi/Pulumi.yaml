@@ -3,4 +3,10 @@ runtime:
   name: python
   options:
     virtualenv: .venv
+    toolchain: uv
 description: Thunderbird Website Fargate Infrastructure
+config:
+  aws:region:
+    value: us-west-2
+  thunderbird-website:certificateArn:
+    default: arn:aws:acm:us-west-2:768512802988:certificate/2cff184f-31a3-4e9e-b478-eff82076f06f

@@ -12,6 +12,8 @@ All environments (local, stage, prod) build the websites from source inside a Do
   - URLs: `www-stage.thunderbird.net`, `start-stage.thunderbird.net`, `updates-stage.thunderbird.net`, `stage.tb.pro`, `roadmaps-stage.thunderbird.net`
 - **Production**: Built from `prod` branch
   - URLs: `www.thunderbird.net`, `start.thunderbird.net`, `updates.thunderbird.net`, `tb.pro`, `roadmaps.thunderbird.net`
+- **PR Preview**: Per-pull-request, on-demand
+  - URLs: `{branch}-{pr}.thunderbird.dev` (e.g., `archive-fix-123.thunderbird.dev`)
 
 Built static files are committed to https://github.com/thunderbird/tb-website-builds as a record of what is deployed (`master` branch for stage, `prod` branch for production).
 
@@ -69,7 +71,7 @@ The infrastructure is defined in the `pulumi/` directory using Python.
 
 ### Configuration
 
-Stack-specific configuration is in:
+Project-level defaults (region, certificate ARN) are in `pulumi/Pulumi.yaml`. Stack-specific overrides:
 - `pulumi/Pulumi.stage.yaml` - Stage environment config
 - `pulumi/Pulumi.prod.yaml` - Production environment config
 
@@ -121,6 +123,40 @@ Steps:
 2. Extract built static files and commit to `tb-website-builds`
 3. Deploy infrastructure with Pulumi
 4. Force ECS service update
+
+### PR Preview (`preview.yml`)
+
+Triggered when a `preview` or `preview:<site>` label is added to a non-fork PR. Subsequent pushes auto-rebuild while the label is present.
+
+- **Deploy**: Builds container, deploys Lambda + API Gateway via Pulumi, comments preview URL on PR
+- **Destroy**: Tears down all preview resources when a labeled PR is closed
+
+## PR Preview Deployments
+
+Pull requests from non-fork branches can get preview deployments at `{branch}-{pr}.thunderbird.dev`. Previews use AWS Lambda (container image via Lambda Web Adapter) behind API Gateway HTTP API, so they cost nothing when idle.
+
+### How It Works
+
+1. Add a `preview` label to a non-fork PR (or `preview:<name>` to target a specific site)
+2. The workflow builds the Docker image, pushes to ECR, and deploys a Lambda function + API Gateway with a custom domain
+3. A comment is posted on the PR with the preview URL
+4. Subsequent pushes auto-rebuild while the label is present
+5. When the PR is closed, all preview resources are destroyed and ECR images cleaned up
+
+### Site Selection
+
+The label controls which site is previewed. Use `preview` for the default (`www.thunderbird.net`) or `preview:<name>` matching a `build-site.py` argument (e.g. `preview:tbpro`, `preview:startpage`).
+
+### Preview Infrastructure
+
+Defined in `pulumi/preview/`. Each PR gets its own Pulumi stack with:
+- Lambda function (container image)
+- API Gateway HTTP API
+- Custom domain + Route53 record
+
+### Prerequisites
+
+Preview deployments depend on: a `*.thunderbird.dev` ACM wildcard certificate (ARN in `pulumi/preview/Pulumi.yaml`), the IAM permissions from `pulumi/setup-oidc-role.sh`, and a `thunderbird-website-preview` ECR repository.
 
 ## Permissions
 

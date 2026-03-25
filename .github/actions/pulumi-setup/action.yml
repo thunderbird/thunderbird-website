@@ -1,0 +1,36 @@
+name: Pulumi Setup
+description: Configure AWS credentials, install uv + Pulumi dependencies, and authenticate with Pulumi Cloud.
+
+inputs:
+  aws-role-arn:
+    description: IAM role ARN for AWS OIDC authentication
+    required: true
+  aws-region:
+    description: AWS region
+    default: us-west-2
+  pulumi-dir:
+    description: Working directory containing the Pulumi project
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7 # v6
+      with:
+        role-to-assume: ${{ inputs.aws-role-arn }}
+        aws-region: ${{ inputs.aws-region }}
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@6ee6290f1cbc4156c0bdd66691b2c144ef8df19a # v7
+
+    - name: Install Pulumi dependencies
+      shell: bash
+      working-directory: ${{ inputs.pulumi-dir }}
+      run: uv sync --frozen
+
+    - name: Authenticate with Pulumi Cloud
+      uses: pulumi/auth-actions@1c89817aab0c66407723cdef72b05266e7376640 # v1
+      with:
+        organization: thunderbird
+        requested-token-type: urn:pulumi:token-type:access_token:organization

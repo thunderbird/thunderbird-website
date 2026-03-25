@@ -28,9 +28,6 @@ concurrency:
   group: deploy-${{ github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage' }}
   cancel-in-progress: true
 
-env:
-  AWS_REGION: us-west-2
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -42,11 +39,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7 # v6
+      - name: Setup AWS + Pulumi
+        uses: ./.github/actions/pulumi-setup
         with:
-          role-to-assume: arn:aws:iam::768512802988:role/thunderbird-website-deploy
-          aws-region: ${{ env.AWS_REGION }}
+          aws-role-arn: arn:aws:iam::768512802988:role/thunderbird-website-deploy
+          pulumi-dir: ./pulumi
 
       - name: Login to ECR
         id: ecr-login
@@ -92,20 +89,6 @@ jobs:
             git -c user.name="Thundernest Bot" -c user.email="${{ secrets.TB_BUILDS_GIT_EMAIL }}" \
               commit -m "Website rebuild triggered by $BUILD_MESSAGE"
           git push
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@6ee6290f1cbc4156c0bdd66691b2c144ef8df19a # v7
-
-      - name: Install Pulumi dependencies
-        working-directory: ./pulumi
-        run: uv sync --frozen
-
-      # Authenticate with Pulumi Cloud via OIDC (no token secret needed)
-      - name: Authenticate with Pulumi Cloud
-        uses: pulumi/auth-actions@1c89817aab0c66407723cdef72b05266e7376640 # v1
-        with:
-          organization: thunderbird
-          requested-token-type: urn:pulumi:token-type:access_token:organization
 
       - name: Deploy infrastructure
         uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6
