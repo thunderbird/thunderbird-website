@@ -51,13 +51,17 @@ body {
   // ==========================================
 
   .heart-container {
-    margin: 2rem auto 1.5625rem;
+    margin: 2rem auto 1.1875rem;
     max-width: 100%;
     color: #DC2626;
     width: 20.25rem;
 
     @media (min-width: @md) {
       width: 100%;
+    }
+
+    .line {
+      border-top: 0.0625rem solid var(--colour-primary-default, #1373d9);
     }
   }
 
@@ -179,7 +183,7 @@ body {
       pointer-events: none;
 
       @media (min-width: @lg) {
-        height: 100vh;
+        height: 58.56rem;
         left: -50vw;
       }
     }
@@ -355,7 +359,8 @@ body {
     max-width: 22rem;
 
     @media (min-width: @md) {
-      max-width: 30rem;
+      width: 33.25rem;
+      max-width: 100%;
     }
 
     @media (min-width: @lg) {
@@ -482,11 +487,14 @@ body {
   }
 
   .letter-container {
+    display: flex;
+    flex-direction: column;
     position: relative;
     background: var(--color-appeal-main-bg);
     border-radius: 0.75rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     max-width: calc(100% - 2.25rem);
+    min-height: 445px;
     margin-inline: 2.25rem;
     padding: 4.375rem 2.25rem 1.5rem;
     z-index: 2; /* Above the gradient canvas */
@@ -504,26 +512,32 @@ body {
     }
 
     #letter-contents {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
       p {
         .mixin-font-styles(@family-open-sans,
           normal,
           1.375rem,
           1.5);
         width: 100%;
+        margin: 0;
       }
 
-      p:first-child {
-        margin: 1rem 0 2rem;
+      p + p {
+        margin-top: 2rem;
+      }
+
+      .heart-container {
+        margin-top: auto;
+        padding-top: 1rem;
       }
     }
 
     #letter-contents > p.closing-text {
       font-size: 1rem;
       margin: 0 !important; /* heart-lines.less override */
-
-      @media (min-width: @md) {
-        margin: 1.1875rem 0 0 0 !important; /* heart-lines.less override */
-      }
     }
   }
 
