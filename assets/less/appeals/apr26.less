@@ -170,7 +170,8 @@ body {
       height: 200vh;
       --sunPos: 50vw 50vh;
       transform-origin: var(--sunPos);
-      animation: sun 3.5s linear infinite alternate;
+      // Commenting this out for now to assess performance impact
+      // animation: sun 3.5s linear infinite alternate;
 
       mask-image: radial-gradient(
         circle at var(--sunPos),
