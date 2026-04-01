@@ -82,7 +82,10 @@ body {
       #F28A7D,
       #FFAB61);
     background-size: 100% 200%;
-    animation: bg-scroll linear forwards;
+    background-position: 0 100%;
+    animation-name: bg-scroll;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
     animation-timeline: scroll();
 
     &>#appeal-heading {
@@ -112,10 +115,10 @@ body {
       animation: cloud var(--duration) linear infinite forwards var(--direction);
 
       --posX: left;
-      --duration: 40s;
+      --duration: 70s;
       --direction: normal; /* normal or reverse */
-      --lowHeight: 10vh;
-      --highHeight: 20vh;
+      --lowHeight: 280px;
+      --highHeight: 200px;
       --layerNum: 4;
       --index: 0;
       --opacity: 0.7;
@@ -170,16 +173,17 @@ body {
       height: 200vh;
       --sunPos: 50vw 50vh;
       transform-origin: var(--sunPos);
-      animation: sun 3.5s linear infinite alternate;
+      // Commenting this out for now to assess performance impact
+      // animation: sun 3.5s linear infinite alternate;
 
       mask-image: radial-gradient(
         circle at var(--sunPos),
         transparent 10vh,
         white 35vh
       );
-      opacity: 0.15;
+      opacity: 0.25;
       transform: scaleX(2);
-      z-index: 2;
+      z-index: -1;
       pointer-events: none;
 
       @media (min-width: @lg) {
@@ -263,6 +267,9 @@ body {
       }
     }
     @keyframes bg-scroll {
+      from {
+        background-position: 0 90%;
+      }
       to {
         background-position: 0 100%;
       }
