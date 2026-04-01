@@ -82,7 +82,10 @@ body {
       #F28A7D,
       #FFAB61);
     background-size: 100% 200%;
-    animation: bg-scroll linear forwards;
+    background-position: 0 100%;
+    animation-name: bg-scroll;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
     animation-timeline: scroll();
 
     &>#appeal-heading {
@@ -264,6 +267,9 @@ body {
       }
     }
     @keyframes bg-scroll {
+      from {
+        background-position: 0 90%;
+      }
       to {
         background-position: 0 100%;
       }
