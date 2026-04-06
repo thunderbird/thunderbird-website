@@ -42,6 +42,8 @@ def setup_argument_parser():
                         action='store_true')
     parser.add_argument('--downloadlegal', help='Download the Thunderbird privacy policy document.', action='store_true')
     parser.add_argument('--tbpro', help='Build the tb.pro site.', action='store_true')
+    parser.add_argument('--all', help='Build all sites (main website, start page, updates, tb.pro, roadmaps).',
+                        action='store_true')
     parser.add_argument('--roadmaps', help='Build the Thunderbird roadmaps site.', action='store_true')
     parser.add_argument('--watch', help='Rebuild when template and asset dirs are changed, and run a server on localhost.',
                         action='store_true')
@@ -134,21 +136,27 @@ def build_roadmaps():
 
                 # Products go in sub-dirs
                 if (clean_name == "index"):
+                    template_extends = '{% extends "includes/base/landing-page.html" %}\n'
+                    template_blockname = '{% block content %}\n'
                     temp_template_path = os.path.join(settings.ROADMAPS_PATH, "index.html")
                 else:
+                    template_extends = '{% extends "includes/base/product-or-service.html" %}\n'
+                    template_blockname = '{% block roadmap_content %}\n'
                     os.makedirs(os.path.join(settings.ROADMAPS_PATH, file.replace(".md", "")), exist_ok=True)
                     temp_template_path = os.path.join(settings.ROADMAPS_PATH, file.replace(".md", ""), "index.html")
 
+                # Landing page has a different template from sub-pages.
                 with open(temp_template_path, "w") as f:
-                    f.write('{% extends "includes/base/page.html" %}\n')
-                    f.write('{% block content %}\n')
+                    f.write(template_extends)
+                    f.write(template_blockname)
                     f.write(html_content) # The converted HTML is baked in here
+                    f.write('{{ super() }}\n')
                     f.write('\n{% endblock %}')
 
     site = builder.Site(languages, settings.ROADMAPS_PATH, settings.ROADMAPS_RENDERPATH,
                        settings.ROADMAPS_CSS, js_bundles=settings.ROADMAPS_JS,
                        data=context, debug=args.debug, dev_mode=args.watch,
-                       extra_searchpaths=[settings.WEBSITE_PATH, settings.COMMON_SEARCHPATH])
+                       extra_searchpaths=[settings.COMMON_SEARCHPATH])
     site.build_roadmaps()
     return site
 
@@ -208,7 +216,18 @@ def build_main_website():
 
 site = None
 
-if args.startpage:
+if args.all:
+    conflicting = [args.startpage, args.updates, args.tbpro, args.roadmaps,
+                   args.buildcalendars, args.downloadlegal, args.watch]
+    if any(conflicting):
+        parser.error('--all cannot be combined with individual site flags or --watch')
+
+    build_main_website()
+    build_startpage()
+    build_updates()
+    build_tbpro()
+    build_roadmaps()
+elif args.startpage:
     site = build_startpage()
 elif args.updates:
     site = build_updates()
@@ -223,6 +242,5 @@ elif args.downloadlegal:
 else:
     site = build_main_website()
 
-# Set up file watcher if requested.
 if args.watch and site:
     builder.setup_observer(site, args.port)

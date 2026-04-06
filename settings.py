@@ -116,7 +116,18 @@ STAGE_HOSTS = [
     CANONICAL_TBPRO_STAGE_URL.replace('https://', ''),
     CANONICAL_ROADMAPS_STAGE_URL.replace('https://', ''),
     'stage.thunderbird.net',
-    'localhost']
+]
+
+WWW_HOSTS = [
+    CANONICAL_URL.replace('https://', ''),
+    CANONICAL_STAGE_URL.replace('https://', ''),
+    'stage.thunderbird.net',
+]
+
+ROADMAPS_HOSTS = [
+    CANONICAL_ROADMAPS_URL.replace('https://', ''),
+    CANONICAL_ROADMAPS_STAGE_URL.replace('https://', ''),
+]
 
 # url for the server that serves Thunderbird downloads.
 BOUNCER_URL = 'https://download.mozilla.org/'
@@ -180,6 +191,57 @@ JSON_PATH = 'libs/product-details/public/1.0'
 
 ALL_PLATFORMS = ('windows', 'linux', 'mac')
 
+APPEAL_DONATE_PAGES = [
+    'thunderbird/128.0/apr25/index.html',
+    'thunderbird/140.0/jun25a/index.html',
+    'thunderbird/140.0/jun25b/index.html',
+    'thunderbird/140.0/nov25a/index.html',
+    'thunderbird/140.0/nov25b/index.html',
+    'thunderbird/140.0/nov25c/index.html',
+    'thunderbird/140.0/dec25-1a/index.html',
+    'thunderbird/140.0/dec25-1b/index.html',
+    'thunderbird/140.0/dec25-1c/index.html',
+    'thunderbird/140.0/dec25-1a6C/index.html',
+    'thunderbird/140.0/dec25-2a/index.html',
+    'thunderbird/140.0/dec25-2b/index.html',
+    'thunderbird/140.0/dec25-2c/index.html',
+    'thunderbird/140.0/dec25-2d/index.html',
+    'thunderbird/140.0/dec25-2d6c/index.html',
+    'thunderbird/140.0/apr26-1a/index.html',
+    'thunderbird/140.0/apr26-1b/index.html',
+    'thunderbird/140.0/apr26-1c/index.html',
+    'thunderbird/140.0/apr26-1d/index.html',
+    'thunderbird/140.0/apr26-1e/index.html',
+    'thunderbird/140.0/apr26-1f/index.html',
+    'thunderbird/release/sep25r/index.html',
+]
+
+
+def _appeal_urls(pages):
+    """Generate URL_MAPPINGS entries from APPEAL_DONATE_PAGES.
+
+    Each entry like 'thunderbird/140.0/jun25a/index.html' produces two mappings:
+      'updates.140.appeal.jun25a':        '/thunderbird/140.0/jun25a/'
+      'updates.140.appeal.jun25a.donate': '/thunderbird/140.0/jun25a/donate/'
+    """
+    urls = {}
+    for page in pages:
+        # 'thunderbird/140.0/jun25a/index.html' -> 'thunderbird/140.0/jun25a'
+        dir_path = page.rsplit('/', 1)[0]
+        # 'thunderbird/140.0/jun25a' -> prefix='thunderbird/140.0', variant='jun25a'
+        prefix, variant = dir_path.rsplit('/', 1)
+
+        parts = [p for p in prefix.split('/') if p]
+        key_parts = ['updates'] + [p.replace('.0', '') if p != 'thunderbird' else None for p in parts]
+        key_prefix = '.'.join(filter(None, key_parts)) + '.appeal'
+
+        key = f'{key_prefix}.{variant}'
+        path = f'/{dir_path}/'
+        urls[key] = path
+        urls[f'{key}.donate'] = f'{path}donate/'
+    return urls
+
+
 # Mappings for the helper.url function.
 # 'thunderbird.sysreq' and 'wiki.moz' have special behaviour.
 # Keys prefixed with 'thunderbird.' will have the settings.CANONICAL_URL prepended to them if you're building
@@ -205,7 +267,7 @@ URL_MAPPINGS = {
     'firefox.release-calendar': 'https://wiki.mozilla.org/Release_Management/Calendar',
     'foundation.licensing.website-content': 'https://www.mozilla.org/foundation/licensing/website-content/',
     'foundation.about': 'https://foundation.mozilla.org/about/',
-    'guidelines': 'https://www.mozilla.org/en-US/about/governance/policies/participation/',
+    'guidelines': 'https://www.mozilla.org/about/governance/policies/participation/',
     'legal.fraud-report': 'https://www.mozilla.org/about/legal/fraud-report/',
     'legal.index': 'https://www.mozilla.org/en-US/about/legal/terms/mozilla/',
     'legal.infringement': 'https://www.mozilla.org/en-US/about/legal/report-infringement/',
@@ -256,8 +318,19 @@ URL_MAPPINGS = {
     'tbpro.home': '/',
     'tbpro.thundermail': '/thundermail',
     'tbpro.appointment': '/appointment',
+    'tbpro.privacy': '/privacy',
     'tbpro.send': '/send',
+    'tbpro.terms': '/terms',
     'tbpro.waitlist': '/waitlist',
+    'tbpro.status': 'https://status.tb.pro/',
+    'tbpro.support': 'https://support.tb.pro/',
+    'tbpro.ideas': 'https://ideas.tb.pro',
+    'roadmaps': 'https://roadmaps.thunderbird.net/',
+    'roadmaps.home': '/',
+    'roadmaps.desktop': '/desktop',
+    'roadmaps.android': '/android',
+    'roadmaps.ios': '/ios',
+    'roadmaps.services': '/services',
     'thunderbird.about': '/about',
     'thunderbird.about.our-mission-statement': '/about/mission-statement',
     'thunderbird.android.announcement': 'https://blog.thunderbird.net/2024/10/thunderbird-for-android-8-0-takes-flight/',
@@ -308,37 +381,12 @@ URL_MAPPINGS = {
     'updates.128.appeal.nov24.donate': '/thunderbird/128.0/nov24/donate/',
     'updates.115.appeal.dec24.donate': '/thunderbird/115.0/dec24/donate/',
     'updates.128.appeal.dec24.donate': '/thunderbird/128.0/dec24/donate/',
-    'updates.128.appeal.apr25': '/thunderbird/128.0/apr25/',
-    'updates.128.appeal.apr25.donate': '/thunderbird/128.0/apr25/donate/',
     'updates.128.monthly': '/thunderbird/128.0/monthly/',
     'updates.140.whatsnew': '/thunderbird/140.0/whatsnew/',
-    'updates.140.appeal.jun25a': '/thunderbird/140.0/jun25a/',
-    'updates.140.appeal.jun25b': '/thunderbird/140.0/jun25b/',
-    'updates.140.appeal.jun25a.donate': '/thunderbird/140.0/jun25a/donate/',
-    'updates.140.appeal.jun25b.donate': '/thunderbird/140.0/jun25b/donate/',
-    'updates.140.appeal.nov25a.donate': '/thunderbird/140.0/nov25a/donate/',
-    'updates.140.appeal.nov25b.donate': '/thunderbird/140.0/nov25b/donate/',
-    'updates.140.appeal.nov25c': '/thunderbird/140.0/nov25c/',
-    'updates.140.appeal.nov25c.donate': '/thunderbird/140.0/nov25c/donate/',
-    'updates.140.appeal.dec25-1a': '/thunderbird/140.0/dec25-1a/',
-    'updates.140.appeal.dec25-1a.donate': '/thunderbird/140.0/dec25-1a/donate/',
-    'updates.140.appeal.dec25-1b': '/thunderbird/140.0/dec25-1b/',
-    'updates.140.appeal.dec25-1b.donate': '/thunderbird/140.0/dec25-1b/donate/',
-    'updates.140.appeal.dec25-1c': '/thunderbird/140.0/dec25-1c/',
-    'updates.140.appeal.dec25-1c.donate': '/thunderbird/140.0/dec25-1c/donate/',
-    'updates.140.appeal.dec25-2a': '/thunderbird/140.0/dec25-2a/',
-    'updates.140.appeal.dec25-2a.donate': '/thunderbird/140.0/dec25-2a/donate/',
-    'updates.140.appeal.dec25-2b': '/thunderbird/140.0/dec25-2b/',
-    'updates.140.appeal.dec25-2b.donate': '/thunderbird/140.0/dec25-2b/donate/',
-    'updates.140.appeal.dec25-2c': '/thunderbird/140.0/dec25-2c/',
-    'updates.140.appeal.dec25-2c.donate': '/thunderbird/140.0/dec25-2c/donate/',
-    'updates.140.appeal.dec25-2d': '/thunderbird/140.0/dec25-2d/',
-    'updates.140.appeal.dec25-2d.donate': '/thunderbird/140.0/dec25-2d/donate/',
-    'updates.140.appeal.dec25-2d6c': '/thunderbird/140.0/dec25-2d6c/',
-    'updates.140.appeal.dec25-2d6c.donate': '/thunderbird/140.0/dec25-2d6c/donate/',
-    'updates.release.appeal.sep25r': '/thunderbird/release/sep25r/',
-    'updates.release.appeal.sep25r.donate': '/thunderbird/release/sep25r/donate/',
 }
+# Appeal page and donate subpage URLs are derived from APPEAL_DONATE_PAGES
+# rather than being listed individually in URL_MAPPINGS above.
+URL_MAPPINGS.update(_appeal_urls(APPEAL_DONATE_PAGES))
 
 BLOG_FEED_URL = 'https://blog.thunderbird.net/feed/atom/'
 
@@ -408,6 +456,8 @@ UPDATES_CSS = {
     "monthly-style": ["less/monthly.less"],
     'whatsnew-140': ['less/whatsnew-140.less'],
     "appeal-jun25-style": ["less/appeals/jun25.less"],
+    "appeal-apr26-style": ["less/appeals/apr26.less"],
+    "appeal-apr26-1e-style": ["less/appeals/apr26-1e.less"],
 }
 
 UPDATES_JS = {
@@ -426,6 +476,8 @@ TBPRO_CSS = {
     'appointment': ['less/tbpro/product/appointment.less'],
     'send': ['less/tbpro/product/send.less'],
     'waitlist': ['less/tbpro/waitlist.less'],
+    # Purely informational, like /terms and /privacy
+    'plain': ['less/tbpro/plain.less'],
 }
 
 TBPRO_JS = {
@@ -450,6 +502,7 @@ ROADMAPS_CSS = {
 }
 
 ROADMAPS_JS = {
+    'roadmaps-bundle': ['js/app.js', 'js/bolt-webcomponents.js'],
 }
 
 

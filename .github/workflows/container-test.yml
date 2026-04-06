@@ -1,8 +1,6 @@
 name: Build and Test Container
 
 on:
-  push:
-    branches: [master]
   pull_request:
     branches: [master]
 
@@ -12,13 +10,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@4d04d5d9486b7bd6fa91e7baf45bbb4f8b9deedd # v4
 
       - name: Build Docker image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@d08e5c354a6adb9ed34480a06d141179aa583294 # v7
         with:
           context: .
           file: ./docker/Dockerfile
@@ -41,7 +39,7 @@ jobs:
 
       - name: Run all tests
         run: |
-          docker exec tb-web-test sh -c "cd /build && /build/venv/bin/python -m pytest tests/ -v"
+          docker exec tb-web-test sh -c "cd /build && uv run pytest tests/ -v"
 
       - name: Show container logs on failure
         if: failure()

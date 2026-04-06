@@ -1,10 +1,11 @@
 <!doctype html>
-<html class="other x86 no-js page-{{ active_page|default('not-set') }}" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
+<html class="dark other x86 no-js page-{{ active_page|default('not-set') }}" lang="{{ LANG|replace('en-US', 'en') }}" dir="{{ DIR }}">
   <head>
     <meta charset="utf-8">{# Note: Must be within first 512 bytes of page #}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block extra_meta %}{% endblock %}
+
 
     {% block shared_meta %}
     <title>{% filter striptags|e %}{% block page_title_full %}{% block page_title_prefix %}{% endblock %}{% block page_title %}{% endblock %}{% endblock page_title_full %}{% block page_title_suffix %} Thunderbird's Public Roadmaps{% endblock %}{% endfilter %}</title>
@@ -24,9 +25,21 @@
     {% endblock shared_meta %}
 
     <link href="{{ static('css/normalize.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ static('css/bolt-webcomponents.css') }}" rel="stylesheet" type="text/css" />
 
     {% block base_css %}
     <link href="{{ static('css/roadmaps.css') }}" rel="stylesheet" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
     {% endblock %}
 
     {% block extra_css %}
@@ -59,17 +72,47 @@
     {% include 'includes/base/tab-navigation-bar.html' %}
     {% block site_nav %}{% endblock %}
     <main>
-      <div id="main-content">
+      <div id="main-content"
+           class="{% block main_content_classes %}{% endblock %}"
+      >
       {% block content %}{% endblock %}
       </div>
+
+      {% block pre_footer %}
+      {% endblock %}
+
     </main>
 
     {% block site_footer %}
         {% include 'includes/base/footer.html' %}
     {% endblock %}
 
-    {% block additional_site_js %}{% endblock %}
 
+
+    <script type="text/javascript" src="{{ static('js/roadmaps-bundle.js') }}" charset="utf-8"></script>
+    <script>
+      (function (){
+        // Handle light/dark mode preference
+        const browserPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (browserPrefersDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+
+        // Allow page to show hamburger menu.
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, "js");
+
+        // Fix the donation button
+        const donationBtn = document.querySelector(`[data-donate-btn]`);
+        if (donationBtn) {
+          donationBtn.setAttribute('href', '{{ url('thunderbird.donate') }}')
+        }
+
+      })()
+    </script>
+    {% block additional_site_js %}{% endblock %}
     {% block js %}{% endblock %}
   </body>
 </html>

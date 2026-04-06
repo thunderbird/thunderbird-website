@@ -1,0 +1,876 @@
+// ========================================================================
+// Only the necessary variables and mixins needed to compile site-nav.less
+@import '../common/site-nav-variables.less';
+@import '../common/site-nav-mixins.less';
+@import '../new/components/site-nav.less';
+
+// ========================================================================
+
+// For the language select drop-down
+@import '../new/components/forms.less';
+
+// Shared styles
+@import "../common/fonts.less";
+@import "../common/breakpoints.less";
+@import "../common/space.less";
+@import "../common/fonts.less";
+@import "../common/tab-navigation-bar.less";
+@import "../common/common-footer.less";
+@import "../common/tb-footer.less";
+@import "../new/colours.less";
+
+
+// Per Sol's recommended tweaks 2026-03-02
+@max-width:     76rem;        // 1216px
+
+
+
+// Variables
+:root {
+    --colour-primary-default: #58c9ff;
+    --colour-text-icon-base: #eeeef0;
+    --colour-text-icon-highlight: #58c9ff;
+    --colour-surface-base: #1a202c;
+    --colour-surface-border: #3d4d67;
+    --colour-surface-lower: #18181b;
+    --color-surface-raised: rgb(38, 45, 59);
+    --color-surface-deep: rgb(61, 77, 103);
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-blue-50: #2493ef;
+    --color-purple-50: #a855f7;
+    --color-gray-30: #d4d4d8;
+    --color-ink-70: #3e3c67;
+    --color-ink-80: #2a284b;
+    --color-link: #1E4EAE;
+
+    // phosphoricon colors
+    --user-green: #34C759;
+    --user-yellow: #F4C430;
+    --dark-text-icon-highlight: #58C9FF;
+}
+
+
+
+// Additional styles for the language select drop down
+.fill-current {
+  display: none;
+}
+
+
+// This is to make the body full height and roughly align with
+// what's on www.
+// Lifted from layout.less
+body {
+
+    font-family: @family-inter;
+    font-weight: 300;
+    line-height: 1.5;
+
+    background: var(--colour-surface-lower);
+    color: var(--txt);
+    position: relative;
+    scroll-padding-top: var(--nav-height);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-navigation-links {
+    max-width: 76rem;
+}
+
+.site-nav {
+    // From home.less
+    color: var(--nav-txt);
+
+    --hamburger-background-inactive: var(--color-black);
+    --hamburger-foreground-inactive: var(--color-gray-30);
+    --hamburger-background-active: var(--color-white);
+    --hamburger-foreground-active: var(--color-black);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-inline: 1rem;
+
+    .nav-container {
+        max-width: 76rem;
+
+        .logo:hover {
+            color: var(--color-blue-20);
+        }
+    }
+
+    // From 2025-fonts.less
+    .nav-links .nav-ln {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    // From layout.less — gradient underline hover animation
+    .nav-ln {
+        text-decoration: none;
+        position: relative;
+        transition: font-size .2s;
+    }
+
+    .nav-ln::after {
+        content: '';
+        position: absolute;
+        inset-inline: 0;
+        bottom: -0.3em;
+        height: 3px;
+        background-color: var(--color-blue-60);
+        background-image: linear-gradient(to right, var(--color-blue-50), var(--color-purple-50));
+        width: 0;
+        transition: width .3s;
+    }
+
+    .nav-ln:focus::after,
+    .nav-ln:hover::after {
+        width: 100%;
+    }
+
+    // On www, seems to be set for all headers
+    h2 {
+        font-weight: 400
+    }
+
+    // On www, the .entry-text has this value, but
+    // I could not find where it was inherited from.
+    .entry-text  {
+        line-height: 27px;
+    }
+
+    // On www, the h6 modifies styles from an ancestor
+    // that I could not find, so hard-coding them here.
+    h6 {
+        font-size: 12.06px;
+        line-height: 18.09px;
+    }
+
+    .header-donate, .header-download {
+        font-weight: 500;
+        margin-top: -0.05rem;
+        margin-left: -1rem;
+
+        a.btn {
+            padding: 0.72em 1em;
+            border-width: 0.125rem; //2px;
+        }
+
+        a.btn::after {
+            background: transparent;
+        }
+
+        svg {
+            width: 1rem;
+        }
+    }
+}
+
+// Lifted from buttons.less to style the
+// Downloads and Donate buttons in header nav.
+// Also necessary for hamburger-btn, but should not
+// be nested in .site-nav so that the padding is
+// properly overridden.
+.btn-donate,
+.btn-donate-lg,
+.btn-download-inline,
+.btn-download-link,
+.download-link.btn-download,
+.btn,
+button {
+    font-size: var(--font-md);
+    background: var(--btn-bg, transparent);
+    border-radius: 0.375rem; //6px;
+    border: .125em solid currentColor;
+    color: currentColor;
+    padding: .5em 3em;
+    position: relative;
+    transition: font-size .2s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+// From buttons.less — glow and hover effects
+.btn::before {
+    content: '';
+    position: absolute;
+    background: var(--color-purple-70);
+    border-radius: 50%;
+    filter: blur(32px);
+    opacity: .25;
+    inset: -.25em -2.5em;
+    z-index: -2;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    background-image: radial-gradient(circle, var(--color-link), var(--color-purple-60) 30%);
+    background-size: 400%;
+    background-position: center;
+    opacity: .5;
+    inset: 0;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.btn:hover::after {
+    opacity: .75;
+    background-size: 500%;
+}
+
+// From buttons.less — fancy gradient border hover states
+.btn-no-bg {
+    --btn-background-color: rgba(0, 0, 0, 0.8);
+
+    &::after {
+        background: transparent;
+    }
+
+    &:hover {
+        background: linear-gradient(var(--btn-background-color), var(--btn-background-color)) padding-box,
+        linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+        border-color: transparent;
+        transition: all 250ms;
+        color: currentColor;
+
+        &::after {
+            opacity: 0.75;
+        }
+    }
+
+    &:active {
+        background: linear-gradient(var(--btn-background-color), var(--btn-background-color)) padding-box,
+        linear-gradient(to right, var(--color-blue-50), var(--color-purple-50)) border-box;
+        border-color: transparent;
+        transition: all 250ms;
+    }
+}
+
+
+// Pulled from links.less
+a {
+  color: currentColor;
+}
+
+
+// TODO: move footer support styles to own file
+// Additional styles needed to make the footer work
+
+// Probably global for www
+.container.footer h4 {
+    font-weight: 400;
+}
+
+// From links.less
+.container.footer a{
+    --accent: var(--color-link);
+
+    color: currentColor;
+    text-decoration: underline;
+    transition: font-size .2s,
+                text-decoration-color .2s;
+
+    &.dotted {
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: currentColor;
+        text-underline-offset: 0.25em;
+        text-decoration-thickness: .12em;
+    }
+    &.donate,
+    &:hover,
+    &:hover:visited {
+        text-decoration-color: var(--accent);
+    }
+
+}
+
+
+// From /assets/less/new/layout.less
+
+.site-links {
+  font-size: var(--font-md);
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  grid-template:
+                "a c d e" 30px
+                "b c d e";
+
+  .site-link-section {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding-left: 40px;
+    }
+
+    .home {
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    // Help our grid template pick the correct b...
+    &:nth-child(2) {
+      grid-area: b;
+    }
+  }
+
+  @media (max-width: @md) {
+    display: flex;
+    flex-direction: column;
+
+    .site-link-section {
+      height: auto;
+    }
+  }
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-inline: 1rem;
+    padding-block: clamp(1rem, 5.469vw, 4.375rem); // 4.375rem~
+    margin-inline: auto;
+    max-width: 1280px;
+    overflow: hidden;
+
+    // For the product pages
+    &.container-tight {
+        max-width: 1040px;
+    }
+
+    &.no-gap {
+        gap: 0;
+    }
+
+    @media (max-width: @md) {
+        // Give them some space to breathe
+        width: calc(100% - 1rem);
+        box-sizing: border-box;
+    }
+}
+
+.logo {
+    max-height: 100%;
+    min-width: 250px;
+    max-width: 250px;
+    height: 60px;
+    width: auto;
+    transition: color .2s;
+}
+
+.logo:hover,
+.mozilla-logo:hover {
+    color: var(--accent);
+    transform: none;
+}
+
+svg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+// ==============================================================================
+// actual roadmap styles
+// ==============================================================================
+
+
+@tablet-breakpoint: @md;
+@desktop-breakpoint: @lg;
+@extrawide-breakpoint: @xl;
+main {
+    color: var(--colour-text-icon-base);
+
+    margin-top: 122px; // TODO: change this to a calculation.
+
+    height: 100%;
+    flex: 1 1 auto;
+}
+
+#donation {
+    .web-body-small();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+
+    // Overrides from Design Team
+    line-height: 1.23;
+
+
+    p {
+        margin: 0;
+    }
+    a {
+        .web-body-xsmall();
+        color: var(--colour-text-icon-highlight);
+
+        // Overrides from Design Team
+        line-height: normal;
+    }
+    .donation-icon  {
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-image: url("/media/svg/roadmaps/heart-24-default.svg");
+
+    }
+}
+
+#roadmaps-site-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 2.25rem;
+
+    @media (min-width: @desktop-breakpoint) {
+        margin-top: 0.75rem;
+        padding-bottom: 3.25rem;
+    }
+
+
+    h4 {
+        .desktop-title-medium();
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+
+        @media (min-width: @desktop-breakpoint) {
+            margin-bottom: 1.25rem;
+        }
+
+
+    }
+
+    div {
+        display: flex;
+        gap: 1.25rem;
+        flex-direction: column;
+
+        @media (min-width: @tablet-breakpoint) {
+            flex-direction: row;
+        }
+
+        a {
+            .web-body-xsmall();
+            display: block;
+            @media (min-width: @desktop-breakpoint) {
+                display: inline-block;
+            }
+
+
+            &.active {
+                text-decoration: none;
+                cursor: unset;
+            }
+        }
+    }
+}
+
+
+#main-content {
+    .web-body-default();
+    @media (min-width: @tablet-breakpoint) {
+        .web-body-large();
+
+        // Overrides from Design Team
+        font-weight: 400;
+        line-height: 1.75rem;
+    }
+
+    margin: 0 auto;
+    max-width: @max-width;
+
+    padding-top: 0.75rem;
+    padding-bottom: 2rem;
+    padding-inline: 1rem;
+
+    @media (min-width: @tablet-breakpoint) {
+        padding-top: 2.25rem;
+    }
+
+    // Page heading
+    h1 {
+        .brand-headline-h1-sm();
+        // Repeating these, as the values from
+        // the mixin are getting overridden somewhere.
+        font-weight: 300;
+        letter-spacing: 0;
+
+        margin: 0;
+        padding: 0;
+        @media (min-width: @tablet-breakpoint) {
+            .brand-headline-h1-lg();
+            // Overrides from Design Team
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -0.03rem;
+        }
+    }
+
+    // The paragraph immediately following
+    h1 + p {
+        max-width: 50.313rem; // ~800px
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+
+        @media (min-width: @tablet-breakpoint) {
+            margin-top: 1.25rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    h1 + ul {
+        margin-top: 1rem;
+    }
+
+    ul + h1,
+    p + h1 {
+        margin-top: 2.25rem;
+    }
+
+    // Card styles
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    li + li {
+        margin-top: 0.5rem;
+    }
+
+    li {
+        // The rest of the content is not wrapped in a tag.
+        .web-body-small();
+        font-weight: 300;
+        @media (min-width: @tablet-breakpoint) {
+            .web-body-default();
+            font-weight: 300;
+        }
+
+        line-height: 1.075rem;
+
+        background-color: var(--colour-surface-base);
+        border: 1px solid var(--colour-surface-border);
+        border-radius: 0.5rem;
+        color: var(--colour-text-icon-base);
+        list-style: none;
+        position: relative;
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        column-gap: 0.75rem;
+        row-gap: 0.5rem;
+
+        box-sizing: border-box;
+        min-height: 10.563rem;
+
+        padding-inline: 0.75rem;
+        padding-block: 0.75rem;
+        min-height: 175px;
+
+        @media (min-width: @tablet-breakpoint) {
+            column-gap: 1rem;
+            padding-inline: 1rem;
+            padding-block: 1rem 1.5rem;
+            min-height: 250px;
+        }
+
+        h2 {
+            .web-title-small();
+            display: block;
+            margin: 0 0 0.25rem;
+
+            @media (min-width: @tablet-breakpoint) {
+                .web-title-medium();
+
+                // Override per Design Team
+                line-height: normal;
+            }
+        }
+
+        strong {
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1;
+
+            @media (min-width: @tablet-breakpoint) {
+                font-size: 1.25rem;
+            }
+        }
+
+        // Additional styles for the Bolt web-components
+        bolt-primary-button {
+            // This changes the color of the text inside the button.
+            --colour-primary-hover: #58c9ff;
+
+            justify-self: start;
+            margin-top: 0.25rem;
+
+            // Anchor to bottom of card.
+            align-self: end;
+        }
+    }
+
+
+    .card-container {
+        @media (min-width: @tablet-breakpoint) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+    }
+
+
+    .card {
+        & + .card {
+            margin-top: 1rem;
+            @media (min-width: @tablet-breakpoint) {
+                margin-top: 0;
+            }
+
+        }
+    }
+
+    .card-icon {
+        grid-template-columns: 1.5rem 1fr;
+        &::before {
+            content: "";
+            height: 1.25rem;
+            width: 1.25rem;
+            @media (min-width: @tablet-breakpoint) {
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+
+            display: inline-block;
+            grid-column: 1;
+            grid-row: 1 / span 3;
+            align-self: start;
+            background-color: var(--colour-primary-default);
+
+            // These properties let us change the color
+            // of an svg loaded as external resource.
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+        }
+    }
+
+    .card-android {
+        &::before {
+            -webkit-mask-image: url("/media/svg/roadmaps/android-logo.svg");
+            mask-image: url("/media/svg/roadmaps/android-logo.svg");
+        }
+    }
+    .card-desktop {
+        &::before {
+            -webkit-mask-image: url("/media/svg/roadmaps/desktop-tower.svg");
+            mask-image: url("/media/svg/roadmaps/desktop-tower.svg");
+        }
+    }
+    .card-ios {
+        &::before {
+            -webkit-mask-image: url("/media/svg/roadmaps/apple-logo.svg");
+            mask-image: url("/media/svg/roadmaps/apple-logo.svg");
+        }
+    }
+    .card-services {
+        &::before {
+            -webkit-mask-image: url("/media/svg/roadmaps/globe.svg");
+            mask-image: url("/media/svg/roadmaps/globe.svg");
+        }
+    }
+
+}
+
+
+
+#main-content.product-or-service {
+
+    // Overrides from Design Team
+    font-weight: 400;
+    line-height: 1.75rem;
+    @media (min-width: @desktop-breakpoint) {
+        padding-inline: 2rem;
+        padding-top: 2.25rem;
+        padding-bottom: 2rem;
+        max-width: 76rem;
+    }
+
+    i.ph {
+        font-size: 1.5rem;
+
+        &.ph-pulse {
+            color: var(--user-green);
+        }
+        &.ph-calendar-blank {
+            color: var(--user-yellow);
+        }
+        &.ph-rocket-launch {
+            color: var(--dark-text-icon-highlight);
+        }
+
+    }
+
+    .product-roadmap {
+        // Ensures use of dark-mode value.
+        --colour-ti-highlight: #58C9FF;
+
+        @media (min-width: @desktop-breakpoint) {
+            display: grid;
+            align-items: start;
+
+            // Supplied by Design
+            grid-template-columns: 18.25rem 1fr;
+            column-gap: 1rem;
+            row-gap: 2.25rem;
+
+            // Prevents h2 from stretching to full height
+            align-items: start;
+        }
+
+
+        .product-roadmap-header {
+            margin-bottom: 1.5rem;
+
+            @media (min-width: @desktop-breakpoint) {
+                padding-inline: 0;
+                margin-bottom: 2rem;
+                grid-column: 1 / 4;
+            }
+
+            p {
+                .web-body-default();
+                margin: 0;
+                line-height: 1.32;
+                margin-top: 1rem;
+
+                @media (min-width: @desktop-breakpoint) {
+                    .web-body-large();
+                    line-height: 28px;
+                    margin-top: 1.25rem;
+                }
+
+            }
+
+            a {
+                .web-body-small();
+                color: var(--colour-ti-highlight);
+
+                // Overrides from Design Team
+                font-size: 0.75rem;
+                line-height: 1rem;
+                text-decoration-thickness: 13%;
+                text-underline-offset: 25%;
+
+                &::after {
+                    content: " \2192";
+                    display: inline-block;
+                    margin-left: 0.25rem;
+                    letter-spacing: -2px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        h2 {
+            .brand-headline-h2-sm();
+            margin: 0;
+            margin-bottom: 1.35rem;
+            display: flex;
+            gap: 0.75rem;
+
+            @media (min-width: @desktop-breakpoint) {
+                position: sticky;
+                top: 116px;
+                background: var(--colour-surface-lower);
+
+                grid-column: 1;
+                font-family: metropolis;
+                font-weight: 300;
+                font-size: 2.25rem;
+                line-height: 120%;
+                letter-spacing: -0.025rem;
+                // per design QA
+                padding-left: 3.75rem; //  61px
+
+                margin-bottom: 0;
+
+                gap: 1rem;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        ul + h2 {
+            margin-top: 2.75rem;
+            @media (min-width: @desktop-breakpoint) {
+                margin-top: 0;
+            }
+        }
+
+
+        ul {
+            @media (min-width: @desktop-breakpoint) {
+                grid-column: 2;
+                margin: 0;
+                max-width: 50.313rem;
+            }
+        }
+
+
+        li {
+            box-sizing: border-box;
+            font-weight: 300;
+            background-color: var(--color-surface-raised);
+            padding: 0.625rem;
+            min-height: unset;
+
+            @media (min-width: @tablet-breakpoint) {
+                padding: 1rem;
+                padding-top: 0.75rem;
+            }
+
+            h2 {
+                @media (min-width: @tablet-breakpoint) {
+                    margin: 0;
+                }
+            }
+
+            .date-badge {
+                border-radius: 4rem;
+                background-color: var(--color-surface-deep);
+                width: fit-content;
+                padding: 0.5rem 0.75rem;
+                font-size: 0.6875rem;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+    }
+}

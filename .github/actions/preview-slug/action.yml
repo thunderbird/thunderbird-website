@@ -1,0 +1,36 @@
+name: Compute Preview Slug
+description: Derive a DNS-safe preview slug from the PR branch name and number, with a bird name.
+
+inputs:
+  branch:
+    description: PR head branch name
+    required: true
+  pr-number:
+    description: PR number
+    required: true
+
+outputs:
+  slug:
+    description: DNS-safe preview slug (e.g. "archive-fix-123-falcon")
+    value: ${{ steps.slug.outputs.slug }}
+
+runs:
+  using: composite
+  steps:
+    - name: Compute slug
+      id: slug
+      shell: bash
+      env:
+        BRANCH: ${{ inputs.branch }}
+        PR_NUMBER: ${{ inputs.pr-number }}
+      run: |
+        BRANCH_SLUG=$(echo "$BRANCH" | tr '[:upper:]' '[:lower:]' | sed 's/[\/\_]/-/g' | sed 's/[^a-z0-9-]//g' | sed 's/^-\+//;s/-\+$//' | cut -c1-30)
+
+        # Pick a bird name deterministically from the PR number
+        BIRDS_FILE="${GITHUB_ACTION_PATH}/../../bird-names.txt"
+        mapfile -t BIRDS < "$BIRDS_FILE"
+        BIRD="${BIRDS[$((PR_NUMBER % ${#BIRDS[@]}))]}"
+
+        SLUG="${BRANCH_SLUG}-${PR_NUMBER}-${BIRD}"
+        echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+        echo "Preview slug: $SLUG"

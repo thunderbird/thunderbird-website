@@ -1,0 +1,42 @@
+@import './dec25-2d.less';
+
+:root {
+  --bg-img: linear-gradient(180deg, #54B9E5 0%, #FBF8E7 31.5%, #FBF8E7 43%, #FFF0A3 66%, #FFC068 100%);
+  --bg-animation-gradient: linear-gradient(180deg, #ffc068 0%, #fff0a3 20%, #fbf8e7 25%, #54b9e5 40%, #54b9e5 60%, #fbf8e7 70%, #fff0a3 75%, #ffc068 80%);
+}
+
+.page-appeal-dec25 {
+  background-color: #ffc068;
+
+  body {
+    max-width: none;
+    min-width: var(--min-small-screen);
+    background: var(--bg-animation-gradient);
+    background-size: 100% 300%;
+    animation: sunset-gradient-linear 20s ease-in-out infinite alternate;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+      background: var(--bg-img);
+      background-size: 100% 100%;
+    }
+  }
+
+  #header-gradient {
+    display: none;
+  }
+
+  #appeal-header {
+    max-width: 80rem;
+    margin: auto auto 2rem;
+    background-image: none;
+
+    @media (min-width: @lg) {
+      height: 22.25rem;
+    }
+  }
+
+  #appeal-heading {
+    --txt: #F34576;
+  }
+}

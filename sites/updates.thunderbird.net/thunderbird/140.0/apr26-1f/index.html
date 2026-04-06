@@ -1,0 +1,12 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set utm_content = utm_content|default('apr26-f') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.apr26-1f.donate')) %}
+
+{% extends "thunderbird/140.0/apr26-1e/index.html" %}
+
+{% block base_css %}
+  <link href="{{ static('css/appeal-dec25-2d-style.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}

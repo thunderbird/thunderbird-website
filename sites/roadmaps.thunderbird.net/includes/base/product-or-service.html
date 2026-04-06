@@ -1,0 +1,38 @@
+{% extends "includes/base/page.html" %}
+
+{% block main_content_classes %}product-or-service{% endblock %}
+{% block content %}
+<div class="product-roadmap">
+  {% block roadmap_content %}
+  {% endblock %}
+</div>
+{% endblock %}
+
+
+{% block pre_footer %}
+<div id="roadmaps-site-nav">
+  <h4>Project roadmaps</h4>
+  <div>
+    <a href="{{ url('roadmaps.desktop') }}" aria-label="Desktop roadmap">Desktop</a>
+    <a href="{{ url('roadmaps.android') }}" aria-label="Android roadmap">Android</a>
+    <a href="{{ url('roadmaps.ios') }}" aria-label="iOS roadmap">iOS</a>
+    <a href="{{ url('roadmaps.services') }}" aria-label="Services roadmap">Services</a>
+  </div>
+</div>
+<script>
+  (function () {
+    const currentUrl = window.location.pathname;
+    document.querySelectorAll('#roadmaps-site-nav a').forEach(link => {
+      const linkUrl = new URL(link.href).pathname;
+      if (currentUrl.startsWith(linkUrl)) {
+        link.classList.add('active');
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+        });
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  })();
+</script>
+{% endblock %}

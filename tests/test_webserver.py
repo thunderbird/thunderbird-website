@@ -91,6 +91,15 @@ TEST_CASES = [
     ("tb.pro", "/send", 302, "/en-US/send"),
     ("tb.pro", "/thundermail", 302, "/en-US/thundermail"),
     ("tb.pro", "/waitlist", 302, "/en-US/waitlist"),
+
+    # support.thunderbird.net - generic url formatter redirect (issue #1135)
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", 302, "support.mozilla.org/kb/quarantined-domains"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/experiment-add-on-support", 302, "support.mozilla.org/kb/experiment-add-on-support"),
+
+    # support.thunderbird.net - custom slug overrides take precedence
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/extension-permissions", 302, "support.mozilla.org/kb/permission-request-messages-thunderbird-extensions"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/cant-remove-addon", 302, "support.mozilla.org/kb/policies-extensions-locked"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/addons-help", 302, "support.mozilla.org/kb/thunderbird-add-ons-frequently-asked-questions"),
 ]
 
 
@@ -133,6 +142,12 @@ LOCALE_TESTS = [
     ("tb.pro", "/waitlist", "en-US", "/en-US/waitlist"),
     ("tb.pro", "/waitlist", "fr", "/fr/waitlist"),
     ("tb.pro", "/waitlist", "ja", "/ja/waitlist"),
+
+    # support.thunderbird.net - redirect is locale-agnostic regardless of Accept-Language (issue #1135)
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", "en-US", "support.mozilla.org/kb/quarantined-domains"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", "de", "support.mozilla.org/kb/quarantined-domains"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", "fr", "support.mozilla.org/kb/quarantined-domains"),
+    ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", "ja", "support.mozilla.org/kb/quarantined-domains"),
 ]
 
 
@@ -143,4 +158,22 @@ def test_locale_detection(host: str, path: str, lang: str, expected_location: st
     assert response.status_code == 302
     location = response.headers.get("Location", "")
     assert expected_location in location, f"Expected '{expected_location}' in Location for lang={lang}, got '{location}'"
+
+
+MIME_TYPE_TESTS = [
+    ("/media/img/thunderbird/base/about/privacy.avif", "image/avif"),
+    ("/media/img/thunderbird/base/about/privacy.webp", "image/webp"),
+    ("/media/img/thunderbird/base/about/privacy.jxl", "image/jxl"),
+]
+
+
+@pytest.mark.parametrize("path,expected_type", MIME_TYPE_TESTS)
+def test_mime_types(path: str, expected_type: str):
+    """Verify Apache serves images with correct Content-Type headers."""
+    response = get(path, "www.thunderbird.net")
+    if response.status_code == 404:
+        pytest.skip(f"File not found: {path}")
+    assert response.status_code == 200, f"GET {path} returned {response.status_code}"
+    content_type = response.headers.get("Content-Type", "")
+    assert content_type.startswith(expected_type), f"Expected '{expected_type}' for {path}, got '{content_type}'"
 

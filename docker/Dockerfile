@@ -1,107 +1,87 @@
 # Thunderbird Website Apache Container
 #
+# All environments build from source (including translation compilation).
+# BUILD_ENV controls post-build cleanup:
+#   local (default): keeps /build so pytest can run inside the container
+#   stage/prod:      removes /build to shrink the image
+#
 # Build modes:
 #   Local/Dev:   docker build -t thunderbird-web .
-#                (clones libs, installs deps, runs tests, builds all sites)
-#
-#   Production:  docker build --build-arg BUILD_ENV=prod -t thunderbird-web .
 #   Staging:     docker build --build-arg BUILD_ENV=stage -t thunderbird-web .
-#                (clones from tb-website-builds, no local build)
+#   Production:  docker build --build-arg BUILD_ENV=prod -t thunderbird-web .
 
 FROM quay.io/centos/centos:stream9
 
 ARG BUILD_ENV=local
+ARG REPO_BRANCH=master
 
 # Install packages (python3.11 for building, python3 for mod_wsgi runtime)
 RUN dnf install -y epel-release \
     && dnf config-manager --set-enabled crb \
-    && dnf install -y httpd mod_ssl python3 python3-pip python3-mod_wsgi python3-libs python3.11 python3.11-pip git npm \
+    && dnf module enable nodejs:22 -y \
+    && dnf install -y httpd mod_ssl python3 python3-pip python3-mod_wsgi python3-libs python3.11 python3.11-pip git npm gettext \
     && dnf clean all
 
 # Create directories
 RUN mkdir -p /var/www/html/start /var/www/html/live.momo /var/www/autoconfig.momo \
-    /var/www/html/autoconfig.momo /var/www/html/autoconfig-temp /var/www/services/broker \
-    /var/www/services/mx /var/www/tbservices /var/log/httpd/autoconfig \
+    /var/www/html/autoconfig.momo /var/www/html/autoconfig-temp \
+    /var/www/services/mx /var/www/tbservices \
     /var/www/html/tbstats /var/www/html/statictest/www /etc/httpd/conf
 
 # Python virtual environment
 RUN python3 -m venv /var/www/tbservices \
     && /var/www/tbservices/bin/pip install --no-cache-dir webob dnspython lxml
 
-# Clone external repos
-RUN git clone --depth 1 --branch prod https://github.com/thunderbird/live-redirects.git /var/www/html/live.momo
+# Clone external repos (branch is passed via --build-arg REPO_BRANCH)
+RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/live-redirects.git /var/www/html/live.momo
 
-RUN git clone --recurse-submodules --branch prod https://github.com/thunderbird/broker.git /var/www/services/broker \
-    && cp /var/www/services/broker/settings.py.dist /var/www/services/broker/settings.py \
-    && cd /var/www/services/broker/lib/pygeoip && /var/www/tbservices/bin/pip install --no-cache-dir .
-
-RUN git clone --depth 1 --branch prod https://github.com/thunderbird/http-mx.git /var/www/services/mx \
+RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/http-mx.git /var/www/services/mx \
     && /var/www/tbservices/bin/pip install --no-cache-dir -r /var/www/services/mx/requirements.txt
 
-RUN git clone --depth 1 --branch prod https://github.com/thunderbird/stats.git /var/www/html/tbstats
+RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/stats.git /var/www/html/tbstats
 
-RUN git clone --depth 1 --branch prod https://github.com/thunderbird/autoconfig.git /var/www/autoconfig.momo
+RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/autoconfig.git /var/www/autoconfig.momo
 
 # Copy config files
 COPY docker/scripts/update-autoconfig.sh /var/www/autoconfig.momo/update.sh
 RUN chmod +x /var/www/autoconfig.momo/update.sh && /var/www/autoconfig.momo/update.sh
 
+COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:1.0.0-rc1 /lambda-adapter /opt/extensions/lambda-adapter
+COPY --from=ghcr.io/astral-sh/uv:0.10.9@sha256:10902f58a1606787602f303954cea099626a4adb02acbac4c69920fe9d278f82 /uv /usr/local/bin/uv
+
 COPY docker/conf/ssl.conf /etc/httpd/conf.d/ssl.conf
 COPY docker/docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
+# Patch httpd.conf for container use: port 8080, logs to stdout/stderr, runtime files in /tmp
+RUN sed -i 's/^Listen 80$/Listen 8080/' /etc/httpd/conf/httpd.conf \
+    && sed -i 's|ErrorLog "logs/error_log"|ErrorLog "/dev/stderr"|' /etc/httpd/conf/httpd.conf \
+    && sed -i 's|CustomLog "logs/access_log" combined|#& - access log handled by ssl.conf (vcombined format)|' /etc/httpd/conf/httpd.conf \
+    && echo 'PidFile /tmp/httpd.pid' >> /etc/httpd/conf/httpd.conf \
+    && echo 'Mutex file:/tmp default' >> /etc/httpd/conf/httpd.conf
+
 # =============================================================================
-# Static files: source depends on BUILD_ENV
+# Build websites from source (all environments)
 # =============================================================================
 
-# Copy source files (needed for local builds)
 COPY . /build/
 
-# For local builds: build the websites from source using a venv
-RUN if [ "$BUILD_ENV" = "local" ]; then \
-      echo "BUILD_ENV=local - building websites from source..." \
-      && cd /build \
-      && mkdir -p libs \
-      && git clone --depth 1 https://github.com/thunderbird/thunderbird.net-l10n.git libs/locale \
-      && git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details \
-      && git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes \
-      && git clone --depth 1 https://github.com/thunderbird/roadmaps-overview.git libs/thunderbird_roadmaps \
-      && npm install -g less \
-      && python3.11 -m venv /build/venv \
-      && /build/venv/bin/pip install --upgrade pip \
-      && /build/venv/bin/pip install -r requirements-dev.txt \
-      && /build/venv/bin/python build-site.py \
-      && /build/venv/bin/python build-site.py --startpage \
-      && /build/venv/bin/python build-site.py --updates \
-      && /build/venv/bin/python build-site.py --tbpro \
-      && cp -r /build/dist/www.thunderbird.net /var/www/html/start/thunderbird.net \
-      && cp -r /build/dist/start.thunderbird.net /var/www/html/start/site \
-      && cp -r /build/dist/updates.thunderbird.net /var/www/html/start/updates.thunderbird.net \
-      && cp -r /build/dist/tb.pro /var/www/html/start/tb.pro \
-      && cp /build/wsgi.py /var/www/html/start/wsgi.py \
-      && cp /build/settings.py /var/www/html/start/settings.py \
-      && cp -r /build/media /var/www/html/start/thunderbird.net/media \
-      && echo "Done building websites"; \
-    fi
+RUN cd /build \
+    && uv sync --frozen \
+    && uv run pull-libs.py --skip-sync --notes-branch $REPO_BRANCH \
+    && bash l10n_tools/compile.sh \
+    && uv run build-site.py --all --debug \
+    && cp -r dist/* wsgi.py settings.py /var/www/html/start/ \
+    && cp -r media /var/www/html/start/www.thunderbird.net/media
 
-# For prod/stage: clone tb-website-builds (includes wsgi.py, settings.py, media)
-# Branch mapping: stage -> master, prod -> prod
-RUN if [ "$BUILD_ENV" != "local" ]; then \
-      if [ "$BUILD_ENV" = "stage" ]; then BUILDS_BRANCH="master"; else BUILDS_BRANCH="prod"; fi \
-      && echo "BUILD_ENV=$BUILD_ENV - cloning tb-website-builds branch $BUILDS_BRANCH..." \
-      && rm -rf /var/www/html/start/* \
-      && git clone --depth 1 --branch ${BUILDS_BRANCH} \
-        https://github.com/thunderbird/tb-website-builds.git /var/www/html/start \
-      && rm -rf /var/www/html/start/.git \
-      && echo "Done cloning tb-website-builds"; \
-    fi
+# Stage/prod: clean up build dir to shrink the image
+# Local: keep /build so container-test.yml can run pytest
+RUN if [ "$BUILD_ENV" != "local" ]; then rm -rf /build; fi
 
-# Set permissions (only log dir needs write access, web files are world-readable)
-RUN chown -R apache:apache /var/log/httpd/autoconfig
 RUN rm -f /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/autoindex.conf
 
-EXPOSE 80
+EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
-    CMD curl -sf -H "Host: www.thunderbird.net" http://localhost/ || exit 1
+    CMD curl -sf -H "Host: www.thunderbird.net" http://localhost:8080/ || exit 1
 
 ENTRYPOINT ["/docker-entrypoint.sh"]

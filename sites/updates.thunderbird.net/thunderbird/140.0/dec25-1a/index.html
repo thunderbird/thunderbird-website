@@ -28,15 +28,18 @@
 
 {% block content %}
   <section id="appeal-body">
+    {% block appeal_headline %}
     <h1 id="appeal-heading" class="with-lowercase" aria-label="{{ _('Only 3% of users support Thunderbird') }}">
       {{ _('Only 3% of users <span>SUPPORT THUNDERBIRD</span>') }}
     </h1>
+    {% endblock %}
 
     <div id="appeal-letter" class="letter-container font-xl">
       <section id="donate-button-container">
         {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content, base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
       </section>
       <div id="letter-contents">
+        {% block appeal_body %}
         <p>
           {{ _('Thunderbird is built by a small, passionate team along with a global community that believes in the <b>power of privacy, freedom and open source</b>. Your support pays for secure servers, robust infrastructure and the dedicated team of people who make it all happen.')}}
         </p>
@@ -46,6 +49,7 @@
         <p>
           {{ _('If you love using Thunderbird, please consider supporting it.')}}
         </p>
+        {% endblock %}
         <div class="heart-container">
           <div class="left-lines">
             <div class="line"></div>

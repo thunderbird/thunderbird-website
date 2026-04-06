@@ -1,5 +1,4 @@
 config:
-  aws:region: us-west-2
   aws:defaultTags:
     tags:
       environment: prod
@@ -7,11 +6,11 @@ config:
       ManagedBy: pulumi
   thunderbird-website:environment: prod
   # desiredCount and minCapacity should be the same.
-  thunderbird-website:desiredCount: 8
+  thunderbird-website:desiredCount: 24
   thunderbird-website:cpu: 1024
   thunderbird-website:memory: 2048
   # Auto scaling
-  thunderbird-website:minCapacity: 8
-  thunderbird-website:maxCapacity: 32
+  thunderbird-website:minCapacity: 24
+  thunderbird-website:maxCapacity: 64
   # Requests per target per minute - scale when each target receives more than this
   thunderbird-website:requestsPerTarget: 5000

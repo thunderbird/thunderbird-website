@@ -29,15 +29,18 @@
 
 {% block content %}
   <section id="appeal-body">
+    {% block appeal_headline %}
     <h1 id="appeal-heading" aria-label="{{ _('Thank YOU. You Help Us Soar') }}">
       {{ _('Thank YOU <span>You Help Us Soar</span>') }}
     </h1>
+    {% endblock %}
 
     <div id="appeal-letter" class="letter-container font-xl">
       <section id="donate-button-container">
         {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content, base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
       </section>
       <div id="letter-contents">
+        {% block appeal_body %}
         <p>
           {{ _('Thunderbird’s mission is to give <b>you</b> a private, customizable, and robust email experience, while keeping it free and accessible for users around the world.')}}
         </p>
@@ -47,6 +50,7 @@
         <p>
           {{ _('Your contributions make a huge difference. <b>We truly can’t do this without you.</b>')}}
         </p>
+        {% endblock %}
         <div class="heart-container">
           <div class="left-lines">
             <div class="line"></div>

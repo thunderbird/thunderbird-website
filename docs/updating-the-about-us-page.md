@@ -16,7 +16,7 @@ You can automatically generate cropped and compressed headshot images using the 
 To use it, make sure you've installed the image manipulation dependencies:
 
 ```bash
-pip install -r requirements-image.txt
+uv sync --group image
 ```
 
 Add each new staff member's photo to `media/img/thunderbird/staff/uncropped/`. (This directory is gitignored.)
