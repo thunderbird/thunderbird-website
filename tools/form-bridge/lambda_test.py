@@ -3,11 +3,18 @@ Unit tests for the donor-form-bridge Lambda function
 Tests the form parsing and Zendesk JSON formatting without external calls
 """
 
+import base64
 import json
-import pytest
+from types import SimpleNamespace
 from unittest.mock import patch
 
-from lambda_function import map_form_to_zendesk, lambda_handler
+from lambda_function import (
+    ScreenshotAttachment,
+    describe_screenshot_drop,
+    lambda_handler,
+    map_form_to_zendesk,
+    upload_screenshot_to_zendesk,
+)
 import urllib.parse
 
 def test_parse_form_data():
@@ -112,8 +119,6 @@ def test_map_form_to_zendesk_unknown_dropdown():
 
 def _test_lambda_handler_helper(is_base64_encoded: bool = False):
     """Helper function to test lambda handler with different body encodings"""
-    import base64
-
     # Form data to test
     form_body = "tfa_95=tfa_197&tfa_211=Test+Support+Request&tfa_163=This+is+a+test&tfa_1=Test+User&tfa_10=test%40example.com"
 
@@ -169,6 +174,149 @@ def test_lambda_handler():
 def test_lambda_handler_base64_encoded():
     """Test the full Lambda handler with base64 encoded body"""
     _test_lambda_handler_helper(is_base64_encoded=True)
+
+
+def _build_multipart_body(
+    file_bytes: bytes = b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR",
+    filename: str = "screenshot.png",
+    content_type: str = "image/png",
+):
+    """Build a multipart body like FormAssembly sends for screenshot uploads."""
+    boundary = "----CursorMultipartBoundary"
+    multipart_body = (
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_95"\r\n'
+        "\r\n"
+        "tfa_186\r\n"
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_211"\r\n'
+        "\r\n"
+        "email\r\n"
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_163"\r\n'
+        "\r\n"
+        "If you want more donations, it should not be a problem to write any good email adress.\r\n"
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_1"\r\n'
+        "\r\n"
+        "Example Donor\r\n"
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_10"\r\n'
+        "\r\n"
+        "donor@example.org\r\n"
+        f"--{boundary}\r\n"
+        f'Content-Disposition: form-data; name="tfa_201"; filename="{filename}"\r\n'
+        f"Content-Type: {content_type}\r\n"
+        "\r\n"
+    ).encode("utf-8") + file_bytes + (
+        "\r\n"
+        f"--{boundary}--\r\n"
+    ).encode("utf-8")
+
+    return boundary, multipart_body
+
+
+def test_lambda_handler_base64_encoded_multipart_with_attachment():
+    """Multipart submissions should attach screenshots when Zendesk upload succeeds."""
+    boundary, multipart_body = _build_multipart_body()
+
+    with patch('lambda_function.upload_screenshot_to_zendesk') as mock_upload, patch('lambda_function.send_to_zendesk') as mock_send:
+        mock_upload.return_value = ("upload-token-123", None)
+        mock_send.return_value = (True, {"ok": True})
+
+        event = {
+            "body": base64.b64encode(multipart_body).decode("ascii"),
+            "isBase64Encoded": True,
+            "httpMethod": "POST",
+            "headers": {
+                "content-type": f"multipart/form-data; boundary={boundary}"
+            }
+        }
+
+        result = lambda_handler(event, None)
+        assert result["statusCode"] == 200
+
+        call_args = mock_send.call_args[0][0]
+        assert call_args["ticket"]["subject"] == "Help with the donation form - email"
+        assert "good email adress" in call_args["ticket"]["comment"]["body"]
+        assert call_args["ticket"]["comment"]["uploads"] == ["upload-token-123"]
+        assert call_args["ticket"]["requester"]["name"] == "Example Donor"
+        assert call_args["ticket"]["requester"]["email"] == "donor@example.org"
+
+
+def test_upload_screenshot_to_zendesk_success():
+    """Supported screenshots should return the Zendesk upload token."""
+    screenshot = ScreenshotAttachment(
+        filename="screen.webp",
+        content_type="image/webp",
+        data=b"RIFF\x00\x00\x00\x00WEBPVP8 "
+    )
+
+    with patch('lambda_function.get_zendesk_headers') as mock_headers, patch('lambda_function.http.request') as mock_request:
+        mock_headers.return_value = {"Content-Type": "image/webp", "Authorization": "Basic test"}
+        mock_request.return_value = SimpleNamespace(
+            status=201,
+            data=json.dumps({"upload": {"token": "upload-token-123"}}).encode("utf-8")
+        )
+
+        token, reason = upload_screenshot_to_zendesk(screenshot)
+
+    assert token == "upload-token-123"
+    assert reason is None
+
+
+def test_upload_screenshot_to_zendesk_rejects_oversized_file():
+    """Oversized screenshots should be dropped before any Zendesk call."""
+    screenshot = ScreenshotAttachment(
+        filename="screen.png",
+        content_type="image/png",
+        data=b"x" * (1024 * 1024 + 1)
+    )
+
+    token, reason = upload_screenshot_to_zendesk(screenshot)
+
+    assert token is None
+    assert reason == "it exceeded the 1 MiB size limit"
+
+
+def test_upload_screenshot_to_zendesk_rejects_unsupported_type():
+    """Unsupported screenshot types should be dropped before any Zendesk call."""
+    screenshot = ScreenshotAttachment(
+        filename="screen.bmp",
+        content_type="image/bmp",
+        data=b"BM" + b"\x00" * 16
+    )
+
+    token, reason = upload_screenshot_to_zendesk(screenshot)
+
+    assert token is None
+    assert reason == "unsupported file type"
+
+
+def test_lambda_handler_multipart_dropped_attachment_adds_note():
+    """Screenshot upload failures should still create a ticket with a note."""
+    boundary, multipart_body = _build_multipart_body(file_bytes=b"x" * (1024 * 1024 + 1))
+
+    with patch('lambda_function.upload_screenshot_to_zendesk') as mock_upload, patch('lambda_function.send_to_zendesk') as mock_send:
+        mock_upload.return_value = (None, "it exceeded the 1 MiB size limit")
+        mock_send.return_value = (True, {"ok": True})
+
+        event = {
+            "body": base64.b64encode(multipart_body).decode("ascii"),
+            "isBase64Encoded": True,
+            "httpMethod": "POST",
+            "headers": {
+                "content-type": f"multipart/form-data; boundary={boundary}"
+            }
+        }
+
+        result = lambda_handler(event, None)
+        assert result["statusCode"] == 200
+
+        call_args = mock_send.call_args[0][0]
+        assert "Screenshot was submitted but dropped" in call_args["ticket"]["comment"]["body"]
+        assert describe_screenshot_drop("it exceeded the 1 MiB size limit") in call_args["ticket"]["comment"]["body"]
+        assert "uploads" not in call_args["ticket"]["comment"]
 
 def test_missing_fields():
     """Test handling of missing form fields"""

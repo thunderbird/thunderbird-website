@@ -110,12 +110,37 @@ error_5xx_alarm = aws.cloudwatch.MetricAlarm(f"donor-form-bridge-5xx-alarm-{stac
     treat_missing_data="notBreaching"
 )
 
+# Create CloudWatch alarm for 4xx errors
+error_4xx_alarm = aws.cloudwatch.MetricAlarm(f"donor-form-bridge-4xx-alarm-{stack}",
+    name=f"donor-form-bridge-4xx-errors-{stack}",
+    alarm_description=f"Alarm when Lambda function returns 4xx errors ({stack})",
+
+    # Use AWS Lambda's built-in Url4xxCount metric for Function URLs
+    metric_name="Url4xxCount",
+    namespace="AWS/Lambda",
+    statistic="Sum",
+    dimensions={
+        "FunctionName": lambda_function.name
+    },
+
+    # Alarm configuration
+    period=300,  # 5 minutes
+    evaluation_periods=1,
+    threshold=1,  # Alert on any 4xx error
+    comparison_operator="GreaterThanOrEqualToThreshold",
+
+    # Send notification to SNS topic
+    alarm_actions=[sns_topic.arn],
+    treat_missing_data="notBreaching"
+)
+
 # Output the Lambda function URL
 pulumi.export("lambda_url", lambda_url.function_url)
 pulumi.export("lambda_function_name", lambda_function.name)
 pulumi.export("environment", stack)
 pulumi.export("sns_topic_arn", sns_topic.arn)
 pulumi.export("alarm_name", error_5xx_alarm.name)
+pulumi.export("alarm_4xx_name", error_4xx_alarm.name)
 
 # Setup instructions
 pulumi.export("setup_instructions", {
