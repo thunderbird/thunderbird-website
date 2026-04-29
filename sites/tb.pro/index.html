@@ -108,3 +108,85 @@
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
 {{ subscription_plan(_(default_plan.name), _(default_plan.description), default_plan.price, _(default_plan.period), _(default_plan.cta_label), url('tbpro.waitlist'), default_plan.mail_storage, default_plan.send_storage, default_plan.num_domains, default_plan.num_email_addresses) }}
 {% endblock %}
+
+
+{% block faq %}
+<section id="faq" class="primary-block">
+  <header>For the nerds:</header>
+  <div class="faq-item-list">
+    <details class="faq-item">
+      <summary class="faq-question">
+        <span class="faq-question__text">
+          When will Thunderbird Pro be available?
+        </span>
+      </summary>
+      <div class="faq-answer">
+        <p>
+          Aliquam erat volutpat.&nbsp;&nbsp;Nunc eleifend leo vitae magna.&nbsp;&nbsp;In id erat non orci commodo lobortis.&nbsp;&nbsp;Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.&nbsp;&nbsp;Sed diam.&nbsp;&nbsp;Praesent fermentum tempor tellus.&nbsp;&nbsp;Nullam tempus.&nbsp;&nbsp;Mauris ac felis vel velit tristique imperdiet.&nbsp;&nbsp;Donec at pede.&nbsp;&nbsp;Etiam vel neque nec dui dignissim bibendum.&nbsp;&nbsp;Vivamus id enim.&nbsp;&nbsp;Phasellus neque orci, porta a, aliquet quis, semper a, massa.&nbsp;&nbsp;Phasellus purus.&nbsp;&nbsp;Pellentesque tristique imperdiet tortor.&nbsp;&nbsp;Nam euismod tellus id erat.
+        </p>
+        <p>
+          Pellentesque dapibus suscipit ligula.&nbsp;&nbsp;Donec posuere augue in quam.&nbsp;&nbsp;Etiam vel tortor sodales tellus ultricies commodo.&nbsp;&nbsp;Suspendisse potenti.&nbsp;&nbsp;Aenean in sem ac leo mollis blandit.&nbsp;&nbsp;Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.&nbsp;&nbsp;Phasellus lacus.&nbsp;&nbsp;Etiam laoreet quam sed arcu.&nbsp;&nbsp;Phasellus at dui in ligula mollis ultricies.&nbsp;&nbsp;Integer placerat tristique nisl.&nbsp;&nbsp;Praesent augue.&nbsp;&nbsp;Fusce commodo.&nbsp;&nbsp;Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.&nbsp;&nbsp;Nullam libero mauris, consequat quis, varius et, dictum id, arcu.&nbsp;&nbsp;Mauris mollis tincidunt felis.&nbsp;&nbsp;Aliquam feugiat tellus ut neque.&nbsp;&nbsp;Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        <span class="faq-question__text">
+          What email protocols does Thundermail support?</span>
+      </summary>
+      <div class="faq-answer">
+        <p>
+          Aliquam erat volutpat.&nbsp;&nbsp;Nunc eleifend leo vitae magna.&nbsp;&nbsp;In id erat non orci commodo lobortis.&nbsp;&nbsp;Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.&nbsp;&nbsp;Sed diam.&nbsp;&nbsp;Praesent fermentum tempor tellus.&nbsp;&nbsp;Nullam tempus.&nbsp;&nbsp;Mauris ac felis vel velit tristique imperdiet.&nbsp;&nbsp;Donec at pede.&nbsp;&nbsp;Etiam vel neque nec dui dignissim bibendum.&nbsp;&nbsp;Vivamus id enim.&nbsp;&nbsp;Phasellus neque orci, porta a, aliquet quis, semper a, massa.&nbsp;&nbsp;Phasellus purus.&nbsp;&nbsp;Pellentesque tristique imperdiet tortor.&nbsp;&nbsp;Nam euismod tellus id erat.
+        </p>
+        <p>
+          Pellentesque dapibus suscipit ligula.&nbsp;&nbsp;Donec posuere augue in quam.&nbsp;&nbsp;Etiam vel tortor sodales tellus ultricies commodo.&nbsp;&nbsp;Suspendisse potenti.&nbsp;&nbsp;Aenean in sem ac leo mollis blandit.&nbsp;&nbsp;Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.&nbsp;&nbsp;Phasellus lacus.&nbsp;&nbsp;Etiam laoreet quam sed arcu.&nbsp;&nbsp;Phasellus at dui in ligula mollis ultricies.&nbsp;&nbsp;Integer placerat tristique nisl.&nbsp;&nbsp;Praesent augue.&nbsp;&nbsp;Fusce commodo.&nbsp;&nbsp;Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.&nbsp;&nbsp;Nullam libero mauris, consequat quis, varius et, dictum id, arcu.&nbsp;&nbsp;Mauris mollis tincidunt felis.&nbsp;&nbsp;Aliquam feugiat tellus ut neque.&nbsp;&nbsp;Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        <span class="faq-question__text">Where will my data be hosted?</span>
+      </summary>
+      <div class="faq-answer">
+        <p>
+          Aliquam erat volutpat.&nbsp;&nbsp;Nunc eleifend leo vitae magna.&nbsp;&nbsp;In id erat non orci commodo lobortis.&nbsp;&nbsp;Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.&nbsp;&nbsp;Sed diam.&nbsp;&nbsp;Praesent fermentum tempor tellus.&nbsp;&nbsp;Nullam tempus.&nbsp;&nbsp;Mauris ac felis vel velit tristique imperdiet.&nbsp;&nbsp;Donec at pede.&nbsp;&nbsp;Etiam vel neque nec dui dignissim bibendum.&nbsp;&nbsp;Vivamus id enim.&nbsp;&nbsp;Phasellus neque orci, porta a, aliquet quis, semper a, massa.&nbsp;&nbsp;Phasellus purus.&nbsp;&nbsp;Pellentesque tristique imperdiet tortor.&nbsp;&nbsp;Nam euismod tellus id erat.
+        </p>
+        <p>
+          Pellentesque dapibus suscipit ligula.&nbsp;&nbsp;Donec posuere augue in quam.&nbsp;&nbsp;Etiam vel tortor sodales tellus ultricies commodo.&nbsp;&nbsp;Suspendisse potenti.&nbsp;&nbsp;Aenean in sem ac leo mollis blandit.&nbsp;&nbsp;Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.&nbsp;&nbsp;Phasellus lacus.&nbsp;&nbsp;Etiam laoreet quam sed arcu.&nbsp;&nbsp;Phasellus at dui in ligula mollis ultricies.&nbsp;&nbsp;Integer placerat tristique nisl.&nbsp;&nbsp;Praesent augue.&nbsp;&nbsp;Fusce commodo.&nbsp;&nbsp;Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.&nbsp;&nbsp;Nullam libero mauris, consequat quis, varius et, dictum id, arcu.&nbsp;&nbsp;Mauris mollis tincidunt felis.&nbsp;&nbsp;Aliquam feugiat tellus ut neque.&nbsp;&nbsp;Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        <span class="faq-question__text">Will I be able to use my own domain?</span>
+      </summary>
+      <div class="faq-answer">
+        <p>
+          Aliquam erat volutpat.&nbsp;&nbsp;Nunc eleifend leo vitae magna.&nbsp;&nbsp;In id erat non orci commodo lobortis.&nbsp;&nbsp;Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.&nbsp;&nbsp;Sed diam.&nbsp;&nbsp;Praesent fermentum tempor tellus.&nbsp;&nbsp;Nullam tempus.&nbsp;&nbsp;Mauris ac felis vel velit tristique imperdiet.&nbsp;&nbsp;Donec at pede.&nbsp;&nbsp;Etiam vel neque nec dui dignissim bibendum.&nbsp;&nbsp;Vivamus id enim.&nbsp;&nbsp;Phasellus neque orci, porta a, aliquet quis, semper a, massa.&nbsp;&nbsp;Phasellus purus.&nbsp;&nbsp;Pellentesque tristique imperdiet tortor.&nbsp;&nbsp;Nam euismod tellus id erat.
+        </p>
+        <p>
+          Pellentesque dapibus suscipit ligula.&nbsp;&nbsp;Donec posuere augue in quam.&nbsp;&nbsp;Etiam vel tortor sodales tellus ultricies commodo.&nbsp;&nbsp;Suspendisse potenti.&nbsp;&nbsp;Aenean in sem ac leo mollis blandit.&nbsp;&nbsp;Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.&nbsp;&nbsp;Phasellus lacus.&nbsp;&nbsp;Etiam laoreet quam sed arcu.&nbsp;&nbsp;Phasellus at dui in ligula mollis ultricies.&nbsp;&nbsp;Integer placerat tristique nisl.&nbsp;&nbsp;Praesent augue.&nbsp;&nbsp;Fusce commodo.&nbsp;&nbsp;Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.&nbsp;&nbsp;Nullam libero mauris, consequat quis, varius et, dictum id, arcu.&nbsp;&nbsp;Mauris mollis tincidunt felis.&nbsp;&nbsp;Aliquam feugiat tellus ut neque.&nbsp;&nbsp;Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        <span class="faq-question__text">Can Thundermail only be used with Thunderbird?</span>
+      </summary>
+      <div class="faq-answer">
+        <p>
+          Aliquam erat volutpat.&nbsp;&nbsp;Nunc eleifend leo vitae magna.&nbsp;&nbsp;In id erat non orci commodo lobortis.&nbsp;&nbsp;Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.&nbsp;&nbsp;Sed diam.&nbsp;&nbsp;Praesent fermentum tempor tellus.&nbsp;&nbsp;Nullam tempus.&nbsp;&nbsp;Mauris ac felis vel velit tristique imperdiet.&nbsp;&nbsp;Donec at pede.&nbsp;&nbsp;Etiam vel neque nec dui dignissim bibendum.&nbsp;&nbsp;Vivamus id enim.&nbsp;&nbsp;Phasellus neque orci, porta a, aliquet quis, semper a, massa.&nbsp;&nbsp;Phasellus purus.&nbsp;&nbsp;Pellentesque tristique imperdiet tortor.&nbsp;&nbsp;Nam euismod tellus id erat.
+        </p>
+        <p>
+          Pellentesque dapibus suscipit ligula.&nbsp;&nbsp;Donec posuere augue in quam.&nbsp;&nbsp;Etiam vel tortor sodales tellus ultricies commodo.&nbsp;&nbsp;Suspendisse potenti.&nbsp;&nbsp;Aenean in sem ac leo mollis blandit.&nbsp;&nbsp;Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.&nbsp;&nbsp;Phasellus lacus.&nbsp;&nbsp;Etiam laoreet quam sed arcu.&nbsp;&nbsp;Phasellus at dui in ligula mollis ultricies.&nbsp;&nbsp;Integer placerat tristique nisl.&nbsp;&nbsp;Praesent augue.&nbsp;&nbsp;Fusce commodo.&nbsp;&nbsp;Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.&nbsp;&nbsp;Nullam libero mauris, consequat quis, varius et, dictum id, arcu.&nbsp;&nbsp;Mauris mollis tincidunt felis.&nbsp;&nbsp;Aliquam feugiat tellus ut neque.&nbsp;&nbsp;Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+        </p>
+      </div>
+    </details>
+
+  </div>
+</section>
+{% endblock %}
