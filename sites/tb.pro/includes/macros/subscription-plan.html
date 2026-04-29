@@ -3,7 +3,7 @@
   <div class="subscription-callout">
     <h3>{{ plan_name }}</h3>
     <p>{{ plan_description }}</p>
-    {# <h4><b><sup>$</sup>{{ plan_price }}</b><span>{{ plan_period }}</span></h4> #}
+    <h4><b><sup>$</sup>{{ plan_price }}</b><span>{{ plan_period }}</span></h4>
     <button class="button-brand-outline-label" onclick="window.location.href='{{ href }}'">
       {{ cta_label }}
 
@@ -20,11 +20,11 @@
         <span class="info-number">{{ mail_storage }} GB</span> <span class="info-desc">of Mail Storage</span>
       </p>
     </li>
-    {# <li>
+    <li>
       <p>
         <span class="info-number">{{ send_storage }} GB</span> <span class="info-desc">of Send Storage</span>
       </p>
-    </li> #}
+    </li>
     <li>
       <p>
         <span class="info-number">{{ num_email_addresses }}</span> <span class="info-desc">Email Addresses</span>
