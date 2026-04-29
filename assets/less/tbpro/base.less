@@ -151,7 +151,13 @@ body {
                     // are only as wide as their content.
                     // They'll be moved to the center because the leftmost and rightmost
                     // columns are empty.
-                    grid-template-columns: 1fr auto auto auto 1fr;
+                    // This version is when we have links to individual services:
+                    // grid-template-columns: 1fr auto auto auto 1fr;
+
+                    // Use this if we're only displaying the "sign in" link:
+                    grid-template-columns: 1fr 1fr;
+
+
                     margin-top: -3rem;
 
                     li:first-child {
