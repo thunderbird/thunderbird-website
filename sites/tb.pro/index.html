@@ -13,11 +13,11 @@
 {% block page_desc %}{{ _('Thundermail offers you email hosting with the same values as Thunderbird. Enjoy privacy, security, and freedom from client to inbox.') }}{% endblock %}
 
 {% block masthead %}
-<div class="product-logo"></div>
+{# <div class="product-logo"></div> #}
 
-<h1>{{ _('Host Securely. Mail Confidently.') }}</h1>
+<h1>{{ _('Email that works for you') }}</h1>
 <p>
-  {{ _('Thundermail offers you email hosting with the same values as Thunderbird. Enjoy privacy, security, and freedom from client to inbox.') }}
+  {{ _('Ad free, privacy-first email from Thunderbird that puts you in control.') }}
 </p>
 
 {{ right_arrow_cta_button(_('Join Waitlist'), url('tbpro.waitlist'), 'cta-button') }}
@@ -28,72 +28,45 @@
 
 {% block overview %}
 <div class="top-level">
-  <section id="overview" class="primary-block">
-  <header>{{ _('Meet Thundermail') }}</header>
-  <p>
-    {{ _('Email hosting from Thunderbird is here. Send/receive emails with a privacy protecting provider based in Germany and the latest mail standards like JMAP. Choose a Thundermail domain or bring your own. Look no further to power the open source email app you love.') }}
-  </p>
-  <div class="overview-card-container">
-    <div class="overview-card overview-card-1">
-      <div class="overview-image"></div>
-      <header>{{ _('Based on Modern Standards') }}</header>
-      <p>
-        {{ _('Experience faster, more efficient email with JMAP support alongside traditional IMAP and SMTP protocols. Built on Stalwart’s modern, modular mail server architecture, Thundermail delivers performance and reliability without the bloat.') }}
-      </p>
+  <section id="meet-thundermail" class="primary-block">
+    <header>
+      <div class="divider-left"></div>
+      <h2>{{ _('Meet Thundermail') }}</h2>
+      <div class="divider-right"></div>
+    </header>
+    <div class="overview-features-icons">
+      <div class="overview-features-icons-email">
+        Email
+      </div>
+      <div class="overview-features-icons-calendar">
+        Calendar
+      </div>
+      <div class="overview-features-icons-contacts">
+        Contacts
+      </div>
     </div>
-    <div class="overview-card overview-card-2">
-      <header>{{ _('Hosted Securely in Germany') }}</header>
-      <p>
-        {{ _('Your emails are protected by strict EU privacy laws and hosted on infrastructure you can trust. With servers located in Germany, Thundermail prioritizes your privacy while ensuring reliable, fast delivery worldwide.') }}
-      </p>
-      <div class="overview-image"></div>
+    <div class="overview-features-descriptions">
+      <div class="overview-features-descriptions-no-ads">
+        <h4>No ads</h4>
+        <p>
+          {{ _('You’ll never see ads in Thundermail. Stay focused on what matters, not on what advertisers want to sell you.')}}
+        </p>
+      </div>
+      <div class="overview-features-descriptions-your-data">
+        <h4>Your data, not ours</h4>
+        <p>
+          {{ _('Many email services rely on selling your data. Thundermail doesn’t. Your data stays yours, and we don’t share it.')}}
+        </p>
+      </div>
+      <div class="overview-features-descriptions-in-control">
+        <h4>You are in control</h4>
+        <p>
+          {{ _('Use it in Thunderbird or your favorite apps. Thundermail is built on open standards, so you’re never locked in.')}}
+        </p>
+      </div>
     </div>
-    <div class="overview-card overview-card-3">
-      <header>{{ _('Customizable Domain') }}</header>
-      <p>
-        {{ _('Choose from @thundermail.com or @tb.pro addresses, or bring your own custom domain for a professional touch. Your email, your identity, your way to have full control over how you present yourself online.') }}
-      </p>
-      <div class="overview-image"></div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-{% endblock %}
-
-
-
-
-{% block reasons %}
-  <div class="top-level">
-    <section id="reasons" class="primary-block">
-      <header>{{ _('Made for You') }}</header>
-      <div class="reason">
-        <div class="reason-content">
-          <h3 class="reason-title">{{ _('Open Source') }}</h3>
-          <p>
-            {{ _('The technology powering Thunderbird Pro is freely licensed and open source, offering you transparency, security, and freedom. By subscribing you fund the development of our other open source tools which remain free-of-charge, free-of-ads, and free-of-data-harvesting.') }}
-          </p>
-        </div>
-      </div>
-      <div class="reason">
-        <div class="reason-content">
-          <h3 class="reason-title">{{ _('User Focused') }}</h3>
-          <p>
-            {{ _('Thunderbird Pro is part of our mission to help you communicate, collaborate, and connect freely. The Thunderbird Desktop and Mobile apps remain the core of how we offer these benefits and your subscription helps us make them even better.') }}
-          </p>
-        </div>
-      </div>
-      <div class="reason">
-        <div class="reason-content">
-          <h3 class="reason-title">{{ _('Freedom Driven') }}</h3>
-          <p>
-            {{ _('Money isn’t our mission, it is the means to bring freedom and productivity to as many people as possible. Freely licensed software, open source code, and open standards liberate you and remain at the heart of Thunderbird.') }}
-          </p>
-        </div>
-      </div>
-
-    </section>
-  </div>
 {% endblock %}
 
 {% block details %}
