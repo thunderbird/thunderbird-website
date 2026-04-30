@@ -30,6 +30,13 @@ body {
 }
 
 // ------------------------------------------------------------
+// Utils
+// ------------------------------------------------------------
+.hidden {
+    display: none;
+}
+
+// ------------------------------------------------------------
 // Set whitespace and widths for overall layout.
 // ------------------------------------------------------------
 .top-level {
@@ -81,19 +88,40 @@ body {
             height: 4rem;
             grid-template-columns: auto auto auto;
             grid-template-rows: 1fr;
+        }
 
-            #nav-link-home {
+        #nav-link-home {
+
+            // 2026-04-30 earlybird change
+            // Not using svg image for Thundermail logo.
+            background-image: url('/media/img/tbpro/xl-thundermail-logo-high-res.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+
+            height: 100%;
+            width: auto;
+            aspect-ratio: 82 / 36;
+            // ===========================================
+
+            @media (min-width: @lg) {
                 grid-column-start: 1;
                 grid-row-start: 1;
-                margin-top: 1rem;
+                // 2026-04-30 earlybird changes
+                // Not needed for thundermail logo.
+                // margin-top: 1rem;
+
                 z-index: 9;
 
-                svg {
-                    height: 36px;
-                    width: 208px;
-                }
+                // 2026-04-30 earlybird changes
+                // Not using svg image for Thundermail logo.
+                // svg {
+                //     height: 36px;
+                //     width: 208px;
+                // }
             }
         }
+
 
 
         #nav-menu {
@@ -167,7 +195,12 @@ body {
                     }
 
                     li:last-child {
-                        margin-block: @gutter;
+                        // 2026-04-30 earlybird change
+                        // only setting bottom margin.
+                        // With top and bottom set, the logo (#nav-link-home)
+                        // will not vertically center (easily).
+                        // margin-block: @gutter;
+                        margin-bottom: @gutter;
                         margin-left: unset;
                         justify-self: end;  // Pushes last item to the right
 
