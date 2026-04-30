@@ -57,8 +57,14 @@ form.bolt-button-wrapper {
 }
 
 .button-brand-small-outline-label:extend(.abstract-button-brand-small) {
+
+    // 2026-04-30: added to support Earlybird version of tb.pro
+    // home page. background-color is from:
+    // https://app.zeplin.io/project/69a863b267476ceecd9280de/screen/69f0fcb8f45d5153ad080a4c
+    background-color: #1a202c;
     @border-width: 0.0625rem;
     .mixin-brand-outline(@border-width);
+
 }
 
 .button-destructive-filled-label:extend(.abstract-button-default) {
