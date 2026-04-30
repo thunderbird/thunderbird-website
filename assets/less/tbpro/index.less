@@ -8,7 +8,6 @@
 
 
     --text-icon-brand: #19518f;
-    --text-icon-base: #1a202c;
 }
 
 // Animations
@@ -16,6 +15,18 @@
     0% { opacity: 0; }
     100% { opacity: 1}
 }
+
+// Mixins
+    .mixin-card-gradient(@accent-color, @darken-by: 30%, @accent-position: 100%) {
+        background-clip: padding-box;
+        background-image: linear-gradient(349deg,
+                                          #0f1623 0%,
+                                          #0a0f19 40%,
+                                          #06090e 85%,
+                                          darken(@accent-color, @darken-by) @accent-position);
+    }
+
+
 
 header#masthead {
     --button-text-color: #1A202C;
@@ -103,204 +114,8 @@ section#features {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
-
-    .feature-card {
-        -webkit-backdrop-filter: blur(24px);
-        backdrop-filter: blur(24px);
-        border-radius: 1.5rem;
-        border: solid 1px rgba(255, 255, 255, 0.05);
-        box-shadow: inset 0 0 74px 0 rgba(0, 0, 0, 0.05);
-        color: #eeeef0; // var(--color-text-base);
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-
-        @media (min-width: @lg) {
-            gap: 0.875rem;
-        }
-
-        // For mobile layout, space above a feature card, if there's a previous one.
-        &+.feature-card {
-            margin-top: @gutter;
-
-            @media (min-width: @lg) {
-                margin-top: 0;
-            }
-        }
-
-        .card-info {
-            .card-header {
-                display: flex;
-                gap: 0.9375rem;
-
-                .app-icon {
-                    align-items: center;
-                    aspect-ratio: 1 / 1;
-                    display: flex;
-                    flex: 0 0 auto;
-                    justify-content: center;
-
-                    height: 48px;
-                    width: 48px;
-
-                }
-                .app-header {
-                    display: flex;
-                    flex-direction: column;
-                    flex: 1;
-                    gap: 4px;
-
-                    & > * {
-                        display: block;
-                        margin: 0;
-                    }
-
-                    .app-name {
-                        .brand-eyebrow-xs();
-                        color: #58c9ff; // var(--color-text-highlight);
-                        text-transform: uppercase;
-
-                        @media (min-width: @lg) {
-                            .brand-eyebrow-lrg();
-                        }
-                    }
-                    .app-tagline {
-                        .brand-headline-h3-sm();
-                        @media (min-width: @lg) {
-                            .brand-headline-h3-lrg();
-                        }
-                    }
-                }
-            }
-            .card-body {
-                .web-body-small();
-                line-height: 1.23; // Specified in Zeplin
-                text-align: left;
-                @media (min-width: @md) {
-                    .web-body-default();
-                }
-            }
-        }
-
-        .card-image {
-            aspect-ratio: 16/9;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            height: auto;
-
-            @media (min-width: @lg) {
-                aspect-ratio: 21/9;
-            }
-        }
-
-    }
-
-    .mixin-card-gradient(@accent-color, @darken-by: 30%, @accent-position: 100%) {
-        background-clip: padding-box;
-        background-image: linear-gradient(349deg,
-                                          #0f1623 0%,
-                                          #0a0f19 40%,
-                                          #06090e 85%,
-                                          darken(@accent-color, @darken-by) @accent-position);
-    }
-
-    .feature-card-1 {
-        .mixin-card-gradient(#1373d9, 23%);
-        justify-content: space-between;
-
-        @media (min-width: @lg) {
-            grid-row: 1 / -1;
-            height: 100%;
-        }
-
-        // Copied from zeplin:
-        padding: 32px 17.4px 16.1px 19px;
-        p {
-            // Make right padding same as left, but only for paragraph.
-            padding-right: 14.6px;
-        }
-
-        .card-image {
-            .mixin-background-image('/media/img/tbpro/xs-graphic-thundermail');
-            @media (min-width: @md) {
-                .mixin-background-image('/media/img/tbpro/xl-graphic-thundermail');
-                height: 100%;
-                width: 100%;
-            }
-            @media (min-width: @lg) {
-            }
-        }
-    }
-    .feature-card-2 {
-        .mixin-card-gradient(#008080, 13%);
-
-        // Copied from zeplin:
-        padding: 2rem 1px 0.25rem 2rem;
-
-        @media (min-width: @lg) {
-            box-sizing: border-box;
-            display: grid;
-            gap: 0;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 1fr;
-        }
-
-        p {
-            padding-right: 0.5rem;
-
-            @media (min-width: @lg) {
-                padding-right: 0.75rem;
-            }
-        }
-
-        .card-image {
-            .mixin-background-image('/media/img/tbpro/xs-appointment-card');
-            @media (min-width: @lg) {
-                aspect-ratio: unset;
-                .mixin-background-image('/media/img/tbpro/xl-appointment-card');
-            }
-        }
-
-    }
-    .feature-card-3 {
-        .mixin-card-gradient(desaturate(#fec18a, 10%), 10%, 120%);
-
-        overflow: hidden;
-        padding: 2rem;
-        padding-bottom: 1rem;
-
-        @media (min-width: @lg) {
-            box-sizing: border-box;
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 1fr;
-            padding-right: 0;
-        }
-
-        .card-image {
-            .mixin-background-image('/media/img/tbpro/xs-send-card');
-            @media (min-width: @lg) {
-                .mixin-background-image('/media/img/tbpro/xl-send-card');
-                aspect-ratio: unset;
-            }
-        }
-    }
+    // Feature cards moved to power-tools
 }
-
-.divider-right {
-  width: 100%;
-  height: 1px;
-
-  background-image: linear-gradient(to left, #fff 1%, #37adf9 50%, #206693);
-}
-
-.divider-left {
-  width: 100%;
-  height: 1px;
-  background-image: linear-gradient(to right, #fff 1%, #37adf9 50%, #206693);
-}
-
 
 section#meet-thundermail {
   display: flex;
@@ -308,6 +123,7 @@ section#meet-thundermail {
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 4rem;
+
 
   header {
       display: grid;
@@ -320,6 +136,19 @@ section#meet-thundermail {
           .brand-headline-h1-lg();
           font-weight: 400;
           color: #1373d9;
+      }
+
+
+      .divider-right {
+          width: 100%;
+          height: 1px;
+          background-image: linear-gradient(to left, #fff 1%, #37adf9 50%, #206693);
+      }
+
+      .divider-left {
+          width: 100%;
+          height: 1px;
+          background-image: linear-gradient(to right, #fff 1%, #37adf9 50%, #206693);
       }
   }
 
@@ -369,6 +198,10 @@ section#meet-thundermail {
           p {
               margin: 0;
               .web-body-large();
+
+              // 2026-04-30: scoping to this selector.
+              // collides with prior definition of --text-icon-base.
+              --text-icon-base: #1a202c;
               color: var(--text-icon-base);
           }
       }
@@ -861,7 +694,226 @@ section#details {
     }
 }
 
-section#details + section#faq {
+section#power-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    padding-top: 4rem;
+
+
+
+    header {
+        // 2026-04-30: scoping to this selector.
+        // collides with prior definition of --text-icon-base
+        // from the same zeplin file which uses the label
+        // --text-icon-base for both #1a202c and for #eeeef0
+        --text-icon-base: #eeeef0;
+
+        .brand-headline-h2-lg();
+        color: var(--text-icon-base);
+        margin: 0;
+        text-align: center;
+
+    }
+
+    .feature-cards {
+        display: grid;
+        gap: @space-12;
+        margin-top: 3rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr ;
+
+        @media (min-width: @lg) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+
+        }
+    }
+
+
+    .feature-card {
+        -webkit-backdrop-filter: blur(24px);
+        backdrop-filter: blur(24px);
+        border-radius: 1.5rem;
+        border: solid 1px rgba(255, 255, 255, 0.05);
+        box-shadow: inset 0 0 74px 0 rgba(0, 0, 0, 0.05);
+        color: #eeeef0; // var(--color-text-base);
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+
+        @media (min-width: @lg) {
+            gap: 0.875rem;
+        }
+
+        // For mobile layout, space above a feature card, if there's a previous one.
+        &+.feature-card {
+            margin-top: @gutter;
+
+            @media (min-width: @lg) {
+                margin-top: 0;
+            }
+        }
+
+        .card-info {
+            .card-header {
+                display: flex;
+                gap: 0.9375rem;
+
+                .app-icon {
+                    align-items: center;
+                    aspect-ratio: 1 / 1;
+                    display: flex;
+                    flex: 0 0 auto;
+                    justify-content: center;
+
+                    height: 48px;
+                    width: 48px;
+
+                }
+                .app-header {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    gap: 4px;
+
+                    & > * {
+                        display: block;
+                        margin: 0;
+                    }
+
+                    .app-name {
+                        .brand-eyebrow-xs();
+                        color: #58c9ff; // var(--color-text-highlight);
+                        text-transform: uppercase;
+
+                        @media (min-width: @lg) {
+                            .brand-eyebrow-lrg();
+                        }
+                    }
+                    .app-tagline {
+                        .brand-headline-h3-sm();
+                        @media (min-width: @lg) {
+                            .brand-headline-h3-lrg();
+                        }
+                    }
+                }
+            }
+            .card-body {
+                .web-body-small();
+                line-height: 1.23; // Specified in Zeplin
+                text-align: left;
+                @media (min-width: @md) {
+                    .web-body-default();
+                }
+            }
+        }
+
+        .card-image {
+            aspect-ratio: 16/9;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            height: auto;
+
+            @media (min-width: @lg) {
+                aspect-ratio: 21/9;
+            }
+        }
+
+    }
+
+    .feature-card-1 {
+        .mixin-card-gradient(#1373d9, 23%);
+        justify-content: space-between;
+
+        @media (min-width: @lg) {
+            grid-row: 1 / -1;
+            height: 100%;
+        }
+
+        // Copied from zeplin:
+        padding: 32px 17.4px 16.1px 19px;
+        p {
+            // Make right padding same as left, but only for paragraph.
+            padding-right: 14.6px;
+        }
+
+        .card-image {
+            .mixin-background-image('/media/img/tbpro/xs-graphic-thundermail');
+            @media (min-width: @md) {
+                .mixin-background-image('/media/img/tbpro/xl-graphic-thundermail');
+                height: 100%;
+                width: 100%;
+            }
+            @media (min-width: @lg) {
+            }
+        }
+    }
+    .feature-card-2 {
+        .mixin-card-gradient(#008080, 13%);
+
+        // Copied from zeplin:
+        padding: 2rem 1px 0.25rem 2rem;
+
+        @media (min-width: @lg) {
+            box-sizing: border-box;
+            display: grid;
+            gap: 0;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr;
+        }
+
+        p {
+            padding-right: 0.5rem;
+
+            @media (min-width: @lg) {
+                padding-right: 0.75rem;
+            }
+        }
+
+        .card-image {
+            .mixin-background-image('/media/img/tbpro/xs-appointment-card');
+            @media (min-width: @lg) {
+                aspect-ratio: unset;
+                .mixin-background-image('/media/img/tbpro/xl-appointment-card');
+            }
+        }
+
+    }
+    .feature-card-3 {
+        .mixin-card-gradient(desaturate(#fec18a, 10%), 10%, 120%);
+
+        overflow: hidden;
+        padding: 2rem;
+        padding-bottom: 1rem;
+
+        @media (min-width: @lg) {
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr;
+            padding-right: 0;
+        }
+
+        .card-image {
+            .mixin-background-image('/media/img/tbpro/xs-send-card');
+            @media (min-width: @lg) {
+                .mixin-background-image('/media/img/tbpro/xl-send-card');
+                aspect-ratio: unset;
+            }
+        }
+    }
+
+
+}
+
+section#power-tools + section#details,
+section#details + section#faq,
+{
     border-top: 1px solid rgba(88, 201, 255, 0.2);
 }
 

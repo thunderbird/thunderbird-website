@@ -163,3 +163,55 @@
   </div>
 </section>
 {% endblock %}
+
+{% block power_tools %}
+<section id="power-tools" class="primary-block">
+  <header>Email Power Tools</header>
+
+  <div class="feature-cards">
+    <div class="feature-card feature-card-2">
+      <div class="card-info">
+        <div class="card-header">
+          <span class="app-icon">
+            {{ svg_img('tbpro/icons/icon-appointment') }}
+          </span>
+          <div class="app-header">
+            <span class="app-name">{{ _('Appointment') }}</span>
+            <span class="app-tagline">{{ _('Schedule Easily') }}</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            {{ _('Instead of exchanging multiple messages to schedule a meeting, select your availability and let Appointment handle the rest. Powered by open standards and compatible with Google Calendar and CalDAV. You can now schedule like a pro.') }}
+          </p>
+        </div>
+      </div>
+      <div class="card-image">
+
+      </div>
+    </div>
+    <div class="feature-card feature-card-3">
+      <div class="card-info">
+        <div class="card-header">
+          <span class="app-icon">
+            {{ svg_img('tbpro/icons/icon-send') }}
+          </span>
+          <div class="app-header">
+            <span class="app-name">{{ _('Send') }}</span>
+            <span class="app-tagline">{{ _('Attach Securely') }}</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            {{ _('Share large files with end-to-end encryption and fewer limits. Send provides a natural file attachment experience in Thunderbird Desktop and is compatible with any recipient’s inbox. Know your attachments will arrive safe and secure.') }}
+          </p>
+        </div>
+      </div>
+      <div class="card-image">
+
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
