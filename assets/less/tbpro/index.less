@@ -27,6 +27,18 @@
     }
 
 
+.fluid-size(@property, @min, @max, @vp-min: @sm, @vp-max: @lg) {
+  // Calculate the differences and strip the units to keep CSS calc() valid
+  @size-diff: unit(@max - @min);
+  @vp-diff: unit(@vp-max - @vp-min);
+
+  // Output the dynamic property with an escaped clamp/calc string
+  @{property}: clamp(
+    @min,
+    ~"calc(@{min} + @{size-diff} * ((100vw - @{vp-min}) / @{vp-diff}))",
+    @max
+  );
+}
 
 header#masthead {
     --button-text-color: #1A202C;
@@ -121,8 +133,11 @@ section#meet-thundermail {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 4rem;
+  @media (min-width: @md) {
+      margin-top: 2rem;
+  }
 
 
   header {
@@ -133,40 +148,66 @@ section#meet-thundermail {
       width: 80%;
 
       h2 {
-          .brand-headline-h1-lg();
+          .brand-headline-h1-sm();
           font-weight: 400;
           color: #1373d9;
+          margin: 0;
+          @media (min-width: @md) {
+              .brand-headline-h1-lg();
+          }
       }
 
 
       .divider-right {
+          display: block;
           width: 100%;
           height: 1px;
-          background-image: linear-gradient(to left, #fff 1%, #37adf9 50%, #206693);
+
+          @media (min-width: @md) {
+              background-image: linear-gradient(to left, #fff 1%, #37adf9 50%, #206693);
+          }
       }
 
       .divider-left {
+          display: block;
           width: 100%;
           height: 1px;
-          background-image: linear-gradient(to right, #fff 1%, #37adf9 50%, #206693);
+
+          @media (min-width: @md) {
+              background-image: linear-gradient(to right, #fff 1%, #37adf9 50%, #206693);
+          }
       }
   }
 
   .overview-features-icons {
+
       display: flex;
       justify-content: center;
-      gap: 8rem;
+
+      // Scale gap property from min 1.5rem to max 145px
+      .fluid-size(gap, 1.5rem, 145px, @vp-min: @md, @vp-max: @lg);
 
       & > div {
-          padding-top: 10rem;
-          width: 140px;
           text-align: center;
           background-repeat: no-repeat;
           background-position: top center;
           background-size: contain;
 
-          .brand-headline-h3-lrg();
           color: var(--text-icon-brand);
+          .mixin-font-styles(
+              @family: @family-metropolis,
+              @weight: 500,
+              @size: 1.1rem,
+              @line-height: 1.2,
+              @letter-spacing: normal
+          );
+
+          padding-top: 90px;
+          .fluid-size(width, 90px, 140px);
+          @media (min-width: @sm) {
+              padding-top: clamp(90px, 9rem, 10rem);
+              .brand-headline-h3-lrg();
+          }
       }
 
       .overview-features-icons-email {
@@ -182,29 +223,47 @@ section#meet-thundermail {
   }
 
   .overview-features-descriptions {
-      margin-top: 3.5rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: clamp(1.25rem, 3vw, 3rem);
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.6875rem;
+      gap: min(2rem, 5vh);
+      text-align: center;
+
+      @media (min-width: @lg) {
+          margin-top: 3.5rem;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: max(3rem, 5vw);
+          text-align: left;
+      }
 
       & > div {
 
           h4 {
-              .brand-headline-h2-lg();
 
-              // color: var(--text-icon-brand);
+              .brand-headline-h1-sm();
+
+              @media (min-width: @lg) {
+                  .brand-headline-h2-lg();
+              }
+
+              // Gradient text.
               background-image: linear-gradient(84deg, #37adf9 1%, #1373d9 27%);
               -webkit-background-clip: text;
               background-clip: text;
               -webkit-text-fill-color: transparent;
 
               margin: 0;
-              margin-bottom: 1rem;
+              margin-bottom: .75rem;
           }
 
           p {
+              .web-body-default();
+              @media (min-width: @lg) {
+                  .web-body-large();
+              }
+
               margin: 0;
-              .web-body-large();
 
               // 2026-04-30: scoping to this selector.
               // collides with prior definition of --text-icon-base.
