@@ -488,7 +488,7 @@ TBPRO_JS = {
 TBPRO_DEFAULT_PLAN = {
     'name': 'Early Bird Plan',
     'description': 'Our initial offering, ideal for most users',
-    'price': '9',
+    'price': '6',
     'period': 'per month,<br>paid annually',
     'cta_label': 'Join Waitlist',
     'mail_storage': '30',  # GB
