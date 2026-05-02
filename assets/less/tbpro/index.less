@@ -776,7 +776,11 @@ section#power-tools {
     margin-top: 2rem;
     margin-bottom: 4rem;
 
-    padding-top: 4rem;
+
+    padding-top: 2rem;
+    @media (min-width: @lg) {
+        padding-top: 4rem;
+    }
 
 
 
@@ -786,22 +790,26 @@ section#power-tools {
         // from the same zeplin file which uses the label
         // --text-icon-base for both #1a202c and for #eeeef0
         --text-icon-base: #eeeef0;
-
-        .brand-headline-h2-lg();
         color: var(--text-icon-base);
         margin: 0;
         text-align: center;
+
+        .brand-headline-h2-sm();
+        @media (min-width: @lg) {
+            .brand-headline-h2-lg();
+        }
 
     }
 
     .feature-cards {
         display: grid;
         gap: @space-12;
-        margin-top: 3rem;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr ;
+        margin-top: 1.5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr ;
 
         @media (min-width: @lg) {
+            margin-top: 3rem;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
 
