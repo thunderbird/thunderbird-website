@@ -12,6 +12,11 @@
 {% block page_title %}{{ _('Thundermail Email Hosting') }}{% endblock %}
 {% block page_desc %}{{ _('Thundermail offers you email hosting with the same values as Thunderbird. Enjoy privacy, security, and freedom from client to inbox.') }}{% endblock %}
 
+{% block nav_link_home_image %}
+  {{ super() }}
+{% endblock %}
+
+
 {% block masthead %}
 {# <div class="product-logo"></div> #}
 
@@ -199,4 +204,12 @@
 
   </div>
 </section>
+{% endblock %}
+
+
+
+{% block footer_container %}
+  {% with hide_home=True %}
+    {% include 'includes/base/footer.html' %}
+  {% endwith %}
 {% endblock %}

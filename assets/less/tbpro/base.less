@@ -113,16 +113,19 @@ body {
 
         #nav-link-home {
 
-            // 2026-04-30 earlybird change
-            // Not using svg image for Thundermail logo.
-            background-image: url('/media/img/tbpro/xl-thundermail-logo-high-res.png');
-            background-repeat: no-repeat;
-            background-position: left center;
-            background-size: cover;
+            &.uses-thundermail-logo {
 
-            height: 90%;
-            width: auto;
-            aspect-ratio: 82 / 36;
+                // 2026-04-30 earlybird change
+                // Not using svg image for Thundermail logo.
+                background-image: url('/media/img/tbpro/xl-thundermail-logo-high-res.png');
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: cover;
+
+                height: 90%;
+                width: auto;
+                aspect-ratio: 82 / 36;
+            }
             // ===========================================
 
             @media (min-width: @always-on) {

@@ -63,7 +63,11 @@
       </div>
     </main>
 
-    {% include 'includes/base/footer.html' %}
+    {% block footer_container %}
+      {% include 'includes/base/footer.html' %}
+    {% endblock %}
+
+
 
     {% block additional_site_js %}{% endblock %}
 
