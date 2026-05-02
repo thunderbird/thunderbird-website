@@ -506,6 +506,8 @@ section#faq {
     @media (min-width: @lg) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        padding-block: @space-72;
+
 
         .faq-item-list {
             grid-column: 2 / -1;
@@ -518,8 +520,8 @@ section#faq {
         margin-bottom: @space-9;
 
         @media (min-width: @lg) {
-            .brand-headline-h2-lg();
-            padding-right: @space-144;
+            .brand-headline-h1-lg();
+            // padding-right: @space-144;
         }
     }
 
@@ -597,7 +599,7 @@ section#details {
         header {
             .headings-h1-sm();
             @media (min-width: @lg) {
-                .brand-headline-h2-lg();
+                .brand-headline-h1-lg();
             }
         }
 
@@ -812,7 +814,7 @@ section#power-tools {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr ;
 
-        @media (min-width: @lg) {
+        @media (min-width: @md) {
             margin-top: 3rem;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
@@ -838,11 +840,19 @@ section#power-tools {
 
         @media (min-width: @lg) {
             gap: 0.875rem;
+            aspect-ratio: 594/266;
         }
 
         // For mobile layout, space above a feature card, if there's a previous one.
         &+.feature-card {
+
+
             margin-top: @gutter;
+            // earlybird
+            @media (min-width: @md) {
+                margin-top: 0;
+            }
+
 
             @media (min-width: @lg) {
                 margin-top: 0;
