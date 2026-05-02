@@ -643,6 +643,7 @@ section#details {
             }
 
             p {
+                margin-block: 0.5rem;
                 text-align: center;
                 @media (min-width: @lg) {
                     text-align: left;
@@ -667,9 +668,9 @@ section#details {
                 .info-desc {
                     .mixin-font-styles(
                         @family-inter,
-                        600,
-                        1.1875rem,
-                        1.46
+                        normal,
+                        0.875rem,
+                        1.32
                     );
                     @media (min-width: @lg) {
                         .mixin-font-styles(
@@ -722,6 +723,7 @@ section#details {
                 color: transparent;
                 display: inline-block;
                 width: fit-content;
+                margin: 0;
                 @media (min-width: @md) {
                     .brand-headline-h3-lrg();
                 }
@@ -736,6 +738,8 @@ section#details {
                 display: inline-flex;
                 flex-direction: row;
                 gap: 0.375rem;
+                margin: 0;
+                margin-bottom: 1rem;
 
                 b {
                     font-size: 2rem;
