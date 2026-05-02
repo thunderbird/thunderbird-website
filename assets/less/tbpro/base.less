@@ -63,15 +63,19 @@ body {
 // Header (nav bar)
 // ------------------------------------------------------------
 
+
+// earlybird
 // To reimplement the hamburger menu:
 // Change `@always-on` to `@lg`
 
 
 #site-header {
-    margin-block: 0 @space-36;
+    margin-block: 0 2.5rem;
+
     padding-top: @space-16;
 
-    @media (min-width: @always-on) {
+    @media (min-width: @lg) {
+        margin-block: 0 @space-36;
         padding-top: 1.25rem;
     }
 
@@ -91,12 +95,18 @@ body {
         display: flex;
         height: 3rem;
         justify-content: space-between;
-        padding-inline: @space-18 0.875rem;
         position: relative;
+
+        padding-inline: 0.75rem 0.875rem;
+        @media (min-width: @lg) {
+            padding-inline: @space-18 0.875rem;
+        }
 
         @media (min-width: @always-on) {
             display: grid;
-            height: 4rem;
+
+            // earlybird
+            // height: 4rem;
             grid-template-columns: auto auto auto;
             grid-template-rows: 1fr;
         }
@@ -107,10 +117,10 @@ body {
             // Not using svg image for Thundermail logo.
             background-image: url('/media/img/tbpro/xl-thundermail-logo-high-res.png');
             background-repeat: no-repeat;
-            background-position: center center;
-            background-size: contain;
+            background-position: left center;
+            background-size: cover;
 
-            height: 100%;
+            height: 90%;
             width: auto;
             aspect-ratio: 82 / 36;
             // ===========================================
@@ -207,11 +217,7 @@ body {
 
                     li:last-child {
                         // 2026-04-30 earlybird change
-                        // only setting bottom margin.
-                        // With top and bottom set, the logo (#nav-link-home)
-                        // will not vertically center (easily).
                         // margin-block: @gutter;
-                        margin-bottom: @gutter;
                         margin-left: unset;
                         justify-self: end;  // Pushes last item to the right
 

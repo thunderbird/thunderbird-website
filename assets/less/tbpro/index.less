@@ -88,11 +88,14 @@ header#masthead {
 
     p {
         .web-body-default();
-        margin-block: @space-6;
+        margin-block: 0;
+
         @media (min-width: @md) {
+
             .web-body-large();
             grid-column: 1 / span 2;
             grid-row: 3;
+            margin-block: @space-6;
         }
     }
 
@@ -106,10 +109,10 @@ header#masthead {
 
 
     .cta-button {
-        margin-bottom: @space-18;
         margin-top: @space-12;
 
         @media (min-width: @md) {
+            margin-bottom: @space-18;
             grid-column: 1;
             grid-row: 4;
             max-width: 180px;
@@ -144,8 +147,12 @@ section#meet-thundermail {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      gap: 1.5rem;
       width: 80%;
+      margin-bottom: 2rem;
+
+      @media (min-width: @md) {
+          gap: 1.5rem;
+      }
 
       h2 {
           .brand-headline-h1-sm();
@@ -185,7 +192,9 @@ section#meet-thundermail {
       justify-content: center;
 
       // Scale gap property from min 1.5rem to max 145px
-      .fluid-size(gap, 1.5rem, 145px, @vp-min: @md, @vp-max: @lg);
+      .fluid-size(gap, 0.75rem, 145px, @vp-min: @md, @vp-max: @lg);
+
+      margin-bottom: 1.5rem;
 
       & > div {
           text-align: center;
@@ -202,8 +211,8 @@ section#meet-thundermail {
               @letter-spacing: normal
           );
 
-          padding-top: 90px;
-          .fluid-size(width, 90px, 140px);
+          padding-top: 100px;
+          .fluid-size(width, 100px, 140px);
           @media (min-width: @sm) {
               padding-top: clamp(90px, 9rem, 10rem);
               .brand-headline-h3-lrg();
@@ -241,7 +250,7 @@ section#meet-thundermail {
 
           h4 {
 
-              .brand-headline-h1-sm();
+              .brand-headline-h2-sm();
 
               @media (min-width: @lg) {
                   .brand-headline-h2-lg();
