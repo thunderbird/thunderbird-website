@@ -35,11 +35,10 @@ footer#tb-footer {
         .site-nav-links {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-end;
             gap: @space-24;
 
             a {
-                font-size: 0.75rem;
+                .brand-label-navigation();
                 text-transform: uppercase;
             }
         }
@@ -48,9 +47,10 @@ footer#tb-footer {
             display: flex;
             font-size: 0.75rem;
             gap: @space-6;
+            justify-self: end;
             @media (min-width: @md) {
                 grid-column: 2;
-                justify-self: end;
+
             }
             a {
                 text-decoration: underline;
