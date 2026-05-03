@@ -57,15 +57,10 @@ form.bolt-button-wrapper {
 }
 
 .button-brand-small-outline-label:extend(.abstract-button-brand-small) {
-
-    // 2026-04-30: added to support Earlybird version of tb.pro
-    // home page. background-color is from:
-    // https://app.zeplin.io/project/69a863b267476ceecd9280de/screen/69f0fcb8f45d5153ad080a4c
-
-    // outline: 1px solid red;
     @border-width: 0.0625rem;
-    .mixin-brand-outline(@border-width, #1a202c);
+    .mixin-brand-outline(@border-width);
 }
+
 
 .button-destructive-filled-label:extend(.abstract-button-default) {
     .mixin-destructive-filled();
@@ -266,9 +261,12 @@ form.bolt-button-wrapper {
     color: #1A202C;
     text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
 
+    // 2026-05-03: Update to background per https://github.com/thunderbird/thunderbird-website/issues/1120
+    // Guess-timated the corresponding text color.
     &:hover {
-        .outline(@border-color, #f2f2f2 url('/media/img/thunderbird/common/noise.png') repeat, @border-width: @border-width);
-        color: var(--colour-ti-base-light);
+        .outline(@border-color, #1A202C url('/media/img/thunderbird/common/noise.png') repeat, @border-width: @border-width);
+        color: #EEEEF0 !important; // !important because the color is easily overriden by other styles.
+
     }
 
     &:active {
