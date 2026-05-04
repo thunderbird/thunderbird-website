@@ -113,9 +113,17 @@ footer#tb-footer {
     }
 }
 
-#tb-legal {
+footer#tb-footer #tb-legal {
     font-size: .75rem;
+
     a {
+        --accent: #1E4EAE;
         text-decoration: underline;
+        text-decoration-color: currentColor;
+
+        &:hover,
+        &:focus {
+            text-decoration-color: var(--accent);
+        }
     }
 }
