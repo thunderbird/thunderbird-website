@@ -61,6 +61,7 @@ form.bolt-button-wrapper {
     .mixin-brand-outline(@border-width);
 }
 
+
 .button-destructive-filled-label:extend(.abstract-button-default) {
     .mixin-destructive-filled();
 }
@@ -253,16 +254,19 @@ form.bolt-button-wrapper {
 
 }
 
-.mixin-brand-outline(@border-width: var(--border-width)) {
+.mixin-brand-outline(@border-width: var(--border-width), @background-color: transparent) {
 
     @border-color: linear-gradient(98.98deg, #58C9FF 19.15%, #6E6F9B 75.77%);
-    .outline(@border-color, @border-width: @border-width);
+    .outline(@border-color, @background-color: @background-color, @border-width: @border-width);
     color: #1A202C;
     text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.10);
 
+    // 2026-05-03: Update to background per https://github.com/thunderbird/thunderbird-website/issues/1120
+    // Guess-timated the corresponding text color.
     &:hover {
-        .outline(@border-color, #f2f2f2 url('/media/img/thunderbird/common/noise.png') repeat, @border-width: @border-width);
-        color: var(--colour-ti-base-light);
+        .outline(@border-color, #1A202C url('/media/img/thunderbird/common/noise.png') repeat, @border-width: @border-width);
+        color: #EEEEF0 !important; // !important because the color is easily overriden by other styles.
+
     }
 
     &:active {

@@ -38,7 +38,7 @@ footer#tb-footer {
             gap: @space-24;
 
             a {
-                font-size: 0.75rem;
+                .brand-label-navigation();
                 text-transform: uppercase;
             }
         }
@@ -47,9 +47,10 @@ footer#tb-footer {
             display: flex;
             font-size: 0.75rem;
             gap: @space-6;
+            justify-self: end;
             @media (min-width: @md) {
                 grid-column: 2;
-                justify-self: end;
+
             }
             a {
                 text-decoration: underline;
@@ -62,9 +63,10 @@ footer#tb-footer {
             grid-template: 1fr / 1fr auto;
         }
     }
+
+    #nav-link-home, #nav-link-home svg { width: 208px;  height: 36px; }
 }
 
-#nav-link-home, #nav-link-home svg { width: 208px;  height: 36px; }
 #moz-link-home svg { width: 150px; height: 36px;}
 
 
