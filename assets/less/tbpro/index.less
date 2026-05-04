@@ -378,11 +378,22 @@ section#overview {
 }
 
 section#reasons {
+    --row-gap-size: 3rem;
+    --column-gap-size: @space-18;
     background: #fff;
     counter-reset: reason;
     display: grid;
     padding-block: @space-36 @space-24;
     row-gap: @space-24;
+
+    @media (min-width: @lg) {
+        column-gap: var(--column-gap-size);
+        // For desktop, create parent grid for counter, reason, and explanation.
+        grid-template-columns: auto auto 58%;
+        row-gap: var(--row-gap-size); // disable for finer control of space above/below divider
+        padding-bottom: 6rem;
+    }
+
 
     & > header {
         .brand-headline-h1-sm();
@@ -396,21 +407,16 @@ section#reasons {
 
         @media (min-width: @lg) {
             grid-column: 1 / -1; // span all columns
+            padding-top: 4rem;
+            line-height: 0.6; // To control space before first RTB.
         }
     }
 
-    @media (min-width: @lg) {
-        column-gap: @space-18;
-        // For desktop, create parent grid for counter, reason, and explanation.
-        grid-template-columns: auto auto 58%;
-        row-gap: @space-36;
-    }
 
     .reason {
-        --gap-size: @space-18;
 
         align-items: start;
-        column-gap: @space-18;
+        column-gap: var(--column-gap-size);
         display: grid;
         grid-template-columns: auto 1fr;
         position: relative;
@@ -420,24 +426,33 @@ section#reasons {
             counter-increment: reason;
         }
 
-        // Horizontal border between rows
-        &:not(:last-child)::after {
-            background: #d9d9de;
-            bottom: calc(var(--gap-size) / -2);
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            right: 0;
-
-            @media (min-width: @lg) {
-                bottom: calc(@space-36 / -2); // Center in parent's row-gap
-            }
-        }
-
         @media (min-width: @lg) {
             grid-column: 1 / -1; // Span all parent columns
             grid-template-columns: subgrid; // Inherit parent's three columns
+        }
+
+        &:not(:last-child) {
+            @media (min-width: @lg) {
+                // Add whitespace to get even amount above/below horizontal border
+                padding-bottom: 2rem;
+            }
+
+            // Horizontal border between rows
+            &::after {
+                background: #d9d9de;
+                bottom: calc(var(--row-gap-size) / -2);
+                bottom: 0;
+                content: '';
+                height: 1px;
+                left: 0;
+                position: absolute;
+                right: 0;
+
+                @media (min-width: @lg) {
+                    bottom: -0.625rem; // manually adjusting to get even amount above/below
+                }
+            }
+
         }
 
         // This is our counter.
@@ -447,7 +462,7 @@ section#reasons {
             content: counter(reason, decimal-leading-zero);
             font-variant-numeric: tabular-nums;
             grid-column: 1;
-            margin-inline-end: var(--gap-size);
+            margin-inline-end: var(--column-gap-size);
             padding-top: 0.1875rem;
 
             @media (min-width: @lg) {
