@@ -142,6 +142,12 @@ LOCALE_TESTS = [
     ("tb.pro", "/waitlist", "en-US", "/en-US/waitlist"),
     ("tb.pro", "/waitlist", "fr", "/fr/waitlist"),
     ("tb.pro", "/waitlist", "ja", "/ja/waitlist"),
+    ("tb.pro", "/privacy", "en-US", "/en-US/privacy"),
+    ("tb.pro", "/privacy", "fr", "/fr/privacy"),
+    ("tb.pro", "/privacy", "ja", "/ja/privacy"),
+    ("tb.pro", "/terms", "en-US", "/en-US/terms"),
+    ("tb.pro", "/terms", "fr", "/fr/terms"),
+    ("tb.pro", "/terms", "ja", "/ja/terms"),
 
     # support.thunderbird.net - redirect is locale-agnostic regardless of Accept-Language (issue #1135)
     ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", "en-US", "support.mozilla.org/kb/quarantined-domains"),
