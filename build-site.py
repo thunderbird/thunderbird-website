@@ -26,8 +26,36 @@ import settings
 
 import markdown
 from pymdownx import emoji
+from bs4 import BeautifulSoup
 
 from calgen.providers.CalendarificProvider import CalendarificProvider
+
+
+CUSTOM_ELEMENT_NAMES = ["bolt-primary-button"]
+
+def wrap_translatable_strings(html_content):
+    """
+    Wrap plain text nodes in the HTML with _() for translation.
+    """
+    soup = BeautifulSoup(html_content, "html.parser")
+
+    # Recursive function to process all text nodes
+    def process_node(node):
+        if node.name is None:  # This is a text node
+            text = node.string.strip()
+            if text:  # Only wrap non-empty strings
+                escaped_text = text.replace("'", "\\'")
+                node.replace_with(f"{{{{ _('{escaped_text}') }}}}")
+        elif node.name not in CUSTOM_ELEMENT_NAMES:  # Skip custom elements
+            # Recursively process child nodes
+            for child in node.contents:
+                process_node(child)
+
+    # Start processing from the root
+    for child in soup.contents:
+        process_node(child)
+
+    return str(soup)
 
 def setup_argument_parser():
     """Configure and return the argument parser for command line options."""
@@ -132,10 +160,14 @@ def build_roadmaps():
                         }
                     }
                 )
+
+                # Wrap translatable strings in the HTML
+                html_content = wrap_translatable_strings(html_content)
+
                 clean_name = file.replace(".md", "")
 
                 # Products go in sub-dirs
-                if (clean_name == "index"):
+                if clean_name == "index":
                     template_extends = '{% extends "includes/base/landing-page.html" %}\n'
                     template_blockname = '{% block content %}\n'
                     temp_template_path = os.path.join(settings.ROADMAPS_PATH, "index.html")
