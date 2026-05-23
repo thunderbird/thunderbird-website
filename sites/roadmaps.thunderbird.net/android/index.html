@@ -1,24 +1,24 @@
 {% extends "includes/base/product-or-service.html" %}
 {% block roadmap_content %}
 <div class="product-roadmap-header">
-<h1>Android Roadmap</h1>
-<p>Thunderbird for Android. Follow the roadmap from active work to to future ideas. Timelines may shift as we learn and iterate.</p>
-<p><a href="https://www.thunderbird.net/en-US/thunderbird/all/#select-download-mobile">Download Thunderbird for Android</a></p>
+<h1>{{ _('Android Roadmap') }}</h1>
+<p>{{ _('Thunderbird for Android. Follow the roadmap from active work to to future ideas. Timelines may shift as we learn and iterate.') }}</p>
+<p style="font-size: 16px;">{{ _('Last updated March 31, 2026') }}</p>
+<p><a href="https://www.thunderbird.net/en-US/thunderbird/all/#select-download-mobile">{{ _('Download Thunderbird for Android') }}</a></p>
 </div>
-
-<h2><i class="ph ph-pulse"></i> Active</h2>
+<h2><i class="ph ph-pulse"></i>{{ _('Active') }}</h2>
 <ul>
-<li><strong>Rearchitecture and Core Maintenance</strong> Modernize the source code that we inherited from K9, tackle the most glaring maintenance and stability issues, and restructure the core architecture for faster and easier development.</li>
-<li><strong>Message View Improvements</strong> Modernize the message view to address the most glaring issues like attachment handling, message loading, zoom, remove images, and so on. Making the experience comparable to the competition.</li>
+<li><strong>{{ _('Rearchitecture and Core Maintenance') }}</strong>{{ _('Modernize the source code that we inherited from K9, tackle the most glaring maintenance and stability issues, and restructure the core architecture for faster and easier development.') }}</li>
+<li><strong>{{ _('Message View Improvements') }}</strong>{{ _('Modernize the message view to address the most glaring issues like attachment handling, message loading, zoom, remove images, and so on. Making the experience comparable to the competition.') }}</li>
 </ul>
-<h2><i class="ph ph-calendar-blank"></i> Planned</h2>
+<h2><i class="ph ph-calendar-blank"></i>{{ _('Planned') }}</h2>
 <ul>
-<li><strong>Message List Improvements</strong> Users spend most of their time on the message list, waiting for messages to load, scrolling to find messages, and quickly interacting with them through swipe actions. This effort is aimed at improving this primary view and addressing all major concerns.</li>
-<li><strong>HTML Signature</strong> Give users a way to set HTML signatures. This is a long time requested feature that alongside Sync will strengthen the continuity between our apps and the first step towards a working ecosystem.</li>
+<li><strong>{{ _('Message List Improvements') }}</strong>{{ _('Users spend most of their time on the message list, waiting for messages to load, scrolling to find messages, and quickly interacting with them through swipe actions. This effort is aimed at improving this primary view and addressing all major concerns.') }}</li>
+<li><strong>{{ _('JMAP Support Exploration') }}</strong>{{ _('Exploring JMAP integration, learning what it means to add a new protocol on Android, and ensuring future proofing against proprietary protocols.') }}</li>
 </ul>
-<h2><i class="ph ph-rocket-launch"></i> Shipped</h2>
+<h2><i class="ph ph-rocket-launch"></i>{{ _('Shipped') }}</h2>
 <ul>
-<li><strong>CASA Approval</strong> Complete the Cloud Application Security Assessment (CASA) <div class="date-badge">March 2025</div></li>
+<li><strong>{{ _('CASA Approval') }}</strong>{{ _('Complete the Cloud Application Security Assessment (CASA)') }}<div class="date-badge">{{ _('March 2025') }}</div></li>
 </ul>{{ super() }}
 
 {% endblock %}

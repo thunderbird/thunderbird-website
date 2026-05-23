@@ -1,30 +1,31 @@
 {% extends "includes/base/product-or-service.html" %}
 {% block roadmap_content %}
 <div class="product-roadmap-header">
-  <h1>Desktop Roadmap</h1>
-  <p>Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.</p>
-  <p><a href="https://www.thunderbird.net/en-US/thunderbird/all/#select-download-desktop">Download Thunderbird for desktop</a></p>
+<h1>{{ _('Desktop Roadmap') }}</h1>
+<p>{{ _('Thunderbird for Windows, macOS, and Linux. Follow the roadmap from active work to future ideas. Timelines may shift as we learn and iterate.') }}</p>
+<p style="font-size: 16px;">{{ _('Last updated March 31, 2026') }}</p>
+<p><a href="https://www.thunderbird.net/en-US/thunderbird/all/#select-download-desktop">{{ _('Download Thunderbird for desktop') }}</a></p>
 </div>
-
-<h2><i class="ph ph-pulse"></i> Active</h2>
+<h2><i class="ph ph-pulse"></i>{{ _('Active') }}</h2>
 <ul>
-<li><strong>Exchange (EWS, GraphAPI)</strong> Finalize the work on the Exchange protocol in order to support all versions of Exchange and Microsoft 365, including calendar and address book support.</li>
-<li><strong>Global Database</strong> Continue the work on the new Panorama database, allowing users to start testing the new database, and handle a consistent data migration.</li>
-<li><strong>Improve and extend existing add-ons APIs</strong> Improve the currently available APIs, focus on giving access to new sections and core features, as well as introducing new APIs for specific sections.</li>
+<li><strong>{{ _('Exchange (EWS, GraphAPI)') }}</strong>{{ _('Finalize the work on the Exchange protocol in order to support all versions of Exchange and Microsoft 365, including calendar and address book support.') }}</li>
+<li><strong>{{ _('Global Database') }}</strong>{{ _('Continue the work on the new Panorama database, allowing users to start testing the new database, and handle a consistent data migration.') }}</li>
+<li><strong>{{ _('Improve and extend existing add-ons APIs') }}</strong>{{ _('Improve the currently available APIs, focus on giving access to new sections and core features, as well as introducing new APIs for specific sections.') }}</li>
 </ul>
-<h2><i class="ph ph-calendar-blank"></i> Planned</h2>
+<h2><i class="ph ph-calendar-blank"></i>{{ _('Planned') }}</h2>
 <ul>
-<li><strong>First Time User Experience</strong> Complete Account Hub for all account creations, enable it for first time users, and show a customization wizard after first account creation.</li>
-<li><strong>Calendar Dialogs UI/UX</strong> Complete the refresh of the calendar interface and user experience. Some protocols handling changes might be needed.</li>
-<li><strong>Settings Interface Improvements</strong> Clean up and reorganize the settings into more discoverable sections and improve its search.</li>
-<li><strong>Encryption and Security Improvements</strong> Improve the support and discovery of OpenPGP and S/MIME, improve email tracking protection, and harden phishing email prevention.</li>
+<li><strong>{{ _('Calendar Dialogs UI/UX') }}</strong>{{ _('Complete the refresh of the calendar interface and user experience. Some protocols handling changes might be needed.') }}</li>
+<li><strong>{{ _('Settings Interface Improvements') }}</strong>{{ _('Clean up and reorganize the settings into more discoverable sections and improve its search.') }}</li>
+<li><strong>{{ _('Encryption and Security Improvements') }}</strong>{{ _('Improve the support and discovery of OpenPGP and S/MIME, improve email tracking protection, and harden phishing email prevention.') }}</li>
 </ul>
-<h2><i class="ph ph-rocket-launch"></i> Shipped</h2>
+<h2><i class="ph ph-rocket-launch"></i>{{ _('Shipped') }}</h2>
 <ul>
-<li><strong>Exchange Email Support</strong>  Full support of email operations and account creation. <div class="date-badge">November 2025</div></li>
-<li><strong>Native OS Notifications</strong> Add quick actions to reply, delete, mark messages as read/unread, and manage the notifications. <div class="date-badge">July 2025</div></li>
-<li><strong>Implement Glean Telemetry</strong> Move away from the old telemetry implementation and add the new Glean Telemetry. <div class="date-badge">April 2025</div></li>
-<li><strong>In-App Notifications</strong> Implement a new notification system that allows the Thunderbird team to push important, time-sensitive information directly to a user's Thunderbird desktop client. <div class="date-badge">May 2025</div></li>
+<li><strong>{{ _('First Time User Experience: Account Hub') }}</strong>{{ _('Complete Account Hub for all account creations, enable it for first time users.') }}<div class="date-badge">{{ _('March 2026') }}</div></li>
+<li><strong>{{ _('Unobtrusive Signatures') }}</strong>{{ _('This was part of the larger “Encryption and Security Improvements” initiative and has been completed to reduce confusion around OpenPGP signatures.') }}<div class="date-badge">{{ _('March 2026') }}</div></li>
+<li><strong>{{ _('Exchange Email Support') }}</strong>{{ _('Full support of email operations and account creation.') }}<div class="date-badge">{{ _('November 2025') }}</div></li>
+<li><strong>{{ _('Native OS Notifications') }}</strong>{{ _('Add quick actions to reply, delete, mark messages as read/unread, and manage the notifications.') }}<div class="date-badge">{{ _('July 2025') }}</div></li>
+<li><strong>{{ _('Implement Glean Telemetry') }}</strong>{{ _('Move away from the old telemetry implementation and add the new Glean Telemetry.') }}<div class="date-badge">{{ _('April 2025') }}</div></li>
+<li><strong>{{ _('In-App Notifications') }}</strong>{{ _('Implement a new notification system that allows the Thunderbird team to push important, time-sensitive information directly to a user\'s Thunderbird desktop client.') }}<div class="date-badge">{{ _('May 2025') }}</div></li>
 </ul>{{ super() }}
 
 {% endblock %}
