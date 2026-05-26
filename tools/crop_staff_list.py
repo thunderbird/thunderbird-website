@@ -20,14 +20,48 @@ Then it will adjust the origin of the crop. (In that case horizontally centered 
 
 We don't have fancy pixel offsets, so do some trimming beforehand if the crop isn't perfect.
 
+Photos from phones or design tools often embed wide-gamut ICC profiles (e.g. Display P3). Color-managed
+apps (macOS Preview) render those correctly; many editors and browsers treat untagged-looking RGB as
+sRGB and look washed out. This script converts embedded profiles to sRGB before resize/crop.
+
 """
 import enum
 import os
 import re
+from io import BytesIO
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageCms, ImageOps
 
 scale_to_px = 128
+
+_srgb_profile = ImageCms.createProfile('sRGB')
+_srgb_icc_bytes = ImageCms.ImageCmsProfile(_srgb_profile).tobytes()
+
+
+def ensure_srgb(image: Image.Image) -> Image.Image:
+    """Convert embedded ICC profiles to sRGB for consistent web and editor display."""
+    icc = image.info.get('icc_profile')
+    if not icc:
+        return image
+
+    try:
+        src_profile = ImageCms.ImageCmsProfile(BytesIO(icc))
+        converted = ImageCms.profileToProfile(
+            image, src_profile, _srgb_profile, outputMode='RGB'
+        )
+    except (ImageCms.PyCMSError, OSError, ValueError) as err:
+        print(f"Warning: could not convert color profile ({err}); using source pixels as-is")
+        return image
+
+    converted.info['icc_profile'] = _srgb_icc_bytes
+    return converted
+
+
+def save_staff_image(image: Image.Image, path: str, *, file_format: str) -> None:
+    save_kwargs = {}
+    if icc := image.info.get('icc_profile'):
+        save_kwargs['icc_profile'] = icc
+    image.save(path, format=file_format, **save_kwargs)
 
 
 class HorzCropCommands(enum.StrEnum):
@@ -87,6 +121,7 @@ def handle_crop():
             print(f"{root}/{file}")
             with Image.open(f"{root}/{file}") as im:
                 im = ImageOps.exif_transpose(im)
+                im = ensure_srgb(im)
                 width = im.width
                 height = im.height
 
@@ -119,8 +154,9 @@ def handle_crop():
                                                (hi_im, f'{new_filename}-high-res', scale_to_px * 2)]:
                     image = process_crop_command(image, scale, crop_commands[0], crop_commands[1])
 
-                    image.save(f'../media/img/thunderbird/staff/{filename}.png', format='png')
-                    image.save(f'../media/img/thunderbird/staff/{filename}.webp', format='webp')
+                    out_dir = '../media/img/thunderbird/staff'
+                    save_staff_image(image, f'{out_dir}/{filename}.png', file_format='png')
+                    save_staff_image(image, f'{out_dir}/{filename}.webp', file_format='webp')
 
 
 if __name__ == "__main__":
