@@ -14,6 +14,8 @@ import settings
 import sys
 import translate
 
+from bs4 import BeautifulSoup
+
 from babel.core import Locale, UnknownLocaleError
 from babel.dates import format_date
 from datetime import datetime
@@ -678,3 +680,33 @@ def f(s, *args, **kwargs):
 
 
 contextfunctions = dict(inspect.getmembers(sys.modules[__name__], inspect.isfunction))
+
+
+
+CUSTOM_ELEMENT_NAMES = ["bolt-primary-button"]
+
+def wrap_translatable_strings(html_content):
+    """
+    Wrap plain text nodes in the HTML with _() for translation.
+
+    Created for translating content on roadmaps.thunderbird.net
+    """
+    soup = BeautifulSoup(html_content, "html.parser")
+
+    # Recursive function to process all text nodes
+    def process_node(node):
+        if node.name is None:  # This is a text node
+            text = node.string.strip()
+            if text:  # Only wrap non-empty strings
+                escaped_text = text.replace("'", "\\'")
+                node.replace_with(f"{{{{ _('{escaped_text}') }}}}")
+        elif node.name not in CUSTOM_ELEMENT_NAMES:  # Skip custom elements
+            # Recursively process child nodes
+            for child in node.contents:
+                process_node(child)
+
+    # Start processing from the root
+    for child in soup.contents:
+        process_node(child)
+
+    return str(soup)

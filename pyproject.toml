@@ -21,6 +21,7 @@ dependencies = [
     "webassets>=0.12.1",
     "webob>=1.7.3",
     "pytest~=9.0.3",
+    "beautifulsoup4>=4.14.3",
 ]
 
 [dependency-groups]

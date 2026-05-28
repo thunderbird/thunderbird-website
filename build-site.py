@@ -29,6 +29,7 @@ from pymdownx import emoji
 
 from calgen.providers.CalendarificProvider import CalendarificProvider
 
+
 def setup_argument_parser():
     """Configure and return the argument parser for command line options."""
     parser = argparse.ArgumentParser(description='Build Thunderbird websites and resources')
@@ -132,10 +133,14 @@ def build_roadmaps():
                         }
                     }
                 )
+
+                # Wrap translatable strings in the HTML
+                html_content = helper.wrap_translatable_strings(html_content)
+
                 clean_name = file.replace(".md", "")
 
                 # Products go in sub-dirs
-                if (clean_name == "index"):
+                if clean_name == "index":
                     template_extends = '{% extends "includes/base/landing-page.html" %}\n'
                     template_blockname = '{% block content %}\n'
                     temp_template_path = os.path.join(settings.ROADMAPS_PATH, "index.html")

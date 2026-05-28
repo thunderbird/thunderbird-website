@@ -1,35 +1,28 @@
 {% extends "includes/base/product-or-service.html" %}
 {% block roadmap_content %}
 <div class="product-roadmap-header">
-  <h1>Services Roadmap</h1>
-  <p>Thunderbird Pro Services and Infrastructure Support. Follow the roadmap from active work to future ideas. Timelines may change as we learn and iterate.</p>
+<h1>{{ _('Services Roadmap') }}</h1>
+<p>{{ _('Thunderbird Pro Services and Infrastructure Support. Follow the roadmap from active work to future ideas. Timelines may change as we learn and iterate.') }}</p>
+<p style="font-size: 16px;">{{ _('Last updated March 19, 2026') }}</p>
+<p><a href="https://ideas.tb.pro">{{ _('Submit your ideas for Thunderbird Pro') }}</a></p>
 </div>
-
-<h2><i class="ph ph-pulse"></i> Active</h2>
+<h2><i class="ph ph-pulse"></i>{{ _('Active') }}</h2>
 <ul>
-<li><strong>Send UI Completion</strong> Send was the one product we haven't been able to complete UI overhaul work. We don't need to block the rollout for this, but we should work on this to keep it up to par with the other products and create consistency.</li>
-<li><strong>Active Sessions</strong> Give the user a view on their active sessions and allow them to end the session. <bolt-primary-button
-      variant="outline"
-      href="https://ideas.tb.pro/p/show-active-login-sessions">
-      ideas.tb.pro
-    </bolt-primary-button></li>
+<li><strong>{{ _('Send UI Completion') }}</strong>{{ _('Send was the one product we haven\'t been able to complete UI overhaul work. We don\'t need to block the rollout for this, but we should work on this to keep it up to par with the other products and create consistency.') }}</li>
+<li><strong>{{ _('Integrate Thunderbird Appointment into Pro add-on') }}</strong>{{ _('As a Pro user, you want to be able to quickly copy your scheduling link when in Thunderbird. Integrate so it can be inserted into emails, or easily copied from the main toolbar.') }}</li>
 </ul>
-<h2><i class="ph ph-calendar-blank"></i> Planned</h2>
+<h2><i class="ph ph-calendar-blank"></i>{{ _('Planned') }}</h2>
 <ul>
-<li><strong>MFA Support</strong> Multifactor authentication via TOTP or similar. We didn't get to this in 2025, and it is an essential security feature. <bolt-primary-button
-      variant="outline"
-      href="https://ideas.tb.pro/p/multifactor-authentication">
-      ideas.tb.pro
-    </bolt-primary-button></li>
-<li><strong>Community Selected Initiative</strong> No doubt the community will have a bunch of great ideas on https://ideas.tb.pro that we can build on. We're making sure we have time to work on one of the top community suggestions that will fit well into the Thunderbird Pro ecosystem.</li>
-<li><strong>Integrate Thunderbird Appointment into Pro add-on</strong> As a Pro user, you want to be able to quickly copy your scheduling link when in Thunderbird. Integrate so it can be inserted into emails, or easily copied from the main toolbar.</li>
-<li><strong>Improve Pro Add-on Integration</strong> We are shipping an Thunderbird Pro add-on to enable Pro features in Thunderbird desktop. For a low barrier of entry we want to improve integration by using the system add-on or new account add-on mechanism. This allows us to make these features easier to discover and use within Thunderbird.</li>
-<li><strong>Thundermail: Webmail</strong> What would an email service be without webmail? We will spend time making the proof of concept more usable, and enable this as an experimental feature for users willing to try new things earyly. The scope will initially be limited to basic folder visibility and message display.
-Webmail will be built with JMAP as a backend, and we need to explore how users can benefit from Webmail while still being encouraged to use end to end encryption and allowing search across folders. <bolt-primary-button
-      variant="outline"
-      href="https://ideas.tb.pro/p/webmail-for-thundermail">
-      ideas.tb.pro
-    </bolt-primary-button></li>
+<li><strong>{{ _('Active Sessions') }}</strong>{{ _('Give the user a view on their active sessions and allow them to end the session.') }}</li>
+<li><strong>{{ _('MFA Support') }}</strong>{{ _('Multifactor authentication via TOTP or similar. We didn\'t get to this in 2025, and it is an essential security feature.') }}</li>
+<li><strong>{{ _('Community Selected Initiative') }}</strong>{{ _('No doubt the community will have a bunch of great ideas on https://ideas.tb.pro that we can build on. We\'re making sure we have time to work on one of the top community suggestions that will fit well into the Thunderbird Pro ecosystem.') }}</li>
+<li><strong>{{ _('Improve Pro Add-on Integration') }}</strong>{{ _('We are shipping an Thunderbird Pro add-on to enable Pro features in Thunderbird desktop. For a low barrier of entry we want to improve integration by using the system add-on or new account add-on mechanism. This allows us to make these features easier to discover and use within Thunderbird.') }}</li>
+<li><strong>{{ _('Thundermail: Webmail') }}</strong>{{ _('What would an email service be without webmail? We will spend time making the proof of concept more usable, and enable this as an experimental feature for users willing to try new things earyly. The scope will initially be limited to basic folder visibility and message display.
+Webmail will be built with JMAP as a backend, and we need to explore how users can benefit from Webmail while still being encouraged to use end to end encryption and allowing search across folders.') }}</li>
+</ul>
+<h2><i class="ph ph-rocket-launch"></i>{{ _('Shipped') }}</h2>
+<ul>
+<li><strong>{{ _('Thundermail: Spam Filtering') }}</strong>{{ _('The spam filtering was very aggressive, causing many emails to unintentionally land in the spam folder. The filtering mechanism has been changed to significantly improve this behavior. A big thank you to Mauro and team from Stalwart, who have made the spam detection algorithm more sophisticated and accurate!') }}<div class="date-badge">{{ _('March 2026') }}</div></li>
 </ul>{{ super() }}
 
 {% endblock %}
