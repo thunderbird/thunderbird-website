@@ -116,8 +116,12 @@ body {
     margin: 0;
     font-weight: 700;
     margin-block-start: -1rem;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
+
+    @media (min-width: 600px) {
+      font-size: 4.5rem;
+    }
 
     @media (min-width: @sm) {
       margin-block-start: -8rem;
