@@ -1,0 +1,17 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+  
+{% set utm_content = utm_content|default('jun26-1b') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.jun26-1b.donate')) %}
+
+{% extends "thunderbird/140.0/jun26-1a/index.html" %}
+
+{% block page_title %}{{ _('Keep Thunderbird alive') }}{% endblock %}
+
+{% block appeal_headline %}
+<h1 id="appeal-heading" class="variant-1b" aria-label="{{ _('Keep Thunderbird alive') }}">
+  {{ _('Keep Thunderbird alive') }}
+</h1>
+{% endblock %}
+    

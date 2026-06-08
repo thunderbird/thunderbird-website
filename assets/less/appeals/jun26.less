@@ -120,15 +120,20 @@ body {
     margin: 0;
     font-weight: 700;
     margin-block-start: -1rem;
+    font-size: 3.5rem;
+    text-transform: uppercase;
 
     @media (min-width: @sm) {
-      font-size: 1.75rem;
       margin-block-start: -8rem;
     }
 
     @media (min-width: @md) {
-      font-size: 2.25rem;
+      font-size: 4.5rem;
       margin-block-start: -2rem;
+
+      &.variant-1b {
+        margin-block-start: 0;
+      }
     }
 
     @media (min-width: @lg) {
@@ -137,13 +142,13 @@ body {
 
     & > span {
       display: block;
-      font-size: 3.5rem;
+      font-size: 1.5rem;
       line-height: 1;
-      text-transform: uppercase;
-      margin-block-start: 1rem;
+      text-transform: initial;
+      margin-block-end: 0.5rem;
 
       @media (min-width: @md) {
-        font-size: 4.5rem;
+        font-size: 2.25rem;
       }
     }
   }
