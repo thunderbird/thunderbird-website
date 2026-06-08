@@ -1,0 +1,79 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "appeal-jun26" %}
+
+{# For donation url generation -- variants override utm_content and donation_base_url #}
+{% set fru_form_id = fru_form_id|default('jun26') %}
+{% set utm_content = utm_content|default('jun26-1a') %}
+{% set utm_campaign = utm_campaign|default('jun26_appeal') %}
+{% set utm_source = utm_source|default('in_app') %}
+{% set donation_base_url = donation_base_url|default(url('updates.140.appeal.jun26-1a.donate')) %}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
+
+{% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
+
+{% block base_css %}
+<link href="{{ static('css/appeal-jun26-style.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block page_title %}{{ _('Help Build What\u2019s Next') }}{% endblock %}
+
+{% block content %}
+<section id="appeal-body">
+  <div id="appeal-header">
+    <header>
+      {% block appeal_headline %}
+      <h1 id="appeal-heading" aria-label="{{ _('Only 3% of users keep Thunderbird alive') }}">
+        {{ _('Only 3% of users <span>keep Thunderbird alive</span>') }}
+      </h1>
+      {% endblock %}
+    </header>
+    <aside id="illustration" aria-hidden="true">
+      <img src="{{ static('img/thunderbird/appeal/jun26/roc.webp') }}" alt="">
+    </aside>
+  </div>
+
+  <div id="appeal-letter" class="letter-container">
+    <section id="donate-button-container">
+      {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content,
+      base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
+    </section>
+
+    <div id="letter-contents">
+      {% block appeal_body %}
+      <p>
+        {{ _('Every update, every fix and every new feature of this latest Thunderbird release <strong>exists thanks to the users who chose to support it.</strong>') }}
+      </p>
+      <p>
+        {{ _('No ads, no corporate funding, no strings.') }}
+      </p>
+      <p>
+        <strong>{{ _('We can\'t do this without you. If you get value from Thunderbird, please help keep it going.') }}</strong>
+      </p>
+      {% endblock %}
+      <div class="heart-container">
+        <div class="left-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+        <div class="right-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block site_footer %}
+  <div id="footer-wrapper">
+    {% include 'includes/base/moz-footer.html' %}
+  </div>
+{% endblock %}

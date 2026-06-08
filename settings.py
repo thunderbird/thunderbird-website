@@ -214,6 +214,7 @@ APPEAL_DONATE_PAGES = [
     'thunderbird/140.0/apr26-1e/index.html',
     'thunderbird/140.0/apr26-1f/index.html',
     'thunderbird/140.0/apr26-2e/index.html',
+    'thunderbird/140.0/jun26-1a/index.html',
     'thunderbird/release/sep25r/index.html',
 ]
 
@@ -459,6 +460,7 @@ UPDATES_CSS = {
     "appeal-jun25-style": ["less/appeals/jun25.less"],
     "appeal-apr26-style": ["less/appeals/apr26.less"],
     "appeal-apr26-1e-style": ["less/appeals/apr26-1e.less"],
+    "appeal-jun26-style": ["less/appeals/jun26.less"],
 }
 
 UPDATES_JS = {
