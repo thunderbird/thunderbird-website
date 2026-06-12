@@ -43,26 +43,28 @@ main {
   --canvas-height: 144.0rem;
   --content-max-width: 80rem;
 
-  // Only use avif and jpg as the webp conversion ended up pretty ugly.
-  --appeal-background-image: url('/media/img/thunderbird/appeal/whatsnew-140/dark-gradient.jpg');
-  --appeal-background-image-set: image-set(url('/media/img/thunderbird/appeal/whatsnew-140/dark-gradient.avif') type('image/avif'),
-  var(--appeal-background-image) type('image/jpeg'));
+  --background-top-image: url('/media/img/thunderbird/appeal/whatsnew-153/background-top-desktop.webp');
+  --background-bottom-image: url('/media/img/thunderbird/appeal/whatsnew-153/background-bottom-desktop.webp');
+  --background-image-width: 2560px;
 }
 
 .page-whatsnew-153 {
-
-  html {
-    background-color: var(--extension-background);
-  }
+  background-color: var(--extension-background);
 
   body {
     margin: auto;
     max-width: var(--canvas-width);
-    background: var(--extension-background);
-    background-position: top center;
-    background-repeat: repeat-x;
+    background: transparent;
     color: var(--text-color);
     font-family: var(--font-content);
+  }
+
+  main {
+    background-color: var(--extension-background);
+    background-image: var(--background-top-image), var(--background-bottom-image);
+    background-position: top center, bottom center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: var(--background-image-width) auto, var(--background-image-width) auto;
   }
 
   .main-content {
@@ -142,17 +144,24 @@ main {
           gap: 0.5rem;
         }
       }
+
+      .card.two-column {
+        display: flex;
+        flex-direction: column-reverse;
+      }
     }
 
     .additional-features-header {
       margin-block: 1.5rem;
+      font-size: 2rem;
     }
 
     section.additional-features {
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      margin-block-end: 3rem;
+      margin: 0 auto 3rem;
+      max-width: 62.5rem;
 
       .card {
         .image-container {
@@ -175,8 +184,9 @@ main {
       border: 1px solid transparent;
       background: linear-gradient(#ffffff, #ffffff) padding-box,
         linear-gradient(to bottom, #ffffff, #d2ebf6) border-box;
-      margin-block-end: 5rem;
       text-align: center;
+      max-width: 62.5rem;
+      margin: 0 auto 5rem;
 
       h2 {
         margin-block-end: 1rem;
@@ -194,6 +204,7 @@ main {
         padding: 1.125rem 1.5rem;
         width: fit-content;
         margin: 0 auto;
+        text-align: left;
   
         // Text
         color: var(--button-text-color);
@@ -270,11 +281,11 @@ main {
 
       .additional-features-header {
         margin-block: 2.5rem;
+        font-size: 2.75rem;
       }
 
       section.additional-features {
         margin: 0 auto 5rem;
-        max-width: 62.5rem;
         flex-direction: row;
         gap: 4rem;
 
@@ -290,7 +301,6 @@ main {
       }
 
       .call-to-action {
-        max-width: 62.5rem;
         margin: 0 auto 7.5rem;
 
         h2 {
