@@ -673,7 +673,12 @@ section#details {
                 }
 
                 .info-number {
-                    .text-medium-semibold();
+                    .mixin-font-styles(
+                        @family-inter,
+                        700,
+                        1rem,
+                        1.32
+                    );
                     @media (min-width: @lg) {
                         .web-body-large();
                         font-weight: bold;
@@ -681,8 +686,7 @@ section#details {
                     }
                 }
                 .info-desc {
-                    .web-body-small();
-                    line-height: 1.32;
+                    .web-body-default();
                     @media (min-width: @lg) {
                         .web-body-large();
                         line-height: 1.4;
