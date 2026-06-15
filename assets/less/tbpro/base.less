@@ -112,11 +112,7 @@ body {
         }
 
         #nav-link-home {
-
             &.uses-thundermail-logo {
-
-                // 2026-04-30 earlybird change
-                // Not using svg image for Thundermail logo.
                 background-image: url('/media/img/tbpro/xl-thundermail-logo-high-res.png');
                 background-repeat: no-repeat;
                 background-position: left center;
@@ -125,6 +121,28 @@ body {
                 height: 90%;
                 width: auto;
                 aspect-ratio: 82 / 36;
+            }
+
+            // Send/Appointment use dedicated nav SVGs normalized to render at the
+            // same icon size, inset, wordmark size, gap, and baseline as Mail.
+            &.uses-send-logo,
+            &.uses-appointment-logo {
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: contain;
+
+                height: 90%;
+                width: auto;
+            }
+
+            &.uses-send-logo {
+                background-image: url('/media/svg/tbpro/logo-send-nav.svg');
+                aspect-ratio: 141.41 / 61.02;
+            }
+
+            &.uses-appointment-logo {
+                background-image: url('/media/svg/tbpro/logo-appointment-nav.svg');
+                aspect-ratio: 263.74 / 62.98;
             }
             // ===========================================
 

@@ -13,10 +13,10 @@
 {% block page_desc %}{{ _('Thunderbird Appointment makes it easy to find a time to meet. So you can ditch the admin and streamline your day.') }}{% endblock %}
 
 {% block nav_link_home_class %}
-  {# blank #}
+  class="uses-appointment-logo"
 {% endblock %}
 {% block nav_link_home_image %}
-  {{ svg('tbpro/logo-tbpro') }}
+  <span class="hidden">Appointment</span>
 {% endblock %}
 
 
@@ -111,5 +111,5 @@
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan(_(default_plan.name), _(default_plan.description), default_plan.price, _(default_plan.period), _(default_plan.cta_label), url('tbpro.waitlist'), default_plan.mail_storage, default_plan.send_storage, default_plan.num_domains, default_plan.num_email_addresses) }}
+{{ subscription_plan(_(default_plan.name), _(default_plan.description), default_plan.price, _(default_plan.period), _(default_plan.cta_label), url('tbpro.waitlist'), default_plan.mail_storage, default_plan.send_storage, default_plan.num_domains, default_plan.num_inboxes, default_plan.num_email_addresses) }}
 {% endblock %}

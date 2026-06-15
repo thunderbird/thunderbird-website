@@ -659,6 +659,12 @@ section#details {
                 border-top: solid 1px rgba(88, 201, 255, 0.2);
             }
 
+            li.subscription-feature-inboxes p {
+                @media (min-width: @lg) {
+                    white-space: nowrap;
+                }
+            }
+
             p {
                 margin-block: 0.5rem;
                 text-align: center;
@@ -669,33 +675,21 @@ section#details {
                 .info-number {
                     .mixin-font-styles(
                         @family-inter,
-                        600,
-                        0.9375rem,
+                        700,
+                        1rem,
                         1.32
                     );
                     @media (min-width: @lg) {
-                        .mixin-font-styles(
-                            @family-inter,
-                            bold,
-                            1.25rem,
-                            1.4
-                        );
+                        .web-body-large();
+                        font-weight: bold;
+                        line-height: 1.4;
                     }
                 }
                 .info-desc {
-                    .mixin-font-styles(
-                        @family-inter,
-                        normal,
-                        0.875rem,
-                        1.32
-                    );
+                    .web-body-default();
                     @media (min-width: @lg) {
-                        .mixin-font-styles(
-                            @family-inter,
-                            normal,
-                            1.25rem,
-                            1.4
-                        );
+                        .web-body-large();
+                        line-height: 1.4;
                     }
                 }
             }
