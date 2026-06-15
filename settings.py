@@ -498,6 +498,7 @@ TBPRO_DEFAULT_PLAN = {
     'mail_storage': '30',  # GB
     'send_storage': '60',  # GB
     'num_domains': '3',
+    'num_inboxes': '1',
     'num_email_addresses': '15',
 }
 

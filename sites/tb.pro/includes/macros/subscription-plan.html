@@ -1,4 +1,4 @@
-{% macro subscription_plan(plan_name, plan_description, plan_price, plan_period, cta_label, href, mail_storage, send_storage, num_domains, num_email_addresses) -%}
+{% macro subscription_plan(plan_name, plan_description, plan_price, plan_period, cta_label, href, mail_storage, send_storage, num_domains, num_inboxes, num_email_addresses) -%}
 <div class="subscription-info">
   <div class="subscription-callout">
     <h3>{{ plan_name }}</h3>
@@ -27,7 +27,7 @@
     </li>
     <li class="subscription-feature-inboxes">
       <p>
-        <span class="info-number">1</span> <span class="info-desc">{{_('Inbox')}},</span> <span class="info-number">{{ num_email_addresses }}</span> <span class="info-desc">{{_('Email Addresses')}}</span>
+        <span class="info-number">{{ num_inboxes }}</span> <span class="info-desc">{{_('Inbox')}},</span> <span class="info-number">{{ num_email_addresses }}</span> <span class="info-desc">{{_('Email Addresses')}}</span>
       </p>
     </li>
     <li>

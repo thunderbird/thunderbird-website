@@ -106,5 +106,5 @@
   </p>
 </div>
 {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
-{{ subscription_plan(_(default_plan.name), _(default_plan.description), default_plan.price, _(default_plan.period), _(default_plan.cta_label), url('tbpro.waitlist'), default_plan.mail_storage, default_plan.send_storage, default_plan.num_domains, default_plan.num_email_addresses) }}
+{{ subscription_plan(_(default_plan.name), _(default_plan.description), default_plan.price, _(default_plan.period), _(default_plan.cta_label), url('tbpro.waitlist'), default_plan.mail_storage, default_plan.send_storage, default_plan.num_domains, default_plan.num_inboxes, default_plan.num_email_addresses) }}
 {% endblock %}
