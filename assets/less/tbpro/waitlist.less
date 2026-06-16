@@ -51,13 +51,135 @@ body {
 
     .waitlist-form-content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 3rem;
 
         .pricing-container {
             display: flex;
             flex-direction: column;
             gap: 2rem;
+
+            .subscription-info {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 24px;
+                border: solid 1px rgba(88, 201, 255, 0.2);
+                display: grid;
+                grid-template-rows: 1fr auto;
+                padding: 1rem;
+                place-items: center;
+                margin-block-end: 2rem;
+
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+
+                    @media (min-width: @lg) {
+                        grid-column: 4 / -1;
+                    }
+
+                    li + li {
+                        border-top: solid 1px rgba(88, 201, 255, 0.2);
+                    }
+
+                    li.subscription-feature-inboxes p {
+                        @media (min-width: @lg) {
+                            white-space: nowrap;
+                        }
+                    }
+
+                    p {
+                        margin-block: 0.75rem;
+                        text-align: center;
+
+                        .info-desc {
+                            font-family: @family-inter;
+                            font-size: 1rem;
+                            line-height: 1.32;
+                            font-weight: normal;
+                        }
+
+                        .info-number {
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .subscription-callout {
+                    background-image: linear-gradient(150deg, #131c28 30%, #0b1017);
+                    border-radius: 24px;
+                    padding: 1.5rem 1rem;
+                    text-align: center;
+                    width: 100%;
+
+                    @media (min-width: @lg) {
+                        grid-column: 1 / 4;
+                    }
+
+                    button {
+                        color: var(--text-icon-base);
+                        display: flex;
+                        margin: 0 auto;
+                        &:hover {
+                            color: var(--colour-ti-base);
+                        }
+                    }
+
+                    h3 {
+                        -webkit-background-clip: text;
+                        font-family: @family-metropolis;
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                        line-height: 1.2;
+                        background: linear-gradient(105deg, #58c9ff 45%, #ddb4fe) text;
+                        color: transparent;
+                        display: inline-block;
+                        width: fit-content;
+                        margin: 0;
+                    }
+
+                    p {
+                        margin-block: 1rem;
+                        font-size: 0.875rem;
+                        line-height: 1.23;
+                        color: #f3f9fcf3;
+                    }
+
+                    h4 {
+                        .mixin-font-styles(
+                            @family-inter,
+                            500,
+                            0.75rem
+                        );
+                        display: inline-flex;
+                        flex-direction: row;
+                        gap: 0.375rem;
+                        margin: 0;
+
+                        b {
+                            font-size: 2rem;
+                            font-weight: normal;
+                            .mixin-font-styles(
+                                @family-metropolis,
+                                normal,
+                                2rem
+                            );
+
+                            sup {
+                                // em, not rem for the sup
+                                font-size: 0.6em;
+                                top: -0.55em;
+                            }
+                        }
+                        span {
+                            text-align: left;
+                            font-weight: normal;
+                            line-height: 1.32;
+                        }
+                    }
+                }
+            }
         }
     
         .form-container {
@@ -77,7 +199,6 @@ body {
             flex-direction: column;
             gap: 1.5rem;
             margin-bottom: 0.5rem;
-            max-width: 30rem;
     
             .wrapper {
                 display: flex;
@@ -142,6 +263,22 @@ body {
                 justify-content: flex-end;
                 margin-block: 1rem;
                 width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: @lg) {
+        .waitlist-form-content {
+            grid-template-columns: 1fr 1fr;
+
+            .form-elements {
+                max-width: 30rem;
+            }
+
+            .pricing-container {
+                .subscription-info {
+                    margin-block-end: 0;
+                }
             }
         }
     }
