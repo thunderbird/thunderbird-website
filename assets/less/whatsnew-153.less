@@ -292,7 +292,7 @@ main {
 
       section.additional-features {
         margin: 0 auto 5rem;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr;
         gap: 4rem;
 
         .card {
@@ -312,6 +312,14 @@ main {
         h2 {
           margin-block-end: 0.5rem;
         }
+      }
+    }
+  }
+
+  @media (min-width: @lg) {
+    .main-content {
+      section.additional-features {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   }
