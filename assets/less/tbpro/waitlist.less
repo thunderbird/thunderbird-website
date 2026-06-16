@@ -12,7 +12,7 @@ body {
 
     main {
         flex-grow: 1;
-
+        background-image: linear-gradient(to top, #1a202c 75%, #18181b);
     }
 
     .lower-gradient {
@@ -33,94 +33,116 @@ body {
 }
 
 #waitlist-form {
-    color: #4c4d58;
+    color: #d9d9de;
     height: 100%;
     padding-inline: 1rem;
 
     #form-header {
         .mixin-font-styles(
             @family-metropolis,
-            400,
-            2.25rem,
+            300,
+            3rem,
             1.2,
-            -0.36px
+            -0.48px
         );
-        color: #1373d9;
+        color: #58c9ff;
+        margin: 3rem 0 0.75rem 0;
     }
 
-    #waitlist-welcome {
-        margin-bottom: 2rem;
-    }
+    .waitlist-form-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
 
-    .form-elements {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        margin-bottom: 0.5rem;
-        max-width: 30rem;
-
-        .wrapper {
+        .pricing-container {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
+            gap: 2rem;
+        }
+    
+        .form-container {
+            #waitlist-welcome {
+                margin-bottom: 2rem;
+                color: #eeeef0;
 
-
-
-            .label {
-                .mixin-font-styles(
-                    @family-inter,
-                    600,
-                    1rem,
-                    1.25rem,
-                );
-                width: 100%;
-
-                .required {
-                    color: #dc2626;
-                    padding-inline-start: 0.25rem;
-                }
-            }
-            .tbpro-input-wrapper {
-                .mixin-font-styles(
-                    @family-inter,
-                    400,
-                    0.875rem,
-                    1.25rem
-                );
-                display: inline-flex;
-                align-items: center;
-                gap: 0.25rem;
-                border-radius: 0.5rem;
-                border: 0.0625rem solid #e4e4e7;
-                box-shadow: 2px 2px 4px #0000000d inset;
-                box-sizing: border-box;
-                width: 100%;
-
-                &:focus-within {
-                    border-color: #1373d9;
-                    box-shadow: 0 0 0 0.0625rem #1373d9;
-                }
-
-                input {
-                    background-color: #feffff;
-                    border: none;
-                    border-radius: 0.5rem;
-                    padding: 0.75rem;
-                    width: 100%;
-
-                    &:focus {
-                        outline: none;
-                    }
+                p {
+                    margin: 0;
+                    line-height: 1.32;;
                 }
             }
         }
-
-        .buttons {
+    
+        .form-elements {
             display: flex;
-            justify-content: flex-end;
-            margin-block: 1rem;
-            width: 100%;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 0.5rem;
+            max-width: 30rem;
+    
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+    
+    
+    
+                .label {
+                    .mixin-font-styles(
+                        @family-inter,
+                        600,
+                        1rem,
+                        1.25rem,
+                    );
+                    width: 100%;
+    
+                    .required {
+                        color: #dc2626;
+                        padding-inline-start: 0.25rem;
+                    }
+                }
+                .tbpro-input-wrapper {
+                    .mixin-font-styles(
+                        @family-inter,
+                        400,
+                        0.875rem,
+                        1.25rem
+                    );
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                    border-radius: 0.5rem;
+                    border: 0.0625rem solid #3d4d67;
+                    box-shadow: 2px 2px 4px #0000000d inset;
+                    box-sizing: border-box;
+                    width: 100%;
+    
+                    &:focus-within {
+                        border-color: #1373d9;
+                        box-shadow: 0 0 0 0.0625rem #1373d9;
+                    }
+    
+                    input {
+                        background-color: #1a202c;
+                        border: none;
+                        border-radius: 0.5rem;
+                        color: #d9d9de;
+                        padding: 0.75rem;
+                        width: 100%;
+    
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+    
+            .buttons {
+                display: flex;
+                justify-content: flex-end;
+                margin-block: 1rem;
+                width: 100%;
+            }
         }
     }
 }
