@@ -127,7 +127,7 @@ main {
       margin: 0 auto 3rem;
 
       .card {
-        padding: 2rem;
+        padding: 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -157,8 +157,8 @@ main {
     }
 
     section.additional-features {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 2rem;
       margin: 0 auto 3rem;
       max-width: 62.5rem;
@@ -236,7 +236,7 @@ main {
     flex-grow: 1;
   }
 
-  @media (min-width: @xl) {
+  @media (min-width: @md) {
     .main-content {
       h1 {
         font-size: 3.875rem;
@@ -266,8 +266,9 @@ main {
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
         margin-block-end: 5rem;
-        
+
         .card {
+          padding: 2rem;
           gap: 2.5rem;
         }
 
@@ -291,7 +292,7 @@ main {
 
       section.additional-features {
         margin: 0 auto 5rem;
-        flex-direction: row;
+        grid-template-columns: repeat(4, 1fr);
         gap: 4rem;
 
         .card {
