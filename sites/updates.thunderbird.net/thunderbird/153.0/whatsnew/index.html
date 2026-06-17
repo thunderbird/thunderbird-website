@@ -1,0 +1,229 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "whatsnew-153" %}
+{% set page_title_text = _('Thunderbird Meadow') %}
+{% set use_new_mozilla_logo = True %}
+{% extends "includes/base/base.html" %}
+
+{% block page_title %}{{ page_title_text }}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+{% block extra_meta %}
+  <meta name="robots" content="noindex,nofollow"/>
+{% endblock %}
+
+{% block base_css %}
+  <link href="{{ static('css/whatsnew-153.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% macro svg_img(file_name, alt_text='', class_name='') %}
+  <img src="{{ static('svg/{file_name}.svg'.format(file_name=file_name)) }}" alt="{{ alt_text }}" class="{{ class_name }}"/>
+{% endmacro %}
+
+{% macro webp_img(file_name, alt_text='', class_name='') %}
+  <img src="{{ static('img/thunderbird/appeal/whatsnew-153/{file_name}.webp'.format(file_name=file_name)) }}" alt="{{ alt_text }}" class="{{ class_name }}"/>
+{% endmacro %}
+
+{% block content %}
+  <div class="main-content">
+    <h1>Thunderbird 153</h1>
+    <div class="header-logo" aria-label="{{ _('Thunderbird 153 - Meadow') }}" role="heading" aria-level="1">
+      {{ svg_img('appeal/whatsnew-153/logo') }}
+    </div>
+    <section class="introduction">
+      <p>
+        {% trans trimmed %}
+          Welcome to Meadow. This release makes Thunderbird more capable and personal, with native Exchange support, a revised Account Hub, and customization options that help you make Thunderbird your own.
+        {% endtrans %}
+      </p>
+    </section>
+    <section class="features">
+      <article class="card two-column">
+        <div class="text-container">
+          <h2>
+            {% trans trimmed %}
+              Easier Account Creation
+            {% endtrans %}
+          </h2>
+          <p>
+            {% trans trimmed %}
+              The all new Account Hub makes setting up accounts faster and more intuitive, allowing you to connect to calendars and address books automatically.
+            {% endtrans %}
+          </p>
+        </div>
+        <div class="image-container">
+          {{ webp_img('easier-account-creation-image') }}
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-container">
+          {{ webp_img('address-book-setup-image') }}
+        </div>
+        <div class="text-container">
+          <h2>
+            {% trans trimmed %}
+              Address Book Set Up
+            {% endtrans %}
+          </h2>
+          <p>
+            {% trans trimmed %}
+              Meadow will scan your existing accounts and configure your local and/or remote address books within Thunderbird.
+            {% endtrans %}
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-container">
+          {{ webp_img('microsoft-exchange-image') }}
+        </div>
+        <div class="text-container">
+          <h2>
+            {% trans trimmed %}
+              Microsoft Exchange Support
+            {% endtrans %}
+          </h2>
+          <p>
+            {% trans trimmed %}
+              Users can now set up their Microsoft Exchange accounts natively without any add-ons to read, manage, and write emails.
+            {% endtrans %}
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-container">
+          {{ webp_img('accent-colors-image') }}
+        </div>
+        <div class="text-container">
+          <h2>
+            {% trans trimmed %}
+              Accent Colors
+            {% endtrans %}
+          </h2>
+          <p>
+            {% trans trimmed %}
+              You can also choose to customize your colors with new accent color settings in the Appearance tab.
+            {% endtrans %}
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="image-container">
+          {{ webp_img('customize-your-notifications-image') }}
+        </div>
+        <div class="text-container">
+          <h2>
+            {% trans trimmed %}
+              Customize Your Notifications
+            {% endtrans %}
+          </h2>
+          <p>
+            {% trans trimmed %}
+              Set an email as read, delete, mark as spam and more right from the native notifications on your operating system.
+            {% endtrans %}
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <h3 class="additional-features-header">
+      {% trans trimmed %}
+        and a lot more...
+      {% endtrans %}
+    </h3>
+
+    <section class="additional-features">
+      <article class="card">
+        <div class="image-container">
+          {{ webp_img('oauth-in-browser-image') }}
+        </div>
+        <h2>
+          {% trans trimmed %}
+            OAuth in browser
+          {% endtrans %}
+        </h2>
+        <p>
+          {% trans trimmed %}
+            Thunderbird now supports OAuth authentication directly in your default browser.
+          {% endtrans %}
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="image-container">
+          {{ webp_img('login-with-thundermail-image') }}
+        </div>
+        <h2>
+          {% trans trimmed %}
+            Login With Thundermail
+          {% endtrans %}
+        </h2>
+        <p>
+          {% trans trimmed %}
+            If you have a Thundermail account you can sign into Thunderbird with a one-click authentication in the Account Hub.
+          {% endtrans %}
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="image-container">
+          {{ webp_img('folder-sorting-improvements-image') }}
+        </div>
+        <h2>
+          {% trans trimmed %}
+            Folder Sorting Improvements
+          {% endtrans %}
+        </h2>
+        <p>
+          {% trans trimmed %}
+            Improved UI and better visual indicators make sorting your emails easier than ever.
+          {% endtrans %}
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="image-container">
+          {{ webp_img('bug-fixes-improvements-image') }}
+        </div>
+        <h2>
+          {% trans trimmed %}
+            Bug Fixes and Improvements
+          {% endtrans %}
+        </h2>
+        <p>
+          {% trans trimmed %}
+            Thousands of bug fixes and performance improvements to bring you the smooth, reliable Thunderbird experience you expect.
+          {% endtrans %}
+        </p>
+      </article>
+    </section>
+
+    <article id="upgrade" class="call-to-action">
+      <h2>
+        {% trans trimmed %}
+          Upgrade to the new Thunderbird Release
+        {% endtrans %}
+      </h2>
+      <p>
+        {% trans trimmed %}
+          Don’t wait a year for the next release — enjoy monthly updates with the same dependable stability.
+        {% endtrans %}
+      </p>
+      <a href="{{ url('updates.128.monthly') }}?utm_campaign=jun26_onepage&utm_source=web&utm_medium=blog&utm_content=button" class="cta-button">
+        {% trans trimmed %}
+          Explore Monthly Releases
+        {% endtrans %}
+        {{ svg_img('appeal/whatsnew-153/icons/arrow-right') }}
+      </a>
+    </article>
+  </div>
+{% endblock %}
+{% block site_footer %}
+  <div id="footer-wrapper">
+    {% include 'includes/base/moz-footer.html' %}
+  </div>
+{% endblock %}

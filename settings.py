@@ -387,6 +387,7 @@ URL_MAPPINGS = {
     'updates.128.appeal.dec24.donate': '/thunderbird/128.0/dec24/donate/',
     'updates.128.monthly': '/thunderbird/128.0/monthly/',
     'updates.140.whatsnew': '/thunderbird/140.0/whatsnew/',
+    'updates.153.whatsnew': '/thunderbird/153.0/whatsnew/',
 }
 # Appeal page and donate subpage URLs are derived from APPEAL_DONATE_PAGES
 # rather than being listed individually in URL_MAPPINGS above.
@@ -463,6 +464,7 @@ UPDATES_CSS = {
     "appeal-apr26-style": ["less/appeals/apr26.less"],
     "appeal-apr26-1e-style": ["less/appeals/apr26-1e.less"],
     "appeal-jun26-style": ["less/appeals/jun26.less"],
+    'whatsnew-153': ['less/whatsnew-153.less'],
 }
 
 UPDATES_JS = {

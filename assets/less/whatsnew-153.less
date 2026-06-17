@@ -1,0 +1,328 @@
+@import "./new-style.less";
+@import "./new/variables.less";
+
+// Components
+@import "./new/components/accordion.less";
+@import "./new/components/buttons.less";
+@import "./new/components/forms.less";
+@import "./new/components/site-nav.less";
+@import "./new/components/testimonial.less";
+@import "./new/components/announcement.less";
+@import "./new/components/updates-footer.less";
+@import "./new/components/donate-cta.less";
+@import "./new/components/dialog.less";
+
+@import "./common/fonts.less";
+@import "./common/moz-footer.less";
+
+// Ensure the footer is contained at the bottom and by default the page extends to at least a full page.
+html, body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  height: auto;
+}
+
+:root {
+  --text-color: #000000;
+  --heading-color: #19518F;
+  --cta-color: #E4F6FF;
+  --button-text-color: #1A202C;
+  --footer-background: #1a202c;
+
+  --extension-background: #F8FCFD;
+  --font-heading: 'Metropolis', sans-serif;
+  --font-content: 'Inter', sans-serif;
+  --canvas-width: 221.0rem;
+  --canvas-height: 144.0rem;
+  --content-max-width: 80rem;
+
+  --background-top-image: url('/media/img/thunderbird/appeal/whatsnew-153/background-top-desktop.webp');
+  --background-bottom-image: url('/media/img/thunderbird/appeal/whatsnew-153/background-bottom-desktop.webp');
+  --background-image-width: 2560px;
+}
+
+.page-whatsnew-153 {
+  background-color: var(--extension-background);
+
+  body {
+    margin: auto;
+    max-width: var(--canvas-width);
+    background: transparent;
+    color: var(--text-color);
+    font-family: var(--font-content);
+  }
+
+  main {
+    background-color: var(--extension-background);
+    background-image: var(--background-top-image), var(--background-bottom-image);
+    background-position: top center, bottom center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: var(--background-image-width) auto, var(--background-image-width) auto;
+  }
+
+  .main-content {
+    margin-inline: 1.5rem;
+
+    h1, h2, h3, h4 {
+      margin: 0;
+      text-align: center;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      color: var(--text-icon-base, #1A202C);
+    }
+
+    h1 {
+      padding: 3.5rem 0 1rem 0;
+      font-size: 2rem;
+      line-height: 1.25;
+    }
+
+    h2 {
+      font-size: 1.375rem;
+      line-height: 1.18;
+      text-align: initial;
+      color: var(--heading-color);
+    }
+
+    h3 {
+      font-size: 2.75rem;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .header-logo {
+      width: 10.75rem;
+      height: 2.75rem;
+      margin: 0 auto;
+      margin-block-end: 2.5rem;
+    }
+
+    .introduction {
+      margin-block-end: 3rem;
+
+      p {
+        text-align: center;
+        max-width: 45rem;
+        margin: 0 auto;
+      }
+    }
+
+    section.features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 62.5rem;
+      margin: 0 auto 3rem;
+
+      .card {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        box-sizing: border-box;
+        border-radius: 28px;
+        border: 1px solid transparent;
+        background: linear-gradient(#ffffff, #ffffff) padding-box,
+          linear-gradient(to bottom, #ffffff, #d2ebf6) border-box;
+
+        .text-container {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+
+      .card.two-column {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    .additional-features-header {
+      margin-block: 1.5rem;
+      font-size: 2rem;
+    }
+
+    section.additional-features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 0 auto 3rem;
+      max-width: 62.5rem;
+
+      .card {
+        .image-container {
+          width: 6rem;
+          height: 6rem;
+          margin-block-end: 1.75rem;
+        }
+
+        h2 {
+          font-size: 1.25rem;
+          margin-block-end: 1rem;
+        }
+      }
+    }
+
+    .call-to-action {
+      padding: 2rem;
+      box-sizing: border-box;
+      border-radius: 28px;
+      border: 1px solid transparent;
+      background: linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(to bottom, #ffffff, #d2ebf6) border-box;
+      text-align: center;
+      max-width: 62.5rem;
+      margin: 0 auto 5rem;
+
+      h2 {
+        margin-block-end: 1rem;
+        text-align: center;
+      }
+
+      p {
+        margin-block-end: 1.5rem;
+      }
+
+      .cta-button {
+        display: flex;
+        gap: 0.25rem;
+        align-items: center;
+        justify-content: center;
+        padding: 1.125rem 1.5rem;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: left;
+  
+        // Text
+        color: var(--button-text-color);
+        text-shadow: 0.03125rem 0.03125rem 0 rgba(255, 255, 255, 0.10);
+        font-size: 0.813rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.03rem;
+        text-transform: uppercase;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: none;
+        }
+  
+        // Button
+        background: linear-gradient(329deg, #1373D9 -21.06%, #58C9FF 64%) padding-box,
+        linear-gradient(247deg, rgba(43, 140, 220, 1) 0%, rgba(0, 102, 255, 0) 10%, rgba(0, 102, 255, 0) 90%, rgba(43, 140, 220, 1) 100%) border-box;
+        border: 0.0625rem solid transparent;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  #footer-wrapper {
+    background: var(--footer-background);
+    flex-grow: 1;
+  }
+
+  @media (min-width: @md) {
+    .main-content {
+      h1 {
+        font-size: 3.875rem;
+        padding: 7.5rem 0 2rem 0;
+        line-height: 0.65;
+      }
+
+      h2 {
+        font-size: 2rem;
+        line-height: 1.13;
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      .header-logo {
+        width: 16.125rem;
+        height: 4.125rem;
+      }
+
+      .introduction {
+        margin-block-end: 5rem;
+      }
+
+      section.features {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-block-end: 5rem;
+
+        .card {
+          padding: 2rem;
+          gap: 2.5rem;
+        }
+
+        .card.two-column {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 5rem;
+          grid-column: span 2;
+
+          .text-container {
+            max-width: 28.25rem;
+          }
+        }
+      }
+
+      .additional-features-header {
+        margin-block: 2.5rem;
+        font-size: 2.75rem;
+      }
+
+      section.additional-features {
+        margin: 0 auto 5rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+
+        .card {
+          .image-container {
+            width: 8rem;
+            height: 8rem;
+            margin-block-end: 2.5rem;
+          }
+        }
+      }
+
+      .call-to-action {
+        margin: 0 auto 7.5rem;
+
+        h2 {
+          margin-block-end: 0.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: @lg) {
+    .main-content {
+      section.additional-features {
+        grid-template-columns: repeat(4, 1fr);
+
+        .card {
+          max-width: 12.625rem;
+        }
+      }
+    }
+  }
+}
