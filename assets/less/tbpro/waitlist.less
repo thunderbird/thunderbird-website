@@ -207,10 +207,7 @@ body {
             .wrapper {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
                 gap: 0.5rem;
-    
-    
     
                 .label {
                     .mixin-font-styles(
@@ -258,6 +255,35 @@ body {
                         &:focus {
                             outline: none;
                         }
+                    }
+
+                }
+
+                span.helper {
+                    font-size: 0.688rem;
+                    color: #737584;
+                    line-height: 1.2;
+                    text-align: left;
+
+                    &.error {
+                        display: none;
+                        color: #dc2626;
+                    }
+                }
+
+                &.has-error {
+                    .tbpro-input-wrapper,
+                    .tbpro-input-wrapper:focus-within {
+                        border-color: #dc2626;
+                        box-shadow: 0 0 0 0.0625rem #dc2626;
+                    }
+
+                    span.helper:not(.error) {
+                        display: none;
+                    }
+
+                    span.helper.error {
+                        display: block;
                     }
                 }
             }

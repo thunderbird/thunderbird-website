@@ -15,15 +15,43 @@
 {% block additional_page_js %}
 <script>
   (function () {
+    const RESERVED_DOMAINS = ['thundermail.com', 'tb.pro'];
+
+    const form = document.querySelector('#mc-embedded-subscribe-form');
+    const emailField = document.querySelector('#mce-EMAIL');
+    const emailFieldLabel = emailField.closest('label');
+
+    function isReservedEmail(email) {
+      const domain = email.trim().toLowerCase().split('@')[1];
+      return RESERVED_DOMAINS.includes(domain);
+    }
+
+    function showEmailError() {
+      emailFieldLabel.classList.add('has-error');
+    }
+
+    function clearEmailError() {
+      emailFieldLabel.classList.remove('has-error');
+    }
+
     // Prefill the email address if they were redirected here from
     // the thunderbird-accounts site.
     const urlParams = new URLSearchParams(window.location.search);
     const emailValue = urlParams.get('email');
 
     if (emailValue) {
-      const emailField = document.querySelector('#mce-EMAIL');
       emailField.value = emailValue;
     }
+
+    emailField.addEventListener('input', clearEmailError);
+
+    form.addEventListener('submit', function (event) {
+      if (isReservedEmail(emailField.value)) {
+        event.preventDefault();
+        showEmailError();
+        emailField.focus();
+      }
+    });
   }())
 </script>
 {% endblock %}
@@ -43,12 +71,12 @@
           <p>{{ _('Thundermail is currently available by invitation only. Join the waitlist to follow our progress and get early access as availability expands.') }}</p>
         </div>
         <form action="https://thunderbird.us12.list-manage.com/subscribe/post?u=f8051cc8637cf3ff79661f382&amp;id=a508104cf8&amp;f_id=00caaae0f0"
-              method="post"
-              id="mc-embedded-subscribe-form"
-              name="mc-embedded-subscribe-form"
-              class="validate"
-              target="_self"
-              >
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate"
+          target="_self"
+        >
   
           <div class="form-elements">
             <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -57,12 +85,14 @@
             </div>
   
             <label class="wrapper" for="mce-EMAIL">
-              <span class="label">{{ _('Verification email')}}
+              <span class="label">{{ _('Email')}}
                 <span class="required">*</span>
               </span>
               <span class="tbpro-input-wrapper">
                 <input type="email" name="EMAIL" class="tbpro-input-element" id="mce-EMAIL" value="" autofocus="" required="">
               </span>
+              <span class="helper">{{ _('This email will be used for account verification when setup is available.') }}</span>
+              <span class="helper error" role="alert">{{ _('Please use an email address that is not @thundermail.com or @tb.pro.') }}</span>
             </label>
   
             <label class="wrapper" for="mce-FNAME">
