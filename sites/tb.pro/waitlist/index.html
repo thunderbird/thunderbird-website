@@ -15,15 +15,43 @@
 {% block additional_page_js %}
 <script>
   (function () {
+    const RESERVED_DOMAINS = ['thundermail.com', 'tb.pro'];
+
+    const form = document.querySelector('#mc-embedded-subscribe-form');
+    const emailField = document.querySelector('#mce-EMAIL');
+    const emailFieldLabel = emailField.closest('label');
+
+    function isReservedEmail(email) {
+      const domain = email.trim().toLowerCase().split('@')[1];
+      return RESERVED_DOMAINS.includes(domain);
+    }
+
+    function showEmailError() {
+      emailFieldLabel.classList.add('has-error');
+    }
+
+    function clearEmailError() {
+      emailFieldLabel.classList.remove('has-error');
+    }
+
     // Prefill the email address if they were redirected here from
     // the thunderbird-accounts site.
     const urlParams = new URLSearchParams(window.location.search);
     const emailValue = urlParams.get('email');
 
     if (emailValue) {
-      const emailField = document.querySelector('#mce-EMAIL');
       emailField.value = emailValue;
     }
+
+    emailField.addEventListener('input', clearEmailError);
+
+    form.addEventListener('submit', function (event) {
+      if (isReservedEmail(emailField.value)) {
+        event.preventDefault();
+        showEmailError();
+        emailField.focus();
+      }
+    });
   }())
 </script>
 {% endblock %}
@@ -37,54 +65,77 @@
 <div class="top-level primary-block">
   <div id="waitlist-form">
     <h2 id="form-header">{{ _('Join the Waitlist') }}</h2>
-    <div id="waitlist-welcome">
-      <p>{{ _('Thunderbird Pro is currently in a closed Early Bird release and available by invitation only.
-        Join the waitlist to stay informed on our progress and get early access as we expand availability.') }}</p>
-    </div>
-    <div class="form-container">
-      <form action="https://thunderbird.us12.list-manage.com/subscribe/post?u=f8051cc8637cf3ff79661f382&amp;id=a508104cf8&amp;f_id=00caaae0f0"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            class="validate"
-            target="_self"
-            >
-
-        <div class="form-elements">
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input type="hidden" name="tags" value="10526643">
-            <input type="text" name="b_f8051cc8637cf3ff79661f382_a508104cf8" tabindex="-1" value="">
-          </div>
-
-          <label class="wrapper" for="mce-EMAIL">
-            <span class="label">{{ _('Email address')}}
-              <span class="required">*</span>
-            </span>
-            <span class="tbpro-input-wrapper">
-              <input type="email" name="EMAIL" class="tbpro-input-element" id="mce-EMAIL" value="" autofocus="" required="">
-            </span>
-          </label>
-
-          <label class="wrapper" for="mce-FNAME">
-            <span class="label">{{ _('First name') }}</span>
-            <span class="tbpro-input-wrapper">
-              <input class="tbpro-input-element" type="text" id="mce-FNAME" name="FNAME">
-            </span>
-          </label>
-          <label class="wrapper" for="mce-LNAME">
-            <span class="label">{{ _('Last name')}}</span>
-            <span class="tbpro-input-wrapper">
-              <input class="tbpro-input-element" type="text" id="mce-LNAME" name="LNAME">
-            </span>
-          </label>
-
-          <div class="buttons">
-            {{ right_arrow_submit_button(_('Submit'), 'cta-button') }}
-          </div>
-
+    <div class="waitlist-form-content">
+      <div class="form-container">
+        <div id="waitlist-welcome">
+          <p>{{ _('Thundermail is currently available by invitation only. Join the waitlist to follow our progress and get early access as availability expands.') }}</p>
         </div>
+        <form action="https://thunderbird.us12.list-manage.com/subscribe/post?u=f8051cc8637cf3ff79661f382&amp;id=a508104cf8&amp;f_id=00caaae0f0"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate"
+          target="_self"
+        >
+  
+          <div class="form-elements">
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="hidden" name="tags" value="10526643">
+              <input type="text" name="b_f8051cc8637cf3ff79661f382_a508104cf8" tabindex="-1" value="">
+            </div>
+  
+            <label class="wrapper" for="mce-EMAIL">
+              <span class="label">{{ _('Email')}}
+                <span class="required">*</span>
+              </span>
+              <span class="tbpro-input-wrapper">
+                <input type="email" name="EMAIL" class="tbpro-input-element" id="mce-EMAIL" value="" autofocus="" required="">
+              </span>
+              <span class="helper">{{ _('This email will be used for account verification when setup is available.') }}</span>
+              <span class="helper error" role="alert">
+                <img src="{{ static('svg/error.svg') }}" alt="" />
+                {{ _('Verification email cannot use @thundermail.com or @tb.pro.') }}
+              </span>
+            </label>
+  
+            <label class="wrapper" for="mce-FNAME">
+              <span class="label">{{ _('First name') }}</span>
+              <span class="tbpro-input-wrapper">
+                <input class="tbpro-input-element" type="text" id="mce-FNAME" name="FNAME">
+              </span>
+            </label>
+            <label class="wrapper" for="mce-LNAME">
+              <span class="label">{{ _('Last name')}}</span>
+              <span class="tbpro-input-wrapper">
+                <input class="tbpro-input-element" type="text" id="mce-LNAME" name="LNAME">
+              </span>
+            </label>
 
-      </form>
+            <label class="wrapper" for="mce-COUNTRY">
+              <span class="label">{{ _('Country') }}</span>
+              <span class="tbpro-input-wrapper">
+                <select class="tbpro-input-element" id="mce-COUNTRY" name="COUNTRY">
+                  <option value=""></option>
+                  {% for country in waitlist_countries() %}
+                  <option value="{{ country.name }}">{{ country.name }}</option>
+                  {% endfor %}
+                </select>
+              </span>
+            </label>
+  
+            <div class="buttons">
+              {{ right_arrow_submit_button(_('Submit'), 'cta-button') }}
+            </div>
+  
+          </div>
+  
+        </form>
+      </div>
+
+      <div class="pricing-container">
+        {% from 'includes/macros/subscription-plan.html' import subscription_plan %}
+        {{ subscription_plan(_(default_plan.name), _(default_plan.description), default_plan.price, _(default_plan.period), _(default_plan.cta_label), url('tbpro.waitlist'), default_plan.mail_storage, default_plan.send_storage, default_plan.num_domains, default_plan.num_inboxes, default_plan.num_email_addresses, show_cta=False) }}
+      </div>
     </div>
   </div>
 </div>

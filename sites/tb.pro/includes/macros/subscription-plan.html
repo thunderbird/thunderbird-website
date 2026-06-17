@@ -1,9 +1,10 @@
-{% macro subscription_plan(plan_name, plan_description, plan_price, plan_period, cta_label, href, mail_storage, send_storage, num_domains, num_inboxes, num_email_addresses) -%}
+{% macro subscription_plan(plan_name, plan_description, plan_price, plan_period, cta_label, href, mail_storage, send_storage, num_domains, num_inboxes, num_email_addresses, show_cta=True) -%}
 <div class="subscription-info">
   <div class="subscription-callout">
     <h3>{{ plan_name }}</h3>
     <p>{{ plan_description }}</p>
     <h4><b><sup>$</sup>{{ plan_price }}</b><span>{{ plan_period }}</span></h4>
+    {% if show_cta %}
     <button class="button-brand-outline-label" onclick="window.location.href='{{ href }}'">
       {{ cta_label }}
 
@@ -13,6 +14,7 @@
     </svg>
 
     </button>
+    {% endif %}
   </div>
   <ul>
     <li>
