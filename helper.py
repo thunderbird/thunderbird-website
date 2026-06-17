@@ -670,6 +670,17 @@ def is_calendarific_free_tier():
 
 
 @jinja2.pass_context
+def waitlist_countries(ctx):
+    """Return localized country options for the waitlist form."""
+    locale = get_locale(ctx['LANG'])
+    return [
+        {'code': code, 'name': name}
+        for code, name in sorted(locale.territories.items(), key=lambda item: item[1])
+        if len(code) == 2 and code.isalpha()
+    ]
+
+
+@jinja2.pass_context
 def split_keep_delimiter(ctx, string: str, split: str):
     lines = string.split(split)
     return [f"{line}," for line in string.split(split)[:-1]] + lines[-1:]

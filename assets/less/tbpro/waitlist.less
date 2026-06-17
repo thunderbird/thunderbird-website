@@ -244,7 +244,8 @@ body {
                         box-shadow: 0 0 0 0.0625rem #1373d9;
                     }
     
-                    input {
+                    input,
+                    select {
                         background-color: #1a202c;
                         border: none;
                         border-radius: 0.5rem;
@@ -257,6 +258,24 @@ body {
                         }
                     }
 
+                    select {
+                        appearance: none;
+                        background-image: url("/media/svg/caret-down.svg");
+                        background-position: calc(100% - 0.75rem) center;
+                        background-repeat: no-repeat;
+                        background-size: 1rem;
+                        cursor: pointer;
+                        padding-inline-end: 2.5rem;
+
+                        &:has(option[value=""]:checked) {
+                            color: #737584;
+                        }
+
+                        option {
+                            background-color: #1a202c;
+                            color: #d9d9de;
+                        }
+                    }
                 }
 
                 span.helper {

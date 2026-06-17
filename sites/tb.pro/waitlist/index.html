@@ -110,6 +110,18 @@
                 <input class="tbpro-input-element" type="text" id="mce-LNAME" name="LNAME">
               </span>
             </label>
+
+            <label class="wrapper" for="mce-COUNTRY">
+              <span class="label">{{ _('Country') }}</span>
+              <span class="tbpro-input-wrapper">
+                <select class="tbpro-input-element" id="mce-COUNTRY" name="COUNTRY">
+                  <option value=""></option>
+                  {% for country in waitlist_countries() %}
+                  <option value="{{ country.name }}">{{ country.name }}</option>
+                  {% endfor %}
+                </select>
+              </span>
+            </label>
   
             <div class="buttons">
               {{ right_arrow_submit_button(_('Submit'), 'cta-button') }}
