@@ -267,15 +267,15 @@ body {
 
                     &.error {
                         display: none;
-                        color: #dc2626;
+                        color: #fca5a5;
                     }
                 }
 
                 &.has-error {
                     .tbpro-input-wrapper,
                     .tbpro-input-wrapper:focus-within {
-                        border-color: #dc2626;
-                        box-shadow: 0 0 0 0.0625rem #dc2626;
+                        border-color: #f05252;
+                        box-shadow: 0 0 0 0.0625rem #f05252;
                     }
 
                     span.helper:not(.error) {
@@ -283,7 +283,20 @@ body {
                     }
 
                     span.helper.error {
-                        display: block;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        background-color: #7f1d1d;
+                        padding: 0.25rem;
+                        font-size: 0.75rem;
+                        border-radius: 4px;
+                        gap: 4px;
+
+                        svg {
+                            width: 1.25rem;
+                            height: 1.25rem;
+                        }
                     }
                 }
             }

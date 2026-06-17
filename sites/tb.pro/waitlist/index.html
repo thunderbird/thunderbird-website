@@ -92,7 +92,10 @@
                 <input type="email" name="EMAIL" class="tbpro-input-element" id="mce-EMAIL" value="" autofocus="" required="">
               </span>
               <span class="helper">{{ _('This email will be used for account verification when setup is available.') }}</span>
-              <span class="helper error" role="alert">{{ _('Please use an email address that is not @thundermail.com or @tb.pro.') }}</span>
+              <span class="helper error" role="alert">
+                <img src="{{ static('svg/error.svg') }}" alt="" />
+                {{ _('Verification email cannot use @thundermail.com or @tb.pro.') }}
+              </span>
             </label>
   
             <label class="wrapper" for="mce-FNAME">
