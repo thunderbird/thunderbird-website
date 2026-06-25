@@ -32,9 +32,6 @@
     // Force-highlight www link for roadmaps site.
     if ((linkHost === currentHost) || isRoadmaps) {
       link.classList.add('active');
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-      });
     } else {
       // Remove active class from other links
       link.classList.remove('active');
