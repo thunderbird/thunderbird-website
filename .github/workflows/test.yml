@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+    - master
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - python: "3.11"
+          node: 16
+          os: macos-15-intel
+        - python: "3.12"
+          node: 20
+          os: windows-2025
+        - python: "3.13"
+          node: 22
+          os: ubuntu-24.04
+        - python: "3.14"
+          node: 24
+          os: macos-26
+        - python: "3.15-dev"
+          node: 25
+          os: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node }}
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python }}
+        cache: pip
+    - name: Install project dependencies
+      run: |
+        npm install -g less
+        pip install -r requirements-dev.txt
+        git clone --depth 1 https://github.com/thunderbird/thunderbird-notes.git libs/thunderbird_notes
+        git clone --depth 1 -b production https://github.com/mozilla-releng/product-details.git libs/product-details
+    - name: Build site (just on darwin)
+      if: runner.os == 'macOS'
+      run: |
+        python build-site.py --debug --enus
+    - name: Build startpage (just on darwin)
+      if: runner.os == 'macOS'
+      run: |
+        python build-site.py --debug --enus --startpage
+    - name: Build tbpro (just on darwin)
+      if: runner.os == 'macOS'
+      run: |
+        python build-site.py --debug --enus --tbpro
+  # - name: Build calendars (disabled until new provider)
+  #   run: |
+  #     python build-site.py --debug --enus --buildcalendar
+    - name: Run pytest
+      run: |
+        python -m pytest tests
