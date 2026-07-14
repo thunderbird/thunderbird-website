@@ -47,3 +47,21 @@ class TestListReleases:
 
         assert 128.0 in list_releases_result
         assert '128.0.1esr' in list_releases_result[128.0]['minor']
+
+    def test_esr_key_used_when_category_mislabeled(self):
+        """product-details sometimes mislabels esr builds' category as 'stability' instead of 'esr'
+        (this happened for the whole 140.x esr line). We should still detect them as esr via the
+        "esr" suffix on the product-details key itself, so the releases page links to the
+        version that actually has release notes (e.g. 140.12.1esr, not 140.12.1)."""
+        thunderbird_desktop.releases = {
+            'releases': {
+                'thunderbird-140.0': {'category': 'major', 'version': '140.0'},
+                'thunderbird-140.12.1esr': {'category': 'stability', 'version': '140.12.1'},
+            }
+        }
+
+        list_releases_result = dict(thunderbird_desktop.list_releases())
+
+        assert 140.0 in list_releases_result
+        assert '140.12.1esr' in list_releases_result[140.0]['minor']
+        assert '140.12.1' not in list_releases_result[140.0]['minor']
