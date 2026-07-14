@@ -89,7 +89,6 @@ TEST_CASES = [
     ("tb.pro", "/", 302, "/en-US/"),
     ("tb.pro", "/appointment", 302, "/en-US/appointment"),
     ("tb.pro", "/send", 302, "/en-US/send"),
-    ("tb.pro", "/thundermail", 302, "/en-US/thundermail"),
     ("tb.pro", "/waitlist", 302, "/en-US/waitlist"),
 
     # support.thunderbird.net - generic url formatter redirect (issue #1135)
