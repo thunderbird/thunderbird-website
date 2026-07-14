@@ -259,8 +259,12 @@ class ThunderbirdDetails():
 
             is_major = category == 'major' or needs_major_fixup(version_int)
             is_stability = category == 'stability'
-            # We only count 128.0 and up as esr (and specific 115.0 versions)
-            is_esr = (category == 'esr' and version_int[0] >= 128) or needs_esr_fixup(version_int)
+
+            # We only count 128.0 and up as esr (and specific 115.0 versions).
+            # product-details sometimes mislabels the category for esr builds (e.g. the
+            # entire 140.x esr line is tagged 'stability'), so also trust the "esr" suffix
+            # on the product-details key itself, which seems to be applied consistently.
+            is_esr = (version_int[0] >= 128 and (category == 'esr' or key.endswith('esr'))) or needs_esr_fixup(version_int)
 
             # Skip non-esr builds between 115 and 136 since monthly releases were in beta
             if not is_esr and 115 < version_int[0] < 136:
