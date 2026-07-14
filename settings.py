@@ -320,7 +320,6 @@ URL_MAPPINGS = {
     'support.mobile': 'https://support.mozilla.org/products/thunderbird-android/',
     'support.question': 'https://support.mozilla.org/questions/new/thunderbird',
     'tbpro.home': '/',
-    'tbpro.thundermail': '/thundermail',
     'tbpro.appointment': '/appointment',
     'tbpro.privacy': '/privacy',
     'tbpro.send': '/send',
