@@ -75,7 +75,13 @@ def application(environ, start_response):
     # Are we updates.thunderbird.net?
     is_utn = any(['updates.' in req.host_url, 'updates-stage.' in req.host_url])
 
-    if (not is_utn
+    # tb.pro doesn't have translations for all strings yet, so always serve
+    # en-US regardless of the visitor's Accept-Language header.
+    is_tbpro = 'tb.pro' in req.host_url
+
+    if is_tbpro:
+        language_code = 'en-US'
+    elif (not is_utn
         and 'thunderbird' in req.path
         and not any(s in req.path for s in settings.ALWAYS_LOCALIZE)):
         # Release notes, system requirements, and 'all' builds pages are only available in English.
