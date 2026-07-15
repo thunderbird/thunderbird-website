@@ -714,6 +714,10 @@ WEBSITE_REDIRECTS = {
     ('thunderbird', '140.0', 'whatsnew'): 'updates.140.whatsnew',
 }
 
+TBPRO_REDIRECTS = {
+    'thundermail': 'tbpro.home',
+}
+
 # Similar to website redirects but for UTN
 UPDATES_REDIRECTS = {
     ('thunderbird', 'appeal'): 'updates.140.appeal.nov25c',

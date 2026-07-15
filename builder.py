@@ -558,6 +558,7 @@ class Site(object):
             logger.info("Building pages for {lang}...".format(lang=lang))
             self._switch_lang(lang)
             self.render()
+            write_site_htaccess(self.renderpath, self.lang, self.site, settings.TBPRO_REDIRECTS, redirect_request=True)
         self.build_assets()
 
     def build_roadmaps(self):
