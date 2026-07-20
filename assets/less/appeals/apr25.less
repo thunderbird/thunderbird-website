@@ -56,6 +56,11 @@
       background: var(--bg-img);
       background-size: 100% 100%;
     }
+
+    // Pause the gradient animation while the tab isn't visible or focused.
+    :root.tab-inactive & {
+      animation-play-state: paused;
+    }
   }
 
   #appeal-header {
