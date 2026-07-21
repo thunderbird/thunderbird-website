@@ -471,7 +471,8 @@ UPDATES_JS = {
         # Necessary for the download button to select the correct platform.
         'js/base/site.js',
         # Load bearing order..Donation must come before AB testing.
-        'js/common/donations.js', 'js/common/ab-testing.js', 'js/common/donation-notice.js'
+        'js/common/donations.js', 'js/common/ab-testing.js', 'js/common/donation-notice.js',
+        'js/common/animation-visibility.js'
     ]
 }
 
