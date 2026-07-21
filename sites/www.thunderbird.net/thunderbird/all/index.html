@@ -221,7 +221,7 @@
       </div>
     </div>
 
-    {# No javascript / source of truth for esr download links #}
+    {# No javascript / source of truth for all channel download links #}
     <div id="all-downloads" data-thunderbird-version="{{ latest_thunderbird_version }}">
       <div class="section-text">
         <h2 class="split-text" aria-label="{{ _('Thunderbird Mobile.') }}" style="justify-content: center">
@@ -254,8 +254,45 @@
           {% endfor -%}
         </ul>
       </div>
-      <div class="all-downloads-container">
-        {{ build_table(platforms, full_builds) }}
+
+      {# ESR channel #}
+      <div data-channel="esr" class="all-downloads-channel">
+        <div class="section-text">
+          <h3>{{ _('Extended Support Release') }} — {{ latest_thunderbird_esr_version }}</h3>
+        </div>
+        <div class="all-downloads-container">
+          {{ build_table(platforms, full_builds_esr) }}
+        </div>
+      </div>
+
+      {# Release channel #}
+      <div data-channel="release" class="all-downloads-channel">
+        <div class="section-text">
+          <h3>{{ _('Release') }} — {{ latest_thunderbird_version }}</h3>
+        </div>
+        <div class="all-downloads-container">
+          {{ build_table(platforms, full_builds) }}
+        </div>
+      </div>
+
+      {# Beta channel #}
+      <div data-channel="beta" class="all-downloads-channel">
+        <div class="section-text">
+          <h3>{{ _('Beta') }} — {{ latest_thunderbird_beta_version }}</h3>
+        </div>
+        <div class="all-downloads-container">
+          {{ build_table(platforms, full_builds_beta) }}
+        </div>
+      </div>
+
+      {# Daily channel #}
+      <div data-channel="daily" class="all-downloads-channel">
+        <div class="section-text">
+          <h3>{{ _('Daily') }} — {{ latest_thunderbird_daily_version }}</h3>
+        </div>
+        <div class="all-downloads-container">
+          {{ build_table(platforms, full_builds_daily) }}
+        </div>
       </div>
     </div>
   </div>
