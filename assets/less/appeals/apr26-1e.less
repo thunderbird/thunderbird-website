@@ -8,6 +8,11 @@
 .page-appeal-dec25 {
   background-color: #ffc068;
 
+  // Pause the gradient animation while the tab isn't visible or focused.
+  &.tab-inactive body {
+    animation-play-state: paused;
+  }
+
   body {
     max-width: none;
     min-width: var(--min-small-screen);
@@ -19,11 +24,6 @@
       animation: none;
       background: var(--bg-img);
       background-size: 100% 100%;
-    }
-
-    // Pause the gradient animation while the tab isn't visible or focused.
-    :root.tab-inactive & {
-      animation-play-state: paused;
     }
   }
 
