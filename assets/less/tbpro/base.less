@@ -91,7 +91,7 @@ body {
         justify-content: space-between;
         position: relative;
 
-        padding-inline: 0.75rem 0.875rem;
+        padding-inline: 1.25rem 0.875rem;
         @media (min-width: @lg) {
             padding-inline: @space-18 0.875rem;
             height: 3.5rem;
@@ -118,7 +118,24 @@ body {
             }
         }
 
+        .mobile-nav-actions {
+            align-items: center;
+            display: flex;
+            gap: 0.75rem;
 
+            button.button-brand-small-outline-label {
+                color: var(--text-icon-base);
+                &:hover {
+                    color: var(--colour-ti-base);
+                }
+            }
+
+            @media (min-width: @lg) {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                justify-self: end;
+            }
+        }
 
         #nav-menu {
             // These are the same colors as #site-header-nav,
@@ -150,7 +167,9 @@ body {
                 overflow: hidden;
                 padding: 0;
 
-                li:first-child {
+                li:first-child,
+                li:last-child {
+                    // Dummy spacer elements
                     display: none;
                     pointer-events: none;
                 }
@@ -164,20 +183,11 @@ body {
                     grid-row-start: 1;
                     pointer-events: none;
 
-                    li:first-child {
-                        // On wider viewports, display the dummy element so that
-                        // it takes up a grid column.
+                    li:first-child,
+                    li:last-child {
+                        // Bigger viewports, display the dummy spacers for the grid columns.
                         display: block;
                     }
-
-                    li:last-child {
-                        // 2026-04-30 earlybird change
-                        // margin-block: @gutter;
-                        margin-left: unset;
-                        justify-self: end;  // Pushes last item to the right
-
-                    }
-
                 }
             }
 
@@ -217,23 +227,7 @@ body {
                 a:hover, a:active {
                     .mixin-active-nav-link();
                 }
-
-                button {
-                    color: var(--text-icon-base);
-                    &:hover {
-                        color: var(--colour-ti-base);
-                    }
-                }
             }
-            li.nav-item-cta-button {
-                margin-left: 1.5rem;
-
-                @media (min-width: @lg) {
-                    margin-block: unset;
-                    margin-left: unset;
-                }
-            }
-
         }
 
         .hamburger-btn {
@@ -264,11 +258,9 @@ body {
             }
         }
 
-        #mobile-hamburger-button[aria-expanded="true"] ~ #nav-menu {
+        &:has(#mobile-hamburger-button[aria-expanded="true"]) #nav-menu {
             grid-template-rows: 1fr;
-
         }
-
     }
 }
 
