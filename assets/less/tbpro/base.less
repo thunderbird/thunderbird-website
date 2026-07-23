@@ -63,18 +63,12 @@ body {
 // Header (nav bar)
 // ------------------------------------------------------------
 
-
-// earlybird
-// To reimplement the hamburger menu:
-// Change `@always-on` to `@lg`
-
-
 #site-header {
     margin-block: 0 2.5rem;
 
     padding-top: @space-16;
 
-    @media (min-width: @lg) {
+    @media (min-width: @md) {
         margin-block: 0 @space-36;
         padding-top: 1.25rem;
     }
@@ -97,74 +91,51 @@ body {
         justify-content: space-between;
         position: relative;
 
-        padding-inline: 0.75rem 0.875rem;
-        @media (min-width: @lg) {
+        padding-inline: 1.25rem 0.875rem;
+        @media (min-width: @md) {
             padding-inline: @space-18 0.875rem;
+            height: 3.5rem;
         }
 
-        @media (min-width: @always-on) {
+        @media (min-width: @md) {
             display: grid;
-
-            // earlybird
-            // height: 4rem;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 1fr;
             grid-template-rows: 1fr;
         }
 
         #nav-link-home {
             &.uses-thundermail-logo {
-                background-image: url('/media/img/tbpro/xl-thundermail-logo-high-res.png');
-                background-repeat: no-repeat;
-                background-position: left center;
-                background-size: cover;
+                background-image: url('/media/svg/tbpro/logo-mail-nav.svg');
 
-                height: 90%;
+                height: 2.25rem;
                 width: auto;
                 aspect-ratio: 82 / 36;
             }
 
-            // Send/Appointment use dedicated nav SVGs normalized to render at the
-            // same icon size, inset, wordmark size, gap, and baseline as Mail.
-            &.uses-send-logo,
-            &.uses-appointment-logo {
-                background-repeat: no-repeat;
-                background-position: left center;
-                background-size: contain;
-
-                height: 90%;
-                width: auto;
-            }
-
-            &.uses-send-logo {
-                background-image: url('/media/svg/tbpro/logo-send-nav.svg');
-                aspect-ratio: 141.41 / 61.02;
-            }
-
-            &.uses-appointment-logo {
-                background-image: url('/media/svg/tbpro/logo-appointment-nav.svg');
-                aspect-ratio: 263.74 / 62.98;
-            }
-            // ===========================================
-
-            @media (min-width: @always-on) {
+            @media (min-width: @md) {
                 grid-column-start: 1;
                 grid-row-start: 1;
-                // 2026-04-30 earlybird changes
-                // Not needed for thundermail logo.
-                // margin-top: 1rem;
-
-                z-index: 9;
-
-                // 2026-04-30 earlybird changes
-                // Not using svg image for Thundermail logo.
-                // svg {
-                //     height: 36px;
-                //     width: 208px;
-                // }
             }
         }
 
+        .mobile-nav-actions {
+            align-items: center;
+            display: flex;
+            gap: 0.75rem;
 
+            button.button-brand-small-outline-label {
+                color: var(--text-icon-base);
+                &:hover {
+                    color: var(--colour-ti-base);
+                }
+            }
+
+            @media (min-width: @md) {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                justify-self: end;
+            }
+        }
 
         #nav-menu {
             // These are the same colors as #site-header-nav,
@@ -185,16 +156,8 @@ body {
             top: @space-48;
             transition: grid-template-rows 0.1s ease-out;
 
-            @media (min-width: @always-on) {
-                background: unset;
+            @media (min-width: @md) {
                 display: contents;
-                grid-template-columns: 1fr auto auto auto 1fr;
-                grid-column: 1 / -1;
-                grid-row-start: 1;
-
-                position: relative;
-                right: unset;
-                top: unset;
             }
 
 
@@ -204,46 +167,27 @@ body {
                 overflow: hidden;
                 padding: 0;
 
-                li:first-child {
-                    // This is a dummy element that will occupy a grid column.
-                    // It should be hidden for narrow viewports.
+                li:first-child,
+                li:last-child {
+                    // Dummy spacer elements
                     display: none;
+                    pointer-events: none;
                 }
 
-                @media (min-width: @always-on) {
+                @media (min-width: @md) {
                     align-items: center;
+
                     display: grid;
-
-                    // Take up the entire width.
+                    grid-template-columns: 1fr auto auto 1fr;
                     grid-column: 1 / -1;
+                    grid-row-start: 1;
+                    pointer-events: none;
 
-                    // Use auto for the middle three columns so that they
-                    // are only as wide as their content.
-                    // They'll be moved to the center because the leftmost and rightmost
-                    // columns are empty.
-                    // This version is when we have links to individual services:
-                    // grid-template-columns: 1fr auto auto auto 1fr;
-
-                    // Use this if we're only displaying the "sign in" link:
-                    grid-template-columns: 1fr 1fr;
-
-
-                    margin-top: -3rem;
-
-                    li:first-child {
-                        // On wider viewports, display the dummy element so that
-                        // it takes up a grid column.
+                    li:first-child,
+                    li:last-child {
+                        // Bigger viewports, display the dummy spacers for the grid columns.
                         display: block;
                     }
-
-                    li:last-child {
-                        // 2026-04-30 earlybird change
-                        // margin-block: @gutter;
-                        margin-left: unset;
-                        justify-self: end;  // Pushes last item to the right
-
-                    }
-
                 }
             }
 
@@ -252,7 +196,9 @@ body {
                 margin-block: calc(@gutter - 11.5px);
                 width: 100%;
 
-                @media (min-width: @always-on) {
+                @media (min-width: @md) {
+                    pointer-events: auto;
+                    margin-block: unset;
                     width: unset;
                 }
 
@@ -271,7 +217,7 @@ body {
                         color: var(--text-icon-base);
                     }
 
-                    @media (min-width: @always-on) {
+                    @media (min-width: @md) {
                         align-self: center;
                         margin-inline: unset;
                         width: unset;
@@ -281,25 +227,7 @@ body {
                 a:hover, a:active {
                     .mixin-active-nav-link();
                 }
-
-                button {
-                    color: var(--text-icon-base);
-                    &:hover {
-                        color: var(--colour-ti-base);
-                    }
-                }
             }
-            li.nav-item-cta-button {
-                align-self: flex-end;
-                margin-left: 1.5rem;
-                margin-block: 0.5rem;
-
-                @media (min-width: @always-on) {
-                    margin-block: unset;
-                    margin-left: unset;
-                }
-            }
-
         }
 
         .hamburger-btn {
@@ -310,7 +238,7 @@ body {
             margin: 0;
             padding: 0;
             width: 2rem;
-            @media (min-width: @always-on) {
+            @media (min-width: @md) {
                 display: none;
             }
         }
@@ -330,11 +258,9 @@ body {
             }
         }
 
-        #mobile-hamburger-button[aria-expanded="true"] ~ #nav-menu {
+        &:has(#mobile-hamburger-button[aria-expanded="true"]) #nav-menu {
             grid-template-rows: 1fr;
-
         }
-
     }
 }
 

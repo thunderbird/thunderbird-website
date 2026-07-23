@@ -68,29 +68,36 @@
           <span class="hidden">Thundermail</span>
           {% endblock %}
         </a>
-        <button
-          id="mobile-hamburger-button"
-          class="hamburger-btn"
-          aria-expanded="false"
-          aria-controls="nav-menu"
+        <div class="mobile-nav-actions">
+          <button
+            id="mobile-hamburger-button"
+            class="hamburger-btn"
+            aria-expanded="false"
+            aria-controls="nav-menu"
 
-          data-expanded="false"
-          type="button"
-          >
-          <span class="hamburger-icon" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
+            data-expanded="false"
+            type="button"
+            >
+            <span class="hamburger-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+          <form class="bolt-button-wrapper" action="https://accounts-stage.tb.pro/login/" id="signin-button">
+            <button class="button-brand-small-outline-label">Sign in</button>
+          </form>
+        </div>
         <div id="nav-menu">
           <ul>
             <li></li>
-            <li class="nav-item-cta-button">
-              <form class="bolt-button-wrapper" action="https://accounts-stage.tb.pro/login/" id="signin-button">
-                <button class="button-brand-small-outline-label">Sign in</button>
-              </form>
+            <li>
+              <a id="nav-link-appointment" href="{{ url('tbpro.appointment') }}">Appointment</a>
             </li>
+            <li>
+              <a id="nav-link-send" href="{{ url('tbpro.send') }}">Send</a>
+            </li>
+            <li></li>
           </ul>
         </div>
       </div>
