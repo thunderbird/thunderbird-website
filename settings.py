@@ -713,6 +713,8 @@ WEBSITE_REDIRECTS = {
     ('thunderbird', '128.0', 'releasenotes'): 'thunderbird.128esr.releasenotes',
     ('thunderbird', '140.0esr', 'whatsnew'): 'updates.140.whatsnew',
     ('thunderbird', '140.0', 'whatsnew'): 'updates.140.whatsnew',
+    ('thunderbird', '153.0esr', 'whatsnew'): 'updates.153.whatsnew',
+    ('thunderbird', '153.0', 'whatsnew'): 'updates.153.whatsnew',
 }
 
 TBPRO_REDIRECTS = {
