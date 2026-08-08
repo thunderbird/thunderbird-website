@@ -186,7 +186,9 @@ def build_main_website():
     print(f'Rendering www.thunderbird.net {langmsg}')
     default_channel = settings.DEFAULT_RELEASE_VERSION
     version = helper.thunderbird_desktop.latest_version(default_channel)
+    esr_version = helper.thunderbird_desktop.latest_version('esr')
     beta_version = helper.thunderbird_desktop.latest_version('beta')
+    daily_version = helper.thunderbird_desktop.latest_version('daily')
 
     if os.path.exists('media/caldata/autogen/calendars.json'):
         caldata = helper.load_calendar_json('media/caldata/autogen/calendars.json')
@@ -199,15 +201,19 @@ def build_main_website():
         'query': '',
         'platforms': helper.thunderbird_desktop.platforms('release'),
         'full_builds_version': version.split('.', 1)[0],
+        'full_builds_esr': helper.thunderbird_desktop.get_filtered_full_builds('esr', esr_version),
         'full_builds': helper.thunderbird_desktop.get_filtered_full_builds('release', version),
         'full_builds_beta': helper.thunderbird_desktop.get_filtered_full_builds('beta', beta_version),
+        'full_builds_daily': helper.thunderbird_desktop.get_filtered_full_builds('daily', daily_version),
         'channel_label': 'Thunderbird',
         'releases': helper.thunderbird_desktop.list_releases(),
         'calendars': caldata['calendars'],
         'letters': caldata['letters'],
         'CALDATA_URL': settings.CALDATA_URL,
         'latest_thunderbird_version': version,
+        'latest_thunderbird_esr_version': esr_version,
         'latest_thunderbird_beta_version': beta_version,
+        'latest_thunderbird_daily_version': daily_version,
         'blog_data': [],
         'default_channel': default_channel
     }
