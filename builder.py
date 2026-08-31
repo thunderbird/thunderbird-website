@@ -349,9 +349,9 @@ class Site(object):
         redirect_rules = (
             'RewriteEngine On\n'
             'RewriteCond %{REQUEST_FILENAME} !-d\n'
-            'RewriteRule ^(115\.[^/]+)esr/(.*)$ /thunderbird/$1/$2 [R,L]\n'
+            'RewriteRule ^(115\\.[^/]+)esr/(.*)$ /thunderbird/$1/$2 [R,L]\n'
             'RewriteCond %{REQUEST_FILENAME} !-d\n'
-            'RewriteRule ^(115\.[^/]+)/(.*)$ /thunderbird/$1esr/$2 [R,L]\n'
+            'RewriteRule ^(115\\.[^/]+)/(.*)$ /thunderbird/$1esr/$2 [R,L]\n'
         )
         write_htaccess_custom(thunderbird_root, redirect_rules)
 
