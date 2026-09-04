@@ -1,0 +1,179 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "includes/base/page.html" %}
+
+{% block page_title %}{{ _('Technical Specifications') }}{% endblock %}
+{% block page_desc %}{{ _('Technical specifications for the Thundermail subscription.') }}{% endblock %}
+
+{% block extra_css %}
+<link href="{{ static('css/plain.css') }}" rel="stylesheet" type="text/css" />
+<style>
+  th {
+    text-align: left;
+    vertical-align: top;
+  }
+</style>
+{% endblock %}
+
+{% block masthead %}
+<h1>{{ _('Technical Specifications') }}</h1>
+{% endblock %}
+
+{% block overview %}
+<div class="top-level primary-block">
+  <div id="plain-page">
+    <h2 id="page-header">{{ _('Thundermail Subscription Technical Specs') }}</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{{ _('Category') }}</th>
+          <th scope="col">{{ _('Feature') }}</th>
+          <th scope="col">{{ _('Detail') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="rowgroup" rowspan="8">{{ _('Thundermail') }}</th>
+          <th scope="row">{{ _('Protocols') }}</th>
+          <td>{{ _('Supports IMAP4rev1/rev2 over TLS, authenticated SMTP submission, and JMAP for Mail (RFC 8621) over HTTPS. JMAP batches operations and supports push updates, reducing round trips on high-latency connections.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Inbox model') }}</th>
+          <td>{{ _('Aliases and custom-domain addresses map to one mailbox rather than separate accounts. Use server-side Sieve rules or client filters to sort messages by recipient address.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Spam detection') }}</th>
+          <td>{{ _('Powered by Stalwart; classifies inbound mail server-side using rules, reputation signals, and statistical analysis. Thundermail tunes the scoring to reduce false positives.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Webmail') }}</th>
+          <td>{{ _('Open-source (MPL 2.0) JMAP web client with a browser-local SQLite cache backed by IndexedDB. Early alpha became available in July 2026.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('SMTP Mail Relay') }}</th>
+          <td>{{ _('Authenticated SMTP submission is available on port 465 with implicit TLS and port 587 with STARTTLS. App passwords let clients, devices, and services send without using the main account password.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Server-side Filtering') }}</th>
+          <td>{{ _('Supports ManageSieve (RFC 5804) for uploading and activating server-side Sieve scripts from a compatible client. Rules execute at delivery time, even while your mail clients are offline.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Unlimited calendars') }}</th>
+          <td>{{ _('No plan-level limit on calendar count. Synchronize via CalDAV (RFC 4791) or JMAP for Calendars, whose event model is JSCalendar; the JMAP calendar extension is currently an IETF Internet-Draft.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Unlimited contacts') }}</th>
+          <td>{{ _('No plan-level limit on contact count. Synchronize via CardDAV (RFC 6352) or JMAP for Contacts (RFC 9610), whose ContactCard objects use the JSContact format (RFC 9553).') }}</td>
+        </tr>
+
+        <tr>
+          <th scope="rowgroup" rowspan="3">{{ _('Addresses & domains') }}</th>
+          <th scope="row">{{ _('Custom domains') }}</th>
+          <td>{{ _('Bring up to three domains. Setup is guided, but DNS remains customer-managed: activation requires MX plus three hosted-DKIM CNAMEs; the wizard also supplies SPF, DMARC, service-discovery SRV, MTA-STS, and TLS-RPT records.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Aliases') }}</th>
+          <td>{{ _('Aliases are additional delivery addresses on the same mailbox, not separate accounts. A matching @tb.pro address is provisioned automatically with your primary @thundermail.com address; custom-domain addresses are managed separately.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Catch-all aliases and + addressing') }}</th>
+          <td>{{ _('Create one catch-all per verified custom domain to receive mail for otherwise undefined local parts. Catch-all is not available on the shared @thundermail.com or @tb.pro domains.') }}</td>
+        </tr>
+
+        <tr>
+          <th scope="rowgroup" rowspan="8">{{ _('Appointment') }}</th>
+          <th scope="row">{{ _('External calendar connection') }}</th>
+          <td>{{ _('Connect a CalDAV account by server URL and credentials. Appointment performs service discovery, reads busy time, and writes confirmed bookings back to the source calendar; it is scheduling integration, not full calendar replication.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Availability rules') }}</th>
+          <td>{{ _('Recurring weekly rules support multiple time ranges per weekday and a selected time zone. One-off date overrides and blackout dates are not currently supported.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Booking window') }}</th>
+          <td>{{ _('Choose immediate, 12-hour, or 1-5-day minimum notice and a 1-4-week booking horizon. Bounds use elapsed clock time, not business-day calculations.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Meeting duration') }}</th>
+          <td>{{ _('Each schedule uses one fixed duration: 15, 30, 45, 60, 75, or 90 minutes. Slots are generated back-to-back after conflict filtering.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Unified view') }}</th>
+          <td>{{ _('The week view overlays connected-calendar events, pending booking requests, and computed free slots. Manage your scheduled bookings without accidentally editing your calendar items.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Booking management') }}</th>
+          <td>{{ _('Owners can approve or decline requests, enable automatic confirmation, and cancel bookings. Rescheduling and modification are not yet supported.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Booking link') }}</th>
+          <td>{{ _('Public booking pages require no visitor account and use a customizable, rotatable apt.mt slug; rotating it invalidates the previous URL.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Video meetings') }}</th>
+          <td>{{ _('Zoom connects through OAuth; each confirmed booking can create a distinct Zoom meeting and join URL. A static meeting URL is also supported; Google Meet integration is currently being developed.') }}</td>
+        </tr>
+
+        <tr>
+          <th scope="rowgroup" rowspan="2">{{ _('Storage') }}</th>
+          <th scope="row">{{ _('Mail storage') }}</th>
+          <td>{{ _('The Early Bird plan includes 30 GB per inbox; internally this is a 30 GiB Stalwart quota, with usage reported by the mail server.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Send storage') }}</th>
+          <td>{{ _('The Early Bird plan includes 60 GB of Send storage (60,000,000,000 bytes), with a 20 GB maximum per file.') }}</td>
+        </tr>
+
+        <tr>
+          <th scope="rowgroup" rowspan="2">{{ _('Bundled services') }}</th>
+          <th scope="row">{{ _('Appointment') }}</th>
+          <td>{{ _('Appointment is included with the subscription, providing availability sharing and self-service scheduling to reduce booking coordination by email.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Send') }}</th>
+          <td>{{ _('Send is included for end-to-end encrypted file sharing. Before upload, every file is encrypted with a unique 256-bit AES-GCM key; that key is wrapped with a per-folder 256-bit AES-KW key, and neither is stored in plaintext on the server.') }}</td>
+        </tr>
+
+        <tr>
+          <th scope="rowgroup" rowspan="3">{{ _('Privacy & security') }}</th>
+          <th scope="row">{{ _('Data hosting') }}</th>
+          <td>{{ _('All of your Thundermail data, including messages, calendars, contacts, Appointment bookings, and Send files, is stored on infrastructure located in Germany.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('App passwords') }}</th>
+          <td>{{ _('Managed from the account dashboard. OAuth2-capable clients use Thunderbird Accounts sign-in. Legacy clients share one replaceable app password, stored only as an Argon2 hash; replacing it invalidates every client using it, and plaintext cannot be recovered.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('2-Factor Authentication') }}</th>
+          <td>{{ _('Protect your account with authenticator-app TOTP (RFC 6238) and one-time recovery codes. SMS and email recovery are not supported.') }}</td>
+        </tr>
+
+        <tr>
+          <th scope="rowgroup" rowspan="5">{{ _('Access & setup') }}</th>
+          <th scope="row">{{ _('Thunderbird desktop') }}</th>
+          <td>{{ _('Beginning with Thunderbird 153 ESR, Account Hub provides one-click OAuth2 setup. The integration ships as a bundled system extension, so no separate add-on install is required; mail still uses IMAP and SMTP over TLS.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Mobile apps') }}</th>
+          <td>{{ _('Thunderbird for Android connects over IMAP and SMTP with TLS and OAuth2. JMAP support on Android is not yet shipped.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Webmail') }}</th>
+          <td>{{ _('Access webmail from the account dashboard using Thunderbird Accounts/OIDC; no client configuration or app password is required.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Third-party clients') }}</th>
+          <td>{{ _('Use IMAP on port 993 plus SMTP on port 465 over TLS, or JMAP Mail/Submission over HTTPS on port 443. OAuth2 is preferred; app passwords support legacy clients. POP is not offered.') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">{{ _('Onboarding') }}</th>
+          <td>{{ _('The dashboard QR code imports TLS, OAuth2, server, username, and identity settings into Thunderbird for Android; it embeds no password or token. Thunderbird 153+ uses Account Hub for one-click desktop setup; custom-domain DNS remains guided and manual.') }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
