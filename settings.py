@@ -284,7 +284,7 @@ URL_MAPPINGS = {
     'mozwiki.support-languages': 'https://wiki.mozilla.org/Thunderbird/Support/Community_support_based_on_languages',
     'mzla.blog-post': 'https://blog.thunderbird.net/2020/01/thunderbirds-new-home/',
     'participate.desktop.docs': 'https://developer.thunderbird.net/',
-    'participate.desktop.repo': 'https://developer.thunderbird.net/thunderbird-development/getting-started',
+    'participate.desktop.repo': 'https://github.com/thunderbird/thunderbird-desktop',
     'participate.desktop.matrix': 'https://matrix.to/#/#maildev:mozilla.org',
     'participate.android.docs': 'https://github.com/thunderbird/thunderbird-android/tree/main/docs',
     'participate.android.repo': 'https://github.com/thunderbird/thunderbird-android',
