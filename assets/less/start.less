@@ -5,140 +5,62 @@
 @import "base/font-faces.less";
 
 :root {
-  --red-10: #fee2e2;
-  --red-20: #fecaca;
-  --red-30: #fca5a5;
-  --red-40: #f87171;
-  --red-50: #ef4444;
-  --red-60: #dc2626;
-  --red-70: #b91c1c;
-  --red-80: #991b1b;
-  --red-90: #7f1d1d;
-
-  --orange-10: #ffedd5;
-  --orange-20: #fed7aa;
-  --orange-30: #fdba74;
-  --orange-40: #fb923c;
-  --orange-50: #f97316;
-  --orange-60: #ea580c;
-  --orange-70: #c2410c;
-  --orange-80: #9a3412;
-  --orange-90: #7c2d12;
-
-  --amber-10: #fef3c7;
-  --amber-20: #fde68a;
-  --amber-30: #fcd34d;
-  --amber-40: #fbbf24;
-  --amber-50: #f59e0b;
-  --amber-60: #d97706;
-  --amber-70: #b45309;
-  --amber-80: #92400e;
-  --amber-90: #78350f;
-
-  --yellow-10: #fef9c3;
-  --yellow-20: #fef08a;
-  --yellow-30: #fde047;
-  --yellow-40: #facc15;
-  --yellow-50: #eab308;
-  --yellow-60: #ca8a04;
-  --yellow-70: #a16207;
-  --yellow-80: #854d0e;
-  --yellow-90: #713f12;
-
-  --green-10: #dcfce7;
-  --green-20: #bbf7d0;
-  --green-30: #86efac;
-  --green-40: #4ade80;
-  --green-50: #22c55e;
-  --green-60: #16a34a;
-  --green-70: #15803d;
-  --green-80: #166534;
-  --green-90: #14532d;
-
-  --teal-10: #cdfaf7;
-  --teal-20: #9ff4f0;
-  --teal-30: #62e9e6;
-  --teal-40: #27d3d6;
-  --teal-50: #0db7bd;
-  --teal-60: #0a929d;
-  --teal-70: #0e757f;
-  --teal-80: #135e67;
-  --teal-90: #144e56;
-
-  --blue-10: #ddeefe;
-  --blue-20: #bce0fd;
-  --blue-30: #88ccfc;
-  --blue-40: #4cb1f9;
-  --blue-50: #2493ef;
-  --blue-60: #1373d9;
-  --blue-70: #105bbc;
-  --blue-80: #124c9a;
-  --blue-90: #15427c;
-
-  --purple-10: #f3e8ff;
-  --purple-20: #e9d5ff;
-  --purple-30: #d8b4fe;
-  --purple-40: #c084fc;
-  --purple-50: #a855f7;
-  --purple-60: #9333ea;
-  --purple-70: #7e22ce;
-  --purple-80: #6b21a8;
-  --purple-90: #581c87;
-
-  --magenta-10: #fbe7f9;
-  --magenta-20: #f8cff3;
-  --magenta-30: #f4a9e8;
-  --magenta-40: #ee75d7;
-  --magenta-50: #e247c4;
-  --magenta-60: #cd26a5;
-  --magenta-70: #b01a86;
-  --magenta-80: #91186e;
-  --magenta-90: #79195c;
-
-  --brown-10: #f4e9d7;
-  --brown-20: #efdfc4;
-  --brown-30: #e4cdab;
-  --brown-40: #d7bc96;
-  --brown-50: #b6986c;
-  --brown-60: #96764b;
-  --brown-70: #755b38;
-  --brown-80: #51412c;
-  --brown-90: #47341f;
-
-  --grey-05: #fafafa;
-  --grey-10: #f4f4f5;
-  --grey-20: #e4e4e7;
-  --grey-30: #d4d4d8;
-  --grey-40: #a1a1aa;
-  --grey-50: #71717a;
-  --grey-60: #52525b;
-  --grey-70: #3f3f46;
-  --grey-80: #27272a;
-  --grey-90: #18181b;
-
-  --ink-10: #f1f3fa;
-  --ink-20: #e3e5f2;
-  --ink-30: #cdd0e5;
-  --ink-40: #9b9ec2;
-  --ink-50: #6e6f9b;
-  --ink-60: #52507c;
-  --ink-70: #3e3c67;
-  --ink-80: #2a284b;
-  --ink-90: #1a1838;
-
   --font-content: 'Inter' , X-LocaleSpecific, sans-serif;
   --font-heading: 'Metropolis', X-LocaleSpecific, sans-serif;
-  --background-image: url('/media/img/thunderbird/backgrounds/bg-start-2026-light.webp');
 
-  --border: var(--grey-20);
-  --text: var(--ink-80);
+  --colour-ti-base: #18181b;
+  --colour-ti-base-inverted: #F7F7F8;
+  --colour-ti-brand: #19518F;
+  --colour-ti-muted: #71717A;
+  --colour-ti-secondary: #52525B;
+  --colour-surface-border: #D9D9DE;
+  --colour-surface-raised: #FFF;
+
+  --freedom-gradient: linear-gradient(90deg, #204170 0%, #315F9F 100%);
+
+  // Release channel tag
+  --release-channel-bg: #fff;
+  --release-channel-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+  --release-channel-border: none;
+
+  // Donate button
+  --donate-border-colour: #072C4E;
+  --donate-text-colour: #204170;
+  --donate-btn-bg-colour: linear-gradient(0deg, #204170 0%, #4279C7 100%);
+  --donate-heart-fill: #FF6190;
+  --donate-heart-stroke: var(--colour-ti-base-inverted);
+
+  --box-bg: rgba(255, 255, 255, 0.9);
   --shadow: 0px 2px 4px 0px #0000001F;
+
+  --background-image: url('/media/img/thunderbird/backgrounds/bg-start-2026-light.webp');
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: var(--grey-05);
-    --border: var(--grey-70);
+    --colour-ti-base: #F7F7F8;
+    --colour-ti-base-inverted: #18181B;
+    --colour-ti-brand: #5FA6E8;
+    --colour-ti-muted: #A1A1AA;
+    --colour-ti-secondary: #D4D4D8;
+    --colour-surface-border: #52525B;
+    --colour-surface-raised: #2B2B2F;
+
+    --freedom-gradient: linear-gradient(90deg, #67C0DE 0%, #D4F6FE 100%);
+
+    // Release channel tag
+    --release-channel-bg: rgba(0, 6, 22, 0.80);
+    --release-channel-shadow: none;
+    --release-channel-border: 1px solid var(--colour-surface-border);
+
+    // Donate button
+    --donate-border-colour: #2C6D99;
+    --donate-text-colour: #C2E0EA;
+    --donate-btn-bg-colour: linear-gradient(0deg, #65D8FF 0%, #C7E9F5 100%);
+    --donate-heart-fill: #FF6190;
+    --donate-heart-stroke: var(--colour-ti-base-inverted);
+
+    --box-bg: rgba(0, 6, 22, 0.90);
     --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 
     --background-image: url('/media/img/thunderbird/backgrounds/bg-start-2026-dark.webp');
@@ -163,7 +85,7 @@ body {
   max-width: 100%;
   padding: 0;
   background-color: #f3f9fb;
-  color: var(--text);
+  color: var(--colour-ti-base);
   line-height: 1.5;
   position: relative;
   background-image: var(--background-image);
@@ -189,12 +111,14 @@ h3 {
     margin: 0;
     padding: 0;
   }
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   min-height: 100vh;
   padding-inline: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   a {
     color: #60a5fa;
     text-decoration: underline dotted;
@@ -202,14 +126,17 @@ h3 {
 
   #release-channel {
     display: block;
-    background-color: #fff;
+    background-color: var(--release-channel-bg);
+    color: var(--colour-ti-base);
     padding: 0.75rem 2rem;
     border-bottom-right-radius: 36px;
     border-bottom-left-radius: 36px;
     font-size: 0.8rem;
     font-weight: 600;
     height: 46px;
-    box-shadow: 0px 1px 2px 0px #0000001A;
+    box-shadow: var(--release-channel-shadow);
+    border: var(--release-channel-border);
+    border-block-start: none;
   }
 
   header {
@@ -227,7 +154,7 @@ h3 {
       margin-block-end: 1rem;
 
       .gradient-text {
-        background: linear-gradient(90deg, #204170 0%, #315F9F 100%);
+        background: var(--freedom-gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -242,7 +169,7 @@ h3 {
       font-size: 1rem;
       font-weight: 400;
       line-height: 1.5;
-      color: var(--grey-90);
+      color: var(--colour-ti-base);
       margin: 0 auto 2rem;
     }
 
@@ -255,15 +182,15 @@ h3 {
       width: min-content;
       height: 48px;
       text-decoration: none;
-      color: #F7F7F8;
+      color: var(--colour-ti-base-inverted);
       font-family: var(--font-heading);
       font-weight: 700;
       font-size: 1.25rem;
       padding: 1rem 1.25rem 0.75rem;
-      background: linear-gradient(360deg, #204170 0%, #4279C7 100%);
+      background: var(--donate-btn-bg-colour);
       border-width: 0 2px 4px 2px;
       border-style: solid;
-      border-color: #072C4E;
+      border-color: var(--donate-border-colour);
       border-radius: 48px;
       margin: 0 auto 0.75rem;
     }
@@ -273,7 +200,7 @@ h3 {
       font-weight: 600;
       font-size: 0.9375rem;
       line-height: 20px;
-      color: #204170;
+      color: var(--donate-text-colour);
       margin-block-end: 2rem;
     }
   }
@@ -285,8 +212,8 @@ h3 {
     padding: 1.5rem 0;
 
     .feature-box {
-      background-color: rgba(255, 255, 255, 0.9);
-      border: 1px solid #D9D9DE;
+      background-color: var(--box-bg);
+      border: 1px solid var(--colour-surface-border);
       border-radius: 28px;
       padding: 2.5rem 2.5rem 1.75rem 2.5rem;
       box-shadow: var(--shadow);
@@ -295,7 +222,7 @@ h3 {
         font-size: 1.5rem;
         font-family: var(--font-heading);
         font-weight: 700;
-        color: var(--grey-90);
+        color: var(--colour-ti-base);
         margin-bottom: 0.5rem;
 
         &.m-b-lg {
@@ -307,7 +234,7 @@ h3 {
         font-family: var(--font-heading);
         font-size: 0.875rem;
         font-weight: 600;
-        color: var(--grey-50);
+        color: var(--colour-ti-muted);
         margin-block-end: 1.5rem;
       }
 
@@ -315,19 +242,19 @@ h3 {
         font-family: var(--font-content);
         font-size: 1rem;
         line-height: 24px;
-        color: var(--grey-60);
+        color: var(--colour-ti-secondary);
         margin-block-end: 1.5rem;
 
         a {
           text-decoration: none;
-          color: #19518F;
+          color: var(--colour-ti-brand);
           font-weight: 700;
         }
       }
 
       ul {
         padding-left: 1.25rem;
-        color: var(--grey-60);
+        color: var(--colour-ti-secondary);
 
         li {
           margin-block-end: 0.5rem;
@@ -346,10 +273,10 @@ h3 {
         align-items: center;
         gap: 0.5rem;
         padding: 0.625rem 1rem;
-        border: 1px solid #D9D9DE;
+        border: 1px solid var(--colour-surface-border);
         border-radius: 100px;
-        color: var(--grey-90);
-        background-color: #FFF;
+        color: var(--colour-ti-base);
+        background-color: var(--colour-surface-raised);
         font-weight: 700;
         font-size: 0.875rem;
         text-decoration: none;
@@ -357,6 +284,7 @@ h3 {
         svg {
           height: 1.25rem;
           width: auto;
+          color: inherit;
         }
       }
     }
@@ -365,9 +293,9 @@ h3 {
   footer {
     margin-block: 1.5rem 4rem;
     padding: 1.25rem 2.5rem;
-    border: 1px solid #D9D9DE;
+    border: 1px solid var(--colour-surface-border);
     border-radius: 28px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--box-bg);
     font-size: 1rem;
     font-family: var(--font-content);
     line-height: 24px;
@@ -378,7 +306,7 @@ h3 {
       text-decoration: none;
 
       strong {
-        color: #19518F;
+        color: var(--colour-ti-brand);
         font-weight: 600;
       }
     }
@@ -389,6 +317,7 @@ h3 {
 @media (min-width: 768px) {
   #start-page {
     .features {
+      flex-direction: row;
       padding: 1.5rem 4.5rem;
     }
   }
@@ -397,8 +326,6 @@ h3 {
 @media (min-width: 1280px) {
   #start-page {
     .features {
-      flex-direction: row;
-
       .feature-box {
         max-width: 25.31rem;
       }
