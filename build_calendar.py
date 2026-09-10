@@ -1,19 +1,6 @@
-#!/usr/bin/python
-import json
-import sys
-from datetime import datetime, UTC
-import os
-import time
 
-import icalendar
-import requests
-
-import helper
 import settings
 
-from calgen.mixins import GlobalHolidays
-from calgen.models.Calendar import CalendarTypes
-from calgen.providers.Provider import Provider
 
 
 def mixin_events(ical, locale: str):
