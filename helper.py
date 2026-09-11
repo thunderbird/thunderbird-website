@@ -494,20 +494,20 @@ def thunderbird_url(page, channel=None):
 
 
 @jinja2.pass_context
-def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign='donation_2023', show_donation_modal=True, download=None, download_channel=None, form_id=settings.FRU_FORM_IDS['support'], base_url=None):
+def donate_url(ctx, content='', source='thunderbird.net', medium='fru', campaign='donation_2023', include_form_id=True, download=None, download_channel=None, form_id=settings.FRU_FORM_IDS['support'], base_url=None):
     """Forms a donation url with the given parameters. If you pass in None for any of the fields they will be excluded from the url
     :param ctx: Jinja context
     :param content: UTM Content tag
     :param source: UTM Source tag
     :param medium: UTM Medium tag
     :param campaign: UTM Campaign tag
-    :param show_donation_modal: Whether we want to append form=support that will automatically load the FRU modal
+    :param include_form_id: Whether we want to append form=<form_id> to the url, which the FRU form uses to automatically load a specific form
     :param download: Whether we have already downloaded Thunderbird (Download button specific.) Boolean or None.
     :param download_channel: What download channel to append to the url (Download button specific.) String or None.
     :param form_id: The id code that opens a specific form. Defaults to 'support'
     """
     form = None
-    if show_donation_modal:
+    if include_form_id:
         form = form_id
 
     query = {
