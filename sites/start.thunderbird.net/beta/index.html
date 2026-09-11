@@ -4,10 +4,11 @@
 
 {% extends "_base-resp.html" %}
 
-{% set fru_form_id = fru_form_id|default('desktop') %}
+{% set fru_form_id = fru_form_id|default('start26') %}
 {% set utm_campaign = utm_campaign|default('main') %}
-{% set utm_medium = utm_medium|default('desktop') %}
-{% set utm_source = utm_source|default('start_page_tb_beta') %}
+{% set utm_medium = utm_medium|default('start_page_tb_beta') %}
+{% set utm_source = utm_source|default('desktop') %}
+{% set utm_content = utm_content|default('cta_start26b_meadow') %}
 
 {% block channel %}beta{% endblock %}
 {% block title %}{{ _('Sharing Freedom – Thunderbird') }}{% endblock %}
@@ -21,7 +22,7 @@
 <header>
   <h1>{{ _('Sharing <span class="gradient-text">Freedom</span>') }}</h1>
   <p class="tagline">{{ _('Thunderbird is a gift from thousands of people like you. By using our Beta release and reporting issues, you contribute to that gift of productivity, privacy, and freedom to the world. Thank you!') }}</p>
-  <a class="donate-btn" href="#">
+  <a class="donate-btn" href={{ redirect_donate_url(form_id=fru_form_id, campaign=utm_campaign, medium=utm_medium, source=utm_source, content=utm_content, location='thunderbird.donate', include_form_id=True) }}>
     {{ svg('start/donate-heart') }} {{ _('Donate') }}
   </a>
   <p class="donate-text">{{ _('Help keep Thunderbird alive!') }}</p>
@@ -59,7 +60,7 @@
 
 <footer>
   {% block footer_content %}
-    {{ _('Have you tried <a href="%(donate_url)s"><strong>Thunderbird Mobile</strong></a> for Android?') | format(donate_url=redirect_donate_url(form_id=fru_form_id, campaign=utm_campaign, medium=utm_medium, source=utm_source, content='link', location='thunderbird.donate.form.desktop', show_donation_modal=False)) }}
+    {{ _('Have you tried <a href="%(mobile_url)s"><strong>Thunderbird Mobile</strong></a> for Android?') | format(mobile_url='https://www.thunderbird.net/mobile/?utm_campaign=main&utm_medium=desktop&utm_source=start_page_tb_release&utm_content=link') }}
   {% endblock %}
 </footer>
 {% endblock %}
