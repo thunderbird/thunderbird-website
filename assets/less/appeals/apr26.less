@@ -691,4 +691,19 @@ body {
       transform: translateY(0) !important;
     }
   }
+
+  // ==========================================
+  // Pause animations while the tab isn't visible or focused
+  // ==========================================
+
+  &.tab-inactive {
+    #appeal-body {
+      animation-play-state: paused;
+
+      #cloud div::before,
+      #cloud div::after {
+        animation-play-state: paused;
+      }
+    }
+  }
 }

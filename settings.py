@@ -471,7 +471,8 @@ UPDATES_JS = {
         # Necessary for the download button to select the correct platform.
         'js/base/site.js',
         # Load bearing order..Donation must come before AB testing.
-        'js/common/donations.js', 'js/common/ab-testing.js', 'js/common/donation-notice.js'
+        'js/common/donations.js', 'js/common/ab-testing.js', 'js/common/donation-notice.js',
+        'js/common/animation-visibility.js'
     ]
 }
 
@@ -712,6 +713,12 @@ WEBSITE_REDIRECTS = {
     ('thunderbird', '128.0', 'releasenotes'): 'thunderbird.128esr.releasenotes',
     ('thunderbird', '140.0esr', 'whatsnew'): 'updates.140.whatsnew',
     ('thunderbird', '140.0', 'whatsnew'): 'updates.140.whatsnew',
+    ('thunderbird', '153.0esr', 'whatsnew'): 'updates.153.whatsnew',
+    ('thunderbird', '153.0', 'whatsnew'): 'updates.153.whatsnew',
+}
+
+TBPRO_REDIRECTS = {
+    'thundermail': 'tbpro.home',
 }
 
 # Similar to website redirects but for UTN
