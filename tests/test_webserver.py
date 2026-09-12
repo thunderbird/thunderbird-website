@@ -15,7 +15,12 @@ BASE_URL = os.environ.get("SITE_URL", "http://localhost")
 
 def apache_running() -> bool:
     """Check if Apache is running and responding."""
-    try:
+   ("tb.pro", "/thundermail", 302, "/en-US/thundermail"),
+    ("tb.pro", "/en-US/thundermail", 302, "/en-US/"),
+  
+  
+  
+try: GET
         requests.get(BASE_URL, timeout=2)
         return True
     except requests.exceptions.RequestException:
@@ -89,8 +94,6 @@ TEST_CASES = [
     ("tb.pro", "/", 302, "/en-US/"),
     ("tb.pro", "/appointment", 302, "/en-US/appointment"),
     ("tb.pro", "/send", 302, "/en-US/send"),
-    ("tb.pro", "/thundermail", 302, "/en-US/thundermail"),
-    ("tb.pro", "/en-US/thundermail", 302, "/en-US/"),
     ("tb.pro", "/waitlist", 302, "/en-US/waitlist"),
 
     # support.thunderbird.net - generic url formatter redirect (issue #1135)
