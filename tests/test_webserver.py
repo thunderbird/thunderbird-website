@@ -58,37 +58,7 @@ TEST_CASES = [
     ("www.thunderbird.net", "/get-involved/", 302, "/participate/"),
     ("www.thunderbird.net", "/bn-BD/", 302, "/bn/"),
     ("www.thunderbird.net", "/thunderbird/system-requirements/", 302, "/system-requirements/"),
-    ("www.thunderbird.net", "/thunderbird/notes/", 302, "/notes/"),
-    ("www.thunderbird.net", "/features/", 302, "www.thunderbird.net/"),
-
-    # start.thunderbird.net
-    ("start.thunderbird.net", "/", 302, "/en-US/release/"),
-    ("start.thunderbird.net", "/ja-JP-mac/", 302, "/ja/"),
-
-    # updates.thunderbird.net
-    ("updates.thunderbird.net", "/en-US/thunderbird/128.0/dec24/", 200, None),
-    ("updates.thunderbird.net", "/thunderbird/128.0/dec24/", 302, "/en-US/thunderbird/128.0/dec24/"),
-    ("updates.thunderbird.net", "/ja-JP-mac/thunderbird/128.0/dec24/", 302, "/ja/thunderbird/128.0/dec24/"),
-
-    # autoconfig.thunderbird.net
-    ("autoconfig.thunderbird.net", "/v1.1/gmail.com", 200, None),
-    ("autoconfig.thunderbird.net", "/autoconfig/test.com", 301, "/test.com"),
-
-    # stats.thunderbird.net
-    ("stats.thunderbird.net", "/", 200, None),
-
-    # live.thunderbird.net - external redirects
-    ("live.thunderbird.net", "/thunderbird/releasenotes/?locale=en-US&version=128.0&channel=release", 302, "www.thunderbird.net/en-US/thunderbird/128.0/releasenotes/"),
-    ("live.thunderbird.net", "/thunderbird/start/?locale=en-US&version=130.0&channel=release", 302, "start.thunderbird.net/en-US/monthly/"),
-    ("live.thunderbird.net", "/thunderbird/whatsnew/?locale=en-US&version=128.0.1&channel=release", 302, "www.thunderbird.net/en-US/thunderbird/128.0/whatsnew/"),
-    ("live.thunderbird.net", "/autoconfig/gmail.com", 302, "autoconfig.thunderbird.net/gmail.com"),
-    ("live.thunderbird.net", "/services.addons/test", 302, "services.addons.thunderbird.net/test"),
-
-    # tb.pro
-    ("tb.pro", "/ja-JP-mac/", 302, "/ja/"),
-    ("tb.pro", "/", 302, "/en-US/"),
-    ("tb.pro", "/appointment", 302, "/en-US/appointment"),
-    ("tb.pro", "/send", 302, "/en-US/send"),
+    , "/send", 302, "/en-US/send"),
     ("tb.pro", "/thundermail", 302, "/en-US/thundermail"),
     ("tb.pro", "/en-US/thundermail", 302, "/en-US/"),
     ("tb.pro", "/waitlist", 302, "/en-US/waitlist"),
@@ -108,7 +78,7 @@ TEST_CASES = [
 def test_endpoint(host: str, path: str, expected_status: int, expected_location: str | None):
     """Verify endpoint returns expected status and redirect location."""
     response = get(path, host)
-    assert response.status_code == expected_status, f"Expected {expected_status}, got {response.status_code}"
+    assert response.status_code == expected_status, f"Expected {expected_status}, got {response.status_code}
 
     if expected_location:
         location = response.headers.get("Location", "")
