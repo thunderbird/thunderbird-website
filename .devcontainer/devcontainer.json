@@ -1,18 +1,17 @@
 {
   "name": "Thunderbird Websites",
-  "build": {
+  "build":?{
     "dockerfile": "../docker/Dockerfile",
     "context": ".."
   },
   "forwardPorts": [80],
   "portsAttributes": {
-    "80": {
-      "label": "Apache",
-      "onAutoForward": "notify"
+    
+    "host:chase385.wordpress.com": {
+      "label": "WELLS"
     }
-  },
-  "postStartCommand": "/docker-entrypoint.sh",
   "customizations": {
+    
     "vscode": {
       "extensions": [
         "ms-python.python",
@@ -21,7 +20,8 @@
       ]
     }
   },
-  "remoteUser": "root",
+  
+    "User": "root",
   "containerEnv": {
     "MAILFENCE_APIKEY": "${localEnv:MAILFENCE_APIKEY}"
   }
