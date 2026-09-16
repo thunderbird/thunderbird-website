@@ -31,9 +31,12 @@ SimpleHTTPRequestHandler = http.server.SimpleHTTPRequestHandler
 from dateutil.parser import parse
 from jinja2 import Environment, FileSystemLoader
 from libs.thunderbird_notes import releasenotes
+from markdown.extensions import Extension
+from markdown.treeprocessors import Treeprocessor
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import urllib.parse
+import urllib.request
 
 extensions = ['jinja2.ext.i18n']
 
@@ -100,27 +103,103 @@ def delete_contents(dirpath):
                 os.remove(filepath)
 
 
+class DemoteHeadingsTreeprocessor(Treeprocessor):
+    """
+    Demotes every heading of a markdown document by one level, so that the document fits
+    below the <h1> of the page embedding it, and gives its title the id the stylesheets
+    address the page header by.
+    """
+    HEADINGS = ('h1', 'h2', 'h3', 'h4', 'h5', 'h6')
+    PAGE_HEADER_ID = 'page-header'
+
+    def run(self, root):
+        headings = [element for element in root.iter() if element.tag in self.HEADINGS]
+
+        for element in headings:
+            level = self.HEADINGS.index(element.tag) + 1
+            element.tag = self.HEADINGS[min(level, len(self.HEADINGS) - 1)]
+
+        if headings:
+            # Documents can name their own anchor, in which case we leave it alone.
+            headings[0].attrib.setdefault('id', self.PAGE_HEADER_ID)
+
+
+class DemoteHeadingsExtension(Extension):
+    """Markdown extension wrapping `DemoteHeadingsTreeprocessor`."""
+
+    def extendMarkdown(self, md):
+        # Runs after attr_list (priority 8) so that headings which declare their own
+        # attributes in the markdown source are demoted along with the rest.
+        md.treeprocessors.register(DemoteHeadingsTreeprocessor(md), 'demote_headings', 4)
+
+
 class Legal:
     """
     Legal building class
-    This will download the Thunderbird desktop privacy policy and place it in the includes directory.
-    Parameters:
-        `template_path` (str): Path to search for templates in.
+    This will download the legal documents (privacy policies, terms of service) that are
+    maintained outside of this repository and convert them to HTML includes the templates
+    can pull in.
+    The generated files are checked into the repository.
     """
-    def __init__(self, template_path: str):
-        self.template_path = template_path
+    GENERATED_WARNING = '{# THIS PAGE IS AUTOMATICALLY GENERATED, DO NOT EDIT THIS DOCUMENT! #}'
+
+    MARKDOWN_EXTENSIONS = ['markdown.extensions.attr_list', 'markdown.extensions.tables']
+
+    # Maps the include file the generated HTML is written to onto the source of the
+    # markdown document it is built from. Documents with `demote_headings` are embedded in
+    # a page that already provides its own <h1>.
+    DOCUMENTS = {
+        os.path.join(settings.WEBSITE_PATH, 'includes', 'privacy', 'privacy-desktop.html'): {
+            'source': settings.THUNDERBIRD_DESKTOP_PRIVACY_POLICY_URL,
+        },
+        os.path.join(settings.TBPRO_PATH, 'includes', 'legal', 'privacy.html'): {
+            'source': settings.TBPRO_PRIVACY_POLICY_URL,
+            'demote_headings': True,
+        },
+        os.path.join(settings.TBPRO_PATH, 'includes', 'legal', 'terms.html'): {
+            'source': settings.TBPRO_TERMS_OF_SERVICE_URL,
+            'demote_headings': True,
+        },
+    }
+
+    @staticmethod
+    def read_document(source: str):
+        """Read the markdown document from `source`, which is either an http(s) URL or,
+        to make local testing easier, a `file:` URL or a path to a local file."""
+        location = urllib.parse.urlparse(source)
+
+        if location.scheme in ('http', 'https'):
+            response = requests.get(source)
+            response.raise_for_status()
+            return response.text
+
+        if location.scheme == 'file':
+            source = urllib.request.url2pathname(location.path)
+
+        return read_file(source)
+
+    @classmethod
+    def convert(cls, contents: str, demote_headings: bool = False):
+        """Convert the markdown document in `contents` to HTML, optionally demoting its
+        headings to fit below the <h1> of the page embedding it."""
+        extensions = list(cls.MARKDOWN_EXTENSIONS)
+
+        if demote_headings:
+            extensions.append(DemoteHeadingsExtension())
+
+        return markupsafe.Markup(markdown.markdown(contents, extensions=extensions))
 
     def download(self):
-        directory = os.path.join(self.template_path, 'includes', 'privacy')
-        os.makedirs(directory, exist_ok=True)
+        for destination, document in self.DOCUMENTS.items():
+            source = document['source']
+            logger.info('Reading %s to %s', source, destination)
 
-        contents = requests.get(settings.THUNDERBIRD_DESKTOP_PRIVACY_POLICY_URL).text
-        html = markupsafe.Markup(markdown.markdown(contents, extensions=['markdown.extensions.attr_list']))
+            contents = self.read_document(source)
+            html = self.convert(contents, demote_headings=document.get('demote_headings', False))
 
-        html = f'{{# THIS PAGE IS AUTOMATICALLY GENERATED, DO NOT EDIT THIS DOCUMENT! #}}\n{html}'
-
-        with open(os.path.join(directory, 'privacy-desktop.html'), 'w') as fh:
-            fh.write(html)
+            os.makedirs(os.path.dirname(destination), exist_ok=True)
+            with open(destination, 'w') as fh:
+                fh.write(f'{self.GENERATED_WARNING}\n{html}')
 
 
 class Site(object):
