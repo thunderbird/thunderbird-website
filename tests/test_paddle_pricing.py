@@ -1,12 +1,22 @@
-"""Unit tests for Paddle pricing configuration, preview parsing, and formatting."""
+"""Unit tests for Paddle pricing configuration, preview parsing, and HTTP fetch."""
+
+from unittest import mock
 
 import pytest
+import requests
 
 from paddle_pricing import (
+    PADDLE_API_VERSION,
+    PADDLE_MAX_ATTEMPTS,
+    PADDLE_MAX_BUILD_RETRY_DELAY_SECONDS,
     PADDLE_PRODUCTION_API_BASE,
+    PADDLE_REQUEST_TIMEOUT,
+    PADDLE_RETRY_DELAY_SECONDS,
     PADDLE_SANDBOX_API_BASE,
+    PaddlePricingConfig,
     PaddlePricingError,
     annual_to_monthly_minor,
+    fetch_monthly_price,
     find_line_item,
     format_monthly_price,
     formatted_price_from_preview,
@@ -78,6 +88,30 @@ def preview_payload(
             'request_id': request_id,
         },
     }
+
+
+API_KEY = 'super-secret-key'
+
+
+def configured_config(environment='sandbox'):
+    return PaddlePricingConfig(
+        api_key=API_KEY,
+        environment=environment,
+        price_id=PRICE_ID,
+        country='US',
+        required=True,
+    )
+
+
+def fake_response(status_code=200, payload=None, headers=None, json_error=False):
+    response = mock.Mock()
+    response.status_code = status_code
+    response.headers = headers or {}
+    if json_error:
+        response.json.side_effect = ValueError('No JSON object could be decoded')
+    else:
+        response.json.return_value = payload
+    return response
 
 
 class TestParseConfig:
@@ -316,3 +350,198 @@ class TestFormattedPriceFromPreview:
         payload = preview_payload(currency='NOTACURRENCY')
         with pytest.raises(PaddlePricingError, match='currency'):
             formatted_price_from_preview(payload, PRICE_ID)
+
+
+class TestFetchMonthlyPrice:
+    def _assert_request(self, mock_post, base_url):
+        mock_post.assert_called()
+        args, kwargs = mock_post.call_args
+        assert args == ('{0}/pricing-preview'.format(base_url),)
+        assert kwargs['headers']['Authorization'] == 'Bearer {0}'.format(API_KEY)
+        assert kwargs['headers']['Paddle-Version'] == PADDLE_API_VERSION
+        assert kwargs['timeout'] == PADDLE_REQUEST_TIMEOUT
+        assert kwargs['json'] == {
+            'items': [{'price_id': PRICE_ID, 'quantity': 1}],
+            'address': {'country_code': 'US'},
+        }
+
+    def test_sandbox_url_headers_body_and_timeout(self):
+        mock_post = mock.Mock(return_value=fake_response(payload=preview_payload()))
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            price = fetch_monthly_price(configured_config('sandbox'))
+        assert price == '$6'
+        assert mock_post.call_count == 1
+        self._assert_request(mock_post, PADDLE_SANDBOX_API_BASE)
+
+    def test_production_url(self):
+        mock_post = mock.Mock(return_value=fake_response(payload=preview_payload()))
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            price = fetch_monthly_price(configured_config('production'))
+        assert price == '$6'
+        self._assert_request(mock_post, PADDLE_PRODUCTION_API_BASE)
+
+    def test_matches_price_that_is_not_first_line_item(self):
+        mock_post = mock.Mock(
+            return_value=fake_response(payload=preview_payload(extra_first=True))
+        )
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            assert fetch_monthly_price(configured_config()) == '$6'
+
+    def test_unconfigured_config_makes_no_request(self):
+        mock_post = mock.Mock()
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            with pytest.raises(PaddlePricingError, match='not fully configured'):
+                fetch_monthly_price(PaddlePricingConfig(
+                    api_key=None,
+                    environment=None,
+                    price_id=None,
+                    country=None,
+                    required=False,
+                ))
+        mock_post.assert_not_called()
+
+    def test_http_400_is_not_retried(self):
+        error_payload = {
+            'error': {'code': 'bad_request', 'detail': 'invalid'},
+            'meta': {'request_id': 'req-400'},
+        }
+        mock_post = mock.Mock(return_value=fake_response(status_code=400, payload=error_payload))
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                with pytest.raises(PaddlePricingError, match='HTTP 400') as exc_info:
+                    fetch_monthly_price(configured_config())
+        assert mock_post.call_count == 1
+        mock_sleep.assert_not_called()
+        assert 'request_id=req-400' in str(exc_info.value)
+        assert API_KEY not in str(exc_info.value)
+
+    def test_http_429_short_retry_after_sleeps_exactly_then_succeeds(self):
+        retry_after = PADDLE_MAX_BUILD_RETRY_DELAY_SECONDS
+        mock_post = mock.Mock(side_effect=[
+            fake_response(
+                status_code=429,
+                payload={'meta': {'request_id': 'req-429'}},
+                headers={'Retry-After': str(retry_after)},
+            ),
+            fake_response(payload=preview_payload()),
+        ])
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                assert fetch_monthly_price(configured_config()) == '$6'
+        assert mock_post.call_count == 2
+        mock_sleep.assert_called_once_with(retry_after)
+
+    def test_http_429_long_retry_after_is_not_retried(self):
+        mock_post = mock.Mock(return_value=fake_response(
+            status_code=429,
+            payload={'meta': {'request_id': 'req-429-long'}},
+            headers={'Retry-After': '60'},
+        ))
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                with pytest.raises(PaddlePricingError, match='HTTP 429') as exc_info:
+                    fetch_monthly_price(configured_config())
+        assert mock_post.call_count == 1
+        mock_sleep.assert_not_called()
+        assert 'request_id=req-429-long' in str(exc_info.value)
+        assert API_KEY not in str(exc_info.value)
+
+    @pytest.mark.parametrize('headers', [
+        {},
+        {'Retry-After': 'abc'},
+        {'Retry-After': '-1'},
+        {'Retry-After': 'nan'},
+        {'Retry-After': 'inf'},
+        {'Retry-After': '-inf'},
+    ])
+    def test_http_429_missing_or_malformed_retry_after_uses_backoff(self, headers):
+        mock_post = mock.Mock(side_effect=[
+            fake_response(
+                status_code=429,
+                payload={'meta': {'request_id': 'req-429'}},
+                headers=headers,
+            ),
+            fake_response(payload=preview_payload()),
+        ])
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                assert fetch_monthly_price(configured_config()) == '$6'
+        mock_sleep.assert_called_once_with(PADDLE_RETRY_DELAY_SECONDS)
+
+    def test_http_500_is_retried_then_succeeds(self):
+        mock_post = mock.Mock(side_effect=[
+            fake_response(status_code=500, payload={'meta': {'request_id': 'req-500'}}),
+            fake_response(payload=preview_payload()),
+        ])
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                assert fetch_monthly_price(configured_config()) == '$6'
+        assert mock_post.call_count == 2
+        mock_sleep.assert_called_once_with(PADDLE_RETRY_DELAY_SECONDS)
+
+    def test_timeout_retries_use_increasing_bounded_delays(self):
+        mock_post = mock.Mock(side_effect=requests.Timeout())
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                with pytest.raises(PaddlePricingError, match='timed out') as exc_info:
+                    fetch_monthly_price(configured_config())
+        assert mock_post.call_count == PADDLE_MAX_ATTEMPTS
+        assert mock_sleep.call_args_list == [
+            mock.call(PADDLE_RETRY_DELAY_SECONDS),
+            mock.call(PADDLE_RETRY_DELAY_SECONDS * 2),
+        ]
+        assert API_KEY not in str(exc_info.value)
+
+    def test_connection_failure_retries_use_increasing_bounded_delays(self):
+        mock_post = mock.Mock(side_effect=requests.ConnectionError())
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                with pytest.raises(PaddlePricingError, match='connection failed') as exc_info:
+                    fetch_monthly_price(configured_config())
+        assert mock_post.call_count == PADDLE_MAX_ATTEMPTS
+        assert mock_sleep.call_args_list == [
+            mock.call(PADDLE_RETRY_DELAY_SECONDS),
+            mock.call(PADDLE_RETRY_DELAY_SECONDS * 2),
+        ]
+        assert API_KEY not in str(exc_info.value)
+
+    def test_generic_request_exception_is_not_retried(self):
+        mock_post = mock.Mock(side_effect=requests.RequestException('upstream failed'))
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                with pytest.raises(PaddlePricingError, match='request failed') as exc_info:
+                    fetch_monthly_price(configured_config())
+        assert mock_post.call_count == 1
+        mock_sleep.assert_not_called()
+        assert API_KEY not in str(exc_info.value)
+
+    def test_exhausted_transient_http_failures_raise(self):
+        mock_post = mock.Mock(return_value=fake_response(
+            status_code=503,
+            payload={'meta': {'request_id': 'req-503'}},
+        ))
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                with pytest.raises(PaddlePricingError, match='HTTP 503') as exc_info:
+                    fetch_monthly_price(configured_config())
+        assert mock_post.call_count == PADDLE_MAX_ATTEMPTS
+        assert mock_sleep.call_args_list == [
+            mock.call(PADDLE_RETRY_DELAY_SECONDS),
+            mock.call(PADDLE_RETRY_DELAY_SECONDS * 2),
+        ]
+        assert 'request_id=req-503' in str(exc_info.value)
+        assert API_KEY not in str(exc_info.value)
+
+    def test_invalid_json_raises(self):
+        mock_post = mock.Mock(return_value=fake_response(json_error=True))
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            with pytest.raises(PaddlePricingError, match='invalid JSON') as exc_info:
+                fetch_monthly_price(configured_config())
+        assert API_KEY not in str(exc_info.value)
+
+    def test_invalid_successful_payload_raises(self):
+        mock_post = mock.Mock(return_value=fake_response(payload={'data': {}, 'meta': {'request_id': 'req-bad'}}))
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            with pytest.raises(PaddlePricingError, match='request_id=req-bad') as exc_info:
+                fetch_monthly_price(configured_config())
+        assert API_KEY not in str(exc_info.value)

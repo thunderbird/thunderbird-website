@@ -1,13 +1,17 @@
-"""Parse Paddle pricing configuration and format annual totals as monthly prices.
+"""Parse Paddle pricing configuration and retrieve formatted monthly prices.
 
-This module does not perform HTTP requests. Callers supply environment mappings,
-secret-file paths, and already-decoded Paddle preview payloads.
+Callers may supply already-decoded preview payloads or a configured
+PaddlePricingConfig used to POST /pricing-preview. This module does not
+apply local fallback behavior.
 """
 
+import math
+import time
 from dataclasses import dataclass
 from decimal import Decimal
 from pathlib import Path
 
+import requests
 from babel.core import Locale
 from babel.numbers import format_currency, get_currency_precision, list_currencies
 
@@ -20,10 +24,15 @@ PADDLE_ENVIRONMENTS = {
 }
 DISPLAY_LOCALE = 'en-US'
 MONTHS_PER_YEAR = 12
+PADDLE_API_VERSION = '1'
+PADDLE_REQUEST_TIMEOUT = 10
+PADDLE_MAX_ATTEMPTS = 3
+PADDLE_RETRY_DELAY_SECONDS = 0.5
+PADDLE_MAX_BUILD_RETRY_DELAY_SECONDS = 2
 
 
 class PaddlePricingError(Exception):
-    """Invalid Paddle configuration or preview payload."""
+    """Invalid Paddle configuration, request failure, or preview payload."""
 
     def __init__(self, message, request_id=None):
         self.request_id = request_id
@@ -275,3 +284,132 @@ def formatted_price_from_preview(payload, price_id):
         return format_monthly_price(monthly_minor, currency)
     except PaddlePricingError as exc:
         raise PaddlePricingError(str(exc), request_id=request_id) from exc
+
+
+def _is_retryable_status(status_code):
+    return status_code == 429 or 500 <= status_code <= 599
+
+
+def _backoff_delay(attempt):
+    """Return the bounded exponential delay after a retryable failure."""
+    return PADDLE_RETRY_DELAY_SECONDS * (2 ** attempt)
+
+
+def _parse_retry_after(response):
+    """Return a finite non-negative Retry-After in seconds, or None."""
+    raw = response.headers.get('Retry-After') if response is not None else None
+    if raw is None:
+        return None
+    try:
+        seconds = float(raw)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(seconds) or seconds < 0:
+        return None
+    return seconds
+
+
+def _delay_after_failure(attempt, response=None, status_code=None):
+    """Return seconds to wait before the next attempt, or None to stop.
+
+    A valid Retry-After longer than PADDLE_MAX_BUILD_RETRY_DELAY_SECONDS is
+    not capped. Retrying sooner would ignore Paddle's rate-limit window, and
+    sleeping for a long window would stall the static-site build, so the
+    request fails immediately instead.
+    """
+    if status_code == 429:
+        retry_after = _parse_retry_after(response)
+        if retry_after is not None:
+            if retry_after <= PADDLE_MAX_BUILD_RETRY_DELAY_SECONDS:
+                return retry_after
+            return None
+    return _backoff_delay(attempt)
+
+
+def _request_id_from_response(response):
+    try:
+        payload = response.json()
+    except ValueError:
+        return None
+    if not isinstance(payload, dict):
+        return None
+    return _request_id(payload)
+
+
+def _http_error(status_code, request_id=None):
+    return PaddlePricingError(
+        f'Paddle pricing preview failed (HTTP {status_code}).',
+        request_id=request_id,
+    )
+
+
+def fetch_monthly_price(config):
+    """POST /pricing-preview and return a formatted monthly price.
+
+    Requires a fully configured PaddlePricingConfig. Every request, HTTP,
+    JSON, or payload failure raises PaddlePricingError. Local fallback is
+    not applied here.
+    """
+    if not isinstance(config, PaddlePricingConfig) or not config.is_configured:
+        raise PaddlePricingError('Paddle pricing is not fully configured.')
+
+    url = '{0}/pricing-preview'.format(paddle_api_base_url(config.environment))
+    headers = {
+        'Authorization': 'Bearer {0}'.format(config.api_key),
+        'Paddle-Version': PADDLE_API_VERSION,
+        'Content-Type': 'application/json',
+    }
+    body = {
+        'items': [{'price_id': config.price_id, 'quantity': 1}],
+        'address': {'country_code': config.country},
+    }
+
+    last_error = None
+    for attempt in range(PADDLE_MAX_ATTEMPTS):
+        try:
+            response = requests.post(
+                url,
+                headers=headers,
+                json=body,
+                timeout=PADDLE_REQUEST_TIMEOUT,
+            )
+        except requests.Timeout as exc:
+            last_error = PaddlePricingError('Paddle pricing preview request timed out.')
+            if attempt + 1 >= PADDLE_MAX_ATTEMPTS:
+                raise last_error from exc
+            time.sleep(_backoff_delay(attempt))
+            continue
+        except requests.ConnectionError as exc:
+            last_error = PaddlePricingError('Paddle pricing preview connection failed.')
+            if attempt + 1 >= PADDLE_MAX_ATTEMPTS:
+                raise last_error from exc
+            time.sleep(_backoff_delay(attempt))
+            continue
+        except requests.RequestException as exc:
+            raise PaddlePricingError('Paddle pricing preview request failed.') from exc
+
+        request_id = _request_id_from_response(response)
+        if response.status_code == 200:
+            try:
+                payload = response.json()
+            except ValueError:
+                raise PaddlePricingError(
+                    'Paddle pricing preview returned invalid JSON (HTTP 200).',
+                    request_id=request_id,
+                ) from None
+            if not isinstance(payload, dict):
+                raise PaddlePricingError(
+                    'Paddle pricing preview returned invalid JSON (HTTP 200).',
+                    request_id=request_id,
+                )
+            return formatted_price_from_preview(payload, config.price_id)
+
+        last_error = _http_error(response.status_code, request_id=request_id)
+        if not _is_retryable_status(response.status_code) or attempt + 1 >= PADDLE_MAX_ATTEMPTS:
+            raise last_error
+        delay = _delay_after_failure(attempt, response, response.status_code)
+        if delay is None:
+            raise last_error
+        time.sleep(delay)
+
+    raise last_error
