@@ -1,5 +1,7 @@
-"""Unit tests for Paddle pricing configuration, preview parsing, and HTTP fetch."""
+"""Unit tests for Paddle pricing configuration, preview parsing, HTTP fetch, and fallback."""
 
+import logging
+import os
 from unittest import mock
 
 import pytest
@@ -23,6 +25,7 @@ from paddle_pricing import (
     paddle_api_base_url,
     parse_config,
     read_api_key,
+    resolve_monthly_price,
 )
 
 PRICE_ID = 'pri_01tbpropriceid000000000001'
@@ -91,6 +94,18 @@ def preview_payload(
 
 
 API_KEY = 'super-secret-key'
+MISSING_SECRET = '/definitely/missing/paddle_api_key'
+FALLBACK_PRICE = '$6'
+
+
+def configured_environ(required='0'):
+    return {
+        'PADDLE_API_KEY': API_KEY,
+        'PADDLE_ENV': 'sandbox',
+        'TBPRO_PADDLE_PRICE_ID': PRICE_ID,
+        'TBPRO_PADDLE_COUNTRY': 'US',
+        'TBPRO_PADDLE_REQUIRED': required,
+    }
 
 
 def configured_config(environment='sandbox'):
@@ -545,3 +560,193 @@ class TestFetchMonthlyPrice:
             with pytest.raises(PaddlePricingError, match='request_id=req-bad') as exc_info:
                 fetch_monthly_price(configured_config())
         assert API_KEY not in str(exc_info.value)
+
+
+class TestResolveMonthlyPrice:
+    def test_valid_fallback_is_returned_unchanged(self):
+        fallback = FALLBACK_PRICE
+        assert resolve_monthly_price(
+            fallback,
+            environ={},
+            secret_path=MISSING_SECRET,
+        ) is fallback
+
+    @pytest.mark.parametrize('fallback', [None, '', '   ', 6, True, ['$6']])
+    def test_empty_missing_or_non_string_fallback_is_rejected(self, fallback):
+        mock_post = mock.Mock()
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            with pytest.raises(PaddlePricingError, match='fallback_price'):
+                resolve_monthly_price(fallback, environ={}, secret_path=MISSING_SECRET)
+        mock_post.assert_not_called()
+
+    def test_unconfigured_optional_returns_fallback_and_makes_no_request(self):
+        mock_post = mock.Mock()
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            price = resolve_monthly_price(
+                FALLBACK_PRICE,
+                environ={},
+                secret_path=MISSING_SECRET,
+            )
+        assert price == FALLBACK_PRICE
+        mock_post.assert_not_called()
+
+    def test_unconfigured_required_raises_and_makes_no_request(self):
+        mock_post = mock.Mock()
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            with pytest.raises(PaddlePricingError, match='required') as exc_info:
+                resolve_monthly_price(
+                    FALLBACK_PRICE,
+                    environ={'TBPRO_PADDLE_REQUIRED': '1'},
+                    secret_path=MISSING_SECRET,
+                )
+        mock_post.assert_not_called()
+        assert API_KEY not in str(exc_info.value)
+
+    def test_partial_configuration_raises_and_makes_no_request(self):
+        mock_post = mock.Mock()
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            with pytest.raises(PaddlePricingError, match='Partial Paddle configuration') as exc_info:
+                resolve_monthly_price(
+                    FALLBACK_PRICE,
+                    environ={
+                        'PADDLE_ENV': 'sandbox',
+                        'TBPRO_PADDLE_PRICE_ID': PRICE_ID,
+                    },
+                    secret_path=MISSING_SECRET,
+                )
+        mock_post.assert_not_called()
+        assert API_KEY not in str(exc_info.value)
+
+    def test_configured_fetch_returns_paddle_price(self):
+        with mock.patch('paddle_pricing.fetch_monthly_price', return_value='$6.50') as mock_fetch:
+            price = resolve_monthly_price(
+                FALLBACK_PRICE,
+                environ=configured_environ(),
+                secret_path=MISSING_SECRET,
+            )
+        assert price == '$6.50'
+        mock_fetch.assert_called_once()
+
+    def test_successful_fetch_emits_no_warning(self, caplog):
+        with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
+            with mock.patch('paddle_pricing.fetch_monthly_price', return_value='$6.50'):
+                price = resolve_monthly_price(
+                    FALLBACK_PRICE,
+                    environ=configured_environ(),
+                    secret_path=MISSING_SECRET,
+                )
+        assert price == '$6.50'
+        assert caplog.records == []
+
+    def test_optional_configured_fetch_failure_returns_fallback(self):
+        fallback = FALLBACK_PRICE
+        with mock.patch(
+            'paddle_pricing.fetch_monthly_price',
+            side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
+        ):
+            price = resolve_monthly_price(
+                fallback,
+                environ=configured_environ('0'),
+                secret_path=MISSING_SECRET,
+            )
+        assert price is fallback
+
+    def test_optional_configured_fetch_failure_emits_one_safe_warning(self, caplog):
+        with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
+            with mock.patch(
+                'paddle_pricing.fetch_monthly_price',
+                side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
+            ):
+                price = resolve_monthly_price(
+                    FALLBACK_PRICE,
+                    environ=configured_environ('0'),
+                    secret_path=MISSING_SECRET,
+                )
+        assert price == FALLBACK_PRICE
+        assert len(caplog.records) == 1
+        assert caplog.records[0].levelno == logging.WARNING
+        message = caplog.records[0].getMessage()
+        assert API_KEY not in message
+        assert 'Authorization' not in message
+        assert 'super-secret-key' not in message
+
+    def test_optional_failure_warning_includes_request_id(self, caplog):
+        with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
+            with mock.patch(
+                'paddle_pricing.fetch_monthly_price',
+                side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
+            ):
+                resolve_monthly_price(
+                    FALLBACK_PRICE,
+                    environ=configured_environ('0'),
+                    secret_path=MISSING_SECRET,
+                )
+        assert 'request_id=req-503' in caplog.records[0].getMessage()
+
+    def test_required_configured_fetch_failure_is_reraised(self):
+        with mock.patch(
+            'paddle_pricing.fetch_monthly_price',
+            side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
+        ):
+            with pytest.raises(PaddlePricingError, match='HTTP 503') as exc_info:
+                resolve_monthly_price(
+                    FALLBACK_PRICE,
+                    environ=configured_environ('1'),
+                    secret_path=MISSING_SECRET,
+                )
+        assert 'request_id=req-503' in str(exc_info.value)
+        assert API_KEY not in str(exc_info.value)
+
+    def test_required_fetch_failure_does_not_emit_fallback_warning(self, caplog):
+        with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
+            with mock.patch(
+                'paddle_pricing.fetch_monthly_price',
+                side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
+            ):
+                with pytest.raises(PaddlePricingError, match='HTTP 503'):
+                    resolve_monthly_price(
+                        FALLBACK_PRICE,
+                        environ=configured_environ('1'),
+                        secret_path=MISSING_SECRET,
+                    )
+        assert caplog.records == []
+
+    def test_unexpected_exception_propagates(self):
+        with mock.patch('paddle_pricing.fetch_monthly_price', side_effect=RuntimeError('boom')):
+            with pytest.raises(RuntimeError, match='boom'):
+                resolve_monthly_price(
+                    FALLBACK_PRICE,
+                    environ=configured_environ('0'),
+                    secret_path=MISSING_SECRET,
+                )
+
+    def test_default_environ_reads_os_environ(self):
+        with mock.patch.dict(os.environ, configured_environ(), clear=True):
+            with mock.patch('paddle_pricing.fetch_monthly_price', return_value='$6.50') as mock_fetch:
+                price = resolve_monthly_price(FALLBACK_PRICE, secret_path=MISSING_SECRET)
+        assert price == '$6.50'
+        config = mock_fetch.call_args.args[0]
+        assert config.api_key == API_KEY
+        assert config.price_id == PRICE_ID
+
+    def test_exceptions_and_logs_do_not_expose_api_key(self, caplog):
+        fetch_error = PaddlePricingError('HTTP 503', request_id='req-503')
+        with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
+            with mock.patch('paddle_pricing.fetch_monthly_price', side_effect=fetch_error):
+                optional_price = resolve_monthly_price(
+                    FALLBACK_PRICE,
+                    environ=configured_environ('0'),
+                    secret_path=MISSING_SECRET,
+                )
+                with pytest.raises(PaddlePricingError) as exc_info:
+                    resolve_monthly_price(
+                        FALLBACK_PRICE,
+                        environ=configured_environ('1'),
+                        secret_path=MISSING_SECRET,
+                    )
+        assert optional_price == FALLBACK_PRICE
+        logged = ' '.join(record.getMessage() for record in caplog.records)
+        assert API_KEY not in logged
+        assert API_KEY not in str(exc_info.value)
+        assert 'Authorization' not in logged
+        assert 'Authorization' not in str(exc_info.value)

@@ -1,11 +1,13 @@
 """Parse Paddle pricing configuration and retrieve formatted monthly prices.
 
-Callers may supply already-decoded preview payloads or a configured
-PaddlePricingConfig used to POST /pricing-preview. This module does not
-apply local fallback behavior.
+Callers may supply already-decoded preview payloads, a configured
+PaddlePricingConfig used to POST /pricing-preview, or environment
+settings resolved through resolve_monthly_price() with a local fallback.
 """
 
+import logging
 import math
+import os
 import time
 from dataclasses import dataclass
 from decimal import Decimal
@@ -29,6 +31,8 @@ PADDLE_REQUEST_TIMEOUT = 10
 PADDLE_MAX_ATTEMPTS = 3
 PADDLE_RETRY_DELAY_SECONDS = 0.5
 PADDLE_MAX_BUILD_RETRY_DELAY_SECONDS = 2
+
+logger = logging.getLogger(__name__)
 
 
 class PaddlePricingError(Exception):
@@ -413,3 +417,39 @@ def fetch_monthly_price(config):
         time.sleep(delay)
 
     raise last_error
+
+
+def resolve_monthly_price(fallback_price, environ=None, secret_path=PADDLE_SECRET_FILE):
+    """Resolve a monthly display price from Paddle or a local fallback.
+
+    fallback_price must already be a complete formatted string such as "$6".
+    It is returned unchanged when fallback is allowed. Completely unset
+    optional configuration is silent; a configured fetch failure in
+    optional mode logs one warning.
+    """
+    if not isinstance(fallback_price, str) or not fallback_price.strip():
+        raise PaddlePricingError(
+            'fallback_price must be a non-empty formatted price string.'
+        )
+
+    if environ is None:
+        environ = os.environ
+
+    config = parse_config(environ, secret_path=secret_path)
+    if not config.is_configured:
+        if config.required:
+            raise PaddlePricingError(
+                'Paddle pricing is required but not fully configured.'
+            )
+        return fallback_price
+
+    try:
+        return fetch_monthly_price(config)
+    except PaddlePricingError as exc:
+        if config.required:
+            raise
+        logger.warning(
+            'Paddle pricing preview failed; using fallback price. %s',
+            exc,
+        )
+        return fallback_price
