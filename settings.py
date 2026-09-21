@@ -399,6 +399,8 @@ SHOW_BETA_NOTES_IN_RSS_FEED = False
 ACTIVE_SURVEY_URL = 'https://www.surveymonkey.com/r/69C9LSH'
 
 THUNDERBIRD_DESKTOP_PRIVACY_POLICY_URL = 'https://raw.githubusercontent.com/mozilla/legal-docs/main/en/thunderbird_privacy_policy.md'
+TBPRO_PRIVACY_POLICY_URL = 'https://raw.githubusercontent.com/thunderbird/thunderbird-accounts/refs/heads/main/assets/legal/privacy/v1.0/en.md'
+TBPRO_TERMS_OF_SERVICE_URL = 'https://raw.githubusercontent.com/thunderbird/thunderbird-accounts/refs/heads/main/assets/legal/tos/v1.0/en.md'
 
 # WEBSITE_CSS = {
 #     'calendar-bundle': ['less/thunderbird/calendar.less', 'less/base/menu-resp.less'],
