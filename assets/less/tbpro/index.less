@@ -631,9 +631,10 @@ section#details {
         border-radius: @space-12;
         border: solid 1px rgba(88, 201, 255, 0.2);
         display: grid;
+        grid-template-columns: minmax(0, 1fr);
         grid-template-rows: 1fr auto;
         margin-block: @space-36;
-        padding-inline: @space-36;
+        padding-inline: @space-16;
         place-items: center;
 
         @media (min-width: @lg) {
@@ -709,13 +710,13 @@ section#details {
             background-image: linear-gradient(150deg, #131c28 30%, #0b1017);
             border-radius: @space-12;
             margin-block: @gutter;
-            margin-inline: @space-36;
             padding: @space-24 @space-16;
             text-align: center;
             width: 100%;
 
             @media (min-width: @lg) {
                 grid-column: 1 / 4;
+                margin-inline: @space-36;
             }
 
             button {
@@ -760,12 +761,6 @@ section#details {
                         normal,
                         2rem
                     );
-
-                    sup {
-                        // em, not rem for the sup
-                        font-size: 0.6em;
-                        top: -0.55em;
-                    }
                 }
                 span {
                     text-align: left;
