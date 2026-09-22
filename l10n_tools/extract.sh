@@ -1,7 +1,11 @@
 #!/bin/bash
 
-cd ..
-pybabel extract -F babel.cfg -o libs/locale/templates/LC_MESSAGES/messages.pot .
-cd ./l10n_tools
+set -euo pipefail
+
+script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "$script_dir/.."
+uv run pybabel extract -F babel.cfg -o libs/locale/templates/LC_MESSAGES/messages.pot .
+cd "$script_dir"
 bash merge.sh
-python linelength.py
+uv run python linelength.py
