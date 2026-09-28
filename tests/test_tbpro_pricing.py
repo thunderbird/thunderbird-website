@@ -1,12 +1,16 @@
 """Tests for wiring resolved Paddle prices into tb.pro builds and the subscription-plan macro."""
 
+import json
 import os
 import runpy
 import sys
+import tempfile
 from unittest import mock
 
 import pytest
+from bs4 import BeautifulSoup
 from jinja2 import Environment, FileSystemLoader
+from jinja2.exceptions import UndefinedError
 
 import builder
 import settings
@@ -21,6 +25,27 @@ PADDLE_ENV_KEYS = (
     'TBPRO_PADDLE_PRICE_ID',
     'TBPRO_PADDLE_COUNTRY',
     'TBPRO_PADDLE_REQUIRED',
+)
+
+TBPRO_PAGE_TEMPLATES = (
+    'index.html',
+    'appointment/index.html',
+    'send/index.html',
+    'waitlist/index.html',
+)
+API_KEY_SENTINEL = 'pdl_test_api_key_sentinel'
+LABEL_SENTINEL = 'TBPRO_LABEL_SENTINEL'
+DANGEROUS_LABEL = f'{LABEL_SENTINEL}</script>{LABEL_SENTINEL}'
+PRICE_SENTINEL = '$6<price>'
+PREVIEW_NOTE = (
+    'Pricing is a preview. Your final price is calculated at checkout using your billing country.'
+)
+PREVIEW_LABEL = 'Select your country or region to preview pricing.'
+ABSENT_PREVIEW_TOKENS = (
+    'monthly_minor',
+    'currency_code',
+    'request_id',
+    API_KEY_SENTINEL,
 )
 
 CONTROLLED_PLAN = {
@@ -39,6 +64,63 @@ CONTROLLED_PLAN = {
 
 def _controlled_plan():
     return CONTROLLED_PLAN.copy()
+
+
+def _parse_html(html):
+    return BeautifulSoup(html, 'html.parser')
+
+
+def _price_preview(default_country='US', countries=None):
+    """Return a public preview whose default is not the first country."""
+    if countries is None:
+        countries = [
+            {'code': 'CA', 'label': 'Canada', 'price': 'CA$10'},
+            {'code': 'US', 'label': 'United States', 'price': '$6'},
+        ]
+    return {
+        'defaultCountry': default_country,
+        'countries': countries,
+    }
+
+
+def _json_island_source(html):
+    """Return the raw JSON island so escaping checks see the page source."""
+    open_tag = '<script type="application/json" class="subscription-price-data">'
+    start = html.index(open_tag) + len(open_tag)
+    return html[start:html.index('</script>', start)]
+
+
+def _render_tbpro_pages(preview, templates=TBPRO_PAGE_TEMPLATES):
+    """Render complete en-US tb.pro pages with one locale_data callback."""
+    plan = _controlled_plan()
+    plan['price'] = '$6'
+    pages = {}
+
+    def locale_data(lang):
+        assert lang == 'en-US'
+        return {'tbpro_price_preview': preview}
+
+    with tempfile.TemporaryDirectory() as renderpath:
+        site = builder.Site(
+            ['en-US'],
+            settings.TBPRO_PATH,
+            renderpath,
+            {},
+            data={'current_year': 2026, 'default_plan': plan},
+            extra_searchpaths=[settings.COMMON_SEARCHPATH],
+            locale_data=locale_data,
+        )
+        # build_tbpro() publishes plan data before switching language. Do that
+        # here without running its 99-language loop.
+        site._env.globals.update(site.data)
+        site._switch_lang('en-US')
+        for template in templates:
+            output = os.path.join(renderpath, template)
+            os.makedirs(os.path.dirname(output), exist_ok=True)
+            site._render_template(template, output)
+            with open(output, encoding='utf-8') as handle:
+                pages[template] = handle.read()
+    return pages
 
 
 def _run_tbpro_site_import(*, resolve=None, extra_patches=()):
@@ -227,3 +309,138 @@ class TestSubscriptionPlanMacro:
         assert f'<h4><b>{plan_price}</b><span>' in html
         assert html.count('$') == plan_price.count('$')
         assert '<sup' not in html
+        soup = _parse_html(html)
+        assert soup.select('.subscription-price-preview') == []
+        assert soup.select('#tbpro-price-country') == []
+        assert soup.select('#tbpro-price-note') == []
+        assert soup.select('.subscription-price-data') == []
+
+
+def _assert_page_language(soup, html, template):
+    assert soup.select_one('html').get('lang') == 'en', template
+    assert soup.select_one('html').get('dir') == 'ltr', template
+    assert 'window.siteLocale = "en-US"' in html, template
+
+
+def _assert_period_break(soup, template):
+    span = soup.select_one('.subscription-callout h4 span')
+    assert span.find('br') is not None, template
+
+
+def _assert_cta(soup, template):
+    buttons = soup.select('.subscription-callout button.button-brand-outline-label')
+    expected = 0 if template == 'waitlist/index.html' else 1
+    assert len(buttons) == expected, template
+
+
+def _assert_absent_tokens(html, template):
+    for token in ABSENT_PREVIEW_TOKENS:
+        assert token not in html, template
+
+
+class TestSubscriptionPlanPages:
+    def test_configured_pages_render_the_default_country_preview(self):
+        preview = _price_preview()
+        for template, html in _render_tbpro_pages(preview).items():
+            soup = _parse_html(html)
+            assert len(soup.select('.subscription-price-preview')) == 1, template
+            assert len(soup.select('#tbpro-price-country')) == 1, template
+            assert len(soup.select('#tbpro-price-note')) == 1, template
+            assert len(soup.select('.subscription-price-data')) == 1, template
+
+            control = soup.select_one('.subscription-price-control')
+            assert control.has_attr('hidden'), template
+            select = soup.select_one('#tbpro-price-country')
+            label = soup.select_one('label[for="tbpro-price-country"]')
+            assert label is not None and label.get_text() == PREVIEW_LABEL, template
+            assert not select.has_attr('name'), template
+            assert select.get('aria-describedby') == 'tbpro-price-note', template
+            note = soup.select_one('#tbpro-price-note')
+            assert note.get_text() == PREVIEW_NOTE, template
+            assert note.find_parent(class_='subscription-price-control') is None, template
+            assert control.select_one('#tbpro-price-note') is None, template
+
+            options = select.select('option')
+            assert [option.get('value') for option in options] == ['CA', 'US'], template
+            selected = select.select('option[selected]')
+            assert len(selected) == 1, template
+            assert selected[0].has_attr('selected'), template
+            assert not options[0].has_attr('selected'), template
+            assert selected[0].get('value') == 'US', template
+            assert selected[0].get_text() == 'United States', template
+
+            price = soup.select_one('.subscription-price')
+            assert price.get('aria-live') == 'polite', template
+            assert price.get('aria-atomic') == 'true', template
+            assert price.get_text() == '$6', template
+
+            payload = json.loads(soup.select_one('script.subscription-price-data').string)
+            assert set(payload) == {'defaultCountry', 'countries'}, template
+            assert payload['defaultCountry'] == 'US', template
+            assert payload['countries'][0]['code'] == 'CA', template
+            for country in payload['countries']:
+                assert set(country) == {'code', 'label', 'price'}, template
+
+            _assert_period_break(soup, template)
+            _assert_cta(soup, template)
+            _assert_page_language(soup, html, template)
+            _assert_absent_tokens(html, template)
+
+            if template == 'waitlist/index.html':
+                mailchimp = soup.select_one('#mce-COUNTRY')
+                assert mailchimp.get('name') == 'COUNTRY', template
+                assert mailchimp.find_parent('form').get('id') == 'mc-embedded-subscribe-form'
+                assert select.find_parent('form') is None, template
+                assert mailchimp.get('id') != select.get('id'), template
+                assert soup.select_one('label[for="mce-COUNTRY"]') is not None, template
+            else:
+                assert soup.select('#mce-COUNTRY') == [], template
+
+    def test_fallback_pages_omit_the_preview(self):
+        for template, html in _render_tbpro_pages(None).items():
+            soup = _parse_html(html)
+            assert soup.select('.subscription-price-preview') == [], template
+            assert soup.select('#tbpro-price-country') == [], template
+            assert soup.select('#tbpro-price-note') == [], template
+            assert soup.select('.subscription-price-data') == [], template
+            assert soup.select('.subscription-price') == [], template
+            assert PREVIEW_NOTE not in html, template
+            assert PREVIEW_LABEL not in html, template
+            price = soup.select_one('.subscription-callout h4 b')
+            assert price.get_text() == '$6', template
+            _assert_period_break(soup, template)
+            _assert_cta(soup, template)
+            _assert_page_language(soup, html, template)
+            _assert_absent_tokens(html, template)
+            if template == 'waitlist/index.html':
+                mailchimp = soup.select_one('#mce-COUNTRY')
+                assert mailchimp.get('name') == 'COUNTRY', template
+                assert mailchimp.find_parent('form') is not None, template
+
+    def test_configured_pages_escape_label_and_price_sentinels(self):
+        countries = [
+            {'code': 'CA', 'label': 'Canada', 'price': 'CA$10'},
+            {'code': 'US', 'label': DANGEROUS_LABEL, 'price': PRICE_SENTINEL},
+        ]
+        preview = _price_preview(countries=countries)
+        for template, html in _render_tbpro_pages(preview).items():
+            island = _json_island_source(html)
+            assert f'{LABEL_SENTINEL}</script>' not in html, template
+            assert f'{LABEL_SENTINEL}\\u003c/script\\u003e{LABEL_SENTINEL}' in island, template
+            assert f'{LABEL_SENTINEL}&lt;/script&gt;{LABEL_SENTINEL}' in html, template
+            assert '$6&lt;price&gt;' in html, template
+            assert API_KEY_SENTINEL not in html, template
+
+            soup = _parse_html(html)
+            payload = json.loads(soup.select_one('script.subscription-price-data').string)
+            united_states = payload['countries'][1]
+            assert united_states['label'] == DANGEROUS_LABEL, template
+            assert united_states['price'] == PRICE_SENTINEL, template
+            selected = soup.select_one('#tbpro-price-country option[selected]')
+            assert selected.get_text() == DANGEROUS_LABEL, template
+            assert soup.select_one('.subscription-price').get_text() == PRICE_SENTINEL, template
+
+    def test_missing_default_country_raises(self):
+        preview = _price_preview(default_country='GB')
+        with pytest.raises(UndefinedError, match='list object has no element 0'):
+            _render_tbpro_pages(preview, templates=('index.html',))
