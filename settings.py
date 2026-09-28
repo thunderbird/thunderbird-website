@@ -504,6 +504,10 @@ TBPRO_DEFAULT_PLAN = {
     'num_email_addresses': '15',
 }
 
+# Countries approved for the tb.pro pricing preview.
+# The configured default country must be included and is fetched first.
+TBPRO_PADDLE_PREVIEW_COUNTRIES = ('US', 'CA')
+
 
 ROADMAPS_CSS = {
     'roadmaps': ['less/roadmaps/index.less'],

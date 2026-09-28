@@ -2,13 +2,15 @@
 
 Callers may supply already-decoded preview payloads, a configured
 PaddlePricingConfig used to POST /pricing-preview, or environment
-settings resolved through resolve_monthly_price() with a local fallback.
+settings resolved through resolve_country_prices() with a local fallback.
+resolve_monthly_price() returns only the default display string.
 """
 
 import logging
 import math
 import os
 import time
+from collections.abc import Mapping
 from dataclasses import dataclass
 from decimal import Decimal
 from pathlib import Path
@@ -16,6 +18,8 @@ from pathlib import Path
 import requests
 from babel.core import Locale
 from babel.numbers import format_currency, get_currency_precision, list_currencies
+
+import settings
 
 PADDLE_SANDBOX_API_BASE = 'https://sandbox-api.paddle.com'
 PADDLE_PRODUCTION_API_BASE = 'https://api.paddle.com'
@@ -66,6 +70,37 @@ class PaddlePricingConfig:
             f'country={self.country!r}, '
             f'required={self.required})'
         )
+
+
+@dataclass(frozen=True)
+class MonthlyPrice:
+    """Monthly-equivalent amount in the currency's minor units."""
+
+    monthly_minor: int
+    currency_code: str
+
+
+@dataclass(frozen=True)
+class CountryPricePreviews:
+    """Complete approved-country previews.
+
+    prices contains every approved country. Key order is fetch order, not
+    display order.
+    """
+
+    default_country: str
+    prices: Mapping[str, MonthlyPrice]
+
+
+@dataclass(frozen=True)
+class ResolvedCountryPrices:
+    """Default display price, with previews only for a complete fetch.
+
+    previews is None when the caller receives the display fallback.
+    """
+
+    default_price: str
+    previews: CountryPricePreviews | None
 
 
 def _optional_text(value):
@@ -142,6 +177,45 @@ def parse_config(environ, secret_path=PADDLE_SECRET_FILE):
         country=country,
         required=required,
     )
+
+
+def _is_preview_country_code(code):
+    """Return whether code is exactly two ASCII letters A-Z."""
+    return (
+        isinstance(code, str)
+        and len(code) == 2
+        and all('A' <= character <= 'Z' for character in code)
+    )
+
+
+def _validate_preview_countries(countries):
+    """Return the approved country tuple, or raise before any Paddle request."""
+    message = (
+        'TBPRO_PADDLE_PREVIEW_COUNTRIES must be a non-empty tuple of unique '
+        'two-letter uppercase ASCII country codes.'
+    )
+    if not isinstance(countries, tuple) or not countries:
+        raise PaddlePricingError(message)
+    seen = set()
+    for code in countries:
+        if not _is_preview_country_code(code) or code in seen:
+            raise PaddlePricingError(message)
+        seen.add(code)
+    return countries
+
+
+def _validate_default_country(country, countries):
+    """Return country when it is an approved preview country."""
+    if country not in countries:
+        raise PaddlePricingError(
+            'TBPRO_PADDLE_COUNTRY must be one of the approved preview countries.'
+        )
+    return country
+
+
+def _country_fetch_order(default_country, countries):
+    """Fetch the configured default first, then the remaining approved countries."""
+    return (default_country,) + tuple(code for code in countries if code != default_country)
 
 
 def paddle_api_base_url(environment):
@@ -230,8 +304,23 @@ def format_monthly_price(monthly_minor, currency, locale=DISPLAY_LOCALE):
     return formatted
 
 
-def formatted_price_from_preview(payload, price_id):
-    """Return a formatted monthly price from a Paddle pricing-preview payload."""
+def _require_currency_code(currency_code, request_id):
+    """Return currency_code, or raise with the preview request ID preserved."""
+    if not currency_code or not isinstance(currency_code, str):
+        raise PaddlePricingError(
+            'Paddle preview is missing a currency code.',
+            request_id=request_id,
+        )
+    if currency_code not in list_currencies():
+        raise PaddlePricingError(
+            f'Unsupported Paddle currency {currency_code}.',
+            request_id=request_id,
+        )
+    return currency_code
+
+
+def monthly_price_from_preview(payload, price_id):
+    """Return normalized monthly price data from a pricing-preview payload."""
     request_id = _request_id(payload)
     data = payload.get('data', payload) if isinstance(payload, dict) else None
     if not isinstance(data, dict):
@@ -282,12 +371,20 @@ def formatted_price_from_preview(payload, price_id):
         )
     annual_minor = int(raw_total)
 
-    currency = data.get('currency_code')
     try:
         monthly_minor = annual_to_monthly_minor(annual_minor)
-        return format_monthly_price(monthly_minor, currency)
     except PaddlePricingError as exc:
         raise PaddlePricingError(str(exc), request_id=request_id) from exc
+    return MonthlyPrice(
+        monthly_minor=monthly_minor,
+        currency_code=_require_currency_code(data.get('currency_code'), request_id),
+    )
+
+
+def formatted_price_from_preview(payload, price_id):
+    """Return a formatted monthly price from a Paddle pricing-preview payload."""
+    price = monthly_price_from_preview(payload, price_id)
+    return format_monthly_price(price.monthly_minor, price.currency_code)
 
 
 def _is_retryable_status(status_code):
@@ -347,15 +444,20 @@ def _http_error(status_code, request_id=None):
     )
 
 
-def fetch_monthly_price(config):
-    """POST /pricing-preview and return a formatted monthly price.
+def fetch_monthly_price_data(config, country_code):
+    """POST /pricing-preview and return normalized monthly price data.
 
-    Requires a fully configured PaddlePricingConfig. Every request, HTTP,
-    JSON, or payload failure raises PaddlePricingError. Local fallback is
-    not applied here.
+    Requires a fully configured PaddlePricingConfig. country_code selects
+    the preview address and does not change config.country. Every request,
+    HTTP, JSON, or payload failure raises PaddlePricingError. Local fallback
+    is not applied here.
     """
     if not isinstance(config, PaddlePricingConfig) or not config.is_configured:
         raise PaddlePricingError('Paddle pricing is not fully configured.')
+    if not _is_preview_country_code(country_code):
+        raise PaddlePricingError(
+            'Paddle pricing preview country_code must be two uppercase ASCII letters.'
+        )
 
     url = '{0}/pricing-preview'.format(paddle_api_base_url(config.environment))
     headers = {
@@ -365,7 +467,7 @@ def fetch_monthly_price(config):
     }
     body = {
         'items': [{'price_id': config.price_id, 'quantity': 1}],
-        'address': {'country_code': config.country},
+        'address': {'country_code': country_code},
     }
 
     last_error = None
@@ -406,7 +508,7 @@ def fetch_monthly_price(config):
                     'Paddle pricing preview returned invalid JSON (HTTP 200).',
                     request_id=request_id,
                 )
-            return formatted_price_from_preview(payload, config.price_id)
+            return monthly_price_from_preview(payload, config.price_id)
 
         last_error = _http_error(response.status_code, request_id=request_id)
         if not _is_retryable_status(response.status_code) or attempt + 1 >= PADDLE_MAX_ATTEMPTS:
@@ -419,18 +521,73 @@ def fetch_monthly_price(config):
     raise last_error
 
 
-def resolve_monthly_price(fallback_price, environ=None, secret_path=PADDLE_SECRET_FILE):
-    """Resolve a monthly display price from Paddle or a local fallback.
+def fetch_monthly_price(config):
+    """POST /pricing-preview and return a formatted monthly price.
+
+    Requires a fully configured PaddlePricingConfig. Every request, HTTP,
+    JSON, or payload failure raises PaddlePricingError. Local fallback is
+    not applied here.
+    """
+    if not isinstance(config, PaddlePricingConfig) or not config.is_configured:
+        raise PaddlePricingError('Paddle pricing is not fully configured.')
+    price_data = fetch_monthly_price_data(config, config.country)
+    return format_monthly_price(price_data.monthly_minor, price_data.currency_code)
+
+
+def _country_pricing_error(country_code, exc):
+    """Return a country-scoped error while preserving Paddle's request ID."""
+    detail = str(exc)
+    request_id = exc.request_id
+    if request_id:
+        suffix = f' (Paddle request_id={request_id})'
+        if detail.endswith(suffix):
+            detail = detail[:-len(suffix)]
+    return PaddlePricingError(
+        f'Country {country_code} pricing preview failed: {detail}',
+        request_id=request_id,
+    )
+
+
+def _fetch_country_price_previews(config, countries, default_country):
+    """Fetch every approved country, default first.
+
+    Returns only after every country succeeds. A failure discards amounts
+    already collected and does not request later countries.
+    """
+    prices = {}
+    for country_code in _country_fetch_order(default_country, countries):
+        try:
+            prices[country_code] = fetch_monthly_price_data(config, country_code)
+        except PaddlePricingError as exc:
+            raise _country_pricing_error(country_code, exc) from exc
+    return CountryPricePreviews(
+        default_country=default_country,
+        prices=prices,
+    )
+
+
+def _fallback_prices(fallback_price):
+    return ResolvedCountryPrices(
+        default_price=fallback_price,
+        previews=None,
+    )
+
+
+def resolve_country_prices(fallback_price, environ=None, secret_path=PADDLE_SECRET_FILE):
+    """Resolve approved-country previews and the default display price.
 
     fallback_price must already be a complete formatted string such as "$6".
-    It is returned unchanged when fallback is allowed. Completely unset
-    optional configuration is silent; a configured fetch failure in
-    optional mode logs one warning.
+    A configured fetch returns that default country's formatted price and the
+    complete preview map. Unconfigured and optional fetch failures return the
+    fallback with previews set to None. Required failures raise. The approved
+    country list is validated even when Paddle is not configured.
     """
     if not isinstance(fallback_price, str) or not fallback_price.strip():
         raise PaddlePricingError(
             'fallback_price must be a non-empty formatted price string.'
         )
+
+    countries = _validate_preview_countries(settings.TBPRO_PADDLE_PREVIEW_COUNTRIES)
 
     if environ is None:
         environ = os.environ
@@ -441,10 +598,11 @@ def resolve_monthly_price(fallback_price, environ=None, secret_path=PADDLE_SECRE
             raise PaddlePricingError(
                 'Paddle pricing is required but not fully configured.'
             )
-        return fallback_price
+        return _fallback_prices(fallback_price)
 
+    default_country = _validate_default_country(config.country, countries)
     try:
-        return fetch_monthly_price(config)
+        previews = _fetch_country_price_previews(config, countries, default_country)
     except PaddlePricingError as exc:
         if config.required:
             raise
@@ -452,4 +610,22 @@ def resolve_monthly_price(fallback_price, environ=None, secret_path=PADDLE_SECRE
             'Paddle pricing preview failed; using fallback price. %s',
             exc,
         )
-        return fallback_price
+        return _fallback_prices(fallback_price)
+
+    default_price_data = previews.prices[default_country]
+    return ResolvedCountryPrices(
+        default_price=format_monthly_price(
+            default_price_data.monthly_minor,
+            default_price_data.currency_code,
+        ),
+        previews=previews,
+    )
+
+
+def resolve_monthly_price(fallback_price, environ=None, secret_path=PADDLE_SECRET_FILE):
+    """Return the default monthly display price from resolve_country_prices()."""
+    return resolve_country_prices(
+        fallback_price,
+        environ=environ,
+        secret_path=secret_path,
+    ).default_price

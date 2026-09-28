@@ -7,6 +7,7 @@ from unittest import mock
 import pytest
 import requests
 
+import settings
 from paddle_pricing import (
     PADDLE_API_VERSION,
     PADDLE_MAX_ATTEMPTS,
@@ -15,16 +16,21 @@ from paddle_pricing import (
     PADDLE_REQUEST_TIMEOUT,
     PADDLE_RETRY_DELAY_SECONDS,
     PADDLE_SANDBOX_API_BASE,
+    MonthlyPrice,
     PaddlePricingConfig,
     PaddlePricingError,
+    ResolvedCountryPrices,
     annual_to_monthly_minor,
     fetch_monthly_price,
+    fetch_monthly_price_data,
     find_line_item,
     format_monthly_price,
     formatted_price_from_preview,
+    monthly_price_from_preview,
     paddle_api_base_url,
     parse_config,
     read_api_key,
+    resolve_country_prices,
     resolve_monthly_price,
 )
 
@@ -116,6 +122,13 @@ def configured_config(environment='sandbox'):
         country='US',
         required=True,
     )
+
+
+def posted_countries(mock_post):
+    return [
+        call.kwargs['json']['address']['country_code']
+        for call in mock_post.call_args_list
+    ]
 
 
 def fake_response(status_code=200, payload=None, headers=None, json_error=False):
@@ -415,6 +428,15 @@ class TestFetchMonthlyPrice:
                 ))
         mock_post.assert_not_called()
 
+    @pytest.mark.parametrize('country_code', ['', 'us', 'USA', 'ÜS', None])
+    def test_malformed_country_code_raises_without_request(self, country_code):
+        mock_post = mock.Mock()
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            with pytest.raises(PaddlePricingError, match='uppercase ASCII') as exc_info:
+                fetch_monthly_price_data(configured_config(), country_code)
+        mock_post.assert_not_called()
+        assert API_KEY not in str(exc_info.value)
+
     def test_http_400_is_not_retried(self):
         error_payload = {
             'error': {'code': 'bad_request', 'detail': 'invalid'},
@@ -569,7 +591,7 @@ class TestResolveMonthlyPrice:
             fallback,
             environ={},
             secret_path=MISSING_SECRET,
-        ) is fallback
+        ) == fallback
 
     @pytest.mark.parametrize('fallback', [None, '', '   ', 6, True, ['$6']])
     def test_empty_missing_or_non_string_fallback_is_rejected(self, fallback):
@@ -618,18 +640,20 @@ class TestResolveMonthlyPrice:
         assert API_KEY not in str(exc_info.value)
 
     def test_configured_fetch_returns_paddle_price(self):
-        with mock.patch('paddle_pricing.fetch_monthly_price', return_value='$6.50') as mock_fetch:
+        price_data = MonthlyPrice(monthly_minor=650, currency_code='USD')
+        with mock.patch('paddle_pricing.fetch_monthly_price_data', return_value=price_data) as mock_fetch:
             price = resolve_monthly_price(
                 FALLBACK_PRICE,
                 environ=configured_environ(),
                 secret_path=MISSING_SECRET,
             )
         assert price == '$6.50'
-        mock_fetch.assert_called_once()
+        assert [call.args[1] for call in mock_fetch.call_args_list] == ['US', 'CA']
 
     def test_successful_fetch_emits_no_warning(self, caplog):
+        price_data = MonthlyPrice(monthly_minor=650, currency_code='USD')
         with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
-            with mock.patch('paddle_pricing.fetch_monthly_price', return_value='$6.50'):
+            with mock.patch('paddle_pricing.fetch_monthly_price_data', return_value=price_data):
                 price = resolve_monthly_price(
                     FALLBACK_PRICE,
                     environ=configured_environ(),
@@ -641,7 +665,7 @@ class TestResolveMonthlyPrice:
     def test_optional_configured_fetch_failure_returns_fallback(self):
         fallback = FALLBACK_PRICE
         with mock.patch(
-            'paddle_pricing.fetch_monthly_price',
+            'paddle_pricing.fetch_monthly_price_data',
             side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
         ):
             price = resolve_monthly_price(
@@ -649,12 +673,12 @@ class TestResolveMonthlyPrice:
                 environ=configured_environ('0'),
                 secret_path=MISSING_SECRET,
             )
-        assert price is fallback
+        assert price == fallback
 
     def test_optional_configured_fetch_failure_emits_one_safe_warning(self, caplog):
         with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
             with mock.patch(
-                'paddle_pricing.fetch_monthly_price',
+                'paddle_pricing.fetch_monthly_price_data',
                 side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
             ):
                 price = resolve_monthly_price(
@@ -673,7 +697,7 @@ class TestResolveMonthlyPrice:
     def test_optional_failure_warning_includes_request_id(self, caplog):
         with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
             with mock.patch(
-                'paddle_pricing.fetch_monthly_price',
+                'paddle_pricing.fetch_monthly_price_data',
                 side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
             ):
                 resolve_monthly_price(
@@ -685,7 +709,7 @@ class TestResolveMonthlyPrice:
 
     def test_required_configured_fetch_failure_is_reraised(self):
         with mock.patch(
-            'paddle_pricing.fetch_monthly_price',
+            'paddle_pricing.fetch_monthly_price_data',
             side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
         ):
             with pytest.raises(PaddlePricingError, match='HTTP 503') as exc_info:
@@ -700,7 +724,7 @@ class TestResolveMonthlyPrice:
     def test_required_fetch_failure_does_not_emit_fallback_warning(self, caplog):
         with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
             with mock.patch(
-                'paddle_pricing.fetch_monthly_price',
+                'paddle_pricing.fetch_monthly_price_data',
                 side_effect=PaddlePricingError('HTTP 503', request_id='req-503'),
             ):
                 with pytest.raises(PaddlePricingError, match='HTTP 503'):
@@ -712,7 +736,7 @@ class TestResolveMonthlyPrice:
         assert caplog.records == []
 
     def test_unexpected_exception_propagates(self):
-        with mock.patch('paddle_pricing.fetch_monthly_price', side_effect=RuntimeError('boom')):
+        with mock.patch('paddle_pricing.fetch_monthly_price_data', side_effect=RuntimeError('boom')):
             with pytest.raises(RuntimeError, match='boom'):
                 resolve_monthly_price(
                     FALLBACK_PRICE,
@@ -722,7 +746,10 @@ class TestResolveMonthlyPrice:
 
     def test_default_environ_reads_os_environ(self):
         with mock.patch.dict(os.environ, configured_environ(), clear=True):
-            with mock.patch('paddle_pricing.fetch_monthly_price', return_value='$6.50') as mock_fetch:
+            with mock.patch(
+                'paddle_pricing.fetch_monthly_price_data',
+                return_value=MonthlyPrice(monthly_minor=650, currency_code='USD'),
+            ) as mock_fetch:
                 price = resolve_monthly_price(FALLBACK_PRICE, secret_path=MISSING_SECRET)
         assert price == '$6.50'
         config = mock_fetch.call_args.args[0]
@@ -732,7 +759,7 @@ class TestResolveMonthlyPrice:
     def test_exceptions_and_logs_do_not_expose_api_key(self, caplog):
         fetch_error = PaddlePricingError('HTTP 503', request_id='req-503')
         with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
-            with mock.patch('paddle_pricing.fetch_monthly_price', side_effect=fetch_error):
+            with mock.patch('paddle_pricing.fetch_monthly_price_data', side_effect=fetch_error):
                 optional_price = resolve_monthly_price(
                     FALLBACK_PRICE,
                     environ=configured_environ('0'),
@@ -750,3 +777,313 @@ class TestResolveMonthlyPrice:
         assert API_KEY not in str(exc_info.value)
         assert 'Authorization' not in logged
         assert 'Authorization' not in str(exc_info.value)
+
+
+class TestMonthlyPriceFromPreview:
+    def test_usd_integer(self):
+        assert monthly_price_from_preview(preview_payload(total='7200'), PRICE_ID) == MonthlyPrice(
+            monthly_minor=600,
+            currency_code='USD',
+        )
+
+    def test_usd_half(self):
+        assert monthly_price_from_preview(preview_payload(total='7800'), PRICE_ID) == MonthlyPrice(
+            monthly_minor=650,
+            currency_code='USD',
+        )
+
+    def test_usd_remainder(self):
+        assert monthly_price_from_preview(preview_payload(total='7201'), PRICE_ID) == MonthlyPrice(
+            monthly_minor=601,
+            currency_code='USD',
+        )
+
+    def test_jpy_zero_decimals(self):
+        assert monthly_price_from_preview(
+            preview_payload(total='11700', currency='JPY'),
+            PRICE_ID,
+        ) == MonthlyPrice(monthly_minor=975, currency_code='JPY')
+
+    def test_unsupported_currency_preserves_request_id(self):
+        payload = preview_payload(currency='NOTACURRENCY')
+        with pytest.raises(PaddlePricingError, match='request_id=req-123') as exc_info:
+            monthly_price_from_preview(payload, PRICE_ID)
+        message = str(exc_info.value)
+        assert 'Unsupported Paddle currency NOTACURRENCY.' in message
+        assert message.count('request_id=') == 1
+
+    def test_missing_currency_preserves_request_id(self):
+        payload = preview_payload(currency=None)
+        with pytest.raises(PaddlePricingError, match='request_id=req-123') as exc_info:
+            monthly_price_from_preview(payload, PRICE_ID)
+        assert str(exc_info.value).count('request_id=') == 1
+
+
+class TestResolveCountryPrices:
+    def test_approved_preview_countries(self):
+        assert settings.TBPRO_PADDLE_PREVIEW_COUNTRIES == ('US', 'CA')
+
+    @pytest.mark.parametrize('countries', [
+        ['US', 'CA'],
+        (),
+        ('US', 'US'),
+        ('us',),
+        ('USA',),
+        ('ÜS',),
+    ])
+    def test_invalid_allowlist_raises_without_request(self, countries):
+        mock_post = mock.Mock()
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            with mock.patch(
+                'paddle_pricing.settings.TBPRO_PADDLE_PREVIEW_COUNTRIES',
+                countries,
+            ):
+                with pytest.raises(PaddlePricingError, match='TBPRO_PADDLE_PREVIEW_COUNTRIES'):
+                    resolve_country_prices(
+                        FALLBACK_PRICE,
+                        environ={},
+                        secret_path=MISSING_SECRET,
+                    )
+        mock_post.assert_not_called()
+
+    def test_unconfigured_optional_has_no_preview_map(self):
+        mock_post = mock.Mock()
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            result = resolve_country_prices(
+                FALLBACK_PRICE,
+                environ={},
+                secret_path=MISSING_SECRET,
+            )
+            wrapped = resolve_monthly_price(
+                FALLBACK_PRICE,
+                environ={},
+                secret_path=MISSING_SECRET,
+            )
+        assert result.default_price == FALLBACK_PRICE
+        assert result.previews is None
+        assert wrapped == result.default_price
+        mock_post.assert_not_called()
+
+    @pytest.mark.parametrize('required', ['0', '1'])
+    def test_default_outside_allowlist_raises_before_http(self, required):
+        mock_post = mock.Mock()
+        environ = configured_environ(required)
+        environ['TBPRO_PADDLE_COUNTRY'] = 'GB'
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            with pytest.raises(PaddlePricingError, match='approved preview countries') as exc_info:
+                resolve_country_prices(
+                    FALLBACK_PRICE,
+                    environ=environ,
+                    secret_path=MISSING_SECRET,
+                )
+        mock_post.assert_not_called()
+        assert API_KEY not in str(exc_info.value)
+
+    def test_successful_preview_map(self):
+        mock_post = mock.Mock(side_effect=[
+            fake_response(payload=preview_payload(total='7200', currency='USD')),
+            fake_response(payload=preview_payload(total='12000', currency='CAD')),
+        ])
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            result = resolve_country_prices(
+                FALLBACK_PRICE,
+                environ=configured_environ('1'),
+                secret_path=MISSING_SECRET,
+            )
+        assert posted_countries(mock_post) == ['US', 'CA']
+        assert result.default_price == '$6'
+        assert result.previews.default_country == 'US'
+        assert set(result.previews.prices) == {'US', 'CA'}
+        assert result.previews.prices['US'] == MonthlyPrice(monthly_minor=600, currency_code='USD')
+        assert result.previews.prices['CA'] == MonthlyPrice(monthly_minor=1000, currency_code='CAD')
+
+    def test_monthly_price_wrapper_returns_default_price(self):
+        resolved = ResolvedCountryPrices(default_price='$6.50', previews=None)
+        with mock.patch('paddle_pricing.resolve_country_prices', return_value=resolved) as mock_resolve:
+            price = resolve_monthly_price(
+                FALLBACK_PRICE,
+                environ={},
+                secret_path=MISSING_SECRET,
+            )
+        assert price == '$6.50'
+        mock_resolve.assert_called_once_with(
+            FALLBACK_PRICE,
+            environ={},
+            secret_path=MISSING_SECRET,
+        )
+
+    def test_configured_canada_default_is_formatted_from_canada(self):
+        environ = configured_environ('1')
+        environ['TBPRO_PADDLE_COUNTRY'] = 'CA'
+        mock_post = mock.Mock(side_effect=[
+            fake_response(payload=preview_payload(total='12000', currency='CAD')),
+            fake_response(payload=preview_payload(total='7200', currency='USD')),
+        ])
+        with mock.patch('paddle_pricing.requests.post', mock_post):
+            result = resolve_country_prices(
+                FALLBACK_PRICE,
+                environ=environ,
+                secret_path=MISSING_SECRET,
+            )
+        assert posted_countries(mock_post) == ['CA', 'US']
+        assert result.previews.default_country == 'CA'
+        assert result.previews.prices['CA'] == MonthlyPrice(monthly_minor=1000, currency_code='CAD')
+        assert result.previews.prices['US'] == MonthlyPrice(monthly_minor=600, currency_code='USD')
+        assert result.default_price == 'CA$10'
+
+    def test_country_context_preserves_request_id(self):
+        with mock.patch(
+            'paddle_pricing.fetch_monthly_price_data',
+            side_effect=PaddlePricingError('HTTP 400', request_id='req-400'),
+        ):
+            with pytest.raises(PaddlePricingError, match='Country US') as exc_info:
+                resolve_country_prices(
+                    FALLBACK_PRICE,
+                    environ=configured_environ('1'),
+                    secret_path=MISSING_SECRET,
+                )
+        error = exc_info.value
+        message = str(error)
+        assert error.request_id == 'req-400'
+        assert 'Country US pricing preview failed:' in message
+        assert message.count('request_id=') == 1
+        assert message.endswith('(Paddle request_id=req-400)')
+
+    def test_optional_fetch_failure_has_no_preview_map(self, caplog):
+        with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
+            with mock.patch(
+                'paddle_pricing.fetch_monthly_price_data',
+                side_effect=PaddlePricingError('HTTP 400', request_id='req-400'),
+            ) as mock_fetch:
+                result = resolve_country_prices(
+                    FALLBACK_PRICE,
+                    environ=configured_environ('0'),
+                    secret_path=MISSING_SECRET,
+                )
+        assert result.default_price == FALLBACK_PRICE
+        assert result.previews is None
+        assert mock_fetch.call_count == 1
+        assert len(caplog.records) == 1
+        message = caplog.records[0].getMessage()
+        assert 'Country US pricing preview failed:' in message
+        assert message.count('request_id=') == 1
+        assert API_KEY not in message
+
+    def test_http_400_does_not_request_later_country(self):
+        mock_post = mock.Mock(side_effect=[
+            fake_response(payload=preview_payload(total='7200', currency='USD')),
+            fake_response(status_code=400, payload={'meta': {'request_id': 'req-ca'}}),
+        ])
+        with mock.patch('paddle_pricing.settings.TBPRO_PADDLE_PREVIEW_COUNTRIES', ('US', 'CA', 'MX')):
+            with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+                with mock.patch('paddle_pricing.requests.post', mock_post):
+                    with pytest.raises(PaddlePricingError, match='Country CA') as exc_info:
+                        resolve_country_prices(
+                            FALLBACK_PRICE,
+                            environ=configured_environ('1'),
+                            secret_path=MISSING_SECRET,
+                        )
+        assert posted_countries(mock_post) == ['US', 'CA']
+        mock_sleep.assert_not_called()
+        message = str(exc_info.value)
+        assert 'MX' not in message
+        assert message.count('request_id=') == 1
+        assert API_KEY not in message
+        assert 'Authorization' not in message
+
+    def test_http_503_exhausts_retries_before_later_country(self, caplog):
+        mock_post = mock.Mock(side_effect=[
+            fake_response(payload=preview_payload(total='7200', currency='USD')),
+            fake_response(status_code=503, payload={'meta': {'request_id': 'req-ca'}}),
+            fake_response(status_code=503, payload={'meta': {'request_id': 'req-ca'}}),
+            fake_response(status_code=503, payload={'meta': {'request_id': 'req-ca'}}),
+        ])
+        with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
+            with mock.patch('paddle_pricing.settings.TBPRO_PADDLE_PREVIEW_COUNTRIES', ('US', 'CA', 'MX')):
+                with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+                    with mock.patch('paddle_pricing.requests.post', mock_post):
+                        result = resolve_country_prices(
+                            FALLBACK_PRICE,
+                            environ=configured_environ('0'),
+                            secret_path=MISSING_SECRET,
+                        )
+        assert posted_countries(mock_post) == ['US', 'CA', 'CA', 'CA']
+        assert mock_sleep.call_args_list == [
+            mock.call(PADDLE_RETRY_DELAY_SECONDS),
+            mock.call(PADDLE_RETRY_DELAY_SECONDS * 2),
+        ]
+        assert result.default_price == FALLBACK_PRICE
+        assert result.previews is None
+        assert len(caplog.records) == 1
+        message = caplog.records[0].getMessage()
+        assert 'Country CA pricing preview failed:' in message
+        assert message.count('request_id=') == 1
+        assert API_KEY not in message
+
+    def test_required_http_503_does_not_warn_or_continue(self, caplog):
+        mock_post = mock.Mock(side_effect=[
+            fake_response(payload=preview_payload(total='7200', currency='USD')),
+            fake_response(status_code=503, payload={'meta': {'request_id': 'req-ca'}}),
+            fake_response(status_code=503, payload={'meta': {'request_id': 'req-ca'}}),
+            fake_response(status_code=503, payload={'meta': {'request_id': 'req-ca'}}),
+        ])
+        with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
+            with mock.patch('paddle_pricing.settings.TBPRO_PADDLE_PREVIEW_COUNTRIES', ('US', 'CA', 'MX')):
+                with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+                    with mock.patch('paddle_pricing.requests.post', mock_post):
+                        with pytest.raises(PaddlePricingError, match='Country CA'):
+                            resolve_country_prices(
+                                FALLBACK_PRICE,
+                                environ=configured_environ('1'),
+                                secret_path=MISSING_SECRET,
+                            )
+        assert posted_countries(mock_post) == ['US', 'CA', 'CA', 'CA']
+        assert mock_sleep.call_args_list == [
+            mock.call(PADDLE_RETRY_DELAY_SECONDS),
+            mock.call(PADDLE_RETRY_DELAY_SECONDS * 2),
+        ]
+        assert caplog.records == []
+
+    def test_default_canada_http_400_does_not_request_us(self):
+        mock_post = mock.Mock(return_value=fake_response(
+            status_code=400,
+            payload={'meta': {'request_id': 'req-ca'}},
+        ))
+        environ = configured_environ('1')
+        environ['TBPRO_PADDLE_COUNTRY'] = 'CA'
+        with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+            with mock.patch('paddle_pricing.requests.post', mock_post):
+                with pytest.raises(PaddlePricingError, match='Country CA') as exc_info:
+                    resolve_country_prices(
+                        FALLBACK_PRICE,
+                        environ=environ,
+                        secret_path=MISSING_SECRET,
+                    )
+        assert posted_countries(mock_post) == ['CA']
+        mock_sleep.assert_not_called()
+        assert str(exc_info.value).count('request_id=') == 1
+
+    def test_default_canada_http_503_does_not_request_us(self, caplog):
+        mock_post = mock.Mock(return_value=fake_response(
+            status_code=503,
+            payload={'meta': {'request_id': 'req-ca'}},
+        ))
+        environ = configured_environ('0')
+        environ['TBPRO_PADDLE_COUNTRY'] = 'CA'
+        with caplog.at_level(logging.WARNING, logger='paddle_pricing'):
+            with mock.patch('paddle_pricing.time.sleep') as mock_sleep:
+                with mock.patch('paddle_pricing.requests.post', mock_post):
+                    result = resolve_country_prices(
+                        FALLBACK_PRICE,
+                        environ=environ,
+                        secret_path=MISSING_SECRET,
+                    )
+        assert posted_countries(mock_post) == ['CA', 'CA', 'CA']
+        assert mock_sleep.call_args_list == [
+            mock.call(PADDLE_RETRY_DELAY_SECONDS),
+            mock.call(PADDLE_RETRY_DELAY_SECONDS * 2),
+        ]
+        assert result.default_price == FALLBACK_PRICE
+        assert result.previews is None
+        assert len(caplog.records) == 1
+        assert 'Country CA pricing preview failed:' in caplog.records[0].getMessage()

@@ -173,7 +173,8 @@ def build_tbpro():
 
     default_plan = settings.TBPRO_DEFAULT_PLAN.copy()
     fallback_price = '${0}'.format(default_plan['price'])
-    default_plan['price'] = paddle_pricing.resolve_monthly_price(fallback_price)
+    resolved_prices = paddle_pricing.resolve_country_prices(fallback_price)
+    default_plan['price'] = resolved_prices.default_price
 
     context = {
         'current_year': date.today().year,

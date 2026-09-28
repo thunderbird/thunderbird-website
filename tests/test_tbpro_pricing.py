@@ -9,6 +9,7 @@ import pytest
 from jinja2 import Environment, FileSystemLoader
 
 import settings
+from paddle_pricing import ResolvedCountryPrices
 
 
 BUILD_SITE = os.path.join(os.path.dirname(__file__), '..', 'build-site.py')
@@ -50,7 +51,7 @@ def _run_tbpro_site_import(*, resolve=None, extra_patches=()):
         mock.patch('builder.Site', mock_site_cls),
     ]
     if resolve is not None:
-        patches.append(mock.patch('paddle_pricing.resolve_monthly_price', resolve))
+        patches.append(mock.patch('paddle_pricing.resolve_country_prices', resolve))
     patches.extend(extra_patches)
 
     stacked = mock.patch.dict(os.environ)
@@ -73,12 +74,17 @@ def _run_tbpro_site_import(*, resolve=None, extra_patches=()):
 
 class TestBuildTbproPricing:
     def test_import_time_build_uses_resolved_price_without_mutating_settings(self):
-        mock_resolve = mock.Mock(return_value=RESOLVED_PRICE)
+        mock_resolve = mock.Mock(return_value=ResolvedCountryPrices(
+            default_price=RESOLVED_PRICE,
+            previews=None,
+        ))
 
         mock_site_cls, mock_site, patched_plan = _run_tbpro_site_import(resolve=mock_resolve)
 
         mock_resolve.assert_called_once_with('$6')
-        context_plan = mock_site_cls.call_args.kwargs['data']['default_plan']
+        context = mock_site_cls.call_args.kwargs['data']
+        assert set(context) == {'current_year', 'default_plan'}
+        context_plan = context['default_plan']
         assert context_plan['price'] == RESOLVED_PRICE
         assert context_plan is not patched_plan
         assert patched_plan == CONTROLLED_PLAN
@@ -96,8 +102,9 @@ class TestBuildTbproPricing:
         )
         mock_site_cls, mock_site, _ = _run_tbpro_site_import(extra_patches=extra_patches)
 
-        context_plan = mock_site_cls.call_args.kwargs['data']['default_plan']
-        assert context_plan['price'] == '$6'
+        context = mock_site_cls.call_args.kwargs['data']
+        assert set(context) == {'current_year', 'default_plan'}
+        assert context['default_plan']['price'] == '$6'
         mock_post.assert_not_called()
         mock_site.build_tbpro.assert_called_once()
 
