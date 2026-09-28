@@ -136,10 +136,16 @@ class Site(object):
         `data` (dict, optional): dict to be directly added to the Jinja2 global context.
         `debug` (bool, optional): Optionally write log output or not.
         `dev_mode` (bool, optional): Enables various behaviours that would be helpful for develoeprs. Don't use on prod.
+        `locale_data` (callable, optional): `locale_data(lang) -> dict`, merged into
+            the Jinja globals on every language switch after LANG, DIR, and NOW.
+            The callable must return its complete, stable key set on every invocation.
+            None leaves language switching unchanged.
     Attributes:
         `lang`: Current language to build the site in, an element of `languages`.
     """
-    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media', js_bundles={}, data={}, debug=False, dev_mode=False, extra_searchpaths=[]):
+    def __init__(self, languages, searchpath, renderpath, css_bundles, staticdir='_media',
+                 js_bundles={}, data={}, debug=False, dev_mode=False, extra_searchpaths=[],
+                 locale_data=None):
         self.languages = languages
         self.lang = languages[0]
         self.context = {}
@@ -152,6 +158,7 @@ class Site(object):
         self.js_bundles = js_bundles
         self.jsout = renderpath + '/media/js'
         self.data = data
+        self.locale_data = locale_data
         self._setup_env()
         self._env.globals.update(settings=settings, **helper.contextfunctions)
         self.dev_mode = dev_mode
@@ -213,10 +220,16 @@ class Site(object):
                 f.write(js_string)
 
     def _switch_lang(self, lang):
-        """Switch current `lang` for build and update gettext translations accordingly."""
+        """Switch current `lang` for build and update gettext translations accordingly.
+
+        When locale_data is set, its return value is merged after LANG, DIR, and NOW.
+        The callback must return the same keys on every call.
+        """
         self.lang = lang
         self._set_context()
         self._env.globals.update(self.context)
+        if self.locale_data is not None:
+            self._env.globals.update(self.locale_data(lang))
         translator = translate.gettext_object(lang)
         self._env.install_gettext_translations(translator)
         self._env.globals.update(translations=translator.get_translations(), l10n_css=translator.l10n_css)

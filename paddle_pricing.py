@@ -17,7 +17,12 @@ from pathlib import Path
 
 import requests
 from babel.core import Locale
-from babel.numbers import format_currency, get_currency_precision, list_currencies
+from babel.numbers import (
+    NumberPattern,
+    format_currency,
+    get_currency_precision,
+    list_currencies,
+)
 
 import settings
 
@@ -276,11 +281,30 @@ def annual_to_monthly_minor(annual_minor):
     return annual_minor // MONTHS_PER_YEAR + (1 if remainder else 0)
 
 
+def _integer_currency_pattern(pattern):
+    """Return a copy of a pattern with fractional precision removed.
+
+    Affixes are preserved so quoted literals and a negative subpattern remain
+    intact.
+    """
+    return NumberPattern(
+        pattern=pattern.pattern,
+        prefix=pattern.prefix,
+        suffix=pattern.suffix,
+        grouping=pattern.grouping,
+        int_prec=pattern.int_prec,
+        frac_prec=(0, 0),
+        exp_prec=pattern.exp_prec,
+        exp_plus=pattern.exp_plus,
+        number_pattern=pattern.number_pattern,
+    )
+
+
 def format_monthly_price(monthly_minor, currency, locale=DISPLAY_LOCALE):
     """Format minor units as a locale-aware currency string.
 
-    Trailing decimal zeros are removed only when the amount is an integer,
-    so $6.50 is preserved and $6.00 becomes $6.
+    Integral amounts drop the fractional portion. Other amounts keep the
+    currency's normal precision.
     """
     if not currency or not isinstance(currency, str):
         raise PaddlePricingError('Paddle preview is missing a currency code.')
@@ -293,15 +317,66 @@ def format_monthly_price(monthly_minor, currency, locale=DISPLAY_LOCALE):
     precision = get_currency_precision(currency)
 
     major = Decimal(monthly_minor).scaleb(-precision)
-    formatted = format_currency(major, currency, locale=babel_locale)
-    if precision == 0 or major != major.to_integral_value():
-        return formatted
+    if precision == 0 or major == major.to_integral_value():
+        pattern = _integer_currency_pattern(
+            Locale.parse(babel_locale).currency_formats['standard']
+        )
+        return format_currency(
+            major,
+            currency,
+            format=pattern,
+            locale=babel_locale,
+            currency_digits=False,
+        )
+    return format_currency(major, currency, locale=babel_locale)
 
-    decimal_symbol = Locale.parse(babel_locale).number_symbols.get('decimal', '.')
-    integer_fraction = decimal_symbol + ('0' * precision)
-    if formatted.endswith(integer_fraction):
-        return formatted[:-len(integer_fraction)]
-    return formatted
+
+def _territory_label(locale, code):
+    """Return the locale's territory name, or English when CLDR has none."""
+    name = locale.territories.get(code)
+    if name:
+        return name
+    english_name = Locale.parse('en').territories.get(code)
+    if not english_name:
+        raise PaddlePricingError(f'No English territory name for country {code}.')
+    return english_name
+
+
+def public_price_preview(previews, locale):
+    """Return the public per-locale preview for a complete country map.
+
+    Prices use locale. Missing territory names fall back to English.
+    countries is sorted by label, then code.
+    """
+    labels = {
+        code: _territory_label(locale, code)
+        for code in previews.prices
+    }
+    seen = {}
+    for code, label in labels.items():
+        if label in seen:
+            raise PaddlePricingError(
+                f'Duplicate price preview label {label!r} for {seen[label]} and {code} '
+                f'in locale {locale}.'
+            )
+        seen[label] = code
+
+    countries = []
+    for code in sorted(previews.prices, key=lambda item: (labels[item], item)):
+        price_data = previews.prices[code]
+        countries.append({
+            'code': code,
+            'label': labels[code],
+            'price': format_monthly_price(
+                price_data.monthly_minor,
+                price_data.currency_code,
+                locale=str(locale),
+            ),
+        })
+    return {
+        'defaultCountry': previews.default_country,
+        'countries': countries,
+    }
 
 
 def _require_currency_code(currency_code, request_id):

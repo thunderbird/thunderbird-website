@@ -1,11 +1,14 @@
 """Unit tests for Paddle pricing configuration, preview parsing, HTTP fetch, and fallback."""
 
+import json
 import logging
 import os
 from unittest import mock
 
 import pytest
 import requests
+from babel.core import Locale
+from babel.numbers import format_currency, parse_pattern
 
 import settings
 from paddle_pricing import (
@@ -16,10 +19,12 @@ from paddle_pricing import (
     PADDLE_REQUEST_TIMEOUT,
     PADDLE_RETRY_DELAY_SECONDS,
     PADDLE_SANDBOX_API_BASE,
+    CountryPricePreviews,
     MonthlyPrice,
     PaddlePricingConfig,
     PaddlePricingError,
     ResolvedCountryPrices,
+    _integer_currency_pattern,
     annual_to_monthly_minor,
     fetch_monthly_price,
     fetch_monthly_price_data,
@@ -29,6 +34,7 @@ from paddle_pricing import (
     monthly_price_from_preview,
     paddle_api_base_url,
     parse_config,
+    public_price_preview,
     read_api_key,
     resolve_country_prices,
     resolve_monthly_price,
@@ -299,6 +305,132 @@ class TestFormatMonthlyPrice:
 
     def test_jpy_zero_decimals(self):
         assert format_monthly_price(975, 'JPY') == '¥975'
+
+    def test_german_suffix_integer_and_fraction(self):
+        assert format_monthly_price(600, 'USD', locale='de') == '6\xa0$'
+        assert format_monthly_price(650, 'USD', locale='de') == '6,50\xa0$'
+        assert format_monthly_price(1000, 'CAD', locale='de') == '10\xa0CA$'
+
+    def test_french_suffix(self):
+        assert format_monthly_price(600, 'USD', locale='fr') == '6\xa0$US'
+
+    def test_arabic_rtl_marks(self):
+        assert format_monthly_price(600, 'USD', locale='ar') == '\u200f6\xa0US$'
+
+    def test_bhd_three_decimals(self):
+        assert format_monthly_price(1000, 'BHD') == 'BHD1'
+        assert format_monthly_price(1500, 'BHD') == 'BHD1.500'
+        assert format_monthly_price(1001, 'BHD') == 'BHD1.001'
+
+    def test_integer_pattern_does_not_mutate_locale_pattern(self):
+        standard = Locale.parse('en_US').currency_formats['standard']
+        before = standard.frac_prec
+        assert format_monthly_price(600, 'USD') == '$6'
+        assert standard.frac_prec == before == (2, 2)
+
+    def test_quoted_literal_is_preserved(self):
+        parsed = parse_pattern("¤#,##0.00' (#,##0.00)'")
+        copied = _integer_currency_pattern(parsed)
+        assert copied is not parsed
+        assert parsed.frac_prec == (2, 2)
+        assert copied.frac_prec == (0, 0)
+        for field in (
+            'pattern', 'prefix', 'suffix', 'grouping', 'int_prec',
+            'exp_prec', 'exp_plus', 'number_pattern',
+        ):
+            assert getattr(copied, field) == getattr(parsed, field)
+        assert format_currency(
+            6, 'USD', format=copied, locale='en_US', currency_digits=False,
+        ) == '$6 (#,##0.00)'
+
+    def test_explicit_negative_subpattern_is_copied(self):
+        synthesized = parse_pattern('¤#,##0.00')
+        explicit = parse_pattern('¤#,##0.00;¤-#,##0.00')
+        assert explicit.prefix[1] != synthesized.prefix[1]
+        copied = _integer_currency_pattern(explicit)
+        assert copied.prefix == explicit.prefix
+        assert copied.suffix == explicit.suffix
+        assert explicit.frac_prec == (2, 2)
+        assert format_currency(
+            -6, 'USD', format=copied, locale='en_US', currency_digits=False,
+        ) == '$-6'
+
+
+class TestPublicPricePreview:
+    def _previews(self, default_country='US'):
+        return CountryPricePreviews(
+            default_country=default_country,
+            prices={
+                'US': MonthlyPrice(monthly_minor=600, currency_code='USD'),
+                'CA': MonthlyPrice(monthly_minor=1000, currency_code='CAD'),
+            },
+        )
+
+    def test_en_us_exact_result_and_keys(self):
+        previews = self._previews()
+        result = public_price_preview(previews, Locale.parse('en_US'))
+        assert result == {
+            'defaultCountry': 'US',
+            'countries': [
+                {'code': 'CA', 'label': 'Canada', 'price': 'CA$10'},
+                {'code': 'US', 'label': 'United States', 'price': '$6'},
+            ],
+        }
+        assert set(result) == {'defaultCountry', 'countries'}
+        for country in result['countries']:
+            assert set(country) == {'code', 'label', 'price'}
+
+    def test_page_locale_formatting_and_order(self):
+        german = public_price_preview(self._previews(), Locale.parse('de'))
+        assert [country['code'] for country in german['countries']] == ['CA', 'US']
+        prices = {country['code']: country['price'] for country in german['countries']}
+        assert prices == {'CA': '10\xa0CA$', 'US': '6\xa0$'}
+
+        arabic = public_price_preview(self._previews(), Locale.parse('ar'))
+        assert [country['code'] for country in arabic['countries']] == ['US', 'CA']
+
+        canada_default = public_price_preview(self._previews('CA'), Locale.parse('de'))
+        assert canada_default['defaultCountry'] == 'CA'
+
+    def test_english_fallback_keeps_every_country(self):
+        latgalian = public_price_preview(self._previews(), Locale.parse('ltg'))
+        labels = {country['code']: country['label'] for country in latgalian['countries']}
+        assert labels == {'CA': 'Canada', 'US': 'United States'}
+
+        guarani = public_price_preview(self._previews(), Locale.parse('gn'))
+        labels = {country['code']: country['label'] for country in guarani['countries']}
+        assert labels['US'] == 'Estados Unidos'
+        assert labels['CA'] == 'Canada'
+        assert {country['code'] for country in guarani['countries']} == {'US', 'CA'}
+
+    def test_duplicate_label_raises(self):
+        class FakeLocale:
+            territories = {'US': 'Canada', 'CA': 'Canada'}
+
+            def __str__(self):
+                return 'zz'
+
+        with pytest.raises(PaddlePricingError, match='zz') as exc_info:
+            public_price_preview(self._previews(), FakeLocale())
+        message = str(exc_info.value)
+        assert 'US' in message
+        assert 'CA' in message
+        assert 'Canada' in message
+
+    def test_result_omits_internal_fields_and_does_not_mutate_previews(self):
+        prices = {
+            'US': MonthlyPrice(monthly_minor=600, currency_code='USD'),
+            'CA': MonthlyPrice(monthly_minor=1000, currency_code='CAD'),
+        }
+        previews = CountryPricePreviews(default_country='US', prices=prices)
+        result = public_price_preview(previews, Locale.parse('en_US'))
+        encoded = json.dumps(result)
+        for hidden in ('monthly_minor', 'currency_code', 'request_id', 'formatted_totals'):
+            assert hidden not in encoded
+        assert previews.prices is prices
+        assert previews.default_country == 'US'
+        assert prices['US'] == MonthlyPrice(monthly_minor=600, currency_code='USD')
+        assert prices['CA'] == MonthlyPrice(monthly_minor=1000, currency_code='CAD')
 
 
 class TestFormattedPriceFromPreview:
