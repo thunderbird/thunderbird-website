@@ -89,7 +89,8 @@ All environments compile translations and build all sites from source.
 docker build -t thunderbird-web .
 docker run -p 8080:80 thunderbird-web
 
-# Stage/prod (used by CI)
+# Stage/prod image cleanup only. Deployment CI also supplies Paddle
+# configuration at build time; see "tb.pro Paddle pricing" under Permissions.
 docker build --build-arg BUILD_ENV=stage -t thunderbird-web:stage .
 docker build --build-arg BUILD_ENV=prod -t thunderbird-web:prod .
 ```
@@ -164,6 +165,23 @@ Preview deployments depend on: a `*.thunderbird.dev` ACM wildcard certificate (A
 
 - **`TB_BUILDS_KEY`**: GitHub PAT or App token with `contents:write` on `thunderbird/tb-website-builds`, used to push built static files.
 - **`TB_BUILDS_GIT_EMAIL`**: Committer email for the bot identity used in `tb-website-builds` commits.
+
+### tb.pro Paddle pricing
+
+Deployment builds for stage and production call Paddle's `POST /pricing-preview` endpoint during the Docker build. They request the configured active annual price for `TBPRO_PADDLE_COUNTRY` (currently `US`) and convert its `totals.total` to a monthly-equivalent display value baked into the static HTML.
+
+Both the `stage` and `prod` GitHub Environments must define:
+
+- **Secret — `PADDLE_API_KEY`**: A Paddle API key with `transaction.read`, the minimum permission required for pricing preview.
+- **Variable — `PADDLE_ENV`**: `sandbox` or `production`.
+- **Variable — `TBPRO_PADDLE_PRICE_ID`**: The active annual Paddle price ID used by tb.pro.
+- **Variable — `TBPRO_PADDLE_COUNTRY`**: Currently `US`.
+
+The API key, Paddle environment, and price ID must belong to the same Paddle environment. Keep the API key only as a GitHub Environment secret. Do not commit it, store it as a GitHub variable, pass it as a Docker build argument, or expose it through Pulumi, ECS, or the runtime container. The deployment workflow supplies it only through a temporary BuildKit secret mount.
+
+Deployment builds require valid Paddle configuration and fail if configuration is missing, partial, or invalid, or if Paddle does not return a valid price. By default, local builds use the committed `$6` fallback without an HTTP request. Container tests and PR previews receive no Paddle credentials and use the same fallback; previews therefore do not validate Paddle pricing.
+
+Each triggered stage or production deployment invalidates the pricing build layer. Paddle catalog changes do not trigger a website deployment by themselves; publish a Paddle-only pricing change by manually running the Build and Deploy workflow or using another existing deployment trigger.
 
 ### OIDC
 

@@ -22,6 +22,7 @@ import build_calendar
 import builder
 
 import helper
+import paddle_pricing
 import settings
 
 import markdown
@@ -170,9 +171,13 @@ def build_tbpro():
     """Build the tb.pro site."""
     print("Building tb.pro site")
 
+    default_plan = settings.TBPRO_DEFAULT_PLAN.copy()
+    fallback_price = '${0}'.format(default_plan['price'])
+    default_plan['price'] = paddle_pricing.resolve_monthly_price(fallback_price)
+
     context = {
         'current_year': date.today().year,
-        'default_plan': settings.TBPRO_DEFAULT_PLAN,
+        'default_plan': default_plan,
     }
     site = builder.Site(languages, settings.TBPRO_PATH, settings.TBPRO_RENDERPATH,
                        settings.TBPRO_CSS, js_bundles=settings.TBPRO_JS,
