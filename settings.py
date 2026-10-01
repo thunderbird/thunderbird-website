@@ -488,6 +488,7 @@ TBPRO_CSS = {
 }
 
 TBPRO_JS = {
+    'tbpro-price-preview': ['js/tbpro/price-preview.js'],
 }
 
 # Thunderbird Pro subscription plan - Single source of truth for all pages

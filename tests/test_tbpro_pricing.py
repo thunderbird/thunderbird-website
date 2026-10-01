@@ -47,6 +47,42 @@ ABSENT_PREVIEW_TOKENS = (
     'request_id',
     API_KEY_SENTINEL,
 )
+PRICE_PREVIEW_JS = os.path.join(
+    os.path.dirname(__file__), '..', 'assets', 'js', 'tbpro', 'price-preview.js',
+)
+PRICE_PREVIEW_SCRIPT = (
+    '<script type="text/javascript" '
+    "src=\"{{ static('js/tbpro-price-preview.js') }}\" "
+    'charset="utf-8" defer></script>'
+)
+PRICE_PREVIEW_SCRIPT_SRC = '/media/js/tbpro-price-preview.js'
+FORBIDDEN_PREVIEW_SOURCE_TOKENS = (
+    'fetch',
+    'XMLHttpRequest',
+    'sendBeacon',
+    'WebSocket',
+    'innerHTML',
+    'outerHTML',
+    'insertAdjacentHTML',
+    'localStorage',
+    'sessionStorage',
+    'document.cookie',
+    'navigator.language',
+    'navigator.languages',
+    'geolocation',
+    'paddle',
+    'Intl.NumberFormat',
+    'toLocaleString',
+    'focus(',
+    'blur(',
+    'scrollIntoView',
+    'window.location',
+    'document.location',
+    'location.assign',
+    'location.replace',
+    'pushState',
+    'replaceState',
+)
 
 CONTROLLED_PLAN = {
     'name': 'Controlled Plan',
@@ -338,6 +374,24 @@ def _assert_absent_tokens(html, template):
         assert token not in html, template
 
 
+def _assert_preview_script(soup, template):
+    tags = [
+        tag for tag in soup.select('script[src]')
+        if tag.get('src') == PRICE_PREVIEW_SCRIPT_SRC
+    ]
+    assert len(tags) == 1, template
+    tag = tags[0]
+    assert tag.has_attr('defer'), template
+    assert tag.get('type') == 'text/javascript', template
+    assert tag.get('charset') == 'utf-8', template
+    assert '://' not in tag.get('src'), template
+
+
+def _price_preview_source():
+    with open(PRICE_PREVIEW_JS, encoding='utf-8') as handle:
+        return handle.read()
+
+
 class TestSubscriptionPlanPages:
     def test_configured_pages_render_the_default_country_preview(self):
         preview = _price_preview()
@@ -385,6 +439,7 @@ class TestSubscriptionPlanPages:
             _assert_cta(soup, template)
             _assert_page_language(soup, html, template)
             _assert_absent_tokens(html, template)
+            _assert_preview_script(soup, template)
 
             if template == 'waitlist/index.html':
                 mailchimp = soup.select_one('#mce-COUNTRY')
@@ -412,6 +467,7 @@ class TestSubscriptionPlanPages:
             _assert_cta(soup, template)
             _assert_page_language(soup, html, template)
             _assert_absent_tokens(html, template)
+            _assert_preview_script(soup, template)
             if template == 'waitlist/index.html':
                 mailchimp = soup.select_one('#mce-COUNTRY')
                 assert mailchimp.get('name') == 'COUNTRY', template
@@ -444,3 +500,76 @@ class TestSubscriptionPlanPages:
         preview = _price_preview(default_country='GB')
         with pytest.raises(UndefinedError, match='list object has no element 0'):
             _render_tbpro_pages(preview, templates=('index.html',))
+
+    def test_privacy_page_loads_the_script_without_a_preview(self):
+        html = _render_tbpro_pages(None, templates=('privacy/index.html',))['privacy/index.html']
+        soup = _parse_html(html)
+        assert soup.select('.subscription-price-preview') == []
+        _assert_preview_script(soup, 'privacy/index.html')
+
+
+class TestPricePreviewScript:
+    """Source and bundle checks. They do not execute the script.
+
+    Malformed JSON and price changes still require manual browser QA.
+    """
+
+    def test_bundle_registration_points_at_the_source_file(self):
+        assert settings.TBPRO_JS == {
+            'tbpro-price-preview': ['js/tbpro/price-preview.js'],
+        }
+        assert os.path.isfile(PRICE_PREVIEW_JS)
+
+    def test_base_template_places_the_deferred_tag_outside_blocks(self):
+        base_path = os.path.join(settings.TBPRO_PATH, 'includes', 'base', 'base.html')
+        with open(base_path, encoding='utf-8') as handle:
+            base = handle.read()
+        marker = '{% block additional_page_js %}{% endblock %}'
+        head, separator, tail = base.partition(marker)
+        assert separator == marker
+        assert PRICE_PREVIEW_SCRIPT not in head
+        assert PRICE_PREVIEW_SCRIPT in tail
+        assert tail.index(PRICE_PREVIEW_SCRIPT) < tail.index('</body>')
+
+    def test_concat_writes_the_source_into_the_media_bundle(self):
+        source = _price_preview_source()
+        with tempfile.TemporaryDirectory() as renderpath:
+            site = builder.Site(
+                ['en-US'],
+                settings.TBPRO_PATH,
+                renderpath,
+                {},
+                js_bundles=settings.TBPRO_JS,
+            )
+            os.makedirs(site.jsout, exist_ok=True)
+            site._concat_js()
+            bundle_path = os.path.join(site.jsout, 'tbpro-price-preview.js')
+            assert bundle_path.endswith('/media/js/tbpro-price-preview.js')
+            with open(bundle_path, encoding='utf-8') as handle:
+                bundle = handle.read()
+        assert bundle == source
+
+    def test_source_scopes_queries_and_reveals_only_after_the_listener(self):
+        source = _price_preview_source()
+        assert "document.querySelectorAll('.subscription-price-preview')" in source
+        assert source.count('document.querySelectorAll') == 1
+        assert 'document.getElementById' not in source
+        assert "root.querySelectorAll('script.subscription-price-data')" in source
+        assert "root.querySelectorAll('.subscription-price-control')" in source
+        assert "control.querySelectorAll('select')" in source
+        assert "root.querySelectorAll('.subscription-price')" in source
+        assert 'JSON.parse(dataNode.textContent)' in source
+        handler = source.index('function onCountryChange()')
+        assignment = source.index('.textContent =')
+        listener = source.index("addEventListener('change', onCountryChange)")
+        reveal = source.index("removeAttribute('hidden')")
+        assert source.count('.textContent =') == 1
+        assert handler < assignment < listener < reveal
+
+    def test_source_omits_network_storage_and_navigation_apis(self):
+        source = _price_preview_source()
+        folded = source.lower()
+        for token in FORBIDDEN_PREVIEW_SOURCE_TOKENS:
+            assert token not in source, token
+            if token == 'paddle':
+                assert token not in folded
