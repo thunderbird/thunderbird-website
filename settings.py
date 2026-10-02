@@ -218,6 +218,9 @@ APPEAL_DONATE_PAGES = [
     'thunderbird/153.0/jun26-1b/index.html',
     'thunderbird/153.0/jun26-1c/index.html',
     'thunderbird/153.0/oct26/index.html',
+    'thunderbird/153.0/nov26-1a/index.html',
+    'thunderbird/153.0/nov26-1b/index.html',
+    'thunderbird/153.0/nov26-1c/index.html',
     'thunderbird/release/sep25r/index.html',
 ]
 
@@ -389,6 +392,9 @@ URL_MAPPINGS = {
     'updates.140.whatsnew': '/thunderbird/140.0/whatsnew/',
     'updates.153.whatsnew': '/thunderbird/153.0/whatsnew/',
     'updates.153.appeal.oc26.donate': '/thunderbird/153.0/oct26/donate/',
+    'updates.153.appeal.nov26-1a.donate': '/thunderbird/153.0/nov26-1a/donate/',
+    'updates.153.appeal.nov26-1b.donate': '/thunderbird/153.0/nov26-1b/donate/',
+    'updates.153.appeal.nov26-1c.donate': '/thunderbird/153.0/nov26-1c/donate/',
 }
 # Appeal page and donate subpage URLs are derived from APPEAL_DONATE_PAGES
 # rather than being listed individually in URL_MAPPINGS above.
@@ -468,6 +474,7 @@ UPDATES_CSS = {
     "appeal-apr26-1e-style": ["less/appeals/apr26-1e.less"],
     "appeal-jun26-style": ["less/appeals/jun26.less"],
     'whatsnew-153': ['less/whatsnew-153.less'],
+    "appeal-nov26-style": ["less/appeals/nov26.less"],
 }
 
 UPDATES_JS = {
