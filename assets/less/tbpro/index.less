@@ -741,21 +741,77 @@ section#details {
                 }
             }
 
+            // Keep normalize's [hidden] rule active until the script reveals the control.
+            .subscription-price-control:not([hidden]) {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                inline-size: 100%;
+                margin-block-end: 1rem;
+
+                label {
+                    min-inline-size: 0;
+                }
+
+                select {
+                    .mixin-font-styles(
+                        @family-inter,
+                        400,
+                        0.875rem,
+                        1.25rem
+                    );
+                    appearance: none;
+                    background-color: #1a202c;
+                    background-image: url("/media/svg/caret-down.svg");
+                    background-position: right 0.75rem center;
+                    background-repeat: no-repeat;
+                    background-size: 1rem;
+                    border: 0.0625rem solid #3d4d67;
+                    border-radius: 0.5rem;
+                    box-shadow: 2px 2px 4px #0000000d inset;
+                    color: #d9d9de;
+                    cursor: pointer;
+                    inline-size: 100%;
+                    padding-block: 0.75rem;
+                    padding-inline: 0.75rem 2.5rem;
+
+                    &:focus-visible {
+                        outline: 0.125rem solid var(--colour-primary-default);
+                        outline-offset: 0.125rem;
+                    }
+
+                    option {
+                        background-color: #1a202c;
+                        color: #d9d9de;
+                    }
+                }
+
+                html[dir="rtl"] & select {
+                    background-position: left 0.75rem center;
+                }
+            }
+
             h4 {
                 .mixin-font-styles(
                     @family-inter,
                     500,
                     0.75rem
                 );
-                display: inline-flex;
+                align-items: baseline;
+                column-gap: 0.375rem;
+                display: flex;
                 flex-direction: row;
-                gap: 0.375rem;
-                margin: 0;
-                margin-bottom: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-block: 0 1rem;
+                max-inline-size: 100%;
+                row-gap: 0.25rem;
 
                 b {
                     font-size: 2rem;
                     font-weight: normal;
+                    min-inline-size: 0;
+                    overflow-wrap: anywhere;
                     .mixin-font-styles(
                         @family-metropolis,
                         normal,
@@ -763,7 +819,7 @@ section#details {
                     );
                 }
                 span {
-                    text-align: left;
+                    text-align: start;
                     line-height: 1.32;
                 }
             }
@@ -773,6 +829,10 @@ section#details {
                 @media (min-width: @md) {
                     .web-body-default();
                 }
+            }
+
+            .subscription-price-note {
+                margin-block-end: 1rem;
             }
 
         }
