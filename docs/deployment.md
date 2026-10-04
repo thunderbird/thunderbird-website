@@ -24,7 +24,6 @@ Built static files are committed to https://github.com/thunderbird/tb-website-bu
 Pushing to `master` or `prod` on this repository triggers a full build and deploy for the corresponding environment.
 
 External repositories also trigger builds via `repository_dispatch`:
-
 - **thunderbird-notes**: `master` push triggers stage, `prod` push triggers production
 - **thunderbird.net-l10n**: `master` push triggers stage
 - **product-details**: `production` push triggers production
@@ -73,7 +72,6 @@ The infrastructure is defined in the `pulumi/` directory using Python.
 ### Configuration
 
 Project-level defaults (region, certificate ARN) are in `pulumi/Pulumi.yaml`. Stack-specific overrides:
-
 - `pulumi/Pulumi.stage.yaml` - Stage environment config
 - `pulumi/Pulumi.prod.yaml` - Production environment config
 
@@ -111,20 +109,17 @@ For local development using VS Code's Dev Containers feature:
 ### Container Test (`container-test.yml`)
 
 Runs on every push/PR to `master`:
-
 - Builds the Docker container with `BUILD_ENV=local`
 - Runs pytest inside the container
 
 ### Build and Deploy (`deploy.yml`)
 
 Triggered by:
-
 - Push to `master` or `prod` branches
 - Manual workflow dispatch
 - Repository dispatch (from external repos like thunderbird-notes, l10n, product-details)
 
 Steps:
-
 1. Build Docker image from source and push to ECR
 2. Extract built static files and commit to `tb-website-builds`
 3. Deploy infrastructure with Pulumi
@@ -156,7 +151,6 @@ The label controls which site is previewed. Use `preview` for the default (`www.
 ### Preview Infrastructure
 
 Defined in `pulumi/preview/`. Each PR gets its own Pulumi stack with:
-
 - Lambda function (container image)
 - API Gateway HTTP API
 - Custom domain + Route53 record
