@@ -745,11 +745,15 @@ section#details {
             .subscription-price-control:not([hidden]) {
                 display: flex;
                 flex-direction: column;
-                gap: 0.5rem;
+                gap: @space-9;
                 inline-size: 100%;
-                margin-block-end: 1rem;
+                max-inline-size: 35rem;
+                margin-inline: auto;
+                margin-block: @space-24 @space-18;
 
                 label {
+                    .web-body-medium();
+                    color: #d9d9de;
                     min-inline-size: 0;
                 }
 
@@ -757,7 +761,7 @@ section#details {
                     .mixin-font-styles(
                         @family-inter,
                         400,
-                        0.875rem,
+                        1rem,
                         1.25rem
                     );
                     appearance: none;
@@ -766,14 +770,15 @@ section#details {
                     background-position: right 0.75rem center;
                     background-repeat: no-repeat;
                     background-size: 1rem;
+                    min-block-size: 3rem;
                     border: 0.0625rem solid #3d4d67;
                     border-radius: 0.5rem;
                     box-shadow: 2px 2px 4px #0000000d inset;
                     color: #d9d9de;
                     cursor: pointer;
                     inline-size: 100%;
-                    padding-block: 0.75rem;
-                    padding-inline: 0.75rem 2.5rem;
+                    padding-block: @space-12;
+                    padding-inline: @space-12 2.5rem;
 
                     &:focus-visible {
                         outline: 0.125rem solid var(--colour-primary-default);
@@ -831,8 +836,29 @@ section#details {
                 }
             }
 
+            .subscription-price-preview h4 {
+                margin-block-end: @space-18;
+
+                b {
+                    flex: 0 0 auto;
+                    max-inline-size: 100%;
+                    min-inline-size: auto;
+                }
+
+                span {
+                    .text-small();
+                    flex: 0 0 auto;
+                    text-align: center;
+                }
+            }
+
             .subscription-price-note {
-                margin-block-end: 1rem;
+                // Dark-palette --colour-ti-muted; tb.pro does not set .dark.
+                color: #7f94ac;
+                .text-small();
+                margin-block-end: @space-16;
+                margin-inline: auto;
+                max-inline-size: 35rem;
             }
 
         }

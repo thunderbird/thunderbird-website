@@ -38,9 +38,9 @@ LABEL_SENTINEL = 'TBPRO_LABEL_SENTINEL'
 DANGEROUS_LABEL = f'{LABEL_SENTINEL}</script>{LABEL_SENTINEL}'
 PRICE_SENTINEL = '$6<price>'
 PREVIEW_NOTE = (
-    'Pricing is a preview. Your final price is calculated at checkout using your billing country.'
+    'Pricing is a preview. Final price is calculated at checkout using your billing country.'
 )
-PREVIEW_LABEL = 'Select your country or region to preview pricing.'
+PREVIEW_LABEL = 'Select your country or region'
 ABSENT_PREVIEW_TOKENS = (
     'monthly_minor',
     'currency_code',
