@@ -24,6 +24,7 @@ Built static files are committed to https://github.com/thunderbird/tb-website-bu
 Pushing to `master` or `prod` on this repository triggers a full build and deploy for the corresponding environment.
 
 External repositories also trigger builds via `repository_dispatch`:
+
 - **thunderbird-notes**: `master` push triggers stage, `prod` push triggers production
 - **thunderbird.net-l10n**: `master` push triggers stage
 - **product-details**: `production` push triggers production
@@ -72,6 +73,7 @@ The infrastructure is defined in the `pulumi/` directory using Python.
 ### Configuration
 
 Project-level defaults (region, certificate ARN) are in `pulumi/Pulumi.yaml`. Stack-specific overrides:
+
 - `pulumi/Pulumi.stage.yaml` - Stage environment config
 - `pulumi/Pulumi.prod.yaml` - Production environment config
 
@@ -109,17 +111,20 @@ For local development using VS Code's Dev Containers feature:
 ### Container Test (`container-test.yml`)
 
 Runs on every push/PR to `master`:
+
 - Builds the Docker container with `BUILD_ENV=local`
 - Runs pytest inside the container
 
 ### Build and Deploy (`deploy.yml`)
 
 Triggered by:
+
 - Push to `master` or `prod` branches
 - Manual workflow dispatch
 - Repository dispatch (from external repos like thunderbird-notes, l10n, product-details)
 
 Steps:
+
 1. Build Docker image from source and push to ECR
 2. Extract built static files and commit to `tb-website-builds`
 3. Deploy infrastructure with Pulumi
@@ -151,6 +156,7 @@ The label controls which site is previewed. Use `preview` for the default (`www.
 ### Preview Infrastructure
 
 Defined in `pulumi/preview/`. Each PR gets its own Pulumi stack with:
+
 - Lambda function (container image)
 - API Gateway HTTP API
 - Custom domain + Route53 record
@@ -168,20 +174,26 @@ Preview deployments depend on: a `*.thunderbird.dev` ACM wildcard certificate (A
 
 ### tb.pro Paddle pricing
 
-Deployment builds for stage and production call Paddle's `POST /pricing-preview` endpoint during the Docker build. They request the configured active annual price for `TBPRO_PADDLE_COUNTRY` (currently `US`) and convert its `totals.total` to a monthly-equivalent display value baked into the static HTML.
+Deployment builds for stage and production call Paddle's `POST /pricing-preview` endpoint during the Docker build. `TBPRO_PADDLE_PREVIEW_COUNTRIES` in `settings.py` is the committed approved-country list, currently containing `US` and `CA`. `TBPRO_PADDLE_COUNTRY` is the configured default country and must be included in that list. A configured build fetches the active annual price for every approved country, starting with the default, and converts each matched `totals.total` into a monthly-equivalent display price.
+
+The published prices are static build-time snapshots formatted for each page locale. The browser reads only that local static data and makes no Paddle or geolocation request. The selection is display-only: it is not persisted and is not verified billing information. Paddle Checkout in Thunderbird Accounts remains authoritative for billing country, currency, taxes, and the final total.
 
 Both the `stage` and `prod` GitHub Environments must define:
 
 - **Secret — `PADDLE_API_KEY`**: A Paddle API key with `transaction.read`, the minimum permission required for pricing preview.
 - **Variable — `PADDLE_ENV`**: `sandbox` or `production`.
 - **Variable — `TBPRO_PADDLE_PRICE_ID`**: The active annual Paddle price ID used by tb.pro.
-- **Variable — `TBPRO_PADDLE_COUNTRY`**: Currently `US`.
+- **Variable — `TBPRO_PADDLE_COUNTRY`**: The default preview country. Currently `US`, and it must be one of `TBPRO_PADDLE_PREVIEW_COUNTRIES`.
 
-The API key, Paddle environment, and price ID must belong to the same Paddle environment. Keep the API key only as a GitHub Environment secret. Do not commit it, store it as a GitHub variable, pass it as a Docker build argument, or expose it through Pulumi, ECS, or the runtime container. The deployment workflow supplies it only through a temporary BuildKit secret mount.
+The approved country preview uses the existing build configuration and requires no additional secret, Docker build argument, workflow variable, or runtime configuration. It does not introduce a service or Accounts handoff.
 
-Deployment builds require valid Paddle configuration and fail if configuration is missing, partial, or invalid, or if Paddle does not return a valid price. By default, local builds use the committed `$6` fallback without an HTTP request. Container tests and PR previews receive no Paddle credentials and use the same fallback; previews therefore do not validate Paddle pricing.
+The API key, Paddle environment, and price ID must belong to the same Paddle environment. Keep the API key only as a GitHub Environment secret. Do not commit it, store it as a GitHub variable, pass it as a Docker build argument, or expose it through Pulumi, ECS, or the runtime container. The deployment workflow supplies it only through a temporary BuildKit secret mount at `/run/secrets/paddle_api_key`.
 
-Each triggered stage or production deployment invalidates the pricing build layer. Paddle catalog changes do not trigger a website deployment by themselves; publish a Paddle-only pricing change by manually running the Build and Deploy workflow or using another existing deployment trigger.
+Stage and production set `TBPRO_PADDLE_REQUIRED=1`. A build fails when configuration is missing, partial, or invalid, or when any approved-country request fails. That failure stops the build, and no image or partial country map is published. When pricing is optional, a configured fetch failure discards the entire map and uses the fallback.
+
+Credential-free local builds, container tests, and PR previews make no Paddle request. They use the committed `$6` fallback and omit the entire preview UI, disclaimer, and embedded country data. Previews therefore do not validate Paddle pricing.
+
+Each triggered stage or production deployment invalidates the pricing build layer. Paddle catalog changes do not trigger a deployment; the published snapshots update only with the next website deployment. To publish a Paddle-only pricing change, manually run the Build and Deploy workflow or use another existing deployment trigger.
 
 ### OIDC
 
