@@ -89,7 +89,8 @@ All environments compile translations and build all sites from source.
 docker build -t thunderbird-web .
 docker run -p 8080:80 thunderbird-web
 
-# Stage/prod (used by CI)
+# Stage/prod image cleanup only. Deployment CI also supplies Paddle
+# configuration at build time; see "tb.pro Paddle pricing" under Permissions.
 docker build --build-arg BUILD_ENV=stage -t thunderbird-web:stage .
 docker build --build-arg BUILD_ENV=prod -t thunderbird-web:prod .
 ```
@@ -164,6 +165,29 @@ Preview deployments depend on: a `*.thunderbird.dev` ACM wildcard certificate (A
 
 - **`TB_BUILDS_KEY`**: GitHub PAT or App token with `contents:write` on `thunderbird/tb-website-builds`, used to push built static files.
 - **`TB_BUILDS_GIT_EMAIL`**: Committer email for the bot identity used in `tb-website-builds` commits.
+
+### tb.pro Paddle pricing
+
+Deployment builds for stage and production call Paddle's `POST /pricing-preview` endpoint during the Docker build. `TBPRO_PADDLE_PREVIEW_COUNTRIES` in `settings.py` is the committed approved-country list, currently containing `US` and `CA`. `TBPRO_PADDLE_COUNTRY` is the configured default country and must be included in that list. A configured build fetches the active annual price for every approved country, starting with the default, and converts each matched `totals.total` into a monthly-equivalent display price.
+
+The published prices are static build-time snapshots formatted for each page locale. The browser reads only that local static data and makes no Paddle or geolocation request. The selection is display-only: it is not persisted and is not verified billing information. Paddle Checkout in Thunderbird Accounts remains authoritative for billing country, currency, taxes, and the final total.
+
+Both the `stage` and `prod` GitHub Environments must define:
+
+- **Secret — `PADDLE_API_KEY`**: A Paddle API key with `transaction.read`, the minimum permission required for pricing preview.
+- **Variable — `PADDLE_ENV`**: `sandbox` or `production`.
+- **Variable — `TBPRO_PADDLE_PRICE_ID`**: The active annual Paddle price ID used by tb.pro.
+- **Variable — `TBPRO_PADDLE_COUNTRY`**: The default preview country. Currently `US`, and it must be one of `TBPRO_PADDLE_PREVIEW_COUNTRIES`.
+
+The approved country preview uses the existing build configuration and requires no additional secret, Docker build argument, workflow variable, or runtime configuration. It does not introduce a service or Accounts handoff.
+
+The API key, Paddle environment, and price ID must belong to the same Paddle environment. Keep the API key only as a GitHub Environment secret. Do not commit it, store it as a GitHub variable, pass it as a Docker build argument, or expose it through Pulumi, ECS, or the runtime container. The deployment workflow supplies it only through a temporary BuildKit secret mount at `/run/secrets/paddle_api_key`.
+
+Stage and production set `TBPRO_PADDLE_REQUIRED=1`. A build fails when configuration is missing, partial, or invalid, or when any approved-country request fails. That failure stops the build, and no image or partial country map is published. When pricing is optional, a configured fetch failure discards the entire map and uses the fallback.
+
+Credential-free local builds, container tests, and PR previews make no Paddle request. They use the committed `$6` fallback and omit the entire preview UI, disclaimer, and embedded country data. Previews therefore do not validate Paddle pricing.
+
+Each triggered stage or production deployment invalidates the pricing build layer. Paddle catalog changes do not trigger a deployment; the published snapshots update only with the next website deployment. To publish a Paddle-only pricing change, manually run the Build and Deploy workflow or use another existing deployment trigger.
 
 ### OIDC
 

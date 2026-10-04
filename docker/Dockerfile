@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 # Thunderbird Website Apache Container
 #
 # All environments build from source (including translation compilation).
@@ -69,8 +71,22 @@ COPY . /build/
 RUN cd /build \
     && uv sync --frozen \
     && uv run pull-libs.py --skip-sync --notes-branch $REPO_BRANCH \
-    && bash l10n_tools/compile.sh \
-    && uv run build-site.py --all --debug \
+    && bash l10n_tools/compile.sh
+
+ARG PADDLE_ENV
+ARG TBPRO_PADDLE_PRICE_ID
+ARG TBPRO_PADDLE_COUNTRY
+ARG TBPRO_PADDLE_REQUIRED=0
+
+# Set to a unique deployment value to refresh build-time Paddle pricing.
+ARG TBPRO_PADDLE_CACHE_BUST=local
+
+RUN --mount=type=secret,id=paddle_api_key,target=/run/secrets/paddle_api_key,required=false \
+    cd /build \
+    && : "${TBPRO_PADDLE_CACHE_BUST}" \
+    && uv run build-site.py --all --debug
+
+RUN cd /build \
     && cp -r dist/* wsgi.py settings.py /var/www/html/start/ \
     && cp -r media /var/www/html/start/www.thunderbird.net/media
 
