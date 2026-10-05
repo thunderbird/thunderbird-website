@@ -110,7 +110,7 @@ def build_calendars():
 def download_legal():
     """Download legal documents."""
     print("Downloading legal documents")
-    legal = builder.Legal(settings.WEBSITE_PATH)
+    legal = builder.Legal()
     legal.download()
 
 def build_roadmaps():

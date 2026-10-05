@@ -4,33 +4,28 @@
 
 {% extends "_base-resp.html" %}
 
-{% set fru_form_id = fru_form_id|default('desktop') %}
+{% set fru_form_id = fru_form_id|default('start26') %}
 {% set utm_campaign = utm_campaign|default('main') %}
-{% set utm_medium = utm_medium|default('desktop') %}
-{% set utm_source = utm_source|default('start_page_tb_esr') %}
-{% set utm_content = utm_medium|default('cta') %}
+{% set utm_medium = utm_medium|default('start_page_tb_esr') %}
+{% set utm_source = utm_source|default('desktop') %}
+{% set utm_content = utm_content|default('cta_start26b_meadow') %}
 
 {% block channel %}esr{% endblock %}
 {% block title %}{{ _('Welcome to Freedom – Thunderbird') }}{% endblock %}
 
 {% block main %}
-<div class="top-links">
-  {% block channel_link %}
-    <a id="release-channel" href="#">{{ _('ESR Channel') }}</a>
-  {% endblock %}
-  <a id="donate-top" href="{{ redirect_donate_url(form_id=fru_form_id, campaign=utm_campaign, medium=utm_medium, source=utm_source, content='cta-top', location='thunderbird.donate.form.desktop', show_donation_modal=False) }}">
-    {{ svg('donate-btn-heart') }} {{ _('Donate') }}
+{% block channel_link %}
+  <a id="release-channel" href="#">
+    {{ svg('start/thunderbird-esr') }}
   </a>
-</div>
+{% endblock %}
 <header>
-  <div id="logo" class="logo-img">{{ svg('logo') }}</div>
-  <h1>{{ _('Welcome to <span class="gradient-text">Freedom</span>') }}</span></h1>
+  <h1>{{ _('Welcome to <span class="gradient-text">Freedom</span>') }}</h1>
   <p class="tagline">{{ _('Thunderbird is a gift from thousands of people like you. We hope you\'ll enjoy the productivity, privacy, and freedom they make possible and we invite you to become part of that gift to others.') }}</p>
-  <div class="btn-set">
-    <a class="btn" href="{{ url('thunderbird.participate') }}">{{ svg('start/participate') }} {{ _('Participate') }}</a>
-    <a class="btn" href="{{ redirect_donate_url(form_id=fru_form_id, campaign=utm_campaign, medium=utm_medium, source=utm_source, content='cta-middle', location='thunderbird.donate.form.desktop', show_donation_modal=False) }}">{{ svg('donate-heart') }} {{ _('Donate') }}</a>
-    <a class="btn" href="https://support.mozilla.org/questions/new/thunderbird">{{ svg('handshake') }} {{ _('Get Help') }}</a>
-  </div>
+  <a class="donate-btn" href={{ redirect_donate_url(form_id=fru_form_id, campaign=utm_campaign, medium=utm_medium, source=utm_source, content=utm_content, location='thunderbird.donate', include_form_id=True) }}>
+    {{ svg('start/donate-heart') }} {{ _('Donate') }}
+  </a>
+  <p class="donate-text">{{ _('Help keep Thunderbird alive!') }}</p>
 </header>
 
 <section class="features">
@@ -38,11 +33,17 @@
     <h3>{{ _('Free and Open Source') }}</h3>
     <p class="subhead">{{ _('Thunderbird is now yours forever.') }}</p>
     <p>{{ _('Thunderbird is developed openly and distributed freely. Our software license protects your right to use, modify, and share Thunderbird. Our mission is to protect your privacy and freedom.') }}</p>
+    <a class="feature-btn" href={{ url('support.question') }}>
+      {{ svg('start/hands-heart') }} {{ _('Get Help') }}
+    </a>
   </div>
   <div class="feature-box">
     <h3>{{ _('Powered by Community') }}</h3>
     <p class="subhead">{{ _('You can become part of our story.') }}</p>
     <p>{{ _('Anyone can contribute to Thunderbird. By donating, translating, answering questions, suggesting features, reporting bugs, and more, you make Thunderbird better for yourself and the world.') }}</p>
+    <a class="feature-btn" href={{ url('thunderbird.participate') }}>
+      {{ svg('start/ruler-pencil') }} {{ _('Participate') }}
+    </a>
   </div>
 </section>
 

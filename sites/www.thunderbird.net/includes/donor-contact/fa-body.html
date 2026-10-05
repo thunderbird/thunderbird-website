@@ -83,25 +83,13 @@
           <div class="htmlSection" id="tfa_200">
             <div class="htmlContent" id="tfa_200-HTML">
               <div data-sheets-root="1">
-                <p><b>{{ _('Please note that due to the limited contact information we receive, we are unable to issue donation receipts or acknowledgements.') }}</b></p>
-                <ul class="unstyled-list">
-                  <li><b>{{ _('Account currency:') }}</b> Euro (EUR)</li>
-                  <li><b>{{ _('Beneficiary Bank:') }}</b> Silicon Valley Bank, a division of First-Citizens Bank</li>
-                  <li><b>{{ _('Name of payee (Care of):') }}</b> MZLA Technologies Corporation</li>
-                  <li><b>{{ _('IBAN:') }}</b> DE05 5123 0500 0500 2158 09</li>
-                  <li><b>{{ _('Purpose:') }}</b> Thunderbird</li>
-                </ul>
-                <ul class="unstyled-list">
-                  <li><b>{{ _('Receiving Bank (Pay to):') }}</b> Standard Chartered Bank</li>
-                  <li><b>{{ _('Location:') }}</b> Frankfurt, Germany</li>
-                  <li><b>{{ _('SWIFT Code (BIC):') }}</b> SCBLDEFX</li>
-                </ul>
-                <p>{{ _('If your bank requires our office address:') }}</p>
-                <ul class="unstyled-list address-list">
-                  <li>149 New Montgomery St, 4th Floor</li>
-                  <li>San Francisco, CA 94105</li>
-                  <li>USA</li>
-                </ul>
+                <p>{% trans trimmed %}
+                  Thunderbird accepts Single Euro Payments Area (SEPA) donations safely and efficiently through our secure donation partner, <b>FundraiseUp</b>.
+                {% endtrans %}</p>
+                <br>
+                <p>{% trans trimmed url=url('thunderbird.donate.form') %}
+                  Using our <a target="_blank" href="{{ url }}">online donation platform</a> ensures that your contribution is processed securely, allows us to issue prompt receipts for tax purposes, and helps keep Thunderbird free and open-source.
+                {% endtrans %}</p>
               </div>
             </div>
           </div>

@@ -39,9 +39,12 @@ jobs:
       id-token: write
       contents: read
       pull-requests: write
+    # Never cancel a running deploy: interrupting `pulumi up` orphans
+    # half-created AWS resources that later runs cannot reconcile.
+    # Superseded pending runs are still dropped by the concurrency group.
     concurrency:
       group: preview-pr-${{ github.event.pull_request.number }}
-      cancel-in-progress: true
+      cancel-in-progress: false
 
     steps:
       - name: Checkout

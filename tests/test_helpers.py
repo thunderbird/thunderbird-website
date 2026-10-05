@@ -67,5 +67,5 @@ class TestUrl:
         }
         url = helper.redirect_donate_url(context, location='thunderbird.donate', content='example',
                                          source='example.com', medium='example',
-                                         campaign='example', show_donation_modal=False)
+                                         campaign='example', include_form_id=False)
         assert url == 'https://www.thunderbird.net/en-US/donate?utm_content=example&utm_source=example.com&utm_medium=example&utm_campaign=example'
