@@ -52,6 +52,50 @@
   }
 }
 
+@keyframes field-breathe {
+
+  0%,
+  100% {
+    transform: translate3d(0, -1.2%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, 3.2%, 0) scale(1.08);
+  }
+}
+
+@keyframes colour-cycle {
+
+  0%,
+  10%,
+  100% {
+    opacity: 0;
+  }
+
+  42%,
+  58% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+}
+
+@keyframes inner-breathe {
+
+  0%,
+  100% {
+    transform: translate3d(0, -1.8%, 0) scale(0.9);
+    opacity: 0.88;
+  }
+
+  50% {
+    transform: translate3d(0, 4.8%, 0) scale(1.26);
+    opacity: 1;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -133,6 +177,86 @@ body {
       animation:
         gradient-pulse 8s cubic-bezier(.45, 0, .55, 1) infinite,
         colour-crossfade 8s cubic-bezier(.45, 0, .55, 1) infinite;
+    }
+
+    // Variant 1b: yellow/orange gradient built from real elements
+    // (.variant-1b) instead of the pseudo-elements above.
+    &:has(> .variant-1b) {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    & > .variant-1b {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      isolation: isolate;
+      background: #e7504d;
+      pointer-events: none;
+
+      .gradient-state,
+      .inner-glow {
+        position: absolute;
+        pointer-events: none;
+        transform-origin: 50% 8%;
+        will-change: transform, opacity;
+      }
+
+      .gradient-state {
+        inset: -8%;
+      }
+
+      .state-a {
+        background: radial-gradient(ellipse 76% 82% at 50% 9%,
+            #ffffff 0%,
+            #fffad3 49%,
+            #ffd643 66%,
+            #e7504d 100%);
+        animation: field-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
+      }
+
+      .state-b {
+        background: radial-gradient(ellipse 76% 82% at 50% 9%,
+            #ffffff 0%,
+            #fffad3 49%,
+            #ffc343 66%,
+            #f93443 100%);
+        opacity: 0;
+        animation:
+          field-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite,
+          colour-cycle 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
+      }
+
+      // Separate inner layer so the white/cream centre visibly expands and contracts.
+      .inner-glow {
+        inset: -4%;
+        z-index: 2;
+        background: radial-gradient(ellipse 62% 68% at 50% 9%,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, .99) 14%,
+            rgba(255, 253, 235, .97) 30%,
+            rgba(255, 250, 211, .93) 48%,
+            rgba(255, 246, 188, .76) 64%,
+            rgba(255, 239, 156, .44) 80%,
+            rgba(255, 239, 156, 0) 100%);
+        animation: inner-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
+      }
+
+      // Very subtle static dither to reduce gradient banding.
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        pointer-events: none;
+        opacity: .022;
+        mix-blend-mode: soft-light;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+        background-size: 180px 180px;
+      }
     }
   }
 
@@ -438,6 +562,18 @@ body {
 
     #appeal-body::after {
       opacity: 0;
+    }
+
+    #appeal-body > .variant-1b {
+      .gradient-state,
+      .inner-glow {
+        animation: none;
+        transform: none;
+      }
+
+      .state-b {
+        opacity: 0;
+      }
     }
 
     // Remove donate button built-in animations
