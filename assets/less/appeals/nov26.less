@@ -27,31 +27,6 @@
   --font-content: Open Sans, system-ui, sans-serif;
 }
 
-@keyframes colour-crossfade {
-
-  0%,
-  100% {
-    opacity: 0;
-  }
-
-  46%,
-  54% {
-    opacity: 1;
-  }
-}
-
-@keyframes gradient-pulse {
-
-  0%,
-  100% {
-    transform: translate3d(0, -0.5%, 0) scale(1);
-  }
-
-  50% {
-    transform: translate3d(0, 1.5%, 0) scale(1.055);
-  }
-}
-
 @keyframes field-breathe {
 
   0%,
@@ -145,18 +120,14 @@ body {
       width: 100%;
     }
 
-    // Animated radial gradient: two stacked layers (green/blue and pink/purple)
-    // that pulse and crossfade. The negative inset gives the scale animation
-    // room without revealing edges.
+    // Static radial gradient (green/blue). The pink/purple layer is kept
+    // hidden.
     &::before,
     &::after {
       content: "";
       position: absolute;
       inset: -7%;
       z-index: -1;
-      transform-origin: 50% 8%;
-      will-change: transform, opacity;
-      animation: gradient-pulse 8s cubic-bezier(.45, 0, .55, 1) infinite;
       pointer-events: none;
     }
 
@@ -179,9 +150,6 @@ body {
           #c96da2 76%,
           #640094 100%);
       opacity: 0;
-      animation:
-        gradient-pulse 8s cubic-bezier(.45, 0, .55, 1) infinite,
-        colour-crossfade 8s cubic-bezier(.45, 0, .55, 1) infinite;
     }
 
     // Variant 1b: yellow/orange gradient built from real elements
@@ -630,15 +598,6 @@ body {
   // ==========================================
 
   @media (prefers-reduced-motion: reduce) {
-    #appeal-body::before,
-    #appeal-body::after {
-      animation: none;
-    }
-
-    #appeal-body::after {
-      opacity: 0;
-    }
-
     #appeal-body > .variant-1b {
       .gradient-state,
       .inner-glow {
