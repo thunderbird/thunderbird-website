@@ -167,11 +167,12 @@ body {
       z-index: -1;
       overflow: hidden;
       isolation: isolate;
-      background: #e7504d;
+      background: #ff8f8d;
       pointer-events: none;
 
       .gradient-state,
-      .inner-glow {
+      .inner-glow,
+      .inner-glow-b {
         position: absolute;
         pointer-events: none;
         transform-origin: 50% 8%;
@@ -186,17 +187,17 @@ body {
         background: radial-gradient(ellipse 76% 82% at 50% 9%,
             #ffffff 0%,
             #fffad3 49%,
-            #ffd643 66%,
-            #e7504d 100%);
+            #ffe999 66%,
+            #ff8f8d 100%);
         animation: field-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
       }
 
       .state-b {
         background: radial-gradient(ellipse 76% 82% at 50% 9%,
-            #ffffff 0%,
-            #fffad3 49%,
-            #ffc343 66%,
-            #f93443 100%);
+            #fff5a3 0%,
+            #fff397 49%,
+            #ffde68 66%,
+            #d05c5a 100%);
         opacity: 0;
         animation:
           field-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite,
@@ -218,6 +219,23 @@ body {
         animation: inner-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
       }
 
+      .inner-glow-b {
+        inset: -4%;
+        z-index: 2;
+        opacity: 0;
+        background: radial-gradient(ellipse 62% 56% at 50% 9%,
+            rgba(255, 245, 163, 1) 0%,
+            rgba(255, 245, 163, .99) 14%,
+            rgba(255, 243, 151, .97) 30%,
+            rgba(255, 236, 126, .93) 48%,
+            rgba(255, 222, 104, .78) 64%,
+            rgba(255, 208, 88, .46) 80%,
+            rgba(255, 208, 88, 0) 100%);
+        animation:
+          inner-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite,
+          colour-cycle 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
+      }
+
       // Very subtle static dither to reduce gradient banding.
       &::after {
         content: "";
@@ -225,10 +243,10 @@ body {
         inset: 0;
         z-index: 3;
         pointer-events: none;
-        opacity: .022;
+        opacity: .038;
         mix-blend-mode: soft-light;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
-        background-size: 180px 180px;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.46'/%3E%3C/svg%3E");
+        background-size: 120px 120px;
       }
     }
   }
@@ -608,12 +626,14 @@ body {
   @media (prefers-reduced-motion: reduce) {
     #appeal-body > .variant-1b {
       .gradient-state,
-      .inner-glow {
+      .inner-glow,
+      .inner-glow-b {
         animation: none;
         transform: none;
       }
 
-      .state-b {
+      .state-b,
+      .inner-glow-b {
         opacity: 0;
       }
     }
