@@ -1,0 +1,672 @@
+// mixins for images.
+@import "../common/images.less";
+
+// Bases
+@import "../new-style.less";
+@import "../new/components/donate-cta.less";
+@import "../new/components/donate-cta-overrides.less";
+@import "../new/components/heart-lines.less";
+
+@import "../common/fonts.less";
+@import "../common/moz-footer.less";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --appeal-content-width: 60rem; // 960px
+  --appeal--letter-width-mobile: 23.8125rem; // 381px
+
+  --background-page-and-footer: #1a202c;
+  --color-appeal-main-bg: #ffffff;
+  --color-text-icon-brand: #19518f;
+
+  --font-content: Open Sans, system-ui, sans-serif;
+}
+
+@keyframes field-breathe {
+
+  0%,
+  100% {
+    transform: translate3d(0, -1.2%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, 3.2%, 0) scale(1.08);
+  }
+}
+
+@keyframes colour-cycle {
+
+  0%,
+  10%,
+  100% {
+    opacity: 0;
+  }
+
+  42%,
+  58% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+}
+
+@keyframes inner-breathe {
+
+  0%,
+  100% {
+    transform: translate3d(0, -1.8%, 0) scale(0.9);
+    opacity: 0.88;
+  }
+
+  50% {
+    transform: translate3d(0, 4.8%, 0) scale(1.26);
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+.page-appeal-nov26 {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex-grow: 0;
+    position: relative;
+  }
+
+  // ==========================================
+  // Main layout
+  // ==========================================
+
+  #appeal-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+    overflow: clip;
+
+    @media (min-width: @xs) {
+      padding-bottom: 7.75rem;
+    }
+
+    isolation: isolate;
+
+    // Radial gradient shape, shared by both color states so they stay aligned.
+    // Change --radial-scale to grow/shrink it while keeping the ratio.
+    --radial-scale: 1;
+    --radial-shape: ellipse calc(62% * var(--radial-scale)) calc(68% * var(--radial-scale)) at 50% 9%;
+
+    &>#appeal-heading {
+      margin-top: 8rem;
+      margin-bottom: 2rem;
+      padding-inline: 1.5rem;
+      text-align: center;
+      max-width: var(--appeal-content-width);
+      width: 100%;
+    }
+
+    // Static radial gradient (green/blue). The pink/purple layer is kept
+    // hidden.
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -7%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    &::before {
+      background: radial-gradient(var(--radial-shape),
+          #ffffff 0%,
+          #fdfdf8 18%,
+          #f3fdd2 43%,
+          #addea7 63%,
+          #70aaa1 76%,
+          #004d99 100%);
+    }
+
+    &::after {
+      background: radial-gradient(var(--radial-shape),
+          #ffffff 0%,
+          #fdfbf9 18%,
+          #feeae3 43%,
+          #ffaaa9 63%,
+          #c96da2 76%,
+          #640094 100%);
+      opacity: 0;
+    }
+
+    // Variant 1b: yellow/orange gradient built from real elements
+    // (.variant-1b) instead of the pseudo-elements above.
+    &:has(> .variant-1b) {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    & > .variant-1b {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      isolation: isolate;
+      background: #ff8f8d;
+      pointer-events: none;
+
+      .gradient-state,
+      .inner-glow,
+      .inner-glow-b {
+        position: absolute;
+        pointer-events: none;
+        transform-origin: 50% 8%;
+        will-change: transform, opacity;
+      }
+
+      .gradient-state {
+        inset: -8%;
+      }
+
+      .state-a {
+        background: radial-gradient(ellipse 76% 82% at 50% 9%,
+            #ffffff 0%,
+            #fffad3 49%,
+            #ffe999 66%,
+            #ff8f8d 100%);
+        animation: field-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
+      }
+
+      .state-b {
+        background: radial-gradient(ellipse 76% 82% at 50% 9%,
+            #fff5a3 0%,
+            #fff397 49%,
+            #ffde68 66%,
+            #d05c5a 100%);
+        opacity: 0;
+        animation:
+          field-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite,
+          colour-cycle 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
+      }
+
+      // Separate inner layer so the white/cream centre visibly expands and contracts.
+      .inner-glow {
+        inset: -4%;
+        z-index: 2;
+        background: radial-gradient(ellipse 62% 68% at 50% 9%,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, .99) 14%,
+            rgba(255, 253, 235, .97) 30%,
+            rgba(255, 250, 211, .93) 48%,
+            rgba(255, 246, 188, .76) 64%,
+            rgba(255, 239, 156, .44) 80%,
+            rgba(255, 239, 156, 0) 100%);
+        animation: inner-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
+      }
+
+      .inner-glow-b {
+        inset: -4%;
+        z-index: 2;
+        opacity: 0;
+        background: radial-gradient(ellipse 62% 56% at 50% 9%,
+            rgba(255, 245, 163, 1) 0%,
+            rgba(255, 245, 163, .99) 14%,
+            rgba(255, 243, 151, .97) 30%,
+            rgba(255, 236, 126, .93) 48%,
+            rgba(255, 222, 104, .78) 64%,
+            rgba(255, 208, 88, .46) 80%,
+            rgba(255, 208, 88, 0) 100%);
+        animation:
+          inner-breathe 6.5s cubic-bezier(.42, 0, .58, 1) infinite,
+          colour-cycle 6.5s cubic-bezier(.42, 0, .58, 1) infinite;
+      }
+
+      // Very subtle static dither to reduce gradient banding.
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        pointer-events: none;
+        opacity: .038;
+        mix-blend-mode: soft-light;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.46'/%3E%3C/svg%3E");
+        background-size: 120px 120px;
+      }
+    }
+  }
+
+  // ==========================================
+  // Hero header (title + illustration)
+  // ==========================================
+
+  #appeal-header {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4rem 1.25rem 3rem;
+
+    header {
+      align-self: flex-start;
+      z-index: 3; /* Above the sun rays */
+
+      @media (min-width: @md) {
+        align-self: flex-end;
+      }
+    }
+
+    @media (min-width: @xs) {
+      padding: 2rem 2.25rem 7.5rem;
+      min-height: 31rem;
+    }
+
+    @media (min-width: @md) {
+      max-width: 1250px;
+      min-height: 22rem;
+      padding: 2rem 2.25rem 6.5rem;
+    }
+
+    @media (min-width: @lg) {
+      max-width: 1250px;
+      padding: 2.25rem 2rem 6.5rem;
+      flex-direction: row;
+    }
+  }
+
+  #appeal-heading {
+    .mixin-font-styles(@family-open-sans, 600, 1.5rem, 1);
+    color: var(--color-text-icon-brand);
+    margin: 0;
+    font-weight: 700;
+    margin-block-start: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    // Keep "KEEP THUNDERBIRD ALIVE" wrapping onto 3 lines so it never runs
+    // under the roc, which is absolutely positioned to the right below @xs.
+    max-width: min(95%, 18rem);
+
+    @media (min-width: @xs) {
+      max-width: 95%;
+      margin-block-start: -1rem;
+      font-size: 3.5rem;
+    }
+
+    &.variant-1b {
+      margin-block-start: 1.75rem;
+
+      @media (min-width: @xs) {
+        margin-block-start: -1rem;
+      }
+    }
+
+    @media (min-width: @sm) {
+      margin-block-start: -8rem;
+
+      &.variant-1b {
+        margin-block-start: -1rem;
+      }
+    }
+
+    @media (min-width: @md) {
+      margin-block-start: -2rem;
+      font-size: 4.5rem;
+
+      &.variant-1b {
+        margin-block-start: -1rem;
+      }
+    }
+
+    @media (min-width: @lg) {
+      padding-block-end: 0.25rem;
+    }
+
+    & > span {
+      display: block;
+      font-size: 1.25rem;
+      line-height: 1;
+      text-transform: initial;
+      margin-block-end: 0.625rem;
+
+      @media (min-width: @xs) {
+        font-size: 1.5rem;
+        margin-block-end: 0.5rem;
+      }
+
+      @media (min-width: @md) {
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  // ==========================================
+  // Roc illustration
+  // ==========================================
+
+  #illustration {
+    display: flex;
+    flex-shrink: 0;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    justify-content: end;
+    width: 7.5rem; // 120px
+    height: 7rem; // 112px
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (min-width: @xs) {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: auto;
+      height: 14.875rem;
+
+      img {
+        width: auto;
+        height: auto;
+        object-fit: fill;
+      }
+    }
+
+    @media (min-width: @md) {
+      width: 100%;
+    }
+
+    @media (min-width: @lg) {
+      height: 21rem;
+      width: 22.375rem;
+    }
+  }
+
+  // ==========================================
+  // Letter container (card)
+  // ==========================================
+
+  .letter-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: var(--color-appeal-main-bg);
+    border-radius: 1.25rem;
+    max-width: calc(100% - 2.5rem);
+    min-height: 445px;
+    margin-inline: 1.25rem;
+    padding: 6rem 1.5rem 1.5rem;
+    filter: drop-shadow(0 12px 10px rgba(35, 32, 130, 0.3));
+
+    @media (min-width: @xs) {
+      max-width: calc(100% - 2.25rem);
+      margin-inline: 2.25rem;
+      padding: 7rem 2.25rem 4rem;
+    }
+
+    @media (min-width: @sm) {
+      max-width: var(--appeal-content-width);
+    }
+
+    @media (min-width: @lg) {
+      margin-inline: 1rem;
+      padding: 7rem 4.5rem 4rem;
+    }
+
+    #letter-contents {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      p {
+        .mixin-font-styles(@family-open-sans,
+          normal,
+          1rem,
+          1.5);
+        width: 100%;
+        margin: 0;
+
+        @media (min-width: @xs) {
+          font-size: 1.375rem;
+        }
+      }
+
+      p > strong {
+        font-weight: 600;
+      }
+
+      p + p {
+        margin-top: 1.5rem;
+
+        @media (min-width: @xs) {
+          margin-top: 2rem;
+        }
+      }
+
+      // ==========================================
+      // Import overrides
+      // ==========================================
+
+      .heart-container {
+        margin: 1.5rem auto 1.1875rem;
+        max-width: 100%;
+        color: #DC2626;
+        width: 29rem;
+
+        .line {
+          border-top: 0.0625rem solid var(--colour-primary-default, #1373d9);
+        }
+
+        .left-lines > .line:nth-child(2) {
+          width: 67.06%;
+        }
+      
+        .left-lines > .line:nth-child(1) {
+          width: 36.01%;
+        }
+      
+        .right-lines > .line:nth-child(2) {
+          width: 67.06%;
+        }
+      
+        .right-lines > .line:nth-child(1) {
+          width: 36.01%;
+        }
+      }
+    }
+
+    #letter-contents > p.closing-text {
+      font-size: 1rem;
+      margin: 0 !important; /* heart-lines.less override */
+    }
+  }
+
+  #donate-button-container {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 3; /* Above the letter container */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+    width: 22.4375rem; // 359px
+
+    @media (min-width: @xs) {
+      transform: translate(-50%, -50%);
+      width: 23.56rem;
+    }
+
+    @media (min-width: @md) {
+      width: 29rem;
+    }
+
+    &:hover {
+      #donate-banner-right {
+        -webkit-text-stroke: 0.0625rem #FFF;
+      }
+    }
+
+    .donate-banner {
+      margin: 0;
+      min-height: 6rem;
+      max-width: 100%;
+
+      @media (min-width: @xs) {
+        min-height: 6.25rem;
+      }
+
+      @media (min-width: @md) {
+        min-height: 7.6875rem;
+      }
+
+      #decoration {
+        left: 45px;
+
+        @media (min-width: @md) {
+          left: -39px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .donate-banner::after {
+      left: -136px;
+
+      @media (min-width: @md) {
+        left: -243px;
+        transform: rotate(45deg);
+      }
+    }
+
+    .donate-banner:hover {
+      #donate-banner-left {
+        padding: 0.5rem 0rem;
+      }
+
+      &::after {
+        transform: scale(3);
+      }
+    }
+
+    #donate-banner-left {
+      font-size: 1.164rem;
+      font-weight: 600;
+      line-height: 1.3;
+      padding: 0.7275rem 1.115rem;
+
+      b {
+        font-size: 2.037rem;
+        font-weight: 600;
+        letter-spacing: 2.21px;
+      }
+
+      @media (min-width: @xs) {
+        font-size: 1.218rem;
+        padding: 0.6875rem 1.5rem;
+
+        b {
+          font-size: 2.133rem;
+        }
+      }
+
+      @media (min-width: @md) {
+        flex: 0 1 auto;
+        font-size: 1rem;
+
+        b {
+          font-size: 2.0rem;
+        }
+      }
+    }
+
+    #donate-banner-right {
+      color: var(--critical-pressed, #7F1D1D);
+      display: none;
+      font-weight: 400;
+      text-shadow: none;
+      padding-inline-end: 1.5rem;
+      padding-block-end: 1.0625rem;
+
+      b {
+        display: block;
+        font-weight: 600;
+      }
+
+      @media (min-width: @md) {
+        display: block;
+      }
+    }
+  }
+
+  #footer-wrapper {
+    background: var(--background-page-and-footer);
+    flex-grow: 1;
+  }
+
+  // ==========================================
+  // Reduced motion
+  // ==========================================
+
+  @media (prefers-reduced-motion: reduce) {
+    #appeal-body > .variant-1b {
+      .gradient-state,
+      .inner-glow,
+      .inner-glow-b {
+        animation: none;
+        transform: none;
+      }
+
+      .state-b,
+      .inner-glow-b {
+        opacity: 0;
+      }
+    }
+
+    // Remove donate button built-in animations
+    .pill {
+      animation: none !important;
+    }
+
+    .donate-banner {
+      animation: none !important;
+      transition-duration: 0ms !important;
+
+      &:hover {
+        transform: none !important;
+      }
+    }
+
+    .donate-banner::after,
+    #decoration,
+    #donate-banner-left,
+    #donate-banner-right {
+      animation: none !important;
+      transition-duration: 0ms !important;
+    }
+
+    // Show hearts at their end position during hover
+    #hover-heart-1,
+    #hover-heart-2,
+    #hover-heart-3 {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  }
+}
