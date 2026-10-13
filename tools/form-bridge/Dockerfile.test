@@ -1,0 +1,2 @@
+# Keep the test runtime aligned with the production Lambda's Python 3.13 runtime.
+FROM public.ecr.aws/lambda/python:3.13@sha256:1f12740d125ab92d8ec3345058da72ba55deeca968b83044ea74af29f0d7f42b
