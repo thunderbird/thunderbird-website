@@ -1,0 +1,38 @@
+name: Test donor form bridge
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'tools/form-bridge/**'
+      - '.github/workflows/form-bridge-test.yml'
+  push:
+    branches: [master, fix/donor-form-rate-limit-and-images]
+    paths:
+      - 'tools/form-bridge/**'
+      - '.github/workflows/form-bridge-test.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      AWS_EC2_METADATA_DISABLED: 'true'
+      AWS_ACCESS_KEY_ID: testing
+      AWS_SECRET_ACCESS_KEY: testing
+      AWS_DEFAULT_REGION: us-east-2
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          persist-credentials: false
+      - name: Build pinned Lambda test image
+        run: docker build --file tools/form-bridge/Dockerfile.test --tag donor-form-tests tools/form-bridge
+      - name: Test in the Lambda Python runtime version
+        run: |
+          docker run --rm --entrypoint /bin/sh -v "$PWD:/work" -w /work/tools/form-bridge \
+            -e AWS_EC2_METADATA_DISABLED -e AWS_ACCESS_KEY_ID \
+            -e AWS_SECRET_ACCESS_KEY -e AWS_DEFAULT_REGION \
+            donor-form-tests -c 'python -c "import boto3, botocore; print(boto3.__version__, botocore.__version__)" && pip install -r requirements-test.txt && python -m pytest -q lambda_test.py rate_limit_test.py pulumi_test.py'

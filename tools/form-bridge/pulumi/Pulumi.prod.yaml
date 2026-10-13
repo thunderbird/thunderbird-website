@@ -1,4 +1,7 @@
 config:
+  donor-form-bridge:lambdaLogGroupName: "/aws/lambda/donor-form-bridge-lambda-prod-e796b27"
+  donor-form-bridge:zendeskSubmitterIpFieldId: "56354955452947"
+  donor-form-bridge:formassemblyAuthSecretId: "form-bridge/prod/formassembly"
   aws:defaultTags:
     tags:
       environment: "prod"

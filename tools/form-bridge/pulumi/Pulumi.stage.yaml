@@ -1,4 +1,5 @@
 config:
+  donor-form-bridge:lambdaLogGroupName: "/aws/lambda/donor-form-bridge-lambda-stage-3207660"
   aws:defaultTags:
     tags:
       environment: "stage"
