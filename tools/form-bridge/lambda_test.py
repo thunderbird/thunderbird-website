@@ -5,9 +5,12 @@ Tests the form parsing and Zendesk JSON formatting without external calls
 
 import base64
 import json
+import hashlib
+from pathlib import Path
 import pytest
 from unittest.mock import patch
 from types import SimpleNamespace
+from lambda_function import ScreenshotAttachment, upload_screenshot_to_zendesk, describe_screenshot_drop
 
 import lambda_function
 import abuse
@@ -653,28 +656,220 @@ def test_missing_email_validation_with_abuse_filter_enabled(abuse_filter):
     send.assert_not_called()
 
 
+def _build_multipart_body(
+    file_bytes: bytes = b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR",
+    filename: str = "screenshot.png",
+    content_type: str = "image/png",
+    extra_fields=None,
+):
+    """Build a multipart body like FormAssembly sends for screenshot uploads."""
+    boundary = "----CursorMultipartBoundary"
+    multipart_body = (
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_95"\r\n'
+        "\r\n"
+        "tfa_186\r\n"
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_211"\r\n'
+        "\r\n"
+        "email\r\n"
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_163"\r\n'
+        "\r\n"
+        "If you want more donations, it should not be a problem to write any good email adress.\r\n"
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_1"\r\n'
+        "\r\n"
+        "Example Donor\r\n"
+        f"--{boundary}\r\n"
+        'Content-Disposition: form-data; name="tfa_10"\r\n'
+        "\r\n"
+        "donor@example.org\r\n"
+        f"--{boundary}\r\n"
+        f'Content-Disposition: form-data; name="tfa_201"; filename="{filename}"\r\n'
+        f"Content-Type: {content_type}\r\n"
+        "\r\n"
+    ).encode("utf-8") + file_bytes + (
+        "\r\n"
+        f"--{boundary}--\r\n"
+    ).encode("utf-8")
+
+    if extra_fields:
+        extra_parts = ''.join(
+            f'--{boundary}\r\nContent-Disposition: form-data; name="{name}"\r\n\r\n{value}\r\n'
+            for name, value in extra_fields.items()
+        ).encode('utf-8')
+        closing = f'--{boundary}--\r\n'.encode('utf-8')
+        multipart_body = multipart_body[:-len(closing)] + extra_parts + closing
+    return boundary, multipart_body
 
 
+def test_lambda_handler_base64_encoded_multipart_with_attachment():
+    """Multipart submissions should attach screenshots when Zendesk upload succeeds."""
+    boundary, multipart_body = _build_multipart_body()
+
+    with patch('lambda_function.upload_screenshot_to_zendesk') as mock_upload, patch('lambda_function.send_to_zendesk') as mock_send:
+        mock_upload.return_value = ("upload-token-123", None)
+        mock_send.return_value = (True, {"ok": True})
+
+        event = {
+            "body": base64.b64encode(multipart_body).decode("ascii"),
+            "isBase64Encoded": True,
+            "httpMethod": "POST",
+            "headers": {
+                "content-type": f"multipart/form-data; boundary={boundary}"
+            }
+        }
+
+        result = lambda_handler(event, None)
+        assert result["statusCode"] == 200
+
+        call_args = mock_send.call_args[0][0]
+        assert call_args["ticket"]["subject"] == "Help with the donation form - email"
+        assert "good email adress" in call_args["ticket"]["comment"]["body"]
+        assert call_args["ticket"]["comment"]["uploads"] == ["upload-token-123"]
+        assert call_args["ticket"]["requester"]["name"] == "Example Donor"
+        assert call_args["ticket"]["requester"]["email"] == "donor@example.org"
 
 
+def test_upload_screenshot_to_zendesk_success():
+    """Supported screenshots should return the Zendesk upload token."""
+    screenshot = ScreenshotAttachment(
+        filename="screen.webp",
+        content_type="image/webp",
+        data=b"RIFF\x00\x00\x00\x00WEBPVP8 "
+    )
+
+    with patch('lambda_function.get_zendesk_headers') as mock_headers, patch('lambda_function.http.request') as mock_request:
+        mock_headers.return_value = {"Content-Type": "image/webp", "Authorization": "Basic test"}
+        mock_request.return_value = SimpleNamespace(
+            status=201,
+            data=json.dumps({"upload": {"token": "upload-token-123"}}).encode("utf-8")
+        )
+
+        token, reason = upload_screenshot_to_zendesk(screenshot)
+
+    assert token == "upload-token-123"
+    assert reason is None
+    args, kwargs = mock_request.call_args
+    assert args == ('POST', 'https://donors.zendesk.com/api/v2/uploads.json?filename=screen.webp')
+    assert kwargs['body'] == screenshot.data
+    assert kwargs['headers']['Content-Type'] == 'image/webp'
+    assert kwargs['retries'] is False
+    assert kwargs['redirect'] is False
 
 
+def test_upload_screenshot_to_zendesk_rejects_oversized_file():
+    """Oversized screenshots should be dropped before any Zendesk call."""
+    screenshot = ScreenshotAttachment(
+        filename="screen.png",
+        content_type="image/png",
+        data=b"x" * (1024 * 1024 + 1)
+    )
+
+    token, reason = upload_screenshot_to_zendesk(screenshot)
+
+    assert token is None
+    assert reason == "it exceeded the 1 MiB size limit"
 
 
+def test_upload_screenshot_to_zendesk_rejects_unsupported_type():
+    """Unsupported screenshot types should be dropped before any Zendesk call."""
+    screenshot = ScreenshotAttachment(
+        filename="screen.bmp",
+        content_type="image/bmp",
+        data=b"BM" + b"\x00" * 16
+    )
+
+    token, reason = upload_screenshot_to_zendesk(screenshot)
+
+    assert token is None
+    assert reason == "unsupported file type"
 
 
+def test_lambda_handler_multipart_dropped_attachment_adds_note():
+    """Screenshot upload failures should still create a ticket with a note."""
+    boundary, multipart_body = _build_multipart_body(file_bytes=b"x" * (1024 * 1024 + 1))
+
+    with patch('lambda_function.upload_screenshot_to_zendesk') as mock_upload, patch('lambda_function.send_to_zendesk') as mock_send:
+        mock_upload.return_value = (None, "it exceeded the 1 MiB size limit")
+        mock_send.return_value = (True, {"ok": True})
+
+        event = {
+            "body": base64.b64encode(multipart_body).decode("ascii"),
+            "isBase64Encoded": True,
+            "httpMethod": "POST",
+            "headers": {
+                "content-type": f"multipart/form-data; boundary={boundary}"
+            }
+        }
+
+        result = lambda_handler(event, None)
+        assert result["statusCode"] == 200
+
+        call_args = mock_send.call_args[0][0]
+        assert "Screenshot was submitted but dropped" in call_args["ticket"]["comment"]["body"]
+        assert describe_screenshot_drop("it exceeded the 1 MiB size limit") in call_args["ticket"]["comment"]["body"]
+        assert "uploads" not in call_args["ticket"]["comment"]
 
 
+def _multipart_event(extra_fields=None):
+    boundary, body = _build_multipart_body(extra_fields=extra_fields)
+    return {
+        'body': base64.b64encode(body).decode('ascii'),
+        'isBase64Encoded': True,
+        'headers': {'Content-Type': f'multipart/form-data; boundary={boundary}'},
+        'requestContext': {'requestId': 'multipart-test', 'http': {'sourceIp': '18.221.37.214'}},
+    }
 
 
+def test_multipart_keeps_forwarded_ip_and_attachment(ip_forwarding):
+    with patch('lambda_function.upload_screenshot_to_zendesk', return_value=('image-token', None)):
+        with patch('lambda_function.send_to_zendesk', return_value=(True, None)) as send:
+            response = lambda_handler(_multipart_event({'submitter_ip': '203.0.113.42'}), None)
+    assert response['statusCode'] == 200
+    ticket = send.call_args.args[0]['ticket']
+    assert ticket['metadata']['submitter_ip'] == '203.0.113.42'
+    assert ticket['custom_fields'] == [{'id': 123456, 'value': '203.0.113.42'}]
+    assert ticket['comment']['uploads'] == ['image-token']
 
 
+def test_multipart_unknown_string_field_is_filtered_before_upload(abuse_filter, monkeypatch):
+    monkeypatch.setattr(rate_limit, 'TABLE_NAME', 'rate-limit-test')
+    with patch('lambda_function.upload_screenshot_to_zendesk') as upload, patch('lambda_function.send_to_zendesk') as send, patch('rate_limit.check') as check:
+        response = lambda_handler(_multipart_event({'new_field': 'You want money? Give me your body.'}), None)
+    assert response['statusCode'] == 200
+    upload.assert_not_called()
+    send.assert_not_called()
+    check.assert_not_called()
 
 
+def test_rate_limited_multipart_does_not_upload_screenshot(ip_forwarding, monkeypatch):
+    monkeypatch.setattr(rate_limit, 'TABLE_NAME', 'rate-limit-test')
+    with patch('rate_limit.check', side_effect=rate_limit.RateLimitExceeded(120)):
+        with patch('lambda_function.upload_screenshot_to_zendesk') as upload, patch('lambda_function.send_to_zendesk') as send:
+            response = lambda_handler(_multipart_event({'submitter_ip': '203.0.113.42'}), None)
+    assert response['statusCode'] == 429
+    upload.assert_not_called()
+    send.assert_not_called()
 
 
+@pytest.mark.parametrize('content_type', ['multipart/form-data', 'application/json'])
+def test_invalid_upload_encoding_keeps_zendesk_untouched(content_type):
+    with patch('lambda_function.upload_screenshot_to_zendesk') as upload, patch('lambda_function.send_to_zendesk') as send:
+        response = lambda_handler({'body': 'malformed', 'headers': {'content-type': content_type}}, None)
+    assert response['statusCode'] == 400
+    upload.assert_not_called()
+    send.assert_not_called()
 
 
+def test_multipart_boundary_parameter_is_case_insensitive():
+    boundary, body = _build_multipart_body()
+    fields, screenshot = lambda_function.parse_form_data(
+        base64.b64encode(body).decode(), {'content-type': f'multipart/form-data; BOUNDARY="{boundary}"'}, True,
+    )
+    assert fields['tfa_10'] == 'donor@example.org'
+    assert screenshot.data
 
 
 @pytest.fixture
@@ -686,11 +881,13 @@ def zendesk_server():
     class Handler(BaseHTTPRequestHandler):
         def do_POST(self):
             state['requests'].append(({key.lower(): value for key, value in self.headers.items()}, self.rfile.read(int(self.headers['Content-Length']))))
-            self.send_response(state['status'])
+            is_upload = self.path.startswith('/uploads.json?')
+            response_body = b'{"upload":{"token":"captured-upload-token"}}' if is_upload else state['body']
+            self.send_response(201 if is_upload else state['status'])
             self.send_header('Retry-After', '3600')
-            self.send_header('Content-Length', str(len(state['body'])))
+            self.send_header('Content-Length', str(len(response_body)))
             self.end_headers()
-            self.wfile.write(state['body'])
+            self.wfile.write(response_body)
 
         def log_message(self, *args):
             pass
@@ -703,6 +900,34 @@ def zendesk_server():
     worker.join()
 
 
+def test_real_formassembly_upload_reaches_ticket_unchanged(zendesk_server, monkeypatch):
+    event = json.loads((Path(__file__).parent / 'fixtures' / 'formassembly-screenshot.json').read_text())
+    fields, image = lambda_function.parse_form_data(event['body'], event['headers'], event['isBase64Encoded'])
+    assert image.filename == 'donor-attachment-test.png'
+    assert image.content_type == 'image/png'
+    assert hashlib.sha256(image.data).hexdigest() == event['expectedImageSha256']
+    assert fields['submitter_ip'] == '203.0.113.42'
+
+    url, state = zendesk_server
+    monkeypatch.setattr(lambda_function, 'ZENDESK_URL', url)
+    monkeypatch.setattr(lambda_function, 'ZENDESK_UPLOADS_URL', url.replace('/tickets.json', '/uploads.json'))
+    monkeypatch.setattr(lambda_function, 'FORMASSEMBLY_AUTH_SECRET_ID', '')
+    monkeypatch.setattr(rate_limit, 'TABLE_NAME', '')
+    with patch.object(lambda_function.secrets_client, 'get_secret_value', return_value={
+        'SecretString': json.dumps({'credentials': 'test-agent:test-secret'}),
+    }):
+        assert lambda_handler(event, None)['statusCode'] == 200
+
+    assert len(state['requests']) == 2
+    upload_headers, upload_body = state['requests'][0]
+    assert upload_headers['content-type'] == 'image/png'
+    assert upload_body == image.data
+    ticket_headers, ticket_body = state['requests'][1]
+    assert ticket_headers['content-type'] == 'application/json'
+    ticket = json.loads(ticket_body)['ticket']
+    assert ticket['comment']['uploads'] == ['captured-upload-token']
+    assert ticket['comment']['body'] == fields['tfa_163']
+    assert ticket['requester']['email'] == 'donor@example.org'
 
 
 @pytest.mark.parametrize('status', [201, 429, 502, 503, 504])

@@ -1,6 +1,9 @@
 import json
 import base64
 import binascii
+from dataclasses import dataclass
+from email.parser import BytesParser
+from email.policy import default
 import hmac
 import ipaddress
 import os
@@ -27,6 +30,7 @@ secrets_client = boto3.client('secretsmanager', region_name='us-east-2')
 # Constants
 BRAND_ID = 43075490201747
 ZENDESK_URL = "https://donors.zendesk.com/api/v2/tickets.json"
+ZENDESK_UPLOADS_URL = "https://donors.zendesk.com/api/v2/uploads.json"
 
 # FormAssembly's published US connector egress addresses (2026-10-13).
 # https://help.formassembly.com/help/ip-whitelisting-for-formassembly
@@ -58,6 +62,21 @@ FIELD_MAPPINGS = {
     'tfa_163': 'comment_body',
     'tfa_1': 'name',
     'tfa_10': 'email'
+}
+
+SCREENSHOT_FIELD = 'tfa_201'
+MAX_SCREENSHOT_SIZE_BYTES = 1024 * 1024
+SCREENSHOT_EXTENSION_TO_TYPE = {
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.webp': 'image/webp'
+}
+SCREENSHOT_TYPE_TO_EXTENSION = {
+    'image/png': '.png',
+    'image/jpeg': '.jpg',
+    'image/jpg': '.jpg',
+    'image/webp': '.webp'
 }
 
 # Dropdown option mappings for tfa_95
@@ -169,6 +188,11 @@ def get_rate_limit_ip(metadata: Dict[str, Any]) -> Optional[str]:
     return None
 
 
+@dataclass
+class ScreenshotAttachment:
+    filename: str
+    content_type: str
+    data: bytes
 
 
 def get_zendesk_headers(content_type: str = 'application/json') -> Dict[str, str]:
@@ -181,16 +205,69 @@ def get_zendesk_headers(content_type: str = 'application/json') -> Dict[str, str
     }
 
 
+def describe_screenshot_drop(reason: str) -> str:
+    """Format a user-visible note when a screenshot was not attached."""
+    return f"Screenshot was submitted but dropped: {reason}."
 
 
+def normalize_screenshot_content_type(filename: str, content_type: str) -> str:
+    """Return a supported MIME type using either the provided type or file extension."""
+    normalized_content_type = (content_type or '').lower()
+    if normalized_content_type in SCREENSHOT_TYPE_TO_EXTENSION:
+        return 'image/jpeg' if normalized_content_type == 'image/jpg' else normalized_content_type
+
+    extension = os.path.splitext((filename or '').lower())[1]
+    return SCREENSHOT_EXTENSION_TO_TYPE.get(extension, '')
 
 
+def normalize_screenshot_filename(filename: str, content_type: str) -> str:
+    """Return a safe filename with an extension that matches the upload MIME type."""
+    base_name = os.path.basename(filename or '').strip() or 'screenshot'
+    root, _ = os.path.splitext(base_name)
+    extension = SCREENSHOT_TYPE_TO_EXTENSION[normalize_screenshot_content_type(base_name, content_type)]
+    return f"{root or 'screenshot'}{extension}"
 
 
+def upload_screenshot_to_zendesk(screenshot: ScreenshotAttachment) -> tuple[Optional[str], Optional[str]]:
+    """Upload a screenshot to Zendesk and return an upload token or a drop reason."""
+    content_type = normalize_screenshot_content_type(screenshot.filename, screenshot.content_type)
+    if not content_type:
+        return None, "unsupported file type"
+
+    if len(screenshot.data) > MAX_SCREENSHOT_SIZE_BYTES:
+        return None, "it exceeded the 1 MiB size limit"
+
+    filename = normalize_screenshot_filename(screenshot.filename, content_type)
+
+    try:
+        response = http.request(
+            'POST',
+            f"{ZENDESK_UPLOADS_URL}?filename={urllib.parse.quote(filename)}",
+            body=screenshot.data,
+            headers=get_zendesk_headers(content_type=content_type),
+            retries=False,
+            redirect=False,
+        )
+
+        if response.status != 201:
+            logger.error(f"Failed to upload screenshot to Zendesk. Status: {response.status}, Response: {response.data}")
+            return None, "Zendesk upload failed"
+
+        response_data = json.loads(response.data.decode('utf-8'))
+        upload_token = response_data.get('upload', {}).get('token')
+        if not upload_token:
+            logger.error("Zendesk upload response did not include a token")
+            return None, "Zendesk upload failed"
+
+        return upload_token, None
+
+    except Exception as e:
+        logger.error(f"Error uploading screenshot to Zendesk: {e}")
+        return None, "Zendesk upload failed"
 
 
-def parse_form_data(body: str, headers: Optional[Dict[str, str]], is_base64_encoded: bool) -> Dict[str, str]:
-    """Parse URL-encoded form data, including base64-encoded request bodies."""
+def parse_form_data(body: str, headers: Optional[Dict[str, str]], is_base64_encoded: bool) -> tuple[Dict[str, str], Optional[ScreenshotAttachment]]:
+    """Parse either urlencoded or multipart form data."""
     try:
         body_bytes = base64.b64decode(body, validate=True) if is_base64_encoded else body.encode('utf-8')
     except Exception as e:
@@ -199,17 +276,61 @@ def parse_form_data(body: str, headers: Optional[Dict[str, str]], is_base64_enco
 
     headers = {key.lower(): value for key, value in (headers or {}).items()}
     content_type = headers.get('content-type', '')
+
+    if content_type.lower().startswith('multipart/form-data'):
+        message = BytesParser(policy=default).parsebytes(
+            (
+                f"Content-Type: {content_type}\r\n"
+                "MIME-Version: 1.0\r\n"
+                "\r\n"
+            ).encode('utf-8') + body_bytes
+        )
+        if not message.get_boundary():
+            raise ValueError('Missing multipart boundary')
+        if not message.is_multipart() or message.defects:
+            raise ValueError('Invalid multipart body')
+
+        form_data: Dict[str, str] = {}
+        screenshot: Optional[ScreenshotAttachment] = None
+        for part in message.iter_parts():
+            field_name = part.get_param('name', header='content-disposition')
+            if part.get_content_disposition() != 'form-data' or not field_name:
+                continue
+
+            if field_name == SCREENSHOT_FIELD and part.get_filename():
+                screenshot = ScreenshotAttachment(
+                    filename=part.get_filename(),
+                    content_type=part.get_content_type(),
+                    data=part.get_payload(decode=True) or b''
+                )
+                continue
+
+            if part.get_filename():
+                continue
+
+            payload = part.get_payload(decode=True) or b''
+            try:
+                form_data[field_name] = payload.decode(part.get_content_charset('utf-8'))
+            except (LookupError, UnicodeDecodeError) as e:
+                logger.error(f"Failed to decode multipart field {field_name}: {e}")
+                raise ValueError(f"Invalid multipart field encoding: {field_name}") from e
+
+        return form_data, screenshot
+
     if content_type and not content_type.lower().startswith('application/x-www-form-urlencoded'):
         raise ValueError(f"Unsupported content type: {content_type}")
+
     try:
-        return dict(urllib.parse.parse_qsl(body_bytes.decode('utf-8'), keep_blank_values=True))
+        return dict(urllib.parse.parse_qsl(body_bytes.decode('utf-8'), keep_blank_values=True)), None
     except UnicodeDecodeError as e:
         logger.error(f"Failed to decode urlencoded body as UTF-8: {e}")
         raise ValueError("Invalid URL-encoded form body") from e
 
 
 def map_form_to_zendesk(form_data: Dict[str, str],
-                        request_metadata: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+                        request_metadata: Optional[Dict[str, Any]] = None,
+                        screenshot_drop_note: str = '',
+                        upload_tokens: Optional[list[str]] = None) -> Dict[str, Any]:
     """Map form fields to Zendesk ticket format"""
     # Map basic fields
     mapped_data = {
@@ -224,7 +345,11 @@ def map_form_to_zendesk(form_data: Dict[str, str],
     final_subject = f"{dropdown_text} - {user_subject}" if dropdown_text else user_subject
 
     comment_body = mapped_data.get('comment_body', '').strip() or DEFAULT_COMMENT
+    if screenshot_drop_note:
+        comment_body = f'{comment_body}\n\n{screenshot_drop_note}'
     comment = {'body': comment_body}
+    if upload_tokens:
+        comment['uploads'] = upload_tokens
 
     # Build Zendesk ticket payload
     ticket_data = {
@@ -315,7 +440,7 @@ def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
             return {'statusCode': 400, 'body': json.dumps({'error': 'No form data provided'})}
 
         try:
-            form_data = parse_form_data(
+            form_data, screenshot = parse_form_data(
                 body, event.get('headers'), event.get('isBase64Encoded', False)
             )
         except ValueError as error:
@@ -370,8 +495,22 @@ def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
                 request_metadata['rate_limit_status'] = 'error'
                 return {'statusCode': 503, 'body': json.dumps({'error': 'Unable to process submission; please retry'})}
 
+        screenshot_drop_note = ''
+        upload_tokens = None
+        if screenshot:
+            upload_token, drop_reason = upload_screenshot_to_zendesk(screenshot)
+            if upload_token:
+                upload_tokens = [upload_token]
+            else:
+                screenshot_drop_note = describe_screenshot_drop(drop_reason or "it could not be attached")
+                logger.warning("Dropping screenshot attachment size=%s reason=%s",
+                               len(screenshot.data), drop_reason or "unknown")
+
         # Map and send to Zendesk
-        ticket_data = map_form_to_zendesk(form_data, request_metadata)
+        ticket_data = map_form_to_zendesk(
+            form_data, request_metadata,
+            screenshot_drop_note=screenshot_drop_note, upload_tokens=upload_tokens,
+        )
         success, zendesk_response = send_to_zendesk(
             ticket_data, request_id=request_metadata['request_id'],
         )

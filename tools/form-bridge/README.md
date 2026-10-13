@@ -164,6 +164,25 @@ Without `DONOR_RATE_LIMIT_TABLE` the limiter is disabled; both Pulumi stacks
 configure the table automatically. Deploy using Pulumi so all four runtime
 files are included in the Lambda package.
 
+## Screenshot attachments
+
+The bridge accepts URL-encoded submissions and multipart submissions, including
+Lambda's base64-encoded request bodies. A multipart `tfa_201` file is uploaded to
+Zendesk first and its upload token is attached to the new ticket. Supported
+screenshots are PNG, JPEG, and WebP, up to 1 MiB. If an attachment is unsupported,
+too large, or cannot be uploaded, the request still creates a ticket with a note
+explaining why the screenshot is missing.
+
+A real submission through the public FormAssembly form on October 13, 2026
+confirmed that the connector sends multipart image bytes unchanged. The test
+was intercepted before Zendesk, and its sanitized request is retained in
+`fixtures/formassembly-screenshot.json` for regression coverage through parsing,
+the upload API, and the ticket's attachment token.
+
+All multipart text fields remain available to the abuse filter, including
+`submitter_ip` and fields introduced later. Both phrase blocking and the IP limit
+run before any screenshot upload or ticket creation.
+
 ## Deployment
 
 The Lambda uses Python 3.13 and packages only `lambda_function.py`, `rate_limit.py`,
@@ -207,4 +226,6 @@ This creates a real ticket and consumes the caller's allowance, so repeating it
 within 12 hours returns HTTP 429. When testing an authenticated environment,
 supply the connector's Basic credentials and a valid `submitter_ip`. For a
 repeatable check that creates no ticket or allowance, use a known blocked phrase
-in the message and verify `outcome=blocked` in CloudWatch.
+in the message and verify `outcome=blocked` in CloudWatch. The captured multipart
+regression covers the verified connector format; a future connector change
+should be checked with another intercepted live upload.
