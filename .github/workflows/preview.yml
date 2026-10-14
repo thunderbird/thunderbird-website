@@ -106,7 +106,7 @@ jobs:
           echo "image_uri=$IMAGE_URI" >> "$GITHUB_OUTPUT"
 
       - name: Deploy preview infrastructure
-        uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6
+        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7.0.0
         with:
           command: up
           stack-name: thunderbird/thunderbird-website-preview/${{ steps.slug.outputs.slug }}
@@ -205,7 +205,7 @@ jobs:
           pulumi-dir: ./pulumi/preview
 
       - name: Destroy preview infrastructure
-        uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6
+        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7.0.0
         with:
           command: destroy
           stack-name: thunderbird/thunderbird-website-preview/${{ steps.slug.outputs.slug }}
