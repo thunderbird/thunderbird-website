@@ -48,7 +48,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Compute preview slug
         id: slug
@@ -106,7 +106,7 @@ jobs:
           echo "image_uri=$IMAGE_URI" >> "$GITHUB_OUTPUT"
 
       - name: Deploy preview infrastructure
-        uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6
+        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7.0.0
         with:
           command: up
           stack-name: thunderbird/thunderbird-website-preview/${{ steps.slug.outputs.slug }}
@@ -119,7 +119,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment on PR
-        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         env:
           SLUG: ${{ steps.slug.outputs.slug }}
           SITE: ${{ steps.site.outputs.site }}
@@ -189,7 +189,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Compute preview slug
         id: slug
@@ -205,7 +205,7 @@ jobs:
           pulumi-dir: ./pulumi/preview
 
       - name: Destroy preview infrastructure
-        uses: pulumi/actions@8582a9e8cc630786854029b4e09281acd6794b58 # v6
+        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7.0.0
         with:
           command: destroy
           stack-name: thunderbird/thunderbird-website-preview/${{ steps.slug.outputs.slug }}
