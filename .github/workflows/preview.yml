@@ -94,6 +94,7 @@ jobs:
           ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
           SLUG: ${{ steps.slug.outputs.slug }}
           IMAGE_TAG: ${{ github.sha }}
+          DOCKER_BUILDKIT: '1'
         run: |
           IMAGE_URI="$ECR_REGISTRY/thunderbird-website-preview:${SLUG}-${IMAGE_TAG}"
           docker build \
