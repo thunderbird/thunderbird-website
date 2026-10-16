@@ -55,19 +55,32 @@ jobs:
           ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
           BUILD_ENV: ${{ env.DEPLOY_ENV }}
+          DOCKER_BUILDKIT: '1'
+          PADDLE_API_KEY: ${{ secrets.PADDLE_API_KEY }}
+          PADDLE_ENV: ${{ vars.PADDLE_ENV }}
+          TBPRO_PADDLE_PRICE_ID: ${{ vars.TBPRO_PADDLE_PRICE_ID }}
+          TBPRO_PADDLE_COUNTRY: ${{ vars.TBPRO_PADDLE_COUNTRY }}
+          TBPRO_PADDLE_REQUIRED: '1'
+          TBPRO_PADDLE_CACHE_BUST: ${{ github.run_id }}-${{ github.run_attempt }}
         run: |
           IMAGE_URI="$ECR_REGISTRY/thunderbird-website-$BUILD_ENV:$IMAGE_TAG"
           if [ "$BUILD_ENV" = "prod" ]; then REPO_BRANCH="prod"; else REPO_BRANCH="master"; fi
           docker build \
             -f docker/Dockerfile \
-            --build-arg BUILD_ENV=$BUILD_ENV \
-            --build-arg REPO_BRANCH=$REPO_BRANCH \
-            -t $IMAGE_URI \
-            -t $ECR_REGISTRY/thunderbird-website-$BUILD_ENV:latest \
+            --build-arg BUILD_ENV="${BUILD_ENV}" \
+            --build-arg REPO_BRANCH="${REPO_BRANCH}" \
+            --build-arg PADDLE_ENV="${PADDLE_ENV}" \
+            --build-arg TBPRO_PADDLE_PRICE_ID="${TBPRO_PADDLE_PRICE_ID}" \
+            --build-arg TBPRO_PADDLE_COUNTRY="${TBPRO_PADDLE_COUNTRY}" \
+            --build-arg TBPRO_PADDLE_REQUIRED="${TBPRO_PADDLE_REQUIRED}" \
+            --build-arg TBPRO_PADDLE_CACHE_BUST="${TBPRO_PADDLE_CACHE_BUST}" \
+            --secret id=paddle_api_key,env=PADDLE_API_KEY \
+            -t "$IMAGE_URI" \
+            -t "$ECR_REGISTRY/thunderbird-website-$BUILD_ENV:latest" \
             .
-          docker push $IMAGE_URI
-          docker push $ECR_REGISTRY/thunderbird-website-$BUILD_ENV:latest
-          echo "image_uri=$IMAGE_URI" >> $GITHUB_OUTPUT
+          docker push "$IMAGE_URI"
+          docker push "$ECR_REGISTRY/thunderbird-website-$BUILD_ENV:latest"
+          echo "image_uri=$IMAGE_URI" >> "$GITHUB_OUTPUT"
 
       - name: Publish to tb-website-builds
         env:
