@@ -106,11 +106,6 @@ body {
 
     isolation: isolate;
 
-    // Radial gradient shape, shared by both color states so they stay aligned.
-    // Change --radial-scale to grow/shrink it while keeping the ratio.
-    --radial-scale: 1;
-    --radial-shape: ellipse calc(62% * var(--radial-scale)) calc(68% * var(--radial-scale)) at 50% 9%;
-
     &>#appeal-heading {
       margin-top: 8rem;
       margin-bottom: 2rem;
@@ -120,48 +115,8 @@ body {
       width: 100%;
     }
 
-    // Static radial gradient (green/blue). The pink/purple layer is kept
-    // hidden.
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      inset: -7%;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    &::before {
-      background: radial-gradient(var(--radial-shape),
-          #ffffff 0%,
-          #fdfdf8 18%,
-          #f3fdd2 43%,
-          #addea7 63%,
-          #70aaa1 76%,
-          #004d99 100%);
-    }
-
-    &::after {
-      background: radial-gradient(var(--radial-shape),
-          #ffffff 0%,
-          #fdfbf9 18%,
-          #feeae3 43%,
-          #ffaaa9 63%,
-          #c96da2 76%,
-          #640094 100%);
-      opacity: 0;
-    }
-
-    // Variant 1b: yellow/orange gradient built from real elements
-    // (.variant-1b) instead of the pseudo-elements above.
-    &:has(> .variant-1b) {
-      &::before,
-      &::after {
-        display: none;
-      }
-    }
-
-    & > .variant-1b {
+    // Animated yellow/orange gradient background.
+    & > .appeal-gradient {
       position: absolute;
       inset: 0;
       z-index: -1;
@@ -257,101 +212,76 @@ body {
 
   #appeal-header {
     position: relative;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
     width: 100%;
-    padding: 4rem 1.25rem 3rem;
+    max-width: 80rem; // 1280px
+    padding: 4rem 1.25rem 2.5rem;
 
     header {
-      align-self: flex-start;
-      z-index: 3; /* Above the sun rays */
-
-      @media (min-width: @md) {
-        align-self: flex-end;
-      }
+      z-index: 3; /* Above the roc */
     }
 
     @media (min-width: @xs) {
-      padding: 2rem 2.25rem 7.5rem;
-      min-height: 31rem;
+      padding: 6.25rem 3rem 6.25rem;
     }
 
-    @media (min-width: @md) {
-      max-width: 1250px;
-      min-height: 22rem;
-      padding: 2rem 2.25rem 6.5rem;
-    }
-
-    @media (min-width: @lg) {
-      max-width: 1250px;
-      padding: 2.25rem 2rem 6.5rem;
-      flex-direction: row;
+    @media (min-width: @xl) {
+      padding: 8.75rem 3rem 8.6875rem;
     }
   }
 
   #appeal-heading {
-    .mixin-font-styles(@family-open-sans, 600, 1.5rem, 1);
+    .mixin-font-styles(@family-open-sans, 700, 1.875rem, 1);
     color: var(--color-text-icon-brand);
     margin: 0;
-    font-weight: 700;
-    margin-block-start: 0;
-    font-size: 2.5rem;
     text-transform: uppercase;
-    // Keep "KEEP THUNDERBIRD ALIVE" wrapping onto 3 lines so it never runs
-    // under the roc, which is absolutely positioned to the right below @xs.
-    max-width: min(95%, 18rem);
+    max-width: 13.875rem; // 222px, wraps onto 3 lines
 
+    // Fluid between 480px and 768px so "THUNDERBIRD" never overflows.
     @media (min-width: @xs) {
-      max-width: 95%;
-      margin-block-start: -1rem;
-      font-size: 3.5rem;
+      font-size: clamp(2.25rem, 7.8vw, 3.75rem);
+      max-width: 8.5em; // 510px at 60px, so it keeps wrapping onto 3 lines
     }
 
-    &.variant-1b {
-      margin-block-start: 1.75rem;
-
-      @media (min-width: @xs) {
-        margin-block-start: -1rem;
-      }
-    }
-
-    @media (min-width: @sm) {
-      margin-block-start: -8rem;
-
-      &.variant-1b {
-        margin-block-start: -1rem;
-      }
-    }
-
-    @media (min-width: @md) {
-      margin-block-start: -2rem;
+    @media (min-width: @xl) {
       font-size: 4.5rem;
-
-      &.variant-1b {
-        margin-block-start: -1rem;
-      }
-    }
-
-    @media (min-width: @lg) {
-      padding-block-end: 0.25rem;
+      max-width: 56.5rem; // 904px, wraps onto 2 lines
     }
 
     & > span {
       display: block;
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       line-height: 1;
       text-transform: initial;
-      margin-block-end: 0.625rem;
+      margin-block-end: 0.5rem;
 
       @media (min-width: @xs) {
-        font-size: 1.5rem;
-        margin-block-end: 0.5rem;
+        font-size: clamp(1.125rem, 3.9vw, 1.875rem);
       }
 
-      @media (min-width: @md) {
+      @media (min-width: @xl) {
         font-size: 2.25rem;
       }
+    }
+  }
+
+  // Lead text under the title (variants that have one)
+  #appeal-lead {
+    .mixin-font-styles(@family-open-sans, 600, 1rem, 1.5);
+    color: var(--color-text-icon-brand);
+    margin: 1.25rem 0 0;
+
+    @media (min-width: @xs) {
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      max-width: 42rem; // 672px
+    }
+
+    @media (min-width: @xl) {
+      max-width: 58.75rem; // 940px
+    }
+
+    strong {
+      font-weight: 700;
     }
   }
 
@@ -359,43 +289,36 @@ body {
   // Roc illustration
   // ==========================================
 
+  // Out of the flow so the title/lead text alone decides the header height.
+  // Three sizes, one per layout. Only between 480px and 768px does it shrink
+  // with the viewport, so it doesn't run into the (also fluid) title.
   #illustration {
-    display: flex;
-    flex-shrink: 0;
     position: absolute;
     top: 1rem;
     right: 1rem;
-    justify-content: end;
     width: 7.5rem; // 120px
-    height: 7rem; // 112px
+    aspect-ratio: 716 / 672;
 
     img {
+      display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     @media (min-width: @xs) {
-      position: relative;
-      top: auto;
-      right: auto;
-      width: auto;
-      height: 14.875rem;
-
-      img {
-        width: auto;
-        height: auto;
-        object-fit: fill;
-      }
+      top: 1.5rem;
+      right: 1.5rem;
+      width: clamp(7.5rem, calc(42.8vw - 5.5rem), 15.875rem);
     }
 
     @media (min-width: @md) {
-      width: 100%;
+      width: 15.875rem; // 254px
     }
 
-    @media (min-width: @lg) {
-      height: 21rem;
-      width: 22.375rem;
+    @media (min-width: @xl) {
+      right: 2rem;
+      width: 22.375rem; // 358px
     }
   }
 
@@ -412,13 +335,13 @@ body {
     max-width: calc(100% - 2.5rem);
     min-height: 445px;
     margin-inline: 1.25rem;
-    padding: 6rem 1.5rem 1.5rem;
+    padding: 7rem 1.5rem 1.75rem;
     filter: drop-shadow(0 12px 10px rgba(35, 32, 130, 0.3));
 
     @media (min-width: @xs) {
       max-width: calc(100% - 2.25rem);
       margin-inline: 2.25rem;
-      padding: 7rem 2.25rem 4rem;
+      padding: 7rem 2.25rem 3rem;
     }
 
     @media (min-width: @sm) {
@@ -449,7 +372,7 @@ body {
       }
 
       p > strong {
-        font-weight: 600;
+        font-weight: 700;
       }
 
       p + p {
@@ -465,7 +388,11 @@ body {
       // ==========================================
 
       .heart-container {
-        margin: 1.5rem auto 1.1875rem;
+        margin: 2rem auto 1.1875rem;
+
+        @media (min-width: @xs) {
+          margin-top: 1.5rem;
+        }
         max-width: 100%;
         color: #DC2626;
         width: 29rem;
@@ -500,19 +427,21 @@ body {
 
   #donate-button-container {
     position: absolute;
-    top: -1rem;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 3; /* Above the letter container */
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
     width: 22.4375rem; // 359px
 
+    // From here on the button overlaps the top of the card by 4rem (64px).
     @media (min-width: @xs) {
-      transform: translate(-50%, -50%);
+      top: 4rem;
+      transform: translate(-50%, -100%);
       width: 23.56rem;
     }
 
-    @media (min-width: @md) {
+    @media (min-width: @lg) {
       width: 29rem;
     }
 
@@ -531,14 +460,14 @@ body {
         min-height: 6.25rem;
       }
 
-      @media (min-width: @md) {
+      @media (min-width: @lg) {
         min-height: 7.6875rem;
       }
 
       #decoration {
         left: 45px;
 
-        @media (min-width: @md) {
+        @media (min-width: @lg) {
           left: -39px;
           transform: rotate(-45deg);
         }
@@ -548,7 +477,7 @@ body {
     .donate-banner::after {
       left: -136px;
 
-      @media (min-width: @md) {
+      @media (min-width: @lg) {
         left: -243px;
         transform: rotate(45deg);
       }
@@ -585,7 +514,7 @@ body {
         }
       }
 
-      @media (min-width: @md) {
+      @media (min-width: @lg) {
         flex: 0 1 auto;
         font-size: 1rem;
 
@@ -608,7 +537,7 @@ body {
         font-weight: 600;
       }
 
-      @media (min-width: @md) {
+      @media (min-width: @lg) {
         display: block;
       }
     }
@@ -624,7 +553,7 @@ body {
   // ==========================================
 
   @media (prefers-reduced-motion: reduce) {
-    #appeal-body > .variant-1b {
+    #appeal-body > .appeal-gradient {
       .gradient-state,
       .inner-glow,
       .inner-glow-b {

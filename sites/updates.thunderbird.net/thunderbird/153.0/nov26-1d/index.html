@@ -11,11 +11,11 @@
 
 {# For donation url generation #}
 {% set fru_form_id = fru_form_id|default('nov26') %}
-{% set utm_content = utm_content|default('cta_c') %}
+{% set utm_content = utm_content|default('cta_d') %}
 {% set utm_campaign = utm_campaign|default('nov26_appeal_esr') %}
 {% set utm_source = utm_source|default('desktop') %}
 {% set utm_medium = utm_medium|default('in_app') %}
-{% set donation_base_url = donation_base_url|default(url('updates.153.appeal.nov26-1c.donate')) %}
+{% set donation_base_url = donation_base_url|default(url('updates.153.appeal.nov26-1d.donate')) %}
 {# Disable the donation banner on this redirect page, we set this to false in the actual donation page. #}
 {% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
 

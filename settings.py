@@ -221,6 +221,7 @@ APPEAL_DONATE_PAGES = [
     'thunderbird/153.0/nov26-1a/index.html',
     'thunderbird/153.0/nov26-1b/index.html',
     'thunderbird/153.0/nov26-1c/index.html',
+    'thunderbird/153.0/nov26-1d/index.html',
     'thunderbird/release/sep25r/index.html',
 ]
 
@@ -395,6 +396,7 @@ URL_MAPPINGS = {
     'updates.153.appeal.nov26-1a.donate': '/thunderbird/153.0/nov26-1a/donate/',
     'updates.153.appeal.nov26-1b.donate': '/thunderbird/153.0/nov26-1b/donate/',
     'updates.153.appeal.nov26-1c.donate': '/thunderbird/153.0/nov26-1c/donate/',
+    'updates.153.appeal.nov26-1d.donate': '/thunderbird/153.0/nov26-1d/donate/',
 }
 # Appeal page and donate subpage URLs are derived from APPEAL_DONATE_PAGES
 # rather than being listed individually in URL_MAPPINGS above.
