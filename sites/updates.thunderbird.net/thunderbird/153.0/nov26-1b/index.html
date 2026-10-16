@@ -1,0 +1,28 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set utm_content = utm_content|default('cta_b') %}
+{% set donation_base_url = donation_base_url|default(url('updates.153.appeal.nov26-1b.donate')) %}
+
+{% extends "thunderbird/153.0/nov26-1a/index.html" %}
+
+{% block appeal_lead %}{% endblock %}
+
+{% block appeal_body %}
+<p>
+  <strong>{{ _('You rely on Thunderbird. Your gift supports the people who build and improve it. Thunderbird can put users first because users, not advertisers, fund its work.') }}</strong>
+</p>
+<p>
+  {{ _('We don’t have corporate sponsors. We don’t show advertisements or sell your data. We don’t design our apps to compete for your attention. Thunderbird exists to help you stay connected, organized and in control of the tools that make daily life easier.') }}
+</p>
+<p>
+  {{ _('Our team works to keep Thunderbird secure, fix problems and make improvements so it remains relevant as the world around it changes.') }}
+</p>
+<p>
+  {{ _('Your donation supports this work. When you give, you help maintain something you rely on and make sure it stays available to millions of others.') }}
+</p>
+<p>
+  {{ _('If Thunderbird makes your everyday life a little easier, please help us keep it going.') }}
+</p>
+{% endblock %}

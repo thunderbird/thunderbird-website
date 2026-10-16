@@ -1,0 +1,97 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set active_page = "appeal-nov26" %}
+
+{# For donation url generation -- variants override utm_content and donation_base_url #}
+{% set fru_form_id = fru_form_id|default('nov26') %}
+{% set utm_content = utm_content|default('cta_a') %}
+{% set utm_campaign = utm_campaign|default('nov26_appeal_esr') %}
+{% set utm_source = utm_source|default('desktop') %}
+{% set utm_medium = utm_medium|default('in_app') %}
+{% set donation_base_url = donation_base_url|default(url('updates.153.appeal.nov26-1a.donate')) %}
+{% set disable_donation_blocked_notice = disable_donation_blocked_notice|default(True) %}
+
+{% extends "includes/base/base.html" %}
+{% from 'includes/macros/donate-button.html' import donate_button with context %}
+
+{% block base_css %}
+<link href="{{ static('css/appeal-nov26-style.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block page_title %}{{ _('Only 3% of users keep Thunderbird alive') }}{% endblock %}
+
+{% block content %}
+<section id="appeal-body">
+  {% block appeal_gradient %}
+  <div class="appeal-gradient" aria-hidden="true">
+    <div class="gradient-state state-a"></div>
+    <div class="gradient-state state-b"></div>
+    <div class="inner-glow"></div>
+    <div class="inner-glow-b"></div>
+  </div>
+  {% endblock %}
+  <div id="appeal-header">
+    <header>
+      {% block appeal_headline %}
+      <h1 id="appeal-heading" aria-label="{{ _('Only 3% of users keep Thunderbird alive') }}">
+        {{ _('<span>Only 3% of users</span> keep Thunderbird alive') }}
+      </h1>
+      {% endblock %}
+      {% block appeal_lead %}
+      <p id="appeal-lead">
+        {{ _('You rely on Thunderbird. Your gift supports the people who build and improve it.') }}
+        <strong>{{ _('Thunderbird can put users first because users, not advertisers, fund its work.') }}</strong>
+      </p>
+      {% endblock %}
+    </header>
+    <aside id="illustration" aria-hidden="true">
+      <img src="{{ static('img/thunderbird/appeal/jun26/roc.webp') }}" alt="">
+    </aside>
+  </div>
+
+  <div id="appeal-letter" class="letter-container">
+    <section id="donate-button-container">
+      {{ donate_button(form_id=fru_form_id, campaign=utm_campaign, source=utm_source, content=utm_content,
+      base_url=donation_base_url, disable_donation_blocked_notice=disable_donation_blocked_notice) }}
+    </section>
+
+    <div id="letter-contents">
+      {% block appeal_body %}
+      <p>
+        {{ _('We don’t have corporate sponsors. We don’t show advertisements or sell your data. We don’t design our apps to compete for your attention. Thunderbird exists to help you stay connected, organized and in control of the tools that make daily life easier.') }}
+      </p>
+      <p>
+        {{ _('Our team works to keep Thunderbird secure, fix problems and make improvements so it remains relevant as the world around it changes.') }}
+      </p>
+      <p>
+        <strong>{{ _('Your donation supports this work. When you give, you help maintain something you rely on and make sure it stays available to millions of others.') }}</strong>
+      </p>
+      <p>
+        {{ _('If Thunderbird makes your everyday life a little easier, please help us keep it going.') }}
+      </p>
+      {% endblock %}
+      <div class="heart-container">
+        <div class="left-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div aria-hidden="true" class="heart-svg">{{ svg('donate-heart') }}</div>
+        <div class="right-lines">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <p class="closing-text">{{ _('The Thunderbird Team') }}</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block site_footer %}
+  <div id="footer-wrapper">
+    {% include 'includes/base/moz-footer.html' %}
+  </div>
+{% endblock %}
