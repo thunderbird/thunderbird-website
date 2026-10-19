@@ -220,12 +220,8 @@ body {
       z-index: 3; /* Above the roc */
     }
 
-    @media (min-width: @xs) {
-      padding: 6.25rem 3rem 6.25rem;
-    }
-
-    // Between 896px and 1280px, line the header and the roc up with the card.
-    @media (min-width: 56rem) and (max-width: (@xl - 0.0625rem)) {
+    // Between @xs and 1280px, line the header and the roc up with the card.
+    @media (min-width: @xs) and (max-width: (@xl - 0.0625rem)) {
       padding-inline: max(2.25rem, calc((100% - var(--appeal-content-width)) / 2));
     }
 
@@ -279,6 +275,10 @@ body {
       font-size: 1.5rem;
       margin-top: 2.5rem;
       max-width: 42rem; // 672px
+    }
+
+    @media (min-width: @xs) and (max-width: 36.9375rem) { // 480px to 591px
+      font-size: 1.125rem;
     }
 
     @media (min-width: @xl) {
@@ -344,7 +344,7 @@ body {
     max-width: calc(100% - 2.5rem);
     min-height: 445px;
     margin-inline: 1.25rem;
-    padding: 6rem 1.5rem 1.5rem;
+    padding: 4rem 1.5rem 1.5rem;
     filter: drop-shadow(0 12px 10px rgba(35, 32, 130, 0.3));
 
     @media (min-width: @xs) {
@@ -436,7 +436,7 @@ body {
 
   #donate-button-container {
     position: absolute;
-    top: -1rem;
+    top: -3rem;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 3; /* Above the letter container */
