@@ -224,6 +224,11 @@ body {
       padding: 6.25rem 3rem 6.25rem;
     }
 
+    // Between 896px and 1280px, line the header and the roc up with the card.
+    @media (min-width: 56rem) and (max-width: (@xl - 0.0625rem)) {
+      padding-inline: max(2.25rem, calc((100% - var(--appeal-content-width)) / 2));
+    }
+
     @media (min-width: @xl) {
       padding: 8.75rem 3rem 8.6875rem;
     }
@@ -314,6 +319,10 @@ body {
 
     @media (min-width: @md) {
       width: 15.875rem; // 254px
+    }
+
+    @media (min-width: 56rem) and (max-width: (@xl - 0.0625rem)) {
+      right: max(2.25rem, calc((100% - var(--appeal-content-width)) / 2));
     }
 
     @media (min-width: @xl) {
