@@ -96,7 +96,7 @@ def application(environ, start_response):
 
     start_response('302 Found', [
         ('Content-type', 'text/html; charset=utf-8'),
-        ('Cache-Control', 'private, s-maxage=0, max-age=604800'),
+        ('Cache-Control', 'public, s-maxage=300, max-age=300'),
         ('Vary', 'Accept-Language'),
         ('Location', location)
     ])

@@ -1,12 +1,33 @@
 from typing import List
 
 import pytest
+from webob import Request
 
 import settings
 import wsgi
 
 
 class TestWSGI:
+    @pytest.mark.parametrize('host', ['www.thunderbird.net', 'updates.thunderbird.net'])
+    @pytest.mark.parametrize('language', ['pt-PT', 'pt-BR'])
+    @pytest.mark.parametrize('method', ['GET', 'HEAD'])
+    def test_redirect_cache_control(self, host, language, method):
+        request = Request.blank(
+            f'https://{host}/calendar/?source=test',
+            method=method,
+            headers={'Host': host, 'Accept-Language': language},
+        )
+
+        response = request.get_response(wsgi.application)
+
+        assert response.status_int == 302
+        assert response.cache_control.public
+        assert not response.cache_control.private
+        assert response.cache_control.s_maxage == 300
+        assert response.cache_control.max_age == 300
+        assert response.headers['Vary'] == 'Accept-Language'
+        assert response.location == f'https://{host}/{language}/calendar/?source=test'
+
     def test_get_language_map(self):
         """Test get_language_map to ensure it returns as expected, and does not product a TypeError"""
         try:
