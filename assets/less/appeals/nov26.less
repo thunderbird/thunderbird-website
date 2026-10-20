@@ -214,10 +214,14 @@ body {
     position: relative;
     width: 100%;
     max-width: 80rem; // 1280px
-    padding: 4rem 1.25rem 3.5rem;
+    padding: 4rem 1.25rem 5.5rem; // 40px gap + 48px button overhang
 
     header {
       z-index: 3; /* Above the roc */
+    }
+
+    @media (min-width: @xs) {
+      padding-block-end: 4.75rem; // 40px gap + 36px button overhang
     }
 
     // Between @xs and 1280px, line the header and the roc up with the card.
@@ -225,8 +229,13 @@ body {
       padding-inline: max(2.25rem, calc((100% - var(--appeal-content-width)) / 2));
     }
 
+    @media (min-width: @lg) {
+      padding-block-end: 8.6875rem; // 80px gap + 59px button overhang
+    }
+
     @media (min-width: @xl) {
-      padding: 8.75rem 3rem 8.6875rem;
+      padding-block-start: 8.75rem;
+      padding-inline: 3rem;
     }
   }
 
@@ -273,7 +282,7 @@ body {
 
     @media (min-width: @xs) {
       font-size: 1.5rem;
-      margin-top: 2.5rem;
+      margin-block-start: 2.5rem;
       max-width: 42rem; // 672px
     }
 
