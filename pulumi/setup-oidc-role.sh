@@ -81,6 +81,12 @@ PERMISSIONS_POLICY=$(cat <<EOF
             "Resource": "*"
         },
         {
+            "Sid": "ECRPublicAuth",
+            "Effect": "Allow",
+            "Action": ["ecr-public:GetAuthorizationToken", "sts:GetServiceBearerToken"],
+            "Resource": "*"
+        },
+        {
             "Sid": "ECS",
             "Effect": "Allow",
             "Action": ["ecs:*"],

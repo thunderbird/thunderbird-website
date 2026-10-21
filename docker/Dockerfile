@@ -10,7 +10,7 @@
 #   Staging:     docker build --build-arg BUILD_ENV=stage -t thunderbird-web .
 #   Production:  docker build --build-arg BUILD_ENV=prod -t thunderbird-web .
 
-FROM quay.io/centos/centos:stream9
+FROM quay.io/centos/centos:stream9 AS website
 
 ARG BUILD_ENV=local
 ARG REPO_BRANCH=master
@@ -46,7 +46,6 @@ RUN git clone --depth 1 --branch $REPO_BRANCH https://github.com/thunderbird/aut
 COPY docker/scripts/update-autoconfig.sh /var/www/autoconfig.momo/update.sh
 RUN chmod +x /var/www/autoconfig.momo/update.sh && /var/www/autoconfig.momo/update.sh
 
-COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:1.0.0-rc1 /lambda-adapter /opt/extensions/lambda-adapter
 COPY --from=ghcr.io/astral-sh/uv:0.10.9@sha256:10902f58a1606787602f303954cea099626a4adb02acbac4c69920fe9d278f82 /uv /usr/local/bin/uv
 
 COPY docker/conf/ssl.conf /etc/httpd/conf.d/ssl.conf
@@ -85,3 +84,8 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
     CMD curl -sf -H "Host: www.thunderbird.net" http://localhost:8080/ || exit 1
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+
+# Deployment images include the Lambda extension. Container tests target
+# "website" so fork PRs can build without public ECR credentials.
+FROM website AS lambda
+COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:1.0.0-rc1 /lambda-adapter /opt/extensions/lambda-adapter
