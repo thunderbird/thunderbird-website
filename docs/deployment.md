@@ -84,6 +84,10 @@ The container is defined in `docker/Dockerfile`. All environments build from sou
 
 All environments compile translations and build all sites from source.
 
+The default final stage, `lambda`, includes the Lambda Web Adapter for preview deployments.
+The `website` stage contains the same application without the Lambda extension and can be
+built with `--target website` when running outside Lambda.
+
 ```bash
 # Local development
 docker build -t thunderbird-web .
@@ -108,7 +112,7 @@ For local development using VS Code's Dev Containers feature:
 ### Container Test (`container-test.yml`)
 
 Runs on every push/PR to `master`:
-- Builds the Docker container with `BUILD_ENV=local`
+- Builds the `website` target with `BUILD_ENV=local`, skipping the Lambda extension so fork PRs do not need AWS credentials
 - Runs pytest inside the container
 
 ### Build and Deploy (`deploy.yml`)
@@ -168,3 +172,12 @@ Preview deployments depend on: a `*.thunderbird.dev` ACM wildcard certificate (A
 ### OIDC
 
 The GitHub Actions workflow uses OIDC to assume an AWS role for deployment and also to access Pulumi Cloud. The AWS role is configured in `pulumi/setup-oidc-role.sh`.
+
+Deployment and preview builds authenticate Docker separately to private ECR (for image pushes)
+and public ECR (for the Lambda Web Adapter pull). Public ECR authentication uses `us-east-1`;
+the rest of the deployment continues to use `us-west-2`.
+
+The deployment role needs `ecr-public:GetAuthorizationToken` and `sts:GetServiceBearerToken`
+on `*`. For an existing role, apply the updated permissions from `pulumi/setup-oidc-role.sh`
+before running the updated deployment workflows. A private ECR login alone leaves public
+image pulls anonymous and subject to the public registry's anonymous data limit.

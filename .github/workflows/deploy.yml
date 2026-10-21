@@ -45,9 +45,16 @@ jobs:
           aws-role-arn: arn:aws:iam::768512802988:role/thunderbird-website-deploy
           pulumi-dir: ./pulumi
 
-      - name: Login to ECR
+      - name: Login to private ECR
         id: ecr-login
         uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076 # v2
+
+      - name: Login to public ECR
+        uses: aws-actions/amazon-ecr-login@062b18b96a7aff071d4dc91bc00c4c1a7945b076 # v2
+        env:
+          AWS_REGION: us-east-1 # Public ECR authentication is only available here.
+        with:
+          registry-type: public
 
       - name: Build and push Docker image
         id: build-image
