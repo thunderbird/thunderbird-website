@@ -214,18 +214,28 @@ body {
     position: relative;
     width: 100%;
     max-width: 80rem; // 1280px
-    padding: 4rem 1.25rem 3.5rem;
+    padding: 4rem 1.25rem 5.5rem; // 40px gap + 48px button overhang
 
     header {
       z-index: 3; /* Above the roc */
     }
 
     @media (min-width: @xs) {
-      padding: 6.25rem 3rem 6.25rem;
+      padding-block-end: 4.75rem; // 40px gap + 36px button overhang
+    }
+
+    // Between @xs and 1280px, line the header and the roc up with the card.
+    @media (min-width: @xs) and (max-width: (@xl - 0.0625rem)) {
+      padding-inline: max(2.25rem, calc((100% - var(--appeal-content-width)) / 2));
+    }
+
+    @media (min-width: @lg) {
+      padding-block-end: 8.6875rem; // 80px gap + 59px button overhang
     }
 
     @media (min-width: @xl) {
-      padding: 8.75rem 3rem 8.6875rem;
+      padding-block-start: 8.75rem;
+      padding-inline: 3rem;
     }
   }
 
@@ -272,8 +282,12 @@ body {
 
     @media (min-width: @xs) {
       font-size: 1.5rem;
-      margin-top: 2.5rem;
+      margin-block-start: 2.5rem;
       max-width: 42rem; // 672px
+    }
+
+    @media (min-width: @xs) and (max-width: 36.9375rem) { // 480px to 591px
+      font-size: 1.125rem;
     }
 
     @media (min-width: @xl) {
@@ -316,6 +330,10 @@ body {
       width: 15.875rem; // 254px
     }
 
+    @media (min-width: 56rem) and (max-width: (@xl - 0.0625rem)) {
+      right: max(2.25rem, calc((100% - var(--appeal-content-width)) / 2));
+    }
+
     @media (min-width: @xl) {
       right: 2rem;
       width: 22.375rem; // 358px
@@ -335,8 +353,8 @@ body {
     max-width: calc(100% - 2.5rem);
     min-height: 445px;
     margin-inline: 1.25rem;
-    padding: 6rem 1.5rem 1.5rem;
-    filter: drop-shadow(0 12px 10px rgba(35, 32, 130, 0.3));
+    padding: 4rem 1.5rem 1.5rem;
+    box-shadow: 0 12px 20px 0 rgba(149, 4, 4, 0.2);
 
     @media (min-width: @xs) {
       max-width: calc(100% - 2.25rem);
@@ -427,7 +445,7 @@ body {
 
   #donate-button-container {
     position: absolute;
-    top: -1rem;
+    top: -3rem;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 3; /* Above the letter container */
@@ -502,7 +520,7 @@ body {
       b {
         font-size: 2.037rem;
         font-weight: 600;
-        letter-spacing: 2.21px;
+        letter-spacing: 0.01rem;
       }
 
       @media (min-width: @xs) {
