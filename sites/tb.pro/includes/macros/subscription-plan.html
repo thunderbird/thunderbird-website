@@ -3,7 +3,7 @@
   <div class="subscription-callout">
     <h3>{{ plan_name }}</h3>
     <p>{{ plan_description }}</p>
-    <h4><b><sup>$</sup>{{ plan_price }}</b><span>{{ plan_period }}</span></h4>
+    <h4><b>{{ plan_price }}</b><span>{{ plan_period }}</span></h4>
     {% if show_cta %}
     <button class="button-brand-outline-label" onclick="window.location.href='{{ href }}'">
       {{ cta_label }}
