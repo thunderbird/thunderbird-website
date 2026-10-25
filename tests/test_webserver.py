@@ -93,6 +93,14 @@ TEST_CASES = [
     ("tb.pro", "/en-US/thundermail", 302, "/en-US/"),
     ("tb.pro", "/waitlist", 302, "/en-US/waitlist"),
 
+    # thundermail.com - redirects to tb.pro, keeping the path and query string
+    ("thundermail.com", "/", 302, "https://tb.pro/"),
+    ("thundermail.com", "/waitlist", 302, "https://tb.pro/waitlist"),
+    ("thundermail.com", "/appointment", 302, "https://tb.pro/appointment"),
+    ("thundermail.com", "/waitlist?utm_source=test", 302, "https://tb.pro/waitlist?utm_source=test"),
+    ("www.thundermail.com", "/send", 302, "https://tb.pro/send"),
+    ("thundermail.com", "/.well-known/mta-sts.txt", 302, "mail.thundermail.com/.well-known/mta-sts.txt"),
+
     # support.thunderbird.net - generic url formatter redirect (issue #1135)
     ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/quarantined-domains", 302, "support.mozilla.org/kb/quarantined-domains"),
     ("support.thunderbird.net", "/thunderbird/147.0.2/Linux/en-US/experiment-add-on-support", 302, "support.mozilla.org/kb/experiment-add-on-support"),
