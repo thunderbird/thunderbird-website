@@ -98,7 +98,7 @@ jobs:
           git push
 
       - name: Deploy infrastructure
-        uses: pulumi/actions@8e5e406f4007fca908480587cb9893c07090f58d # v7.0.0
+        uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7.1.0
         with:
           command: up
           stack-name: thunderbird/thunderbird-website/${{ env.DEPLOY_ENV }}
