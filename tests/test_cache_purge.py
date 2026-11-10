@@ -2,6 +2,7 @@ import copy
 import hashlib
 import json
 import traceback
+from types import MappingProxyType
 
 import pytest
 
@@ -1535,3 +1536,471 @@ class TestDeploymentIntent:
 
         assert _state_snapshot(state) == before
         assert _state_snapshot(planned) == planned_before
+
+
+_STATE_RULES = (
+    ("www.example/", ("www.example",)),
+    ("start.example/", ("start.example",)),
+)
+_PUBLISHED = cache_purge.content_fingerprints(
+    {
+        "www.example/index.html": b"published-www",
+        "start.example/index.html": b"published-start",
+    },
+    _STATE_RULES,
+)
+_INTENDED = cache_purge.content_fingerprints(
+    {
+        "www.example/index.html": b"intended-www",
+        "start.example/index.html": b"intended-start",
+    },
+    _STATE_RULES,
+)
+_SITE_A = cache_purge.content_fingerprints(
+    {"site.example/index.html": b"accepted-a"},
+    (("site.example/", ("site.example",)),),
+)["site.example"]
+_SITE_B = cache_purge.content_fingerprints(
+    {"site.example/index.html": b"intended-b"},
+    (("site.example/", ("site.example",)),),
+)["site.example"]
+
+
+def _canonical_state(document):
+    """Return the deterministic JSON encoding of a version-1 state document."""
+    return json.dumps(document, sort_keys=True, separators=(",", ":"))
+
+
+class TestPurgeStateJson:
+    """Version-1 JSON preserves purge state without becoming a storage adapter."""
+
+    def test_initial_state_with_no_intent_round_trips(self):
+        """An empty state encodes as version 1 and decodes back to read-only collections."""
+        state = _purge_state()
+        encoded = cache_purge.encode_purge_state(state)
+        decoded = cache_purge.decode_purge_state(encoded)
+
+        assert encoded == '{"intent":null,"pending":[],"purged":{},"version":1}'
+        assert decoded == state
+        assert type(decoded.purged) is MappingProxyType
+        assert decoded.pending == frozenset()
+        assert decoded.intent is None
+
+    def test_unmanaged_pending_hostnames_round_trip(self):
+        """Pending hostnames stay recorded when no intent currently manages them."""
+        state = cache_purge.PurgeState(
+            MappingProxyType({}),
+            frozenset({"retired.example", "old.example"}),
+            None,
+        )
+        encoded = cache_purge.encode_purge_state(state)
+        decoded = cache_purge.decode_purge_state(encoded)
+
+        assert '"pending":["old.example","retired.example"]' in encoded
+        assert decoded.pending == frozenset({"old.example", "retired.example"})
+        assert decoded.purged == {}
+        assert decoded.intent is None
+        assert cache_purge.encode_purge_state(decoded) == encoded
+
+    def test_partial_acceptance_preserves_missing_records(self):
+        """Accepted fingerprints stay distinct from hostnames that were not accepted."""
+        state = cache_purge.begin_deployment_intent(
+            cache_purge.PurgeState(
+                {"www.example": _PUBLISHED["www.example"]},
+                frozenset({"old.example"}),
+                None,
+            ),
+            "intent-b",
+            _IMAGE_B,
+            _INTENDED,
+        )
+        partial = cache_purge.record_intent_acceptance(
+            state, "intent-b", {"www.example": _INTENDED["www.example"]})
+        encoded = cache_purge.encode_purge_state(partial)
+        decoded = cache_purge.decode_purge_state(encoded)
+
+        assert _PUBLISHED["www.example"] != _INTENDED["www.example"]
+        assert partial.pending == frozenset({"old.example", "start.example"})
+        assert "start.example" not in partial.purged
+        assert ":null" not in encoded
+        assert decoded.purged == {"www.example": _INTENDED["www.example"]}
+        assert "start.example" not in decoded.purged
+        assert decoded.pending == partial.pending
+        assert decoded.intent.identity == "intent-b"
+        assert decoded.intent.image == _IMAGE_B
+        assert decoded.intent.fingerprints == _INTENDED
+        assert cache_purge.encode_purge_state(decoded) == encoded
+
+    def test_insertion_order_does_not_change_json(self):
+        """Object-key and pending order are canonical for equivalent states."""
+        forward = cache_purge.PurgeState(
+            {"start.example": _INTENDED["start.example"], "www.example": _INTENDED["www.example"]},
+            ["www.example", "old.example"],
+            cache_purge.DeploymentIntent("intent-b", _IMAGE_B, dict(_INTENDED)),
+        )
+        reverse_fingerprints = {
+            "www.example": _INTENDED["www.example"],
+            "start.example": _INTENDED["start.example"],
+        }
+        reverse = cache_purge.PurgeState(
+            {"www.example": _INTENDED["www.example"], "start.example": _INTENDED["start.example"]},
+            ["old.example", "www.example"],
+            cache_purge.DeploymentIntent("intent-b", _IMAGE_B, reverse_fingerprints),
+        )
+        expected = _canonical_state({
+            "version": 1,
+            "purged": {
+                "start.example": _INTENDED["start.example"],
+                "www.example": _INTENDED["www.example"],
+            },
+            "pending": ["old.example", "www.example"],
+            "intent": {
+                "identity": "intent-b",
+                "image": _IMAGE_B,
+                "fingerprints": {
+                    "start.example": _INTENDED["start.example"],
+                    "www.example": _INTENDED["www.example"],
+                },
+            },
+        })
+
+        assert cache_purge.encode_purge_state(forward) == expected
+        assert cache_purge.encode_purge_state(reverse) == expected
+        assert forward.pending == ["www.example", "old.example"]
+
+    def test_decoded_collections_cannot_be_modified(self):
+        """Decoded fingerprints and pending hostnames reject later mutation."""
+        decoded = cache_purge.decode_purge_state(cache_purge.encode_purge_state(
+            cache_purge.PurgeState(
+                {"www.example": _INTENDED["www.example"]},
+                frozenset({"start.example"}),
+                cache_purge.DeploymentIntent("intent-b", _IMAGE_B, dict(_INTENDED)),
+            )))
+
+        with pytest.raises(TypeError):
+            decoded.purged["www.example"] = _PUBLISHED["www.example"]
+        with pytest.raises(TypeError):
+            decoded.intent.fingerprints["start.example"] = _PUBLISHED["start.example"]
+        with pytest.raises(AttributeError):
+            decoded.pending.add("old.example")
+
+    def test_inputs_are_not_mutated(self):
+        """Encoding copies the supplied fingerprints and pending hostnames."""
+        purged = {"www.example": _INTENDED["www.example"]}
+        pending = ["old.example", "start.example"]
+        fingerprints = dict(_INTENDED)
+        state = cache_purge.PurgeState(
+            purged, pending, cache_purge.DeploymentIntent("intent-b", _IMAGE_B, fingerprints))
+
+        cache_purge.encode_purge_state(state)
+
+        assert purged == {"www.example": _INTENDED["www.example"]}
+        assert pending == ["old.example", "start.example"]
+        assert fingerprints == _INTENDED
+        assert state.intent.fingerprints is fingerprints
+
+    def test_opaque_memory_fingerprints_are_not_encoded(self):
+        """In-memory recovery still accepts opaque fingerprints; JSON does not."""
+        state = cache_purge.begin_deployment_intent(
+            _purge_state(), "intent-a", _IMAGE_A, {"www.example": "A"})
+
+        with pytest.raises(ValueError, match="unsupported fingerprint") as caught:
+            cache_purge.encode_purge_state(state)
+
+        assert state.intent.fingerprints == {"www.example": "A"}
+        assert "A" not in str(caught.value)
+
+    @pytest.mark.parametrize(("document", "match", "secret"), [
+        ("", "malformed JSON", None),
+        ("{", "malformed JSON", None),
+        ('{"secret-state-token":', "malformed JSON", "secret-state-token"),
+        ("null", "state must be an object", None),
+        ("[]", "state must be an object", None),
+        (None, "purge state must be JSON text", None),
+        (
+            '{"version":1,"version":1,"purged":{},"pending":[],"intent":null}',
+            "duplicate key in state",
+            None,
+        ),
+        (
+            '{"version":1,"purged":{"www.example":"%s","www.example":"secret-state-token"},'
+            '"pending":[],"intent":null}' % ("ab" * 32),
+            "duplicate key in purged",
+            "secret-state-token",
+        ),
+    ])
+    def test_malformed_documents_are_rejected(self, document, match, secret):
+        """Malformed JSON is not treated as an empty initial state."""
+        with pytest.raises(ValueError, match=match) as caught:
+            cache_purge.decode_purge_state(document)
+
+        if secret:
+            assert secret not in str(caught.value)
+
+    @pytest.mark.parametrize(("changes", "match", "secret"), [
+        (lambda document: document.pop("version"), "missing version in state", None),
+        (lambda document: document.pop("purged"), "missing purged in state", None),
+        (lambda document: document.pop("pending"), "missing pending in state", None),
+        (lambda document: document.pop("intent"), "missing intent in state", None),
+        (lambda document: document.update(version="1"), "version must be 1", None),
+        (lambda document: document.update(version=True), "version must be 1", None),
+        (lambda document: document.update(version=2), "version must be 1", None),
+        (lambda document: document.update(version=0), "version must be 1", None),
+        (lambda document: document.update(purged=[]), "purged must be an object", None),
+        (lambda document: document.update(pending={}), "pending must be an array", None),
+        (lambda document: document.update(intent=[]), "intent must be an object", None),
+        (
+            lambda document: document.update(token="secret-state-token"),
+            "unknown field in state",
+            "secret-state-token",
+        ),
+        (
+            lambda document: document.update(pending=["old.example", "old.example"]),
+            "duplicate hostname in pending",
+            None,
+        ),
+    ])
+    def test_invalid_state_fields_are_rejected(self, changes, match, secret):
+        """Required fields, versions, types, and unknown fields fail closed."""
+        document = {"version": 1, "purged": {}, "pending": [], "intent": None}
+        changes(document)
+
+        with pytest.raises(ValueError, match=match) as caught:
+            cache_purge.decode_purge_state(json.dumps(document))
+
+        if secret:
+            assert secret not in str(caught.value)
+
+    def test_invalid_intent_fields_are_rejected(self):
+        """Intent objects need their identity, image, and fingerprint map only."""
+        base = {
+            "version": 1,
+            "purged": {},
+            "pending": [],
+            "intent": {"identity": "intent-a", "image": _IMAGE_A, "fingerprints": {}},
+        }
+        for key, match in (
+            ("identity", "missing identity in intent"),
+            ("image", "missing image in intent"),
+            ("fingerprints", "missing fingerprints in intent"),
+        ):
+            document = copy.deepcopy(base)
+            del document["intent"][key]
+            with pytest.raises(ValueError, match=match):
+                cache_purge.decode_purge_state(json.dumps(document))
+
+        unknown = copy.deepcopy(base)
+        unknown["intent"]["token"] = "secret-state-token"
+        with pytest.raises(ValueError, match="unknown field in intent") as caught:
+            cache_purge.decode_purge_state(json.dumps(unknown))
+        assert "secret-state-token" not in str(caught.value)
+
+        blank = copy.deepcopy(base)
+        blank["intent"]["identity"] = ""
+        with pytest.raises(ValueError, match="deployment intent identity is required"):
+            cache_purge.decode_purge_state(json.dumps(blank))
+        listed = copy.deepcopy(base)
+        listed["intent"]["fingerprints"] = []
+        with pytest.raises(ValueError, match="fingerprints must be an object"):
+            cache_purge.decode_purge_state(json.dumps(listed))
+
+    @pytest.mark.parametrize("image", [
+        "registry.example/site:latest",
+        "123456789012.dkr.ecr.us-west-2.amazonaws.com/thunderbird-website-prod:latest",
+        "",
+        "   ",
+        _PROD_IMAGE + ("a" * 63),
+        _PROD_IMAGE + ("A" * 64),
+        None,
+        1,
+    ])
+    def test_mutable_or_malformed_images_are_rejected(self, image):
+        """A persisted intent image must be digest-pinned, and rejection changes nothing."""
+        state = cache_purge.PurgeState(
+            {}, frozenset(), cache_purge.DeploymentIntent("intent-a", image, {}))
+        before = state.intent.image
+
+        with pytest.raises(ValueError, match="digest-pinned") as caught:
+            cache_purge.encode_purge_state(state)
+
+        if isinstance(image, str) and image.strip() != "":
+            assert image not in str(caught.value)
+        assert state.intent.image == before
+        document = json.dumps({
+            "version": 1,
+            "purged": {},
+            "pending": [],
+            "intent": {"identity": "intent-a", "image": image, "fingerprints": {}},
+        })
+        with pytest.raises(ValueError, match="digest-pinned") as decoded:
+            cache_purge.decode_purge_state(document)
+        if isinstance(image, str) and image.strip() != "":
+            assert image not in str(decoded.value)
+
+    @pytest.mark.parametrize("fingerprint", ["", "A", "A" * 64, "a" * 63, "g" * 64, None, 1, True])
+    def test_unsupported_fingerprints_are_rejected(self, fingerprint):
+        """SHA-256 text is the only persistent fingerprint, and nothing is coerced."""
+        state = cache_purge.PurgeState({"www.example": fingerprint}, frozenset(), None)
+        before = dict(state.purged)
+
+        with pytest.raises(ValueError, match="unsupported fingerprint in purged") as caught:
+            cache_purge.encode_purge_state(state)
+
+        if isinstance(fingerprint, str) and fingerprint != "":
+            assert fingerprint not in str(caught.value)
+        assert dict(state.purged) == before
+        purged = json.dumps({
+            "version": 1,
+            "purged": {"www.example": fingerprint},
+            "pending": [],
+            "intent": None,
+        })
+        with pytest.raises(ValueError, match="unsupported fingerprint in purged"):
+            cache_purge.decode_purge_state(purged)
+        intended = json.dumps({
+            "version": 1,
+            "purged": {},
+            "pending": [],
+            "intent": {
+                "identity": "intent-a",
+                "image": _IMAGE_A,
+                "fingerprints": {"start.example": fingerprint},
+            },
+        })
+        with pytest.raises(ValueError, match="unsupported fingerprint in fingerprints") as caught:
+            cache_purge.decode_purge_state(intended)
+        if isinstance(fingerprint, str) and fingerprint != "":
+            assert fingerprint not in str(caught.value)
+
+    @pytest.mark.parametrize("hostname", [
+        "https://start.example/path",
+        "start.example:443",
+        "start.example/path",
+        "*",
+        "start.example\x00",
+        "",
+        "Start.example",
+        None,
+        1,
+    ])
+    def test_invalid_hostnames_are_rejected(self, hostname):
+        """Persisted hostnames use the purge hostname policy and are not echoed."""
+        state = cache_purge.PurgeState({}, [hostname], None)
+        with pytest.raises(ValueError, match="invalid hostname in pending") as caught:
+            cache_purge.encode_purge_state(state)
+        if isinstance(hostname, str) and hostname != "":
+            assert hostname not in str(caught.value)
+
+        document = json.dumps({
+            "version": 1,
+            "purged": {},
+            "pending": [hostname],
+            "intent": None,
+        })
+        with pytest.raises(ValueError, match="invalid hostname in pending") as caught:
+            cache_purge.decode_purge_state(document)
+        if isinstance(hostname, str) and hostname != "":
+            assert hostname not in str(caught.value)
+
+    @pytest.mark.parametrize("accepted", [None, "different"])
+    def test_outstanding_intent_without_pending_is_rejected(self, accepted):
+        """A required purge that is not pending is contradictory state."""
+        purged = {} if accepted is None else {"site.example": _SITE_A}
+        pending = []
+        fingerprints = {"site.example": _SITE_B}
+        state = cache_purge.PurgeState(
+            purged, pending, cache_purge.DeploymentIntent("intent-a", _IMAGE_A, fingerprints))
+        document = json.dumps({
+            "version": 1,
+            "purged": dict(purged),
+            "pending": [],
+            "intent": {"identity": "intent-a", "image": _IMAGE_A, "fingerprints": dict(fingerprints)},
+        })
+
+        with pytest.raises(ValueError, match="intended purge is not pending") as encoded:
+            cache_purge.encode_purge_state(state)
+        with pytest.raises(ValueError, match="intended purge is not pending") as decoded:
+            cache_purge.decode_purge_state(document)
+
+        assert purged == ({} if accepted is None else {"site.example": _SITE_A})
+        assert pending == []
+        assert fingerprints == {"site.example": _SITE_B}
+        for caught in (encoded, decoded):
+            assert "site.example" not in str(caught.value)
+            assert _SITE_A not in str(caught.value)
+            assert _SITE_B not in str(caught.value)
+
+    @pytest.mark.parametrize("accepted", [None, "different"])
+    def test_outstanding_intent_with_pending_is_accepted(self, accepted):
+        """The same outstanding purge is valid once its hostname is pending."""
+        purged = {} if accepted is None else {"site.example": _SITE_A}
+        state = cache_purge.PurgeState(
+            purged,
+            ["old.example", "site.example"],
+            cache_purge.DeploymentIntent("intent-a", _IMAGE_A, {"site.example": _SITE_B}),
+        )
+        decoded = cache_purge.decode_purge_state(cache_purge.encode_purge_state(state))
+
+        assert _SITE_A != _SITE_B
+        assert decoded.purged == purged
+        assert decoded.pending == frozenset({"old.example", "site.example"})
+        assert decoded.intent.fingerprints == {"site.example": _SITE_B}
+
+    def test_matching_fingerprints_can_remain_pending(self):
+        """A matching accepted fingerprint does not clear pending work."""
+        state = cache_purge.PurgeState(
+            {"site.example": _SITE_B},
+            ["old.example", "site.example"],
+            cache_purge.DeploymentIntent("intent-a", _IMAGE_A, {"site.example": _SITE_B}),
+        )
+        decoded = cache_purge.decode_purge_state(cache_purge.encode_purge_state(state))
+
+        assert decoded.purged == {"site.example": _SITE_B}
+        assert decoded.pending == frozenset({"old.example", "site.example"})
+        assert decoded.intent.fingerprints == {"site.example": _SITE_B}
+
+    def test_matching_fingerprints_need_not_be_pending(self):
+        """A hostname whose fingerprints match may be absent from pending."""
+        state = cache_purge.PurgeState(
+            {"site.example": _SITE_B},
+            ["old.example"],
+            cache_purge.DeploymentIntent("intent-a", _IMAGE_A, {"site.example": _SITE_B}),
+        )
+        decoded = cache_purge.decode_purge_state(cache_purge.encode_purge_state(state))
+
+        assert decoded.purged == {"site.example": _SITE_B}
+        assert decoded.pending == frozenset({"old.example"})
+        assert "site.example" not in decoded.pending
+
+    def test_absent_intent_does_not_require_pending(self):
+        """Without an intent there are no intended fingerprints to reconcile."""
+        state = cache_purge.PurgeState({"site.example": _SITE_A}, frozenset(), None)
+        decoded = cache_purge.decode_purge_state(cache_purge.encode_purge_state(state))
+
+        assert decoded.intent is None
+        assert decoded.pending == frozenset()
+        assert decoded.purged == {"site.example": _SITE_A}
+
+    def test_malformed_fields_are_reported_before_the_pending_invariant(self):
+        """A bad image or fingerprint is reported before the cross-field check."""
+        state = cache_purge.PurgeState(
+            {},
+            [],
+            cache_purge.DeploymentIntent(
+                "intent-a", "registry.example/site:latest", {"site.example": _SITE_B}),
+        )
+        with pytest.raises(ValueError, match="digest-pinned"):
+            cache_purge.encode_purge_state(state)
+
+        document = json.dumps({
+            "version": 1,
+            "purged": {"site.example": "A"},
+            "pending": [],
+            "intent": {
+                "identity": "intent-a",
+                "image": _IMAGE_A,
+                "fingerprints": {"site.example": _SITE_B},
+            },
+        })
+        with pytest.raises(ValueError, match="unsupported fingerprint in purged"):
+            cache_purge.decode_purge_state(document)

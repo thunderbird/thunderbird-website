@@ -20,8 +20,9 @@ bindings. It does not read credentials or contain a production hostname map.
 ``pending_hostnames`` and ``record_accepted_purges`` track outstanding purge
 work from caller-supplied fingerprints. ``begin_deployment_intent`` and
 ``record_intent_acceptance`` attach that work to one deployment intent. The
-intent image must be a digest-pinned reference. They do not read Git,
-Cloudflare, or deployment state.
+intent image must be a digest-pinned reference. ``encode_purge_state`` and
+``decode_purge_state`` convert that state to versioned JSON. They do not read
+Git, Cloudflare, or deployment state.
 """
 
 import hashlib
@@ -190,9 +191,14 @@ def load_purge_config(document: str) -> PurgeConfiguration:
 
 
 def _parse_config_json(document):
+    """Return decoded configuration pairs, without a parse error's document excerpt."""
+    return _parse_json_document(document, "purge configuration")
+
+
+def _parse_json_document(document, label):
     """Return decoded JSON pairs, without retaining a parse error's document excerpt."""
     if not isinstance(document, str):
-        raise ValueError("purge configuration must be JSON text")
+        raise ValueError(f"{label} must be JSON text")
     try:
         return json.loads(document, object_pairs_hook=_JSONObject)
     except (json.JSONDecodeError, RecursionError, ValueError):
@@ -801,3 +807,147 @@ def _mapping(value, message):
     if isinstance(value, (str, bytes, bytearray)) or not isinstance(value, Mapping):
         raise ValueError(message)
     return dict(value)
+
+
+def encode_purge_state(state: PurgeState) -> str:
+    """Encode purge state as deterministic version-1 JSON.
+
+    The document has ``version``, ``purged``, ``pending``, and ``intent``.
+    ``purged`` maps a hostname to its accepted SHA-256 fingerprint. A hostname
+    with no accepted record is omitted; it is not stored as null or an empty
+    string. ``pending`` lists every outstanding hostname, including ones the
+    current intent does not manage, in lexicographic order. ``intent`` is
+    null, or the current identity, digest-pinned image, and intended
+    fingerprints. Object keys are sorted. Hostnames use the same lowercase
+    DNS spelling as purge configuration. Fingerprints are 64 lowercase hex
+    characters, not arbitrary in-memory values. An intended hostname whose
+    accepted fingerprint is missing or different must be pending. Extra
+    pending hostnames are kept, including ones whose fingerprints already
+    match. This document has no revision field: the storage adapter can use
+    the Git commit that contains it.
+
+    Encoding does not write that commit, and it does not make a later write
+    atomic. After a conflict the adapter must not replay a stale intent
+    registration or a stale acceptance onto a newer revision.
+    """
+    if not isinstance(state, PurgeState):
+        raise ValueError("purge state is required")
+    purged = _persistent_fingerprints(state.purged, "purged")
+    pending = _persistent_pending(state.pending)
+    intent = _persistent_intent(state.intent)
+    fingerprints = None if intent is None else intent["fingerprints"]
+    _require_outstanding_purges(purged, pending, fingerprints)
+    document = {"version": 1, "purged": purged, "pending": pending, "intent": intent}
+    return json.dumps(document, sort_keys=True, separators=(",", ":"))
+
+
+def decode_purge_state(document: str) -> PurgeState:
+    """Decode version-1 purge-state JSON into read-only purge state.
+
+    Malformed JSON, an unsupported version, duplicate keys, unknown or missing
+    fields, unsupported fingerprints, and an intent whose required purge is
+    not pending raise ``ValueError``. They are not an empty initial state,
+    and the missing hostname is not added. A missing remote state ref is the
+    adapter's condition; this function does not invent state when the
+    document is absent or unusable. The returned mappings cannot be modified.
+    Decoding does not contact Git or make a conditional write.
+    """
+    parsed = _parse_json_document(document, "purge state")
+    root = _config_object(parsed, "state", _STATE_FIELDS)
+    if type(root["version"]) is not int or root["version"] != 1:
+        raise ValueError("version must be 1")
+    purged = _persistent_fingerprints(root["purged"], "purged")
+    pending = _persistent_pending(root["pending"])
+    intent = _load_persistent_intent(root["intent"])
+    fingerprints = None if intent is None else intent.fingerprints
+    _require_outstanding_purges(purged, pending, fingerprints)
+    return PurgeState(MappingProxyType(purged), frozenset(pending), intent)
+
+
+_STATE_FIELDS = ("version", "purged", "pending", "intent")
+_INTENT_FIELDS = ("identity", "image", "fingerprints")
+
+
+def _persistent_intent(intent):
+    """Return the JSON intent object, or null when the state has no owner."""
+    if intent is None:
+        return None
+    if not isinstance(intent, DeploymentIntent):
+        raise ValueError("intent must be an object")
+    _required_text(intent.identity, "deployment intent identity is required")
+    if not digest_pinned(intent.image):
+        raise ValueError("deployment intent image must be a digest-pinned reference")
+    return {
+        "identity": intent.identity,
+        "image": intent.image,
+        "fingerprints": _persistent_fingerprints(intent.fingerprints, "fingerprints"),
+    }
+
+
+def _load_persistent_intent(value):
+    """Return the current intent, or None when the document stores null."""
+    if value is None:
+        return None
+    mapping = _config_object(value, "intent", _INTENT_FIELDS)
+    _required_text(mapping["identity"], "deployment intent identity is required")
+    if not digest_pinned(mapping["image"]):
+        raise ValueError("deployment intent image must be a digest-pinned reference")
+    fingerprints = _persistent_fingerprints(mapping["fingerprints"], "fingerprints")
+    return DeploymentIntent(mapping["identity"], mapping["image"], MappingProxyType(fingerprints))
+
+
+def _require_outstanding_purges(purged, pending, fingerprints):
+    """Reject an intent that omits a hostname whose purge is still required.
+
+    Each intended hostname must be pending when its accepted fingerprint is
+    absent or different. The check does not add that hostname, remove a
+    pending hostname whose fingerprints match, or drop pending hostnames
+    outside the intent. No intent means there are no intended fingerprints.
+    """
+    if fingerprints is None:
+        return
+    outstanding = set(pending)
+    for hostname, intended in fingerprints.items():
+        if (hostname not in purged or purged[hostname] != intended) and hostname not in outstanding:
+            raise ValueError("intended purge is not pending")
+
+
+def _persistent_fingerprints(mapping, field):
+    """Return a hostname-to-SHA-256 mapping, preserving absent keys by omission."""
+    if isinstance(mapping, _JSONObject):
+        pairs = _object_pairs(mapping, field)
+    elif isinstance(mapping, (str, bytes, bytearray)) or not isinstance(mapping, Mapping):
+        raise ValueError(f"{field} must be an object")
+    else:
+        pairs = mapping
+    loaded = {}
+    for hostname, fingerprint in pairs.items():
+        if not _valid_hostname(hostname):
+            raise ValueError(f"invalid hostname in {field}")
+        if not _sha256_fingerprint(fingerprint):
+            raise ValueError(f"unsupported fingerprint in {field}")
+        loaded[hostname] = fingerprint
+    return loaded
+
+
+def _sha256_fingerprint(value):
+    """Return whether ``value`` is a lowercase SHA-256 hex digest."""
+    return isinstance(value, str) and len(value) == 64 and all(
+        character in "0123456789abcdef" for character in value)
+
+
+def _persistent_pending(pending):
+    """Return outstanding hostnames in lexicographic order, without collapsing duplicates."""
+    if isinstance(pending, _JSONObject) or not isinstance(pending, (list, tuple, frozenset, set)):
+        raise ValueError("pending must be an array")
+    names = []
+    seen = set()
+    for hostname in pending:
+        if not _valid_hostname(hostname):
+            raise ValueError("invalid hostname in pending")
+        if hostname in seen:
+            raise ValueError("duplicate hostname in pending")
+        seen.add(hostname)
+        names.append(hostname)
+    names.sort()
+    return names
