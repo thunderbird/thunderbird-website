@@ -142,6 +142,8 @@ Steps:
 
 `prepare_deployment_intent` is implemented. Credentials are required for every zone used by a managed hostname, and each one must be locally well-formed. It then fingerprints a completed artifact directory and persists that intent. The check does not prove Cloudflare authorization or zone access. `deploy.yml` does not call it yet. `docs/examples/cache-purge.example.json` is a non-production illustration with no tokens and is not a fallback configuration.
 
+`extract_pinned_content` is implemented. It creates a stopped container from the digest-pinned image and copies `/var/www/html/start/.` into a temporary directory. That copy is the archived site tree only, not server configuration outside it. Cleanup tries to remove that invocation's container and directory when create returns an id, times out, is interrupted, or returns an unusable result. An interruption or exit from the extraction is propagated. Cleanup is best-effort: it does not survive process termination or daemon failure as a transactional rollback. `deploy.yml` still creates a container named `extract` and does not call this function yet. Purge preparation, readiness polling, and Cloudflare remain unwired.
+
 ### PR Preview (`preview.yml`)
 
 Triggered when a `preview` or `preview:<site>` label is added to a non-fork PR. Subsequent pushes auto-rebuild while the label is present.
