@@ -136,6 +136,8 @@ Steps:
 3. Deploy infrastructure with Pulumi using the same reference as `IMAGE_URI`
 4. Force ECS service update
 
+`persist_deployment_intent` is implemented and records one deployment intent. `deploy.yml` does not call it yet. Once that integration is added, the caller must complete configuration and credential checks and successfully persist the deployment intent before Pulumi can expose new content. Persisting the intent does not establish deployment readiness or authorize a purge.
+
 ### PR Preview (`preview.yml`)
 
 Triggered when a `preview` or `preview:<site>` label is added to a non-fork PR. Subsequent pushes auto-rebuild while the label is present.
