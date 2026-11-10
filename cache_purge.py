@@ -14,11 +14,13 @@ rule contributes its hostnames. The function does not contain a production
 hostname map.
 
 ``purge_hostnames`` posts those hostnames to the fixed Cloudflare cache API.
-``pending_hostnames`` and ``record_accepted_purges`` track outstanding purge
-work from caller-supplied fingerprints. They do not read Git, Cloudflare, or
-deployment state.
+``content_fingerprints`` hashes the files those rules select for each declared
+hostname. ``pending_hostnames`` and ``record_accepted_purges`` track
+outstanding purge work from caller-supplied fingerprints. They do not read
+Git, Cloudflare, or deployment state.
 """
 
+import hashlib
 import json
 import math
 import time
@@ -78,6 +80,53 @@ def _rule_matches(rule_path, changed_path):
     if rule_path.endswith("/"):
         return changed_path.startswith(rule_path)
     return changed_path == rule_path
+
+
+def content_fingerprints(
+    snapshot: Mapping[str, bytes],
+    rules: Sequence[tuple[str, Sequence[str]]],
+) -> dict[str, str]:
+    """Return a SHA-256 fingerprint for every hostname declared by ``rules``.
+
+    ``snapshot`` and ``rules`` use the same paths and matching rules as
+    ``changed_hostnames``. Every matching rule contributes its hostnames. A
+    path is included once for a hostname even when several rules select it.
+
+    Each fingerprint is the lowercase hex SHA-256 of that hostname's matched
+    files, ordered by path. A file is framed as an 8-byte big-endian length of
+    the UTF-8 path, the path, an 8-byte big-endian length of the file bytes,
+    and those bytes. Lengths keep paths and arbitrary contents unambiguous.
+    A hostname with no matched file contributes no records. Its fingerprint is
+    SHA-256 of empty input, ``e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855``.
+    Identical matched bytes share a fingerprint. The bytes are hashed as
+    given, including timestamps and randomized CSS.
+
+    The values do not depend on snapshot order, rule order, hostname order, or
+    repeated assignments. The inputs are not modified.
+    """
+    matched = {}
+    for _rule_path, hostnames in rules:
+        for hostname in hostnames:
+            matched.setdefault(hostname, set())
+    for path in snapshot:
+        for rule_path, hostnames in rules:
+            if _rule_matches(rule_path, path):
+                for hostname in hostnames:
+                    matched[hostname].add(path)
+    return {hostname: _content_fingerprint(snapshot, paths) for hostname, paths in matched.items()}
+
+
+def _content_fingerprint(snapshot, paths):
+    """Hash one hostname's matched files in path order."""
+    digest = hashlib.sha256()
+    for path in sorted(paths):
+        path_bytes = path.encode("utf-8")
+        content = snapshot[path]
+        digest.update(len(path_bytes).to_bytes(8, "big"))
+        digest.update(path_bytes)
+        digest.update(len(content).to_bytes(8, "big"))
+        digest.update(content)
+    return digest.hexdigest()
 
 
 class PurgeAcceptance(NamedTuple):

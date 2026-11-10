@@ -1,3 +1,5 @@
+import copy
+import hashlib
 import json
 import traceback
 
@@ -850,3 +852,177 @@ class TestPurgeRecovery:
         assert cache_purge.pending_hostnames({"www": ""}, {"www": ""}, set()) == set()
         assert cache_purge.pending_hostnames({"www": "A"}, {"www": None}, set()) == {"www"}
         assert cache_purge.pending_hostnames({"www": "A"}, {"www": ""}, set()) == {"www"}
+
+
+_EMPTY_FINGERPRINT = hashlib.sha256(b"").hexdigest()
+
+
+def _fingerprint_changes(before, after, rules):
+    """Return hostnames whose fingerprints differ between two snapshots."""
+    before_fingerprints = cache_purge.content_fingerprints(before, rules)
+    after_fingerprints = cache_purge.content_fingerprints(after, rules)
+    return {
+        hostname for hostname, fingerprint in before_fingerprints.items()
+        if after_fingerprints[hostname] != fingerprint
+    }
+
+
+class TestContentFingerprints:
+    """Fingerprints hash the bytes selected by the changed-hostname rules."""
+
+    def test_reordered_snapshots_and_rules_have_the_same_fingerprints(self):
+        """Snapshot order, rule order, and hostname order do not change a fingerprint."""
+        first = {
+            "start.thunderbird.net/en-US/index.html": b"page",
+            "start.thunderbird.net/en-US/maintenance/index.html": b"down",
+        }
+        second = {
+            "start.thunderbird.net/en-US/maintenance/index.html": b"down",
+            "start.thunderbird.net/en-US/index.html": b"page",
+        }
+        forward = [
+            ("start.thunderbird.net/", [START, ADDONS]),
+            ("start.thunderbird.net/en-US/maintenance/", [ADDONS, START]),
+        ]
+        reverse = [
+            ("start.thunderbird.net/en-US/maintenance/", [START, ADDONS]),
+            ("start.thunderbird.net/", [ADDONS, START]),
+        ]
+
+        assert cache_purge.content_fingerprints(first, forward) == cache_purge.content_fingerprints(second, reverse)
+
+    def test_overlapping_start_and_maintenance_dependencies(self):
+        """Maintenance content is in both fingerprints, and other start content is not."""
+        maintenance = "start.thunderbird.net/en-US/maintenance/index.html"
+        other = "start.thunderbird.net/en-US/index.html"
+        snapshot = {maintenance: b"down", other: b"page"}
+
+        fingerprints = cache_purge.content_fingerprints(snapshot, START_RULES)
+        addons_only = cache_purge.content_fingerprints(
+            {maintenance: b"down"},
+            [("start.thunderbird.net/en-US/maintenance/", [ADDONS])],
+        )
+
+        assert set(fingerprints) == {START, ADDONS}
+        assert fingerprints[ADDONS] == addons_only[ADDONS]
+        assert fingerprints[START] != fingerprints[ADDONS]
+
+    def test_duplicate_rules_do_not_change_fingerprints(self):
+        """A path selected by several rules is hashed once for that hostname."""
+        path = "www.thunderbird.net/en-US/index.html"
+        snapshot = {path: b"page"}
+        once = [("www.thunderbird.net/", [WWW])]
+        twice = [
+            ("www.thunderbird.net/", [WWW, WWW]),
+            ("www.thunderbird.net/en-US/", [WWW]),
+        ]
+
+        assert cache_purge.content_fingerprints(snapshot, once) == cache_purge.content_fingerprints(snapshot, twice)
+
+    def test_shared_exact_file_is_in_every_assigned_fingerprint(self):
+        """One exact file contributes the same content fingerprint to every assigned hostname."""
+        fingerprints = cache_purge.content_fingerprints({"wsgi.py": b"application"}, SHARED_FILE_RULES)
+
+        assert set(fingerprints) == {WWW, UPDATES, TBPRO, WWW_TBPRO, ROADMAPS, ROADMAP}
+        assert len(set(fingerprints.values())) == 1
+        assert fingerprints[WWW] != _EMPTY_FINGERPRINT
+
+    def test_added_deleted_renamed_and_empty_files_change_fingerprints(self):
+        """Path identity is part of the fingerprint, including a zero-byte file."""
+        rules = [("www.thunderbird.net/", [WWW])]
+        original = {"www.thunderbird.net/old.html": b"page"}
+        added = {"www.thunderbird.net/old.html": b"page", "www.thunderbird.net/new.html": b"more"}
+        deleted = {}
+        renamed = {"www.thunderbird.net/new.html": b"page"}
+        empty = {"www.thunderbird.net/empty.txt": b""}
+
+        original_fingerprint = cache_purge.content_fingerprints(original, rules)[WWW]
+        assert cache_purge.content_fingerprints(added, rules)[WWW] != original_fingerprint
+        assert cache_purge.content_fingerprints(deleted, rules)[WWW] == _EMPTY_FINGERPRINT
+        assert cache_purge.content_fingerprints(renamed, rules)[WWW] != original_fingerprint
+        assert cache_purge.content_fingerprints(empty, rules)[WWW] != _EMPTY_FINGERPRINT
+
+    def test_binary_content_uses_length_prefixed_framing(self):
+        """Adjacent path and content boundaries stay distinct for arbitrary bytes."""
+        path = "a"
+        content = b"b\x00c"
+        path_bytes = path.encode("utf-8")
+        framed = b"".join((
+            len(path_bytes).to_bytes(8, "big"),
+            path_bytes,
+            len(content).to_bytes(8, "big"),
+            content,
+        ))
+        fingerprints = cache_purge.content_fingerprints({path: content}, [("a", [WWW])])
+
+        assert fingerprints[WWW] == hashlib.sha256(framed).hexdigest()
+        assert fingerprints[WWW] != cache_purge.content_fingerprints({"ab": b"\x00c"}, [("ab", [WWW])])[WWW]
+        assert fingerprints[WWW] != cache_purge.content_fingerprints({"a": b"b"}, [("a", [WWW])])[WWW]
+
+    def test_declared_hostname_with_no_match_has_the_empty_fingerprint(self):
+        """Every hostname named by a rule is present when none of its files are."""
+        fingerprints = cache_purge.content_fingerprints({}, START_RULES)
+
+        assert fingerprints == {START: _EMPTY_FINGERPRINT, ADDONS: _EMPTY_FINGERPRINT}
+
+    def test_unmatched_files_do_not_change_fingerprints(self):
+        """Bytes outside every rule leave the declared fingerprints untouched."""
+        unmatched = "notes/private.txt"
+        before = {unmatched: b"old\x00"}
+        after = {unmatched: b"new", "wsgi.py.bak": b"application"}
+
+        assert cache_purge.content_fingerprints(before, START_RULES) == {START: _EMPTY_FINGERPRINT, ADDONS: _EMPTY_FINGERPRINT}
+        assert cache_purge.content_fingerprints(after, START_RULES) == cache_purge.content_fingerprints(before, START_RULES)
+
+    def test_inputs_are_not_mutated(self):
+        """Fingerprinting reads the snapshot and rules."""
+        snapshot = {"wsgi.py": b"application", "notes/private.txt": b"secret"}
+        rules = [("wsgi.py", [WWW, UPDATES]), ("start.thunderbird.net/", [START])]
+        original_snapshot = copy.deepcopy(snapshot)
+        original_rules = copy.deepcopy(rules)
+
+        cache_purge.content_fingerprints(snapshot, rules)
+
+        assert snapshot == original_snapshot
+        assert rules == original_rules
+
+    @pytest.mark.parametrize("before,after,rules", [
+        (
+            {"start.thunderbird.net/en-US/maintenance/index.html": b"down"},
+            {"start.thunderbird.net/en-US/maintenance/index.html": b"still down"},
+            START_RULES,
+        ),
+        (
+            {"start.thunderbird.net/en-US/index.html": b"page"},
+            {"start.thunderbird.net/en-US/index.html": b"page changed"},
+            START_RULES,
+        ),
+        (
+            {"wsgi.py": b"redirect-a"},
+            {"wsgi.py": b"redirect-b"},
+            SHARED_FILE_RULES,
+        ),
+        (
+            {"www.thunderbird.net/old.html": b"page"},
+            {"www.thunderbird.net/new.html": b"page"},
+            [("www.thunderbird.net/", [WWW])],
+        ),
+        (
+            {},
+            {"www.thunderbird.net/empty.txt": b""},
+            [("www.thunderbird.net/", [WWW])],
+        ),
+        (
+            {"www.thunderbird.net/en-US/thunderbird/releases/atom.xml": b"<updated>2026-11-10T00:10:49+00:00</updated>"},
+            {"www.thunderbird.net/en-US/thunderbird/releases/atom.xml": b"<updated>2026-11-10T00:35:59+00:00</updated>"},
+            [("www.thunderbird.net/", [WWW])],
+        ),
+        (
+            {"notes/private.txt": b"old"},
+            {"notes/private.txt": b"new"},
+            START_RULES,
+        ),
+    ])
+    def test_changed_fingerprint_keys_match_changed_hostnames(self, before, after, rules):
+        """Hostnames with a new fingerprint are the hostnames changed_hostnames returns."""
+        assert _fingerprint_changes(before, after, rules) == cache_purge.changed_hostnames(before, after, rules)
