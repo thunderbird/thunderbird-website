@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "zones": {
+    "example": {"id": "0123456789abcdef0123456789abcdef"},
+    "example_updates": {"id": "fedcba9876543210fedcba9876543210"}
+  },
+  "hostnames": {
+    "www.example": "example",
+    "addons.example": "example",
+    "updates.example": "example_updates"
+  },
+  "rules": [
+    {"path": "www.example/", "hostnames": ["www.example"]},
+    {"path": "www.example/en-US/maintenance/", "hostnames": ["addons.example"]},
+    {"path": "wsgi.py", "hostnames": ["www.example", "updates.example"]}
+  ]
+}

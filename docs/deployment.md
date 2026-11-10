@@ -140,6 +140,8 @@ Steps:
 
 `read_content_snapshot` is implemented. The caller provides a completed, stable artifact directory. The function reads that directory into relative path-to-bytes records and does not create an atomic filesystem snapshot. `deploy.yml` does not call it yet.
 
+`prepare_deployment_intent` is implemented. Credentials are required for every zone used by a managed hostname, and each one must be locally well-formed. It then fingerprints a completed artifact directory and persists that intent. The check does not prove Cloudflare authorization or zone access. `deploy.yml` does not call it yet. `docs/examples/cache-purge.example.json` is a non-production illustration with no tokens and is not a fallback configuration.
+
 ### PR Preview (`preview.yml`)
 
 Triggered when a `preview` or `preview:<site>` label is added to a non-fork PR. Subsequent pushes auto-rebuild while the label is present.

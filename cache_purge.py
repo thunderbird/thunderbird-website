@@ -17,6 +17,8 @@ hostname map.
 ``content_fingerprints`` hashes the files those rules select for each declared
 hostname. ``load_purge_config`` validates JSON rules and hostname-to-zone
 bindings. It does not read credentials or contain a production hostname map.
+``validate_api_token`` checks local credential syntax and does not contact
+Cloudflare or prove authorization.
 ``pending_hostnames`` and ``record_accepted_purges`` track outstanding purge
 work from caller-supplied fingerprints. ``begin_deployment_intent`` and
 ``record_intent_acceptance`` attach that work to one deployment intent. The
@@ -372,9 +374,9 @@ def purge_hostnames(
     other collection is deduplicated by exact string, sorted, and sent as
     ``{"hosts": [...]}`` only. Each hostname is a lowercase DNS name, as
     required by configuration. ``zone_id`` must be 1 to 32 ASCII letters or
-    digits. ``api_token`` must be non-empty printable ASCII without spaces.
-    Invalid input raises ValueError before a header is built, and that error
-    does not include the token or the hostname.
+    digits. ``api_token`` must pass ``validate_api_token``: non-empty printable
+    ASCII without spaces. Invalid input raises ValueError before a header is
+    built, and that error does not include the token or the hostname.
 
     A nonempty call is HTTPS POST
     ``/client/v4/zones/{zone_id}/purge_cache`` on ``api.cloudflare.com``,
@@ -445,12 +447,22 @@ def _validated_hostnames(hostnames):
     return sorted(set(cleaned))
 
 
+def validate_api_token(api_token):
+    """Reject a credential that ``purge_hostnames`` would refuse to send.
+
+    The token must be non-empty printable ASCII without spaces. This checks
+    local syntax only. It does not prove Cloudflare authorization or zone
+    access, and the error does not include the token.
+    """
+    if not isinstance(api_token, str) or not _header_safe_token(api_token):
+        raise ValueError("api_token is required")
+
+
 def _validate_request(zone_id, api_token):
     """Reject a zone id or token that must not be sent."""
     if not _valid_zone_id(zone_id):
         raise ValueError("zone_id must be 1 to 32 ASCII letters or digits")
-    if not isinstance(api_token, str) or not _header_safe_token(api_token):
-        raise ValueError("api_token is required")
+    validate_api_token(api_token)
 
 
 def _header_safe_token(api_token):
