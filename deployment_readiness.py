@@ -87,7 +87,7 @@ def evaluate_deployment(
     deployment id as unowned. This function cannot guarantee that the
     deployment stays in the observed state.
     """
-    if not _digest_pinned(image):
+    if not digest_pinned(image):
         return DeploymentEvaluation(INVALID)
     deployments = _deployment_list(service)
     if deployments is None:
@@ -240,6 +240,6 @@ def _count(value):
     return value
 
 
-def _digest_pinned(image):
+def digest_pinned(image):
     """Return whether the reference names an image by its sha256 digest."""
     return isinstance(image, str) and _DIGEST_IMAGE.fullmatch(image) is not None

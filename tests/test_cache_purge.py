@@ -1283,3 +1283,255 @@ class TestLoadPurgeConfig:
             cache_purge.load_purge_config(duplicate_field)
 
         assert "secret-rule-path" not in str(caught.value)
+
+
+_PROD_IMAGE = "123456789012.dkr.ecr.us-west-2.amazonaws.com/thunderbird-website-prod@sha256:"
+_IMAGE_A = _PROD_IMAGE + "a" * 64
+_IMAGE_B = _PROD_IMAGE + "b" * 64
+_IMAGE_C = _PROD_IMAGE + "c" * 64
+
+
+def _purge_state(purged=None, pending=()):
+    """Build a purge state that does not yet have an owner."""
+    return cache_purge.PurgeState({} if purged is None else purged, frozenset(pending), None)
+
+
+def _state_snapshot(state):
+    """Copy the observable purge state without relying on deepcopy."""
+    intent = None
+    if state.intent is not None:
+        intent = (state.intent.identity, state.intent.image, dict(state.intent.fingerprints))
+    return (dict(state.purged), set(state.pending), intent)
+
+
+class TestDeploymentIntent:
+    """Acceptance is applied only for the deployment that currently owns the state."""
+
+    def test_unsuccessful_intermediate_purge_stays_pending_after_revert(self):
+        """A was accepted, B was not, and returning to A does not clear that work."""
+        accepted = cache_purge.begin_deployment_intent(
+            _purge_state(), "intent-a", _IMAGE_A, {"www.example": "A"})
+        accepted = cache_purge.record_intent_acceptance(accepted, "intent-a", {"www.example": "A"})
+        intermediate = cache_purge.begin_deployment_intent(
+            accepted, "intent-b", _IMAGE_B, {"www.example": "B"})
+        reverted = cache_purge.begin_deployment_intent(
+            intermediate, "intent-a-again", _IMAGE_A, {"www.example": "A"})
+
+        assert accepted.pending == frozenset()
+        assert "www.example" in intermediate.pending
+        assert reverted.pending == frozenset({"www.example"})
+        assert reverted.purged == {"www.example": "A"}
+        assert reverted.intent.identity == "intent-a-again"
+
+    def test_partial_acceptance_then_revert_keeps_both_hostnames_pending(self):
+        """One accepted hostname and one still pending are both outstanding after the revert."""
+        planned = cache_purge.begin_deployment_intent(
+            _purge_state(), "intent-b", _IMAGE_B, {"www.example": "B", "start.example": "B"})
+        partial = cache_purge.record_intent_acceptance(planned, "intent-b", {"www.example": "B"})
+        reverted = cache_purge.begin_deployment_intent(
+            partial, "intent-a", _IMAGE_A, {"www.example": "A", "start.example": "A"})
+
+        assert partial.purged == {"www.example": "B"}
+        assert partial.pending == frozenset({"start.example"})
+        assert partial.intent == planned.intent
+        assert reverted.pending == frozenset({"www.example", "start.example"})
+        assert reverted.purged == {"www.example": "B"}
+
+    def test_stale_acceptance_does_not_change_the_newer_intent(self):
+        """B's acceptance is rejected after C has become the owner."""
+        older = cache_purge.begin_deployment_intent(
+            _purge_state(), "intent-b", _IMAGE_B, {"www.example": "B"})
+        current = cache_purge.begin_deployment_intent(
+            older, "intent-c", _IMAGE_C, {"www.example": "C"})
+        before = _state_snapshot(current)
+
+        with pytest.raises(ValueError, match="current deployment intent"):
+            cache_purge.record_intent_acceptance(current, "intent-b", {"www.example": "B"})
+
+        assert _state_snapshot(current) == before
+        assert current.intent.identity == "intent-c"
+        assert current.pending == frozenset({"www.example"})
+
+    def test_stale_acceptance_is_rejected_when_fingerprints_match(self):
+        """Identical fingerprints do not let an older intent clear the newer owner's work."""
+        fingerprints = {"www.example": "same"}
+        older = cache_purge.begin_deployment_intent(_purge_state(), "intent-b", _IMAGE_B, fingerprints)
+        current = cache_purge.begin_deployment_intent(older, "intent-c", _IMAGE_C, fingerprints)
+        before = _state_snapshot(current)
+
+        with pytest.raises(ValueError, match="current deployment intent"):
+            cache_purge.record_intent_acceptance(current, "intent-b", fingerprints)
+
+        assert _state_snapshot(current) == before
+        assert current.intent.identity == "intent-c"
+
+    def test_mismatched_fingerprint_and_unknown_hostname_are_rejected(self):
+        """A valid entry followed by a bad fingerprint or hostname records nothing."""
+        state = cache_purge.begin_deployment_intent(
+            _purge_state(), "intent-b", _IMAGE_B, {"www.example": "B", "start.example": "B"})
+        before = _state_snapshot(state)
+
+        with pytest.raises(ValueError, match="does not match the current intent"):
+            cache_purge.record_intent_acceptance(
+                state, "intent-b", {"www.example": "B", "start.example": "A"})
+        with pytest.raises(ValueError, match="outside the current intent"):
+            cache_purge.record_intent_acceptance(state, "intent-b", {"www.example": "B", "other.example": "B"})
+
+        assert state.purged == {}
+        assert state.pending == frozenset({"www.example", "start.example"})
+        assert _state_snapshot(state) == before
+
+    def test_removed_hostname_stays_pending_until_it_returns(self):
+        """A pending hostname that leaves the intent remains recorded when it comes back."""
+        both = cache_purge.begin_deployment_intent(
+            _purge_state(pending={"www.example"}),
+            "intent-1",
+            _IMAGE_A,
+            {"www.example": "A", "start.example": "S"},
+        )
+        removed = cache_purge.begin_deployment_intent(
+            both, "intent-2", _IMAGE_B, {"start.example": "S"})
+        restored = cache_purge.begin_deployment_intent(
+            removed, "intent-3", _IMAGE_C, {"www.example": "A", "start.example": "S"})
+
+        assert "www.example" in removed.pending
+        assert removed.intent.fingerprints == {"start.example": "S"}
+        assert "www.example" in restored.pending
+        assert restored.intent.identity == "intent-3"
+
+    def test_same_intent_and_acceptance_can_be_repeated(self):
+        """Repeating the current registration and its acceptance is idempotent."""
+        fingerprints = {"www.example": "A", "start.example": "A"}
+        first = cache_purge.begin_deployment_intent(_purge_state(), "intent-a", _IMAGE_A, fingerprints)
+        repeated = cache_purge.begin_deployment_intent(first, "intent-a", _IMAGE_A, dict(fingerprints))
+        accepted = {"www.example": "A"}
+        once = cache_purge.record_intent_acceptance(repeated, "intent-a", accepted)
+        twice = cache_purge.record_intent_acceptance(once, "intent-a", dict(accepted))
+        registered_again = cache_purge.begin_deployment_intent(
+            twice, "intent-a", _IMAGE_A, fingerprints)
+
+        assert repeated == first
+        assert once.purged == {"www.example": "A"}
+        assert once.pending == frozenset({"start.example"})
+        assert twice == once
+        assert registered_again == twice
+
+    def test_new_identity_replaces_matching_intent_inputs(self):
+        """A new identity owns the state even when the image and fingerprints are unchanged."""
+        fingerprints = {"www.example": "A"}
+        first = cache_purge.begin_deployment_intent(_purge_state(), "intent-b", _IMAGE_A, fingerprints)
+        second = cache_purge.begin_deployment_intent(first, "intent-c", _IMAGE_A, fingerprints)
+
+        assert second.intent.identity == "intent-c"
+        assert second.intent.image == first.intent.image
+        assert second.pending == first.pending
+        assert second.purged == first.purged
+
+    def test_identity_is_not_reused_for_different_inputs(self):
+        """The current identity cannot be reused for another digest or fingerprint."""
+        state = cache_purge.begin_deployment_intent(
+            _purge_state(), "intent-a", _IMAGE_A, {"www.example": "A"})
+        before = _state_snapshot(state)
+
+        with pytest.raises(ValueError, match="already bound"):
+            cache_purge.begin_deployment_intent(state, "intent-a", _IMAGE_B, {"www.example": "A"})
+        with pytest.raises(ValueError, match="already bound"):
+            cache_purge.begin_deployment_intent(state, "intent-a", _IMAGE_A, {"www.example": "B"})
+
+        assert _state_snapshot(state) == before
+
+    def test_inputs_are_not_mutated(self):
+        """Planning and acceptance copy the supplied state and fingerprints."""
+        purged = {}
+        pending = {"old.example"}
+        fingerprints = {"www.example": "A"}
+        accepted = {"www.example": "A"}
+        state = cache_purge.PurgeState(purged, pending, None)
+        planned = cache_purge.begin_deployment_intent(state, "intent-a", _IMAGE_A, fingerprints)
+        recorded = cache_purge.record_intent_acceptance(planned, "intent-a", accepted)
+
+        assert purged == {}
+        assert pending == {"old.example"}
+        assert fingerprints == {"www.example": "A"}
+        assert accepted == {"www.example": "A"}
+        assert state.intent is None
+        assert recorded.pending == frozenset({"old.example"})
+        assert recorded.purged == {"www.example": "A"}
+        assert planned.purged is not purged
+        assert planned.intent.fingerprints is not fingerprints
+        assert recorded.purged is not planned.purged
+        with pytest.raises(TypeError):
+            planned.intent.fingerprints["www.example"] = "Z"
+
+    def test_digest_pinned_image_is_accepted(self):
+        """A digest-pinned reference is stored exactly as supplied."""
+        planned = cache_purge.begin_deployment_intent(
+            _purge_state(), "intent-a", _IMAGE_A, {"www.example": "A"})
+
+        assert planned.intent.image == _IMAGE_A
+
+    @pytest.mark.parametrize("image", [
+        "registry.example/site:latest",
+        "123456789012.dkr.ecr.us-west-2.amazonaws.com/thunderbird-website-prod:latest",
+        "",
+        "   ",
+        _PROD_IMAGE + ("a" * 63),
+        _PROD_IMAGE + ("A" * 64),
+        None,
+        1,
+    ])
+    def test_mutable_or_malformed_images_are_rejected(self, image):
+        """A tag, blank value, bad digest, or non-string image leaves state unchanged."""
+        state = _purge_state(pending={"www.example"})
+        before = _state_snapshot(state)
+
+        with pytest.raises(ValueError, match="digest-pinned") as caught:
+            cache_purge.begin_deployment_intent(state, "intent-a", image, {"www.example": "A"})
+
+        if isinstance(image, str) and image.strip() != "":
+            assert image not in str(caught.value)
+        assert _state_snapshot(state) == before
+
+    def test_acceptance_without_an_intent_is_rejected(self):
+        """Acceptance cannot create an owner or clear pending work."""
+        state = _purge_state(pending={"www.example"})
+        before = _state_snapshot(state)
+
+        with pytest.raises(ValueError, match="no current deployment intent"):
+            cache_purge.record_intent_acceptance(state, "intent-a", {"www.example": "A"})
+
+        assert _state_snapshot(state) == before
+
+    @pytest.mark.parametrize("identity", ["", None, 1])
+    def test_missing_or_invalid_identity_is_rejected(self, identity):
+        """A blank or non-string identity is rejected for planning and acceptance."""
+        state = _purge_state(pending={"www.example"})
+        before = _state_snapshot(state)
+
+        with pytest.raises(ValueError, match="deployment intent identity is required"):
+            cache_purge.begin_deployment_intent(state, identity, _IMAGE_A, {"www.example": "A"})
+
+        planned = cache_purge.begin_deployment_intent(state, "intent-a", _IMAGE_A, {"www.example": "A"})
+        planned_before = _state_snapshot(planned)
+        with pytest.raises(ValueError, match="deployment intent identity is required"):
+            cache_purge.record_intent_acceptance(planned, identity, {"www.example": "A"})
+
+        assert _state_snapshot(state) == before
+        assert _state_snapshot(planned) == planned_before
+
+    @pytest.mark.parametrize("fingerprints", ["www.example", b"www.example", ["www.example"], None])
+    def test_non_mapping_fingerprints_are_rejected(self, fingerprints):
+        """Intended and accepted fingerprints must be mappings, and nothing is recorded."""
+        state = _purge_state(pending={"www.example"})
+        before = _state_snapshot(state)
+
+        with pytest.raises(ValueError, match="intended fingerprints must be a mapping"):
+            cache_purge.begin_deployment_intent(state, "intent-a", _IMAGE_A, fingerprints)
+
+        planned = cache_purge.begin_deployment_intent(state, "intent-a", _IMAGE_A, {"www.example": "A"})
+        planned_before = _state_snapshot(planned)
+        with pytest.raises(ValueError, match="accepted purges must be a mapping"):
+            cache_purge.record_intent_acceptance(planned, "intent-a", fingerprints)
+
+        assert _state_snapshot(state) == before
+        assert _state_snapshot(planned) == planned_before

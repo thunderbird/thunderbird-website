@@ -18,8 +18,10 @@ hostname map.
 hostname. ``load_purge_config`` validates JSON rules and hostname-to-zone
 bindings. It does not read credentials or contain a production hostname map.
 ``pending_hostnames`` and ``record_accepted_purges`` track outstanding purge
-work from caller-supplied fingerprints. They do not read Git, Cloudflare, or
-deployment state.
+work from caller-supplied fingerprints. ``begin_deployment_intent`` and
+``record_intent_acceptance`` attach that work to one deployment intent. The
+intent image must be a digest-pinned reference. They do not read Git,
+Cloudflare, or deployment state.
 """
 
 import hashlib
@@ -33,6 +35,8 @@ from types import MappingProxyType
 from typing import NamedTuple, TypeVar
 
 import http.client
+
+from deployment_readiness import digest_pinned
 
 
 # Documented Cloudflare API: POST https://api.cloudflare.com/client/v4/zones/{zone_id}/purge_cache
@@ -687,3 +691,113 @@ def record_accepted_purges(
     remaining = set(pending)
     remaining.difference_update(accepted)
     return updated, remaining
+
+
+class DeploymentIntent(NamedTuple):
+    """The deployment that currently owns changes to purge state.
+
+    ``identity`` is a caller-supplied unique id. ``image`` is that deployment's
+    digest-pinned reference, the same form required for deployment readiness.
+    ``fingerprints`` are the hostname fingerprints it intends to publish. A
+    later intent replaces this one even when those values match.
+    """
+
+    identity: str
+    image: str
+    fingerprints: Mapping[str, _Fingerprint]
+
+
+class PurgeState(NamedTuple):
+    """Accepted fingerprints, outstanding hostnames, and the owning intent.
+
+    ``pending`` retains hostnames that are no longer managed. Replacing
+    ``intent`` does not remove them.
+    """
+
+    purged: Mapping[str, _Fingerprint]
+    pending: frozenset[str]
+    intent: DeploymentIntent | None
+
+
+def begin_deployment_intent(
+    state: PurgeState,
+    identity: str,
+    image: str,
+    fingerprints: Mapping[str, _Fingerprint],
+) -> PurgeState:
+    """Plan purge work for one deployment and make that deployment the owner.
+
+    Outstanding hostnames stay pending. ``pending_hostnames`` also adds each
+    intended hostname that has no accepted fingerprint or a different one.
+    The returned intent replaces the previous owner even when the image,
+    fingerprints, and pending set are unchanged.
+
+    ``image`` must be a digest-pinned reference. A mutable tag, a blank value,
+    a malformed digest, and a non-string are rejected before any state is
+    built. Repeating the same identity with the same image and fingerprints
+    is idempotent. The same identity with a different digest or different
+    fingerprints is rejected and does not change ownership. These functions
+    do not remember identities older than the current one.
+
+    Nothing is persisted. A storage adapter must condition its write on the
+    exact revision it read. After a conflict it must not register this intent
+    again onto newer state.
+    """
+    _required_text(identity, "deployment intent identity is required")
+    if not digest_pinned(image):
+        raise ValueError("deployment intent image must be a digest-pinned reference")
+    intended = _mapping(fingerprints, "intended fingerprints must be a mapping")
+    current = state.intent
+    if current is not None and current.identity == identity:
+        if current.image != image or dict(current.fingerprints) != intended:
+            raise ValueError("deployment intent identity is already bound to different inputs")
+    pending = pending_hostnames(intended, state.purged, state.pending)
+    intent = DeploymentIntent(identity, image, MappingProxyType(intended))
+    return PurgeState(MappingProxyType(dict(state.purged)), frozenset(pending), intent)
+
+
+def record_intent_acceptance(
+    state: PurgeState,
+    identity: str,
+    accepted: Mapping[str, _Fingerprint],
+) -> PurgeState:
+    """Record purges accepted for the current intent.
+
+    ``identity`` must be that intent. Every accepted hostname must be one of
+    its intended hostnames, and the fingerprint must be the one that intent
+    published. ``record_accepted_purges`` then updates only those hostnames.
+    A missing, mismatched, or older acceptance raises ``ValueError`` before
+    any hostname is cleared.
+
+    Repeating an acceptance that was already recorded yields the same state.
+    This does not make the write atomic. After a storage conflict the adapter
+    must not apply this acceptance, or an acceptance computed for an older
+    intent, to the newer revision.
+    """
+    _required_text(identity, "deployment intent identity is required")
+    current = state.intent
+    if current is None:
+        raise ValueError("there is no current deployment intent")
+    if current.identity != identity:
+        raise ValueError("acceptance does not belong to the current deployment intent")
+    recorded = _mapping(accepted, "accepted purges must be a mapping")
+    for hostname, fingerprint in recorded.items():
+        if hostname not in current.fingerprints:
+            raise ValueError("accepted hostname is outside the current intent")
+        if current.fingerprints[hostname] != fingerprint:
+            raise ValueError("accepted fingerprint does not match the current intent")
+    purged, pending = record_accepted_purges(state.purged, state.pending, recorded)
+    return PurgeState(MappingProxyType(purged), frozenset(pending), current)
+
+
+def _required_text(value, message):
+    """Reject a missing or non-string intent field."""
+    if not isinstance(value, str) or value == "":
+        raise ValueError(message)
+
+
+def _mapping(value, message):
+    """Return a copy of a fingerprint mapping."""
+    if isinstance(value, (str, bytes, bytearray)) or not isinstance(value, Mapping):
+        raise ValueError(message)
+    return dict(value)
