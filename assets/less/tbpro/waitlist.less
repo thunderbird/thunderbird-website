@@ -1,5 +1,6 @@
 @import "../common/fonts.less";
 @import "../common/breakpoints.less";
+@import "../common/space.less";
 
 
 html, body {
@@ -146,37 +147,117 @@ body {
                         color: #f3f9fcf3;
                     }
 
+                    // Keep normalize's [hidden] rule active until the script reveals the control.
+                    .subscription-price-control:not([hidden]) {
+                        display: flex;
+                        flex-direction: column;
+                        gap: @space-9;
+                        inline-size: 100%;
+                        max-inline-size: 35rem;
+                        margin-inline: auto;
+                        margin-block: @space-24 @space-18;
+
+                        label {
+                            .web-body-medium();
+                            color: #d9d9de;
+                            min-inline-size: 0;
+                        }
+
+                        select {
+                            .mixin-font-styles(
+                                @family-inter,
+                                400,
+                                1rem,
+                                1.25rem
+                            );
+                            appearance: none;
+                            background-color: #1a202c;
+                            background-image: url("/media/svg/caret-down.svg");
+                            background-position: right 0.75rem center;
+                            background-repeat: no-repeat;
+                            background-size: 1rem;
+                            min-block-size: 3rem;
+                            border: 0.0625rem solid #3d4d67;
+                            border-radius: 0.5rem;
+                            box-shadow: 2px 2px 4px #0000000d inset;
+                            color: #d9d9de;
+                            cursor: pointer;
+                            inline-size: 100%;
+                            padding-block: @space-12;
+                            padding-inline: @space-12 2.5rem;
+
+                            &:focus-visible {
+                                outline: 0.125rem solid var(--colour-primary-default);
+                                outline-offset: 0.125rem;
+                            }
+
+                            option {
+                                background-color: #1a202c;
+                                color: #d9d9de;
+                            }
+                        }
+
+                        html[dir="rtl"] & select {
+                            background-position: left 0.75rem center;
+                        }
+                    }
+
                     h4 {
                         .mixin-font-styles(
                             @family-inter,
                             500,
                             0.75rem
                         );
-                        display: inline-flex;
+                        align-items: baseline;
+                        column-gap: 0.375rem;
+                        display: flex;
                         flex-direction: row;
-                        gap: 0.375rem;
+                        flex-wrap: wrap;
+                        justify-content: center;
                         margin: 0;
+                        max-inline-size: 100%;
+                        row-gap: 0.25rem;
 
                         b {
                             font-size: 2rem;
                             font-weight: normal;
+                            min-inline-size: 0;
+                            overflow-wrap: anywhere;
                             .mixin-font-styles(
                                 @family-metropolis,
                                 normal,
                                 2rem
                             );
-
-                            sup {
-                                // em, not rem for the sup
-                                font-size: 0.6em;
-                                top: -0.55em;
-                            }
                         }
                         span {
-                            text-align: left;
+                            text-align: start;
                             font-weight: normal;
                             line-height: 1.32;
                         }
+                    }
+
+                    .subscription-price-preview h4 {
+                        margin-block-end: @space-18;
+
+                        b {
+                            flex: 0 0 auto;
+                            max-inline-size: 100%;
+                            min-inline-size: auto;
+                        }
+
+                        span {
+                            .text-small();
+                            flex: 0 0 auto;
+                            text-align: center;
+                        }
+                    }
+
+                    .subscription-price-note {
+                        // Dark-palette --colour-ti-muted; tb.pro does not set .dark.
+                        color: #7f94ac;
+                        .text-small();
+                        margin-inline: auto;
+                        max-inline-size: 35rem;
                     }
                 }
             }
