@@ -80,7 +80,7 @@ Project-level defaults (region, certificate ARN) are in `pulumi/Pulumi.yaml`. St
 The container is defined in `docker/Dockerfile`. All environments build from source. `BUILD_ENV` controls post-build behavior:
 
 - **`local`** (default): Keeps `/build` directory so pytest can run inside the container. Used by `container-test.yml` and local development.
-- **`stage` / `prod`**: Removes `/build` to reduce image size. `REPO_BRANCH` is derived from `BUILD_ENV` (`prod` -> `prod`, else -> `master`).
+- **`stage` / `prod`**: Removes `/build` to reduce image size. `DEPLOY_ENV` selects that mode and the `REPO_BRANCH` used when the image build clones external repositories (`prod` for production, `master` for stage). The website files are the checked-out source, not that branch name.
 
 All environments compile translations and build all sites from source.
 
@@ -122,10 +122,18 @@ Triggered by:
 - Manual workflow dispatch
 - Repository dispatch (from external repos like thunderbird-notes, l10n, product-details)
 
+The build step runs `deployment_image.py` with Python 3 and Docker Buildx. Buildx metadata identifies the image pushed by that run. The commit SHA and `latest` tags remain published. Extraction and Pulumi use `repository@sha256:<64 hex digits>` from that metadata, not those tags.
+
+`DEPLOY_ENV` selects the stage or production repository and the external `REPO_BRANCH`. The website files are the checked-out source. For an automatic push, that checkout is the `master` or `prod` commit that triggered the run. A manual run checks out the selected ref, which can differ from `DEPLOY_ENV`.
+
+Provenance attestations are disabled. The previous `docker build` and `docker push` published one image manifest. Buildx would otherwise make the recorded root digest an attestation index.
+
+Missing, malformed, or inconsistent metadata fails the build step, before extraction and Pulumi. `docker create` uses the digest reference. When the local daemon does not already have that image, Docker pulls it with the ECR login from the same job. That login is the existing push credential. No separate registry permission is added.
+
 Steps:
-1. Build Docker image from source and push to ECR
-2. Extract built static files and commit to `tb-website-builds`
-3. Deploy infrastructure with Pulumi
+1. Build the checked-out source, push it, and publish the digest reference
+2. Extract the built static files from that reference and commit them to `tb-website-builds`
+3. Deploy infrastructure with Pulumi using the same reference as `IMAGE_URI`
 4. Force ECS service update
 
 ### PR Preview (`preview.yml`)
