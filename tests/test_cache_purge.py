@@ -365,6 +365,11 @@ class TestPurgeHostnames:
         (ZONE, b"www.example.com", TOKEN),
         (ZONE, ["www.example.com", ""], TOKEN),
         (ZONE, ["www.example.com", None], TOKEN),
+        (ZONE, ["https://start.example/path"], TOKEN),
+        (ZONE, ["start.example:443"], TOKEN),
+        (ZONE, ["start.example/path"], TOKEN),
+        (ZONE, ["*"], TOKEN),
+        (ZONE, ["start.example\x00"], TOKEN),
         (ZONE, ["www.example.com"], ""),
         (ZONE, ["www.example.com"], None),
         (ZONE, ["www.example.com"], " token "),
@@ -376,8 +381,12 @@ class TestPurgeHostnames:
         """A string, bad hostname, missing token, or unsafe zone never opens a connection."""
         _forbid_http(monkeypatch)
 
-        with pytest.raises(ValueError):
+        with pytest.raises(ValueError) as caught:
             cache_purge.purge_hostnames(zone_id, hostnames, api_token)
+        rendered = str(caught.value)
+        for hostname in hostnames if isinstance(hostnames, list) else ():
+            if hostname:
+                assert hostname not in rendered
 
     @pytest.mark.parametrize("token", [
         pytest.param("ascii-prefix-" + "\u20ac", id="non-ascii"),
@@ -1026,3 +1035,251 @@ class TestContentFingerprints:
     def test_changed_fingerprint_keys_match_changed_hostnames(self, before, after, rules):
         """Hostnames with a new fingerprint are the hostnames changed_hostnames returns."""
         assert _fingerprint_changes(before, after, rules) == cache_purge.changed_hostnames(before, after, rules)
+
+
+# Reserved example names and a fake zone id. This is not production configuration.
+_ZONE_ID = "0123456789abcdef0123456789abcdef"
+_EXAMPLE_CONFIG = {
+    "version": 1,
+    "zones": {"example": {"id": _ZONE_ID}},
+    "hostnames": {
+        "start.example": "example",
+        "addons.example": "example",
+    },
+    "rules": [
+        {"path": "start.example/", "hostnames": ["start.example"]},
+        {"path": "start.example/en-US/maintenance/", "hostnames": ["addons.example"]},
+    ],
+}
+
+
+def _config_text(config=None):
+    """Serialize a configuration document."""
+    return json.dumps(_EXAMPLE_CONFIG if config is None else config)
+
+
+class TestLoadPurgeConfig:
+    """JSON configuration supplies rules and the hostname-to-zone bindings."""
+
+    def test_valid_document_exposes_rules_bindings_and_zone_ids(self):
+        """A rule can name a hostname whose files are not in the current snapshot."""
+        config = cache_purge.load_purge_config(_config_text())
+
+        assert config.rules == (
+            ("start.example/", ("start.example",)),
+            ("start.example/en-US/maintenance/", ("addons.example",)),
+        )
+        assert config.hostnames == {"start.example": "example", "addons.example": "example"}
+        assert config.zones == {"example": _ZONE_ID}
+        assert cache_purge.content_fingerprints({}, config.rules) == {
+            "start.example": _EMPTY_FINGERPRINT,
+            "addons.example": _EMPTY_FINGERPRINT,
+        }
+        with pytest.raises(TypeError):
+            config.hostnames["start.example"] = "other"
+        with pytest.raises(TypeError):
+            config.zones["example"] = "other"
+
+    def test_overlapping_rules_select_and_fingerprint_without_a_production_map(self):
+        """Loaded rules keep the start and maintenance overlap."""
+        config = cache_purge.load_purge_config(_config_text())
+        maintenance = "start.example/en-US/maintenance/index.html"
+        other = "start.example/en-US/index.html"
+        before = {maintenance: b"down", other: b"page"}
+        changed_maintenance = {maintenance: b"still down", other: b"page"}
+        changed_other = {maintenance: b"down", other: b"changed"}
+
+        assert cache_purge.changed_hostnames(before, changed_maintenance, config.rules) == {
+            "start.example", "addons.example",
+        }
+        assert cache_purge.changed_hostnames(before, changed_other, config.rules) == {"start.example"}
+        assert _fingerprint_changes(before, changed_maintenance, config.rules) == {
+            "start.example", "addons.example",
+        }
+        assert _fingerprint_changes(before, changed_other, config.rules) == {"start.example"}
+
+    def test_repeated_hostname_assignment_is_preserved(self):
+        """The same hostname may occur in overlapping rules and more than once in a rule."""
+        config = copy.deepcopy(_EXAMPLE_CONFIG)
+        config["rules"][1]["hostnames"] = ["addons.example", "start.example", "start.example"]
+        loaded = cache_purge.load_purge_config(_config_text(config))
+
+        assert loaded.rules[1] == (
+            "start.example/en-US/maintenance/",
+            ("addons.example", "start.example", "start.example"),
+        )
+
+    def test_undefined_hostname_and_zone_references_are_rejected(self):
+        """Rules and hostname bindings cannot name a hostname or zone that is not declared."""
+        undefined_host = copy.deepcopy(_EXAMPLE_CONFIG)
+        undefined_host["rules"][0]["hostnames"] = ["missing.example"]
+        undefined_zone = copy.deepcopy(_EXAMPLE_CONFIG)
+        undefined_zone["hostnames"]["start.example"] = "missing-zone"
+        unused = copy.deepcopy(_EXAMPLE_CONFIG)
+        unused["hostnames"]["unused.example"] = "example"
+
+        with pytest.raises(ValueError, match="rules\\[0\\].hostnames references an undefined hostname"):
+            cache_purge.load_purge_config(_config_text(undefined_host))
+        with pytest.raises(ValueError, match="hostnames references an undefined zone"):
+            cache_purge.load_purge_config(_config_text(undefined_zone))
+        with pytest.raises(ValueError, match="hostname is not used by a rule"):
+            cache_purge.load_purge_config(_config_text(unused))
+
+    @pytest.mark.parametrize("raw,field", [
+        ('{"version":1,"version":1,"zones":{},"hostnames":{},"rules":[]}', "configuration"),
+        ('{"version":1,"zones":{"example":{"id":"%s"},"example":{"id":"%s"}},"hostnames":{},"rules":[]}' % (_ZONE_ID, _ZONE_ID), "zones"),
+        ('{"version":1,"zones":{"example":{"id":"%s","id":"%s"}},"hostnames":{},"rules":[]}' % (_ZONE_ID, _ZONE_ID), "zone"),
+    ])
+    def test_duplicate_keys_are_rejected(self, raw, field):
+        """A repeated JSON key is invalid even when both values match."""
+        with pytest.raises(ValueError, match=f"duplicate key in {field}"):
+            cache_purge.load_purge_config(raw)
+
+    @pytest.mark.parametrize("version", [True, False, 2, 0, "1", 1.0])
+    def test_unsupported_version_is_rejected(self, version):
+        """Only the integer 1 is a supported document version."""
+        config = copy.deepcopy(_EXAMPLE_CONFIG)
+        config["version"] = version
+
+        with pytest.raises(ValueError, match="version must be 1"):
+            cache_purge.load_purge_config(_config_text(config))
+
+    @pytest.mark.parametrize("mutate,message", [
+        (lambda config: config["rules"].__setitem__(0, {"path": 1, "hostnames": ["start.example"]}), r"rules\[0\].path"),
+        (lambda config: config["zones"]["example"].__setitem__("id", True), "invalid zone id"),
+        (lambda config: config["hostnames"].__setitem__("start.example", 1), "undefined zone"),
+        (lambda config: config.__setitem__("rules", {"path": "start.example/"}), "rules must be an array"),
+        (lambda config: config["zones"]["example"].__setitem__("token", "super-secret-token-value"), "unknown field in zone"),
+        (lambda config: config.__setitem__("token", "super-secret-token-value"), "unknown field in configuration"),
+    ])
+    def test_malformed_values_and_unknown_fields_are_rejected(self, mutate, message):
+        """Wrong types and unexpected fields name the location and omit the document value."""
+        config = copy.deepcopy(_EXAMPLE_CONFIG)
+        mutate(config)
+
+        with pytest.raises(ValueError, match=message) as caught:
+            cache_purge.load_purge_config(_config_text(config))
+
+        assert "super-secret-token-value" not in str(caught.value)
+
+    @pytest.mark.parametrize("path", [
+        "",
+        "/start.example/index.html",
+        "start.example/../secret-traversal/index.html",
+        "start.example/./index.html",
+        "start.example//index.html",
+        "../start.example/",
+        "C:/start.example/index.html",
+        "start.example\\index.html",
+    ])
+    def test_unsafe_paths_are_rejected_without_normalization(self, path):
+        """Absolute paths and traversal components are not rewritten into rule paths."""
+        config = copy.deepcopy(_EXAMPLE_CONFIG)
+        config["rules"][0]["path"] = path
+
+        with pytest.raises(ValueError, match="rules\\[0\\].path is unsafe") as caught:
+            cache_purge.load_purge_config(_config_text(config))
+
+        assert "secret-traversal" not in str(caught.value)
+        if path:
+            assert path not in str(caught.value)
+
+    def test_malformed_json_does_not_echo_the_document(self):
+        """A parse failure names the problem rather than the document text."""
+        with pytest.raises(ValueError, match="malformed JSON") as caught:
+            cache_purge.load_purge_config('{"version": "secret-broken-json"')
+
+        assert caught.value.__cause__ is None
+        assert "secret-broken-json" not in str(caught.value)
+
+    def test_zone_alias_is_not_a_dns_hostname(self):
+        """An underscore alias such as primary_zone can identify a zone."""
+        config = copy.deepcopy(_EXAMPLE_CONFIG)
+        config["zones"] = {"primary_zone": {"id": _ZONE_ID}}
+        config["hostnames"] = {
+            "start.example": "primary_zone",
+            "addons.example": "primary_zone",
+        }
+        loaded = cache_purge.load_purge_config(_config_text(config))
+
+        assert loaded.zones == {"primary_zone": _ZONE_ID}
+        assert loaded.hostnames["start.example"] == "primary_zone"
+
+    @pytest.mark.parametrize("alias", ["Primary_zone", "primary.zone", "1zone", "_zone"])
+    def test_invalid_zone_alias_is_rejected(self, alias):
+        """Zone aliases stay lowercase and do not use hostname spelling."""
+        config = copy.deepcopy(_EXAMPLE_CONFIG)
+        config["zones"] = {alias: {"id": _ZONE_ID}}
+        config["hostnames"] = {"start.example": alias}
+
+        with pytest.raises(ValueError, match="invalid zone name") as caught:
+            cache_purge.load_purge_config(_config_text(config))
+
+        assert alias not in str(caught.value)
+
+    @pytest.mark.parametrize("hostname", [
+        "www.example.com",
+        "start.example",
+        "a.b",
+        "xn--n3h.example",
+        "a-b.example",
+        "a" * 63 + ".example",
+        ".".join(["a"] * 127),
+    ])
+    def test_literal_dns_hostnames_are_accepted(self, hostname):
+        """Production-shaped names and ASCII punycode are managed hostnames."""
+        config = copy.deepcopy(_EXAMPLE_CONFIG)
+        config["hostnames"] = {hostname: "example", "addons.example": "example"}
+        config["rules"][0]["hostnames"] = [hostname]
+        loaded = cache_purge.load_purge_config(_config_text(config))
+
+        assert loaded.hostnames[hostname] == "example"
+
+    @pytest.mark.parametrize("hostname", [
+        "https://start.example/path",
+        "start.example:443",
+        "start.example/path",
+        "*",
+        "start.example\x00",
+        "Start.example",
+        "start.example.",
+        "-start.example",
+        "start-.example",
+        "st.example-",
+        "start..example",
+        ".start.example",
+        "*.example",
+        "example",
+        "a" * 64 + ".example",
+        ".".join(["a"] * 128),
+    ])
+    def test_invalid_hostnames_are_rejected_without_echoing_them(self, hostname):
+        """Schemes, ports, paths, wildcards, case, and trailing dots are not keys."""
+        config = copy.deepcopy(_EXAMPLE_CONFIG)
+        config["hostnames"] = {hostname: "example"}
+        config["rules"] = [{"path": "start.example/", "hostnames": [hostname]}]
+
+        with pytest.raises(ValueError, match="invalid hostname") as caught:
+            cache_purge.load_purge_config(_config_text(config))
+
+        assert hostname not in str(caught.value)
+        assert hostname not in "".join(caught.value.args)
+
+    def test_duplicate_hostname_keys_and_rule_fields_are_rejected(self):
+        """Repeated hostname keys and repeated rule fields are duplicate JSON keys."""
+        zone = '{"example":{"id":"%s"}}' % _ZONE_ID
+        duplicate_host = (
+            '{"version":1,"zones":%s,"hostnames":{"start.example":"example","start.example":"example"},'
+            '"rules":[{"path":"start.example/","hostnames":["start.example"]}]}'
+        ) % zone
+        duplicate_field = (
+            '{"version":1,"zones":%s,"hostnames":{"start.example":"example"},'
+            '"rules":[{"path":"secret-rule-path/","path":"secret-rule-path/","hostnames":["start.example"]}]}'
+        ) % zone
+
+        with pytest.raises(ValueError, match="duplicate key in hostnames"):
+            cache_purge.load_purge_config(duplicate_host)
+        with pytest.raises(ValueError, match="duplicate key in rules\\[0\\]") as caught:
+            cache_purge.load_purge_config(duplicate_field)
+
+        assert "secret-rule-path" not in str(caught.value)

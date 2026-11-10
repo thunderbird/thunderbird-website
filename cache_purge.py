@@ -15,9 +15,11 @@ hostname map.
 
 ``purge_hostnames`` posts those hostnames to the fixed Cloudflare cache API.
 ``content_fingerprints`` hashes the files those rules select for each declared
-hostname. ``pending_hostnames`` and ``record_accepted_purges`` track
-outstanding purge work from caller-supplied fingerprints. They do not read
-Git, Cloudflare, or deployment state.
+hostname. ``load_purge_config`` validates JSON rules and hostname-to-zone
+bindings. It does not read credentials or contain a production hostname map.
+``pending_hostnames`` and ``record_accepted_purges`` track outstanding purge
+work from caller-supplied fingerprints. They do not read Git, Cloudflare, or
+deployment state.
 """
 
 import hashlib
@@ -27,6 +29,7 @@ import time
 from collections.abc import Collection, Mapping, Sequence
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
+from types import MappingProxyType
 from typing import NamedTuple, TypeVar
 
 import http.client
@@ -129,6 +132,205 @@ def _content_fingerprint(snapshot, paths):
     return digest.hexdigest()
 
 
+class _JSONObject(list):
+    """JSON object pairs, retained so duplicate keys stay visible."""
+
+
+class PurgeConfiguration(NamedTuple):
+    """Rules and the hostname-to-zone bindings loaded from JSON.
+
+    ``rules`` is the ``(path, hostnames)`` sequence accepted by
+    ``changed_hostnames`` and ``content_fingerprints``. ``hostnames`` maps
+    each managed hostname to its zone name. ``zones`` maps that name to the
+    Cloudflare zone id. Neither mapping can be modified.
+    """
+
+    rules: tuple[tuple[str, tuple[str, ...]], ...]
+    hostnames: Mapping[str, str]
+    zones: Mapping[str, str]
+
+
+def load_purge_config(document: str) -> PurgeConfiguration:
+    """Validate purge configuration JSON and return its rules and zone bindings.
+
+    The hostname map is the only assignment of hostnames to zones. Rules name
+    hostnames and do not repeat zone ids. A hostname is a lowercase ASCII DNS
+    name of two or more labels, with no trailing dot; uppercase and a trailing
+    dot are different spellings of the same host and are rejected. Zone names
+    are internal aliases, not DNS names: a lowercase letter followed by
+    lowercase letters, digits, underscores, or hyphens, matched exactly.
+    Paths keep the exact-file and trailing-slash directory distinction. They
+    are not normalized.
+
+    ``version`` must be the integer 1. Boolean ``true`` is rejected. Duplicate
+    keys, unknown fields, unsafe paths, and references to an undefined
+    hostname or zone are rejected. Every managed hostname needs a zone binding
+    and must appear in at least one rule. A rule may match no current files.
+    An unused hostname is invalid.
+
+    Tokens are not part of this document. Before a deployment can expose
+    content, the caller must supply a credential for every managed zone. A
+    missing credential must fail that run and must not drop the hostname.
+    """
+    parsed = _parse_config_json(document)
+    root = _config_object(parsed, "configuration", ("version", "zones", "hostnames", "rules"))
+    if type(root["version"]) is not int or root["version"] != 1:
+        raise ValueError("version must be 1")
+    zones = _load_zones(root["zones"])
+    hostnames = _load_hostnames(root["hostnames"], zones)
+    rules = _load_rules(root["rules"], hostnames)
+    used = {hostname for _path, names in rules for hostname in names}
+    if set(hostnames) - used:
+        raise ValueError("hostname is not used by a rule")
+    return PurgeConfiguration(rules, MappingProxyType(hostnames), MappingProxyType(zones))
+
+
+def _parse_config_json(document):
+    """Return decoded JSON pairs, without retaining a parse error's document excerpt."""
+    if not isinstance(document, str):
+        raise ValueError("purge configuration must be JSON text")
+    try:
+        return json.loads(document, object_pairs_hook=_JSONObject)
+    except (json.JSONDecodeError, RecursionError, ValueError):
+        raise ValueError("malformed JSON") from None
+
+
+def _object_pairs(value, field):
+    """Return the pairs in one JSON object, rejecting a non-object or a repeated key."""
+    if not isinstance(value, _JSONObject):
+        raise ValueError(f"{field} must be an object")
+    mapping = {}
+    for key, item in value:
+        if key in mapping:
+            raise ValueError(f"duplicate key in {field}")
+        mapping[key] = item
+    return mapping
+
+
+def _config_object(value, field, allowed):
+    """Return one JSON object, rejecting unknown fields and omissions."""
+    mapping = _object_pairs(value, field)
+    for key in mapping:
+        if key not in allowed:
+            raise ValueError(f"unknown field in {field}")
+    for key in allowed:
+        if key not in mapping:
+            raise ValueError(f"missing {key} in {field}")
+    return mapping
+
+
+def _load_zones(value):
+    """Return zone aliases mapped to validated Cloudflare zone ids."""
+    zones = {}
+    for name, spec in _object_pairs(value, "zones").items():
+        if not _valid_zone_alias(name):
+            raise ValueError("invalid zone name")
+        zone = _config_object(spec, "zone", ("id",))
+        if not _valid_zone_id(zone["id"]):
+            raise ValueError("invalid zone id")
+        zones[name] = zone["id"]
+    return zones
+
+
+def _load_hostnames(value, zones):
+    """Return managed hostnames mapped to known zone names."""
+    bindings = {}
+    for hostname, zone_name in _object_pairs(value, "hostnames").items():
+        if not _valid_hostname(hostname):
+            raise ValueError("invalid hostname")
+        if not isinstance(zone_name, str) or zone_name not in zones:
+            raise ValueError("hostnames references an undefined zone")
+        bindings[hostname] = zone_name
+    return bindings
+
+
+def _load_rules(value, hostnames):
+    """Return rule pairs, preserving overlap and repeated hostname assignments."""
+    if isinstance(value, _JSONObject) or not isinstance(value, list):
+        raise ValueError("rules must be an array")
+    rules = []
+    for index, rule in enumerate(value):
+        field = f"rules[{index}]"
+        mapping = _config_object(rule, field, ("path", "hostnames"))
+        if not _canonical_rule_path(mapping["path"]):
+            raise ValueError(f"{field}.path is unsafe")
+        names = mapping["hostnames"]
+        if isinstance(names, _JSONObject) or not isinstance(names, list):
+            raise ValueError(f"{field}.hostnames must be an array")
+        cleaned = []
+        for name in names:
+            if not _valid_hostname(name):
+                raise ValueError(f"{field}.hostnames is invalid")
+            if name not in hostnames:
+                raise ValueError(f"{field}.hostnames references an undefined hostname")
+            cleaned.append(name)
+        rules.append((mapping["path"], tuple(cleaned)))
+    return tuple(rules)
+
+
+def _canonical_rule_path(path):
+    """Return whether a rule path is a canonical relative file or directory."""
+    if not isinstance(path, str) or path == "" or not path.isprintable():
+        return False
+    if any(character.isspace() for character in path) or "\\" in path or path.startswith("/"):
+        return False
+    if len(path) >= 2 and path[1] == ":":
+        return False
+    parts = path.split("/")
+    if path.endswith("/"):
+        parts = parts[:-1]
+    return bool(parts) and all(part not in ("", ".", "..") for part in parts)
+
+
+def _valid_hostname(hostname):
+    """Return whether ``hostname`` is one exact lowercase DNS name.
+
+    The name is two or more labels joined by dots, at most 253 characters,
+    with no trailing dot. Each label is 1 to 63 ASCII letters, digits, or
+    hyphens and does not start or end with a hyphen. Uppercase is rejected, so
+    ``Start.example`` is not a second key for ``start.example``. A trailing
+    dot is rejected for the same reason. Schemes, ports, paths, wildcards,
+    whitespace, and controls are not labels. ASCII punycode is accepted.
+    """
+    if not isinstance(hostname, str) or len(hostname) > 253 or "." not in hostname:
+        return False
+    return all(_valid_dns_label(label) for label in hostname.split("."))
+
+
+def _valid_dns_label(label):
+    """Return whether one DNS label has a legal lowercase LDH boundary."""
+    if not 1 <= len(label) <= 63:
+        return False
+    if label.startswith("-") or label.endswith("-"):
+        return False
+    return all(character in "abcdefghijklmnopqrstuvwxyz0123456789-" for character in label)
+
+
+def _valid_zone_alias(name):
+    """Return whether ``name`` is an internal zone alias, not a DNS hostname.
+
+    An alias is 1 to 63 characters: a lowercase letter, then lowercase letters,
+    digits, underscores, or hyphens. ``primary_zone`` is valid. Matching is
+    exact, so uppercase is a different spelling and is rejected. Dots are
+    rejected so an alias cannot be mistaken for a hostname.
+    """
+    if not isinstance(name, str) or not 1 <= len(name) <= 63:
+        return False
+    if name[0] not in "abcdefghijklmnopqrstuvwxyz":
+        return False
+    return all(character in "abcdefghijklmnopqrstuvwxyz0123456789_-" for character in name)
+
+
+def _valid_zone_id(zone_id):
+    """Return whether a zone id meets the Cloudflare purge request policy."""
+    return (
+        isinstance(zone_id, str)
+        and zone_id.isascii()
+        and zone_id.isalnum()
+        and len(zone_id) <= 32
+    )
+
+
 class PurgeAcceptance(NamedTuple):
     """Cloudflare accepted a hostname purge.
 
@@ -158,10 +360,11 @@ def purge_hostnames(
     ``hostnames`` is a collection of strings, not one hostname string. An empty
     collection returns None and does not check credentials or connect. Any
     other collection is deduplicated by exact string, sorted, and sent as
-    ``{"hosts": [...]}`` only. ``zone_id`` must be 1 to 32 ASCII letters or
+    ``{"hosts": [...]}`` only. Each hostname is a lowercase DNS name, as
+    required by configuration. ``zone_id`` must be 1 to 32 ASCII letters or
     digits. ``api_token`` must be non-empty printable ASCII without spaces.
     Invalid input raises ValueError before a header is built, and that error
-    does not include the token.
+    does not include the token or the hostname.
 
     A nonempty call is HTTPS POST
     ``/client/v4/zones/{zone_id}/purge_cache`` on ``api.cloudflare.com``,
@@ -226,9 +429,7 @@ def _validated_hostnames(hostnames):
         raise ValueError("hostnames must be a collection of hostname strings")
     cleaned = []
     for hostname in hostnames:
-        if not isinstance(hostname, str) or hostname == "" or hostname.strip() != hostname:
-            raise ValueError("hostnames must be a collection of hostname strings")
-        if any(character.isspace() for character in hostname):
+        if not _valid_hostname(hostname):
             raise ValueError("hostnames must be a collection of hostname strings")
         cleaned.append(hostname)
     return sorted(set(cleaned))
@@ -236,12 +437,7 @@ def _validated_hostnames(hostnames):
 
 def _validate_request(zone_id, api_token):
     """Reject a zone id or token that must not be sent."""
-    if (
-        not isinstance(zone_id, str)
-        or not zone_id.isascii()
-        or not zone_id.isalnum()
-        or len(zone_id) > 32
-    ):
+    if not _valid_zone_id(zone_id):
         raise ValueError("zone_id must be 1 to 32 ASCII letters or digits")
     if not isinstance(api_token, str) or not _header_safe_token(api_token):
         raise ValueError("api_token is required")
