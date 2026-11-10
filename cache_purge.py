@@ -14,6 +14,9 @@ rule contributes its hostnames. The function does not contain a production
 hostname map.
 
 ``purge_hostnames`` posts those hostnames to the fixed Cloudflare cache API.
+``pending_hostnames`` and ``record_accepted_purges`` track outstanding purge
+work from caller-supplied fingerprints. They do not read Git, Cloudflare, or
+deployment state.
 """
 
 import json
@@ -22,7 +25,7 @@ import time
 from collections.abc import Collection, Mapping, Sequence
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
-from typing import NamedTuple
+from typing import NamedTuple, TypeVar
 
 import http.client
 
@@ -382,3 +385,60 @@ def _header(headers, name):
         if header_name.lower() == name:
             return value
     return None
+
+
+_Fingerprint = TypeVar("_Fingerprint")
+
+
+def pending_hostnames(
+    managed: Mapping[str, _Fingerprint],
+    purged: Mapping[str, _Fingerprint],
+    pending: Collection[str],
+) -> set[str]:
+    """Return outstanding purge work after planning the current fingerprints.
+
+    The result contains every hostname already in ``pending``. It also
+    contains each managed hostname that is absent from ``purged``, or whose
+    current fingerprint differs from the stored one. Planning does not remove
+    work. Only ``record_accepted_purges`` clears a hostname.
+
+    A pending hostname absent from ``managed`` stays in the result. That
+    records the work. It does not authorize a purge request for that hostname.
+    Choosing which pending hostnames may be sent is later orchestration.
+
+    Membership in ``purged`` distinguishes a missing accepted record from a
+    stored fingerprint. ``None`` and ``""`` are ordinary fingerprints when
+    the hostname is present. Fingerprints are otherwise opaque and compared
+    with equality. An empty ``purged`` and empty ``pending`` marks every
+    managed hostname pending.
+    """
+    outstanding = set(pending)
+    for hostname, fingerprint in managed.items():
+        if hostname not in purged or purged[hostname] != fingerprint:
+            outstanding.add(hostname)
+    return outstanding
+
+
+def record_accepted_purges(
+    purged: Mapping[str, _Fingerprint],
+    pending: Collection[str],
+    accepted: Mapping[str, _Fingerprint],
+) -> tuple[dict[str, _Fingerprint], set[str]]:
+    """Record accepted purges without changing the supplied inputs.
+
+    ``accepted`` maps hostnames whose purge was accepted to the fingerprint
+    that was accepted. Those hostnames are removed from the returned pending
+    set, and only their entries in the returned fingerprint map are updated.
+    Hostnames that were not accepted stay pending. Recording the same accepted
+    fingerprints again yields the same result.
+
+    These functions do not persist state, confirm deployment readiness, or
+    make a remote write atomic. The caller must store pending work before a
+    deployment can expose content, and must confirm readiness and ownership
+    before treating an acceptance as success.
+    """
+    updated = dict(purged)
+    updated.update(accepted)
+    remaining = set(pending)
+    remaining.difference_update(accepted)
+    return updated, remaining

@@ -711,3 +711,142 @@ class TestPurgeHostnames:
             cache_purge.purge_hostnames(ZONE, ["www.example.com"], TOKEN)
         _assert_token_hidden(caught.value)
         assert delays == [1.0, 1.0]
+
+
+class TestPurgeRecovery:
+    def test_failed_purge_stays_pending_when_content_reverts(self):
+        """A is purged, B's purge fails, and C equal to A still needs a purge."""
+        pending = cache_purge.pending_hostnames({"www": "A"}, {}, set())
+        assert pending == {"www"}
+        purged, pending = cache_purge.record_accepted_purges({}, pending, {"www": "A"})
+        assert purged == {"www": "A"}
+        assert pending == set()
+
+        pending = cache_purge.pending_hostnames({"www": "B"}, purged, pending)
+        assert pending == {"www"}
+        selected = cache_purge.pending_hostnames({"www": "A"}, purged, pending)
+
+        assert selected == {"www"}
+        assert purged == {"www": "A"}
+
+    def test_partial_failure_then_revert_selects_each_host_for_its_reason(self):
+        """The host accepted at B changes again at A; the failed host is still pending."""
+        purged = {"one": "A", "two": "A"}
+        pending = cache_purge.pending_hostnames({"one": "B", "two": "B"}, purged, set())
+        assert pending == {"one", "two"}
+        purged, pending = cache_purge.record_accepted_purges(purged, pending, {"one": "B"})
+        assert purged["one"] == "B"
+        assert purged["two"] == "A"
+        assert pending == {"two"}
+
+        selected = cache_purge.pending_hostnames({"one": "A", "two": "A"}, purged, pending)
+
+        assert selected == {"one", "two"}
+
+    def test_unchanged_clean_content_has_no_pending_work(self):
+        """A current fingerprint that matches the accepted purge is not pending."""
+        assert cache_purge.pending_hostnames({"www": "A", "start": "S"}, {"www": "A", "start": "S"}, set()) == set()
+
+    def test_new_hostnames_become_pending(self):
+        """First use marks every managed hostname, and a later hostname is added."""
+        assert cache_purge.pending_hostnames({"www": "A", "start": "S"}, {}, set()) == {"www", "start"}
+        selected = cache_purge.pending_hostnames(
+            {"www": "A", "start": "S"},
+            {"www": "A"},
+            set(),
+        )
+        assert selected == {"start"}
+
+    def test_partial_acceptance_updates_only_accepted_hosts(self):
+        """An accepted hostname is cleared and the other stays pending at its old fingerprint."""
+        purged = {"one": "A", "two": "A"}
+        pending = {"one", "two"}
+
+        updated, remaining = cache_purge.record_accepted_purges(purged, pending, {"one": "B"})
+
+        assert updated == {"one": "B", "two": "A"}
+        assert remaining == {"two"}
+
+    def test_repeated_planning_and_acceptance_are_idempotent(self):
+        """Planning the same inputs twice, then recording the same acceptance twice, is stable."""
+        managed = {"www": "B", "start": "S"}
+        purged = {"www": "A", "start": "S"}
+        pending = set()
+        first = cache_purge.pending_hostnames(managed, purged, pending)
+        second = cache_purge.pending_hostnames(managed, purged, first)
+        assert first == second == {"www"}
+
+        recorded, remaining = cache_purge.record_accepted_purges(purged, first, {"www": "B"})
+        again_recorded, again_remaining = cache_purge.record_accepted_purges(recorded, remaining, {"www": "B"})
+
+        assert again_recorded == recorded == {"www": "B", "start": "S"}
+        assert again_remaining == remaining == set()
+        assert cache_purge.pending_hostnames(managed, recorded, remaining) == set()
+
+    def test_inputs_are_not_mutated(self):
+        """Planning and acceptance return new collections and leave the inputs intact."""
+        managed = {"www": "B"}
+        purged = {"www": "A"}
+        pending = {"www"}
+        accepted = {"www": "B"}
+        managed_before = dict(managed)
+        purged_before = dict(purged)
+        pending_before = set(pending)
+        accepted_before = dict(accepted)
+
+        selected = cache_purge.pending_hostnames(managed, purged, pending)
+        updated, remaining = cache_purge.record_accepted_purges(purged, pending, accepted)
+
+        assert managed == managed_before
+        assert purged == purged_before
+        assert pending == pending_before
+        assert accepted == accepted_before
+        assert selected == {"www"}
+        assert updated == {"www": "B"}
+        assert remaining == set()
+        assert updated is not purged
+        assert remaining is not pending
+
+    def test_empty_managed_mapping_retains_pending_work(self):
+        """Storing the plan while nothing is managed does not drop outstanding work."""
+        purged = {"www": "A"}
+        pending = {"www"}
+
+        assert cache_purge.pending_hostnames({}, purged, pending) == {"www"}
+        assert purged == {"www": "A"}
+        assert pending == {"www"}
+
+    def test_pending_host_remains_pending_while_unmanaged_and_after_it_returns(self):
+        """B stays pending when the hostname leaves and later comes back at A."""
+        purged, pending = cache_purge.record_accepted_purges({}, {"www"}, {"www": "A"})
+        pending = cache_purge.pending_hostnames({"www": "B"}, purged, pending)
+        assert pending == {"www"}
+
+        while_absent = cache_purge.pending_hostnames({}, purged, pending)
+        assert while_absent == {"www"}
+        returned = cache_purge.pending_hostnames({"www": "A"}, purged, while_absent)
+
+        assert returned == {"www"}
+        assert purged == {"www": "A"}
+
+    def test_pending_unmanaged_hosts_coexist_with_changed_managed_hosts(self):
+        """Outstanding work for an unmanaged hostname stays beside a new managed change."""
+        managed = {"start": "new"}
+        purged = {"start": "old", "gone": "A"}
+        pending = {"gone"}
+
+        selected = cache_purge.pending_hostnames(managed, purged, pending)
+
+        assert selected == {"gone", "start"}
+        assert managed == {"start": "new"}
+        assert purged == {"start": "old", "gone": "A"}
+        assert pending == {"gone"}
+
+    def test_missing_purge_record_differs_from_none_and_empty_string(self):
+        """A hostname absent from the purge map is pending even when the fingerprint is empty."""
+        assert cache_purge.pending_hostnames({"www": None}, {}, set()) == {"www"}
+        assert cache_purge.pending_hostnames({"www": ""}, {}, set()) == {"www"}
+        assert cache_purge.pending_hostnames({"www": None}, {"www": None}, set()) == set()
+        assert cache_purge.pending_hostnames({"www": ""}, {"www": ""}, set()) == set()
+        assert cache_purge.pending_hostnames({"www": "A"}, {"www": None}, set()) == {"www"}
+        assert cache_purge.pending_hostnames({"www": "A"}, {"www": ""}, set()) == {"www"}
