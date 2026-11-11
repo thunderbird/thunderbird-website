@@ -67,26 +67,34 @@ def prepare_deployment_intent(
     hostname map. No example or production file is read as a fallback.
 
     Every zone used by a managed hostname must have a credential, including
-    when the artifact matches accepted content. ``validate_api_token`` checks
-    presence and local syntax. It does not prove Cloudflare authorization or
-    zone access, and this function does not send a purge request. A missing
-    or malformed token raises ``ValueError`` before publication and does not
-    drop the hostname. The token is not included in the error or the returned
+    when the artifact matches accepted content. ``require_zone_credentials``
+    applies ``validate_api_token`` to each one. That check is local syntax
+    only. It does not prove Cloudflare authorization or zone access, and this
+    function does not send a purge request. A missing or malformed token
+    raises ``ValueError`` before publication and does not drop the hostname.
+    The token is not included in the error or the returned
     ``PurgeStateSnapshot``.
 
     The snapshot is read with ``read_content_snapshot`` and fingerprinted
     with ``content_fingerprints``. A snapshot failure or a revision conflict
     propagates and is not replayed.
     """
-    _require_zone_credentials(configuration, credentials)
+    require_zone_credentials(configuration, credentials)
     snapshot = read_content_snapshot(artifact_root)
     fingerprints = content_fingerprints(snapshot, configuration.rules)
     return persist_deployment_intent(
         workspace, remote, ref, path, identity, image, fingerprints)
 
 
-def _require_zone_credentials(configuration, credentials):
-    """Reject a run that lacks a locally well-formed token for a used zone."""
+def require_zone_credentials(configuration, credentials):
+    """Reject a run that lacks a locally well-formed token for a used zone.
+
+    ``configuration`` is a ``PurgeConfiguration``. ``credentials`` maps each
+    zone alias used by a managed hostname to an API token. The token check is
+    ``validate_api_token``: presence and local syntax only. It does not prove
+    Cloudflare authorization or zone access. A missing or malformed token
+    raises ``ValueError`` and is not included in that error.
+    """
     if not isinstance(configuration, PurgeConfiguration):
         raise ValueError("purge configuration is required")
     if not isinstance(credentials, Mapping):

@@ -1,8 +1,10 @@
 """Conditional Git persistence for purge state, using local repositories only."""
 
 import os
+import signal
 import subprocess
 import tempfile
+import time
 
 import pytest
 
@@ -207,6 +209,72 @@ def _round_trip_origin(monkeypatch, reader, writer):
         assert "refs/remotes/origin/purge-state" not in refs
         assert "refs/remotes/origin/master" in refs
     return updated_snapshot
+
+
+def _pid_alive(pid, kill=None):
+    """Return whether ``pid`` is present on Linux or macOS.
+
+    Signal 0 does not kill the process. A missing ``/proc`` directory is not
+    treated as exit. ``kill`` defaults to ``os.kill`` and can be the original
+    function when a test has replaced it.
+    """
+    probe = os.kill if kill is None else kill
+    try:
+        probe(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
+def _descendant_gone(pid, timeout=2, kill=None):
+    """Return whether a process this test does not own has left the process table."""
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        if not _pid_alive(pid, kill):
+            return True
+        time.sleep(0.02)
+    return not _pid_alive(pid, kill)
+
+
+def _marker_pids(marker):
+    """Return integer pids written by a test command, ignoring a partial write."""
+    if not marker.exists():
+        return []
+    pids = []
+    for item in marker.read_text(encoding="utf-8").split():
+        try:
+            pids.append(int(item))
+        except ValueError:
+            continue
+    return pids
+
+
+def _reap_owned(process, real_wait, descendants, killpg=None, kill=None):
+    """Stop and reap one Popen child, then signal descendants the test does not own."""
+    if process is None:
+        return
+    group_kill = os.killpg if killpg is None else killpg
+    direct_kill = os.kill if kill is None else kill
+    try:
+        group_kill(process.pid, signal.SIGKILL)
+    except OSError:
+        pass
+    try:
+        direct_kill(process.pid, signal.SIGKILL)
+    except OSError:
+        pass
+    if real_wait is not None:
+        try:
+            real_wait(timeout=2)
+        except (subprocess.TimeoutExpired, OSError):
+            pass
+    for pid in descendants:
+        try:
+            direct_kill(pid, signal.SIGKILL)
+        except OSError:
+            pass
 
 
 def _auth_recorder(path):
@@ -700,3 +768,163 @@ class TestPurgeStateStore:
         assert "secret-auth-token" not in str(failed.value)
         assert type(failed.value) is store.PurgeStateStoreError
         assert _signature(reader) == before
+
+    def test_interruption_stops_the_git_process_group(self, monkeypatch, tmp_path):
+        """Cancellation reaps a running state command and the child it started."""
+        reader, _writer, _remote = _layout(tmp_path)
+        marker = tmp_path / "state-children"
+        command = tmp_path / "sleeping-ssh"
+        command.write_text(
+            "#!/bin/sh\n"
+            f"echo $$ > '{marker}'\n"
+            "sleep 30 &\n"
+            f"echo $! >> '{marker}'\n"
+            "wait\n",
+            encoding="utf-8",
+        )
+        command.chmod(0o755)
+        _git(reader, "remote", "add", "auth", "ssh://local.test/repo.git")
+        _git(reader, "config", "core.sshCommand", str(command))
+        before = _signature(reader)
+        owned = {}
+        armed = {"live": True}
+        real_popen = subprocess.Popen
+
+        def popen(args, **kwargs):
+            process = real_popen(args, **kwargs)
+            if armed["live"] and args and args[0] == "git":
+                armed["live"] = False
+                real_wait = process.wait
+                owned["process"] = process
+                owned["wait"] = real_wait
+
+                def wait(timeout=None):
+                    real_wait(timeout=timeout)
+                    raise OSError("secret-wait")
+
+                def communicate(input=None, timeout=None):
+                    deadline = time.monotonic() + 5
+                    while time.monotonic() < deadline:
+                        descendants = _marker_pids(marker)
+                        if len(descendants) >= 2:
+                            assert process.poll() is None
+                            assert all(_pid_alive(pid) for pid in descendants)
+                            raise KeyboardInterrupt()
+                        time.sleep(0.02)
+                    raise AssertionError("state git child did not start")
+
+                process.communicate = communicate
+                process.wait = wait
+            return process
+
+        real_killpg = os.killpg
+
+        def killpg(pid, sig):
+            real_killpg(pid, sig)
+            raise OSError("secret-kill")
+
+        monkeypatch.setattr(subprocess, "Popen", popen)
+        monkeypatch.setattr(store.os, "killpg", killpg)
+        try:
+            with pytest.raises(KeyboardInterrupt) as caught:
+                store.read_purge_state(str(reader), "auth", REF, DOCUMENT)
+            process = owned["process"]
+            descendants = _marker_pids(marker)
+            assert caught.type is KeyboardInterrupt
+            assert "secret-kill" not in str(caught.value)
+            assert "secret-wait" not in str(caught.value)
+            assert process.poll() is not None
+            assert len(descendants) >= 2
+            assert all(_descendant_gone(pid) for pid in descendants)
+            assert _signature(reader) == before
+        finally:
+            _reap_owned(
+                owned.get("process"),
+                owned.get("wait"),
+                _marker_pids(marker),
+                real_killpg,
+                os.kill,
+            )
+
+    def test_failed_git_stop_stays_bounded(self, monkeypatch, tmp_path):
+        """A kill that fails before signaling does not wait out the child."""
+        reader, _writer, _remote = _layout(tmp_path)
+        marker = tmp_path / "state-children"
+        command = tmp_path / "sleeping-ssh"
+        command.write_text(
+            "#!/bin/sh\n"
+            f"echo $$ > '{marker}'\n"
+            "sleep 30 &\n"
+            f"echo $! >> '{marker}'\n"
+            "wait\n",
+            encoding="utf-8",
+        )
+        command.chmod(0o755)
+        _git(reader, "remote", "add", "auth", "ssh://local.test/repo.git")
+        _git(reader, "config", "core.sshCommand", str(command))
+        owned = {}
+        armed = {"live": True}
+        real_popen = subprocess.Popen
+
+        def popen(args, **kwargs):
+            process = real_popen(args, **kwargs)
+            if armed["live"] and args and args[0] == "git":
+                armed["live"] = False
+                real_wait = process.wait
+                owned["process"] = process
+                owned["wait"] = real_wait
+
+                def wait(timeout=None):
+                    return real_wait(timeout=timeout)
+
+                def communicate(input=None, timeout=None):
+                    deadline = time.monotonic() + 5
+                    while time.monotonic() < deadline:
+                        descendants = _marker_pids(marker)
+                        if len(descendants) >= 2:
+                            assert process.poll() is None
+                            assert all(_pid_alive(pid, real_kill) for pid in descendants)
+                            raise KeyboardInterrupt()
+                        time.sleep(0.02)
+                    raise AssertionError("state git child did not start")
+
+                process.communicate = communicate
+                process.wait = wait
+            return process
+
+        real_killpg = os.killpg
+        real_kill = os.kill
+
+        def killpg(pid, sig):
+            raise OSError("secret-kill")
+
+        def kill(pid, sig):
+            raise OSError("secret-direct")
+
+        monkeypatch.setattr(subprocess, "Popen", popen)
+        monkeypatch.setattr(store.os, "killpg", killpg)
+        monkeypatch.setattr(store.os, "kill", kill)
+        started = time.monotonic()
+        try:
+            with pytest.raises(KeyboardInterrupt) as caught:
+                store.read_purge_state(str(reader), "auth", REF, DOCUMENT)
+            process = owned["process"]
+            descendants = _marker_pids(marker)
+            assert time.monotonic() - started < 10
+            assert caught.type is KeyboardInterrupt
+            assert "secret-kill" not in str(caught.value)
+            assert "secret-direct" not in str(caught.value)
+            assert "sleeping-ssh" not in str(caught.value)
+            assert process.poll() is None
+            assert descendants and all(_pid_alive(pid, real_kill) for pid in descendants)
+        finally:
+            _reap_owned(
+                owned.get("process"),
+                owned.get("wait"),
+                _marker_pids(marker),
+                real_killpg,
+                real_kill,
+            )
+
+        assert owned["process"].poll() is not None
+        assert all(_descendant_gone(pid, kill=real_kill) for pid in _marker_pids(marker))

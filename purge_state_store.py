@@ -28,6 +28,11 @@ repository.
 set them. When either is absent, the variable is left unset so Git can
 apply the command configured in the repository, such as ``core.askPass``
 or ``core.sshCommand``. Terminal prompts are disabled for every command.
+Inherited repository overrides, including ``GIT_COMMON_DIR``, are removed.
+An interruption signals that command's process group and, if that signal
+fails, the direct child, then reaps for at most one second. Cleanup is
+best-effort when termination cannot be confirmed. It does not roll back a
+push that already reached the remote.
 """
 
 import math
@@ -42,6 +47,8 @@ from cache_purge import PurgeState, decode_purge_state, encode_purge_state
 
 
 _DEFAULT_TIMEOUT = 30
+# Best-effort reap after a Git command is interrupted or times out.
+_CLEANUP_TIMEOUT = 1
 _PUSH_FLAG_BYTES = b"*!=+- "
 
 
@@ -373,13 +380,45 @@ def _git_path(workspace, name, timeout):
     return path
 
 
+def _stop_group(process):
+    """Signal one Git process and reap it for at most one second.
+
+    The process group is signaled first. A failed group signal is followed
+    by a direct signal to the child. The wait is bounded. If that wait
+    expires, termination is unconfirmed. Nothing from the command is reported.
+    """
+    signaled = False
+    try:
+        os.killpg(process.pid, signal.SIGKILL)
+        signaled = True
+    except BaseException:
+        pass
+    if not signaled:
+        try:
+            os.kill(process.pid, signal.SIGKILL)
+        except BaseException:
+            pass
+    try:
+        process.wait(timeout=_CLEANUP_TIMEOUT)
+    except BaseException:
+        pass
+    for pipe in (process.stdin, process.stdout, process.stderr):
+        if pipe is None:
+            continue
+        try:
+            pipe.close()
+        except BaseException:
+            pass
+
+
 def _run(workspace, args, timeout, index=None, input_bytes=None, git_dir=None, work_tree=None):
     """Run one Git command without a shell, prompt, or inherited Git directory.
 
     Supplied ``GIT_ASKPASS`` and ``GIT_SSH_COMMAND`` values are kept.
-    Omitting either one leaves that variable unset so a configured
-    ``core.askPass`` or ``core.sshCommand`` still applies.
-    ``GIT_TERMINAL_PROMPT=0`` prevents Git from prompting.
+    Explicit index, work tree, and ``--git-dir`` arguments are applied after
+    inherited overrides, including ``GIT_COMMON_DIR``, are removed.
+    ``GIT_TERMINAL_PROMPT=0`` prevents Git from prompting. An interruption
+    signals the process group, reaps for at most one second, and propagates.
     """
     env = os.environ.copy()
     for name in (
@@ -387,6 +426,7 @@ def _run(workspace, args, timeout, index=None, input_bytes=None, git_dir=None, w
         "GIT_WORK_TREE",
         "GIT_INDEX_FILE",
         "GIT_PREFIX",
+        "GIT_COMMON_DIR",
         "GIT_OBJECT_DIRECTORY",
         "GIT_ALTERNATE_OBJECT_DIRECTORIES",
         "GIT_NAMESPACE",
@@ -419,10 +459,9 @@ def _run(workspace, args, timeout, index=None, input_bytes=None, git_dir=None, w
     try:
         stdout, stderr = process.communicate(input_bytes, timeout=timeout)
     except subprocess.TimeoutExpired:
-        try:
-            os.killpg(process.pid, signal.SIGKILL)
-        except ProcessLookupError:
-            pass
-        process.wait()
+        _stop_group(process)
         raise PurgeStateStoreError("purge state command timed out") from None
+    except (KeyboardInterrupt, SystemExit):
+        _stop_group(process)
+        raise
     return process.returncode, stdout, stderr
