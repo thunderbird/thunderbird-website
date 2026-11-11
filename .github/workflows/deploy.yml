@@ -26,7 +26,7 @@ permissions:
 
 concurrency:
   group: deploy-${{ github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage' }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ (github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage') != 'prod' }}
 
 jobs:
   deploy:
@@ -68,21 +68,39 @@ jobs:
           IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
           TB_BUILDS_BRANCH: ${{ env.DEPLOY_ENV == 'prod' && 'prod' || 'master' }}
           BUILD_MESSAGE: ${{ github.event.client_payload.message || (github.event_name == 'push' && format('thunderbird-website {0} push.', github.ref_name)) || 'manual deployment.' }}
+          TB_BUILDS_KEY: ${{ secrets.TB_BUILDS_KEY }}
+          TB_BUILDS_GIT_EMAIL: ${{ secrets.TB_BUILDS_GIT_EMAIL }}
+          CACHE_PURGE_CONFIG: ${{ vars.CACHE_PURGE_CONFIG }}
+          CACHE_PURGE_ZONE_CREDENTIALS: ${{ secrets.CACHE_PURGE_ZONE_CREDENTIALS }}
         run: |
-          docker create --name extract $IMAGE_URI
-          git clone --depth 1 --branch $TB_BUILDS_BRANCH \
+          set -euo pipefail
+          builds="${RUNNER_TEMP}/tb-website-builds"
+          git clone --depth 1 --branch "$TB_BUILDS_BRANCH" \
             https://github.com/thunderbird/tb-website-builds.git \
-            tb-website-builds
-          cd tb-website-builds
-          git remote set-url origin \
-            https://x-access-token:${{ secrets.TB_BUILDS_KEY }}@github.com/thunderbird/tb-website-builds.git
-          find . -maxdepth 1 ! -name '.git' ! -name 'README.md' ! -name '.' -exec rm -rf {} +
-          docker cp extract:/var/www/html/start/. .
-          git add -A
-          git diff --cached --quiet || \
-            git -c user.name="Thundernest Bot" -c user.email="${{ secrets.TB_BUILDS_GIT_EMAIL }}" \
-              commit -m "Website rebuild triggered by $BUILD_MESSAGE"
-          git push
+            "$builds"
+          if [ "$DEPLOY_ENV" = "prod" ]; then
+            config="${RUNNER_TEMP}/cache-purge-config.json"
+            receipt="${RUNNER_TEMP}/purge-receipt.json"
+            printf '%s' "$CACHE_PURGE_CONFIG" > "$config"
+            python3 deployment_cli.py publish \
+              --image "$IMAGE_URI" \
+              --environment prod \
+              --checkout "$builds" \
+              --remote https://github.com/thunderbird/tb-website-builds.git \
+              --message "$BUILD_MESSAGE" \
+              --configuration "$config" \
+              --identity "${GITHUB_RUN_ID}.${GITHUB_RUN_ATTEMPT}" \
+              --state-ref refs/heads/purge-state \
+              --state-path prod.json \
+              --receipt "$receipt"
+          else
+            python3 deployment_cli.py publish \
+              --image "$IMAGE_URI" \
+              --environment stage \
+              --checkout "$builds" \
+              --remote https://github.com/thunderbird/tb-website-builds.git \
+              --message "$BUILD_MESSAGE"
+          fi
 
       - name: Deploy infrastructure
         uses: pulumi/actions@96c7761824268174e0d2a4e8c7d75671eebd24a7 # v7.1.0

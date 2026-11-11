@@ -327,7 +327,9 @@ class TestDeploymentImage:
 
         extract = _step(steps, name="Publish to tb-website-builds")
         pulumi = _step(steps, name="Deploy infrastructure")
-        assert extract["run"].splitlines()[0] == "docker create --name extract $IMAGE_URI"
+        assert "python3 deployment_cli.py publish" in extract["run"]
+        assert '--image "$IMAGE_URI"' in extract["run"]
+        assert "docker create --name extract" not in extract["run"]
         assert _resolve(extract["env"]["IMAGE_URI"], context) == published
         assert _resolve(pulumi["env"]["IMAGE_URI"], context) == published
         assert pulumi["uses"].startswith("pulumi/actions@")

@@ -128,27 +128,31 @@ The build step runs `deployment_image.py` with Python 3 and Docker Buildx. Build
 
 Provenance attestations are disabled. The previous `docker build` and `docker push` published one image manifest. Buildx would otherwise make the recorded root digest an attestation index.
 
-Missing, malformed, or inconsistent metadata fails the build step, before extraction and Pulumi. `docker create` uses the digest reference. When the local daemon does not already have that image, Docker pulls it with the ECR login from the same job. That login is the existing push credential. No separate registry permission is added.
+Missing, malformed, or inconsistent metadata fails the build step, before publication and Pulumi. Publication extracts that digest-pinned image. When the local daemon does not already have it, Docker pulls it with the ECR login from the same job. That login is the existing push credential. No separate registry permission is added.
 
 Steps:
 1. Build the checked-out source, push it, and publish the digest reference
-2. Extract the built static files from that reference and commit them to `tb-website-builds`
+2. Publish that image's archive to `tb-website-builds`. Production also persists the purge intent and writes a receipt
 3. Deploy infrastructure with Pulumi using the same reference as `IMAGE_URI`
 4. Force ECS service update
 
-`persist_deployment_intent` is implemented and records one deployment intent. `publish_pinned_release` calls it for production before replacing the archive. `deploy.yml` does not call that coordinator yet. The caller must complete configuration and credential checks and successfully persist the deployment intent before Pulumi can expose new content. Persisting the intent does not establish deployment readiness or authorize a purge.
+The purge command is not part of this workflow yet. Step 4 does not record an ECS deployment id or call `purge`.
 
-`read_content_snapshot` is implemented. The caller provides a completed, stable artifact directory. The function reads that directory into relative path-to-bytes records and does not create an atomic filesystem snapshot. `deploy.yml` does not call it yet.
+`persist_deployment_intent` is implemented and records one deployment intent. Production publication calls it before replacing the archive and before Pulumi. A failure stops the job. Stage publication does not record an intent. Persisting the intent does not establish deployment readiness or authorize a purge.
 
-`prepare_deployment_intent` is implemented. Credentials are required for every zone used by a managed hostname, and each one must be locally well-formed. It then fingerprints a completed artifact directory and persists that intent. The check does not prove Cloudflare authorization or zone access. `deploy.yml` does not call it yet. `docs/examples/cache-purge.example.json` is a non-production illustration with no tokens and is not a fallback configuration.
+`read_content_snapshot` is implemented. The caller provides a completed, stable artifact directory. The function reads that directory into relative path-to-bytes records and does not create an atomic filesystem snapshot. Production publication uses that read on the archive extracted from the pinned image.
+
+`prepare_deployment_intent` is implemented. Credentials are required for every zone used by a managed hostname, and each one must be locally well-formed. It then fingerprints a completed artifact directory and persists that intent. The check does not prove Cloudflare authorization or zone access. Production publication calls it before Pulumi. `docs/examples/cache-purge.example.json` is a non-production illustration with no tokens and is not a fallback configuration.
 
 `extract_pinned_content` is implemented. It creates a stopped container from the digest-pinned image and copies `/var/www/html/start/.` into a temporary directory. That copy is the archived site tree only, not server configuration outside it. Cleanup tries to remove that invocation's container and directory when create returns an id, times out, is interrupted, or returns an unusable result. An interruption or exit from the extraction is propagated. Cleanup is best-effort: it does not survive process termination or daemon failure as a transactional rollback.
 
-`publish_pinned_release` is implemented. It publishes one pinned archive and, on production, persists that intent first. `deploy.yml` does not call it yet and still creates a container named `extract`. Future integration must serialize running production deployments; that serialization is not active. Cancellation signals this operation's Git processes and briefly reaps them. That cleanup is best-effort when termination cannot be confirmed, and outstanding purge work is retained. A push that already reached the remote stays there.
+`publish_pinned_release` is implemented. It publishes one pinned archive and, on production, persists that intent first. `deploy.yml` calls it through `deployment_cli.py publish` before Pulumi. The builds repository is cloned from its plain URL, with a shallow `master` checkout for stage and `prod` for production. An in-progress production run is not cancelled by a later production run in the same `deploy-prod` group. Stage still cancels an in-progress stage run. That group is not a purge lock, and the workflow does not call `purge`. Cancellation of a Git command inside publication still signals that process and briefly reaps it. That cleanup is best-effort when termination cannot be confirmed, and outstanding purge work is retained. A push that already reached the remote stays there.
 
 `purge_ready_deployment` is implemented. It purges pending hostnames for the expected intent, one configured zone at a time, after a ready observation of this run's deployment. Each zone starts only from the revision used to plan that work, or from the revision this run last wrote. An unexpected revision stops the run before that zone is polled or purged. The caller must serialize production deployments. Readiness observations and state checks are not locks. `deploy.yml` does not call this function. A purge Cloudflare accepted but this function did not persist can remain pending and may be repeated. The Cloudflare request and the state write are not one atomic update.
 
-`deployment_cli.py` provides `publish` and `purge`. `deploy.yml` does not call it. The example configuration is not a fallback. A future workflow identity must distinguish attempts, such as `github.run_id` and `github.run_attempt`.
+`deployment_cli.py` provides `publish` and `purge`. The workflow runs `publish` from the website checkout and passes the builds checkout explicitly. It does not run `purge`. The example configuration is not a fallback. Production's identity is `${GITHUB_RUN_ID}.${GITHUB_RUN_ATTEMPT}`.
+
+`CACHE_PURGE_CONFIG` is a non-secret Actions variable, separate from the production secrets. Set it on the production environment, or on the repository when that environment does not. Its value is the purge configuration JSON. The publication step writes that value to a file under `RUNNER_TEMP` and passes the file to `publish`. The JSON is not interpolated into the shell script and is not printed. Stage does not read it. `CACHE_PURGE_ZONE_CREDENTIALS` is a required production secret. The workflow passes it only as that environment variable. Whether the secret is actually configured in production is unverified. GitHub supplies a missing variable or secret as an empty string, and the publication script still starts the CLI. Empty configuration or empty credentials fail during CLI validation, before extraction, state publication, or receipt creation. The receipt is `${RUNNER_TEMP}/purge-receipt.json`, outside the builds checkout, and is not consumed by a later step yet. State is `refs/heads/purge-state` and `prod.json`. An invalid configuration or credential, or a failed state write, archive publication, or receipt write, fails the publication step and prevents Pulumi.
 
 `publish` calls `publish_pinned_release`. Stage does not read purge configuration, `CACHE_PURGE_ZONE_CREDENTIALS`, or purge state, and it does not write a receipt. Production requires an explicit configuration file, that variable, a unique intent identity, the state location, and a receipt path. `CACHE_PURGE_ZONE_CREDENTIALS` is a JSON object mapping zone aliases to API tokens. It is not a command argument. Malformed JSON, a duplicate alias, or a token the purge client would refuse is rejected without echoing the document. After publication succeeds, the command writes the returned state with `encode_purge_state` and replaces the receipt only when the file is complete. A filesystem failure while writing it prints `receipt could not be written`, removes that attempt's temporary file, leaves the previous receipt in place, and does not roll back the archive or the persisted intent.
 
@@ -226,10 +230,15 @@ Preview deployments depend on: a `*.thunderbird.dev` ACM wildcard certificate (A
 
 ## Permissions
 
+### Variables
+
+- **`CACHE_PURGE_CONFIG`**: Non-secret production configuration. The value is the purge configuration JSON, not the example file. The workflow passes it as the `CACHE_PURGE_CONFIG` environment variable. Local tests do not establish the value configured in production.
+
 ### Secrets
 
-- **`TB_BUILDS_KEY`**: GitHub PAT or App token with `contents:write` on `thunderbird/tb-website-builds`, used to push built static files.
+- **`TB_BUILDS_KEY`**: GitHub PAT or App token with `contents:write` on `thunderbird/tb-website-builds`, used to push the archive branch and to create or update `refs/heads/purge-state`. The workflow passes it as `TB_BUILDS_KEY` and does not put it in a remote URL. Local tests do not establish that the production token has that ref permission.
 - **`TB_BUILDS_GIT_EMAIL`**: Committer email for the bot identity used in `tb-website-builds` commits.
+- **`CACHE_PURGE_ZONE_CREDENTIALS`**: Required production secret. A JSON object mapping zone aliases to API tokens, passed only through that environment variable. Local tests do not establish that this secret is configured in production.
 
 ### OIDC
 
