@@ -238,6 +238,8 @@ def _checkout(tmp_path, branch, shallow=False):
     )
     if completed.returncode != 0:
         raise AssertionError(completed.stderr.decode())
+    _git(checkout, "config", "user.email", "fixture@example.com")
+    _git(checkout, "config", "user.name", "Fixture")
     (checkout / ".git" / "marker").write_text("git-marker\n")
     return bare, checkout
 
