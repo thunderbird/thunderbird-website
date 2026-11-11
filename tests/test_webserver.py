@@ -90,7 +90,6 @@ TEST_CASES = [
     ("tb.pro", "/appointment", 302, "/en-US/appointment"),
     ("tb.pro", "/send", 302, "/en-US/send"),
     ("tb.pro", "/thundermail", 302, "/en-US/thundermail"),
-    ("tb.pro", "/en-US/thundermail", 302, "/en-US/"),
     ("tb.pro", "/waitlist", 302, "/en-US/waitlist"),
 
     # thundermail.com - redirects to tb.pro, keeping the path and query string
@@ -121,6 +120,22 @@ def test_endpoint(host: str, path: str, expected_status: int, expected_location:
     if expected_location:
         location = response.headers.get("Location", "")
         assert expected_location in location, f"Expected '{expected_location}' in Location header, got '{location}'"
+
+
+# The directory exists, so Apache adds the slash before the generated home redirect.
+THUNDERMAIL_REDIRECTS = [
+    ("/en-US/thundermail", 301, "https://tb.pro/en-US/thundermail/"),
+    ("/en-US/thundermail/", 302, "https://tb.pro/en-US/"),
+]
+
+
+@pytest.mark.parametrize("path,expected_status,expected_location", THUNDERMAIL_REDIRECTS)
+def test_thundermail_redirect(path: str, expected_status: int, expected_location: str):
+    """Check both Thundermail hops, including the full Location."""
+    response = get(path, "tb.pro")
+    location = response.headers.get("Location", "")
+    assert response.status_code == expected_status
+    assert location == expected_location
 
 
 # Filter to only redirect test cases for HTTPS scheme verification

@@ -45,7 +45,7 @@ jobs:
 
       - name: Run all tests
         run: |
-          docker exec tb-web-test sh -c "cd /build && uv run pytest tests/ -v"
+          docker exec -e SITE_URL=http://localhost:8080 tb-web-test sh -c "cd /build && uv run pytest tests/ -v"
 
       - name: Show container logs on failure
         if: failure()
