@@ -111,9 +111,9 @@ For local development using VS Code's Dev Containers feature:
 
 ### Container Test (`container-test.yml`)
 
-Runs on every push/PR to `master`:
+Runs on pull requests targeting `master`:
 - Builds the `website` target with `BUILD_ENV=local`, skipping the Lambda extension so fork PRs do not need AWS credentials
-- Runs pytest inside the container
+- Runs pytest inside the website container with `SITE_URL=http://localhost:8080`, so the Apache checks execute
 
 ### Build and Deploy (`deploy.yml`)
 
