@@ -148,6 +148,48 @@ Steps:
 
 `purge_ready_deployment` is implemented. It purges pending hostnames for the expected intent, one configured zone at a time, after a ready observation of this run's deployment. Each zone starts only from the revision used to plan that work, or from the revision this run last wrote. An unexpected revision stops the run before that zone is polled or purged. The caller must serialize production deployments. Readiness observations and state checks are not locks. `deploy.yml` does not call this function. A purge Cloudflare accepted but this function did not persist can remain pending and may be repeated. The Cloudflare request and the state write are not one atomic update.
 
+`deployment_cli.py` provides `publish` and `purge`. `deploy.yml` does not call it. The example configuration is not a fallback. A future workflow identity must distinguish attempts, such as `github.run_id` and `github.run_attempt`.
+
+`publish` calls `publish_pinned_release`. Stage does not read purge configuration, `CACHE_PURGE_ZONE_CREDENTIALS`, or purge state, and it does not write a receipt. Production requires an explicit configuration file, that variable, a unique intent identity, the state location, and a receipt path. `CACHE_PURGE_ZONE_CREDENTIALS` is a JSON object mapping zone aliases to API tokens. It is not a command argument. Malformed JSON, a duplicate alias, or a token the purge client would refuse is rejected without echoing the document. After publication succeeds, the command writes the returned state with `encode_purge_state` and replaces the receipt only when the file is complete. A filesystem failure while writing it prints `receipt could not be written`, removes that attempt's temporary file, leaves the previous receipt in place, and does not roll back the archive or the persisted intent.
+
+Documented validation and coordinator errors are printed. Any other failure prints `deployment command failed` and does not include the exception, a traceback, a response body, the environment, or the credential document. Either failure exits nonzero.
+
+`purge` reads the receipt with `decode_purge_state` and uses its intent only. The caller repeats the run identity and digest-pinned image and passes this run's ECS deployment id. The command does not select the deployment that is currently PRIMARY. Pending work and revision checks come from the remote state. Publish installs askpass only for its own Git commands and restores the previous Git environment before it returns. Purge does not install authentication. The caller must already provide noninteractive Git authentication for that command.
+
+These examples use fake values:
+
+```
+CACHE_PURGE_ZONE_CREDENTIALS='{"example":"fake-token"}' \
+python3 deployment_cli.py publish \
+    --image example.invalid/website@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa \
+    --environment prod \
+    --checkout /tmp/builds \
+    --remote https://example.invalid/builds.git \
+    --message 1001.2 \
+    --configuration /tmp/cache-purge.json \
+    --identity 1001.2 \
+    --state-ref refs/heads/purge-state \
+    --state-path prod.json \
+    --receipt /tmp/purge-receipt.json
+```
+
+```
+CACHE_PURGE_ZONE_CREDENTIALS='{"example":"fake-token"}' \
+python3 deployment_cli.py purge \
+    --configuration /tmp/cache-purge.json \
+    --receipt /tmp/purge-receipt.json \
+    --identity 1001.2 \
+    --image example.invalid/website@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa \
+    --workspace /tmp/builds \
+    --remote https://example.invalid/builds.git \
+    --state-ref refs/heads/purge-state \
+    --state-path prod.json \
+    --cluster example-cluster \
+    --service example-service \
+    --region example-region \
+    --deployment-id deployment-1
+```
+
 ### PR Preview (`preview.yml`)
 
 Triggered when a `preview` or `preview:<site>` label is added to a non-fork PR. Subsequent pushes auto-rebuild while the label is present.
