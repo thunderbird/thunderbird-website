@@ -114,11 +114,36 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update ECS service
+        id: update-ecs
         env:
           BUILD_ENV: ${{ env.DEPLOY_ENV }}
+          AWS_PAGER: ""
+          AWS_CLI_AUTO_PROMPT: "off"
+        run: python3 deployment_ecs.py
+
+      - name: Purge production caches
+        if: ${{ env.DEPLOY_ENV == 'prod' }}
+        env:
+          IMAGE_URI: ${{ steps.build-image.outputs.image_uri }}
+          DEPLOYMENT_ID: ${{ steps.update-ecs.outputs.deployment_id }}
+          TB_BUILDS_KEY: ${{ secrets.TB_BUILDS_KEY }}
+          TB_BUILDS_GIT_EMAIL: ${{ secrets.TB_BUILDS_GIT_EMAIL }}
+          CACHE_PURGE_ZONE_CREDENTIALS: ${{ secrets.CACHE_PURGE_ZONE_CREDENTIALS }}
         run: |
-          aws ecs update-service \
-            --cluster thunderbird-website-$BUILD_ENV \
-            --service thunderbird-website-$BUILD_ENV \
-            --force-new-deployment \
-            --region $AWS_REGION
+          set -euo pipefail
+          if [ "$DEPLOY_ENV" != "prod" ]; then
+            exit 0
+          fi
+          python3 deployment_cli.py purge \
+            --configuration "${RUNNER_TEMP}/cache-purge-config.json" \
+            --receipt "${RUNNER_TEMP}/purge-receipt.json" \
+            --identity "${GITHUB_RUN_ID}.${GITHUB_RUN_ATTEMPT}" \
+            --image "$IMAGE_URI" \
+            --workspace "${RUNNER_TEMP}/tb-website-builds" \
+            --remote https://github.com/thunderbird/tb-website-builds.git \
+            --state-ref refs/heads/purge-state \
+            --state-path prod.json \
+            --cluster "thunderbird-website-${DEPLOY_ENV}" \
+            --service "thunderbird-website-${DEPLOY_ENV}" \
+            --region "$AWS_REGION" \
+            --deployment-id "$DEPLOYMENT_ID"

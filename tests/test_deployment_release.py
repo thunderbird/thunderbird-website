@@ -192,6 +192,20 @@ def _secrets(monkeypatch):
     monkeypatch.setenv("TB_BUILDS_GIT_EMAIL", _EMAIL)
 
 
+def _git_identity():
+    """Return the caller's Git identity settings."""
+    return {key: os.environ.get(key) for key in deployment_release._AUTH_KEYS}
+
+
+def _restore_identity(saved):
+    """Put the process environment back even when a later assertion fails."""
+    for key, value in saved.items():
+        if value is None:
+            os.environ.pop(key, None)
+        else:
+            os.environ[key] = value
+
+
 def _checkout(tmp_path, branch, shallow=False):
     """Return a bare builds remote and a clone of one archive branch."""
     bare = tmp_path / "builds.git"
@@ -955,6 +969,102 @@ class TestPublishPinnedRelease:
         assert os.environ["GIT_AUTHOR_NAME"] == "Caller Name"
         assert os.environ.get("GIT_ASKPASS") is None
         assert (checkout / "old.txt").read_text(encoding="utf-8") == "old\n"
+
+    def test_failed_entry_keeps_its_error_when_cleanup_is_interrupted(self, monkeypatch):
+        """Entry failure survives a restoration failure and an interrupted removal.
+
+        Publication and purge share this context manager. The test removes
+        its own askpass file and restores the environment if an assertion fails.
+        """
+        created = []
+        removed = []
+        restored = []
+        real_mkstemp = tempfile.mkstemp
+        real_unlink = os.unlink
+        saved_env = _git_identity()
+
+        def mkstemp(*args, **kwargs):
+            result = real_mkstemp(*args, **kwargs)
+            if kwargs.get("prefix") == "tb-builds-askpass-":
+                created.append(result[1])
+            return result
+
+        def explode(_script, _email):
+            raise ValueError("entry failed")
+
+        def restore(saved):
+            restored.append(saved)
+            raise RuntimeError("restore failed")
+
+        def unlink(path):
+            if "tb-builds-askpass-" in str(path):
+                removed.append(path)
+                raise KeyboardInterrupt()
+            return real_unlink(path)
+
+        monkeypatch.setattr(tempfile, "mkstemp", mkstemp)
+        monkeypatch.setattr(deployment_release, "_export_auth", explode)
+        monkeypatch.setattr(deployment_release, "_restore_auth", restore)
+        monkeypatch.setattr(deployment_release.os, "unlink", unlink)
+        _secrets(monkeypatch)
+        try:
+            with pytest.raises(ValueError) as caught:
+                with deployment_release.BuildsGitAuth():
+                    raise AssertionError("command started")
+            assert str(caught.value) == "entry failed"
+            assert caught.type is ValueError
+            assert any(frame.name == "explode" for frame in traceback.extract_tb(caught.value.__traceback__))
+            assert restored
+            assert removed
+        finally:
+            _restore_identity(saved_env)
+            for path in created:
+                try:
+                    real_unlink(path)
+                except OSError:
+                    pass
+
+    def test_restore_failure_still_removes_askpass(self, monkeypatch):
+        """A successful command still removes askpass when restoration fails."""
+        created = []
+        removed = []
+        real_mkstemp = tempfile.mkstemp
+        real_unlink = os.unlink
+        saved_env = _git_identity()
+
+        def mkstemp(*args, **kwargs):
+            result = real_mkstemp(*args, **kwargs)
+            if kwargs.get("prefix") == "tb-builds-askpass-":
+                created.append(result[1])
+            return result
+
+        def restore(_saved):
+            raise RuntimeError("restore failed")
+
+        def unlink(path):
+            if "tb-builds-askpass-" in str(path):
+                removed.append(path)
+            return real_unlink(path)
+
+        monkeypatch.setattr(tempfile, "mkstemp", mkstemp)
+        monkeypatch.setattr(deployment_release, "_restore_auth", restore)
+        monkeypatch.setattr(deployment_release.os, "unlink", unlink)
+        _secrets(monkeypatch)
+        monkeypatch.setenv("GIT_AUTHOR_NAME", "Caller Name")
+        try:
+            with pytest.raises(RuntimeError, match="^restore failed$"):
+                with deployment_release.BuildsGitAuth():
+                    assert os.environ["GIT_ASKPASS"]
+                    assert _TOKEN not in Path(os.environ["GIT_ASKPASS"]).read_text(encoding="utf-8")
+            assert removed
+            assert all(not Path(path).exists() for path in removed)
+        finally:
+            _restore_identity(saved_env)
+            for path in created:
+                try:
+                    real_unlink(path)
+                except OSError:
+                    pass
 
     def test_interruption_during_git_stops_its_process_group(self, monkeypatch, tmp_path):
         """Cancellation reaps a running archive Git command and its child."""

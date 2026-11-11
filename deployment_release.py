@@ -92,12 +92,7 @@ def publish_pinned_release(
     email = _validate_request(image, deploy_env, checkout, remote, message)
     if deploy_env == "prod":
         require_zone_credentials(configuration, credentials)
-    script = None
-    saved = None
-    primary = None
-    try:
-        script = _askpass_script()
-        saved = _export_auth(script, email)
+    with BuildsGitAuth():
         with extract_pinned_content(image) as artifact:
             published = None
             _reject_git(artifact)
@@ -115,24 +110,6 @@ def publish_pinned_release(
                 )
             _publish_archive(checkout, artifact, remote, message, _BRANCH[deploy_env], email)
             return published
-    except BaseException as exc:
-        primary = exc
-        raise
-    finally:
-        try:
-            if saved is not None:
-                _restore_auth(saved)
-        except BaseException:
-            if primary is None:
-                raise
-        if script is not None:
-            try:
-                os.unlink(script)
-            except OSError:
-                pass
-            except BaseException:
-                if primary is None:
-                    raise
 
 
 def _validate_request(image, deploy_env, checkout, remote, message):
@@ -176,6 +153,77 @@ def _require_branch(checkout, branch):
         raise ValueError("archive checkout must be the deployment branch")
 
 
+class BuildsGitAuth:
+    """Install the builds-key askpass program for one command.
+
+    ``TB_BUILDS_KEY`` stays in the environment and is read by the program.
+    Restoration and removal are attempted independently. A failure or
+    interruption while cleaning up does not replace an entry or command
+    error that has already been raised, and that original traceback is kept.
+    On a successful command, a restoration failure still removes the program.
+    """
+
+    def __init__(self):
+        self.script = None
+        self.saved = None
+        self.primary = None
+
+    def __enter__(self):
+        try:
+            email = _builds_setting("TB_BUILDS_GIT_EMAIL")
+            _builds_setting("TB_BUILDS_KEY")
+            self.saved = {key: os.environ.get(key) for key in _AUTH_KEYS}
+            self.script = _askpass_script()
+            _export_auth(self.script, email)
+        except BaseException as exc:
+            self.primary = exc
+            try:
+                self._close()
+            except BaseException:
+                pass
+            raise
+        return self
+
+    def __exit__(self, _exc_type, exc, _traceback):
+        self.primary = exc
+        try:
+            self._close()
+        except BaseException:
+            if self.primary is None:
+                raise
+        return False
+
+    def _close(self):
+        """Restore the caller and remove the askpass program."""
+        restore_error = None
+        if self.saved is not None:
+            saved = self.saved
+            self.saved = None
+            try:
+                _restore_auth(saved)
+            except BaseException as exc:
+                restore_error = exc
+        remove_error = None
+        if self.script is not None:
+            script = self.script
+            self.script = None
+            try:
+                os.unlink(script)
+            except OSError:
+                pass
+            except BaseException as exc:
+                remove_error = exc
+        if self.primary is not None:
+            return
+        for error in (restore_error, remove_error):
+            if isinstance(error, (KeyboardInterrupt, SystemExit)):
+                raise error
+        if restore_error is not None:
+            raise restore_error
+        if remove_error is not None:
+            raise remove_error
+
+
 def _askpass_script():
     """Write an askpass program that reads ``TB_BUILDS_KEY`` from the environment."""
     descriptor, script = tempfile.mkstemp(prefix="tb-builds-askpass-")
@@ -215,19 +263,13 @@ def _askpass_script():
 
 def _export_auth(script, email):
     """Point Git at askpass and the bot identity, keeping other configuration."""
-    saved = {key: os.environ.get(key) for key in _AUTH_KEYS}
-    try:
-        os.environ.update({
-            "GIT_ASKPASS": script,
-            "GIT_AUTHOR_NAME": _BOT,
-            "GIT_AUTHOR_EMAIL": email,
-            "GIT_COMMITTER_NAME": _BOT,
-            "GIT_COMMITTER_EMAIL": email,
-        })
-    except BaseException:
-        _restore_auth(saved)
-        raise
-    return saved
+    os.environ.update({
+        "GIT_ASKPASS": script,
+        "GIT_AUTHOR_NAME": _BOT,
+        "GIT_AUTHOR_EMAIL": email,
+        "GIT_COMMITTER_NAME": _BOT,
+        "GIT_COMMITTER_EMAIL": email,
+    })
 
 
 def _restore_auth(saved):

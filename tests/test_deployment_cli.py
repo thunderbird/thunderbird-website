@@ -14,7 +14,7 @@ import deployment_cli
 import deployment_purge
 import deployment_release
 import purge_state_store as store
-from deployment_readiness import DeploymentEvaluation
+from deployment_readiness import FAILED, DeploymentEvaluation
 from test_deployment_release import (
     IMAGE,
     OTHER_IMAGE,
@@ -482,6 +482,7 @@ class TestPurgeCommand:
         receipt = tmp_path / "purge-receipt.json"
         receipt.write_text(cache_purge.encode_purge_state(claimed), encoding="utf-8")
         original = receipt.read_bytes()
+        _secrets(monkeypatch)
         _credentials(monkeypatch, json.dumps({"example": _SECRET, "example_updates": "updates-zone-token"}))
         polls = []
         purges = []
@@ -533,6 +534,144 @@ class TestPurgeCommand:
         assert err.strip() == "zone credentials are required"
         assert "purge started" not in err
         assert receipt.read_text(encoding="utf-8") == "{}"
+
+    def test_readiness_or_purge_failure_retains_pending_work(self, monkeypatch, tmp_path, capsys):
+        """A failed readiness check or purge stays nonzero and does not drop pending hostnames."""
+        _reader, writer, remote = _layout(tmp_path)
+        config, configuration = _config(tmp_path)
+        fingerprints = cache_purge.content_fingerprints(_SITE, configuration.rules)
+        intent = cache_purge.DeploymentIntent(_IDENTITY, IMAGE, fingerprints)
+        pending = frozenset(set(fingerprints) | {_RETIRED})
+        remote_state = cache_purge.PurgeState({}, pending, intent)
+        store.write_purge_state(str(writer), str(remote), REF, DOCUMENT, None, remote_state)
+        receipt = tmp_path / "purge-receipt.json"
+        receipt.write_text(cache_purge.encode_purge_state(remote_state), encoding="utf-8")
+        _secrets(monkeypatch)
+        monkeypatch.setenv("GIT_ASKPASS", "caller-askpass")
+        _credentials(monkeypatch, json.dumps({"example": _SECRET, "example_updates": "updates-zone-token"}))
+        purges = []
+
+        def reject(*_args, **_kwargs):
+            purges.append("called")
+            raise cache_purge.PurgeError("purge was not accepted")
+
+        monkeypatch.setattr(deployment_purge, "poll_deployment_readiness", lambda *_args, **_kwargs: DeploymentEvaluation(FAILED))
+        monkeypatch.setattr(deployment_purge, "purge_hostnames", reject)
+        status, out, err = _invoke(capsys, _purge_args(writer, remote, config, receipt))
+        saved = store.read_purge_state(str(writer), str(remote), REF, DOCUMENT)
+
+        assert status == 1
+        assert err.strip() == "deployment is not ready"
+        assert purges == []
+        assert saved.state.pending == pending
+        assert saved.state.purged == {}
+        assert os.environ["GIT_ASKPASS"] == "caller-askpass"
+        assert _SECRET not in _visible(out, err)
+
+        monkeypatch.setattr(
+            deployment_purge,
+            "poll_deployment_readiness",
+            lambda *_args, **_kwargs: DeploymentEvaluation("ready"),
+        )
+        status, out, err = _invoke(capsys, _purge_args(writer, remote, config, receipt))
+        saved = store.read_purge_state(str(writer), str(remote), REF, DOCUMENT)
+
+        assert status == 1
+        assert err.strip() == "purge was not accepted"
+        assert purges == ["called"]
+        assert saved.state.pending == pending
+        assert saved.state.purged == {}
+        assert os.environ["GIT_ASKPASS"] == "caller-askpass"
+        assert _SECRET not in _visible(out, err)
+        assert _TOKEN not in _visible(out, err)
+
+    def test_purge_git_authentication_is_installed_and_restored(self, monkeypatch, tmp_path, capsys):
+        """Purge's Git commands see askpass, and the caller's environment is restored."""
+        _reader, writer, remote = _layout(tmp_path)
+        config, configuration = _config(tmp_path)
+        fingerprints = cache_purge.content_fingerprints(_SITE, configuration.rules)
+        intent = cache_purge.DeploymentIntent(_IDENTITY, IMAGE, fingerprints)
+        remote_state = cache_purge.PurgeState({}, frozenset(fingerprints), intent)
+        store.write_purge_state(str(writer), str(remote), REF, DOCUMENT, None, remote_state)
+        receipt = tmp_path / "purge-receipt.json"
+        receipt.write_text(cache_purge.encode_purge_state(remote_state), encoding="utf-8")
+        original = receipt.read_bytes()
+        _secrets(monkeypatch)
+        monkeypatch.setenv("GIT_ASKPASS", "caller-askpass")
+        monkeypatch.setenv("GIT_AUTHOR_NAME", "Caller Name")
+        _credentials(monkeypatch, json.dumps({"example": _SECRET, "example_updates": "updates-zone-token"}))
+        seen = []
+        checked = {}
+        real_popen = subprocess.Popen
+
+        def popen(args, **kwargs):
+            env = kwargs.get("env") or {}
+            if args and Path(args[0]).name == "git":
+                path = env.get("GIT_ASKPASS")
+                seen.append((list(args), path, env.get("GIT_AUTHOR_NAME")))
+                if path and "password" not in checked and Path(path).exists():
+                    checked["text"] = Path(path).read_text(encoding="utf-8")
+                    checked["path"] = path
+                    completed = real_popen(
+                        [path, "Password for 'https://x-access-token@github.com': "],
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        env=os.environ.copy(),
+                    )
+                    checked["password"] = completed.communicate()[0]
+            return real_popen(args, **kwargs)
+
+        monkeypatch.setattr(subprocess, "Popen", popen)
+        monkeypatch.setattr(
+            deployment_purge,
+            "poll_deployment_readiness",
+            lambda *_args, **_kwargs: DeploymentEvaluation("ready"),
+        )
+        monkeypatch.setattr(
+            deployment_purge,
+            "purge_hostnames",
+            lambda *_args, **_kwargs: cache_purge.PurgeAcceptance("req-1"),
+        )
+        status, out, err = _invoke(capsys, _purge_args(writer, remote, config, receipt))
+
+        assert status == 0
+        assert seen
+        assert all(path and Path(path).name.startswith("tb-builds-askpass-") for _args, path, _author in seen)
+        assert {author for _args, _path, author in seen} == {"Thundernest Bot"}
+        assert _TOKEN not in checked["text"]
+        assert checked["password"] == _TOKEN.encode() + b"\n"
+        assert any("fetch" in args for args, _path, _author in seen)
+        assert any("push" in args for args, _path, _author in seen)
+        rendered = " ".join(token for args, _path, _author in seen for token in args)
+        assert _TOKEN not in rendered
+        assert os.environ["GIT_ASKPASS"] == "caller-askpass"
+        assert os.environ["GIT_AUTHOR_NAME"] == "Caller Name"
+        assert not Path(checked["path"]).exists()
+        assert receipt.read_bytes() == original
+        assert _TOKEN not in _visible(out, err)
+        assert _SECRET not in _visible(out, err)
+
+        created = []
+        real_mkstemp = tempfile.mkstemp
+
+        def mkstemp(*args, **kwargs):
+            result = real_mkstemp(*args, **kwargs)
+            if kwargs.get("prefix") == "tb-builds-askpass-":
+                created.append(result[1])
+            return result
+
+        def interrupt(*_args, **_kwargs):
+            raise KeyboardInterrupt
+
+        monkeypatch.setattr(tempfile, "mkstemp", mkstemp)
+        monkeypatch.setattr(deployment_cli, "purge_ready_deployment", interrupt)
+        with pytest.raises(KeyboardInterrupt):
+            deployment_cli.main(_purge_args(writer, remote, config, receipt))
+        assert created
+        assert all(not Path(path).exists() for path in created)
+        assert os.environ["GIT_ASKPASS"] == "caller-askpass"
+        assert os.environ["GIT_AUTHOR_NAME"] == "Caller Name"
+        assert _TOKEN not in receipt.read_text(encoding="utf-8")
 
 
 def test_process_exits_nonzero(tmp_path):

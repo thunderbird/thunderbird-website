@@ -3,9 +3,10 @@
 ``publish`` and ``purge`` call the existing coordinators. Stage publication
 does not read purge configuration, credentials, or state. Production writes
 the receipt only after publication succeeds. Purge uses that receipt's
-intent and the caller's explicit deployment id. Command examples, the
-``CACHE_PURGE_ZONE_CREDENTIALS`` binding, and purge's Git authentication
-requirement are documented in ``docs/deployment.md``.
+intent and the caller's explicit deployment id. It installs the same
+builds-key askpass lifecycle as publication, then restores the caller.
+Zone credentials stay in ``CACHE_PURGE_ZONE_CREDENTIALS``. Command examples
+are documented in ``docs/deployment.md``.
 """
 
 import argparse
@@ -26,7 +27,7 @@ from deployment_extract import ArtifactExtractionError
 from deployment_polling import DeploymentPollingError
 from deployment_purge import purge_ready_deployment
 from deployment_readiness import digest_pinned
-from deployment_release import ArchivePublicationError, publish_pinned_release
+from deployment_release import ArchivePublicationError, BuildsGitAuth, publish_pinned_release
 from purge_state_store import PurgeStateSnapshot, PurgeStateStoreError
 
 
@@ -160,19 +161,20 @@ def _purge(args):
     configuration = _load_configuration(args.configuration)
     credentials = _zone_credentials()
     intent = _receipt_intent(args.receipt, args.identity, args.image)
-    purge_ready_deployment(
-        configuration,
-        credentials,
-        args.workspace,
-        args.remote,
-        args.state_ref,
-        args.state_path,
-        intent,
-        args.cluster,
-        args.service,
-        args.region,
-        args.deployment_id,
-    )
+    with BuildsGitAuth():
+        purge_ready_deployment(
+            configuration,
+            credentials,
+            args.workspace,
+            args.remote,
+            args.state_ref,
+            args.state_path,
+            intent,
+            args.cluster,
+            args.service,
+            args.region,
+            args.deployment_id,
+        )
 
 
 def _zone_credentials():
