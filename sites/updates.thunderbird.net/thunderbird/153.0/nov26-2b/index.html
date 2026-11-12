@@ -1,0 +1,39 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set fru_form_id = fru_form_id|default('nov26-2') %}
+{% set utm_content = utm_content|default('cta_b') %}
+{% set utm_campaign = utm_campaign|default('nov26-2_appeal') %}
+{% set donation_base_url = donation_base_url|default(url('updates.153.appeal.nov26-2b.donate')) %}
+
+{% extends "thunderbird/153.0/nov26-1a/index.html" %}
+
+{# Static blue gradient shared by the nov26-2 variants (replaces the animated nov26-1 one). #}
+{% block appeal_gradient %}
+<div class="appeal-gradient appeal-gradient-2" aria-hidden="true"></div>
+{% endblock %}
+
+{% block appeal_lead %}{% endblock %}
+
+{# Roc on a cloud, shared by the nov26-2 variants. #}
+{% block appeal_illustration %}
+<aside id="illustration" class="illustration-cloud" aria-hidden="true">
+  <img src="{{ static('img/thunderbird/appeal/nov26/roc.png') }}" alt="">
+</aside>
+{% endblock %}
+
+{% block appeal_body %}
+<p>
+  {{ _('All of the work we do is funded by less than 3% of our users.') }}
+</p>
+<p>
+  {{ _('We never show advertisements or sell your data. We don’t have corporate funding. Thunderbird is fully funded by financial contributions from our users.') }}
+</p>
+<p>
+  {{ _('Thunderbird’s mission is to give you the best privacy-respecting, customizable email experience possible. Free for everyone to install and enjoy! Maintaining expensive servers, fixing bugs, developing new features, and hiring talented engineers are crucial for this mission.') }}
+</p>
+<p>
+  {{ _('If you get value from using Thunderbird, please help support it. We can’t do this without you.') }}
+</p>
+{% endblock %}

@@ -203,6 +203,17 @@ body {
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.46'/%3E%3C/svg%3E");
         background-size: 120px 120px;
       }
+
+      // nov26-2 variants: static blue gradient + decorative image at the top centre
+      &.appeal-gradient-2 {
+        background:
+          url('/media/img/thunderbird/appeal/nov26/background-top-center.png') top center / clamp(80rem, calc(130.3vw + 49.45rem), 160rem) auto no-repeat,
+          linear-gradient(180deg,
+            rgba(128, 194, 245, 0) 0%,
+            rgba(189, 202, 248, .5) 36.17%,
+            #5366b2 103.33%),
+          #ffffff;
+      }
     }
   }
 
@@ -239,6 +250,21 @@ body {
     }
   }
 
+  // nov26-2 variants: the title and card sit further down from 480px up
+  .appeal-gradient-2 + #appeal-header {
+    @media (min-width: @xs) {
+      padding-block: 6.5rem 7.75rem;
+    }
+
+    @media (min-width: @lg) {
+      padding-block-end: 9.75rem;
+    }
+
+    @media (min-width: @xl) {
+      padding-block-start: 16.75rem;
+    }
+  }
+
   #appeal-heading {
     .mixin-font-styles(@family-open-sans, 700, 1.875rem, 1);
     color: var(--color-text-icon-brand);
@@ -271,6 +297,11 @@ body {
       @media (min-width: @xl) {
         font-size: 2.25rem;
       }
+    }
+
+    // Small line sits under the large one instead of above it.
+    &.heading-inverted > span {
+      margin-block: 0.5rem 0;
     }
   }
 
@@ -312,6 +343,32 @@ body {
     right: 1rem;
     width: 7.5rem; // 120px
     aspect-ratio: 716 / 672;
+
+    // nov26-2 variants: wider image (roc on a cloud)
+    &.illustration-cloud {
+      aspect-ratio: 872 / 600;
+      top: 1.75rem;
+      right: 0.5rem;
+      // 140px at 375px, growing to 323px at 768px.
+      width: clamp(7.5rem, calc(46.6vw - 2.175rem), 20.1875rem);
+
+      @media (min-width: @xs) {
+        top: 2.5rem;
+        right: 1.25rem;
+      }
+
+      @media (min-width: 56rem) and (max-width: (@xl - 0.0625rem)) {
+        right: max(1.25rem, calc((100% - var(--appeal-content-width)) / 2 - 1rem));
+      }
+
+      // Anchored to the page centre like the background image (right edge
+      // 722px from the centre), but kept 24px inside narrower viewports.
+      @media (min-width: @xl) {
+        top: 7.8125rem; // 125px
+        right: max(-5.125rem, calc(41.5rem - 50vw));
+        width: 27.25rem; // 436px
+      }
+    }
 
     img {
       display: block;
@@ -441,6 +498,11 @@ body {
       font-size: 1rem;
       margin: 0 !important; /* heart-lines.less override */
     }
+  }
+
+  // nov26-2 variants: blue-tinted card shadow to suit the blue background
+  .appeal-gradient-2 ~ .letter-container {
+    box-shadow: 0 12px 20px 0 rgba(82, 85, 169, 0.2);
   }
 
   #donate-button-container {
