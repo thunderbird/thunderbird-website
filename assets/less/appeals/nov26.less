@@ -204,15 +204,98 @@ body {
         background-size: 120px 120px;
       }
 
-      // nov26-2 variants: static blue gradient + decorative image at the top centre
+      // nov26-2 variants: static pastel background, drawn in three layers.
+      // 1. this element: vertical white-to-blue base gradient
+      // 2. .pastel-glow: diagonal lavender/pink/peach field, faded out by an
+      //    elliptical mask
+      // 3. .envelope-trail: the ribbon of envelopes (2560x625 image)
+      // The glow and the trail share one width, so they scale together:
+      // 1280px at 375px, 1792px at 768px and 2560px (design size) on desktop.
       &.appeal-gradient-2 {
-        background:
-          url('/media/img/thunderbird/appeal/nov26/background-top-center.png') top center / clamp(80rem, calc(130.3vw + 49.45rem), 160rem) auto no-repeat,
-          linear-gradient(180deg,
-            rgba(128, 194, 245, 0) 0%,
-            rgba(189, 202, 248, .5) 36.17%,
-            #5366b2 103.33%),
-          #ffffff;
+        --art-width: clamp(80rem, calc(130.3vw + 49.45rem), 160rem);
+        background: linear-gradient(180deg,
+            #ffffff 0%,
+            #f7fbfe 5%,
+            #f1f8fe 10%,
+            #ebf4fd 15%,
+            #e7f1fd 20%,
+            #e3edfc 25%,
+            #e1eafc 30%,
+            #dfe7fc 35%,
+            #dee5fb 40%,
+            #d8dff9 45%,
+            #d2daf6 50%,
+            #cbd3f3 55%,
+            #c4cdef 60%,
+            #bcc6eb 65%,
+            #b3bee7 70%,
+            #abb6e2 75%,
+            #a1aedd 80%,
+            #98a5d8 85%,
+            #8e9cd2 90%,
+            #8392cc 95%,
+            #7888c6 100%);
+
+        .pastel-glow,
+        .envelope-trail {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: var(--art-width);
+          transform: translateX(-50%);
+          pointer-events: none;
+        }
+
+        .pastel-glow {
+          @glow-mask: radial-gradient(
+            ellipse calc(var(--art-width) * 0.5) calc(var(--art-width) * 0.31488) at 49.97% calc(var(--art-width) * 0.03083),
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 6.25%,
+            rgba(0, 0, 0, 1) 12.5%,
+            rgba(0, 0, 0, 1) 18.75%,
+            rgba(0, 0, 0, 0.999) 25%,
+            rgba(0, 0, 0, 0.998) 31.25%,
+            rgba(0, 0, 0, 0.996) 37.5%,
+            rgba(0, 0, 0, 0.99) 43.75%,
+            rgba(0, 0, 0, 0.967) 50%,
+            rgba(0, 0, 0, 0.912) 56.25%,
+            rgba(0, 0, 0, 0.805) 62.5%,
+            rgba(0, 0, 0, 0.648) 68.75%,
+            rgba(0, 0, 0, 0.452) 75%,
+            rgba(0, 0, 0, 0.267) 81.25%,
+            rgba(0, 0, 0, 0.133) 87.5%,
+            rgba(0, 0, 0, 0.052) 93.75%,
+            rgba(0, 0, 0, 0.014) 100%,
+            rgba(0, 0, 0, 0.005) 106.25%,
+            rgba(0, 0, 0, 0.002) 112.5%,
+            rgba(0, 0, 0, 0.001) 118.75%,
+            rgba(0, 0, 0, 0.001) 125%,
+            rgba(0, 0, 0, 0) 131.25%);
+          height: calc(var(--art-width) * 0.34375); // 880px at 2560px
+          background: linear-gradient(42.46deg,
+            #e6e6ff -1.09%,
+            #eef0fb 13.11%,
+            #f2f0fc 27.31%,
+            #f1f0fc 34.4%,
+            #f4eefc 41.5%,
+            #fbedf9 48.6%,
+            #feedf3 55.7%,
+            #fff0ec 62.8%,
+            #fff2e7 69.9%,
+            #fff2e6 77%,
+            #fff0ea 84.1%,
+            #fef0f0 91.2%,
+            #fafcff 100%);
+          -webkit-mask-image: @glow-mask;
+          mask-image: @glow-mask;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+        }
+
+        .envelope-trail {
+          aspect-ratio: 2560 / 625;
+          background: url('/media/img/thunderbird/appeal/nov26/background-top-center.png') center / 100% 100% no-repeat;
+        }
       }
     }
   }

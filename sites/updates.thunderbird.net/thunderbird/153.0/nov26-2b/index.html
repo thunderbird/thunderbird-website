@@ -9,9 +9,12 @@
 
 {% extends "thunderbird/153.0/nov26-1a/index.html" %}
 
-{# Static blue gradient shared by the nov26-2 variants (replaces the animated nov26-1 one). #}
+{# Static pastel background shared by the nov26-2 variants (replaces the animated nov26-1 one). #}
 {% block appeal_gradient %}
-<div class="appeal-gradient appeal-gradient-2" aria-hidden="true"></div>
+<div class="appeal-gradient appeal-gradient-2" aria-hidden="true">
+  <div class="pastel-glow"></div>
+  <div class="envelope-trail"></div>
+</div>
 {% endblock %}
 
 {% block appeal_lead %}{% endblock %}
