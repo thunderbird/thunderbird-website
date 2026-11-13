@@ -117,3 +117,11 @@ jobs:
             --service thunderbird-website-$BUILD_ENV \
             --force-new-deployment \
             --region $AWS_REGION
+
+      - name: Wait for production ECS service stability
+        if: env.DEPLOY_ENV == 'prod'
+        run: |
+          aws ecs wait services-stable \
+            --cluster thunderbird-website-$DEPLOY_ENV \
+            --services thunderbird-website-$DEPLOY_ENV \
+            --region $AWS_REGION
