@@ -1,0 +1,18 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set utm_content = utm_content|default('cta_a') %}
+{% set donation_base_url = donation_base_url|default(url('updates.153.appeal.nov26-2a.donate')) %}
+
+{# Same gradient and letter as nov26-2b, with a different title. #}
+{% extends "thunderbird/153.0/nov26-2b/index.html" %}
+
+{% block page_title %}{{ _('Funded by users, not advertisers') }}{% endblock %}
+
+{# Large line first, small line second (the reverse of the nov26-1 heading). #}
+{% block appeal_headline %}
+<h1 id="appeal-heading" class="heading-inverted" aria-label="{{ _('Funded by users, not advertisers') }}">
+  {{ _('Funded by users <span>Not advertisers</span>') }}
+</h1>
+{% endblock %}

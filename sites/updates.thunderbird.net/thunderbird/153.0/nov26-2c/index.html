@@ -1,0 +1,11 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% set fru_form_id = fru_form_id|default('nov26-2') %}
+{% set utm_content = utm_content|default('cta_c') %}
+{% set utm_campaign = utm_campaign|default('nov26-2_appeal') %}
+{% set donation_base_url = donation_base_url|default(url('updates.153.appeal.nov26-2c.donate')) %}
+
+{# Same page as nov26-1c, tracked under the nov26-2 campaign. #}
+{% extends "thunderbird/153.0/nov26-1c/index.html" %}

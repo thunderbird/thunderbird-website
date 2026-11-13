@@ -203,6 +203,100 @@ body {
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.46'/%3E%3C/svg%3E");
         background-size: 120px 120px;
       }
+
+      // nov26-2 variants: static pastel background, drawn in three layers.
+      // 1. this element: vertical white-to-blue base gradient
+      // 2. .pastel-glow: diagonal lavender/pink/peach field, faded out by an
+      //    elliptical mask
+      // 3. .envelope-trail: the ribbon of envelopes (5120x960 image)
+      // The glow and the trail share one width, so they scale together:
+      // 1280px at 375px, 1792px at 768px and 2560px (design size) on desktop.
+      &.appeal-gradient-2 {
+        --art-width: clamp(80rem, calc(130.3vw + 49.45rem), 160rem);
+        background: linear-gradient(180deg,
+            #ffffff 0%,
+            #f7fbfe 5%,
+            #f1f8fe 10%,
+            #ebf4fd 15%,
+            #e7f1fd 20%,
+            #e3edfc 25%,
+            #e1eafc 30%,
+            #dfe7fc 35%,
+            #dee5fb 40%,
+            #d8dff9 45%,
+            #d2daf6 50%,
+            #cbd3f3 55%,
+            #c4cdef 60%,
+            #bcc6eb 65%,
+            #b3bee7 70%,
+            #abb6e2 75%,
+            #a1aedd 80%,
+            #98a5d8 85%,
+            #8e9cd2 90%,
+            #8392cc 95%,
+            #7888c6 100%);
+
+        .pastel-glow,
+        .envelope-trail {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: var(--art-width);
+          transform: translateX(-50%);
+          pointer-events: none;
+        }
+
+        .pastel-glow {
+          @glow-mask: radial-gradient(
+            ellipse calc(var(--art-width) * 0.5) calc(var(--art-width) * 0.31488) at 49.97% calc(var(--art-width) * 0.03083),
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 6.25%,
+            rgba(0, 0, 0, 1) 12.5%,
+            rgba(0, 0, 0, 1) 18.75%,
+            rgba(0, 0, 0, 0.999) 25%,
+            rgba(0, 0, 0, 0.998) 31.25%,
+            rgba(0, 0, 0, 0.996) 37.5%,
+            rgba(0, 0, 0, 0.99) 43.75%,
+            rgba(0, 0, 0, 0.967) 50%,
+            rgba(0, 0, 0, 0.912) 56.25%,
+            rgba(0, 0, 0, 0.805) 62.5%,
+            rgba(0, 0, 0, 0.648) 68.75%,
+            rgba(0, 0, 0, 0.452) 75%,
+            rgba(0, 0, 0, 0.267) 81.25%,
+            rgba(0, 0, 0, 0.133) 87.5%,
+            rgba(0, 0, 0, 0.052) 93.75%,
+            rgba(0, 0, 0, 0.014) 100%,
+            rgba(0, 0, 0, 0.005) 106.25%,
+            rgba(0, 0, 0, 0.002) 112.5%,
+            rgba(0, 0, 0, 0.001) 118.75%,
+            rgba(0, 0, 0, 0.001) 125%,
+            rgba(0, 0, 0, 0) 131.25%);
+          height: calc(var(--art-width) * 0.34375); // 880px at 2560px
+          background: linear-gradient(42.46deg,
+            #e6e6ff -1.09%,
+            #eef0fb 13.11%,
+            #f2f0fc 27.31%,
+            #f1f0fc 34.4%,
+            #f4eefc 41.5%,
+            #fbedf9 48.6%,
+            #feedf3 55.7%,
+            #fff0ec 62.8%,
+            #fff2e7 69.9%,
+            #fff2e6 77%,
+            #fff0ea 84.1%,
+            #fef0f0 91.2%,
+            #fafcff 100%);
+          -webkit-mask-image: @glow-mask;
+          mask-image: @glow-mask;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+        }
+
+        .envelope-trail {
+          aspect-ratio: 5120 / 960; // 2x image, drawn 2560x480 at design size
+          background: url('/media/img/thunderbird/appeal/nov26/background-top-center.png') center / 100% 100% no-repeat;
+        }
+      }
     }
   }
 
@@ -217,6 +311,7 @@ body {
     padding: 4rem 1.25rem 5.5rem; // 40px gap + 48px button overhang
 
     header {
+      position: relative;
       z-index: 3; /* Above the roc */
     }
 
@@ -236,6 +331,21 @@ body {
     @media (min-width: @xl) {
       padding-block-start: 8.75rem;
       padding-inline: 3rem;
+    }
+  }
+
+  // nov26-2 variants: the title and card sit further down from 480px up
+  .appeal-gradient-2 + #appeal-header {
+    @media (min-width: @xs) {
+      padding-block: 6.5rem 7.75rem;
+    }
+
+    @media (min-width: @lg) {
+      padding-block-end: 9.75rem;
+    }
+
+    @media (min-width: @xl) {
+      padding-block-start: 16.75rem;
     }
   }
 
@@ -271,6 +381,11 @@ body {
       @media (min-width: @xl) {
         font-size: 2.25rem;
       }
+    }
+
+    // Small line sits under the large one instead of above it.
+    &.heading-inverted > span {
+      margin-block: 0.5rem 0;
     }
   }
 
@@ -312,6 +427,32 @@ body {
     right: 1rem;
     width: 7.5rem; // 120px
     aspect-ratio: 716 / 672;
+
+    // nov26-2 variants: wider image (roc on a cloud)
+    &.illustration-cloud {
+      aspect-ratio: 872 / 600;
+      top: 1.75rem;
+      right: 0.5rem;
+      // 140px at 375px, growing to 323px at 768px.
+      width: clamp(7.5rem, calc(46.6vw - 2.175rem), 20.1875rem);
+
+      @media (min-width: @xs) {
+        top: 2.5rem;
+        right: 1.25rem;
+      }
+
+      @media (min-width: 56rem) and (max-width: (@xl - 0.0625rem)) {
+        right: max(1.25rem, calc((100% - var(--appeal-content-width)) / 2 - 1rem));
+      }
+
+      // Anchored to the page centre like the background image (right edge
+      // 722px from the centre), but kept 24px inside narrower viewports.
+      @media (min-width: @xl) {
+        top: 7.8125rem; // 125px
+        right: max(-5.125rem, calc(41.5rem - 50vw));
+        width: 27.25rem; // 436px
+      }
+    }
 
     img {
       display: block;
@@ -441,6 +582,11 @@ body {
       font-size: 1rem;
       margin: 0 !important; /* heart-lines.less override */
     }
+  }
+
+  // nov26-2 variants: blue-tinted card shadow to suit the blue background
+  .appeal-gradient-2 ~ .letter-container {
+    box-shadow: 0 12px 20px 0 rgba(82, 85, 169, 0.2);
   }
 
   #donate-button-container {
