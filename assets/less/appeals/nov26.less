@@ -208,7 +208,7 @@ body {
       // 1. this element: vertical white-to-blue base gradient
       // 2. .pastel-glow: diagonal lavender/pink/peach field, faded out by an
       //    elliptical mask
-      // 3. .envelope-trail: the ribbon of envelopes (2560x625 image)
+      // 3. .envelope-trail: the ribbon of envelopes (5120x960 image)
       // The glow and the trail share one width, so they scale together:
       // 1280px at 375px, 1792px at 768px and 2560px (design size) on desktop.
       &.appeal-gradient-2 {
@@ -293,7 +293,7 @@ body {
         }
 
         .envelope-trail {
-          aspect-ratio: 2560 / 625;
+          aspect-ratio: 5120 / 960; // 2x image, drawn 2560x480 at design size
           background: url('/media/img/thunderbird/appeal/nov26/background-top-center.png') center / 100% 100% no-repeat;
         }
       }
