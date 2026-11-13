@@ -125,3 +125,62 @@ jobs:
             --cluster thunderbird-website-$DEPLOY_ENV \
             --services thunderbird-website-$DEPLOY_ENV \
             --region $AWS_REGION
+
+      - name: Purge production Cloudflare cache
+        if: env.DEPLOY_ENV == 'prod'
+        env:
+          CACHE_PURGE_CONFIG: ${{ vars.CACHE_PURGE_CONFIG }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          die() { printf '%s\n' "$1" >&2; exit 1; }
+          config=${CACHE_PURGE_CONFIG-}
+          token=${CLOUDFLARE_API_TOKEN-}
+          config_present=${config//[[:space:]]/}
+          token_present=${token//[[:space:]]/}
+          [ -n "$config_present" ] || die "Cloudflare purge configuration is missing"
+          [ -n "$token_present" ] || die "Cloudflare API token is missing"
+          case "$token" in
+            *[[:space:]]*) die "Cloudflare API token is missing" ;;
+          esac
+          unset config_present token_present
+          # jq can print the rejected document, so keep its diagnostics off the log.
+          plans=$(printf '%s' "$config" | jq -ce '
+            def plan:
+              if type != "object" then error("zone")
+              elif (.id | type) != "string" or ((.id | test("^[0-9a-fA-F]{32}$")) | not) then error("id")
+              elif (has("hosts") and has("purge_everything")) then error("ambiguous")
+              elif has("hosts") then
+                if (.hosts | type) != "array" or (.hosts | length) == 0
+                   or any(.hosts[]; type != "string" or length == 0) then error("hosts")
+                else {id, payload: {hosts}} end
+              elif .purge_everything == true then {id, payload: {purge_everything: true}}
+              else error("scope") end;
+            if type != "object" or (.zones | type) != "array" or (.zones | length) == 0 then error("config")
+            else .zones[] | plan end
+          ' 2>/dev/null) || die "Cloudflare purge configuration is invalid"
+          [ -n "$plans" ] || die "Cloudflare purge configuration is invalid"
+          body=
+          trap '[ -n "${body:-}" ] && rm -f "$body"' EXIT
+          while IFS= read -r plan; do
+            zone_id=$(printf '%s' "$plan" | jq -er '.id') || die "Cloudflare purge configuration is invalid"
+            payload=$(printf '%s' "$plan" | jq -ce '.payload') || die "Cloudflare purge configuration is invalid"
+            body=$(mktemp)
+            # -q blocks a curlrc from following redirects or tracing the token.
+            if ! code=$(curl -q --silent --show-error \
+                --connect-timeout 10 --max-time 30 \
+                --output "$body" --write-out '%{http_code}' \
+                --request POST \
+                --header "Authorization: Bearer ${token}" \
+                --header 'Content-Type: application/json' \
+                --data "$payload" \
+                "https://api.cloudflare.com/client/v4/zones/${zone_id}/purge_cache"); then
+              die "Cloudflare purge request failed for zone ${zone_id}"
+            fi
+            # Accept only a single JSON object. jq's exit status is the decision.
+            if [ "$code" != "200" ] || ! jq -e -s 'length == 1 and (.[0] | type) == "object" and .[0].success == true' "$body" >/dev/null; then
+              die "Cloudflare purge for zone ${zone_id} was not accepted (HTTP ${code})"
+            fi
+            rm -f "$body"
+            body=
+          done <<< "$plans"
