@@ -136,16 +136,12 @@ jobs:
           die() { printf '%s\n' "$1" >&2; exit 1; }
           config=${CACHE_PURGE_CONFIG-}
           token=${CLOUDFLARE_API_TOKEN-}
-          config_present=${config//[[:space:]]/}
-          token_present=${token//[[:space:]]/}
-          [ -n "$config_present" ] || die "Cloudflare purge configuration is missing"
-          [ -n "$token_present" ] || die "Cloudflare API token is missing"
           case "$token" in
-            *[[:space:]]*) die "Cloudflare API token is missing" ;;
+            ''|*[[:space:]]*) die "Cloudflare API token is missing" ;;
           esac
-          unset config_present token_present
-          # jq can print the rejected document, so keep its diagnostics off the log.
-          plans=$(printf '%s' "$config" | jq -ce '
+          # Slurp so a second document cannot yield plans. jq can print a
+          # rejected document, so keep its diagnostics off the log.
+          plans=$(printf '%s' "$config" | jq -ce -s '
             def plan:
               if type != "object" then error("zone")
               elif (.id | type) != "string" or ((.id | test("^[0-9a-fA-F]{32}$")) | not) then error("id")
@@ -156,8 +152,9 @@ jobs:
                 else {id, payload: {hosts}} end
               elif .purge_everything == true then {id, payload: {purge_everything: true}}
               else error("scope") end;
-            if type != "object" or (.zones | type) != "array" or (.zones | length) == 0 then error("config")
-            else .zones[] | plan end
+            if length != 1 or (.[0] | type) != "object"
+               or (.[0].zones | type) != "array" or (.[0].zones | length) == 0 then error("config")
+            else .[0].zones[] | plan end
           ' 2>/dev/null) || die "Cloudflare purge configuration is invalid"
           [ -n "$plans" ] || die "Cloudflare purge configuration is invalid"
           body=
