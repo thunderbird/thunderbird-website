@@ -26,7 +26,7 @@ permissions:
 
 concurrency:
   group: deploy-${{ github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage' }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ (github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage') != 'prod' }}
 
 jobs:
   deploy:
