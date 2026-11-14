@@ -117,6 +117,8 @@ Runs on every push/PR to `master`:
 - Builds the `website` target with `BUILD_ENV=local`, skipping the Lambda extension so fork PRs do not need AWS credentials
 - Runs pytest inside the container
 
+Changed-host purge tests: `pytest tests/test_purge_cloudflare.py`. The deployment workflow does not call `tools/purge-cloudflare.py` yet.
+
 ### Build and Deploy (`deploy.yml`)
 
 Triggered by:
