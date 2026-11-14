@@ -84,6 +84,8 @@ The container is defined in `docker/Dockerfile`. All environments build from sou
 
 All environments compile translations and build all sites from source.
 
+The release-notes Atom feed takes its `<updated>` time from the included release dates, not from the build clock. Rebuilding the same notes leaves that timestamp unchanged. An entry uses the product-details release date when one exists, and the note's `release_date` otherwise. Edits to the note text are not dated, so they do not move the feed timestamp.
+
 The default final stage, `lambda`, includes the Lambda Web Adapter for preview deployments.
 The `website` stage contains the same application without the Lambda extension and can be
 built with `--target website` when running outside Lambda.

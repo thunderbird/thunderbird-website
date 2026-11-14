@@ -474,6 +474,7 @@ class Site(object):
         }
 
         entries = []
+        entry_updates = []
         for item in feed_items_mixed:
             version = item[0]
             note = item[1]
@@ -525,6 +526,13 @@ class Site(object):
                 'published': published_date.isoformat(),
                 'updated': updated_date.isoformat(),
             })
+            # Entry updates are product-details dates, or the note release_date
+            # when product-details has none. Note text has no date of its own.
+            entry_updates.append(updated_date)
+
+        # Newest included entry update. A rebuild does not move this.
+        if entry_updates:
+            feed_context['feed_updated'] = max(entry_updates).isoformat()
 
         # Render our atom template and write it to atom.xml
         feed_xml = feed_template.render({'entries': entries, **feed_context})
