@@ -117,7 +117,7 @@ Runs on every push/PR to `master`:
 - Builds the `website` target with `BUILD_ENV=local`, skipping the Lambda extension so fork PRs do not need AWS credentials
 - Runs pytest inside the container
 
-Changed-host purge tests: `pytest tests/test_purge_cloudflare.py`. The deployment workflow does not call `tools/purge-cloudflare.py` yet.
+Changed-host purge tests: `pytest tests/test_purge_cloudflare.py`.
 
 ### Build and Deploy (`deploy.yml`)
 
@@ -133,47 +133,22 @@ Steps:
 2. Extract built static files and commit to `tb-website-builds`
 3. Deploy infrastructure with Pulumi
 4. Force ECS service update
-5. On production, wait until the ECS service is stable, then purge each configured Cloudflare zone
+5. On production, wait until the ECS service is stable, then purge hostnames affected by the published diff
 
 Stage stops after the ECS update. It does not purge.
 
 #### Production cache purge
 
-The production job reads `vars.CACHE_PURGE_CONFIG` and `secrets.CLOUDFLARE_API_TOKEN`. This repository does not contain those values. Create the variable and secret where the production job can read them before expecting a production deploy to purge.
-
-`CACHE_PURGE_CONFIG` must be exactly one JSON object with a nonempty `zones` array. Each zone has a 32-character hexadecimal `id` and exactly one scope:
-
-- `hosts`: a nonempty array of nonempty hostnames
-- `purge_everything`: boolean `true`
-
-Setting both, setting neither, or using the string `"true"` is invalid. Several JSON documents concatenated in one value are also invalid.
-
-`CLOUDFLARE_API_TOKEN` is one token for every configured zone. Give it Cloudflare's Cache Purge permission, limited to those zones. A missing token, an empty token, or a token that contains whitespace fails the job before any request.
-
-The example below uses dummy zone IDs and example hostnames. It is not a production configuration.
+Production runs `tools/purge-cloudflare.py` after the ECS service is ready. The script reads the paths staged for that publication and purges the hostnames those paths affect. Set `vars.CLOUDFLARE_ZONES` to a domain-to-zone-id map and `secrets.CLOUDFLARE_API_TOKEN` to a token that can purge those zones. This repository does not contain either value.
 
 ```json
 {
-  "zones": [
-    {
-      "id": "0123456789abcdef0123456789abcdef",
-      "hosts": ["www.example.net", "start.example.net"]
-    },
-    {
-      "id": "fedcba9876543210fedcba9876543210",
-      "purge_everything": true
-    }
-  ]
+  "thunderbird.net": "0123456789abcdef0123456789abcdef",
+  "tb.pro": "fedcba9876543210fedcba9876543210"
 }
 ```
 
-The first zone is posted as `{"hosts":["www.example.net","start.example.net"]}`. The second is posted as `{"purge_everything":true}`. Each request goes to `https://api.cloudflare.com/client/v4/zones/{id}/purge_cache`.
-
-Missing or invalid configuration fails the job before those requests. The ECS update and stability wait have already finished, and a failed purge leaves that deployment in place.
-
-A failed connection, a timeout, an HTTP status other than 200, or a body that is not one JSON object with boolean `success` set to `true` fails the job. An earlier zone may already have been purged. Rerun the production job to send every configured purge again. Duplicate purges are acceptable. The workflow keeps no purge state and does not reconcile a partial purge.
-
-Cloudflare accepting the request does not show that every cache has evicted the content.
+The ids above are examples. A missing configuration, a missing path list, or a failed purge request is reported and does not fail the deployment. A failed publication, ECS update, or readiness check still fails the deployment and does not purge. A failed purge is not retried. Cloudflare accepting a request does not show that every cache has dropped the content.
 
 ### PR Preview (`preview.yml`)
 

@@ -2,6 +2,8 @@ import importlib.util
 import json
 import os
 import socket
+import subprocess
+import sys
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -259,3 +261,216 @@ class TestPurgeCloudflare:
         assert purge.TIMEOUT - 1 <= elapsed <= purge.TIMEOUT + 5
         assert TOKEN not in capsys.readouterr().err
         server.server_close()
+
+
+WORKFLOW = Path(__file__).resolve().parents[1] / ".github/workflows/deploy.yml"
+
+
+def workflow_text():
+    return WORKFLOW.read_text()
+
+
+def publication_capture_script():
+    """Return the publish commands from git add through the commit, excluding push."""
+    lines = workflow_text().splitlines()
+    start = next(i for i, line in enumerate(lines) if line.strip() == "git add -A")
+    end = next(i for i, line in enumerate(lines) if line.strip() == "git push")
+    assert start < end
+    body = "\n".join(lines[start:end])
+    assert "git diff --cached --name-only --no-renames -z" in body
+    assert "${{ secrets.TB_BUILDS_GIT_EMAIL }}" in body
+    assert "BUILD_MESSAGE" in body
+    assert "git push" not in body
+    # Actions expands the expression before bash starts. The shell that
+    # actually runs cannot contain the raw ${{ }} form.
+    return body.replace("${{ secrets.TB_BUILDS_GIT_EMAIL }}", "bot@example.com") + "\n"
+
+
+def git_env(runner, home):
+    env = os.environ.copy()
+    env.update({
+        "HOME": str(home),
+        "RUNNER_TEMP": str(runner),
+        "BUILD_MESSAGE": "slice3 publication",
+        "GIT_CONFIG_GLOBAL": os.devnull,
+        "GIT_CONFIG_SYSTEM": os.devnull,
+    })
+    return env
+
+
+def git(repo, env, *args):
+    subprocess.run(["git", *args], cwd=repo, env=env, check=True)
+
+
+def init_publication(repo, env):
+    repo.mkdir()
+    git(repo, env, "init", "-b", "main")
+    for directory in ("www.thunderbird.net", "start.thunderbird.net"):
+        (repo / directory).mkdir()
+    (repo / "www.thunderbird.net" / "keep.html").write_text("keep\n")
+    (repo / "www.thunderbird.net" / "old.html").write_text("old\n")
+    (repo / "start.thunderbird.net" / "gone.html").write_text("gone\n")
+    git(repo, env, "add", "-A")
+    git(repo, env, "-c", "user.name=Test", "-c", "user.email=test@example.com", "commit", "-m", "base")
+
+
+def run_capture(repo, env):
+    return subprocess.run(
+        ["bash", "--noprofile", "--norc", "-eo", "pipefail", "-c", publication_capture_script()],
+        cwd=repo,
+        env=env,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+
+
+def nul_paths(filename):
+    data = Path(filename).read_bytes()
+    return [item.decode() for item in data.split(b"\0") if item]
+
+
+class TestPublicationWiring:
+    def test_staged_changes_remain_after_commit(self, tmp_path, monkeypatch):
+        repo = tmp_path / "publication"
+        runner = tmp_path / "runner"
+        runner.mkdir()
+        env = git_env(runner, tmp_path / "home")
+        init_publication(repo, env)
+        (repo / "www.thunderbird.net" / "keep.html").write_text("changed\n")
+        (repo / "updates.thunderbird.net").mkdir()
+        (repo / "updates.thunderbird.net" / "new.html").write_text("new\n")
+        (repo / "start.thunderbird.net" / "gone.html").unlink()
+        git(repo, env, "mv", "www.thunderbird.net/old.html", "www.thunderbird.net/renamed.html")
+
+        result = run_capture(repo, env)
+        assert result.returncode == 0, result.stderr
+        captured = runner / "publication-changes"
+        assert set(nul_paths(captured)) == {
+            "www.thunderbird.net/keep.html",
+            "www.thunderbird.net/old.html",
+            "www.thunderbird.net/renamed.html",
+            "start.thunderbird.net/gone.html",
+            "updates.thunderbird.net/new.html",
+        }
+        message = subprocess.check_output(
+            ["git", "log", "-1", "--format=%s"], cwd=repo, env=env, text=True,
+        )
+        assert message.strip() == "Website rebuild triggered by slice3 publication"
+        assert set(nul_paths(captured)) == {
+            "www.thunderbird.net/keep.html",
+            "www.thunderbird.net/old.html",
+            "www.thunderbird.net/renamed.html",
+            "start.thunderbird.net/gone.html",
+            "updates.thunderbird.net/new.html",
+        }
+
+        server = serve("ok")
+        use_server(monkeypatch, server)
+        assert run(monkeypatch, str(captured)) == 0
+        assert len(bodies(server)) == 1
+        assert set(bodies(server)[0]["hosts"]) == {
+            "www.thunderbird.net",
+            "start.thunderbird.net",
+            "updates.thunderbird.net",
+        }
+
+        again = run_capture(repo, env)
+        assert again.returncode == 0, again.stderr
+        assert nul_paths(captured) == []
+        called = []
+        monkeypatch.setattr(purge.http.client, "HTTPSConnection", lambda *args, **kwargs: called.append(args))
+        assert run(monkeypatch, str(captured)) == 0
+        assert called == []
+
+    def test_failed_capture_does_not_fail_publication_or_leave_a_diff(self, tmp_path):
+        repo = tmp_path / "publication"
+        runner = tmp_path / "runner"
+        runner.mkdir()
+        env = git_env(runner, tmp_path / "home")
+        init_publication(repo, env)
+        (repo / "www.thunderbird.net" / "keep.html").write_text("changed\n")
+        stale = runner / "publication-changes"
+        stale.write_bytes(b"www.thunderbird.net/stale\0")
+        (runner / "publication-changes.partial").mkdir()
+
+        result = run_capture(repo, env)
+        assert result.returncode == 0, result.stderr
+        assert "production cache purge will be skipped" in result.stdout + result.stderr
+        assert not stale.exists()
+        assert b"stale" not in result.stdout.encode()
+        message = subprocess.check_output(
+            ["git", "log", "-1", "--format=%s"], cwd=repo, env=env, text=True,
+        )
+        assert "slice3 publication" in message
+
+        missing = runner / "publication-changes"
+        proc = subprocess.run(
+            [sys.executable, str(SCRIPT), str(missing)],
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        assert proc.returncode != 0
+        assert "Could not read changed paths" in proc.stderr
+        assert TOKEN not in proc.stderr
+
+    def test_publication_outside_a_repository_fails_before_purge(self, tmp_path):
+        repo = tmp_path / "not-a-repo"
+        repo.mkdir()
+        runner = tmp_path / "runner"
+        runner.mkdir()
+        result = run_capture(repo, git_env(runner, tmp_path / "home"))
+        assert result.returncode != 0
+        assert not (runner / "publication-changes").exists()
+
+    def test_yaml_runs_purge_only_after_successful_production_readiness(self):
+        text = workflow_text()
+        names = []
+        current = None
+        steps = []
+        for line in text.splitlines():
+            if line.startswith("      - name: "):
+                current = {
+                    "name": line.split("name: ", 1)[1],
+                    "if": None,
+                    "continue_on_error": False,
+                }
+                steps.append(current)
+                names.append(current["name"])
+            elif current is not None and line.startswith("        if: "):
+                current["if"] = line.split("if: ", 1)[1]
+            elif current is not None and line.strip() == "continue-on-error: true":
+                current["continue_on_error"] = True
+
+        order = [
+            "Publish to tb-website-builds",
+            "Update ECS service",
+            "Wait for production ECS service stability",
+            "Purge changed production hosts",
+        ]
+        positions = [names.index(name) for name in order]
+        assert positions == sorted(positions)
+        purge_step = next(step for step in steps if step["name"] == order[-1])
+        wait_step = next(step for step in steps if step["name"] == order[-2])
+        assert purge_step["if"] == "env.DEPLOY_ENV == 'prod'"
+        assert wait_step["if"] == "env.DEPLOY_ENV == 'prod'"
+        assert purge_step["continue_on_error"] is True
+        assert sum(step["continue_on_error"] for step in steps) == 1
+        for step in (purge_step, wait_step):
+            assert not any(token in (step["if"] or "") for token in ("success(", "failure(", "always(", "cancelled("))
+        assert "CACHE_PURGE_CONFIG" not in text
+        assert "vars.CLOUDFLARE_ZONES" in text
+        assert "secrets.CLOUDFLARE_API_TOKEN" in text
+        assert 'python3 tools/purge-cloudflare.py "$RUNNER_TEMP/publication-changes"' in text
+        assert "AWS_MAX_ATTEMPTS" not in text
+        assert "cancel-in-progress:" in text
+
+        # GitHub supplies success() when an if has no status function. This is
+        # that documented rule, not a live workflow run.
+        def purge_runs(deploy_env, prior_steps_succeeded):
+            return prior_steps_succeeded and deploy_env == "prod"
+
+        assert purge_runs("prod", True) is True
+        assert purge_runs("prod", False) is False
+        assert purge_runs("stage", True) is False

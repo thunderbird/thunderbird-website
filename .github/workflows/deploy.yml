@@ -92,6 +92,15 @@ jobs:
           find . -maxdepth 1 ! -name '.git' ! -name 'README.md' ! -name '.' -exec rm -rf {} +
           docker cp extract:/var/www/html/start/. .
           git add -A
+          # Keep this run's staged paths only after git diff exits 0, so a
+          # failed capture is not later read as a partial diff.
+          changes="${RUNNER_TEMP}/publication-changes"
+          partial="${changes}.partial"
+          rm -f "$changes" "$partial" || true
+          if ! git diff --cached --name-only --no-renames -z > "$partial" || ! mv "$partial" "$changes"; then
+            echo "::warning::Could not capture the publication diff; production cache purge will be skipped"
+            rm -f "$partial" || true
+          fi
           git diff --cached --quiet || \
             git -c user.name="Thundernest Bot" -c user.email="${{ secrets.TB_BUILDS_GIT_EMAIL }}" \
               commit -m "Website rebuild triggered by $BUILD_MESSAGE"
@@ -126,58 +135,10 @@ jobs:
             --services thunderbird-website-$DEPLOY_ENV \
             --region $AWS_REGION
 
-      - name: Purge production Cloudflare cache
+      - name: Purge changed production hosts
         if: env.DEPLOY_ENV == 'prod'
+        continue-on-error: true
         env:
-          CACHE_PURGE_CONFIG: ${{ vars.CACHE_PURGE_CONFIG }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: |
-          set -euo pipefail
-          die() { printf '%s\n' "$1" >&2; exit 1; }
-          config=${CACHE_PURGE_CONFIG-}
-          token=${CLOUDFLARE_API_TOKEN-}
-          case "$token" in
-            ''|*[[:space:]]*) die "Cloudflare API token is missing" ;;
-          esac
-          # Slurp so a second document cannot yield plans. jq can print a
-          # rejected document, so keep its diagnostics off the log.
-          plans=$(printf '%s' "$config" | jq -ce -s '
-            def plan:
-              if type != "object" then error("zone")
-              elif (.id | type) != "string" or ((.id | test("^[0-9a-fA-F]{32}$")) | not) then error("id")
-              elif (has("hosts") and has("purge_everything")) then error("ambiguous")
-              elif has("hosts") then
-                if (.hosts | type) != "array" or (.hosts | length) == 0
-                   or any(.hosts[]; type != "string" or length == 0) then error("hosts")
-                else {id, payload: {hosts}} end
-              elif .purge_everything == true then {id, payload: {purge_everything: true}}
-              else error("scope") end;
-            if length != 1 or (.[0] | type) != "object"
-               or (.[0].zones | type) != "array" or (.[0].zones | length) == 0 then error("config")
-            else .[0].zones[] | plan end
-          ' 2>/dev/null) || die "Cloudflare purge configuration is invalid"
-          [ -n "$plans" ] || die "Cloudflare purge configuration is invalid"
-          body=
-          trap '[ -n "${body:-}" ] && rm -f "$body"' EXIT
-          while IFS= read -r plan; do
-            zone_id=$(printf '%s' "$plan" | jq -er '.id') || die "Cloudflare purge configuration is invalid"
-            payload=$(printf '%s' "$plan" | jq -ce '.payload') || die "Cloudflare purge configuration is invalid"
-            body=$(mktemp)
-            # -q blocks a curlrc from following redirects or tracing the token.
-            if ! code=$(curl -q --silent --show-error \
-                --connect-timeout 10 --max-time 30 \
-                --output "$body" --write-out '%{http_code}' \
-                --request POST \
-                --header "Authorization: Bearer ${token}" \
-                --header 'Content-Type: application/json' \
-                --data "$payload" \
-                "https://api.cloudflare.com/client/v4/zones/${zone_id}/purge_cache"); then
-              die "Cloudflare purge request failed for zone ${zone_id}"
-            fi
-            # Accept only a single JSON object. jq's exit status is the decision.
-            if [ "$code" != "200" ] || ! jq -e -s 'length == 1 and (.[0] | type) == "object" and .[0].success == true' "$body" >/dev/null; then
-              die "Cloudflare purge for zone ${zone_id} was not accepted (HTTP ${code})"
-            fi
-            rm -f "$body"
-            body=
-          done <<< "$plans"
+          CLOUDFLARE_ZONES: ${{ vars.CLOUDFLARE_ZONES }}
+        run: python3 tools/purge-cloudflare.py "$RUNNER_TEMP/publication-changes"
