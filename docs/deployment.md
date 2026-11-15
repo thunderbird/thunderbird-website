@@ -148,7 +148,7 @@ Production runs `tools/purge-cloudflare.py` after the ECS service is ready. The 
 }
 ```
 
-The ids above are examples. A missing configuration, a missing path list, or a failed purge request is reported and does not fail the deployment. A failed publication, ECS update, or readiness check still fails the deployment and does not purge. A failed purge is not retried. Cloudflare accepting a request does not show that every cache has dropped the content.
+The ids above are examples. A missing configuration, a missing path list, or a failed purge request is reported and does not fail the deployment. A failed publication, ECS update, or readiness check still fails the deployment and does not purge. Failed purges are not retried or saved for recovery; later runs consider only their own publication diff. Cloudflare accepting a request does not show that every cache has dropped the content.
 
 ### PR Preview (`preview.yml`)
 
