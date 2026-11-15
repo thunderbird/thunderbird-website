@@ -26,7 +26,7 @@ permissions:
 
 concurrency:
   group: deploy-${{ github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage' }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ (github.event.inputs.environment || github.event.action || (github.ref_name == 'prod' && 'prod') || 'stage') != 'prod' }}
 
 jobs:
   deploy:
@@ -92,6 +92,15 @@ jobs:
           find . -maxdepth 1 ! -name '.git' ! -name 'README.md' ! -name '.' -exec rm -rf {} +
           docker cp extract:/var/www/html/start/. .
           git add -A
+          # Keep this run's staged paths only after git diff exits 0, so a
+          # failed capture is not later read as a partial diff.
+          changes="${RUNNER_TEMP}/publication-changes"
+          partial="${changes}.partial"
+          rm -f "$changes" "$partial" || true
+          if ! git diff --cached --name-only --no-renames -z > "$partial" || ! mv "$partial" "$changes"; then
+            echo "::warning::Could not capture the publication diff; production cache purge will be skipped"
+            rm -f "$partial" || true
+          fi
           git diff --cached --quiet || \
             git -c user.name="Thundernest Bot" -c user.email="${{ secrets.TB_BUILDS_GIT_EMAIL }}" \
               commit -m "Website rebuild triggered by $BUILD_MESSAGE"
@@ -117,3 +126,19 @@ jobs:
             --service thunderbird-website-$BUILD_ENV \
             --force-new-deployment \
             --region $AWS_REGION
+
+      - name: Wait for production ECS service stability
+        if: env.DEPLOY_ENV == 'prod'
+        run: |
+          aws ecs wait services-stable \
+            --cluster thunderbird-website-$DEPLOY_ENV \
+            --services thunderbird-website-$DEPLOY_ENV \
+            --region $AWS_REGION
+
+      - name: Purge changed production hosts
+        if: env.DEPLOY_ENV == 'prod'
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONES: ${{ vars.CLOUDFLARE_ZONES }}
+        run: python3 tools/purge-cloudflare.py "$RUNNER_TEMP/publication-changes"

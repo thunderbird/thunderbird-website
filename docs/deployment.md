@@ -84,6 +84,8 @@ The container is defined in `docker/Dockerfile`. All environments build from sou
 
 All environments compile translations and build all sites from source.
 
+The release-notes Atom feed takes its `<updated>` time from the included release dates, not from the build clock. Rebuilding the same notes leaves that timestamp unchanged. An entry uses the product-details release date when one exists, and the note's `release_date` otherwise. Edits to the note text are not dated, so they do not move the feed timestamp.
+
 The default final stage, `lambda`, includes the Lambda Web Adapter for preview deployments.
 The `website` stage contains the same application without the Lambda extension and can be
 built with `--target website` when running outside Lambda.
@@ -115,6 +117,8 @@ Runs on every push/PR to `master`:
 - Builds the `website` target with `BUILD_ENV=local`, skipping the Lambda extension so fork PRs do not need AWS credentials
 - Runs pytest inside the container
 
+Changed-host purge tests: `pytest tests/test_purge_cloudflare.py`.
+
 ### Build and Deploy (`deploy.yml`)
 
 Triggered by:
@@ -122,11 +126,29 @@ Triggered by:
 - Manual workflow dispatch
 - Repository dispatch (from external repos like thunderbird-notes, l10n, product-details)
 
+A production run does not cancel a production deployment that is already in progress.
+
 Steps:
 1. Build Docker image from source and push to ECR
 2. Extract built static files and commit to `tb-website-builds`
 3. Deploy infrastructure with Pulumi
 4. Force ECS service update
+5. On production, wait until the ECS service is stable, then purge hostnames affected by the published diff
+
+Stage stops after the ECS update. It does not purge.
+
+#### Production cache purge
+
+Production runs `tools/purge-cloudflare.py` after the ECS service is ready. The script reads the paths staged for that publication and purges the hostnames those paths affect. Set `vars.CLOUDFLARE_ZONES` to a domain-to-zone-id map and `secrets.CLOUDFLARE_API_TOKEN` to a token that can purge those zones. This repository does not contain either value.
+
+```json
+{
+  "thunderbird.net": "0123456789abcdef0123456789abcdef",
+  "tb.pro": "fedcba9876543210fedcba9876543210"
+}
+```
+
+The ids above are examples. A missing configuration, a missing path list, or a failed purge request is reported and does not fail the deployment. A failed publication, ECS update, or readiness check still fails the deployment and does not purge. Failed purges are not retried or saved for recovery; later runs consider only their own publication diff. Cloudflare accepting a request does not show that every cache has dropped the content.
 
 ### PR Preview (`preview.yml`)
 
@@ -168,6 +190,7 @@ Preview deployments depend on: a `*.thunderbird.dev` ACM wildcard certificate (A
 
 - **`TB_BUILDS_KEY`**: GitHub PAT or App token with `contents:write` on `thunderbird/tb-website-builds`, used to push built static files.
 - **`TB_BUILDS_GIT_EMAIL`**: Committer email for the bot identity used in `tb-website-builds` commits.
+- **`CLOUDFLARE_API_TOKEN`**: Bearer token for the production Cloudflare purge described above. Not stored in this repository.
 
 ### OIDC
 
