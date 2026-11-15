@@ -2,6 +2,8 @@ import datetime
 import os
 import xml.etree.ElementTree as ET
 
+import pytest
+
 import builder
 import settings
 
@@ -41,24 +43,24 @@ def parsed_feed(xml):
     return root.find("a:updated", ATOM).text, entries
 
 
+@pytest.fixture
+def feed_site(tmp_path, monkeypatch):
+    dates = {}
+    monkeypatch.setattr(
+        builder.thunderbird_desktop,
+        "get_release_date",
+        lambda version: dates.get(version, ""),
+    )
+    site = builder.Site(["en-US"], settings.WEBSITE_PATH, str(tmp_path), {})
+    site._switch_lang("en-US")
+    os.makedirs(os.path.join(site.outpath, "thunderbird", "releases"))
+    return site, dates
+
+
 class TestNotesFeed:
-    def setup_method(self):
-        self.dates = {}
-
-    def _site(self, tmp_path, monkeypatch):
-        monkeypatch.setattr(
-            builder.thunderbird_desktop,
-            "get_release_date",
-            lambda version: self.dates.get(version, ""),
-        )
-        site = builder.Site(["en-US"], settings.WEBSITE_PATH, str(tmp_path), {})
-        site._switch_lang("en-US")
-        os.makedirs(os.path.join(site.outpath, "thunderbird", "releases"))
-        return site
-
-    def test_unchanged_notes_keep_the_same_feed_timestamp(self, tmp_path, monkeypatch):
+    def test_unchanged_notes_keep_the_same_feed_timestamp(self, feed_site):
         """The feed timestamp comes from release dates, not the build clock."""
-        site = self._site(tmp_path, monkeypatch)
+        site, _dates = feed_site
         items = [("1.0", release_note(datetime.datetime(2024, 1, 10), "Original note"))]
         site._env.globals["NOW"] = datetime.datetime(2020, 1, 1, tzinfo=datetime.UTC)
         first = render_feed(site, items)
@@ -73,28 +75,33 @@ class TestNotesFeed:
         assert entries[0]["published"] == "2024-01-10T00:00:00+00:00"
         assert entries[0]["updated"] == "2024-01-10T00:00:00+00:00"
 
-    def test_changed_release_date_moves_the_feed_timestamp(self, tmp_path, monkeypatch):
-        """A newer included release date becomes the feed timestamp."""
-        site = self._site(tmp_path, monkeypatch)
+    def test_note_release_date_is_the_update_without_product_details(self, feed_site):
+        """Without a product-details date, entry updates follow the note release date."""
+        site, _dates = feed_site
         older = release_note(datetime.datetime(2024, 1, 10), "Older release")
         newer = release_note(datetime.datetime(2024, 5, 1), "Newer release")
         updated, entries = parsed_feed(render_feed(site, [("1.0", older), ("2.0", newer)]))
 
         assert [entry["title"] for entry in entries] == ["Thunderbird 2.0", "Thunderbird 1.0"]
         assert entries[0]["published"] == "2024-05-01T00:00:00+00:00"
+        assert entries[0]["updated"] == "2024-05-01T00:00:00+00:00"
         assert entries[1]["published"] == "2024-01-10T00:00:00+00:00"
+        assert entries[1]["updated"] == "2024-01-10T00:00:00+00:00"
         assert updated == "2024-05-01T00:00:00+00:00"
 
         newer["release"]["release_date"] = datetime.datetime(2024, 8, 1)
         updated, entries = parsed_feed(render_feed(site, [("1.0", older), ("2.0", newer)]))
         assert [entry["title"] for entry in entries] == ["Thunderbird 2.0", "Thunderbird 1.0"]
+        assert entries[0]["published"] == "2024-08-01T00:00:00+00:00"
         assert entries[0]["updated"] == "2024-08-01T00:00:00+00:00"
+        assert entries[1]["published"] == "2024-01-10T00:00:00+00:00"
+        assert entries[1]["updated"] == "2024-01-10T00:00:00+00:00"
         assert updated == "2024-08-01T00:00:00+00:00"
 
-    def test_product_details_date_is_the_entry_update(self, tmp_path, monkeypatch):
-        """Product-details supplies entry updates and can move the feed timestamp without reordering."""
-        self.dates = {"1.0": "2024-01-11", "2.0": "2024-05-02"}
-        site = self._site(tmp_path, monkeypatch)
+    def test_product_details_date_is_the_entry_update(self, feed_site):
+        """A product-details date supplies the update and can move the feed maximum without reordering."""
+        site, dates = feed_site
+        dates.update({"1.0": "2024-01-11", "2.0": "2024-05-02"})
         older = release_note(datetime.datetime(2024, 1, 10), "Older release")
         newer = release_note(datetime.datetime(2024, 5, 1), "Newer release")
         updated, entries = parsed_feed(render_feed(site, [("1.0", older), ("2.0", newer)]))
@@ -106,15 +113,18 @@ class TestNotesFeed:
         assert entries[1]["updated"] == "2024-01-11T00:00:00+00:00"
         assert updated == "2024-05-02T00:00:00+00:00"
 
-        self.dates["1.0"] = "2024-08-01"
+        dates["1.0"] = "2024-08-01"
         updated, entries = parsed_feed(render_feed(site, [("1.0", older), ("2.0", newer)]))
         assert [entry["title"] for entry in entries] == ["Thunderbird 2.0", "Thunderbird 1.0"]
+        assert entries[0]["published"] == "2024-05-01T00:00:00+00:00"
+        assert entries[0]["updated"] == "2024-05-02T00:00:00+00:00"
+        assert entries[1]["published"] == "2024-01-10T00:00:00+00:00"
         assert entries[1]["updated"] == "2024-08-01T00:00:00+00:00"
         assert updated == "2024-08-01T00:00:00+00:00"
 
-    def test_note_text_changes_the_entry_but_not_the_timestamp(self, tmp_path, monkeypatch):
+    def test_note_text_changes_the_entry_but_not_the_timestamp(self, feed_site):
         """Note text is rendered, but it has no date, so the feed timestamp stays put."""
-        site = self._site(tmp_path, monkeypatch)
+        site, _dates = feed_site
         note = release_note(datetime.datetime(2024, 5, 1), "Original wording")
         first_updated, first_entries = parsed_feed(render_feed(site, [("2.0", note)]))
         assert "Original wording" in first_entries[0]["content"]
@@ -127,8 +137,8 @@ class TestNotesFeed:
         assert second_entries[0]["published"] == first_entries[0]["published"]
         assert second_entries[0]["updated"] == first_entries[0]["updated"]
 
-    def test_empty_feed_writes_nothing(self, tmp_path, monkeypatch):
+    def test_empty_feed_writes_nothing(self, feed_site):
         """No release notes still produces no atom file."""
-        site = self._site(tmp_path, monkeypatch)
+        site, _dates = feed_site
         site.build_notes_feed([])
         assert not os.path.exists(feed_file(site))
