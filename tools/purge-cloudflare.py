@@ -4,7 +4,6 @@
 import http.client
 import json
 import os
-import ssl
 import sys
 
 API = "api.cloudflare.com"
@@ -21,10 +20,8 @@ SITES = {
     "roadmaps.thunderbird.net": ["roadmaps.thunderbird.net", "roadmap.thunderbird.net"],
 }
 # Copied beside the sites and imported by the WSGI vhosts. start is static.
-SHARED = {
-    "wsgi.py": ["www.thunderbird.net", "updates.thunderbird.net", "tb.pro", "roadmaps.thunderbird.net"],
-    "settings.py": ["www.thunderbird.net", "updates.thunderbird.net", "tb.pro", "roadmaps.thunderbird.net"],
-}
+WSGI_SITES = ["www.thunderbird.net", "updates.thunderbird.net", "tb.pro", "roadmaps.thunderbird.net"]
+SHARED = {"wsgi.py": WSGI_SITES, "settings.py": WSGI_SITES}
 
 
 def die(message):
@@ -48,10 +45,9 @@ def affected(paths):
             directory = path.split("/", 1)[0]
             sites = [directory] if directory in SITES else []
         for site in sites:
-            for host in SITES[site]:
-                if host not in hosts:
-                    hosts.append(host)
-    return hosts
+            hosts.extend(SITES[site])
+    # First-seen order. A repeated hostname stays where it first appeared.
+    return list(dict.fromkeys(hosts))
 
 
 def zones_for(hosts):
@@ -77,15 +73,10 @@ def zones_for(hosts):
     return grouped
 
 
-def api_token():
-    value = os.environ.get("CLOUDFLARE_API_TOKEN", "")
-    if not value or any(char.isspace() for char in value):
-        die("CLOUDFLARE_API_TOKEN is missing")
-    return value
-
-
 def purge(zone_id, hosts, token):
-    connection = http.client.HTTPSConnection(API, timeout=TIMEOUT, context=ssl.create_default_context())
+    # The default context verifies the certificate and hostname.
+    # HTTPSConnection does not follow redirects.
+    connection = http.client.HTTPSConnection(API, timeout=TIMEOUT)
     try:
         connection.request(
             "POST",
@@ -113,7 +104,9 @@ def main(argv):
     hosts = affected(changed_paths(argv[0]))
     if not hosts:
         return 0
-    token = api_token()
+    token = os.environ.get("CLOUDFLARE_API_TOKEN", "")
+    if not token or any(char.isspace() for char in token):
+        die("CLOUDFLARE_API_TOKEN is missing")
     for zone_id, names in zones_for(hosts).items():
         purge(zone_id, names, token)
     return 0
