@@ -44,6 +44,10 @@ class Calendarific(Calendar):
         else:
             self.name = data.get('name')
 
+        # Normalize incorrect South Korea holiday name returned by Calendarific API
+        if self.name == "건국일":
+            self.name = "개천절"
+
         description = data.get('description')
         primary_type = data.get('primary_type')
 
