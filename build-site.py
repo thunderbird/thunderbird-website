@@ -22,6 +22,7 @@ import build_calendar
 import builder
 
 import helper
+import paddle_pricing
 import settings
 
 import markdown
@@ -170,14 +171,30 @@ def build_tbpro():
     """Build the tb.pro site."""
     print("Building tb.pro site")
 
+    default_plan = settings.TBPRO_DEFAULT_PLAN.copy()
+    fallback_price = '${0}'.format(default_plan['price'])
+    resolved_prices = paddle_pricing.resolve_country_prices(fallback_price)
+    default_plan['price'] = resolved_prices.default_price
+
+    def tbpro_locale_data(lang):
+        """Return the stable per-language tb.pro preview global."""
+        preview = None
+        if resolved_prices.previews is not None:
+            preview = paddle_pricing.public_price_preview(
+                resolved_prices.previews,
+                helper.get_locale(lang),
+            )
+        return {'tbpro_price_preview': preview}
+
     context = {
         'current_year': date.today().year,
-        'default_plan': settings.TBPRO_DEFAULT_PLAN,
+        'default_plan': default_plan,
     }
     site = builder.Site(languages, settings.TBPRO_PATH, settings.TBPRO_RENDERPATH,
                        settings.TBPRO_CSS, js_bundles=settings.TBPRO_JS,
                        data=context, debug=args.debug, dev_mode=args.watch,
-                       extra_searchpaths=[settings.COMMON_SEARCHPATH])
+                       extra_searchpaths=[settings.COMMON_SEARCHPATH],
+                       locale_data=tbpro_locale_data)
     site.build_tbpro()
     return site
 

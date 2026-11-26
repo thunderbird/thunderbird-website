@@ -3,7 +3,26 @@
   <div class="subscription-callout">
     <h3>{{ plan_name }}</h3>
     <p>{{ plan_description }}</p>
-    <h4><b><sup>$</sup>{{ plan_price }}</b><span>{{ plan_period }}</span></h4>
+    {# plan_period intentionally includes <br> and must not be escaped. #}
+    {% set preview = tbpro_price_preview|default(none) %}
+    {% if preview %}
+    {% set selected = preview.countries|selectattr('code', 'equalto', preview.defaultCountry)|list %}
+    <div class="subscription-price-preview">
+      <div class="subscription-price-control" hidden>
+        <label for="tbpro-price-country">{{ _('Select your country or region')|e }}</label>
+        <select id="tbpro-price-country" aria-describedby="tbpro-price-note">
+          {% for country in preview.countries %}
+          <option value="{{ country.code|e }}"{% if country.code == preview.defaultCountry %} selected{% endif %}>{{ country.label|e }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <h4><b class="subscription-price" aria-live="polite" aria-atomic="true">{{ selected[0].price|e }}</b><span>{{ plan_period }}</span></h4>
+      <p class="subscription-price-note" id="tbpro-price-note">{{ _('Pricing is a preview. Final price is calculated at checkout using your billing country.')|e }}</p>
+      <script type="application/json" class="subscription-price-data">{{ preview|tojson }}</script>
+    </div>
+    {% else %}
+    <h4><b>{{ plan_price|e }}</b><span>{{ plan_period }}</span></h4>
+    {% endif %}
     {% if show_cta %}
     <button class="button-brand-outline-label" onclick="window.location.href='{{ href }}'">
       {{ cta_label }}
