@@ -264,8 +264,9 @@
       }
     }
 
-    // Make popover on hover, or on focus-within (needed for keyboard users)
-    &:focus-within {
+    // Make popover on hover, or on keyboard focus (needed for keyboard users).
+    // Uses :focus-visible so a mouse click doesn't leave the popover open.
+    &:is(:focus-visible, :has(:focus-visible)) {
       .popover-container {
         display: block;
       }
@@ -293,7 +294,7 @@
   }
 
   // Make popover on focus (tab)
-  .nav-ln:focus + .popover-container {
+  .nav-ln:focus-visible + .popover-container {
     display: block;
   }
 
@@ -354,6 +355,13 @@
     .nav-entry {
       padding: 1rem 1rem;
       border-bottom: 2px var(--color-gray-30) solid;
+
+      // Taps don't match :focus-visible, so keep focus-within for the touch menu.
+      &:focus-within {
+        .popover-container {
+          display: block;
+        }
+      }
 
       .popover-container {
         margin-left: 0;
