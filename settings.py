@@ -667,6 +667,7 @@ CALENDAR_LOCALES = {
     'ES': ('Spain', 'es'),
     'LK': ('Sri Lanka', 'en'),
     'SE': ('Swedish', 'sv'),
+    'SY': [('Syria (Arabic)', 'ar'), ('Syria (English)', 'en')],
     'CH': ('Switzerland', 'en'),
     'TW': ('Taiwan', 'zh'),
     'TH': ('Thailand', 'th'),
@@ -713,6 +714,8 @@ CALENDAR_REMAP = {
     'Slovenia': 'Slovenian',
     'Slovakia': 'Slovak',
     'Switzerland': 'Swiss',
+    'Syria (English)': 'Syria',
+    'Syria (Arabic)': ('Syria', 'Arabic'),
     'United Kingdom': 'UK',
     'United States': 'US'
 }
